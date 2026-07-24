@@ -11182,7 +11182,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11200,7 +11200,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784893038,
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784674524,
   "name": "Aircall",
   "pace_of_work": {
@@ -11213,7 +11213,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784893278,
+  "retry_after": 1784893955,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68691,41 +68691,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied defense analytics/engineering, not core AI research; prestige derives from mission impact not publication record."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b291fdc64",
+    "79a7a93752"
+   ],
+   "value": "Federal government contractor relying on cost-plus, fixed-price, and IDIQ contracts for defense R&D and production programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Structured, compliance-heavy, engineering-focused; values security and process over rapid experimentation; hierarchical but mission-aligned."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8b291fdc64",
+    "79a7a93752"
+   ],
+   "value": "Primarily U.S. Department of Defense and related federal agencies; specific contract vehicles not disclosed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80k-$105k base + modest bonus; below top-tier commercial AI offers but competitive for cleared entry-level defense roles."
   },
   "evidence_sha": "b244aec25c70c55b",
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8b291fdc64",
+    "79a7a93752"
+   ],
+   "value": "Defense / Federal IT & Engineering Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on clearance eligibility, systems engineering fundamentals, defense domain knowledge, and compliance-oriented development practices; less focus on cutting-edge ML research or open-source contribution."
   },
-  "last_attempt_at": 1784893255,
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784675134,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f72e0c363"
+   ],
+   "value": "Headquarters and operations likely in the Washington D.C. metro area / Northern Virginia corridor (specific offices not detailed in sources)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1f72e0c363",
+    "8b291fdc64"
+   ],
+   "value": "Deliver advanced weapons and military technology solutions to U.S. defense customers (exact mission statement not found in sources)."
+  },
   "name": "Catapult Federal Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Government program milestones drive cadence; slower than commercial tech but with intense periods before deliveries/reviews."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8b291fdc64"
+   ],
+   "value": "Defense weapons systems, military technology R&D, engineering services for federal agencies (specific products not detailed in available sources)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays (typical for mid-tier defense contractors)."
   },
-  "retry_after": 1784893375,
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68735,7 +68789,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns; may observe minimal staffing between Christmas/New Year depending on contract requirements."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "79a7a93752"
+   ],
+   "value": "Established mid-sized federal contractor (exact employee count and revenue not public in sources)."
   },
   "sources": [
    {
@@ -68769,14 +68830,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=12c3eb081b422e288c29c18945306432397999985250b305ecb3844273fc2a58JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuY2F0YXB1bHQuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors security clearances (Secret/TS) for U.S. persons; H-1B sponsorship unknown — defense work typically requires citizenship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1f72e0c363",
+    "8b291fdc64",
+    "79a7a93752"
+   ],
+   "value": "Catapult Federal Services is a defense and military technology contractor focused on weapons systems and advanced engineering for U.S. government clients. It generates revenue through federal contracts for research, development, and production of military capabilities."
+  },
+  "synthesized_evidence_sha": "b244aec25c70c55b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b291fdc64"
+   ],
+   "value": "Weapons systems engineering, mechanical/aerospace engineering, systems integration, embedded software, modeling & simulation for defense applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Catapult+Federal+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven defense AI/data work with federal impact, but prestige and pay likely trail top-tier commercial AI labs; culture leans structured/government-paced rather than fast-moving startup; work-life balance may be decent for cleared roles but overtime surges occur around contract deliveries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally predictable hours outside crunch periods; clearance and site requirements limit flexibility."
   }
  },
  "caterpillar inc": {
@@ -73195,11 +73283,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73211,6 +73301,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678473,
   "name": "Checkout.com",
   "pace_of_work": {
@@ -73223,6 +73314,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893595,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73286,7 +73378,7 @@
     "url": "https://jobs.ashbyhq.com/checkout.com/7f05e133-17cd-495b-843a-ff152fb47677"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Checkout.com+company+careers+benefits",
@@ -129627,11 +129719,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129643,6 +129737,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678727,
   "name": "Fifth Third Bank",
   "pace_of_work": {
@@ -129655,6 +129750,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893595,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129698,7 +129794,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e11f766e0ba825033e2d9fa06fbe606eaa14c432dcce0f7e995d06207ab8cd21JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cuNTMuY29tL2NvbnRlbnQvZmlmdGgtdGhpcmQvZW4uaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678727,
   "web_search_url": "https://duckduckgo.com/?q=Fifth+Third+Bank+company+careers+benefits",
@@ -141200,42 +141296,104 @@
  "gdit": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Lower tier; technical work is constrained by federal requirements and compliance rather than elite, cutting-edge tech development."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Government contracting and IT consulting, heavily reliant on procurement contracts from the federal government and public sector entities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Corporate, mission-driven, and structured; prioritizes security and process adherence over fast-paced innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Federal, state, and local government agencies, the Department of Defense, intelligence communities, and public sector organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary, offering competitive government contracting rates but below top-tier tech firms."
   },
   "evidence_sha": "4ca174c8e5cef1b9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784893255,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Government IT Consulting and Defense Contracting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Be prepared to discuss your ability to navigate structured corporate environments, your willingness to handle federal compliance, and how you define work-life balance in a slower-paced setting rather than a high-growth tech culture."
+  },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678641,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Headquartered in the US with offices and operations located globally, primarily concentrated around federal hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To deliver IT, systems engineering, and mission support services to government agencies, enabling them to modernize their operations and secure critical infrastructure."
+  },
   "name": "GDIT",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Dynamic but constrained by government compliance; as a large defense contractor, it likely leans toward a traditional, slower pace rather than fast tech startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "IT services, systems engineering, cybersecurity, cloud computing, data analytics, and mission support systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 15-20 days of vacation plus federal holidays, with potential accrual increases based on tenure."
   },
-  "retry_after": 1784893375,
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141244,8 +141402,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns, but employees may receive federal holidays off depending on project rules."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "A well-established, large-scale IT contractor operating as a major subsidiary of a global aerospace and defense conglomerate."
   },
   "sources": [
    {
@@ -141289,14 +141456,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Likely requires US citizenship and security clearances due to federal contracting requirements; less likely to sponsor H1-B or F1 OPT visas."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "General Dynamics Information Technology (GDIT) is a business unit of General Dynamics that provides information technology and systems engineering services. It makes money by securing large government contracts and consulting for federal agencies, defense sectors, and intelligence communities."
+  },
+  "synthesized_evidence_sha": "4ca174c8e5cef1b9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science, AI engineering, software development, cloud infrastructure, and cybersecurity applied to federal and defense missions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=GDIT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a government contractor, GDIT offers mission-driven work rather than elite tech prestige, featuring a slow, bureaucratic pace and lower compensation compared to FAANG, and is unlikely to meet desires for highly innovative cultures or guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate to high; government contracts typically maintain standard 40-hour work weeks, though strict deadlines can occasionally cause spikes."
   }
  },
  "ge aerospace": {
@@ -144578,37 +144776,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High (top-tier for new grads) – likely competitive with leading AI labs but less public brand recognition."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B software subscriptions, professional services contracts, and possibly licensing of proprietary AI models or platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative, learning-oriented, transparent, and deliberately anti-burnout; emphasizes autonomy, mentorship, and sustainable pace over heroics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise clients across industries such as finance, healthcare, retail, and technology seeking AI integration and data science expertise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k total compensation (base + equity + bonus) for AI/ML engineering roles, competitive with top-tier labs."
   },
   "evidence_sha": "9ede9505c1825acd",
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Machine Learning Software and Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical assessments in ML systems design, productionizing models, and data engineering; expect behavioral questions about collaboration, learning agility, and boundary-setting to gauge cultural fit with claimed work-life balance."
+  },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678728,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in a major tech hub (e.g., San Francisco, New York, or remote-first) with possible satellite offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To democratize advanced AI capabilities and accelerate data-driven decision-making for organizations while maintaining ethical standards and work-life balance."
+  },
   "name": "Generalist",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast – iterative product cycles and client-driven deadlines, but with guardrails to prevent chronic crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: AI/ML platform tools, data science consulting, custom model development, and possibly SaaS offerings for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus company holidays; unlimited or flexible policy may exist but with cultural expectation to actually disconnect."
   },
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144618,7 +144858,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. 1-2 weeks) and possible summer break; leadership encourages full disconnection during these periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage startup (50-200 employees), post-Series A, scaling product and go-to-market teams."
   },
   "sources": [
    {
@@ -144652,14 +144897,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e0765398fc6048058990f08cb8569a1ccb430fde11ce90b8e09d7df5dda1ff25JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dlbmVyYWxpc3Q&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers H-1B and green card sponsorship for specialized AI/ML roles given talent scarcity; candidate should confirm during recruiting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Generalist appears to be a technology company focused on AI and data science solutions, likely generating revenue through software products, consulting services, or platform subscriptions."
+  },
+  "synthesized_evidence_sha": "9ede9505c1825acd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work involves building and deploying machine learning pipelines, developing scalable data infrastructure, researching novel AI techniques, and collaborating with clients on custom solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678728,
   "web_search_url": "https://duckduckgo.com/?q=Generalist+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI prestige and high new-grad pay without burnout, Generalist's estimated fast-paced yet balanced culture could offer rapid technical growth, meaningful mission-driven work, and sane hours—rare in top-tier AI labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – company reportedly enforces reasonable hours, guaranteed shutdowns, and respects personal time, though client emergencies may occasionally intrude."
   }
  },
  "generate biomedicines": {
@@ -209545,7 +209811,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209563,7 +209829,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784893255,
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784675226,
   "name": "Magna International",
   "pace_of_work": {
@@ -209576,7 +209842,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784893375,
+  "retry_after": 1784893715,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -295527,47 +295793,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Likely Tier 3 (Service Provider). Prestige in AI/Data Science is typically lower at defense contractors compared to elite tech companies."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific business model details unavailable in provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific culture details unavailable in provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific customer details unavailable in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000. Typical for new grads in engineering services, below elite tech pay scales."
   },
   "evidence_sha": "538d1e320823bc6f",
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific industry details unavailable in provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During interviews, the candidate should clarify the team's agility, actual work hours, and opportunities for rapid technical growth in AI to ensure it meets their expectations against typical defense sector bureaucracy."
   },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678725,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific location details unavailable in provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific mission statement unavailable in provided sources."
+  },
   "name": "Saalex Solutions - A Saalex Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Defense contracting often involves structured timelines and compliance requirements that slow down the pace of innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific product details unavailable in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Typical for mid-sized engineering and IT service providers."
   },
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed. Shutdowns are less common in government contracting unless tied to specific federal budget lapses."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific company size and stage unavailable in provided sources."
   },
   "sources": [
    {
@@ -295601,14 +295950,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b6b88d7e67f33e572f67433c48aec54e0e069c24e49b2c260c6fd1aace211fb0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N4YzE0MTQ3NDkxMDkvYXJ0aWNsZS9kZXRhaWxzLzE1MDYwMTk1Nw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific visa sponsorship context unavailable in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Due to source access limitations, specific factual details about Saalex Solutions could not be retrieved from the provided links. Saalex is generally an engineering and IT services provider supporting government and defense sectors."
+  },
+  "synthesized_evidence_sha": "538d1e320823bc6f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b72fa7b1f9",
+    "14b85e9671",
+    "e0da4db8fd"
+   ],
+   "value": "Specific technical work details unavailable in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678725,
   "web_search_url": "https://duckduckgo.com/?q=Saalex+Solutions+-+A+Saalex+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a government and defense contractor, Saalex Solutions may not align with the candidate's priority for a fast-paced, elite tech culture, and it likely involves navigating bureaucratic processes typical of federal contracts."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Government contracting often adheres to standard hours, but specific team demands can vary."
   }
  },
  "safety national": {
@@ -305108,37 +305490,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Respected hardware/AI integration player, not a pure AI research lab; publications and patents exist but less visible than FAIR/Google Research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Hardware sales (displays, MFPs, appliances) with recurring revenue from managed print services, software licenses, and support contracts; also OEM/white-label supply."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, engineering-driven, process-oriented, respectful of hierarchy; U.S. offices blend Japanese consensus style with American directness. Low toxicity, moderate innovation speed."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise, education, government, healthcare, and retail customers for B2B displays/print; consumers for home appliances and electronics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + 10-15% target bonus + RSU (vesting 4yrs); total comp ~$110k-$140k. Lower than top-tier FAANG but high for traditional electronics."
   },
   "evidence_sha": "22951dc7b896edc6",
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Consumer Electronics / Commercial Displays & Printing / Edge AI Hardware"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for embedded/edge AI questions (model optimization, sensor fusion), system design for device fleets, and practical ML deployment. Expect behavioral emphasis on cross-cultural collaboration (Japan HQ alignment), long-term maintainability, and work-life boundary setting. Ask about 'guaranteed shutdown' policies, on-call rotation for cloud services, and how new grads are mentored vs. thrown into legacy codebases."
+  },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784675305,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: U.S. headquarters in Montvale, NJ; additional offices in California, Texas, Illinois, and remote/hybrid roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To innovate in visual and document technology that empowers productivity and connectivity, aligned with parent Sharp Corporation's 'Simply Smarter' ethos."
+  },
   "name": "Sharp Electronics Corporation USA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Enterprise hardware cycles (12-18 months) enforce planning; sprints exist but crunch is less common than in ad-driven tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Professional displays (interactive whiteboards, digital signage), multifunction printers (MFPs), home appliances, and emerging IoT/AI-enabled edge devices for commercial and consumer markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; accrual starts day one; carryover limited."
   },
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305148,7 +305572,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdown; typical year-end slowdown (Dec 24-Jan 1) observed informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established subsidiary of a public Japanese conglomerate (Sharp Corp., TSE: 6753); U.S. headcount estimated in the low thousands, mature stage with stable revenue."
   },
   "sources": [
    {
@@ -305182,14 +305611,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d07ad61d64b846931ca64de90b58359899303b3c608f6b012c9e7dbb60864f64JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cuc2hhcnAuY29tL2FwcA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established global company; likely sponsors H-1B and green cards for specialized engineering roles, but new-grad sponsorship volume is not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "083be1e084",
+    "b162b1926b",
+    "cb13efc391"
+   ],
+   "value": "Sharp Electronics Corporation USA is the U.S. subsidiary of Sharp Corporation, a global Japanese electronics manufacturer known for displays, printers, and consumer electronics. It sells B2B and B2C hardware and related software/services in the Americas."
+  },
+  "synthesized_evidence_sha": "22951dc7b896edc6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Embedded systems, firmware, computer vision, edge AI for smart displays/printers, cloud services, mobile apps, and data analytics for device fleets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675305,
   "web_search_url": "https://duckduckgo.com/?q=Sharp+Electronics+Corporation+USA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sharp USA offers a rare blend: a globally recognized electronics brand with deep R&D heritage (prestige), stable compensation structures typical of large Japanese multinationals (competitive new-grad pay), and a U.S. subsidiary culture that can be less hierarchical than HQ. For a candidate prioritizing work-life balance, the mature enterprise environment often means predictable hours and defined shutdowns versus startup burnout. The push into edge AI and smart displays provides real technical de"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — Japanese corporate culture values stability; U.S. subsidiary often adopts 9-5 core hours with limited weekend expectation. Guaranteed shutdowns not formalized but culturally respected."
   }
  },
  "shi international": {
@@ -305589,11 +306043,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305605,6 +306061,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678727,
   "name": "Shift",
   "pace_of_work": {
@@ -305617,6 +306074,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893595,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305680,7 +306138,7 @@
     "url": "https://job-boards.greenhouse.io/shifttechnology/jobs/5843676003"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678727,
   "web_search_url": "https://duckduckgo.com/?q=Shift+company+careers+benefits",
@@ -310536,48 +310994,155 @@
  "sitreps": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown / Unranking due to absence of verifiable company data."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown due to absence of verifiable company data."
   },
   "evidence_sha": "5a68fe068f3aaddd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Since no technical or business details were present in the sources to inform standard interview prep, you should focus your initial calls with recruiters on your core priorities: confirming actual day-to-day AI/tech pace, querying exact new-grad compensation bands, and asking explicit questions about shutdown policies and after-hours expectations to screen for toxicity."
+  },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784678728,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
   "name": "Sitreps",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown due to absence of verifiable company data."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown due to absence of verifiable company data."
   },
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown due to absence of verifiable company data."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
   },
   "sources": [
    {
@@ -310611,14 +311176,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=ed651cc4c6e7b25981b9b90cf9e5320ee88756ce580c37965f9d41861aff7087JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTMxMmNkYmRmMTRjZjY0YWUwODk3Y2M0MTE1MzM2NTFk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "The supplied sources for Sitreps consist only of non-functional redirect URLs to general landing pages for Microsoft and Office, without any descriptive company text. Consequently, there is no verifiable information available from the provided sources about what Sitreps does or how it generates revenue."
+  },
+  "synthesized_evidence_sha": "5a68fe068f3aaddd",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Unknown due to lack of descriptive text in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678728,
   "web_search_url": "https://duckduckgo.com/?q=Sitreps+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "This profile cannot be evaluated against your priorities for top-tier AI/data science prestige, fast innovative culture, or guaranteed work-life balance because the provided sources contain no actual company data. To verify if Sitreps meets your bar for elite new-grad pay and sane hours, descriptive sources like an official careers page or engineering blog must be supplied."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9be7d997bc",
+    "8353ad00b3",
+    "cf30a2b0da"
+   ],
+   "value": "Estimated: Unknown due to absence of verifiable company data."
   }
  },
  "sixtyfour x25": {
@@ -378294,38 +378900,107 @@
  "western union": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Tier 3: Moderate AI maturity focused on fraud, risk, and transaction optimization rather than elite, cutting-edge AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Earning transaction fees and foreign exchange spreads on money transfers conducted via digital channels and physical agent locations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Mission-driven toward financial inclusion, featuring a mature corporate atmosphere that values stability and global impact over rapid disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Global consumers, including expatriates, migrants, and small businesses needing cross-border payment solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $115,000 base salary, reflecting legacy corporate compensation rather than elite tech-tier pay."
   },
   "evidence_sha": "f73f867e7764f4b2",
+  "generated_at": 1784893475,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Financial Services / Fintech / Remittances"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe the specific team's tech stack and AI deployment pace to ensure it avoids slow bureaucracy and meets the desire for fast-paced technical learning. Asking about exact hours, on-call expectations, and work-life balance policies will be critical to verify sane hours and avoid burnout."
   },
+  "last_attempt_at": 1784893475,
   "last_evidence_at": 1784674653,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Headquartered in Denver, Colorado, with global offices and operational centers spanning multiple continents."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "To connect people and businesses globally by providing reliable, accessible, and fast financial transfer services."
+  },
   "name": "Western Union",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Estimated: Steady and corporate-paced, weighted heavily toward process and compliance rather than rapid innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "International money transfers, bill payment services, money orders, and digital remittance platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off, typical for a large, established financial corporation."
   },
+  "refresh_after": 1790077475,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -378335,7 +379010,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard public holidays, with no guaranteed company-wide shutdowns routinely observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Established, publicly traded global corporation with a massive international presence."
   },
   "sources": [
    {
@@ -378369,14 +379052,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=afa521d32da0fa20a643c21f39d48d69052cb91f30b7f260d54cb68a3dbcd7a0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvV2VzdGVybl8oZ2VucmUp&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Likely offers visa sponsorship for specialized tech roles due to its large-scale global operations, though specifics vary by role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Western Union is a global financial services and communications company that specializes in cross-border money transfers and payment services. It generates revenue by charging transaction fees and foreign exchange margins when consumers and businesses send funds internationally through its digital and physical retail networks."
+  },
+  "synthesized_evidence_sha": "f73f867e7764f4b2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992",
+    "2e18ac6441"
+   ],
+   "value": "Digital payment platforms, fraud detection systems, transaction processing architecture, and global network infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674653,
   "web_search_url": "https://duckduckgo.com/?q=Western+Union+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a legacy fintech, Western Union may struggle to provide the highly innovative, fast-paced tech culture desired by top-tier AI candidates, potentially leaning toward slow bureaucracy. However, it may offer better work-life balance and sane hours compared to high-growth tech startups, even if the technical learning pace and new-grad pay are less competitive."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "46c78f7522",
+    "5c014a4992"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, driven by traditional corporate policies rather than high-burnout startup demands."
   }
  },
  "westinghouse electric company": {
