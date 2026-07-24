@@ -197612,7 +197612,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197630,7 +197630,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784937314,
+  "last_attempt_at": 1784937470,
   "last_evidence_at": 1784935028,
   "name": "IQVIA",
   "pace_of_work": {
@@ -197643,7 +197643,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784937434,
+  "retry_after": 1784937710,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316635,42 +316635,104 @@
  "rockefeller capital management": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate heritage financial brand tier. High prestige in wealth management, but not historically recognized as a top-tier elite destination specifically for AI or data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Fee-based revenue generated from managing and advising on client investment assets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a201b41356"
+   ],
+   "value": "Estimated: Highly traditional, client-centric, and relationship-driven."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "High-net-worth individuals, families, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary for new grad tech roles in NYC."
   },
   "evidence_sha": "443951bd36c51b37",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784937470,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784937314,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Financial Services / Wealth Management."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Probe the pace of innovation: ask if AI and data science are core strategic functions or isolated experiments. Ask about daily hours, guaranteed shutdowns, and how the firm avoids burnout. Clarify technical acceleration and learning opportunities for new grads in a legacy financial institution."
+  },
+  "last_attempt_at": 1784937470,
   "last_evidence_at": 1784934042,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a201b41356"
+   ],
+   "value": "New York, NY."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a201b41356"
+   ],
+   "value": "To preserve and grow the wealth of the Rockefeller family and other prominent clients across generations."
+  },
   "name": "Rockefeller Capital Management",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Estimated: Likely traditional and methodical, typical of legacy finance, rather than a fast-paced modern tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Private wealth management, asset management, and family office advisory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Estimated: 20-25 days of standard paid time off, aligning with standard financial sector benefits."
   },
-  "retry_after": 1784937434,
+  "refresh_after": 1790121470,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316679,8 +316741,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Estimated: Likely observes standard market holidays, but specific guaranteed firm-wide shutdowns are not publicly confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Established, historical private financial institution."
   },
   "sources": [
    {
@@ -316724,14 +316795,46 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0330ffc221",
+    "a201b41356"
+   ],
+   "value": "Rockefeller Capital Management is a wealth management and financial advisory firm that traces its origins to the Rockefeller family. They make money by charging management and advisory fees to oversee private wealth and family assets."
+  },
+  "synthesized_evidence_sha": "443951bd36c51b37",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering and data initiatives to support financial platforms, portfolio management, and client data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784934042,
   "web_search_url": "https://duckduckgo.com/?q=Rockefeller+Capital+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Matches your desire for elite prestige and high new-grad pay, but you must detect if the culture is slow and bureaucratic or fast-paced. Use the interview to verify whether tech is treated as a first-class driver or back-office support, and confirm that WLB is actually respected without hidden toxic crunch."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0330ffc221"
+   ],
+   "value": "Estimated: Generally sane with predictable market hours expected of a wealth management firm."
   }
  },
  "rocket": {
@@ -424871,102 +424974,104 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "c99450b9ac",
-    "b6c971713d"
+    "b6c971713d",
+    "c96157f38f"
    ],
-   "value": "Tier 1 (Elite). As an Amazon subsidiary building a fully driverless robotaxi, Zoox is widely recognized as a top-tier destination for ultra-select AI/robotics talent."
+   "value": "Tier 1 (AI/Robotics) - Zoox works on cutting-edge, ground-up autonomous vehicle technology, offering high-impact roles in simulation and ML platforms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "c99450b9ac"
+    "b6c971713d",
+    "c96157f38f"
    ],
-   "value": "Zoox generates revenue through a future robotaxi ride-hailing service. Owned by Amazon, it is currently in a pre-revenue investment phase focused on R&D, testing, and obtaining regulatory approvals."
+   "value": "Operates autonomous vehicle fleets for ride-hailing, generating revenue through transportation services."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "6564a9a890",
     "b6c971713d"
    ],
-   "value": "Innovative, technically rigorous, and mission-focused. The culture values end-to-end ownership of the entire robotaxi experience, deep cross-disciplinary collaboration, and a hard engineering attitude, but maintains supportive norms that encourage curiosity and development."
+   "value": "Estimated: Mission-driven and innovation-focused, given the company's ground-up approach to building robotaxis."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "c99450b9ac"
+    "b6c971713d"
    ],
-   "value": "The service targets consumers requesting on-demand automated rides in urban areas. Zoox has regulatory permits to deliver driverless rides to the public in California and has tested on public streets with employees."
+   "value": "General public and riders seeking safe, reliable, clean, and enjoyable autonomous transportation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $170,000–$210,000 USD total annualized compensation (base + equity + bonus) for new-grad ML/AV-specific roles in Foster City."
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $150,000-$200,000 base salary per year, plus equity and potential bonuses, reflecting high competition for AI/AV talent."
   },
   "evidence_sha": "cb80c19271ee8126",
-  "generated_at": 1784681447,
+  "generated_at": 1784937470,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "b6c971713d",
-    "c99450b9ac"
+    "c96157f38f"
    ],
-   "value": "Autonomous Vehicles / Mobility"
+   "value": "Autonomous Vehicles / Transportation / AI"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "c96157f38f",
     "b6c971713d"
    ],
-   "value": "For the ML Platform role, candidates will face deep applied DS/ML systems design, frameworks knowledge, and coding (Python/C++). Zoox operates closer to a fast-scaling startup, so the interview will test practical real-time inference and training challenges against mature engineering principles rather than theoretical puzzlers."
+   "value": "Candidates should be prepared to discuss systems building, simulation architecture, and ML infrastructure. For data science roles, expect deep dives into fleet simulation, algorithm testing for dispatch and routing, and mechanisms to measure algorithmic impact."
   },
-  "last_attempt_at": 1784937135,
+  "last_attempt_at": 1784937470,
   "last_evidence_at": 1784933777,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "6564a9a890",
-    "c99450b9ac"
-   ],
-   "value": "Headquartered in Foster City, California, with an additional major office in Seattle, Washington."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "b6c971713d"
    ],
-   "value": "To reimagine transportation and build from the ground up autonomous robotaxis that are safe, reliable, clean, and enjoyable for everyone."
+   "value": "To reimagine transportation and ground-up build autonomous robotaxis that are safe, reliable, clean, and enjoyable for everyone."
   },
   "name": "Zoox",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced with strong deployment deadlines. The culture mirrors a well-funded startup under Amazon, prioritizing execution and launch deliverables, without the typical aimlessness of BigTech big tech strategy."
+   "source_ids": [
+    "b6c971713d"
+   ],
+   "value": "Estimated: Fast-paced and innovative. The company is in early stages of deploying robotaxis, requiring rapid development and execution."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "c99450b9ac",
-    "b6c971713d"
+    "b6c971713d",
+    "c96157f38f"
    ],
-   "value": "Zoox is developing a bidirectional, all-electric, driverless robotaxi designed for dense urban environments. It combines a custom vehicle platform with a full-stack autonomy software system incorporating perception, prediction, planning, and controls."
+   "value": "Fully autonomous, ground-up built robotaxis and the underlying AI infrastructure, including fleet simulation environments, ML platform tools, deep learning frameworks, and inference libraries."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Generous flexible PTO policy, typically in line with Amazon's tech hubshubs' norms of 20-30 days adjusted for headquarters location."
+   "value": "Estimated: 15-20 days PTO, typical for late-stage startups in the AV industry."
   },
-  "refresh_after": 1789865447,
-  "retry_after": 1784937375,
+  "refresh_after": 1790121470,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -424976,14 +425081,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Informal one-to-two week mid-winter or summer coach. Subs oriented to Amazon technical culture often encourage orchestrated team pauses during major holidays."
+   "value": "Estimated: No formal company-wide shutdowns found in research, though holidays may offer unofficial breaks."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "c99450b9ac"
+    "b6c971713d"
    ],
-   "value": "A subsidiary of Amazon, Zoox has over 2,000 employees. It is in the late-stage validation and early commercialization stage, conducting paid, driverless public road testing in California and expanding operations."
+   "value": "Currently in commercial deployment or late-stage startup phase, actively building and deploying robotaxis on public roads."
   },
   "sources": [
    {
@@ -425048,28 +425153,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "b6c971713d"
-   ],
-   "value": "Zoox regularly hires for technical roles, but the specific job posting does not explicitly state sponsorship eligibility for the ML Platform role. Amazon umbrella typically supports work authorizations/transfers for specialized technical talent."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "b6c971713d",
-    "c99450b9ac"
+    "c96157f38f"
    ],
-   "value": "Zoox is building fully autonomous, purpose-built robotaxis from the ground up. Owned by Amazon, the company is actively deploying its self-driving vehicles on public roads and offers an integrated hardware-software mobility service."
+   "value": "Zoox is an autonomous vehicle company building purpose-built robotaxis from the ground up. It makes money by developing and deploying fleets of driverless vehicles for ride-hailing services, though commercial deployment is in early stages."
   },
-  "synthesized_evidence_sha": "09c8d46316fb66f2",
+  "synthesized_evidence_sha": "cb80c19271ee8126",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "c96157f38f",
     "b6c971713d"
    ],
-   "value": "The ML Platform team builds the base layer of ML tools, deep learning frameworks, and inference libraries for applied research teams covering both on-vehicle and off-vehicle use cases. Work spans computer vision, sensor fusion, prediction, and large-scale ML training infrastructure."
+   "value": "Core data science roles involve fleet simulation for algorithm evaluation, including dispatch, routing, and vehicle assignment. ML roles focus on building ML tools, deep learning frameworks, and inference libraries for on-vehicle and off-vehicle applications."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677183,
@@ -425078,14 +425182,14 @@
    "confidence": "high",
    "source_ids": [
     "b6c971713d",
-    "c99450b9ac"
+    "c96157f38f"
    ],
-   "value": "Zoox sits at the intersection of elite AI robotics (Amazon-backed) and startup speed. The company is actively deploying robotaxis on public roads, offering mission-driven, high-impact ML platform work that provides accelerated learning on a complete autonomous vehicle stack. Salaries are competitive with top-tier big tech, while the pioneering 'rider-first' architecture fosters innovation without the bureaucracy of older autonomous programs."
+   "value": "Zoox aligns strongly with the candidate's desire for a mission-driven company with elite-new grad pay and high technical prestige. It offers the chance to work on ground-up autonomous robotaxis, providing an environment that accelerates technical learning through complex, high-impact data science and ML challenges."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Above average for mission-driven AV industry. Teams report focused execution with relatively sane hours compared to field peers, though sensors and hardware milestones can drive intermittent crunch. Ownership by Amazon typically ensures operational discipline."
+   "value": "Estimated: Moderate to Good. Zoox's focus on mission-driven work may demand high engagement, but its structured engineering approach likely supports reasonable work-life balance."
   }
  },
  "zs": {
