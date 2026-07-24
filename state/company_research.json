@@ -31011,41 +31011,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low — not known as an AI/data science destination; likely Tier 4/5 (traditional industrial company)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details available from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional industrial / engineering-focused; safety, quality, and reliability valued over speed. Likely hierarchical rather than flat startup culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information available from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$90k base for manufacturing engineering/IT roles; AI/ML roles unlikely at new-grad level."
   },
   "evidence_sha": "4c658ec7c5c57f57",
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Manufacturing / Industrial"
   },
-  "last_attempt_at": 1784868461,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the company has genuine AI/data science initiatives or only traditional manufacturing IT. Ask about: (1) actual ML/AI projects in production, (2) engineering culture and deployment speed, (3) typical hours and on-call expectations, (4) mentorship and learning budget for new grads, (5) whether 'shutdowns' or mandated time-off exist."
+  },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784676903,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based manufacturing facility locations; specific sites unknown."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement available from supplied sources."
+  },
   "name": "B&B Manufacturing",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — manufacturing cycles and safety/quality constraints typically create measured pace, not 'fast/innovative tech culture'."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information available from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-10 holidays typical for US mid-sized manufacturing; no guaranteed shutdowns found."
   },
-  "retry_after": 1784868581,
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31055,7 +31093,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research; manufacturing plants rarely do company-wide shutdowns except major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized manufacturing firm (likely 100-1000 employees) based on company name convention."
   },
   "sources": [
    {
@@ -31089,14 +31132,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5feaeb183321f7ea296c0100e7d60cde448bac570b2c8906e0692c8b859c76b8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles; no public data found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B&B Manufacturing appears to be a manufacturing company, but the provided sources contain only redirect links with no accessible content about the company's operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "4c658ec7c5c57f57",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves mechanical/industrial engineering, process automation, quality systems, and possibly IoT/industrial data analytics for manufacturing operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=B%26B+Manufacturing+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay, fast innovation culture, strong work-life balance, and accelerated technical growth: this company is a manufacturing firm, not a top-tier AI/data science employer. It likely offers traditional engineering roles rather than cutting-edge AI research, with manufacturing-sector pay and culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — manufacturing often has structured shifts and predictable hours, but may require overtime during production pushes."
   }
  },
  "babel street": {
@@ -43350,37 +43414,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging applied AI in niche healthtech; not a primary AI research lab but offers real-world ML application opportunities)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "Subscription-based SaaS model with recurring revenue from practice-level contracts, likely tiered by practice size and feature set."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-oriented, engineering-driven with low bureaucracy; Utah tech culture values family/time outdoors."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "Dental practices, medical practices, DSOs (Dental Service Organizations), and healthcare groups seeking to improve patient retention and reduce no-shows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k-$120k base + equity (0.05-0.15%); total comp ~$100k-$135k. Utah market adjusts below coastal tiers."
   },
   "evidence_sha": "d52a5abd4aafb3d4",
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "Healthtech / SaaS / Patient Engagement Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical full-stack and data problems: designing scalable patient communication pipelines, optimizing message timing with ML, integrating with legacy practice management APIs, and measuring feature impact on retention metrics. Prepare to discuss trade-offs between speed and reliability in healthcare contexts, and how you'd balance innovation with the regulatory/compliance constraints of patient data."
   },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784674231,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Lehi, Utah (Silicon Slopes); likely offers remote/hybrid options for engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "To help healthcare practices thrive by automating patient engagement and reactivation, ultimately improving patient outcomes and practice revenue."
+  },
   "name": "Brevium",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; typical growth-stage SaaS pace with quarterly planning cycles, not constant fire-drills."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "Patient retention and reactivation SaaS platform with automated communication (text, email, phone), appointment reminders, scheduling integration, and analytics for dental and medical practices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited PTO not confirmed."
   },
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43390,7 +43516,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some teams may observe holiday breaks (Thanksgiving week, Christmas-New Year)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees; growth-stage startup (likely Series A/B) in healthtech SaaS."
   },
   "sources": [
    {
@@ -43424,14 +43555,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=17afd7832ae97b5478f1fe4a21d7e81b6a6ef8fca3bdfb33a6ee892727e6ade7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9icmV2aXVtLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles; no public data on green card sponsorship. Candidates should inquire directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "678f540c8f",
+    "735b419492",
+    "460abf88fc"
+   ],
+   "value": "Brevium is a healthcare technology company that provides patient retention and reactivation software for dental and medical practices. Their platform automates patient communication to help practices reduce no-shows, reactivate inactive patients, and improve schedule utilization."
+  },
+  "synthesized_evidence_sha": "d52a5abd4aafb3d4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development (React, Node.js, PostgreSQL), API integrations with practice management systems (Dentrix, Eaglesoft, Open Dental), data analytics, and potential ML for patient behavior prediction and communication optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674231,
   "web_search_url": "https://duckduckgo.com/?q=Brevium+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brevium offers a mission-driven healthtech role where AI/data science can directly impact patient care access and practice efficiency. The company's focus on automation for healthcare aligns with a desire for meaningful work, while its growth-stage SaaS environment suggests faster iteration and learning than bureaucratic enterprises. Candidate priorities for work-life balance and technical growth may match a culture that values sustainable pace in a high-impact niche."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; culture emphasizes reasonable hours and shutdowns, but on-call rotations may exist for critical patient-facing systems."
   }
  },
  "bridgewater associates": {
@@ -65370,42 +65526,116 @@
  "commonwealth of massachusetts": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: Low. Public sector tech lacks elite industry prestige compared to FAANG or top startups."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Funded by tax revenues and federal allocations to provide public goods and government services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: Traditional, bureaucratic, and public-service oriented."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Residents of Massachusetts, businesses, and visitors to the state."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: $70,000-$85,000. Below top-tier tech standards."
   },
   "evidence_sha": "4ae5a767d3f5de93",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784868302,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Government and Public Administration."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Focus on the speed of tech adoption during interviews. Verify if data teams use modern stacks or legacy systems, and confirm overtime expectations."
+  },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784586000,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Boston, MA (capital) with offices and facilities across all regions of the state."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "To serve the public by administering state programs, maintaining infrastructure, and ensuring the well-being and safety of its constituents."
+  },
   "name": "Commonwealth of Massachusetts",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: Slow. Bureaucracy and red tape severely limit innovation speed compared to private tech."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Public services, regulatory oversight, infrastructure, and digital platforms for state residents."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: 15-25 days of vacation plus state holidays and generous sick leave."
   },
-  "retry_after": 1784868542,
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65414,8 +65644,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: None found in research, likely limited to occasional state holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Mature government entity with thousands of employees across various state agencies."
   },
   "sources": [
    {
@@ -65449,14 +65690,50 @@
     "url": "https://massanf.taleo.net/smartorg/smartorg/common/toc.jsf?lang=en"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: Public sector generally provides limited immigration sponsorship compared to tech firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "The Commonwealth of Massachusetts is the U.S. state government entity responsible for public administration and services. It funds its operations through state taxes, federal grants, and fees."
+  },
+  "synthesized_evidence_sha": "4ae5a767d3f5de93",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Digital services, enterprise IT, data management, and public policy analytics across various state departments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586000,
   "web_search_url": "https://duckduckgo.com/?q=Commonwealth+of+Massachusetts+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "A government role may align with mission-driven work and strict work-life boundaries, but it will clash with the desire for a fast, innovative tech culture and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "af7ad9dbdb",
+    "83cc670d66"
+   ],
+   "value": "Estimated: High. Public sector roles typically feature predictable 40-hour weeks and strong boundary respect."
   }
  },
  "community care cooperative c3": {
@@ -102370,52 +102647,128 @@
  "fox corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: Tier 2. While engineering teams solve complex data and streaming challenges, the core flywheel is media rather than cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c172504b",
+    "8304c0d918"
+   ],
+   "value": "Ad-supported broadcasting combined with subscription carriage fees paid by distributors and licensing revenue for original content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: Corporate environment mixed with newsroom intensity, featuring public service and mission-driven buzz without typical big-tech autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c172504b",
+    "8304c0d918"
+   ],
+   "value": "General viewing public, advertisers seeking mass reach, and cable/satellite distribution affiliates."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: $110,000 - $150,000 base salary, depending on location and group, generally lower than top big-tech firms in AI."
   },
   "evidence_sha": "b8fb4adcbbf8f9e7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784868461,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05c172504b",
+    "8304c0d918"
+   ],
+   "value": "Broadcast Media and Entertainment"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Assess how the team balances elite, fast-paced innovative tech culture against slow bureaucracy, confirming that work-life balance, sane hours, and technical growth are truly respected. Clarify new-grad compensation ceilings and whether personal time is genuinely protected from broadcast-industry burnout."
+  },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784673267,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "New York City, NY and Los Angeles, CA, along with local broadcast affiliates across the United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "To produce and distribute compelling news, sports, and entertainment content that engages audiences across multiple platforms."
+  },
   "name": "Fox Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: Can be fast-paced and reactive during live broadcast cycles and major news events, though software teams may operate more steadily."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "National and local broadcast television networks, sports programming, news channels, and digital streaming platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: 15-20 days of vacation plus public holidays, typically increasing with tenure."
   },
-  "retry_after": 1784868581,
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "05c172504b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: No guaranteed tech-wide company shutdowns; teams may experience slowdowns between major broadcast seasons."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Large-cap public media conglomerate with a mature market presence and steady cash flows."
   },
   "sources": [
    {
@@ -102449,14 +102802,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=e0242f8e9af170c37dd822305853d5ee3483b295483b2d9ced54ecaf77a6002fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly93d3cuZm94LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Likely available for highly skilled technical roles requiring specialized media technology expertise, though not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c172504b",
+    "8304c0d918"
+   ],
+   "value": "Fox Corporation is a prominent media and broadcasting company that operates a portfolio of news, sports, and entertainment networks. It generates revenue primarily through advertising sales, content licensing, and affiliate fees from cable and satellite providers."
+  },
+  "synthesized_evidence_sha": "b8fb4adcbbf8f9e7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Platform engineering, digital streaming infrastructure, broadcast automation, and consumer data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=Fox+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Supporting a top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. Seeking a mission-driven media brand that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic, high-burnout broadcast environments while accelerating technical learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "05c172504b"
+   ],
+   "value": "Estimated: Moderate work-life balance; tech roles likely have standard hours, but live news and sports demands occasional weekend or evening work."
   }
  },
  "franklin templeton": {
@@ -164509,49 +164894,130 @@
  },
  "mccorquodale transfer llc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d"
+   ],
+   "value": "Estimated: Neither AI/DS prestige nor dedicated AI roles are verifiable from the retrieved sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d",
+    "d981f5271d"
+   ],
+   "value": "Not available in retrieved sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d"
+   ],
+   "value": "Not available in retrieved sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d981f5271d"
+   ],
+   "value": "Not available in retrieved sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1732d2e48d"
+   ],
+   "value": "Estimated: New-grad tech pay cannot be determined from retrieved sources."
   },
   "evidence_sha": "b09b810297eb0656",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d",
+    "d981f5271d",
+    "8408f88957"
+   ],
+   "value": "Transfer services (inferred from company name; sector is not detailed in sources)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1732d2e48d",
+    "d981f5271d"
+   ],
+   "value": "Confirm if a true AI or data science role exists that offers elite new-grad pay, innovative tech culture, and fast-paced learning without bureaucracy. Probe actual work hours, shutdown policies, and whether the environment respects personal time or leans toxic."
+  },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784674231,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8408f88957"
+   ],
+   "value": "Not available in retrieved sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8408f88957"
+   ],
+   "value": "Not available in retrieved sources."
+  },
   "name": "McCorquodale Transfer, LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d981f5271d"
+   ],
+   "value": "Estimated: Insufficient data on internal pace, though candidates should screen for whether it is fast/innovative vs slow/bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d"
+   ],
+   "value": "Not available in retrieved sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d981f5271d"
+   ],
+   "value": "Estimated: Exact PTO policy unrevealed; verify standard local allowances during onsite screen."
   },
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d981f5271d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8408f88957"
+   ],
+   "value": "Estimated: Shutdown practices cannot be confirmed from available sourcing."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8408f88957"
+   ],
+   "value": "Not available in retrieved sources."
   },
   "sources": [
    {
@@ -164585,14 +165051,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc26b9226cda96a9061c47a3bee8f05698461a23fad46ffec08273ee113315f2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3JlZ3VsYXI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d"
+   ],
+   "value": "Not available in retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d",
+    "d981f5271d",
+    "8408f88957"
+   ],
+   "value": "Public details describing McCorquodale Transfer, LLC's core operations and revenue model are not currently available based on retrieved sourcing. Candidates must consult official websites directly to confirm the business."
+  },
+  "synthesized_evidence_sha": "b09b810297eb0656",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1732d2e48d",
+    "d981f5271d"
+   ],
+   "value": "Not available in retrieved sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674231,
   "web_search_url": "https://duckduckgo.com/?q=McCorquodale+Transfer%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d981f5271d",
+    "8408f88957"
+   ],
+   "value": "Candidate seeks top-tier elite AI pay and a fast, innovative tech culture that avoids bureaucracy, alongside guaranteed work-life balance and accelerated technical learning. Without confirming McCorquodale Transfer's actual technical environment or sane-hours commitment, candidates must verify if the company aligns with these mission-driven, low-burnout goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8408f88957"
+   ],
+   "value": "Estimated: Insufficient data on WLB; candidates should explicitly confirm if sane hours and guaranteed shutdowns exist."
   }
  },
  "mcdonald s": {
@@ -240674,7 +241175,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240692,7 +241193,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784868461,
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784677096,
   "name": "Solideon",
   "pace_of_work": {
@@ -240705,7 +241206,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784868581,
+  "retry_after": 1784868854,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -250817,49 +251318,140 @@
  },
  "supernova technology": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown due to source redirect failures."
   },
   "evidence_sha": "4b00d6d2d85288ef",
+  "generated_at": 1784868614,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During interviews, directly ask questions to validate the company's alignment with your priorities: inquire about actual working hours, on-call expectations, and shutdown policies to ensure they respect work-life balance. Additionally, ask about the pace of product innovation, the specific AI/data science stack used, and new-grad compensation bands to gauge if the role matches your expectations for prestige, rapid career growth, and a non-bureaucratic culture."
   },
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784676904,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
   "name": "Supernova Technology™",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown due to source redirect failures."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown due to source redirect failures."
   },
+  "refresh_after": 1790052614,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
   },
   "sources": [
    {
@@ -250893,14 +251485,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=ddd7f271b37efbaf4d34d2acb7ec77acc178d1efad80f9834a536257580c3b64JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3VwZXJub3Zh&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "No factual information about Supernova Technology™ could be extracted from the supplied sources, as all retrieved pages failed to load content and only returned redirect notices. Consequently, how the company operates and generates revenue remains unknown based on the provided materials."
+  },
+  "synthesized_evidence_sha": "4b00d6d2d85288ef",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "54b31827bf",
+    "a52dcc14c2",
+    "d0738bb8ed"
+   ],
+   "value": "Unknown due to source redirect failures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676904,
   "web_search_url": "https://duckduckgo.com/?q=Supernova+Technology%E2%84%A2+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a candidate seeking a top-tier AI/data science role balancing elite prestige, high new-grad pay, fast innovative culture, mission-driven work, and protected personal time, you must verify if Supernova Technology™ can provide elite technical learning without burnout. Without sourced data on their tech stack, WLB, or mission, it is impossible to confirm if they meet your strict criteria for avoiding bureaucracy and toxic environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown due to source redirect failures."
   }
  },
  "supper": {
@@ -253747,7 +254372,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -253765,7 +254390,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784868302,
+  "last_attempt_at": 1784868614,
   "last_evidence_at": 1784677608,
   "name": "T-Rex Solutions, LLC",
   "pace_of_work": {
@@ -253778,7 +254403,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784868542,
+  "retry_after": 1784869094,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
