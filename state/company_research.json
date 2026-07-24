@@ -1528,11 +1528,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1544,6 +1546,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784672492,
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
@@ -1556,6 +1559,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784881385,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1599,7 +1603,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e7c42582b1d7820368b011dc90573c0e89c22338499dd8dd978d061b7b22dcbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672492,
   "web_search_url": "https://duckduckgo.com/?q=A.P.+Moller+-+Maersk+company+careers+benefits",
@@ -19220,7 +19224,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19238,7 +19242,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784879930,
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784674897,
   "name": "Analysis Group",
   "pace_of_work": {
@@ -19251,7 +19255,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784880170,
+  "retry_after": 1784881625,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -22786,7 +22790,7 @@
    "value": "Emphasize your elite technical precision and collaborative skills to thrive in their fast-paced environment, and probe team-specific work-life balance as enterprise software can clash with strict sane-hours expectations."
   },
   "last_attempt_at": 1784861700,
-  "last_evidence_at": 1784881157,
+  "last_evidence_at": 1784850885,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -22822,6 +22826,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days (Standard for established public tech companies in the McLean, VA area)."
   },
+  "refresh_after": 1790045700,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -22917,6 +22922,7 @@
    ],
    "value": "Appian is a software company that provides a low-code automation platform, focusing on AI-driven automation for mission-critical work. They make money by licensing their platform to large enterprises and governments to help them automate complex processes."
   },
+  "synthesized_evidence_sha": "5a8905f41e6190b9",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -63208,7 +63214,7 @@
    "value": "Expect practical Java/Spring/Angular coding exercises, REST API design, SQL query optimization, and scenario questions about scaling enterprise applications. Behavioral interviews emphasize client-facing communication, handling ambiguous requirements, and teamwork in distributed project settings. Prepare to discuss how you would apply ML or data science techniques to real-world public-sector or financial use cases."
   },
   "last_attempt_at": 1784748944,
-  "last_evidence_at": 1784880873,
+  "last_evidence_at": 1784747329,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -67788,7 +67794,7 @@
    "value": "For a top-tier AI or data science candidate, it is critical to interview the hiring manager to determine if the specific team operates with startup-like innovation or is hindered by larger corporate processes."
   },
   "last_attempt_at": 1784880706,
-  "last_evidence_at": 1784881157,
+  "last_evidence_at": 1784674432,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -67830,6 +67836,8 @@
    ],
    "value": "Estimated: 20-25 days of standard Paid Time Off alongside standard company holidays."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [
@@ -67924,6 +67932,7 @@
    ],
    "value": "Cisco is a global technology leader that designs, manufactures, and sells networking hardware, software, and services. The company generates revenue by providing enterprise networking infrastructure, security, and collaboration solutions to businesses worldwide."
   },
+  "synthesized_evidence_sha": "b18ee2260bcd25d1",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -97589,48 +97598,125 @@
  "east west bank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Low to medium. Traditional financial institutions generally do not offer the top-tier AI/data science prestige associated with elite tech firms or advanced quantitative hedge funds."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "The bank generates revenue primarily through net interest income from commercial and residential lending, complemented by non-interest income from trade finance and treasury management fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Traditional, conservative, and compliance-focused banking culture with an emphasis on customer relations and cross-cultural commerce."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Businesses and individuals engaged in cross-border trade, commercial real estate investors, and corporate clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: $85,000 to $110,000 base salary for new graduate technical roles, which is average for the commercial banking industry and lower than elite tech firms."
   },
   "evidence_sha": "b6bdd214c08a634b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784881145,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Banking and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Probe whether their tech team operates with agility or is constrained by banking bureaucracy. Ask about WLB and expected working hours to ensure they align with your need for sane hours and personal time. Inquire about the specific AI/Data technologies used to see if the role accelerates your technical learning as desired."
+  },
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784583493,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Headquartered in Pasadena, California, with branch and office locations across the U.S. and Greater China."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Serving as a financial and commercial bridge between the U.S. and Greater China."
+  },
   "name": "East West Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Slower, compliance-driven, and stability-focused pace typical of the commercial banking sector, which contrasts with a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Commercial and residential real estate loans, commercial business loans, trade finance, treasury management, and personal banking services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Around 15 to 20 days of paid time off annually, which is standard for mid to large-sized commercial banks."
   },
+  "refresh_after": 1790065145,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b56db4488d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: No specific company-wide tech or holiday shutdowns are indicated for this banking entity."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Large, established public financial institution holding company."
   },
   "sources": [
    {
@@ -97664,14 +97750,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=092d18f36550bd87f766c3ee08e6361cc6b48d3516c55d093414a4298e2c9e30JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9DYXJkaW5hbF9kaXJlY3Rpb24&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Given its heavy presence in and bridging to Greater China, the bank likely has a higher degree of familiarity with international hiring and visa sponsorship compared to domestic-only banks. Estimated: H-1B sponsorship may be available for specific technical or specialized financial roles, though it is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "East West Bank is a major commercial bank holding company focused on bridging the U.S. and Greater China markets. It makes money by providing commercial banking services, including deposit gathering, commercial and residential lending, and trade finance to its cross-border client base."
+  },
+  "synthesized_evidence_sha": "b6bdd214c08a634b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Tech roles cover enterprise systems, digital banking platforms, cybersecurity, and analytics to support commercial banking operations. Engineers focus on maintaining secure, compliant, and scalable financial infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583493,
   "web_search_url": "https://duckduckgo.com/?q=East+West+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "As a traditional commercial bank, East West Bank may struggle to provide the fast-paced tech culture you prioritize. Banks are heavily compliance-driven and typically prioritize stability over rapid innovation, which could bottleneck your desire for a fast tech culture and advanced AI/data science applications."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b56db4488d"
+   ],
+   "value": "Estimated: Sane hours likely compared to high-burnout tech environments, though without guaranteed shutdown periods explicitly stated."
   }
  },
  "eastern research group": {
@@ -125817,7 +125934,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -125835,7 +125952,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784880706,
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784807865,
   "name": "GenLogs",
   "pace_of_work": {
@@ -125848,7 +125965,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784880946,
+  "retry_after": 1784881463,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134869,7 +134986,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134887,7 +135004,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784880087,
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784674278,
   "name": "Harbor",
   "pace_of_work": {
@@ -134900,7 +135017,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784880207,
+  "retry_after": 1784881385,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153998,7 +154115,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784880873,
+  "last_evidence_at": 1784762207,
   "name": "Instabase",
   "pace_of_work": {
    "confidence": "estimated",
@@ -162741,7 +162858,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162759,7 +162876,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784880087,
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784583339,
   "name": "Johnson & Johnson MedTech",
   "pace_of_work": {
@@ -162772,7 +162889,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784880207,
+  "retry_after": 1784881385,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204629,42 +204746,99 @@
  "nestl": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Estimated: Low to Medium. Recognized for consumer brand prestige rather than elite tech industry standing or cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Mass manufacturing and global distribution of consumer packaged goods (CPG), capturing margins through brand equity, supply chain scale, and retail partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5f3b954859"
+   ],
+   "value": "Estimated: Corporate, traditional, and globally focused, emphasizing sustainability and long-term consumer brand health over tech-first disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Global consumers, households, and pet owners purchasing everyday food, beverage, and consumer goods."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000 USD base. Unlikely to match FAANG-level new-grad compensation or aggressive equity packages."
   },
   "evidence_sha": "03945b3f95175362",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881145,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784880087,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Food, Beverage, and Consumer Packaged Goods (CPG)."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784676553,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b889960e67",
+    "5f3b954859"
+   ],
+   "value": "Headquartered in Vevey, Switzerland, with a massive global footprint spanning operations, research, and development centers worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f3b954859"
+   ],
+   "value": "To enhance the quality of life and contribute to a healthier future by offering tastier and healthier food and beverage choices."
+  },
   "name": "Nestl\u00e9",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Estimated: Slow to moderate. Typical of a legacy multinational CPG, prioritizing process alignment and risk mitigation over rapid tech-cycle iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "A wide range of food, beverage, and pet care products, including iconic brands like Nespresso, KitKat, Purina, and Gerber."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, reflecting standard corporate European-rooted benefits."
   },
-  "retry_after": 1784880207,
+  "refresh_after": 1790065145,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204674,7 +204848,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown if guaranteed corporate-wide tech shutdowns exist, though standard public holidays are observed globally."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Large-cap, established public multinational corporation employing hundreds of thousands of people globally."
   },
   "sources": [
    {
@@ -204708,14 +204889,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e700ccc7bccdcbc2b5ab436d39ac30f5913c37e92282384adcacb7435bf0910JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cubmVzdGxlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Estimated: Managing immigration for a massive global corporate footprint, though actual US tech sponsorship remains unverified."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Nestl\u00e9 is the world's largest food and beverage company, managing a vast portfolio of well-known brands across coffee, water, baby food, and pet care. It makes money by manufacturing and selling these consumer goods globally through retail and e-commerce channels."
+  },
+  "synthesized_evidence_sha": "03945b3f95175362",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d87f84bc8"
+   ],
+   "value": "Estimated: AI and data science efforts likely focus on supply chain optimization, demand forecasting, marketing analytics, and personalized consumer experiences, heavily constrained by legacy enterprise IT systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676553,
   "web_search_url": "https://duckduckgo.com/?q=Nestl%C3%A9+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5f3b954859"
+   ],
+   "value": "Estimated: Good. Traditionally offers stable, corporate-friendly hours, though navigating heavy internal processes can occasionally stretch timelines."
   }
  },
  "nestl purina north america": {
@@ -225970,11 +226180,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225986,6 +226198,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784677403,
   "name": "Penn State University",
   "pace_of_work": {
@@ -225998,6 +226211,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784881265,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226041,7 +226255,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4b2dbd89b7b22478649ad8856fcd4a952e654b8d8fb934f3e415ede2e6d2449bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1007e481-0202-6d0a-33e8-f31c033a6cfd&u=a1aHR0cHM6Ly93d3cudXBlbm4uZWR1Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677403,
   "web_search_url": "https://duckduckgo.com/?q=Penn+State+University+company+careers+benefits",
@@ -321334,38 +321548,111 @@
  "verition fund management llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a179345bec"
+   ],
+   "value": "Estimated: Elite. Multi-strategy hedge funds like Verition are highly selective and command top-tier prestige in the quantitative and data science job market."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a179345bec",
+    "d2da74c295"
+   ],
+   "value": "Operates as an alternative investment management firm, charging management fees on assets under management (AUM) and performance fees on profits generated by its trading strategies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a179345bec"
+   ],
+   "value": "Estimated: Intense, meritocratic, and analytically rigorous. Focuses heavily on intellectual capital, research-driven solutions, and measurable performance."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5902809d4c",
+    "a179345bec"
+   ],
+   "value": "Institutional investors, pensions, endowments, and high-net-worth individuals seeking alternative investment returns. Specific client profiles are not detailed in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "a179345bec"
+   ],
+   "value": "Estimated: $200k - $350k+ total compensation. Top-tier hedge funds frequently offer highly competitive new-grad packages heavily weighted toward performance bonuses."
   },
   "evidence_sha": "0f58b6a924abce89",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881145,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a179345bec",
+    "d2da74c295"
+   ],
+   "value": "Financial Services / Investment Management / Hedge Funds."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5902809d4c",
+    "d2da74c295"
+   ],
+   "value": "Assess the speed of their technical interviews and on-call expectations to ensure the culture accelerates learning without leading to high burnout. Probe the team's priorities around innovation versus infrastructure maintenance to confirm it aligns with a sustainable, truly mission-driven engineering culture."
+  },
+  "last_attempt_at": 1784881145,
   "last_evidence_at": 1784674520,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a179345bec",
+    "d2da74c295"
+   ],
+   "value": "Headquartered in Greenwich, Connecticut, with operations spanning various financial hubs. Exact office locations are not explicitly listed in the provided sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5902809d4c",
+    "d2da74c295"
+   ],
+   "value": "To generate consistent, risk-adjusted absolute returns for investors through a multi-strategy approach. Exact mission statement not explicitly detailed in provided sources."
+  },
   "name": "Verition Fund Management LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5902809d4c"
+   ],
+   "value": "Estimated: Very fast-paced. The trading industry demands rapid iteration and deployment to capture market opportunities, which can conflict with slow, bureaucratic processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5902809d4c",
+    "a179345bec"
+   ],
+   "value": "Multi-strategy hedge fund investment vehicles and quantitative trading strategies. Specific product lines are not publicly detailed in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "d2da74c295"
+   ],
+   "value": "Estimated: 15-25 days. Standard for professional roles in the financial industry, though actual blackout periods during market hours may apply."
   },
+  "refresh_after": 1790065145,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -321374,8 +321661,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5902809d4c"
+   ],
+   "value": "Estimated: No guaranteed explicit tech shutdowns like big tech 'hack months', but market holidays provide structural downtime. Specific internal shutdown policies are unknown."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5902809d4c",
+    "a179345bec"
+   ],
+   "value": "A mature, established hedge fund. Exact AUM and employee count are not detailed in the provided sources."
   },
   "sources": [
    {
@@ -321409,14 +321706,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=c5d9dd5db3227056caf4d3249145baa710d47e53a29dec0a110d0df763578606JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cudmVyaXRpb24uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5902809d4c"
+   ],
+   "value": "Hedge funds of this stage frequently sponsor top-tier quantitative and engineering talent, though exact visa sponsorship policies are not detailed in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5902809d4c",
+    "a179345bec",
+    "d2da74c295"
+   ],
+   "value": "Verition Fund Management LLC is a multi-strategy hedge fund that deploys capital across quantitative and discretionary investment strategies. It makes money by generating alpha (investment returns) from its various trading strategies and charging management and performance fees to its institutional and high-net-worth investors."
+  },
+  "synthesized_evidence_sha": "0f58b6a924abce89",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5902809d4c",
+    "d2da74c295"
+   ],
+   "value": "Involves building out quantitative research platforms, low-latency trading systems, and data pipelines for ingesting structured and unstructured datasets. Specific technical stack details are not available in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674520,
   "web_search_url": "https://duckduckgo.com/?q=Verition+Fund+Management+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5902809d4c",
+    "a179345bec"
+   ],
+   "value": "Verition operates in the elite financial tier, offering the potential for top-of-market compensation and significant technical impact without the slow bureaucracy of big tech. Balancing the fast-paced drive for alpha with the candidate's need for guaranteed sane hours and a healthy work-life balance will be critical."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5902809d4c"
+   ],
+   "value": "Estimated: Moderate. Finance inherently has high-pressure periods, though quantitative teams often avoid the traditional investment banking hours. Actual work-life balance is team-dependent."
   }
  },
  "verizon": {
