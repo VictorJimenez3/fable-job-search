@@ -26218,11 +26218,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26234,6 +26236,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677672,
   "name": "Aptiv",
   "pace_of_work": {
@@ -26246,6 +26249,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887435,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26299,7 +26303,7 @@
     "url": "https://aptiv.wd5.myworkdayjobs.com/en-US/aptiv_careers/job/Graduate--IT-Leadership-Development-Programme-2025_J000667184"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677672,
   "web_search_url": "https://duckduckgo.com/?q=Aptiv+company+careers+benefits",
@@ -40335,49 +40339,129 @@
  },
  "baseten": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "Emerging high-tier AI infrastructure startup with cutting-edge GPU fabric systems work, though less established outside hard-core AI infra circles"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "Platform-as-a-service for ML deployment, offering infrastructure access to ML startups and influencing product roadmap for customers and prospects"
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4fe59af03",
+    "8ac2387707"
+   ],
+   "value": "Diverse, inclusive, mission-driven startup culture focused on learning. Exposure to variety of ML startups offers networking and growth opportunities."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "ML startups and companies requiring ML model deployment and scaling"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "Estimated: $150K-$200K base salary range (premium AI infrastructure startup role in a fast-growing, VC-backed company with strong benefits and full medical coverage)."
   },
   "evidence_sha": "c7f4da9c23994135",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "AI/ML Infrastructure, Distributed Systems, Cloud Computing"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "Expect rigorous technical interviews testing distributed systems knowledge, networking internals (InfiniBand, RoCE, RDMA), and low-level GPU fabric understanding. Be prepared to discuss root-cause analysis approaches for complex, intermittent cross-layer failures and how you balance thorough technical investigation with sustainable work practices."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784842446,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c4fe59af03"
+   ],
+   "value": "Not found in research"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "Building first-class infrastructure for ML model deployment, solving hard distributed systems problems in GPU fabrics"
+  },
   "name": "Baseten",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c4fe59af03",
+    "3822f48f41"
+   ],
+   "value": "Estimated: Fast-paced startup environment balancing rapid scaling (hiring across technical and GTM functions simultaneously) with solving complex, deep technical problems that require concentrated effort rather than rushing."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "ML deployment platform, GPU fabric observability and root-cause analysis system, infrastructure for large-scale NVIDIA systems"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "Estimated: 20-25 days flexible PTO (standard for startups with 'flexible PTO' policy) plus 4-5 days guaranteed Winter Break (Christmas Eve to New Year's Day)."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c4fe59af03"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "Company-wide Winter Break: offices closed from Christmas Eve to New Year's Day."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4fe59af03",
+    "3822f48f41"
+   ],
+   "value": "Growing startup actively scaling go-to-market recruiting function and hiring across technical roles"
   },
   "sources": [
    {
@@ -40441,14 +40525,46 @@
     "url": "https://jobs.ashbyhq.com/baseten/49aaa88c-75b5-4d4e-b726-28bfecd4300e"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c4fe59af03"
+   ],
+   "value": "Not found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3822f48f41",
+    "8ac2387707"
+   ],
+   "value": "Baseten provides infrastructure and deployment solutions for machine learning models, specializing in high-density NVIDIA systems and distributed GPU fabrics. They make money by offering a platform that helps companies deploy and scale ML models efficiently, charging for infrastructure access and enterprise services."
+  },
+  "synthesized_evidence_sha": "c7f4da9c23994135",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "Hard distributed systems work including RoCE congestion, InfiniBand stalls, ECN/DCQCN tuning, GPU driver issues, and building observability systems for GPU fabrics"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678375,
   "web_search_url": "https://duckduckgo.com/?q=Baseten+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3822f48f41"
+   ],
+   "value": "For someone seeking elite, high-paying AI infrastructure role with fast technical learning, Baseten offers hard distributed systems challenges at the cutting edge of GPU/ML deployment without the slow bureaucracy of larger companies. Foundational stage allows outsized career growth potential and direct technical impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8ac2387707"
+   ],
+   "value": "Estimated: Appears balanced for the industry—a flexible PTO policy with guaranteed Winter Break shutdown suggests intent to avoid burnout, though the hard technical problems and startup scale phase may require spikes of high focus."
   }
  },
  "basis set": {
@@ -78976,7 +79092,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78994,7 +79110,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784887105,
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784678333,
   "name": "Columbia Sportswear Company",
   "pace_of_work": {
@@ -79007,7 +79123,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784887225,
+  "retry_after": 1784887555,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83231,37 +83347,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Respected applied AI in regulated medtech; not a primary AI research lab but growing investment in ML for manufacturing, diagnostics, and personalized vision/fertility products."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Generates revenue by selling manufactured medical devices directly to practices, clinics, hospitals, and distributors. Recurring revenue from contact lens replacement cycles and fertility treatment consumables."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, quality-focused, collaborative. Engineering culture values rigor and documentation due to regulatory demands. Increasingly data-driven but not 'move fast and break things.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary customers are eye care practitioners (optometrists, ophthalmologists), optical retailers, fertility clinics, hospitals, and obstetrics/gynecology practices worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + equity/bonus (total ~$130k–$160k) for AI/ML engineering roles in high-cost areas; competitive with medtech peers, below top-tier pure software."
   },
   "evidence_sha": "c7e756808438215e",
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Medical Devices / Healthcare Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for concrete examples of model deployment in regulated medical device contexts (FDA/ISO), cross-functional collaboration with clinical/regulatory teams, and how the org balances rapid iteration with compliance. Ask about typical sprint cycles, on-call expectations for production ML systems, and whether new grads get dedicated mentorship and protected learning time."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677672,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Ramon, CA. Major R&D/manufacturing in Pleasanton, CA; Scottsville, NY; Costa Rica; UK; Hungary; Israel; and other global sites."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To improve lives by providing innovative medical devices that enhance vision and support families through fertility and women's health solutions."
+  },
   "name": "Cooper Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Regulated environment imposes validation/gating, but digital transformation initiatives create pockets of faster experimentation. Generally slower than consumer tech, faster than traditional pharma."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core products include soft contact lenses (e.g., Biofinity, MyDay, clariti), specialty lenses for astigmatism/presbyopia, and CooperSurgical devices for IVF, genetic testing, and women's health procedures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays; typical for large US medtech. Exact policy not public."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83271,7 +83429,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed annual company-wide shutdowns reported; some sites may observe winter holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large-cap public company (NYSE: COO) with ~14,000+ employees globally, mature stage with steady growth in niche medical device markets."
   },
   "sources": [
    {
@@ -83305,14 +83468,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=fabbc363a3afb5f92d07c612d6b51b78c58e847664c2d554db895396985a366cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cuY29vcGVydGlyZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large global medical device firm, likely sponsors H-1B visas for specialized engineering, data science, and research roles; green card sponsorship typical for retained talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Cooper Companies is a global medical device company operating through two main business units: CooperVision (contact lenses) and CooperSurgical (fertility, genomics, and women's health). It develops, manufactures, and markets a broad portfolio of products for vision care and reproductive health."
+  },
+  "synthesized_evidence_sha": "c7e756808438215e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: R&D focuses on advanced materials science for lenses, optics design, microfluidics/genomics for fertility, software for surgical navigation and clinic management, and manufacturing automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677672,
   "web_search_url": "https://duckduckgo.com/?q=Cooper+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cooper Companies offers a mission-driven medical device environment where AI/data science can directly impact vision care and fertility outcomes. Its scale provides resources for elite technical work and competitive new-grad compensation, while the specialized healthcare focus may foster steadier pacing than ad-driven tech, aligning with a desire for meaningful innovation without toxic burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Medical device firms often emphasize sustainable hours; limited public data but industry reputation suggests reasonable balance with occasional crunch around regulatory submissions."
   }
  },
  "coopercompanies": {
@@ -106291,48 +106475,125 @@
  "ebay": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "602b8204e0"
+   ],
+   "value": "Top-tier in large-scale systems, but viewed as more traditional than FAANG for pure AI."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "Charges users fees for listing items and takes a percentage of the final sale value when transactions are completed."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Collaborative, mission-driven, and inclusive, focusing on community impact."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "Millions of individual buyers and sellers, as well as businesses, worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "602b8204e0"
+   ],
+   "value": "Estimated: $150,000-$180,000 total compensation."
   },
   "evidence_sha": "b355baf7d1a0b60a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "E-commerce & Internet Marketplace"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "Demonstrate how your technical skills can solve scalable, data-intensive marketplace challenges, showing a desire for fast learning. Be sure to ask about team rotation, growth paths, and shutdown policies to gauge culture."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784678376,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "San Jose, CA; Austin, TX; New York, NY; remote."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "To connect people and build communities to create economic opportunity for all."
+  },
   "name": "eBay",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Steady and structured, balancing tech innovation with enterprise processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Online marketplace platform featuring both auction-style and fixed-price listings, alongside mobile applications and seller tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "Estimated: 20-25 days per year."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "837fe060fe"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Estimated: Possibly a few company-wide shutdown days, but not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "602b8204e0"
+   ],
+   "value": "Large, established public company."
   },
   "sources": [
    {
@@ -106366,14 +106627,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=1e160b5871e47a6e7e90d9ec6d3fcc80deb600b5acb5468fe9bc9e256cdc258eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly93d3cuZWJheS5jb20vP21zb2NraWQ9M2RlOWYxYWE0MzYzNjYzMjNkMGFlNjM3NDI4YjY3YjI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Frequently sponsors H-1B visas for engineering and data science roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "eBay is a global e-commerce platform that operates an online auction website and a marketplace for fixed-price shopping, where individuals and businesses buy and sell a vast variety of goods. It makes money primarily by taking fees and commissions from successful transactions on its platform."
+  },
+  "synthesized_evidence_sha": "b355baf7d1a0b60a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "Massive-scale distributed systems, e-commerce search algorithms, real-time data streaming, and applied ML."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678376,
   "web_search_url": "https://duckduckgo.com/?q=eBay+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6ede625371"
+   ],
+   "value": "eBay's established tech structure aims to balance innovative applied AI with genuine respect for work-life balance. The environment accelerates technical learning through high-scale marketplace problems without the toxic burnout of newer startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "837fe060fe"
+   ],
+   "value": "Strong work-life balance with reasonable hours and supportive atmosphere."
   }
  },
  "ebsco": {
@@ -135963,41 +136255,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (High-impact specialized AI applications in a niche industry, rather than broad elite prestige)."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Likely operates on a B2B model providing tech-driven logistics visibility, fraud detection, and data analytics services to freight and transportation industry stakeholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Tech-driven and mission-oriented, focused on building robust infrastructure for America's logistics backbone."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Stakeholders within America's logistics and freight transportation industry."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base, aligning with competitive new-grad tech compensation for high-value data science roles."
   },
   "evidence_sha": "bc142e415aff6702",
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Transportation Technology / Logistics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe into the team's cadence to ensure the culture is fast-paced and innovative without being toxic or burnout-prone, and ask about typical hours, on-call expectations, and learning opportunities."
   },
-  "last_attempt_at": 1784880983,
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784807865,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Specific physical office locations are not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "To strengthen America's logistics backbone, combat freight fraud and cargo theft, and provide near-instantaneous visibility into commercial motor vehicle activity across major freight corridors."
+  },
   "name": "GenLogs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, typical of an early-stage tech startup building new infrastructure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Models, analytics, and measurement frameworks that enable vehicle detection, entity resolution, behavioral insights, fraud and theft indicators, compliance signals, and network-wide operational performance metrics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days, standard for modern tech startups, though exact policy is not public."
   },
-  "retry_after": 1784881463,
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136007,7 +136349,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific shutdowns found in research; typical startups may offer flexible holidays rather than guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "bfda074b6a"
+   ],
+   "value": "Early-stage or high-growth startup, evidenced by the sourcing of this role through a New-Grad-Positions repository and use of modern recruiting infrastructure."
   },
   "sources": [
    {
@@ -136061,14 +136411,42 @@
     "url": "https://ats.rippling.com/genlogs-corporation/jobs/127f98d1-b702-4395-a25c-0f7ebc98881b"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "340be16e12"
+   ],
+   "value": "No specific information regarding visa sponsorship found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "GenLogs is a transportation-technology company building the next generation of truck intelligence and logistics infrastructure. They generate revenue by providing analytics, models, and measurement frameworks that enable vehicle detection, fraud detection, and network-wide operational performance metrics for freight corridors."
+  },
+  "synthesized_evidence_sha": "bc142e415aff6702",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "340be16e12"
+   ],
+   "value": "Building models, analytics, and measurement frameworks focused on vehicle detection, entity resolution, behavioral insights, and fraud indicators."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784807865,
   "web_search_url": "https://duckduckgo.com/?q=GenLogs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns with your desire for mission-driven work (strengthening logistics and fighting fraud) and high-impact data science at a fast-paced tech company, though WLB and shutdown policies require validation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, typical of modern tech startups, but requires validation to ensure it meets your standard of not sacrificing personal time."
   }
  },
  "gentex corporation": {
@@ -211894,38 +212272,104 @@
  "mitek": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Low; as a construction technology firm, MiTek is not widely recognized in the tech industry for top-tier, cutting-edge AI or Data Science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9fd4607fb3"
+   ],
+   "value": "B2B sales of specialized software and engineered physical products, supplemented by professional engineering and consulting services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9fd4607fb3"
+   ],
+   "value": "Estimated: Traditional, mission-focused on safety and reliability, prioritizing structural integrity over rapid software disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9fd4607fb3"
+   ],
+   "value": "Builders, building material suppliers, design professionals, and contractors involved in residential and commercial construction."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b22426c775"
+   ],
+   "value": "Estimated: $75,000 to $95,000 base salary, reflecting standard tech rates for the construction and engineering software industry rather than elite tech-sector compensation."
   },
   "evidence_sha": "0b64adc4a863e654",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b22426c775"
+   ],
+   "value": "Construction Technology and Building Materials."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Probe the specific tech stack and AI/DS applications within their software division to ensure it aligns with top-tier technical learning goals. Ask detailed questions about team structure, release cycles, and internal processes to determine if bureaucracy will stifle the fast-paced innovation you desire."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677672,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9fd4607fb3"
+   ],
+   "value": "Global operations with multiple facilities and offices, headquartered in the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "To revolutionize the building industry by providing innovative technologies, products, and services that make building safer, faster, and more efficient."
+  },
   "name": "MiTek",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Estimated: Steady and methodical, typical of a mature, traditional enterprise operating in the physical construction and manufacturing supply chain."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b22426c775"
+   ],
+   "value": "Software for building design (e.g., structural framing), engineered structural connectors, performance materials, and off-site construction solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Estimated: 15 to 25 days of paid time off annually, varying by tenure and role."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -211934,8 +212378,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Large, established global enterprise operating as a subsidiary of Berkshire Hathaway."
   },
   "sources": [
    {
@@ -211969,14 +212422,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=eaf1cef02f26554514d52df60ba0cb10628fd4fbbd1796ffad3d8ba7b73ddb20JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cubWl0ZWstdXMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "As a global Berkshire Hathaway subsidiary, MiTek likely has established immigration infrastructure, though specific visa sponsorship details for new grads are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9fd4607fb3"
+   ],
+   "value": "MiTek is a technology and engineering company that provides software, engineered products, and services for the global building and construction industry. It makes money by selling software solutions, structural connectors, and engineering services to professionals in the residential and commercial building supply chain."
+  },
+  "synthesized_evidence_sha": "0b64adc4a863e654",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b22426c775"
+   ],
+   "value": "Development of enterprise-scale SaaS applications, 3D modeling software, and structural engineering design tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677672,
   "web_search_url": "https://duckduckgo.com/?q=MiTek+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "While MiTek may utilize 3D modeling and design algorithms, its core identity is in construction tech and structural engineering, which lacks the elite prestige and cutting-edge AI/DS focus you are prioritizing. Being a large, legacy subsidiary likely means a slower bureaucratic pace rather than the fast, innovative tech culture you are looking for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9bd34b14a5"
+   ],
+   "value": "Estimated: Good, standard corporate work-life balance consistent with established legacy engineering and manufacturing companies."
   }
  },
  "mitsubishi electric iconics digital solutions": {
@@ -213443,11 +213927,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213459,6 +213945,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784678375,
   "name": "MongoDB",
   "pace_of_work": {
@@ -213471,6 +213958,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887435,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213524,7 +214012,7 @@
     "url": "https://www.mongodb.com/careers/job/?gh_jid=7311204"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678375,
   "web_search_url": "https://duckduckgo.com/?q=MongoDB+company+careers+benefits",
@@ -252656,37 +253144,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (if directly part of Amazon's core AI/ML teams) to Tier 2 (if supporting educational/video content algorithms), reflecting Amazon's overall prestige but dependent on specific team assignment."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Subscription-driven and retail-based, leveraging Amazon Prime memberships and storefront traffic to distribute video and educational content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate and data-driven, prioritizing customer obsession and operational excellence over startup-style flexibility."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Amazon Prime subscribers and general retail consumers using the Amazon storefront."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Approximately $150,000 to $200,000 total compensation (base + equity) per year, reflecting Amazon's high new-grad pay scales."
   },
   "evidence_sha": "5874a0fa59828c22",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "E-commerce, digital media, and educational technology, operating within Amazon's broader retail and streaming services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Ask about team-specific AI and data science projects to determine if the role offers the elite technical learning and career growth you seek. Question the interviewers about day-to-day pace, expected working hours, and whether the team enforces shutdowns or sane-hours policies to ensure the environment avoids burnout and respects personal time."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677672,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Not explicitly detailed in sources, but likely tied to Amazon's global headquarters and office network."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Not explicitly stated in available sources, but likely aligned with delivering Amazon Prime entertainment and educational content to subscribers."
+  },
   "name": "PRIME Education",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and delivery-focused, consistent with Amazon's corporate culture, but may carry bureaucratic overhead."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Digital video collections, educational content included with Prime, and Amazon Prime storefront offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, typical for large tech corporations."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252696,7 +253254,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Operates under Amazon's corporate umbrella, suggesting a large-scale, mature stage entity rather than a startup."
   },
   "sources": [
    {
@@ -252730,14 +253297,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=181797eda99fe23183a4766901ff74bd8812997e11b21450a3c0127558da01f6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cucHJpbWV2aWRlby5jb20vY29sbGVjdGlvbi9JbmNsdWRlZHdpdGhQcmltZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Sponsorship details not found in available sources; may follow Amazon's corporate policies for employment sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "PRIME Education appears to be an e-commerce or digital media entity closely linked to Amazon Prime, potentially operating as a storefront or Prime Video content distributor. It likely makes money by driving subscriptions to Prime services or selling educational and entertainment products through the Amazon ecosystem. The retrieved public pages redirect to Amazon's main storefront and Prime Video collections, indicating a tight integration with Amazon's retail and streaming platforms."
+  },
+  "synthesized_evidence_sha": "5874a0fa59828c22",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "Technical work likely involves managing digital storefronts, video streaming infrastructure, and e-commerce platforms within Amazon's ecosystem."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677672,
   "web_search_url": "https://duckduckgo.com/?q=PRIME+Education+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "959bf419fa",
+    "70fb2584bc",
+    "493cd6a240"
+   ],
+   "value": "The company's deep integration with Amazon suggests access to elite-scale technical infrastructure and high compensation potential, which aligns with your priority for a top-tier AI or data science role with high new-grad pay. However, the corporate nature of Amazon may conflict with your desire for a fast, innovative tech culture free of slow bureaucracy, and Amazon's reputation for demanding work hours may not fully meet your need for guaranteed work-life balance and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, with a risk of heavy hours reflecting typical high-tech corporate demands, which may challenge your goal of guaranteed shutdowns."
   }
  },
  "primefocus health": {
@@ -265650,37 +266254,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no AI/data science presence information available in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no business model information available in provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture information available in provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no customer information available in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data available in provided sources."
   },
   "evidence_sha": "2fb68fb2211e411e",
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Unknown — no industry information available in provided sources."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot provide interview focus guidance due to complete absence of verifiable company information in the provided sources."
+  },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677673,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no location information available in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no mission statement available in provided sources."
+  },
   "name": "Red Oak Sourcing",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no work pace information available in provided sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no product information available in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy information available in provided sources."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265690,7 +266336,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no shutdown policy information available in provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no size or stage information available in provided sources."
   },
   "sources": [
    {
@@ -265724,14 +266375,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=89c991baf22fd2505562e330bc9d6c61545f846eeef24bd203169ca2ea7f33c2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL3JlZGRpdC93aWtpL2luZGV4Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no visa sponsorship information available in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8be99fc1a3",
+    "e96a49c2a3",
+    "3abc7a877c"
+   ],
+   "value": "No verifiable information about a company named 'Red Oak Sourcing' was found in the provided sources. The supplied links redirect to unrelated pages (a 2010 film, a color entry, and a Reddit wiki). Cannot confirm company existence, business, or operations from these sources."
+  },
+  "synthesized_evidence_sha": "2fb68fb2211e411e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no technical work information available in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677673,
   "web_search_url": "https://duckduckgo.com/?q=Red+Oak+Sourcing+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, fast innovative culture, mission-driven) due to complete absence of verifiable company information in the provided sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no work-life balance information available in provided sources."
   }
  },
  "red ventures": {
@@ -292123,41 +292799,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown due to source failures; assess via LinkedIn tenure and tech stack during interview."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown for this specific company; typical AI startup new-grad TC ranges $120k-$200k+ but verify directly."
   },
   "evidence_sha": "33e42b90991adad9",
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Probe for concrete examples of innovation pace, sane hours, shutdown policies, technical mentorship, and actual new-grad compensation to verify alignment with candidate's elite, non-toxic AI role criteria."
   },
-  "last_attempt_at": 1784887105,
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784677671,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
   "name": "SmarTrak.ai",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; candidate should verify if pace is fast/innovative vs slow bureaucracy during interviews."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; ask HR for exact PTO policy."
   },
-  "retry_after": 1784887225,
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292167,7 +292909,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; candidate should ask if guaranteed company-wide shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
   },
   "sources": [
    {
@@ -292201,14 +292952,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b9494d4a3015fc90b46efda8be45f3ff9d9834a85a2475a01c0705e918f49221JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cDovL3d3dy5oZWFydGxhbmQub3IuanAvc2hpZ2lzYW4v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Information unavailable due to source retrieval failures."
+  },
+  "synthesized_evidence_sha": "33e42b90991adad9",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d255a62e4b",
+    "cd70cddf61",
+    "8735e9a060"
+   ],
+   "value": "Unknown (sources returned no content)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677671,
   "web_search_url": "https://duckduckgo.com/?q=SmarTrak.ai+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate prioritizes elite AI/data science prestige, high new-grad pay, fast tech culture, mission-driven work, respected work-life balance with guaranteed shutdowns, and rapid career growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; candidate should confirm sane hours and lack of burnout culture directly with team."
   }
  },
  "smith nephew": {
@@ -298760,37 +299544,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High prestige; highly respected machine learning and data science applications particularly in recommendation systems and adtech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "062b7506ff"
+   ],
+   "value": "Freemium streaming model driven by premium user subscriptions and ad sales channels targeting global users [062b7506ff]."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "062b7506ff"
+   ],
+   "value": "Innovative and impact-driven, focused on shaping the way the world experiences music, podcasts, and audio advertising [062b7506ff]."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "062b7506ff"
+   ],
+   "value": "Millions of users across the globe, as well as advertising clients and partners [062b7506ff]."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad total compensation around $130k-$160k USD base, scaling higher depending on equity and location."
   },
   "evidence_sha": "114571e18e658d0d",
+  "generated_at": 1784887315,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9613ad8ac0",
+    "062b7506ff"
+   ],
+   "value": "Audio and video streaming technology / digital media"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Highlight your passion for building innovative ad experiences and scalable backend systems. Ask about team pace, data pipeline architecture scale, and how the engineering culture balances fast iteration with sustainable work hours, ensuring they respect your need for sane hours and a non-toxic environment."
   },
+  "last_attempt_at": 1784887315,
   "last_evidence_at": 1784678376,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Global presence, with a primary corporate footprint in Europe and North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9613ad8ac0",
+    "062b7506ff"
+   ],
+   "value": "To build a next generation advertising platform that aligns with its unique value proposition for audio and video, impacting the way the world experiences music and podcasts [9613ad8ac0, 062b7506ff]."
+  },
   "name": "Spotify",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, balancing high-impact feature releases with a culture that avoids heavy bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9613ad8ac0",
+    "062b7506ff"
+   ],
+   "value": "Audio and video streaming services, alongside innovative ad products and platforms for clients and partners [9613ad8ac0, 062b7506ff]."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of annual paid time off, typical for senior tech roles in its primary markets."
   },
+  "refresh_after": 1790071315,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -298800,7 +299641,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers holiday shutdowns between Christmas and New Year's, a common practice for large tech companies to ensure guaranteed rest."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established, large-scale global technology company."
   },
   "sources": [
    {
@@ -298854,14 +299700,40 @@
     "url": "https://jobs.lever.co/spotify/a0fa7da3-4c3c-4fa2-97bd-7d6eb01eb9e5"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large tech employers like Spotify typically offer visa sponsorship for full-time engineering roles, though it varies by specific team and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9613ad8ac0",
+    "062b7506ff"
+   ],
+   "value": "Spotify is a leading audio and video streaming platform that connects millions of users globally. It generates revenue through a combination of premium paid subscriptions and a next-generation advertising platform [9613ad8ac0, 062b7506ff]."
+  },
+  "synthesized_evidence_sha": "114571e18e658d0d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9613ad8ac0"
+   ],
+   "value": "Building scalable backend services, data pipelines, and APIs. Collaborating with internal customers to design innovative ad experiences and next-generation platforms [9613ad8ac0]."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678376,
   "web_search_url": "https://duckduckgo.com/?q=Spotify+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns with your priority for a fast, innovative tech culture. Building scalable data pipelines and backend services for a global audience directly accelerates technical learning in a high-impact environment, providing the career growth you seek without compromising on elite industry prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally good work-life balance with a focus on sustainable engineering practices, avoiding toxic burnout cultures."
   }
  },
  "sprezzatura": {
