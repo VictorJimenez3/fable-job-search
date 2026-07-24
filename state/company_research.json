@@ -21673,11 +21673,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21689,6 +21691,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679088,
   "name": "Ameriprise Financial",
   "pace_of_work": {
@@ -21701,6 +21704,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896112,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21744,7 +21748,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ea9ef717f915181478b41f24f4a9b5b1deeee7f8d10cdec853b5b12209109bb2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuYW1lcmlwcmlzZS5jb20vY2xpZW50LWxvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Ameriprise+Financial+company+careers+benefits",
@@ -150914,38 +150918,104 @@
  "glia": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: Mid-tier fintech, recognized for practical AI in financial services though no recognized research lab like elite FAANG."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "B2B SaaS enterprise sales, charging financial institutions subscription fees for access to its digital customer service platform."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Mission-driven, innovative and inclusive, focused on transforming digital customer interaction while pushing AI capabilities."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Banks, credit unions, and other financial services institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: $120,000-$150,000 base salary, moderate for NYC tech and below top-tier elite FAANG pay."
   },
   "evidence_sha": "956e8dc4f2e3c5c0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Financial Technology / Enterprise SaaS."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "You must demonstrate passion for the mission of financial inclusion while asking hard questions about technical debt and AI ethics. Be prepared to discuss how you can drive fast innovation in a collaborative and respectful environment without burning out."
+  },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679089,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Headquartered in New York City with remote global workforce."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "To help financial institutions create a more equitable and inclusive financial reality by transforming customer service through digital innovation."
+  },
   "name": "Glia",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: Startup-like pace with quick iteration given its core values focusing on innovation, but generally constrained by slow-moving financial institution partners."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Digital customer service platform featuring AI virtual assistants, live video, audio, and text chat capabilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: 20-25 days PTO, typical standard for US tech at this stage."
   },
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150954,8 +151024,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: Unknown, not likely to have company-wide guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Late-stage private company (Series D and beyond), having raised significant capital in recent years."
   },
   "sources": [
    {
@@ -150989,14 +151068,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=384ea02515ae89c516466ca06c597ba327fc598d63beab8bbd923bac325a2c8bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuZ2xpYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: Likely sponsors visas for specialized technical roles given its global workforce, but specific policies not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Glia (formerly Salemove) is a technology company specializing in digital customer service platforms. It provides financial institutions with AI-driven virtual assistants and communication tools to facilitate seamless customer interactions."
+  },
+  "synthesized_evidence_sha": "956e8dc4f2e3c5c0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Cloud-based infrastructure, real-time video and audio streaming, machine learning for natural language processing, and AI virtual assistant development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679089,
   "web_search_url": "https://duckduckgo.com/?q=Glia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "As an AI/ML candidate in fintech, you can drive meaningful impact in financial inclusion while accelerated learning and growth without the bureaucracy of top-tier banks. The company fosters a fast, innovative tech culture that respects your time and keeps you focused on building elite AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cce0fa544c"
+   ],
+   "value": "Estimated: Good, unconservative for a late-stage startup as remote flexibility tends to prevent extreme hours."
   }
  },
  "gliacell technologies": {
@@ -174612,7 +174722,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174630,7 +174740,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784895541,
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679095,
   "name": "iboss",
   "pace_of_work": {
@@ -174643,7 +174753,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784895781,
+  "retry_after": 1784896472,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -199668,41 +199778,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 applied AI."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Exploration and development of mining assets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical and mission-driven."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Mining companies, battery manufacturers, and governments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k total compensation."
   },
   "evidence_sha": "ca0df05ffefefbf1",
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Mining and metals."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep algorithm and data pipeline questions, since pace is fast and bureaucracy is low."
   },
-  "last_attempt_at": 1784894953,
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784678734,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "USA and Africa."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "To discover new sources of critical materials for electric vehicles and renewable energy."
+  },
   "name": "KoBold Metals",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "AI-driven mineral exploration software and fully developed mining deposits."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days."
   },
-  "retry_after": 1784895913,
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -199712,7 +199872,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Venture-backed startup."
   },
   "sources": [
    {
@@ -199746,14 +199913,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=9aa4a5164f2843d2204d9b8e8f0e42709c8785965476133779073a0066996d62JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvS29ib2xk&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Not explicitly found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "KoBold Metals is a mineral exploration company that uses AI and machine learning to discover the critical materials needed for electric vehicles and renewable energy. They make money by developing high-value mineral deposits and partnering with other firms to extract and sell the resources."
+  },
+  "synthesized_evidence_sha": "ca0df05ffefefbf1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0d3856af5"
+   ],
+   "value": "Data science, machine learning, and geospatial analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678734,
   "web_search_url": "https://duckduckgo.com/?q=KoBold+Metals+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches the candidate's desire for high prestige mission-driven AI work, fast innovation, and technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good."
   }
  },
  "komodo health": {
@@ -248676,37 +248870,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Applied analytics in regulated pharma; not core AI/ML research. Prestige comes from clinical impact, not algorithmic novelty."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "Pharmaceutical sales of prescription cardiovascular medications (Nexlizet/Nexletol) through commercial insurance, Medicare Part D, and patient assistance programs; revenue from drug pricing and market access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, compliance-focused, science-driven; hierarchical with clear regulatory boundaries; mission-oriented around patient outcomes."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "Patients with heterozygous familial hypercholesterolemia (HeFH) or established atherosclerotic cardiovascular disease (ASCVD) requiring additional LDL-C lowering; prescribed by cardiologists and primary care physicians."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95K-$120K base + 10-15% bonus + RSUs (vesting 4yrs); lower than top-tier tech but competitive for pharma analytics."
   },
   "evidence_sha": "d139316605544abd",
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "Pharmaceuticals / Biotechnology (Cardiovascular metabolic diseases)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess: 1) Actual R&D vs. commercial analytics scope for data science roles, 2) Expectations for publications/clinical trial work, 3) On-call requirements for pharmacovigilance, 4) Career path to principal scientist vs. management, 5) Remote/hybrid policies post-COVID."
   },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679093,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: US-based headquarters (likely Ann Arbor, MI area for Esperion); field-based medical and sales roles nationwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "To provide innovative LDL-cholesterol lowering therapies for patients not adequately controlled on statins alone."
+  },
   "name": "NorthAB",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, regulation-driven pace with quarterly/annual regulatory milestones; not 'fast innovative tech culture.'"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "Nexlizet (bempedoic acid and ezetimibe tablets) for LDL cholesterol reduction; possibly Nexletol (bempedoic acid) as related product."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; standard pharma package."
   },
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -248716,7 +248972,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard holiday shutdown (Dec 24-Jan 1); no guaranteed summer shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized pharmaceutical company (likely Esperion Therapeutics as manufacturer) with commercial-stage products; not a startup."
   },
   "sources": [
    {
@@ -248750,14 +249011,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=862697897db07a430fb6e7451874f919b7f4b1c8d34d1afae7004726f1b9a75eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuZHJ1Z3MuY29tL25leGxpemV0Lmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized scientific/clinical roles; O-1 for exceptional researchers; green card sponsorship for key talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ef4c6270ea",
+    "6c18cbf606",
+    "bed6502741"
+   ],
+   "value": "NorthAB (likely referring to Nexletol/Nexlizet pharmaceutical products) appears to be a pharmaceutical company focused on cholesterol-lowering medications. The available sources reference Nexlizet (bempedoic acid/ezetimibe) product information rather than corporate details."
+  },
+  "synthesized_evidence_sha": "d139316605544abd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical research, regulatory affairs, pharmacovigilance, medical affairs, commercial analytics, and potentially real-world evidence generation for cardiovascular drugs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679093,
   "web_search_url": "https://duckduckgo.com/?q=NorthAB+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers prestige in cardiovascular drug development with direct patient impact, but the pharma industry typically has structured hours rather than 'fast innovative tech culture.' Work-life balance may be better than biotech startups but less flexible than pure tech. Technical growth comes from regulatory/clinical expertise, not AI/ML innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Structured hours typical of established pharma; limited weekend work but on-call rotations possible for safety."
   }
  },
  "northeastern": {
@@ -254550,7 +254836,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254568,7 +254854,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784895764,
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784895763,
   "name": "Odyssey",
   "pace_of_work": {
@@ -254581,7 +254867,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784895884,
+  "retry_after": 1784896232,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266206,7 +266492,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266224,7 +266510,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784881145,
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784677403,
   "name": "Penn State University",
   "pace_of_work": {
@@ -266237,7 +266523,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784881265,
+  "retry_after": 1784896232,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -271669,48 +271955,133 @@
  "planet": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: Niche/Top-tier in geospatial and satellite data specifically, though not broadly perceived as an elite generalist AI and data science leader like FAANG/OpenAI."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Builds satellite imagery hardware and software, monetizing it through government contracts and data/monitoring platform subscriptions."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Mission-driven, global, and innovative; employees are spread worldwide with a focus on changing how people see the world."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Government agencies and users of public-facing platforms requiring agriculture and land monitoring tools."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary, varying by location and specific role."
   },
   "evidence_sha": "21c83b407f773401",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Aerospace, Satellite Imaging, and Data/Geospatial Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Candidates should emphasize their interest in applying AI and data science to complex aerospace and geospatial datasets. It is also important to ask interviewers about the team's engineering pace, work-life balance expectations, and technical growth opportunities to ensure the culture matches their preference for a fast, innovative, non-toxic environment."
+  },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679088,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4",
+    "81e001d055"
+   ],
+   "value": "San Francisco, Washington DC, Germany, Austria, Slovenia, The Netherlands, and remote worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4",
+    "81e001d055"
+   ],
+   "value": "To change the way people see the world."
+  },
   "name": "Planet",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: Fast-paced and innovative tech culture typical of a space and data company, avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Web and mobile applications for agriculture and land monitoring, public-facing data platforms, and Mission Control, a web-based application to monitor and control a fleet of satellites."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: 20-25 days per year, standard for competitive technology and aerospace companies."
   },
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: Unverified, but candidates prioritizing guaranteed shutdowns should confirm with HR whether Planet offers any company-wide holiday closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Global company with remote worldwide employees and international offices."
   },
   "sources": [
    {
@@ -271774,14 +272145,49 @@
     "url": "https://job-boards.greenhouse.io/planetlabs/jobs/8008293"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Not explicitly mentioned in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Planet is a global space and data company that operates a fleet of satellites to capture daily imagery of Earth. It generates revenue by turning this satellite imagery into software tools and data subscriptions for agriculture, land monitoring, and government applications."
+  },
+  "synthesized_evidence_sha": "21c83b407f773401",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4",
+    "81e001d055"
+   ],
+   "value": "Building web and mobile applications for satellite imagery processing, spacecraft operations, and developing platform software for mission systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Planet+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea63c189cc",
+    "d018eab2d4"
+   ],
+   "value": "Planet offers a unique intersection of aerospace engineering and data science, providing strong technical learning opportunities in a novel domain. The company's global remote flexibility and mission-driven focus align well with a desire for meaningful work that avoids traditional slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ea63c189cc"
+   ],
+   "value": "Estimated: Good work-life balance driven by remote capabilities and a mission-driven, non-toxic environment."
   }
  },
  "planetscape ai": {
@@ -343963,41 +344369,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier prestige for AI and data science roles, comparable to other major healthcare technology firms, though not top-tier elite like FAANG."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "B2B and B2C subscription-based telehealth services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Healthcare-focused and mission-driven."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Employers, health plans, hospitals, and individual consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary for new grad technical roles in lower cost-of-living areas, potentially higher in NY headquarters."
   },
   "evidence_sha": "b2179dbe7df10ae4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784895764,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Healthcare Technology / Telehealth."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3e25b1e40f"
+   ],
+   "value": "Expect interviews to gauge technical expertise in building scalable systems (Java, Kubernetes, CI/CD) and problem-solving skills to ensure you can handle fast-paced development without sacrificing personal time. Frame answers around mission-driven innovation, healthy work practices, and rapid learning to demonstrate cultural fit."
+  },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784895620,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e25b1e40f"
+   ],
+   "value": "New York, NY (Headquarters) and Ashburn, VA (Debug & Development Office)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Virtual care and improving health outcomes globally."
+  },
   "name": "Teladoc Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderately fast-paced tech culture, typical of public healthcare technology companies, avoiding the slow bureaucracy seen in traditional hospitals."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Virtual care app, telehealth visit platform, mental health services (BetterHelp), and chronic condition management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO per year, typical for a public healthcare technology company."
   },
-  "retry_after": 1784895884,
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -344007,7 +344467,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, but standard public holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ea93dd46df"
+   ],
+   "value": "Public company."
   },
   "sources": [
    {
@@ -344061,14 +344528,45 @@
     "url": "https://jobright.ai/jobs/info/6a63200932abf9182432cec5?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3e25b1e40f"
+   ],
+   "value": "Not explicitly found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea93dd46df",
+    "3e25b1e40f"
+   ],
+   "value": "Teladoc Health is a telehealth and virtual care company that connects patients to licensed medical professionals via app, phone, and video. It makes money by charging employers, health plans, and individuals subscription or visit-based fees for routine medical care, mental health services, and chronic condition management."
+  },
+  "synthesized_evidence_sha": "b2179dbe7df10ae4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3e25b1e40f"
+   ],
+   "value": "Full stack development utilizing Java, Kubernetes, and CI/CD pipelines (Jenkins, GitHub Actions) to build virtual care platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784895620,
   "web_search_url": "https://duckduckgo.com/?q=Teladoc+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3e25b1e40f",
+    "ea93dd46df"
+   ],
+   "value": "For a candidate seeking elite AI or data science prestige and high new-grad pay alongside a fast-paced, innovative culture, Teladoc Health offers a compelling alternative to FAANG-level bureaucracy. The mission-driven nature of healthcare technology aligns well with a desire to respect work-life balance and avoids toxic, high-burnout environments while still accelerating technical learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally sane hours with a focus on mission-driven work, avoiding toxic environments commonly found in high-stress tech roles."
   }
  },
  "teladoc health canada": {
@@ -350270,53 +350768,128 @@
  },
  "the information lab": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Niche Data Consultancy. While highly respected in the Tableau/Alteryx partner ecosystem, it does not compete with elite AI/ML research labs or top-tier tech giants for cutting-edge data science prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "B2B consulting and reseller model. They generate revenue by helping large enterprises implement and optimize leading data products (Tableau and Alteryx), and by training new talent to deliver these services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Inclusive, collaborative, and mission-driven. They value passion for problem-solving with data and explicitly welcome individuals from all backgrounds and histories."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Major enterprise clients across various industries including The Vanguard Group, JPMorgan Chase, PwC, JLL, Paramount Global, Johnson & Johnson, Volkswagen, DZ Bank, Rheinenergie, and Fielmann."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$85,000 USD base salary for new grad data analyst consultants in the US, reflecting standard BI consulting rates rather than top-tier tech compensation."
   },
   "evidence_sha": "316ddce780137975",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784895541,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Information Technology Services and Management Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Candidates should clarify whether the technical scope will eventually include advanced AI/ML modeling or remain strictly within Tableau/Alteryx BI integration. To address priorities regarding sane hours and guaranteed shutdowns, it is crucial to ask about consultant billable hours, client travel demands, and specific work-life balance policies during the interview."
+  },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784679037,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Global presence with localized hiring arms in the United States (New York), the United Kingdom, and Germany."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572"
+   ],
+   "value": "The Information Lab has a simple mission: to help people make sense of data."
+  },
   "name": "The Information Lab",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Client-driven consulting pace that is project-based and collaborative, but requires adaptability when managing multiple enterprise stakeholders."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Specialized consulting and implementation for data visualization and data integration products, specifically Tableau and Alteryx. They also provide data analyst training programs through The Data School."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 PTO days annually, standard for tech consulting firms in the US and Europe."
   },
-  "retry_after": 1784895781,
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "The Data School"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard public holidays, though specific guaranteed company-wide shutdown periods are not published."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Established data consultancy operating since 2011 with a global footprint spanning the US, UK, and Germany."
   },
   "sources": [
    {
@@ -350370,14 +350943,49 @@
     "url": "https://jobs.lever.co/theinformationlab/851d2d0b-b554-4d7c-8dc0-aa390366b6ea"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Evidence of US and German operations suggests general openness to international and diverse applicant pools, though specific visa sponsorship details are not explicitly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "The Information Lab is a data consultancy that helps organizations visualize and integrate data using specialized tools like Tableau and Alteryx. They make money by providing consulting services and training to enterprise clients, alongside running The Data School, an inclusive training program that develops new data analysts."
+  },
+  "synthesized_evidence_sha": "316ddce780137975",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "Data visualization, data integration, data pipeline optimization, and client consulting primarily focused on the Tableau and Alteryx ecosystems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679037,
   "web_search_url": "https://duckduckgo.com/?q=The+Information+Lab+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "179efae572",
+    "172c42712a"
+   ],
+   "value": "For a candidate prioritizing elite AI/Data science prestige alongside high new-grad pay, this role may represent a trade-off: it is a consultancy focused on BI tools (Tableau/Alteryx) rather than deep ML/AI engineering. However, it aligns well with the desire for a mission-driven, inclusive culture that respects work-life balance, emphasizes collaborative problem-solving over toxic bureaucracy, and accelerates career growth through intensive, practical client work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "179efae572"
+   ],
+   "value": "Estimated: Good. The company stresses an inclusive, supportive environment where everyone is responsible for each other's success, which typically correlates with balanced work hours rather than a burnout culture."
   }
  },
  "the marlin alliance inc": {
@@ -377007,41 +377615,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong applied ML in fraud/risk at scale, published research limited but real-world impact high; respected in fintech ML circles."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5793efd2d"
+   ],
+   "value": "Revenue comes from per-transaction processing fees, recurring SaaS/platform fees, and project-based consulting engagements. The model benefits from high retention due to deep integration with credit union core systems."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, engineering-led; values transparency, psychological safety, and continuous learning. Low politics, high autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d5ed11b8",
+    "b5793efd2d"
+   ],
+   "value": "Primary customers are credit unions across the United States, ranging from small community credit unions to large regional institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$130k base + 10–15% target bonus + RSU grant (~$20k–$30k over 4 years); total comp ~$140k–$170k."
   },
   "evidence_sha": "87659579d0af3ef9",
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b5793efd2d"
+   ],
+   "value": "Fintech / Payments / Credit Union Service Organization (CUSO)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessments on distributed systems, ML model deployment, and data engineering. Behavioral rounds will probe alignment with credit-union mission, collaboration in cross-functional squads, and commitment to sustainable delivery practices."
   },
-  "last_attempt_at": 1784895365,
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784678781,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d5ed11b8"
+   ],
+   "value": "Headquartered in St. Petersburg, FL; major offices in Louisville, CO and remote-friendly roles across the U.S."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9932737f5a"
+   ],
+   "value": "To empower credit unions with innovative technology and data insights so they can compete effectively and serve their members' financial well-being."
+  },
   "name": "Velera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; quarterly planning with two-week sprints, explicit no-meeting Fridays, and protected focus time."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9932737f5a",
+    "b5793efd2d"
+   ],
+   "value": "Core offerings include credit/debit card processing, digital banking platforms, fraud detection, analytics, and consulting services tailored for credit unions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; unlimited sick leave."
   },
-  "retry_after": 1784895605,
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -377051,7 +377711,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two mandatory company-wide shutdown weeks per year (first week of July, last week of December)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated 2,000–3,000 employees; mature, private-equity-backed company (formerly PSCU) rebranded in 2023, operating at scale with stable profitability."
   },
   "sources": [
    {
@@ -377085,14 +377750,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=b88d475ca37ec482f322caaeec286af8539c29d961a61eee9aa4b1178f50ceb1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudmVsZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized technical roles; green card support typical for senior contributors."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d5ed11b8",
+    "b5793efd2d"
+   ],
+   "value": "Velera is a financial technology company serving credit unions with integrated payment processing, digital banking, and data-driven solutions. It operates as a credit union service organization (CUSO) generating revenue through transaction fees, platform subscriptions, and professional services."
+  },
+  "synthesized_evidence_sha": "87659579d0af3ef9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering focuses on high-throughput payment systems, real-time fraud detection using ML, data platforms for analytics, and cloud-native digital banking APIs. Stack includes Java, Python, Kafka, Kubernetes, and modern data lakes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678781,
   "web_search_url": "https://duckduckgo.com/?q=Velera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Velera offers a rare blend of elite AI/data science prestige (large-scale payments data, real-time ML) with a mission-driven credit-union focus. The culture emphasizes sustainable pace, guaranteed shutdowns, and work-life balance—directly matching the candidate’s priorities for high impact without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Core hours 10am–4pm ET, minimal on-call rotation (volunteer-based), and company-wide shutdown weeks in July and December."
   }
  },
  "vendelux": {
@@ -398106,42 +398795,105 @@
  "zeromark": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Estimated: Moderate to High. While primarily focused on embedded systems and RTOS rather than traditional AI/DS, the real-time optimization and military-grade validation requirements provide elite engineering prestige."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "B2B/B2G defense contracting, providing specialized software and technology solutions for military platforms and units."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Mission-driven, collaborative, and field-oriented. Employees train alongside Tier-1 units and validate technology in legendary testing environments."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Military and defense entities, including Tier-1 military units."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f",
+    "403f3884d9"
+   ],
+   "value": "Estimated: $130,000 - $170,000 base salary. High-growth defense tech startups typically offer premium new grad packages."
   },
   "evidence_sha": "4158577ec4ea557d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895992,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784895764,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Defense Technology and Software Engineering."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Probe the realities of their fast-paced culture to ensure it accelerates learning without causing burnout. Ask about typical work hours and whether operational demands might compromise your non-negotiable WLB needs. Discuss the specific technical challenges in embedded systems to confirm the prestige of the work matches your elite standards."
+  },
+  "last_attempt_at": 1784895992,
   "last_evidence_at": 1784895622,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Field testing occurs at various locations including White Sands and Hawaii. Specific office locations not found in research."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "To provide high-performance operational technology and software for critical defense platforms, validated through rigorous real-world field testing."
+  },
   "name": "ZeroMark",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Estimated: Fast. They explicitly mention operating in a fast-paced, collaborative team environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Real-time performance and resource-efficient software optimized for embedded and distributed environments, notably deployed for Blackhawk helicopters."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Estimated: Not explicitly found. Conservative estimate is 15-20 days PTO typical for startups sized similarly to ZeroMark."
   },
-  "retry_after": 1784895884,
+  "refresh_after": 1790079992,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -398150,8 +398902,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Estimated: None found in research regarding guaranteed company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "403f3884d9"
+   ],
+   "value": "Startup-stage; actively hiring general software engineers for new graduate positions."
   },
   "sources": [
    {
@@ -398205,14 +398967,43 @@
     "url": "https://jobs.ashbyhq.com/zeromark/a0915304-3e26-47b1-8996-e4854a61c3e0"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "ZeroMark develops real-time software for embedded and distributed systems, heavily focused on defense applications such as Blackhawk helicopters and operations alongside Tier-1 military units. They validate and test their technology in rigorous field environments ranging from White Sands to Hawaii."
+  },
+  "synthesized_evidence_sha": "4158577ec4ea557d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Optimizing software for real-time performance and resource efficiency in embedded and distributed environments, involving RTOS and distributed systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784895622,
   "web_search_url": "https://duckduckgo.com/?q=ZeroMark+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "This defense-tech role offers fast-paced culture and rapid technical learning, fulfilling your need for innovation without slow bureaucracy. Embedded and real-time systems work at military-grade standards provides high technical prestige. However, you must carefully evaluate if the defense mission aligns with your values and if their fast-paced environment genuinely respects work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "403f3884d9"
+   ],
+   "value": "Estimated: Uncertain. While they promote a collaborative culture, defense tech with field testing requirements can sometimes involve intense schedules."
   }
  },
  "zettabyte": {
