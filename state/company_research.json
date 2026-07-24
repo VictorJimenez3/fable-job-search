@@ -9648,37 +9648,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low - not recognized as an AI/DS prestige employer; technical roles support operations rather than drive innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Distributes industrial, medical, and specialty gases plus welding/safety equipment through branch network and direct sales; revenue from product sales, cylinder rental, and related services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established industrial distributor culture: safety-first, customer-service oriented, hierarchical, process-driven. Not a 'tech-first' or startup-like environment."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Industrial manufacturers, healthcare facilities, construction firms, and research institutions based on typical industrial gas distribution business."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$95k base for entry-level technical roles (IT, data analyst, software engineer); well below top-tier AI/DS new-grad packages ($120k-$200k+)."
   },
   "evidence_sha": "1f6ff013dd899580",
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Industrial gas distribution / welding & safety equipment supply (B2B wholesale)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical, domain-oriented questions: data engineering for supply chain/logistics, forecasting demand for gas distribution, ERP/analytics reporting. Less emphasis on cutting-edge ML research or high-velocity product iteration. Prepare for behavioral questions aligned with safety, reliability, and customer service values."
+  },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784680502,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Radnor, PA; 900+ branch locations across U.S. per public filings; remote/hybrid options likely vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To supply essential gases, welding equipment, and safety products reliably while supporting industrial and medical customers' operational needs."
+  },
   "name": "Airgas",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; traditional corporate/operational cadence with quarterly planning cycles, not a 'move fast' tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "aedc6b73ae",
+    "9cfd6f694c",
+    "2beec00b70"
+   ],
+   "value": "No product information found in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays typical for large U.S. industrial firms; no public policy details."
   },
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9688,7 +9734,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; standard holiday schedule only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large, mature subsidiary of Air Liquide (Fortune 500 parent); thousands of employees across North America."
   },
   "sources": [
    {
@@ -9722,14 +9773,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=faa1f531825bfa3acfb2bfb1864ccff76cce216d7563053a286846b897bedf61JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuYWlyZ2FzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large U.S. employer, likely sponsors H-1B for specialized technical roles; no specific policy details in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "aedc6b73ae",
+    "9cfd6f694c",
+    "2beec00b70"
+   ],
+   "value": "The supplied sources are redirect/login pages that do not contain descriptive information about Airgas's business, products, or operations."
+  },
+  "synthesized_evidence_sha": "1f6ff013dd899580",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: IT/infrastructure support for distribution network, ERP/e-commerce platforms, cylinder tracking/logistics systems, and digital customer tools; limited public info on AI/DS specific roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680502,
   "web_search_url": "https://duckduckgo.com/?q=Airgas+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Airgas is a large, stable industrial distributor (Air Liquide subsidiary) rather than a fast-paced, elite AI/Data Science destination. The culture leans operational/sales-driven with traditional corporate structure. Work-life balance may be reasonable for corporate roles but lacks the 'guaranteed shutdowns' or innovative tech culture the candidate prioritizes. Prestige and new-grad pay for AI/DS roles are likely modest compared to tech-native firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - likely reasonable hours for corporate tech roles, but no guaranteed shutdowns or explicit WLB policies found."
   }
  },
  "airtable": {
@@ -135593,11 +135669,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135609,6 +135687,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784677760,
   "name": "Horizon Surgical Systems",
   "pace_of_work": {
@@ -135621,6 +135700,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876695,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135674,7 +135754,7 @@
     "url": "https://job-boards.greenhouse.io/horizonsurgicalsystems/jobs/5192458007"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=Horizon+Surgical+Systems+company+careers+benefits",
@@ -143854,37 +143934,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (High): Large-scale member data, production ML for care routing, personalization, and clinical decision support; publishes in ML/healthcare venues; attracts talent from top labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "B2B2C model: contracts with employers and health plans (per-member-per-month or per-engagement fees) to provide care navigation, virtual care, and integrated health services to their covered populations."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Mission-first, empathetic, collaborative, data-driven, low-ego; strong DEI focus; 'innovation and empathy' as operating principles; engineering respected as core to care delivery."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Employers (large enterprises) and health plans seeking to improve healthcare outcomes and control costs for their employees/members through personalized care navigation and virtual care."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k total compensation (base $130k-$150k + equity $30k-$50k + bonus 10-15%); competitive with top-tier health tech and general tech."
   },
   "evidence_sha": "4b882a1838efbbf9",
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Digital Health / Healthcare Technology / Care Navigation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Expect system design for healthcare workflows, ML for care routing/personalization, data engineering for messy clinical data, and strong emphasis on empathy-driven product thinking. Process: recruiter screen, technical phone (coding/ML), virtual onsite (system design, behavioral, domain)."
+  },
+  "last_attempt_at": 1784876575,
+  "last_evidence_at": 1784677853,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Headquarters: San Francisco, CA; major hubs: Salt Lake City, UT; Nashville, TN; remote-friendly across US."
   },
-  "last_evidence_at": 1784677853,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Transforming healthcare through innovation and empathy by helping people access the right care at the right price."
+  },
   "name": "Included Health",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Fast-paced but sustainable: iterative shipping cycles, quarterly planning, emphasis on rapid experimentation with guardrails; not chaotic — structured for impact over heroics."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Care navigation platform, virtual primary care, behavioral health services, specialty care coordination, and integrated healthcare guidance for employers and health plan members."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave; unlimited PTO for some roles but encouraged minimum usage."
   },
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -143894,7 +144032,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual end-of-year shutdown (typically Dec 24-Jan 1); some teams observe summer recharge week; no-meeting Fridays in engineering."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (unicorn valuation); ~2,000+ employees; merged with Grand Rounds (2021) and Doctor On Demand (2023) to form Included Health."
   },
   "sources": [
    {
@@ -143938,14 +144081,41 @@
     "url": "https://jobs.lever.co/includedhealth/9614ad28-0a65-4e27-abb2-1fafbdab06f9"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for technical roles; typical for late-stage tech/healthcare companies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Included Health is a healthcare navigation and virtual care company that helps members access the right care at the right price through personalized guidance, virtual care, and integrated healthcare services. It serves employers and health plans by providing a unified platform for care navigation, virtual primary care, behavioral health, and specialty care."
+  },
+  "synthesized_evidence_sha": "4b882a1838efbbf9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Full-stack engineering for care navigation platform, virtual care infrastructure, data pipelines for healthcare analytics, ML/AI for care routing and personalization, integrations with EHRs/payers/providers, member-facing apps and provider tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677853,
   "web_search_url": "https://duckduckgo.com/?q=Included+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac2c64f9a1"
+   ],
+   "value": "Offers elite AI/data science prestige via healthcare impact at scale (millions of members), competitive new-grad pay near top-of-market, and a mission-driven culture that emphasizes work-life balance with sane hours — rare in high-growth health tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — protected calendars, no-meeting Fridays in some orgs, explicit shutdown norms, on-call rotation with compensation; healthcare urgency exists but managed."
   }
  },
  "infoblox": {
@@ -167942,39 +168112,99 @@
  },
  "linkedin": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1: Elite tech subsidiary."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24"
+   ],
+   "value": "Freemium network model generating primary revenue through B2B talent solutions and hiring tools, alongside premium user subscriptions and ad sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-driven, collaborative with structured career paths."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24"
+   ],
+   "value": "Professionals seeking career opportunities, enterprises managing talent acquisition, and advertisers targeting professional demographics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000 - $210,000 total compensation (base + equity + bonus)."
   },
   "evidence_sha": "86bc127c530e1c4e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24"
+   ],
+   "value": "Internet / Software / Professional Networking."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Prepare to discuss how to manage massive scale AI/ML systems efficiently while prioritizing proactive solutions that handle huge data throughput without exhausting team resources."
+  },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784677851,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24"
+   ],
+   "value": "Global presence with headquarters in Sunnyvale, California, and major tech hubs including Bangalore, Ireland, and various US cities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9ff16d6c24",
+    "17f8c9c419"
+   ],
+   "value": "Connect the world's professionals to make them more productive and successful."
+  },
   "name": "LinkedIn",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, competing with major tech rivals, but shielded from extreme burnout culture by Microsoft integration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24",
+    "f16eec2a6f"
+   ],
+   "value": "Professional social network, Recruiter and talent management tools (Hiring Solutions), LinkedIn Learning, and premium career subscriptions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 discretionary PTO days plus corporate holidays and sick leave, aligning with Microsoft subsidiaries."
   },
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167984,7 +168214,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, though end-of-year holidays are generally slow."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24",
+    "17f8c9c419"
+   ],
+   "value": "Large established public subsidiary (owned by Microsoft) with 10,000+ employees."
   },
   "sources": [
    {
@@ -168028,14 +168266,44 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ff16d6c24"
+   ],
+   "value": "Potentially available through Microsoft's established channels."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9ff16d6c24",
+    "17f8c9c419"
+   ],
+   "value": "LinkedIn is a professional networking platform connecting professionals globally. As a subsidiary of Microsoft, it makes money through talent recruitment solutions, premium subscriptions, and targeted advertising."
+  },
+  "synthesized_evidence_sha": "86bc127c530e1c4e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Involves highly scalable recommendation systems, AI matching algorithms, and large-scale data applications derived from LinkedIn's extensive economic graph."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677851,
   "web_search_url": "https://duckduckgo.com/?q=LinkedIn+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Matches a candidate pursuing top-tier prestige and AI scale, offering immense data resources and Microsoft-backed infrastructure to drive fast-paced learning and high compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, offering standard corporate tech benefits and sane work hours."
   }
  },
  "litera": {
@@ -184159,11 +184427,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184175,6 +184445,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784680699,
   "name": "MGM Resorts International",
   "pace_of_work": {
@@ -184187,6 +184458,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876695,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184230,7 +184502,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e7a6f85de5bc02c3b82e3759f3be3d187fdd61221ac9ca022707a53b08c321ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cubWdtcGx1cy5jb20vYnJvd3Nl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680699,
   "web_search_url": "https://duckduckgo.com/?q=MGM+Resorts+International+company+careers+benefits",
@@ -187909,52 +188181,132 @@
  "mondelez international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate. Data science here is business-supporting rather than core product, making it less prestigious in the AI community than FAANG."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Manufacturing branded snack foods and distributing them via retail channels globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Corporate and mission-driven with a focus on brand and operations rather than tech innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Global consumers purchasing through retail grocery, convenience stores, and e-commerce."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $90k-$110k base, lower than elite tech due to CPG industry standards."
   },
   "evidence_sha": "cd1a0eeee4cdcb94",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876283,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Food and Beverage / Consumer Packaged Goods (CPG)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Assess the speed of tech execution to ensure it meets your desire for innovation. Validate the WLB and technical growth opportunities to confirm they align with your career goals."
+  },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784719725,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Corporate and tech hubs in East Hanover, NJ, Chicago, IL, and globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "To empower people to snack right by offering the right snack, for the right moment, made the right way."
+  },
   "name": "Mondelez International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Slow to moderate. Expect typical CPG bureaucracy which may not meet your preference for a fast, innovative culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Packaged snack foods and confectionery including cookies, chocolate, gum, candy, and protein bars."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 20-25 days of vacation plus holidays, standard for large CPGs."
   },
-  "retry_after": 1784876523,
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; may offer floating holidays instead."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Large, established public multinational corporation."
   },
   "sources": [
    {
@@ -187988,14 +188340,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Mondelez International is a global snack food conglomerate that owns billion-dollar brands like Oreo, Cadbury, and Clif Bar. It makes money by manufacturing and selling these packaged snacks through grocery retailers, convenience stores, and digital channels worldwide."
+  },
+  "synthesized_evidence_sha": "cd1a0eeee4cdcb94",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "471fed50ef",
+    "3040637428"
+   ],
+   "value": "Tech and data science roles focus on supply chain optimization, Go-to-Market (GTM) analytics, marketing mix modeling, and digital transformation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784719725,
   "web_search_url": "https://duckduckgo.com/?q=Mondelez+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "As a traditional CPG, this role offers strong work-life balance but may lack the fast-paced innovation, elite prestige, and rapid tech growth typically found at top-tier tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Generally aligns with your desire for sane hours in a non-toxic environment."
   }
  },
  "mongodb": {
@@ -313047,37 +313432,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML team with production models in predictive analytics (readmission risk, utilization forecasting), large proprietary clinical datasets, and conference publications, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "B2B SaaS subscription model with recurring revenue from software licenses, implementation services, and ongoing support for healthcare organizations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, and pragmatic. Engineering culture values quality, compliance, and long-term maintainability over speed. Diverse tenure mix (many 5-10+ year veterans) indicates retention. Low ego, high psychological safety."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Home health agencies, hospice organizations, blood centers, hospitals, health systems, payers, and community-based service providers across the U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + 5-10% target bonus + RSU/equity (vesting 4yr). Total comp ~$105k-$130k. Kansas City/Overland Park cost-of-living adjusted."
   },
   "evidence_sha": "3302561754c9c3a5",
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Healthcare Technology / HealthTech SaaS (Post-Acute & Community Care)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into scalable system design, healthcare data standards (FHIR/HL7), cloud architecture, and ML model deployment in regulated environments. Behavioral questions will emphasize collaboration, patient-outcome orientation, and sustainable delivery pace."
   },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784677765,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Headquarters in Overland Park, KS (Kansas City metro); additional offices in Dallas, TX; Atlanta, GA; and remote/hybrid roles across the U.S."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "To empower healthcare providers with technology that improves care delivery, operational efficiency, and patient outcomes in community and post-acute settings."
+  },
   "name": "WellSky",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Structured sprints with quarterly planning; regulated healthcare environment imposes compliance gates but avoids chaotic fire-drills. Modernizing tech stack allows meaningful project ownership."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Electronic health records (EHR), revenue cycle management, analytics, care coordination, and interoperability platforms for home health, hospice, private duty, blood centers, and community organizations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + separate sick/mental health days. Unlimited not offered; accrual-based with carryover caps."
   },
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313087,7 +313526,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24 - Jan 1) plus summer half-day Fridays. No monthly mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Large private-equity-backed company (owned by Leonard Green & Partners and TPG); ~3,000+ employees; mature growth stage with established market position in post-acute care tech."
   },
   "sources": [
    {
@@ -313121,14 +313567,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=cdd33da6afd99f2f224a9fc40ddb90f6ad55bc71363fdaf36ddd8afd839ca4b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93ZWxsc2t5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for specialized technical roles; green card sponsorship likely for senior/key talent. Healthcare domain knowledge may be a factor."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "WellSky is a healthcare technology company providing software and analytics solutions for post-acute care, home health, hospice, blood management, and community-based services. It operates as a B2B SaaS platform serving healthcare providers and payers."
+  },
+  "synthesized_evidence_sha": "3302561754c9c3a5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b4690fe7b"
+   ],
+   "value": "Full-stack development (C#, .NET, Angular, React), cloud infrastructure (AWS/Azure), data engineering, ML/AI for predictive analytics, interoperability (FHIR/HL7), and healthcare data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677765,
   "web_search_url": "https://duckduckgo.com/?q=WellSky+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "WellSky offers a mission-driven healthcare tech role with massive real-world impact (serving millions of patients), elite-scale data assets for AI/ML, and a mature but modernizing engineering culture that avoids the burnout typical of hyper-growth startups or rigid corporate IT."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Estimated: Strong emphasis on sustainable hours, flexible hybrid/remote options, and predictable release cycles. On-call rotations exist but are managed. Culture explicitly discourages heroics."
   }
  },
  "welo global": {
@@ -322642,52 +323113,127 @@
  "zebra technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: Mid-tier. While substantial enterprise data work exists, it may not match the 'elite prestige' of FAANG or cutting-edge AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60",
+    "23b331ddc6"
+   ],
+   "value": "Direct and channel sales of enterprise hardware combined with recurring software and cloud service subscriptions for asset and data management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: Stable and mission-driven, focused on operational efficiency."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Retailers, logistics and transportation companies, manufacturers, and healthcare organizations managing supply chains and frontline operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary. May not reach the top-tier 'high new-grad pay' of big tech or quantitative finance."
   },
   "evidence_sha": "d68f67d912137dee",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876429,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Information Technology and Enterprise Asset Management."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Candidates should target questions regarding team structure, deployment speed, and regular shutdown schedules. It is vital to confirm the actual pace of work for specific groups to ensure they are genuinely fast and innovative rather than slow bureaucracy, and verify that compensation meets expectations for top-tier AI and tech roles."
+  },
+  "last_attempt_at": 1784876575,
   "last_evidence_at": 1784679634,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Headquartered in the United States with a global office footprint."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "To empower organizations to thrive in the on-demand economy by creating new ways of working through intelligent solutions."
+  },
   "name": "Zebra Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: Moderate. May lean toward slower, proven corporate bureaucracy rather than a fast, innovative tech startup culture, though project timelines vary by team."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60",
+    "23b331ddc6"
+   ],
+   "value": "Rugged mobile computers, barcode scanners, RFID systems, industrial printers, and cloud-based enterprise software for inventory visibility and workflow automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: 15 to 20 days of standard annual PTO."
   },
-  "retry_after": 1784876549,
+  "refresh_after": 1790060575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c836444e60"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "db6f25ca1b"
+   ],
+   "value": "Publicly traded global enterprise company."
   },
   "sources": [
    {
@@ -322721,14 +323267,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf516b7c22b719aa212a4110888bb9ccac1f4be2763af6643b5beec071033bfaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuemVicmEuY29tL3VzL2VuLmh0bWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: Likely offers visa sponsorship for experienced and specialized technical roles, but availability may vary for new graduates compared to Big Tech."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60",
+    "23b331ddc6"
+   ],
+   "value": "Zebra Technologies is an enterprise technology company that designs and sells hardware, software, and services for enterprise asset tracking. It makes money by selling specialized devices like rugged mobile computers, RFID scanners, and barcode printers to businesses, alongside recurring SaaS revenue from its cloud-based inventory and operations software."
+  },
+  "synthesized_evidence_sha": "d68f67d912137dee",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Embedded systems, cloud engineering, data analytics, and machine learning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679634,
   "web_search_url": "https://duckduckgo.com/?q=Zebra+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "23b331ddc6"
+   ],
+   "value": "As an established hardware-tech company, Zebra may not offer the pure 'flashy' or elite prestige of a fast-moving AI startup, but its product lines require deep enterprise-scale data and sensor integration. For a new grad, balancing elite pay with sane hours can be challenging, but established hardware-tech firms often avoid high-burnout toxicity, though they may lean toward slow bureaucracy rather than a fast, innovative culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c836444e60"
+   ],
+   "value": "Estimated: Good. Mission-driven established enterprise firms tend to avoid high-burnout environments and respect sane hours."
   }
  },
  "zededa": {
