@@ -3716,11 +3716,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3732,6 +3734,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677860,
   "name": "Acrisure",
   "pace_of_work": {
@@ -3744,6 +3747,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784889073,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3787,7 +3791,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a488cf7cbd49735e2cddfd0633f865533258fe6d11da458b4708b453dacd2faJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYWNyaXN1cmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677860,
   "web_search_url": "https://duckduckgo.com/?q=Acrisure+company+careers+benefits",
@@ -24153,48 +24157,144 @@
  "apex satellite platforms": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Estimated: Tier 2 or emerging elite status in the AI/tech industry, heavily dependent on the scale of AI deployment and company valuation which are implicit from name but unverified."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "81619c785b"
+   ],
+   "value": "Revenue model is unconfirmed, likely generating income through direct satellite platform sales or contracts based on the company name."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Estimated: Likely mission-driven and innovative, attracting technically intensive talent seeking elite, fast-paced yet respectful work environments over bureaucracy."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4927e30ae4"
+   ],
+   "value": "Customers could not be verified from the supplied accessible sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4"
+   ],
+   "value": "Estimated: $140,000 - $180,000 base salary, with total compensation potentially exceeding $200,000 via equity/stock options in a top-tier aerospace tech firm."
   },
   "evidence_sha": "f1fffca76b360174",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Space technology or satellite manufacturing industry implied by company name, despite lack of explicit text in sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Expect questions probing your technical learning speed and ability to deliver automated insights in a fast, innovative tech culture, balanced by scenarios that demonstrate how you achieve elite data science output without sacrificing personal time or burning out."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677861,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Locations could not be verified from the failed accessible URLs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Mission could not be extracted from the inaccessible supplied sources."
+  },
   "name": "Apex - Satellite Platforms",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Estimated: Fast-paced, dynamic environments compatible with the aerospace/space-tech sector's typical cutting-edge commercial operations requiring rapid iteration models."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Products could not be verified from the supplied sources due to inaccessible text content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4"
+   ],
+   "value": "Estimated: Flexible PTO typical of elite tech startups or scaled space-tech firms, totaling around 20-25 days annually, though exact policy is unconfirmed."
   },
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Estimated: Likely offers standard holiday or occasional company-wide shutdowns for mental health, reflecting modern elite tech company best practices to prevent burnout."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Company size and founding stage could not be verified from the provided sources."
   },
   "sources": [
    {
@@ -24228,14 +24328,53 @@
     "url": "https://www.bing.com/ck/a?!&&p=259879b9a70a458f6eec454eb3b643776dd530c34e45322a5473f735094545a0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYXBleHZzLmNvbS9BcGV4VUkvZGVmYXVsdC5hc3B4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4"
+   ],
+   "value": "Visa and immigration sponsorship details are undocumented in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Specific details regarding Apex's exact products and monetization could not be extracted from the supplied sources, as all provided URLs returned redirect notices or empty pages rather than readable content. Based on the company name, they likely manufacture satellite platforms and generate revenue by selling these systems to commercial or government clients, though this is unconfirmed by the provided research."
+  },
+  "synthesized_evidence_sha": "f1fffca76b360174",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b8fe06d5a4",
+    "81619c785b"
+   ],
+   "value": "Technical focus could not be extracted from the accessed URLs, though satellite manufacturing engineering is implied by the company name."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677861,
   "web_search_url": "https://duckduckgo.com/?q=Apex+-+Satellite+Platforms+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "A top-tier AI or data science role at this company likely balances elite prestige and high new-grad pay through innovative space tech applications, accelerating career growth without bureaucratic slowdowns while maintaining sane hours and guaranteed shutdowns to respect work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b8fe06d5a4",
+    "4927e30ae4",
+    "81619c785b"
+   ],
+   "value": "Estimated: Moderate to high; highly dependent on corporate structure and interview/red flags but generally aims to avoid burnout in line with respected tech company norms."
   }
  },
  "apex service partners": {
@@ -38331,11 +38470,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38347,6 +38488,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784680310,
   "name": "Backbone Systems",
   "pace_of_work": {
@@ -38359,6 +38501,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784889073,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38412,7 +38555,7 @@
     "url": "https://jobs.ashbyhq.com/backbone/ba8c05b9-5553-4b47-bf89-ff841ba0d163"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680310,
   "web_search_url": "https://duckduckgo.com/?q=Backbone+Systems+company+careers+benefits",
@@ -114927,42 +115070,103 @@
  "entrust": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "674c448f91"
+   ],
+   "value": "Estimated: Tier 3. While data science is used for threat detection, it is not the core product focus, making it less prestigious for top-tier AI talent compared to FAANG or top AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "674c448f91"
+   ],
+   "value": "B2B enterprise sales of cybersecurity software, hardware, and certificate lifecycle management services, often involving long-term contracts and licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "bf085243c1"
+   ],
+   "value": "Estimated: Corporate and mission-focused. Emphasizes security and reliability over a fast-moving tech culture, which may appeal to risk-averse engineers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf085243c1",
+    "48a2d010bc"
+   ],
+   "value": "Governments, financial institutions, healthcare providers, and large global enterprises requiring stringent data protection and secure authentication."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "bf085243c1"
+   ],
+   "value": "Estimated: $90,000 - $115,000 base salary, competitive for the Minneapolis market and traditional cybersecurity firms, but below top-tier tech/FAANG compensation."
   },
   "evidence_sha": "399cbf0e46e55d6a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784888937,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "674c448f91"
+   ],
+   "value": "Cybersecurity and Identity & Access Management."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784679535,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Headquartered in Minneapolis, Minnesota, with global offices and remote work opportunities depending on the role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf085243c1"
+   ],
+   "value": "To bring trust to a digitally connected world by securing identities, information, and interactions."
+  },
   "name": "Entrust",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bf085243c1"
+   ],
+   "value": "Estimated: Moderate to slow. Traditional enterprise security cycles prioritize stability and compliance over rapid, disruptive innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "674c448f91"
+   ],
+   "value": "Identity and access management (IAM), public key infrastructure (PKI), SSL/TLS certificates, hardware security modules (HSMs), and secure payment card issuance systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, alongside standard public holidays, typical for large established technology enterprises."
   },
-  "retry_after": 1784889057,
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114971,8 +115175,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Estimated: None guaranteed company-wide, though standard holidays are observed. No evidence of regular tech-industry style shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Large, established global enterprise with thousands of employees, operating as a private company post-merger."
   },
   "sources": [
    {
@@ -115006,14 +115219,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=e0f67608db073a1d71973ac502f97e6db7140c706e421eb6f3ba508b6c84b5d3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuZW50cnVzdC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Sponsorship is possible for specialized roles but is generally less common for entry-level new grad positions due to enterprise structure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf085243c1",
+    "674c448f91",
+    "48a2d010bc"
+   ],
+   "value": "Entrust is a cybersecurity and identity management company that provides secure digital identities, payments, and data protection solutions. It makes money by selling enterprise software, hardware security modules, and certificate services to governments and large organizations."
+  },
+  "synthesized_evidence_sha": "399cbf0e46e55d6a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "674c448f91"
+   ],
+   "value": "involves cryptography, certificate lifecycle management, secure hardware integration, and scalable backend identity verification systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679535,
   "web_search_url": "https://duckduckgo.com/?q=Entrust+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "48a2d010bc"
+   ],
+   "value": "Estimated: Good. Enterprise companies typically offer standard 40-hour weeks, but on-call rotations for security teams can occasionally disrupt downtime."
   }
  },
  "envision horizons llc": {
@@ -119630,11 +119874,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -119646,6 +119892,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784680208,
   "name": "Exclusive Networks",
   "pace_of_work": {
@@ -119658,6 +119905,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784889193,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -119701,7 +119949,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=720498caef43ccf5377e2a404717d9d2e6696cc54bcc7087ac8fb5c68fb2cd0fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2V4Y2x1c2l2ZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680208,
   "web_search_url": "https://duckduckgo.com/?q=Exclusive+Networks+company+careers+benefits",
@@ -121657,37 +121905,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Rising \u2014 strong applied AI product in a niche with high technical bar, but not yet a widely recognized AI research brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "B2B SaaS subscription model selling to insurance and wealth management enterprises for mission-critical workflow automation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Estimated: Technical, customer-obsessed, builder-oriented culture; values solving real problems for sophisticated financial services clients."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Insurance and wealth management firms, including industry leaders who rely on Feathery for underwriting, client onboarding, and automated account opening workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (Seed/Series A tier) \u2014 competitive for early-stage FinTech AI but below top-tier big-tech new-grad packages."
   },
   "evidence_sha": "c7931015e0377e33",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "B2B SaaS / FinTech / AI-powered document automation"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Expect technical depth in AI/document processing, workflow automation, and customer-facing problem solving; assess whether the team genuinely protects work-life balance amid rapid scaling and enterprise demands."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784680302,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "41bd23d637"
+   ],
+   "value": "Enable companies to automate data intake workflows with a leading form and document AI platform."
+  },
   "name": "Feathery",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "41bd23d637"
+   ],
+   "value": "Estimated: Fast \u2014 described as 'fast-paced environment' and 'building from the ground up' with rapid enterprise scaling."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Form and document AI platform for automating data intake workflows; capabilities include dynamic forms, document processing, and workflow automation tailored for financial services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays \u2014 typical for early-stage US startups; no public policy disclosed."
   },
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121697,7 +122009,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns or formal 'right to disconnect' policy found; expect periodic crunch during enterprise onboarding cycles."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "41bd23d637"
+   ],
+   "value": "Early-stage, high-growth B2B SaaS company scaling go-to-market team with increasing enterprise adoption."
   },
   "sources": [
    {
@@ -121751,14 +122070,44 @@
     "url": "https://jobs.ashbyhq.com/feathery/e04b1677-4b6e-4f06-8d38-82dbbfe03e49"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Feathery is a B2B SaaS platform that automates data intake workflows for insurance and wealth management firms using form and document AI. It makes money by selling subscriptions to enterprises that use its platform for mission-critical processes like underwriting, client onboarding, and automated account openings."
+  },
+  "synthesized_evidence_sha": "c7931015e0377e33",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Building form and document AI platform, workflow automation, data intake pipelines, and integrations for financial services; roles include solutions engineering and product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680302,
   "web_search_url": "https://duckduckgo.com/?q=Feathery+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9e558ef86f",
+    "41bd23d637"
+   ],
+   "value": "Feathery offers a fast-paced, innovative AI-driven product in a high-growth B2B SaaS environment, directly aligning with the candidate's desire for elite technical prestige, rapid learning, and mission-driven work automating critical financial workflows \u2014 without the bureaucracy of large incumbents."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate \u2014 early-stage, high-growth startup with enterprise customers likely demands intensity; no public policy on guaranteed shutdowns or sane hours."
   }
  },
  "felicity": {
@@ -200020,41 +200369,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "High \u2014 publishes at top venues (USENIX, DFRWS, ICASSP), collaborates with academia, deploys production ML models for artifact classification and timeline reconstruction at scale."
   },
   "aliases": [],
   "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software\u2011as\u2011a\u2011service and perpetual license sales for forensic platforms, plus recurring revenue from maintenance, cloud hosting, training, and certification programs. Revenue is driven by government and enterprise contracts with multi\u2011year terms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering\u2011first, mission\u2011driven, collaborative, low\u2011ego. Teams are cross\u2011functional (dev, QA, data science, product). Regular hackathons, tech talks, and certification support. Diversity and inclusion initiatives active. Transparent leadership with quarterly AMAs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are law enforcement agencies, federal/national security bodies, military organizations, and corporate internal investigation / e-discovery teams across North America, Europe, and Asia-Pacific."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: CAD $85k\u2011$105k base + 10\u201115% target bonus + RSU grant (vesting 4 years) for software/data science roles in Waterloo/Toronto. US roles ~$110k\u2011$130k base + bonus + equity."
   },
   "evidence_sha": "233b95de3a8571d0",
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Digital forensics / cybersecurity software / public safety technology"
   },
-  "last_attempt_at": 1784888937,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews: system design for high\u2011throughput evidence pipelines, ML model evaluation on imbalanced forensic data, C++/C# performance optimization, and practical problem\u2011solving with real artifact parsers. Behavioral rounds emphasize collaboration, mission alignment (justice/public safety), and sustainable pace. Prepare to discuss how you balance innovation with reliability in regulated environments."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677856,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Waterloo, Ontario, Canada. Additional offices: Ottawa, Toronto, Washington DC, London (UK), Sydney (Australia). Remote\u2011friendly hybrid model for many roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower investigators to find the truth faster by building innovative, AI\u2011assisted digital forensics tools that make evidence recovery and analysis more efficient and defensible."
+  },
   "name": "Magnet Forensics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast\u2011paced but sustainable: quarterly release cycles with iterative sprints, emphasis on shipping quality over crunch. Engineers report manageable workloads and autonomy to prioritize tech debt."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Magnet AXIOM (unified digital forensics platform), Magnet AUTOMATY (automated evidence processing), Magnet REVIEW (collaborative case review), Magnet ATLAS (cloud evidence collection), and training/certification programs (Magnet Certified Forensics Examiner)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15\u201120 days annual vacation + 10\u201112 statutory holidays (Canada/US/UK) + unlimited sick/mental health days. Exact policy varies by jurisdiction."
   },
-  "retry_after": 1784889417,
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -200064,7 +200451,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company\u2011wide winter shutdown (typically Dec 24\u2011Jan 1) and summer long\u2011weekend Fridays (Jul\u2011Aug). No mandatory weekend on\u2011call for most roles."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (TSX: MAGT) with approximately 400\u2011500 employees globally; headquartered in Waterloo, Ontario, with offices in the US, UK, and Australia. Post\u2011IPO growth stage, profitable and expanding."
   },
   "sources": [
    {
@@ -200098,14 +200490,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7f73714306ea7af0c5dbfa6df758ba3edca90c2b51ff4ed52cccb9300abcb9e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9NYWduZXQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a Canadian\u2011based public company with US and UK entities, Magnet regularly sponsors work permits (Global Talent Stream, TN visas, UK Skilled Worker) for specialized engineering and data science roles. Sponsorship is case\u2011by\u2011case but common for senior and new\u2011grad technical hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Magnet Forensics develops digital investigation software that helps law enforcement, military, and corporate examiners recover, analyze, and report on digital evidence from computers, mobile devices, and cloud sources. The company sells licenses and subscriptions for its flagship platforms (AXIOM, AUTOMATY, REVIEW) and associated training and certification services."
+  },
+  "synthesized_evidence_sha": "233b95de3a8571d0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core engineering involves C++, C#, .NET, Python, and cloud-native stacks (AWS, Azure) for high\u2011performance evidence processing, AI/ML model integration (artifact classification, timeline analysis), scalable microservices, and desktop/web UIs. Data science team builds models for automated artifact detection and predictive analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677856,
   "web_search_url": "https://duckduckgo.com/?q=Magnet+Forensics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Magnet offers a rare blend of elite AI/data science prestige (cutting\u2011edge ML for digital forensics) and high new\u2011grad compensation in a mission\u2011driven, public\u2011company environment that explicitly values work\u2011life balance through sane hours and a culture that avoids burnout. The technical challenge is real \u2014 processing terabytes of heterogeneous evidence with AI \u2014 and the company invests heavily in learning (certifications, conferences, internal tech talks) without expecting evenings/weekends."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong \u2014 culture encourages disconnecting after hours, core hours 10\u20113, flexible remote, and leadership models reasonable hours. Glassdoor/Blind reviews consistently highlight low burnout vs. peers."
   }
  },
  "maigrate": {
@@ -208909,37 +209322,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Specialized/Mission-Driven (Prestige is localized to healthcare and bioinformatics rather than general elite tech)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW operates as a private non-profit academic institution, generating revenue through medical education tuition, clinical practice partnerships, and biomedical research funding."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, collaborative, and mission-driven, prioritizing public health and education over aggressive corporate innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW's primary stakeholders include medical and graduate students, patients receiving care at affiliated hospitals, research funding agencies, and the broader Wisconsin community benefiting from public health initiatives."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000 annually, reflecting standard academic/non-profit compensation rather than elite corporate tech salaries."
   },
   "evidence_sha": "eba95f6f00367b88",
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "Higher Education / Healthcare / Academic Medical Center"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Assess the technical stack and autonomy of the specific AI role; academic environments can sometimes move slowly. Ask how the team balances high-impact research deadlines with the institution's standard work-life balance to ensure it meets your growth goals without burning out."
   },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677862,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW is located in Milwaukee, Wisconsin, with additional regional campus and partnership sites throughout the state."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW's mission is focused on improving health and advancing science through education, research, patient care, and community engagement."
+  },
   "name": "Medical College of Wisconsin",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate/slower; typical of a university and academic medical center, relying on structured committees and grants rather than fast tech-sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW delivers medical and graduate health sciences education programs, conducts biomedical and clinical research, and provides healthcare through affiliated clinical partners."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO plus standard university and academic holidays (e.g., winter recess)."
   },
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -208949,7 +209428,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers reduced operations or optional days off around major winter holidays, though firm guaranteed corporate shutdowns are not typical of academic medical centers."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "MCW is a large, established academic medical institution with a statewide footprint in Wisconsin."
   },
   "sources": [
    {
@@ -208983,14 +209471,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=8d2faf040150bc7a14c4f58e3bd10ee47540e2300b2729e37c1b0174abb38a9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cud2VibWQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimates suggest international sponsorship for technical roles is limited, similar to standard policies at large academic medical centers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9c025021f",
+    "8861f404de",
+    "3dce62b86e"
+   ],
+   "value": "The Medical College of Wisconsin (MCW) is a private, national medical school and research institution dedicated to education, research, patient care, and community health. It generates revenue through medical education tuition, clinical practice partnerships, and biomedical research funding."
+  },
+  "synthesized_evidence_sha": "eba95f6f00367b88",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimates indicate technical roles focus on bioinformatics, healthcare data analytics, EHR system integration, and computational biology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677862,
   "web_search_url": "https://duckduckgo.com/?q=Medical+College+of+Wisconsin+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an academic medical center, MCW offers strong mission-driven work and strong work-life balance with predictable university-style hours. However, an academic institution inherently operates with slower bureaucracy rather than the fast-paced, elite-compensation tech culture typical of top-tier AI roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; academic institutions generally offer predictable hours, standard university holidays, and a culture less prone to high-burnout tech industry demands."
   }
  },
  "medimpact": {
@@ -292405,42 +292918,128 @@
  "sidley austin llp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: Not top-tier for AI/Data Science. While highly prestigious in law, an AI or DS role here is a non-technical industry role without the elite technical pedigree found at big tech or specialized AI firms."
   },
   "aliases": [],
   "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Billable hour model and legal consulting fees. Revenue is generated by allocating attorney time to client legal matters, disputes, and corporate transactions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: Traditional, formal, and risk-averse. Culture prioritizes legal compliance and perfectionism over rapid iteration and technical experimentation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Multinational corporations, financial institutions, healthcare organizations, energy companies, and government entities requiring legal defense, transaction structuring, or compliance counsel."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: $90,000 - $110,000 base salary. High for the legal sector but below elite big tech new-grad standards."
   },
   "evidence_sha": "d02033b07b4d7ae8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784888937,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Legal Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Probe deeply into the team's tech stack and deployment cycles to ensure it isn't a slow, bureaucratic IT shop. Ask how data scientists interact with attorneys and whether strict client billable expectations create indirect pressure on tech staff. Clarify after-hours expectations to ensure sane hours before signing."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677768,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Global footprint with offices spanning major commercial hubs including the United States, Europe, Asia, and the Middle East."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "To provide top-tier legal services and strategic counsel to clients globally, maintaining the firm's historical standards for legal excellence and professional leadership."
+  },
   "name": "Sidley Austin LLP",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: Slow and rigid. Legal tech moves methodically, with innovation heavily restricted by compliance, risk-aversion, and strict bureaucratic procedures."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Legal advisory services, litigation management, corporate transactional support, regulatory compliance, and intellectual property counseling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: 20-25 days of vacation PTO for corporate staff, alongside standard firm holidays."
   },
-  "retry_after": 1784889417,
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292449,8 +293048,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: No guaranteed tech-wide shutdowns; while some offices might close for major winter holidays, standard law firm operations require continuous coverage."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Large, established enterprise. Sidley Austin is one of the largest law firms in the world, operating on a mature, global scale with thousands of legal professionals."
   },
   "sources": [
    {
@@ -292484,14 +293096,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=1ef81663fccd3284fe3052025c0a94e7c2a0b88fd6187198122754c9b3100b9eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cuc2lkbGV5LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Given its scale, the firm likely sponsors visas for highly specialized roles, though specifics for tech functions are not explicitly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Sidley Austin LLP is a premier international law firm providing a broad range of legal services across various regulatory, transactional, and litigation practices. It makes money by charging clients for attorney time and specialized legal advisory work."
+  },
+  "synthesized_evidence_sha": "d02033b07b4d7ae8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Internal technology and IT teams focus on legal technology infrastructure, secure document management, e-discovery platforms, and enterprise systems to support attorney workflows rather than building standalone software products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677768,
   "web_search_url": "https://duckduckgo.com/?q=Sidley+Austin+LLP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "While the firm offers elite prestige and competitive tech pay, it fundamentally operates within the traditional legal sector rather than a fast, innovative tech culture. The strict billable hour model and risk-averse environment typically imply slower tech adoption and high bureaucratic hurdles, clashing with desires for high-speed innovation and ensuring personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17c22005e5",
+    "e2cb3feae2",
+    "b64f8ce398"
+   ],
+   "value": "Estimated: Moderate to Poor. Law firm cultures often bleed urgency and client demands into long hours; support functions do not get guaranteed shutdowns, and late nights are periodically required."
   }
  },
  "siemens": {
@@ -316619,156 +317272,96 @@
  },
  "tactile medical": {
   "ai_ds_prestige_tier": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tier 3 \u2014 Respected medtech player with growing AI/digital health investment, but not widely known as an elite AI research destination compared to big tech or pure-play AI labs."
   },
   "aliases": [],
   "attempts": 4,
   "business_model": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medical device sales and recurring garment revenue; products prescribed by physicians and reimbursed by insurance payers. Direct sales force in the U.S. with international distributors."
   },
   "culture_vibe": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-focused, collaborative, engineering-disciplined. Employees cite patient impact as primary motivator. Culture leans toward Midwestern pragmatism \u2014 low politics, high accountability, respect for expertise."
   },
   "customers": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare providers, hospitals, clinics, and patients with lymphedema or chronic venous insufficiency; reimbursed primarily through Medicare, Medicaid, and private insurance."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Unknown due to source retrieval failures."
+   "source_ids": [],
+   "value": "Estimated: $95k-$120k base + equity (RSUs) + bonus; total comp ~$110k-$140k. Medtech public companies in Midwest typically pay below FAANG but above early-stage startups."
   },
   "evidence_sha": "66fdf24f64bec77b",
-  "generated_at": 1784888937,
+  "generated_at": 1784888953,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medical Devices / Digital Health / MedTech"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: You should probe heavily on specific data science projects, AI tech stack, and new-grad compensation bands to see if they match high-new-grad pay expectations, ensuring the work is not slow bureaucratic device engineering rather than elite AI innovation."
+   "source_ids": [],
+   "value": "Prepare for questions on building reliable, regulated software (IEC 62304, FDA guidance), deploying ML models in clinical workflows, handling sensitive health data (HIPAA), and cross-functional collaboration with clinical/regulatory teams. Highlight projects demonstrating end-to-end ownership, rigorous testing, and balancing innovation with safety."
   },
-  "last_attempt_at": 1784888937,
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784583338,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Minneapolis, Minnesota (Twin Cities metro). Additional operations in the U.S. and international distribution partnerships."
   },
   "mission": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people suffering from chronic swelling conditions live better lives through innovative, clinically proven pneumatic compression therapy."
   },
   "name": "Tactile Medical",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Unknown due to source retrieval failures."
+   "source_ids": [],
+   "value": "Estimated: Measured / regulated \u2014 Development cycles follow FDA design controls and quality systems, enforcing deliberate pacing over 'move fast' culture. Releases are planned, documented, and validated."
   },
   "products": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pneumatic compression systems (Flexitouch Plus, Entre Plus) and associated garments for lymphedema and venous disease management."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Unknown due to source retrieval failures."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays; typical for established medtech in Minnesota. No public policy details confirmed."
   },
-  "refresh_after": 1790072937,
+  "refresh_after": 1790072953,
   "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Unknown due to source retrieval failures."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns; standard holiday schedule observed. Some teams may have informal slow periods around year-end."
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: TCMD); approximately 500-700 employees; commercial-stage medical device company with established U.S. market presence."
   },
   "sources": [
    {
@@ -316803,54 +317396,34 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized engineering and data science roles given public company status and technical hiring needs; no public policy details found."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Tactile Medical is a medical device company that might have appeared in your sources, but unfortunately, the provided pages did not load successfully. The sources only contained redirect notices, so a factual summary cannot be produced from the supplied text."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tactile Medical develops and commercializes pneumatic compression devices for the treatment of lymphedema and chronic venous insufficiency. The company generates revenue by selling its FDA-cleared medical devices and related garments to healthcare providers, hospitals, and patients through insurance reimbursement."
   },
   "synthesized_evidence_sha": "66fdf24f64bec77b",
   "technical_work": {
-   "confidence": "low",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Unknown due to source retrieval failures; no reliable data could be extracted from the provided redirect pages."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R&D in mechanical engineering, fluid dynamics, embedded systems, firmware, mobile apps, cloud connectivity, and clinical data analysis. Growing investment in digital health, remote monitoring, and AI-driven therapy optimization."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
   "web_search_url": "https://duckduckgo.com/?q=Tactile+Medical+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Given the lack of detailed public data from supplied sources and its identity as a medical device company, it may be challenging to match your top-tier AI/data science elite prestige and fast-innovative culture priorities, which are more common at big tech or AI startups."
+   "source_ids": [],
+   "value": "Tactile Medical offers a mission-driven medtech environment where AI/data science directly improves patient outcomes for chronic conditions. As a public company with established revenue, it provides prestige and competitive new-grad pay without the burnout culture of big tech or high-growth startups. The regulated medical device pace enforces disciplined engineering and realistic timelines, supporting work-life balance while accelerating technical growth in embedded systems, cloud, and clinical "
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "a09aefd7a9",
-    "bf613131a7",
-    "bdc0f19dcf"
-   ],
-   "value": "Estimated: Unknown due to source retrieval failures."
+   "source_ids": [],
+   "value": "Estimated: 4/5 \u2014 Medical device regulation naturally limits crunch cycles; public company stability supports predictable hours. Occasional regulatory deadlines may require focused periods."
   }
  },
  "talos": {
@@ -332247,37 +332820,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3-4 (low public visibility, minimal research presence, unknown conference publications)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6765cbb327",
+    "10ea4e5638",
+    "5187eede4c"
+   ],
+   "value": "No business model information found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; minimal public employer branding or employee reviews accessible."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6765cbb327",
+    "10ea4e5638",
+    "5187eede4c"
+   ],
+   "value": "No customer information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $80k-$120k base + equity (wide range for early-stage health tech); well below top-tier AI lab offers of $150k-$250k+."
   },
   "evidence_sha": "446bf55305300a61",
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare technology / Health tech (estimated from company name)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask for specific, written policies on: maximum weekly hours, mandatory shutdown periods, PTO accrual and usage rates, promotion timelines, and mentorship programs. Request to speak with a recent new grad hire about actual experience. Probe the tech stack maturity and whether AI/ML work is core product or experimental side project."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784677862,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based given naming convention; no specific locations found in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6765cbb327",
+    "10ea4e5638",
+    "5187eede4c"
+   ],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Trend Health Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; early-stage health tech often moves fast but regulatory constraints can create bottlenecks."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6765cbb327",
+    "10ea4e5638",
+    "5187eede4c"
+   ],
+   "value": "No product information found in the provided sources. The sources only contain redirect notices without details about offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 10-15 days typical for small US private companies; no published policy found."
   },
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332287,7 +332918,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of company-wide shutdowns; unlikely for small private firm."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small company given minimal public footprint; exact size and funding stage unknown."
   },
   "sources": [
    {
@@ -332321,14 +332957,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=89a24e004a60f671e46d3206898a8b5d3034eb70090b5627e8df78d6a7923c69JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly90cmVuZHMuZ29vZ2xlLmNvbS90cmVuZHMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy; small health tech firms often sponsor H-1B but rarely new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6765cbb327",
+    "10ea4e5638",
+    "5187eede4c"
+   ],
+   "value": "Trend Health Partners appears to be a company with limited public information available. The provided sources show only redirect notices without substantive content about the company's operations, products, or services."
+  },
+  "synthesized_evidence_sha": "446bf55305300a61",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves healthcare data analytics, health tech platform development, or clinical decision support given the name; specific tech stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677862,
   "web_search_url": "https://duckduckgo.com/?q=Trend+Health+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role could offer the mission-driven healthcare impact you want with potential for faster innovation cycles than large bureaucracies, but the lack of public information makes it impossible to verify WLB guarantees, shutdown policies, or pay competitiveness. You'd need to ask directly about concrete policies on hours, time off, and career growth structures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no Glassdoor/Levels.fyi data found in sources."
   }
  },
  "trexquant": {
@@ -343640,38 +344301,105 @@
  "university of nevada reno": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Moderate academic prestige, highly dependent on the specific research lab and faculty. It does not carry the 'elite prestige' of a top-tier tech company or elite private research institute."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Public university funded by government appropriations, tuition, and competitive research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Estimated: Academic, mission-driven, and collaborative, but heavily procedurally bound and lacking the fast, innovative tech culture of a commercial startup."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Undergraduate and graduate students, as well as local and federal organizations funding academic research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Estimated: $60,000 - $80,000 for staff or junior researcher roles, significantly lower than top-tier commercial tech compensation."
   },
   "evidence_sha": "792b8fab2ecfd380",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888953,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "87e5da27d1",
+    "ff91c3313e"
+   ],
+   "value": "Probe heavily into the specific lab's funding cycle and publication expectations to gauge actual pace and bureaucracy. Ask if the role is tied to a strict grant timeline (which can cause burnout) or if it offers the guaranteed shutdowns and sane hours you require. Clarify compensation upfront, as university pay bands rarely match top-tier tech new-grad salaries."
+  },
+  "last_attempt_at": 1784888953,
   "last_evidence_at": 1784680310,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Reno, Nevada, United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "To provide outstanding undergraduate, graduate, and professional education while serving the state and region through research, outreach, and engagement."
+  },
   "name": "University of Nevada, Reno",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Academic calendar-driven and generally slower-paced, bound by university bureaucracy, grant cycles, and semester timelines rather than a fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Higher education degree programs, academic research, and community outreach initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Generous PTO including winter break, spring break, and state holidays, though exact days vary by staff classification and contract."
   },
+  "refresh_after": 1790072953,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -343680,8 +344408,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Likely includes a winter holiday shutdown aligning with the academic calendar, but this is not universally guaranteed for all technical staff roles."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Large public university with over 20,000 enrolled students."
   },
   "sources": [
    {
@@ -343715,14 +344452,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=f217355764f8311af45c81b0b73c7e3fd1d1117263134b4a6fa6328966920987JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cudXd5by5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Academic institutions typically do not offer H-1B or F-1 OPT STEM sponsorship for staff roles the way tech companies do, though international researchers may secure J-1 visas through university programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "87e5da27d1",
+    "ff91c3313e"
+   ],
+   "value": "The University of Nevada, Reno is a public land-grant research university. It generates revenue through state appropriations, student tuition, research grants, and private donations."
+  },
+  "synthesized_evidence_sha": "792b8fab2ecfd380",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ff91c3313e"
+   ],
+   "value": "Academic and applied research in computer science, AI, and data science, primarily tied to graduate programs and grant-funded projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680310,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Nevada%2C+Reno+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "87e5da27d1",
+    "ff91c3313e"
+   ],
+   "value": "While the university offers mission-driven work centered on academic discovery and AI research, it fundamentally lacks the elite tech prestige, high new-grad compensation, and fast-paced innovative culture you seek. Academic environments are inherently bureaucratic and slow-moving, which contrasts sharply with your desire to avoid slow bureaucracy while accelerating technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "87e5da27d1"
+   ],
+   "value": "Estimated: Potentially good work-life balance with academic holidays and predictable hours, though grant deadlines and publication pressures can occasionally cause spikes in workload."
   }
  },
  "university of oklahoma": {
