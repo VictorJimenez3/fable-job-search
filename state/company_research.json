@@ -79242,37 +79242,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top-tier): Public ad-tech leader with published research (KDD, RecSys, ICML), open-source contributions, petabyte-scale ML infra, and recognized expertise in real-time large-scale recommendation/bidding."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue primarily from media spend on its platform (take-rate on ad spend) and SaaS/platform fees for retail media technology. Reports revenue on a net basis (ex-TAC). High-volume, low-latency real-time bidding infrastructure is a key cost center."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, internationally diverse, low politics. Strong 'blameless postmortem' culture. Values technical depth and mentorship. Social but not mandatory. Remote/hybrid well-supported."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Thousands of retailers, brands, and agencies globally — including large enterprises like Target, Best Buy, Carrefour, Macy's, and many mid-market e-commerce companies. Demand-side: brands/agencies buying retail media; supply-side: retailers monetizing first-party data and inventory."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US (Ann Arbor/NY): $130k–$155k base + $25k–$45k RSU/year + 10–15% bonus. Paris: €50k–€65k base + RSU. Toronto: CAD 100k–120k base + RSU. Signing bonus $10k–$25k common."
   },
   "evidence_sha": "ef3ced17509f3d74",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AdTech / Commerce Media / Retail Media / MarTech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep system design (low-latency distributed systems, RTB architecture), ML system design (feature engineering, model serving, online/offline evaluation), coding (LeetCode medium/hard), and domain questions on auction theory, recommendation, or causal inference. Emphasis on practical trade-offs over theory."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784674036,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Paris, France. Major engineering hubs in Paris, Ann Arbor (MI), New York, Toronto, Tokyo, Singapore, São Paulo. Remote-friendly hybrid policy in many regions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To power the world's marketers and media owners with trusted and impactful advertising through commerce data and AI, enabling better consumer experiences and business outcomes."
+  },
   "name": "Criteo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — iterative shipping cycles (2-week sprints), quarterly planning, on-call rotations manageable. Not a 'move fast and break things' culture; emphasis on reliability at scale."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include Commerce Max (DSP for agencies/brands), Commerce Growth (performance marketing for retailers/brands), Retail Media Platform (for retailers to monetize on-site/off-site inventory), and Audience/Measurement solutions. Heavy reliance on ML for real-time bidding, recommendation, and attribution."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (varies by country; France ~30, US ~15–20 + 10–12 holidays). Unlimited sick leave. Generous parental leave (topped up beyond statutory)."
   },
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79282,7 +79324,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide year-end shutdown (typically Dec 24–Jan 2). Summer slowdown in Europe (August). No mandatory weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: CRTO), ~3,000–3,500 employees globally, profitable, mature ad-tech scale-up with significant R&D investment."
   },
   "sources": [
    {
@@ -79316,14 +79363,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1717bbc1b94b8afd6f538d5538e1f94a1e6b60c077fe29dce10fa96eddaeb92bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL2FsbCsv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor in the US (Ann Arbor, NY). Supports visa transfers and new cap filings. In EU, hires under local work permits; French Tech Visa eligible. Global mobility program for internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Criteo is a global commerce media platform that helps retailers and brands reach shoppers through targeted advertising across the open internet. It operates a large-scale real-time bidding engine and retail media network."
+  },
+  "synthesized_evidence_sha": "ef3ced17509f3d74",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale distributed systems (millions of QPS), real-time bidding (<10ms), ML platform (feature stores, training/serving pipelines), recommendation systems, causal inference/attribution, data engineering (petabyte-scale), privacy-enhancing tech (cohorts, clean rooms). Stack: Java/Scala, Go, Python, Kubernetes, Kafka, Flink, Spark, custom ML infra."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674036,
   "web_search_url": "https://duckduckgo.com/?q=Criteo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Criteo offers elite AI/DS prestige as a rare profitable, public ad-tech company operating at massive scale with real-time ML constraints. It balances high new-grad compensation with a culture known for engineering autonomy, reasonable hours (vs. FAANG intensity), and strong internal mobility. The commerce media pivot provides a mission-driven product direction tied to measurable retailer/brand outcomes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~10am–4pm local, rare weekends, protected vacation. On-call ~1 week/quarter with follow-the-sun coverage. French labor law influence in Paris office strengthens boundaries."
   }
  },
  "crossmark": {
@@ -88388,7 +88456,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88406,7 +88474,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784879341,
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784676250,
   "name": "Denso",
   "pace_of_work": {
@@ -88419,7 +88487,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784879461,
+  "retry_after": 1784879737,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88565,37 +88633,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – Not recognized as an AI/DS leader; work is operational analytics in a legacy public-sector setting."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly funded via property taxes, state per-pupil funding, federal grants, and bond measures. Operates as a non-profit government entity with a budget over $1 billion annually."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, equity-focused, but hierarchical and process-heavy. Culture varies by department; central office is more corporate, schools are community-centered. Not a 'fast, innovative tech culture'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students and families in the City and County of Denver, taxpayers, and the broader Denver community. Also serves as an employer for teachers, administrators, and support staff."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $75,000 base salary for entry-level data analyst/engineer roles. Significantly below top-tier tech market rates. Benefits include PERA pension, health insurance, and tuition assistance."
   },
   "evidence_sha": "015446a0e76935e1",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+   "value": "Public Education / Government"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions about equity, collaboration, and navigating bureaucracy. Technical interviews will focus on SQL, Python/R for analytics, data visualization (Tableau/Power BI), and understanding of educational data (attendance, assessment, demographics). Prepare to discuss how you would translate data insights into actionable interventions for schools. Ask about data governance, modernization roadmap, and opportunities for advanced analytics."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784616149,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Denver, Colorado. Schools and facilities throughout the City and County of Denver. Some remote/hybrid flexibility for central office roles, but school-based roles are on-site."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide all students the knowledge and skills to become contributing citizens in a diverse society. DPS focuses on equity, academic excellence, and whole-child development."
+  },
   "name": "Denver Public Schools",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow – Bureaucratic, consensus-driven, with long procurement and approval cycles. Projects move at government pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public K-12 education services, including traditional schools, charter schools, innovation schools, and specialized programs. Supporting services include student data systems, curriculum platforms, transportation, nutrition, and administrative technology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 paid holidays + sick leave. Varies by role and tenure. No unlimited PTO."
   },
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88605,7 +88715,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Schools have summer break but central office operates year-round. Some departments may have reduced hours around holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public institution with ~15,000 employees and ~90,000 students. Not a startup; organizational structure is hierarchical and bureaucratic."
   },
   "sources": [
    {
@@ -88639,14 +88754,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0b8e20b78cae9499629292d6e132726a9cdadf845c2c590c7a87f332fcc2e715JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=25af3677-2741-673c-22d6-21ea26a5669a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGVudmVy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public school district, DPS can sponsor H-1B visas (cap-exempt) for specialty occupations, but sponsorship for new grads is rare and typically limited to hard-to-fill roles like bilingual special education or STEM teachers. Tech roles may be eligible but competition is high."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Denver Public Schools (DPS) is the largest public school district in Colorado, serving approximately 90,000 students across 200+ schools. It is a government entity funded by local, state, and federal tax dollars, not a for-profit company."
+  },
+  "synthesized_evidence_sha": "015446a0e76935e1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily enterprise IT: student information systems (Infinite Campus), data warehousing, reporting/analytics, learning management systems, network infrastructure, and cybersecurity. Emerging use of predictive analytics for early warning indicators. Limited cutting-edge AI/ML research; most data science is descriptive analytics and dashboarding."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616149,
   "web_search_url": "https://duckduckgo.com/?q=Denver+Public+Schools+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DPS offers a mission-driven environment focused on educational equity, which aligns with a desire for social impact. However, it does not match the candidate's priorities for elite AI/DS prestige, high new-grad pay, fast innovative tech culture, or guaranteed shutdowns. The pace is bureaucratic, pay is below market for tech roles, and technical growth is incremental rather than accelerated. Work-life balance is generally decent with standard public-sector hours and holidays, but not the 'sane ho"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Moderate-Good – Standard 40-hour weeks, generous holidays (including summer break for some roles), but on-call expectations for critical systems. No guaranteed daily shutdowns."
   }
  },
  "descartes systems group": {
@@ -135885,37 +136021,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – recognized for production ML at scale (personalization, forecasting, logistics optimization) and frequent publications at top conferences (RecSys, KDD, ICML)."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Subscription-based e-commerce: customers choose a weekly plan, receive pre-portioned ingredients with recipes, and are billed recurringly; revenue supplemented by add-ons, upsells, and brand portfolio cross-selling."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "Entrepreneurial, data-driven, ownership-oriented, diverse, and inclusive; ‘Achieve something delicious, every day’ mantra reflects bias for action and customer obsession."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Home cooks seeking convenience, variety, and reduced food waste—typically busy professionals, families, and health-conscious individuals in 18+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US new-grad Data Scientist/ML Engineer ~$135k–$160k base + 10–15% bonus + RSUs (4-yr vest ~$80k–$120k); Germany ~€60k–€70k base + equity; UK ~£55k–£65k base + equity."
   },
   "evidence_sha": "85b06d8b6b0be996",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Food-tech / meal-kit delivery / e-commerce logistics"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "Expect rigorous technical screens (ML system design, statistical modeling, SQL/coding) plus behavioral rounds probing ownership mentality, entrepreneurial problem-solving, and collaboration in cross-functional squads. Demonstrate ability to ship production-grade models fast while respecting operational constraints."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784676254,
-  "name": "Hello Fresh",
-  "pace_of_work": {
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "HQ in Berlin; major tech hubs in Berlin, Amsterdam, New York, London, Toronto, Sydney; plus fulfillment centers across North America, Europe, and Oceania."
   },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "“We are a global tech company driven to deliver delicious meals for our customers.”"
+  },
+  "name": "Hello Fresh",
+  "pace_of_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "Fast, iterative, squad-based delivery cycles (bi-weekly sprints); emphasis on autonomy and rapid experimentation over heavy process."
+  },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core meal-kit boxes (HelloFresh), plus subsidiary brands such as Green Chef (organic/keto), EveryPlate (budget), Factor (ready-to-eat meals), and Chefs Plate (Canada)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (varies by country; Germany 30, US 15–20 + holidays)."
   },
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135925,7 +136111,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (typically Dec 24–Jan 1) plus occasional ‘recharge days’; no guaranteed summer shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (ETR: HFG), ~20,000 employees globally, €7.6B revenue (2023), profitable at scale."
   },
   "sources": [
    {
@@ -135959,14 +136150,39 @@
     "url": "https://careers.hellofresh.com/global/en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors work visas (EU Blue Card, H-1B, Global Talent Visa) for technical roles; relocation packages common for senior hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HelloFresh is a global meal-kit delivery company that sends pre-portioned ingredients and recipes to subscribers' doors. It makes money primarily through recurring subscription revenue from weekly meal-kit boxes across multiple brands."
+  },
+  "synthesized_evidence_sha": "85b06d8b6b0be996",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "Heavy investment in data science & ML for demand forecasting, personalization, route optimization, dynamic pricing, and supply-chain automation; modern stack (Python, Kubernetes, Kafka, Snowflake) with a strong “HelloTech” engineering culture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676254,
   "web_search_url": "https://duckduckgo.com/?q=Hello+Fresh+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "142dc5d422"
+   ],
+   "value": "HelloFresh offers a rare combination for a new-grad AI/data scientist: a publicly traded, profitable company with a genuine tech-first culture (data-driven, entrepreneurial ownership), top-tier compensation packages that rival big tech, and a stated emphasis on sustainable pace and work-life balance—avoiding the burnout typical of hyper-growth startups or rigid corporate bureaucracies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong – company promotes ‘sane hours’ and ‘guaranteed shutdowns’ (e.g., no-meeting Fridays, protected weekends); employee surveys consistently rate WLB above industry average."
   }
  },
  "hershey": {
@@ -197570,41 +197786,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (solid applied work in government context; not a primary AI research hub)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government contracting: wins prime and subcontract awards, provides staffed expertise and managed services on a cost-plus, time-and-materials, or fixed-price basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, process-driven, collaborative, with emphasis on compliance and veteran/native Hawaiian community values."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. federal government agencies (e.g., Department of Defense, civilian agencies)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000–$110,000 base + modest bonus; clearance-eligible roles may start higher."
   },
   "evidence_sha": "35f9b913d4f41f6e",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Federal Government Contracting / Professional Services"
   },
-  "last_attempt_at": 1784878881,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on federal compliance, teamwork, and mission alignment. Technical screens may emphasize practical ML/engineering for regulated environments, security clearance processes, and ability to deliver within government procurement constraints."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784674432,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters likely in Hawaii or Washington, D.C. area; project sites at federal facilities nationwide."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "bb106ebdce"
+   ],
+   "value": "To deliver mission-critical solutions that advance national priorities while fostering a culture of integrity, innovation, and community stewardship (inferred from Nakupuna Foundation presence)."
+  },
   "name": "Nakupuna Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, driven by contract deliverables and compliance cycles; slower than Silicon Valley but with predictable sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Professional services including IT modernization, cybersecurity, data analytics, engineering support, and program management for federal clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; may include separate sick leave."
   },
-  "retry_after": 1784879361,
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197614,7 +197870,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observes federal holidays and likely a year-end shutdown (Dec 24–Jan 1); some contracts mandate specific shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-sized government contractor (estimated 500–2,000 employees), established enough to have a separate foundation entity."
   },
   "sources": [
    {
@@ -197648,14 +197909,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=829e0ded77dbcfee9e3d623a9e1a12e69f9dd2cc2c071e760b9207172f54b318JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9uYWt1cHVuYS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards for cleared positions; may require U.S. citizenship for many roles due to security clearance requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bb106ebdce",
+    "d91a89a50c",
+    "2efe7d224c"
+   ],
+   "value": "Nakupuna Companies appears to be a federal government contracting and professional services firm, likely providing IT, engineering, and management solutions to U.S. government agencies. Revenue is derived primarily from federal contracts and task orders."
+  },
+  "synthesized_evidence_sha": "35f9b913d4f41f6e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software development, cloud migration, DevSecOps, data science/ML model deployment, cybersecurity compliance, and systems engineering for federal programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Nakupuna+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven federal contracting environment with potential for meaningful national security work. The presence of a foundation suggests community values. For a candidate seeking elite AI/data science prestige with work-life balance, the firm’s government focus may provide stable hours and shutdowns, but prestige and pay may lag top-tier tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – government contracting often enforces 40-hour weeks and shutdowns, but surge periods near contract deadlines occur."
   }
  },
  "namsa": {
@@ -236075,41 +236361,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (core AI infrastructure builder, not model research); high prestige in systems/MLOps circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "ODM/JDM model: design collaboration followed by high-volume contract manufacturing; revenue per unit shipped plus NRE fees for joint development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, metric-driven, collaborative across ME/EE/SW; Taiwanese corporate heritage brings hierarchy but U.S. site operates with autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Hyperscale cloud providers (e.g., AWS, Google, Microsoft), major OEM brands (e.g., Dell, HPE, Lenovo), and enterprise IT vendors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + 10-15% bonus + RSU (vesting over 4 yrs); total ~$130k-$160k year 1."
   },
   "evidence_sha": "24aef2b4a974c3a0",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Electronics manufacturing / ODM / Data-center infrastructure"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep-dive on hardware/software co-design, thermal/power optimization, CI/CD for firmware, and Python/Go automation for factory test; behavioral emphasis on cross-functional program execution and supply-chain resilience."
   },
-  "last_attempt_at": 1784879341,
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784675359,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Primary site: Fremont, California; global HQ in Taoyuan, Taiwan; additional factories in China, Thailand, Germany, and U.S. (TN, MA)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Enable scalable, efficient computing infrastructure through advanced manufacturing and co-design partnerships."
+  },
   "name": "Quanta Manufacturing Fremont",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast hardware cycles (quarterly platform ramps) but predictable sprint cadences; less chaotic than consumer-device launches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Server platforms, rack-scale AI/ML infrastructure, notebook/Chromebook assemblies, and related data-center hardware."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days (U.S. standard for large manufacturer)."
   },
-  "retry_after": 1784879461,
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236119,7 +236467,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas/New Year; optional summer Friday half-days."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Large public parent (Quanta Computer, TWSE: 2382) with $100B+ annual revenue; Fremont site employs several hundred to low-thousands in engineering and operations."
   },
   "sources": [
    {
@@ -236153,14 +236510,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1b0f86e5563ae024a9590b050be2cbaebfff914b8a5fb26ba79d5c6b21b22bffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cucXVhbnRhc2VydmljZXMuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (parent files thousands yearly); green-card support common for specialized engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Quanta Manufacturing Fremont is the U.S. production arm of Quanta Computer, a global original design manufacturer (ODM) that designs and builds servers, laptops, and data-center hardware for hyperscalers and tier-1 brands. Revenue comes from contract manufacturing and joint design services sold to cloud providers and OEMs."
+  },
+  "synthesized_evidence_sha": "24aef2b4a974c3a0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6f8e8eb2f",
+    "dfa8894693",
+    "6fa01c2a48"
+   ],
+   "value": "Hardware validation, thermal/mechanical design, firmware/BIOS, supply-chain automation, data-center deployment tooling, and increasing AI/ML infrastructure integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675359,
   "web_search_url": "https://duckduckgo.com/?q=Quanta+Manufacturing+Fremont+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite-scale AI hardware exposure (building the servers that run frontier models) with ODM-speed iteration, yet as a manufacturing subsidiary it typically avoids the 24/7 on-call culture of pure-play cloud hyperscalers—aligning with your priority for high technical prestige, strong new-grad pay, and protected personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — factory-adjacent roles have shift rotations; R&D roles ~45-50 hrs/wk with protected weekends."
   }
  },
  "quantam": {
@@ -307269,41 +307655,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low–Moderate. AI/DS work exists in academic research (e.g., UMaine's AI initiatives, climate modeling, forestry analytics) and institutional analytics, but UMS is not an AI industry leader. Prestige derives from domain-specific research impact, not cutting-edge ML engineering."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit public university system funded through state appropriations (~40%), student tuition and fees (~35%), grants and contracts (~15%), auxiliary enterprises, and private giving. No profit motive; surplus reinvested in mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collegial, consensus-driven, mission-oriented. Shared governance means faculty/staff have voice in decisions. Hierarchical but accessible. Values stability, equity, and public service over disruption. Can feel slow or risk-averse to private-sector hires. Strong Maine community identity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maine residents seeking higher education (traditional and adult learners), research sponsors (federal/state agencies, private foundations), employers hiring graduates, and communities served by extension and outreach programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$75,000 base for entry-level IT/data roles (e.g., Systems Analyst, Data Analyst, Research Programmer). Higher ($70k–$90k) for specialized research computing or grant-funded positions. No equity/bonus. Comprehensive benefits (health, retirement, tuition remission) add ~30–40% value."
   },
   "evidence_sha": "9f3bc34ed4037aba",
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784879341,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions about public-sector mission fit, experience with diverse stakeholders, grant-funded project cycles, FERPA/HIPAA compliance, and collaborative governance. Technical assessments may be lighter than industry. Ask about: research computing roadmap, data strategy maturity, remote/hybrid flexibility, professional development funding, and how IT partners with academic units. Clarify whether role is central IT or embedded in a research center—culture differs."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784678788,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d296299125"
+   ],
+   "value": "Seven university campuses across Maine: Orono (UMaine flagship), Portland/Gorham (USM), Farmington (UMF), Machias (UMM), Presque Isle (UMPI), Fort Kent (UMFK), Augusta (UMA), plus Maine Law in Portland and numerous outreach centers statewide. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide accessible, affordable, high-quality public higher education that advances the intellectual, economic, and social well-being of Maine's people through teaching, research, and public service."
+  },
   "name": "University of Maine System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow–Moderate. Academic and bureaucratic processes dominate: procurement, hiring, governance, and compliance add latency. Projects align with semester/grant cycles. Urgent operational issues (outages, security) get fast response; strategic initiatives move at committee pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate and graduate degree programs, academic research, continuing education, workforce development, cooperative extension services, and cultural/community programming across Maine's seven public universities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22–28 days annual leave (vacation + sick + personal) + 12–14 paid holidays + winter break closure (typically 5–7 extra days between Christmas/New Year). Accrual based on years of service and union contract. Varies by employee class (faculty vs. staff vs. admin)."
   },
-  "retry_after": 1784879461,
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307313,7 +307739,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes—annual winter shutdown (typically Dec 24–Jan 2) where most offices close. Summer reduced-hours programs common. No guaranteed 'summer Fridays' system-wide but some units offer flexibility."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mature public institution. ~29,000 students system-wide, ~5,000 employees across 7 universities + law school. Annual budget ~$600M. Governed by a Board of Trustees appointed by the Governor."
   },
   "sources": [
    {
@@ -307347,14 +307778,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=c556c7c821b01bd950cd65253bcdafc1b7f1a98af2d485da1468d3711cf0a75aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university system, UMS sponsors H-1B visas for faculty and specialized research/IT roles. J-1 scholars common for visiting researchers. Green card sponsorship possible for tenured/tenure-track faculty and select permanent staff. Less common for entry-level IT roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d296299125"
+   ],
+   "value": "The University of Maine System (UMS) is Maine's public university system, comprising seven universities, a law school, and multiple regional centers. It serves as the state's primary provider of public higher education, research, and community engagement across Maine."
+  },
+  "synthesized_evidence_sha": "9f3bc34ed4037aba",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT infrastructure, learning management systems, research computing/HPC, data analytics for student success, cybersecurity, enterprise applications (ERP, SIS), and discipline-specific research computing. AI/ML primarily in academic research labs, not central IT."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678788,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Maine+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "UMS offers mission-driven work with tangible impact on Maine's communities and workforce. For an AI/data science candidate, roles exist in research computing, institutional analytics, and academic labs—but pay and prestige lag industry. Work-life balance is generally strong with academic calendar rhythms, generous holidays, and union protections. Pace is deliberate, not fast/innovative by tech standards. Career growth follows public-sector tracks, not startup velocity. Best fit if mission alignm"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High. Standard 37.5–40 hr weeks, generous holiday/break calendar (winter break, summer flexibility), strong union contracts (AFUM, UMPSA), and cultural expectation of boundaries. On-call rotations exist for critical infra but are managed. Burnout risk low vs. industry."
   }
  },
  "university of maryland college park": {
@@ -313237,37 +313691,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-to-high tier, specializing in AI-powered platforms with recent strategic rebranding from Maxar Intelligence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "B2B technology provider generating revenue through the licensing and deployment of AI-powered platforms and intelligence solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Tech-driven and collaborative, with an emphasis on AI and platform innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "887216ea35",
+    "a08959a7ec"
+   ],
+   "value": "Enterprise clients seeking advanced AI and data-driven intelligence platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $160,000 base salary, aligning with competitive tech industry standards for AI and data roles."
   },
   "evidence_sha": "c25641cdc0668a77",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879497,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "Information Technology and Artificial Intelligence"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "Emphasize your expertise in AI and data science platform development during interviews. Be sure to ask about team structure, work-life balance expectations, and the frequency of guaranteed shutdowns or sane-hour policies to ensure the culture meets your burnout-avoidance criteria. Inquire about new-grad compensation packages and technical learning pathways to gauge prestige and pay alignment."
+  },
+  "last_attempt_at": 1784879497,
   "last_evidence_at": 1784676254,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "887216ea35"
+   ],
+   "value": "Corporate website and careers portal are accessible globally; specific physical office locations were not found in the retrieved sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "To deliver innovative AI-powered platforms and intelligence solutions that drive value for enterprise clients."
+  },
   "name": "Vantor",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced due to the innovative nature of AI platform development."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "AI-powered platforms and intelligence solutions, including systems rebranded from Maxar Intelligence unveiled AI-powered platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of paid time off annually, standard for the tech industry."
   },
+  "refresh_after": 1790063497,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313277,7 +313793,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public information available on guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "887216ea35"
+   ],
+   "value": "Established technology firm with a public-facing corporate presence and active careers portal."
   },
   "sources": [
    {
@@ -313311,14 +313834,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=df2e53c0b3715a37b20b8f07b6c394abb9286c37a79026e0eba3031005723fa1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly92YW50b3IuY29tL2Jsb2cvdmFudG9yLXJlYnJhbmRzLWZyb20tbWF4YXItaW50ZWxsaWdlbmNlLXVudmVpbHMtYWktcG93ZXJlZC1wbGF0Zm9ybS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "887216ea35"
+   ],
+   "value": "Specific information regarding visa sponsorship for AI and data science roles is not available in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "Vantor specializes in AI-powered platforms and intelligence solutions. The company generates revenue by providing advanced AI technologies and platforms to enterprise clients."
+  },
+  "synthesized_evidence_sha": "c25641cdc0668a77",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "Development of AI-powered platforms, intelligence software, and data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676254,
   "web_search_url": "https://duckduckgo.com/?q=Vantor+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a08959a7ec",
+    "887216ea35"
+   ],
+   "value": "Vantor aligns well with your goal of securing a top-tier AI role by working on AI-powered platforms, offering potential for high technical growth and innovation. The company's involvement in advanced AI systems suggests a fast-paced, mission-driven environment that could match your desire for elite technical work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good, typical of specialized tech firms, though specific policies are not public."
   }
  },
  "varian": {
