@@ -31965,37 +31965,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — known in bio-automation niche but not widely recognized as a top-tier AI research destination compared to big tech or pure-play AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Razor-blade model — sell high-value automated storage instruments and generate recurring revenue from consumables, software licenses, and maintenance services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a6a720d20"
+   ],
+   "value": "Customer-focused, encourages innovation and challenging status quo, collaborative work relationships; normal office setting with occasional travel."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Biopharmaceutical companies, academic research centers, hospitals, and contract research organizations (CROs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$120k base + equity/bonus (aligned with industrial automation/med-tech peers); no public new-grad data found."
   },
   "evidence_sha": "2a2052f833e1b990",
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Life sciences tools & services / laboratory automation"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a6a720d20"
+   ],
+   "value": "Expect emphasis on interpersonal communication, collaborative problem-solving, and ability to innovate within a regulated life-sciences context. Prepare for questions on full-stack or embedded software experience, quality mindset, and cross-functional teamwork."
+  },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784848352,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a6a720d20"
+   ],
+   "value": "Headquarters in Burlington, MA; job posting lists South Plainfield, NJ as a work site; global offices in US, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To advance life sciences research by delivering reliable sample integrity and workflow automation solutions."
+  },
   "name": "Azenta",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — product cycles tied to instrument releases and regulated software validation; not a pure software velocity culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Automated biobanking systems, cryogenic storage, sample tracking software, and laboratory automation hardware."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays (typical US public company); no official policy found in sources."
   },
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32005,7 +32053,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; likely observes standard US federal holidays only."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "83eab2659d",
+    "13cf4124b1",
+    "d4e9317995"
+   ],
+   "value": "Publicly traded company (NASDAQ: AZTA) with global operations; identified as a public company in multiple source pages."
   },
   "sources": [
    {
@@ -32059,14 +32116,42 @@
     "url": "https://azenta.wd1.myworkdayjobs.com/AzentaJobs/job/US---South-Plainfield-NJ/Software-Developer_R20260491"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards given public company status and technical hiring; no explicit policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Azenta is a public life sciences company providing sample management, cold storage, and automation solutions for biopharma and research institutions. It generates revenue through instrument sales, consumables, and service contracts."
+  },
+  "synthesized_evidence_sha": "2a2052f833e1b990",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a6a720d20"
+   ],
+   "value": "Software development for laboratory automation and sample management platforms; collaborative, innovation-focused environment with occasional travel (≤10%)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848352,
   "web_search_url": "https://duckduckgo.com/?q=Azenta+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a6a720d20",
+    "dbc3b9e88f"
+   ],
+   "value": "Azenta offers a public-company platform in life sciences automation where AI/data science can directly impact drug discovery workflows. The job posting emphasizes innovation, collaborative culture, and customer focus — signals that may align with a fast-paced, mission-driven environment. However, concrete data on new-grad pay, WLB guarantees, and AI prestige tier are not publicly documented in available sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0a6a720d20"
+   ],
+   "value": "Estimated: 3.5/5 — normal office environment noted in posting; travel ≤10%; no public data on shutdown policies or guaranteed hours."
   }
  },
  "b b manufacturing": {
@@ -55820,48 +55905,130 @@
  "cbiz": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Tier 3 — Respectable applied DS/AI within professional services; not an elite AI research or product-driven tech brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Fee-for-service professional services model: bills clients for accounting, tax, advisory, insurance commissions, and consulting engagements. Revenue is recurring from compliance work and project-based from advisory/valuation."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Collaborative, credential-oriented, client-service first. Hierarchical by practice group; emphasis on CPA/CFA progression. DEI and learning initiatives exist but culture varies significantly by office and service line."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Small-to-mid-market businesses, nonprofit organizations, high-net-worth individuals, and middle-market companies across industries including healthcare, manufacturing, real estate, and financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + modest bonus (5–10%); RSU grants rare for entry-level. Total comp ~$90k–$120k. Below top-tier pure-tech new-grad offers."
   },
   "evidence_sha": "261a4b82b7b549d0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Professional Services / Accounting & Advisory / Insurance Brokerage"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc",
+    "1db9db9c4d"
+   ],
+   "value": "Expect behavioral questions on client-facing problem solving, technical screens on Python/SQL, data pipelines, and statistical modeling applied to tax/audit/valuation use cases. Prepare for case studies involving messy real-world financial data. Emphasize ability to translate technical work into business value for non-technical stakeholders."
+  },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784848351,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Headquartered in Cleveland, OH; 100+ offices nationwide. Hybrid/office-centric culture typical of professional services; limited fully remote roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ecd01190dc"
+   ],
+   "value": "To provide clients with integrated professional services that help them manage finances, mitigate risk, and achieve growth, delivered through a national platform with local expertise."
+  },
   "name": "CBIZ",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Moderate-to-high; seasonal peaks (tax busy season Jan–Apr, audit cycles). Project deadlines driven by client deliverables. Not a \"move fast and break things\" tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Accounting & tax services, insurance brokerage & risk management, valuation & advisory, financial consulting, retirement plan services, and managed networking/hardware services via CBIZ MHM (Mayer Hoffman McCann)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 6–10 holidays; accrual-based, increases with tenure. No unlimited PTO policy."
   },
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; some offices may close between Christmas and New Year but not formalized."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Public company (NYSE: CBZ); ~5,500 employees; $1.4B+ annual revenue; national footprint with 100+ offices. Mature, acquisitive platform consolidating regional CPA and advisory firms."
   },
   "sources": [
    {
@@ -55905,14 +56072,45 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B for specialized technical and actuarial roles; green card support case-by-case. Not a high-volume tech visa sponsor compared to pure tech firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "CBIZ, Inc. is a publicly traded professional services company (NYSE: CBZ) providing accounting, tax, insurance brokerage, valuation, and advisory services to businesses and individuals across the U.S. It operates through a network of offices and generates revenue primarily from fee-based professional services."
+  },
+  "synthesized_evidence_sha": "261a4b82b7b549d0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc"
+   ],
+   "value": "Internal IT, data analytics, and automation supporting professional services delivery. Roles focus on modernizing tax/audit workflows, client-facing portals, data platforms, and actuarial/valuation modeling — not a core software product company."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848351,
   "web_search_url": "https://duckduckgo.com/?q=CBIZ+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbaf82afa0",
+    "ecd01190dc",
+    "1db9db9c4d"
+   ],
+   "value": "CBIZ offers a stable, prestigious professional-services platform with growing investment in data science and AI to modernize tax, audit, and advisory delivery. For a new grad, it provides structured learning, exposure to diverse client data, and a clear career ladder — but the culture is professional-services paced (busy seasons, client deadlines) rather than a fast-moving, product-centric tech environment. Work-life balance varies by practice group; guaranteed shutdowns are not standard. Pay is"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Professional services norms: busy seasons demand 50–60+ hrs/week; off-peak closer to 40. No company-wide guaranteed shutdowns; PTO accrual standard."
   }
  },
  "cdk global": {
@@ -89044,37 +89242,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Legacy satellite tech firm, reflects mode"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Operates by providing communication and satellite television services, monetizing through mobile networks and various connectivity offerings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven to"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Consumers and businesses requiring connectivity, television, and communication solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "low",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Estimated: For Data Analyst I roles, is $59K/yr - $78K/yr."
   },
   "evidence_sha": "d809f7c5c138860b",
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Communication and satellite services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess the team's work-life balance policies and daily schedule to ensure"
   },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784782306,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Englewood, CO"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Reimagining the future of connectivity."
+  },
   "name": "EchoStar Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace typ"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Satellite television services and mobile communication products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO"
   },
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89084,7 +89338,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely holiday shut"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Public corporatwithuctures spanning services and products."
   },
   "sources": [
    {
@@ -89138,14 +89399,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=f353c8323ab7d040d196b425f70036ee08e3829ba6767f1bba981fec99cf6f85JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuZWNob3N0YXIuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "EchoStar Corporation is reimagining the future of connectivity by providing a range of communication services, including satellite television and mobile products. The company makes money by two-way audio/video communications and wireless networks to its consumer and enterprise clients."
+  },
+  "synthesized_evidence_sha": "d809f7c5c138860b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "60d2f3c194"
+   ],
+   "value": "Data analytics and operations focused on developing and optimizing communication and television products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675400,
   "web_search_url": "https://duckduckgo.com/?q=EchoStar+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "An AI or data science role at a mission-oriented connectivity company offers"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, older corporat"
   }
  },
  "ecs": {
@@ -93113,38 +93399,96 @@
  "enova": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Estimated: Niche fintech leader—strong applied AI work, but not FAANG/quant-level prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Earns revenue through fintech lending and online financial services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Inclusive, employee-focused tech culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Consumers and businesses in need of online financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base"
   },
   "evidence_sha": "421c31592ea9d47d",
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Financial Technology (FinTech)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Demonstrate ML modeling skills, show interest in fintech impact, and ask about new-grad growth paths."
   },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784776544,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Hybrid (implies office presence required)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Committed to making Enova an awesome place to work, fostering an inclusive environment where employees can thrive."
+  },
   "name": "Enova",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Online financial services and consumer credit products delivered via the Colossus AI/ML platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: standard (15-20 days)"
   },
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -93154,7 +93498,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: limited/none"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Established publicly-traded financial technology company."
   },
   "sources": [
    {
@@ -93218,14 +93569,43 @@
     "url": "https://job-boards.greenhouse.io/enova/jobs/8013589"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Cannot sponsor visas or take over sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Enova International is a financial technology company that provides online financial services powered by its AI and machine learning Colossus platform. It makes money by offering credit products and financial services to consumers and businesses."
+  },
+  "synthesized_evidence_sha": "421c31592ea9d47d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Building and maintaining AI and machine learning models on the Colossus platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776544,
   "web_search_url": "https://duckduckgo.com/?q=Enova+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Aligns well: AI/ML platform offers strong learning, hybrid setup supports balance, and inclusive culture avoids toxicity."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56fb37d831"
+   ],
+   "value": "Estimated: Moderate-to-good, supporting thrive culture."
   }
  },
  "enova international": {
@@ -158407,43 +158787,111 @@
  },
  "lg electronics": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "3516ebe147"
+   ],
+   "value": "Medium in the US tech market; high in South Korea for hardware and applied AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Manufacturing and direct sales of physical consumer and enterprise hardware through global retail and B2B supply chains."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional large hardware conglomerate with a hierarchical structure, making it potentially bureaucratic."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Global retail consumers, enterprise businesses, and automotive manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 - $130,000 base salary for US AI and data science roles."
   },
   "evidence_sha": "3516d215d06aea2b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784872621,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Consumer Electronics and Manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "In interviews, probe whether the specific team operates with a fast, innovative tech culture or is hindered by slow bureaucracy. Given the importance of guaranteed shutdowns and sane hours to you, ask detailed questions about work-life balance, on-call expectations, and burnout rates within the division."
+  },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784677994,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69"
+   ],
+   "value": "Global presence with major headquarters and R&D hubs in South Korea and North America."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Innovation for a Better Life."
+  },
   "name": "LG Electronics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast-paced, with product cycles driven by global consumer electronics launches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Consumer electronics (OLED TVs, monitors), home appliances (refrigerators, washers), air solutions, vehicle component systems, and business displays."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO."
   },
-  "retry_after": 1784872741,
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158453,7 +158901,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Mandatory shutdowns may exist during specific regional holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Large, established public multinational corporation."
   },
   "sources": [
    {
@@ -158487,14 +158944,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=beec70861b7974beca45381e16c96d0e2300d53d6b5a2126a45b41bed3625e8dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cubGcuY29tL3VzLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "Likely offers H-1B and other visa sponsorships for specialized engineering and data science roles at its global R&D centers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "687703ba69",
+    "3516ebe147"
+   ],
+   "value": "LG Electronics is a South Korean multinational conglomerate that manufactures and sells consumer electronics, home appliances, and vehicle components. The company makes money by producing and globally distributing physical hardware products, spanning televisions, washing machines, refrigerators, and automotive displays."
+  },
+  "synthesized_evidence_sha": "3516d215d06aea2b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "3516ebe147"
+   ],
+   "value": "AI integration for smart appliances, deep learning for autonomous vehicle component systems, and data science for smart home ecosystems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677994,
   "web_search_url": "https://duckduckgo.com/?q=LG+Electronics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "6c80772f2c",
+    "3516ebe147"
+   ],
+   "value": "You are looking for a top-tier AI/DS role offering elite prestige and high new-grad pay within a fast, innovative tech culture. LG provides significant technical learning and career growth through autonomous vehicle and smart home AI applications."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, department-dependent, and potentially traditional at Korean headquarters."
   }
  },
  "lg electronics north america": {
@@ -196725,11 +197217,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196741,6 +197235,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784719724,
   "name": "Omega Home Health Care Services, Inc.",
   "pace_of_work": {
@@ -196753,6 +197248,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872887,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196816,7 +197312,7 @@
     "url": "https://jobright.ai/jobs/info/6a54f06e4119652ff3862495?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784719724,
   "web_search_url": "https://duckduckgo.com/?q=Omega+Home+Health+Care+Services%2C+Inc.+company+careers+benefits",
@@ -288763,11 +289259,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -288779,6 +289277,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784583443,
   "name": "UW Health",
   "pace_of_work": {
@@ -288791,6 +289290,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872887,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -288834,7 +289334,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=cec4409dec6097786261d16bdf1a9b3adc6b4de9a989575341d7343feef9ce7cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudXdtZWRpY2luZS5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583443,
   "web_search_url": "https://duckduckgo.com/?q=UW+Health+company+careers+benefits",
@@ -305000,48 +305500,130 @@
  "wsp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Low - AI/DS roles are not the core competency of the firm and do not carry top-tier tech prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "fff0205917",
+    "280f77b2a1"
+   ],
+   "value": "B2B and B2G professional services and consulting firm, billing hours and project fees for infrastructure planning and design."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Professional, safety-oriented, and collaborative environment focused on public infrastructure impact."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "280f77b2a1",
+    "fff0205917"
+   ],
+   "value": "Government agencies at the local, state, and federal levels (e.g., @ws.wa.gov), as well as private developers and infrastructure authorities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b0707f9787"
+   ],
+   "value": "Estimated: $75,000 - $95,000 USD base salary for entry-level data/tech roles, below top-tier tech firms."
   },
   "evidence_sha": "b355d41d8b8c8517",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872767,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fff0205917",
+    "280f77b2a1"
+   ],
+   "value": "Engineering Services / Infrastructure Consulting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fff0205917",
+    "b0707f9787"
+   ],
+   "value": "To find out if this role avoids the pitfalls of slow bureaucracy, you must ask precise questions: 'What is the exact daily relationship between the data science team and core civil engineering project managers?' and 'Is there a guarantee of sane hours and protected weekends, or do billable hours dictate availability during project crunches?' You should also probe their AI stack to see if you'll be building modern models or just doing basic data cleaning for older Excel pipelines."
+  },
+  "last_attempt_at": 1784872767,
   "last_evidence_at": 1784676689,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Headquartered in Canada with major US operations and offices worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0707f9787"
+   ],
+   "value": "To future-proof our cities and communities by providing engineering solutions that are sustainable, innovative, and resilient."
+  },
   "name": "WSP",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fff0205917",
+    "280f77b2a1"
+   ],
+   "value": "Estimated: Moderate to slow pace depending on the scale of the project, typical of large-scale engineering and government contracts."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Engineering design, infrastructure advisory, environmental consulting, and program management services for transportation, buildings, energy, and water sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b0707f9787"
+   ],
+   "value": "Estimated: 15-20 days of PTO per year, with additional paid holidays depending on the region."
   },
+  "refresh_after": 1790056767,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "b0707f9787"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Estimated: Standard public holidays; no widespread corporate-wide guaranteed shutdowns found in general PR."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "Global enterprise, publicly traded on the TSX, employing over 70,000 people globally."
   },
   "sources": [
    {
@@ -305075,14 +305657,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=1c050ee8285b8a4a2fa247caca0c8e42e4e18b824018177d51ba629120d107cbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93c3Aud2EuZ292Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b0707f9787"
+   ],
+   "value": "As a large global consultancy, WSP occasionally sponsors visas for specialized engineering roles, but it is not guaranteed for all new-grad applicants and depends on regional demand."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fff0205917"
+   ],
+   "value": "WSP is one of the world's largest professional services firms, providing engineering and design services to communities and infrastructure projects globally. They make money by charging public and private sector clients for project planning, engineering consulting, and advisory services."
+  },
+  "synthesized_evidence_sha": "b355d41d8b8c8517",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0707f9787",
+    "fff0205917"
+   ],
+   "value": "Engineering design, transportation planning, environmental analysis, public works infrastructure. AI and data science roles are strictly limited to optimizing these traditional civil projects rather than core product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676689,
   "web_search_url": "https://duckduckgo.com/?q=WSP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fff0205917",
+    "280f77b2a1"
+   ],
+   "value": "While WSP offers a strong mission-driven environment focused on sustainability and future-proofing cities, its identity as a massive civil engineering consultancy fundamentally conflicts with your desire for fast, innovative tech culture and elite AI prestige. New data scientists here are support roles optimizing infrastructure projects, not building core AI products, meaning you will likely face slow bureaucracy and lower tech-industry pay than top-tier software firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b0707f9787",
+    "fff0205917"
+   ],
+   "value": "Estimated: Good work-life balance relative to tech, but may include long hours during major project deadlines or proposals."
   }
  },
  "wtw": {
