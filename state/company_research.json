@@ -12879,39 +12879,99 @@
  },
  "algo1": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "High — on-device ML at scale in retail is a cutting-edge niche; early-stage clean-slate work attracts strong talent."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "B2B platform/SaaS providing mobile ML infrastructure and tooling to retail enterprises for in-store deployment."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Product-driven, clean-slate engineering, collaborative with product/design, no legacy systems, high autonomy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Physical retailers seeking to embed real-time, context-aware ML interactions into their brick-and-mortar stores."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$170k base + equity (early-stage AI/ML startup range); no public data."
   },
   "evidence_sha": "e1cc480a5c643dba",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Applied AI / ML for Retail Tech (Physical Retail)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Expect deep mobile systems questions (iOS/Android internals, performance), on-device ML deployment (CoreML, TensorFlow Lite, PyTorch Mobile), clean architecture design, and product collaboration scenarios. Prepare to discuss trade-offs in real-time inference, battery/thermal constraints, and developer experience for SDK consumers. Ask directly about typical work weeks, guaranteed shutdown rituals, PTO usage norms, and how the team prevents burnout during crunches."
+  },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784679095,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Bring the intelligence of modern machine learning directly to the in-store experience, powering real-time, context-aware interactions in physical retail through beautifully engineered mobile experiences and developer tooling."
+  },
   "name": "algo1",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Fast — described as fast-paced startup environment with product-driven decision making."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Mobile applications and developer platforms for deploying modern ML models directly into in-store retail experiences, built from the ground up without legacy systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days typical for early-stage US startups; no public policy disclosed."
   },
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12921,7 +12981,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed; startup culture often lacks formal shutdown rituals."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Early-stage startup (described as fast-paced startup environment with clean-slate platform)."
   },
   "sources": [
    {
@@ -12965,14 +13032,41 @@
     "url": "https://jobs.ashbyhq.com/algo1/56048e6a-5d98-4235-8e79-fa3ad63e4b3d"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "algo1 builds AI-powered mobile experiences and developer tooling that bring real-time machine learning intelligence to physical retail environments, enabling context-aware in-store interactions."
+  },
+  "synthesized_evidence_sha": "e1cc480a5c643dba",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Mobile engineering (iOS/Android), real-time ML inference on device, developer tooling/SDKs, clean-slate platform architecture, collaboration with product/design on high-level technical decisions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679095,
   "web_search_url": "https://duckduckgo.com/?q=algo1+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1759df0f6e"
+   ],
+   "value": "Offers a top-tier AI/ML role at an early-stage startup building mobile-first ML for physical retail — a rare combination of elite technical challenge (on-device inference, clean-slate architecture) and high new-grad compensation potential, with a product-driven culture that avoids legacy baggage. Mission-driven focus on transforming in-store retail aligns with candidate's desire for impact, while startup pace accelerates learning. However, fast-paced startup environments can risk work-life balan"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Low — early-stage startup with fast pace; no public policy on hours or shutdowns."
   }
  },
  "alkami technology": {
@@ -58763,11 +58857,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58779,6 +58875,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784680208,
   "name": "CAE",
   "pace_of_work": {
@@ -58791,6 +58888,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887003,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58834,7 +58932,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ef9e7f8143c6394213a930e4e7b1289a99ad6c5ab1814769b046f7dec125aaffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuY2FlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680208,
   "web_search_url": "https://duckduckgo.com/?q=CAE+company+careers+benefits",
@@ -94189,11 +94287,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94205,6 +94305,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784680910,
   "name": "Dave & Busters",
   "pace_of_work": {
@@ -94217,6 +94318,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887003,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94260,7 +94362,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0f404cdcbd4e81c0bb65a3ac976cecc6889dead885fc777bf03022c9ed53716JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9kYXZlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680910,
   "web_search_url": "https://duckduckgo.com/?q=Dave+%26+Busters+company+careers+benefits",
@@ -98450,11 +98552,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98466,6 +98570,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784679533,
   "name": "Diebold Nixdorf",
   "pace_of_work": {
@@ -98478,6 +98583,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887003,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98521,7 +98627,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=76525ebe8d635f78bb085019581d7bf635d7417088f58e47d00d1eb4cd359707JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuZGllYm9sZG5peGRvcmYuY29tL2VuLXVzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679533,
   "web_search_url": "https://duckduckgo.com/?q=Diebold+Nixdorf+company+careers+benefits",
@@ -190909,41 +191015,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (emerging): recognized for applied ML at scale in a non-tech-native Fortune 500, but not yet a known AI research brand; publications and open-source contributions are minimal."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3abc48b6f8"
+   ],
+   "value": "Traditional dealership model augmented by omnichannel digital retailing: revenue from vehicle gross profit, F&I commissions, service/parts margins, and subscription/fee income from Driveway platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, data-informed, transitioning from dealership-centric to product-centric; engineers report collaborative cross-functional teams, but legacy IT and field-operations dependencies can slow decisions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3abc48b6f8"
+   ],
+   "value": "Consumer car buyers (new and used), vehicle service and repair customers, and fleet/commercial buyers across the U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU grant ($25k–$40k over 4 years); total first-year $150k–$185k."
   },
   "evidence_sha": "a2f08dcc30638519",
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "81f0f5eb64"
+   ],
+   "value": "Automotive Retail / Omnichannel Commerce"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: (1) end-to-end ML system design (pricing, recommendation, demand forecasting) with messy, high-cardinality tabular data; (2) SQL and Python proficiency applied to automotive domain problems (VIN decode, inventory turn, lead scoring); (3) stakeholder management stories—translating technical trade-offs to non-technical GMs and OEM partners; (4) evidence of shipping models in regulated/conservative environments. Ask about: model deployment latency requirements, data governance across 3"
   },
-  "last_attempt_at": 1784886668,
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784679632,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b8f2c03e9",
+    "81f0f5eb64"
+   ],
+   "value": "Headquartered in Medford, Oregon; dealerships and operations across 25+ states; technology hubs in Portland (OR), Austin (TX), and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3abc48b6f8"
+   ],
+   "value": "To be the leading automotive retailer by providing a seamless, customer-centric experience across physical and digital channels."
+  },
   "name": "Lithia Motors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast—quarterly retail cadence drives hard deadlines, but engineering sprints are 2-week cycles with protected refactor time; less chaotic than consumer-internet 'move fast' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3abc48b6f8"
+   ],
+   "value": "New and used vehicles from multiple OEM brands; finance and insurance (F&I) products; maintenance, repair, and parts services; and a growing digital retailing platform (Driveway)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days; accrues from day one; unlimited not offered."
   },
-  "retry_after": 1784886788,
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190953,7 +191110,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; major holidays observed; some teams informal slow-down between Christmas–New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "81f0f5eb64",
+    "0b8f2c03e9"
+   ],
+   "value": "Publicly traded (NYSE: LAD), Fortune 500, ~$30B+ annual revenue, ~20,000+ employees, 300+ locations across the U.S. (2023–2024 figures)."
   },
   "sources": [
    {
@@ -190987,14 +191152,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=b3695aec6cb7eb0e4eb7276724e22a3c6d738c6cd8de92ca7943db1d8c8024cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cubGl0aGlhLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles (data science, software engineering) but volume is lower than pure-play tech firms; likely cap-subject for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "81f0f5eb64",
+    "3abc48b6f8"
+   ],
+   "value": "Lithia Motors is one of the largest automotive retailers in the United States, operating a nationwide network of dealerships. It makes money primarily through new and used vehicle sales, financing and insurance products, and after-sales service and parts."
+  },
+  "synthesized_evidence_sha": "a2f08dcc30638519",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3abc48b6f8"
+   ],
+   "value": "E-commerce/digital retailing platform (Driveway), inventory and pricing optimization, CRM and customer data platforms, dealership management system integrations, data analytics, and emerging AI/ML for pricing, demand forecasting, and personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679632,
   "web_search_url": "https://duckduckgo.com/?q=Lithia+Motors+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Lithia offers a rare combination: a Fortune-500 scale retailer investing heavily in a modern tech stack (Driveway, AI pricing, consumer data) with new-grad compensation competitive with tier-2 tech firms, while the core business provides stability. The culture is shifting from traditional auto-retail bureaucracy toward a product-driven, iterative engineering org, but the transformation is mid-flight—expect pockets of legacy process alongside greenfield AI work. Work-life balance is generally bet"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5—core hours 9–5, limited on-call (tier-2 rotation), remote-friendly; month-end and model-year transitions add ~2–3 high-intensity weeks per quarter."
   }
  },
  "live nation": {
@@ -202215,48 +202406,126 @@
  "mauser packaging solutions": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Low. This is a traditional industrial packaging business; AI and Data Science roles are likely operational support rather than core revenue drivers, offering little to no prestige in the elite tech community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Manufactures and sells industrial packaging containers while also operating a substantial reconditioning and recycling business model to extend product life cycles and generate revenue from circular services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Traditional, corporate, and stability-focused. Global industrial manufacturing enterprise with an emphasis on physical operations, safety, and efficiency."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "B2B industrial clients, including companies in the chemicals, petrochemicals, food and beverage, and pharmaceutical sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Below top-tier tech standards. Likely in the $70,000-$90,000 range for new grad IT/Data roles, as the compensation bands are aligned with traditional manufacturing tiers rather than elite software companies."
   },
   "evidence_sha": "07519700c1134ef1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Packaging and Containers / Industrial Manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Current AI projects and how much they use modern vs. legacy stacks. The candidate should grill them on work-life balance to see if they abide by sane hours or shift towards toxic environments. They should ensure they won't be slowed down by slow bureaucracy that wastes time without offering the elite pay and prestige they expect."
+  },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784680708,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a403d4e0fb"
+   ],
+   "value": "Corporate offices and manufacturing facilities located globally, with the UK site referencing the historic Mauser industrial heritage."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "To provide sustainable and reliable industrial packaging solutions, notably emphasizing reconditioning and container recovery to support circular economy principles."
+  },
   "name": "Mauser Packaging Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Slower, traditional industrial pace. Manufacturing and packaging efficiency moves methodically, heavily relying on long-standing physical processes rather than rapid software iteration cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Industrial packaging products including steel, plastic, and fiber drums, intermediate bulk containers (IBCs), and reconditioned packaging solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Standard corporate allocation (15-20 days of PTO, depending on tenure, plus standard public holidays)."
   },
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "32f343400c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Unlikely to offer modern tech-style guaranteed shutdowns (e.g., week-long company closures) outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6c3d9979c",
+    "32f343400c"
+   ],
+   "value": "Very large, established global enterprise. Mauser was a large legacy industrial company that morphed into Mauser Packaging Solutions and acquired BWay (a major US packaging manufacturer) to form a massive industrial entity."
   },
   "sources": [
    {
@@ -202290,14 +202559,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a8423d0400acabf135a8e5e026a973e3b2ef66c9fb3db31610238873148a9d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cubWF1c2VyLmNvbS9lbi1HQi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6c3d9979c"
+   ],
+   "value": "Estimated: As a massive, older industrial company with a non-tech core focus, it may offer traditional visa sponsorship for specialized roles, but lacks the streamlined, high-volume tech sponsorship pipelines of elite AI firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Mauser Packaging Solutions is a global industrial packaging company that manufactures containers, drums, and IBCs (Intermediate Bulk Containers) for hazardous and non-hazardous materials. The company makes money by producing, reconditioning, and selling these industrial packaging products to B2B clients across various end-markets."
+  },
+  "synthesized_evidence_sha": "07519700c1134ef1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "32f343400c",
+    "a403d4e0fb"
+   ],
+   "value": "Estimated: Technical work involves traditional IT, ERP systems, and supply chain logistics, with a high likelihood of legacy BWay systems. It is likely centered on process automation and enterprise architecture rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680708,
   "web_search_url": "https://duckduckgo.com/?q=Mauser+Packaging+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Mauser Packaging Solutions feels starkly at odds with the candidate's goals; it is a slow-moving industrial manufacturing entity rather than a fast-paced, innovative tech culture. If you are aiming for a top-tier AI role with elite new-grad pay, high prestige, and rapid technical learning, a legacy manufacturing and packaging firm is likely to frustrate you with bureaucracy, low compensation, and outdated tech stacks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "32f343400c"
+   ],
+   "value": "Estimated: Moderate. Large legacy industrial companies often have standard corporate hours and lack the severe burnout culture of high-speed tech startups, though they also lack the modern guaranteed shutdowns or policies often found at elite new-grad tech companies."
   }
  },
  "maven clinic": {
@@ -223968,48 +224269,126 @@
  "nice": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: Tier 2. High domain prestige in contact center AI and conversational intelligence, but lacks the elite industry-wide brand recognition of Fang/AI-first pure-play tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Enterprise B2B Software-as-a-Service (SaaS) subscriptions, recurring licensing, and professional services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: Corporate and performance-driven. The culture is likely more traditional and structured than high-growth startups, focusing on steady career development and enterprise problem-solving."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Mid-to-large enterprise organizations spanning various sectors including financial services, telecommunications, healthcare, and retail."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: $120k - $150k base. High for traditional enterprise software but slightly below top-tier consumer tech FAANG compensation ceilings."
   },
   "evidence_sha": "c64f941752231448",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Enterprise Software / Information Technology / Cloud Computing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Probe the specific team's agility, release cycles, and on-call expectations. Ask questions to determine if the day-to-day pace matches candidate's desire for fast innovation and strict personal time boundaries."
+  },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784748359,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520",
+    "9f1db6e19d"
+   ],
+   "value": "Global corporate footprint with a significant presence in Israel, the United States, and the United Kingdom."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Focused on delivering AI-powered cloud solutions to help organizations improve customer interactions and operational efficiency."
+  },
   "name": "NICE",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: Moderate to slow. Large, mature enterprise SaaS companies often prioritize stability, compliance, and structured release cycles over rapid, disruptive iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Cloud-native CX platforms such as CXone (AI-driven contact center solution) and Enghouse (analytics and workforce engagement management)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large global enterprise technology companies, though exact regional allotments vary."
   },
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: None found in research. Large enterprise companies typically do not offer company-wide holiday shutdowns, opting for standard public holiday schedules instead."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Publicly traded enterprise software company and global market leader in CX solutions."
   },
   "sources": [
    {
@@ -224053,14 +224432,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Not explicitly verified in research; enterprise software companies of this scale frequently offer US visa sponsorship for specialized AI/ML roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "NICE is a publicly traded enterprise software company specializing in cloud-native platforms for customer experience (CX) and contact center operations. It primarily generates revenue through subscription-based enterprise SaaS agreements and professional services."
+  },
+  "synthesized_evidence_sha": "c64f941752231448",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "AI and data science roles focus on conversational AI, natural language processing, predictive routing, analytics, and large-scale cloud infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784748359,
   "web_search_url": "https://duckduckgo.com/?q=NICE+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "While NICE holds strong prestige and a massive market presence in AI-driven customer experience, its enterprise nature may lean toward structured bureaucracy over fast-paced innovation. Furthermore, large enterprise software environments typically do not guarantee the strict work-life balance shutdowns the candidate seeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "077afbd520"
+   ],
+   "value": "Estimated: Good, but not guaranteed. Work-life balance is generally manageable at mature enterprise firms, though it varies heavily by team and lacks the guaranteed shutdowns found in smaller tech startups."
   }
  },
  "nidec": {
@@ -224225,11 +224635,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224241,6 +224653,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784679532,
   "name": "Nielsen",
   "pace_of_work": {
@@ -224253,6 +224666,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887003,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224296,7 +224710,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679532,
   "web_search_url": "https://duckduckgo.com/?q=Nielsen+company+careers+benefits",
@@ -230392,11 +230806,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230408,6 +230824,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784679641,
   "name": "nVent",
   "pace_of_work": {
@@ -230420,6 +230837,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887003,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230463,7 +230881,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a6bddeab5f1e88293b27fb244f18abb2ae3ecaa03f6dc68f78c96de48bfa9fbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cubnZlbnQuY29tL2VuLXVzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679641,
   "web_search_url": "https://duckduckgo.com/?q=nVent+company+careers+benefits",
@@ -289596,49 +290014,156 @@
  },
  "sinclair": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Not found in sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No business model details found in the supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No culture details found in the supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Estimated: Pay data not available in the provided sources."
   },
   "evidence_sha": "4e6e925ea3e96a98",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Not found in sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "During interviews, the candidate should probe deeply to confirm if the role actually offers high new-grad tech pay and accelerated technical growth, while directly asking teams about sane hours, shutdowns, and whether the culture is fast-paced/innovative or burdened by slow bureaucracy."
+  },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784678782,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Sinclair",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Estimated: Unknown pace due to lack of public information in the provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No product information found in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Estimated: Policy not available in provided sources."
   },
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Estimated: No information found regarding guaranteed company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No size or stage information found in the supplied sources."
   },
   "sources": [
    {
@@ -289672,14 +290197,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=a3731a3e46f7dd32ce8f726f83b46a6453db81defe2f1aa6fe2409fcce15c9d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cuc2luY2xhaXJvaWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No visa sponsorship information found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Information unavailable. The provided public company pages for Sinclair consist solely of redirect notices without descriptive content."
+  },
+  "synthesized_evidence_sha": "4e6e925ea3e96a98",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "No technical work details found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678782,
   "web_search_url": "https://duckduckgo.com/?q=Sinclair+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Since the sources yielded no factual data, it cannot be confirmed if this employer provides the elite AI/Data science prestige, high new-grad pay, fast tech culture, or the work-life balance and guaranteed shutdowns that the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "10c4cb0ee6",
+    "b73b930a12",
+    "de295dc662"
+   ],
+   "value": "Estimated: Unknown work-life balance rating due to lack of descriptive public information."
   }
  },
  "siriusxm": {
@@ -309140,7 +309706,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -309158,7 +309724,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784886466,
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784680197,
   "name": "T-Mobile",
   "pace_of_work": {
@@ -309171,7 +309737,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784886706,
+  "retry_after": 1784887363,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -327547,48 +328113,126 @@
  "tulane university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Estimated: Regional academic prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Revenue is generated through tuition fees, government and private research grants, and alumni endowments."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Educational and research-focused."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Undergraduate and graduate students, academic researchers, and funding organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Estimated: Lower than big tech."
   },
   "evidence_sha": "1ddd9215cef3913a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886883,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Candidates should clarify exact compensation, growth, and innovation pace."
+  },
+  "last_attempt_at": 1784886883,
   "last_evidence_at": 1784680301,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe9f9a69d",
+    "e69a4bc357"
+   ],
+   "value": "New Orleans, Louisiana."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "To provide a high-quality educational experience and conduct impactful research."
+  },
   "name": "Tulane University",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Estimated: Slower academic pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Undergraduate and graduate degree programs, academic research, and continuing education."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Estimated: Generous academic leave policies."
   },
+  "refresh_after": 1790070883,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Estimated: Likely holiday and term breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "Established private research university."
   },
   "sources": [
    {
@@ -327622,14 +328266,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=929cef9b0c8475fa806dd679cb46d4616652ef1a712d16e4e388a6ce884d942eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly90dWxhbmUuZWR1Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Not explicitly found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe9f9a69d",
+    "e69a4bc357"
+   ],
+   "value": "Tulane University is a private research university located in New Orleans, Louisiana. As an educational institution, it generates revenue through student tuition, research grants, and private endowments while providing undergraduate and graduate degree programs."
+  },
+  "synthesized_evidence_sha": "1ddd9215cef3913a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Academic research in various fields including AI and data science, university IT infrastructure, and educational technology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680301,
   "web_search_url": "https://duckduckgo.com/?q=Tulane+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e69a4bc357"
+   ],
+   "value": "This environment partially aligns with your goals: it offers prestige and likely work-life balance, but the culture is probably slower."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fbe9f9a69d"
+   ],
+   "value": "Estimated: Good work-life balance."
   }
  },
  "turn river capital": {
