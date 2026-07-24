@@ -53395,7 +53395,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53413,7 +53413,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784875957,
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784802937,
   "name": "California Department of Conservation",
   "pace_of_work": {
@@ -53426,7 +53426,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784876077,
+  "retry_after": 1784876358,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53791,37 +53791,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not recognized as an AI/data science destination; minimal research output, no known AI labs, and limited advanced ML deployment."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Government agency funded through the state budget and investment management fees; not a for-profit entity. Revenue comes from investment returns on state funds and administrative fees on bond issuances and savings programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Traditional, hierarchical, risk-averse, and process-oriented. Values stability, accuracy, and public accountability over innovation. Collegial but not 'tech startup' dynamic."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Primary customers are California state agencies, local governments (cities, counties, schools), taxpayers, and participants in state-sponsored savings programs (ScholarShare, CalABLE)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 base salary (state civil service range for entry-level IT/Analyst roles). No equity or significant bonuses. Comprehensive benefits (CalPERS pension, health)."
   },
   "evidence_sha": "d34ea9112d663a03",
+  "generated_at": 1784876118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Government / Public Finance / State Treasury"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on public service motivation, ethical decision-making, and handling bureaucracy. Technical assessments may cover financial math, Excel/SQL proficiency, and basic data analysis—not cutting-edge ML. Emphasize stability, compliance, and long-term impact over speed."
   },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784680810,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Headquartered in Sacramento, CA (915 Capitol Mall). May have limited presence in Los Angeles and San Francisco for program outreach."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "To safeguard and grow the state's financial assets, provide low-cost financing for public infrastructure, and promote financial literacy and security for Californians through transparent, prudent fiscal management."
+  },
   "name": "California State Treasurer's Office",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow — bureaucratic, compliance-driven, with extensive approval chains and legislative cycles. Projects move at government speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Core products include the Pooled Money Investment Account (PMIA), state bond issuance (general obligation and revenue bonds), the ScholarShare 529 college savings plan, CalABLE disability savings program, and various local government financing programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days/year (accrued monthly) + 11-13 paid state holidays + sick leave (1 day/month). Exact accrual depends on tenure and bargaining unit."
   },
+  "refresh_after": 1790060118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53831,7 +53885,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard state holidays observed; possible limited operations between Christmas and New Year's but no formal guaranteed annual shutdown."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "Large, established state constitutional office with approximately 250-300 employees across divisions (Investment, Finance, Administration, Programs)."
   },
   "sources": [
    {
@@ -53875,14 +53936,37 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state government office, positions typically require U.S. citizenship or permanent residency due to public trust and security requirements. Visa sponsorship (H-1B, etc.) is extremely rare and generally not offered."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3de472b4be"
+   ],
+   "value": "The California State Treasurer's Office serves as the state's banker and fiscal agent, managing the state's investment portfolio, issuing bonds for infrastructure, and administering financial programs for state and local governments."
+  },
+  "synthesized_evidence_sha": "d34ea9112d663a03",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technical roles focus on financial modeling, portfolio analytics, data management for investment operations, bond analytics, and maintaining legacy/mainframe systems. Emerging work in data visualization and process automation, but not a primary AI/ML research environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680810,
   "web_search_url": "https://duckduckgo.com/?q=California+State+Treasurer%27s+Office+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers strong mission-driven public service impact managing $100B+ in state assets with excellent work-life balance (standard 40-hour weeks, generous leave). However, it lacks elite AI/DS prestige, high new-grad pay (likely $70k-$90k), and fast-paced innovative tech culture; environment is bureaucratic and process-heavy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — estimated 40-hour weeks, strong union protections, generous paid time off, and predictable schedules. Rare weekend/evening work."
   }
  },
  "calm": {
@@ -71359,37 +71443,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid‑tier: meaningful applied AI/ML in population health, but not a primary AI research lab; publications occasional, focus on production impact."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capitated payments from MassHealth for attributed Medicaid lives; shared savings/losses under the ACO model; grant and philanthropic funding for innovation pilots."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission‑first, clinically informed tech culture; low hierarchy, strong cross‑functional partnership with providers and analysts."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MassHealth (Massachusetts Medicaid) as the primary payer; partner community health centers, behavioral health providers, and hospitals in the C3 network."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k‑$115k base + modest bonus; nonprofit pay bands below top tech firms but competitive for mission‑driven healthcare analytics."
   },
   "evidence_sha": "1ba758bf0c9e7256",
+  "generated_at": 1784876118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare / Medicaid Accountable Care Organization (Nonprofit)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on healthcare data (claims, EHR), FHIR/HL7, risk adjustment methodology, causal inference for intervention evaluation, and experience building scalable analytics pipelines in regulated environments."
+  },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784666846,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Boston, MA; remote‑flexible roles common; satellite presence at partner community health centers across Massachusetts."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve health outcomes and equity for Medicaid enrollees through collaborative, community‑driven care and data‑informed innovation."
+  },
   "name": "Community Care Cooperative (C3)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles driven by regulatory reporting deadlines and partner needs; generally avoids crunch culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Population health management platform, care coordination tools, data analytics and reporting for MassHealth ACO contracts, and provider network support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15‑20 days PTO + 10‑12 holidays; nonprofit standard, may include volunteer time off."
   },
+  "refresh_after": 1790060118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71399,7 +71525,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company‑wide mandated shutdowns; some teams observe summer slowdown; flexible scheduling encouraged."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated 200‑500 employees; mature nonprofit ACO operating since 2018, not a startup but still scaling analytics capabilities."
   },
   "sources": [
    {
@@ -71433,14 +71564,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0aaead9e7245e3b77d131282d9dfa327a08da205dd75dcbefe8e73fbebbfa9d0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1788d514-e421-6752-0a9a-c289e5f76653&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29tbXVuaXR5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H‑1B for specialized data science/engineering roles; nonprofit status may allow cap‑exempt filings. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Community Care Cooperative (C3) is a nonprofit accountable care organization (ACO) that manages Medicaid populations in Massachusetts, focusing on integrated, community‑based care delivery."
+  },
+  "synthesized_evidence_sha": "1ba758bf0c9e7256",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data engineering (claims, EHR integration), analytics dashboards, predictive modeling for risk stratification, FHIR interoperability, and emerging AI/ML for care gap detection."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784666846,
   "web_search_url": "https://duckduckgo.com/?q=Community+Care+Cooperative+%28C3%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission‑driven, nonprofit healthcare setting with strong technical challenges (large‑scale Medicaid data, population health AI) while promoting work‑life balance through nonprofit culture and flexible schedules — aligning with the candidate’s desire for elite technical work without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — nonprofit mission, flexible remote options, and emphasis on sustainable pace reported by employees."
   }
  },
  "community health systems inc fqhc": {
@@ -76691,41 +76843,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 — AI/DS is a supporting function, not a core competitive differentiator; limited external visibility or research output."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Designs, manufactures, and sells proprietary engineered products and systems; earns recurring revenue from aftermarket parts, services, and upgrades."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, process-oriented, safety and quality focused; hierarchical with strong engineering discipline; less \"move fast\" than tech-native firms."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Commercial and military aerospace OEMs, defense contractors, electronics manufacturers, financial institutions, and industrial equipment builders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + modest bonus/equity; below top-tier tech but competitive for industrial sector."
   },
   "evidence_sha": "f1544a06e53a9b0b",
+  "generated_at": 1784876118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Diversified industrial manufacturing / aerospace & defense components."
   },
-  "last_attempt_at": 1784875957,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for: (1) actual scope of AI/DS work — is it core product or support? (2) team autonomy and release cadence — waterfall vs agile? (3) concrete WLB policies (core hours, on-call, shutdowns). (4) career path for data scientists vs engineers. (5) recent AI/ML project examples and business impact."
+  },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784678866,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Stamford, CT; manufacturing and engineering sites across the US, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver innovative, reliable engineered solutions that enable customer success across critical applications while creating long-term value for shareholders."
+  },
   "name": "Crane Co.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow — typical for regulated industrial manufacturing with long product cycles and compliance requirements."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Aerospace components (fluid handling, landing gear), electronic interconnect solutions, payment acceptance and currency handling systems, and engineered materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; typical for US industrial firms."
   },
-  "retry_after": 1784876077,
+  "refresh_after": 1790060118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76735,7 +76925,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some sites may have seasonal holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Publicly traded (NYSE: CR), ~10,000 employees, $3B+ annual revenue, mature industrial conglomerate with multiple segments."
   },
   "sources": [
    {
@@ -76769,14 +76964,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=03c16c7d5ffd8e60f94eb7820b3335f27d1ac6d6a3bc34a63facb86623b30d8aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3JhbmVfKG1hY2hpbmUp&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large US public company, likely sponsors H-1B and green cards for specialized engineering roles; sponsorship for new-grad AI/DS roles may be selective."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Crane Co. is a diversified industrial manufacturer that designs and produces engineered products for aerospace, defense, electronics, and general industrial markets. The company generates revenue through the sale of proprietary components and systems, as well as aftermarket services."
+  },
+  "synthesized_evidence_sha": "f1544a06e53a9b0b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mechanical, electrical, and software engineering for product development; data analytics for operations and product performance; limited AI/ML in predictive maintenance and process optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678866,
   "web_search_url": "https://duckduckgo.com/?q=Crane+Co.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/DS prestige with high new-grad pay and a fast, innovative culture: Crane is a traditional industrial manufacturer, not a tech-first company, so AI/DS roles are likely niche and less prestigious than at pure-play tech firms. Work-life balance may be decent due to established corporate policies, but pace is likely slower and more bureaucratic than desired. Technical learning may be deep in domain-specific engineering but not at the cutting edge of AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally predictable hours, but occasional crunch around program milestones; limited guaranteed shutdowns."
   }
  },
  "cresta": {
@@ -121471,11 +121687,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121487,6 +121705,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784675409,
   "name": "Global Infrastructure",
   "pace_of_work": {
@@ -121499,6 +121718,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876238,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121552,7 +121772,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675409,
   "web_search_url": "https://duckduckgo.com/?q=Global+Infrastructure+company+careers+benefits",
@@ -176081,52 +176301,125 @@
  "marvell": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "Tier 2 (Hardware-focused). Lacks the software prestige of top-tier AI labs, but highly respected for AI-enabling silicon."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "188b3badf1"
+   ],
+   "value": "Fabless semiconductor model: Marvell designs and engineers proprietary silicon, outsourcing the physical manufacturing to foundries like TSMC, and sells the finished chips and solutions to enterprise clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "188b3badf1"
+   ],
+   "value": "Estimated: Mission-driven by the AI hardware shortage, highly technical, and respectful of deep engineering expertise."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "Hyperscale cloud providers, enterprise IT organizations, automotive manufacturers, and 5G infrastructure builders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $160,000 - $200,000 total compensation (base + RSUs) for top-tier AI/systems new grads."
   },
   "evidence_sha": "010a579c15b1b178",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784875957,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cecbd2a50a"
+   ],
+   "value": "Semiconductors"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "188b3badf1"
+   ],
+   "value": "Be ready for deep questions on computer architecture, AI accelerator hardware, and low-level systems. Expect discussions on how to balance fast-paced chip design with sustainable development cycles, aligning with your desire to avoid toxic crunch."
+  },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784676697,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "cecbd2a50a"
+   ],
+   "value": "Headquartered in Wilmington, Delaware with major engineering hubs in Santa Clara, CA and global offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cecbd2a50a"
+   ],
+   "value": "To move, store, and process the world's data securely and sustainably."
+  },
   "name": "Marvell",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "Estimated: Fast and project-oriented due to the rapid pace of the AI hardware race, but largely shielded from the high-burnout crunch seen in pure software startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "Data center chips, networking Ethernet switches, storage controllers, custom ASICs, and automotive networking silicon."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "Estimated: 15 days of standard Paid Time Off for new graduates, accruing more with tenure."
   },
-  "retry_after": 1784876077,
+  "refresh_after": 1790060118,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely standard US tech holidays without guaranteed week-long company-wide shutdowns, though holiday lulls are common."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Publicly traded, large-cap technology company."
   },
   "sources": [
    {
@@ -176170,14 +176463,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "As a major US semiconductor company, Marvell regularly sponsors work visas for specialized hardware and AI engineering talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cecbd2a50a",
+    "188b3badf1"
+   ],
+   "value": "Marvell is a leading semiconductor company that designs and sells data infrastructure chips, including processors, Ethernet switches, and storage controllers. They make money by developing specialized silicon for cloud data centers, enterprise IT, and automotive markets, capitalizing on the massive data processing demands of AI."
+  },
+  "synthesized_evidence_sha": "010a579c15b1b178",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "ASIC design, AI accelerator architecture, machine learning for chip design optimization, embedded systems, and high-speed networking software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676697,
   "web_search_url": "https://duckduckgo.com/?q=Marvell+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5200ade35"
+   ],
+   "value": "While not an elite pure software AI lab, Marvell offers strong hardware/ASIC prestige and high new-grad pay driven by the AI chip boom. The fabless model keeps innovation fast, and large tech companies typically offer good work-life balance to protect their talent."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cecbd2a50a"
+   ],
+   "value": "Estimated: Generally good for large tech. Sane hours are the norm for established teams, though critical tape-out periods may require temporary intense pushes."
   }
  },
  "marvell technology": {
@@ -187059,11 +187384,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187075,6 +187402,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784876118,
   "last_evidence_at": 1784719725,
   "name": "Mondelez International",
   "pace_of_work": {
@@ -187087,6 +187415,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876238,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187130,7 +187459,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784719725,
   "web_search_url": "https://duckduckgo.com/?q=Mondelez+International+company+careers+benefits",
@@ -277524,38 +277853,98 @@
  "tenon": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Estimated: Not applicable/Low. Tenon's technical work is centered on ServiceNow administration and implementation rather than elite AI or data science model development."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Professional services and technical consulting, generating revenue by configuring, supporting, and maintaining customer ServiceNow instances."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Collaborative and cross-functional, operating with a philosophy of radical candor and open lines of communication across Professional Services, Product, and Engineering."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Enterprises utilizing ServiceNow instances that require implementation and ongoing technical support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 USD, aligning with standard entry-level ServiceNow technical consulting compensation."
   },
   "evidence_sha": "9a9dfc5b832f139e",
+  "generated_at": 1784876118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Information Technology Services and Enterprise Software Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Probe for concrete examples of how 'radical candor' plays out day-to-day to ensure it drives innovation rather than creating a toxic, high-pressure environment. Ask about billable hours expectations, on-call rotation for instance stability, and shutdown policies to verify if their work-life balance truly respects personal time without hidden burnout risks."
+  },
+  "last_attempt_at": 1784876118,
+  "last_evidence_at": 1784821848,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Likely offers hybrid or remote working arrangements typical for technical consulting roles."
   },
-  "last_evidence_at": 1784821848,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "To move customer environments efficiently through their implementation lifecycle while operating in a culture of radical candor and open communication."
+  },
   "name": "Tenon",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Estimated: Fast-paced, driven by moving multiple customer environments through their implementation lifecycle simultaneously."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Tenon provides an implementation and support platform offering configuration, stability management, and marketing asset building for customer ServiceNow instances."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, subject to specific offer details."
   },
+  "refresh_after": 1790060118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -277565,7 +277954,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays only; no guaranteed corporate-wide shutdowns were found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or mid-sized consulting firm."
   },
   "sources": [
    {
@@ -277609,14 +278003,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6584d4fac1cbbd45e49f10faf6f70a1f213bad509284e457d0803da7df487b6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9Nb3J0aXNlX2FuZF90ZW5vbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship availability is not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Tenon is a technology consulting partner that implements and supports technical solutions within customer ServiceNow instances. It makes money by providing hands-on configuration, implementation lifecycle management, and technical support for enterprise environments."
+  },
+  "synthesized_evidence_sha": "9a9dfc5b832f139e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Hands-on implementation, configuration, and support within customer ServiceNow instances, including building marketing assets and managing environment stability. ServiceNow CSA, CIS, or CAD certifications are considered a plus."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675478,
   "web_search_url": "https://duckduckgo.com/?q=Tenon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "As an Associate Technical Consultant, you would gain deep, hands-on expertise in the highly in-demand ServiceNow ecosystem, accelerating your technical learning through direct cross-functional exposure. The explicitly stated culture of 'radical candor' suggests transparent, linear communication which can cut through typical corporate bureaucracy and foster a fast-paced, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b531c751ca"
+   ],
+   "value": "Estimated: Moderate, highly dependent on client delivery deadlines and instance stability support requirements."
   }
  },
  "tensley consulting inc": {
