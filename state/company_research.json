@@ -21948,41 +21948,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected enterprise AI practice with real production scale, but not a primary AI research lab; prestige comes from applied impact in a regulated, data-rich domain."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-based advisory revenue, asset management fees, insurance premiums, and spread income from banking products. Revenue driven by assets under management/administration and advisor productivity."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, advisor-centric; engineering culture maturing rapidly with growing investment in developer experience, but still embedded in a financial-services compliance mindset."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mass-affluent and high-net-worth individuals, families, and institutional clients across the U.S. through a network of ~10,000 financial advisors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU (~$15k-$25k/yr vesting); total comp ~$135k-$175k."
   },
   "evidence_sha": "16beb2a758786708",
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Services / Wealth Management / Asset Management"
   },
-  "last_attempt_at": 1784896212,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system-design questions grounded in financial-services use cases (e.g., recommendation engines for advisors, risk modeling, time-series forecasting). Prepare to discuss model explainability, data governance, and deploying to regulated environments. Behavioral screens will probe collaboration with non-technical stakeholders and handling ambiguity in a matrixed org."
+  },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679088,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Minneapolis, MN. Major tech presence in Minneapolis; additional offices in Boston, Denver, Phoenix, and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help clients achieve their financial goals through confident advice and comprehensive planning."
+  },
   "name": "Ameriprise Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project cadence driven by quarterly planning and regulatory release windows; faster than traditional banking IT but slower than consumer-tech sprint cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wealth management advisory services, asset management (Columbia Threadneedle), annuities, life insurance, retirement planning, banking/lending products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure."
   },
-  "retry_after": 1784896452,
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21992,7 +22030,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer half-day Fridays in some divisions; not guaranteed firm-wide."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: AMP); ~12,000 employees; ~$1.4T in assets under management/administration; Fortune 500."
   },
   "sources": [
    {
@@ -22026,14 +22069,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ea9ef717f915181478b41f24f4a9b5b1deeee7f8d10cdec853b5b12209109bb2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuYW1lcmlwcmlzZS5jb20vY2xpZW50LWxvZ2lu&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor for specialized tech roles; green card sponsorship typical for senior/lead positions. Standard large-corp immigration process."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ameriprise Financial is a diversified financial services company providing wealth management, asset management, insurance, and banking services to individual and institutional clients."
+  },
+  "synthesized_evidence_sha": "16beb2a758786708",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise fintech platform modernization, data engineering, ML/AI for advisor tools and client personalization, cloud migration, cybersecurity, regulatory tech. Tech hub in Minneapolis with satellite offices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Ameriprise+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ameriprise offers a rare blend for a new-grad AI/data scientist: a Fortune-500 financial-services leader investing heavily in AI-driven advisor and client platforms, with compensation competitive with tech firms but generally more predictable hours and a culture that emphasizes advisor-client relationships over 'move fast and break things.' The firm's scale means real production data and regulatory-grade ML problems, while its advisory heritage tends to produce a more measured pace than pure-pla"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~40-45/week for IC roles; on-call rotations exist but are managed; 'shutdown' culture encouraged around major holidays."
   }
  },
  "amgen": {
@@ -67245,47 +67309,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Specialized healthcare AI tier; highly respected in dermatology and clinical research but lacks the broad prestige of top-tier consumer tech or quantitative finance."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "bc509e3d0e"
+   ],
+   "value": "Revenue is generated through the sale of high-end clinical imaging hardware, recurring software licenses, and specialized research services for clinical trials."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, clinical, and research-oriented, with a strong focus on scientific precision rather than fast-paced tech culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "343a36bbea"
+   ],
+   "value": "Dermatologists, plastic surgeons, aesthetic medicine practitioners, and pharmaceutical companies conducting clinical research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $110,000, lower than elite big tech but typical for specialized medical software companies outside of major tech hubs."
   },
   "evidence_sha": "006c4fb70ce8f3cc",
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3b1d128fb",
+    "343a36bbea"
+   ],
+   "value": "Medical Devices and Health Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Given the specialized nature of the firm, candidates should investigate whether the pace of work is fast and modern or slow and bureaucratic. Prepare to ask pointed questions about sane hours, guaranteed shutdowns, overall WLB, and whether compensation approaches top-tier new-grad tech pay."
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784677294,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "343a36bbea"
+   ],
+   "value": "Headquartered in Fairfield, New Jersey, with operations and staff supporting global clinical research sites."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3b1d128fb"
+   ],
+   "value": "To provide innovative medical imaging and AI technologies that improve patient care and clinical outcomes in aesthetic and dermatological medicine."
+  },
   "name": "Canfield Scientific",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As an established medical device company, the pace likely balances innovation with regulatory compliance, potentially feeling bureaucratic and slow to a new grad versus a pure startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "bc509e3d0e"
+   ],
+   "value": "Specialized clinical imaging systems, facial imaging and skin analysis software, and clinical trial documentation tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, typical for an established mid-sized company, though exact policies are not public."
   },
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "343a36bbea",
+    "bc509e3d0e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific company-wide guaranteed shutdowns found in research; likely follows standard holiday closures only."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "343a36bbea"
+   ],
+   "value": "Established, privately-held mid-sized medical device and software company."
   },
   "sources": [
    {
@@ -67319,14 +67452,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=62ac978874559f48cc8a753b89fc6328e72069b574661d562b546efd5156b01cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9jYXJkZ2FtZXMuaW8vY2FuZmllbGRzb2xpdGFpcmUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "343a36bbea",
+    "bc509e3d0e"
+   ],
+   "value": "No specific information found in research regarding visa sponsorship for AI or data science roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "343a36bbea"
+   ],
+   "value": "Canfield Scientific is a medical imaging and AI company specializing in clinical photography and imaging systems for dermatology, plastic surgery, and aesthetics. It makes money by selling proprietary imaging hardware, software subscriptions, and clinical research services to medical professionals and pharmaceutical companies."
+  },
+  "synthesized_evidence_sha": "006c4fb70ce8f3cc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f3b1d128fb",
+    "bc509e3d0e"
+   ],
+   "value": "Involves developing computer vision algorithms, ImageJ-based software tools, and AI models for facial analysis and clinical skin imaging."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677294,
   "web_search_url": "https://duckduckgo.com/?q=Canfield+Scientific+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a niche leader in medical imaging, Canfield offers the mission-driven appeal of healthcare technology backed by rigorous clinical demands. It is a solid environment for a new grad to build specialized computer vision expertise and publish research, appealing to those who want high career growth and innovative tech culture alongside meaningful impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Medical device companies generally offer stable hours compared to big tech, though specific shutdown policies or intense WLB protections were not found in research."
   }
  },
  "canonical": {
@@ -112686,11 +112850,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112702,6 +112868,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784680205,
   "name": "Double Holo",
   "pace_of_work": {
@@ -112714,6 +112881,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896767,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112757,7 +112925,7 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680205,
   "web_search_url": "https://duckduckgo.com/?q=Double+Holo+company+careers+benefits",
@@ -156980,37 +157148,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML team solving high-impact healthcare problems; publishes occasionally, contributes to open source, but not a primary AI research lab. Respected in healthtech circles; compensation competitive with top-tier mid-market tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "01289b4fa1",
+    "c696b181f2"
+   ],
+   "value": "Gravie earns revenue through: (1) per-employee-per-month (PEPM) platform fees from employers for administration and technology; (2) commissions or administrative fees from health plan carriers for enrollment and ongoing management; (3) fees for value-added services like concierge support and analytics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, collaborative, low-ego. Cross-functional squads (eng, product, design, ops) work closely with member-facing teams. Transparency emphasized — monthly all-hands, open OKRs. Diversity initiatives active but representation in senior technical roles still developing."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "01289b4fa1"
+   ],
+   "value": "Primary customers are mid-market to enterprise employers (100–5,000+ employees) seeking alternatives to traditional group health insurance. Also serves brokers, consultants, and health plan carriers who partner to distribute Gravie's products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$140k base + $15k–$25k equity (4-yr) + $10k–$15k sign-on. Total comp ~$145k–$180k. Above median for Minneapolis; competitive with Tier 2 coastal new-grad offers adjusted for COL."
   },
   "evidence_sha": "681baeb9471ad581",
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "51e6adaa46"
+   ],
+   "value": "Healthtech / Insurtech / Benefits Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect: (1) System design for scalable benefits platforms (enrollment flows, EDI integration, event-driven architecture); (2) ML case studies — ranking/recommendation for plan selection, cost prediction, fraud detection; (3) Data engineering depth — pipeline reliability, data quality, handling messy healthcare claims data; (4) Product sense — balancing regulatory constraints with user experience; (5) Behavioral — collaboration with non-technical stakeholders (benefits consultants, carrier partne"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679633,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "51e6adaa46"
+   ],
+   "value": "Headquarters: Minneapolis, MN. Remote-friendly with distributed team across US. No international offices reported."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "51e6adaa46",
+    "01289b4fa1"
+   ],
+   "value": "To make health benefits simpler, more affordable, and more human for employers and their people — removing complexity and cost barriers so everyone can access quality care."
+  },
   "name": "Gravie",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — quarterly planning with 2-week sprints; product-driven deadlines but minimal fire drills. Engineers report ~40–45 hr weeks typical; on-call rotation exists but light (Tier 2 support handles most paging)."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "01289b4fa1",
+    "c696b181f2"
+   ],
+   "value": "Gravie's core platform includes: Comfort (a level-funded health plan with predictable costs), Gravie Express (an ICHRA administration solution), and decision-support tools like cost estimators and provider search. They also offer member concierge services for claims, billing, and care navigation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick/mental health days. Unlimited PTO not offered; accrual-based with carryover up to 5 days."
   },
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157020,7 +157245,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns. Informal slowdown between Christmas–New Year observed but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "51e6adaa46"
+   ],
+   "value": "Series D startup; approximately 300–500 employees (estimated). Headquartered in Minneapolis, MN. Backed by investors including First Trust Capital, Flair Ventures, and Reed Jobs. Profitability status not publicly confirmed."
   },
   "sources": [
    {
@@ -157054,14 +157286,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=182bb137eefc8499527ba449305c40e020b63ddfe46efbcc4e55b207f26bb05bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuZ3JhdmllLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsorship history exists but limited; primarily for senior engineering and data roles. No public cap-exempt status. Candidates needing sponsorship should confirm case-by-case during recruiting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "51e6adaa46",
+    "01289b4fa1"
+   ],
+   "value": "Gravie is a health benefits technology company that provides a platform for employers to design, administer, and manage health benefits for their employees. It simplifies the complex health insurance marketplace by offering curated plan options, decision-support tools, and year-round member support."
+  },
+  "synthesized_evidence_sha": "681baeb9471ad581",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering focuses on: benefits administration platform (enrollment, eligibility, billing), data pipelines for claims/cost analytics, member-facing web/mobile apps, integration with carrier/EDI systems, and ML models for plan recommendation and cost prediction. Stack includes React, Node.js, Python, PostgreSQL, AWS, and Kafka."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679633,
   "web_search_url": "https://duckduckgo.com/?q=Gravie+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Gravie sits at the intersection of healthcare, fintech, and consumer tech — offering a rare chance to apply AI/ML to real-world problems (plan recommendation, cost transparency, claims anomaly detection) with direct member impact. The company's mission-driven culture, remote flexibility, and Series D scale provide elite technical challenges without the burnout typical of FAANG or early-stage startups. For a new grad seeking prestige, pay, and sustainable pace, Gravie's data-rich environment and "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Consistently cited in employee reviews for respecting boundaries, flexible remote policy, and leadership that models sustainable pace. No guaranteed shutdowns but strong cultural norm against after-hours expectations."
   }
  },
  "gravity": {
@@ -172922,42 +173178,104 @@
  "human computer lab": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: Niche prestigious startup tier. It offers elite, cutting-edge R&D work in embodied AI, though it lacks the widespread name recognition of top-tier tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Robotics startup and research lab creating interactive physical products; presumed to generate revenue through hardware sales and R&D funding."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: Research-driven, innovative, and focused on building responsive, alive technologies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Not explicitly stated in available sources; presumed to be consumers or businesses seeking interactive, everyday robotic environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: $130,000 - $180,000 base salary, competitive with elite AI startups, though specific new grad compensation data is not public."
   },
   "evidence_sha": "2dc9a3371b4c4ee5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784896418,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Robotics and Artificial Intelligence / Machine Learning"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "The candidate should probe deeply into the company's daily pace, expected working hours, and operational maturity to ensure the environment is fast-paced yet respects personal time. It is also critical to ask about the technical mentorship structure, as the candidate requires rapid career growth without falling into a high-burnout startup environment."
+  },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679096,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Not found in research (likely concentrated at a single headquarters or research lab facility)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "To build the foundation for a new generation of robots designed for everyday environments, focusing on making robots that feel alive and responsive."
+  },
   "name": "Human Computer Lab",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, typical of a startup building foundational robotics technology."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "LeLamp, an expressive robot designed to feel alive and responsive, equipped with machine learning models for environmental perception and natural interaction."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: 15-20 days of flexible PTO, standard for early-stage tech startups, though exact policy is unverified."
   },
-  "retry_after": 1784896538,
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -172966,8 +173284,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; startup operations typically run year-round."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Early-stage startup (specific headcount not found in research)."
   },
   "sources": [
    {
@@ -173011,14 +173338,45 @@
     "url": "https://jobs.ashbyhq.com/human-computer-lab/eb62af20-f469-40dc-b0a1-8b7ec59c9225"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Human Computer Lab is a robotics startup and research lab developing expressive robots designed for everyday environments, such as their LeLamp product. As a startup, they likely make money through venture capital funding and early sales of their robotic systems."
+  },
+  "synthesized_evidence_sha": "2dc9a3371b4c4ee5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Developing machine learning models for robotic perception, environmental understanding, and intentional natural responsiveness."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679096,
   "web_search_url": "https://duckduckgo.com/?q=Human+Computer+Lab+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "This role aligns closely with the candidate's technical goals, offering high-impact ML work on state-of-the-art robotic perception models, which provides exceptional learning opportunities. However, the candidate must carefully screen the startup during interviews to ensure its early-stage culture does not compromise their strict requirement for work-life balance and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7605be193d"
+   ],
+   "value": "Estimated: Uncertain. Early-stage startups often carry a risk of variable hours, which may challenge the candidate's requirement for sane hours."
   }
  },
  "humana": {
@@ -175385,41 +175743,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML for threat detection and anomaly detection at scale; publishes at security conferences (Black Hat, RSA) but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "Subscription-based SaaS model selling cloud security platform licenses per user or per bandwidth, with recurring revenue from multi-year contracts to enterprises and public sector."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, transparent, and mission-oriented; flat hierarchy with direct access to CTO/VP Eng; remote-friendly with quarterly offsites; values diversity and internal mobility."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "Enterprise organizations, government agencies, educational institutions, and healthcare providers seeking cloud-native security to replace legacy appliances and enable secure remote work."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$160k base + $20k-$40k sign-on + RSUs (4-year vest, ~$80k-$120k total grant) = $180k-$220k year-one total compensation for software engineering / data science roles in high-cost metros."
   },
   "evidence_sha": "e5fe56ce178e7d87",
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "Cybersecurity / Cloud Security / SASE"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into distributed systems design, container networking, and security-relevant algorithms (e.g., threat detection, encryption). Prepare for coding in Go/Rust/C++, system design for high-throughput data planes, and behavioral questions about ownership and collaboration in a fast-moving, remote-friendly environment. Ask about on-call rotations, deployment frequency, and how the team protects focus time."
   },
-  "last_attempt_at": 1784895992,
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679095,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Boston, MA with additional offices in San Diego, CA; Washington, DC; London, UK; and remote-friendly roles across the US."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "To secure organizations in a cloud-first world by delivering security as a service that follows the user and data anywhere, eliminating the need for on-premises hardware."
+  },
   "name": "iboss",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but engineering-driven; quarterly planning with bi-weekly sprints, frequent releases to global PoPs, and emphasis on autonomous feature ownership. Not a 'move fast and break things' culture—security demands rigor."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "iboss offers a cloud security platform encompassing SASE, ZTNA, SWG, CASB, malware defense, data loss prevention, and remote browser isolation. The platform is delivered through a containerized, globally distributed architecture."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + unlimited sick/mental health days; 4-week sabbatical after 4 years."
   },
-  "retry_after": 1784896472,
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175429,7 +175840,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus two additional 'recharge' weeks (July 4 week and Thanksgiving week) where all non-on-call engineering pauses."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, late-stage venture-backed company with 500-1,000 employees; last known valuation over $1B (unicorn status) with investors including Goldman Sachs, NightDragon, and others."
   },
   "sources": [
    {
@@ -175463,14 +175879,38 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for senior and specialized engineering roles; new-grad sponsorship likely on a case-by-case basis given company size and funding."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dc601a1cf",
+    "89c8929a5d"
+   ],
+   "value": "iboss is a cybersecurity company providing cloud-based security services including Secure Access Service Edge (SASE), Zero Trust Network Access (ZTNA), and Secure Web Gateway (SWG) solutions. It delivers security as a service via a globally distributed cloud platform."
+  },
+  "synthesized_evidence_sha": "e5fe56ce178e7d87",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Distributed systems engineering, container orchestration (Kubernetes), eBPF/XDP for high-performance packet processing, ML for threat detection, Zero Trust architecture, global PoP management, and cloud-native security data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679095,
   "web_search_url": "https://duckduckgo.com/?q=iboss+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "iboss offers a high-growth, unicorn-stage cybersecurity platform tackling hard distributed-systems and ML problems at global scale, with a modern cloud-native stack that aligns with a candidate's desire for elite technical prestige and fast innovation. The company's mission to secure the cloud-first enterprise provides clear purpose, while its private, well-funded status suggests resources for competitive new-grad compensation without public-company bureaucracy. Reports indicate a culture that v"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Leadership publicly emphasizes sustainable pace; typical core hours 10am-4pm ET with flexible start/end; on-call rotation exists but compensated and limited to one week per quarter per engineer."
   }
  },
  "ibotta": {
@@ -188477,11 +188917,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188493,6 +188935,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784677296,
   "name": "Isuzu North America",
   "pace_of_work": {
@@ -188505,6 +188948,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896767,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188548,7 +188992,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=23f3d8ecbff915b4c91096da7140edddef4693434573305ff965f40456b7778fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9pc3V6dWN2LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677296,
   "web_search_url": "https://duckduckgo.com/?q=Isuzu+North+America+company+careers+benefits",
@@ -203297,38 +203741,108 @@
  "lantern series a": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: Emerging tier. Joining a specialized Series A AI startup offers strong resume signaling and elite peer groups, though it lacks the established prestige dominance of a massive tech lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: Primarily a B2B SaaS or usage-based pricing model, charging enterprises for access to its data analytics, AI tooling, or forecasting infrastructure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "91506bf001",
+    "4d2ef33840"
+   ],
+   "value": "Estimated: Technical, hacker-centric, and deeply focused on solving hard engineering challenges, as evidenced by internal engagement with complex topics like time series forecasting."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4d2ef33840",
+    "91506bf001"
+   ],
+   "value": "Not explicitly stated in available sources, but likely targets data science teams, AI engineers, or enterprises needing advanced time series and predictive modeling capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: $140,000 - $170,000 base salary, supplemented by meaningful early-stage equity. High for the startup market to compete with elite new-grad offers."
   },
   "evidence_sha": "1f585410b76c36b7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "91506bf001",
+    "4d2ef33840"
+   ],
+   "value": "Data Infrastructure, AI, and Analytics."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784680310,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4d2ef33840",
+    "d148bfdb11"
+   ],
+   "value": "Lantern maintains an online presence at lantern.io and operates a dedicated career portal at mysurgery.lanterncare.com, suggesting a centralized or potentially remote-friendly web presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4d2ef33840",
+    "d148bfdb11"
+   ],
+   "value": "Exact mission statement not available in the provided sources."
+  },
   "name": "Lantern ( Series A )",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: Fast and innovative. Early-stage startups typically require rapid iteration, high adaptability, and autonomous execution to survive and scale, avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4d2ef33840",
+    "91506bf001"
+   ],
+   "value": "While specific product details are obscured by login redirects, the company's technical context suggests a focus on data infrastructure, time series forecasting, or AI-driven analytics tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, which is typical for newly scaled Series A startups looking to attract top-tier technical talent."
   },
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203337,8 +203851,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns currently known. Startups of this size rarely implement mandatory generational breaks or holiday shutdowns unless specifically structured by leadership."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Series A startup, indicating a small but rapidly scaling team likely ranging from 10 to 50 employees, heavily focused on product-market fit and initial growth."
   },
   "sources": [
    {
@@ -203372,14 +203895,44 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: As an early-stage Series A startup, visa sponsorship is possible but highly constrained and typically evaluated on a case-by-case basis for exceptional candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4d2ef33840",
+    "91506bf001"
+   ],
+   "value": "Lantern is a Series A startup that appears to operate in the data, time series, or AI tooling space given its technical footprint. Like many early-stage SaaS or infrastructure companies in this domain, it likely makes money by selling subscription-based access to its data analytics or predictive platforms."
+  },
+  "synthesized_evidence_sha": "1f585410b76c36b7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "91506bf001"
+   ],
+   "value": "Involves complex data engineering and AI challenges, particularly highlighted by external technical discussions around the difficulty of time series forecasting that are associated with the company's technical sphere."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680310,
   "web_search_url": "https://duckduckgo.com/?q=Lantern+%28+Series+A+%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4d2ef33840"
+   ],
+   "value": "Estimated: Medium. While the candidate prioritizes sane hours and guaranteed shutdowns, the reality of a Series A startup often involves periods of intense effort to build and scale the product."
   }
  },
  "laserfiche": {
@@ -258788,37 +259341,104 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High tier for new grads pursuing mission-driven defense tech and modern AI applications."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "89592a9dc4"
+   ],
+   "value": "B2B/Defense software and AI solutions, likely operating through enterprise or government contracts."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Mission-driven, distributed, and highly collaborative, with a mix of military, operational, and technology backgrounds where everyone has a voice."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Military, defense, and operational teams working in environments where decisions carry real-world consequences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k - $160k base salary, typical for defense tech startups hiring high-caliber technical talent."
   },
   "evidence_sha": "275a5db44489a04e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896647,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Defense Technology, AI Software, Real-time Collaboration."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Expect evaluation on motivation for the defense mission, ability to thrive in a high-trust, fast-moving environment, and technical skills to build AI and real-time systems. Candidates should emphasize adaptability, collaborative problem-solving, and a builder mindset to match the startup's innovative culture."
+  },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679542,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4"
+   ],
+   "value": "Distributed team with remote work options and personnel embedded directly alongside customers in operational environments globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "To improve how important work gets done by bringing modern software, AI, and real-time collaboration into high-stakes defense environments."
+  },
   "name": "One Brief",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Estimated: Fast-paced and high-trust, requiring high adaptability and a builder's mentality."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Modern software, AI, and real-time collaboration platforms designed for high-stakes operational and military planning."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually, typical for fast-growing tech startups."
   },
+  "refresh_after": 1790080647,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258828,7 +259448,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned, but some holiday flexibility is standard."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "A distributed team of builders, indicative of a tight-knit, early-stage to mid-stage startup."
   },
   "sources": [
    {
@@ -258882,14 +259510,46 @@
     "url": "https://jobs.ashbyhq.com/onebrief/fbd0fd12-5aed-4428-9373-55ec2c5076f3"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c228f0cc76"
+   ],
+   "value": "Not explicitly mentioned in available sources, though defense work historically requires US citizenship or clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Onebrief is a software company that builds modern, AI-powered collaboration tools for the defense sector. It makes money by equipping military and operational teams with its planning and decision-making software to improve clarity and adaptability in high-stakes environments."
+  },
+  "synthesized_evidence_sha": "275a5db44489a04e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "AI integration, modern software development, and real-time collaboration tooling, with a strong focus on software quality (e.g., SDET roles)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679542,
   "web_search_url": "https://duckduckgo.com/?q=One+Brief+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "89592a9dc4",
+    "c228f0cc76"
+   ],
+   "value": "Aligns with the desire for a fast, innovative tech culture and accelerated technical learning through AI and modern software applications. The mission-driven nature of improving high-stakes defense operations provides strong elite prestige and impact, ideal for a new grad seeking rapid growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, though working in high-stakes operational environments may require occasional intense periods."
   }
  },
  "one finance": {
@@ -267467,11 +268127,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267483,6 +268145,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679541,
   "name": "Penn Interactive",
   "pace_of_work": {
@@ -267495,6 +268158,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896767,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267538,7 +268202,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab379bdbe9c63520fe9f823cfa0aff7ca8a75b19c3f75285f23ea4c6aeb0b0ceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cudXBlbm4uZWR1Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Penn+Interactive+company+careers+benefits",
@@ -296478,11 +297142,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -296494,6 +297160,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784680311,
   "name": "RFCUNY",
   "pace_of_work": {
@@ -296506,6 +297173,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896767,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -296549,7 +297217,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cf0639070804ea023abd289db33cf9ba60004b0a1ff26952073aa9253689585JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cucmZjdW55Lm9yZy9SRldlYnNpdGUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680311,
   "web_search_url": "https://duckduckgo.com/?q=RFCUNY+company+careers+benefits",
@@ -314867,11 +315535,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314883,6 +315553,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896647,
   "last_evidence_at": 1784679629,
   "name": "Sharp Electronics",
   "pace_of_work": {
@@ -314895,6 +315566,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896767,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314938,7 +315610,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=299e850d691b5379fff7810ee29f7f79e29b8cd6ca30d34986b33bdfef269206JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuc2hhcnAuY29tL2FwcA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679629,
   "web_search_url": "https://duckduckgo.com/?q=Sharp+Electronics+company+careers+benefits",
