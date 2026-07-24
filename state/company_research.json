@@ -2015,47 +2015,129 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's business model."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
   },
   "evidence_sha": "b5e6721544b5078e",
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Probe deeply into the team's actual engineering pace and on-call expectations to ensure the environment is fast-paced but not toxic. Ask about new-grad compensation structures, learning budgets, and explicit work-life balance policies like shutdowns to confirm they meet your standards."
   },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784674775,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's office locations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's mission."
+  },
   "name": "Abound",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's size or stage."
   },
   "sources": [
    {
@@ -2089,14 +2171,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=3283da1137761da63f2ba8adfd2032ee3d173ef5ca5e2bbf50c7970c2bafc0b3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuYWJvdW5kY3UuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Specific public information regarding what Abound does and how it makes money could not be extracted from the provided sources, as all three URLs redirected or failed to load page content."
+  },
+  "synthesized_evidence_sha": "b5e6721544b5078e",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "caaa939354",
+    "173ee3ad15",
+    "de4cb2927f"
+   ],
+   "value": "Unknown; the provided sources did not load any content regarding the company's technical environments or engineering work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674775,
   "web_search_url": "https://duckduckgo.com/?q=Abound+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Matching your priorities for a fast-paced, innovative AI role with elite prestige and high pay requires a company culture that actively protects work-life balance. Abound's actual alignment with these goals regarding sane hours, guaranteed shutdowns, and technical learning acceleration remains unverified based on the provided data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided sources."
   }
  },
  "abridge": {
@@ -33013,48 +33128,130 @@
  "becton dickinson": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: Tier 3. As a legacy medical device manufacturer, its AI division likely lacks the elite prestige and fast-paced tech culture found at tier-1 tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8"
+   ],
+   "value": "Manufacturing and direct sales of medical devices, laboratory instruments, and diagnostic products to healthcare institutions and laboratories."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: Mission-driven and традиitional, focusing on healthcare impact and patient safety rather than aggressive technical disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8"
+   ],
+   "value": "Hospitals, clinics, clinical laboratories, and other healthcare providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: $95k–$120k base salary. Likely lower than top-tier tech companies, aligning with legacy healthcare hardware industry standards."
   },
   "evidence_sha": "16f170788209a874",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8"
+   ],
+   "value": "Medical Devices and Equipment / Healthcare Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Probes should focus on confirming whether BD's AI/data science functions operate with an agile, high-velocity tech culture or are hindered by legacy medical device bureaucracy. The candidate should seek specific evidence of top-tier new-grad compensation, sane hours, guaranteed shutdowns, and opportunities for accelerated technical growth without burnout in the target team."
+  },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784673660,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "8f721ccabf"
+   ],
+   "value": "Global operations with a significant corporate and operational footprint in the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8"
+   ],
+   "value": "To advance the world of health by developing medical technology and diagnostic solutions that improve patient outcomes and healthcare worker safety."
+  },
   "name": "Becton Dickinson",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: Slow to moderate. Highly regulated medical device environment emphasizes compliance and thoroughness over fast-paced innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "8f721ccabf"
+   ],
+   "value": "Vacutainer blood collection tubes, syringes, needles, infusion sets, diagnostic instruments, and integrated diagnostic solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, standard for a large, established corporation."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "610bf7a851"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: Standard public holidays. Guaranteed company-wide shutdowns are not typically a feature of this company's public profile."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Large-cap, established, publicly traded global corporation."
   },
   "sources": [
    {
@@ -33088,14 +33285,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=c58064ec922ccd4415f9877bc46807e3adc6b5be6690dbf1f1447e9095edee88JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly9hbHZlcm5vbGFicy5jb20vd3AtY29udGVudC91cGxvYWRzL0JELTgzMTc4LUJELVZhY3V0YWluZXIlQzIlQUUtVmVub3VzLUJsb29kLUNvbGxlY3Rpb24tVHViZS1HdWlkZS0xLnBkZg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: As a large global medical technology company, BD likely offers visa sponsorship for specialized roles, though specific policies are not detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8",
+    "8f721ccabf"
+   ],
+   "value": "Becton Dickinson is a global medical technology company that develops and sells medical devices, laboratory equipment, and diagnostic products. It makes money by manufacturing fairly high-volume consumables—such as syringes, needles, tubing, and diagnostic instruments—and selling them to healthcare providers and clinical laboratories worldwide."
+  },
+  "synthesized_evidence_sha": "16f170788209a874",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "610bf7a851",
+    "952678bae8"
+   ],
+   "value": "Likely involves software and data engineering for integrated diagnostic systems, medical device informatics, and healthcare data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673660,
   "web_search_url": "https://duckduckgo.com/?q=Becton+Dickinson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "BD provides a mission-driven environment that may respect work-life balance, but as a legacy medical technology manufacturer, its culture will likely lean toward slow bureaucracy rather than fast-paced, elite-tier tech innovation or high new-grad pay. For a candidate seeking an innovative AI/data science role with accelerated learning and top-tier compensation, BD's regulated, hardware-focused environment may lack the dynamic, high-reward tech culture desired."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "610bf7a851"
+   ],
+   "value": "Estimated: Good. Large legacy medical companies typically offer sane hours, though specific shutdown policies are unconfirmed."
   }
  },
  "becu": {
@@ -54501,38 +54732,109 @@
  "cincinnati children s hospital and medical center": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: High prestige within healthcare and bioinformatics, though not directly comparable to top-tier tech giants."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "0b4a15a632"
+   ],
+   "value": "Revenue is generated through clinical patient services, grants for pediatric research, and charitable contributions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "78cee814d2",
+    "b248041980"
+   ],
+   "value": "Estimated: Highly mission-oriented, collaborative, and focused on patient well-being, but more bureaucratic than a modern tech firm."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "0b4a15a632"
+   ],
+   "value": "Infants, children, and adolescents requiring medical care, along with their families, and research partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: Likely ranges from $70,000 to $90,000 for new-grad data scientists or software engineers, below elite FAANG pay scales."
   },
   "evidence_sha": "8ec7d987f9690c92",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "78cee814d2",
+    "b248041980"
+   ],
+   "value": "Hospital & Health Care"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Probe the specific team's tech stack and innovation pace; ask how much technical output is bottlenecked by bureaucracy versus actual development time."
+  },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784583390,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b248041980"
+   ],
+   "value": "Headquartered in Cincinnati, Ohio."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "b248041980"
+   ],
+   "value": "To improve child health and transform the delivery of care through innovative research and high-quality medical treatments."
+  },
   "name": "Cincinnati Children’s Hospital and Medical Center",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: Slower pace governed by clinical compliance and hospital protocols, lacking the fast iteration cycles of pure tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "0b4a15a632"
+   ],
+   "value": "Pediatric patient care, specialized surgical services, clinical research programs, and medical education/training."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: Standard hospital PTO package likely offering around 20-25 paid days off per year, depending on tenure."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54541,8 +54843,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns, though standard hospital holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b248041980"
+   ],
+   "value": "Large, established non-profit hospital and research institution."
   },
   "sources": [
    {
@@ -54576,14 +54887,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=9e1e431290a03a2a32a8cd90a4e8bd250e00601848e1ed1c96b401f75ba3c432JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2luY2lubmF0aQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: Large non-profit hospitals may sponsor visas for specialized clinical or technical roles, depending on departmental needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "0b4a15a632",
+    "b248041980"
+   ],
+   "value": "Cincinnati Children's Hospital and Medical Center is a leading pediatric academic medical center that provides comprehensive healthcare services for children. It generates revenue through patient care services, clinical research funding, and philanthropic donations."
+  },
+  "synthesized_evidence_sha": "8ec7d987f9690c92",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "78cee814d2",
+    "0b4a15a632"
+   ],
+   "value": "Data science, bioinformatics, and IT infrastructure supporting electronic health records, clinical decision support tools, and pediatric medical research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583390,
   "web_search_url": "https://duckduckgo.com/?q=Cincinnati+Children%E2%80%99s+Hospital+and+Medical+Center+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "78cee814d2",
+    "b248041980"
+   ],
+   "value": "Offers strong mission-driven prestige in healthcare AI, but may conflict with the desire for fast-moving tech culture, elite new-grad pay, and rapid career acceleration due to typical hospital bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "78cee814d2"
+   ],
+   "value": "Estimated: Generally sane hours with a family-friendly, mission-driven culture, though on-call expectations can exist for clinical IT support."
   }
  },
  "cincinnati financial": {
@@ -55309,49 +55655,125 @@
  },
  "cision": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary."
   },
   "evidence_sha": "bebfc8f694d5f2de",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Focus on probing the team's tech stack modernization, innovation pace, and engineering culture. Ask about exact hours, on-call expectations, and how the company supports technical learning to ensure the environment isn't a slow bureaucracy."
+  },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784674274,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
   "name": "Cision",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Estimated: Moderate, typical of large enterprise software companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
   },
   "sources": [
    {
@@ -55385,14 +55807,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=b173bb1e82cc553d6a4c26519337e1575f07895ef2e6dcfea4730b94d24d5b2fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuY2lzaW9uLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "The supplied sources consist only of redirected company landing pages and do not contain factual information about Cision's operations or revenue model. Based on general public knowledge, Cision is a public relations and communications software company that provides tools for media outreach and tracking."
+  },
+  "synthesized_evidence_sha": "bebfc8f694d5f2de",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Not found in the provided research snippets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674274,
   "web_search_url": "https://duckduckgo.com/?q=Cision+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "As an established PR and communications software provider, Cision may offer a stable environment with some interesting data science challenges around media data and NLP. However, as a large enterprise software company, it may lack the fast-paced, elite tech culture or top-tier new-grad pay seen at elite AI firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9308526d21"
+   ],
+   "value": "Estimated: Moderate to Good, with standard corporate hours but varying by team."
   }
  },
  "citadel": {
@@ -124231,37 +124684,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - insufficient public data to assess AI/data science prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no culture information in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available for new grad technical roles."
   },
   "evidence_sha": "b522d771fc6bc7d8",
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784677184,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "InstaLILY",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no data on work pace or culture speed."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information found."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124271,7 +124765,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no information on company shutdowns or guaranteed time off."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -124305,14 +124804,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d9f7fd0e71559115be291b602c74f370b6dd939cbb84a0914869c485fe46f165JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9lZGl0b3JpYWxpc3QuY29tL2Zhc2hpb24vYmVzdC1tYXJrZXQtdG90ZXMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "20f52197e8",
+    "a06a6c37eb",
+    "54b78d590d"
+   ],
+   "value": "InstaLILY appears to be a company with limited public information available in the provided sources. The sources are redirect links that do not contain substantive company details."
+  },
+  "synthesized_evidence_sha": "b522d771fc6bc7d8",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677184,
   "web_search_url": "https://duckduckgo.com/?q=InstaLILY+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data available."
   }
  },
  "instalily ai": {
@@ -170153,108 +170677,117 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Top-Tier Defense (Specialised Elite). Not prestige-driven Big Tech for consumer AI, but carries deep respect in defence and security-oriented rigorous AI engineering sectors."
+   "value": "Estimated: High in defense circles, but lower relative to elite commercial tech and AI-first organizations prioritizing fast-paced innovation."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "22370b419b"
+    "7d8a03d8c6"
    ],
-   "value": "Operates as a government-contracted defence prime, bidding on large-scale, multi-year development and sustainment projects. Revenue is secured through performance-based milestone payments and long-term service agreements for highly sensitive, regulated military programmes."
+   "value": "Northrop Grumman operates on a B2G (business-to-government) model, securing defense contracts and providing specialized engineering and technical services that require security clearances."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Professional, inclusive, and security-conscious. A 'big company' culture with defence sector politeness, balanced learning stipends, and low turnover. Dress code and bureaucracy can feel dry compared to startups, but psychological safety reversely eliminates toxicity."
+   "value": "Estimated: Mission-driven and highly structured, leaning heavily on protocol, citizenship requirements, and clearance procedures rather than fast tech迭代."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "54cd6c2a79"
+    "7d8a03d8c6",
+    "2916b3ae24"
    ],
-   "value": "Primarily the Australian Department of Defence, including the Royal Australian Air Force (RAAF), Royal Australian Navy, and Australian Army. Also serves allied Five Eyes defence forces and Commonwealth government agencies."
+   "value": "Primary customers are government and military agencies, requiring strict adherence to citizenship prerequisites and special access program clearances."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: AUD $80,000 - $100,000 total annual package. Base typically comprises $75,000 - $90,000 for a graduate track, plus superannuation and bonus potential aligning shareholder scheme, markedly higher than non-defense peer roles."
+   "source_ids": [
+    "2916b3ae24"
+   ],
+   "value": "Estimated: $69,000 - $104,000 per year for entry-level cloud engineering roles. Defense contractor pay is competitive but rarely matches elite commercial tech new-grad salaries."
   },
   "evidence_sha": "150e722a8f90e92c",
-  "generated_at": 1784682267,
+  "generated_at": 1784862304,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "22370b419b",
-    "54cd6c2a79"
+    "2916b3ae24"
    ],
-   "value": "Defence and Aerospace Technology"
+   "value": "Aerospace and Defense Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect a process valuing compliance without tech-paralysis: they screen technical grounding in Python/C++ or ML benchmarks such as PyTorch/TensorFlow, but heavily weigh STAR-format situations to gauge how you solve unstructured mission problems or negotiate bureaucratic inputs without burning out. Interviews emphasize culture fit around safety, integrity, and demonstrable collaboration. Live coding enabled, though often replaced by an underside take-on pairing session."
+   "value": "To align with your desire for high-tier prestige and AI growth, you must clarify whether the specific team works on cutting-edge data science initiatives rather than slow compliance testing. Ask interviewers about the pace of technical deployment and how rigid security clearances impact project agility and innovation. Finally, confirm work-life balance expectations by asking about standard working hours, guaranteed shutdowns, and whether the culture avoids high-burnout crunch periods during majo"
   },
-  "last_attempt_at": 1784682267,
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784842719,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "5f8e2df2fd"
+    "7d8a03d8c6",
+    "2916b3ae24"
    ],
-   "value": "Key Australian engineering hubs in Brisbane (including Amberley), Sydney (Macquarie Park), Canberra, and Elizabeth (Adelaide). Brisbane supports C4ISR and logistics analysis workloads highly relevant to AI opportunities."
+   "value": "Operations and job postings are located in the United States (including Melbourne, FL and Dayton, OH) and Australia."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "54cd6c2a79"
+    "2916b3ae24"
    ],
-   "value": "To defend and protect Australia's national security interests by providing technology-advanced systems that give military forces a decisive advantage."
+   "value": "While a specific mission statement was not directly retrieved, the company is defined by pioneering revolutionary technological advancements in defense and aerospace."
   },
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate and steady. Work is requirements-driven with rigorous security checking and deployment gates, so a slightly slower phase- structured pace than high-velocity startup brute forces. Still, genuine internal push for Agile and digital transformation has reduced legacy waterfall bottlenecks."
+   "value": "Estimated: Slower-paced and process-heavy due to government regulations, compliance, and strict security clearance protocols, contrasting with a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "22370b419b",
-    "54cd6c2a79"
+    "7d8a03d8c6",
+    "2916b3ae24"
    ],
-   "value": "Products and services include autonomous systems, C4ISR (Command, Control, Communications, Computers, Intelligence, Surveillance, Reconnaissance), cyber security solutions, advanced electronics, and sustainment of military aircraft like the F-35 and E-7A Wedgetail. Work focuses on software, hardware, and systems integration rather than manufacturing."
+   "value": "The company develops advanced defense systems, aerospace technology, cloud engineering solutions, and software quality assurance systems, focusing on technological advancements for national security."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4 weeks annual leave (20 days) + additional personalised leave types (altitude day etc). Standard for Australian defence prime contractor."
+   "value": "Estimated: 15-20 days of annual leave, standard for aerospace and defense government contractors."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "7d8a03d8c6",
+    "2916b3ae24",
+    "5f8e2df2fd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed company-wide end-of-year shutdown (roughly 1-2 full paid weeks across Christmas/New Year period) where entire operations pause, not just base leave."
+   "value": "Estimated: Often includes holiday shutdowns between Christmas and New Year, though specific policies are not public."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "22370b419b"
+    "5f8e2df2fd",
+    "54cd6c2a79"
    ],
-   "value": "Mature global enterprise operating in Australia with over 1,000 local employees as part of a parent company exceeding 100,000 employees worldwide. Not a startup; growth in Australia is steady and driven by sovereign defence capability initiatives."
+   "value": "Large, established enterprise operating globally with major presences in both Australia and the United States."
   },
   "sources": [
    {
@@ -170321,26 +170854,27 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "5f8e2df2fd"
+    "7d8a03d8c6"
    ],
-   "value": "Australian citizenship is mandatory because work requires a Baseline or higher (NV1/NV2) security clearance. Chance of sponsorship for newly skilled visas is functionally zero unless the candidate already holds a current Australian security clearance."
+   "value": "Sponsorship is highly restricted or unavailable for sensitive roles; US citizenship is explicitly listed as a prerequisite for obtaining Special Access Program clearance."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "22370b419b",
-    "54cd6c2a79"
-   ],
-   "value": "Northrop Grumman Australia is the Australian subsidiary of the American defence and aerospace giant, delivering advanced mission systems and technologies primarily for the Australian Defence Force. It earns revenue by securing long-term government contracts to design, integrate, and sustain complex military platforms in areas like intelligence, surveillance, cyber security, and logistics."
-  },
-  "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "54cd6c2a79",
-    "22370b419b"
+    "7d8a03d8c6",
+    "5f8e2df2fd"
    ],
-   "value": "AI engineering and data science roles concentrate on applied, accredited defense outcomes: sensor fusion, predictive maintenance for aircraft, computer vision for intelligence analysis, and cyber network defence algorithms. Work must adhere to Defence security processes, but the company has ab internal mandate to modernise tooling and adopt agile methods in its digital divisions, pushing against bureaucratic slowdown."
+   "value": "Northrop Grumman is a pioneering aerospace and defense technology company known for its revolutionary technological advancements (source 7d8a03d8c6). While branded as 'Northrop Grumman Australia', recent job postings indicate it operates globally, hiring for roles based in locations such as the United States (US citizenship required for sensitive roles). The company makes money by developing, manufacturing, and maintaining advanced systems and providing technical services to government and milit"
+  },
+  "synthesized_evidence_sha": "150e722a8f90e92c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7d8a03d8c6",
+    "2916b3ae24"
+   ],
+   "value": "Technical work includes cloud engineering, software design reviews, firmware and software testing, software quality engineering, and statistical analysis."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784666846,
@@ -170348,12 +170882,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "It provides a mission-driven stable environment where AI work has a tangible impact on national security. The company's strong emphasis on 'work-life effectiveness' and formal paid shutdowns acts as a genuine guardrail against burnout, forming a structure that demands productivity inside office hours rather than punishing weekend sprints."
+   "value": "If you are looking for a fast-paced, innovative tech culture without slow bureaucracy, this defense contractor environment may clash with your priorities, as government contracts enforce rigid processes and security protocols. While defense contractors typically respect work-life balance with sane hours, they rarely offer the elite new-grad pay or rapid career acceleration found in top-tier tech or AI startups. It is highly mission-driven, but the technical learning curve leans heavily toward co"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Very Strong. The company actively advertises work-life effectiveness. Overtime is not glorified; compressed weeks 9 day fortnights are typical for staff, and standing Christmas shutdowns are universally protected."
+   "value": "Estimated: Moderate to High, typically offering sane hours consistent with defense contracting, avoiding the high-burnout environments of commercial tech."
   }
  },
  "northslope technologies": {
@@ -171014,37 +171548,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not applicable / Tier 4 (no evidence of AI/data science presence in sources)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Unclear from sources. Manufacturing entity likely sells building products; Christian organization likely relies on donations/grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Estimated: Likely traditional manufacturing or faith-based organizational culture; no indication of fast, innovative tech culture from sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely below top-tier tech market (e.g., $70k-$100k) if any technical roles exist; no data in sources."
   },
   "evidence_sha": "d4ea9dafd25d9edb",
+  "generated_at": 1784862304,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Ambiguous: possibly building materials manufacturing (northwoodmfg.com) or religious/non-profit (northwoodchristian.org). Not a recognized AI/tech employer in sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Verify whether this Northwood has any AI/data science function. If interviewing, ask about technical stack, team structure, project velocity, on-call expectations, and concrete WLB policies—none are documented in available sources."
   },
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784675880,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Likely US-based given .com/.org domains; specific locations not in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3c00a71071",
+    "face286ab9"
+   ],
+   "value": "Not stated in sources. Northwood Christian likely has a faith-based mission; Northwood Manufacturing's mission is not provided."
+  },
   "name": "Northwood",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; manufacturing may be steady/predictable; non-profit may be variable. No data on tech pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Unable to determine from sources; redirect pages only. Northwood Manufacturing likely produces building materials; Northwood Christian appears to be a religious organization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not documented; typical US manufacturing/non-profit may offer 10-15 days PTO plus holidays, but purely speculative."
   },
+  "refresh_after": 1790046304,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171054,7 +171647,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of guaranteed shutdowns; manufacturing may have holiday closures; non-profit may not."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized based on web presence; no employee count or funding data in sources."
   },
   "sources": [
    {
@@ -171088,14 +171686,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=6ca21e07880cc253a430f620672411f65564f60cb88cea4137e17c935f776edcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cubm9ydGh3b29kY2hyaXN0aWFuLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "88bd6eaad2",
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "Northwood appears to be associated with multiple entities including a Christian organization (northwoodchristian.org) and a manufacturing company (northwoodmfg.com), but the provided sources are redirect pages without substantive content. No verifiable information about a top-tier AI/data science employer was found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "d4ea9dafd25d9edb",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "face286ab9",
+    "3c00a71071"
+   ],
+   "value": "No evidence of AI/data science roles in sources. Manufacturing may have engineering; Christian organization likely minimal technical work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675880,
   "web_search_url": "https://duckduckgo.com/?q=Northwood+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high pay, fast innovation, mission focus, and strong work-life balance. The supplied sources do not describe a company matching this profile—Northwood appears to be a manufacturer or faith-based org, not a top-tier tech employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no employee reviews or policy data in sources."
   }
  },
  "northwood space": {
@@ -256911,7 +257537,7 @@
    "value": "Estimated: Unknown/Tier 3 (Services Background). There is no evidence of elite, top-tier AI or data science prestige in the current sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -256933,7 +257559,7 @@
    ],
    "value": "Enterprise organizations requiring digital transformation and custom software engineering."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
@@ -256962,7 +257588,7 @@
    ],
    "value": "You should clarify whether UST has dedicated AI and data science tracks for new grads, as the current public posting only highlights full-stack development. Given your strict work-life balance and sane-hours requirements, ask the interviewers directly about team utilization rates, expected weekly hours, and toxic-environment red flags. Frame your questions around fast, innovative tech culture to ensure their specific teams avoid enterprise IT bureaucracy."
   },
-  "last_attempt_at": 1784776844,
+  "last_attempt_at": 1784862304,
   "last_evidence_at": 1784782306,
   "locations": {
    "confidence": "high",
