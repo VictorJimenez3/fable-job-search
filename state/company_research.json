@@ -359,41 +359,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. As an established edtech company, it provides solid, impactful data science work but is not typically classified alongside elite FAANG or top-tier AI labs for cutting-edge ML research."
   },
   "aliases": [],
-  "attempts": 6,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 7,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "Powers thousands of higher education offerings for its university partners. It generates revenue by providing the infrastructure, marketing, and support for these programs, likely sharing in the tuition revenue from enrolled students."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "Mission-driven, collaborative, and connected by a shared passion to deliver world-class higher education at scale."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "Universities seeking to deliver world-class higher education at scale, and individual learners seeking online education."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000. Competitive for the edtech industry but potentially lower than top-tier tech firms that offer elite new-grad compensation."
   },
   "evidence_sha": "0c7e4b623397c49e",
+  "generated_at": 1784915984,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "E-learning / EdTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Should probe the team's use of modern experimentation platforms to assess the pace of innovation and learning. Ask about sane working hours, shutdown policies, and specific new-grad compensation bands to see if they match the candidate's high expectations and WLB requirements."
   },
-  "last_attempt_at": 1784907924,
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784680917,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3841c2f98"
+   ],
+   "value": "Headquartered in the United States; provides online education globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "To make learning limitless and deliver world-class higher education at scale."
+  },
   "name": "2U",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Operates with a mix of mission-driven urgency to scale education and the typical processes of a public company, possibly lacking the fast-paced, highly innovative  culture of a newer startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "Online higher education offerings including free courses, boot camps, and full online degree programs via the edX platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-25 days. Standard for established US tech companies, though exact policy is not public."
   },
-  "retry_after": 1784911764,
+  "refresh_after": 1790099984,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -403,7 +455,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard holidays and limited year-end shutdown, but no explicit guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3841c2f98"
+   ],
+   "value": "Public company (parent company of edX)."
   },
   "sources": [
    {
@@ -447,14 +506,43 @@
     "url": "https://job-boards.greenhouse.io/2u/jobs/8551048002"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e3841c2f98"
+   ],
+   "value": "Specific sponsorship policies are not mentioned in the provided sources, but as a public US tech company, it may offer sponsorship for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "2U is an education technology company that partners with universities to build and deliver online degree programs and courses. As the parent company of edX, it monetizes by powering higher education offerings ranging from free courses to full degrees, sharing tuition revenue with its university partners."
+  },
+  "synthesized_evidence_sha": "0c7e4b623397c49e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "be5f06e123"
+   ],
+   "value": "Data science roles involve modern experimentation platforms (e.g., Statsig, Eppo, Optimizely, LaunchDarkly) to measure and optimize educational outcomes and platform features."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=2U+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "e3841c2f98"
+   ],
+   "value": "Aligns with the candidate's desire for a mission-driven company, but may fall short on elite prestige, high new-grad pay, and fast-paced innovation, which are often found in newer startups or top-tier tech firms. The public company status could indicate slower bureaucracy, but the focus on experimentation suggests a data-driven approach to growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The mission-driven culture often attracts talent focused on impact over grind, suggesting reasonable hours, though specific shutdowns and burnout prevention are not publicly detailed."
   }
  },
  "3red partners": {
@@ -137271,7 +137359,7 @@
    "value": "Tier 2 \u2014 Respected industry practitioner with real production ML at scale, but not an AI research lab or tech-first brand."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137287,7 +137375,7 @@
    "source_ids": [],
    "value": "Individual consumers, small businesses, middle-market companies, and institutional clients primarily in the Midwest and Southeast U.S."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137310,7 +137398,7 @@
    "source_ids": [],
    "value": "Expect practical ML system design (fraud, credit risk, personalization), SQL/analytics case studies, and behavioral questions on stakeholder management in a regulated environment. Prepare to discuss model governance, fairness, and deployment constraints."
   },
-  "last_attempt_at": 1784893681,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908633,
   "locations": {
    "confidence": "estimated",
@@ -137339,6 +137427,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days PTO + 10 company holidays + 2-3 'recharge days' annually; accrues with tenure."
   },
+  "retry_after": 1784916282,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137402,7 +137491,7 @@
    "source_ids": [],
    "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles; typical for large U.S. banks with dedicated immigration teams."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139495,11 +139584,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139511,6 +139602,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784908633,
   "name": "FirstEnergy",
   "pace_of_work": {
@@ -139523,6 +139615,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784916224,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139576,7 +139669,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784908633,
   "web_search_url": "https://duckduckgo.com/?q=FirstEnergy+company+careers+benefits",
@@ -215706,11 +215799,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215722,6 +215817,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784915596,
   "name": "Liberty Mutual",
   "pace_of_work": {
@@ -215734,6 +215830,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784916224,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215787,7 +215884,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784915596,
   "web_search_url": "https://duckduckgo.com/?q=Liberty+Mutual+company+careers+benefits",
@@ -220899,7 +220996,7 @@
    "value": "Estimated: Tier 2 \u2014 strong commercial ML practice with published case studies (dynamic packaging, pricing), but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220915,7 +221012,7 @@
    "source_ids": [],
    "value": "Leisure travellers in the UK and Ireland booking short- and medium-haul package holidays, primarily price-sensitive families, couples, and groups seeking self-serve digital booking."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220938,7 +221035,7 @@
    "source_ids": [],
    "value": "Expect applied ML system design (real-time pricing/ranking), production-grade data engineering puzzles, and behavioural questions on shipping iteratively in a cross-functional squad. Prepare to discuss model monitoring, A/B testing rigor, and how you balance innovation with operational stability in a high-transaction domain."
   },
-  "last_attempt_at": 1784895541,
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "estimated",
@@ -220968,6 +221065,7 @@
    "value": "Estimated: 25 days annual leave + UK bank holidays (8) + 1\u20132 company-wide \"recharge\" days per year."
   },
   "refresh_after": 1790079541,
+  "retry_after": 1784916224,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221031,7 +221129,7 @@
    "source_ids": [],
    "value": "Estimated: Licensed UK sponsor; routinely sponsors Skilled Worker visas for engineering, data science, and ML roles. No public cap or restriction noted."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258655,48 +258753,131 @@
  "norfolk southern": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: Low to Medium. Legacy railroads offer complex optimization problems but generally lack the elite, fast-paced prestige of big tech or high-growth AI startups."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "686149dbd3",
+    "e3ace20407"
+   ],
+   "value": "Logistics service provider generating revenue by charging fees for transporting bulk and intermodal freight across its rail network."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Describes itself as a diverse and inclusive environment offering competitive pay and resources for work-life balance, with a focus on sustainability."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "686149dbd3",
+    "e3ace20407"
+   ],
+   "value": "Industrial, agricultural, and commercial manufacturers and shippers requiring long-haul freight transport."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f",
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Large traditional engineering companies generally pay solid new-grad salaries and top benefits, but this is typically lower than the 'elite' $150k+ packages offered by big tech or top-tier AI labs."
   },
   "evidence_sha": "6c5f3d273604153f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784915984,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "686149dbd3",
+    "e3ace20407"
+   ],
+   "value": "Transportation & Logistics (Freight Rail)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probe the actual pace of innovation and autonomy in the team to ensure it escapes slow bureaucratic processes. Ask about exact working hours and formal shutdowns to verify that work-life balance won't be impacted by legacy operational demands, and confirm that the compensation matches the 'top-tier' expectations of the candidate."
+  },
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784915598,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Headquartered in Atlanta, Georgia, with operations spanning the Eastern United States; remote/hybrid tech roles may be available."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "To advance industry-leading sustainability initiatives, build a diverse and inclusive culture, and create rewarding careers for its team while safely moving freight."
+  },
   "name": "Norfolk Southern",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: Moderate. Operations in heavy industry can feature slower, more bureaucratic decision-making, which may conflict with a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "686149dbd3",
+    "e3ace20407"
+   ],
+   "value": "Intermodal freight transportation, rail-based cargo logistics, and supply chain management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: 15-25 days of paid time off annually, which is standard for large U.S. corporations but falls short of 'unlimited PTO' or guaranteed shutdowns."
   },
+  "refresh_after": 1790099984,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "686149dbd3",
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns during holidays; standard operations in freight logistics run continuously."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "686149dbd3"
+   ],
+   "value": "Large public enterprise (Class I railroad)."
   },
   "sources": [
    {
@@ -258740,14 +258921,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Large U.S. corporations often offer visa sponsorship for specialized technical roles, but exact policies for recent grads are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "686149dbd3",
+    "e3ace20407"
+   ],
+   "value": "Norfolk Southern Corporation is a major American transportation company operating a large Class I freight railroad across the Eastern United States. It makes money by charging industrial, agricultural, and commercial customers to transport freight across its rail network. [686149dbd3, e3ace20407]"
+  },
+  "synthesized_evidence_sha": "6c5f3d273604153f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Data science, AI, and software engineering roles focused on logistics optimization, rail network routing, predictive maintenance, and supply chain analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784915598,
   "web_search_url": "https://duckduckgo.com/?q=Norfolk+Southern+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "This candidate is seeking top-tier elite tech prestige with high new-grad pay, but also a mission-driven environment with guaranteed work-life balance and sane hours. A legacy railroad may lack 'elite AI prestige' and a fast-innovative tech culture, potentially suffering from slow bureaucracy rather than the rapid career acceleration or guaranteed shutdowns the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "632f6e5ca0"
+   ],
+   "value": "Estimated: Moderate to High. Traditional industries often emphasize standard hours and work-life balance resources, but external tech candidates should verify there are no on-call rotations tied to rail operations."
   }
  },
  "norsk hydro": {
@@ -265115,131 +265328,126 @@
  },
  "observable space": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Not enough verifiable information in the provided sources to estimate their AI/DS prestige tier."
+   "confidence": "low",
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Not applicable or not found in research; current public postings emphasize embedded software engineering rather than AI or data science roles."
   },
   "aliases": [],
   "attempts": 3,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "How the company generates revenue is not detailed in the provided sources."
+   "value": "Develops and sells precision optics platforms for space and terrestrial applications."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "confidence": "high",
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Mission-driven culture focused on meaningful challenges with real-world impact, offering flexible and trust-based policies."
   },
   "customers": {
    "confidence": "low",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "Information regarding the target customer base is not available in the provided sources."
+   "value": "Not explicitly stated in available sources, but typically includes aerospace, defense, satellite, or earth observation entities requiring precision optics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "confidence": "high",
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Estimated: $100,000 - $160,000 per year for entry-level technical roles."
   },
   "evidence_sha": "ac39202ebe366139",
-  "generated_at": 1784900757,
+  "generated_at": 1784915984,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "The specific industry is not explicitly stated in the provided sources."
+   "value": "Space Technology / Optical Systems"
   },
   "interview_focus": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "Because the retrieved sources only contain redirect notices, there is no verified company information to prepare an interview focus. The candidate should independently verify the company's tech stack and culture, and come prepared to ask recruiters about new-grad compensation, technical learning paths, guaranteed shutdowns, and project turnaround speed to ensure it meets their expectations."
+   "value": "Ask detailed questions about daily working hours and culture to ensure they respect your boundary against toxic environments. Probe their embedded software stack and growth trajectory to confirm they accelerate technical learning without trapping you in slow bureaucracy."
   },
-  "last_attempt_at": 1784915945,
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784908633,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "The physical or geographic locations of the company's offices are not listed in the provided sources."
+   "value": "Los Angeles, CA (Hybrid work model)."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "The company mission could not be retrieved from the supplied public page links."
+   "value": "To tackle meaningful challenges with real-world impact through a mission-driven culture focused on advanced space and Earth optics technology."
   },
   "name": "Observable Space",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Estimated: Fast-paced and innovative environment, typical of high-growth space technology startups."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "The company's specific products or services are not detailed in the provided sources, which only display redirect messages."
+   "value": "Precision optics platforms designed for Earth and space applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Estimated: 15-20 days per year. The company offers an Unlimited PTO policy that includes paid holidays, but typical accrual metrics are not specified."
   },
-  "retry_after": 1784916425,
+  "refresh_after": 1790099984,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Estimated: No explicit mention of guaranteed company-wide shutdowns; verify if any exist outside of standard paid holidays."
   },
   "size_stage": {
    "confidence": "low",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "The current company size, funding stage, or employee headcount is not available in the retrieved data."
+   "value": "High-growth space technology company; other specific details regarding employee count or funding stage are not available in the provided sources."
   },
   "sources": [
    {
@@ -265306,47 +265514,42 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "There is no information regarding visa sponsorship or international hiring policies in the retrieved sources."
+   "value": "Not explicitly stated in available sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "Observable Space is a technology company whose specific product offerings and monetization strategies could not be determined from the retrieved public pages, as all supplied sources resulted in a redirect notice. Consequently, the exact nature of their business operations remains unverified in this research."
+   "value": "Observable Space is a high-growth space technology company that builds precision optics platforms for use on Earth and in orbit. They sustain their business by developing and deploying these advanced optical systems to solve meaningful, real-world challenges."
   },
+  "synthesized_evidence_sha": "ac39202ebe366139",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "Specific details on the technical work, engineering stack, or data science projects are not mentioned in the provided sources."
+   "value": "Involves embedded systems, software engineering, and integrating software with precision optical hardware for space and Earth platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=Observable+Space+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "4ec92279f6",
-    "31a56f7ac3",
-    "7f62aee37f"
+    "4091127270"
    ],
-   "value": "It is currently unclear how Observable Space aligns with a job candidate's desire for elite AI prestige, high new-grad pay, fast tech culture, and strong work-life balance. Since the provided sources only display redirect notices, the company's actual mission, technical reputation, and internal policies remain unverified in this research."
+   "value": "This role aligns with your desire for a mission-driven company tackling meaningful real-world challenges and may offer high new-grad pay. You must determine if their space technology focus matches your technical learning goals and verify their actual day-to-day work-life balance to avoid burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+   "source_ids": [
+    "4091127270"
+   ],
+   "value": "Estimated: Moderate. While the company advertises a mission-driven culture with unlimited PTO, actual work-life balance in high-growth space tech startups can vary and may require validation during the interview process."
   }
  },
  "ocean optics": {
@@ -314490,11 +314693,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314506,6 +314711,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784908632,
   "name": "RRS Group & Co",
   "pace_of_work": {
@@ -314518,6 +314724,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784916224,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314581,7 +314788,7 @@
     "url": "https://jobright.ai/jobs/info/6a635b888d53603449601ec0?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784908632,
   "web_search_url": "https://duckduckgo.com/?q=RRS+Group+%26+Co+company+careers+benefits",
@@ -321476,68 +321683,78 @@
  "schonfeld": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier: Schonfeld is a recognized elite quantitative firm competing for the same talent as Two Sigma, Citadel, DE Shaw, and Hudson River Trading, with published research and conference presence in ML/DS applied to finance."
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Tier 1 - Elite quantitative hedge fund platform competing for top AI and data science talent."
   },
   "aliases": [],
   "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Multi-strategy hedge fund platform earning management fees (typically 1-2% of AUM) and performance fees (typically 15-20% of profits) on capital allocated to quantitative trading strategies developed by internal research and engineering teams."
+   "confidence": "high",
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Multi-manager hedge fund platform that invests proprietary capital with internal and partner portfolio managers on an exclusive or semi-exclusive basis to generate trading profits."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Inclusive, collaborative, research-first culture where ideas are encouraged at all levels; diversity of background and thought is explicitly valued; teamwork-oriented with a focus on long-term talent development over short-term extraction."
+   "value": "Inclusive, teamwork-oriented, and collaborative; values diverse backgrounds and voices while encouraging ideas to be shared at all levels."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Institutional investors including pension funds, endowments, foundations, sovereign wealth funds, and high-net-worth individuals who allocate capital to the firm's multi-strategy fund vehicles."
+   "confidence": "high",
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "The firm acts as a principal investing platform, deploying its own capital alongside exclusive and semi-exclusive portfolio managers rather than serving external retail clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $175k-$225k base + $50k-$100k signing bonus + $50k-$150k year-end bonus (total $275k-$475k) for quantitative data engineering/research roles, competitive with top quant firms."
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Estimated: $200K-$300K total compensation package, aligning with elite quantitative hedge fund new-grad offers."
   },
   "evidence_sha": "59a27cae6f910053",
-  "generated_at": 1784684091,
+  "generated_at": 1784915984,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "4392c813fe"
+    "75eefa4f9c"
    ],
-   "value": "Quantitative Finance / Hedge Fund / Proprietary Trading"
+   "value": "Financial Services / Investment Management (Multi-Manager Hedge Fund)"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Expect deep technical assessment in Python/C++, data structures, distributed systems, and quantitative problem-solving; behavioral focus on collaboration, innovation mindset, and ability to thrive in a research-driven, non-hierarchical environment. Prepare to discuss real-world data engineering challenges and research-to-production workflows."
+   "value": "Prepare to discuss how you drive innovation and resilient system design in a collaborative setting, and ask about the team's engineering culture to ensure the pace aligns with sustainable hours. Highlight your eagerness to continually learn and share ideas at all levels, while clarifying expectations around guaranteed shutdowns and sane work-life balance to confirm it meets your standards."
   },
-  "last_attempt_at": 1784915945,
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784913843,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary offices in New York, NY and London, UK; additional presence in Miami, FL and potentially other global financial centers."
+   "confidence": "low",
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Not explicitly stated in supplied sources, but as a major hedge fund platform, operations are likely concentrated in major financial hubs."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "To deliver superior risk-adjusted returns through systematic quantitative investing while fostering an inclusive, collaborative culture that empowers talent to innovate and pursue ambitious technical goals."
+   "value": "To create an inclusive environment where diverse backgrounds and voices spark better ideas, empowering talent to continually learn, innovate, and pursue ambitious goals while thriving professionally."
   },
   "name": "Schonfeld",
   "pace_of_work": {
@@ -321545,38 +321762,46 @@
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Estimated: Fast-paced research-driven environment with intense project cycles around strategy development, but cultural signals suggest sustainable intensity rather than perpetual crunch; 'continually learn, innovate and pursue ambitious goals' implies structured ambition."
+   "value": "Estimated: Fast-paced and ambitious drive to continuously innovate and pursue ambitious goals."
   },
   "products": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "4392c813fe"
+    "75eefa4f9c"
    ],
-   "value": "Quantitative trading strategies, systematic investment algorithms, proprietary data infrastructure, and research platforms for alpha generation across equities, futures, and other liquid asset classes."
+   "value": "Capital allocation and investment management services across quantitative, fundamental equity, tactical trading, and discretionary macro & fixed income strategies."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days PTO + 10-12 US/UK market holidays; financial firms typically offer competitive but not unlimited PTO with expectation of coverage during market hours."
+   "source_ids": [
+    "4392c813fe"
+   ],
+   "value": "Estimated: 20-25 paid time off days annually, following standard financial sector norms."
   },
-  "refresh_after": 1789868091,
-  "retry_after": 1784916425,
+  "refresh_after": 1790099984,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "4392c813fe"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed firm-wide shutdowns; market-driven schedule means limited downtime around major holidays (Dec 24-26, Jan 1, July 4, etc.) but no published policy for mandatory disconnect periods."
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Estimated: Likely observes standard market holidays, though specific firm-wide shutdown periods were not found in research."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Established multi-billion AUM quantitative hedge fund (estimated $10B+ AUM), mature stage with 200-500 employees globally, operating as a proprietary trading firm rather than a startup."
+   "confidence": "medium",
+   "source_ids": [
+    "75eefa4f9c"
+   ],
+   "value": "Established multi-manager hedge fund platform operating across four distinct trading strategies with internal and partner portfolio managers."
   },
   "sources": [
    {
@@ -321631,42 +321856,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B and green cards for specialized quantitative and engineering roles given industry norms; specific policy not disclosed in sources."
+   "confidence": "low",
+   "source_ids": [
+    "4392c813fe"
+   ],
+   "value": "Not explicitly confirmed in supplied sources, though the firm's investment in diverse backgrounds suggests an inclusive hiring approach."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "4392c813fe"
+    "75eefa4f9c"
    ],
-   "value": "Schonfeld is a quantitative investment firm that operates a multi-strategy hedge fund platform, employing quantitative researchers, data engineers, and technologists to build systematic trading strategies. The firm generates revenue through management fees and performance fees on capital deployed across its portfolio of quantitative strategies."
+   "value": "Schonfeld Strategic Advisors is a multi-manager hedge fund platform that invests its capital with internal and partner portfolio managers across four primary trading strategies: quantitative, fundamental equity, tactical trading, and discretionary macro & fixed income. The firm makes money by deploying its own capital to generate absolute returns across these diverse market strategies."
   },
-  "synthesized_evidence_sha": "9f3c19b3d8df5c4f",
+  "synthesized_evidence_sha": "59a27cae6f910053",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Quantitative data engineering: building high-performance data pipelines, alternative data integration, research computing infrastructure, strategy implementation systems, and real-time trading technology using Python, C++, and cloud/distributed systems."
+   "value": "Engineering roles involve building systems that support quantitative trading strategies, including quantitative data engineering and developing resilient technical infrastructure for portfolio management teams."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673566,
   "web_search_url": "https://duckduckgo.com/?q=Schonfeld+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Schonfeld offers elite quant finance prestige and top-tier new-grad compensation in a culture explicitly described as inclusive, collaborative, and focused on continuous learning \u2014 aligning with your priority for high-impact AI/data science work without toxic burnout. The firm's emphasis on empowering talent at all levels and investing in people suggests a sustainable pace compared to sweatshop-style quant shops."
+   "value": "Schonfeld offers the elite prestige and top-tier compensation expected from a major hedge fund, with a fast innovative tech culture that continually empowers talent to learn and pursue ambitious goals. The collaborative, teamwork-oriented environment encourages ideas at all levels, providing strong technical learning acceleration and career growth without the slow bureaucracy found elsewhere."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "4392c813fe"
    ],
-   "value": "Estimated: 3.5/5 \u2014 above average for quant finance; explicit cultural emphasis on inclusion, collaboration, and investing in people suggests respect for boundaries, but market-hours constraints and strategy deadlines inherently create pressure periods."
+   "value": "Estimated: Moderate work-life balance, typical of elite multi-manager hedge funds."
   }
  },
  "schroders": {
@@ -396395,7 +396622,7 @@
    "value": "Estimated: Mid-to-High. Positioned at the center of the 'Physical AI' technology shift, deploying millions of devices globally, offering highly consequential AI and backend data science roles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [
@@ -396417,7 +396644,7 @@
    ],
    "value": "Wide-ranging organizations and communities globally, with more than 2 million devices deployed across 170+ countries."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -396445,7 +396672,7 @@
    "source_ids": [],
    "value": "Assess the true day-to-day pace and schedule expectations of the specific team. Probe whether the engineering culture genuinely protects personal time and guarantees shutdowns, ensuring the elite learning experience does not come at the cost of a high-burnout environment."
   },
-  "last_attempt_at": 1784872155,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784913843,
   "locations": {
    "confidence": "high",
@@ -396486,6 +396713,7 @@
    "value": "Estimated: 15-20 days of standard PTO, typical for a rapidly scaling tech company of this size, though exact policy is not public."
   },
   "refresh_after": 1790056155,
+  "retry_after": 1784916042,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -396573,7 +396801,7 @@
    ],
    "value": "Has a demonstrated track record of offering H1B sponsorship, though sponsorship is not guaranteed for every specific role."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -418390,7 +418618,7 @@
    "value": "Estimated: Tier 2. While Zocdoc is a highly recognizable consumer tech brand, its AI/Data Science work is primarily focused on practical marketplace applications rather than bleeding-edge foundational research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -418412,7 +418640,7 @@
    ],
    "value": "Everyday patients seeking convenient medical care and healthcare providers or practices looking to acquire new patients and manage their administrative workflows."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -418439,7 +418667,7 @@
    ],
    "value": "Candidates should interrogate team-specific work-life balance norms, specifically asking about on-call rotations and sustained weekly hours, as older established tech firms sometimes carry legacy operational burdens. They should also question the actual scope of AI/ML work versus traditional backend software engineering to ensure it meets their career growth and fast-paced innovation criteria."
   },
-  "last_attempt_at": 1784890560,
+  "last_attempt_at": 1784915984,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "high",
@@ -418475,6 +418703,7 @@
    "value": "Estimated: 20-25 PTO days per year. As a mature tech firm, Zocdoc typically offers standard to competitive PTO accruals."
   },
   "refresh_after": 1790074560,
+  "retry_after": 1784916224,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -418540,7 +418769,7 @@
    "source_ids": [],
    "value": "The company has historically sponsored visas for top technical talent, though policies fluctuate based on market conditions and specific technical reqs."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
