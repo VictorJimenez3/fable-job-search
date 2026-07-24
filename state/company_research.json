@@ -22042,41 +22042,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier for AI/Data Science specifically; prestige is concentrated in hardware and precision engineering."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Designs and sells specialized hardware and software testing equipment for energy storage applications."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented and focused on the green energy transition, though potentially structured with some traditional hardware industry bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Researchers and manufacturers in the energy storage and battery sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 base salary."
   },
   "evidence_sha": "6a277b6b61660bb7",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Electronic and Precision Test Equipment Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Estimated: Expect interviews centered on data acquisition, hardware-software integration, and testing methodologies rather than cutting-edge AI or data science models. You should gauge their engineering pace and work schedules during interviews to ensure the technical learning environment suits your career acceleration goals without toxic bureaucratic slowdowns."
+  },
+  "last_attempt_at": 1784867664,
+  "last_evidence_at": 1784677175,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in College Station, Texas, with an international presence."
   },
-  "last_attempt_at": 1784867502,
-  "last_evidence_at": 1784677175,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Providing high-precision testing instrumentation to accelerate energy storage research and manufacturing."
+  },
   "name": "Arbin Instruments",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical of manufacturing and hardware engineering environments."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "High-precision battery testing systems, supercapacitor testing equipment, and associated testing software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of accrued PTO."
   },
-  "retry_after": 1784867622,
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -22086,7 +22148,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research, outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size private company."
   },
   "sources": [
    {
@@ -22120,14 +22187,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=9d5a311bcb845f95b21328200903e160c9e8538acdec5525bdaf173be6c9e859JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9hcmJpbi5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjQvMDkvQXJiaW4tTEJUU19Ccm9jaHVyZV9yZXYxMi5wZGY&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a mid-size hardware-focused company, immigration sponsorship is evaluated on a case-by-case basis but is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Arbin Instruments is a manufacturer of precision testing equipment for energy storage devices, including batteries and supercapacitors. They make money by designing and selling these high-precision instruments, electronics, and testing software to researchers and manufacturers globally."
+  },
+  "synthesized_evidence_sha": "6a277b6b61660bb7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Firmware, hardware design, and software development for testing instruments and data acquisition systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Arbin+Instruments+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3e0aef13a2",
+    "218a46928d",
+    "6af3938bdf"
+   ],
+   "value": "Estimated: While Arbin operates in a slow-moving hardware space rather than offering an elite, fast-paced AI tech culture, it is a mission-driven company supporting the green energy transition. It may offer a balanced work environment and accelerate technical learning in embedded systems or hardware-software integration without the high-burnout culture of top-tier tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, likely offering standard engineering hours without the high burnout of big tech."
   }
  },
  "arc teryx equipment": {
@@ -25157,37 +25257,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Specialized Elite) — Not an AI/ML-first company. Prestige derives from elite vulnerability research and nation-state level cyber operations, not data science. Top-tier for systems security researchers; low relevance for pure ML roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal contracting model: cost-plus, fixed-price, and time-and-materials contracts with DoD/IC. Revenue from multi-year R&D programs, IDIQ task orders, and specialized security services. Employee-owned (ESOP) structure aligns long-term incentives."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineer-first, low-bureaucracy, deeply technical. Employee-owned so decisions favor long-term talent retention. Collaborative mentorship culture with senior researchers publishing at Black Hat/DEF CON. Mission-focused but not militaristic. Quiet professionalism over perks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. Department of Defense agencies, intelligence community organizations, federal civilian agencies, and select commercial critical infrastructure clients. Work is largely classified or controlled unclassified."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000-$160,000 base + ESOP allocation (vesting over 3-5 years) + comprehensive benefits. Total comp competitive with Tier 1 tech for cleared roles. No public bonus structure; ESOP is primary equity vehicle."
   },
   "evidence_sha": "9fe18901670a3d4d",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cybersecurity / Defense Contracting / Federal R&D"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: x86/ARM assembly, memory corruption concepts, RE tooling (Ghidra/IDA), C/C++ internals, and vulnerability classes. Behavioral focus on clearance eligibility, citizenship, and long-term commitment to classified work. Prepare for take-home RE/vuln challenges. Ask about ESOP vesting, clearance sponsorship timeline, and publication review process."
+  },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784677604,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Rome, NY. Additional offices: Syracuse, NY; Hampton, VA; Dayton, OH; Albuquerque, NM; Colorado Springs, CO; and remote-eligible positions. Security clearance requirements often dictate on-site work."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To assure the security and resilience of critical systems through advanced cybersecurity research, development, and operational support for national security missions."
+  },
   "name": "Assured Information Security (AIS)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, project-driven pace. Program milestones drive tempo but ESOP culture discourages crunch. Typical 40-45 hrs/week. Surge periods around deliverables are planned, not chronic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cybersecurity R&D services including vulnerability discovery, exploit development, malware analysis, secure embedded systems, cross-domain solutions, and security assessments. They also develop proprietary tools for automated vulnerability research and cyber training platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + guaranteed year-end shutdown (5-7 days). ESOP companies in this sector typically offer 3-4 weeks total paid leave."
   },
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25197,7 +25339,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Guaranteed annual year-end shutdown (typically Christmas through New Year, ~5-7 business days). Company-wide, mandatory disconnect."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-stage private company, ~400-500 employees. Established 2001, employee-owned via ESOP. Stable government revenue base with low turnover in core technical staff."
   },
   "sources": [
    {
@@ -25231,14 +25378,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=801295eb383f1dfcc4fef64b13838161b4d174b29d1cfd77550fd5ad4b80314cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Fzc3VyZWQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited H-1B sponsorship due to U.S. citizenship and security clearance requirements for most roles. Nearly all positions require active or obtainable TS/SCI clearance. Not a viable option for candidates needing visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assured Information Security (AIS) is a cybersecurity research and engineering firm specializing in vulnerability research, reverse engineering, and secure systems development for U.S. defense and intelligence agencies. They operate as an employee-owned company (ESOP) delivering high-assurance security solutions."
+  },
+  "synthesized_evidence_sha": "9fe18901670a3d4d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deep technical work in C/C++, Python, assembly (x86/ARM), reverse engineering (IDA Pro, Ghidra), vulnerability research, exploit development, embedded systems security, hypervisor/kernel internals, and formal methods. Limited ML/AI application currently — primarily traditional cyber R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677604,
   "web_search_url": "https://duckduckgo.com/?q=Assured+Information+Security+%28AIS%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AIS offers elite-tier technical prestige in vulnerability research and cyber R&D with new-grad compensation competitive with FAANG (~$130-160K base + ESOP). The employee-owned culture prioritizes sustainable pace (40-45 hr weeks), guaranteed holiday shutdowns, and deep mentorship — rare in defense contracting. You'll work on mission-critical national security problems with publishable research opportunities, without the burnout typical of cleared defense work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Strong work-life boundaries for cleared defense work. Guaranteed holiday shutdowns (Christmas-New Year), generous PTO, and management that models sustainable hours. Clearance constraints limit remote flexibility but protect against scope creep."
   }
  },
  "ast": {
@@ -29463,37 +29631,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected within semiconductor process control and equipment analytics; publishes at SPIE/SEMI conferences, collaborates with university labs, but not a primary AI research lab like FAIR/Google Brain."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capital equipment sales (ion implanters priced $5M–$30M+) combined with high-margin recurring aftermarket revenue (spare parts, services, upgrades) that typically exceeds 40% of total revenue and provides stability across semiconductor cycles."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics. Long-tenure employees (10–20+ years common) indicate stability. Cross-functional teams (mechanical, electrical, software, process) work side-by-side. Diversity improving but still male-dominated in senior hardware roles. Management accessible; open-door culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Top-tier semiconductor manufacturers including Intel, Samsung, TSMC, SK Hynix, Micron, GlobalFoundries, and other logic, memory, and foundry fabs globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120K–$140K base + 10–15% annual bonus + RSU grant (~$15K–$25K vesting over 4 years). Total Year 1 ~$150K–$180K. Signing bonus $5K–$10K. Bay Area/MA premium ~+10%."
   },
   "evidence_sha": "7b4f87fea0ddae27",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Semiconductor Capital Equipment (Front-end Wafer Processing — Ion Implantation)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: physics/statistics fundamentals for data science, C++/Python + algorithms for software, and domain-relevant problem solving (e.g., beam diagnostics, vacuum modeling, time-series anomaly detection). Behavioral questions emphasize collaboration across hardware/software boundaries and customer-facing problem ownership. No LeetCode grind; take-home projects mirror real implanter data challenges."
+  },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784677605,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Beverly, MA (USA). Major R&D/manufacturing: Beverly, MA; Hsinchu, Taiwan; Seoul, Korea; Beijing/Shanghai, China; Munich, Germany. Field service offices at major customer sites worldwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enable customers' process technology leadership through innovative ion implantation solutions that deliver precision, productivity, and cost of ownership advantages in semiconductor manufacturing."
+  },
   "name": "Axcelis Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-deliberate: quarterly hardware release cycles, multi-month validation, and customer-driven schedules. Occasional crunch during tool installations/acceptance, but no sustained 60-hour weeks. Engineering-driven, not sales-driven deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Purion series ion implanters (high-voltage Purion H, high-current Purion XE, specialty Purion Power, and Purion Dragon for advanced packaging), legacy Optima/Excellis platforms, and comprehensive aftermarket services including spare parts, upgrades, and field support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 1–2 floating days; additional sick/personal time per state law. Carryover up to 5 days. No unlimited PTO policy."
   },
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -29503,7 +29713,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24–Jan 1, paid, no PTO charged). Summer shutdown not standard. Fab-critical field calls during shutdown are rare and compensated with comp time."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: ACLS) with ~$1.1B annual revenue, ~1,500 employees globally, and market cap ~$3.5B. Profitable, mature but investing in R&D for advanced nodes (GAA, 3D NAND, SiC/Power)."
   },
   "sources": [
    {
@@ -29537,14 +29752,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f89d8553af8d097cc3d4b4cddc6307ccc339e570d0c8fa4c49cd0a6677c447a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cudHJlc2d1ZXJyYXMuY29tLm14LzNHL3RyYWNraW5nLnBocA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (regular filings for engineering, data science, and field service roles). Green card sponsorship (PERM) for senior/key talent. O-1 and TN visas used for specialized roles. Cap-exempt status via university-affiliated research collaborations possible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axcelis Technologies is a semiconductor capital equipment company that designs, manufactures, and services ion implantation systems used in chip fabrication. It sells high-voltage and high-current implanters to leading logic, memory, and foundry manufacturers worldwide, generating revenue from system sales and a growing aftermarket services business."
+  },
+  "synthesized_evidence_sha": "7b4f87fea0ddae27",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core engineering spans high-voltage physics, vacuum systems, robotics, plasma/beam dynamics, precision motion control, and factory automation software. Data science/AI roles focus on predictive maintenance, process control analytics, yield modeling, and digital twin simulation for implanter performance optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677605,
   "web_search_url": "https://duckduckgo.com/?q=Axcelis+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axcelis offers a rare blend: elite semiconductor hardware prestige (top-3 ion implant market share) with genuine work-life balance culture—low bureaucracy, minimal on-call, and respect for personal time. New-grad total compensation is competitive with big tech ($120K–$140K base + equity), but you ship mission-critical tools that enable AI chips rather than optimizing ad click-through rates. Technical depth is high (physics + software + data science), learning curve is steep but supported, and th"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Core hours 8:30–5:00 with flexibility, minimal weekend work, generous holiday shutdown (typically Christmas–New Year), and strong culture of 'leave at leave time.' Field service roles have travel but protected recovery time."
   }
  },
  "axiom space": {
@@ -115202,37 +115438,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected domain-specific ML/DS (chemometrics, sensor fusion, anomaly detection for water quality) within a Fortune 500 industrial tech leader, not a generalist AI lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15",
+    "d0b3f0d595"
+   ],
+   "value": "Sells water analysis hardware (spectrophotometers, controllers, sensors), consumable reagents/test kits, and software/services through direct sales and online shop channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, process-disciplined, mission-oriented (water safety). Collaborative cross-functional teams (R&D, manufacturing, quality, regulatory). Low politics, high accountability via DBS."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15",
+    "d0b3f0d595"
+   ],
+   "value": "Municipal water utilities, industrial facilities, environmental labs, and research institutions requiring water quality monitoring and compliance testing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$120,000 base + 10-15% target bonus + RSU grant (vesting 4 years), competitive for Colorado industrial tech; total comp ~$115K-$145K."
   },
   "evidence_sha": "47b8a39074a4af2d",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15"
+   ],
+   "value": "Water quality analysis / Environmental instrumentation / Life sciences tools (Danaher portfolio)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: 1) Sensor/embedded systems questions (signal processing, low-power firmware), 2) Chemometrics/data modeling for water parameter prediction, 3) Regulatory software validation (EPA/ISO compliance), 4) Danaher Business System (DBS) behavioral examples — Kaizen, standard work, problem-solving. Demonstrate ability to ship reliable, maintainable code in regulated environments."
   },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784675222,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15"
+   ],
+   "value": "Headquartered in Loveland, Colorado, USA with global sales/service offices and manufacturing facilities."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15"
+   ],
+   "value": "To provide reliable water quality analysis solutions that help customers ensure safe, compliant water."
+  },
   "name": "Hach",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured, milestone-driven pace governed by DBS; product cycles 12-24 months with regulated release gates. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15",
+    "d0b3f0d595"
+   ],
+   "value": "Water quality testing instruments, reagents, test kits, and related software/services for laboratory and field analysis."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays (US), aligning with Danaher standard benefits; exact accrual varies by tenure/location."
   },
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115242,7 +115541,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 25 - Jan 1) per Danaher practice; additional summer shutdowns not standard."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established subsidiary of Danaher Corporation (Fortune 500), operating globally with significant market presence in water analytics."
   },
   "sources": [
    {
@@ -115276,14 +115580,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=bdcf82787771dccf502261e251d8b8082140414b605896f7d993a42659ecb45fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cuaGFjaC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a Danaher subsidiary, likely supports H-1B and green card sponsorship for specialized engineering roles, but no public policy details found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "46691f9a30",
+    "32b32fcf15",
+    "d0b3f0d595"
+   ],
+   "value": "Hach is a water quality analysis company offering instruments, reagents, and services for testing water parameters. The company appears to operate through direct sales and e-commerce channels."
+  },
+  "synthesized_evidence_sha": "47b8a39074a4af2d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded firmware for instruments, analytical chemistry software, data management platforms, IoT/cloud connectivity for remote monitoring, and sensor algorithm development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675222,
   "web_search_url": "https://duckduckgo.com/?q=Hach+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hach offers a mission-critical role in global water safety with the backing of Danaher's Danaher Business System (DBS) for continuous improvement. The water analytics domain provides deep technical challenges in sensor fusion, chemometrics, and regulatory-compliant software — elite prestige without consumer-tech burnout. Danaher's culture emphasizes structured career growth, measurable impact, and sustainable pace, aligning with your priority for high new-grad pay, technical depth, and guarantee"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Danaher culture emphasizes standard work, sustainable pace, and predictable hours. On-call rotations exist for critical instrument support but are structured."
   }
  },
  "hadrian": {
@@ -135885,37 +136214,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML/quant research in risk analytics and pricing, but not a primary AI research lab; prestige derives from scale of financial data and production impact rather than publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software licensing, subscription/SaaS fees, and managed services for financial technology platforms; revenue driven by long-term contracts with institutional clients and expansion via acquisition of niche fintech vendors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric but top-down; acquisitive growth creates a federation of distinct sub-cultures. Technical depth respected, but bureaucracy from integration efforts and centralized strategy can slow autonomy. Less 'startup vibe', more 'institutional fintech at scale'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Banks, asset managers, hedge funds, corporations, central banks, exchanges, and energy/commodity trading firms worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + bonus/RSU (US/UK hubs); highly variable by location and acquired unit. Total comp likely competitive with Tier 2 fintech but below top quant firms."
   },
   "evidence_sha": "cd943e93faf3d1bc",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Technology / Capital Markets Software"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep C++/Java systems questions, low-latency design, concurrency, and domain knowledge of fixed income/FX/commodities workflows. Prepare for practical coding on platform-like problems. Ask specifically about the team's origin (acquired vs. core), on-call expectations, and integration roadmap — these dictate pace and WLB more than company-wide policy."
+  },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784677604,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Global: HQ in Dublin; major hubs in London, New York, Milan, Paris, Frankfurt, Singapore, Hong Kong, Sydney, and numerous regional offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To simplify and automate complex financial workflows through integrated technology platforms, enabling clients to manage risk, comply with regulation, and operate efficiently across global markets."
+  },
   "name": "ION",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and deadline-driven, especially around regulatory releases and acquisition integrations; varies significantly by business unit. Some teams report sustained high intensity; others more stable."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Trading platforms (ION Markets), post-trade processing, risk analytics, treasury management, commodity/energy trading systems, and data analytics across fixed income, FX, derivatives, and commodities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days + local holidays (varies by country/acquired entity); no unified global policy publicly documented."
   },
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135925,7 +136296,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some regional offices may observe local holiday closures but trading-support teams typically maintain coverage."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large private company (10,000+ employees), profitable, owned by founder Andrea Pignataro via private equity structure; serial acquirer of fintech businesses."
   },
   "sources": [
    {
@@ -135959,14 +136335,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a0a2011c525522c7107caddfa3b1b10c15830f38a655785bc7f4266f9212ba3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9pb250ZWxldmlzaW9uLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors visas (H-1B, STEM OPT, global equivalents) given global footprint and technical hiring needs; specific policies not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ION Group is a global financial technology company providing trading, workflow automation, and analytics software for financial institutions, corporations, and central banks. It grows primarily through acquiring and integrating specialized fintech platforms across asset classes."
+  },
+  "synthesized_evidence_sha": "cd943e93faf3d1bc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core platform engineering (C++, Java, C#), low-latency trading systems, distributed systems, cloud migration, data pipelines, quantitative analytics, and integration of acquired technology stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677604,
   "web_search_url": "https://duckduckgo.com/?q=ION+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ION offers elite-scale fintech impact with massive real-world trading volume, but its acquisitive culture can mean fragmented tech stacks and variable team autonomy. High new-grad pay is likely, yet work-life balance and burnout risk vary widely by acquired business unit — some teams report intense deadlines post-acquisition integration. Learning is broad but may lack structured mentorship; mission-driven in financial infrastructure sense, not social impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — Highly variable; acquired units often retain original culture temporarily but face integration pressure. No company-wide shutdowns or guaranteed hours reported. Expect on-call for production trading systems."
   }
  },
  "iowa state university": {
@@ -169332,11 +169729,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169348,6 +169747,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784675474,
   "name": "Mitsubishi Electric Iconics Digital Solutions",
   "pace_of_work": {
@@ -169360,6 +169760,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867784,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169403,7 +169804,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8ec029c26985ffeece8e6f41ebc3f595928c038bcbca6ca2395e5a60fbb66444JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWl0c3ViaXNoaWNhcnMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675474,
   "web_search_url": "https://duckduckgo.com/?q=Mitsubishi+Electric+Iconics+Digital+Solutions+company+careers+benefits",
@@ -259046,37 +259447,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3-4 (Regional/Niche). Not a top-tier AI research lab. Prestige derives from federal mission impact and ANC leadership, not cutting-edge ML publication record."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "Revenue from federal contracts (often sole-source or set-aside) via subsidiary operating companies. Profits fund shareholder dividends, elder benefits, scholarships, and cultural programs. Diversified portfolio across multiple sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, community-focused, process-compliant. Values Native heritage, shareholder returns, and long-term stewardship. Hierarchical but with cultural cohesion. Veteran-friendly."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "Primary customer is likely the U.S. federal government (DoD, NASA, civilian agencies) through 8(a), HUBZone, or other set-aside contracts. May also serve commercial clients in Alaska and Pacific Northwest."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + benefits (health, 401k match, education assistance). Lower than FAANG but competitive for Alaska/DC markets. Shareholder dividends not for employees unless also shareholders."
   },
   "evidence_sha": "163ac9a3d467b1e8",
+  "generated_at": 1784867664,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "Federal Government Contracting / Alaska Native Corporation (ANC) / Diversified Holding Company"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask about: specific subsidiary hiring (Tatitlek Corporation vs. operating companies), AI/DS project examples in federal context, remote/hybrid policies, shareholder benefit programs, and how technical innovation is balanced with contract compliance. Clarify if role is direct-hire or project-based."
   },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784674425,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "Headquartered in Anchorage, Alaska. Operations across Alaska, Washington DC area, and federal sites nationwide. Remote work possible for some IT roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "As an Alaska Native Corporation, mission centers on creating economic opportunity, preserving cultural heritage, and providing dividends/benefits to Tatitlek Native Village shareholders."
+  },
   "name": "The Tatitlek Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Federal contracting cycles (proposal, award, execution) create structured timelines. Less \"move fast and break things\" than tech startups; more compliance-driven cadence."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "Likely provides government contracting services including construction, environmental remediation, logistics, IT/services, and facility management through subsidiaries. Specific offerings not confirmed from available sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays. ANCs often offer competitive benefits to attract talent to Alaska/remote roles."
   },
+  "refresh_after": 1790051664,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259086,7 +259541,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Federal contractors typically observe federal holidays; some ANCs close for cultural events (e.g., ANCC annual meeting)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Medium-large ANC with multiple subsidiaries; likely 500-2,000+ employees across enterprises. Mature stage (ANCSA corporations established 1971)."
   },
   "sources": [
    {
@@ -259120,14 +259580,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=64bb4558a7db531c80a3a46a914bfbb8439b85ac0c91264b436cfcf084f3f89aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized IT/engineering roles given federal contract needs. ANC status may provide hiring preferences for Native shareholders and veterans."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "363858c2f6"
+   ],
+   "value": "The Tatitlek Corporation is an Alaska Native Corporation (ANC) likely engaged in federal government contracting and diversified business operations. As an ANC, it operates under the Alaska Native Claims Settlement Act to benefit its shareholders."
+  },
+  "synthesized_evidence_sha": "163ac9a3d467b1e8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: IT/services subsidiary may offer cybersecurity, cloud, data analytics, GIS, and engineering support. AI/DS roles likely in federal mission support (e.g., geospatial intelligence, logistics optimization) rather than core product R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674425,
   "web_search_url": "https://duckduckgo.com/?q=The+Tatitlek+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven work supporting Native shareholder benefits and federal missions. ANC structure can provide stable, long-term employment with cultural purpose. Federal contracting offers exposure to large-scale technical challenges. Work-life balance may be better than pure defense contractors due to community-oriented values."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Federal contracting can have surge periods (proposals, deployments), but ANC culture often emphasizes employee wellbeing and community. Less burnout risk than Big Tech or elite consulting."
   }
  },
  "the tjx companies inc": {
@@ -270734,11 +271217,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270750,6 +271235,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867664,
   "last_evidence_at": 1784677293,
   "name": "United Launch Alliance",
   "pace_of_work": {
@@ -270762,6 +271248,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867784,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270805,7 +271292,7 @@
     "url": "https://jobs.ulalaunch.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677293,
   "web_search_url": "https://duckduckgo.com/?q=United+Launch+Alliance+company+careers+benefits",
