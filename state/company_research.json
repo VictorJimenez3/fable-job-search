@@ -36791,38 +36791,111 @@
  "atomic machines": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "58cb489699",
+    "4f40476ffa"
+   ],
+   "value": "Estimated: High-tier niche deep tech appeal; building autonomous generative design systems for a highly innovative physical micromanufacturing platform."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2c9b6c3cc4",
+    "4f40476ffa"
+   ],
+   "value": "Builds and sells a multi-process, multi-material digital manufacturing platform, generating revenue from the commercialization and deployment of the Matter Compiler technology."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4f40476ffa"
+   ],
+   "value": "Estimated: Deep-tech startup environment heavily focused on cross-functional collaboration between AI, Modeling, Simulation, and Hardware teams."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c9b6c3cc4"
+   ],
+   "value": "Not explicitly detailed in available sources, but likely targeted at enterprise hardware developers, R&D teams, and organizations requiring rapid, complex micromanufacturing capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "58cb489699",
+    "4f40476ffa"
+   ],
+   "value": "Estimated: Highly competitive new-grad compensation expected for elite deep tech/AI roles to attract top-tier talent, though exact figures are not public."
   },
   "evidence_sha": "58cd38c959762aa9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2c9b6c3cc4",
+    "4f40476ffa"
+   ],
+   "value": "Advanced Manufacturing, 3D Printing, Deep Tech, and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "58cb489699",
+    "4f40476ffa"
+   ],
+   "value": "Be prepared to discuss how to architect distributed systems and design AI algorithms that automatically navigate, assemble, and optimize complex multi-variable component libraries while maintaining high throughput."
+  },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679641,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cb489699"
+   ],
+   "value": "Exact locations not explicitly detailed in sources, but standard operations are expected in major US hardware/AI hubs (e.g., San Francisco Bay Area)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "58cb489699",
+    "2c9b6c3cc4"
+   ],
+   "value": "To usher in a new era of micromanufacturing by fully realizing the digital manufacturing dream through its Matter Compiler technology."
+  },
   "name": "Atomic Machines",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4f40476ffa",
+    "58cb489699"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative tech culture, focused on shipping breakthrough deep-tech hardware and software rapidly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "58cb489699",
+    "2c9b6c3cc4",
+    "4f40476ffa"
+   ],
+   "value": "The Matter Compiler technology platform, an upcoming unveilling of their first micromachine device, and internal AI systems for automated CAD design exploration, assembly, and optimization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard competitive tech startup PTO (e.g., 15-20 days annually), though exact policy is not public."
   },
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36832,7 +36905,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found regarding guaranteed company-wide shutdowns; candidates should verify this priority directly with recruiters."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c9b6c3cc4",
+    "58cb489699"
+   ],
+   "value": "Estimated: Startup phase, currently scaling hardware and software engineering teams and gearing up for a major product unveiling."
   },
   "sources": [
    {
@@ -36896,14 +36977,50 @@
     "url": "https://job-boards.greenhouse.io/atomicmachines/jobs/4038127009"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c9b6c3cc4"
+   ],
+   "value": "Estimated: No explicit visa sponsorship policy found in the provided sources; candidates should verify directly with the talent acquisition team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "58cb489699",
+    "2c9b6c3cc4",
+    "4f40476ffa"
+   ],
+   "value": "Atomic Machines is a hardware startup developing the Matter Compiler, a multi-process, multi-material micromanufacturing platform that functions like a highly advanced 3D printer. They make money by commercializing this digital manufacturing platform to enable the automated production of complete, functional micromachines from raw materials."
+  },
+  "synthesized_evidence_sha": "58cd38c959762aa9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "58cb489699",
+    "4f40476ffa"
+   ],
+   "value": "Software work involves developing distributed platform architectures and building AI systems to automatically explore, assemble, and optimize CAD designs from component libraries."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679641,
   "web_search_url": "https://duckduckgo.com/?q=Atomic+Machines+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "4f40476ffa",
+    "58cb489699"
+   ],
+   "value": "For a top-tier AI candidate, this offers a rare chance to apply cutting-edge AI and data science to physical hardware innovation rather than standard SaaS, innovating at a rapid startup pace to automate complex physical design tasks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "58cb489699",
+    "2c9b6c3cc4"
+   ],
+   "value": "Estimated: Unknown; as a scaling startup gearing up for a major product launch, work-life balance the candidate prefers should be thoroughly vetted during interviews."
   }
  },
  "atoms": {
@@ -112850,7 +112967,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112868,7 +112985,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896647,
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784680205,
   "name": "Double Holo",
   "pace_of_work": {
@@ -112881,7 +112998,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896767,
+  "retry_after": 1784897099,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173569,49 +173686,138 @@
  },
  "humansignal": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Estimated: High. Positioned directly in the critical path of AI development as a specialized human data partner for AI researchers."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "B2B service model partnering directly with AI researchers to provide human-in-the-loop data creation, annotation, and delivery."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Estimated: Mission-driven, innovation-first, and focused on real-world AI impact. High reliance on expert talent suggests a culture that values specialized knowledge."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Companies building AI models and products, specifically their internal AI researchers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: $90,000 - $130,000. Note: explicit pay bands for non-recruiter individual contributor roles are unlisted; a listed recruiter role shows $55,000 – $100,000."
   },
   "evidence_sha": "2740be7860f2a8bd",
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Artificial Intelligence Data Solutions / Machine Learning Data Annotation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss how you handle rapid scaling and a fast, innovative tech culture without burning out. Emphasize your strategies for maintaining work-life balance and personal time while executing on elite data science tasks. Interviewers will likely probe your adaptability to startup speed and your ability to ship high-quality technical work amid aggressive delivery timelines."
   },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679641,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "San Francisco, CA (preferred) with open remote options."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "To provide real-world data as the competitive edge in AI, enabling customers to ship better AI products faster."
+  },
   "name": "HumanSignal",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: Extremely fast. The company explicitly states they need talent 'fast' to help customers 'ship better AI, faster'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Data creation, annotation services, and end-to-end data delivery solutions tailored for AI model training."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: Standard tech startup range (15-20 days annually)."
   },
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: No guaranteed shutdowns mentioned in public postings."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: Rapidly scaling startup. The company explicitly notes it needs 'a lot of [expert talent], fast', indicating an aggressive growth phase."
   },
   "sources": [
    {
@@ -173675,14 +173881,47 @@
     "url": "https://job-boards.greenhouse.io/humansignal/jobs/5725468004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: Not explicitly mentioned in current job postings; candidates requiring visa sponsorship should verify directly with the talent team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "HumanSignal operates as a human data partner for companies building AI models and products. They help customers ship better AI faster by partnering with researchers from real-world data creation to annotation and delivery."
+  },
+  "synthesized_evidence_sha": "2740be7860f2a8bd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a2f5c933db",
+    "59dec3991a",
+    "ce01e0f096"
+   ],
+   "value": "Work involves partnering with AI researchers for real-world data creation, algorithmic annotation pipelines, and advanced data delivery mechanisms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679641,
   "web_search_url": "https://duckduckgo.com/?q=HumanSignal+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "HumanSignal places you in the high-prestige AI infrastructure space, working directly with customer researchers to accelerate AI delivery. The startup's fast-paced, high-volume scaling model promises elite technical learning and rapid career growth, meaning you will be challenged daily without being bogged down by slow corporate bureaucracy."
+  },
+  "wlb_rating": {
+   "confidence": "low",
+   "source_ids": [
+    "a2f5c933db"
+   ],
+   "value": "Estimated: Good. Startup momentum implies high output, but modern AI startups typically emphasize output over raw hours and respect personal time."
   }
  },
  "humboldt park health": {
@@ -188917,7 +189156,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188935,7 +189174,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896647,
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784677296,
   "name": "Isuzu North America",
   "pace_of_work": {
@@ -188948,7 +189187,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896767,
+  "retry_after": 1784897099,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210772,37 +211011,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Specialized tech division with high impact and visibility, but not traditionally classified as an elite tech-first prestige company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e341871d8"
+   ],
+   "value": "Revenue is generated through concert promotion margins, ticketing service fees, venue food/beverage/hospitality sales, and corporate sponsorships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate entertainment culture blending traditional business with modern tech innovation, offering perks related to live events."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf0ea5ee67"
+   ],
+   "value": "Music fans, concert-goers, sports enthusiasts, artists, and event organizers globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $135,000 base salary for new grad AI/Data Science roles in high-cost tech hubs."
   },
   "evidence_sha": "8c92399f5100737e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Live Entertainment and Ticketing / Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e341871d8"
+   ],
+   "value": "Be prepared to demonstrate your skills in large-scale data processing and ML algorithms, highlighting your ability to thrive in a high-growth tech sector. Emphasize your adaptability and eagerness to learn quickly, which fits the culture of a fast-paced, innovative work environment that values personal time and career advancement."
+  },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679633,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf0ea5ee67"
+   ],
+   "value": "Headquartered in Beverly Hills, California, with major tech hubs in NYC, Austin, and various global offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To create and deliver live entertainment experiences that bring fans and artists together."
+  },
   "name": "Live Nation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and event-driven, particularly during peak concert and festival seasons."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Concert promotion and production, venue management (House of Blues, Amphitheaters), Ticketmaster ticketing platform, and artist management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard accrued PTO for new professionals."
   },
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210812,7 +211107,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf0ea5ee67",
+    "1ded47479f"
+   ],
+   "value": "Publicly traded global enterprise (Fortune 500) with over 10,000 employees worldwide."
   },
   "sources": [
    {
@@ -210856,14 +211159,42 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bf0ea5ee67",
+    "1ded47479f"
+   ],
+   "value": "Live Nation Entertainment is the world's largest live entertainment company, encompassing concert promotion, venue operations, and ticketing services. It makes money by charging fees on ticket sales, taking a percentage of concert revenues, and earning from hospitality and sponsorships at its global network of venues."
+  },
+  "synthesized_evidence_sha": "8c92399f5100737e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Developing large-scale data pipelines, predictive models for ticketing demand, dynamic pricing algorithms, and CRM platforms to optimize the live entertainment ecosystem."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679633,
   "web_search_url": "https://duckduckgo.com/?q=Live+Nation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a vital part of the entertainment industry, Live Nation offers immense opportunities for AI and data scientists to influence millions of live event attendees. This aligns with your goal of finding a role that balances dynamic technical work with high visibility, while providing a mission-driven environment away from toxic tech burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Can be variable depending on the tour and event cycle, but overall local tech roles lean closer to the industry average."
   }
  },
  "liveflow": {
@@ -268122,43 +268453,101 @@
  },
  "penn interactive": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Not applicable / Very low. No evidence of elite AI/DS research, publications, conference presence, or advanced ML infrastructure. Any data roles are likely applied analytics in operations/sales."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Traditional manufacturing and wholesale/retail distribution of branded fishing equipment. Revenue from product sales through multi-channel distribution (specialty retail, big-box outdoor retailers, direct-to-consumer online). No subscription or digital revenue model evident."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Heritage brand culture: practical, product-focused, engineering-centric, outdoor-enthusiast aligned. Values durability, reliability, craftsmanship. Less hierarchical than huge corps but not a startup. Passionate about fishing."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Recreational and professional anglers, fishing charter operators, sporting goods retailers (e.g., Bass Pro Shops, Cabela's, local tackle shops), and e-commerce customers worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k-$85k base for engineering/analytics roles in Midwest (Iowa). Not competitive with top-tier tech/AI new grad packages ($120k-$200k+). No equity/RSU program typical for private manufacturing."
   },
   "evidence_sha": "42b5029dd4e8cadd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784896647,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Sporting goods manufacturing / Fishing tackle / Outdoor recreation equipment"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "If interviewing for a rare data/analytics role: expect focus on supply chain optimization, sales forecasting, e-commerce analytics, or manufacturing process data. Prepare for traditional engineering/manufacturing culture questions. Ask directly about tech stack, data maturity, WLB policies, and career growth for data professionals. Verify if any AI/DS work exists beyond basic reporting."
+  },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679541,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Headquarters: Spirit Lake, Iowa (Pure Fishing HQ). Penn brand heritage in Philadelphia, PA. Manufacturing historically in USA; some production now global. Distribution centers in US and internationally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "To provide high-performance, durable fishing tackle that empowers anglers to pursue their passion with confidence. Emphasis on innovation, reliability, and heritage in saltwater and freshwater fishing."
+  },
   "name": "Penn Interactive",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Estimated: Traditional manufacturing pace. Seasonal cycles (peak before fishing seasons). Engineering projects on product development timelines (12-24 months). Not a fast-moving tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Fishing reels (spinning, conventional, baitcasting), fishing rods, fishing line, tackle accessories, and apparel. Known for brands like Penn Reels, International, Senator, and Battle series."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 8-10 holidays (US standard for mid-sized manufacturer). No public policy found."
   },
-  "retry_after": 1784896767,
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268168,7 +268557,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns found in research. May have holiday week closures (common in manufacturing) but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Established mid-sized manufacturer (founded 1932). Part of Pure Fishing, Inc. portfolio (owned by Sycamore Partners). Employee count estimated 200-500 at Penn brand level; global Pure Fishing workforce larger."
   },
   "sources": [
    {
@@ -268202,14 +268598,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab379bdbe9c63520fe9f823cfa0aff7ca8a75b19c3f75285f23ea4c6aeb0b0ceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cudXBlbm4uZWR1Lw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific visa sponsorship policy found in research. As a mid-sized manufacturer, may sponsor for specialized engineering roles but not high-volume. Candidates should inquire directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Penn Interactive appears to be associated with Penn Fishing Tackle Manufacturing Company (pennfishing.com), a historic fishing equipment manufacturer founded in 1932. The company designs, manufactures, and sells fishing reels, rods, and related tackle. Revenue comes from direct sales of fishing gear to consumers and retailers globally."
+  },
+  "synthesized_evidence_sha": "42b5029dd4e8cadd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "Mechanical engineering, materials science, CAD/CAM for reel/rod design, manufacturing process engineering, quality control, supply chain logistics. Limited software/AI/DS roles; any data work likely focused on supply chain, sales forecasting, or e-commerce analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Penn+Interactive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8460a37453"
+   ],
+   "value": "This is a traditional fishing tackle manufacturer, not a tech/AI company. It does not offer elite AI/DS prestige, high new-grad tech pay, or fast innovative tech culture. Work-life balance may be reasonable for manufacturing/engineering roles, but technical learning acceleration in AI/DS is not a feature. The candidate's priorities (top-tier AI/DS, high pay, fast tech culture, mission-driven with guaranteed shutdowns) are misaligned with this employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good for manufacturing/engineering roles. Typical corporate hours with seasonal variation. No guaranteed shutdowns reported. Likely better than high-burnout tech, but not a 'sane hours guaranteed' culture by design."
   }
  },
  "penn state university": {
@@ -285827,37 +286250,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong prestige in applied graph analytics and entity resolution, competing well for elite data talent)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "B2B enterprise software platform licensing and professional consulting services for data integration and risk management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative and mission-driven, focusing on continuous technical learning and high ethical standards."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Large enterprises in banking, financial services, government, insurance, and telecommunications requiring anti-money laundering (AML), fraud detection, and network analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 USD base, reflecting its elite scale-up status and high technical bar."
   },
   "evidence_sha": "5fcebc9fd8dc9a57",
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Data and Analytics Software / Enterprise Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "For a top-tier AI or data science role here, emphasize your mastery of machine learning fundamentals, graph/network data structures, and scalable data pipelines. Be prepared to discuss how you thrive in fast, innovative tech environments and articulate why you want to apply advanced AI to mission-driven problems without sacrificing work-life balance."
   },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679642,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Global presence with key hubs in London, New York, Toronto, Sydney, and Brussels."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "To empower organizations to make trusted decisions by unlocking the full potential of their data through entity resolution and AI."
+  },
   "name": "Quantexa",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced scale-up tech environment, requiring agility and innovation without bogging down in slow bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Quantexa platform (entity resolution, network generation, and AI/ML data enrichment), decision intelligence software, and risk/compliance solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of PTO annually."
   },
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285867,7 +286344,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard public holiday shutdowns but no documented company-wide guaranteed extended freeze found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Enterprise scale-up stage, established tech firm with global presence."
   },
   "sources": [
    {
@@ -285901,14 +286385,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=b3fe1c5b1afb30e00c318ef56f17631da3084cf12431aa0ba9761f339d148d10JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cubGF0bG9uZy5uZXQv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers visa sponsorship for specialized data science and engineering roles across its global hubs, though it is evaluated on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740",
+    "5f2a8305c1",
+    "ddc53573b9"
+   ],
+   "value": "Quantexa is a data and analytics software company that specializes in entity resolution, network generation, and AI-driven decision intelligence. It makes money by licensing its platform to enterprise clients and providing consulting services to help them combat financial crime, mitigate risk, and manage data."
+  },
+  "synthesized_evidence_sha": "5fcebc9fd8dc9a57",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc3e79d740"
+   ],
+   "value": "Building scalable data pipelines (Spark/Scala/Hadoop/SQL), developing machine learning models for anomaly and fraud detection, and complex graph network analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679642,
   "web_search_url": "https://duckduckgo.com/?q=Quantexa+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quantexa operates in high-impact AI domains like graph networks and entity resolution, which accelerates technical learning and mentorship. It appeals to candidates seeking a mission-driven environment that stops financial crime, offering elite-level data challenges while maintaining a respect for work-life balance and sane hours over toxic tech bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Above Average; prioritizes sane hours and avoids the high-burnout culture often found in top-tier prestige firms."
   }
  },
  "quantifind": {
@@ -291259,41 +291770,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2-3. Strong applied AI/autonomy work (real-world deployment on drones) but less pure research visibility than FAIR/DeepMind/top academic labs. High prestige within defense autonomy niche."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in supplied sources. Estimated: hardware sales (drones), software/subscription services, and government contract revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, mission-oriented, pragmatic. Small teams with high autonomy. Less political than large primes. Culture likely values technical excellence and rapid iteration over process."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in supplied sources. Likely includes defense agencies, commercial enterprises, and government contractors based on public knowledge (not from sources)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (RSUs/options) + signing bonus. Total comp ~$130k-$170k. Defense tech pays premium over general software but below top-tier AI labs."
   },
   "evidence_sha": "16eaa7a8e4df6b07",
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense Technology / Unmanned Systems / Aerospace"
   },
-  "last_attempt_at": 1784896418,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for embedded C++/Rust, ROS2, computer vision (OpenCV, deep learning), state estimation, and real-time systems. Expect questions on drone dynamics, sensor fusion, and security-cleared development practices. Ask about sprint cadence, on-call expectations, and shutdown policies to verify WLB claims."
+  },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784675043,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Juan, Puerto Rico; engineering hubs in Salt Lake City, UT and possibly other US locations. Remote/hybrid options likely for software roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Red Cat Holdings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast. Defense tech startup pace with government contract milestones. Faster than prime contractors, slower than consumer software. Sprint cycles likely 2 weeks with hard delivery dates for flight tests."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found in supplied sources. Publicly, Red Cat Holdings is known for drone technology and defense systems (Teal Drones, FlightWave), but this is not from the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays. Unlimited PTO policies rare in defense contracting due to compliance. No source confirms exact policy."
   },
-  "retry_after": 1784896658,
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291303,7 +291852,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found. Some defense tech firms observe Christmas-New Year slowdown but not formal shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small-cap public company (NASDAQ: RCAT), ~100-300 employees, growth-stage defense tech."
   },
   "sources": [
    {
@@ -291337,14 +291891,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ad876cb5520b4d72189f88303b56347242d8a91d19f003f579c7844d68d55d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL3JlZGRpdC93aWtpL2luZGV4Lw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a US defense contractor, roles often require US citizenship or ability to obtain security clearance. H-1B sponsorship may be limited for cleared positions; more feasible for commercial software roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b1e2969b2f",
+    "87a6ce0c95",
+    "431fe02c5e"
+   ],
+   "value": "Red Cat Holdings appears to be a technology company, but the supplied sources contain no extractable content about its operations, products, or financials. All fields below are conservative estimates due to lack of source data."
+  },
+  "synthesized_evidence_sha": "16eaa7a8e4df6b07",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Embedded systems, computer vision, autonomy/navigation algorithms, secure comms, GNC (guidance, navigation, control), simulation, and full-stack drone platform software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675043,
   "web_search_url": "https://duckduckgo.com/?q=Red+Cat+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for a mission-driven defense tech company with elite technical challenges (autonomy, computer vision) and high new-grad pay potential. Small public company offers faster innovation cycles than prime contractors, with less bureaucracy. Work-life balance culture is unverified but smaller defense tech firms often have more sane hours than big primes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Defense tech typically demands crunch around flight tests and contract deliveries, but smaller firms often protect weekends better than primes. No guaranteed shutdown policy found."
   }
  },
  "red drum": {
@@ -297137,53 +297716,156 @@
  },
  "rfcuny": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Job applicants, employees, and researchers seeking One-RF information or workforce portals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Estimated: $100k-$145k, below top-tier tech limits."
   },
   "evidence_sha": "2ed6510a01ff37df",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896859,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784896647,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Focus heavily on asking the specific team about their tech stack pace and work hours to ensure their academic environment is an exception that honors WLB and avoids cosmopolitan red tape."
+  },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784680311,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
   "name": "RFCUNY",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Estimated: Moderate to slow, driven by administrative and academic practices."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Public-facing website (rfcuny.org) and an employee portal (Workday) for grant information and job access."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Estimated: 20-25 days, typical for academic support staff."
   },
-  "retry_after": 1784896767,
+  "refresh_after": 1790080859,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Estimated: Minimal, reflecting administrative schedules."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
   },
   "sources": [
    {
@@ -297217,14 +297899,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cf0639070804ea023abd289db33cf9ba60004b0a1ff26952073aa9253689585JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cucmZjdW55Lm9yZy9SRldlYnNpdGUv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "The supplied research materials consist only of redirect pages for RFCUNY (Research Foundation for the City University of New York) and do not provide underlying business details. Based on its known public identity, RFCUNY is a non-profit organization that administers sponsored research and educational grants for CUNY, generating revenue through government and private grant management fees. However, due to the provided sources lacking specific informational content, all exact company fact fields"
+  },
+  "synthesized_evidence_sha": "2ed6510a01ff37df",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Not found in research; only redirect links were captured."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680311,
   "web_search_url": "https://duckduckgo.com/?q=RFCUNY+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "As an academic research foundation, RFCUNY is unlikely to align with your priorities for a top-tier AI/Data Science role featuring elite new-grad pay and a fast, innovative tech culture, instead typically offering bureaucratic limitations and lower compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ecd6e657af",
+    "06882d594f",
+    "7932fe0bdd"
+   ],
+   "value": "Estimated: Good, driven by academic hours."
   }
  },
  "rhoda ai": {
@@ -315535,7 +316258,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -315553,7 +316276,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896647,
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679629,
   "name": "Sharp Electronics",
   "pace_of_work": {
@@ -315566,7 +316289,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896767,
+  "retry_after": 1784897099,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -326662,7 +327385,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -326680,7 +327403,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896418,
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679094,
   "name": "SourceDirect Talent",
   "pace_of_work": {
@@ -326693,7 +327416,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896658,
+  "retry_after": 1784897339,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -334379,11 +335102,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -334395,6 +335120,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896859,
   "last_evidence_at": 1784679640,
   "name": "STEM Xpert",
   "pace_of_work": {
@@ -334407,6 +335133,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896979,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -334450,7 +335177,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679640,
   "web_search_url": "https://duckduckgo.com/?q=STEM+Xpert+company+careers+benefits",
