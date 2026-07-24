@@ -41436,37 +41436,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 for cleared government AI work; top-tier nationally for production ML at scale in national security. Comparable to FAIR/DeepMind in mission impact within the cleared ecosystem."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government contracting model: wins competitive contracts (IDIQ, GWACs, single-award) to provide billable consulting and technical services. Revenue driven by headcount utilization on cost-plus, time-and-materials, and fixed-price task orders. Publicly traded (NYSE: BAH)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, intellectually rigorous, and more engineering-centric than typical consulting firms. 'Client-first' mindset with strong peer support. Less political than pure Beltway shops; technical credibility matters. Diverse workforce with military/veteran presence. Formal in client settings, collaborative internally."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily U.S. federal government: Department of Defense, intelligence community (NSA, CIA, etc.), civilian agencies (VA, HHS, DHS, etc.), and some commercial clients in regulated industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + $5,000-$15,000 sign-on + RSU (vesting over 4 years) ≈ $110,000-$140,000 total first-year. Cleared roles may command premium. Varies by location (DC/CA/HI differentials) and practice area (Strategic Innovation Group higher)."
   },
   "evidence_sha": "6967fc0173d59ae0",
+  "generated_at": 1784870477,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Government consulting / Defense technology / Federal IT services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect technical screens covering ML fundamentals (optimization, generalization, model selection), coding (Python, SQL, data structures), and system design for ML pipelines. Domain questions may touch on ISR, NLP for intel, or adversarial robustness. Behavioral questions assess mission alignment, clearance eligibility, and ability to navigate government stakeholder complexity. Prepare to discuss end-to-end project experience and how you handle ambiguous requirements."
+  },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784674659,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in McLean, VA. Major hubs: DC metro, Annapolis Junction (NSA campus), San Antonio, Honolulu, Huntsville, St. Louis, Denver, and remote/hybrid options. Many roles require security clearance and on-site presence at government facilities."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Empower people to change the world by solving the most difficult problems facing the nation, combining deep domain expertise with advanced technology to deliver mission-critical outcomes for government clients."
+  },
   "name": "Booz Allen",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast depending on contract. Innovation/R&D roles move at tech-company speed; large program execution roles follow government milestone cadences. Generally faster than traditional beltway integrators due to dedicated AI engineering practices."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consulting services, AI/ML and data science solutions, cybersecurity, cloud migration, digital transformation, engineering and systems integration, and analytics platforms for government clients. Known for platforms like aiSSEMBLE and work on major defense modernization programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + 2-3 floating holidays. Accrual increases with tenure. Unlimited sick leave. Some contracts allow comp time for overtime."
   },
+  "refresh_after": 1790054477,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41476,7 +41518,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Observes federal holidays. Some business units encourage 'use-it-or-lose-it' PTO before year-end. Project-dependent quiet periods around Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (~33,000+ employees, $10B+ revenue). Mature, stable, with deep government relationships and long contract lifecycles."
   },
   "sources": [
    {
@@ -41510,14 +41557,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=580e364ba7bc81128635d327a74703076cdbe072b58180f942ab331006d653b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9qc29uZm9ybWF0dGVyLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsors H-1B for specialized roles, but most AI/DS positions require active or obtainable U.S. security clearance (Secret/TS/SCI), which effectively limits eligibility to U.S. citizens. Green card sponsorship possible for cleared roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Booz Allen Hamilton is a leading management and technology consulting firm that primarily serves U.S. federal government agencies, especially in defense, intelligence, and civil sectors. It delivers consulting, analytics, digital solutions, engineering, and cyber expertise to help clients solve complex missions."
+  },
+  "synthesized_evidence_sha": "6967fc0173d59ae0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Real production ML/AI at scale for defense/intel missions: computer vision for ISR, NLP for intelligence analysis, MLOps pipelines on classified clouds, adversarial ML, and large-scale data engineering. Also cyber, cloud-native dev, and digital modernization. Work ranges from R&D prototypes to deployed systems on classified networks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
   "web_search_url": "https://duckduckgo.com/?q=Booz+Allen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Booz Allen offers elite prestige in the national security AI space with competitive new-grad compensation, access to massive classified datasets and mission-critical production systems, and a culture that increasingly emphasizes technical depth over pure consulting. While government contracting imposes some bureaucracy, the firm's Strategic Innovation Group and AI-focused practices provide faster innovation cycles than traditional beltway shops. Work-life balance is generally respected with pred"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. Most roles target 40-45 hour weeks with protected weekends. Surge periods near contract deliverables or proposal cycles can push to 50-55 hours temporarily. Remote/hybrid flexibility varies by contract and clearance requirements."
   }
  },
  "booz allen hamilton": {
@@ -45377,11 +45445,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45393,6 +45463,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784675818,
   "name": "Brown Brothers Harriman",
   "pace_of_work": {
@@ -45405,6 +45476,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784870597,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45448,7 +45520,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f3c9bc373762583431d5c47a1cd2bff3f701f1107118077c4a70b8b663905958JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuYnJvd24uZWR1Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675818,
   "web_search_url": "https://duckduckgo.com/?q=Brown+Brothers+Harriman+company+careers+benefits",
@@ -108454,97 +108526,125 @@
  "general atomics aeronautical systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 (Elite Defense/Aerospace) — Fielded autonomy on 5M+ flight hours; publishes at CVPR/ICRA/AIAA; DARPA/AFRL prime on multiple AI efforts; not a consumer-AI brand but top-tier for deployed defense ML."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Established industry leader in defense aerospace, though not typically categorized as a top-tier elite tech firm for fast-paced AI and data science innovation compared to hyperscalers or specialized AI startups."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prime defense contractor: wins DoD programs of record (development, production, sustainment) and FMS contracts; revenue from aircraft delivery, sensor payloads, ground stations, logistics support, and training services."
+   "confidence": "high",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Aerospace and defense manufacturing, generating revenue through government and military procurement contracts for aircraft and surveillance systems."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-centric, mission-proud, process-disciplined (CMMI/AS9100). Hierarchical but accessible technical leadership; strong internal mobility across airframe, sensors, ground, autonomy. Diversity initiatives growing; clearance culture creates insider/outsider dynamic."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Mission-driven, patriotic, highly structured, and engineering-focused."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "U.S. Air Force, Army, Marine Corps, Navy, Department of Homeland Security, NATO allies, and partnered nations via Foreign Military Sales."
+   "confidence": "medium",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "United States Department of Defense, foreign allied militaries, and government agencies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $105k–$125k base + 5–10% target bonus + RSU-equivalent phantom stock (vest 4 yrs) + relocation $5k–$10k. Total first-year $120k–$145k. Clearance-eligible candidates may start at upper band."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary, competitive for the defense sector, though potentially lower than top-tier big tech compensation."
   },
   "evidence_sha": "82372ec9149b2b6e",
-  "generated_at": 1784682913,
+  "generated_at": 1784870477,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Defense / Aerospace — Unmanned Aircraft Systems & ISR Sensors"
+   "confidence": "high",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Aerospace and Defense, Aviation, Manufacturing."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep C++/embedded fundamentals, DO-178C/DO-254 awareness, sensor-fusion/estimation theory (Kalman, particle filters), real-time Linux/RTOS debugging, and system-safety articulation. Prepare for scenario questions on autonomy safety, multi-sensor latency budgets, and ITAR-compliant software architecture. Behavioral emphasis on cross-functional collaboration (systems, hardware, test) and documentation rigor."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Candidates should be prepared to discuss rigorous software testing, verification, validation, and quality analysis processes. During interviews, expect questions focusing on structured development life cycles, safety-critical systems, and reliability. Candidates should also implicitly evaluate whether the defense-industry pace aligns with their expectations for a fast-paced technical culture and high-growth new-grad environment."
   },
-  "last_attempt_at": 1784869982,
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784858719,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Poway, CA (San Diego area). Major sites: Gray Butte Flight Operations (CA), El Mirage (CA), Centennial (CO), Huntsville (AL), Dallas (TX), Washington DC metro. Remote/hybrid options vary by program and clearance."
+   "confidence": "medium",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Headquartered in San Diego, California; operates major facilities across the United States."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Provide persistent, multi-mission remotely piloted aircraft and sensor solutions that deliver decisive ISR and strike capability for U.S. and allied forces."
+   "confidence": "medium",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "To develop and deliver state-of-the-art remotely piloted aircraft and advanced surveillance systems that protect and support military and government personnel worldwide."
   },
   "name": "General Atomics Aeronautical Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate–Fast — Program milestones (PDR/CDR/flight test) drive sprints; sustained crunch around flight demonstrations, but institutional processes (Earned Value, DO-178C) limit ad-hoc fire drills."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Estimated: Slower and methodical due to defense regulations, compliance standards, and hardware integration cycles."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "MQ-9 Reaper, MQ-1C Gray Eagle, MQ-20 Avenger, Predator series UAS; Lynx multi-mode radar; EO/IR sensors; ground control stations; satellite communications links; detect-and-avoid systems."
+   "confidence": "high",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Remotely piloted aircraft (RPA) systems, advanced surveillance and reconnaissance systems, and related software for defense applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 federal holidays + 5 floating days (accrual starts day 1); additional sick bank; partial carryover up to 240 hrs."
-  },
-  "refresh_after": 1789866913,
-  "retry_after": 1784870462,
-  "rotational_program_name": {
-   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d"
+    "d71c75c69f"
    ],
-   "value": "None found in research"
+   "value": "Estimated: 15-20 days of accrued paid time off, standard for the defense contractor industry."
+  },
+  "refresh_after": 1790054477,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Annual full shutdown week between Christmas and New Year; occasional 3-day holiday weekends (July 4, Thanksgiving) with minimal on-call."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Estimated: Some companies in this industry offer holiday shutdowns or reduced summer hours, but specific guaranteed shutdowns are not publicly confirmed for GA-ASI."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 7,000–9,000 employees at GA-ASI; parent General Atomics ~15,000+. Mature, profitable, privately held; no public equity."
+   "confidence": "medium",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Large-scale, established enterprise operating as a major defense contractor."
   },
   "sources": [
    {
@@ -108599,34 +108699,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Established H-1B sponsor; many roles require U.S. Person status (citizen/GC) due to ITAR/EAR and DoD clearance requirements. Limited sponsorship for new-grad roles unless candidate already holds clearance eligibility."
+   "confidence": "medium",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "As a U.S. defense contractor, highly likely requires strict adherence to ITAR regulations. Candidates must generally be U.S. Persons (citizens or permanent residents) and capable of obtaining security clearances."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "General Atomics Aeronautical Systems (GA-ASI) is a leading designer and manufacturer of unmanned aircraft systems (UAS), radar systems, and related electro-optical sensors. It operates as a subsidiary of General Atomics, a privately held defense and energy conglomerate."
+   "confidence": "high",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "General Atomics Aeronautical Systems (GA-ASI) is a world leader in the design and manufacturing of remotely piloted aircraft (RPA) and advanced surveillance systems. As a major defense and aerospace contractor, the company generates revenue through multi-billion dollar government and military contracts for its unmanned aerial vehicles and related technologies."
   },
-  "synthesized_evidence_sha": "8050c7d8d032b766",
+  "synthesized_evidence_sha": "82372ec9149b2b6e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Embedded flight software (C/C++, DO-178C), autonomy/ATR algorithms, sensor fusion, radar signal processing, satcom networking, DevSecOps pipelines, model-based systems engineering (MBSE), simulation/test infrastructure."
+   "confidence": "high",
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Software engineering, testing, inspection, verification, validation, and software quality analysis for advanced aviation and surveillance systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674039,
   "web_search_url": "https://duckduckgo.com/?q=General+Atomics+Aeronautical+Systems+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "GA-ASI fields the world’s most operationally proven UAS fleet, offering AI/ML engineers rare access to real-flight sensor data and deployed autonomy stacks. As a privately held prime, it can invest in long-horizon R&D (e.g., collaborative combat aircraft, AI-driven ISR) without quarterly pressure, while defense budgets provide compensation competitive with top tech. Culture skews engineering-first with clearer program boundaries than many Silicon Valley shops, supporting the candidate’s desire f"
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "As a defense contractor, GA-ASI offers a strong mission-driven environment with stable hours, but differs from a candidate's desire for a fast, innovative tech culture. The aerospace and defense sector often moves slower due to bureaucracy, strict regulations, and long hardware development cycles, which may conflict with a preference for fast-paced tech innovation, though it generally delivers on work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 — Core hours ~9/80 or flex 4/10 common; surge periods near flight test (2–4 weeks/quarter) may push 50–55 hrs; limited weekend work; shutdowns between Christmas–New Year."
+   "source_ids": [
+    "d71c75c69f"
+   ],
+   "value": "Estimated: Good work-life balance generally reported, avoiding toxic hours common in big tech due to defense timelines and government contract caps."
   }
  },
  "general dynamics": {
@@ -123758,11 +123868,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -123774,6 +123886,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784675818,
   "name": "Hitachi Energy",
   "pace_of_work": {
@@ -123786,6 +123899,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784870597,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -123829,7 +123943,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa5de1ff0a5ec3bb4eb2fc6e1f055cd779bfa991c4b92220e3d01ead3c1cca73JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuaGl0YWNoaS5jb20vZW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675818,
   "web_search_url": "https://duckduckgo.com/?q=Hitachi+Energy+company+careers+benefits",
@@ -163791,52 +163905,134 @@
  "masco": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "94642ab5a2"
+   ],
+   "value": "Low Tier - Masco is not known for elite Artificial Intelligence or Data Science prestige, as tech operates in a support capacity for manufacturing rather than as a core software product."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "B2B and B2C manufacturing and distribution of home improvement products, relying on retail partnerships and direct sales to professionals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "94642ab5a2"
+   ],
+   "value": "Estimated: Stable, corporate, and mission-driven around home improvement, but potentially lacking the high-speed innovation culture found in top-tier tech companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "DIY consumers, professional contractors, homebuilders, and major retail partners like The Home Depot."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5d55604fbe"
+   ],
+   "value": "Estimated: $80,000 - $100,000 base salary for corporate tech/AI roles, below FAANG-level new-grad targets but potentially accompanied by solid work-life balance."
   },
   "evidence_sha": "266907a1acb6ee77",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870477,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784870314,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "Home Improvement / Building Products Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "94642ab5a2",
+    "5d55604fbe"
+   ],
+   "value": "Ask specific questions about the exact team's tech stack, how fast new AI/Data Science projects are funded, and scope for technical learning without being bogged down by legacy manufacturing bureaucracy. Verify if new-grad compensation meets your targets."
+  },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784673557,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "5d55604fbe"
+   ],
+   "value": "Headquartered in Livonia, Michigan, with numerous manufacturing facilities, distribution centers, and offices globally."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "To enhance the quality of life for consumers by delivering innovative, high-quality home improvement and building products."
+  },
   "name": "Masco",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8f4dede8e4"
+   ],
+   "value": "Estimated: Moderate and process-oriented. Expect a traditional enterprise pace focused on supply chain stability and operational efficiency rather than fast tech innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "Cabinetry (KraftMaid, Merillat), plumbing products (Delta Faucet, Brizo), coatings and paints (Behr, Kilz), and other home improvement goods."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8f4dede8e4"
+   ],
+   "value": "Estimated: 15 to 25 days of vacation annually, typical for a Fortune 500 corporate environment, alongside standard paid holidays."
   },
-  "retry_after": 1784870434,
+  "refresh_after": 1790054477,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8f4dede8e4"
+   ],
+   "value": "Estimated: May offer occasional paid holidays around Thanksgiving and Christmas, but explicit guaranteed company-wide shutdowns are not public."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "Fortune 500 publicly traded enterprise (NYSE: MAS) with a global manufacturing and distribution footprint."
   },
   "sources": [
    {
@@ -163870,14 +164066,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=4c486af543e67b4acd69c7500ca6d43ef712d06ada21d861ef97a4cbe55d77bdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9tYXNjby5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8f4dede8e4"
+   ],
+   "value": "Estimated: Likely offers visa sponsorship for specialized corporate roles, typical of Fortune 500 manufacturers, but not expressly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "Masco is a Fortune 500 conglomerate that designs, manufactures, and distributes home improvement and building products. It makes money by selling recognized consumer brands like Delta Faucet, Behr Paint, and KraftMaid cabinetry through retail channels such as The Home Depot, as well as directly to builders and wholesalers."
+  },
+  "synthesized_evidence_sha": "266907a1acb6ee77",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8f4dede8e4",
+    "5d55604fbe"
+   ],
+   "value": "Corporate technology operations including enterprise systems, digital supply chain optimization, e-commerce, and smart home/IoT product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673557,
   "web_search_url": "https://duckduckgo.com/?q=Masco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8f4dede8e4",
+    "94642ab5a2"
+   ],
+   "value": "You are seeking fast-paced, elite AI prestige and high new-grad pay, but Masco is a traditional manufacturing conglomerate. While it may offer sane hours and mission-driven vibes around home improvement, its corporate tech culture likely leans slower and more bureaucratic than the fast-paced tech firms you prefer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8f4dede8e4"
+   ],
+   "value": "Estimated: Generally solid work-life balance typical of established Fortune 500 manufacturers, likely prioritizing sane hours over tech-sector burnout."
   }
  },
  "masco corporation": {
@@ -166673,38 +166903,107 @@
  "mckesson": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "da845d9805"
+   ],
+   "value": "Estimated: Mid-tier (Industry AI). AI work is tied to logistics and healthcare analytics rather than cutting-edge foundational research, lacking the elite prestige of top tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "Earns revenue through high-volume wholesale distribution of pharmaceuticals and medical supplies, supplemented by fees from healthcare technology solutions and specialty services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "da845d9805",
+    "7066607292"
+   ],
+   "value": "Estimated: Traditional, mission-oriented, and stable. Focuses on long-term healthcare impact, compliance, and steady operations rather than fast-paced tech disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "Retail pharmacies, health systems, hospitals, physician offices, and biopharma manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary for new grad tech roles. Solid corporate compensation but lacks the elite new-grad pay scales of top-tier tech firms."
   },
   "evidence_sha": "2539bdb2b11cbef3",
+  "generated_at": 1784870477,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "Healthcare / Pharmaceuticals (Wholesale Distribution and Health Technology)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific team's tech stack and deployment cadence to ensure you aren't stepping into a slow, bureaucratic IT environment. Ask about opportunities for rapid technical learning, guaranteed shutdowns, and how the team avoids the typical burnout and red tape of large healthcare corporations."
   },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784677098,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "Headquartered in Irving, Texas (formerly San Francisco), with offices, distribution centers, and tech hubs across the United States and globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7066607292",
+    "da845d9805"
+   ],
+   "value": "To advance health outcomes for all by delivering insights, products, and services that make healthcare more accessible and affordable."
+  },
   "name": "McKesson",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "60e78e2b51"
+   ],
+   "value": "Estimated: Moderate to slow. Large-scale enterprise logistics necessitate stability over rapid innovation, leading to a more deliberate, bureaucratic pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "Pharmaceutical distribution, medical-surgical supplies, specialty pharmaceuticals, and healthcare technology platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7066607292"
+   ],
+   "value": "Estimated: 20-25 days of flexible PTO annually, standard for large legacy corporations, though exact policy is not explicitly stated in sources."
   },
+  "refresh_after": 1790054477,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166713,8 +167012,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "da845d9805"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found in research, typical for continuous healthcare logistics operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51"
+   ],
+   "value": "Large-cap public corporation ranked as one of the largest companies in the United States by revenue, employing tens of thousands of people globally."
   },
   "sources": [
    {
@@ -166748,14 +167056,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=080ab9c099a61908573a6e5dcf9641aa8255475ad7c555427e344fccc94be603JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cubWNrZXNzb24uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "60e78e2b51",
+    "7066607292"
+   ],
+   "value": "As a massive, legacy healthcare corporation, it likely offers standard visa sponsorship for specialized technical roles, though specific policies are not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "60e78e2b51",
+    "da845d9805"
+   ],
+   "value": "McKesson Corporation is a major American healthcare company that distributes pharmaceuticals and provides health information technology, medical supplies, and care management tools. It makes money primarily through massive-scale pharmaceutical distribution contracts with retailers and health systems, alongside technology and services revenue."
+  },
+  "synthesized_evidence_sha": "2539bdb2b11cbef3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "da845d9805",
+    "7066607292"
+   ],
+   "value": "Enterprise software engineering, data engineering, and AI/ML focused on healthcare logistics, supply chain optimization, and medical analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677098,
   "web_search_url": "https://duckduckgo.com/?q=McKesson+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While McKesson is highly mission-driven in healthcare and generally offers stable corporate hours, it is a traditional legacy enterprise rather than a fast-paced, elite AI tech firm. Its corporate bureaucracy and slower innovation cycles may conflict with your desire for a high-paying, fast-paced new-grad AI role with rapid technical acceleration."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7066607292"
+   ],
+   "value": "Estimated: Good. Corporate healthcare environments typically maintain sane hours and respect work-life boundaries better than high-growth tech startups."
   }
  },
  "mckinsey company": {
@@ -201010,49 +201350,127 @@
  },
  "pgim": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "High prestige within the financial and asset-management sector, particularly for quant and risk-modeling roles, but lacks the elite Silicon Valley tech prestige of pure-tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Charges management and performance fees based on Assets Under Management (AUM) and specific investment product guidelines."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: Traditional, conservative, and corporate finance environment that emphasizes stability, risk mitigation, and structured bureaucracy over a fast-moving tech culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Institutional investors, retail investors, financial intermediaries, and third-party institutions seeking asset management services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary for new grad technical and data science roles, with potential for modest performance-based annual bonuses."
   },
   "evidence_sha": "b6afa24ebea75c42",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870477,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643",
+    "8e7f8b1a1a"
+   ],
+   "value": "Financial Services / Asset Management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Probe heavily for specific tech culture indicators, hours expectations, and tech-stack modernization speed. Ask about their tolerance for bureaucratic process versus shipping velocity to ensure it meets your need for learning acceleration without sacrificing personal time."
+  },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784674427,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Headquartered in Newark, New Jersey (USA), with a global network of offices spanning North America, Europe, Asia, and Australia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "To deliver stable, long-term performance and investment solutions to help clients achieve their financial objectives."
+  },
   "name": "PGIM",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: Patient, process-heavy, and compliance-driven pace typical of a massive legacy financial institution, prioritizing risk management over fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Public equity, fixed income, real estate (PGIM Real Estate), private equity, private fixed income, and alternatives investment strategies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: 20 to 25 paid vacation days annually depending on seniority, combined with a standard suite of corporate banking holidays."
   },
+  "refresh_after": 1790054477,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: No firm-wide guaranteed tech shutdowns, typical for non-SaaS financial institutions, though occasional quiet periods may exist around major market holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "A massive, established global firm with over $1.2 trillion in Assets Under Management (AUM) and operations worldwide."
   },
   "sources": [
    {
@@ -201086,14 +201504,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=8f453838106c2454281b0b37884449398249678c27bf60eceee9218379e21503JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cucGdpbS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Exact policy not public; large global financial institutions of this scale typically offer structured H-1B sponsorship for specialized technical and quant roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "957266a643",
+    "8e7f8b1a1a"
+   ],
+   "value": "PGIM is the global asset management business of Prudential Financial, providing investment management solutions across a wide range of asset classes. They make money by charging management and performance fees on the assets they manage for institutional clients, retail investors, and other partners."
+  },
+  "synthesized_evidence_sha": "b6afa24ebea75c42",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Tech and data science work involves building quantitative models, risk analytics, portfolio optimization tools, and large-scale trading data infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674427,
   "web_search_url": "https://duckduckgo.com/?q=PGIM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "As a top-tier asset manager, PGIM offers strong compensation and high-prestige financial AI opportunities. However, its highly regulated, corporate culture may lack the fast-paced, innovative tech velocity and guaranteed shutdowns you prioritize, meaning it might not perfectly align with your desired work-life balance and startup-like agility."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "957266a643"
+   ],
+   "value": "Estimated: Generally good corporate work-life balance with sane hours compared to high-burnout tech startups, but without guaranteed shutdown periods."
   }
  },
  "pgtek": {
@@ -273056,48 +273506,125 @@
  "u s bank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: Low to Mid-tier. As a traditional bank with open new-grad roles in Cobol, it is unlikely to offer the elite AI prestige found at top tech firms or dedicated AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Traditional financial institution model: earning interest margins on loans, transaction fees, and wealth management services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Stable, collaborative, ethical, and focused on wide-ranging career opportunities within a mature corporate structure."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Individual consumers, small businesses, large commercial enterprises, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: $80,000 - $100,000. Traditional banking new-grad tech pay in the Midwest typically falls below elite big-tech compensation."
   },
   "evidence_sha": "63343d26569b200f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784870477,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Financial Services / Banking."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "You should verify whether internal AI/DS roles actually exist and assess the bank's tech culture for bureaucracy. Interviewers will likely focus on your ability to collaborate across a large organization and maintain self-motivation in a slower, legacy environment."
+  },
+  "last_attempt_at": 1784870477,
   "last_evidence_at": 1784762882,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Brookfield, WI (for the specific Mainframe/Cobol role surfaced)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "To do their best on a journey to provide a wide range of opportunities and be one of the country's most respected, innovative, ethical, and successful financial institutions."
+  },
   "name": "U.S. Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: Slow to moderate. Large legacy banks typically operate at a deliberate, process-heavy pace rather than a fast, innovative startup speed."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Consumer and commercial banking, payment systems, wealth management, and investment services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: 20-25 days. Large financial institutions generally provide 3-5 weeks of PTO depending on tenure."
   },
+  "refresh_after": 1790054477,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: Limited. Banks usually do not offer tech-style holiday shutdowns due to continuous financial market operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Mature enterprise; the 5th largest bank in the United States."
   },
   "sources": [
    {
@@ -273141,14 +273668,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=8d7ac1375a9d2877289213f380ea36b8348b1c9543a5c95c11dabe704c6a9f12JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudWhhdWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "U.S. Bank is the fifth-largest commercial bank in the United States, providing a wide range of financial services. It makes money by managing deposits, issuing loans, and offering payment, investment, and wealth management services to consumers and businesses."
+  },
+  "synthesized_evidence_sha": "63343d26569b200f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Mainframe development, specifically utilizing Cobol for core banking systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583486,
   "web_search_url": "https://duckduckgo.com/?q=U.S.+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "U.S. Bank may not align with your goal for an elite, fast-paced, top-tier AI/DS role. The current open position is in legacy Mainframe/Cobol, which indicates a slower, bureaucratic tech culture rather than the cutting-edge AI innovation you are prioritizing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "961a55b3e4"
+   ],
+   "value": "Estimated: Good. Major traditional banks usually offer standard corporate hours and respect work-life balance, avoiding the high burnout of tech startups."
   }
  },
  "uab medicine": {
