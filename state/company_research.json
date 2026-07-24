@@ -14916,38 +14916,104 @@
  "allstate": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate. Recognized for applying AI at scale in insurtech, but a legacy finance/insurance brand lacks the elite prestige of pure big-tech or specialized AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Collecting monthly or annual insurance premiums and investing the capital, generating profit from underwriting margins and investment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: Corporate and established. Likely prioritizes stability and incremental innovation, respecting personal time while focusing on customer protection."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Individual consumers seeking personal and property insurance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base. In line with standard insurance tech salaries, though potentially slightly lower than elite big-tech FAANG compensation."
   },
   "evidence_sha": "b194a03db4582711",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Insurance."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should seek transparency on team-level autonomy to ensure they land in a fast-moving innovation pod rather than slow-moving bureaucracy. It is critical to interview the hiring manager about sane hours, work-life balance policies, and technical mentorship to verify the company meets the standard for guaranteed personal time and career acceleration over grueling legacy processes."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678559,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Not explicitly found in the provided sources, but generally focused on protecting customers from life's uncertainties."
+  },
   "name": "Allstate",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: Moderate. Large corporate environment, which may lean towards slower legacy processes, balanced by ongoing tech transformation initiatives."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Insurance policies including auto, home, renters, and life insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: 20-25 days. Large legacy companies typically provide generous standard vacation packages, though exact policies are not public."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14956,8 +15022,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: None found in research. Corporate holidays are observed, but guaranteed company-wide shutdowns are not a standard published policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Large, established public corporation."
   },
   "sources": [
    {
@@ -15001,14 +15076,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: Like many large US public companies, sponsorship likely exists for high-demand roles but is not guaranteed for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Allstate is a major insurance provider offering auto, home, and life insurance. It makes money by collecting premiums from policyholders and investing those funds, paying out claims as needed."
+  },
+  "synthesized_evidence_sha": "b194a03db4582711",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Surfaced in a new-grad data science tracker, indicating active hiring for entry-level AI and data science roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678559,
   "web_search_url": "https://duckduckgo.com/?q=Allstate+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a massive legacy insurer, Allstate is actively transitioning to a data-driven culture, offering entry-level AI practitioners high-impact projects. While a corporate environment may not inherently possess the elite fast-paced innovation of a pure tech startup, the company's tech transformation presents a unique opportunity to scale modern AI solutions that directly impact real consumers, fitting the desire for technical learning and career growth without the burnout culture commonly found in h"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4af18b3169"
+   ],
+   "value": "Estimated: Good. Large traditional corporations typically enforce standard hours to respect work-life balance, though specific team dynamics can vary."
   }
  },
  "allstate insurance company": {
@@ -21503,7 +21609,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21521,7 +21627,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784892192,
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678472,
   "name": "Anaplan",
   "pace_of_work": {
@@ -21534,7 +21640,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892312,
+  "retry_after": 1784892650,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31059,11 +31165,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31075,6 +31183,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678474,
   "name": "Artefact",
   "pace_of_work": {
@@ -31087,6 +31196,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892530,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31130,7 +31240,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f88406dfb8b719e47966ba96b19076ee86de6d1377ba59de50349d74b0551ee2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FydGVmYWN0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678474,
   "web_search_url": "https://duckduckgo.com/?q=Artefact+company+careers+benefits",
@@ -53257,39 +53367,97 @@
  },
  "boston dynamics": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Elite. Widely recognized as one of the most prestigious and advanced applied robotics companies in the world, offering top-tier technical prestige for AI and ML practitioners."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "B2B hardware and software sales, leasing, and R&D partnerships. The company sells and leases its robotic fleets to enterprises while providing software APIs and integration support for specialized industrial use cases."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Deeply mission-driven, intensely engineering-focused, and highly collaborative. The culture is fueled by a passion for groundbreaking physical robotics rather than pure software optimization, attracting top-tier hardware and AI talent."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "Industrial, commercial, and enterprise clients, including warehousing and logistics operators, oil and gas companies, electrical utilities, and academic or government research institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base salary for AI/Data Science new grads, supported by the high cost of living in the Boston area and the elite prestige of the firm, with potential for strong equity or bonuses."
   },
   "evidence_sha": "d82a025f51a3bc35",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "Robotics and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Be prepared for rigorous technical interviews centered on algorithmic problem-solving, computer vision, state estimation, and reinforcement learning. To ensure the role meets your WLB and anti-burnout priorities, explicitly ask the hiring manager about the team's sprint pace, deployment hours, and how hardware-software integration deadlines affect daily engineering hours."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678566,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0bd5aa338a"
+   ],
+   "value": "Headquartered in Waltham, Massachusetts, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "To imagine and create something that changes the world by building dynamically advanced robots that enhance human life and work."
+  },
   "name": "Boston Dynamics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and highly innovative tech culture, driven by rapid iteration on complex hardware and software integration, though generally less bureaucratic than big-tech due to its engineering-first roots."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "Advanced mobile robots including Spot (a quadruped robot dog used for industrial inspection and data collection), Stretch (an AI-driven robot designed for warehouse box-moving), and Atlas (a highly dynamic bipedal humanoid robot focused on R&D and mobility pushing)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard Paid Time Off, reflecting typical high-end engineering corporate benefits in the Massachusetts tech corridor."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53299,7 +53467,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical closures are limited to standard public holidays rather than extended guaranteed off-periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0bd5aa338a"
+   ],
+   "value": "Late-stage private company. Originally a spin-out from MIT, it has operated as a wholly-owned subsidiary of SoftBank and later the Hyundai Motor Group."
   },
   "sources": [
    {
@@ -53343,14 +53518,44 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As an elite robotics firm with historical ties to MIT and DARPA funding, the company has infrastructure for specialized engineering talent. Exact visa sponsorship policies are not publicly detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10",
+    "0bd5aa338a"
+   ],
+   "value": "Boston Dynamics is a premier robotics engineering and design company recognized globally for its highly mobile, dynamic robots. The company makes money by commercializing its advanced robotic hardware and software, selling specialized robots like Spot and Atlas for industrial, commercial, and research applications."
+  },
+  "synthesized_evidence_sha": "d82a025f51a3bc35",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d84d4bf10"
+   ],
+   "value": "Highly complex robotics engineering combining mechanical design, AI, machine learning, computer vision, controls, and path planning. AI and Data Science roles involve developing autonomous navigation, computer vision models for perception, and reinforcement learning for dynamic locomotion."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678566,
   "web_search_url": "https://duckduckgo.com/?q=Boston+Dynamics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Offers elite prestige in robotics and AI, providing exceptional technical learning through deeply challenging, wet-edge problems like robotic locomotion and autonomous perception. It aligns with your desire for an innovative, mission-driven culture, giving new grads massive career acceleration by working on world-renowned robotic platforms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Sane hours are generally respected due to the mature engineering foundation, but pushing the boundaries of dynamic physical robotics can occasionally lead to heavy crunch periods during hardware rollouts or new product integrations."
   }
  },
  "boston housing authority": {
@@ -102150,50 +102355,45 @@
  },
  "deloitte": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "e438c19402",
-    "ca903c6312"
+    "367c992a91"
    ],
-   "value": "Estimated: High. As a Big Four consulting firm, Deloitte carries elite global brand prestige, though its AI/Data practice may be viewed more as enterprise consulting than cutting-edge pure-tech innovation."
+   "value": "Elite (Big 4 Professional Services)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "ca903c6312",
-    "e438c19402"
+    "367c992a91"
    ],
-   "value": "Professional services and consulting. Revenue is generated by deploying expert personnel to design, build, and maintain scalable solutions for client environments."
+   "value": "Generates revenue by providing expert professional consulting, audit, tax, and advisory services to client organizations."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e438c19402",
-    "ca903c6312"
-   ],
-   "value": "Inclusive, collaborative, and growth-oriented. The firm emphasizes setting people up for success and allowing employees to contribute unique perspectives in a consulting environment."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "ca903c6312",
     "e438c19402"
    ],
-   "value": "Organizations across various sectors, specifically including Government & Public Services entities facing complex challenges."
+   "value": "Inclusive, collaborative, and growth-oriented, where professionals are encouraged to contribute unique perspectives."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d",
-    "dbc3b9e88f"
+    "367c992a91",
+    "ca903c6312",
+    "e438c19402"
    ],
-   "value": "Estimated: Competitive new-grad base salary (likely $80k-$110k) reflecting the consulting industry, but likely lower than top-tier pure-tech FAANG roles."
+   "value": "Estimated: $85,000 - $110,000 base (varies heavily by specific tech practice, location, and sub-service line)."
   },
   "evidence_sha": "fb71ff27a5c0e1bf",
-  "generated_at": 1784872320,
+  "generated_at": 1784892410,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -102202,28 +102402,27 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2bf28768b6",
-    "0673392a03"
+    "367c992a91"
    ],
-   "value": "Professional Services and Consulting."
+   "value": "Business Consulting and Professional Services"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
-    "e438c19402",
-    "ca903c6312"
-   ],
-   "value": "Candidates should probe heavily into the specific team's tech stack to ensure it aligns with top-tier AI/data science work rather than legacy systems. It is critical to ask about typical project timelines, expected weekly hours, and on-call expectations to verify if the team truly respects work-life balance, as consulting can sometimes clash with personal time."
-  },
-  "last_attempt_at": 1784891353,
-  "last_evidence_at": 1784672493,
-  "locations": {
    "confidence": "medium",
    "source_ids": [
-    "2bf28768b6",
-    "0673392a03"
+    "ca903c6312",
+    "e438c19402"
    ],
-   "value": "Global presence with operations across various countries and regions."
+   "value": "Prepare to discuss how you balance innovative AI/data solutions with complex client challenges. Be ready to ask about utilization rates, project ramp-up times, and how the specific team enforces boundaries to protect work-life balance, as these factors determine whether the role avoids the traditional toxic or highly bureaucratic environments you want to avoid."
+  },
+  "last_attempt_at": 1784892410,
+  "last_evidence_at": 1784672493,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "367c992a91",
+    "ca903c6312"
+   ],
+   "value": "Global presence, founded in London, England, with ongoing recruiting across the US (including Government & Public Services roles)."
   },
   "mission": {
    "confidence": "high",
@@ -102231,51 +102430,59 @@
     "ca903c6312",
     "e438c19402"
    ],
-   "value": "To help clients and organizations address complex business challenges that matter while setting its people up for success in a collaborative, growth-oriented environment."
+   "value": "Setting people up for success while helping organizations address complex challenges that matter through scalable, secure solutions."
   },
   "name": "Deloitte",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "ca903c6312",
-    "e438c19402"
+    "367c992a91",
+    "ca903c6312"
    ],
-   "value": "Estimated: Variable and potentially fast-paced due to client-driven deadlines and exposure to multiple client environments, which can sometimes lead to bureaucratic friction in a large firm."
+   "value": "Estimated: Fast-paced and demanding. Pace is largely dictated by client environments and billable utilization targets rather than an internal product roadmap, which can sometimes lead to bureaucratic bottlenecks and high-burnout stretches if not managed carefully."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ca903c6312",
+    "367c992a91",
     "e438c19402"
    ],
-   "value": "Professional services including software engineering, AI & Data Engineering, consulting, and advisory offerings."
+   "value": "Audit, consulting, financial advisory, and tax services, alongside custom software engineering, AI, and data engineering solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Typical for large consulting firms (often around 20-25 days annually), but exact policy not specified in sources."
+   "source_ids": [
+    "367c992a91",
+    "e438c19402"
+   ],
+   "value": "Estimated: 20 to 25 days of Paid Time Off annually, typically accruing with tenure, though strict utilization metrics may limit when it can be taken."
   },
-  "refresh_after": 1790056320,
-  "retry_after": 1784892313,
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "367c992a91",
+    "e438c19402"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown if guaranteed firm-wide shutdowns exist, though some large firms offer holiday closures. Not specified in sources."
+   "source_ids": [
+    "ca903c6312",
+    "e438c19402"
+   ],
+   "value": "Estimated: No firm-wide guaranteed tech shutdowns. Time off is generally flexible but highly dependent on client project timelines and manager approval, unlike companies with mandated hard shutdowns."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "2bf28768b6",
-    "0673392a03"
+    "367c992a91"
    ],
-   "value": "Large, established multinational professional services network (Big Four)."
+   "value": "Mature enterprise with 10,001+ employees globally, originally founded in 1845."
   },
   "sources": [
    {
@@ -102340,46 +102547,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "367c992a91"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though immigration sponsorship is limited and not guaranteed for every specific role."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "367c992a91",
     "ca903c6312",
     "e438c19402"
    ],
-   "value": "Deloitte is a leading global professional services firm that provides consulting, audit, tax, and advisory services to a wide range of organizations. It makes money by leveraging its deep industry expertise to help clients solve complex business challenges, implement technology solutions, and optimize operations."
+   "value": "Deloitte is a global professional services firm offering audit, consulting, financial advisory, and tax services. It generates revenue by providing specialized expertise and custom solutions, such as software engineering and AI/data development, to help client organizations solve complex business challenges."
   },
-  "synthesized_evidence_sha": "fc64bfd42f23c4bd",
+  "synthesized_evidence_sha": "fb71ff27a5c0e1bf",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "ca903c6312",
     "e438c19402"
    ],
-   "value": "Analysts apply software engineering and AI/Data engineering expertise to design, build, and maintain scalable, secure technical solutions for clients."
+   "value": "Designing, building, and maintaining scalable, secure software solutions, with specialized roles in AI and Data Engineering that apply modern techniques to complex business challenges."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672493,
   "web_search_url": "https://duckduckgo.com/?q=Deloitte+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "367c992a91",
     "ca903c6312",
     "e438c19402"
    ],
-   "value": "For a candidate seeking elite prestige and high new-grad pay paired with fast, innovative tech culture over slow bureaucracy, Deloitte presents a mixed bag. While it offers strong brand prestige and excellent technical learning opportunities through hands-on client challenges, the large consulting structure often introduces bureaucracy and variable work-life balance that may conflict with the desire for guaranteed shutdowns and strictly sane hours."
+   "value": "While Deloitte offers elite Big 4 prestige, fast technical exposure across diverse client environments, and competitive pay, it sits within a massive traditional consulting framework. You will need to actively navigate firm bureaucracy and billable-hour pressures to ensure the role meets your strict requirements for a fast-paced innovative tech culture and genuine work-life balance without burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "e438c19402",
+    "367c992a91",
     "ca903c6312"
    ],
-   "value": "Estimated: Moderate to Variable. Deloitte promotes a growth-oriented culture and inclusive environment, but work-life balance in consulting often depends on the specific client engagement and may require long hours."
+   "value": "Estimated: Variable to Moderate. Sane hours are not guaranteed; they depend heavily on your specific project, client demands, and manager. Respect for personal time can fluctuate during intense dead sprints, contrasting with what one might find in a strictly mission-driven, low-burnout company."
   }
  },
  "deluxe": {
@@ -104965,38 +105176,128 @@
  "diligent corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: Mid-tier. Diligent is recognized in enterprise software and GRC, but it is not considered an elite, top-tier AI or data science powerhouse."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Sells B2B software subscriptions, offering tiered enterprise licenses for its suite of governance, risk, and compliance tools."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: Professional and mission-driven, emphasizing client security and accuracy over rapid technical experimentation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Corporate boards, executives, legal teams, and compliance officers across various industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: $90k-$120k. Likely below the elite FAANG-level new-grad pay scale."
   },
   "evidence_sha": "7d60cdecae0dda6b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Software / Governance, Risk, and Compliance (GRC) Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Probe the specific team's tech stack to ensure you will be doing modern AI/data science work, and ask about the pace of learning, work-life boundaries, and new-grad compensation limits."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678566,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Global presence with primary corporate offices and remote work options across multiple regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "To empower leaders with the right technology, insights, and connectivity to drive effective governance."
+  },
   "name": "Diligent Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: Moderate. The enterprise focus suggests a mature, slow-moving bureaucracy focused on stability rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Board management software, risk assessment and compliance tools, secure messaging, entity management, and ESG reporting solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO annually, typical for large, established enterprise SaaS firms."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105005,8 +105306,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: Standard public holidays, with no source indicating guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Established private company with a long market history, operating at a large scale globally."
   },
   "sources": [
    {
@@ -105040,14 +105354,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc9512a58a3ba4b10ce2cdd756c5df21324fb87509bd9e404ac1683f33c5f241JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cuZGlsaWdlbnQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Likely offers work visa sponsorship for experienced technical roles, though exact policies are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Diligent Corporation provides a governance, risk, and compliance (GRC) platform, offering software solutions that enable organizations to manage board meetings, assess risks, and ensure regulatory compliance. It generates revenue by selling software subscriptions and enterprise licenses to mid- and large-sized organizations."
+  },
+  "synthesized_evidence_sha": "7d60cdecae0dda6b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Full-stack development, cloud infrastructure management, data security, and machine learning to detect risks and analyze compliance data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678566,
   "web_search_url": "https://duckduckgo.com/?q=Diligent+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Provides mission-driven work focused on corporate accountability and trust, but may not match the top-tier AI prestige, fast-paced innovation, or elite new-grad pay you are prioritizing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "90b0b4ccc9",
+    "a80d6a07fc",
+    "a4151a898a"
+   ],
+   "value": "Estimated: Good. Large, established software companies often respect work-life balance, though specific guaranteed shutdowns and sane hours are unverified."
   }
  },
  "dimensional fund advisors": {
@@ -174091,11 +174446,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174107,6 +174464,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678562,
   "name": "ING",
   "pace_of_work": {
@@ -174119,6 +174477,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892530,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174162,7 +174521,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=98187317adab0e9c6c2bf436a97491b85394b33daa64c7a90e4819a44b16957aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cuaW5nLmNvbS5hdS9zZWN1cmViYW5raW5nLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678562,
   "web_search_url": "https://duckduckgo.com/?q=ING+company+careers+benefits",
@@ -198872,7 +199231,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198890,7 +199249,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784892192,
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678467,
   "name": "Lever",
   "pace_of_work": {
@@ -198903,7 +199262,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892312,
+  "retry_after": 1784892650,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -200976,38 +201335,107 @@
  "lila sciences": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "93f3738ed4",
+    "a2c5465136"
+   ],
+   "value": "Estimated: Elite (Tier 1). They are conducting foundational AI research on 100B+ parameter models and frontier scientific superintelligence, placing them in the top echelon of AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8a7780e72b"
+   ],
+   "value": "Developing integrated AI platforms and foundation models that combine machine learning with life science data to enable automated scientific discovery."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c5465136",
+    "8a7780e72b"
+   ],
+   "value": "Mission-driven, research-focused, and collaborative. They are committed to advancing scientific superintelligence and encourage applications from those passionate about frontier science, even if they don't meet every qualification."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a7780e72b",
+    "a2c5465136"
+   ],
+   "value": "Internal scientific domains across life sciences and physical sciences, leveraging the platform for automated discovery."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $250,000 base salary, aligned with top-tier AI labs paying elite new-grad compensation."
   },
   "evidence_sha": "fce10c6c0968ea0d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8a7780e72b",
+    "a2c5465136"
+   ],
+   "value": "Artificial Intelligence and Life Sciences / Physical Sciences Research."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "93f3738ed4"
+   ],
+   "value": "Given the candidate's priorities, interviewers should probe the team's actual work-life balance, expected hours, and shutdown policies, as the fast-paced startup environment could risk burnout. It is also vital to confirm that the new-grad compensation meets the elite prestige and high pay expectations."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678562,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7b8bed6e8c"
+   ],
+   "value": "Not explicitly stated in available sources, though URL references suggest a primary web presence at lila.ai."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c5465136",
+    "93f3738ed4"
+   ],
+   "value": "To achieve scientific superintelligence by advancing Lila's vision of autonomously reading, interpreting, and structuring scientific knowledge to solve frontier science problems."
+  },
   "name": "Lila Sciences",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "93f3738ed4"
+   ],
+   "value": "Estimated: Fast-moving and highly autonomous. Job descriptions emphasize a 'rapidly growing' organization tackling 'frontier science problems' with 'autonomy, flexibility, and compute'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8a7780e72b",
+    "a2c5465136",
+    "93f3738ed4"
+   ],
+   "value": "Large-scale generative foundation models, reasoning frameworks for automated scientific discovery, and systems for asynchronous RL training and multimodal scientific data extraction (text, images, experimental data)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for early-stage tech startups with flexible autonomy."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -201018,6 +201446,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "93f3738ed4"
+   ],
+   "value": "Early-stage startup rapidly growing its Research Engineering organization."
   },
   "sources": [
    {
@@ -201081,14 +201516,46 @@
     "url": "https://job-boards.greenhouse.io/lilasciences/jobs/4052832009"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8a7780e72b",
+    "a2c5465136"
+   ],
+   "value": "Lila Sciences is an AI company building a platform where AI and automation co-evolve to solve the hardest problems in medicine and physical sciences. They monetize by developing foundation models and agentic systems that power automated scientific discovery."
+  },
+  "synthesized_evidence_sha": "fce10c6c0968ea0d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93f3738ed4",
+    "8a7780e72b",
+    "a2c5465136"
+   ],
+   "value": "Designing and optimizing systems for 100B+ parameter asynchronous RL training runs, scaling post-training, sharpening reasoning, and unlocking compute-intensive agentic-harness training. Developing ML research for foundation models intersecting life sciences and multimodal data extraction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678562,
   "web_search_url": "https://duckduckgo.com/?q=Lila+Sciences+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "93f3738ed4"
+   ],
+   "value": "Lila Sciences offers an elite AI role with the autonomy and compute to tackle frontier science problems, aligning with a fast, innovative tech culture rather than slow bureaucracy. For a new grad, this translates to accelerated technical learning and career growth by working on cutting-edge 100B+ parameter models."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "93f3738ed4"
+   ],
+   "value": "Estimated: Moderate. The high autonomy and massive compute resources suggest a results-driven culture, but the fast-paced startup nature could require significant hours."
   }
  },
  "lincoln financial": {
@@ -282070,49 +282537,129 @@
  },
  "relativity space": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "17aea859a6",
+    "dea80b719a"
+   ],
+   "value": "High. Applying AI and data science to autonomous 3D-printed rocket manufacturing and orbital trajectory analysis offers elite, highly complex technical challenges."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "287b8c9960",
+    "dea80b719a"
+   ],
+   "value": "Aerospace manufacturing and launch services. The company leverages additive manufacturing to lower the cost and complexity of building rockets, generating revenue by providing launch capacity for payloads."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Creative, technically rigorous, and foundational. Described as a place where 'your voice will help define the stories we’re writing together' and early enough for employees to define the culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "17aea859a6"
+   ],
+   "value": "Commercial satellite operators, private space enterprises, and government entities requiring payload launch services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary plus equity, aligning with competitive aerospace engineering packages for new graduates."
   },
   "evidence_sha": "2acc7009d2b232c3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "287b8c9960",
+    "17aea859a6"
+   ],
+   "value": "Aerospace manufacturing and launch services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Demonstrate how your elite AI or data science skills can directly enhance their automated 3D-printing and orbital launch systems. Emphasize your ability to operate in a fast-paced, innovative culture and ask about how their 'generous PTO and sick leave policy' supports work-life balance to ensure the environment avoids the burnout typical of high-prestige aerospace."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678473,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "17aea859a6"
+   ],
+   "value": "US-based, with primary operations in Long Beach, California."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "To build the next great commercial launch company and redefine how rockets are designed and manufactured through 3D printing, letting employees leave their mark on the product, process, and culture."
+  },
   "name": "Relativity Space",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative. The company emphasizes leaving a mark on tangible products during a period of 'picking up momentum', requiring strong technical rigor alongside rapid creativity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Terran R, a reusable 3D-printed medium-to-heavy lift launch vehicle (the company recently secured policy momentum for this flagship rocket)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Estimated: 20-25 days. The company states they offer a 'generous PTO and sick leave policy' alongside other premium benefits."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "dea80b719a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Estimated: Guaranteed company-wide shutdowns are not typical in aerospace, but employees may utilize the generous PTO policy to create guaranteed time off, avoiding toxic environments."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Late-stage scale-up. The company is 'far enough along that Terran R is tangible and picking up momentum,' making it a unique moment to join while still early enough to shape the product and culture."
   },
   "sources": [
    {
@@ -282156,14 +282703,47 @@
     "url": "https://boards.greenhouse.io/relativity/jobs/8639195002?gh_jid=8639195002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17aea859a6",
+    "dea80b719a"
+   ],
+   "value": "Not explicitly found in the provided sources. Sourced facts cited."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "287b8c9960",
+    "17aea859a6"
+   ],
+   "value": "Relativity Space is an aerospace manufacturing company building 3D-printed rockets and launch vehicles. It makes money by competing for commercial and government satellite launch contracts using its highly automated, additive manufacturing-driven production methods."
+  },
+  "synthesized_evidence_sha": "2acc7009d2b232c3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Highly automated aerospace manufacturing, 3D-printing at scale, robotics, software development for launch vehicle systems, and technical rigor in engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Relativity+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "If you are an elite AI or data science candidate, this role fits your priority for a fast, innovative tech culture that accelerates learning without slow bureaucracy. The company explicitly values where 'creativity and technical rigor go hand in hand,' offering both the high prestige of cutting-edge aerospace and the high impact of an early-stage scale-up, while providing generous PTO to ensure you maintain your work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dea80b719a"
+   ],
+   "value": "Estimated: Good. Relativity explicitly advertises a 'generous PTO and sick leave policy' alongside competitive compensation, suggesting a respect for work-life balance actively counteracting standard aerospace burnout."
   }
  },
  "relay": {
@@ -302080,37 +302660,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respectable enterprise AI practice with production ML systems, but not a primary research hub or top-tier talent magnet like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Value-added reseller (VAR) and solutions integrator model: revenue from hardware/software product margins, cloud subscription management, professional services engagements, and managed services contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, sales-influenced but engineering-respectful, ESOP-driven ownership mindset, diverse workforce, low politics for a large private firm."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Enterprise corporations, federal/state/local government agencies, educational institutions, and healthcare organizations across North America and internationally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + 10-15% target bonus + ESOP allocation (vesting over 5-6 years); total comp ~$110K-$135K first year."
   },
   "evidence_sha": "bee4d16b28b5f2e4",
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "IT Services / Value-Added Reseller / Solutions Integrator"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical ML/system design questions tied to real business use cases (e.g., forecasting, recommendation, anomaly detection at scale). Prepare to discuss end-to-end project ownership, cross-functional collaboration with sales/consulting teams, and experience with cloud ML services (Azure ML, AWS SageMaker, Vertex AI). Emphasize communication of technical value to non-technical stakeholders."
   },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678559,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Headquarters in Somerset, NJ; major offices in Austin TX, Dallas TX, Chicago IL, Irvine CA, Washington DC area, and international presence in UK, Ireland, Singapore, Hong Kong."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Deliver innovative technology solutions and exceptional service to help customers solve business challenges and accelerate digital transformation."
+  },
   "name": "SHI International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project-driven with quarterly planning cycles; faster than traditional enterprise IT but slower than pure tech product companies. Some crunch during major client deployments."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Hardware procurement, software licensing (Microsoft, VMware, Adobe, etc.), cloud solutions (AWS, Azure, Google Cloud), cybersecurity, data center infrastructure, and professional/managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + volunteer time off; accrual increases with tenure."
   },
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -302120,7 +302766,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; summer Fridays or early closure in some divisions."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "Large private company (~$14B+ revenue, 5,000+ employees), profitable and mature, not venture-backed."
   },
   "sources": [
    {
@@ -302154,14 +302809,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b7e9fbe078895386162cf2fc0821642fb97a21df8c719232ea1a6c2a7474f724JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cuc2hpLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for technical and professional roles; green card sponsorship available for tenured employees in specialized positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a08e7a634f",
+    "ef6f4e80da",
+    "e4e5567bb3"
+   ],
+   "value": "SHI International is a privately held global IT solutions provider offering hardware, software licensing, cloud services, and consulting to enterprise and public sector clients. It operates as a value-added reseller and solutions integrator, generating revenue through product margins and professional services fees."
+  },
+  "synthesized_evidence_sha": "bee4d16b28b5f2e4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal IT engineering (platforms, automation, data), cloud solutions architecture, cybersecurity engineering, software development for proprietary tools, and data analytics/ML for customer insights and operational efficiency."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678559,
   "web_search_url": "https://duckduckgo.com/?q=SHI+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SHI offers a stable, large-scale private-company environment with significant AI/data science investment in internal platforms and customer-facing solutions. The culture emphasizes employee ownership (ESOP), work-life balance through flexible schedules, and technical growth via exposure to enterprise cloud ecosystems — aligning with a desire for prestige, learning velocity, and sustainable hours without the burnout typical of hyperscalers or consulting firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong emphasis on flexibility, hybrid/remote options, and reasonable hours; ESOP culture incentivizes retention over burnout."
   }
  },
  "shield ai": {
@@ -346934,42 +347614,114 @@
  "trm labs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "158549f4bb"
+   ],
+   "value": "Estimated: Top-tier, specializing in AI-native intelligence and scalable integration platforms with high societal impact."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d372bd2943",
+    "e5e43a3e7a"
+   ],
+   "value": "B2B and B2G AI-powered intelligence solutions, relying on fast-moving vendor procurement and cross-functional partnerships to deliver services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d372bd2943",
+    "e5e43a3e7a"
+   ],
+   "value": "Estimated: Mission-driven, pragmatic, and solution-oriented. Cross-functional teams with executive presence and high impact."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d372bd2943",
+    "158549f4bb",
+    "e5e43a3e7a"
+   ],
+   "value": "Leading public and private sector agencies, as well as businesses worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "158549f4bb",
+    "e5e43a3e7a"
+   ],
+   "value": "Estimated: Highly competitive, aligning with high-growth AI technology company standards for backend engineers."
   },
   "evidence_sha": "307513d91ea807cb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784892410,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784892192,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e43a3e7a",
+    "158549f4bb"
+   ],
+   "value": "AI-powered intelligence solutions for financial security and crime investigation."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5e43a3e7a",
+    "d372bd2943"
+   ],
+   "value": "Candidates should demonstrate their ability to thrive and operate with minimal supervision in a fast-paced, fast-moving environment. Emphasize strong bias toward closing and innovative problem-solving to align with the company's high-growth tech culture."
+  },
+  "last_attempt_at": 1784892410,
   "last_evidence_at": 1784678472,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d372bd2943",
+    "158549f4bb"
+   ],
+   "value": "Not explicitly stated in provided sources, but operates worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d372bd2943",
+    "158549f4bb"
+   ],
+   "value": "To build a safer financial system for the world by making the world safer and more secure."
+  },
   "name": "TRM Labs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d372bd2943",
+    "e5e43a3e7a"
+   ],
+   "value": "Estimated: Very fast-paced and fast-moving, requiring high autonomy and ability to operate with limited information."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "158549f4bb"
+   ],
+   "value": "AI-native intelligence products featuring a scalable integration platform for external intelligence sources and third-party API integrations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e5e43a3e7a"
+   ],
+   "value": "Estimated: Conservative company-specific estimate is approximately 15-20 days of flexible PTO."
   },
-  "retry_after": 1784892312,
+  "refresh_after": 1790076410,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -346978,8 +347730,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d372bd2943"
+   ],
+   "value": "Estimated: Unknown if guaranteed shutdowns exist; company prioritizes fast-moving environments with limited downtime."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5e43a3e7a"
+   ],
+   "value": "High-growth technology company."
   },
   "sources": [
    {
@@ -347043,14 +347804,46 @@
     "url": "https://jobs.ashbyhq.com/trm-labs/1f973e1f-60b7-413f-95ca-cf22994a0573"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d372bd2943",
+    "158549f4bb",
+    "e5e43a3e7a"
+   ],
+   "value": "TRM Labs provides AI-powered intelligence solutions that help public and private sector agencies investigate and disrupt crime. The company makes money by licensing its AI-native platforms and scalable integration tools to government agencies and businesses worldwide."
+  },
+  "synthesized_evidence_sha": "307513d91ea807cb",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "158549f4bb"
+   ],
+   "value": "AI Engineering team focused on building third-party integrations, API integrations, and scalable integration platforms to connect external intelligence sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=TRM+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "158549f4bb"
+   ],
+   "value": "TRM Labs offers a mission-driven environment highly suited for elite AI and data science talent. The company provides a fast, innovative tech culture that accelerates technical learning, avoiding slow bureaucracy while adhering to a strong, impactful mission of building a safer financial system."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e5e43a3e7a",
+    "d372bd2943"
+   ],
+   "value": "Estimated: Moderate. The business model and investigation aspect demand fast-paced, minimal-supervision environments, which may impact work-life balance."
   }
  },
  "true anomaly": {
