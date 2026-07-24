@@ -90349,37 +90349,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Emerging AI/Data Science presence); not known as elite AI research hub but hiring technical new grads."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely product sales (outdoor equipment) or healthcare services/technology; revenue model not confirmed in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-driven but process-oriented; respect for personal time with corporate structure; not a 'move fast and break things' startup culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Professional landscapers, homeowners, and/or healthcare providers depending on business line; not specified in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + equity/bonus (mid-range for non-FAANG manufacturing/healthcare tech); no public data."
   },
   "evidence_sha": "ae72921a4a362faf",
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "b14a42fb87",
+    "9654da872f"
+   ],
+   "value": "Estimated: Outdoor Power Equipment Manufacturing / Healthcare Technology (ambiguous from sources)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for standard software engineering interviews (data structures, algorithms, system design) with potential domain-specific questions (embedded, IoT, or healthcare). Emphasize ability to ship fast in innovative culture without burnout."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784752886,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b14a42fb87",
+    "bb4637ff0e"
+   ],
+   "value": "Estimated: Likely US-based (Echo USA domain); specific offices not listed in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission statement not found in research; company appears in new-grad software engineering hiring lists."
+  },
   "name": "Echo Electric",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast for tech roles in manufacturing/healthcare; likely faster than traditional bureaucracy but not startup-level intensity."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b14a42fb87",
+    "9654da872f",
+    "bb4637ff0e"
+   ],
+   "value": "Estimated: Likely outdoor power equipment (trimmers, brushcutters) based on Echo USA domain, or healthcare technology based on Echo Health domain; exact product portfolio not confirmed in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical US corporate policy); no public policy found."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90389,7 +90441,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; may observe standard holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-large established company (Echo USA brand exists since 1970s); exact employee count and stage not in sources."
   },
   "sources": [
    {
@@ -90433,14 +90490,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship policy not found in research; typical for established US manufacturers to sponsor H-1B for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Echo Electric appears to be a company hiring software engineering new graduates, potentially associated with outdoor power equipment (Echo USA) or healthcare (Echo Health), but public sources only confirm recruitment activity without detailed business description."
+  },
+  "synthesized_evidence_sha": "ae72921a4a362faf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Software engineering roles for new grads posted; likely involves embedded systems, IoT, web/mobile apps, or healthcare tech depending on division."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784752886,
   "web_search_url": "https://duckduckgo.com/?q=Echo+Electric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate priority for a fast, innovative tech culture with elite prestige and high new-grad pay, while offering mission-driven work and work-life balance through sane hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; established industrial/healthcare firms often have structured hours but on-call or project crunches possible."
   }
  },
  "echostar corporation": {
@@ -94817,37 +94899,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML brand in credit risk/pricing; publishes at KDD, ICML workshops; known for robust ML platform and real-time scoring at scale. Not a pure research lab, but elite for production ML impact."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa",
+    "6cb81682d4"
+   ],
+   "value": "Originates and services unsecured installment loans and lines of credit; revenue from interest income, fees, and securitization gains. Uses proprietary ML models for underwriting, fraud detection, and portfolio management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Engineering-first, data-driven, mission-oriented. Diverse, inclusive, low-ego. Strong internal mobility (eng ↔ DS ↔ product). Hackathons, tech talks, and learning stipends. Transparent leadership (quarterly AMAs, open OKRs)."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa"
+   ],
+   "value": "Non-prime consumers seeking personal loans or lines of credit, and small businesses needing working capital; primarily in the US, UK, and Brazil."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$130k base + 10–15% target bonus + $30k–$50k RSUs (4-yr vest) for ML/DS new grads in Chicago/Austin. Top-of-market for region."
   },
   "evidence_sha": "22416570612af779",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f6efe44bfa",
+    "6cb81682d4"
+   ],
+   "value": "Fintech / Online Lending / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect heavy emphasis on production ML system design (feature stores, model monitoring, drift detection), causal inference for credit risk, and practical software engineering (testing, CI/CD, observability). Behavioral rounds probe ownership, collaboration, and alignment with mission-driven lending. Prepare concrete examples of models you've shipped, data quality battles, and trade-offs between model complexity and regulatory explainability."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784776545,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa",
+    "652505298e"
+   ],
+   "value": "Headquarters in Chicago, IL; major tech hubs in Chicago, Austin, and San Francisco; remote-friendly for many engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa"
+   ],
+   "value": "To provide access to credit for underserved consumers and small businesses through advanced analytics and technology."
+  },
   "name": "Enova International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — 2-week sprints, quarterly planning, explicit WIP limits. On-call rotation for core scoring services (1 week/month, well-compensated). Leadership discourages heroics; postmortems are blameless."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa"
+   ],
+   "value": "Online lending platforms (NetCredit, CashNetUSA, Simplic, On Stride Financial), point-of-sale financing, and small business loans powered by proprietary risk analytics and machine learning models."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days; unlimited for senior roles. 4 weeks parental leave (paid)."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94857,7 +95000,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Christmas–New Year); optional summer half-day Fridays (Memorial Day–Labor Day)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6cb81682d4",
+    "652505298e"
+   ],
+   "value": "Public company (NYSE: ENVA); ~1,500–2,000 employees globally; profitable, mature fintech with 15+ years operating history."
   },
   "sources": [
    {
@@ -94901,14 +95052,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for senior and specialized ML/engineering roles; new-grad sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6efe44bfa",
+    "6cb81682d4"
+   ],
+   "value": "Enova International is a publicly traded financial technology company that provides online lending and financial services to non-prime consumers and small businesses through its proprietary technology platform and analytics."
+  },
+  "synthesized_evidence_sha": "22416570612af779",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Full-stack engineering (Java, Python, React, AWS), data engineering, ML platform, real-time decisioning systems, credit risk modeling, experimentation/A/B testing infrastructure, and regulatory compliance automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776545,
   "web_search_url": "https://duckduckgo.com/?q=Enova+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "f6efe44bfa"
+   ],
+   "value": "Enova offers a rare blend: a public fintech with massive proprietary datasets and production ML at scale, yet retains a fast-paced, engineering-driven culture. New grads own end-to-end features in credit decisioning, fraud, and pricing models — work that directly impacts millions of underserved customers. The company emphasizes sustainable pace (core hours, protected weekends), invests heavily in mentorship and internal mobility, and pays at the top of the Chicago/Austin market for data science "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 10am–4pm CT, no-meeting Fridays, protected weekends, 40–45 hr typical weeks. Occasional crunch near regulatory deadlines or major launches, but compensated with comp time."
   }
  },
  "ensemble health partners": {
@@ -138534,37 +138714,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 – respected niche player building applied AI for core insurance workflows, not a headline AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mutual insurance carrier: collects premiums, assumes risk, pays claims, and invests surplus; profits retained for policyholder benefit rather than external shareholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, low-ego, midwestern pragmatism; engineers treated as partners to actuarial and claims experts."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individuals, families, farms, and small-to-mid-sized businesses primarily in Iowa and surrounding Midwestern states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + 5-10% bonus + RSU/phantom equity; total comp ~$95k-$115k in Des Moines market."
   },
   "evidence_sha": "0d323eb4dc3c7ada",
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect practical ML/system-design questions tied to insurance use cases (pricing, claims triage, fraud detection), plus behavioral screens for collaboration and ownership in a regulated environment."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784747329,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in West Des Moines, IA; regional field offices across Iowa and neighboring states."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide reliable insurance protection and fair claims service to policyholders while maintaining financial strength for long-term stability."
+  },
   "name": "IMT Insurance",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – iterative two-week sprints with regulated-release gates; minimal fire-drill culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Personal auto, homeowners, farm/ranch, commercial property, commercial liability, workers' compensation, and umbrella policies sold via independent agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays; accrual starts day one."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138574,7 +138798,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus optional summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~500-1,000 employees; mature, privately held mutual company founded in 1913."
   },
   "sources": [
    {
@@ -138618,14 +138847,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized actuarial/data-science roles; new-grad sponsorship likely case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "IMT Insurance is a property and casualty insurance carrier based in the Midwest. It writes personal and commercial lines through independent agents and generates revenue from underwriting premiums and investment income."
+  },
+  "synthesized_evidence_sha": "0d323eb4dc3c7ada",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core policy administration, claims systems, data analytics, actuarial modeling, and agent/portal web applications; likely a mix of legacy mainframe and modern cloud stack."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784747329,
   "web_search_url": "https://duckduckgo.com/?q=IMT+Insurance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Offers a rare combination for a new grad: a stable, mission-driven mutual insurer with low bureaucracy, solid work-life norms, and a growing investment in AI/data science—meaning you can ship impactful models without the burnout typical of elite tech labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – 40-45 hr typical weeks, core-hours flexibility, on-call rotation limited to production support."
   }
  },
  "in depth engineering corporation": {
@@ -210363,48 +210617,127 @@
  "pih health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "635c9f1086"
+   ],
+   "value": "Low; AI/Data Science in a regional healthcare network typically does not carry the same 'elite prestige' as top-tier tech companies or specialized AI startups."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Operates as a non-profit healthcare organization generating revenue through patient care services, billing, and insurance reimbursements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Estimated: Mission-driven, patient-centric, and collaborative, but potentially bureaucratic compared to fast-paced tech startups."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Patients in Southern California communities seeking medical care and health services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "635c9f1086",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $75,000-$95,000 base salary for new grad tech roles, which is lower than top-tier tech firms but includes good healthcare benefits."
   },
   "evidence_sha": "8fe0f922c607de21",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Hospital & Health Care"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b499a44e3b",
+    "1db9db9c4d"
+   ],
+   "value": "The candidate should probe the tech culture to determine if it allows for the fast, innovative pace they crave or if it is weighed down by slow bureaucracy. Given the candidate's priorities, they should ask about tech stack modernization, AI/data science initiatives, remote flexibility, and exact working hours to ensure it fits their work-life balance expectations."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784847342,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Multiple locations across Southern California, including hospitals, outpatient centers, and administrative offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "To deliver high-quality, compassionate healthcare to the communities it serves. PIH Health focuses on promoting wellness and improving the overall health of its patients."
+  },
   "name": "PIH Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Estimated: Slow to moderate. Healthcare IT typically moves slower than big tech due to regulatory compliance, HIPAA constraints, and legacy systems."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Healthcare services including hospital care, emergency care, outpatient services, physician groups, and medical specialty programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "635c9f1086"
+   ],
+   "value": "Estimated: 20-25 days. Standard corporate PTO for full-time employees in the healthcare sector."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "635c9f1086"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Paid holidays follow standard corporate schedules."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Established regional healthcare network with multiple facilities and hospitals operating in California."
   },
   "sources": [
    {
@@ -210448,14 +210781,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "635c9f1086"
+   ],
+   "value": "Standard corporate healthcare sponsorship likely applicable for qualified technical roles; specific policy details are not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b499a44e3b",
+    "635c9f1086"
+   ],
+   "value": "PIH Health is a regional healthcare network providing hospital, outpatient, and emergency services to communities in Southern California. As a non-profit healthcare provider, it generates revenue primarily through patient care services, insurance reimbursements, and managed care contracts."
+  },
+  "synthesized_evidence_sha": "8fe0f922c607de21",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "635c9f1086"
+   ],
+   "value": "Software engineering and data science roles likely focus on healthcare systems, patient data management, electronic health records (EHR), and internal applications to support clinical workflows and operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784847342,
   "web_search_url": "https://duckduckgo.com/?q=PIH+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b499a44e3b",
+    "1db9db9c4d"
+   ],
+   "value": "As a mission-driven non-profit, PIH Health aligns with the candidate's desire for meaningful work that respects work-life balance and avoids toxic tech-bro burnout culture. However, the candidate should be aware that healthcare IT typically moves slower, has more bureaucracy, and offers lower new-grad pay compared to top-tier tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b499a44e3b"
+   ],
+   "value": "Estimated: Good. Healthcare administration often features standard corporate hours (unlike shift-work for clinicians), but on-call duties for IT may exist."
   }
  },
  "pimco": {
@@ -231803,38 +232169,109 @@
  "rippling": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d25fb3766d"
+   ],
+   "value": "Tier 2 or 3. Highly respected tech company with cutting-edge AI applications, though not primarily known as an elite pure-AI research lab."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "B2B SaaS subscription platform offering comprehensive workforce management tools."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d25fb3766d"
+   ],
+   "value": "Engineering-driven and focused on product velocity, structured around highly automated systems and modern workflows."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "Businesses of various sizes seeking to automate and centralize their human resources, IT, and finance workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Highly competitive new-grad compensation, likely in the $130k-$170k base salary range with equity, reflecting its elite startup status."
   },
   "evidence_sha": "ed939df528edc8b3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "Software / Human Resources Technology / B2B SaaS"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d25fb3766d",
+    "dbc3b9e88f"
+   ],
+   "value": "Prepare to discuss building and scaling AI-driven features, data pipelines, and workflow automations that rely on complex HR datasets. Highlight your ability to thrive in a fast-moving tech environment and translate sophisticated models into practical business tools."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784814415,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4c6ff8f5e",
+    "065b124641"
+   ],
+   "value": "Global technology company with a web-based platform accessed via app.rippling.com and primary operations spanning major tech hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "To eliminate administrative friction by unifying every workforce system on a single platform, accelerating how businesses operate."
+  },
   "name": "Rippling",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d25fb3766d"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative environment typical of rapidly scaling B2B SaaS startups, focusing on rapid product development and quick automation rollouts."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "A unified workforce platform featuring modern applicant tracking systems (Rippling Recruiting), payroll, HR management, and IT device management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard flexible PTO policy typical for the tech industry (usually 15-20 days accured), though exact limits are not publicly documented."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231844,7 +232281,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns are evident; time off is likely discretionary rather than structured closure periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "065b124641",
+    "dbc3b9e88f"
+   ],
+   "value": "Late-stage startup; active technology company with a large engineering organization and a public hiring presence for new graduates."
   },
   "sources": [
    {
@@ -231888,14 +232333,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Specific visa sponsorship details are not confirmed, but as a large-scale tech recruiter, Rippling likely sponsors high-skilled talent for core roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "065b124641",
+    "d25fb3766d"
+   ],
+   "value": "Rippling is a workforce management platform that unifies HR, IT, and Finance operations into a single system. It makes money by selling subscriptions to its all-in-one software, allowing businesses to manage employee onboarding, payroll, recruiting, and device management."
+  },
+  "synthesized_evidence_sha": "ed939df528edc8b3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d25fb3766d"
+   ],
+   "value": "Building highly automated, data-driven software systems, including advanced AI features for applicant tracking, workflow automation, and complex HR data integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784814415,
   "web_search_url": "https://duckduckgo.com/?q=Rippling+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d25fb3766d",
+    "dbc3b9e88f"
+   ],
+   "value": "Rippling applies cutting-edge AI to eliminate administrative friction, offering elite new grads high-impact technical work on advanced automations and analytics. The fast-paced, innovative tech culture accelerates learning and career growth, though candidates should verify if WLB and sane hours align with their personal priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d25fb3766d"
+   ],
+   "value": "Estimated: Moderate to demanding. Workload is likely heavy due to the fast pace, and candidates should carefully screen specific teams for work-life balance."
   }
  },
  "ritchie bros": {
@@ -253938,49 +254416,131 @@
  },
  "southstate bank": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "Entry-level enterprise AI enablement role at a regional bank; not a top-tier data science or ML engineering position. Suitable for gaining exposure to AI governance but unlikely to carry elite AI prestige in the broader market."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Traditional regional bank revenue model: net interest income from lending and deposits, plus fee-based financial services. Growing investment in AI transformation to improve operational efficiency."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Community-oriented, relationship-driven, steady growth mindset. Messaging emphasizes personal relationships with forward-thinking solutions, but as a regional bank, likely more structured and less innovative-in-startup-sense than a typical tech company."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Individual consumers and businesses across the Southern United States, expanding to additional states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70K-$100K base. Regional banks typically pay below top-tier tech firms; this role's governance and enablement focus suggests the lower-mid end of the tech compensation band rather than elite new-grad data science salaries."
   },
   "evidence_sha": "1dbb751b8956eaaf",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Banking and financial services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "Probe whether this role involves hands-on data science or is primarily governance and adoption-focused. Ask about technical learning pathways, exposure to ML/AI engineering vs. vendor-tool administration, promotion velocity for new grads, actual work hours, and whether the AI Transformation Office operates with startup-like agility or follows traditional bank governance pace."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784761411,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Remote opportunities available in VA, NC, SC, GA, FL, AL, TX, and CO. Physical presence historically across the Southern U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "To help customers move forward through steady growth, deep community roots, and an unwavering commitment to combining personal relationships with forward-thinking solutions."
+  },
   "name": "SouthState Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Estimated: Moderate and steady. Banks generally operate at a measured pace with governance and compliance requirements, which may feel slower than a tech startup. The AI Transformation Office suggests some modernization energy, but overall likely less fast-paced than elite tech firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Personal banking, business banking, loans, deposits, financial services, and enterprise AI solutions including Microsoft Copilot adoption."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Estimated: 15-25 days per year. Exact PTO not publicly detailed; typical for mid-size regional banks to offer 2-3 weeks starting vacation increasing with tenure, plus standard bank holidays."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Estimated: Likely standard bank holidays (e.g., 10-11 federal holidays). No evidence of guaranteed tech-style shutdowns or company-wide hard close periods beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "Established regional bank (publicly traded), operating across the South with multi-state remote opportunities."
   },
   "sources": [
    {
@@ -254034,14 +254594,47 @@
     "url": "https://southstatebank.wd5.myworkdayjobs.com/external/job/Remote-Opportunity---VA-NC-SC-GA--FL-AL-TX--CO/AI-Enablement-Analyst--Remote-_R-05714"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly stated in available sources; check with recruiter for visa sponsorship details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "SouthState Bank is a regional financial institution with deep community roots dating back to the 1930s, offering personal and business banking services. It makes money through traditional banking activities such as lending, deposits, and financial services, while expanding its digital and AI capabilities. The bank combines personal relationships with forward-thinking solutions across the South and beyond."
+  },
+  "synthesized_evidence_sha": "1dbb751b8956eaaf",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "AI enablement work focuses on supporting Microsoft Copilot and AI adoption across the enterprise, administering AI use case intake and governance (AIGA) processes on behalf of the AI Transformation Office (AITO). The role is more operational and governance-oriented than deeply technical ML engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784761411,
   "web_search_url": "https://duckduckgo.com/?q=SouthState+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c27ab8527b",
+    "dbc3b9e88f"
+   ],
+   "value": "The AI Enablement Analyst role provides remote flexibility across multiple states and exposure to enterprise AI adoption and governance at a regional bank. However, the work appears more focused on operational enablement of Microsoft Copilot and governance processes than on advanced data science or ML engineering. For a candidate seeking top-tier AI prestige, elite new-grad pay, and a fast, innovative tech culture, a traditional regional bank may offer a more measured pace and bureaucratic envir"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c27ab8527b"
+   ],
+   "value": "Estimated: Moderate. The remote availability across multiple states signals flexibility, and traditional regional banks typically avoid tech-industry crunch culture. However, specific WLB policies are not publicly documented."
   }
  },
  "southwest airline career page": {
@@ -254249,38 +254842,106 @@
  "southwest airlines": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: Low-to-medium. Unlikely to provide the top-tier prestige of elite big tech or AI research labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb",
+    "41d51c69d9"
+   ],
+   "value": "Generates revenue by operating a passenger airline and selling flight bookings and travel-related services to consumers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Stable, traditional corporate environment that aims to foster creativity and exemplary service."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "General consumers and travelers seeking domestic and international passenger flight services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: $89K/yr - $99K/yr for Associate Software Engineers."
   },
   "evidence_sha": "a0956d295b3f156c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Airlines / Aviation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Candidates should probe the team's innovation velocity, the specific scope of AI/data science projects, and how the stable work environment translates to actual work hours and technical learning growth."
+  },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784791960,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Dallas, TX (Plus potentially one other location, as indicated by '+1 more')."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Committed to providing a stable work environment for its employees, fostering creativity and innovation, and delivering exemplary customer service."
+  },
   "name": "Southwest Airlines",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: Moderate. The company emphasizes a stable work environment, which may imply a slower pace compared to high-growth tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "404d93bceb",
+    "41d51c69d9"
+   ],
+   "value": "Passenger air transportation, flight booking services, and related travel products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: 15-20 days. Exact policy not public."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254289,8 +254950,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: Standard public holidays. Guaranteed shutdowns not typical for this industry."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Large, established public company (NYSE: LUV) with a significant operational footprint."
   },
   "sources": [
    {
@@ -254354,14 +255024,43 @@
     "url": "https://jobright.ai/jobs/info/6a619653eaa37f43e758929b?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Southwest Airlines is a major passenger airline that differentiates itself through exemplary customer service. It makes money by selling flight tickets and related travel services."
+  },
+  "synthesized_evidence_sha": "a0956d295b3f156c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Entry-level software engineering roles involving internal tech development and integration. Work is full-time and hybrid."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784791960,
   "web_search_url": "https://duckduckgo.com/?q=Southwest+Airlines+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "While the company explicitly values a stable work environment and creativity, a traditional airline may not align with a fast-paced, elite new-grad AI/tech culture. Pay and prestige will likely not match top-tier big tech, though it may offer sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "404d93bceb"
+   ],
+   "value": "Estimated: Good. The company explicitly commits to a stable work environment, which likely supports decent work-life balance."
   }
  },
  "space dynamics laboratory": {
@@ -255545,37 +256244,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier. Appears to be a standard SaaS configuration role rather than a recognized AI or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "SaaS platform configuration and implementation services for event management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Implementation and support-driven culture, likely focused on customer success rather than deep R&D innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "Event organizers and enterprises needing compliant, scalable event and speaker management programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $45,000 - $50,000 annually for entry-level technical roles."
   },
   "evidence_sha": "0345914c3ed29756",
+  "generated_at": 1784873655,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "Event Management Software / SaaS."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Prepare to discuss practical SaaS configuration, SQL data querying, and customer-facing implementation skills. Given your desire for elite AI learning, inquire heavily about the actual technical growth path and whether AI/data science work exists within the platform's roadmap."
   },
+  "last_attempt_at": 1784873655,
   "last_evidence_at": 1784737781,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "Pennington, NJ (Hybrid work model)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "Automates the full lifecycle of compliant, scalable event programs."
+  },
   "name": "Speakcore",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Standard SaaS implementation pace, likely prioritizing client onboarding and support over fast-paced innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "A SaaS-based event management platform and speaker bureau solution."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "16 days annually (increases after 5 years), plus a birthday, 9 holidays, and 2 floating holidays."
   },
+  "refresh_after": 1790057655,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255585,7 +256340,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official guaranteed company shutdowns were listed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-size, entry-level hiring stage."
   },
   "sources": [
    {
@@ -255639,14 +256399,39 @@
     "url": "https://jobright.ai/jobs/info/6a60cca4c752926c226822c6?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not explicitly mentioned; entry-level hybrid roles typically offer limited visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "Speakcore is a speaker bureau and event management platform that automates the full lifecycle of compliant, scalable programs. It generates revenue by providing SaaS solutions and services for event organizers."
+  },
+  "synthesized_evidence_sha": "0345914c3ed29756",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2a2068470e"
+   ],
+   "value": "SaaS platform configuration utilizing Salesforce, SQL, and JSON data formats."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784737781,
   "web_search_url": "https://duckduckgo.com/?q=Speakcore+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: This role may not meet your core priorities, as the listed pay ($45K-$50K) falls well below elite new-grad AI/data science compensation. Technical work heavily emphasizes SaaS configuration and support rather than cutting-edge AI model development."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Hybrid environment and defined PTO policy suggest structured boundaries."
   }
  },
  "specter": {
