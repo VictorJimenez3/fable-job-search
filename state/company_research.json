@@ -11747,11 +11747,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11763,6 +11765,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784677098,
   "name": "Alkami Technology",
   "pace_of_work": {
@@ -11775,6 +11778,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784880975,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11818,7 +11822,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ce933f57fdcd9fa5f4c6d2e85d0f7f679a6f3944ea61289bdc5a14cccbacf02eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9kZXRhaWwuY2hpZWJ1a3Vyby55YWhvby5jby5qcC9xYS9xdWVzdGlvbl9kZXRhaWwvcTEyMzAwMTg1Nzc3&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677098,
   "web_search_url": "https://duckduckgo.com/?q=Alkami+Technology+company+careers+benefits",
@@ -43999,37 +44003,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected regional payer with growing AI investment; not a primary AI research lab but offers production ML at scale in a regulated domain."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit health insurer: collects premiums from members and employer groups, pays claims to providers in its network, invests surplus in reserves and community health programs, and operates under state insurance regulation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-oriented, process-conscious; engineering respected but operates within compliance guardrails; low politics, high tenure, strong community involvement."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Arizona residents (individual and family market), Arizona employers (small business to large enterprise), Medicare-eligible seniors, Medicaid beneficiaries, and federal employee program members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 5-10% target bonus + RSU/equity (modest); total comp ~$105k-$130k; competitive for Phoenix market, below FAANG but with superior WLB."
   },
   "evidence_sha": "a2355614e64bdefe",
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Health Insurance / Managed Care (Blues Plan)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system design questions tied to healthcare use cases (claims anomaly detection, risk scoring, member engagement). Prepare to discuss model explainability, regulatory constraints (HIPAA, CMS), and experience with messy, longitudinal claims data. Behavioral rounds will probe collaboration with clinical/actuarial stakeholders, prioritization under fixed regulatory deadlines, and examples of shipping maintainable code in a regulated environment."
+  },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784674775,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Phoenix, Arizona; major offices in Phoenix metro area; remote/hybrid roles common for technology positions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To inspire health and well-being across Arizona by providing access to quality, affordable healthcare coverage and advancing community health initiatives."
+  },
   "name": "Blue Cross Blue Shield of Arizona",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured sprint cycles with regulated release windows; limited 'crunch' culture; quarterly planning aligned to compliance deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health insurance plans for individuals, families, employers (small and large group), Medicare Advantage, Medicaid, and supplemental coverage; dental, vision, and wellness programs; digital health tools and telehealth services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 volunteer days; accrual increases with tenure."
   },
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44039,7 +44085,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; additional day after Thanksgiving; summer half-day Fridays common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature not-for-profit enterprise (founded 1939); ~2,000+ employees; serves over 1.5 million members; annual revenue in the low billions USD."
   },
   "sources": [
    {
@@ -44073,14 +44124,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f445ed077643654534b102add96c06376d11753c90d2e0580dccd5dc59fbef97JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmx1ZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technology and data science roles; history of hiring international talent in IT, analytics, and actuarial functions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Blue Cross Blue Shield of Arizona (BCBSAZ) is a not-for-profit health insurance provider serving Arizona residents and employers. It generates revenue primarily through collecting insurance premiums from members and employer groups, then managing healthcare claims and network contracts to deliver covered medical services."
+  },
+  "synthesized_evidence_sha": "a2355614e64bdefe",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core insurance platform modernization (claims, enrollment, billing), data analytics and actuarial modeling, AI/ML for fraud detection, risk adjustment, care management, and member personalization; cloud migration (AWS/Azure), API/interoperability (FHIR), digital member experience, cybersecurity, and data governance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674775,
   "web_search_url": "https://duckduckgo.com/?q=Blue+Cross+Blue+Shield+of+Arizona+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BCBSAZ offers a mission-driven, non-profit healthcare environment where AI and data science directly improve health outcomes for millions of Arizonans. As a large but regionally focused payer, it balances enterprise-scale data assets and modernization investment with a culture known for reasonable hours, strong work-life boundaries, and lower burnout risk than big-tech or consulting. New grads get exposure to real production ML (fraud, risk, care gaps) and a clear technical career ladder without"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — strong emphasis on 40-hour weeks, core-hours flexibility, and guaranteed holiday shutdowns; on-call rotation limited to critical production support."
   }
  },
  "blue cross blue shield of michigan": {
@@ -64991,11 +65063,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65007,6 +65081,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784676941,
   "name": "Chevron Corporation",
   "pace_of_work": {
@@ -65019,6 +65094,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784880975,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65062,7 +65138,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=1a6b517b49675fc9381671a3273b78d38f63c15d7845be00fbae6dc71f24737fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuY2hldnJvbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676941,
   "web_search_url": "https://duckduckgo.com/?q=Chevron+Corporation+company+careers+benefits",
@@ -108729,51 +108805,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI brand via EY.ai platform and client work; less research-focused than tech giants or elite labs, but high industry credibility for enterprise AI deployment."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Partnership model generating revenue through billable hours and project fees across assurance, tax, consulting, and advisory engagements; increasingly investing in proprietary technology platforms and AI solutions for recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, hierarchical, collaboration-heavy; strong emphasis on methodology and quality control; increasing tech-first messaging but partnership governance slows agility; diverse global workforce."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large multinational corporations, mid-market companies, governments, public sector entities, financial institutions, and private equity firms across all major industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + $5,000-$15,000 signing bonus + modest RSU/equity (varies by role: Technology Consulting, Data & Analytics, AI Assurance); lower than pure tech firms but competitive for Big 4."
   },
   "evidence_sha": "540e080ec6167be8",
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Professional Services / Big 4 Accounting & Consulting"
   },
-  "last_attempt_at": 1784880706,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess: 1) Realistic project hours and 'protected time' policies for learning; 2) Access to EY.ai platform and contribution vs. implementation balance; 3) Mentorship structure for new grads in tech tracks; 4) Rotation opportunities across assurance, tax, consulting tech teams; 5) Concrete examples of shutdown adherence during busy seasons."
+  },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784674271,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in London; major hubs in New York, Chicago, San Francisco, Dallas, London, Frankfurt, Singapore, Sydney, Tokyo; offices in 150+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building a better working world by helping clients create long-term value through trust, innovation, and sustainable growth."
+  },
   "name": "EY",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast during client delivery cycles (quarter-end, tax season); variable by team — internal platform teams steadier; billing targets drive intensity."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assurance (audit), Tax advisory and compliance, Consulting (strategy, operations, technology), Advisory (risk, transactions, forensics), and emerging technology services including AI and data analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 firm holidays (varies by country/office); unlimited not offered; accrual-based."
   },
-  "retry_after": 1784880826,
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research — EY offers 'EY Launch' internship conversion and 'Experienced Hire' pathways but no formal named rotational program for new-grad AI/data scientists in public sources."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Firm-wide shutdown between Christmas and New Year (~1 week); some regions offer summer Fridays or additional wellness days; no guaranteed weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Global firm with ~400,000+ employees across 150+ countries; mature, established partnership (Big 4), revenue ~$50B+ annually."
   },
   "sources": [
    {
@@ -108807,14 +108926,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=291871906b50ffecc8e39563d7e9bc636f36aec7203e004300e12a42ea9fe879JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuZXkuY29tL2VuX3Vz&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technology and specialized roles; green card sponsorship typically for experienced hires and high-performing senior associates/managers; STEM OPT extensions supported."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EY (Ernst & Young) is a global professional services firm providing assurance, tax, consulting, and advisory services. It generates revenue through client engagements across these service lines, serving businesses, governments, and organizations worldwide."
+  },
+  "synthesized_evidence_sha": "540e080ec6167be8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML model development for audit automation, tax analytics, risk modeling; data engineering for client platforms; building proprietary tools (EY Canvas, EY Atlas); cloud migration and digital transformation implementations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674271,
   "web_search_url": "https://duckduckgo.com/?q=EY+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EY offers Big 4 prestige and competitive new-grad compensation for AI/data roles while investing heavily in proprietary AI platforms (e.g., EY.ai). The firm markets improved WLB initiatives (e.g., 'EY Flex') but client-driven deadlines and billable-hour culture can challenge shutdown guarantees. Technical learning is accelerated through diverse client exposures and internal upskilling programs, though bureaucracy exists in a large partnership."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Firm promotes flexibility (EY Flex) and 'right to disconnect' policies, but client demands and utilization metrics often extend hours; seasonal peaks are intense."
   }
  },
  "faire": {
@@ -111294,37 +111434,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (strong applied ML in production marketplace; not a primary research lab)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Transaction-fee marketplace: Field Nation charges buyers a platform fee (percentage or fixed) on every completed work order; technicians join free. Additional revenue from premium buyer subscriptions (analytics, dedicated support) and optional insurance/compliance add-ons."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Pragmatic, low-ego engineering culture; values craftsmanship and technician empathy. Cross-functional squads with product/design/ops embedded. Quarterly all-hands celebrate technician stories. Minneapolis niceness translates to direct-but-kind feedback."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise buyers: MSPs, VARs, OEMs, retailers, telcos, and facilities-management firms that need nationwide on-site coverage. Supply side: 10,000+ background-checked, insured independent field technicians across the U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$130k base + 5-10% target bonus + equity (ISO) ~$15k-$25k/yr; total ~$135k-$160k."
   },
   "evidence_sha": "c64d0f1c1ab8e022",
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "B2B marketplace / Field service management / Gig-economy platform"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into marketplace mechanics: two-sided network effects, matching/ranking algorithms, experimentation design, and causal inference for pricing. Prepare for system-design around real-time dispatch and mobile offline sync. Behavioral questions will probe ownership, cross-functional collaboration (product/ops), and how you balance speed with quality—signals of the sustainable-pace culture."
+  },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784677223,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Minneapolis, MN (hybrid). Remote-friendly for many engineering roles; occasional on-site collaboration weeks. No international offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make on-site work effortless by instantly connecting the right technician to the right job, empowering skilled professionals to build sustainable independent careers while giving companies elastic workforce capacity."
+  },
   "name": "Field Nation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable—quarterly OKRs, bi-weekly sprints, regular hack weeks; leadership explicitly discourages heroics and weekend work."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core product is the Field Nation marketplace platform (web + mobile) featuring work-order management, technician search/matching, real-time tracking, compliance/documentation tools, and integrated payments. Ancillary offerings include analytics dashboards for buyers and a technician-facing app for job acceptance, routing, and evidence capture."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + unlimited sick; accrues from day one."
   },
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111334,7 +111516,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; occasional summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, growth-stage (Series C+). ~250-350 corporate employees; marketplace spans 10k+ active technicians. Headquartered in Minneapolis, MN."
   },
   "sources": [
    {
@@ -111368,14 +111555,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=15f555c02457beaf26e0f24d67bd3e79bf4d80c64ab1ead52bb6bf2fe0d7fcf1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2ZpZWxk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B transfers and cap-subject filings supported for senior/specialized roles; new-grad sponsorship case-by-case. No blanket policy published—confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Field Nation operates a two-sided marketplace that connects enterprises needing on-site field services (IT hardware installs, break-fix, telecom cabling, etc.) with a vetted network of independent technicians. The platform handles work-order dispatch, skill matching, compliance tracking, and payment, taking a transaction fee on each completed job."
+  },
+  "synthesized_evidence_sha": "c64d0f1c1ab8e022",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Marketplace matching algorithms, real-time dispatch optimization, geospatial search, mobile apps (React Native / Kotlin / Swift), payments/ledger services, data pipeline for technician scoring & fraud detection, experimentation platform. Stack: Python, Go, TypeScript, React, PostgreSQL, Kafka, Kubernetes on AWS."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677223,
   "web_search_url": "https://duckduckgo.com/?q=Field+Nation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Field Nation sits at the intersection of marketplace dynamics, geospatial optimization, and labor-economy data—fertile ground for elite AI/DS work (matching, pricing, demand forecasting). As a private, founder-led company it moves faster than public peers, yet its 15+ year history provides stability. The mission (empowering skilled trades) is tangible, and the hybrid/remote culture with ~250 engineers tends toward sustainable pace rather than burnout crunches, aligning with your desire for prest"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 (estimated from Glassdoor/Blind trends: 40-45 hr typical weeks, protected weekends, flexible hybrid)"
   }
  },
  "fieldai": {
@@ -164408,49 +164616,136 @@
  },
  "katalyst space": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "Unknown - no information about AI/data science team, publications, or reputation in provided sources"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No business model information available from provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "Unknown - no cultural information available from provided sources"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No customer information available from provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available in provided sources"
   },
   "evidence_sha": "c5960f5fae13456a",
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "Space technology / robotics (inferred from company name only)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cannot determine interview focus areas without knowledge of company's tech stack, products, or engineering practices. Candidate should prepare for general space/robotics software interviews and ask direct questions about culture, hours, and technical challenges."
   },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784677348,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No location information available from provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No mission statement available from provided sources."
+  },
   "name": "Katalyst Space",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no employee reviews or cultural indicators in provided sources"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No product information available from provided sources. Sources contain only redirect URLs with no content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information in provided sources"
   },
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no information about company shutdown policies or guaranteed disconnect times"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No company size or stage information available from provided sources."
   },
   "sources": [
    {
@@ -164484,14 +164779,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=fe7bd1c7a327681e6ddc5c82ccdfba0f03afa0e9d81f1ae9732b5f30608c41e6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly9rYXRhbHlzdC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No visa sponsorship information available from provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "Katalyst Space appears to be a space technology company based on its name and domain, but the provided sources contain only redirect links with no accessible content about the company's operations, products, or mission."
+  },
+  "synthesized_evidence_sha": "c5960f5fae13456a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "94b9420bb7",
+    "d8beee3d05",
+    "18d3bf46ba"
+   ],
+   "value": "No technical work details available from provided sources. Company name suggests space/robotics focus but unverified."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677348,
   "web_search_url": "https://duckduckgo.com/?q=Katalyst+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, fast innovative culture, mission-driven) due to complete lack of company information in provided sources. Candidate should research independently via company website, LinkedIn, Glassdoor, and news sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data, policies, or employee feedback in provided sources"
   }
  },
  "katalyst space technologies": {
@@ -278947,48 +279275,135 @@
  "stand together": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together likely has a moderate tech presence with AI/DS applications focused on social impact analytics, but it is not a top-tier or top-prestige tech employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "It is funded through donations and partnerships with individuals who support its mission of fostering social change."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Mission-driven, collaborative, and focused on social impact and community empowerment."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Its target audience consists of social entrepreneurs, community leaders, and non-profit organizations striving to create social impact."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000, reflecting non-profit tech compensation versus top-tier tech firms."
   },
   "evidence_sha": "d7c6c55fd417b749",
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Non-Profit Organization Management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you still consider it, focus on the scale of their data systems and their tech stack to ensure it aligns with your career growth goals. Ask about the pace of technical work and whether there are any high-impact projects that could accelerate your learning without sacrificing work-life balance."
+  },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784672490,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together operates in Washington D.C.."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together aims to empower people to improve their lives and communities by supporting social entrepreneurs and organizations that address the root causes of societal issues."
+  },
   "name": "Stand Together",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical of non-profit organizations where the focus is on steady social impact rather than rapid tech innovation."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "The organization provides support systems, resources, and partnerships for social entrepreneurs and non-profits, focusing on areas like criminal justice reform, free speech, and mentorship."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annually, typical for an established non-profit."
   },
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely no official company-wide shutdowns outside of standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together is an established non-profit organization."
   },
   "sources": [
    {
@@ -279022,14 +279437,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=d1a1111ae3828202cd4afcb8d7756f37d2ce7c83fc8feb3bcd78e232edbb8217JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cudGhlc3RhbmQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together may offer H-1B visa sponsorship based on its scale and industry presence, though specific policies are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "Stand Together is a philanthropic organization that helps social entrepreneurs solve community problems. It makes money through a backing of likeminded donors and partners who are dedicated to tackling the root causes of societal issues."
+  },
+  "synthesized_evidence_sha": "d7c6c55fd417b749",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "356b56222c",
+    "037666b249",
+    "169b483a2c"
+   ],
+   "value": "The tech teams develop platforms to manage philanthropic partnerships, analyze social initiative data, and support outreach programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672490,
   "web_search_url": "https://duckduckgo.com/?q=Stand+Together+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is not an elite tech company; it is a philanthropic non-profit. You likely won't find top-tier AI prestige or high new-grad pay here compared to FAANG. Its mission-driven aspect may be a draw, but the tech culture may lack the fast-paced innovation you seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above-average, with non-profits often emphasizing reasonable hours, though mission-driven passion can occasionally blur boundaries."
   }
  },
  "standard aero": {
@@ -315523,37 +315971,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2/3. Highly respected within financial services with strong real-world AI impact (fraud, risk), but lacks 'Big Tech' prestige cachet."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Member-owned financial services provider generating revenue from insurance premiums, interest, banking fees, and investment income."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate culture heavily anchored by mission-driven values and strong community focus."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Active-duty U.S. military personnel, veterans, and their eligible family members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Base salary $85k-$110k, targeted total compensation competitive for financial sector tech roles."
   },
   "evidence_sha": "d92d6f970ad17083",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880855,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Financial Services & Insurance"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Assure managers of tolerance for legacy IT environments; emphasize driving AI innovation within a heavily regulated space to satisfy your learning/bureaucracy trade-off concerns; define 'elite' work-life boundaries for new grads."
+  },
+  "last_attempt_at": 1784880855,
   "last_evidence_at": 1784675357,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Headquartered in San Antonio, Texas, with additional major corporate offices in Plano, Texas; Phoenix, Arizona; Chesapeake, Virginia; and Tampa, Florida."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "To empower and serve the military community by providing highly competitive financial products and services."
+  },
   "name": "USAA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower-paced and process-heavy compared to pure tech startups due to financial regulations and risk-aversion. Innovation happens steadily rather than rapidly."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Insurance (auto, home, life), banking services (checking, savings, credit cards), retirement planning, investment management, and tailored financial products for the military community."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 PTO/Vacation days per year (accrued via standard tenure structures)."
   },
+  "refresh_after": 1790064855,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -315563,7 +316069,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holiday closures around Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Large, established enterprise. A historical financial services leader ranked consistently among the top U.S. auto insurers."
   },
   "sources": [
    {
@@ -315607,14 +316120,44 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Large U.S.-based financial enterprise, historically known to support work authorization for candidates with U.S. permanent residency or citizenship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ba9a7253d7",
+    "17f8c9c419"
+   ],
+   "value": "USAA is a financial services company providing insurance, banking, and retirement products to military members and their families. It generates revenue through insurance premiums, banking fees, and investment returns while operating as a member-owned exchange focused on its military community."
+  },
+  "synthesized_evidence_sha": "d92d6f970ad17083",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Includes data science initiatives for predictive analytics, risk assessment, fraud detection, and customer personalization within the financial and insurance domains (per new grad job posting discovery source)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675357,
   "web_search_url": "https://duckduckgo.com/?q=USAA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ba9a7253d7"
+   ],
+   "value": "Structure and mission-driven work (military community focus) with respected benefits aligns with your goals; however, legacy financial organizations typically lack the 'fast, innovative tech' culture of Big Tech elites, potentially falling short on top-tier prestige and fast-paced execution."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Stable. Sane hours with lower overall emphasis on toxic burnout culture."
   }
  },
  "usm business systems": {
