@@ -28248,7 +28248,7 @@
    "value": "Estimated: Tier 1 (Elite AI/Prestige) due to deep focus on cutting-edge perception, autonomy frameworks, and multi-domain collaborative AI."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -28299,7 +28299,7 @@
    ],
    "value": "Candidates must demonstrate mastery of C++ and autonomy frameworks, but they should also evaluate if the 5-day in-office mandate and fast-paced scale-up culture fit their strict boundary requirements against toxic burnout and their desire for sane hours."
   },
-  "last_attempt_at": 1784920630,
+  "last_attempt_at": 1784922475,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "high",
@@ -28340,7 +28340,7 @@
    "value": "Estimated: 15 to 20 days of standard PTO supported by wellness benefits."
   },
   "refresh_after": 1790099802,
-  "retry_after": 1784921110,
+  "retry_after": 1784923435,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -51892,46 +51892,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a",
+    "dbc3b9e88f"
    ],
-   "value": "Estimated: Tier 2. While quant trading is highly technical and prestigious, this firm seems heavily focused on low-latency systems engineering rather than pure AI or data science models."
+   "value": "Estimated: Tier 2/3. As a specialized boutique market maker, it likely offers strong domain-specific prestige and high pay, though it lacks the broad brand recognition of top-tier multi-strat hedge funds or tech giants."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "2baf624b05",
-    "ba3923c8c0"
+    "4865bdd00a",
+    "2baf624b05"
    ],
-   "value": "Proprietary trading firm that generates revenue through market making and capturing the bid-ask spread in the options market."
+   "value": "Acting as an industry-leading market maker to profit from the spread and liquidity provision in the treasury options space."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a"
    ],
-   "value": "Deeply collaborative, ambitious, and ownership-driven. Valued by those energized by building systems from the ground up with a direct impact on trading outcomes."
+   "value": "Intense and mission-driven, rooted in a pursuit of trading excellence and a passion for cutting-edge quantitative finance."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "2baf624b05",
-    "ba3923c8c0"
+    "4865bdd00a",
+    "2baf624b05"
    ],
-   "value": "Institutional participants, broker-dealers, and other market participants in the financial options ecosystem."
+   "value": "Institutional participants in the financial markets requiring liquidity for treasury options trading."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0",
+    "4865bdd00a",
     "dbc3b9e88f"
    ],
-   "value": "Estimated: $150,000 - $250,000+ base. As an elite quant market maker, new grad tech pay likely features a high base salary plus significant performance bonuses."
+   "value": "Estimated: $150K - $250K+ total comp. Boutique market makers typically offer highly competitive new grad packages to attract top quant talent, heavily weighted on performance bonuses."
   },
   "evidence_sha": "8eb06b01d8a37e4d",
-  "generated_at": 1784693514,
+  "generated_at": 1784922475,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -51940,78 +51941,83 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2baf624b05",
-    "ba3923c8c0"
-   ],
-   "value": "Financial Services / Proprietary Trading"
-  },
-  "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
-    "ba3923c8c0",
+    "4865bdd00a",
     "2baf624b05"
    ],
-   "value": "Probe deeply into their actual work hours, on-call expectations, and uncompensated overtime to ensure the environment respects personal time. Ask about their technical mentorship structure and how they balance aggressive low-latency system shipping with supportive, sustainable team practices."
+   "value": "Financial Services / Quantitative Trading"
   },
-  "last_attempt_at": 1784920449,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4865bdd00a"
+   ],
+   "value": "Probe deeply into the day-to-day pace and work-life balance to ensure the 'pursuit of excellence' does not translate into a toxic or high-burnout environment lacking guaranteed shutdowns. Ask questions about the team's structure to confirm it maintains a fast, innovative tech culture rather than slow bureaucracy, and seek evidence that personal time is genuinely respected while still accelerating your technical career growth."
+  },
+  "last_attempt_at": 1784922475,
   "last_evidence_at": 1784919313,
   "locations": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a"
    ],
-   "value": "Chicago-based, with remote work supported."
+   "value": "Estimated: Likely headquartered in a major financial hub (e.g., Chicago or New York), though specific office locations were not detailed in the available sources."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a"
    ],
-   "value": "To build a leading market-making initiative in the treasury options space through industry-leading technology, custom hardware, and a deeply collaborative culture."
+   "value": "Pursuing excellence in trading at the cutting edge of quantitative finance."
   },
   "name": "BlackEdge Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a"
    ],
-   "value": "Estimated: Extremely fast-paced. The firm explicitly states it is early-stage and focused on the intersection of low-level systems and custom hardware where nanoseconds matter."
+   "value": "Estimated: Fast-paced and innovative. The firm emphasizes a desire to work at the cutting edge of quant finance and actively pursues excellence in a highly competitive market-making space."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "2baf624b05",
-    "ba3923c8c0"
+    "4865bdd00a",
+    "2baf624b05"
    ],
-   "value": "Industry-leading proprietary trading systems and market-making services specifically focused on treasury options."
+   "value": "Quantitative financial services, specifically market making in treasury options."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days. Standard for boutique quant trading firms, though not explicitly stated."
+   "source_ids": [
+    "4865bdd00a"
+   ],
+   "value": "Estimated: 15-20 days. Standard for boutique financial firms, though specific PTO policies are not listed in public sources."
   },
-  "refresh_after": 1789877514,
-  "retry_after": 1784921409,
+  "refresh_after": 1790106475,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "4865bdd00a",
+    "2baf624b05"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "2baf624b05"
+    "4865bdd00a"
    ],
-   "value": "Estimated: Likely market holidays only. No explicit mention of guaranteed firm-wide shutdowns like those seen in big tech."
+   "value": "Estimated: Likely standard market holidays. There is no mention of guaranteed firm-wide shutdowns outside of standard market closures."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0"
+    "dbc3b9e88f",
+    "4865bdd00a"
    ],
-   "value": "An early-stage, focused, and ambitious initiative where employees have real ownership and the chance to shape systems from the ground up."
+   "value": "Estimated: A boutique quantitative trading firm, likely early-to-mid stage with a highly specialized focus, actively recruiting new graduate talent."
   },
   "sources": [
    {
@@ -52076,44 +52082,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "2baf624b05",
-    "ba3923c8c0"
+    "dbc3b9e88f"
    ],
-   "value": "BlackEdge Capital is a proprietary options market maker primarily operating in the treasury options space. The firm makes money by providing liquidity to financial markets, earning profits from the spread between buy and sell orders and capitalizing on market inefficiencies."
+   "value": "Estimated: Unknown sponsorship specifics for new grads, though the firm actively surfaces roles on broad new-grad job boards."
   },
-  "synthesized_evidence_sha": "9e6d63998c3684f1",
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4865bdd00a",
+    "2baf624b05"
+   ],
+   "value": "BlackEdge Capital is an industry-leading market maker operating in the treasury options space of quantitative finance. The firm makes money by providing liquidity and capturing spreads through the cutting-edge quantitative trading of treasury options."
+  },
+  "synthesized_evidence_sha": "8eb06b01d8a37e4d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a",
+    "2baf624b05"
    ],
-   "value": "High-performance, low-latency systems programming, custom hardware optimization, and applied research. Heavy emphasis on low-level systems where every nanosecond on the path from signal to order matters."
+   "value": "Working at the cutting edge of quantitative finance, involving algorithmic trading, market making systems, and quantitative development for treasury options."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784692850,
   "web_search_url": "https://duckduckgo.com/?q=BlackEdge+Capital+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "ba3923c8c0",
+    "4865bdd00a",
     "2baf624b05"
    ],
-   "value": "Matches your desire for a fast, innovative tech culture without bureaucracy, allowing you to claim real ownership over core systems. While it promises high prestige and strong new-grad compensation typical of elite quant firms, you must carefully evaluate if the aggressive low-latency trading environment and early-stage scaling pressure conflict with your need for sane hours and a low-burnout work-life balance."
+   "value": "As a specialized quant firm, BlackEdge offers the elite prestige, high new-grad pay, and fast-paced innovative tech culture you desire, free from the slow bureaucracy of larger institutions. Its explicit pursuit of 'excellence in trading' suggests a mission-driven environment that accelerates technical learning, though you should verify if its market-making culture aligns with your requirement for guaranteed shutdowns and sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "ba3923c8c0"
+    "4865bdd00a",
+    "2baf624b05"
    ],
-   "value": "Estimated: Medium. The company states it has a deeply collaborative culture, but the early-stage nature and high-frequency trading focus typically demand high intensity."
+   "value": "Estimated: Moderate to Low. While the firm highlights a culture of excellence, boutique market-making firms typically require intense focus and rapid response to market hours. Guaranteed shutdowns are unconfirmed."
   }
  },
  "blackhawk network": {
