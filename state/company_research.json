@@ -35796,37 +35796,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate. It is highly respected in healthcare and life sciences, but as a legacy medical device manufacturer, it does not hold elite prestige in the pure AI/data science tech space."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and stable, prioritizing patient impact and steady, process-oriented work over fast-paced technical disruption."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000. Large legacy medical companies typically offer stable but non-elite new-grad compensation compared to top-tier tech firms."
   },
   "evidence_sha": "abf91ea951e10167",
+  "generated_at": 1784873059,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Medical Devices and Healthcare Equipment"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should clarify the exact WLB expectations, growth velocity, and compensation limits to ensure the role meets their standards for avoiding bureaucracy while balancing technical learning with guaranteed shutdowns."
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784847053,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Headquartered in Franklin Lakes, New Jersey, USA."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "BD",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Estimated: Slower, process-driven pace typical of a large legacy healthcare corporation, which may lean toward bureaucracy rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Estimated: 15-25 days of Paid Time Off, including all required State leaves, as stated in the benefits package."
   },
+  "refresh_after": 1790057059,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -35837,6 +35887,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Large, established corporation with over 10,001 employees, founded in 1897."
   },
   "sources": [
    {
@@ -35880,14 +35937,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=3d214277d51394cff7250aafeaf3b06e3433bfa6181ec6da946ef0bb00aafe3fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9teXBpa3Bhay5jb20vcy9WTzdPaXlwZDN2bWk3VW5Dc2wxV3ZNTDdvMQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "BD has a track record of offering H1B sponsorships."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "BD (Becton, Dickinson and Company) is a global medical technology company that develops and sells medical devices, laboratory equipment, and diagnostic products. It makes money by supplying these critical healthcare products to hospitals, labs, and clinical settings worldwide."
+  },
+  "synthesized_evidence_sha": "abf91ea951e10167",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "daa1337f8d"
+   ],
+   "value": "Roles such as Commercial Analytics Engineer and Business Decision Intelligence focus on analyzing healthcare data and building models to drive commercial and operational decisions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674624,
   "web_search_url": "https://duckduckgo.com/?q=BD+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role fits a candidate seeking mission-driven work in a stable, non-toxic environment with sane hours, but the large corporate size (10,000+ employees, founded 1897) suggests a slower pace and likely lower new-grad tech pay compared to top-tier elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Healthcare manufacturing generally respects standard hours and avoids the toxic burnout culture of high-speed tech, offering the personal time the candidate desires."
   }
  },
  "bdo canada": {
@@ -59162,11 +59246,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59178,6 +59264,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784742766,
   "name": "Charles Schwab",
   "pace_of_work": {
@@ -59190,6 +59277,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873179,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59263,7 +59351,7 @@
     "url": "https://jobright.ai/jobs/info/6a60d622193c4d692385fbb0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784742766,
   "web_search_url": "https://duckduckgo.com/?q=Charles+Schwab+company+careers+benefits",
@@ -79603,37 +79691,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier unknown; not enough public information to assess prestige relative to top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Business model not disclosed in available sources; presumed B2B data/AI services or platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Culture not described in sources; investigate transparency, blameless postmortems, and learning budget during conversations."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Customer base unknown from available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad total compensation likely $130k–$180k (base + equity + bonus) for AI/data roles in current market; verify offer details."
   },
   "evidence_sha": "8e53e5ba5522cff0",
+  "generated_at": 1784873059,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Data Science / Analytics"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Prepare for standard new-grad data science/AI interviews: coding (Python/SQL), ML fundamentals, statistics, and system design for data pipelines. Ask directly about team velocity, on-call expectations, shutdown policies, mentorship structure, and concrete new-grad compensation bands to assess alignment with your priorities."
+  },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784848351,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Office locations not found in research; may be remote-friendly or US-based given hiring source."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission statement not found in research."
+  },
   "name": "DataMap",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Pace unknown; candidate should probe for sprint cadence, release frequency, and overtime norms during interviews."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No product information available from supplied sources; likely a data/AI-focused company given the name."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: PTO policy not found; typical US tech new-grad offers range 15–20 days plus holidays—confirm with recruiter."
   },
+  "refresh_after": 1790057059,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79643,7 +79775,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns not documented; ask if annual winter break or mandatory recharge periods exist."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Stage and headcount not found in research; appears in new-grad hiring lists suggesting early-to-growth stage."
   },
   "sources": [
    {
@@ -79687,14 +79824,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "DataMap appears to be a technology company listed in new graduate software engineering hiring pipelines, but the provided sources contain only redirect links and a GitHub discovery reference without substantive company details."
+  },
+  "synthesized_evidence_sha": "8e53e5ba5522cff0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technical focus likely involves data engineering, ML/AI, or analytics given company name; specifics not found."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848351,
   "web_search_url": "https://duckduckgo.com/?q=DataMap+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This role surfaces in curated new-grad hiring lists, suggesting active recruitment of early-career AI/data talent. The candidate prioritizes elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with sane hours, and accelerated technical growth without burnout—all factors to verify directly with DataMap given the lack of public detail."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance not documented; ask about core hours, weekend work, and guaranteed shutdown policies."
   }
  },
  "datavisor": {
@@ -80052,11 +80214,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80068,6 +80232,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784768808,
   "name": "DaVita Kidney Care",
   "pace_of_work": {
@@ -80080,6 +80245,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873179,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80143,7 +80309,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=651883db804311a2b740b3a7a499b246947c92512d4461773c7a9ae478384939JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGFWaXRh&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583401,
   "web_search_url": "https://duckduckgo.com/?q=DaVita+Kidney+Care+company+careers+benefits",
@@ -87419,11 +87585,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87435,6 +87603,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784679541,
   "name": "Duke Energy",
   "pace_of_work": {
@@ -87447,6 +87616,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873179,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87490,7 +87660,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa58ac8d95bb906ba8d5d8c0fb561a6bfd61448224d8ceccc0a100878b538f34JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly9kdWtlLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Duke+Energy+company+careers+benefits",
@@ -104686,37 +104856,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier – no AI/data science research, publications, or conference presence found for Flash Group."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture artifacts (values pages, team blogs, retreat notes) located in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data (Levels.fyi, Glassdoor, offer letters) for Flash Group new grads."
   },
   "evidence_sha": "0b3cbd614762d133",
+  "generated_at": 1784873059,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "230597b703",
+    "7f2a0300f5",
+    "c67b2a33e0"
+   ],
+   "value": "Unclear. Sources reference obsolete browser plugin (Adobe Flash) and a TV series; no industry classification for Flash Group itself."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "With no public technical blog, engineering brand, or process details, prepare for standard LeetCode-style algorithms and system design. Ask directly about AI/ML project scope, mentorship structure, on-call expectations, and shutdown policies."
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784871651,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Flash Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no employee reviews, engineering blogs, or process descriptions available."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "230597b703",
+    "7f2a0300f5",
+    "c67b2a33e0"
+   ],
+   "value": "No credible product information for Flash Group found in sources. Sources discuss Adobe Flash Player (end-of-life) and The Flash TV series, not a company called Flash Group."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy documented publicly."
   },
+  "refresh_after": 1790057059,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104726,7 +104946,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy found in research."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -104790,14 +105015,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=a2786363764aa5ff255ea6f36c09731335537d06cf3e3557f2d50a88e7f469d3JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWRvYmVfRmxhc2g&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d",
+    "230597b703",
+    "7f2a0300f5"
+   ],
+   "value": "Flash Group appears in a 2026 new-grad software engineer hiring list, but the supplied sources only reference Adobe Flash Player (discontinued) and The Flash TV series. No verifiable public information describes Flash Group's current products, revenue, or operations."
+  },
+  "synthesized_evidence_sha": "0b3cbd614762d133",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Listed in a 2026 new-grad software engineer hiring list, suggesting software engineering roles exist. No details on stack, AI/data science, or infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784871651,
   "web_search_url": "https://duckduckgo.com/?q=Flash+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige, high new-grad pay, fast innovation culture, strong work-life balance with guaranteed shutdowns, and accelerated growth without burnout. Flash Group's actual alignment is unverifiable due to lack of public data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data, Glassdoor ratings, or policy disclosures found."
   }
  },
  "flashpoint": {
@@ -221072,48 +221324,125 @@
  "quantum research international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: Tier 3 (Niche Defense Tech). Lacks the commercial prestige of top-tier AI labs, but offers specialized mission-driven AI application."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Contract-based services and technical consulting, primarily securing government and defense sector contracts to deploy specialized technical talent."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: Mission-driven, structured, and compliance-focused."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Government and defense sector clients operating in high-stakes environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Below top-tier commercial tech pay, but competitive for the defense sector."
   },
   "evidence_sha": "ef7d4ba6d2a34718",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873059,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Defense and Space Manufacturing / Government Technical Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Probe their tech stack deployment speed, work-life balance expectations, and exactly how much red tape exists around model deployment. Ask about advancement timelines to ensure it accelerates your learning without sacrificing personal time."
+  },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784848353,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Not explicitly stated in provided sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "To research and integrate advanced technical solutions, such as AI and predictive modeling, to generate actionable insights in high-stakes defense contexts."
+  },
   "name": "Quantum Research International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: Moderate to slow. Defense environments heavily prioritize compliance, security clearances, and protocol, often resulting in a more deliberate, bureaucratic pace rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Data science solutions, predictive models, and LLM-based integrations for cyber and cloud environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: 15-20 days of PTO, standard for government contractors, alongside federal holidays."
   },
+  "refresh_after": 1790057059,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d6c2567756"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: No guaranteed shutdowns, though federal holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Not explicitly stated in provided sources, but operates at a scale capable of supporting high-stakes defense contracts."
   },
   "sources": [
    {
@@ -221167,14 +221496,46 @@
     "url": "https://jobright.ai/jobs/info/6a623bfed5caab4af8bac98c?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Not explicitly stated in provided sources, though defense environments typically require domestic citizenship or clearances."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d6c2567756",
+    "4ea7dbf1c7"
+   ],
+   "value": "Quantum Research International (QRI) is a defense-focused research and engineering firm that provides high-stakes technical solutions, such as predictive models and LLM-based data processing, for government applications. The company makes money by securing defense contracts and deploying specialized technical talent to solve complex data and cyber challenges."
+  },
+  "synthesized_evidence_sha": "ef7d4ba6d2a34718",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Developing and integrating predictive models and LLM-based solutions using Python, R, TensorFlow, PyTorch, and Scikit-learn."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848353,
   "web_search_url": "https://duckduckgo.com/?q=Quantum+Research+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "As a defense contractor, the culture may lean toward mission-driven impact and stable hours rather than the fast-paced, high-paying tech culture of elite commercial AI startups. The work will accelerate technical learning in secure environments, but bureaucracy and lower new-grad pay might contrast with your goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d6c2567756"
+   ],
+   "value": "Estimated: Good. Defense contractors typically avoid the toxic burnout culture of commercial tech, offering stable, sane hours."
   }
  },
  "quera computing": {
@@ -268958,37 +269319,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Regional tier. Highly respected academic institution, but AI/DS research lacks the industry prestige of top-tier tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f1e4f3bd8d"
+   ],
+   "value": "Public university funded by state appropriations, tuition, federal research grants, and endowment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f52f695c6c"
+   ],
+   "value": "Traditional academic environment with strong Aggie Network camaraderie and conservative institutional culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f52f695c6c"
+   ],
+   "value": "Undergraduate and graduate students, academic researchers, government agencies, and the state of Texas."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $85,000 for junior research staff or postdocs, below new-grad tech roles."
   },
   "evidence_sha": "b1f84915cb096765",
+  "generated_at": 1784873059,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f1e4f3bd8d"
+   ],
+   "value": "Higher Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss how you handle slower bureaucratic research timelines and whether the academic mission and predictable hours outweigh the lack of elite tech pay."
   },
+  "last_attempt_at": 1784873059,
   "last_evidence_at": 1784674531,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f52f695c6c"
+   ],
+   "value": "College Station, Texas, with additional branches and centers across the state."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f1e4f3bd8d"
+   ],
+   "value": "To provide comprehensive, high-quality educational programs, conduct cutting-edge research, and serve the public through outreach and engagement."
+  },
   "name": "Texas A&M University - College Station",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow. Academic bureaucracy and committee-driven processes dominate."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f52f695c6c",
+    "9d9deda267"
+   ],
+   "value": "Higher education degrees, academic research publications, and public service programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days vacation plus state holidays, but flexibility depends heavily on the specific lab and PI."
   },
+  "refresh_after": 1790057059,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268998,7 +269416,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University typically observes holidays and sometimes offers administrative days off between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f52f695c6c"
+   ],
+   "value": "Very large public institution with tens of thousands of employees and a massive student body."
   },
   "sources": [
    {
@@ -269032,14 +269457,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=6950546ce6ecc2bd0993b5c48aafc767df9c31c8e3efc4285f33e5244a5d6109JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGV4YXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f1e4f3bd8d"
+   ],
+   "value": "Estimated: Likely limited H-1B sponsorship for staff roles, but J-1 visas are common for international researchers and postdocs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f52f695c6c",
+    "f1e4f3bd8d"
+   ],
+   "value": "Texas A&M University is a public land-grant research university and the flagship institution of the Texas A&M University System. As a public educational institution, it generates revenue through state appropriations, student tuition, research grants, and private donations."
+  },
+  "synthesized_evidence_sha": "b1f84915cb096765",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f52f695c6c"
+   ],
+   "value": "Academic research in AI, data science, and engineering, typically involving Python, TensorFlow, PyTorch, and HPC clusters."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674531,
   "web_search_url": "https://duckduckgo.com/?q=Texas+A%26M+University+-+College+Station+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Academia moves at a slower, bureaucratic pace which conflicts with a desire for fast tech culture, but it offers guaranteed academic shutdowns and a highly mission-driven environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Sane hours compared to tech, but grant deadlines can cause spikes in workload."
   }
  },
  "texas a m university system": {
