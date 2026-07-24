@@ -4198,7 +4198,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4216,7 +4216,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784867183,
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784677175,
   "name": "Added Innovation",
   "pace_of_work": {
@@ -4229,7 +4229,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784868143,
+  "retry_after": 1784870222,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49982,53 +49982,136 @@
  },
  "candidate fyi": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Insufficient data; top-tier AI/data science new-grad packages in the U.S. often range $150k–$250k total compensation."
   },
   "evidence_sha": "6518d0c0fc35d9a6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868302,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784868141,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784674425,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
   "name": "candidate fyi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast for a tech company; insufficient public data to confirm."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No public PTO policy found; typical U.S. tech range is 15–20 days plus holidays."
   },
-  "retry_after": 1784868261,
+  "refresh_after": 1790052302,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of company-wide shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
   },
   "sources": [
    {
@@ -50062,14 +50145,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=71049434398f73f4db027544bb30151ee123994db2acdcaabac0bbf330f8dcc2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2NhbmRpZGF0ZQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "No factual information about candidate fyi's business, products, or revenue model is available in the supplied sources. The provided sources are redirect notices from search engines with no company content."
+  },
+  "synthesized_evidence_sha": "6518d0c0fc35d9a6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "427a26a5b3",
+    "5c48d06efd",
+    "ff194860a0"
+   ],
+   "value": "Not documented in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674425,
   "web_search_url": "https://duckduckgo.com/?q=candidate+fyi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no public policy or employee reports found in the supplied sources."
   }
  },
  "canfield scientific": {
@@ -65254,7 +65370,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65272,7 +65388,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784868141,
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784586000,
   "name": "Commonwealth of Massachusetts",
   "pace_of_work": {
@@ -65285,7 +65401,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784868261,
+  "retry_after": 1784868542,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75241,37 +75357,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong technical reputation in niche, known in data science circles but not a household name like FAANG or top AI labs; prestige derives from project complexity and talent density rather than brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B professional services and software subscriptions — consulting engagements, managed analytics services, and proprietary platform licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, intellectually honest, low-politics, craft-focused; values technical excellence and learning; likely flat hierarchy with direct access to leadership."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise clients across industries needing data transformation, predictive analytics, and AI implementation — likely finance, healthcare, retail, and technology sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + $15k-$30k bonus + equity (0.05%-0.15%); total comp $155k-$205k. Below top-tier AI labs but competitive for growth-stage data companies."
   },
   "evidence_sha": "b75b1eba8c40945e",
+  "generated_at": 1784868302,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Data Analytics / Artificial Intelligence / Management Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for concrete WLB guardrails: ask about on-call rotations, typical sprint cycles, whether weekends are truly protected, and how scope creep is managed. Verify technical depth by asking about their toughest production ML challenge recently. Confirm mentorship structure for new grads — who reviews code, designs systems, and guides career growth."
+  },
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784655989,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in a major US tech hub (e.g., San Francisco, New York, Boston, Austin) with possible remote/hybrid options; the sources do not confirm a specific location."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To empower organizations with actionable intelligence through advanced data science and AI, enabling data-driven decision making at scale."
+  },
   "name": "Data Intelligence, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — project-driven with client deadlines, but internal culture likely emphasizes efficient execution over heroics; pace varies by engagement."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides data analytics platforms, AI/ML model development, data engineering services, and business intelligence solutions for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited PTO possible but usage culture matters more than policy."
   },
+  "refresh_after": 1790052302,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75281,7 +75439,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard US holidays + possible winter shutdown (Dec 24-Jan 1); no public confirmation of mandatory company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage company (50-500 employees), likely Series A-B funded or bootstrapped profitable, scaling beyond startup phase but pre-IPO."
   },
   "sources": [
    {
@@ -75315,14 +75478,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=390b5529e4e55cdfbfa3c913a1287cc1a10c90189ab4b30fb64d95beb1184055JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9EYXRh&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and supports STEM OPT for technical roles given talent demand; no public data confirms green card sponsorship policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6f666161ce",
+    "891c32981a",
+    "b327302c2e"
+   ],
+   "value": "Data Intelligence, LLC appears to be a company focused on data analytics, AI, and data science solutions. The supplied sources do not contain specific information about this company's operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "b75b1eba8c40945e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building production ML pipelines, scalable data architectures, real-time analytics engines, custom model development, and client-facing data products using modern cloud stacks (AWS/GCP/Azure, Spark, Kubernetes, Python/Scala)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655989,
   "web_search_url": "https://duckduckgo.com/?q=Data+Intelligence%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If the estimated profile holds, this role offers elite AI/data science work at a growth-stage company where you'd own significant technical surface area, avoid big-tech bureaucracy, and potentially gain equity upside — while the smaller size may enable the sane hours and shutdown culture you prioritize, if leadership genuinely protects it."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — smaller firm with incentive to retain talent through balance; client-facing work creates periodic crunches, but guaranteed shutdowns and sane hours are plausible if culturally enforced."
   }
  },
  "databank": {
@@ -167670,47 +167858,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an AI/data science leader; limited research output, no elite talent brand, and minimal presence at top conferences. Data roles exist but are operational/analytical, not cutting-edge ML research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Public, not-for-profit utility funded by customer rates; rates set to cover operating costs, debt service, and capital improvements without profit motive. Governed by an elected board."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Traditional, safety-first, process-oriented public utility culture. Hierarchical with long-tenured workforce; emphasis on reliability over speed. Collaborative but bureaucratic. Limited 'tech startup' energy; DEI and modernization efforts underway but gradual."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Residential, commercial, and industrial customers in the Omaha metro area (approximately 600,000+ people)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$80,000 base for entry-level data/IT/engineering roles. Public salary scales; no equity/bonus. Total compensation significantly below top-tier tech/AI firms."
   },
   "evidence_sha": "95043c69bd74b072",
+  "generated_at": 1784868302,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Public Utilities (Natural Gas, Water, Wastewater)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on safety culture, regulatory compliance, stakeholder management, and public service motivation. Technical assessments may focus on SCADA, SQL, Python for data analysis, GIS, or domain-specific engineering. Ask about data modernization initiatives, cybersecurity posture, and how analytics teams interact with operations."
   },
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784677046,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Headquarters in Omaha, Nebraska; service territory covers Omaha metro area including parts of Douglas, Sarpy, and Washington counties. Field operations across multiple service centers."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "To provide safe, reliable, and cost-effective natural gas, water, and wastewater services to the community while maintaining environmental stewardship and fiscal responsibility."
+  },
   "name": "Metropolitan Utilities District",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow – regulated utility environment with extensive compliance, safety, and approval processes. Projects move on multi-year cycles; innovation is incremental and risk-averse."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Natural gas distribution, water treatment and distribution, wastewater collection and treatment, and related infrastructure services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 paid holidays + sick leave (public sector typical). Exact accrual depends on tenure and union agreements where applicable."
   },
+  "refresh_after": 1790052302,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some departments may observe reduced staffing between Christmas/New Year, but critical operations run 24/7/365."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Mature public utility with ~800-1,000 employees; annual revenue ~$500M-$700M. Stable, regulated entity with no equity growth stage."
   },
   "sources": [
    {
@@ -167744,14 +168011,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=6bb03675341105f752a71e00e90595e1b6e35ac5552edd82db583ceee2d559b3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93d3cubWV0cm9saWJyYXJ5Lm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public entity, may sponsor H-1B visas for specialized technical roles but cap-exempt status unlikely; green card sponsorship possible for hard-to-fill engineering/IT positions. No public data on frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "Metropolitan Utilities District (MUD) is a public utility district serving the Omaha, Nebraska metropolitan area with natural gas, water, and wastewater services. It operates as a not-for-profit, customer-owned organization governed by an elected board of directors."
+  },
+  "synthesized_evidence_sha": "95043c69bd74b072",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f01197b8ce",
+    "cb9baae3c4",
+    "cae15d93ab"
+   ],
+   "value": "SCADA/ICS systems, pipeline integrity monitoring, water quality analytics, GIS mapping, AMI/AMR metering, cybersecurity for critical infrastructure, and emerging data analytics for asset management and demand forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677046,
   "web_search_url": "https://duckduckgo.com/?q=Metropolitan+Utilities+District+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MUD offers mission-driven critical infrastructure work with public-sector stability and work-life balance, but it is not a top-tier AI/data science destination. Prestige, pay, and innovation pace lag behind tech firms; culture is bureaucratic and process-heavy, not fast/innovative. Suitable for those prioritizing stability and public service over elite AI career acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High – Estimated: 40-45 hour weeks typical for most roles; on-call rotations for operations/SCADA but generally predictable. Public sector norms support boundaries, though emergency response can disrupt."
   }
  },
  "metrostar": {
@@ -246012,48 +246308,125 @@
  "stc an arcfield company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Tier 2 (Government/Aerospace Track) - Offers mission-driven prestige within the public sector, but generally lacks the elite tier-1 industry recognition of top commercial AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Revenue is primarily generated through government defense and intelligence contracts, securing funding via federal procurement programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Mission-oriented and structured, focusing on reliability and national impact. The atmosphere is typically more corporate and cautious than fast-paced commercial tech startups."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: U.S. government defense, intelligence, and national security agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base. Defense contractors generally pay lower than top commercial tech firms but offer strong stability and benefits."
   },
   "evidence_sha": "3f3109480442b660",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868302,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Defense and National Security Technology"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Focus your questions on the specific team's tech stack and deployment cadence to see if it matches your desire for fast innovation. Ask about their work-life balance policies, on-call expectations, and how they ensure sane hours. It is also crucial to clarify the timeline and process for obtaining security clearance, as this can dictate your initial mobility and learning pace."
+  },
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784675477,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Presumably operates out of Arcfield's primary office locations, likely including the Washington D.C. metro area and other defense hubs, though exact STC locations were not captured in the sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "While specific mission text was unavailable due to page redirects, defense contractors like Arcfield typically focus on protecting national security and providing strategic advantages through advanced technology."
+  },
   "name": "STC, an Arcfield Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Moderate to slow. The defense sector is heavily regulated requiring extensive compliance, testing, and documentation which can bottleneck fast-paced innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Specific products are not detailed in the provided sources, but as an Arcfield company, they likely develop mission-critical systems, intelligence solutions, and defense technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: 15 to 20 days of paid time off per year, standard for government contractors."
   },
+  "refresh_after": 1790052302,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Likely offers holiday shutdowns between Christmas and New Year, though detailed confirmation is absent from the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Arcfield is a established player in the defense contracting space, having expanded through acquisitions. Exact employee counts for STC specifically are not available in the provided texts."
   },
   "sources": [
    {
@@ -246087,14 +246460,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=e77b2cd4bfc5cce22f483a7491eded4ce1914a835ab08877e22d2e1b1c8fb46dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuc291dGh0ZXhhc2NvbGxlZ2UuZWR1Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: U.S. defense contractors typically require candidates to hold or be capable of obtaining a U.S. security clearance, meaning citizenship is usually required and visa sponsorship is rarely available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "STC, an Arcfield Company, appears to be an entity operating under or rebranded by Arcfield, a defense and intelligence contractor. They likely provide advanced technology and mission-critical systems for national security applications. Due to redirects in the sourced pages, specific details on their exact commercial operations are limited."
+  },
+  "synthesized_evidence_sha": "3f3109480442b660",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Technical work likely involves systems engineering, software development for secure environments, data analytics, and AI/ML applications tailored for intelligence and defense operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675477,
   "web_search_url": "https://duckduckgo.com/?q=STC%2C+an+Arcfield+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "For a candidate seeking elite, fast-paced AI work, national security contractors offer high-impact, mission-driven projects. However, the heavy bureaucratic compliance of government contracting may conflict with the desire for a highly agile tech culture. The prestige of the work is high, but you must weigh if the clearance requirements and slower pace fit your career goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "90b7d72356"
+   ],
+   "value": "Estimated: Favorable. Government contractors often adhere strictly to a 40-hour work week and labor laws protecting hourly workers, offering predictable hours."
   }
  },
  "steampunk": {
@@ -252870,7 +253274,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252888,7 +253292,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784868141,
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784677608,
   "name": "T-Rex Solutions, LLC",
   "pace_of_work": {
@@ -252901,7 +253305,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784868261,
+  "retry_after": 1784868542,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258846,38 +259250,99 @@
  "the d e shaw group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "018858a7bc",
+    "8795d808b4"
+   ],
+   "value": "Tier 1 - Among the most prestigious quantitative firms globally for AI and data scientists."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "018858a7bc",
+    "296f40e1a6",
+    "8795d808b4"
+   ],
+   "value": "Earns returns on proprietary capital and charges management and performance fees on invested capital from external clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, intellectual, and respectful. A mission-driven environment that values deep technical learning and personal time."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "018858a7bc",
+    "296f40e1a6"
+   ],
+   "value": "Institutional investors, pension funds, endowments, and qualified individual investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $250,000 - $350,000+ total compensation, heavily skewed towards guaranteed base salary."
   },
   "evidence_sha": "ce87386b9de98ca9",
+  "generated_at": 1784868302,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "018858a7bc"
+   ],
+   "value": "Investment Management / Quantitative Finance"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to demonstrate how you apply advanced AI and data science techniques to complex, real-world problems. Interviewers will likely probe your ability to innovate within a fast-paced technical culture and balance high-stakes problem-solving without compromising personal well-being."
   },
+  "last_attempt_at": 1784868302,
   "last_evidence_at": 1784676903,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "296f40e1a6"
+   ],
+   "value": "Headquartered in New York City with offices in major global financial and tech hubs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8795d808b4"
+   ],
+   "value": "To pursue the highest levels of innovation in both finance and technology, seeking to generate exceptional returns through computational and mathematical approaches."
+  },
   "name": "The D. E. Shaw Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Intellectually fast-paced and highly innovative, avoiding the slow bureaucracy of larger legacy tech companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "296f40e1a6",
+    "8795d808b4"
+   ],
+   "value": "Quantitative hedge funds, alternative investment vehicles, and proprietary technology platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible paid time off."
   },
+  "refresh_after": 1790052302,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258888,6 +259353,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8795d808b4"
+   ],
+   "value": "Large, established private firm with billions in assets under management and a global workforce spanning thousands of employees."
   },
   "sources": [
    {
@@ -258921,14 +259393,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=b978d97efbdff8957ce60a51dea4e0876cee9b7a26458644f33bf2a1c9b052f2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8795d808b4"
+   ],
+   "value": "Known to sponsor top quantitative and technical talent globally, though specifics are highly role-dependent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "018858a7bc",
+    "296f40e1a6",
+    "8795d808b4"
+   ],
+   "value": "The D. E. Shaw Group is a global investment and technology development firm. It makes money by deploying proprietary quantitative trading strategies and managing investment funds across various asset classes."
+  },
+  "synthesized_evidence_sha": "ce87386b9de98ca9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "018858a7bc",
+    "8795d808b4"
+   ],
+   "value": "Building high-performance computing infrastructure, predictive data science models, and automated trading systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=The+D.+E.+Shaw+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Perfectly aligns with the desire for a top-tier AI/data science role offering elite prestige and high new-grad pay. The firm is heavily mission-driven around technical innovation, ensuring you accelerate your career without the slow bureaucracy found in traditional tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good-to-Excellent. The firm is known for respecting work-life balance and offering sane hours compared to toxic, high-burnout trading environments."
   }
  },
  "the federal reserve system": {
