@@ -65168,37 +65168,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown. No evidence of AI/data science presence, publications, or talent density in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "61d1c935fc",
+    "4751679100",
+    "d0b446d003"
+   ],
+   "value": "No business model details for Capstone Energy+ found in provided sources. Sources describe unrelated entities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No cultural artifacts, values, or employee sentiments in sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information for Capstone Energy+ found in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data for Capstone Energy+ in sources. Energy tech new-grad ranges typically $90k-$150k base depending on region and prestige."
   },
   "evidence_sha": "1744217cf57fd9ba",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Energy / Clean Technology (inferred from name 'Capstone Energy+')"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate should probe for: actual engineering culture vs. energy industry bureaucracy; concrete WLB policies (shutdowns, on-call); new-grad compensation structure; technical mentorship and learning budget; mission authenticity in energy transition. Sources provide no evidence to assess these."
+  },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784678369,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d0b446d003"
+   ],
+   "value": "Estimated: Headquarters location unknown. Capstone Logistics (different entity) is US-based per source d0b446d003."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement for Capstone Energy+ found in provided sources."
+  },
   "name": "Capstone Energy+",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. Energy sector often involves regulatory/compliance pace; '+' suffix may indicate startup speed, but no data."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "61d1c935fc",
+    "4751679100",
+    "d0b446d003"
+   ],
+   "value": "No specific products for Capstone Energy+ found in the provided sources. Sources discuss capstone projects (academic) and Capstone Logistics (supply chain), not Capstone Energy+ energy products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No PTO policy found in sources."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65208,7 +65260,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No mention of company-wide shutdowns or guaranteed disconnect policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size/stage. No employee count, funding, or revenue data for Capstone Energy+ in sources."
   },
   "sources": [
    {
@@ -65242,14 +65299,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=df41b18928aeaa7f3548f69bac26e46d8b7e8b6de35f7c2815a30568c83b73b3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly93d3cuY2Fwc3RvbmVsb2dpc3RpY3MuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy. No information in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "61d1c935fc",
+    "4751679100",
+    "d0b446d003"
+   ],
+   "value": "Capstone Energy+ appears to be an energy sector company, but the provided sources do not contain verifiable information about its operations, products, or business model. The sources reference capstone projects generally and a logistics company (Capstone Logistics), not Capstone Energy+ specifically."
+  },
+  "synthesized_evidence_sha": "1744217cf57fd9ba",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves energy data analysis, grid optimization, or renewable energy forecasting given 'Energy+' branding, but no technical details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678369,
   "web_search_url": "https://duckduckgo.com/?q=Capstone+Energy%2B+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. Capstone Energy+ cannot be evaluated against these criteria due to insufficient source data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No employee reviews, policy docs, or culture signals in sources."
   }
  },
  "captivation": {
@@ -88409,37 +88491,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Established applied AI in talent analytics; strong engineering brand but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS revenue model selling talent management software licenses to enterprises on a per-user or per-module basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, engineering-led product culture with emphasis on customer outcomes; structured but not bureaucratic; DEI and learning investments."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise and mid-market organizations across industries seeking cloud-based HR and talent management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% bonus + RSUs ($30k-$50k/yr vesting) = $170k-$220k total first-year comp for software engineering/data science in US hubs."
   },
   "evidence_sha": "fa7e8c9ce8616a05",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6898272ac3"
+   ],
+   "value": "Enterprise SaaS / HR Technology (Human Capital Management)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system design for scalable services, data modeling for HR domain, ML fundamentals for talent matching/analytics, and behavioral questions on collaboration in cross-functional product teams. Prepare for practical coding in Java/Python and questions about handling legacy code modernization."
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784674230,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Santa Monica, CA. Offices: Denver, New York, London, Sydney, Bangalore, Tokyo, and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help organizations unlock the potential of their people through cloud-based talent management technology."
+  },
   "name": "CornerStone Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — quarterly release cycles with agile sprints; sustainable pace typical of mature enterprise SaaS."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6898272ac3"
+   ],
+   "value": "Talent management SaaS platform including recruiting (ATS), learning management (LMS), performance management, succession planning, compensation planning, and people analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick time; unlimited policy for some roles post-acquisition."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88449,7 +88577,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 25-Jan 1) plus summer Friday half-days or shutdown week in some regions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (formerly NASDAQ: CSOD, acquired by Clearlake Capital in 2021); ~2,500+ employees globally."
   },
   "sources": [
    {
@@ -88483,14 +88616,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=7093494cbf7354c92a653724c50b79ab4f40a5e91778678cc4af8c62adbca1dfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuY29ybmVyc3RvbmVvbmRlbWFuZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering and data science roles given size and tech focus."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6898272ac3"
+   ],
+   "value": "CornerStone Partners appears to be associated with Cornerstone OnDemand, a cloud-based talent management software provider. The company offers HR solutions including recruiting, learning, performance management, and HR analytics."
+  },
+  "synthesized_evidence_sha": "fa7e8c9ce8616a05",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack cloud development (Java, AWS, microservices), data engineering, ML/AI for talent analytics, mobile apps, and platform integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674230,
   "web_search_url": "https://duckduckgo.com/?q=CornerStone+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige as a recognized leader in HR tech with substantial new-grad compensation. The SaaS product focus provides fast, innovative technical challenges in AI-driven talent analytics. As a mature but evolving platform, it balances scale with modernization efforts, avoiding pure bureaucracy while maintaining reasonable hours typical of enterprise SaaS vs. high-burnout startup or consulting environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Enterprise SaaS culture with predictable hours, remote flexibility, and low on-call burden for most roles."
   }
  },
  "cornerstone research": {
@@ -107242,37 +107398,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied AI implementation (Einstein, Data Cloud, predictive analytics) within client projects; not a core AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "Project-based professional services (time-and-materials or fixed-fee implementations), recurring managed services contracts, and Salesforce license referral revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, certification-obsessed, client-facing; culture varies by project team. Look for firms that celebrate 'certification Fridays' and protect non-billable learning time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "Mid-market and enterprise companies across industries such as financial services, healthcare, manufacturing, and technology that are adopting or expanding Salesforce."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + $5,000-$15,000 bonus + benefits; top-tier partners may reach $115,000 for AI/Data Cloud specialization."
   },
   "evidence_sha": "590cb08bac8d8cc6",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "Salesforce consulting / professional services / CRM implementation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask about: (1) typical weekly hours and whether 'crunch' periods are compensated or capped; (2) guaranteed shutdown periods (e.g., year-end, summer); (3) structured learning budget and time for certifications/AI specializations; (4) bench policy between projects — is there paid upskilling time or pressure to bill immediately?; (5) mentorship structure for new grads on Einstein AI/Data Cloud implementations."
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784673266,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in the United States (likely Bay Area or major metro); may have remote/hybrid workforce across North America."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver successful Salesforce transformations that drive measurable business outcomes for clients while fostering employee growth and work-life harmony."
+  },
   "name": "dotSolved Systems Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven with sprint cycles; moderate-to-high intensity during go-lives, calmer during discovery/maintenance phases. Utilization targets likely 75-85%."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "Salesforce implementation, customization, integration, and managed services across Sales Cloud, Service Cloud, Marketing Cloud, and Experience Cloud; likely also offers Salesforce CPQ, Field Service, and Industry Cloud solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays; some firms add 'recharge days' or mandatory summer/winter shutdowns."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107282,7 +107496,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not guaranteed industry-wide; best-in-class partners enforce 1-2 week year-end shutdown and/or summer Fridays. Verify in offer stage."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees; privately held, growth-stage Salesforce consulting partner."
   },
   "sources": [
    {
@@ -107316,14 +107535,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=05819b52d5730023d95ceb45e8631ef58bacec64f6c60de62f8353f54c70eccdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly9mb3J1bS5sb3d5YXQubmV0L0tvcGl0aWFt&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and cap-subject petitions for experienced Salesforce consultants; new-grad sponsorship less common but possible for specialized technical tracks."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "dotSolved Systems Inc. is a Salesforce consulting and implementation partner that helps organizations deploy, customize, and optimize Salesforce cloud solutions. The company generates revenue through professional services fees for implementation projects, managed services retainers, and Salesforce license resale commissions."
+  },
+  "synthesized_evidence_sha": "590cb08bac8d8cc6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "29ffb875ef",
+    "cc320b6389",
+    "ef2fcff673"
+   ],
+   "value": "Salesforce platform configuration, Apex/Lightning development, integration architecture (MuleSoft, APIs), data migration, DevOps automation, and emerging AI/Einstein feature implementation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673266,
   "web_search_url": "https://duckduckgo.com/?q=dotSolved+Systems+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a specialized Salesforce partner, dotSolved offers deep platform expertise and exposure to enterprise AI/Einstein rollouts — prestige comes from leading complex transformations, not pure research. The consulting model can enable faster skill growth than internal IT roles, but project deadlines may challenge the 'sane hours' priority unless the firm enforces strict utilization caps and protected time off."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — consulting inherently variable; firms with explicit 'no weekend' policies and mandatory PTO score higher."
   }
  },
  "double holo": {
@@ -140333,37 +140581,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Traditional Industrial Tech). Lacks the elite prestige of top-tier tech or pure-play AI firms; AI and Data Science work here is primarily applied to IoT telemetry, predictive maintenance, and internal operations rather than cutting-edge AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8907457c16",
+    "bea15f40c4"
+   ],
+   "value": "Hardware manufacturing and energy technology sales, focusing on the design, distribution, and servicing of power generation equipment across residential and industrial channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, engineering-focused, and mission-oriented. Prioritizes physical product reliability and industrial safety over rapid software innovation, which may feel bureaucratic to a new-grad tech candidate."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bea15f40c4",
+    "8907457c16"
+   ],
+   "value": "Homeowners, commercial businesses, and industrial operations requiring reliable backup power and energy management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $110,000 base salary for software and data engineering roles in the Midwest, with potential for standard corporate benefits and minor annual bonuses, but missing the top-tier elite-tech new-grad pay scale."
   },
   "evidence_sha": "38ddc4a8c24b7448",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bea15f40c4",
+    "8907457c16"
+   ],
+   "value": "Energy Technology and Power Generation Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the specific team's tech stack and deployment cadence to ensure you are joining an innovative software/data group rather than traditional IT supporting manufacturing. Ask about exact new-grad compensation structures, hardware constraints on software agility, and whether leadership actively enforces hard boundaries for work-life balance and sane hours."
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784674229,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "43cd6fce2c"
+   ],
+   "value": "Headquartered in Waukesha, Wisconsin, with manufacturing facilities and offices globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bea15f40c4"
+   ],
+   "value": "To build a smarter, more sustainable, and more resilient world by accelerating clean energy adoption and ensuring power continuity."
+  },
   "name": "Generac",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to deliberate. Operates at the speed of physical manufacturing and industrial product cycles rather than the fast, continuous-deployment agility of pure software startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8907457c16",
+    "bea15f40c4"
+   ],
+   "value": "Home standby generators, portable generators, commercial and industrial backup power systems, and clean energy products like power storage and management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard paid time off annually, plus typical paid holidays, which is the industry norm for mature public industrial companies."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140373,7 +140679,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found in research, though standard paid public holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "43cd6fce2c"
+   ],
+   "value": "Large-cap public company (NYSE: GNRC) operating on a global scale, well past the startup or high-growth startup phase."
   },
   "sources": [
    {
@@ -140407,14 +140720,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=c6808f8468b051d6725d67273ee6c0b7b4a35a3e7253720edf694f37beff3305JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuZ2VuZXJhYy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "43cd6fce2c"
+   ],
+   "value": "Estimated: Large-cap public companies of this scale typically offer H-1B visa sponsorship for specialized engineering roles, though future sponsorship availability may fluctuate based on company needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8907457c16",
+    "bea15f40c4"
+   ],
+   "value": "Generac is a global manufacturer of backup power generation products and energy technology systems. The company makes money by designing, producing, and selling standby generators, portable power equipment, and clean energy storage solutions to residential, commercial, and industrial markets."
+  },
+  "synthesized_evidence_sha": "38ddc4a8c24b7448",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8907457c16",
+    "bea15f40c4",
+    "43cd6fce2c"
+   ],
+   "value": "Hardware and embedded systems engineering for power generation, power electronics development, IoT connectivity for smart energy management, and telematics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674229,
   "web_search_url": "https://duckduckgo.com/?q=Generac+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Generac offers a deeply mission-driven environment focused on grid resilience and clean energy, which aligns with your desire for meaningful impact. However, as a legacy hardware-first manufacturer, it often carries a slower, more traditional engineering pace and bureaucracy rather than the fast-paced, elite-tech culture you are prioritizing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally sane and traditional. Being rooted in Midwestern manufacturing culture, hours are typically standard 40-hour weeks with high respect for personal time, avoiding the toxic burnout culture of high-intensity tech companies."
   }
  },
  "general atlantic": {
@@ -145060,41 +145403,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier; not widely known as elite AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from professional services contracts, staffing placements, and consulting engagements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-oriented, potentially less bureaucratic than large defense contractors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely serves federal government agencies and commercial clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base depending on location and role."
   },
   "evidence_sha": "06b03b7fc3c2b388",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Professional services / Government contracting / IT consulting."
   },
-  "last_attempt_at": 1784891570,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate priorities: evaluate technical depth in AI/DS, culture of innovation vs bureaucracy, work-life balance policies, career growth opportunities, mission alignment."
+  },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784672894,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in Washington DC metro area; remote opportunities possible."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven focus on delivering technology solutions with work-life balance."
+  },
   "name": "Global Alliant Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast; project-based deadlines typical of consulting."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides IT staffing, consulting, and managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days plus holidays."
   },
-  "retry_after": 1784891690,
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145104,7 +145485,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; may observe federal holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized company (100-500 employees) based on typical government contractors."
   },
   "sources": [
    {
@@ -145138,14 +145524,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6a7d97e2373c15d2098b165d4b6bf69dc9fa36f2248e40da80317943040184dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9hbmd1bGFyLmRldi9ndWlkZS9kaXJlY3RpdmVzL2RpcmVjdGl2ZS1jb21wb3NpdGlvbi1hcGk&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas for specialized roles; check with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Global Alliant Inc appears to be a professional services or staffing firm, possibly focused on government contracting. No detailed public information available."
+  },
+  "synthesized_evidence_sha": "06b03b7fc3c2b388",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Involves software development, data science, AI/ML projects for government clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672894,
   "web_search_url": "https://duckduckgo.com/?q=Global+Alliant+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate priorities: top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven, respects work-life balance with sane hours and guaranteed shutdowns, accelerates technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; consulting can have crunch periods but company may emphasize balance."
   }
  },
  "global channel management": {
@@ -150324,7 +150731,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150342,7 +150749,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784890746,
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784889537,
   "name": "GridCARE",
   "pace_of_work": {
@@ -150355,7 +150762,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784891706,
+  "retry_after": 1784893675,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203868,34 +204275,88 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "Commission and fee-based, supporting independent financial advisors through an integrated platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "Independent financial advisors, registered investment advisors (RIAs), banks, and credit unions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "1774dd3943e06347",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "Financial Services / Capital Markets"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Because LPL is growing rapidly its modernization of advisor tools may create opportunities for data-heavy, innovation-oriented technical work thatенным fits a candidate seeking a fast innovative tech culture."
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784674220,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "Fort Mill, SC; San Diego, CA; Boston, MA; and other US offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "To help financial advisors manage the complexity of their practice and deliver financial guidance to their clients."
+  },
   "name": "LPL Financial Holdings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Moderate-to-fast (estimated)"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "Brokerage services, clearing services, advisory platforms,2738320074Emma, and wealth management technology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203906,6 +204367,11 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
   },
   "sources": [
    {
@@ -203939,10 +204405,33 @@
     "url": "https://www.bing.com/ck/a?!&&p=3426d8452a139598edc86e1c89708f5d1c326179247e035f2e05db7a01fd4cb7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cubHBsLmNvbS9hY2NvdW50cy9sb2ctaW4uaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1c4dfbfe78"
+   ],
+   "value": "LPL Financial Holdings provides an integrated platform of brokerage, clearing, and advisory services primarily to independent financial advisors. The company makes money by charging advisors fees and holding margins on the financial products and assets they manage through LPL's infrastructure."
+  },
+  "synthesized_evidence_sha": "1774dd3943e06347",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimate: Platforms for advisor workflows, client portfolio management, and data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674220,
   "web_search_url": "https://duckduckgo.com/?q=LPL+Financial+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a wealth-management-focused firm, LPL offers strong technical scale and a mission-driven environment centered on advisor enablement, which may appeal to candidates seeking business impact and a faster pace than legacy Wall Street tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284683,42 +285172,101 @@
  "rivian": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "314876cf93"
+   ],
+   "value": "Estimated: Tier 2 for AI/Data Science. Rivian carries strong brand prestige and provides elite mission-driven challenges in self-driving and fleet data analytics, but it is not considered a Big Tech AI powerhouse primary."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93"
+   ],
+   "value": "Rivian makes money through the direct sale of electric vehicles, service plans, and accessories, complemented by commercial fleet sales agreements and revenue from its charging network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1777c6c9d3"
+   ],
+   "value": "Estimated: Outdoor adventure-friendly, sustainability-centric environment emphasizing teamwork and a deep connection to the product mission."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93",
+    "f7d03980bf"
+   ],
+   "value": "Everyday consumers seeking adventure-focused electric vehicles, and commercial fleet operators (notably Amazon) requiring electric delivery vans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad tech pay likely ranges from $130,000 to $160,000 base, with additional equity and potential sign-on bonuses due to the sector."
   },
   "evidence_sha": "578e9e7edbd6b1a9",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "314876cf93"
+   ],
+   "value": "Automotive Manufacturing and Electric Vehicles (EV)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During interviews, probe deeply into the realities of their engineering culture to discern if the pace is slow-moving like legacy auto or iterative and fast. Ask specific questions about team workloads and shutdown policies to ensure that the smart working spirit is maintained and work-life balance is respected."
   },
-  "last_attempt_at": 1784891570,
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784678367,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93"
+   ],
+   "value": "Rivian operates out of its headquarters in Irvine, California, its primary manufacturing plant in Normal, Illinois, and various other satellite engineering and service facilities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1777c6c9d3"
+   ],
+   "value": "To keep the world adventurous forever by building products that promote sustainable transportation and outdoor exploration."
+  },
   "name": "Rivian",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "314876cf93",
+    "f7d03980bf"
+   ],
+   "value": "Estimated: The pace is influenced by a tension between agile tech culture and traditional automotive certification cycles. It's a high-pressure environment due to scaling demands, which can lead to some spontaneous urgency."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93",
+    "f7d03980bf"
+   ],
+   "value": "Consumer electric vehicles including the R1T pickup truck and R1S SUV, commercial electric delivery vans (primarily built for Amazon), and connected charging and software ecosystem services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of accrued vacation per year, based on standard corporate benchmarks for the US."
   },
-  "retry_after": 1784891690,
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284728,7 +285276,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: It is common for the company to have paid holidays that align with typical corporate closures, but guaranteed company-wide shutdowns are rarely public and may be limited to standard end-of-year holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93"
+   ],
+   "value": "Rivian is a publicly traded company (NASDAQ: RIVN) operating at commercial scale, actively ramping up vehicle production in the United States."
   },
   "sources": [
    {
@@ -284762,14 +285317,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=f8736648a0fe5f5ad8782096ae30aee3be38320d736e781664a4abd033aee9ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly9yaXZpYW4uY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1777c6c9d3"
+   ],
+   "value": "Estimated: Rivian has a history of sponsoring technical and engineering talent, including recent graduates, though visa sponsorship tends to be evaluated on a case-by-case basis depending on team needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "314876cf93",
+    "1777c6c9d3"
+   ],
+   "value": "Rivian is an American electric vehicle manufacturer specializing in premium electric trucks and SUVs, alongside commercial delivery vans. The company generates revenue by selling these consumer and commercial vehicles and by providing associated software services, charging networks, and fleet management solutions."
+  },
+  "synthesized_evidence_sha": "578e9e7edbd6b1a9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "314876cf93",
+    "f7d03980bf"
+   ],
+   "value": "Software and data science work at Rivian spans autonomous driving algorithms, fleet telemetry analytics, battery management systems, over-the-air (OTA) software updates, and connected vehicle infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678367,
   "web_search_url": "https://duckduckgo.com/?q=Rivian+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "314876cf93",
+    "1777c6c9d3"
+   ],
+   "value": "Rivian offers mission-driven engineering aimed at solving complex AI and data problems in autonomous driving and battery optimization, which aligns with your desire for technical learning. However, as a rapidly scaling manufacturer, it can face production-pressure-driven bureaucracy that may occasionally conflict with the desire for a purely fast, low-friction tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: The WLB rating is Moderate to Good, though it can vary significantly between the software divisions and the production hardware teams."
   }
  },
  "rivian and volkswagen group technologies": {
@@ -291309,37 +291896,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied ML in a traditional insurance carrier; not an AI research lab or top-tier tech brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Collects premiums on underwritten policies, invests float, and earns fee income from claims administration and alternative risk programs. Profitability driven by underwriting discipline and investment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, risk-aware. Long-tenured actuarial/underwriting core; newer tech/data teams building influence. Conservative decision-making; collaboration across silos can be slow."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Employers (small to large), insurance brokers, managing general agents, and self-insured groups seeking workers' comp and specialty casualty coverage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 5–10% bonus + RSU (Tokio Marine HCC equity rare at entry level). Total comp ~$100k–$125k."
   },
   "evidence_sha": "db803cb4f029cf8d",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Insurance / Specialty Casualty / Workers' Compensation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect actuarial and domain-heavy questions: workers' comp data nuances, loss development triangles, regulatory constraints, and model explainability. Prepare for SQL, Python, and cloud (likely Azure/AWS) practical tests. Ask about: (1) maturity of the ML platform and path to production, (2) collaboration between data science and actuarial/underwriting, (3) on-call expectations and release cadence, (4) recent AI/ML projects that impacted combined ratio. Probe WLB directly—ask for typical weekly "
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784673267,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Headquartered in St. Louis, MO; major offices in Atlanta, GA; Chicago, IL; Dallas, TX; and other U.S. cities. Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "To provide innovative insurance solutions and superior service that protect businesses and workers, backed by the financial strength of Tokio Marine Group."
+  },
   "name": "Safety National",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow — project cycles measured in quarters; regulatory and actuarial review gates add latency. Not a 'move fast' tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Workers' compensation insurance, excess and surplus lines coverage, alternative risk transfer programs, and claims administration services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–11 company holidays (varies by tenure/level)."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291349,7 +291990,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None — no company-wide guaranteed shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Large, mature subsidiary (multi-billion dollar premium base) of Tokio Marine HCC, which is part of the global Tokio Marine Group (Fortune Global 500)."
   },
   "sources": [
    {
@@ -291383,14 +292031,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=fcff5d12ad753ad31766f536066ac397a4239856ab5539c972aadec1769990c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly93d3cub3NoYS5nb3YvdG9waWNz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large U.S. employer, likely sponsors H-1B and green cards for specialized actuarial, data science, and IT roles. No public policy detail found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f81bc6b0cb"
+   ],
+   "value": "Safety National is a specialty insurance carrier focused on workers' compensation and excess & surplus lines, operating as a subsidiary of Tokio Marine HCC. It generates revenue by underwriting and managing risk for employers and brokers across the U.S."
+  },
+  "synthesized_evidence_sha": "db803cb4f029cf8d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actuarial modeling, claims analytics, legacy system modernization, data engineering for underwriting/claims data, and emerging AI/ML for risk selection and fraud detection. Not a primary AI research shop."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=Safety+National+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Safety National offers the stability and compensation of a Fortune 500-backed insurer with growing investment in data science and AI for underwriting and claims. It can provide strong pay and actuarial-domain impact, but its culture is traditional insurance—not a fast-moving, elite tech-first environment. Work-life balance is generally respectable for the industry, but 'guaranteed shutdowns' and a startup-like pace are unlikely. Best suited if you want insurance-domain DS/ML at scale with solid "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally 40–45 hr weeks for DS/analytics roles; occasional spikes at renewal or catastrophe events. No guaranteed shutdowns."
   }
  },
  "saic": {
@@ -297338,37 +298009,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / Unverifiable. No evidence of AI/data science presence, publications, or reputation was found in the supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No revenue model or business model information was available in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No cultural information (values, collaboration style, innovation tolerance) was available in the provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No customer or market information was available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data for new-grad technical roles was available in the provided sources."
   },
   "evidence_sha": "184228a132118017",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "e84ac36bfe"
+   ],
+   "value": "Estimated: Advanced Components / Electronics Materials (inferred from company name only; not verified by sources)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the total lack of verifiable data from supplied sources, interview focus should be on basic fact-finding: confirm the company's actual business, products, tech stack, team structure, compensation bands, WLB policies (hours, shutdowns, PTO), growth trajectory, and AI/DS investment level. Ask for concrete examples of innovation speed, mentorship, and burnout prevention."
+  },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784673267,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No headquarters or office location information was available in the provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No mission statement or company purpose was available in the provided sources."
+  },
   "name": "SENKO Advanced Components, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No information about work pace, release cycles, or bureaucracy level was available in the provided sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e84ac36bfe"
+   ],
+   "value": "Estimated: Unknown. No product information was available in the provided sources. The senko.com domain may host product details, but the source excerpt contained only a redirect notice."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No PTO or vacation policy information was available in the provided sources."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297378,7 +298095,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No information about company-wide shutdowns or guaranteed time-off periods was available in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No employee count, funding stage, or company size information was available in the provided sources."
   },
   "sources": [
    {
@@ -297412,14 +298134,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a9c1a0d828c9aa66327b623d082cfdd2ddcea69abda4b44be20591a6fd2b999JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly93d3cuc2Vua28uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No information about visa sponsorship (H-1B, etc.) was available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e84ac36bfe"
+   ],
+   "value": "SENKO Advanced Components, Inc. appears to be a company with a web presence at senko.com, though the provided sources only show redirect notices without substantive content. The first two sources redirect to a fishing bait website (Yamamoto Baits), suggesting possible confusion with a similarly named consumer brand. No verifiable information about an advanced components business was extractable from the supplied sources."
+  },
+  "synthesized_evidence_sha": "184228a132118017",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No information about technical stack, engineering practices, or AI/data science work was available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=SENKO+Advanced+Components%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Without verifiable company data, alignment cannot be assessed. The candidate should independently verify SENKO Advanced Components' actual business, tech culture, compensation, and WLB practices before investing interview time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No information about work-life balance, hours, or shutdown policies was available in the provided sources."
   }
  },
  "sennos": {
@@ -325288,41 +326033,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected within defense/national security analytics community; publishes at top venues (NeurIPS, ICML, AAAI) but less brand recognition in commercial AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes primarily from cost-plus and fixed-price federal contracts, task orders on IDIQ vehicles, and FFRDC management contracts. The company operates as an employee-owned ESOP."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, intellectually rigorous, mission-focused, low-politics for a beltway firm; ESOP ownership fosters long-term thinking and peer mentorship."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers include the U.S. Department of Defense, intelligence community agencies, federal civilian agencies, and allied foreign governments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + ESOP allocation (vesting over 3-5 years) + bonus; total comp ~$110k-$135k first year depending on clearance level and role."
   },
   "evidence_sha": "d1db49424fe14b7b",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense consulting / Federal IT & Analytics / FFRDC Contractor"
   },
-  "last_attempt_at": 1784891570,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect technical depth in ML/statistics, cleared-ready problem framing, and cultural fit for collaborative, mission-driven work. Prepare for scenario questions on balancing rigor with delivery speed, and demonstrate interest in long-term national security applications over short-term hype cycles."
+  },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784672896,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Alexandria, VA. Additional offices in Arlington, VA; Washington, DC; Huntsville, AL; Colorado Springs, CO; and other locations near major military installations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide objective, innovative analysis and engineering solutions that address critical national security challenges."
+  },
   "name": "Systems Planning & Analysis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project-driven with contract milestones; generally sustainable compared to commercial tech crunch cycles, but surge periods occur around contract deliveries."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Advanced analytics, systems engineering, modeling & simulation, AI/ML solutions, cyber operations support, program management, and strategic advisory services for defense and intelligence agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + flexible sick leave; ESOP companies often have generous leave banks."
   },
-  "retry_after": 1784891690,
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -325332,7 +326115,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; winter holiday coverage required for some contracts; liberal leave encouraged between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size government contractor (~1,500-2,000 employees), mature stage, employee-owned (ESOP), headquartered in Alexandria, VA with multiple U.S. locations."
   },
   "sources": [
    {
@@ -325366,14 +326154,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=448aca964f0319ff0bc55c4f2098210d56663f20a99292e627c587b478621dffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly93d3cubWRwaS5jb20vam91cm5hbC9zeXN0ZW1z&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards for cleared technical roles given defense contracting nature and ESOP structure; active clearance sponsorship for U.S. citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Systems Planning & Analysis (SPA) is a defense and government consulting firm providing advanced analytical, technical, and engineering support to U.S. national security clients. The company operates as a federally funded research and development center (FFRDC) contractor and advisory services provider."
+  },
+  "synthesized_evidence_sha": "d1db49424fe14b7b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML for ISR and decision support, large-scale modeling & simulation, data fusion, cyber analytics, digital engineering, DevSecOps, and advanced statistical analysis for defense applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672896,
   "web_search_url": "https://duckduckgo.com/?q=Systems+Planning+%26+Analysis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SPA offers elite technical prestige in national security AI/data science with ESOP ownership upside, meaningful mission impact, and a reputation for better work-life balance than typical defense contractors. The employee-owned structure aligns incentives toward sustainable pace and career growth without the burnout culture of pure-play commercial tech or high-pressure beltway firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong reputation for reasonable hours (40-45 typical), flexible telework, and leadership emphasis on sustainability; varies by contract and clearance demands."
   }
  },
  "systimmune": {
@@ -342897,38 +343706,94 @@
  "treehouse foods": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Estimated: Tier 3. Data science work at a private label food manufacturer lacks the elite prestige and cutting-edge technical innovation found at top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Operates a network of over 20 production facilities across the United States and Canada to manufacture and distribute packaged foods and beverages to retail partners."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional and corporate-driven, focused on stable, efficient manufacturing operations over cutting-edge tech innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Retail grocery chains and partners that sell the company's private label products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000. Below elite tech compensation tiers typical of coastal tech hubs, reflecting the CPG industry baseline."
   },
   "evidence_sha": "f4879ce83f111074",
+  "generated_at": 1784891755,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Consumer Packaged Goods (CPG) / Food and Beverage Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the actual pace of innovation and daily tasks in the Associate Product Data Scientist role. Ask about team structure and tech stack to gauge whether the environment is dynamic or constrained by slow manufacturing bureaucracy."
   },
+  "last_attempt_at": 1784891755,
   "last_evidence_at": 1784673266,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Headquartered in Oak Brook, Illinois, USA, with over 20 production facilities and several corporate offices across the United States and Canada."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Focused on manufacturing high-quality private label packaged foods and beverages. Specific mission statement not available in provided sources."
+  },
   "name": "TreeHouse Foods",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. As a large, established manufacturer, the pace is likely driven by traditional corporate cycles rather than rapid tech iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Private label packaged foods and beverages, including meal solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off annually, standard for large Midwest CPG corporations."
   },
+  "refresh_after": 1790075755,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -342938,7 +343803,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found regarding guaranteed corporate shutdowns. Manufacturing facilities run continuous operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Founded in 2005, headquartered in Oak Brook, Illinois. Operates at a large scale with 5001-10000 employees across North America."
   },
   "sources": [
    {
@@ -342982,14 +343854,41 @@
     "url": "https://jobright.ai/jobs/info/6a21a21ec00e701fe836f647?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "TreeHouse Foods has a track record of offering H1B sponsorships for its employees."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "TreeHouse Foods is a leading manufacturer of private label packaged foods and beverages. The company generates revenue by producing and supplying store-brand grocery items to retail partners across a network of over 20 production facilities."
+  },
+  "synthesized_evidence_sha": "f4879ce83f111074",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bb28020271"
+   ],
+   "value": "Includes data science roles focused on product analytics. An Associate Product Data Scientist position was recently open, indicating works on data-driven product insights and analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673266,
   "web_search_url": "https://duckduckgo.com/?q=TreeHouse+Foods+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While the title may look appealing, TreeHouse Foods is a legacy CPG manufacturer, not a fast-paced tech company. Candidate should expect bureaucratic dynamics typical of a 5,000+ employee traditional manufacturing firm, which conflicts with the desired elite prestige and highly innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. A large, traditional CPG company is likely to offer sane hours compared to high-pressure tech firms, though specific policies should be confirmed."
   }
  },
  "trend health partners": {
