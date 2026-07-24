@@ -64754,7 +64754,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64772,7 +64772,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784887929,
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784678870,
   "name": "Cartesia",
   "pace_of_work": {
@@ -64785,7 +64785,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784888049,
+  "retry_after": 1784888387,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73877,90 +73877,109 @@
  "citi": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High. Citi is a Tier-1 global systemically important bank with elite Wall Street brand recognition, combined with rapidly modernizing big-data and AI capabilities that operate at unmatched global scale within regulated finance."
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Estimated: Tier 2. Big bank prestige applies, but the team's specific role in deploying advanced AI might be constrained by institutional pace."
   },
   "aliases": [],
-  "attempts": 15,
+  "attempts": 16,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "9ac5be308b",
     "c839e08560"
    ],
-   "value": "Operates as a diversified bank-to-bank and consumer-facing model with a global network spanning the world's largest settlement and custody infrastructure. Revenue is generated from lending margins, transaction fees, asset management fees, and advisory services."
+   "value": "Financial services and credit card issuing, leveraging internal technology teams to build and support systems that power banking and capital markets."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Formal and collaborative, focused on prudent innovation and accountability. The culture emphasizes responsible delivery, broad inclusion, and operational excellence rather than hackathon hype. Not toxic, but still hierarchical for final decisions."
+   "confidence": "high",
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Supportive environment focused on discovering the best fit for skills and long-term career goals while building impactful systems."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "9ac5be308b",
     "c839e08560"
    ],
-   "value": "Individual consumers, small businesses, mid-sized to large multinational corporations, sovereign entities, and institutional investors globally."
+   "value": "Consumers, corporations, and governments requiring global financial and card services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Estimated: $90k - $120k depending on location and exact role (e.g., Junior Gen AI Application Developer)."
   },
   "evidence_sha": "a8b5e9901307898e",
-  "generated_at": 1784679089,
+  "generated_at": 1784888147,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "98e5c55b72",
     "c839e08560"
    ],
-   "value": "Financial services, diversified banking and capital markets."
+   "value": "Financial Services"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Interviews likely assess quantitative rigor (statistics, Python/SQL depth), an understanding of financial instruments for AI applications, and behavioral alignment with values of responsibility, integrity, and low-ego collaboration. Expect cross-functional panels with risk, compliance, and business stakeholders."
+   "value": "Probe the specific team's autonomy to ensure they operate with a fast, innovative tech culture rather than standard corporate bureaucracy. Ask detailed questions about expected working hours, on-call rotations, and work-life balance policies to confirm they respect personal time and prioritize sane hours over high-burnout environments."
   },
-  "last_attempt_at": 1784866527,
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784847053,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Global headquarters are in New York City. Major tech and functional hubs exist in London, Singapore, Dublin, Tampa, Irving (Texas), and Bengaluru. Roles are generally in-office or hybrid."
+   "confidence": "high",
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Irving, Texas, United States (among other global locations)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "98e5c55b72",
     "c839e08560"
    ],
-   "value": "To serve as a trusted partner by responsibly providing financial services that enable growth and economic progress. Citi emphasizes enabling client success and driving global financial inclusion and innovation."
+   "value": "To provide financial services that enable growth and progress, harnessing technology to help clients and colleagues find the best fit for their goals while shaping global markets."
   },
   "name": "Citi",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate to fast within highly governed frameworks. The modernization push under recent leadership emphasizes quicker delivery cycles in tech, but change is intrinsically paced by risk management and regulatory oversight common to all global G-SIBs."
+   "source_ids": [
+    "98e5c55b72",
+    "c839e08560"
+   ],
+   "value": "Estimated: Moderate to fast. While deploying advanced AI suggests innovation, the scale of the company implies bureaucratic layers that may slow down processes."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "98e5c55b72",
+    "9ac5be308b",
     "c839e08560"
    ],
-   "value": "Consumer and business banking accounts, credit cards, mortgages, personal and commercial loans, wealth management, investment and corporate banking, market making, securities services, and treasury advisory."
+   "value": "Global banking systems, capital markets infrastructure, and commercial/credit card services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Estimated: 20-25 days. Large financial institutions typically provide standard to above-average vacation packages for full-time employees."
   },
-  "refresh_after": 1789863089,
-  "retry_after": 1784888127,
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73970,14 +73989,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. Large banks rarely offer company-wide guaranteed shutdowns, typically operating continuously."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "c839e08560"
    ],
-   "value": "Publicly traded, mature enterprise with over 200 years of history and a workforce exceeding 230,000 employees across the globe."
+   "value": "Large, established globalFinancial institution (Public company)."
   },
   "sources": [
    {
@@ -74032,23 +74051,29 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Generally provides visa sponsorship for highly specialized technical and quantitative roles, including AI and data science. Policies are assessed on a role-by-roles basis and subject to prevailing immigration regulations."
+   "confidence": "high",
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Unauthorized to work for candidates requiring sponsorship now or in the future; candidates must be authorized to work in the United States without employer sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "98e5c55b72",
+    "9ac5be308b",
     "c839e08560"
    ],
-   "value": "Citi is a global financial services giant, operating as a diversified bank that serves millions of consumers, corporations, governments, and institutions across 160+ countries. It makes money primarily through net interest income (lending, credit cards) and non-interest revenue from investment banking, trading, wealth management, and transaction services."
+   "value": "Citi is a global financial services institution where the tech team redefines finance rather than just supporting it. It makes money through banking, capital markets, and card services. They are currently deploying advanced AI to help shape global markets."
   },
-  "synthesized_evidence_sha": "b3e793f69f3bcfe4",
+  "synthesized_evidence_sha": "a8b5e9901307898e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Data science and AI roles at Citi encompass risk modeling, fraud detection, NLP for global markets, algorithmic trading analytics, personalization engines for digital banking, and large-scale cloud transformation projects on its global data platform."
+   "confidence": "high",
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "The team deploys advanced AI and builds systems that matter for global finance, operating in a supportive environment to help employees discover the best fit for their skills and career goals."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
@@ -74056,12 +74081,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Citi blends prestige with impactful innovation, aiming to modernize banking at a global scale using AI. Candidates in data science will encounter massive datasets and mission-critical infrastructure without the 'move-fast-and-break-things' chaos, given the regulated but improving tech culture that provides relative stability and governance-respecting work-life boundaries."
+   "value": "While Citi offers the elite prestige and high new-grad pay of a major financial institution, its massive scale inherently involves bureaucracy that may stall the fast, innovative tech culture you seek. However, specific AI deployment teams may offer accelerated technical learning and career growth, though the environment will likely require navigating slower corporate processes rather than maintaining guaranteed shutdowns or strictly sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Estimated: Medium. Financial services traditionally demand higher hours, though the job description highlights a \"supportive environment\"."
   }
  },
  "citizen health": {
@@ -75874,37 +75901,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected applied data science in a dominant niche player, not an elite AI research brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service and performance-based contracts with utilities and regulators to administer energy efficiency portfolios; revenue tied to verified energy savings (kWh/therms) and demand reduction (kW) targets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, collaborative, engineering-and-policy hybrid; low ego, high domain depth; diversity and inclusion emphasized; less 'move fast break things', more 'measure twice deploy once'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Electric and gas utilities (IOUs, munis, co-ops), regional grid operators (ISOs/RTOs), state energy offices, and large corporate energy buyers across the U.S. and Canada."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k–$125k base + 5–10% target bonus + modest RSU (vesting over 4 yrs); total comp ~$115k–$140k."
   },
   "evidence_sha": "f3ae7eeafe437d7e",
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Energy efficiency / utility services / climate tech (applied)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system design questions on energy data (time-series, anonymized AMI), M&V methodology, and stakeholder communication; less LeetCode, more applied modeling and SQL; prepare for cross-functional collaboration scenarios with program managers and utility clients."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784856588,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Austin, TX; major offices in Boston, Chicago, Portland, San Francisco, Toronto; remote/hybrid options common for technical roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To change the way people use energy by delivering measurable energy savings and grid reliability through innovative, data-driven programs."
+  },
   "name": "CLEAResult",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles tied to regulatory/utility planning (months), not sprint-driven; limited crunch periods around program filing deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Energy efficiency program design and implementation; demand response and load management; distributed energy resource integration; data analytics and EM&V (evaluation, measurement & verification); residential, commercial, and industrial retrofit services; grid modernization consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75914,7 +75983,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; occasional summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large private company (~2,500+ employees), portfolio company of TPG Capital since 2015; mature, stable, non-startup environment."
   },
   "sources": [
    {
@@ -75948,14 +76022,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=09223521ec0da3adcae5ef27900998c3baf85f913940389ae678621bc5d65956JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=12cd59f3-0bab-6363-113b-4e530afd62cc&u=a1aHR0cHM6Ly93d3cuZ2FwLmNvbS8_bXNvY2tpZD0xMmNkNTlmMzBiYWI2MzYzMTEzYjRlNTMwYWZkNjJjYw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Will sponsor H-1B and green cards for experienced data science/engineering hires; new-grad sponsorship likely case-by-case given non-tech-core business."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CLEAResult is North America's largest energy efficiency consulting and implementation firm, designing and delivering utility-funded energy efficiency, demand response, and distributed energy resource programs. It generates revenue primarily through contracts with utilities, grid operators, and government agencies to administer ratepayer-funded energy savings portfolios."
+  },
+  "synthesized_evidence_sha": "f3ae7eeafe437d7e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied data science for load forecasting, customer segmentation, M&V analytics, program optimization; software platforms for program tracking, customer engagement, and grid integration; IoT/device data pipelines; not a core AI research shop."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784856588,
   "web_search_url": "https://duckduckgo.com/?q=CLEAResult+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven energy-climate impact with utility-scale data assets; compensation competitive for applied DS/ML in non-FAANG sector; culture emphasizes reasonable hours and low burnout vs. high-velocity tech; strong mentorship and domain expertise growth, but less cutting-edge AI research prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — strong cultural norm of 40–45 hr weeks, rare weekends, explicit shutdown encouragement; on-call rare for DS roles."
   }
  },
  "clearway energy": {
@@ -142086,38 +142181,128 @@
  "gorev": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverifiable from the provided sources; requires direct assessment of their AI/data science talent and market reputation during interviews."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverified from supplied sources; candidates must confirm compensation details to ensure it meets the elite new-grad pay threshold."
   },
   "evidence_sha": "9ffcc7a8da84e651",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "During interviews, aggressively probe their actual day-to-day AI/data science projects to confirm they offer real technical learning and career acceleration. Ask detailed questions about after-hours expectations, on-call duties, and shutdown policies to ensure they truly respect personal time and avoid the toxic bureaucracy you want to escape."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784677766,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
   "name": "GoRev",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverified due to source limitations; candidates should confirm directly whether the culture is genuinely fast-paced and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverified from supplied sources; candidates must ask HR for the exact PTO policy to ensure it meets personal time requirements."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142126,8 +142311,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverified from supplied sources; candidates must explicitly ask if the company offers guaranteed holiday or end-of-year shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
   },
   "sources": [
    {
@@ -142161,14 +142359,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=1690731e54e6ac259935f2a27fba4c517af771f39a6b11fe1e6ae417bc244b28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cuaXJzLmdvdi9pbmRpdmlkdWFscy91bmRlcnN0YW5kaW5nLXlvdXItY3AyODgtbm90aWNl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Specific factual details regarding GoRev's core operations and revenue model could not be extracted from the provided sources, as they solely consist of non-resolving redirect notices."
+  },
+  "synthesized_evidence_sha": "9ffcc7a8da84e651",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Information not available in the provided sources due to redirect limitations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=GoRev+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Since GoRev's public footprint could not be verified via the provided sources, you must validate if they actually align with your priorities: securing a top-tier AI/data science role, earning elite new-grad pay, and joining a fast, innovative culture that guarantees work-life balance and sane hours without burning out."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b32f22d9e6",
+    "70b1b43a74",
+    "eb8fc3b0bb"
+   ],
+   "value": "Estimated: Unverified from supplied sources; candidates must directly confirm if sane hours are respected or if the environment leans toxic and high-burnout."
   }
  },
  "gorin systems": {
@@ -150511,7 +150750,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150529,7 +150768,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784887929,
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784678956,
   "name": "Healf",
   "pace_of_work": {
@@ -150542,7 +150781,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784888049,
+  "retry_after": 1784888387,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157475,48 +157714,155 @@
  "hr a advisors": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: Low. As an economic consulting firm, it is not a recognized leader in the AI/data science space."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Consulting compensation is usually lower than top-tier tech firms for new grads."
   },
   "evidence_sha": "a812c8ad5e04b512",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Candidates should probe deeply into the actual day-to-day technical work to ensure it meets the bar for elite AI/data science. It is also critical to ask about typical project hours, weekend expectations, and work-life balance policies, as consulting firms often require long hours. Inquiring about the technology stack and the pace of innovation will help determine if the environment is too bureaucratic or slow for the candidate's preferences."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784677766,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
   "name": "HR&A Advisors",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: Fast-paced and client-driven, typical of the consulting industry."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: Standard consulting PTO (e.g., 15-20 days annually), often subject to project demands."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: None commonly guaranteed outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
   },
   "sources": [
    {
@@ -157550,14 +157896,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=9d09972df0a047ed06baa8c29ee026dcc45b4f0e86123ef4eac29f649ecfed9aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9hY2NvdW50LmhyYmxvY2suY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Unable to generate a plain-English explanation of what the company does and how it makes money based on the provided sources. All source links redirected automatically and did not provide usable content."
+  },
+  "synthesized_evidence_sha": "a812c8ad5e04b512",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "No information available."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=HR%26A+Advisors+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "HR&A Advisors is a real estate and economic development consulting firm, which fundamentally misaligns with the candidate's priority for a top-tier AI or data science role. While consulting can offer prestige and fast career growth, the technical work likely focuses on real estate analytics rather than cutting-edge AI, and the traditional consulting structure may lack the fast, innovative tech culture and guaranteed work-life balance the candidate seeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d9c4506ec2",
+    "fa73282bc8",
+    "56031aa9e4"
+   ],
+   "value": "Estimated: Moderate to low. Consulting roles often feature demanding hours and high-pressure deadlines."
   }
  },
  "hsssoft": {
@@ -233169,41 +233556,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low – not recognized as an elite AI/data science employer; primary R&D is in physical product engineering."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Manufactures and sells engineered electrical components through a global distribution network; revenue from product sales across three segments: Enclosures, Thermal Management, and Electrical & Fastening Solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established industrial engineering culture emphasizing safety, quality, and incremental innovation; hierarchical with structured processes; not a ‘move fast and break things’ tech startup vibe."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Serves contractors, distributors, OEMs, and end-users across energy, industrial automation, data centers, infrastructure, and commercial construction sectors worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$95k base + modest bonus/RSU for engineering roles; AI/DS specific data not public but likely below top-tier tech ($120k-$180k+)."
   },
   "evidence_sha": "ef7a8d9708491d59",
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Electrical equipment manufacturing / Industrial technology"
   },
-  "last_attempt_at": 1784887517,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on safety, quality, and cross-functional collaboration in manufacturing. Technical interviews may cover mechanical/electrical design, materials, or IIoT data analytics. Ask about digital transformation roadmap, AI/DS team structure, mentorship programs, and concrete WLB policies (on-call, shutdowns)."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784679641,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in London, UK; operational HQ in St. Louis, MO, USA; manufacturing and engineering sites across North America, Europe, Asia-Pacific."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To provide safe, reliable, and efficient electrical connections and protection solutions that enable electrification and digital infrastructure."
+  },
   "name": "nVent",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – typical industrial product development cycles (12-24 months), not fast iterative software pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Product lines include HOFFMAN enclosures, RAYCHEM heat-tracing and cable protection, ERIFLEX low-voltage power distribution, CADDY electrical fasteners, and SCHROFF electronic packaging."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (US), varies by region and tenure; no public unlimited PTO policy."
   },
-  "retry_after": 1784887997,
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233213,7 +233638,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns reported; some sites may have holiday week shutdowns between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Public company (NYSE: NVT), ~$3B annual revenue, ~10,000 employees globally, mature industrial manufacturing stage."
   },
   "sources": [
    {
@@ -233247,14 +233677,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a6bddeab5f1e88293b27fb244f18abb2ae3ecaa03f6dc68f78c96de48bfa9fbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cubnZlbnQuY29tL2VuLXVzLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational, likely sponsors H-1B and green cards for specialized engineering roles; specific AI/data science sponsorship volume unknown."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: nVent is a global electrical components and solutions company spun off from Pentair in 2018, designing and manufacturing enclosures, thermal management, electrical fastening, and cable management products for industrial, commercial, and residential markets."
+  },
+  "synthesized_evidence_sha": "ef7a8d9708491d59",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Engineering focus on mechanical, electrical, and materials engineering for physical products; growing digital/IIoT initiatives for smart monitoring and predictive maintenance; limited public evidence of elite AI/data science research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679641,
   "web_search_url": "https://duckduckgo.com/?q=nVent+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "nVent offers industrial-scale impact on electrification and safety-critical infrastructure, but its culture is traditional manufacturing rather than fast-paced AI innovation. Work-life balance may be reasonable for a 10k-person industrial firm, but guaranteed shutdowns and elite AI prestige are not documented. High new-grad pay likely trails top-tier tech firms. Career growth exists in engineering management, not necessarily accelerated AI/DS technical tracks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – likely reasonable hours for manufacturing engineering, but plant-support roles may require shift/on-call; no public guaranteed shutdown policy."
   }
  },
  "nvidia": {
@@ -237755,48 +238206,150 @@
  "oneok": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: Low. As a traditional energy pipeline operator, it is primarily recognized for industrial engineering and operational prestige rather than top-tier AI/Data Science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Asset-heavy midstream operations generating steady, largely fee-based revenue from long-term contracts for the transportation, gathering, and processing of natural gas and NGLs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: Traditional, safety-centric, and corporate. Emphasizes industrial reliability, compliance, and long-term career stability over rapid technical growth or startup culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Exploration and production companies, refineries, industrial end-users, and other energy marketing entities operating within the U.S. energy supply chain."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: Between $80,000 and $105,000 base salary for new graduates in tech, data, or IT roles. Pay in traditional energy tech is generally lower than top-tier tech firms."
   },
   "evidence_sha": "d619089173da48a2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Oil, Gas, and Midstream Energy"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Probe whether their data and systems work supports real-time pipeline optimization or merely legacy enterprise IT maintenance. Assess actual technical pace and whether roles involve cutting-edge ML/AI learning opportunities or are constrained by heavy industrial compliance and slow bureaucratic processes."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784679037,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "7dca619198"
+   ],
+   "value": "Corporate headquarters in Tulsa, Oklahoma, with major operational hubs and office locations in Texas (Houston, Midland), Oklahoma City, Kansas, and North Dakota."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "To provide essential energy services safely and reliably, connecting natural gas and NGL supply sources with demand centers."
+  },
   "name": "ONEOK",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "7dca619198"
+   ],
+   "value": "Estimated: Moderate to slow. The pace is likely steady and focused on operational reliability and industrial compliance, lacking the fast, iterative innovation typical of modern tech firms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Natural gas gathering, processing, transportation, and storage services, alongside natural gas liquids (NGLs) fractionation, transportation, and storage."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "7dca619198"
+   ],
+   "value": "Estimated: Standard corporate policy of 15 to 20 days of paid time off annually, alongside company holidays, though exact policies are not public."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: No data found regarding guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d56699785f"
+   ],
+   "value": "Large-cap public company (Fortune 500) and a constituent of the S&P 500."
   },
   "sources": [
    {
@@ -237830,14 +238383,54 @@
     "url": "https://www.bing.com/ck/a?!&&p=d9578cc6f2763128db1718f8d92037ea4ead222292cd7694a172e19c3662b8f4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cub25lb2suY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: As a traditional Fortune 500 energy operator, sponsorship may be available for high-demand operational roles but is generally limited for corporate IT functions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "ONEOK is one of the largest diversified midstream energy companies in the United States, specializing in the gathering, processing, transportation, and storage of natural gas and natural gas liquids (NGLs). The company makes money by charging fees for transporting and processing these energy commodities through its extensive pipeline network."
+  },
+  "synthesized_evidence_sha": "d619089173da48a2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d43d2fdb31",
+    "7dca619198"
+   ],
+   "value": "Enterprise IT infrastructure, operational technology (OT), pipeline control systems (SCADA), and data analytics supporting enterprise operations and industrial engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679037,
   "web_search_url": "https://duckduckgo.com/?q=ONEOK+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "While not a tech-sector prestige name like FAANG, ONEOK offers stable, mission-critical data and operational technology challenges. However, given your preference for top-tier AI prestige and a fast, innovative tech culture, this traditional midstream energy company likely leans more toward slow bureaucracy and enterprise IT over fast-paced technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d43d2fdb31",
+    "d56699785f",
+    "7dca619198"
+   ],
+   "value": "Estimated: Fair to good. Sane hours are generally respected due to the structured nature of utility and energy operations, though on-call rotations may be required for critical infrastructure systems."
   }
  },
  "onsemi": {
@@ -271478,41 +272071,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Health Tech) - High impact and ethical prestige within healthcare IoT and digital health, but not on the bleeding-edge research level of top-tier dedicated AI labs or pure tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "Manufacturing and selling medical hardware devices paired with recurring revenue from cloud-based software and digital health data subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and patient-focused. Cultivates a grounded environment that respects sustainable hours while pushing for technical innovation in a regulated medical technology space."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "723b9de234",
+    "71fb77efec"
+   ],
+   "value": "Individuals with sleep apnea and respiratory disorders, healthcare providers, and sleep clinics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 to $140,000 base salary, competitive for the healthcare technology sector but potentially lower than top-tier pure tech or quant firms."
   },
   "evidence_sha": "d2058e0ce8c12394",
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "Medical Devices, Digital Health, and Cloud Software."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should emphasize their ability to apply elite AI and machine learning techniques to real-world health data while aligning with ResMed's mission to improve patient outcomes. It is key to highlight your adaptability to a collaborative, regulated tech culture that prioritizes robust learning and sustainable work practices over breakneck speed."
   },
-  "last_attempt_at": 1784887929,
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784677765,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "723b9de234",
+    "b9d26ef3d9"
+   ],
+   "value": "Global operations with a primary corporate footprint spanning the United States and Australia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "723b9de234",
+    "b9d26ef3d9"
+   ],
+   "value": "Improving patient quality of life and treating sleep apnea, COPD, and other chronic respiratory diseases."
+  },
   "name": "Resmed",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Operates at the speed of a mature, publicly traded healthcare corporation, prioritizing compliance and patient safety over agile, rapid tech deployment, which may feel slow to those seeking pure startup innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "CPAP machines, ventilators, respiratory care devices, and cloud-based patient monitoring software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 paid days off annually, standard for a large healthcare corporation alongside health and wellness leave."
   },
-  "retry_after": 1784888049,
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -271522,7 +272171,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdown periods typical of large medical device manufacturers outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "723b9de234",
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "Established, publicly traded, large-cap global healthcare corporation."
   },
   "sources": [
    {
@@ -271556,14 +272214,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=b5397c03c7ba3480fd3eabfbfcbad15543e4e923e0904fc9d56bde52d6b86215JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cucmVzbWVkLmNvbS9lbi11cy8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "723b9de234"
+   ],
+   "value": "Likely offers standard visa sponsorship for specialized engineering and data science roles due to its scale and global footprint, though specific policy details are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "723b9de234",
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "ResMed is a global medical device and cloud-based health technology company that develops products for sleep apnea, COPD, and other respiratory conditions. It makes money by selling digital health devices, such as CPAP and ventilator machines, alongside cloud-connected software solutions that track and manage patient health data."
+  },
+  "synthesized_evidence_sha": "d2058e0ce8c12394",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fb77efec",
+    "b9d26ef3d9"
+   ],
+   "value": "Involves hardware engineering for medical devices, cloud architecture for health data platforms, and software development for connected health tracking ecosystems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677765,
   "web_search_url": "https://duckduckgo.com/?q=Resmed+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ResMed provides a mission-driven environment focused on life-changing healthcare technology. AI and data science roles here offer the prestige of impacting massive-scale health datasets and guaranteed personal time through its historically strong work-life balance, avoiding toxic burnout cultures, though its corporate nature may lack the ultra-fast pace of a pure tech startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. Generally reported to respect personal time and offer a balanced corporate schedule characteristic of established healthcare companies."
   }
  },
  "revel": {
@@ -284077,49 +284765,120 @@
  },
  "sciton": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "e1d4a1c187"
+   ],
+   "value": "Not applicable or unknown from provided sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "e1d4a1c187"
+   ],
+   "value": "Unknown from provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "b05faf1fca"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not found in research."
   },
   "evidence_sha": "893ecf48572df88b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "b05faf1fca"
+   ],
+   "value": "Without verifiable data on WLB or culture, the candidate should probe heavily during interviews to determine if hardware and regulatory constraints stifle innovation. Ask specific questions about engineering pace, on-call expectations, and whether guaranteed shutdowns exist to ensure it avoids the high-burnout environment they want to avoid."
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784677768,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Unknown from provided sources."
+  },
   "name": "SCITON",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Estimated: Unknown, but medical devices often face slower regulatory cycles, which may hinder a fast tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b05faf1fca"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not found in research."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not found in research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Unknown from provided sources."
   },
   "sources": [
    {
@@ -284153,14 +284912,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=c20cad80958527044cde41c10d06bf3f867462e7f08ada6acab0843b6c49ab00JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9tYXBzLmdvb2dsZS5jb20vbWFwcy9zZWFyY2gvQ2hpY2FnbywrSWxsaW5vaXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e1d4a1c187"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9",
+    "e1d4a1c187"
+   ],
+   "value": "Specific factual information about Sciton could not be extracted from the provided sources, as they all resulted in redirect errors to generic map and geographic search pages rather than the actual company website. However, Sciton is generally known as a medical device company that develops and manufactures aesthetic and medical laser systems, generating revenue through the direct sales of these capital equipment devices to physicians. A proper brief could not be completed using only the supplie"
+  },
+  "synthesized_evidence_sha": "893ecf48572df88b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b05faf1fca"
+   ],
+   "value": "Unknown from provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677768,
   "web_search_url": "https://duckduckgo.com/?q=SCITON+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "e5079a7aa9"
+   ],
+   "value": "Mapped against the candidate's priorities: Prestige and new grad pay are uncertain. The medical device industry is inherently regulated, which can introduce slower bureaucracy and hinder the fast, innovative tech culture desired. Work-life balance, sane hours, and shutdowns cannot be verified from the provided text."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Cannot be determined from sources."
   }
  },
  "scopely": {
@@ -287417,37 +288206,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Industry/Enterprise Tech). While mission-driven in real estate finance, it is not known for cutting-edge AI/data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "ServiceLink makes money by providing business-to-business (B2B) transaction services, valuations, and technology solutions to lenders, servicers, and investors in the mortgage industry."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, process-oriented, and focused on operational efficiency and accuracy in mortgage servicing."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "Mortgage lenders, servicers, borrowers, investors, and vendors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 to $95,000 base salary for new grad tech roles, typical for non-Silicon Valley mortgage tech companies."
   },
   "evidence_sha": "b236111e28173f69",
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "Real estate / mortgage finance technology and services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe the specific tech stack of the team to determine if it is a fast, innovative environment or a slow bureaucratic one. It is crucial to ask about daily hours, on-call expectations, and work-life balance, while clarifying if the team actually does advanced AI/data science rather than just maintaining legacy enterprise systems."
   },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784677766,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Specific office locations are not detailed in the provided sources, but the company likely operates primarily within the United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not explicitly stated in the provided sources., but generally focused on providing innovative, technology-driven mortgage services and solutions."
+  },
   "name": "ServiceLink",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical corporate IT pace focused on processing volume and system stability rather than pioneering rapid innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "Title and closing services, valuations (including home equity and default), flood services, field services, auction asset management, and process solutions for the mortgage lifecycle."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of PTO annually, standard for mid-to-large corporate enterprises."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287457,7 +288296,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays, with no formal guaranteed company-wide shutdown periods other than normal holiday observations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "Established, large-scale mortgage services provider (subsidiary of ServiceLink IP Holding Company, LLC)."
   },
   "sources": [
    {
@@ -287491,14 +288337,41 @@
     "url": "https://careers-svclnk.icims.com/jobs/intro?hashed=-625973387"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not explicitly detailed in the sources, but large mortgage service companies of this size in the US often offer H-1B sponsorships for specialized tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "df171e19f5",
+    "026b9e0881",
+    "f8f4277f17"
+   ],
+   "value": "ServiceLink is a provider of technology-driven transaction services and data-driven solutions for the mortgage and real estate finance industries. It makes money by offering outsourced origination, default, and portfolio valuations along with title, closing, and field services to mortgage lenders, servicers, and investors."
+  },
+  "synthesized_evidence_sha": "b236111e28173f69",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f8f4277f17"
+   ],
+   "value": "Likely involves developing and maintaining enterprise software, data platforms, and scalable transaction systems tailored for the mortgage and real estate finance lifecycle."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=ServiceLink+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a tech-enabled transaction services provider rather than a pure tech or AI firm, ServiceLink may lack the elite prestige and fast-paced innovative AI culture desired for rapid technical growth. However, enterprise tech roles often feature standard corporate hours and predictable shutdowns, offering a better work-life balance compared to high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Balanced. Corporate IT roles in financial services usually prioritize predictable schedules over grueling tech crunches."
   }
  },
  "servicenow": {
@@ -367070,48 +367943,134 @@
  "zilch": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Estimated: Mid-tier. While appearing as a prominent fintech, the specific prestige and tier of its AI and Data Science teams cannot be verified from the provided sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Fintech/Buy Now, Pay Later (BNPL). The business likely generates revenue through merchant transaction fees on processed payments, enabled by its core application."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Mission-driven, customer-obsessed, and collaborative, with a strong emphasis on learning, proposing great ideas, and caring for team members."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Consumers looking for empowering, flexible ways to pay for anything, anywhere, as well as the merchants processing those transactions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Estimated: Highly competitive within the fintech sector due to the growth-stage scaling and specialized data roles, exact compensation numbers are not public."
   },
   "evidence_sha": "0be9094a3663c530",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784888147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba"
+   ],
+   "value": "Financial Services / Financial Technology (Fintech)"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784888147,
   "last_evidence_at": 1784679094,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2794e36812",
+    "40c7f2075b"
+   ],
+   "value": "Redirecting to the US and UK pages suggests primary operations are based in the United States and the United Kingdom."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "To create the most empowering way to pay for anything, anywhere, while deeply caring for both internal and external customers."
+  },
   "name": "Zilch",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of growth-stage fintech companies scaling new products and operations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "A consumer payment application that gives customers options to earn instant cashback or spread the cost of purchases over time, completely interest-free and with no late fees."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "961972cfba"
+   ],
+   "value": "Estimated: Standard tech industry allowance, typically ranging between 20 to 28 days plus public holidays, though exact policy is unstated."
   },
+  "refresh_after": 1790072147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "961972cfba"
+   ],
+   "value": "Estimated: Unknown. Had no official mention of guaranteed company-wide shutdowns, so candidates should verify."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Growth-stage fintech. The presence of specialized roles like Application Support and Product Analyst indicates an expanding organization scaling its operations."
   },
   "sources": [
    {
@@ -367165,14 +368124,46 @@
     "url": "https://jobs.ashbyhq.com/zilch/95083d49-ae68-42d3-ae32-e51197b91b5f"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Estimated: No explicit details on visa sponsorship were found in the provided job postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Zilch is a payment technology company that combines debit, credit, and savings, allowing customers to either earn instant cashback or spread the cost of purchases interest-free with no late fees. It makes money by monetizing the transaction flow and merchant partnerships through its Buy Now, Pay Later (BNPL) model."
+  },
+  "synthesized_evidence_sha": "0be9094a3663c530",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "961972cfba",
+    "6066e879e8"
+   ],
+   "value": "Ensuring the smooth operation of core applications via an Application Management team, and utilizing data/product analytics to understand customers, size risks, and measure product impact."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679094,
   "web_search_url": "https://duckduckgo.com/?q=Zilch+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "961972cfba"
+   ],
+   "value": "Estimated: Moderate to Good. The company explicitly notes that caring for internal customers is paramount, which may indicate a healthy culture."
   }
  },
  "zip": {
