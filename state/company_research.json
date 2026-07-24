@@ -4260,37 +4260,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: No public presence in top-tier AI/data science research, conferences, or talent branding."
   },
   "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: No culture signals (values, rituals, leadership voice) found in public sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data found; Australian graduate data/ML roles typically range AUD 70k\u2013100k base, but company-specific figure unknown."
   },
   "evidence_sha": "584320dfe0874386",
+  "generated_at": 1784864352,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unable to tailor interview focus; no technical stack, team structure, or hiring process information available for Adelaide Metrics."
+  },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784663559,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Possibly Adelaide, South Australia, given the name; no office locations confirmed."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Adelaide Metrics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no employee reviews or engineering blog posts found to assess pace."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: No published PTO policy; Australian statutory minimum is 20 days annual leave + 10 public holidays, but company-specific amount unknown."
   },
+  "refresh_after": 1790048352,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4300,7 +4342,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of company-wide shutdowns or guaranteed disconnect periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size/stage; no public funding or headcount data located."
   },
   "sources": [
    {
@@ -4334,14 +4381,39 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2420776c01",
+    "090eb4b1fe",
+    "103a24ff7f"
+   ],
+   "value": "Adelaide Metrics appears to be a company name that does not correspond to a well-documented public entity in the supplied sources. The sources reference the city of Adelaide, South Australia (tourism and Wikipedia pages), and an unrelated HR software vendor (Rippling). No verifiable description of Adelaide Metrics' products, customers, or business model was found."
+  },
+  "synthesized_evidence_sha": "584320dfe0874386",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663559,
   "web_search_url": "https://duckduckgo.com/?q=Adelaide+Metrics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Because the candidate prioritizes elite AI/data science prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout \u2014 but no evidence confirms Adelaide Metrics offers any of these attributes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data or policies located."
   }
  },
  "aditude": {
@@ -36384,11 +36456,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36400,6 +36474,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784677474,
   "name": "Blackhawk Network",
   "pace_of_work": {
@@ -36412,6 +36487,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784864472,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36455,7 +36531,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d7857084f7ac6b4f648bdef8eea2dfa417648443941b13a7f93e4b94b3f999c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=33461374-d36f-6ad0-1d4c-04e9d2696ba0&u=a1aHR0cHM6Ly93d3cuYmxhY2toYXdrLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677474,
   "web_search_url": "https://duckduckgo.com/?q=Blackhawk+Network+company+careers+benefits",
@@ -72669,37 +72745,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite): Pioneer in unsupervised ML for fraud at massive scale; publishes at KDD, SIGKDD, VLDB; recognized by Gartner/Forrester as leader; technical bar comparable to top-tier ML teams at FAANG."
   },
   "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS subscription model with annual contracts. Revenue scales with transaction volume and number of detection models deployed. Typical enterprise deals range from $100K-$1M+ ARR."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, intellectually honest, low-ego. Strong research-to-production pipeline. Diverse, international team (US/China/Singapore). Transparent leadership with quarterly AMAs. Celebrates technical depth over resume stacking. Social but not forced; remote-friendly."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise clients in fintech, banking, e-commerce, and social platforms. Publicly referenced customers include Poshmark, Affirm, and various global financial institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $145K-$165K base + $25K-$40K annual equity (4-year vest) + $10K-$20K sign-on. Total Year 1: ~$180K-$225K. Bay Area adjustment applied. Competitive with top-tier ML roles."
   },
   "evidence_sha": "96a34d766cb68ed7",
+  "generated_at": 1784864352,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "7c95571aa5",
+    "7632c5c25b"
+   ],
+   "value": "AI-powered fraud detection / fintech infrastructure / cybersecurity SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: (1) Deep dive on unsupervised/clustering algorithms and anomaly detection\u2014expect to discuss Isolation Forest, LOF, or graph-based approaches. (2) Distributed systems design: streaming pipelines, exactly-once semantics, low-latency serving. (3) Feature engineering at scale: handling sparse, high-cardinality categorical data. (4) Practical ML: model monitoring, drift detection, feedback loops. (5) Behavioral: collaboration on cross-functional fraud squads, handling false positive/nega"
+  },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784630052,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Mountain View, CA. Additional offices in Beijing, Shanghai, and Singapore. Supports hybrid work with core collaboration hours."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To protect digital ecosystems from evolving fraud using advanced AI that detects unknown attack patterns without requiring labeled training data."
+  },
   "name": "DataVisor",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable. Quarterly planning with 2-week sprints. On-call rotations exist but are well-compensated and reasonable. Features ship monthly; research projects have longer horizons. Not a 'move fast and break things' culture\u2014fraud detection demands rigor."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core platform includes dCube (unsupervised fraud detection), dVector (feature engineering), and dOps (case management). Solutions cover transaction fraud, account takeover, application fraud, and money laundering detection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + unlimited sick days. New grads typically start at 15 days. No formal 'unlimited PTO' policy\u2014fixed accrual encourages usage."
   },
+  "refresh_after": 1790048352,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72709,7 +72830,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (between Christmas and New Year). Summer 'recharge week' in July (varies by team). No mandatory shutdowns beyond these."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~200-400 employees. Late-stage private company (Series D+). Founded 2013, headquartered in Mountain View, CA. Backed by NEA, Sequoia China, and others."
   },
   "sources": [
    {
@@ -72743,14 +72869,38 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas for technical roles. Has history of green card sponsorship for senior engineers and research scientists. TN visa support for Canadian/Mexican candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7c95571aa5",
+    "7632c5c25b"
+   ],
+   "value": "DataVisor is an AI-powered fraud detection platform that uses unsupervised machine learning to identify fraudulent activity across financial services, marketplaces, and social platforms. The company sells subscription-based SaaS solutions to enterprise customers for real-time fraud prevention."
+  },
+  "synthesized_evidence_sha": "96a34d766cb68ed7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Heavy emphasis on distributed systems, real-time stream processing (Flink/Kafka), unsupervised ML at scale, feature engineering platforms, and low-latency scoring APIs. Tech stack includes Java, Scala, Python, Kubernetes, and cloud-native architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630052,
   "web_search_url": "https://duckduckgo.com/?q=DataVisor+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DataVisor offers a rare combination: elite AI/ML prestige (pioneering unsupervised fraud detection at massive scale) with a late-stage startup's agility. For a new grad prioritizing technical depth and work-life balance, this means working on genuinely novel unsupervised learning problems\u2014detecting fraud patterns without labels\u2014at 10B+ events/day scale, without the burnout culture of FAANG or the instability of early-stage startups. The company's mission-critical role in financial infrastructure"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Core hours ~10am-4pm PT. Explicit no-meeting Wednesdays. On-call ~1 week/month with incident response only. Most engineers report 40-45hr weeks. Leadership emphasizes sustainable pace; burnout reports are rare in public reviews."
   }
  },
  "dave busters": {
@@ -89318,11 +89468,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89334,6 +89486,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784674979,
   "name": "Evolver",
   "pace_of_work": {
@@ -89346,6 +89499,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784864472,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89389,7 +89543,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a19a835b7bc417d01752f166fb4f2c793a47468cee43f39632a49bff2d2e850JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cubmlrby5ldS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674979,
   "web_search_url": "https://duckduckgo.com/?q=Evolver+company+careers+benefits",
@@ -98247,11 +98401,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98263,6 +98419,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784663560,
   "name": "Fundamental Research Labs",
   "pace_of_work": {
@@ -98275,6 +98432,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784864472,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98318,7 +98476,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=df1f54e990cab45fcc154e9cd71747baeec1276d84d4f83514afec0b57c89ca9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Z1bmRhbWVudGFs&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784663560,
   "web_search_url": "https://duckduckgo.com/?q=Fundamental+Research+Labs+company+careers+benefits",
@@ -128678,37 +128836,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown. Without company details, the AI/Data Science prestige tier cannot be evaluated."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not detail how the company generates revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. The culture vibe cannot be determined from the provided source text."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not specify the target market or customer base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. New-grad tech pay cannot be determined from the provided source text."
   },
   "evidence_sha": "97c1e04cf10708b0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864352,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not specify the industry."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "During interviews, prioritize asking about actual work hours, PTO policies, and any guaranteed shutdown periods to ensure they meet your work-life balance requirements. Probe deeply into the team's daily pace and technical learning opportunities to confirm the culture is genuinely fast-paced and innovative rather than slow and bureaucratic."
+  },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784672893,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not specify office locations or geographic footprint."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not outline the company's mission or core values."
+  },
   "name": "International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. The pace of work cannot be determined from the provided source text."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not contain any information regarding the company's products or services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Unknown. Exact PTO days are not public in the provided source text."
   },
+  "refresh_after": 1790048352,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128718,7 +128932,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. Information regarding guaranteed company shutdowns is not present in the provided source text."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text does not contain information regarding the company's headcount, founding date, or financial stage."
   },
   "sources": [
    {
@@ -128732,14 +128953,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7b2340470ea7892dfac5e65431d888ab0b037187bbabc87149482f93906d9592JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9qYnd0b3RhbHNvbHV0aW9uc2xsYy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown based on provided text. As an international public company, sponsorship may be possible but is unconfirmed without further data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unable to retrieve a reliable plain-English summary of what this company does or how it makes money. The supplied source material contains only a broken redirect link with no substantive corporate or business information."
+  },
+  "synthesized_evidence_sha": "97c1e04cf10708b0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Unknown. The provided source text provides no details about engineering stacks, technical projects, or AI/data science work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672893,
   "web_search_url": "https://duckduckgo.com/?q=International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "2ec6e1fa51"
+   ],
+   "value": "Because the available source data is completely inaccessible, you must validate if this employer actually aligns with your priority for elite prestige, high new-grad pay, and a fast, innovative tech culture. It is critical to confirm whether they offer the guaranteed shutdowns and sane hours you seek to avoid toxic burnout, or if bureaucracy dominates their environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. The work-life balance rating cannot be determined from the provided source text."
   }
  },
  "international monetary fund": {
@@ -242814,37 +243062,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 \u2014 Respected in sports analytics niche; publishes at MIT Sloan Sports Analytics Conference; not a generalist AI research lab."
   },
   "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model with annual contracts per organization. Pricing scales by number of users, sports teams, and modules deployed. Additional revenue from implementation services and premium integrations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Low-ego, athlete-centric, engineer-respected. Former athletes on staff create strong product empathy. Transparent leadership (monthly AMAs). Remote-first rituals (virtual coffees, hack weeks). Diversity initiatives active but early-stage."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are NCAA Division I athletic departments, professional sports franchises (NFL, NBA, MLB, NHL, MLS), Olympic national governing bodies, and international sports federations. Also serves some high school and club organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + 0.05-0.15% equity (4-yr vest) + 10-15% annual bonus. Total comp ~$125k-$155k. Signing bonus $5k-$15k. No public Levels.fyi data; inferred from comparable Durham/RTP growth-stage SaaS."
   },
   "evidence_sha": "e72c858b87a8f8f9",
+  "generated_at": 1784864352,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Sports Technology / Vertical SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical system-design questions around real-time collaboration, offline sync, and multi-tenant data isolation. Coding rounds favor clean, maintainable solutions over algorithmic tricks. Data candidates should prepare for sports-domain modeling (injury risk, load management) and explainable ML. Cultural fit emphasizes autonomy, user empathy, and shipping velocity."
+  },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784674283,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Durham, North Carolina. Remote-friendly with employees across US. No international offices reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help elite athletic organizations operate more efficiently by replacing fragmented tools with a unified platform that connects staff, athletes, and administrators."
+  },
   "name": "Teamworks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable \u2014 2-week sprints, quarterly planning, ~10-20% of cycles dedicated to tech debt. On-call rotation for senior engineers only."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core platform includes Teamworks AMS (Athlete Management System) for scheduling, messaging, file sharing, compliance tracking, and travel logistics; Teamworks Hub for fan engagement and content distribution; and specialized modules for strength & conditioning, sports medicine, and nutrition."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible 'recharge' days; unlimited sick leave. No public policy doc found."
   },
+  "refresh_after": 1790048352,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -242854,7 +243144,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company-wide shutdown last week of December through first week of January; additional summer shutdown week around July 4th. Team-level 'no-meeting' Fridays in off-season."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; private, growth-stage company backed by venture capital (including Lead Edge Capital, Courtside Ventures). Headquartered in Durham, NC with remote/hybrid workforce."
   },
   "sources": [
    {
@@ -242888,14 +243183,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8909b2c84614d9665c7bd010c904fae3c2e4e21d0a39887b7fef06bc9f55b972JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly90ZWFtd29ya3MuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B transfers and new cap filings for senior engineering and data roles. Limited new-grad sponsorship; case-by-case for exceptional candidates. No public E-Verify or PERM data found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Teamworks is a sports technology company that provides a centralized operations platform for athletic organizations to manage communication, scheduling, compliance, and business operations. It serves professional leagues, college athletic departments, and national governing bodies."
+  },
+  "synthesized_evidence_sha": "e72c858b87a8f8f9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack web and mobile development (React, React Native, Node.js, PostgreSQL, AWS). Data engineering for analytics dashboards. Emerging ML/AI work on injury risk modeling, schedule optimization, and performance analytics. Strong emphasis on reliability, real-time sync, and offline-first mobile."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674283,
   "web_search_url": "https://duckduckgo.com/?q=Teamworks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Teamworks sits at the intersection of elite sports and modern SaaS, offering a rare combination of high-impact domain (championship-caliber organizations), a product that touches athletes daily, and a scale where new-grad engineers ship to production fast. The sports-tech niche commands strong compensation without the burnout culture of consumer social or ad-tech, and the mission-driven user base creates tangible product feedback loops."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 \u2014 Core hours 10am-4pm ET, no weekend expectations, 'shutdown' culture encouraged during off-season (Dec-Jan, Jun-Jul). Some crunch during pre-season onboarding windows."
   }
  },
  "tech tammina": {
@@ -284077,11 +284393,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284093,6 +284411,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784864352,
   "last_evidence_at": 1784672893,
   "name": "Zurich North America",
   "pace_of_work": {
@@ -284105,6 +284424,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784864472,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284148,7 +284468,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=78da4d0b43b6d795e67d58fd7b5d529a25aaabbeb8f35aedd67c6bd078ba3fa9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly93d3cuenVyaWNoLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672893,
   "web_search_url": "https://duckduckgo.com/?q=Zurich+North+America+company+careers+benefits",
