@@ -1,50 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-07-24T18:06:27+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 6097,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 3295,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-24T18:07:13+00:00",
-   "completion_tokens": 2200,
-   "detail": "task schema validation failed",
-   "endpoint": "nvidia:nemotron",
-   "lane": "api",
-   "latency_ms": 52104,
-   "max_tokens": 2200,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "prompt_chars": 3295,
-   "prompt_tokens": 1262,
-   "status": "invalid",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-24T18:07:21+00:00",
-   "completion_tokens": 1208,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 60359,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3295,
-   "prompt_tokens": 1134,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1784916442,
+ "events": [],
+ "generated_at": 1784916473,
  "history": [
   {
    "attempts": [
@@ -12790,33 +12746,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 1,
- "models": {
-  "nvidia:glm": {
-   "errors": 0,
-   "model": "z-ai/glm-5.2",
-   "ok": 1,
-   "requests": 1,
-   "tokens": 2342
-  },
-  "nvidia:kimi": {
-   "errors": 1,
-   "model": "moonshotai/kimi-k2.6",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 0
-  },
-  "nvidia:nemotron": {
-   "errors": 1,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 3462
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 4,
- "task_calls": {
-  "company_research": 1
- }
+ "requests": 0,
+ "task_calls": {}
 }
