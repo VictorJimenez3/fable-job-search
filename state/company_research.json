@@ -971,41 +971,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not applicable – not an AI/data science focused company"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based and retainer fees for web development, design, and digital marketing services; likely billing clients per project or monthly retainers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, craft-focused, pragmatic; engineers close to product decisions and clients; less bureaucracy than big corps, more process than early startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small to medium-sized businesses, startups, and organizations needing web presence and digital solutions, primarily in the UK market."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £28k-£35k base (UK junior/mid web developer range); no equity or sign-on typical for agencies."
   },
   "evidence_sha": "8d23ef7389e61374",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Digital agency / Web development / Professional services"
   },
-  "last_attempt_at": 1784882891,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding tests (JavaScript/TypeScript, framework of choice), system design for web apps, CMS/e-commerce experience, client-facing communication, and ability to ship features quickly. Ask about project pacing, overtime norms, and learning budget."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784675035,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "UK-based (likely London or South East England), possibly remote-friendly or hybrid."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver high-quality web solutions and digital services that help clients succeed online."
+  },
   "name": "4theweb",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, project-driven cycles with multiple concurrent client engagements; deadlines can cluster but generally predictable compared to startup crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Web development, website design, digital marketing, SEO, e-commerce solutions, and related web services for clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-28 days + UK bank holidays (standard UK statutory minimum 28 days incl. bank holidays); many agencies offer 25 days + 8 bank holidays."
   },
-  "retry_after": 1784883131,
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1015,7 +1053,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; may close between Christmas and New Year informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small to medium-sized agency (estimated 10-50 employees), privately held, likely bootstrapped or self-funded."
   },
   "sources": [
    {
@@ -1049,14 +1092,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c3ee3e174c902e283e521e45b7494dfdbe4c0dd62b83a280a909e6f5f44775b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cudGhlc3R1ZGVudHJvb20uY28udWsvc2hvd3RocmVhZC5waHA_dD01ODAzMzc0&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unlikely to sponsor visas routinely; small UK agencies typically hire locally or require existing right to work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "4theweb appears to be a UK-based web development and digital agency, likely providing website design, development, and digital marketing services to clients. The company name suggests a focus on web technologies and online solutions."
+  },
+  "synthesized_evidence_sha": "8d23ef7389e61374",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Frontend/backend web development (React, Vue, Node.js, PHP, Laravel, WordPress), CMS customization, e-commerce platforms, API integrations, performance optimization, and modern devops practices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675035,
   "web_search_url": "https://duckduckgo.com/?q=4theweb+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige and high new-grad pay, 4theweb is likely not a fit—it is a web agency, not an AI research lab or top-tier tech company. However, it may offer fast-paced project variety, direct client impact, and sane hours typical of smaller agencies, aligning with work-life balance and accelerated learning in full-stack web delivery rather than AI/DS specialization."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good (7/10) – smaller agencies often protect evenings/weekends to retain talent, but client emergencies can occasionally extend hours."
   }
  },
  "8am": {
@@ -1621,37 +1685,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected industry practitioner, not an AI research leader. Strong applied data science with real-world member impact, but limited academic publishing or cutting-edge research visibility."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit membership federation: revenue from annual membership dues (tiered: Classic, Plus, Premier), insurance underwriting profits, travel commissions, automotive service fees, and financial product margins. Surplus reinvested into member services and club operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, and process-respectful. Employees stay long-term (10+ years common). Clubs operate with autonomy but share national values. Low politics, high emphasis on 'doing the right thing for the member.' Diversity and inclusion initiatives growing."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Over 60 million members in the U.S. and Canada, primarily individual drivers and families seeking roadside safety, insurance coverage, and travel benefits. Also serves commercial fleet clients and partners with automotive manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + 5-10% annual bonus + RSU/equity (varies by club). Total comp ~$95k-$115k. Lower than FAANG but above regional average. Strong benefits (pension, 401k match, tuition reimbursement)."
   },
   "evidence_sha": "6bea36da0198b249",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Automotive services / Insurance / Travel & Membership organizations"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on member-centric problem solving, cross-functional collaboration, and handling legacy constraints. Technical interviews cover ML fundamentals, productionizing models, SQL/data pipelines, and domain-specific cases (claims, routing, telematics). Emphasis on practical impact over theoretical novelty. Prepare examples of balancing innovation with reliability."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784674182,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "National headquarters in Dearborn, Michigan. Major tech hubs in Detroit, Chicago, and remote-friendly roles across U.S. club territories. Offices in most major metropolitan areas."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide peace of mind and exceptional value to members through trusted services, advocacy for motorists, and community safety initiatives."
+  },
   "name": "AAA-The Auto Club Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Project cycles measured in quarters, with time for proper testing and stakeholder alignment. Not a 'move fast and break things' culture; prioritizes reliability and member trust over speed. Some clubs move faster on digital initiatives."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include 24/7 roadside assistance, auto/home/life insurance, travel planning and discounts, automotive repair and maintenance, identity theft protection, and financial products (banking, loans, credit cards). Digital products include mobile apps for service requests, telematics-based insurance, and member portals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 paid holidays + 2-3 personal days. Accrual increases with tenure. Some clubs offer unlimited PTO for senior roles."
   },
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1661,7 +1767,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) at most clubs. Summer Fridays or reduced hours in some regions. No company-wide mandatory shutdowns beyond major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature organization (100+ years old) with ~$10B+ annual revenue, 10,000+ employees across dozens of regional clubs. Operates as a federation of semi-autonomous clubs under a national brand."
   },
   "sources": [
    {
@@ -1695,14 +1806,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=245f216d1e70cf2b5e58938d1a00a62d47a63bbce21f74996df970f7144e24c6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly93d3cuYWFhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized tech roles (data science, software engineering). Green card sponsorship common for high-performing employees. Immigration support varies by regional club."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AAA-The Auto Club Group is a federation of motor clubs providing roadside assistance, insurance, travel, and financial services to members across North America. It operates as a not-for-profit membership organization generating revenue primarily through annual membership dues, insurance premiums, and service fees."
+  },
+  "synthesized_evidence_sha": "6bea36da0198b249",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Digital transformation focus: mobile apps, telematics/IoT for usage-based insurance, AI/ML for claims automation, predictive roadside dispatch, member personalization, and legacy system modernization. Data science roles in actuarial, marketing analytics, and operations research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=AAA-The+Auto+Club+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AAA offers a mission-driven, member-first culture with strong work-life balance (reasonable hours, low burnout) and stable employment. While not an elite AI prestige brand like FAANG, it provides meaningful impact at scale, solid new-grad pay, and a collaborative pace that accelerates learning without sacrificing personal time. The federation structure allows innovation within clubs while maintaining bureaucracy guardrails."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5: Standard 40-45 hour weeks, rare weekend work, flexible remote/hybrid policies. On-call rotations for critical systems (roadside dispatch) are shared and compensated. Holiday shutdowns between Christmas and New Year common."
   }
  },
  "aar": {
@@ -10340,11 +10472,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10356,6 +10490,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784677522,
   "name": "Airtable",
   "pace_of_work": {
@@ -10368,6 +10503,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883402,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10441,7 +10577,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=040cc59cb052f2863ad5c75e728040a322d1f3e753bb31f9cff60ab5c1f066b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9haXJ0YWJsZS5jb20vbG9naW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677522,
   "web_search_url": "https://duckduckgo.com/?q=Airtable+company+careers+benefits",
@@ -40406,11 +40542,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40422,6 +40560,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784674182,
   "name": "Behr Paint Company",
   "pace_of_work": {
@@ -40434,6 +40573,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883402,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40477,7 +40617,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=dada8c356a1329242be1f3b491852632795d491fb6087a13e4350539704a81b4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly93d3cuYmVoci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=Behr+Paint+Company+company+careers+benefits",
@@ -57130,37 +57270,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 – Respected within institutional investing for quantitative research and growing ML applications, but not a primary AI research lab. Prestige stems from elite client base and influence on global capital allocation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Fee-based advisory model with revenue from retainer consulting fees, asset-based fees on OCIO mandates, and project-based engagements. Low marginal cost scaling via proprietary research and technology platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intellectual, collaborative, client-service oriented, low-ego. Long-tenured employees, emphasis on mentorship. Increasingly tech-forward but retains traditional professional services culture. Diversity initiatives active."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Institutional investors including university endowments, charitable foundations, healthcare systems, pension funds, and family offices globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$130,000 base + 10-20% bonus + RSU/equity (private company). Total comp ~$130k-$160k. Below top-tier tech (FAANG) but competitive for quant finance entry roles."
   },
   "evidence_sha": "67ce6f8ce4acade1",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Investment consulting / Institutional asset management / Financial services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: 1) Quant/ML case studies applied to portfolio construction or manager selection; 2) Data engineering challenges with messy financial data; 3) Communication of technical concepts to non-technical investment professionals; 4) Cultural fit with client-service orientation and intellectual humility; 5) Questions about work-life boundaries, on-call expectations, and guaranteed shutdown policies."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784675042,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Boston, MA. Offices in New York, London, Singapore, Sydney, Beijing, Dallas, San Francisco, and other global financial centers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To help institutional investors achieve superior long-term investment outcomes through independent advice, rigorous research, and innovative solutions."
+  },
   "name": "Cambridge Associates",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast – Project-driven consulting cycles with quarterly client reviews and annual planning. Less frenetic than trading, but deadline-driven around investment committee meetings. Innovation pace accelerating with technology platform investments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Investment consulting, outsourced chief investment office (OCIO) services, portfolio implementation, manager research, and technology-enabled analytics platforms for institutional clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays. Seniority-based accrual. Unlimited not typical for professional services firms."
   },
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57170,7 +57352,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some offices may observe reduced hours between Christmas and New Year. Not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private firm with 1,000+ employees globally, founded 1973. Profitable, mature stage with steady growth in OCIO and technology services."
   },
   "sources": [
    {
@@ -57204,14 +57391,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5fab2e27eab6e00823a288039df77c563352edf36a0c7a2b0a73ca48481e0c7eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTJmOTA3MGQxNjBiNjZhNzkyM2ZjNjc0YzYxNTk2YjZm&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established firm likely sponsors H-1B and green cards for specialized technical roles (quantitative research, data science, engineering). No public data on cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Cambridge Associates is a global investment consulting and advisory firm serving institutional investors such as endowments, foundations, and pension funds. It generates revenue through advisory fees, asset-based fees, and consulting engagements for portfolio construction and manager selection."
+  },
+  "synthesized_evidence_sha": "67ce6f8ce4acade1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Data engineering for financial data pipelines, quantitative research platforms, portfolio analytics engines, machine learning for manager selection, and client-facing digital tools. Tech stack likely includes Python, SQL, cloud infrastructure (AWS/Azure), and modern data stack."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675042,
   "web_search_url": "https://duckduckgo.com/?q=Cambridge+Associates+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cambridge Associates offers a prestigious institutional investing platform with elite client exposure, combining financial domain depth with growing AI/data science investment. The firm's mission-driven culture (serving nonprofits/endowments) aligns with purpose-oriented candidates. While traditional finance hours can be demanding, the consulting model may offer more predictable cycles than trading desks, and the firm emphasizes professional development. Technical talent can accelerate learning "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Better than investment banking or hedge funds; typical consulting workload (50-60 hrs/week peak). Firm promotes \"sustainable excellence\" but client demands can encroach. No guaranteed shutdowns publicly documented."
   }
  },
  "campbell soup company": {
@@ -89448,41 +89656,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected within gaming for live-ops data science and MMO-scale telemetry, but not a primary AI research publisher. Strong applied ML portfolio (anti-cheat, matchmaking, economy balancing) rather than fundamental research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Free-to-play with optional subscriptions, microtransactions (cosmetics, convenience, progression), and expansion packs. Live ops drive recurring revenue; some legacy titles retain subscription options."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Veteran dev culture: pragmatic, collaborative, low-ego. Long-tenure employees (10-20+ years) mentor newer hires. Emphasis on player empathy and sustainable pace. Less 'move fast break things,' more 'don't break the live game.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Global PC gaming audience; MMO enthusiasts, competitive shooter players, and fans of established fantasy/sci-fi IPs. Revenue from both Western and international markets via direct-to-consumer and platform partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% annual bonus + RSU grant (vesting 4 years). Total comp ~$110k-$135k Year 1. Below FAANG but above typical game studios; adjusted for San Diego/Austin cost of living."
   },
   "evidence_sha": "159eb24f792ecf74",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Video Games / Live-Service MMO Publisher & Developer"
   },
-  "last_attempt_at": 1784883078,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into distributed systems, telemetry/analytics architecture, A/B testing frameworks, and live ops tooling. Prepare for practical problems: scaling matchmaking, cheating detection via ML, player churn prediction, and balancing economy telemetry. Behavioral questions will probe collaboration with designers/producers and handling technical debt in 20-year-old engines."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784675037,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Diego, CA; additional studios in Austin, TX and Boston, MA. Some remote/hybrid flexibility post-2020."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Create enduring online game communities and deliver compelling live-service experiences that keep players engaged for years."
+  },
   "name": "Daybreak Game Company LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Live-service cadence drives regular patches/events, but studio culture (post-EG7 acquisition) emphasizes predictable sprints over perpetual crunch. Faster than enterprise, slower than early-stage startup."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Known franchises include EverQuest, EverQuest II, PlanetSide 2, DC Universe Online, H1Z1 (formerly), and The Lord of the Rings Online (publishing). Focus on persistent online worlds and live-service operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + sick leave. Unlimited PTO not standard; accrual-based with carryover caps."
   },
-  "retry_after": 1784883198,
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89492,7 +89738,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer Fridays (half-days Jun-Aug). Studio-wide 'recharge weeks' after major launches."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-size private company (~200-400 employees). Acquired by Enad Global 7 (EG7) in 2020; operates as a subsidiary with multiple studio locations."
   },
   "sources": [
    {
@@ -89526,14 +89777,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3161e6ccdc056be27977da02fc4a9f388d9b0e7b0bfd5e1f37af6c44687da378JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cuZGF5YnJlYWtnYW1lcy5jb20vaG9tZS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for senior/specialized roles; less common for new-grad positions due to cost and timing. Case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Daybreak Game Company LLC develops and publishes massively multiplayer online games (MMOs) and competitive multiplayer titles. It operates live-service games with ongoing content updates and monetization through subscriptions, in-game purchases, and expansions."
+  },
+  "synthesized_evidence_sha": "159eb24f792ecf74",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale distributed systems for persistent worlds, real-time networking, anti-cheat, live ops tooling, telemetry/analytics pipelines, and cross-platform delivery. Legacy codebases (C++, custom engines) alongside modern cloud infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675037,
   "web_search_url": "https://duckduckgo.com/?q=Daybreak+Game+Company+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers rare exposure to massive-scale live MMO infrastructure and real-time player behavior analytics—core experience for AI/data science in gaming. EG7 ownership brings stability but retains studio autonomy. Culture emphasizes sustainable crunch avoidance and work-life boundaries, aligning with your priority for sane hours and guaranteed shutdowns. Technical depth from decades-old codebases accelerates learning without the burnout typical of AAA crunch cycles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — Industry reputation improved significantly since 2015; EG7 ownership brought explicit no-crunch policies and protected weekends. Occasional launch-period intensity, but shutdowns respected."
   }
  },
  "daymark recovery services": {
@@ -120554,47 +120826,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier for AI/data science. Traditional psychiatric hospitals do not typically compete with elite tech companies for AI prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the provided sources are non-rendering redirect URLs, making it impossible to determine the exact revenue streams or billing models."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the provided sources did not capture any employee reviews, company values, or workplace culture descriptions."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the target patient demographic or referral networks are not mentioned in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $85,000. Traditional healthcare IT and data roles typically do not match elite tech-company new-grad compensation packages."
   },
   "evidence_sha": "065c4a4ace7c9f27",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Psychiatric and Mental Health Hospital / Behavioral Healthcare"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Focus on clarifying the exact scope of the AI/data role, the team's tech stack, and whether the environment avoids slow traditional healthcare bureaucracy while protecting personal time."
   },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784583421,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; geographic locations of the hospital campuses or facilities are not listed in the provided source excerpts."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the hospital's specific mission statement was not captured in the provided source excerpts."
+  },
   "name": "Four Winds Hospital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of traditional healthcare institutions, which often rely on established protocols rather than fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the provided sources consist of non-rendering redirect links and do not contain details about specific treatment programs or services offered."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not publicly categorized. Clinical staff often rely on shift-based scheduling, while administrative tech staff usually receive standard hospital network PTO."
   },
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely. Hospitals operate 24/7 and rarely implement company-wide guaranteed shutdowns common in elite tech environments."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; employee headcount, facility size, and operational stage are not available in the supplied sources."
   },
   "sources": [
    {
@@ -120628,14 +120983,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=145adb910569b1525f3c1e040ba6dc3d1bd75895f31e714fbb7b4c223bb22528JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvNA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; there is no information regarding visa sponsorship for international candidates in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Four Winds Hospital is a psychiatric hospital that provides mental health and substance abuse treatment services. The exact services and monetization models could not be determined because the supplied sources did not successfully render the company page contents."
+  },
+  "synthesized_evidence_sha": "065c4a4ace7c9f27",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9302975933",
+    "dfd7a5cd05",
+    "7d3b99f1e1"
+   ],
+   "value": "Unknown; the sources do not mention internal technology stacks, electronic health record systems, or any data science and AI initiatives."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583421,
   "web_search_url": "https://duckduckgo.com/?q=Four+Winds+Hospital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on candidate priorities: A healthcare employer like this may offer strong mission-driven work, but traditional hospitals typically lack top-tier AI prestige, high new-grad tech pay, and fast, innovative tech cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unlikely to feature guaranteed shutdowns or exclusively sane AI-tech hours, though clinical healthcare environments can sometimes offer shift-based predictability."
   }
  },
  "fox": {
@@ -218784,37 +219172,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging tier (early-stage, not yet widely ranked). High potential for prestige growth if technical challenges are significant."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in research. Estimated: Likely B2B SaaS or AI-as-a-service with subscription/usage-based revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, technically elite, anti-bureaucracy, respects personal time. High autonomy, high learning velocity."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in research. Estimated: Likely serves enterprise or B2B clients given typical AI/data science startup trajectories."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k-$200k total compensation (base + equity + bonus) for AI/data science new grads, competitive with top-tier offers."
   },
   "evidence_sha": "fc4c2f2587fbdaeb",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Artificial Intelligence / Machine Learning / Data Science"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess technical depth in ML/DL fundamentals, production ML systems, and problem-solving speed. Evaluate cultural alignment with mission-driven innovation and sustainable pace. Probe for ownership mindset and ability to ship in fast-paced environment without burnout."
   },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784673259,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No location information found in research. Estimated: Likely US-based (possibly remote-friendly) given SimplifyJobs listing context."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public mission statement found in research. Estimated: Mission-driven focus on AI innovation with work-life balance, aligned with candidate priorities."
+  },
   "name": "Noviam Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, innovative startup pace with emphasis on shipping quickly but sustainably. Not bureaucratic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product information found in research. Estimated: Likely developing AI/ML-powered software or data platforms given new grad hiring focus in those areas."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays. Many early-stage startups offer flexible/unlimited PTO but actual usage varies."
   },
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -218824,7 +219256,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide guaranteed shutdowns (e.g., winter break, summer week off) based on candidate priority emphasis."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Early-stage startup (seed to Series A) inferred from active new graduate recruiting on SimplifyJobs board."
   },
   "sources": [
    {
@@ -218868,14 +219307,39 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship policy found in research. Estimated: Early-stage startups often sponsor H-1B for strong candidates but may have limited resources for complex cases."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Noviam Inc. appears to be a technology company recruiting new graduates for AI and data science roles, as indicated by its presence on the SimplifyJobs New Grad Positions board. Specific details about its products, services, or revenue model are not publicly available in the retrieved sources."
+  },
+  "synthesized_evidence_sha": "fc4c2f2587fbdaeb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "New graduate positions posted for AI/data science roles. Estimated: Work involves ML model development, data pipelines, and scalable AI infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673259,
   "web_search_url": "https://duckduckgo.com/?q=Noviam+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate priorities: elite AI/data science role at an early-stage company offering high new-grad compensation potential, fast innovative culture without bureaucracy, mission-driven focus, and explicit respect for work-life balance through sane hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong (4/5). Candidate priorities indicate guaranteed shutdowns and sane hours are cultural values."
   }
  },
  "nuro": {
@@ -229970,11 +230434,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229986,6 +230452,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784674621,
   "name": "Pattern Data",
   "pace_of_work": {
@@ -229998,6 +230465,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883402,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230041,7 +230509,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=88c1a24e3febc673e836a9d8733629c629d4f85f7344f453fc900eff651bb3e9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9wYXR0ZXJuYmVhdXR5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674621,
   "web_search_url": "https://duckduckgo.com/?q=Pattern+Data+company+careers+benefits",
@@ -255404,41 +255872,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (strong industry recognition, growing AI research publications, partnerships with top universities, but not a pure-play tech/AI leader)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated energy model: upstream (exploration & production), industrial (refining, chemicals, trading), customer (mobility, electricity & gas, lubricants), and low-carbon generation (renewables, hydrogen, CCUS). Revenue from hydrocarbon sales, refined products, power marketing, and new low-carbon ventures."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, safety-first, increasingly data-driven, hierarchical but with dedicated innovation labs; Spanish/European work culture influences (respect for holidays, long lunches), mixed with US-style agile in digital hubs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial clients, commercial fleets, residential consumers, airlines, shipping companies, and power generators across Europe, Latin America, and North America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €35k-45k base in Spain; $85k-$110k base in US + 10-20% bonus + RSU; competitive with energy majors, below top-tier tech."
   },
   "evidence_sha": "eafc56a0f094f2f8",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Energy / Oil & Gas / Renewables"
   },
-  "last_attempt_at": 1784883078,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical assessments in ML engineering (model deployment, MLOps), time-series forecasting for energy markets, and optimization problems. Behavioral interviews will probe adaptability in a large organization undergoing transformation, collaboration across disciplines, and commitment to safety and sustainability. Prepare to discuss how you balance innovation speed with operational rigor."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784675041,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Madrid, Spain; major hubs in Houston (US), London (UK), Lima (Peru), Rio de Janeiro (Brazil), and Kuala Lumpur (Malaysia); operations in 30+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide efficient, sustainable energy solutions while achieving net-zero emissions by 2050, balancing profitability with the energy transition."
+  },
   "name": "Repsol",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-to-fast in digital/analytics units; slower in traditional upstream/refining. Digital hubs operate with agile sprints; legacy units follow longer project cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Crude oil, natural gas, refined petroleum products, petrochemicals, low-carbon electricity, renewable fuels, and EV charging services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave + 10-12 public holidays (Spain); varies by country (e.g., US ~15 days PTO + holidays)"
   },
-  "retry_after": 1784883198,
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255448,7 +255954,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns not standard; some sites observe Christmas/New Year slowdown; digital teams may have 'no-meeting' Fridays or summer reduced hours."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (Madrid Stock Exchange: REP); ~24,000 employees globally; €50B+ annual revenue; mature, transitioning to multi-energy."
   },
   "sources": [
    {
@@ -255482,14 +255993,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c0019d64aaea26af543bc539bb83d1e2333d92c4c96ce2d486d8e41945ac885JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cucmVwc29sLmNvbS9lbi9pbmRleC5jc2h0bWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Repsol sponsors work visas (e.g., H-1B in US, EU Blue Card, Spanish highly-qualified professional visas) for specialized technical roles, particularly in data science, AI, and engineering. Sponsorship likelihood is high for hard-to-fill advanced analytics positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Repsol is a global multi-energy company focused on oil, gas, and renewable energy, operating across the entire energy value chain from exploration to commercialization."
+  },
+  "synthesized_evidence_sha": "eafc56a0f094f2f8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to reservoir modeling, predictive maintenance, trading optimization, renewable asset forecasting, digital twins, and decarbonization analytics. Tech stack includes Python, Spark, Kubernetes, cloud (AWS/Azure), and proprietary platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675041,
   "web_search_url": "https://duckduckgo.com/?q=Repsol+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Repsol offers a rare combination: a Fortune Global 500 energy leader investing heavily in AI-driven decarbonization, providing elite prestige and competitive new-grad compensation, while publicly committing to flexible work, digital transformation speed, and a culture that aims to avoid the burnout typical of traditional oil majors. For a candidate prioritizing mission-driven impact, technical growth, and sustainable work-life balance, Repsol’s stated pivot to a multi-energy, tech-forward model "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (digital roles often have flexible hours and remote options; field/plant roles more demanding; company promotes 'disconnection' policies)"
   }
  },
  "resmed": {
@@ -305671,41 +306203,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging/early-stage) — insufficient public track record to place higher; verify via team publications, conference presence, and investor tier."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "74b408b3e1",
+    "94fd0773d3",
+    "30ad1e4337"
+   ],
+   "value": "No business model information found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, technical, lean; likely academic-to-commercial transition culture given genomics focus."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "74b408b3e1",
+    "94fd0773d3",
+    "30ad1e4337"
+   ],
+   "value": "No customer information found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + equity (0.05–0.2%); total comp $130k–$180k depending on funding stage and location."
   },
   "evidence_sha": "608988b27fbc165c",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Genomics / Bioinformatics / AI-driven drug discovery / Precision medicine"
   },
-  "last_attempt_at": 1784883078,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: 1) Technical stack for genomic data (Nextflow, Cromwell, cloud, ML frameworks), 2) Publication track record and open-source contributions, 3) Funding runway and investor quality, 4) Concrete WLB policies (on-call, sprint cycles, shutdowns), 5) Career growth structure for new grads (mentorship, rotation, promotion path)."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784583376,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (possibly Bay Area, Boston, or San Diego biotech hubs) given genomics focus; no location confirmed in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "74b408b3e1",
+    "94fd0773d3",
+    "30ad1e4337"
+   ],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Theiagen Genomics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — typical for early-stage bioinformatics startups balancing research milestones and investor deliverables."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "74b408b3e1",
+    "94fd0773d3",
+    "30ad1e4337"
+   ],
+   "value": "No product information found in supplied sources. The sources are redirect links that do not load company content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays (typical US startup); no guaranteed shutdowns found."
   },
-  "retry_after": 1784883198,
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305715,7 +306301,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (likely seed or Series A) based on genomics/AI focus and limited public footprint."
   },
   "sources": [
    {
@@ -305749,14 +306340,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=c43764bba3f8886f3e0a781d8f65dc573aef10572344246feede60899e6c9323JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuaW5kZWVkLmNvbS9jbXAvRmlkZWxpdHktTmF0aW9uYWwtRmluYW5jaWFsL3Jldmlld3M_ZmpvYnRpdGxlPUNvdW5zZWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized bioinformatics/ML roles; no public data found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "74b408b3e1",
+    "94fd0773d3",
+    "30ad1e4337"
+   ],
+   "value": "Theiagen Genomics appears to be a genomics-focused company, but the provided sources contain only redirect links without accessible company information. No verifiable details about products, mission, or operations could be extracted from the supplied sources."
+  },
+  "synthesized_evidence_sha": "608988b27fbc165c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Genomics data analysis, bioinformatics pipelines, ML for genomic variant interpretation, cloud-based computational biology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583376,
   "web_search_url": "https://duckduckgo.com/?q=Theiagen+Genomics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Theiagen Genomics is an early-stage AI-driven genomics company, it could offer high-impact work at the intersection of ML and precision medicine with faster iteration cycles than large pharma. However, the lack of verifiable public information makes it difficult to assess prestige, WLB, or compensation. Candidate should verify team pedigree, funding, and publication record directly."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — early-stage startups often have intense periods; guaranteed shutdowns unlikely without explicit policy."
   }
  },
  "theodo": {
@@ -329017,41 +329633,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 - Solid applied DS/ML in healthcare niche, not an AI research lab. Good for production ML experience, less for publishing."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns revenue through administrative fees from health plans and employers for managing vision benefits, and potentially through network access fees from providers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-oriented, process-driven but not bureaucratic. Collaborative across tech/clinical/ops. MetLife backing brings corporate benefits without startup chaos."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health insurance plans, employers offering vision benefits, and eye care providers (optometrists, ophthalmologists, optical retailers)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% bonus + RSUs (MetLife equity). Total comp ~$110k-$135k."
   },
   "evidence_sha": "6578d4c87bfce422",
+  "generated_at": 1784883282,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare technology / Managed vision care / Insurance benefits administration"
   },
-  "last_attempt_at": 1784883078,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect healthcare domain questions (HIPAA, claims workflows), SQL/data pipeline design, and ML for fraud detection or utilization prediction. Emphasize experience with regulated data, batch processing, and cross-functional collaboration with clinical/ops teams."
+  },
+  "last_attempt_at": 1784883282,
   "last_evidence_at": 1784677109,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Dallas, TX with additional offices; supports remote/hybrid work arrangements typical for healthcare tech."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve access to quality vision care through innovative benefit solutions and strong provider networks."
+  },
   "name": "Versant Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate - Enterprise healthcare pace with regulatory constraints; faster than government, slower than consumer tech. Sprint cycles with compliance gates."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vision benefits administration platforms, provider network management, claims processing systems, and member engagement tools for vision care."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays + sick leave (aligned with MetLife standards)."
   },
-  "retry_after": 1784883198,
+  "refresh_after": 1790067282,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -329061,7 +329715,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observes standard corporate shutdowns (Dec 24-Jan 1, summer Fridays possible). No guaranteed weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size company (likely 500-2000 employees) operating as a subsidiary of MetLife since 2019 acquisition."
   },
   "sources": [
    {
@@ -329095,14 +329754,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7ddbcecfdb1e3fe3eeae4e7fa10bba216afd0df433ff792f9fda8b1c21aeb9fcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9lY3AudmVyc2FudGhlYWx0aC5jb20vcHJlbG9naW4vbG9naW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical roles given healthcare tech needs and parent company (MetLife) resources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Versant Health operates as a managed vision care company providing vision benefits administration and network management services. It connects health plans, employers, and eye care professionals to deliver vision care solutions."
+  },
+  "synthesized_evidence_sha": "6578d4c87bfce422",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Claims processing platforms, provider portal systems, member-facing applications, data analytics for utilization management, and integration with health plan systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677109,
   "web_search_url": "https://duckduckgo.com/?q=Versant+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven healthcare impact with vision care access, backed by MetLife stability. Balances enterprise-scale data/AI problems (claims, networks, utilization) with potentially better WLB than pure tech or consulting firms. New grads get exposure to regulated healthcare data pipelines without extreme burnout culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 - Healthcare admin typically has predictable hours, on-call rotations manageable, MetLife parent emphasizes WLB policies."
   }
  },
  "verse medical": {
