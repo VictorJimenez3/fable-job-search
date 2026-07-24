@@ -1842,7 +1842,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1860,7 +1860,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784877472,
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678333,
   "name": "Abbott",
   "pace_of_work": {
@@ -1873,7 +1873,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784877592,
+  "retry_after": 1784877876,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15091,43 +15091,101 @@
  },
  "amazon com services llc a57": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Extremely high; Amazon is a dominant force in AI and data science, operating massive global data infrastructure."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "E-commerce retail sales, B2B cloud infrastructure, and consumer subscription revenues."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Mission-driven and focused on customer obsession, characterized by a peculiar culture of curiosity and fearless initiative."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Individual consumers and enterprise businesses globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000 - $200,000+ total compensation (heavy stock emphasis) for top-tier AI/Data Science roles."
   },
   "evidence_sha": "e3cb7b43753421bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784877636,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784877314,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "E-commerce and Cloud Computing"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Assess the specific team's on-call expectations and operational load to ensure the culture doesn't lead to burnout, and confirm if the data science role truly accelerates technical learning without sacrificing personal time to fast-paced delivery cycles."
+  },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678212,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Global corporate offices and fulfillment centers, with primary tech hubs in major metropolitan areas."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "To be Earth's most customer-centric company, united by a peculiar culture of curiosity, bold ownership, and fearless initiative to make everyday impact."
+  },
   "name": "Amazon.com Services LLC - A57",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Very fast-paced, highly metric-driven environment emphasizing bold ownership and rapid delivery."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "A variety of products and services including e-commerce retail, cloud infrastructure, consumer electronics, and entertainment streaming."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days of PTO typical for new corporate hires, increasing with tenure."
   },
-  "retry_after": 1784877554,
+  "refresh_after": 1790061636,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15136,8 +15194,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Estimated: None. Amazon rarely offers company-wide shutdowns and typically operates 24/7."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Large-cap, established global corporate subsidiary."
   },
   "sources": [
    {
@@ -15181,14 +15248,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Historically offers extensive visa sponsorship for qualified technical roles, though specific policy for this exact entity posting is standard corporate."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Amazon.com Services LLC - A57 is a subsidiary entity of Amazon.com, Inc. Amazon's broader business makes money primarily through e-commerce product sales, AWS cloud computing services, and subscription programs like Prime."
+  },
+  "synthesized_evidence_sha": "e3cb7b43753421bc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Large-scale systems engineering, machine learning model deployment, and data science at massive global scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678212,
   "web_search_url": "https://duckduckgo.com/?q=Amazon.com+Services+LLC+-+A57+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "e6d83815e0"
+   ],
+   "value": "While this role offers top-tier elite prestige and high new-grad pay at a technical pioneer, the candidate must weigh it against the company's infamous fast-paced bureaucracy and historically poor work-life balance, which fundamentally conflicts with their desire for guaranteed shutdowns and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Generally poor across the industry due to intense operational metrics, conflicting with guaranteed shutdowns."
   }
  },
  "amazon development center u s inc": {
@@ -86327,48 +86426,135 @@
  "dell technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e95fa35556",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 2 — Recognized global tech brand with significant AI investments, but lacks the elite, specialized prestige of pure-AI labs for top-tier data science talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "5990db395b"
+   ],
+   "value": "Generates revenue primarily through hardware manufacturing and direct sales of IT infrastructure, complemented by recurring software licensing and managed IT services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e95fa35556"
+   ],
+   "value": "Estimated: Corporate and structured. Emphasizes customer satisfaction and operational reliability over rapid, disruptive innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "5573854845"
+   ],
+   "value": "Individual consumers, small and medium businesses, large enterprises, and public sector organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary for new grad tech roles, with potential for moderate stock grants and performance bonuses."
   },
   "evidence_sha": "04291d2c315ca8c3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877636,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "5990db395b"
+   ],
+   "value": "Information Technology, Computer Hardware, and Enterprise Software."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "17f8c9c419"
+   ],
+   "value": "Candidates should probe deeply into the specific team's daily operations to gauge actual pace of work and autonomy. Ask about on-call expectations, shutdown policies, and whether the AI role involves building novel models versus maintaining legacy infrastructure to verify it meets strict burnout-avoidance and rapid-growth criteria."
+  },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678378,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "5573854845"
+   ],
+   "value": "Headquartered in Round Rock, Texas, with a vast global footprint of offices and R&D centers spanning the Americas, EMEA, and APJC regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "5990db395b"
+   ],
+   "value": "To drive human progress through technology by empowering organizations and individuals to build their digital future and transform how they work and live."
+  },
   "name": "Dell Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e95fa35556"
+   ],
+   "value": "Estimated: Moderate to slow. Large enterprise structure often requires navigating complex processes and red tape, which can slow down innovation cycles compared to pure tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "5573854845"
+   ],
+   "value": "Personal computers, enterprise servers, data storage solutions, networking switches, and IT infrastructure software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e95fa35556"
+   ],
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off annually, not including sick leave or company-designated holidays."
   },
+  "refresh_after": 1790061636,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5990db395b",
+    "5573854845"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e95fa35556"
+   ],
+   "value": "Estimated: Often provides one to two weeks of mandatory year-end holiday shutdown, though specific closure days can vary by business unit and region."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "5990db395b"
+   ],
+   "value": "Mature enterprise and large publicly traded global corporation."
   },
   "sources": [
    {
@@ -86412,14 +86598,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "17f8c9c419"
+   ],
+   "value": "Sponsorship availability is not explicitly confirmed in the provided sources, though large global tech corporations frequently offer immigration support for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "5990db395b"
+   ],
+   "value": "Dell Technologies is a multinational technology company that develops, sells, repairs, and supports computers, servers, data storage, and software solutions. It makes money primarily through enterprise hardware sales, IT infrastructure contracts, and software services."
+  },
+  "synthesized_evidence_sha": "04291d2c315ca8c3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e95fa35556",
+    "17f8c9c419"
+   ],
+   "value": "Roles involve hardware engineering, software development for infrastructure optimization, systems architecture, and applied data science for enterprise IT solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678378,
   "web_search_url": "https://duckduckgo.com/?q=Dell+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e95fa35556",
+    "17f8c9c419"
+   ],
+   "value": "Dell offers the security and high compensation typical of a legacy tech giant, but its immense scale leans more toward bureaucracy than a fast, innovative startup culture. While its AI mission is expanding, new grads should closely scrutinize team assignments to ensure the role provides genuine technical acceleration and respected work-life boundaries rather than slow internal process management."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to moderate. Known for generally stable hours, but this can vary drastically by team; workloads may spike during product launch cycles."
   }
  },
  "dellfor technologies": {
@@ -153284,11 +153503,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153300,6 +153521,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678337,
   "name": "Ivy Tech Community College",
   "pace_of_work": {
@@ -153312,6 +153534,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877756,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153355,7 +153578,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3e719a87b9dc468832a7b28945cbac07289e48105cb01f2519d767b1334726afJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly9pdnlsaXZpbmcuY29tL3RoZWl2eWhhd2FpaWthaS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678337,
   "web_search_url": "https://duckduckgo.com/?q=Ivy+Tech+Community+College+company+careers+benefits",
@@ -167413,37 +167636,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not determinable from provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Not found in research"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not determinable from provided sources."
   },
   "evidence_sha": "e5cff1ae995f9120",
+  "generated_at": 1784877636,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not found in research"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe the hiring manager on typical work hours, on-call expectations, and how the team avoids bureaucratic delays while maintaining a healthy work-life balance."
+  },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678473,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
   "name": "Leonardo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Not determinable from provided sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not determinable from provided sources."
   },
+  "refresh_after": 1790061636,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167453,7 +167718,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not determinable from provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
   },
   "sources": [
    {
@@ -167487,14 +167757,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d81cbf9b7769572655de6388d6202cbefd55683b0213c1f5623dda7a1058c4fdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly9ob3dtYW55b2ZtZS5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d2a93c54b1",
+    "1d52fea99f",
+    "22b61ba9e8"
+   ],
+   "value": "Company information could not be extracted from the provided sources."
+  },
+  "synthesized_evidence_sha": "e5cff1ae995f9120",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Leonardo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the company's specific tech culture and WLB norms, you should ask targeted questions about how the role balances fast-paced innovation with personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Not determinable from provided sources."
   }
  },
  "letsgetchecked": {
@@ -201002,47 +201297,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Bell Labs heritage, 6G/AI research leadership, top-conference publications, but compensation lags FAANG)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "Revenue from network equipment sales, software/subscriptions, professional services, and patent licensing. Heavy R&D investment drives product differentiation and IP monetization."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, consensus-driven, long-termist; low politics, high technical respect; diverse global workforce with strong Nordic egalitarian values."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "Communication service providers (telecom operators), enterprises, governments, and webscale/cloud providers worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €50k–€65k base (Finland/EU) + 10–15% bonus + RSUs; US new grad $110k–$135k base + 10–15% bonus + RSUs (varies by location/role)"
   },
   "evidence_sha": "1bf5abdc800e2c19",
+  "generated_at": 1784877636,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f"
+   ],
+   "value": "Telecommunications equipment / Network infrastructure / Industrial AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, networking fundamentals, and applied ML (optimization, time-series, graph neural nets). Prepare for system-design questions around low-latency, high-reliability telecom workloads. Demonstrate ability to bridge research prototypes to production-grade, standards-compliant software. Cultural fit questions will probe collaboration across global, cross-functional teams and long-term ownership mindset."
   },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678567,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "Headquartered in Espoo, Finland; major R&D hubs in Finland, US (Murray Hill, Sunnyvale), France, Germany, India, China; sales/support in >130 countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5663bef21"
+   ],
+   "value": "To create technology that helps the world act together, leveraging networks that sense, think, and act."
+  },
   "name": "Nokia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast in R&D/cloud transformation; slower in legacy hardware/support orgs. Quarterly planning cycles with multi-year standardisation commitments (3GPP)."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "5G radio access networks, core networks, fixed broadband (fiber, copper), IP/optical routing, network automation software, Nokia Bell Labs research innovations, and patent licensing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave + 10–12 public holidays (Finland baseline; varies by country)"
   },
+  "refresh_after": 1790061636,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "Nokia Graduate Leadership Program (2-year rotational across R&D, strategy, sales); also Bell Labs Internship/Postdoc pipeline for research-track"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown; some business units observe summer slowdown (July) and year-end holiday week"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "Large public company (NYSE: NOK); ~86,000 employees globally; mature but investing heavily in 5G/6G and cloud-native software."
   },
   "sources": [
    {
@@ -201076,14 +201437,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=e1af36bc35d7d8bee666ce636d1b8cdcd0504fd3f2d28d4ba386d596c1952442JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cubm9raWEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "80cb10ab1f"
+   ],
+   "value": "Actively sponsors work visas (H-1B, Green Card in US; EU Blue Card, local permits in Europe) for specialized engineering and research roles; dedicated global mobility team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "475d7f64fb",
+    "d5663bef21"
+   ],
+   "value": "Nokia is a Finnish multinational telecommunications, information technology, and consumer electronics company. It primarily makes money by selling network infrastructure (5G, fixed, cloud), software, and licensing its extensive patent portfolio to other technology firms."
+  },
+  "synthesized_evidence_sha": "1bf5abdc800e2c19",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "80cb10ab1f",
+    "d5663bef21"
+   ],
+   "value": "Large-scale distributed systems, real-time 5G/6G signal processing, cloud-native network functions, AI/ML for network optimization and automation, edge computing, and fundamental research at Nokia Bell Labs (including AI, quantum, sensing)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678567,
   "web_search_url": "https://duckduckgo.com/?q=Nokia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nokia Bell Labs offers elite AI/research prestige with a 100-year legacy of Nobel-grade innovation, while the core business provides massive real-world deployment scale for ML systems. European heritage generally translates to stronger work-life boundaries (e.g., Finnish labor laws, generous PTO) than US tech giants, and the current cloud-native transformation creates high-impact growth opportunities without the 'move fast and break things' burnout culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 (Finnish/EU labor protections, flexible hybrid policy, limited on-call for most SW roles; some on-call in network operations)"
   }
  },
  "nomi health": {
@@ -312345,7 +312736,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312363,7 +312754,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784877314,
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678104,
   "name": "VITAS Healthcare",
   "pace_of_work": {
@@ -312376,7 +312767,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784877554,
+  "retry_after": 1784878116,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313188,11 +313579,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313204,6 +313597,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877636,
   "last_evidence_at": 1784678466,
   "name": "Wabash Valley Power Alliance",
   "pace_of_work": {
@@ -313216,6 +313610,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877756,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313259,7 +313654,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678466,
   "web_search_url": "https://duckduckgo.com/?q=Wabash+Valley+Power+Alliance+company+careers+benefits",
