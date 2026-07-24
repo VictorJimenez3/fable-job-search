@@ -1927,41 +1927,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — recognized as a top pharma employer for data science; publishes at NeurIPS, ICML, AMIA; partners with academic AI labs; but not a pure-play AI company like FAANG."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d"
+   ],
+   "value": "Revenue comes from sales of patented prescription drugs; heavy investment in R&D (approx. 20% of revenue) fuels pipeline; post-Humira loss of exclusivity, growth relies on newer immunology/oncology assets and acquisitions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, science-first, collaborative, and risk-aware. Employees value impact on patients. Hierarchy exists but technical expertise is respected. Diversity and inclusion are emphasized. Less 'move fast and break things', more 'move deliberately and validate'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d"
+   ],
+   "value": "Primary customers are healthcare providers, hospitals, pharmacies, patients, and payers (insurers/government health systems) globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base + 10-15% target bonus + RSU grant ($20k-$40k vesting over 4 years). Total first-year comp ~$140k-$180k."
   },
   "evidence_sha": "7d600d46009cc5bb",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d"
+   ],
+   "value": "Biopharmaceuticals / Life Sciences"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on ML fundamentals, statistical rigor, causal inference, and domain adaptation to biology/clinical data. Emphasize experience with messy real-world data, model interpretability, and cross-functional communication. Prepare for behavioral questions on collaboration, compliance awareness, and long-term project ownership."
   },
-  "last_attempt_at": 1784871147,
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784677760,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d",
+    "01bf04f523"
+   ],
+   "value": "Headquarters: North Chicago, Illinois. Major R&D hubs: Lake County (IL), South San Francisco, Boston, Worcester (MA). Global offices in Europe, Asia, Latin America. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "To discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow."
+  },
   "name": "AbbVie",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured — regulated drug development imposes stage-gate reviews, documentation, and compliance; slower than consumer tech but faster than traditional pharma due to digital transformation initiatives."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d"
+   ],
+   "value": "Key products include Humira (adalimumab), Skyrizi (risankizumab), Rinvoq (upadacitinib), Imbruvica (ibrutinib), Venclexta (venetoclax), and a pipeline spanning immunology, oncology, neuroscience, eye care, and virology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays (including year-end shutdown). Accrual increases with tenure."
   },
-  "retry_after": 1784871267,
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1971,7 +2022,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — annual year-end shutdown (typically Dec 24-Jan 1) where most operations close; employees use PTO or unpaid time if not covered by holiday schedule."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d"
+   ],
+   "value": "Large, mature public company (NYSE: ABBV); ~50,000 employees worldwide; Fortune 500; market cap ~$280B (2024)."
   },
   "sources": [
    {
@@ -2005,14 +2063,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and employment-based green cards for technical and scientific roles; large immigration program given global workforce."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d",
+    "01bf04f523"
+   ],
+   "value": "AbbVie is a global biopharmaceutical company focused on discovering and delivering innovative medicines for serious health conditions. It was spun off from Abbott Laboratories in 2013 and operates as an independent, research-driven enterprise."
+  },
+  "synthesized_evidence_sha": "7d600d46009cc5bb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML applied to drug discovery (molecular design, target identification), clinical trial optimization, real-world evidence, commercial analytics, supply chain, and digital health. Uses cloud platforms, bioinformatics, NLP, computer vision, and causal inference."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=AbbVie+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AbbVie offers elite pharma prestige and competitive new-grad pay for AI/data science, with a mission-driven focus on patient impact. Its regulated environment means slower pace than pure tech, but provides structured work-life boundaries, generous PTO, and holiday shutdowns that protect personal time. Technical growth is strong in applied ML for drug development, though bureaucracy exists."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good — typical 40-45 hour weeks for individual contributors; core hours culture; limited on-call; protected vacation; holiday shutdown between Christmas and New Year."
   }
  },
  "abound": {
@@ -30005,11 +30087,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -30021,6 +30105,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784675819,
   "name": "Avis Budget Group",
   "pace_of_work": {
@@ -30033,6 +30118,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871437,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -30076,7 +30162,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bac61d3b888e93d938a4d0bbbe059f10b0de1bd6b52a9204d708e207e562e7cfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuYXZpcy5jb20vZW4vaG9tZT9tc29ja2lkPTI1OTlmNjMzNDYyZTY4MWYxOGRiZTFhZTQ3YTc2OWJm&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Avis+Budget+Group+company+careers+benefits",
@@ -40677,7 +40763,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40695,7 +40781,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784871147,
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784850885,
   "name": "Blueprint Technologies",
   "pace_of_work": {
@@ -40708,7 +40794,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784871267,
+  "retry_after": 1784871557,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42525,37 +42611,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — recognized leader in applied DSP/ML for audio; publishes at top conferences (ICASSP, AES); attracts PhD talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174",
+    "8d4a1e9f35"
+   ],
+   "value": "Revenue from direct hardware sales (B2C and B2B), automotive OEM contracts, licensing of proprietary audio technologies, and professional installation services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, research-driven, collaborative, low-politics; emphasis on technical depth and product quality over speed."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174",
+    "a849d56711"
+   ],
+   "value": "General consumers, audiophiles, automotive OEMs, aviation/military, and professional installers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU/equity (private valuation); total ~$140k-$170k year 1."
   },
   "evidence_sha": "1cd6a3cfebdf8161",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6210b02174"
+   ],
+   "value": "Consumer electronics / Audio technology / Acoustics research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on signal processing, acoustics, and ML for audio; system-design questions around real-time embedded constraints; and behavioral emphasis on research rigor and cross-functional collaboration."
   },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784679631,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174"
+   ],
+   "value": "Headquarters in Framingham, MA; major engineering centers in Boston area, Seattle, San Diego; global offices in Europe and Asia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174"
+   ],
+   "value": "To develop innovative audio solutions through research that deliver better sound experiences across consumer, automotive, and professional markets."
+  },
   "name": "Bose",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles driven by hardware launch cadences; research groups have longer horizons; generally avoids crunch culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8d4a1e9f35",
+    "a849d56711"
+   ],
+   "value": "Consumer audio (headphones, earbuds, portable speakers, home audio), professional audio, automotive sound systems, and noise-cancellation technology licensing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays; flexible sick time; sabbatical after 7 years."
   },
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42565,7 +42708,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December); occasional summer Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174"
+   ],
+   "value": "Estimated: ~10,000-12,000 employees globally; mature private company founded in 1964, headquartered in Framingham, MA."
   },
   "sources": [
    {
@@ -42599,14 +42749,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=0d382274bc573f4dc4b809245659edb4f34f092ed8023a79d14857167665e24bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuYm9zZS5jb20vaG9tZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Capable of H-1B and green card sponsorship for specialized engineering roles; private company with stable workforce."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210b02174",
+    "8d4a1e9f35",
+    "a849d56711"
+   ],
+   "value": "Bose is a privately held American manufacturing company that designs, develops, and sells audio equipment including headphones, speakers, home theater systems, and automotive sound systems. The company is known for its research-driven approach to acoustics and noise-cancellation technology."
+  },
+  "synthesized_evidence_sha": "1cd6a3cfebdf8161",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DSP algorithms, active noise cancellation, acoustic modeling, machine learning for audio processing, embedded systems, transducer design, and audio software platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679631,
   "web_search_url": "https://duckduckgo.com/?q=Bose+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bose offers elite acoustics/DSP prestige with a research-first culture, competitive new-grad compensation, and a private-company structure that avoids quarterly pressure. Its mission-driven audio innovation and reasonable work-life norms align with your goals for technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — private ownership enables stable schedules; typical 40-45 hr weeks; limited on-call outside critical hardware launches."
   }
  },
  "boson ai": {
@@ -71253,41 +71428,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Unlikely to be considered elite or top-tier for AI/Data Science prestige compared to FAANG or specialized AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "36bd1e18cb"
+   ],
+   "value": "B2B service and SaaS model. Charges clients for claims management services, network access, and software platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional and structured. Claims management is a regulated, detail-oriented industry, suggesting a culture focused on compliance and process rather than rapid disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b4d9b1cbb",
+    "36bd1e18cb"
+   ],
+   "value": "Insurance carriers, self-insured employers, third-party administrators (TPAs), and government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $110,000 base salary. Reflects standard enterprise compensation in insurance tech, which is generally lower than elite tech or finance roles."
   },
   "evidence_sha": "ded6c0c4ce57e634",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784871147,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe deeply into the specific AI and data science projects to see if the work is genuinely innovative or if the role leans toward maintaining legacy systems; this is critical for ensuring you get the fast, innovative tech culture you want rather than slow bureaucracy. Ask team members about typical hours, on-call expectations, and how quickly engineers can push new machine learning models to production."
+  },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784827102,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "36bd1e18cb"
+   ],
+   "value": "Headquartered in Irvine, California, with numerous remote and hybrid offices across the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "36bd1e18cb"
+   ],
+   "value": "To deliver innovative risk management and claims management solutions that improve outcomes for patients and reduce costs for clients."
+  },
   "name": "CorVel Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Likely features standard enterprise software development cycles, which may feel slower and more bureaucratic than cutting-edge, fast-paced tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b4d9b1cbb",
+    "36bd1e18cb"
+   ],
+   "value": "Workers' compensation claims management, auto claims management, disability management, medical bill review, pharmacy benefit management, and case management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of vacation for standard employees, accrued over time, which is typical for established mid-to-large public companies in this sector."
   },
-  "retry_after": 1784871267,
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71297,7 +71522,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Engineering teams usually operate year-round with standard national holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d829513a6d"
+   ],
+   "value": "Public company (NASDAQ: CRVL). Established firm with thousands of employees nationwide."
   },
   "sources": [
    {
@@ -71341,14 +71573,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d829513a6d",
+    "4b4d9b1cbb",
+    "36bd1e18cb"
+   ],
+   "value": "CorVel Corporation is a publicly traded provider of workers' compensation, auto, health, and disability management solutions. It makes money by charging insurance carriers, self-insured employers, and third-party administrators for its claims management, risk mitigation, and case management services."
+  },
+  "synthesized_evidence_sha": "ded6c0c4ce57e634",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Enterprise software development, data engineering, claims automation, and building platforms for risk management and healthcare billing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784827102,
   "web_search_url": "https://duckduckgo.com/?q=CorVel+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a candidate seeking elite AI prestige and high new-grad pay within a fast, innovative culture, CorVel may fall short of your top-tier expectations; however, its steady enterprise environment might offer a safe haven that respects work-life balance and personal time, avoiding the toxic burnout of flashier startups. The technical learning curve here is unlikely to accelerate your career as rapidly as a dedicated tech giant would, making it crucial to decide if sane hours outweigh prestige for y"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Corporate insurance techroles typically offer stable hours and better work-life balance compared to consumer tech or high-growth startups."
   }
  },
  "corvus robotics": {
@@ -180102,37 +180361,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – strong applied AI/ML practice with production impact, but not a primary research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns revenue primarily from insurance premiums, asset management fees, investment income, and banking net interest margin."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, mission-oriented, and conservative; emphasizes integrity, diversity, and community involvement."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual consumers, families, small-to-large businesses, and institutional investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000–$110,000 base salary + 10–15% annual bonus + RSU/ESPP grants."
   },
   "evidence_sha": "7bf6140581b99a6a",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Insurance / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on collaboration and ethics, applied ML case studies (e.g., claims triage, pricing models), SQL/Python proficiency, and domain knowledge of insurance or regulated environments. System design for scalable, auditable pipelines is common."
+  },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784675819,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Columbus, Ohio; major offices in Des Moines, Chicago, New York, San Francisco, and remote-friendly roles across the U.S."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect people, businesses, and futures with extraordinary care."
+  },
   "name": "Nationwide",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate; project-driven with regulatory review cycles, leading to deliberate but steady delivery timelines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Auto, home, life, and commercial insurance; retirement plans (401k, pensions); mutual funds, ETFs, annuities; banking and lending products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO per year plus 10–11 company holidays."
   },
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -180142,7 +180443,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown between Christmas and New Year (typically 5–7 business days)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature, publicly traded (Fortune 100); approximately 28,000 employees."
   },
   "sources": [
    {
@@ -180176,14 +180482,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=65c0056d70952a06939a73fe894f5c528c1fca71b8a450448188fe6fb89cecccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cubmF0aW9ud2lkZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and employment-based green cards for technical roles, especially in data science, ML engineering, and software engineering."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nationwide is a Fortune 100 insurance and financial services company that provides insurance, retirement, investment, and banking products to individuals, businesses, and institutional clients across the United States."
+  },
+  "synthesized_evidence_sha": "7bf6140581b99a6a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise IT, data platforms, applied AI/ML for underwriting, claims automation, fraud detection, customer personalization, and digital experience; heavy emphasis on governance, security, and regulatory compliance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Nationwide+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a stable, mission-driven environment with strong work-life balance typical of the insurance sector, competitive new-grad pay, and growing applied AI/ML initiatives. While not a pure-play tech giant, it provides meaningful impact on financial security for millions and a culture that respects personal time, aligning with the candidate’s priorities for balance, growth, and purpose."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good; estimated 40–45 hour weeks, low burnout, flexible scheduling, and strong managerial support for boundaries."
   }
  },
  "natwest group": {
@@ -227251,37 +227578,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Industrial AI leader)—FactoryTalk Analytics, Pavilion8, and Kalypso acquisitions position Rockwell at the forefront of applying ML/RL to process optimization, predictive maintenance, and autonomous control in regulated plants."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Revenue comes from hardware sales (controllers, drives, I/O), recurring software subscriptions and licenses (FactoryTalk, cloud/edge analytics), and professional services (consulting, implementation, maintenance). Shift toward higher-margin software and services recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, collaborative. Strong safety/quality mindset from hardware roots. Diverse tenure mix—many 15-20 yr veterans alongside new cloud/AI hires. Inclusive ERGs, transparency from leadership (quarterly AMAs), low politics. Mission pride in 'making the world more productive.'"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Manufacturing companies across automotive, food & beverage, life sciences, oil & gas, chemicals, consumer packaged goods, semiconductors, and machine builders seeking to modernize plants and connect OT/IT systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + 10-15% target bonus + RSU grant ($20k-$40k over 4 yrs) for software/AI roles in high-cost hubs (Milwaukee, San Diego, Austin). Total Year 1 ~$140k-$180k. Signing bonus $5k-$15k common."
   },
   "evidence_sha": "38f215786c41a530",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Industrial Automation / Manufacturing Technology / Industrial Software (IIoT, MES, Edge AI)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: C++/Python for embedded or cloud services, real-time systems design, data structures/algorithms, and domain questions on control theory, time-series analytics, or OT security. System design emphasizes reliability, determinism, and scalability. Behavioral rounds assess collaboration with hardware teams and customer empathy."
   },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784677183,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9b27f77ede",
+    "bab1731fb5"
+   ],
+   "value": "Headquartered in Milwaukee, WI. Major engineering hubs in Milwaukee, Cleveland, San Diego, Austin, Toronto, Eindhoven, Shanghai, Singapore, Pune. Remote/hybrid options vary by role and team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "To expand human possibility by making the world more productive and sustainable through industrial automation and digital transformation."
+  },
   "name": "Rockwell Automation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast—quarterly release cycles for software, hardware-in-the-loop validation adds rigor. Faster than traditional industrial peers; slower than pure-play SaaS. Innovation time allocated via hackathons and 10% exploration policies in some orgs."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Core offerings include Allen-Bradley industrial control products (PLCs, drives, motion control, safety), FactoryTalk software portfolio (MES, analytics, edge computing, design tools), lifecycle services, and consulting for smart manufacturing and industrial IoT."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure. Unlimited not offered. Carryover capped (~5 days)."
   },
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227291,7 +227678,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown week between Christmas and New Year (paid, not deducted from PTO). Some business units add summer shutdown week."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9b27f77ede",
+    "bab1731fb5"
+   ],
+   "value": "Large public company (NYSE: ROK); ~26,000 employees globally; FY2024 revenue ~$8.2B. Mature, profitable, dividend-paying industrial tech leader."
   },
   "sources": [
    {
@@ -227325,14 +227720,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=d41b0059f017679e8d971d59eb79403ba4925ba537446fdf9710d699933837abJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cDovL3JvY2t3ZWxsLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles; green card support common for senior/PhD hires. University recruiting targets US and international grads. OPT/STEM-OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Rockwell Automation is a global industrial automation and digital transformation company that provides control systems, software, and services to manufacturers. It helps customers optimize production through integrated hardware and software solutions across discrete, process, and hybrid industries."
+  },
+  "synthesized_evidence_sha": "38f215786c41a530",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bab1731fb5",
+    "ab4844617f"
+   ],
+   "value": "Embedded firmware/real-time control systems, industrial networking (EtherNet/IP, CIP), edge computing, cloud-native IIoT platforms, data analytics/ML for predictive maintenance/quality, digital twin simulation, cybersecurity for OT environments, MES/SCADA software development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677183,
   "web_search_url": "https://duckduckgo.com/?q=Rockwell+Automation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rockwell offers elite industrial AI/DS prestige—applying ML to real-world OT data at massive scale—with top-tier new-grad compensation. Culture balances innovation speed (FactoryTalk cloud/edge push) with industrial rigor; WLB is respected via flexible schedules and low weekend-on-call for most software roles. Technical growth is accelerated through exposure to hardware-software integration, global deployments, and a clear ladder from IC to Fellow."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—Core hours ~40-45/week for most software roles; on-call rotation light (typically 1 week/quarter). Flexible hybrid (3 days office typical). Summer Fridays/shutdown weeks in some divisions. Low burnout reputation vs. Big Tech."
   }
  },
  "rogers behavioral health": {
@@ -278723,37 +279145,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. As a franchise management group, AI and data science are likely support functions rather than core prestige products."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Franchise fees, royalties, and brand licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate and business-oriented, focusing on franchise support and growth rather than a tech-driven, innovative culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Entrepreneurs and investors looking to own and operate franchised businesses."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$90k. Likely lower than elite tech firms due to industry and role scope."
   },
   "evidence_sha": "b15d2e8b9cdd199f",
+  "generated_at": 1784871317,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Franchising"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific AI/data science projects, the team's tech stack, and engineering culture. Ask about on-call expectations, sprint velocity, and whether data science work is core to the business or a cost-center. Clarify compensation structures and career progression paths for technical staff."
   },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784673568,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Global operations, with specific headquarters details not provided in the sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Not explicitly stated in the provided sources, but generally focuses on franchise growth and support."
+  },
   "name": "United Franchise Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Pace is likely driven by business operations and franchisee needs rather than rapid tech iteration."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Franchise opportunities and associated brand licensing and support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, standard for corporate roles."
   },
+  "refresh_after": 1790055317,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -278763,7 +279245,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "Established corporate entity operating multiple franchise brands globally."
   },
   "sources": [
    {
@@ -278797,14 +279287,44 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4",
+    "f16eec2a6f"
+   ],
+   "value": "Not explicitly mentioned in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b88baf9980",
+    "d8693135e4"
+   ],
+   "value": "United Franchise Group (UFG) is a franchising company that supports various franchise brands. It makes money by providing franchise services, brand licensing, and ongoing support to franchisees. Exact operational details are limited in the provided sources."
+  },
+  "synthesized_evidence_sha": "b15d2e8b9cdd199f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Not explicitly detailed in the sources, but likely includes IT systems for franchise management, operations, and recruitment (e.g., SmartRecruiters integration)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673568,
   "web_search_url": "https://duckduckgo.com/?q=United+Franchise+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given your priority for a top-tier AI/data science role with prestige and high pay, this company may not align perfectly as it is a franchising corporation rather than a tech-first firm. The culture may lean towards traditional business operations rather than the fast, innovative tech environment and sane hours you seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average to Good. Benefits may be standard for corporate roles, but specific shutdown policies or guarantees are unknown."
   }
  },
  "united health services": {
