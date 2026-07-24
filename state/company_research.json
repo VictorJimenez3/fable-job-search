@@ -4198,7 +4198,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4216,7 +4216,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784866376,
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784677175,
   "name": "Added Innovation",
   "pace_of_work": {
@@ -4229,7 +4229,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784866616,
+  "retry_after": 1784867173,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50909,37 +50909,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected enterprise AI team with production impact, but not a primary AI research lab or top-tier tech brand. Strong for applied ML at scale in healthcare."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit health insurer: collects premiums, pays claims, invests reserves; surplus reinvested into reserves, community programs, and cost containment. Regulated by state insurance commissioners."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-oriented, process-driven but not bureaucratic for its size; inclusive and community-focused with long-tenured employees. Tech culture is modernizing — agile, cloud-native, but still influenced by insurance compliance."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individuals, families, employer groups (small to large), and government programs across Maryland, Washington D.C., and Northern Virginia."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 5–10% target bonus + RSU/equity (vesting over 3–4 years); total comp ~$105k–$130k. Below FAANG but competitive for non-profit healthcare payer."
   },
   "evidence_sha": "0ca67c122f33c678",
+  "generated_at": 1784866693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Health Insurance / Managed Care (Payer)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: (1) Applied ML case studies — fraud detection, risk scoring, member engagement; (2) SQL/data engineering depth — large claims datasets, ETL, cloud (Azure/AWS); (3) Model deployment and monitoring in regulated environments; (4) Behavioral questions on cross-functional collaboration with clinical/operations teams; (5) Questions about WLB — ask about on-call rotations, sprint cadence, and shutdown policies."
+  },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784583341,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Baltimore, MD; major offices in Owings Mills (MD), Washington D.C., and Northern VA; hybrid/remote options common for tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide affordable, quality health care services and improve the health of the communities we serve."
+  },
   "name": "CareFirst BlueCross BlueShield",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured sprints, regulatory review gates, and compliance requirements slow raw velocity vs. pure tech firms, but modernization initiatives create pockets of faster iteration."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health insurance plans (HMO, PPO, POS), Medicare Advantage, Medicaid managed care, dental, vision, and wellness programs; also offers telehealth and digital health tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays + 2–3 floating days; accrual increases with tenure. No unlimited PTO."
   },
+  "refresh_after": 1790050693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50949,7 +50991,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24–Jan 1) plus summer floating days; no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature enterprise (~8,000 employees, ~3.5M members); established 1938; part of the Blue Cross Blue Shield Association."
   },
   "sources": [
    {
@@ -50983,14 +51030,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=33e6a51b7643e2efc44d9db1de8cb0420e2ab2c92d09186ab80c757ce1432124JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuY2ZhYmx1ZS5jb20vcHJvdmlkZXJzL3Byb3ZpZGVycy1ob21lLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for specialized tech roles (data science, ML engineering, software engineering); green card sponsorship typically for senior/lead levels. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CareFirst BlueCross BlueShield is a not-for-profit health insurance provider serving the Mid-Atlantic region. It generates revenue primarily through premiums from individual, employer-group, and government-sponsored health plans (Medicare, Medicaid)."
+  },
+  "synthesized_evidence_sha": "0ca67c122f33c678",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core insurance platforms (claims, enrollment, billing), data analytics for risk adjustment and population health, digital member engagement (mobile/web), AI/ML for fraud detection, care management, and personalized outreach; cloud migration and modernization underway."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583341,
   "web_search_url": "https://duckduckgo.com/?q=CareFirst+BlueCross+BlueShield+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven healthcare payer environment where AI/data science directly impacts member health outcomes and cost containment. Balances enterprise stability with ongoing digital transformation, providing opportunities to build production ML systems at scale without the burnout typical of high-growth tech startups. Culture emphasizes work-life balance and community impact, aligning with your priority for sane hours and technical growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong emphasis on 40-hour weeks, limited on-call for most DS roles, and organizational support for boundaries; however, quarterly regulatory deadlines can cause temporary crunches."
   }
  },
  "caris": {
@@ -65755,51 +65823,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Industry-specific Engineering). AI/Data Science work is primarily focused on operational automation rather than cutting-edge machine learning research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Business-to-business (B2B) services relying on SaaS and administrative fees from pharmaceutical clients to operate and maintain their medication affordability platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented and collaborative, driven by patient care, but likely bound by traditional enterprise software processes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Pharmaceutical manufacturers, healthcare providers, and pharmacies, as well as patients utilizing copay and affordability programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 to $120,000 base salary, reflecting standard healthcare tech industry compensation rather than elite new-grad pay at top-tier tech firms."
   },
   "evidence_sha": "1e6e7c6f01c78132",
+  "generated_at": 1784866693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Healthcare Technology / Pharmaceutical Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into release cycles, on-call expectations, and the speed of feature deployment to determine if the engineering culture is genuinely fast-paced or hindered by healthcare bureaucracy and regulatory slow-downs."
   },
-  "last_attempt_at": 1784866527,
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784673261,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Headquarters and primary operations are located in the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "To improve patient access to prescription medications by streamlining the complexities of copay assistance and patient support programs through technology."
+  },
   "name": "ConnectiveRx",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Working in healthcare tech requires careful compliance and regulatory adherence, suggesting a steady, heavily documented pace rather than rapid, disruptive iteration."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "ConnectiveRx offers technology solutions for patient assistance programs, copay cards, and pharmacy support services, featuring a developer API bridging inbound fax documentation to web platforms for automated routing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of PTO annually, typical for established mid-sized healthcare technology firms."
   },
-  "retry_after": 1784866647,
+  "refresh_after": 1790050693,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide guaranteed shutdowns found; time off is likely managed flexibly by team or manager approval."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Established, mid-sized private company operating in the healthcare technology sector."
   },
   "sources": [
    {
@@ -65833,14 +65976,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=fdb5210cbf34bfa5fd0d858c4d6e6c62f4ed548caf9c9865788859c68a6a7212JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly9uZXh0anMub3JnL2RvY3MvYXBwL2FwaS1yZWZlcmVuY2UvdHVyYm9wYWNr&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Specific visa sponsorship policies for technical roles are not documented in available public sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "ConnectiveRx is a healthcare technology company that provides prescription support, patient assistance, and copay program management. They generate revenue by administering these programs for pharmaceutical manufacturers and healthcare providers, facilitating affordable medication access for patients."
+  },
+  "synthesized_evidence_sha": "1e6e7c6f01c78132",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "44c4ca3689",
+    "ebb0f9994a",
+    "e401768d2e"
+   ],
+   "value": "Software engineering and API development, including integrations between legacy telecommunication documentation (faxes) and modern web application routing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673261,
   "web_search_url": "https://duckduckgo.com/?q=ConnectiveRx+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While the company's mission to accelerate patient access to medication aligns with a desire for meaningful work, a mature healthcare tech company typically operates with more process and compliance overhead, which may conflict with a preference for a fast, highly innovative tech culture and elite prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Moderate. As a non-consumer-facing B2B company, hours are generally sane, though the exact strictness of logging off is organizational rather than famously guaranteed."
   }
  },
  "conservice": {
@@ -155841,11 +156017,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155857,6 +156035,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784676855,
   "name": "Major League Baseball (MLB)",
   "pace_of_work": {
@@ -155869,6 +156048,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784866813,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155912,7 +156092,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=daa7e347c1487a29186405d06881a02acb76652f09856ca7fbb38bdb2f0eb6b4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L21ham9y&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676855,
   "web_search_url": "https://duckduckgo.com/?q=Major+League+Baseball+%28MLB%29+company+careers+benefits",
@@ -238544,11 +238724,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238560,6 +238742,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784675134,
   "name": "Spatial Front, Inc",
   "pace_of_work": {
@@ -238572,6 +238755,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784866813,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238615,7 +238799,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf562e1559de4bdad5ac3b506c1f45e8028c5aaeea2d5e87e7c888c3421b0c51JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuc3BhdGlhbC5pby8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Spatial+Front%2C+Inc+company+careers+benefits",
@@ -246854,38 +247038,94 @@
  "swift": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Top-tier for language compilers; limited pure AI/ML focus but heavily supports ML frameworks."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Operates as an open-source project heavily backed by Apple, driving developers to build native apps that sustain the App Store revenue ecosystem."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, deeply technical, collaborative, and highly innovative."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Software developers and engineers building applications for Apple platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $170,000 base, aligned with Apple new-grad compensation."
   },
   "evidence_sha": "2869b7ffe243ac43",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Developer Tools and Programming Languages."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784675468,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Apple offices and remote contributors globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "To create a fast, safe, and interactive programming language for everyone, from first-time programmers to experienced developers."
+  },
   "name": "Swift",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow, methodical, and occasionally bureaucratic due to open-source governance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "The Swift programming language, the Swift Compiler, and Xcode developer tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days (aligned with standard big-tech allowances)."
   },
+  "refresh_after": 1790050693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246895,7 +247135,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Possible holiday slowdowns, though guaranteed corporate shutdowns are not standard across all teams."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Backed by a trillion-dollar parent company with a global, distributed open-source contributor base."
   },
   "sources": [
    {
@@ -246929,14 +247176,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=ce2d5182f14254618024571b265218e87d83b44c1df651aaffe1667987065debJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuc3dpZnQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Sponsored by Apple, with project infrastructure and governance provided via the open-source community."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Swift is Apple's programming language for building iOS, macOS, watchOS, and tvOS applications. It is maintained as an open-source project, earning no direct revenue but serving as the foundational infrastructure for Apple's multi-billion dollar software and services ecosystem."
+  },
+  "synthesized_evidence_sha": "2869b7ffe243ac43",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "68dfa75ae9"
+   ],
+   "value": "Compiler engineering, language design, and core standard library development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675468,
   "web_search_url": "https://duckduckgo.com/?q=Swift+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, generally respecting sane hours and personal time."
   }
  },
  "sword health": {
@@ -254223,38 +254497,94 @@
  "the brattle group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Elite prestige within economic and litigation consulting, though less recognized as a pure tech or AI brand compared to top-tier tech giants."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Consulting fees derived from advising on and supporting legal and regulatory cases."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Highly academic and formal. Firmly hierarchical with a strong emphasis on rigorous, defensible analysis and a buttoned-up consulting environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Law firms, corporations, government agencies, and regulatory bodies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad data science/quantitative analysts likely earn between $110,000-$130,000 base, supplemented by performance-based bonuses."
   },
   "evidence_sha": "3b6489b4fd2ee9f5",
+  "generated_at": 1784866693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Management, Economic, and Data Science Consulting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for case interviews focused on analytical problem-solving, statistical analysis, and lateral thinking rather than fast-paced software engineering or pure ML design. Be ready to discuss how you handle rigorous, methodical data workflows (e.g., in Stata or R) and how you adapt to nuanced, regulatory client questions rather than rapid tech product deployment."
   },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784669635,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Headquarters in Boston, MA with several additional global offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "To provide the highest quality economic analysis and expert testimony to clients facing complex legal and regulatory challenges."
+  },
   "name": "The Brattle Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally slower, methodical, and deadline-driven by litigation schedules, lacking the rapid iteration cycles of a fast tech startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Economic analysis, financial modeling, expert testimony, and data analytics for litigation and regulatory proceedings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard PTO alongside firm holidays, with fluctuations based on case deadlines."
   },
+  "refresh_after": 1790050693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254264,7 +254594,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard holiday closures, but no industry-known firm-wide summer shutdowns that tech companies might offer."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Established mid-sized professional services firm with global offices."
   },
   "sources": [
    {
@@ -254298,14 +254635,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=3d47d172e87ae92492ccc378986f8545b81de737f4f2c071a6c339af23fad457JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsorship details not explicitly found, though professional services firms of this size often sponsor high-skilled quantitative talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "The Brattle Group is an economic consulting firm that provides expert testimony and analysis in litigation, regulatory, and competition matters. They make money by charging clients fees for the specialized economic, financial, and analytical expertise of their principals and staff."
+  },
+  "synthesized_evidence_sha": "3b6489b4fd2ee9f5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b9abca405"
+   ],
+   "value": "Quantitative analysts and data scientists perform data management, statistical modeling (e.g., SAS, Python, R, Stata), and large-scale data manipulation to analyze economic impacts for litigation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669635,
   "web_search_url": "https://duckduckgo.com/?q=The+Brattle+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brattle offers elite economic consulting prestige with strong compensation, but it leans heavily into a bureaucratic, rigid consulting culture rather than a fast-paced innovative tech environment. While it provides deep technical learning in statistical modeling, the regulatory case work is often slow-paced and adversarial, conflicting with desires for fast tech culture and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderately good WLB, though subject to the strict deadlines of litigation. It respects sane hours better than investment banking but uses billable hours which can occasionally spike."
   }
  },
  "the cadmus group": {
@@ -288130,34 +288492,81 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not publicly available in the provided sources."
   },
   "evidence_sha": "3d5bfe9d174e9bed",
+  "generated_at": 1784866693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8bd10327f1",
+    "73ce91a2fd"
+   ],
+   "value": "Information Technology / Tech Services (inferred from the presence of a technology-focused .com domain and careers portal)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the team uses modern, innovative tech stacks and maintains sane hours. Ask about technical learning opportunities, new-grad compensation structures, and how the company ensures guaranteed shutdowns to avoid toxic, high-burnout environments."
   },
+  "last_attempt_at": 1784866693,
   "last_evidence_at": 1784677533,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Wyetech, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Moderate-to-fast (estimated)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "73ce91a2fd"
+   ],
+   "value": "Details about specific products or services are not available in the provided sources, though the existence of a careers page suggests they are actively hiring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not publicly available in the provided sources."
   },
+  "refresh_after": 1790050693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -288167,7 +288576,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not publicly available in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -288201,10 +288615,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=5daedfab4d4eec0bb42b0902ad7fd80127a82eaf11128188c28962a8b1d15de9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93eWV0ZWNobGxjLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "62692300bb",
+    "8bd10327f1",
+    "73ce91a2fd"
+   ],
+   "value": "Wyetech, LLC is a technology company whose public web presence consists of redirection pages to its main site and careers portal. Specific details regarding its core operations and revenue generation are not available in the provided sources."
+  },
+  "synthesized_evidence_sha": "3d5bfe9d174e9bed",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "73ce91a2fd"
+   ],
+   "value": "The existence of a dedicated careers page indicates ongoing recruitment for technical roles, but specifics are unavailable."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677533,
   "web_search_url": "https://duckduckgo.com/?q=Wyetech%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role aligns with the target of finding a fast-paced, innovative AI/Data Science position that accelerates technical learning without sacrificing personal time. Candidates should prioritize verifying that the company's culture matches these elite, mission-driven, and work-life balance standards."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
