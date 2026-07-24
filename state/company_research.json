@@ -2396,7 +2396,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 15,
+  "attempts": 16,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2445,7 +2445,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784842178,
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "high",
@@ -2485,6 +2485,7 @@
    "value": "Estimated: 15-20 days of paid vacation, plus floating holidays; total institution varies based on tenure and distinct consultant banding."
   },
   "refresh_after": 1789866730,
+  "retry_after": 1784886126,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2573,7 +2574,7 @@
    ],
    "value": "Varies by role and entity; many US-based technology roles are available for US citizens, and Federal Services positions mandate US citizenship with active Secret or higher security clearance, which typically excludes visa sponsorship."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -36453,41 +36454,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 \u2014 Strong applied ML at payments scale, but not a primary AI research lab; publishes occasionally at KDD/RecSys; respected for production ML engineering."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2fc0d0bc12",
+    "a798900ac2"
+   ],
+   "value": "Earns through distribution fees on card sales, interchange revenue, float interest on stored-value balances, breakage income from unredeemed cards, and SaaS fees for incentive platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Pragmatic, low-ego engineering culture; strong emphasis on documentation and knowledge sharing; diverse global teams; Silver Lake ownership brings disciplined investment in tech debt reduction."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a798900ac2"
+   ],
+   "value": "Retailers (grocery, drug, convenience, big-box), financial institutions, fintechs, corporate enterprises (for employee/customer incentives), and consumers purchasing gift cards."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $135k\u2013$155k base + 10\u201315% target bonus + RSU (4-yr vest, ~$40k\u2013$60k total grant) = ~$180k\u2013$220k Y1 TC for ML/DS roles in Bay Area/Atlanta."
   },
   "evidence_sha": "a9d2ae7edafd625d",
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2fc0d0bc12"
+   ],
+   "value": "Fintech / Branded Payments / Prepaid Products"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect: (1) System design for high-throughput ledger/fraud pipelines; (2) ML case study on imbalanced fraud detection or gift-card demand forecasting; (3) Behavioral screen for collaboration across product/finance/compliance; (4) Coding in Python/Java/SQL. Ask about 'recharge week' cadence and model-deployment SLAs to gauge pace."
   },
-  "last_attempt_at": 1784864352,
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784677474,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a798900ac2"
+   ],
+   "value": "Headquarters: Pleasanton, CA. Major tech hubs: Atlanta GA, Dallas TX, Toronto, London, Bangalore, Manila. Remote-friendly for many engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a798900ac2"
+   ],
+   "value": "To make branded payments effortless by connecting people with the brands they love through innovative prepaid and digital payment solutions."
+  },
   "name": "Blackhawk Network",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast \u2014 Quarterly planning with 2-week sprints; protected focus time; 'no-meeting Fridays' policy; major releases tied to holiday retail cycles (Q4 intensity)."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a798900ac2",
+    "71e165a022"
+   ],
+   "value": "Prepaid gift cards (physical and digital) for 1,000+ brands; incentives and rewards platforms for corporate clients; digital wallet integrations; payment processing APIs; fraud prevention and compliance tooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 4 recharge-week shutdown days (quarterly) = ~29 days total annual paid time off."
   },
-  "retry_after": 1784864472,
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36497,7 +36550,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes \u2014 Quarterly 'Recharge Week' (full company shutdown, typically one week per quarter) plus standard US holiday calendar."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2fc0d0bc12"
+   ],
+   "value": "Large private company (~3,000 employees globally); owned by Silver Lake since 2018; $2B+ annual revenue; operates in 25+ countries."
   },
   "sources": [
    {
@@ -36531,14 +36591,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=d7857084f7ac6b4f648bdef8eea2dfa417648443941b13a7f93e4b94b3f999c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=33461374-d36f-6ad0-1d4c-04e9d2696ba0&u=a1aHR0cHM6Ly93d3cuYmxhY2toYXdrLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (regular filings for software, data, ML roles); supports GC processing (PERM) for senior talent; cap-exempt via university partnerships for research roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a798900ac2",
+    "71e165a022"
+   ],
+   "value": "Blackhawk Network is a global branded payments provider that connects consumers, retailers, and financial institutions through prepaid gift cards, incentives, and digital payment solutions. It operates a two-sided network distributing physical and digital gift cards for major brands while earning revenue from distribution fees, float interest, and breakage on unused balances."
+  },
+  "synthesized_evidence_sha": "a9d2ae7edafd625d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-scale payment processing, fraud detection, real-time ledger systems, API platforms, digital wallet integrations, data analytics for consumer behavior, ML for fraud/pricing optimization, cloud migration (AWS/GCP), event-driven architectures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677474,
   "web_search_url": "https://duckduckgo.com/?q=Blackhawk+Network+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Blackhawk offers a rare mix: payments-scale data (billions of transactions) for ML/AI impact, private-equity-backed investment in modernization, and a culture that explicitly protects evenings/weekends via 'no-meeting Fridays' and quarterly recharge weeks. You'll ship models that move real revenue without the burnout typical of fintech unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 \u2014 Explicit 'recharge week' (full shutdown) each quarter; core hours 10a-3p local; on-call rotation limited to platform engineers with generous comp time."
   }
  },
  "blackhawk network holdings": {
@@ -89464,52 +89548,130 @@
  "evolver": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dd8769cdd7"
+   ],
+   "value": "Estimated: Not a top-tier AI employer based on current evidence; likely Tier 3 (Industry-specific tech)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "dd8769cdd7",
+    "ce5e9a46e3"
+   ],
+   "value": "Likely generates revenue through the sale of home automation hardware and accompanying software platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dd8769cdd7"
+   ],
+   "value": "Estimated: Mission-oriented towards consumer home improvement, likely lacking the fast-paced elite tech culture desired by top-tier AI graduates."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ce5e9a46e3",
+    "8b4d0d1d24"
+   ],
+   "value": "European consumers and homeowners seeking smart home automation solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "dd8769cdd7"
+   ],
+   "value": "Estimated: Likely moderate (e.g., 60,000-80,000 EUR equivalent), below top-tier elite tech new-grad salaries."
   },
   "evidence_sha": "4b63b3b38c30627c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784864352,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "dd8769cdd7",
+    "ce5e9a46e3"
+   ],
+   "value": "Home Automation / Smart Home Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dd8769cdd7"
+   ],
+   "value": "Focus on clarifying the exact nature of the AI/DS work, the startup pace versus bureaucracy, standard working hours, and specific policies regarding PTO and company-wide shutdowns to verify work-life balance claims."
+  },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784674979,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ce5e9a46e3",
+    "dd8769cdd7"
+   ],
+   "value": "Europe (specifically operates via Niko EU domains for regions like Belgium and broader English-speaking markets)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8b4d0d1d24"
+   ],
+   "value": "Not explicitly found in the provided research sources."
+  },
   "name": "Evolver",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ce5e9a46e3"
+   ],
+   "value": "Estimated: Moderate pace typical of European hardware/IoT companies, prioritizing steady product releases over rapid software iteration."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "dd8769cdd7",
+    "ce5e9a46e3"
+   ],
+   "value": "Home automation and smart home control systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "ce5e9a46e3"
+   ],
+   "value": "Estimated: 20-25 days, standard for European tech companies."
   },
-  "retry_after": 1784864472,
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "8b4d0d1d24"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ce5e9a46e3"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though some European firms close briefly in summer."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8b4d0d1d24"
+   ],
+   "value": "Not found in research."
   },
   "sources": [
    {
@@ -89543,14 +89705,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a19a835b7bc417d01752f166fb4f2c793a47468cee43f39632a49bff2d2e850JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cubmlrby5ldS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8b4d0d1d24"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dd8769cdd7",
+    "ce5e9a46e3",
+    "8b4d0d1d24"
+   ],
+   "value": "Evolver (retrieved via Niko EU domains) appears to be a company specializing in smart home automation products, likely operating within the European market. Without accessible page content due to redirect limitations, specific monetization and operational details cannot be fully verified, but they likely generate revenue through the direct sale of smart home hardware and software solutions."
+  },
+  "synthesized_evidence_sha": "4b63b3b38c30627c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8b4d0d1d24"
+   ],
+   "value": "Not explicitly found in the provided research sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674979,
   "web_search_url": "https://duckduckgo.com/?q=Evolver+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dd8769cdd7"
+   ],
+   "value": "This role may not align with your priority for a top-tier AI or data science position offering elite prestige and high new-grad pay. It is also unclear if the company provides the fast, innovative tech culture or guaranteed shutdowns you are seeking to avoid burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ce5e9a46e3"
+   ],
+   "value": "Estimated: Likely good work-life balance adhering to European labor norms, though specific company culture is unverified."
   }
  },
  "exa": {
@@ -98398,41 +98593,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No business model information available from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No customer information available from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   },
   "evidence_sha": "43a654db9c36f892",
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Industry unknown \u2013 no information in supplied sources."
   },
-  "last_attempt_at": 1784864352,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot provide interview focus areas due to complete absence of company information in supplied sources. Candidate should verify company existence and research independently before investing time."
+  },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784663560,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No location information available from supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No mission statement available from supplied sources."
+  },
   "name": "Fundamental Research Labs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No product information available from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   },
-  "retry_after": 1784864472,
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98442,7 +98675,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No size or stage information available from supplied sources."
   },
   "sources": [
    {
@@ -98476,14 +98714,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=df1f54e990cab45fcc154e9cd71747baeec1276d84d4f83514afec0b57c89ca9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Z1bmRhbWVudGFs&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No visa sponsorship information available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "28f6d58da3",
+    "b29c920d98",
+    "8728916ff2"
+   ],
+   "value": "No verifiable public information about a company named 'Fundamental Research Labs' was found in the supplied sources. The provided links redirect to dictionary/thesaurus entries for the word 'fundamental', not to a company website or profile."
+  },
+  "synthesized_evidence_sha": "43a654db9c36f892",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical work details available from supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663560,
   "web_search_url": "https://duckduckgo.com/?q=Fundamental+Research+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI prestige, high new-grad pay, fast innovative culture, mission-driven, strong WLB, guaranteed shutdowns, accelerated learning) due to complete absence of company information in supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown \u2013 no information in supplied sources."
   }
  },
  "funding circle": {
@@ -151772,48 +152035,127 @@
  "manulife": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: Moderate. As a non-tech financial institution, it does not carry the elite prestige of top-tier AI firms, but offers solid, stable data challenges in the fintech/insurtech space."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Financial services and insurance carrier generating revenue through policy premiums, asset management fees, and investment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: Traditional, corporate, and mission-driven. Focuses on security and compliance, occasionally at the expense of rapid innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Individuals, families, and businesses primarily in Canada, Asia, and the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: $80,000 - $110,000 CAD/USD. Generally competitive for finance, though usually below elite big-tech new-grad pay."
   },
   "evidence_sha": "0fbaa07b7da6dcb7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Financial Services and Insurance."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Question heavily on team structure vs. bureaucracy, expected hours, and Data/AI modernization roadmap to ensure the role isn't slowed by legacy IT processes. Clarify how new-grad pay and learning acceleration compare to elite tech firms, and ask about actual WLB to ensure personal time is respected."
+  },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784677033,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Global presence with operational markets explicitly focused on Canada, Asia, and the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Helping people make the right financial decisions to achieve their goals and protect what matters most."
+  },
   "name": "Manulife",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: Slow to moderate. Traditional financial services tend to operate at a deliberate pace with bureaucratic processes rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Life insurance, health insurance, and wealth/asset management products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large Canadian/Global financial institutions, though exact new-grad policies are not in the sources."
   },
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "206896d528",
+    "fad017aa9c",
+    "8663c3779d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: Potentially limited. While some financial firms offer holiday shutdowns, guaranteed tech-wide shutdowns are not standard and unverified by sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Large, publicly-traded multinational corporation."
   },
   "sources": [
    {
@@ -151847,14 +152189,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=307d10357fe3a8562b3c37c534604e0d258b79fdfeffbe56eda8b95326d471beJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93d3cubWFudWxpZmUuY2EvcGVyc29uYWwuaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fad017aa9c"
+   ],
+   "value": "Not explicitly detailed in the provided public portal redirects."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Manulife (operating as Manulife in Canada and John Hancock in the U.S.) is a major international financial services and insurance provider. It makes money by collecting premiums, managing assets, and offering wealth, asset management, and insurance products."
+  },
+  "synthesized_evidence_sha": "0fbaa07b7da6dcb7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "206896d528",
+    "fad017aa9c"
+   ],
+   "value": "The supplied sources are public marketing pages that briefly mention 'Products and Services'; specific details regarding AI and data science technical projects, stacks, or infrastructure are not available in the provided texts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677033,
   "web_search_url": "https://duckduckgo.com/?q=Manulife+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "As a massive, established financial institution, it contrasts with a fast, innovative tech culture and leans toward slow bureaucracy. While it likely provides a structured, mission-driven environment focusing on financial security, candidates seeking elite AI prestige and accelerated technical growth might find the pace limiting and shouldverify tech-org autonomy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8663c3779d"
+   ],
+   "value": "Estimated: Good to Fair. Large legacy financial institutions typically offer sane, structured hours and respect for personal time, though bureaucracy can add non-technical stress."
   }
  },
  "manulife financial": {
@@ -241212,38 +241586,98 @@
  "t rex solutions": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Estimated: Respected regional B2G tech prestige, but not top-tier elite for pure AI/Data Science compared to FAANG or top commercial AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "B2G (Business to Government) IT consulting and cloud managed services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Mission-driven, military-friendly, and focused on federal service."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Federal agencies and government organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $110,000 base salary, typical for new grads in the Greater Washington DC federal tech market."
   },
   "evidence_sha": "6ed09aca3ac72ccd",
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "IT Services and Federal Cloud Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific team's culture to verify if actual day-to-day work is fast-paced and innovative or slowed by federal red tape, asking directly about work-life balance policies, sane hours, and how much dedicated technical learning time is granted versus client deliverables."
   },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784675405,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Greater Washington area."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Relentlessly driving innovation to drive federal mission success."
+  },
   "name": "T-Rex Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Estimated: Moderate pace typical of federal contracting, which may feel slow or bureaucratic compared to fast-paced commercial tech environments."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "AWS Advanced Tier cloud services and comprehensive technology solutions tailored for federal government applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO, standard for mid-sized federal contractors."
   },
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241253,7 +241687,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, but standard federal holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Established mid-sized federal contractor recognized as a Greater Washington Top Workplace."
   },
   "sources": [
    {
@@ -241287,14 +241728,43 @@
     "url": "https://www.trexsolutionsllc.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Highly likely to support employment visas and military veteran hiring, evidenced by recent Department of Labor HIRE Vets Medallion Awards."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "T-Rex Solutions is a technology solutions provider that partners with federal agencies to drive mission success. The company earns revenue by delivering advanced cloud and IT services, notably as an AWS Advanced Tier Services Partner."
+  },
+  "synthesized_evidence_sha": "6ed09aca3ac72ccd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Cloud computing architecture and engineering, specifically leveraging AWS Advanced Tier Services to support federal missions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675405,
   "web_search_url": "https://duckduckgo.com/?q=T-Rex+Solutions+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This role offers mission-driven federal tech work that is highly prestigious within the B2G sector, which could provide stable hours compared to commercial tech, though it carries an inherent risk of bureaucratic pace and slower innovation cycles than elite commercial AI firms."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "662662dedd"
+   ],
+   "value": "Estimated: Good work-life balance likely supported by being named a 2026 Greater Washington Top Workplace, though federal contract deadlines can periodically require heavy hours."
   }
  },
  "t rex solutions llc": {
@@ -270217,49 +270687,124 @@
  },
  "voxel": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Tier unknown. Without public data on size or technical work, prestige cannot be gauged."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Unknown. High compensation expectations cannot be validated."
   },
   "evidence_sha": "60aba758b8e48a88",
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "During interviews, the candidate should probe directly on their core priorities: elite AI or engineering technical learning, new-grad compensation, and sane hours. They should specifically ask about guaranteed shutdowns and fast-paced tech culture to ensure the role avoids bureaucracy and toxic burnout environments."
+  },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784676695,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Voxel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Unknown. Need to verify if culture is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Unknown. No public data on exact PTO or balanced hour policies."
   },
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: None found in research. Likely not applicable."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Unknown. No policy sourced."
+  },
+  "size_stage": {
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -270293,14 +270838,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=20f601c37b49556ee647287b899ed406c006074ed5ab226b3dd3e2bde833ec85JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cudHJpcGFkdmlzb3IuY29tLmFyL0hvdGVscy1nMzEyODM2LVByb3ZpbmNlX29mX0xhX1BhbXBhX1BhdGFnb25pYS1Ib3RlbHMuaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Based on the supplied sources, there is no accessible information regarding the company's core operations or revenue models. The retrieved page excerpts only indicate a redirect error. Consequently, a plain-English explanation of the business cannot be provided."
+  },
+  "synthesized_evidence_sha": "60aba758b8e48a88",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676695,
   "web_search_url": "https://duckduckgo.com/?q=Voxel+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Evaluating this company against the candidate's priorities is currently impossible due to a lack of sourced data. The candidate requires a top-tier AI role with high new-grad pay, fast-paced innovation, and guaranteed work-life balance, but the sourced materials do not confirm whether Voxel aligns with these goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b488ba4d43",
+    "e871b0342c",
+    "de69acd5f5"
+   ],
+   "value": "Estimated: Unknown. Work-life balance metrics, sane hours, and burnout risk are not confirmed."
   }
  },
  "vsolvit": {
@@ -284390,41 +284968,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tech prestige. AI and data science work is applied and business-focused (actuarial/claims) rather than research-driven."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "d5d266925c"
+   ],
+   "value": "Underwriting premiums and investing those assets to generate returns, assuming the risk of customer losses in exchange for regular premium payments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, risk-averse, and corporate. Emphasizes stability, compliance, and steady career progression over fast-paced disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "729e8a19ce"
+   ],
+   "value": "Mid-to-large-sized businesses, multinational corporations, and individuals seeking insurance and risk management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 to $110,000 base salary, competitive for the Midwest but below top-tier tech compensation bands."
   },
   "evidence_sha": "4faa55c9c941edf5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864526,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784864352,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d5d266925c"
+   ],
+   "value": "Insurance and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "be39c3a87e"
+   ],
+   "value": "Probe deeply into the specific technology stack and cycle times. Ask how data science models are actually deployed in production, how much technical debt exists, and how much time is spent on compliance versus innovation. Clarify if teams use modern cloud native and ML ops practices, and confirm actual shutdown/holiday policies to ensure WLB claims hold up."
+  },
+  "last_attempt_at": 1784864526,
   "last_evidence_at": 1784672893,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "729e8a19ce"
+   ],
+   "value": "Headquartered in Schaumburg, Illinois, with a significant presence in New York City and various regional offices across North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "729e8a19ce"
+   ],
+   "value": "To help customers understand, protect themselves against, and recover from risk."
+  },
   "name": "Zurich North America",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower-paced and bureaucratic due to heavy regulation and legacy processes. Expect methodical project cycles rather than rapid iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "729e8a19ce"
+   ],
+   "value": "Commercial property and casualty insurance, specialty lines (cyber, management liability, environmental), life insurance, and risk engineering/management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 days of standard paid time off, alongside standard corporate holidays."
   },
-  "retry_after": 1784864472,
+  "refresh_after": 1790048526,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284434,7 +285069,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers paid holidays, but no confirmed guaranteed corporate-wide shutdowns outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "d5d266925c"
+   ],
+   "value": "Large enterprise; Zurich Insurance Group operates globally with a massive workforce, while the North American division handles substantial regional operations."
   },
   "sources": [
    {
@@ -284468,14 +285111,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=78da4d0b43b6d795e67d58fd7b5d529a25aaabbeb8f35aedd67c6bd078ba3fa9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly93d3cuenVyaWNoLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "be39c3a87e"
+   ],
+   "value": "Estimated: As a large multinational, they may sponsor visas for specialized roles, but details are not explicitly confirmed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "be39c3a87e",
+    "d5d266925c",
+    "729e8a19ce"
+   ],
+   "value": "Zurich North America is the North American arm of the Zurich Insurance Group, a leading global insurer. It provides commercial property and casualty insurance, life insurance, and risk management services to businesses and individuals, generating revenue by underwriting policies and investing collected premiums."
+  },
+  "synthesized_evidence_sha": "4faa55c9c941edf5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "be39c3a87e"
+   ],
+   "value": "Estimated: Tech teams focus on underwriting automation, claims processing platforms, risk modeling, and enterprise data infrastructure. AI and data science work heavily emphasizes risk assessment, predictive modeling, and actuarial analytics rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672893,
   "web_search_url": "https://duckduckgo.com/?q=Zurich+North+America+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "be39c3a87e"
+   ],
+   "value": "Beware that a traditional insurance carrier is the opposite of a fast-paced, innovative tech culture. While it may offer sane hours and structured learning, the environment is heavily regulated and process-driven. The 'elite prestige' here refers to the global corporate brand, not top-tier tech prestige, so it may feel bureaucratic compared to a tech-first company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Corporate insurance often enforces sane hours compared to the tech industry, though legacy technical debt can occasionally cause stressful crunch periods."
   }
  },
  "zurn elkay water solutions": {
