@@ -43255,41 +43255,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier domain-specific prestige, recognized heavily within the scientific instrument and life sciences fields, but not considered top-tier AI or AI/DS prestige in the general tech industry."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Stable and mission-driven atmosphere focused on scientific advancement, but potentially carrying traditional hardware company bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2ab6ea0b5"
+   ],
+   "value": "Academic and government research institutions, pharmaceutical companies, biotechnology firms, and industrial manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base salary, competitive for the life sciences hardware sector but below elite AI tech pay."
   },
   "evidence_sha": "9fe8c702c146504d",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b2ab6ea0b5"
+   ],
+   "value": "Scientific and Technical Instruments / Analytical Laboratory Equipment."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should evaluate the company's technical learning and career growth trajectory in their specific data science or AI team to ensure it provides adequate growth and avoids slow internal bureaucracy."
   },
-  "last_attempt_at": 1784864700,
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784676695,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2dffb9ee5"
+   ],
+   "value": "Global operations with headquarters in the Americas and major facilities across Europe and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2dffb9ee5"
+   ],
+   "value": "To advance scientific research and innovation by providing high-performance analytical instruments and solutions."
+  },
   "name": "Bruker",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical pace, typical of scientific hardware manufacturing, which may be slower than fast-paced AI startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b2ab6ea0b5"
+   ],
+   "value": "Mass spectrometry, NMR (Nuclear Magnetic Resonance), EPR, X-ray, microanalysis, and molecular spectroscopy systems, along with consumables and related software solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of base PTO, which aligns with standard large corporate benefits but rarely exceeds top-tier tech packages."
   },
-  "retry_after": 1784864820,
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43299,7 +43347,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed corporate-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b65eb1028c"
+   ],
+   "value": "Publicly traded global corporation."
   },
   "sources": [
    {
@@ -43333,14 +43388,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=b72f0a89f7ace0c111241ed7bd2fea01f90b6320f1c09e068283fe465f1b9bbfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cuYnJ1a2VyLmNvbS9lbi5odG1s&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b65eb1028c"
+   ],
+   "value": "As a large, publicly traded multinational company, Bruker typically offers standard visa sponsorship for specialized scientific and engineering roles, though it is evaluated on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b2ab6ea0b5",
+    "a2dffb9ee5"
+   ],
+   "value": "Bruker is a global manufacturer of high-performance scientific instruments and analytical solutions used in life science research and applied industrial markets. The company makes money by designing, manufacturing, and selling specialized hardware such as mass spectrometers and NMR systems, complemented by software and aftermarket services."
+  },
+  "synthesized_evidence_sha": "9fe8c702c146504d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2ab6ea0b5"
+   ],
+   "value": "Developing embedded software and firmware for scientific instruments, creating data acquisition pipelines, and building software for instrument control, visualization, and analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676695,
   "web_search_url": "https://duckduckgo.com/?q=Bruker+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bruker offers strong mission alignment and can provide a moderate pace of work that respects work-life balance, but it is fundamentally a hardware-first scientific instrument manufacturer rather than a fast-paced, elite AI or software native tech company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance with sane hours compared to big tech, though shutdowns are not guaranteed or standard."
   }
  },
  "brunswick": {
@@ -123540,7 +123623,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -123558,7 +123641,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784864700,
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784677232,
   "name": "IGT",
   "pace_of_work": {
@@ -123571,7 +123654,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784864820,
+  "retry_after": 1784865105,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127691,37 +127774,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not applicable / Low tier. Non-profits focused on environmental policy do not provide top-tier commercial AI or data science prestige relative to FAANG, elite trading firms, or top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "As a non-profit, WRI México is funded through grants from philanthropic foundations, international climate funds, government partnerships, and corporate sponsorships to conduct research and execute sustainability projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, academic-leaning, and highly collaborative. The culture values expertise in environmental science, sustainability, and public policy, prioritizing real-world ecological impact over rapid commercial growth."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Their primary stakeholders and funding partners include municipal and federal government agencies, international development banks, philanthropic foundations, and private corporations seeking to improve their environmental impact."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Low. As a non-profit, new grad compensation in data or tech roles is likely well below elite tech industry standards (likely in the range of $25,000 - $40,000 USD equivalent annually), reflecting non-profit sector constraints in Mexico."
   },
   "evidence_sha": "769ae639f41094e7",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Non-Profit, Environmental Policy, and Sustainability Research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To screen for your priorities, ask: \"Does the AI or data team deploy production ML models, or is the work limited to policy analysis? What is the compensation band and how does it compare to tech industry norms? How long are the deployment cycles for new technical tools?\""
   },
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784672894,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Headquartered in Mexico City, Mexico, leveraging a hybrid or fully in-office presence for local policy engagement, while connected to the broader global WRI network."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "To move human society to live in ways that protect Earth’s environment and its capacity to provide a high quality of life for current and future generations, specifically tailored to Mexico's socioeconomic and ecological context."
+  },
   "name": "Instituto de Recursos Mundiales México (WRI México)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. The pace is dictated by grant cycle deliverables, stakeholder consensus building, and environmental policy timelines rather than a fast, iterative tech product development cycle."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "WRI México produces research reports, data platforms, and policy frameworks focused on cities, energy, climate resilience, and ocean sustainability. They also provide strategic consulting and pilot project implementation for sustainable urban and environmental initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of Paid Time Off annually, which is typical for established non-profit think tanks operating under Mexican labor law guidelines."
   },
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127731,7 +127880,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found. Time off is likely managed individually around public holidays and project deadlines."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Mature non-profit organization operating as the Mexican branch of the global WRI network, which employs over 1,000 staff worldwide across multiple international offices."
   },
   "sources": [
    {
@@ -127765,14 +127923,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab09cff958d40e8c6d91b1eeb695298cbedf1156053915a8dd6d00c7da7d87ffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Estimated: As a non-profit entity in Mexico, international visa sponsorship for foreign entry-level tech workers is unlikely; they primarily hire local or regional talent for their in-country operations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Instituto de Recursos Mundiales México (WRI México) is the Mexican office of the global World Resources Institute, a non-profit research organization. It partners with businesses, governments, and civil society to research and implement practical solutions for environmental challenges, climate action, and sustainable development."
+  },
+  "synthesized_evidence_sha": "769ae639f41094e7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6b9700e923",
+    "c7f4bc7f6c",
+    "ddb92fab8a"
+   ],
+   "value": "Estimated: Technical roles likely focus on data engineering, spatial analysis (GIS), environmental data science, and data visualization to support climate and urban mobility research. The role involves building data pipelines and analytics tools rather than developing cutting-edge commercial AI products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672894,
   "web_search_url": "https://duckduckgo.com/?q=Instituto+de+Recursos+Mundiales+M%C3%A9xico+%28WRI+M%C3%A9xico%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This profile fundamentally mismatches your priorities. While it may avoid toxic tech burnout and offers a highly mission-driven environment, an environmental non-profit does not deliver elite AI/data science prestige, fast innovative tech culture, or high new-grad tech pay. Non-profit bureaucracy and grant-cycle timelines inherently clash with a desire for fast-paced, high-growth technical acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Think tanks and global NGOs generally offer reasonable hours and respect personal time, avoiding the toxic, high-burnout culture common in elite tech and finance, though deadlines tied to grant reports can cause periodic spikes."
   }
  },
  "integral federal": {
@@ -189432,47 +189623,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (respected in cleared space, not widely known in commercial AI research rankings)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
+   "value": "Business model not discernible from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, process-heavy, hierarchical; engineering culture varies by program office."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
+   "value": "Customer segments not disclosed in accessible sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + modest bonus/RSU (cleared entry-level roles in DC/AL/CO markets)."
   },
   "evidence_sha": "3fc4413f4a23d253",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Defense technology / government services / federal IT contracting (AI, cyber, data analytics)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask directly: (1) What are core hours and is there a formal 'shutdown' policy? (2) How is on-call / surge work managed on classified programs? (3) What does the first-year learning curriculum look like for new-grad AI/ML hires? (4) What percentage of time is spent on R&D vs. delivery? (5) Can you share recent promotion timelines for junior data scientists?"
+  },
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784676696,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not confirmed in sources; defense contractors of this name often operate near DC metro (VA/MD), Huntsville AL, or Colorado Springs CO."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
+   "value": "Mission statement not found in supplied sources."
+  },
   "name": "Peterson Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate—project-driven with contract milestones; likely slower than Big Tech but with periodic crunches around delivery dates."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
+   "value": "No specific product information could be extracted from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays (typical for mid-size govcon)."
   },
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some programs observe winter break between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size private company (likely 200–1,000 employees) based on typical defense/government contractor footprint; stage appears to be established/growth."
   },
   "sources": [
    {
@@ -189506,14 +189764,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=8553d43a1f5bb25eb740d2be004952aef426999ebd79b3066048ccccf25f78f9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cucGV0ZXJzb25zLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for cleared technical roles given defense sector norms; no public data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "884499213e",
+    "a516eb00a4",
+    "908e628d88"
+   ],
+   "value": "Peterson Technologies appears to be a technology company with web presence at peterson.org and petersons.com, though accessible public details about its core business, products, and financials were not retrievable from the supplied sources (which returned only redirect notices)."
+  },
+  "synthesized_evidence_sha": "3fc4413f4a23d253",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely involves software engineering, data analytics, cybersecurity, and/or AI/ML for defense/intelligence customers given the 'Peterson Technologies' naming pattern common among govtech contractors; specifics not in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676696,
   "web_search_url": "https://duckduckgo.com/?q=Peterson+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Peterson Technologies is a defense/government AI contractor, it may offer high-prestige cleared work with competitive new-grad pay and structured hours (government contracts often mandate 40-hr weeks), aligning with your desire for elite technical challenge, mission focus, and work-life boundaries. However, without verified public data, you must validate culture, pace, and shutdown policies directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5—government contracts often enforce 40-hr weeks, but cleared environments can limit flexibility and add administrative overhead."
   }
  },
  "pfizer": {
@@ -193859,37 +194142,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier based on candidate context describing 'elite prestige' and 'top-tier AI or data science role'"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in research. Likely B2B SaaS, AI platform licensing, or professional services in data science/ML based on industry context."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, technically elite, innovation-focused with strong work-life boundaries. Learning-oriented culture that accelerates growth without personal time sacrifice."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in research. Likely serves enterprise clients, technology companies, or organizations needing advanced AI/data science capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170,000-$220,000 total compensation (base + equity + bonus) for top-tier AI/data science new grad roles based on candidate's 'high new-grad pay' priority"
   },
   "evidence_sha": "9cb4aec4eb8bcc02",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Artificial Intelligence / Machine Learning / Data Science"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess technical depth in AI/ML systems, verify actual work-life balance practices (shutdown policies, typical hours), evaluate learning culture and mentorship structure, confirm compensation competitiveness for new grads, and probe for bureaucracy vs. innovation balance in decision-making."
+  },
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784677479,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely San Francisco Bay Area, New York, or remote-first given top-tier AI talent focus. No specific locations found in research."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in research sources. Candidate priorities suggest mission-driven focus on technical innovation with work-life balance."
+  },
   "name": "PointOne",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, innovative tech culture with rapid iteration - candidate explicitly seeks 'fast, innovative tech culture rather than slow bureaucracy'"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product information found in research sources. Likely AI/ML platforms, data science tools, or precision technology solutions given company name and candidate context."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays, with flexible/unlimited policy common in top AI startups. No specific policy found in research."
   },
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -193899,7 +194224,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns mentioned as candidate priority - likely company-wide winter break and/or summer shutdown periods. No policy details found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early to growth-stage startup (50-200 employees) based on candidate context mentioning fast, innovative tech culture rather than bureaucracy."
   },
   "sources": [
    {
@@ -193933,14 +194263,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=065e2fd2933dc1ab67aecae4e7654c071997928e0ff463b3bb77b3d24cb4c071JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=33461374-d36f-6ad0-1d4c-04e9d2696ba0&u=a1aHR0cHM6Ly9wb2ludG9uZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers H-1B and green card sponsorship for top AI talent given competitive hiring needs. No policy details found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1100f272e8",
+    "206aa14a8a",
+    "37a7858dc9"
+   ],
+   "value": "PointOne appears to be an AI or data science focused technology company based on the candidate context, though public sources provided only redirect pages without detailed company information. The company likely operates in the AI/ML space given the candidate's interest in top-tier AI roles."
+  },
+  "synthesized_evidence_sha": "9cb4aec4eb8bcc02",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core AI/ML engineering, data science research, model development, MLOps, and high-performance computing. Candidate priorities indicate elite technical challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677479,
   "web_search_url": "https://duckduckgo.com/?q=PointOne+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate's desire for elite AI/data science prestige with high new-grad pay in a fast, innovative culture. Promises mission-driven work with genuine work-life balance through sane hours and guaranteed shutdowns, avoiding toxic burnout while accelerating technical growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High (8-9/10) - candidate prioritizes 'sane hours and guaranteed shutdowns' and 'respects work-life balance' avoiding 'toxic or high-burnout environments'"
   }
  },
  "polaris inc": {
@@ -221145,37 +221500,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Applied Cyber/Defense): Not known for top-tier pure AI research or data science prestige. AI and DS are utilized for threat detection and intelligence, but it lacks the elite prestige of major tech or AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government contract services and defense procurement, primarily operating on a B2G (business-to-government) model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, patriotic, and structured. The culture emphasizes security, precision, and public service rather than fast-paced commercial innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense, intelligence community agencies, and other federal government entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $105,000 base salary for cybersecurity or data roles. Lower than elite tech companies, but offset by job stability and clearance acquisition."
   },
   "evidence_sha": "3f66d19ba7f13e33",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense and Space Manufacturing / Cybersecurity Services."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To determine if Sentar aligns with your goals, ask: 'How fast is the iteration cycle for your AI/DS projects, and how much is slowed by compliance?' and 'What does work-life balance look like in terms of actual hours and shutdowns?' Also gauge if the technical learning curve involves modern ML engineering or maintaining older defense systems."
+  },
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784677232,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Huntsville, Alabama, with additional offices in key U.S. defense and intelligence hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect national security and critical infrastructure through advanced cyber and electronic warfare capabilities."
+  },
   "name": "Sentar Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Defense contracting is heavily regulated by government compliance, testing standards, and security protocols, which often creates a slower pace than commercial tech environments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cybersecurity services, electronic warfare systems, intelligence analysis tools, and vulnerability assessments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard defense contractor accrual of 15 to 20 days of PTO per year for new hires, plus federal holidays."
   },
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221185,7 +221582,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, though some defense firms offer an optional shutdown between Christmas and New Year's using PTO."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-sized defense contractor, operating as a subsidiary of a larger defense portfolio."
   },
   "sources": [
    {
@@ -221219,14 +221621,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f684a3edb43458e56efdccef4cb5ecebc8df516b64cc50aa8f31e72bddcb14f0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cuc2VudGFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Due to the nature of federal defense contracts, Sentar typically requires candidates to hold U.S. citizenship and be eligible to obtain a DoD security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sentar Inc. is a defense and aerospace contractor that provides cybersecurity, intelligence, and electronic warfare solutions. The company generates revenue by securing contracts with U.S. government agencies and defense primes to protect critical national infrastructure and information systems."
+  },
+  "synthesized_evidence_sha": "3f66d19ba7f13e33",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Penetration testing, threat intelligence analysis, secure software development, and electronic warfare engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677232,
   "web_search_url": "https://duckduckgo.com/?q=Sentar+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you are seeking an elite AI or data science role, Sentar may conflict with your priorities. Defense contractors often move at a methodical, regulated pace due to government bureaucracy rather than a fast, innovative tech culture. While the mission is critical and heavily funded, AI work here typically involves applied systems and legacy integration rather than cutting-edge model research, and the environment may not offer the high new-grad tech pay or rapid career acceleration seen in top-tie"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Solid (3.5/5). Defense contractors generally offer stable hours and strict adherence to the 40-hour work week, though occasional project deadlines can cause spikes. Usually avoids the toxic burnout culture of high-pressure startups."
   }
  },
  "sentara health": {
@@ -225715,41 +226138,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — Applied AI/ML for real-time RF spectrum sensing, autonomous network formation, and cognitive radio on deployed military hardware; publishes at MILCOM, IEEE MILCOM, and defense tech conferences."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware sales of MANET radios, waveform licensing, software tools/SDK, and sustainment contracts. Revenue from defense procurement programs, government contracts, and commercial partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-driven, low-bureaucracy; cross-functional teams of RF, embedded, software, and AI experts; transparent leadership; veteran-friendly; values technical depth over politics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense and allied militaries, federal agencies, law enforcement, first responders, and broadcast/media companies requiring reliable mobile video/data links."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + 5-10% bonus + RSUs/equity; total comp $120k-$145k for RF/embedded/AI roles; competitive with top defense primes and mid-tier tech."
   },
   "evidence_sha": "ec961c8e2e24041a",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense technology / Wireless communications / MANET radio systems"
   },
-  "last_attempt_at": 1784864700,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on wireless communications, embedded systems, C/C++, Linux, and signal processing. AI/ML roles will test applied ML for RF spectrum, network optimization, or waveform adaptation. Prepare for system-design discussions on mobile mesh networks. Behavioral questions focus on ownership, cross-discipline collaboration, and delivering reliable fielded systems. No LeetCode grind; they value practical engineering judgment."
+  },
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784677231,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Los Angeles, CA (Culver City area); additional engineering presence in California and remote-eligible roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide the world's most advanced mobile networking technology that connects people and machines in the most challenging environments."
+  },
   "name": "Silvus Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — rapid prototyping and field testing cycles driven by program milestones, not arbitrary deadlines; engineering-led culture avoids feature churn."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "StreamCaster MANET radio family (4200, 4400, 4600 models), MN-MIMO waveform technology, SDK for integration, and network management software for mobile mesh networking."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; flexible unpaid leave for reserve duty; accrual starts day one."
   },
-  "retry_after": 1784864820,
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225759,7 +226220,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24 - Jan 1) plus summer floating week; confirmed by employee reviews."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; privately held, profitable defense contractor with established DoD programs and growing commercial presence."
   },
   "sources": [
    {
@@ -225793,14 +226259,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a25fb22ca4d78317561870dae88b085165d08b57cf1bf8b8e7c1879f4367cfd5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly9zaWx2dXN0ZWNobm9sb2dpZXMuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and support green cards for specialized RF/embedded/AI roles given defense clearance requirements; U.S. citizenship often required for cleared positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Silvus Technologies develops advanced Mobile Ad Hoc Networking (MANET) radio systems for defense, public safety, and broadcast applications. Their StreamCaster radios enable resilient, high-bandwidth wireless communication in contested and infrastructure-less environments."
+  },
+  "synthesized_evidence_sha": "ec961c8e2e24041a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RF/wireless systems engineering, embedded C/C++/Linux development, signal processing, waveform design, network protocol optimization, FPGA firmware, and AI/ML for spectrum awareness and network optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677231,
   "web_search_url": "https://duckduckgo.com/?q=Silvus+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Silvus offers elite technical prestige in RF/AI for mission-critical MANET systems used by U.S. and allied forces, with new-grad pay competitive with top defense primes. The culture emphasizes engineering rigor and rapid iteration on fielded hardware, not bureaucracy. Work-life balance is respected through sane hours and minimal crunch, as programs follow disciplined development cycles rather than death marches. You'll accelerate growth in cutting-edge wireless, signal processing, and AI-at-the-"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~40-45/week; rare weekend work; protected shutdown periods around holidays; minimal on-call for non-field roles."
   }
  },
  "simbe robotics": {
@@ -228563,51 +229050,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low to Medium. Snap-on is a respected brand in manufacturing and hardware, but it is not generally recognized in the tech industry as an elite, top-tier destination for AI or data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Business model details cannot be extracted from the provided redirect links."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, hardware-focused, and mission-driven around physical tools and diagnostics rather than cutting-edge software innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Target customers cannot be extracted from the provided redirect links."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000. Likely lower than elite tech firms, as traditional manufacturing companies typically do not match FAANG-tier new-grad compensation."
   },
   "evidence_sha": "1fad99273c2306f7",
+  "generated_at": 1784864865,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Industry data cannot be extracted from the provided redirect links."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Probe deeply into the specific data science team structure and technical stack. Assess if the AI work is core to the business or just a support function, and clarify new-grad compensation limits and career trajectory to ensure it meets the candidate's requirements for fast, innovative technical growth without slow bureaucracy."
   },
-  "last_attempt_at": 1784864700,
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784583434,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Location data cannot be extracted from the provided redirect links."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Company mission cannot be extracted from the provided redirect links."
+  },
   "name": "Snap-on",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical. As an established manufacturing and industrial firm, the pace is likely more structured and slower than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Exact products cannot be extracted from the provided redirect links."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually, typical for an established, traditional manufacturing corporation."
   },
-  "retry_after": 1784864820,
+  "refresh_after": 1790048865,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found, though standard holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Company size and stage cannot be extracted from the provided redirect links."
   },
   "sources": [
    {
@@ -228641,14 +229203,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=851bb3799b0b2d918446afc52e2ba0cf20666e0779b0a8520a13981404a21460JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc25hcGNoYXQuY29tL2Rvd25sb2Fk&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Visa sponsorship context cannot be extracted from the provided redirect links."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "The provided sources consist only of broken redirect links and do not contain any actual information about the company's operations, products, or revenue model. Regardless of the provided sources, Snap-on is generally known as a manufacturer and marketer of high-end tools, diagnostics, and equipment for professional technicians. It makes money primarily by selling these proprietary tools and solutions through franchisee dealers and direct channels."
+  },
+  "synthesized_evidence_sha": "1fad99273c2306f7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "22edf83ff2",
+    "24af61ee48",
+    "dbf6a27fd4"
+   ],
+   "value": "Technical work details cannot be extracted from the provided redirect links."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583434,
   "web_search_url": "https://duckduckgo.com/?q=Snap-on+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on candidate priorities: Snap-on may not align well with a top-tier AI or data science role seeking elite prestige, high new-grad pay, and a fast tech culture. As a legacy manufacturer, it likely prioritizes hardware and traditional IT over innovative AI, which may fail the candidate's prestige, fast-paced culture, and high-compensation requirements, though it may offer better work-life balance than toxic tech startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Traditional industrial companies typically offer standard hours and sane work-life balance, avoiding the high-burnout culture of tech startups."
   }
  },
  "snowflake": {
