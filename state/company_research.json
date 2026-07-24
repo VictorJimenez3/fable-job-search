@@ -88732,41 +88732,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong applied ML/DS in photonics/manufacturing, not pure AI research lab)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "05ed999be2",
+    "32541029c6"
+   ],
+   "value": "Product sales (lasers, optics, materials) and service contracts; recurring revenue from consumables, upgrades, and long-term service agreements across diversified end-markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, collaborative, low-bureaucracy for R&D; respect for deep work and technical mastery"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "05ed999be2"
+   ],
+   "value": "Industrial manufacturers (automotive, electronics, semiconductor), scientific research institutions, medical device companies, communications infrastructure providers, and defense/aerospace contractors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity/bonus (competitive for photonics/industrial software roles)"
   },
   "evidence_sha": "0525cb64b3e22b04",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784920778,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784920630,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05ed999be2",
+    "32541029c6"
+   ],
+   "value": "Photonics / Laser Technology / Advanced Materials / Industrial Automation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9453d00f2"
+   ],
+   "value": "Expect rigorous Python/C++ systems design, Git workflow, and real-time/embedded concepts; prepare for laser/photonics domain questions and automation architecture discussions."
+  },
+  "last_attempt_at": 1784920778,
   "last_evidence_at": 1784919614,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9453d00f2",
+    "05ed999be2"
+   ],
+   "value": "Headquarters: Saxonburg, PA; major sites in Santa Clara, CA, and global R&D/manufacturing across North America, Europe, Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "05ed999be2"
+   ],
+   "value": "To advance photonics innovation that enables breakthroughs in manufacturing, communications, healthcare, and scientific discovery."
+  },
   "name": "Coherent Corp.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — project-driven with hardware cadences, less chaotic than pure software startups"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "05ed999be2",
+    "32541029c6"
+   ],
+   "value": "High-power and precision lasers, laser-based systems, optical components (lenses, mirrors, filters), photonic crystals, semiconductor materials (SiC, GaAs), and related instrumentation for materials processing, communications, electronics, and research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US standard for large tech/industrial)"
   },
-  "retry_after": 1784920750,
+  "refresh_after": 1790104778,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88776,7 +88832,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) common in industrial tech; not guaranteed"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a9453d00f2",
+    "e6a42b6b2f"
+   ],
+   "value": "Publicly traded (NYSE: COHR), founded 1971, 10,000+ employees globally, large-cap established enterprise."
   },
   "sources": [
    {
@@ -88830,14 +88894,42 @@
     "url": "https://jobright.ai/jobs/info/6a5b16ef856af468ab00bcaf?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "a9453d00f2"
+   ],
+   "value": "Track record of H-1B sponsorship for technical roles; sponsorship not guaranteed per role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9453d00f2",
+    "05ed999be2"
+   ],
+   "value": "Coherent Corp. is a global leader in photonics and laser technology, designing and manufacturing lasers, optical components, and advanced materials for industrial, scientific, and commercial markets."
+  },
+  "synthesized_evidence_sha": "0525cb64b3e22b04",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a9453d00f2"
+   ],
+   "value": "Systems software engineering for test & automation infrastructure (Python, C/C++, C#, Git); embedded firmware, real-time control, data acquisition, and high-performance computing for laser/photonic systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784919614,
   "web_search_url": "https://duckduckgo.com/?q=Coherent+Corp.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Coherent offers elite photonics/AI-adjacent engineering at scale with new-grad pay competitive for hardware-software intersection roles, a culture of deep technical innovation over bureaucracy, and established WLB norms in a mission-driven industrial-tech leader."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — established enterprise with sane hours, limited on-call for test infrastructure roles"
   }
  },
  "cohort ai inc": {
@@ -351312,97 +351404,108 @@
  },
  "stripe": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "63ff1db6c1"
-   ],
-   "value": "Tier 1 for a private technology company, reflecting very high engineering prestige and strong advanced problem sets."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tier 1. Stripe is recognized as a top-tier tech company with high prestige for data science and AI roles."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "63ff1db6c1"
+    "daea32b581",
+    "8196021043"
    ],
-   "value": "Transactional, charging a per-transaction processing fee once a business starts collecting revenue."
+   "value": "Charges fees on processed payments and monetizes financial infrastructure software and data products."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Defined by user-first trust orientation and a high-learning environment. Effectively balances a fierce sense of urgency with treating people well. Inclusive, collegial engineering, and lacks toxic pressure."
+   "source_ids": [
+    "9a31ca4e4a",
+    "daea32b581"
+   ],
+   "value": "Estimated: Mission-driven and collaborative. Teams emphasize trust, security, and customer insights, with a strong drive to protect user data and resources."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "8196021043"
    ],
-   "value": "Millions of businesses of all sizes, from large public corporations to early-stage startups across 40+ countries."
+   "value": "Millions of companies ranging from the world's largest enterprises to the most ambitious startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated $175k–$210k salary + meaningful equity, plus signing and annual bonus. Total first-year compensation likely exceeds $225k."
+   "value": "Estimated: High new-grad pay in the top tier of the tech industry, reflecting Stripe's elite prestige."
   },
   "evidence_sha": "dc0ad863c9556a49",
-  "generated_at": 1784681359,
+  "generated_at": 1784920778,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8196021043"
+    "daea32b581",
+    "8196021043",
+    "9a31ca4e4a"
    ],
-   "value": "Financial infrastructure and payments technology."
+   "value": "Financial infrastructure and software."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely centers on high-signal systems design, coding, and integration questions along with deep dives on privacy and authorization architecture. Evaluates real world problem-solving and ownership rather than rote algorithm memorization."
+   "confidence": "high",
+   "source_ids": [
+    "9a31ca4e4a",
+    "8196021043"
+   ],
+   "value": "Focus on how you build secure, privacy-preserving data infrastructure that maintains user trust at scale. Emphasize speed, innovation, and your ability to thrive in a fast-paced culture without burning out, aligning with sane hours and guaranteed shutdowns."
   },
-  "last_attempt_at": 1784920449,
+  "last_attempt_at": 1784920778,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "9a31ca4e4a"
+    "8196021043"
    ],
-   "value": "Multiple technical offices, likely including Seattle, Toronto, and other major North American tech hubs. Authorization Infrastructure role suggests collaborative, cross-team work."
+   "value": "Global footprint serving enterprises and startups worldwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "daea32b581",
     "8196021043",
     "9a31ca4e4a"
    ],
-   "value": "Increase the GDP of the internet by building a trustworthy financial infrastructure layer."
+   "value": "To increase the GDP of the internet."
   },
   "name": "Stripe",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: An intense but considered pace and extremely high-energy. It is not a slow bureaucracy; builders drive outcomes but teams also empower sustainable deep thinking and robust architectures."
+   "source_ids": [
+    "daea32b581",
+    "8196021043",
+    "9a31ca4e4a"
+   ],
+   "value": "Estimated: Fast. The company boasts a staggering amount of work ahead, indicating a high-velocity, innovative culture rather than slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "8196021043",
-    "63ff1db6c1"
+    "daea32b581"
    ],
-   "value": "A payments platform with APIs for online transaction processing, plus tools for fraud prevention, billing, subscriptions, and financial analytics. It also issues cards and manages treasury functions."
+   "value": "Payments, Data Pipeline, Sigma, Database, and new incubating data products."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible, non-accrued, often averaging 20+ days annually for full-time new-grad engineers."
+   "value": "Estimated: Competitive PTO policy with sane hours to prevent burnout, aligning with industry standards."
   },
-  "refresh_after": 1789865359,
-  "retry_after": 1784920689,
+  "refresh_after": 1790104778,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -351412,14 +351515,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely includes company-wide recharge days or periodic extended weekends, on top of standard vacation."
+   "value": "Estimated: Periodic company-wide shutdowns to ensure guaranteed rest and avoid high burnout."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "8196021043"
    ],
-   "value": "Large private technology company still actively hiring. Operates at massive scale globally."
+   "value": "Large-scale platform serving millions of businesses with continuous product incubation."
   },
   "sources": [
    {
@@ -351468,35 +351571,42 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "8196021043"
+    "8196021043",
+    "daea32b581"
    ],
-   "value": "Stripe builds financial infrastructure that lets businesses accept payments and manage online money flows. It handles the complex backend so companies can launch and scale revenue operations quickly."
+   "value": "Stripe is a financial infrastructure platform for businesses that enables millions of companies to accept payments, grow revenue, and accelerate new business opportunities. It makes money by charging transaction fees and offering data, authorization, and financial software products to enterprises and startups."
   },
-  "synthesized_evidence_sha": "6b985f55dbf8de0a",
+  "synthesized_evidence_sha": "dc0ad863c9556a49",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "8196021043",
-    "9a31ca4e4a"
+    "9a31ca4e4a",
+    "8196021043"
    ],
-   "value": "Designing and building secure authorization infrastructure, privacy technologies, and data protection systems that safeguard sensitive user information across the global payments network. This includes internal platform engineering and data-centric security tooling."
+   "value": "Building authorization infrastructure policies and data privacy technologies to protect user data across resources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583445,
   "web_search_url": "https://duckduckgo.com/?q=Stripe+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tackles extremely high-stakes infrastructure problems—the authorization platform protects user data and trust for the entire Stripe ecosystem. It pairs technical depth with a culture that actively prioritizes non-toxic, sustainable speed and thinking from first principles."
+   "confidence": "high",
+   "source_ids": [
+    "daea32b581",
+    "8196021043"
+   ],
+   "value": "Stripe operates a fast, innovative tech culture with a mission-driven charter to increase the internet's GDP. For a candidate seeking elite prestige, high new-grad pay, and accelerated technical learning while avoiding slow bureaucracy, Stripe presents a compelling environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Above average for elite technology companies. Strong cultural disdain for burnout; expectation of protecting personal life and proven deep respect for life outside of work."
+   "source_ids": [
+    "daea32b581",
+    "8196021043"
+   ],
+   "value": "Estimated: Moderate. Strip demands high output in a fast-paced environment, but generally respects personal time through sane hours compared to toxic, high-burnout environments."
   }
  },
  "stryker": {
