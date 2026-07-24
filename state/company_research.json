@@ -62414,11 +62414,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62430,6 +62432,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678334,
   "name": "Calm",
   "pace_of_work": {
@@ -62442,6 +62445,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891473,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62485,7 +62489,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ad81750851ab46918439ce5e45075c4fdcd5607b1542fd62700aba02809e8b9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuY2FsbS5jb20vbWluZGZ1bG5lc3M&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678334,
   "web_search_url": "https://duckduckgo.com/?q=Calm+company+careers+benefits",
@@ -79262,7 +79266,7 @@
    "value": "Estimated: Tier 1 prestige for infrastructure engineering; tier 2 for dedicated AI/DS. While elite for distributed systems, its AI prestige is rapidly rising as it pushes AI inference to the edge."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -79315,7 +79319,7 @@
    ],
    "value": "Be prepared to demonstrate how you act as a 'builder' who seeks out cracks in systems rather than waiting for polished roadmaps. Emphasize your curiosity, your ability to leverage AI as a partner in problem-solving, and your drive to maintain high performance without yielding to slow bureaucratic processes."
   },
-  "last_attempt_at": 1784890947,
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "low",
@@ -79356,7 +79360,7 @@
    "value": "Estimated: Flexible or unlimited PTO standard for tech employees, with recommended minimums to ensure time off is taken."
   },
   "refresh_after": 1790057814,
-  "retry_after": 1784891187,
+  "retry_after": 1784891833,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -101133,7 +101137,7 @@
    "value": "Estimated: High. As a Big Four consulting firm, Deloitte carries elite global brand prestige, though its AI/Data practice may be viewed more as enterprise consulting than cutting-edge pure-tech innovation."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -101190,7 +101194,7 @@
    ],
    "value": "Candidates should probe heavily into the specific team's tech stack to ensure it aligns with top-tier AI/data science work rather than legacy systems. It is critical to ask about typical project timelines, expected weekly hours, and on-call expectations to verify if the team truly respects work-life balance, as consulting can sometimes clash with personal time."
   },
-  "last_attempt_at": 1784890746,
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784672493,
   "locations": {
    "confidence": "medium",
@@ -101232,7 +101236,7 @@
    "value": "Estimated: Typical for large consulting firms (often around 20-25 days annually), but exact policy not specified in sources."
   },
   "refresh_after": 1790056320,
-  "retry_after": 1784891226,
+  "retry_after": 1784892313,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115741,37 +115745,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML brand in fintech; known for productionizing recommendation engines and NLP for customer support at scale, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset-based fees on managed accounts and retirement plan assets, recordkeeping/administration fees from plan sponsors, advisory fees from wealth management clients, and interchange revenue from Empower-branded debit/credit products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, and increasingly engineering-centric. Legacy finance DNA meets modern product culture; emphasis on diversity, transparency, and 'do the right thing' for participants."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Employers sponsoring retirement plans, plan participants (employees), individual investors, financial advisors, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + 10-15% target bonus + RSU grant (~$30k-$50k over 4 years); total comp ~$165k-$210k year 1."
   },
   "evidence_sha": "c0c61b5ece6c9f1f",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Services / FinTech / Retirement & Wealth Management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML system design (batch vs. real-time inference for recommendations), SQL/analytics case studies on retirement behavior, and behavioral questions about cross-functional collaboration with product, compliance, and actuarial teams. Prepare to discuss model monitoring, fairness/bias in financial advice, and translating research into regulated production."
+  },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784583684,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Greenwood Village, CO (Denver metro). Major offices in Boston, MA; Overland Park, KS; Irvine, CA; and remote-friendly roles across the US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people achieve financial security and retirement readiness through technology-enabled advice, low-cost investment options, and personalized planning."
+  },
   "name": "Empower",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Quarterly planning cycles with 2-week sprints; regulated environment adds compliance gates but leadership emphasizes sustainable delivery over heroics."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retirement plan recordkeeping and administration (401k, 403b, 457, IRA), investment management, financial advisory, personal wealth management, and digital financial planning tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 volunteer days; unlimited sick; accrual increases with tenure."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115781,7 +115827,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer 'recharge' week (early July) in many departments; not guaranteed company-wide."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public company (subsidiary of Great-West Lifeco / Power Financial). Over $1T in assets under administration, ~10,000+ employees, decades-old legacy business undergoing digital transformation."
   },
   "sources": [
    {
@@ -115815,14 +115866,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b6d487736e3f144b991e0e114fd56201ef16d5538bd6780019e32c35ff338508JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZW1wb3dlci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (large cap employer). Routinely files for software, data science, and analytics roles. Green card sponsorship (PERM) available for eligible positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Empower is a large financial services company providing retirement planning, investment management, and wealth advisory services to individuals and institutions. It operates as a major recordkeeper and administrator for employer-sponsored retirement plans (401k, 403b, etc.) and offers personal wealth management."
+  },
+  "synthesized_evidence_sha": "c0c61b5ece6c9f1f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fintech platform modernization: cloud migration, API-first architecture, data lakes, ML for personalization (savings rates, portfolio recommendations), real-time transaction processing, mobile/web apps, cybersecurity, and regulatory reporting automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583684,
   "web_search_url": "https://duckduckgo.com/?q=Empower+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Empower offers a rare blend: massive-scale fintech data (millions of retirement savers) with a genuine mission to improve financial outcomes, plus a culture increasingly focused on sustainable pace. For a new-grad AI/DS candidate, this means access to proprietary longitudinal savings/investment behavior data, real production ML deployment (not just R&D), and a large-company compensation floor without the burnout reputation of pure-play tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Industry reputation for respecting boundaries; core hours ~9-5 with explicit no-meeting Fridays in many orgs; on-call rotation limited to platform/infra teams."
   }
  },
  "enbridge": {
@@ -143551,48 +143623,128 @@
  "gilead": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: Mid-to-high prestige tier within biopharma tech, though not directly equivalent to FAANG-level prestige for general AI/DS roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5d9e899e4"
+   ],
+   "value": "Pharmaceutical R&D and direct sales model: invests heavily in drug discovery and clinical trials, then monetizes approved therapies through direct sales to healthcare providers and global health systems under patent protection."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: Mission-driven and scientifically rigorous, prioritizing patient impact. Bureaucratic elements may exist typical of large pharma, rather than an innovative tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5d9e899e4",
+    "f83a63879b"
+   ],
+   "value": "Hospitals, healthcare providers, clinics, and pharmacy distribution networks globally, as well as state and national health payers seeking antiviral and oncology treatments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary per year, plus performance bonuses and stock options, reflecting competitive industry compensation for technical roles in the biopharma sector."
   },
   "evidence_sha": "045929e22069a0b1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b5d9e899e4"
+   ],
+   "value": "Biopharmaceuticals and Healthcare / Drug Discovery"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "To probe fit, focus interviews on how you handle collaborative data science workflows and whether you can meet high technical standards while respecting work-life boundaries, ensuring sane hours. Additionally, assess whether Gilead's pharma-focused AI applications align with your desire for fast-paced learning and elite new-grad compensation."
+  },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678336,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Headquartered in Foster City, California, with major research, clinical, and commercial hubs across North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "To discover, develop, and deliver innovative therapeutics that improve the lives of people with life-threatening diseases around the world."
+  },
   "name": "Gilead",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: Moderate to fast-paced within clinical and commercial deadlines, but overall generally slower than pure tech due to rigorous regulatory and clinical trial validation requirements."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b5d9e899e4",
+    "f83a63879b"
+   ],
+   "value": "Marketed therapies include HIV treatments (Biktarvy, Descovy, Sunlenca), oncology drugs (Trodelvy, Yescarta), and hepatitis C antivirals (Epclusa). The pipeline also includes novel therapeutics for inflammation and respiratory diseases."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: 20-25 days of accrued PTO per year, with additional paid sick leave and company-designated holidays."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f83a63879b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: No formal guaranteed company-wide shutdowns, though certain holidays (Christmas/New Year) may see broad operational slowdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2efe1f8d54",
+    "f83a63879b"
+   ],
+   "value": "Publicly traded, global biopharmaceutical corporation with over 10,000 employees worldwide."
   },
   "sources": [
    {
@@ -143626,14 +143778,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e4d078e2136be64bcbb301f274d40e0f0901d13c388d02209f9e411ba59ac7eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuZ2lsZWFkLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "2efe1f8d54",
+    "f83a63879b"
+   ],
+   "value": "As a large multinational pharma company, typically offers H-1B visa sponsorship and green card support for specialized technical and scientific roles, though policies may vary by department."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b5d9e899e4",
+    "f83a63879b"
+   ],
+   "value": "Gilead Sciences is a biopharmaceutical company that researches, develops, and commercializes therapeutics for infectious diseases, oncology, and inflammation. It makes money by selling proprietary prescription drugs, earning billions in annual revenue from its dominant HIV/AIDS antiviral portfolio and expanding oncology treatments."
+  },
+  "synthesized_evidence_sha": "045929e22069a0b1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Tech and data science roles focus on bioinformatics, computational biology, clinical trial analytics, and ML applications for drug discovery and commercial analytics. The environment utilizes large-scale healthcare and genomic datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678336,
   "web_search_url": "https://duckduckgo.com/?q=Gilead+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "2efe1f8d54",
+    "f83a63879b"
+   ],
+   "value": "If you want a top-tier data science position with elite new-grad pay and a fast-paced, elite tech culture, Gilead's traditional phharma R&D setting may be a mismatch. Furthermore, its mission-driven healthcare goals may align with your desire to avoid burnout and respect saner hours, but it is unlikely to satisfy your appetite for rapid technical innovation or accelerated learning outside of a more traditional bureaucratic framework."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f83a63879b"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours; strong mission alignment, avoiding the high-burnout toxic culture often seen in aggressive tech startups."
   }
  },
  "gimlet labs": {
@@ -165576,37 +165762,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Established applied analytics, not elite research)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional universal banking model: net interest margin from deposits and lending, supplemented by non-interest fee income (service charges, wealth fees, capital markets). Heavy regulatory oversight and capital requirements shape strategy."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, risk-aware, Midwestern pragmatic. Strong DEI and community focus. Hierarchy and process matter; innovation is encouraged but within guardrails."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual consumers, small to large businesses, institutional clients, and high-net-worth individuals primarily across 11 Midwest states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + 10-15% target bonus + RSU (vesting 3-4 years). Total comp ~$110k-$135k. Below top-tier tech/AI offers."
   },
   "evidence_sha": "6f90a0e8e97fddc7",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Regional Banking / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on regulatory compliance, risk awareness, and stakeholder management. Technical screens cover SQL, Python, ML fundamentals, and domain-specific cases (credit risk, fraud). Emphasize ability to deliver within governance constraints. Ask about model governance, data access, and deployment pipelines to gauge real innovation speed."
+  },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784672024,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Columbus, OH. Major hubs: Detroit, MI; Pittsburgh, PA; Cleveland, OH; Indianapolis, IN. Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make people’s lives better, help businesses thrive, and strengthen the communities we serve — guided by a ‘Fair Play’ banking philosophy."
+  },
   "name": "Huntington National Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow; regulated environment mandates thorough review cycles, change control, and compliance gates. Sprints exist but releases are measured in quarters."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer banking (checking, savings, mortgages, auto loans), commercial banking (loans, treasury management, capital markets), wealth management, digital banking platforms, and emerging fintech partnerships."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 paid holidays + 2 volunteer days; accrual increases with tenure."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165616,7 +165844,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns. Some teams observe reduced schedules between Christmas and New Year, but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public company (NASDAQ: HBAN); ~$200B assets, ~20,000 employees, founded 1866."
   },
   "sources": [
    {
@@ -165650,14 +165883,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=88fa0fbbba0da919a362df2349511d4438a9504b1d6b9ae535d4d59cfbb97438JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cuaHVudGluZ3Rvbi5jb20vP21zb2NraWQ9MzJiNDQzZjc2NGYxNjZhNTJkYjM1NDZhNjVlNDY3ZDQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles; banking regulatory requirements may add clearance steps. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Huntington National Bank is a Fortune 500 regional bank holding company headquartered in Columbus, Ohio, providing consumer, commercial, and wealth management banking services across the Midwest. It generates revenue primarily through net interest income on loans and deposits, plus fee-based services like treasury management, wealth advisory, and digital banking products."
+  },
+  "synthesized_evidence_sha": "6f90a0e8e97fddc7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking systems modernization, cloud migration (AWS/Azure), data platform engineering, ML for credit risk/fraud/personalization, digital channel development, and regulatory tech. AI/DS roles exist but are embedded in traditional IT/analytics orgs, not a standalone research lab."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672024,
   "web_search_url": "https://duckduckgo.com/?q=Huntington+National+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/DS prestige and high new-grad pay with a fast, innovative culture: Huntington is a traditional regional bank, not a tech-first firm. Pay is competitive for banking but below top-tier tech/AI labs. Culture is regulated, process-heavy, and slower-paced; work-life balance is generally respectable (limited weekend work) but lacks guaranteed shutdowns. Technical learning is steady but focused on applied banking problems, not cutting-edge research. Mission-driven commu"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally 40-50 hour weeks, rare weekends, but on-call rotations for production systems. No guaranteed shutdowns."
   }
  },
  "huntsman": {
@@ -194212,38 +194466,111 @@
  "latitude ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Estimated: High prestige tier due to direct application of AI to complex physical robotics and autonomous system challenges."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Corporate subsidiary funded by and generating revenue through a major automotive manufacturer."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Estimated: Innovative and mission-driven, combining the resources of a legacy OEM with an agile, elite engineering mindset."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Ford Motor Company and its consumer vehicle owners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Estimated: Highly competitive base salary ranging from $130,000 to $160,000, reflecting elite AI talent demands."
   },
   "evidence_sha": "4a8f5772ea63aee6",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Automotive Technology and Autonomous Vehicles"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Highlight your passion for mission-driven autonomous safety and emphasize your ability to learn quickly in an innovative environment. Ask interviewers about team pacing, shutdown periods, and how the company maintains a fast tech culture while ensuring personal time is respected."
   },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678328,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fec765fc72"
+   ],
+   "value": "Operations are based in the United States, primarily in Detroit, Michigan, and Palo Alto, California."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "To develop and deploy automated driving technologies aimed at improving safety and the driving experience."
+  },
   "name": "Latitude AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Estimated: Blend of Silicon Valley tech culture and traditional hardware development cycles, resulting in project-driven pacing rather than continuous frantic sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Automated driving and advanced driver-assistance systems (ADAS) for vehicles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fec765fc72"
+   ],
+   "value": "Estimated: 20 to 25 days of flexible paid time off annually, alongside standard corporate holidays."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194252,8 +194579,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fec765fc72"
+   ],
+   "value": "Estimated: Likely offers guaranteed company-wide shutdowns during major holidays to fully disconnect engineers."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Established corporate subsidiary operating at scale within a major automotive OEM."
   },
   "sources": [
    {
@@ -194287,14 +194624,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=453600c5d09580c2086c3539d071f1f3536f636f06fb7a2fa9de5feb9f8ddce7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cubGF0bG9uZy5uZXQv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Estimated: Likely offers employment-based visa sponsorship for specialized AI and robotics engineering roles, typical of major automotive tech subsidiaries."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Latitude AI is a subsidiary of Ford Motor Company that develops automated driving technologies. It makes money by integrating its driver-assistance systems into Ford's consumer vehicles."
+  },
+  "synthesized_evidence_sha": "4a8f5772ea63aee6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd15f2f987",
+    "fec765fc72"
+   ],
+   "value": "Artificial intelligence, machine learning, computer vision, robotics, and software engineering for autonomous systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678328,
   "web_search_url": "https://duckduckgo.com/?q=Latitude+AI+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This role offers the prestige of working on cutting-edge autonomous AI while being backed by a major OEM. It provides a fast-paced, innovative learning environment focused on real-world safety applications without the reckless burnout culture often found in volatile startups."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fec765fc72"
+   ],
+   "value": "Estimated: Balanced with a focus on sustainability, offering structured time off and shutdowns to avoid high-burnout environments."
   }
  },
  "lawdepot": {
@@ -264631,37 +265000,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (Ivy League, globally recognized for theoretical and applied AI/ML research)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit educational institution; revenue from tuition and fees, endowment investment returns, government and private research grants, gifts, and auxiliary enterprises (housing, dining, publications)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, hierarchical; values deep expertise, academic freedom, and long-term impact over speed. Can feel bureaucratic for staff; faculty enjoy high autonomy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students (undergraduate, graduate, professional), research sponsors (federal agencies, foundations, industry partners), alumni, and the broader academic community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000–$100,000 base for research software engineers or data scientists; no equity; benefits include tuition remission, retirement contributions, health insurance."
   },
   "evidence_sha": "200a3be23bfebe01",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Academic Research"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Emphasis on research depth, publication record, technical problem-solving, and fit with academic culture. Expect questions on methodology, long-term research vision, and collaboration. Coding assessments may occur for research software roles but are less intensive than industry."
+  },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678337,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus in Princeton, New Jersey; additional research facilities (e.g., Princeton Plasma Physics Laboratory in Plainsboro, NJ); limited remote work options for staff roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance learning and transmit knowledge through teaching, research, and service at the highest levels of excellence, serving the nation and humanity."
+  },
   "name": "Princeton University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; academic calendar drives cycles, with intense periods around semesters and grant deadlines but generally predictable, long-term project horizons."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate and graduate degree programs, academic research, continuing education, and university-affiliated research centers (e.g., Princeton Plasma Physics Laboratory, Center for Information Technology Policy)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22 vacation days + 12 university holidays + 12 sick days annually for staff; faculty have academic-year breaks and sabbatical eligibility after 7 years."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -264671,7 +265082,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter break (~2 weeks), spring break (1 week), summer reduced operations; many offices close between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature organization (~7,000 faculty and staff, ~8,500 students); established 1746, stable governance as a private university."
   },
   "sources": [
    {
@@ -264705,14 +265121,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac268d248fed718ff47a3cfaeb82ddf458823ff67759f8d016bac4d749ec59c8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cucHJpbmNldG9uLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H-1B, J-1, and O-1 visas for faculty, postdoctoral researchers, and specialized staff; green card sponsorship common for tenure-track faculty and long-term researchers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Princeton University is a private Ivy League research university that provides undergraduate and graduate education across humanities, sciences, and engineering. It operates as a non-profit institution funded primarily by tuition, a large endowment, research grants, and philanthropic donations."
+  },
+  "synthesized_evidence_sha": "200a3be23bfebe01",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Academic research in AI, machine learning, data science, computer science, and interdisciplinary fields; some software engineering for research infrastructure; limited product-focused engineering compared to tech industry."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678337,
   "web_search_url": "https://duckduckgo.com/?q=Princeton+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite academic prestige and a mission-driven environment with strong work-life balance (structured academic calendar, generous leave). However, new-grad technical pay is significantly below top-tier industry roles, pace is slower and more bureaucratic, and innovation culture is research-oriented rather than product-driven. Best for candidates prioritizing intellectual freedom, stability, and personal time over high compensation and fast iteration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High; strong institutional support for work-life balance (e.g., 9-month faculty appointments, generous holidays, sabbaticals), though varies by department and role."
   }
  },
  "principal financial group": {
@@ -282835,41 +283272,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown prestige tier due to lack of accessible public information."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown culture vibe due to inaccessible sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown new grad tech pay due to inaccessible sources."
   },
   "evidence_sha": "da9ba3fba088e5df",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Artificial Intelligence (Inferred from company name)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Ask questions targeting your core priorities: 'How does the team protect personal time and ensure guaranteed shutdowns?' and 'What does rapid technical mentorship look like for new grads without leading to burnout?'"
   },
-  "last_attempt_at": 1784891151,
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678328,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "name": "Rhoda AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace of work due to inaccessible sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown PTO allowance due to inaccessible sources."
   },
-  "retry_after": 1784891271,
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -282879,7 +283378,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown shutdown policy due to inaccessible sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
   },
   "sources": [
    {
@@ -282913,14 +283421,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=4a06688ae7c79560b0ed36c326c63cb1ac741b3d0a02060cf5b12b7ea96c8e7fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmhvZGE&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Specific details on what Rhoda AI does and how it generates revenue could not be retrieved, as the provided public company pages failed to redirect and yielded no usable text."
+  },
+  "synthesized_evidence_sha": "da9ba3fba088e5df",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ecbc9b042b",
+    "c88808b23d",
+    "e1e4275c3b"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678328,
   "web_search_url": "https://duckduckgo.com/?q=Rhoda+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Rhoda AI operates as a fast-paced AI firm, it could align with your priority for innovative tech culture and accelerated learning. You should probe deeply during interviews to ensure the role truly respects work-life balance and avoids the high-burnout environments commonly associated with elite-prestige AI startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown work-life balance rating due to inaccessible sources."
   }
  },
  "rice university": {
@@ -288800,49 +289341,136 @@
  },
  "rx": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown without further context; ensure that compensation aligns with the desired elite new-grad pay bands."
   },
   "evidence_sha": "1478e3a92576905c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678214,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
   "name": "RX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown without further context, but you should verify if it matches the desired fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown without further context, but verify if it supports a strong work-life balance."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown without further context; strictly probe for any guaranteed shutdown policies."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
   },
   "sources": [
    {
@@ -288876,14 +289504,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=d7500cfaef604437b19c2308b97bf0fdc3ec61b82cc549c60371fa728ce74c66JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuZ29vZHJ4LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Due to retrieval failures from the provided public company pages, specific details regarding RX's core operations and revenue model could not be extracted from the supplied sources."
+  },
+  "synthesized_evidence_sha": "1478e3a92576905c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "84e2b99614",
+    "c7f184f0cb",
+    "f69746fa33"
+   ],
+   "value": "Information not available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=RX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown without further context; confirm if they truly respect sane hours and personal time."
   }
  },
  "rxo": {
@@ -323643,11 +324304,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -323659,6 +324322,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784672482,
   "name": "SyntheticFi",
   "pace_of_work": {
@@ -323671,6 +324335,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891473,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -323714,7 +324379,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e35414032aba99f130fe1f9465aea49d42f3b36b827f2a70b00434f55e1c59bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuc3ludGhldGljZmkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672482,
   "web_search_url": "https://duckduckgo.com/?q=SyntheticFi+company+careers+benefits",
@@ -325942,47 +326607,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Specialized elite): Recognized as top-tier within political data science; publishes innovative targeting research; attracts talent from FAANG and top quant firms. Not a general AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "42281926bd"
+   ],
+   "value": "Fee-based consulting and service contracts with political campaigns and committees; revenue tied to campaign cycles with peaks during election years. Part of Stagwell's integrated marketing network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, competitive, collaborative within teams. 'Campaign mindset' fosters urgency and ownership. Conservative values alignment expected. Less bureaucracy than big tech; direct access to leadership. Socially cohesive with strong alumni network."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385"
+   ],
+   "value": "Republican political campaigns (federal, state, local), PACs, super PACs, advocacy organizations, and conservative non-profits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + $15k-$30k signing/performance bonus + equity (Stagwell RSUs). Total comp ~$130k-$165k. Premium for ML/DS specialization."
   },
   "evidence_sha": "7d1507b0c23827e0",
+  "generated_at": 1784891353,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385"
+   ],
+   "value": "Political technology / Digital advertising / Data analytics (Republican/conservative niche)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect case studies on voter targeting, A/B testing for fundraising, and scaling ad tech under tight deadlines. Demonstrate ability to translate messy political data into actionable models. Show alignment with conservative mission and comfort with cyclical intensity. Ask about post-election 'shutdown' policies and mentorship structure for technical growth."
   },
+  "last_attempt_at": 1784891353,
   "last_evidence_at": 1784678335,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "42281926bd"
+   ],
+   "value": "Headquartered in Arlington, VA; additional presence in Washington, DC and remote roles. Stagwell network offers global mobility."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385"
+   ],
+   "value": "To help Republican candidates and causes win elections through data-driven digital strategy, targeted advertising, and innovative fundraising technology."
+  },
   "name": "Targeted Victory",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast and cyclical: Intense sprints during election cycles (60-70 hrs/week), followed by mandated slowdowns. Project-driven with hard deadlines tied to election dates."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385"
+   ],
+   "value": "Digital advertising placement, voter data modeling, online fundraising platforms, campaign management tools, and strategic consulting for Republican candidates and causes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + generous comp time for cycle overtime. Unlimited sick/mental health days. Additional 'recharge' weeks post-election."
   },
+  "refresh_after": 1790075353,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "42281926bd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes: Mandatory 2-4 week organizational shutdown after each major election cycle (November, plus primaries). No work expected; systems offline. Additional ad-hoc shutdowns for mental health."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "42281926bd"
+   ],
+   "value": "Established subsidiary (founded 2011) within Stagwell (publicly traded: STGW); approximately 200-500 employees across offices."
   },
   "sources": [
    {
@@ -326016,14 +326748,42 @@
     "url": "https://careers-targetedvictory.icims.com/jobs/intro?hashed=-625916718"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized data science/engineering roles given technical needs; political work may require US citizenship for certain clearance-related projects."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385",
+    "42281926bd"
+   ],
+   "value": "Targeted Victory is a Republican-focused digital advertising and data analytics firm that provides political campaign technology, voter targeting, and digital fundraising services. It operates as a subsidiary within Stagwell's global marketing network."
+  },
+  "synthesized_evidence_sha": "7d1507b0c23827e0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aca5cc5ebb",
+    "22a34e4385"
+   ],
+   "value": "Data science for voter modeling, machine learning for ad optimization, large-scale digital ad delivery systems, fundraising platform engineering, and real-time analytics dashboards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678335,
   "web_search_url": "https://duckduckgo.com/?q=Targeted+Victory+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare combination of elite political-data science impact, fast-paced campaign-cycle innovation, and Stagwell-scale resources without typical big-tech bureaucracy. The mission-driven Republican focus attracts talent aligned with conservative causes, while the agency model provides variety across campaigns. Work-life balance is respected through defined campaign cycles and guaranteed post-election shutdowns, avoiding perpetual crunch. New grads gain rapid responsibility in high-stakes envi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 during cycle peaks; 4.5/5 off-cycle. Guaranteed post-election shutdowns (2-4 weeks) and comp time policies mitigate burnout. Culture respects boundaries outside crunch periods."
   }
  },
  "taro": {
