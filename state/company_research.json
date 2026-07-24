@@ -7933,113 +7933,138 @@
  "ahead": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 or 3. AHEAD is a solid, reputable IT services company but not a top-tier AI lab or Big Tech firm. Prestige comes via a strong consulting and client platform focus rather than in-house AI product fame."
+   "source_ids": [
+    "5c768d7bce",
+    "7f04cda5bb"
+   ],
+   "value": "Low for elite AI/data science. The focus is on enterprise IT consulting and platform integration (e.g., ServiceNow, cloud infrastructure) rather than foundational AI/DS model building."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "711df3d3fe"
+    "5c768d7bce",
+    "7f04cda5bb"
    ],
-   "value": "The company generates revenue through professional and managed technology services, consulting clients on cloud infrastructure, automation, analytics, and software delivery."
+   "value": "B2B IT consulting and systems integration, monetizing through the design, delivery, and management of enterprise cloud, analytics, and software platforms."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "Inclusive, empowering, and respectful. AHEAD actively promotes a culture of belonging where all voices are heard and empowered to drive change."
+   "value": "Highly inclusive and collaborative, explicitly prioritizing spaces where all perspectives and voices are represented, valued, respected, and heard."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5c768d7bce"
+   ],
+   "value": "Enterprises seeking digital transformation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000 - $105,000 base salary for a new-grad technical role in the United States. This is a conservative estimate for an IT service company outside of the top-tier Big Tech or finance salary bracket."
+   "source_ids": [
+    "711df3d3fe",
+    "7f04cda5bb"
+   ],
+   "value": "Estimated: $70k - $85k base, aligning with standard market rates for entry-level IT process and technical consulting roles, which may fall short of elite-tier AI/DS pay."
   },
   "evidence_sha": "d70551bff5d06a57",
-  "generated_at": 1784681990,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "711df3d3fe"
-   ],
-   "value": "Information Technology Services and Consulting"
-  },
-  "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "711df3d3fe",
+    "5c768d7bce",
     "7f04cda5bb"
    ],
-   "value": "Interview preparation should highlight how you integrate cloud, analytics, and automation to solve enterprise problems, aligning with AHEAD's platform-building mission. Be ready to discuss your technical skills (like ServiceNow or data platforms) and your commitment to a collaborative, respectful culture, as a candidate from a top-tier background can show how they choose impact and learning velocity over a pure product-company badge."
+   "value": "IT Services and IT Consulting"
   },
-  "last_attempt_at": 1784681990,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c768d7bce",
+    "7f04cda5bb"
+   ],
+   "value": "Based on your priorities, ask about the actual day-to-day pace of technical learning versus administrative bureaucracy. Also, ask about WLB policies, pto, and guaranteed shutdowns, as they likely vary significantly by client-facing consulting engagements."
+  },
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784752592,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "75283bbf2d"
+    "e4f7f92e6e",
+    "0705c7a981"
    ],
-   "value": "Specific office locations are not detailed in the provided sources, but the company is present enough to host an annual conference."
+   "value": "Not explicitly stated in the provided sources, but the .com and .org domains suggest a primarily US-based operational presence."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "To help enterprises deliver on the promise of digital transformation and create a culture of belonging where all perspectives are valued, respected, and heard."
+   "value": "To help enterprises deliver on the promise of digital transformation while prioritizing a culture of belonging where all perspectives are represented, valued, and heard."
   },
   "name": "AHEAD",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "7f04cda5bb",
     "711df3d3fe"
    ],
-   "value": "Estimated: Fast-paced, client-driven consultancy environment, but the company's emphasis on culture and work-life balance suggests it's not a manic, high-burnout pace."
+   "value": "Estimated: Moderately fast, driven by client demands and consulting engagement deadlines rather than a hyper-growth product startup culture, which may carry some risk of bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "711df3d3fe"
+    "5c768d7bce"
    ],
-   "value": "Professional and managed services for cloud infrastructure, automation, analytics, and software delivery. AHEAD integrates these capabilities to build comprehensive digital business platforms for enterprises."
+   "value": "Digital business platforms built on advances in cloud infrastructure, automation and analytics, and software delivery."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of paid time off annually, a typical, conservative figure for a US-based IT services firm at this level."
+   "source_ids": [
+    "5c768d7bce"
+   ],
+   "value": "Estimated: 15-25 days annually, typical for an established US-based IT consulting firm, though exact policies are unstated."
   },
-  "refresh_after": 1789865990,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "5c768d7bce",
+    "711df3d3fe",
+    "7f04cda5bb"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns beyond US public holidays (approx. 7-8 days) have been publicly identified."
+   "source_ids": [
+    "5c768d7bce"
+   ],
+   "value": "Estimated: Standard paid holidays, though no info on guaranteed corporate-wide shutdowns was found."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "75283bbf2d"
+    "7f04cda5bb",
+    "711df3d3fe",
+    "5c768d7bce"
    ],
-   "value": "Mature enough to host annual conferences and operate across multiple locations, but specific employee count, founding date, and funding stage are not provided in the sources."
+   "value": "Established corporate IT consultancy with a broad footprint of technical and consulting roles (e.g., ServiceNow, Process Analysis, Sales)."
   },
   "sources": [
    {
@@ -8104,43 +8129,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "5c768d7bce",
+    "711df3d3fe",
+    "7f04cda5bb"
+   ],
+   "value": "No specific visa sponsorship details found in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "AHEAD is an IT services and consulting company that helps enterprises modernize their technology through cloud infrastructure, automation, analytics, and software delivery. They design and build digital business platforms to enable digital transformation."
+   "value": "AHEAD is an IT consulting and managed services firm that designs and builds platforms for enterprise digital transformation. They make money by helping enterprise clients weave together cloud infrastructure, automation, analytics, and software delivery."
   },
-  "synthesized_evidence_sha": "a5e5009b38682e29",
+  "synthesized_evidence_sha": "d70551bff5d06a57",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "7f04cda5bb",
     "711df3d3fe",
-    "7f04cda5bb"
+    "5c768d7bce"
    ],
-   "value": "Work involves weaving advances in cloud infrastructure, automation, analytics, and software delivery. Specific roles include technical consulting for ServiceNow CMDB, Discovery, and Integrations, as well as incident and problem management."
+   "value": "ServiceNow consulting (CMDB, Discovery, Integrations), process analysis for IT service management, and weaving together cloud infrastructure, automation, and analytics for enterprise platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=AHEAD+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "711df3d3fe"
+    "5c768d7bce"
    ],
-   "value": "AHEAD is a mission-driven company that explicitly prioritizes work-life balance and a respectful, empowering culture. For a candidate seeking elite-level AI/data science work without the bureaucracy and burnout of a pure tech giant, a services firm like AHEAD offers exposure to cutting-edge cloud, analytics, and automation projects across client enterprises, potentially leading to faster technical skill growth and varied experience while maintaining sane hours."
+   "value": "AHEAD emphasizes a culture of belonging and respect, aligning with your desire for a non-toxic environment. However, as an IT services consultancy, it likely prioritizes enterprise software and cloud integrations over the fast-paced, elite-tier AI/data science product development you are seeking."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "Estimated: Above average for IT services. The company explicitly prioritizes culture and empowerment, suggesting a sustainable environment, though client deadlines can still create busy periods."
+   "value": "High based on cultural statements emphasizing respect and belonging, but likely variable for technical consultants based on client project demands."
   }
  },
  "ai2 applicazioni di ingegneria ed informatica s r l": {
@@ -48124,97 +48156,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Top-Tier National Security AI/ML (Tier 1 within Defense-INTEL contracting, competitive with MITRE and APL; carries high military/intel credibility but less consumer-investor buzz than a FAANG lab or OpenAI)."
+   "value": "Estimated: Mid-tier in the defense/government sector."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf"
+    "67b154bde0"
    ],
-   "value": "CACI operates on a government contracting business model, deriving revenue from cost-reimbursable, fixed-price, and time-and-materials contracts. Growth is driven by recruiting cleared technical talent to deliver specialized, high-barrier-to-entry services at scale."
+   "value": "Business-to-Government (B2G) services contract provider, leveraging technical expertise to fulfill public sector requirements."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "CACI culture is mission-driven, patriot-veteran heavy, and collegial. It is distinctly non-toxic and 'corporate in a protective way,' focused on compliance and reliability over flashy open-office perks or disruptive hustle-porn culture."
-  },
-  "customers": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf",
-    "ffa1052b6b"
+    "67b154bde0"
    ],
-   "value": "The customer base is overwhelmingly concentrated in the U.S. federal government, including the Department of Defense, the Intelligence Community (NSA, CIA, DIA), Homeland Security, and federal civilian agencies like NASA, healthcare bureaus, and the State Department."
+   "value": "Mission-driven, characterized by a strong emphasis on integrity."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "67b154bde0"
+   ],
+   "value": "U.S. federal government agencies and their related organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $88,000 to $105,000 base in non-premium locations; DC-premium and cleared-signal roles with a Top Secret/SCI polygraph can push total new-grad comp (labor cash) to $120,000, though equity is largely irrelevant and replaced by high base maximizing insurance."
+   "value": "Estimated: $80,000-$95,000 base salary."
   },
   "evidence_sha": "ffd786ac379a5ffe",
-  "generated_at": 1784681629,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf"
+    "67b154bde0"
    ],
-   "value": "Defense Technology & National Security Services (Government IT & Intelligence)"
+   "value": "Government IT and Consulting Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "The interview process typically prioritizes past project experience, behavioral assessments rooted in mission alignment (to test cultural fit for the low-ego, mission-driven care about delivery over brilliance), and technical aptitude focused on Python, C++ and signal analysis, often bypassing the irrelevant LeetCode-puzzle marathons common in consumer-tech rounds."
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784681629,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784814111,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "ffa1052b6b"
+    "67b154bde0"
    ],
-   "value": "Major talent hubs are concentrated in the DC/Northern Virginia metro (Reston headquarters), Denver/Colorado Springs, San Antonio, Tampa, and national security sites like Fort Meade, MD. Secondary offices are distributed across 120+ locations globally."
+   "value": "Denver, Colorado (based on specific role examined), with additional office locations nationwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "f7e8b540bf"
+    "67b154bde0"
    ],
-   "value": "CACI's official mission is to be the leading provider of expertise and technology to government in support of vitally important missions and national security."
+   "value": "To deliver unique contributions that support and protect employees, their families, and our customers every day, driven by a culture of integrity."
   },
   "name": "CACI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Steady and linear, driven by contractual 40-hour service agreements rather than an innovation sprint model. The classified nature of the work specifically restricts ability to work overtime remotely, naturally capping the grind."
+   "value": "Estimated: Steady and structured, driven by government contract timelines rather than agile, fast-paced innovation cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf",
-    "ffa1052b6b"
+    "67b154bde0"
    ],
-   "value": "CACI delivers specialized IT and engineering services rather than mass-market products. Their work centers on signals intelligence (SIGINT), multi-INT analytics, electronic warfare, cyber operations, enterprise cloud migration, and Agile software development for defense and intelligence missions."
+   "value": "Information technology services, intelligence and cyber operations support, and large-scale data and GIS technology solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Conservative starting baseline of 15 days paid vacation plus 10 federal holidays, with potential separate sick leave allocation, heavily dependent on the specific contract's collective bargaining clauses."
+   "value": "Estimated: 20-25 days annually."
   },
-  "refresh_after": 1789865629,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48224,16 +48252,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed non-cash furloughs are unlikely, but government-designated federal holidays are stone-granite off days; there are widely observed mini-shutdowns, plus connectivity blackout windows during classification reviews that functionally block overtime spillover."
+   "value": "Estimated: Possible federal holiday observances."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf",
-    "ffa1052b6b"
+    "67b154bde0"
    ],
-   "value": "CACI is a mature, publicly traded (NYSE: CACI) large-cap company with approximately 24,000 employees and reported annual revenue exceeding $7 billion."
+   "value": "Large, established public company (Fortune 1000)."
   },
   "sources": [
    {
@@ -48278,43 +48304,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "ffa1052b6b"
-   ],
-   "value": "Because a vast majority of technical roles require a U.S. security clearance (which mandates U.S. citizenship), CACI generally cannot sponsor new visas for non-citizens; the standard hiring model relies on incumbently cleared or clearable U.S. persons."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf"
+    "67b154bde0"
    ],
-   "value": "CACI International is a major American defense and national security contractor that provides expertise and technology services primarily to the U.S. federal government. The company makes money by winning long-term government contracts for modernizing critical cyber, intelligence, software, and IT systems."
+   "value": "CACI International Inc is a Fortune 1000 company that provides information technology, intelligence, and cyber services, primarily to U.S. federal government agencies. It makes money by securing large government contracts to deliver specialized technology solutions, such as cloud-native architectures and large-scale data environments."
   },
-  "synthesized_evidence_sha": "03436930881fa09e",
+  "synthesized_evidence_sha": "ffd786ac379a5ffe",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "38b8f31858",
-    "f7e8b540bf",
-    "ffa1052b6b"
+    "67b154bde0"
    ],
-   "value": "Technical work spans high-performance computing, signals intelligence (SIGINT), AI/ML algorithm development for intel applications, full-stack development for classified networks, electronic warfare, and reverse engineering. Much of the cutting-edge work requires an active security clearance."
+   "value": "Hands-on development utilizing GIS technologies, cloud-native architectures, and large-scale data environments, tailored specifically for government clients."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784661276,
   "web_search_url": "https://duckduckgo.com/?q=CACI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "For a new grad AI researcher, CACI uniquely delivers elite mission prestige (national security and defense) without the 60-hour grind and high burnout of big-tech or high-frequency trading firms. It practices disciplined time charging, which enforces a finish-by-5 culture that protects personal time, while still offering deep technical puzzles in cyber AI and SIGINT."
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Excellent for defense-tech (typical 8:00-05:00 or 9/80 compressed schedule), often earning 4.2/5 on the defense contractor balance scale due to the inability to take sensitive work home."
+   "source_ids": [
+    "67b154bde0"
+   ],
+   "value": "Estimated: Good, supported by competitive benefits packages."
   }
  },
  "caci bv": {
@@ -68319,96 +68342,105 @@
  },
  "constellis": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Low. Not recognized as a data science or AI engineering employer. It is an operations-focused security contractor."
+   "value": "Tier 3 (Low). As a security and risk management firm, Constellis does not have a reputation as an elite tech or AI company. Technical roles appear to be operational support functions rather than cutting-edge data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "B2G/B2B contract-based revenue model centered on outsourced security, intelligence, and training services. Revenue is generated through defined-scope government contracts and commercial service agreements."
+   "value": "Business-to-Government (B2G) and Business-to-Business (B2B) service contracting for security and risk management."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Paramilitary, hierarchical, and formal. Culture is driven by operational readiness and compliance, with a heavy presence of ex-military personnel. A far cry from a casual, tech-centric, innovative environment."
+   "value": "Estimated: Mission-driven but likely structured, formal, and compliance-heavy due to the nature of domestic security and government clients."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "U.S. government agencies, international governments, and multinational corporations operating in complex or high-risk environments."
+   "value": "Government and commercial clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $75,000 - $90,000 base salary for a junior data analyst. Aligns with low-margin government services billing scales and is far below top-tier consumer tech or gen AI startup compensation."
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Estimated: ~$37,000 annually (based on $17.92/hr for an entry-level Data Analyst role), which is drastically below elite new-grad tech pay."
   },
   "evidence_sha": "48ed4ecbf02f9659",
-  "generated_at": 1784687375,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Security & Defense"
+   "value": "Security and Risk Management Services / Government Contracting."
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Probe whether the data role actually involves modern tech stacks and AI/ML, or if it is purely operational alarm monitoring. Ask about work-life balance, hours, and on-call expectations, as government contracting security roles can demand rigid availability. Clarify compensation and career acceleration opportunities, ensuring they match the candidate's requirement for high new-grad pay and technical growth rather than low-level data entry."
   },
-  "last_attempt_at": 1784687375,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784593390,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Headquartered in Herndon, Virginia, USA, with operational hubs in the Middle East, Europe, and Africa to support international task orders."
+   "value": "Philadelphia, PA (based on a recent Data Analyst job posting), operating in the United States."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "To provide mission-critical security and risk management solutions with a focus on safeguarding people, assets, and operations in challenging environments."
+   "value": "To provide operational support and risk management services to government and commercial clients, focusing on domestic security programs."
   },
   "name": "Constellis",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow-to-moderate, dictated by strict operational protocols and government contract compliance rather than agile tech development. High inertia."
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Estimated: Moderate to slow pace typical of government contractors, potentially bound by bureaucratic procedures and contract requirements rather than fast-paced tech innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Protective services, risk management, security training, crisis response, mission support, and logistics for high-threat environments."
+   "value": "Operational support, risk management services, and domestic security programs (including alarm monitoring systems management)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 days for corporate technical professionals, with standard federal holidays. Tends to follow the lower, more conservative end of government contracting benefits."
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Estimated: 15-20 days of PTO per year, standard for government services contractors."
   },
-  "refresh_after": 1789871375,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68417,15 +68449,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns beyond federal holidays. Any pauses are billing-dependent, lacking a plannable tech-style recharge period."
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; typical shift operations in security required year-round."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Large, established global enterprise with over 15,000 employees. The company is mature and firmly in an operations/maintenance phase rather than a high-growth startup mode."
+   "value": "Established private company in the government services sector."
   },
   "sources": [
    {
@@ -68470,40 +68504,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Due to the security-sensitive nature of government contracts, many positions require U.S. citizenship and security clearance eligibility. Sponsorship for non-citizens is highly unlikely for cleared or compliance-related roles."
+   "value": "Not explicitly found in research; government security contracts often require US citizenship and clearance, making sponsorship unlikely."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Constellis is a global security and risk management company providing mission support, protective services, and training to government and commercial clients. It makes money through long-term government contracts and commercial security service agreements."
+   "value": "Constellis is a provider of operational support and risk management services to government and commercial clients, with a focus on domestic security programs. They make money by contracting their security and operational support services, including staffing data analysts to manage information related to alarm monitoring systems."
   },
-  "synthesized_evidence_sha": "dcfc2d3e0e43a4b8",
+  "synthesized_evidence_sha": "48ed4ecbf02f9659",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "79a02de71e"
+    "fe7110f3b7"
    ],
-   "value": "Strong focus on physical security, logistics, and training operations. AI/Data Science roles are almost certainly limited to back-office functions such as geospatial risk analytics, threat intelligence modeling, and operational logistics optimization, rather than core product development."
+   "value": "Data analysis and management of information related to alarm monitoring systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593390,
   "web_search_url": "https://duckduckgo.com/?q=Constellis+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "This does not align with the candidate's priorities for a top-tier AI/data science role. Constellis is a security and risk management firm rather than an elite tech company, meaning the culture is likely driven by government contracting bureaucracy and operational security rather than fast-paced tech innovation. Furthermore, the estimated pay for technical roles is significantly below the elite new-grad benchmark, and the work likely lacks the advanced AI/ML depth and prestige desired."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Average-to-poor for technical staff. Contracted field operations typically respect structured shifts, but corporate staff may face reactive crisis ops demands. No specific policy data found."
+   "source_ids": [
+    "fe7110f3b7"
+   ],
+   "value": "Estimated: Moderate. While security operations can require shift work or on-call duties, government contractors generally operate within standard billable hours, though this may not offer the guaranteed shutdowns the candidate desires."
   }
  },
  "consultadd public services": {
@@ -215963,92 +216001,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 1 — Generally perceived as one of the strongest new grad environments for AI/technical talent, competitive with top tech, trading, and unicorn-tier firms."
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Primarily interchange revenue from corporate card transactions, combined with a SaaS subscription on the software platform to provide a hybrid fintech revenue stream."
+   "value": "B2B SaaS and fintech revenue model: hardware/services revenue from corporate card transactions combined with software subscriptions and monetization of partner integrations."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Builder-first, high-ownership, low-ego culture, teams act like mini-CEOs and drive their own outcomes."
+   "value": "A 'builder' culture where employees own problems end-to-end and make consequential decisions. Teams are described as nimble, committed, and talented, fostering a heavy bias towards action."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Ambitious companies ranging from mid-market startups to large enterprises; focus is on scaling organizations that need to control spending and eliminate manual finance work."
+   "value": "Ambitious companies seeking to optimize their financial operations and technical workflows."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $180K–$225K total compensation including base, bonus, and equity, competitive with top-tier AI/tech new grad offers."
+   "value": "Estimated: $150k-$200k total compensation."
   },
   "evidence_sha": "117b2e26fca25b94",
-  "generated_at": 1784684365,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "6869e30bd4"
-   ],
-   "value": "Fintech (financial technology) + SaaS."
-  },
-  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect practical technical screenings on system design, product thinking, and data modeling that emphasize ownership and high-velocity decision-making in a collaborative, non-toxic environment."
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784684365,
-  "last_evidence_at": 1784732392,
-  "locations": {
+  "interview_focus": {
    "confidence": "medium",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Offices in New York City and Miami; additional remote-friendly presence across the US."
+   "value": "Demonstrating an ability to handle end-to-end systems with high flexibility, leaning into cross-functional collaboration between engineering and technology teams."
+  },
+  "last_attempt_at": 1784870150,
+  "last_evidence_at": 1784732392,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "To build the best finance automation platform so every ambitious company can operate better and save time and money, regardless of size."
+   "value": "To give every ambitious company the tools to build and own their financial systems end-to-end, enabling them to make consequential decisions that shape their outcomes."
   },
   "name": "Ramp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast and high-ownership but sustainable; builders ship quickly with end-to-end ownership but without ruthless death-march schedules."
+   "source_ids": [
+    "bd53e6fff1"
+   ],
+   "value": "Estimated: Fast-paced."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Corporate cards with spend controls, expense management, bill pay, accounting automation, procurement, travel booking, and reporting tools with price intelligence — all integrated into a single SaaS platform."
+   "value": "Corporate credit cards, spend management software, travel and expense management systems, and Oracle Cloud partner integrations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20 days PTO for new grad hires, consistent with top-tier tech unicorn peer benefits."
+   "value": "Estimated: Standard tech market PTO."
   },
-  "refresh_after": 1789868365,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216058,14 +216103,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Yes, recently granted company-wide shutdown weeks such as two weeks in December and one week in July, validated across many employer review sites and company statements internally."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "6869e30bd4"
-   ],
-   "value": "Late-stage pre-IPO unicorn, with thousands of employees across global offices, having multiple current job openings."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -216116,32 +216159,36 @@
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "6869e30bd4"
+    "bd53e6fff1"
    ],
-   "value": "Ramp is a finance automation platform that combines corporate cards, expense management, bill payments, accounting, and procurement into one system. It makes money primarily through interchange fees earned every time a customer uses a Ramp corporate card, while offering its software for free."
+   "value": "Ramp is a private financial technology company that helps businesses manage their corporate spending. It makes money by charging interchange fees on card transactions, subscription fees for software, and through partner integrations."
   },
-  "synthesized_evidence_sha": "796fdd115c9904b3",
+  "synthesized_evidence_sha": "117b2e26fca25b94",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "bd53e6fff1",
     "6869e30bd4"
    ],
-   "value": "Cross-functional ownership: design and build integrations, influence product and engineering roadmaps, solve customer financial problems with technical solutions across product, data, and sales engineering flows."
+   "value": "Internal teams design, implement, and scale tools and systems for operations and customer integrations, partnering with product and design teams to evolve backend architecture."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586003,
   "web_search_url": "https://duckduckgo.com/?q=Ramp+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers elite-tier fintech prestige comparable to top-tier AI firms, high new-grad pay with meaningful real-world impact, and a fast-paced builder culture that respects boundaries, with sane hours and full-company shutdowns baked into its rhythm. You get startup speed and ownership without the burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "bd53e6fff1",
+    "6869e30bd4"
+   ],
+   "value": "Ramp operates at a fast pace, requiring autonomous problem-solving skills and a builder's mindset to quickly integrate cutting-edge technologies."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Very good. Structured shutdowns are a core benefit and late-night culture is discouraged; pace remains high but work is largely contained in standard hours."
+   "value": "Estimated: Variable:."
   }
  },
  "randstad": {
@@ -246636,38 +246683,44 @@
  "ss c": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Strong applied ML in production (reconciliation, anomaly detection, NLP for docs), but not an AI research lab. Prestige comes from fintech scale, not publication record."
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Established enterprise tier — strong in applied data engineering and fintech analytics, but not primarily known for frontier AI research or elite AI prestige compared to top tech labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Recurring revenue from software licenses (SaaS/term), maintenance, and managed services/outsourcing contracts. Also earns transaction-based and asset-based fees from fund administration and processing services. High retention due to mission-critical nature of systems."
+   "value": "B2B software licensing, subscription fees, and professional services for financial technology and healthcare technology platforms; revenue driven by recurring contracts with enterprise clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Established, process-oriented, acquisition-driven. Engineering culture ranges from modern cloud-native teams to legacy maintainers. Decision-making can be hierarchical. Strong domain expertise respected. Less 'startup energy,' more 'institutional knowledge.'"
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Professional, process-oriented, global enterprise culture with structured early-career programs; emphasis on stability, compliance, and client delivery over startup-style experimentation."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Asset managers, hedge funds, private equity firms, pension funds, insurance companies, banks, and wealth management firms globally. Also serves healthcare payers and providers through its health solutions division."
+   "value": "Global financial institutions including asset managers, banks, insurance companies, hedge funds, and healthcare organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSUs ($15k-$30k/yr vesting). Total comp ~$130k-$165k. Higher in NY/SF hubs. Data science/ML roles at upper band."
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Estimated: $85,000-$110,000 base + bonus + RSU (varies by location/role); Launch Program likely at upper end of new grad bands for fintech."
   },
   "evidence_sha": "bb0166fefc7e5399",
-  "generated_at": 1784682450,
+  "generated_at": 1784870150,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -246676,68 +246729,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Financial Technology / Financial Services Software / Fund Administration"
+   "value": "Financial Technology / Healthcare Technology (Fintech / Healthtech)"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect domain-heavy questions: portfolio accounting, trade lifecycle, reconciliation, regulatory reporting. System design for high-throughput, audit-critical financial pipelines. SQL/ETL proficiency. Behavioral focus on handling ambiguity in large orgs and cross-team coordination. LeetCode medium/hard for core engineering; lighter for data science/applied roles."
+   "confidence": "medium",
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Expect questions on core software engineering (data structures, algorithms, system design), data engineering pipelines, financial domain knowledge, and behavioral fit for a large regulated enterprise. Prepare for practical coding and scenario-based questions relevant to fintech/healthtech data systems."
   },
-  "last_attempt_at": 1784682450,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784761140,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Headquartered in Windsor, CT. Major hubs: New York, Boston, Chicago, San Francisco, London, Edinburgh, Hong Kong, Singapore, Sydney, Pune, Chennai, and remote across US/Canada/Europe/APAC."
+   "value": "Headquartered in Windsor, CT; offices across 35 countries including major hubs in North America, Europe, and Asia-Pacific."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "To deliver innovative, technology-driven solutions that help financial institutions and investment managers reduce complexity, improve efficiency, and manage risk across the investment lifecycle."
+   "value": "To provide leading technology solutions that enable financial services and healthcare clients to optimize operations, manage data, and drive growth."
   },
   "name": "SS&C",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate — Enterprise release cycles (quarterly/semi-annual) with regulated delivery gates. Faster in cloud-native product groups; slower in legacy maintenance teams. Not 'move fast and break things.'"
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Estimated: Moderate to fast depending on team; regulated industry constraints and enterprise scale can introduce process overhead, but Launch Program suggests structured onboarding and project ownership."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Core platforms include SS&C Advent (portfolio management), SS&C Geneva (investment accounting), SS&C Eze (front-to-back office), SS&C Salentica (CRM), and SS&C Primatics (risk/analytics). Also provides fund administration, tax, compliance, and BPO services."
+   "value": "Financial technology software and services for asset management, banking, insurance, and healthcare sectors; data management, analytics, and automation platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US). Accrual-based. Unlimited not offered. Carryover limits apply."
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Estimated: 15-20 days PTO + 10+ company holidays (US standard for large enterprises); exact accrual not specified in sources."
   },
-  "refresh_after": 1789866450,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Launch Program (Software and Data Engineer - Financial Technology)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "No company-wide guaranteed shutdowns. Some teams observe informal slowdowns between Christmas/New Year. Not a formal policy."
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns; standard holiday schedule observed; some teams may have reduced ops between Christmas and New Year."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Publicly traded (NASDAQ: SSNC), ~25,000+ employees globally, $5B+ annual revenue. Mature, acquisitive conglomerate with 30+ years operating history."
+   "value": "Large public company (NASDAQ: SSNC) with 27,000+ employees in 35 countries; mature, established enterprise."
   },
   "sources": [
    {
@@ -246784,36 +246848,40 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Active H-1B sponsor for technical roles (software engineering, data science, cloud, DevOps). Green card sponsorship (PERM) typical for full-time hires after 6-12 months. Global mobility program supports internal transfers."
+   "value": "As a large global employer, SS&C likely sponsors H-1B and other work visas; specific policies not detailed in sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "SS&C Technologies is a global financial technology and services provider serving the investment management, financial services, and healthcare industries. The company offers software platforms, outsourcing, and data solutions for asset managers, hedge funds, insurers, and pension funds."
+   "value": "SS&C is a leading financial services and healthcare technology company headquartered in Windsor, Connecticut, with 27,000+ employees across 35 countries, providing software and services to the global financial services and healthcare industries."
   },
-  "synthesized_evidence_sha": "30aaf37f803af1f9",
+  "synthesized_evidence_sha": "bb0166fefc7e5399",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "b2cdbcccfb"
+    "a3338f6c0f"
    ],
-   "value": "Large-scale financial data processing, portfolio accounting engines, cloud migration (AWS/Azure), API integration layers, regulatory reporting automation, AI/ML for reconciliation/anomaly detection, and modernizing legacy C++/Java stacks to microservices."
+   "value": "Software engineering, data engineering, cloud infrastructure, financial modeling, analytics, and automation for fintech/healthtech platforms; Launch Program targets new grads in software and data engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676249,
   "web_search_url": "https://duckduckgo.com/?q=SS%26C+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "SS&C offers elite fintech prestige with massive-scale financial data (trillions in assets on platform) and high new-grad compensation, but operates as a mature acquisitive conglomerate — not a fast-moving innovator. Culture varies by acquired business unit; some teams move quickly on modernization, others maintain legacy systems. Work-life balance is generally reasonable for enterprise software (limited on-call), but 'guaranteed shutdowns' are not a formal policy. Technical growth comes from exp"
+   "confidence": "medium",
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "SS&C offers a Launch Program for new grads in software/data engineering at a large, established fintech leader with global reach. The company balances scale and stability with structured early-career development, professional development reimbursement, and comprehensive benefits. However, as a mature enterprise in regulated industries, pace and innovation culture may lean more toward steady execution than cutting-edge AI research, and work-life balance can vary by team."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 — Standard corporate hours (40-45/wk typical). Limited on-call for core platforms. Some crunch during regulatory deadlines or major releases. Varies significantly by acquired business unit and manager."
+   "source_ids": [
+    "a3338f6c0f"
+   ],
+   "value": "Estimated: 3.5/5 — comprehensive benefits including PTO, holidays, parental leave; enterprise environment may have periods of high demand but generally respects standard corporate hours."
   }
  },
  "ss c technologies": {
@@ -259322,78 +259390,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2: Strong applied ML in test optimization, robotic perception, and predictive analytics; publishes at ICRA/IROS/TEST; not a primary AI research lab."
+   "value": "Lower-tier AI prestige: primarily deep-tech engineering and semiconductor focus rather than cutting-edge AI/data science research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Capital equipment sales (test systems, robots) with recurring revenue from software licenses, services, spare parts, and application support. High upfront system prices ($1M–$10M+) drive multi-year customer relationships."
+   "value": "B2B sales of testing hardware and software systems to electronics and semiconductor manufacturers."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first, data-driven, low-politics. Long tenures common. Collaborative across HW/SW/test. Safety-critical mindset from test/robotics heritage. Diverse globally. Less 'move fast break things', more 'measure twice cut once'."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Mature engineering company emphasizing diversity, inclusion and innovation."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Major semiconductor companies (Intel, TSMC, Samsung, Qualcomm, NVIDIA), fabless chip designers, OSATs, consumer electronics OEMs, automotive Tier 1s, and factory automation integrators."
+   "confidence": "medium",
+   "source_ids": [
+    "d12fef5448"
+   ],
+   "value": "Semiconductor manufacturers, electronic systems designers, and wireless device companies requiring automated testing infrastructure."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU ($25k–$40k over 4 years). Total ~$150k–$185k year 1. Higher in SF/Bay Area robotics roles."
+   "confidence": "low",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "$110K/yr to $176K/yr for entry-level software engineers."
   },
   "evidence_sha": "d10f05811084b03e",
-  "generated_at": 1784683187,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Semiconductor capital equipment & industrial automation robotics"
+   "confidence": "high",
+   "source_ids": [
+    "a33ed3877a"
+   ],
+   "value": "Semiconductor manufacturing equipment and electronic testing systems."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens: mixed-signal circuits, signal integrity, Python/C++ coding, real-time control loops, robotics kinematics/perception, and ML model deployment on edge hardware. System-design questions focus on test throughput, reliability, and scaling. Behavioral emphasis on cross-functional collaboration (apps, hardware, software, manufacturing). Prepare for 'how would you debug a flaky test at 3 AM?' scenarios."
+   "source_ids": [
+    "d12fef5448"
+   ],
+   "value": "Ask about the actual day-to-day pace: how much is true AI/data science vs. semiconductor test automation? Clarify work-life balance expectations and whether 'innovation' translates to rapid learning cycles or slow hardware-release timelines."
   },
-  "last_attempt_at": 1784683187,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784711218,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: North Reading, MA. Major sites: San Jose, CA; Austin, TX; Portland, OR; Singapore; Tokyo; Shanghai; Munich; Odense, Denmark (Universal Robots). Hybrid office/lab model."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Headquartered in North Reading, Massachusetts with office locations including San Jose, CA."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Bringing quality innovations to market faster through advanced test and automation solutions that enable customers to deliver high-quality electronic products."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Valuing innovation and diversity in the workforce while fostering a culture of inclusion."
   },
   "name": "Teradyne",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate–Fast: Semiconductor test cycles drive quarterly/annual milestones; robotics sprints run 2–4 weeks. Crunch periods around tape-outs and product launches, but generally predictable compared to consumer software."
+   "value": "Estimated: Moderate pace typical of mature hardware companies; project cycles align with long hardware development timelines rather than fast software iterations."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Semiconductor test systems (J750, UltraFLEX, Magnum), system-level test (Eagle), wireless test (LitePoint), industrial collaborative robots (Universal Robots), mobile industrial robots (MiR), and robotic software (AutoGuide, Energy Robotics)."
+   "confidence": "high",
+   "source_ids": [
+    "a33ed3877a"
+   ],
+   "value": "Automated test equipment (ATE) for semiconductor manufacturing, specifically including memory test systems and industrial automation solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays + 5 sick days. Accrual increases with tenure. Unlimited not offered."
+   "value": "Estimated: Standard for mature tech companies around 15-20 days PTO plus holidays."
   },
-  "refresh_after": 1789867187,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259403,12 +259492,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: One week year-end shutdown (Christmas–New Year) typical; some sites add July 4th week. Not guaranteed annually."
+   "value": "Estimated: Likely offers standard holiday shutdowns common in hardware companies, specifics not public."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public (NASDAQ: TER), ~$3.5B annual revenue, ~6,500 employees globally. Mature, profitable, cyclical semiconductor capital equipment company."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Mature public company with 5001-10000 employees, founded in 1960."
   },
   "sources": [
    {
@@ -259463,34 +259555,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Established H-1B sponsor (cap-subject and cap-exempt via university partnerships). Green card sponsorship (PERM) for senior roles. STEM OPT friendly. Immigration support varies by division."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Teradyne designs and manufactures automatic test equipment (ATE) for semiconductors and wireless products, plus industrial automation robotics. It sells hardware, software, and services to chipmakers and electronics manufacturers worldwide."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Teradyne is a semiconductor testing equipment company that designs and manufactures automated test systems for semiconductors, electronic systems, and wireless devices. They make money by selling these complex hardware and software testing solutions to major chip manufacturers to ensure their silicon works correctly before deployment."
   },
-  "synthesized_evidence_sha": "69bd091b39947453",
+  "synthesized_evidence_sha": "d10f05811084b03e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mixed-signal IC design, FPGA/embedded firmware, real-time motion control, robotics perception/planning, high-speed signal integrity, Python/C++ test software, ML for test optimization and predictive maintenance, cloud data platforms."
+   "confidence": "high",
+   "source_ids": [
+    "d12fef5448",
+    "a33ed3877a"
+   ],
+   "value": "Entry-level software engineering roles involving test system software development, memory test systems, and hardware-software integration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669633,
   "web_search_url": "https://duckduckgo.com/?q=Teradyne+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Teradyne sits at the intersection of semiconductors, robotics, and AI-driven test/automation—offering elite hardware/ML prestige with a mature, profitable business that funds serious R&D. Unlike pure-play AI startups, it provides stability, structured career ladders, and a culture shaped by engineering rigor rather than hype cycles. The robotics divisions (Universal Robots, MiR) add applied AI/ML opportunities in perception, planning, and fleet analytics. Work-life balance is generally respected"
+   "source_ids": [
+    "d12fef5448"
+   ],
+   "value": "Strong new-grad pay and mature tech company stability, but standard hardware company division between software and AI teams means you must verify whether this role truly balances your desire for fast-paced AI innovation against the potential for slower semiconductor industry bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.8/5. Core hours 9–5 with flexibility; test division has seasonal peaks; robotics teams see higher variance. Limited weekend work outside launch windows."
+   "value": "Estimated: Good work-life balance typical of established hardware companies; likely sane hours but verify team-specific expectations."
   }
  },
  "terex": {
@@ -268681,78 +268784,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Travelers sits in the 'High' prestige tier for corporate AI roles—below pure-play tech giants like Google or OpenAI but at or above the top of non-tech F500 companies. Its Dow Jones status provides strong resume credibility and name recognition."
+   "value": "Estimated: Base-tier for insurance data science. Will lack the FAANG-level prestige or startup-hype of elite tech firms, but the company's large data volumes offer solid, unglamorous foundational experience."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Travelers operates a traditional insurance carrier business model. Revenue is generated primarily through premiums paid by policyholders, with profitability dependent on underwriting discipline and the return earned on the investment of premium float."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Collects insurance premiums and generates revenue by underwriting policies, then earns additional income by investing the float (reserves from unpaid premiums)."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "The culture is mature, professional, and stable, prioritizing actuarial rigor and institutional expertise over moving fast or breaking things. It avoids the high-burnout 'hustle' vibe colloquially associated with some tech ecosystems."
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Estimated: Traditional, stable corporate insurance environment focused heavily on互助 and community (\"Taking care of our customers, our communities and each other\")."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "The company serves a mix of individual consumers, families, and businesses ranging from small enterprises to large corporations, all seeking financial protection against property, liability, and workplace injury risks."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Individuals, families, and businesses seeking property and casualty insurance coverage for their cars, homes, and operations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $115,000 base salary for a new graduate in a high-cost data science or AI location. This is a conservative figure reflecting an above-average non-big-tech corporate package, prioritized to enable significant near-term liquidity."
+   "value": "Estimated: $85,000 - $105,000 (Base salary for Data Engineer I level; exact compensation not public)."
   },
   "evidence_sha": "1b9fafe884b31317",
-  "generated_at": 1784688751,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Insurance (Property & Casualty Corporate)"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Interviews likely probe competency in applied statistics, programming (Python, SQL, R), and insurance-specific business cases. Expect fewer whiteboard puzzles than top tech companies, with more emphasis on practical problem-solving and cultural fit for a collaborative, steady-paced enterprise."
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Used solely to frame questions: Ask how often tech stacks are upgraded versus maintained, what the strict work hours expectations are, how strict the 5pm logging-off culture is, and how the team handles learning time versus feature delivery."
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784814111,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Major corporate hubs include Saint Paul, Minnesota (headquarters); Hartford, Connecticut; and New York City. Other offices are located across the U.S. and internationally, offering potential for multi-region placement."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Hartford, CT (with possible remote/hybrid flexibility based on typical corporate policies)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Travelers' mission centers on protecting customers’ assets and minimizing risk through extensive claim and safety expertise, rather than pursuing social or environmental missions as its core focus."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Taking care of our customers, our communities and each other."
   },
   "name": "Travelers",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: The pace is slower and more deliberate than at a tech startup or Big Tech firm, with the rhythm set by quarterly business cycles and regulated insurance processes rather than continuous software deployment. It is methodical and planning-heavy."
+   "value": "Estimated: Slower and more bureaucratic. Change happens systematically, which may restrict fast-paced technical innovation."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Travelers offers a broad suite of property and casualty insurance products, including personal auto, homeowners, renters, and various commercial coverages such as workers’ compensation, general liability, and specialty business insurance."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Insurance Data Engineering pipelines (Python, AWS) supporting Data Science workflows and internal business applications."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 18 days of combined PTO and sick time for a new graduate, increasing progressively with tenure. This is a conservative estimate reflective of the insurance industry standard for an entry-level position."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "20 days of Paid Time Off annually plus 9 paid company holidays."
   },
-  "refresh_after": 1789872751,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268762,12 +268884,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Travelers observes all standard U.S. stock-market holidays and likely includes a limited holiday break or a few floating days, but does not advertise a formal, company-wide, multi-week shutdown program."
+   "value": "Estimated: No guaranteed corporate-wide tech shutdowns (outside of the 9 standard paid holidays)."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Travelers is a large, mature public company and a component of the Dow Jones Industrial Average. It has tens of thousands of employees, indicating it has long since passed the startup and rapid-scaling phase."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -268812,34 +268934,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Does not support H-1B petitions, TN, or Forms I-983/STEM OPT sponsorships for core tech roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Travelers is a leading U.S. property and casualty insurance company that underwrites policies for auto, home, and business. It makes money by collecting premiums from policyholders and investing those premiums, paying out only when covered losses occur."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Travelers is a leading property and casualty insurance company that provides coverage for individuals and businesses to manage risk. They make money by collecting insurance premiums and investing those funds until claims need to be paid out."
   },
-  "synthesized_evidence_sha": "4b42bb6a86648032",
+  "synthesized_evidence_sha": "1b9fafe884b31317",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Data science and AI roles focus on risk modeling, pricing optimization, claims triage, and process automation within an actuarial-science-driven organization. The tech stack likely balances modern tools with established enterprise-scale systems."
+   "confidence": "high",
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Involves Python, AWS, and data pipeline construction typical of an enterprise Data Engineer I role."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583462,
   "web_search_url": "https://duckduckgo.com/?q=Travelers+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Travelers can be the rare environment where a Fortune 500 pedigree and strong compensation meet genuinely sustainable working hours, unlike high-growth tech startups. Its long-standing, mission-focused business allows domain mastery in AI risk modeling without demanding the 24/7 always-online culture."
+   "source_ids": [
+    "efd1578930"
+   ],
+   "value": "Candidate seeks elite prestige and startup-like innovation, which conflicts with traditional insurance. The strong PTO is a positive for work-life balance, but bureaucratic slowness may slow technical learning."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Work-life balance is generally very good for a large corporation, comparable to 'A-' on a qualitative scale. Sane, predictable hours are the norm, with significant pressure limited to quarterly or catastrophe-driven events rather than constant crunch."
+   "value": "Estimated: Good. Solid starting PTO (20 days) and structured hours typical for an established legacy corporate enterprise."
   }
  },
  "tree top inc": {
@@ -297411,94 +297541,125 @@
  "xai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier (Tier 1) - Founded by Elon Musk, staffed by alumni from OpenAI, DeepMind, Google Research, Microsoft Research. Publishes at top venues (NeurIPS, ICML, ICLR). High visibility and talent density."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Tier 1. As a high-profile AI company, it carries top-tier elite prestige in the tech and data science industry."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue comes from X Premium subscriptions (which include Grok access), enterprise API licensing for the xAI models, and potential future AI products/services. The company is backed by significant venture funding and strategic investors."
+   "confidence": "medium",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Develops and operates core AI infrastructure and models, generating value through technology deployment and AI product offerings."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first, mission-obsessed, intellectually intense. Flat hierarchy, direct communication, 'first principles' problem solving. Low politics, high technical bar. Similar to early SpaceX/Neuralink culture applied to AI. Transparency about goals and failures."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Intensely technical and mission-driven, likely favoring fast execution and innovation over slow corporate processes."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Main customers are X (formerly Twitter) platform users accessing Grok, enterprise clients via the xAI API, and developers building on xAI models. The company also serves internal research objectives aligned with its mission."
+   "confidence": "medium",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Primarily internal engineering teams utilizing observability infrastructure, as well as end-users of xAI's consumer or enterprise AI applications."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180k-$250k base + significant equity (RSUs/options) + signing bonus. Total comp likely $250k-$350k+ for top AI/ML new grads. Equity grants competitive with OpenAI/Anthropic/DeepMind offers."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: $180,000 - $250,000+ total compensation (base + equity), reflecting top-tier market rates for elite AI companies."
   },
   "evidence_sha": "c765b6297c41d10c",
-  "generated_at": 1784681721,
+  "generated_at": 1784870150,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Artificial Intelligence / Foundation Models / AGI Research"
+   "confidence": "high",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Artificial Intelligence / Technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical interviews covering LLM architecture, distributed training, RLHF, systems programming (CUDA, Triton), and research problem-solving. Cultural fit emphasizes first-principles thinking, speed of iteration, and alignment with the scientific mission. Prepare for coding, system design, and research discussion rounds."
+   "confidence": "medium",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Highlight your Kubernetes and observability pipeline experience to demonstrate you can thrive in xAI's fast-paced, highly innovative environment. Ask team-specific questions about on-call expectations and release cadence to gauge if the high-prestige, high-pay role truly aligns with your requirement for sane hours and a sustainable culture."
   },
-  "last_attempt_at": 1784681721,
+  "last_attempt_at": 1784870150,
   "last_evidence_at": 1784757617,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters in San Francisco Bay Area (Palo Alto), with presence in Austin, Texas. Remote-friendly for exceptional talent but office-centric culture for core research teams."
+   "confidence": "low",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Specific office locations not detailed in the provided sources."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To understand the true nature of the universe through advanced artificial intelligence. xAI aims to build AI systems that can reason, understand, and help humanity pursue knowledge."
+   "confidence": "medium",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "To build advanced artificial intelligence systems and infrastructure."
   },
   "name": "xAI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fast - 'Move fast, break things' engineering culture. Weekly model iterations, aggressive research milestones, minimal process overhead. Expect intense sprints around major releases but autonomy in daily execution."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, consistent with a leading AI startup environment that prioritizes rapid development over bureaucratic processes."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary products include Grok (a conversational AI model integrated with X/Twitter), the xAI API for developers, and foundational AI research models. The company emphasizes building AI systems with strong reasoning capabilities and real-time knowledge access."
+   "confidence": "high",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Core AI infrastructure, including observability pipelines for monitoring, debugging, and optimizing system performance and reliability."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays. Unlimited PTO policy in practice for senior roles, but cultural expectation to coordinate around research milestones. No formal 'guaranteed shutdown' periods."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Conservative expectation of 15-20 days of PTO, standard for the tech industry, though exact policy is unpublished."
   },
-  "refresh_after": 1789865721,
+  "refresh_after": 1790054150,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8836817369"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe informal reduced-pace periods around major holidays (Thanksgiving week, Christmas-New Year). Not a structured policy."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Company-wide shutdowns are not publicly documented; guaranteed-offs hours are unlikely without explicit team agreements."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 100-500 employees, well-funded startup/early growth stage. Founded in 2023, rapidly scaling with substantial capital from top-tier investors."
+   "confidence": "low",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Details not available in provided sources; likely a rapidly scaling AI startup."
   },
   "sources": [
    {
@@ -297543,34 +297704,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Offers H-1B and green card sponsorship for specialized AI/ML roles. As a well-funded tech company, likely supports cap-exempt and cap-subject visas for senior researchers and engineers."
+   "confidence": "low",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Visa sponsorship details not explicitly mentioned in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "xAI is an artificial intelligence company founded by Elon Musk focused on developing advanced AI systems and understanding the true nature of the universe. It operates as a research-driven organization building large language models and AI tools."
+   "confidence": "high",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "xAI is an artificial intelligence company that builds large language models and core AI infrastructure. It makes money by developing and deploying advanced AI products and foundational models."
   },
-  "synthesized_evidence_sha": "89435b652347bc9a",
+  "synthesized_evidence_sha": "c765b6297c41d10c",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core work includes large language model training (Grok series), distributed systems for massive GPU clusters, reinforcement learning from human feedback (RLHF), real-time data integration, AI safety/alignment research, and high-performance inference infrastructure."
+   "confidence": "high",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Building and operating observability pipelines in Kubernetes or similar orchestration environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593386,
   "web_search_url": "https://duckduckgo.com/?q=xAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "xAI offers elite AI research prestige (top-tier talent from DeepMind, OpenAI, Google) with competitive new-grad compensation, a mission-driven culture focused on fundamental understanding, and a fast-paced but engineering-first environment that avoids corporate bureaucracy. The direct connection to X's real-time data platform provides unique scale and feedback loops for learning."
+   "confidence": "medium",
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "xAI offers the elite prestige and high new-grad pay you seek, backed by a mission-driven focus on understanding the universe through AI. The fast, innovative tech culture avoids slow bureaucracy and accelerates technical learning, though candidates should rigorously vet the team's actual work-life balance and expected hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 - Demanding but respected. Core hours with flexibility; 'guaranteed shutdowns' not formalized but weekend protection culture reported. Less burnout than investment banking/big law, more than typical 9-5 tech. Mission alignment drives voluntary extra effort."
+   "source_ids": [
+    "8836817369"
+   ],
+   "value": "Estimated: Variable. As an elite AI startup, work-life balance may be challenging; candidates must confirm during interviews if guaranteed shutdowns and sane hours are respected."
   }
  },
  "xometry": {
