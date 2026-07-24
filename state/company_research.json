@@ -3047,7 +3047,7 @@
    "value": "Estimated: Tier 2. The global Accenture brand carries elite prestige and scale, but internal AI/data work in the federal branch leans heavily toward government consulting integration rather than top-tier cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -3110,7 +3110,7 @@
    ],
    "value": "Ask about day-to-day client variability, engineering agility vs. red tape, actual hours logged on federal contracts, and whether billable-hour metrics create crunches to determine if this avoids the toxic environments you want to avoid."
   },
-  "last_attempt_at": 1784895764,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "high",
@@ -3160,7 +3160,7 @@
    "value": "Estimated: 20-25 days. Federal consulting subsidiaries typically offer standard accrued PTO matching industry averages for large enterprises, though exact policy is not public."
   },
   "refresh_after": 1790070268,
-  "retry_after": 1784917364,
+  "retry_after": 1784942049,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -36636,86 +36636,100 @@
  "astronomer": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Premium Tier (AI Infra & Open-Source Leader: akin to Confluent, HashiCorp). Not a traditional FAANG, but holds high prestige in data engineering, AI pipelines, and infrastructure engineering circles."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Estimated: Niche Technical Prestige. Highly respected in the data engineering community for Airflow, but not a top-tier generalist AI/ML research brand."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Astronomer generates revenue through a platform-as-a-service subscription model for its Airflow-managed service, Astro. Customers pay for cloud-hosted, fully-managed orchestration environments that provide governance and scaling capabilities."
+   "confidence": "high",
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Sells enterprise software and data engineering services, operating a Global Services Delivery Team to implement use cases for its Astro platform."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "The culture vibe is a blend of open-source collaboration, decentralized decision-making, and engineering excellence. It is a remote-first environment where deep focus and team autonomy are prized over unnecessary ceremonies."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Estimated: Mission-driven and deeply technical, focused on data engineering and open-source (Airflow) community building."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Astro's customers include data engineers, data scientists, and data-driven organizations seeking to orchestrate complex data pipelines reliably. Notable customers range from digital-native companies to large enterprises adopting cloud-native data strategies."
+   "confidence": "high",
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "More than 800 of the world's leading enterprises."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: New-grad software engineering total compensation (base + equity) lands in the range of $160,000–$195,000, depending on role specialty and market, positioning to compete with top infrastructure startups."
+   "value": "Estimated: $120k - $150k base. Competitive for data infrastructure roles but below the elite tier 1 compensation of $180k+."
   },
   "evidence_sha": "c7d287e05b6ed194",
-  "generated_at": 1784673262,
+  "generated_at": 1784920449,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "301dacc372"
+    "78ea80c0c0"
    ],
-   "value": "AI & Data Infrastructure / Cloud Data Platforms"
+   "value": "Data Infrastructure / DataOps / Enterprise Software"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Interviews are expected to heavily test system design for distributed setting, data pipeline architecture, and deep knowledge of Kubernetes and Python. Expect process questions that gauge product-thinking, collaboration agility, and alignment with a remote-first, mission-driven culture."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Probe the split between pure product engineering and client-facing services implementation, asking where your specific role sits and how customer demands impact pace, technical prestige, and sane hours."
   },
-  "last_attempt_at": 1784915593,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784913843,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Not specified in research, though it mentions a Global Services Delivery Team."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "301dacc372"
+    "78ea80c0c0"
    ],
-   "value": "Astronomer aims to empower data teams to deliver world-class data products by making Apache Airflow accessible and manageable at scale. The company is focused on developer velocity and operational excellence."
+   "value": "Empowers data teams to bring mission-critical software, analytics, and AI to life."
   },
   "name": "Astronomer",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and innovative, moving with the speed of a venture-backed startup, but not a frantic growth-at-all-costs pace. Teams are mission-driven with a focus on sustainable, asynchronous progress owing to its remote-first model."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Estimated: Moderately fast due to startup culture, but tempered by the needs of major enterprise clients which can introduce structural bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "301dacc372"
+    "78ea80c0c0"
    ],
-   "value": "Astronomer's main product is Astro, a fully-managed and multi-cloud data orchestration platform. It serves as a single control plane for deploying, scaling, and monitoring Apache Airflow pipelines, enabling teams to reliably deliver data products."
+   "value": "Astro, a unified DataOps platform powered by Apache Airflow."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible/Unlimited PTO policy, typical of similar-stage data-infra startups, with new grads likely taking a practical range of 20-25 days off annually while maintaining manager alignment."
+   "value": "Estimated: 20-25 days. Typical for scaled tech startups, though exact policy not public."
   },
-  "refresh_after": 1789857262,
-  "retry_after": 1784917513,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36725,12 +36739,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed, company-wide multi-week shutdowns for all employees, apart from standard US holidays. Some engineering teams may practice unofficial seasonal slowdowns."
+   "value": "Estimated: No guaranteed shutdowns found in research; assume standard floating PTO model without company-wide holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Astronomer is a late-stage private company, having raised substantial venture funding (including a Series C round). It has scaled to several hundred employees globally to support its growing customer base."
+   "confidence": "medium",
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Established scale-up with a global services delivery team supporting over 800 enterprise customers."
   },
   "sources": [
    {
@@ -36779,34 +36795,38 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "301dacc372"
+    "78ea80c0c0"
    ],
-   "value": "Astronomer is the company behind Astro, a modern data orchestration platform powered by Apache Airflow. It enables data engineering, data science, and analytics teams to programmatically author, schedule, and monitor mission-critical pipelines. The company has driven the rapid rise of Apache Airflow through its contributions and services."
+   "value": "Astronomer is the company behind Astro, an industry-leading unified DataOps platform powered by Apache Airflow. It makes money by providing enterprise data orchestration solutions to help global organizations deploy and manage mission-critical analytics, software, and AI workflows."
   },
-  "synthesized_evidence_sha": "20dc15cedbb0b370",
+  "synthesized_evidence_sha": "c7d287e05b6ed194",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "301dacc372"
+    "78ea80c0c0"
    ],
-   "value": "Technical work involves building and managing Astro, which heavily leverages Apache Airflow, Kubernetes, and cloud-native infrastructure. Engineers work on orchestration engines, data pipeline tooling, distributed systems, and developer experience for the platform."
+   "value": "Involves data engineering, DataOps, and the implementation of Apache Airflow across various enterprise customer use cases."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663558,
   "web_search_url": "https://duckduckgo.com/?q=Astronomer+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Astronomer sits at a high-growth intersection of AI-ready data infrastructure and elite cloud-native tech, offering prestige akin to top data-infra startups. Its open-source-first nature and remote culture typically support efficient collaboration, aligning with sane hours and reduced bureaucracy, while providing rapid technical learning in scalable data systems."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "While Astronomer operates in a deeply technical, AI-adjacent data infrastructure space that ensures rapid learning and innovation, the heavy enterprise services delivery model may introduce slower bureaucracy and client-driven work cadence rather than the fast, high-prestige, guaranteed-shutdown WLB you are targeting."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Above Average. The remote-first nature and asynchronous culture foster flexibility, but startup growth demands remain. Generally avoids the 996 culture or on-call always-on models, consistent with an engineering-first environment."
+   "source_ids": [
+    "78ea80c0c0"
+   ],
+   "value": "Estimated: Good, though client-facing implementation roles (like Solutions Engineer) may require fluctuating hours based on customer delivery milestones."
   }
  },
  "asure software": {
@@ -51876,7 +51896,7 @@
    "value": "Estimated: Tier 2. While quant trading is highly technical and prestigious, this firm seems heavily focused on low-latency systems engineering rather than pure AI or data science models."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -51900,7 +51920,7 @@
    ],
    "value": "Institutional participants, broker-dealers, and other market participants in the financial options ecosystem."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -51932,7 +51952,7 @@
    ],
    "value": "Probe deeply into their actual work hours, on-call expectations, and uncompensated overtime to ensure the environment respects personal time. Ask about their technical mentorship structure and how they balance aggressive low-latency system shipping with supportive, sustainable team practices."
   },
-  "last_attempt_at": 1784693514,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "high",
@@ -51971,6 +51991,7 @@
    "value": "Estimated: 15-20 days. Standard for boutique quant trading firms, though not explicitly stated."
   },
   "refresh_after": 1789877514,
+  "retry_after": 1784921409,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52058,7 +52079,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -52837,82 +52858,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown tier due to lack of public research presence, publications, or conference visibility."
+   "value": "Estimated: Emerging startup tier (lacking elite FAANG-level prestige, but offers high-impact deep tech and AI/ML application scope)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No business model information available from supplied sources."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Operates as a lean startup functioning as multiple startups in one to provide integrated hardware and SaaS solutions for highway systems."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown culture; no employee reviews or cultural signals in supplied sources."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Adaptable, mission-driven, and high-impact, described internally as a startup that operates as multiple startups in one."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No customer information available from supplied sources."
+   "confidence": "medium",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Tollway authorities and highway management organizations seeking simplified toll collection and improved safety."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown compensation; no salary data available for new grad AI/DS roles."
+   "value": "Estimated: $100,000 - $140,000 base, typical for deep tech/embedded systems roles in lean startups."
   },
   "evidence_sha": "ab58b6bcc89c008e",
-  "generated_at": 1784863706,
+  "generated_at": 1784920449,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Unknown; insufficient public data to classify industry."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Intelligent Transportation Systems / Deep Tech."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Focus interviews on clarifying: actual AI/DS team structure and project scope; compensation transparency for new grads; engineering culture pace and deployment frequency; explicit WLB policies (core hours, shutdowns, on-call); mentorship and learning budget; and mission authenticity beyond marketing."
+   "confidence": "medium",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Candidates should highlight their adaptability and willingness to take on broad technical challenges across AI/ML and embedded systems, while also probing the company's startup pace to ensure it aligns with sustainable work-life balance and sane hours."
   },
-  "last_attempt_at": 1784863706,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "No location information found in supplied sources."
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No mission statement found in supplied sources."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Simplify toll collection and dramatically improve highway safety."
   },
   "name": "Blissway",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown; no employee reports or public data on work pace."
+   "value": "Estimated: Fast-paced and highly adaptable due to being a lean startup handling multiple technological domains."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "8b6426d0a7",
-    "cd9ff6c62f",
-    "f2c8311655"
+    "a8964d3502"
    ],
-   "value": "No verifiable product information found in supplied sources. Sources discuss UPS package tracking on Reddit, not Blissway products."
+   "value": "Roadside systems featuring solar power generation, cell connectivity, and high-speed sensors designed for 99.9% reliability in harsh environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown PTO policy; no public benefits documentation found."
+   "value": "Estimated: 15-20 days, standard for venture-backed tech startups."
   },
-  "refresh_after": 1790047706,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52922,12 +52954,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No information on company-wide shutdowns or guaranteed disconnect policies."
+   "value": "Estimated: Unknown if guaranteed shutdowns exist; typical lean startups may only observe standard public holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Early-stage or small company given lack of public presence; exact size and funding stage unknown."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Lean startup team."
   },
   "sources": [
    {
@@ -52972,38 +53006,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "No visa sponsorship information available from supplied sources."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "8b6426d0a7",
-    "cd9ff6c62f",
-    "f2c8311655"
+    "a8964d3502"
    ],
-   "value": "Blissway appears to be a company with limited public information available. The provided sources reference Reddit discussions about UPS package tracking rather than Blissway itself, suggesting minimal verifiable public data on the company's operations."
+   "value": "Blissway is a startup that simplifies toll collection and improves highway safety using a combination of Deep Tech, AI/ML, Hardware, SaaS, and IoT. They generate revenue by deploying and maintaining these roadside systems for their clients."
   },
-  "synthesized_evidence_sha": "78119c71141d8ed7",
+  "synthesized_evidence_sha": "ab58b6bcc89c008e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No technical work details available from supplied sources."
+   "confidence": "high",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Developing and maintaining multi-disciplinary systems spanning Deep Tech, AI/ML, Hardware, SaaS, and IoT, with a strong emphasis on high reliability (99.9%) for solar, cellular, and sensor hardware."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630051,
   "web_search_url": "https://duckduckgo.com/?q=Blissway+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Blissway's alignment is unknown due to insufficient public data."
+   "confidence": "medium",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Blissway offers new grads the opportunity to build across cutting-edge domains (AI/ML, IoT, Hardware) in a fast-paced, adaptable lean startup environment, accelerating technical learning and career growth without the slow bureaucracy of larger firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown; no verifiable work-life balance data from sources."
+   "value": "Estimated: Moderate, typical of a lean startup where impact is expected daily, requiring careful boundary setting to avoid burnout."
   }
  },
  "blitzy": {
@@ -55639,37 +55675,39 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Low in big tech terms. AI and Data Science efforts are buried within a legacy industrial and defense context, lacking the tier-1 industry prestige and new grad pay associated with elite tech firms."
+   "value": "Estimated: Tier 2. High industry visibility but lagging FAANG prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "d53313239e"
    ],
-   "value": "Generates revenue primarily through the design, massive-scale manufacturing, and end-to-edge lifecycle servicing of commercial and defense aircraft, supplemented by long-term government and military contracts."
+   "value": "Manufactures and sells large-scale aerospace products and services to airlines and governments, primarily through long-term contracts and defense procurements."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Mission-driven and legacy-focused. Heavy emphasis on safety, protocol, and formal processes over fast-paced innovation or disruption."
+   "value": "Estimated: Traditional, mission-driven, and highly structured corporate environment."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "d53313239e"
+    "3fd7327d48"
    ],
-   "value": "Major commercial airlines, governments, defense agencies, and aerospace clients worldwide."
+   "value": "Global airlines, government and defense agencies, and corporate aerospace clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $90,000 - $120,000. Sufficient but falls below the top-tier new grad pay scale of elite tech or AI firms, reflecting its classification as an industrial manufacturer rather than a tech giant."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary for software engineering roles, varying by location."
   },
   "evidence_sha": "8c10f0bc9413c61f",
-  "generated_at": 1784869828,
+  "generated_at": 1784920449,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -55678,52 +55716,54 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "d53313239e"
+    "d53313239e",
+    "0983f75956"
    ],
-   "value": "Aerospace and Defense Manufacturing"
+   "value": "Aerospace and Defense."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Probe heavily for the exact team's敏捷性 and leadership's willingness to bypass standard bureaucratic processes. Ask how the specific team prioritizes fast-paced technical learning and career acceleration over slow traditional compliance, and verify that daily work actually involves modern AI/data stacks rather than legacy system maintenance."
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784869828,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919613,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "3fd7327d48"
+    "3fd7327d48",
+    "d53313239e"
    ],
-   "value": "Headquartered in the United States with a significant global presence and major engineering/manufacturing hubs across the country."
+   "value": "Major U.S. manufacturing centers include Everett, Washington; Renton, Washington; and Charleston, South Carolina."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "d53313239e"
+    "0983f75956"
    ],
-   "value": "To connect, protect, explore, and inspire the world through breakthrough, mission-driven aerospace innovation."
+   "value": "To connect, protect, explore, and inspire the world through aerospace innovation."
   },
   "name": "Boeing",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "d53313239e"
-   ],
-   "value": "Estimated: Slow, safety-critical, and highly structured due to immense regulatory oversight, prioritizing risk aversion and bureaucratic compliance over rapid technological iteration."
+   "source_ids": [],
+   "value": "Estimated: Slow. Highly regulated environment with heavy bureaucratic processes."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "d53313239e"
    ],
-   "value": "Commercial aircraft (such as the 737, 777, and 787 families), defense and space systems, autonomous and military aircraft, rockets, and aerospace support services."
+   "value": "Commercial airplanes (e.g., 737, 777, 787), defense systems, military aircraft, rotorcraft, andA launch systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of annual PTO, standard for a legacy enterprise, with an emphasis on taking off major holidays."
+   "value": "Estimated: 15 to 20 days PTO annually, accruing with tenure."
   },
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55733,14 +55773,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Occasional company-wide holidays around major events, though not guaranteed shutdowns outside of major holiday periods."
+   "value": "No guaranteed corporate shutdowns found in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3fd7327d48"
+    "d53313239e"
    ],
-   "value": "A massive, established global enterprise with operations spanning multiple continents, operating at the highest echelon of the aerospace manufacturing industry."
+   "value": "Large-cap, established public enterprise."
   },
   "sources": [
    {
@@ -55787,37 +55827,39 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
-    "3fd7327d48"
+    "d53313239e"
    ],
-   "value": "As a major U.S. defense contractor, work heavily centers on the United States with strict security clearance requirements that mandate U.S. citizenship for many technical roles, making traditional visa sponsorship highly restricted."
+   "value": "Historically open to sponsoring work visas for specialized engineering roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "d53313239e"
+    "d53313239e",
+    "3fd7327d48"
    ],
-   "value": "Boeing is one of the world's largest aerospace manufacturers and defense contractors, designing, producing, and servicing commercial airplanes, defense systems, and aerospace technologies globally. It makes money primarily through the massive long-cycle sales of aircraft and defense platforms, as well as aftermarket parts and maintenance services."
+   "value": "Boeing is a multinational aerospace corporation that designs, manufactures, and sells commercial airplanes, defense systems, and security solutions. The company generates revenue through long-term contracts with airlines, governments, and corporate clients for aircraft and defense products."
   },
+  "synthesized_evidence_sha": "8c10f0bc9413c61f",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0983f75956"
+    "1db9db9c4d"
    ],
-   "value": "Aerospace engineering, complex systems integration, large-scale manufacturing technology, defense systems, and data-driven predictive maintenance, involving traditional engineering stacks rather than modern agile software development."
+   "value": "Embedded software, flight control systems, aerospace firmware, and large-scale systems engineering and integration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589342,
   "web_search_url": "https://duckduckgo.com/?q=Boeing+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "While Boeing offers a mission-driven environment with sane hours and guaranteed holidays compared to big tech, it starkly lacks the fast, innovative tech culture you seek. Its reputation for slow bureaucracy, risk-averse legacy processes, and compliance-heavy workflows will likely frustrate your desire for accelerated technical learning and rapid career growth in a cutting-edge AI environment."
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Balanced. Generally promotes a standard work week without the grueling hours of big tech, though this can vary heavily by program phase and manufacturing deadlines."
+   "value": "Estimated: Moderate (7/10). Generally standard 40-hour weeks, but periods of heavy overtime during production deadlines."
   }
  },
  "boerboel": {
@@ -91762,95 +91804,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Respected applied ML at scale within a profitable public company; not a pure AI research lab but strong publication record in systems/ML conferences (USENIX, FAST, VLDB) and real exabyte-scale data."
+   "value": "Estimated: Traditional data infrastructure tier rather than top-tier AI/Data Science. Commvault has strong prestige in data backup but is not considered an elite AI innovator like OpenAI or Google."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "cec8685104",
-    "ff35d290a3"
+    "88a673200b"
    ],
-   "value": "Revenue from software licenses, subscription (term licenses and SaaS/Metallic), maintenance/support renewals, and professional services. Transitioning toward recurring subscription and SaaS revenue."
+   "value": "B2B enterprise software sales, operating via direct sales forces and a partner ecosystem to deploy data management solutions."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "124e0110ba"
+    "88a673200b"
    ],
-   "value": "Engineering-first, collaborative, low-politics; long-tenured talent (many 10+ yr veterans) mixed with newer cloud/SaaS hires. Values \"do the right thing\" and customer obsession. Diversity initiatives active (ERGs, partnership with AnitaB.org)."
+   "value": "Estimated: Mission-driven and technical, focusing on data security and governance. The culture likely values deep enterprise experience and steady execution over rapid disruption."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "cec8685104"
+    "88a673200b"
    ],
-   "value": "Enterprise and mid-market organizations across industries including finance, healthcare, government, education, and technology; thousands of global customers managing petabytes of data."
+   "value": "More than 100,000 organizations, including senior-level IT leadership at large enterprises, supported by a vast partner ecosystem."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $125k-$145k base + 10-15% target bonus + RSU grant (~$30k-$50k over 4 years) for SWE/ML roles in US hubs (CO, NJ); Hyderabad base ₹18-25 LPA + RSUs."
+   "value": "Estimated: $90k-$120k base salary, typical for new grad software engineers at large public enterprise tech companies in non-tier-1 cost-of-living areas, supplemented by stock options and benefits."
   },
   "evidence_sha": "82cbd8a52176d387",
-  "generated_at": 1784689344,
+  "generated_at": 1784920449,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "cec8685104"
+    "88a673200b"
    ],
-   "value": "Enterprise Software / Data Management / Cybersecurity (Data Protection)"
+   "value": "Enterprise Data Management and Protection Software"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect deep systems questions (distributed consensus, storage semantics), ML-applied-to-infrastructure problems (time-series anomaly detection, classification at scale), and practical coding (Go/Python/Java). Prepare to discuss how you'd productionize a model inside a backup pipeline with strict SLAs. Cultural fit: collaboration, ownership, and evidence of self-directed learning."
+   "value": "To align with your priorities, focus the interview on the team's engineering velocity, opportunities for rapid technical learning, and concrete work-life balance policies. Ask about potential AI or data science initiatives to gauge if the technical culture matches your desire for innovative, high-impact work over slow corporate processes."
   },
-  "last_attempt_at": 1784689344,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "cec8685104",
-    "124e0110ba"
+    "88a673200b"
    ],
-   "value": "Headquarters: Tinton Falls, NJ. Major engineering hubs: Colorado (Boulder/Denver), Hyderabad (India), Prague (Czech Republic), Beijing, Singapore, Australia. Remote/hybrid options vary by role."
+   "value": "Global presence with roles such as Commercial Sales Engineer based in Arizona; headquarters in Tinton Falls, New Jersey."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "124e0110ba"
+    "88a673200b"
    ],
-   "value": "To help organizations protect, manage, and activate their data so they can focus on innovation and business outcomes."
+   "value": "To help organizations reduce risks, improve governance, and do more with their data."
   },
   "name": "Commvault",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Sustainable, quarterly-planned cadence with explicit \"no-meeting Fridays\" and protected focus time; faster during SaaS feature pushes but generally avoids death-march culture."
+   "value": "Estimated: Moderate. As a mature 25+ year old public company, the pace is steady and process-driven, which may feel slower than high-growth tech startups."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "cec8685104",
-    "ff35d290a3"
+    "88a673200b"
    ],
-   "value": "Commvault Platform (data protection, backup & recovery, archive, disaster recovery), Metallic (SaaS backup-as-a-service), Hedvig (software-defined storage), and related professional services."
+   "value": "Data protection, backup, and disaster recovery software, alongside broader data management and governance tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days accrued PTO + 10-12 company holidays + 2-3 recharge days (company-wide shutdown); unlimited not offered."
+   "value": "Estimated: 20-25 days per year for experienced hires, plus standard public holidays, based on typical large enterprise software company benefits."
   },
-  "refresh_after": 1789873344,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91860,14 +91900,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Yes — Company-wide \"Recharge Days\" (typically 2-3 per year, often around July 4 and year-end) where all non-critical ops pause; plus standard holiday calendar."
+   "value": "Estimated: No known company-wide guaranteed shutdowns; employees likely use standard PTO flexibility."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "cec8685104"
+    "88a673200b"
    ],
-   "value": "Public company (NASDAQ: CVLT); ~2,700 employees globally; FY2024 revenue ~$840M. Mature, profitable, mid-cap enterprise software vendor."
+   "value": "Established, mature public enterprise software company with a 25+ year operating history."
   },
   "sources": [
    {
@@ -91913,27 +91953,26 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Active H-1B sponsor with history of cap-subject and cap-exempt filings; supports GC processing (PERM) for tenured employees. Large engineering presence in India facilitates global mobility."
+   "source_ids": [
+    "88a673200b"
+   ],
+   "value": "Estimated: As a large US-based public tech company, Commvault is likely to offer visa sponsorship for specialized roles, though specific policies are not publicly detailed."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "cec8685104",
-    "124e0110ba",
-    "ff35d290a3"
+    "88a673200b"
    ],
-   "value": "Commvault is a publicly traded enterprise software company specializing in data protection, backup, recovery, and cloud data management. It helps organizations secure, manage, and derive value from their data across on-premises, hybrid, and multi-cloud environments."
+   "value": "Commvault is an enterprise software company that provides data protection, backup, recovery, and data management solutions. It generates revenue primarily through selling software licenses, cloud subscriptions, and related maintenance services to enterprises."
   },
-  "synthesized_evidence_sha": "342ad0190eef9573",
+  "synthesized_evidence_sha": "82cbd8a52176d387",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "cec8685104",
-    "ff35d290a3"
+    "88a673200b"
    ],
-   "value": "Distributed systems, cloud-native services (Kubernetes, microservices), data plane engineering, AI/ML for anomaly detection and ransomware defense, storage/filesystem internals, SaaS platform (Metallic), automation and orchestration."
+   "value": "Development of large-scale enterprise data management, backup, and disaster recovery software, involving complex systems engineering and cloud integration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784599680,
@@ -91941,12 +91980,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Commvault offers a rare blend for a new-grad AI/data scientist: a profitable, public company with elite-scale data (exabytes under management) feeding real ML problems (ransomware detection, anomaly detection, capacity forecasting), a modern cloud-native stack (Metallic SaaS, Kubernetes), and a culture that publicly emphasizes sustainable pace and \"no-meeting Fridays\" — avoiding the burnout typical of hyper-growth unicorns while still paying competitive new-grad packages."
+   "value": "As a mature 25-year-old enterprise software company, Commvault offers stability and mission-driven work in critical data infrastructure. However, candidates should be aware that its traditional corporate structure may lean toward established bureaucracy rather than the fast-paced, elite tech culture typical of top-tier AI or new-grad roles."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5 — Industry reputation for reasonable hours, guaranteed shutdowns (company-wide recharge days), and management support for boundaries; on-call rotations exist but are compensated and rotated."
+   "value": "Estimated: Good. Mature enterprise companies typically maintain standard hours and sustainable work cultures, avoiding the high-burnout environment of early-stage startups."
   }
  },
  "compass": {
@@ -134554,119 +134593,109 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
+    "d494a66b60"
    ],
-   "value": "Estimated: Top-tier (well-funded digital sports platform with 22k+ employees, world-class investors, dedicated Collectibles tech division including Topps.com)"
+   "value": "Estimated: Mid-tier. While not a pure-tech FAANG equivalent, Fanatics provides strong prestige as a high-growth global sports platform with a newly formed Data Science organization."
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
-   ],
-   "value": "Digital sports platform monetizing through collectibles sales, licensing partnerships, and technology-enabled fan experiences across physical and digital collectibles markets."
-  },
-  "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
-   ],
-   "value": "Mission-driven, innovation-focused, fan-obsessed, 'relentless' enhancement mindset, intersection of sports/culture/technology, backed by elite investors/operators"
-  },
-  "customers": {
    "confidence": "high",
    "source_ids": [
     "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
+    "50191613b6"
    ],
-   "value": "Sports fans globally, collectors, partners, and creators in the sports collectibles and memorabilia market."
+   "value": "E-commerce and digital platform monetization through sports merchandise sales, collectibles, and partnerships, backed by world-class investors and sports operators."
   },
-  "error": "",
-  "estimated_new_grad_tech_pay": {
+  "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
     "b78fd617cf",
     "50191613b6"
    ],
-   "value": "Estimated: $130k-$180k base + equity + bonus (top-tier for sports tech/collectibles platform with world-class investors; competitive with FAANG-adjacent)"
+   "value": "Estimated: Relentless, fan-focused, and driven by global partnerships. Culture blends sports enthusiasm with high-growth tech innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b78fd617cf",
+    "50191613b6"
+   ],
+   "value": "Sports fans globally, as well as partners and creators in the sports and entertainment ecosystem."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d494a66b60"
+   ],
+   "value": "Estimated: Competitive market rate ($110k-$140k base) for new grad data science roles, varying by location."
   },
   "evidence_sha": "98e67094861e930e",
-  "generated_at": 1784762203,
+  "generated_at": 1784920449,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
+    "d494a66b60",
+    "b78fd617cf"
    ],
-   "value": "Sports technology / Digital collectibles / E-commerce platform"
+   "value": "Digital Sports Platform, E-commerce, and Collectibles."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "b78fd617cf",
-    "65d1560060"
+    "d494a66b60"
    ],
-   "value": "Probe for: 1) Actual WLB/shutdown practices vs. 'relentless' mission language, 2) AI/ML team structure and autonomy within Collectibles vs. broader Fanatics, 3) Technical learning budget and mentorship for new grads, 4) On-call expectations and sprint cadence, 5) How 'reimagining collectibles' translates to daily engineering problems."
+   "value": "Emphasize your ability to thrive in fast-paced environments and demonstrate strong applied statistics skills, specifically regression, clustering, and A/B testing. Be prepared to discuss how you can drive outcome-oriented, data-driven results that enhance the fan experience without getting bogged down by bureaucracy."
   },
-  "last_attempt_at": 1784762203,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "fd4cc0d67f",
-    "3a69d3eade",
-    "56b9cf9521"
+    "b78fd617cf",
+    "50191613b6"
    ],
-   "value": "Global operations with job postings showing presence across multiple Greenhouse instances (fanaticscollectibles, fanaticsfbg, fanaticsinc), suggesting distributed/remote-friendly structure."
+   "value": "Operates globally, serving sports fans worldwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
+    "50191613b6"
    ],
-   "value": "Relentlessly enhancing the fan experience and delighting sports fans globally by reimagining every part of the collectibles experience for fans, partners, and creators."
+   "value": "Relentlessly enhancing the fan experience and delighting sports fans globally."
   },
   "name": "Fanatics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "b78fd617cf",
-    "65d1560060"
+    "d494a66b60",
+    "b78fd617cf"
    ],
-   "value": "Estimated: Fast-paced, innovative (described as 'new company' reimagining collectibles, growth engineering roles, startup-like agility within large org)"
+   "value": "Estimated: Fast-paced and high-growth. The environment is constantly evolving with newly formed teams and a focus on rapid platform development."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
+    "d494a66b60",
+    "b78fd617cf"
    ],
-   "value": "Fanatics Collectibles (including Topps.com as flagship platform), next-generation collectibles platform, digital sports platform spanning collectibles, culture, and technology."
+   "value": "Global digital sports platform, licensed sports merchandise, and next-generation collectibles (operating at the intersection of collectibles, culture, and technology)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + holidays (typical for well-funded tech companies of this scale; no specific policy found in sources)"
+   "value": "Estimated: Standard corporate PTO (15-20 days) typical for a company of this size, though exact policy is not public."
   },
-  "refresh_after": 1789946203,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134675,19 +134704,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "b78fd617cf"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in sources; 'relentless' mission language suggests continuous operation"
+   "source_ids": [],
+   "value": "Estimated: No widespread guaranteed shutdowns found in research; flexibility likely depends on team or season."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "b78fd617cf",
-    "fd4cc0d67f",
-    "3a69d3eade"
+    "50191613b6",
+    "d494a66b60"
    ],
-   "value": "Large scale (22,000+ employees), well-funded growth stage with world-class investors, operating multiple divisions (Fanatics Collectibles, Fanatics FBG, Fanatics Inc)."
+   "value": "Large-scale global company with more than 22,000 employees, experiencing high-growth and forming new technical teams."
   },
   "sources": [
    {
@@ -134752,47 +134779,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b78fd617cf",
+    "50191613b6"
+   ],
+   "value": "Backed by world-class investors, operators, and sports & entertainment partners."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
-   ],
-   "value": "Fanatics is building a leading global digital sports platform with over 22,000 employees, operating at the intersection of collectibles, culture, and technology. The company is backed by world-class investors and sports & entertainment partners to reimagine the collectibles experience globally."
-  },
-  "synthesized_evidence_sha": "b86843389ae286ee",
-  "technical_work": {
-   "confidence": "medium",
-   "source_ids": [
-    "65d1560060",
+    "d494a66b60",
     "b78fd617cf"
    ],
-   "value": "Full-stack engineering, growth engineering, platform development for Topps.com and collectibles marketplace, digital sports platform architecture, collectibles technology innovation."
+   "value": "Fanatics is building a leading global digital sports platform that enhances the fan experience through commerce, collecting, and betting. They make money by selling licensed sports merchandise, operating next-generation collectibles (like trading cards), and leveraging digital sports partnerships globally."
+  },
+  "synthesized_evidence_sha": "98e67094861e930e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d494a66b60"
+   ],
+   "value": "Roles involve outcome-oriented, data-driven work in high-growth environments. Technical tasks for data scientists include applying statistics concepts such as regression, clustering, and A/B testing."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583333,
   "web_search_url": "https://duckduckgo.com/?q=Fanatics+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "b78fd617cf",
-    "50191613b6",
-    "65d1560060"
-   ],
-   "value": "Fanatics offers a rare combination: elite AI/data science prestige at a $22k+ employee digital sports platform with world-class investor backing, fast-paced innovation culture in collectibles tech, and mission-driven fan experience focus. The scale and investor profile suggest top-tier compensation potential while the 'new company' Collectibles division signals startup-like agility within a stable giant."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fanatics offers a fast-paced, high-growth tech environment where you can rapidly accelerate your technical learning by building a global digital sports platform. The company's mission-driven focus on delighting sports fans provides a dynamic, innovative culture that avoids slow bureaucracy, making it an excellent place for new grads seeking impactful career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "d494a66b60",
     "b78fd617cf"
    ],
-   "value": "Estimated: Moderate (mission language emphasizes 'relentlessly enhancing fan experience' which may imply high intensity; no explicit WLB policies found in sources)"
+   "value": "Estimated: Moderate. The high-growth, fast-paced nature of the business suggests a demanding environment, though the 22,000+ headcount may offer corporate structure."
   }
  },
  "fanduel": {
@@ -151711,7 +151736,7 @@
    "value": "Estimated: Mid-tier. While Gen Digital is a major tech enterprise, it is primarily known for consumer cybersecurity rather than elite AI research, though its current Generative AI roles offer strong applied learning."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -151763,7 +151788,7 @@
    ],
    "value": "Prepare to discuss how you thrive in a 'scrappy' and 'relentlessly customer driven' environment, balancing fast technical experimentation with practical application development. Be ready to demonstrate how you can manage hands-on AI innovation without contributing to burnout, leveraging their stated well-being programs and flexible work options."
   },
-  "last_attempt_at": 1784915593,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "high",
@@ -151804,7 +151829,7 @@
    "value": "Estimated: 20-25 days. The company highlights competitive time off, though exact accruable amounts are not public."
   },
   "refresh_after": 1790053098,
-  "retry_after": 1784917513,
+  "retry_after": 1784924289,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195312,12 +195337,153 @@
   }
  },
  "iridium": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 2 — strong applied ML for network optimization and anomaly detection, but not a primary AI research lab."
+  },
   "aliases": [],
-  "evidence_sha": "dd050580a2319c22",
-  "last_evidence_at": 1784919313,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Recurring revenue from service subscriptions and airtime contracts, plus hardware sales of satellite terminals and modems. High capital expenditure for satellite constellation maintenance and replacement."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering‑first, safety‑oriented, collaborative across hardware/software/firmware; low politics, high technical respect, and strong alumni network in aerospace."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Government/military agencies, maritime and aviation operators, enterprise remote‑operations teams, emergency responders, and individual consumers in off‑grid areas."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Estimated: $110k‑$130k base + 10‑15% annual bonus + RSU grant (~$20k‑$30k vesting over 4 years); total first‑year ~$140k‑$170k."
+  },
+  "evidence_sha": "55aa47c88a0393b1",
+  "generated_at": 1784920449,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Satellite telecommunications / aerospace"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Expect deep C/C++ systems questions, real‑time/embedded debugging scenarios, Python/Java coding for automation, and domain knowledge of satellite communications or signal processing. Behavioral questions will emphasize reliability, cross‑team collaboration, and handling mission‑critical constraints."
+  },
+  "last_attempt_at": 1784920449,
+  "last_evidence_at": 1784920448,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in McLean, VA; major engineering offices in Tempe, AZ and Leesburg, VA; global gateway and gateway‑earth‑station sites."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide reliable, truly global satellite communications that enable connectivity anywhere on Earth, supporting safety, productivity, and critical operations."
+  },
   "name": "Iridium",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: measured, project‑driven cadence with quarterly release cycles; urgency spikes during launch campaigns or anomaly resolution but generally sustainable."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Satellite voice and data services (Iridium Certus, Iridium GO!, Iridium Push-to-Talk), IoT/M2M connectivity, maritime and aviation safety services, and satellite handsets/terminals."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Estimated: 15‑20 days annual PTO plus 10‑12 company holidays; accrual increases with tenure."
+  },
+  "refresh_after": 1790104449,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: company‑wide shutdown between Christmas and New Year; optional summer Fridays or compressed weeks in some groups."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: IRDM), ~500‑1,000 employees, mature satellite operator with a fully deployed second‑generation constellation (Iridium NEXT)."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a09853cd1b",
+    "kind": "company_web",
+    "publisher": "Iridium",
+    "retrieved_at": 1784920448,
+    "title": "Iridium public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5977bbb0ea426eb98818a90100f72cfe08e0bcc4dbbf3d8d1110603e8fc733c6JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=0c3ace8d-7fdf-6036-2245-d92d7e92617e&u=a1aHR0cHM6Ly9pbnZlc3Rvci5pcmlkaXVtLmNvbS8yMDI2LTA2LTI5LVJvY2tldC1MYWItdG8tQWNxdWlyZS1JcmlkaXVtLWluLUhpc3RvcmljLURlYWwsLUNyZWF0aW5nLUEtRnVsbHktVmVydGljYWxseS1JbnRlZ3JhdGVkLVNwYWNlLVBvd2VyaG91c2UtUHJpbWVkLWZvci1Hcm93dGg&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2562bd21db",
+    "kind": "company_web",
+    "publisher": "Iridium",
+    "retrieved_at": 1784920448,
+    "title": "Iridium public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a157e2b7ca00a47b42a45acdd38e020ed709c8330d18a223348a7e536573556aJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=0c3ace8d-7fdf-6036-2245-d92d7e92617e&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSXJpZGl1bQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "56563c0649",
+    "kind": "company_web",
+    "publisher": "Iridium",
+    "retrieved_at": 1784920448,
+    "title": "Iridium public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=98d76fa46f13579030788fcc62d7f13ab839c9b9b6435729f3a546ae43bd6123JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=0c3ace8d-7fdf-6036-2245-d92d7e92617e&u=a1aHR0cHM6Ly93d3cuaXJpZGl1bS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Iridium",
+    "retrieved_at": 1784920448,
+    "title": "Discovery source for Iridium",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "9f9b806904ab89f3",
     "excerpt": "citizen Benefits Company stock Annual bonus Medical, dental, and vision insurance coverage 401(k) retirement plan options Paid time off and paid holidays Paid parental leave Other discounts and perks Company Iridium Iridium provides satellite-based voice, data, and positioning services through a global low Earth orbit satellite network. Your Score - Top Applicants Must-Have Skills for This Role Software Development C C++ Python Java Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach M Mike M. Engineer I, Software Engineer @ Iridium",
@@ -195329,7 +195495,43 @@
     "url": "https://jobright.ai/jobs/info/6a6377a4e8d8d22e32928d5a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H‑1B and green‑card sponsorship available for technical roles; history of sponsoring international STEM graduates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Iridium operates a global low Earth orbit satellite constellation providing voice, data, and positioning services worldwide. The company generates revenue through subscription and usage fees for satellite communications hardware and airtime sold to governments, enterprises, and consumers."
+  },
+  "synthesized_evidence_sha": "55aa47c88a0393b1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0"
+   ],
+   "value": "Embedded/firmware development for satellite ground equipment, real‑time C/C++ software for network control, Python/Java for automation and data pipelines, cloud infrastructure for service delivery, and RF/signal‑processing algorithm work."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784920448,
+  "web_search_url": "https://duckduckgo.com/?q=Iridium+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "db121bd9d0",
+    "1db9db9c4d"
+   ],
+   "value": "Iridium offers a rare blend of elite aerospace/telecom prestige and new‑grad compensation competitive with top tech firms, while its mission‑critical satellite network demands high‑quality engineering without the chaotic burnout culture of many consumer‑internet companies. The work directly enables global connectivity for safety‑of‑life and remote operations, aligning with a tangible mission, and the mature public‑company structure provides stable benefits and predictable hours."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 4/5 — core hours with flexible scheduling, limited on‑call rotations for operations teams, and a culture that respects personal time."
+  }
  },
  "iron mountain": {
   "ai_ds_prestige_tier": {
@@ -261232,40 +261434,40 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: High in defense circles, but lower relative to elite commercial tech and AI-first organizations prioritizing fast-paced innovation."
+   "value": "Estimated: Top-tier within defense, but likely conservative compared to fast-paced tech firms."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "7d8a03d8c6"
-   ],
-   "value": "Northrop Grumman operates on a B2G (business-to-government) model, securing defense contracts and providing specialized engineering and technical services that require security clearances."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and highly structured, leaning heavily on protocol, citizenship requirements, and clearance procedures rather than fast tech迭代."
-  },
-  "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "7d8a03d8c6",
     "2916b3ae24"
    ],
-   "value": "Primary customers are government and military agencies, requiring strict adherence to citizenship prerequisites and special access program clearances."
+   "value": "Revenue is generated through defense contracts, specialized clearance programs, and the development of advanced technological solutions for government and military clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
-  "estimated_new_grad_tech_pay": {
+  "culture_vibe": {
    "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven and collaborative, focusing on impactful defense technology, but potentially slower and more bureaucratic."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d8a03d8c6"
+   ],
+   "value": "Government and military organizations requiring security clearances and specialized access programs."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "high",
    "source_ids": [
     "2916b3ae24"
    ],
-   "value": "Estimated: $69,000 - $104,000 per year for entry-level cloud engineering roles. Defense contractor pay is competitive but rarely matches elite commercial tech new-grad salaries."
+   "value": "Estimated: $69,000 - $104,000 per year, based on provided compensation data."
   },
   "evidence_sha": "fa50cc96a2e833a3",
-  "generated_at": 1784862304,
+  "generated_at": 1784920449,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -261281,69 +261483,65 @@
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "To align with your desire for high-tier prestige and AI growth, you must clarify whether the specific team works on cutting-edge data science initiatives rather than slow compliance testing. Ask interviewers about the pace of technical deployment and how rigid security clearances impact project agility and innovation. Finally, confirm work-life balance expectations by asking about standard working hours, guaranteed shutdowns, and whether the culture avoids high-burnout crunch periods during majo"
+   "value": "Candidates should highlight skills in C, C++, Python, and real-time systems, emphasizing their ability to work in Agile environments while balancing innovation with slow, methodical processes."
   },
-  "last_attempt_at": 1784915593,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "7d8a03d8c6",
-    "2916b3ae24"
+    "2916b3ae24",
+    "7d8a03d8c6"
    ],
-   "value": "Operations and job postings are located in the United States (including Melbourne, FL and Dayton, OH) and Australia."
+   "value": "Dayton, OH and Melbourne, FL, with potential requirements for US citizenship and Special Access Program clearance."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
     "2916b3ae24"
    ],
-   "value": "While a specific mission statement was not directly retrieved, the company is defined by pioneering revolutionary technological advancements in defense and aerospace."
+   "value": "To pioneer revolutionary technological advancements in aerospace and defense, ensuring national security and technological superiority."
   },
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Slower-paced and process-heavy due to government regulations, compliance, and strict security clearance protocols, contrasting with a fast, innovative tech culture."
+   "value": "Estimated: Moderate pace typical of defense contractors, balancing innovative tech development with regulatory and clearance processes."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "11d8a7ec2c",
     "7d8a03d8c6",
     "2916b3ae24"
    ],
-   "value": "The company develops advanced defense systems, aerospace technology, cloud engineering solutions, and software quality assurance systems, focusing on technological advancements for national security."
+   "value": "Design, development, integration, and testing of software for embedded and real-time systems, software quality engineering, firmware testing, and cloud engineering solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of annual leave, standard for aerospace and defense government contractors."
+   "value": "Estimated: 20-25 days annually, standard for large defense firms."
   },
-  "refresh_after": 1790046304,
-  "retry_after": 1784919433,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "7d8a03d8c6",
-    "2916b3ae24",
-    "5f8e2df2fd"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Often includes holiday shutdowns between Christmas and New Year, though specific policies are not public."
+   "value": "Estimated: Likely periodic breaks aligning with government holidays and project milestones."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "5f8e2df2fd",
-    "54cd6c2a79"
+    "22370b419b"
    ],
-   "value": "Large, established enterprise operating globally with major presences in both Australia and the United States."
+   "value": "Large, established multinational aerospace and defense technology contractor."
   },
   "sources": [
    {
@@ -261412,25 +261610,26 @@
    "source_ids": [
     "7d8a03d8c6"
    ],
-   "value": "Sponsorship is highly restricted or unavailable for sensitive roles; US citizenship is explicitly listed as a prerequisite for obtaining Special Access Program clearance."
+   "value": "US citizenship is a pre-requisite, along with eligibility for Special Access Program clearance."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7d8a03d8c6",
-    "5f8e2df2fd"
+    "11d8a7ec2c",
+    "2916b3ae24"
    ],
-   "value": "Northrop Grumman is a pioneering aerospace and defense technology company known for its revolutionary technological advancements (source 7d8a03d8c6). While branded as 'Northrop Grumman Australia', recent job postings indicate it operates globally, hiring for roles based in locations such as the United States (US citizenship required for sensitive roles). The company makes money by developing, manufacturing, and maintaining advanced systems and providing technical services to government and milit"
+   "value": "Northrop Grumman is a pioneering aerospace and defense technology company known for revolutionary advancements in embedded systems, software quality, and cloud engineering. It makes money by securing defense contracts and developing advanced technological solutions for government and military clients."
   },
-  "synthesized_evidence_sha": "150e722a8f90e92c",
+  "synthesized_evidence_sha": "fa50cc96a2e833a3",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "11d8a7ec2c",
     "7d8a03d8c6",
     "2916b3ae24"
    ],
-   "value": "Technical work includes cloud engineering, software design reviews, firmware and software testing, software quality engineering, and statistical analysis."
+   "value": "Roles involve Agile development, C/C++/Python programming, safety-critical embedded and real-time systems, software design reviews, statistical analysis, and cloud engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784666846,
@@ -261438,12 +261637,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "If you are looking for a fast-paced, innovative tech culture without slow bureaucracy, this defense contractor environment may clash with your priorities, as government contracts enforce rigid processes and security protocols. While defense contractors typically respect work-life balance with sane hours, they rarely offer the elite new-grad pay or rapid career acceleration found in top-tier tech or AI startups. It is highly mission-driven, but the technical learning curve leans heavily toward co"
+   "value": "For a candidate seeking top-tier AI or data science work with elite prestige and high pay, this role offers a mission-driven environment but may lean towards slower bureaucracy. However, it provides an opportunity to work on fast, innovative, safety-critical technologies."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to High, typically offering sane hours consistent with defense contracting, avoiding the high-burnout environments of commercial tech."
+   "value": "Estimated: Good work-life balance with sane hours, typical of large defense contractors avoiding toxic environments."
   }
  },
  "northslope technologies": {
@@ -350793,7 +350992,7 @@
    "value": "Tier 1 for a private technology company, reflecting very high engineering prestige and strong advanced problem sets."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -350813,7 +351012,7 @@
    ],
    "value": "Millions of businesses of all sizes, from large public corporations to early-stage startups across 40+ countries."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -350838,7 +351037,7 @@
    "source_ids": [],
    "value": "Likely centers on high-signal systems design, coding, and integration questions along with deep dives on privacy and authorization architecture. Evaluates real world problem-solving and ownership rather than rote algorithm memorization."
   },
-  "last_attempt_at": 1784681359,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "medium",
@@ -350876,6 +351075,7 @@
    "value": "Estimated: Flexible, non-accrued, often averaging 20+ days annually for full-time new-grad engineers."
   },
   "refresh_after": 1789865359,
+  "retry_after": 1784920689,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -350941,7 +351141,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -407045,52 +407245,51 @@
  },
  "westinghouse electric company": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "c3939cef95",
-    "458d07b954"
+    "7eb0420ada",
+    "b75f11dd54"
    ],
-   "value": "Elite industry-specific (Tier 2). It is a world leader in nuclear energy, on par with top aerospace/defense firms for engineering prestige, but not a pure-play AI lab or Big Tech company. The mission and safety-critical work elevate its status considerably within its domain."
+   "value": "Estimated: Prestige is elite within the energy and hardware sectors for mission-critical engineering, but it is not a recognized top-tier tech company for AI/Data Science. Top AI talent seeking elite tech prestige may find the software work more focused on legacy and safety systems than cutting-edge data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "d7b702faab",
-    "c3939cef95"
-   ],
-   "value": "A business-to-business model earning revenue through long-cycle capital projects (new reactor builds), recurring fuel supply contracts with existing plants, and ongoing plant engineering, maintenance, and modernization services."
-  },
-  "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "458d07b954",
     "b75f11dd54"
    ],
-   "value": "Mission-centric, stable, and disciplined. The climate-focused mission provides a sense of purpose. The culture is shaped by safety regulation and the long-term lifecycle of nuclear technology, rewarding precision, reliability, and deep expertise over rapid disruption."
+   "value": "B2B provider of complex nuclear technologies, safety-critical software development, engineering services, and maintenance contracts within a highly regulated environment."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "458d07b954",
+    "b75f11dd54"
+   ],
+   "value": "Estimated: Mission-driven and safety-focused. Engineers work closely with senior peers to resolve technical issues, suggesting a collaborative environment that values learning and mentorship alongside a commitment to clean energy."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "458d07b954"
    ],
-   "value": "The primary customers are public electric utilities, local governments, and large industrial power consumers globally that operate or are building nuclear power generation capacity."
+   "value": "Public utilities and local governments requiring clean, safe, reliable, and carbon-free energy generation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "b75f11dd54",
-    "1f800bde34"
+    "7eb0420ada"
    ],
-   "value": "Estimated: $80,000 - $95,000 USD base salary in the Pittsburgh area. This reflects highly competitive pay for an engineering corporation, typical for specialized, high-quality, engineering new graduates, though not at Big Tech 'AI' compensation levels."
+   "value": "Estimated: Likely medi120k - $140k的标准base, emphasizing strong work-life balance and benefits rather than the elite top-tier new-grad pay ($180k+) found in big tech or AI labs."
   },
   "evidence_sha": "2fadea33d84f2a5c",
-  "generated_at": 1784680912,
+  "generated_at": 1784920449,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -407098,26 +407297,25 @@
    "source_ids": [
     "458d07b954"
    ],
-   "value": "Nuclear Energy / Clean Technology"
+   "value": "Nuclear Energy / Clean Energy Technology"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "b75f11dd54",
-    "1f800bde34",
-    "458d07b954"
+    "7eb0420ada",
+    "b75f11dd54"
    ],
-   "value": "Look for evidence that their hiring process emphasizes rigorous, methodical problem-solving and strict adherence to process, rather than the 'move fast and break things' tech culture. The interview will likely assess cultural fit for steady, meticulous work on safety systems, not rapid feature iteration, making the assurance of work-life balance credible."
+   "value": "Candidates should expect heavy scrutiny on their understanding of software design principles and rigorous testing methodologies, as they will be working in a high-stakes regulated environment. The interviews will likely focus on how candidates can accelerate their technical learning while respecting the safety constraints that ensure sane hours and zero burnout. Be prepared to contrast the fast-paced tech culture you desire with the slow bureaucracy of nuclear safety, demonstrating how you can d"
   },
-  "last_attempt_at": 1784680912,
+  "last_attempt_at": 1784920449,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "b75f11dd54",
-    "1f800bde34"
+    "7eb0420ada",
+    "b75f11dd54"
    ],
-   "value": "Global headquarters in Cranberry Township (Pittsburgh), Pennsylvania. The job postings researched correspond to an office in Warrendale, PA."
+   "value": "Headquartered in Cranberry, Pennsylvania, USA with a notable engineering presence in Warrendale, Oregon."
   },
   "mission": {
    "confidence": "high",
@@ -407133,40 +407331,47 @@
     "b75f11dd54",
     "1f800bde34"
    ],
-   "value": "Estimated: Predictable and methodical. The highly regulated, safety-critical nature of the work enforces rigorous processes, extensive documentation, and thorough testing, leading to a steady, well-planned pace rather than rapid, unstructured sprints."
+   "value": "Estimated: Deliberately slow and methodical. The heavy regulatory environment requires rigorous testing and validation, leading to a pace of work that may feel slow or bureaucratic to those used to fast, innovative tech cultures."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "d7b702faab",
-    "c3939cef95"
+    "b75f11dd54",
+    "1f800bde34"
    ],
-   "value": "Westinghouse provides nuclear reactor designs (including the AP1000 and AP300 small modular reactor), nuclear fuel fabrication, digital instrumentation and control systems, engineering services, plant maintenance and upgrades, and decommissioning solutions."
+   "value": "Nuclear reactor designs (e.g., AP1000), instrumentation and control (I&C) systems, human-machine interface (HMI) systems, safety system software, and nuclear fuel."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: A competitive corporate package for new graduates, likely around 15-20 days of vacation plus standard public holidays and additional personal/sick days consistent with a large, established engineering company."
+   "source_ids": [
+    "7eb0420ada"
+   ],
+   "value": "Estimated: While exact new-grad PTO is not public, large engineering firms in this sector typically offer介于 15 to 20 days of vacation plus paid holidays. True shutdowns are rare outside of specific holidays."
   },
-  "refresh_after": 1789864912,
+  "refresh_after": 1790104449,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7eb0420ada"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "458d07b954"
+   ],
+   "value": "Estimated: No known guaranteed operational or IT shutdowns outside of standard major holidays (e.g., winter holidays) where the office may close. The term 'shutdowns' in this company context usually refers to nuclear plant outages rather than employee time off."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "c3939cef95"
+    "7eb0420ada"
    ],
-   "value": "A large, mature, privately held company with thousands of employees globally that provides critical infrastructure. It operates at a massive scale in a stable, long-term, and highly regulated industry."
+   "value": "Large established corporation with 5001-10000 employees, originally founded in 1886."
   },
   "sources": [
    {
@@ -407231,43 +407436,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7eb0420ada"
+   ],
+   "value": "Has a historical track record of offering H1B sponsorhips, though this is not a guarantee for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "458d07b954",
     "d7b702faab",
     "c3939cef95"
    ],
-   "value": "Westinghouse Electric Company supplies advanced nuclear energy technology, fuel, and services to power plants worldwide. The company generates revenue by designing, licensing, installing, and servicing nuclear reactors and providing the nuclear fuel that keeps them running."
+   "value": "Westinghouse Electric Company provides nuclear power plant technology, products, and services to utility operators worldwide. It makes money by designing systems like its AP1000 reactors and offering fuel, engineering, and maintenance services throughout the plant lifecycle."
   },
-  "synthesized_evidence_sha": "cff5ab621fde5f5f",
+  "synthesized_evidence_sha": "2fadea33d84f2a5c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "7eb0420ada",
     "b75f11dd54",
     "1f800bde34"
    ],
-   "value": "Involves safety-critical software development, integration, testing, and debugging for human-machine interface (HMI) systems under a highly regulated environment. The business and its technologies are deeply data and engineering-driven, but the term 'AI' is not explicitly featured in the researched sources."
+   "value": "Software development, integration, testing, and debugging for safety system software, HMI systems, and Windows platforms within a highly regulated environment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677185,
   "web_search_url": "https://duckduckgo.com/?q=Westinghouse+Electric+Company+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "458d07b954",
-    "1f800bde34"
+    "b75f11dd54"
    ],
-   "value": "This role uniquely satisfies the need for a mission-driven organization focused on climate change, alongside the prestige of an elite industry leader. The safety-critical, regulated environment and government-utility customer base enforce sane, predictable hours with no crunch-time culture, directly addressing the need for work-life balance and avoiding burnout. You gain deep, specialized technical skills in a unique domain, accelerating your career growth without sacrificing personal time."
+   "value": "Westinghouse offers the elite mission-driven prestige of combating climate change through nuclear power, appealing directly to candidates who want their AI or data science work to have global impact. The company's focus on safety-critical, regulated environments suggests a culture that values getting things right over moving fast and breaking things, which can provide guaranteed shutdowns and sane hours that protect work-life balance. However, the heavy regulatory nature of the industry means th"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Excellent. The regulated, utility-driven project cycles enforce sane hours and discourage a crunch-time culture, creating a stable 40-hour work week likely rarely exceeded."
+   "source_ids": [
+    "458d07b954",
+    "b75f11dd54"
+   ],
+   "value": "Estimated: Working hours are likely very sane. The lack of a rush-to-market mentality in safety-critical nuclear development generally prevents the toxic, high-burnout environments often found in fast-paced tech, though this comes at the cost of speed."
   }
  },
  "westlake": {
