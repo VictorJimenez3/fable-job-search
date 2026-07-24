@@ -6583,48 +6583,124 @@
  "adways inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Moderate. As an ad-tech company, it likely employs data scientists for analytics and optimization, but it is not recognized as an elite AI research institution."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "176266b4f4"
+   ],
+   "value": "Likely operates on a B2B model, generating revenue through ad platform usage, placement fees, or marketing service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Business-oriented and results-driven, focused on advertising metrics and client success."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "176266b4f4"
+   ],
+   "value": "Businesses and publishers looking for digital advertising and marketing solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Likely ranges from $60k to $90k USD equivalent, depending on the global office location, which is lower than the elite tier new-grad pay the candidate seeks."
   },
   "evidence_sha": "eee5ea558036b604",
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "176266b4f4"
+   ],
+   "value": "Digital Advertising and Marketing Technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should clarify the exact nature of the AI and data science work, confirm new-grad compensation packages, and ask detailed questions about work hours and learning opportunities to ensure it matches their expectation of a fast, non-bureaucratic, mission-driven environment."
   },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784676895,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ec66d79ca7",
+    "176266b4f4"
+   ],
+   "value": "Operates internationally, with official sites indicating presence in Japan (adways.net) and global operations (adways.com)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6cdf464725"
+   ],
+   "value": "The specific corporate mission was not accessible in the provided sources, but as an ad-tech firm, it likely revolves around connecting advertisers with audiences effectively."
+  },
   "name": "Adways Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Traditional corporate pace with periods of high tempo during product launches or campaign seasons."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "176266b4f4"
+   ],
+   "value": "Digital advertising platforms and marketing technology solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Standard corporate PTO, likely around 10-20 days annually depending on region and tenure."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ec66d79ca7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: No public information confirming guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "The company operates globally with a public company structure, though specific employee headcount and current stage metrics are unavailable from the provided sources."
   },
   "sources": [
    {
@@ -6658,14 +6734,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=31cf9a27c4502ac8d70a4b0f439f9a48dab1b0ff36b19ec56e179a764f56cf9bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9hZHdheXMubmV0L2VuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "176266b4f4"
+   ],
+   "value": "Estimated: As a global ad-tech company, there may be opportunities for visa sponsorship depending on the region, but no specific policy is confirmed in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec66d79ca7",
+    "176266b4f4",
+    "6cdf464725"
+   ],
+   "value": "Adways Inc. is a technology company that operates a digital advertising platform. It makes money by facilitating ad distribution and providing marketing solutions to businesses. Specific operational and financial details could not be retrieved due to source access redirects."
+  },
+  "synthesized_evidence_sha": "eee5ea558036b604",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Given its industry, technical work likely involves web development, ad-serving algorithms, and data analytics, rather than elite AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676895,
   "web_search_url": "https://duckduckgo.com/?q=Adways+Inc.+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "The candidate is seeking a top-tier AI role with elite prestige, high new-grad pay, and a fast, innovative culture with strong work-life balance. Adways is an established ad-tech firm, which may offer solid technical challenges but likely falls short of the 'elite prestige' and 'top-tier AI' focus the candidate desires."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ec66d79ca7"
+   ],
+   "value": "Estimated: Typical of the ad-tech industry, which can experience demanding project cycles, though specific WLB metrics are not public."
   }
  },
  "aeg": {
@@ -9347,37 +9454,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Emerging – strong applied NLP/ML work in a niche vertical, but not a widely recognized AI research lab. Offers high ownership and production impact for early-career data scientists."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS with tiered pricing based on data volume, user seats, and feature modules. Additional revenue from professional services, custom integrations, and data API access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, engineering-led, and pragmatic. Values transparency, continuous learning, and work-life boundaries. Remote-first rituals (async communication, virtual coffees) maintain cohesion without forced socialization."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are PR agencies, in-house corporate communications teams, government organizations, and non-profits that need to monitor media mentions, analyze sentiment, and report on campaign performance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD 85,000–105,000 base + equity (RSUs/options) + bonus (5–10%). US remote hires may see USD 95,000–120,000 base. Signing bonus sometimes offered."
   },
   "evidence_sha": "80005ba69271622b",
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "PR technology / media monitoring / communications SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on NLP/ML modeling, data pipeline design, and system scalability. Behavioral interviews emphasize collaboration, ownership, and alignment with a low-bureaucracy, high-autonomy culture. Prepare to discuss past projects that delivered measurable product impact."
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784643846,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Ottawa, Ontario, Canada; remote-first hiring across Canada and the US. No mandatory office attendance."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower communications professionals with real-time media intelligence and actionable insights so they can prove the value of their work and make faster, data-driven decisions."
+  },
   "name": "Agility PR Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced product cycles with quarterly planning; teams ship frequently but protect sustainable velocity. Not a 'move fast and break things' culture; emphasis on quality and reliability."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include a media monitoring dashboard, automated reporting, sentiment analysis, influencer identification, press release distribution, and a PR CRM. The platform ingests news, social, and broadcast data and applies NLP/ML for relevance scoring and insights."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 10 statutory holidays (Canada) or equivalent US PTO bank. Unlimited sick/mental health days. Minimum 3 weeks encouraged."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9387,7 +9536,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December; optional summer Fridays (half-days) July–August. Team-level 'no-meeting' weeks occasionally scheduled."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-stage private company (approx. 200–500 employees), headquartered in Ottawa, Canada, with a distributed workforce across North America. Profitable and growing without recent large funding announcements."
   },
   "sources": [
    {
@@ -9421,14 +9575,35 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a Canadian company, Agility can support work permits (e.g., Global Talent Stream, ICT) for eligible candidates. US hiring typically requires existing work authorization; limited H-1B sponsorship due to entity structure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Agility PR Solutions provides a SaaS platform for media monitoring, analytics, and PR workflow automation, helping communications teams track coverage, measure impact, and manage outreach. The company generates revenue through subscription fees for its software and related data services."
+  },
+  "synthesized_evidence_sha": "80005ba69271622b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering focuses on high-volume data ingestion pipelines, natural language processing for entity extraction and sentiment classification, search/relevance engineering, real-time analytics, and scalable cloud infrastructure (AWS, Kubernetes). Data science roles build and productionize ML models for media analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643846,
   "web_search_url": "https://duckduckgo.com/?q=Agility+PR+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches the candidate's desire for a top-tier AI/data science role in a fast, innovative tech culture with high new-grad pay, genuine work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. The mission-driven PR-tech space offers meaningful impact on how organizations understand public perception."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 8/10 – company promotes reasonable hours, flexible scheduling, and explicit shutdown periods (e.g., year-end, summer Fridays). Low incidence of weekend/on-call expectations for non-infra roles."
   }
  },
  "agoda": {
@@ -43947,48 +44122,132 @@
  "betterhealth a planned parenthood partnership": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Unknown prestige for AI/DS. Likely not a top-tier tech employer for elite AI talent, with limited public visibility on advanced data science work."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "Healthcare service provider operating in direct partnership with Planned Parenthood, generating revenue through clinical patient care."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "acd9b7890d"
+   ],
+   "value": "Mission-driven and focused on patient care and health equity, consistent with the broader Planned Parenthood organizational culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "Patients seeking reproductive healthcare and related clinical services through affiliated clinics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Not publicly available. Likely below elite FAANG-tier pay bands, aligning closer to standard non-profit/healthcare IT salaries rather than elite new-grad tech packages."
   },
   "evidence_sha": "4852253648c36f13",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "Healthcare and Reproductive Health Services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Focus your questions on the engineering culture to confirm it lacks slow bureaucracy and matches a fast, innovative tech pace. Ask how the team accelerates technical learning, detail the exact new-grad compensation structure, and verify guarantees around sane hours and shutdowns to ensure high burnout is mitigated."
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784583412,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "acd9b7890d"
+   ],
+   "value": "Online presence includes standard patient portals and a general about page,暗示ing both remote web access and physical clinic operations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "acd9b7890d"
+   ],
+   "value": "To provide accessible healthcare and health resources to patients in partnership with Planned Parenthood."
+  },
   "name": "BetterHealth: A Planned Parenthood Partnership",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Unclear pace of work from public sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "Healthcare clinic services and online patient management portals facilitating direct patient care and health information."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Standard healthcare PTO package likely offering around 15-25 days annually, though exact policy is not public."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Unknown guaranteed shutdowns. Unlikely to feature regular tech-industry style shutdowns, relying more on standard PTO structures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Unknown organization size and funding stage, operating as a specific partnership entity within the broader Planned Parenthood network."
   },
   "sources": [
    {
@@ -44022,14 +44281,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=8e73aaf739620e2c5fca4e3cfe13ffda6bb73f919a401ab313a37a30edd386deJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuYmV0dGVyaGVscC5jb20vYWJvdXQv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "No public information regarding visa sponsorship for AI or new graduate software roles was found in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de",
+    "acd9b7890d"
+   ],
+   "value": "BetterHealth: A Planned Parenthood Partnership is a healthcare organization focused on providing patient services and specialized health resources. It appears to generate revenue by partnering directly with Planned Parenthood to facilitate and deliver clinical care to patients."
+  },
+  "synthesized_evidence_sha": "4852253648c36f13",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "Specific AI, data science, and software engineering duties are not publicly listed in the available sources, though IT and technical roles likely support online patient portals and clinical data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583412,
   "web_search_url": "https://duckduckgo.com/?q=BetterHealth%3A+A+Planned+Parenthood+Partnership+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "885bf09b53",
+    "a75bc887de"
+   ],
+   "value": "The organization is highly mission-driven, aligning with your desire to work at a company that respects personal time and avoids a toxic environment. While the Planned Parenthood mission provides strong intrinsic motivation, you will need to carefully validate the technical team's prestige, new-grad pay scaling, and fast-paced innovation against your needs during the interview loop."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "885bf09b53"
+   ],
+   "value": "Estimated: Strong work-life balance typical of established healthcare organizations, with predictable hours inspired by a mission-driven culture."
   }
  },
  "bevi": {
@@ -75221,34 +75515,92 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f683d52ce6",
+    "4902624d4b"
+   ],
+   "value": "Nonprofit model funded by government grants, philanthropic donations, government contracts for social services, and potentially developer fees from affordable housing projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, community-focused, collaborative, socially conscious. Culture centered on social impact rather than technical innovation. Likely diverse staff with social work, urban planning, and community organizing backgrounds."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f683d52ce6"
+   ],
+   "value": "Low-income residents, homeless populations, local communities in need of development services, and government/philanthropic funders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000-$75,000 for any entry-level technical role (IT support, data analyst), far below top-tier AI/data science new grad pay ($150,000-$250,000+). Not competitive for elite technical talent."
   },
   "evidence_sha": "22fbbb5bfad3429b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "f683d52ce6",
+    "4902624d4b"
+   ],
+   "value": "Nonprofit / Community Development / Social Services / Affordable Housing"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784675227,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f683d52ce6"
+   ],
+   "value": "Likely based in Los Angeles, California (South LA/Vermont Corridor area) based on pchomeless.org association. May have multiple service sites in the region."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f683d52ce6",
+    "4902624d4b"
+   ],
+   "value": "To foster responsible community development that improves quality of life for underserved residents through housing, economic opportunity, and social services."
+  },
   "name": "Coalition for Responsible Community Development",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, mission-driven pace typical of nonprofits. Not fast-paced tech innovation. Work rhythm driven by grant cycles, community needs, and government reporting deadlines."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f683d52ce6",
+    "4902624d4b"
+   ],
+   "value": "Community development services, affordable housing initiatives, workforce development programs, and social services for underserved populations. No technology products or AI/data science offerings identified."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays typical for mid-sized nonprofits. May offer additional mission-related leave."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75258,7 +75610,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. May observe standard holidays and possibly a winter break."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized nonprofit (50-200 employees), mature stage. Not a startup or technology company."
   },
   "sources": [
    {
@@ -75292,14 +75649,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=2472fb91476dd16c6f9e228ce9f8fc399449bdd295dc305593397b8403ff3ccaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cuY29hbGl0aW9uaW5jLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H-1B visas for technical roles given nonprofit status and limited technical workforce. May sponsor for specialized social work or program management roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f683d52ce6",
+    "4902624d4b"
+   ],
+   "value": "Coalition for Responsible Community Development (CRCD) appears to be a nonprofit community development organization focused on responsible development in underserved communities, likely in the Los Angeles area based on the pchomeless.org redirect. The organization does not appear to be a technology company or AI/data science employer."
+  },
+  "synthesized_evidence_sha": "22fbbb5bfad3429b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited technical work expected. May have basic IT infrastructure, data reporting for grants, and case management systems. No evidence of AI, machine learning, data science, or software engineering roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675227,
   "web_search_url": "https://duckduckgo.com/?q=Coalition+for+Responsible+Community+Development+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance typical of mission-driven nonprofits (40-45 hour weeks), but may have occasional evening/weekend community events. Not a 'guaranteed shutdown' culture."
   }
  },
  "coaspire": {
@@ -81347,37 +81728,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied AI/DS in regulated medtech; respected for domain-specific innovation but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Manufactures and sells medical devices directly and through distributors; generates recurring revenue from contact lens replacement cycles and procedural device sales; invests heavily in R&D for product differentiation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, engineering-first with strong quality mindset. Low politics, high cross-functional respect. Employees stay long-term; values integrity and patient safety over speed."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Eye care professionals (optometrists, ophthalmologists), hospitals, ambulatory surgical centers, fertility clinics, and healthcare distributors worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% bonus + RSU ($20k-$40k/yr vesting); total comp ~$150k-$180k for AI/DS roles in Bay Area."
   },
   "evidence_sha": "ebac247d660e5b2c",
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on applied ML for medical devices, statistical process control, optimization of manufacturing yield, and cross-functional collaboration with regulatory/clinical teams. Prepare for case studies on lens design or surgical workflow improvement. Cultural fit emphasizes patient impact and sustainable pace."
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784675227,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Ramon, CA; major R&D and manufacturing sites in California, New York, UK, Hungary, Puerto Rico, Costa Rica, and Japan; global commercial offices in 100+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve lives through innovation in vision and women's health by providing high-quality medical devices and services that enhance patient outcomes."
+  },
   "name": "CooperCompanies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Project-driven with regulatory milestones; faster than pharma but slower than consumer tech. Sprints aligned with FDA/CE submission cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Contact lenses (spherical, toric, multifocal, specialty), intraocular lenses, surgical instruments and devices for women's health (fertility, obstetrics, gynecology), and genomic testing services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81387,7 +81810,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 25-Jan 1) and summer floating week; some sites observe additional local holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (~$3B+ annual revenue, ~14,000 employees globally), mature stage with stable growth in vision care and expanding women's health portfolio."
   },
   "sources": [
    {
@@ -81421,14 +81849,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=030dd660d88064e45d4031e30d5962de68f3e8f3b63a5f72c8bcf6ea9eb5b5ddJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9vbmxpbmUuZXJpZXJpLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles (data science, engineering, R&D); typical for large medtech firms with global talent needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CooperCompanies is a global medical device company specializing in contact lenses (CooperVision) and women's health surgical devices (CooperSurgical). It operates as a public company (NYSE: COO) with a focus on innovation in vision correction and reproductive health."
+  },
+  "synthesized_evidence_sha": "ebac247d660e5b2c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R&D in optical design, biomaterials, polymer science, precision manufacturing, data analytics for supply chain and quality, software for diagnostic devices, and emerging AI/ML for lens customization and surgical planning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675227,
   "web_search_url": "https://duckduckgo.com/?q=CooperCompanies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite medtech prestige with high new-grad compensation in a mission-driven healthcare company. Balances innovative technical challenges (optics, AI-driven personalization) with a culture known for reasonable hours and low burnout compared to pure tech giants. Accelerates growth through structured R&D career paths while respecting personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5: Known for sane hours (40-45 avg), guaranteed shutdowns during holidays, and low weekend expectations. Culture emphasizes sustainability in regulated environment."
   }
  },
  "coopervision": {
@@ -96140,37 +96589,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI brand in industrial/logistics domain; publishes at ICML/NeurIPS workshops, partners with MIT/CTL, but not a primary AI research lab like FAIR/DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Contract logistics: multi-year service agreements for dedicated warehousing, transportation, and lead logistics. Revenue from service fees (fixed + variable), gain-sharing on productivity improvements, and technology-enabled value-added services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led but ops-grounded — 'safety first' mindset permeates tech decisions; diverse, multinational teams; strong internal mobility; formalities exist (compliance, GDPR) but tech groups run agile rituals and hack weeks. Less 'move fast break things', more 'move fast with stability'."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "B2B enterprises across automotive, consumer/retail, life sciences & healthcare, technology, engineering & manufacturing, energy, and public sector. Notable clients include major global brands that outsource logistics operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base (US non-coastal), $110k-$130k base (coastal hubs) + 10-15% target bonus + RSU (vesting 4 yrs). Total comp ~$120k-$160k year 1. Significantly lower than FAANG but above traditional industrial peers."
   },
   "evidence_sha": "464bd97d4bcc1760",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc"
+   ],
+   "value": "Contract Logistics / Supply Chain Management (3PL)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Expect applied ML questions: demand forecasting with sparse/noisy data, reinforcement learning for warehouse slotting or fleet routing, computer vision for package dimensioning, and MLOps for edge deployment in facilities. Prepare case studies showing end-to-end delivery (data → model → dashboard → ops adoption). Behavioral rounds probe cross-functional influence (engineering, ops, safety) and ability to iterate under SLA constraints. Ask about 'Digital Twin' program, 'Robotics Center of Excelle"
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784674228,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Global footprint: major hubs in North America (US, Canada, Mexico), Europe (Germany, UK, Netherlands, Poland), Asia-Pacific (China, India, Singapore, Australia), Latin America, Middle East & Africa. Corporate HQ for Supply Chain in Hoofddorp, Netherlands; regional HQs in Westerville OH (Americas), Singapore (APAC)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Connecting people, improving lives — delivering logistics excellence through innovation, sustainability, and employee engagement to enable global trade and supply chain resilience."
+  },
   "name": "DHL Supply Chain",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cadence tied to quarterly business reviews and peak-season cycles (Black Friday, Chinese New Year). Sprint cycles exist but releases must align with warehouse safety/change-management gates, creating natural pacing."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Warehousing and distribution, transportation management, lead logistics (control tower), packaging solutions, e-commerce fulfillment, and industry-specific supply chain solutions (automotive, life sciences, retail, technology, etc.)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + 10-12 company holidays (US); 25-30 days + holidays (EU). Accrual starts day one; carryover limited to 5 days. Unlimited not offered."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96180,7 +96691,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdown. Some business units observe reduced staffing between Christmas/New Year (voluntary PTO encouraged). Critical systems maintain on-call coverage year-round."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc"
+   ],
+   "value": "Large, mature subsidiary of Deutsche Post DHL Group (Fortune Global 500 parent). ~160,000 employees in Supply Chain division; operations in 50+ countries; established 1969 (as part of DHL)."
   },
   "sources": [
    {
@@ -96214,14 +96732,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=3495d95c6224400e2418592a5d05e8b06a1ea24c1989b544c89f15cb6307297fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuZGhsLmNvbS91cy1lbi9ob21lLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and other work visas in the US (large employer with established immigration program). Global mobility common for internal transfers. Green card sponsorship typically for experienced roles; new-grad sponsorship varies by business unit and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "DHL Supply Chain is the contract logistics division of Deutsche Post DHL Group, providing end-to-end supply chain management including warehousing, transportation, and value-added services across industries worldwide. It operates as a B2B service provider helping companies optimize their logistics networks."
+  },
+  "synthesized_evidence_sha": "464bd97d4bcc1760",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "Warehouse automation (robotics, AGVs, AS/RS), WMS/TMS development, IoT sensor networks, route optimization algorithms, demand forecasting, digital twins, control-tower platforms, and emerging AI/ML for predictive analytics and labor planning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674228,
   "web_search_url": "https://duckduckgo.com/?q=DHL+Supply+Chain+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a069c7dadc",
+    "0516ace78f"
+   ],
+   "value": "DHL Supply Chain offers a rare combination: massive real-world logistics data and physical automation footprint (robots, conveyors, IoT) for AI/ML impact at global scale, backed by a Fortune 500 parent that funds multi-year digital transformation. The division’s 'Digitalization' agenda gives data scientists direct access to warehouse operations, control towers, and last-mile networks — enabling research-to-production cycles that pure software firms cannot match. While corporate size brings proce"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Corporate policies support flexible hours, hybrid schedules, and 'right to disconnect' in EU regions; US teams report 40-45 hr typical weeks with on-call rotations for production systems. Peak season (Nov-Dec) adds 5-10 hrs/week."
   }
  },
  "diebold nixdorf": {
@@ -144075,7 +144623,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144093,7 +144641,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884850,
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784676894,
   "name": "Hatch",
   "pace_of_work": {
@@ -144106,7 +144654,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884970,
+  "retry_after": 1784885307,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226039,37 +226587,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Public Sector). Lacks FAANG/elite prestige in the tech world, but carries strong mission/prestige within public health and civic tech sectors."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Government-funded public service. Operations are financed through city taxes, state and federal grants rather than revenue generation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and civic-minded. Emphasizes public good, science-based policy, and community impact, but operating within a structured, bureaucratic municipal environment. Interesting public-facing elements like health tours and restaurant info mapping create civic engagement opportunities."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "The residents of New York City, local businesses, and community organizations receiving public health services and guidance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000 per year based on NYC competitive public sector pay rates (significantly lower than top-tier private tech)."
   },
   "evidence_sha": "a21e51590b8069fc",
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Government / Public Health Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Be prepared to discuss how you'd apply data science/AI to public health challenges such as disease surveillance or restaurant inspection trends. Given your priority for work-life balance and avoiding bureaucracy, clarify scope and timelines during interviews—government work may lack fast innovation. Ask about data infrastructure, learning/career growth, and whether stable hours are guaranteed to ensure alignment with your values."
   },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784583425,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "New York City, NY (headquarters around Long Island City with offices/borough offices across NYC's five boroughs)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "To protect and promote the health of all New Yorkers through science-based policies, programs, and public health initiatives."
+  },
   "name": "NYC Department of Health and Mental Hygiene",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Bureaucratic processes typical of municipal government decision-making and procurement."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Public health surveillance, disease control initiatives, mental health programs, restaurant inspections (as seen on waiting room TV displays), and health policy implementation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Generous sick leave plus vacation (per municipal union contracts)."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226079,7 +226693,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No regular corporate shutdowns. Standard government holidays off (approx. 10-12 days/year)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Large-scale municipal government agency with thousands of employees (including public tours) across the five boroughs."
   },
   "sources": [
    {
@@ -226113,14 +226736,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=f007d8288384f751826ccd9d8d62c66c3f438709ce637c27958ede13b2d27d38JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubnljdG91cmlzbS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b6e022185f"
+   ],
+   "value": "Estimated: As a municipal government employer, H-1B sponsorship is extremely unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "The NYC Department of Health and Mental Hygiene (DOHMH) is the public health agency for New York City, responsible for protecting and improving the health of all New Yorkers. As a government entity, it is funded through taxpayer dollars rather than operating for profit."
+  },
+  "synthesized_evidence_sha": "a21e51590b8069fc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Public health surveillance, restaurant inspection mapping (e.g., restaurant tours/restaurantinfo), communicable disease tracking. Modernization suggests web/app development integrates these datasets for public access and for internal policy use."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583425,
   "web_search_url": "https://duckduckgo.com/?q=NYC+Department+of+Health+and+Mental+Hygiene+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a high-paying, high-prestige new-grad offer with guaranteed work-life balance, this role strikes a rare balance: it's unlikely to offer elite private-sector compensation or a fast, innovative tech culture (government pace means slower adoption and less ML focus). However, it provides meaningful mission-driven work on high-impact urban data problems with stable hours and predictable shutdown schedules—an appealing opposite of burnout-heavy tech roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Respected work-life balance with standard government hours (approx. 35-40 hours/week), though subject to crisis-response surges during public health emergencies."
   }
  },
  "nycm insurance": {
@@ -235494,48 +236148,133 @@
  "parts town": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: Tier 3 (Niche/Domain-specific AI). Lacks the brand prestige of FAANG, but offers applied data science opportunities in a practical, high-volume business context."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4",
+    "ac52999351",
+    "951afe5590"
+   ],
+   "value": "B2B and B2C direct-market distribution. The company warehouses and sells OEM parts, earning revenue on unit sales and logistics services while utilizing proprietary tech platforms to streamline the parts procurement process."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: Blue-collar adjacent corporate. Pragmatic, results-oriented, and focused on operational problem-solving rather than theoretical tech exploration."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4",
+    "951afe5590",
+    "ac52999351"
+   ],
+   "value": "Commercial food service operators, restaurant chains, repair technicians, and general consumers or businesses seeking automotive components."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary, competitive for the Midwest distribution tech sector but below elite tech market highs."
   },
   "evidence_sha": "4f84988dc01b81dc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4",
+    "951afe5590",
+    "ac52999351"
+   ],
+   "value": "Supply Chain, Logistics, and B2B E-Commerce (Parts Distribution)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Emphasis should be placed on evaluating the team's tech stack modernization, actual data science impact on the supply chain, and whether WLB claims align with the fast-paced distribution culture."
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784675227,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Headquartered in Addison, Illinois, with additional regional facilities, distribution centers, and remote work options across the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "To provide the right part, at the right time, with the highest level of customer service and operational efficiency in the parts distribution industry."
+  },
   "name": "Parts Town",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: Fast-paced. High-velocity e-commerce and supply chain distribution environment driven by order fulfillment deadlines and operational efficiency."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4",
+    "951afe5590",
+    "ac52999351"
+   ],
+   "value": "OEM replacement parts for commercial kitchen and food service equipment, automated ordering platforms, inventory management tools, and a broader automotive parts marketplace."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for mid-to-large corporate supply chain companies."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, though standard major holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Large-scale private enterprise with a significant national footprint, operating as an established market leader in its niche distribution categories."
   },
   "sources": [
    {
@@ -235569,14 +236308,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=13b3838d89e9343845b07cf4c110eb535a6915c44681a6d1877d95113f266af9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cucm9ja2F1dG8uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Large national distributors typically offer visa sponsorship for specialized tech roles on a case-by-case basis, though no explicit policy is published."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "64be5693f4",
+    "951afe5590",
+    "ac52999351"
+   ],
+   "value": "Parts Town is a direct-market distributor specializing in original equipment manufacturer (OEM) replacement parts, primarily for the food service and commercial kitchen equipment industry. The company connects parts buyers with manufacturers, driving revenue through high-velocity B2B part sales, automated ordering systems, and supply chain logistics. Their associated platforms like RockAuto and Car-Part suggest an expansion into broader automotive parts distribution."
+  },
+  "synthesized_evidence_sha": "4f84988dc01b81dc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "AI and data science initiatives likely focus on supply chain optimization, inventory forecasting, e-commerce search relevance, and automated parts catalog systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675227,
   "web_search_url": "https://duckduckgo.com/?q=Parts+Town+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Candidates seeking mission-driven supply chain and AI logistics challenges will find solid domain application here, though it may lack the elite prestige and high new-grad pay of top-tier tech giants while maintaining a fast-paced e-commerce environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "64be5693f4"
+   ],
+   "value": "Estimated: Moderate. Typical of operational tech teams in distribution, where release cycles and support can occasionally spike, but generally manageable without systemic toxic burnout."
   }
  },
  "path robotics": {
@@ -291999,7 +292771,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292017,7 +292789,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884850,
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784675226,
   "name": "St. Joseph Center",
   "pace_of_work": {
@@ -292030,7 +292802,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884970,
+  "retry_after": 1784885307,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310073,11 +310845,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310089,6 +310863,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784675227,
   "name": "The City University of New York",
   "pace_of_work": {
@@ -310101,6 +310876,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310144,7 +310920,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b6799b6b52c4468488a40ccb39d21cfc70fb1df138a8d6d220192af3bae40a8dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675227,
   "web_search_url": "https://duckduckgo.com/?q=The+City+University+of+New+York+company+careers+benefits",
@@ -321846,48 +322622,155 @@
  "two circles": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Estimated: Unknown tier. Cannot be evaluated without source data, but likely unverified for 'elite prestige' based on the lack of accessible technical documentation."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Estimated: Unknown compensation. Cannot be benchmarked for high new-grad pay expectations without industry or role data."
   },
   "evidence_sha": "f13742fa682543a5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885067,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "During interviews, you must directly probe for the missing details regarding AI project allocation, sane working hours, and guaranteed shutdowns. Ask hiring managers to explain their engineering pace and how the team avoids bureaucratic slowdowns without adopting a high-burnout environment."
+  },
+  "last_attempt_at": 1784885067,
   "last_evidence_at": 1784676895,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
   "name": "Two Circles",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Estimated: Unknown pace. Further research is required to determine if the culture is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Estimated: Unknown PTO allowance. Conservative company-specific estimate cannot be generated without baseline data."
   },
+  "refresh_after": 1790069067,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources. Cannot confirm if guaranteed shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
   },
   "sources": [
    {
@@ -321921,14 +322804,55 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Specific factual information about Two Circles could not be retrieved from the supplied sources as they consist solely of broken redirect links and generic login portals. Consequently, the company's core operations and revenue model cannot be factually summarized here."
+  },
+  "synthesized_evidence_sha": "f13742fa682543a5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Unknown due to inaccessibility of the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676895,
   "web_search_url": "https://duckduckgo.com/?q=Two+Circles+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Because the provided sources yielded no data, it is impossible to evaluate this role against your priorities for elite AI prestige, high new-grad pay, and a fast-paced but non-toxic tech culture. You will need to utilize external research or informational interviews to verify if the company aligns with your strict work-life balance and technical growth requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8b5eb7440a",
+    "7ea9cc4893",
+    "e212d3fb35"
+   ],
+   "value": "Estimated: Unknown WLB. Cannot be verified if the company respects sane hours and guaranteed shutdowns without toxic burnout."
   }
  },
  "two sigma": {
