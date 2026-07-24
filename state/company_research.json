@@ -143064,41 +143064,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche/Tier 2. While it is highly respected in enterprise insurtech, it is not considered an 'elite prestige' AI/Data Science company on par with big tech or top AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "B2B enterprise software licensing and subscription-based models, providing scalable solutions to insurance carriers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and stable. Focuses on sustainable work practices and technical learning without sacrificing personal time."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Property and casualty (P&C) insurance carriers worldwide seeking to modernize their core systems and digitize their operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $135,000 base salary, competitive for enterprise software but lower than top-tier big tech/quant roles."
   },
   "evidence_sha": "5645ad1d4386cc53",
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Enterprise Software / Insurance Technology (InsurTech)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize how your data science and AI skills can drive practical innovation and efficiency in a large-scale, mission-critical enterprise context. Prove your ability to navigate collaborative, structured environments where work-life balance is valued, showcasing that you can learn quickly and grow technically without burning out."
   },
-  "last_attempt_at": 1784885874,
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784674426,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Global operations, with a strong presence in the United States and various international offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "To provide the digital platform that P&C insurers rely upon to effectively engage and insure their policyholders."
+  },
   "name": "Guidewire",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and deliberate. Pace is steady and project-based rather than hyper-fast; typical of large, established enterprise companies."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "A comprehensive software suite encompassing core insurance operations (underwriting, policy administration, billing, claims management), data and analytics platforms, and digital engagement tools for insurers and their customers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible vacation, typical for a large established enterprise tech company."
   },
-  "retry_after": 1784885994,
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -143109,6 +143165,14 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Established, large-cap public enterprise software company."
   },
   "sources": [
    {
@@ -143132,14 +143196,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=4fec018e6f5d32554de59da8f8f44fd03a8af4f897f388e8bff8d745fdd05c23JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuZ3VpZGV3aXJlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large, established public enterprise software company, likely offers visa sponsorship for specialized senior or hard-to-fill technical roles, but may be more conservative for standard new-grad positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Guidewire develops enterprise software specifically for the property and casualty (P&C) insurance industry. It generates revenue by licensing its suite of core operational systems, data management, and digital engagement platforms to insurers, driving both the backbone of their operations and their customer-facing interactions."
+  },
+  "synthesized_evidence_sha": "5645ad1d4386cc53",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1a848fb7f6",
+    "17f750b1b6"
+   ],
+   "value": "Developing large-scale enterprise platforms spanning core operations, data analytics, and cloud-based digital products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674426,
   "web_search_url": "https://duckduckgo.com/?q=Guidewire+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns with the mission-driven focus by providing critical infrastructure that helps insurers protect people and businesses. While it offers stable, high-tier new-grad pay and respects work-life balance with sane hours, the culture leans toward established enterprise processes rather than a hyper-fast, cutting-edge AI startup environment, meaning bureaucracy may be more prevalent than rapid innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known for respecting personal time with sane hours and avoiding toxic, high-burnout cultures."
   }
  },
  "gulfstream": {
@@ -159639,37 +159730,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not an AI-centric firm; data-science roles are applied analytics supporting equipment health and process optimization, not core product innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Designs and manufactures proprietary engineered components and systems; sells directly and through distributors with recurring aftermarket revenue from parts, service, and consumables; grows via bolt-on acquisitions in adjacent fluid-control niches."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-conscious, continuous-improvement (Lean/Kaizen) mindset; collaborative but hierarchical; long-tenure workforce values stability and deep domain mastery."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "OEMs and end-users in pharmaceutical/bioprocessing, analytical instrumentation, food & beverage, chemical processing, agriculture, municipal fire departments, and specialty vehicle builders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000–$95,000 base + 5–10% annual bonus + RSU grant (~$5–10k vesting over 3–4 yrs); total first-year ~$90–110k."
   },
   "evidence_sha": "6cfa7861975ab7a0",
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Industrial Machinery / Fluid Handling & Controls (Specialty Engineered Products)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on cross-functional collaboration, root-cause problem solving in hardware, and adaptability to acquisition integration; technical screens emphasize fluid-mechanics fundamentals, GD&T, FEA/CFD basics, and Python/Matlab for data analysis — not LeetCode-style algorithms."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784680816,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Lake Forest, IL (USA); major engineering/manufacturing sites in North America, Europe (Germany, UK, Italy), and Asia (China, India, Singapore); hybrid office/factory presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver trusted, mission-critical fluidics solutions that enable customers to improve productivity, safety, and sustainability in demanding applications."
+  },
   "name": "IDEX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — project cycles measured in quarters; structured stage-gate development; minimal crunch culture but slower iteration than pure-software shops."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Precision fluid-handling equipment including metering pumps, diaphragm valves, rotary lobe pumps, sanitary fittings, banders, and firefighting foam systems, plus related aftermarket parts and services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days vacation + 10 company holidays + 2 floating days (accrual increases with tenure)."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159679,7 +159812,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24 – Jan 1) plus standard US federal holidays; no additional mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NYSE: IEX); ~$3.2B annual revenue, ~7,800 employees globally; mature, acquisitive industrial conglomerate."
   },
   "sources": [
    {
@@ -159713,14 +159851,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0543d723ceb73463f2219648d03c464fce2568f81d08611a1e0120f584b14e2eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly9pZGV4Y29ycC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regular H-1B sponsor for specialized engineering, supply-chain, and IT roles; green-card support typical for advanced-degree hires in R&D and global operations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IDEX Corporation (NYSE: IEX) is a diversified industrial manufacturer that designs, produces, and sells highly engineered fluidics systems, specialty valves, pumps, and flow-control components for niche markets in life sciences, industrial technology, and fire & safety."
+  },
+  "synthesized_evidence_sha": "6cfa7861975ab7a0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core R&D spans mechanical engineering, fluid dynamics, materials science, precision machining, and embedded controls/firmware; emerging data-science roles focus on predictive maintenance, process analytics, and IoT-enabled equipment monitoring rather than core AI product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680816,
   "web_search_url": "https://duckduckgo.com/?q=IDEX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite industrial-engineering prestige and competitive new-grad compensation (~$80–95k base + bonus) within a stable, acquisition-driven culture that respects standard corporate work-life norms (40–45 hr weeks, predictable shutdowns) — but is not an AI-first or high-velocity software environment; technical growth comes from deep domain expertise in fluidics and cross-functional project rotations rather than cutting-edge ML research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good — typical 40–45 hr week, respected holidays, limited on-call for field-service escalations; corporate shutdown week between Christmas and New Year."
   }
  },
  "idexcel": {
@@ -187182,49 +187341,128 @@
  },
  "lexisnexis legal professional": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "Tier 2. Highly respected in legal AI and NLP, but focused on a specific vertical rather than general AI/tech prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "B2B SaaS and subscription information services, charging recurring fees for access to proprietary legal databases and analytics tools."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "Estimated: Corporate, mission-oriented, and professional. Emphasizes accuracy and rule of law, which may create a more structured, bureaucratic environment."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "501b84c680",
+    "b342807711"
+   ],
+   "value": "Law firms, corporate legal departments, government agencies, and academic institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "Estimated: $90k - $120k. Good corporate pay, but typically below the elite $150k+ new-grad pay of top-tier tech firms."
   },
   "evidence_sha": "3a38aaf59dc0c802",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b342807711"
+   ],
+   "value": "Information Services / Legal Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab44b43a8"
+   ],
+   "value": "Probe the team's tech stack modernization, AI project timelines, and engineering culture. Assess whether the role offers competitive new-grad compensation, accelerated technical learning, and sane hours without the typical bureaucracy of a legacy enterprise."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784679086,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "Global operations with major tech hubs in the United States (e.g., Raleigh, NC; New York, NY; Dayton, OH) and the UK."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6ab44b43a8"
+   ],
+   "value": "To advance the rule of law by providing high-quality, accurate legal information and analytics to legal professionals globally."
+  },
   "name": "LexisNexis Legal & Professional",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6ab44b43a8"
+   ],
+   "value": "Estimated: Moderate. Balances enterprise product cycles with innovation in legal AI, though likely slower than pure-tech startups due to corporate structure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "501b84c680",
+    "6ab44b43a8"
+   ],
+   "value": "Subscription-based legal research databases (Lexis+), regulatory compliance solutions, litigation analytics, and AI-driven legal software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6ab44b43a8"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, standard for a large enterprise in the information sector."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6ab44b43a8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b342807711"
+   ],
+   "value": "Estimated: Likely offers standard public holidays, but no widespread evidence of guaranteed company-wide shutdowns beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b342807711"
+   ],
+   "value": "Large, established enterprise. LexisNexis is a subsidiary of RELX, a multinational information and analytics conglomerate."
   },
   "sources": [
    {
@@ -187258,14 +187496,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=870be266cde49b8172d103f2ce53bc7aa9073d4aca747c8917603f79d71edb19JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cubGV4aXNuZXhpcy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b342807711"
+   ],
+   "value": "Estimated: As a large global corporation and tech employer, it likely offers H-1B sponsorship and OPT support for specialized tech roles, though exact policies vary by role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "501b84c680",
+    "6ab44b43a8",
+    "b342807711"
+   ],
+   "value": "LexisNexis Legal & Professional is a leading global provider of legal, regulatory, and business information and analytics. It makes money by offering subscription-based access to its vast databases, research tools, and SaaS platforms to legal and corporate professionals. [Source URLs were non-text/redirecting pages, but LexisNexis is fundamentally known as a legal information and analytics provider owned by RELX]."
+  },
+  "synthesized_evidence_sha": "3a38aaf59dc0c802",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6ab44b43a8"
+   ],
+   "value": "Involves building large-scale data pipelines, information retrieval systems, NLP models for legal document analysis, and enterprise SaaS architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679086,
   "web_search_url": "https://duckduckgo.com/?q=LexisNexis+Legal+%26+Professional+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "501b84c680"
+   ],
+   "value": "Provides elite corporate stability and mission-driven work advancing the rule of law. The large enterprise nature may conflict with a fast, innovative tech culture and high new-grad pay, potentially offering slower technical learning and more bureaucracy than a pure tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b342807711"
+   ],
+   "value": "Estimated: Industry-standard WLB. Generally sustainable hours typical of a large legacy tech employer, avoiding high-burnout startup culture."
   }
  },
  "lexisnexis risk solutions": {
@@ -191932,7 +192203,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191950,7 +192221,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784885874,
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784678560,
   "name": "Louisiana State University (LSU)",
   "pace_of_work": {
@@ -191963,7 +192234,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784885994,
+  "retry_after": 1784886312,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -211495,52 +211766,126 @@
  "monster energy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: Low. The company is not known for elite AI or Data Science research, functioning primarily as a beverage manufacturer rather than a tech-first innovator."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796",
+    "bd5a0d1bb0"
+   ],
+   "value": "Manufactures and distributes energy beverages physically and wholesale to retail outlets, complemented by direct-to-consumer sales of branded apparel and gear."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "High-energy, action sports, and lifestyle-focused, geared towards athletes and gamers. Tech culture is likely secondary to the core marketing and distribution business."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Action sports participants, athletes, gamers, and general consumers looking for energy and lifestyle beverage products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: $85,000 - $110,000. Solid new-grad pay for enterprise IT, but significantly lower than the 'elite new-grad pay' ($180k+) seen at top-tier tech firms."
   },
   "evidence_sha": "c05e25fb960c807f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784885671,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Beverage Manufacturing and Consumer Packaged Goods (CPG)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Candidates should determine if the specific role involves cutting-edge ML/AI work or general IT support. Ask detailed questions about tech stack modernity, the actual hours required to avoid a toxic or high-burnout environment, and whether technical career growth is prioritized alongside personal time."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784676903,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Headquartered in Corona, California, with global distribution and operational hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "To support the lifestyle of athletes, gamers, and active individuals by providing energy beverages and promoting an associated high-energy, action-sports culture."
+  },
   "name": "Monster Energy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: Moderate to fast due to consumer marketing cycles, but likely lacking the rapid iterative innovation culture of top-tier tech firms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Energy drinks, hydration beverages, coffee blends, juice products, and branded lifestyle apparel and gear."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: 15-20 days of annual PTO, consistent with standard corporate CPG benefits."
   },
-  "retry_after": 1784885911,
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5ed50e454d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: Standard corporate holidays. No evidence of guaranteed company-wide tech shutdowns to prevent burnout."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Established, large-scale global private corporation."
   },
   "sources": [
    {
@@ -211574,14 +211919,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=39499efedf7c9daa0dca8763a1ce39a09b215085d1f0683d1922a3060932c623JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cubW9uc3Rlci5jb20vP21zb2NraWQ9MDE4NjNjYjNlYzJkNjI3MTI2OGMyYjJlZWRjMjYzNDk&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796"
+   ],
+   "value": "Sponsorship of action sports, athletes, musicians, and gaming events. Technical immigration sponsorship is not explicitly detailed in company postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e4342b796",
+    "5ed50e454d",
+    "bd5a0d1bb0"
+   ],
+   "value": "Monster Energy is a global beverage brand that develops, markets, and sells energy drinks and related lifestyle products, including apparel and gear. The company makes money primarily through the wholesale distribution of its beverages to retail channels, supermarkets, and convenience stores worldwide."
+  },
+  "synthesized_evidence_sha": "c05e25fb960c807f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "General IT functions supporting global operations, digital marketing platforms, and enterprise data systems. Highly elite AI/Data Science or innovative new-grad tech rotational roles are not prominently featured."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=Monster+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "While Monster is a flagship lifestyle brand, its core business does not typically offer top-tier AI/Data Science prestige or elite new-grad tech rotational programs. The tech culture may lack the fast-paced, cutting-edge innovation of big tech, potentially feeling more bureaucratic and traditional."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5ed50e454d"
+   ],
+   "value": "Estimated: Moderate. Likely varies heavily by team, but traditional CPG structures may lack the guaranteed shutdowns or flexible hours found in tech-forward companies."
   }
  },
  "montage health": {
@@ -221167,7 +221545,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221185,7 +221563,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784885671,
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784588246,
   "name": "NewYork-Presbyterian Hospital",
   "pace_of_work": {
@@ -221198,7 +221576,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784885911,
+  "retry_after": 1784886552,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246106,48 +246484,137 @@
  "planetscape ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "Estimated: Unknown, but based on the company name, likely operates in the AI/Spatial Data sector."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "Estimated: Tech-focused and collaborative, prioritizing technical learning and career growth."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Top-tier compensation likely ranges between $150,000 - $200,000 base."
   },
   "evidence_sha": "4f51ce8e790ebbd7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Probe for specifics on guaranteed shutdowns, sane working hours, and actual day-to-day pace to ensure it matches the fast, innovative, yet non-toxic environment desired. Ask about mentorship for new grads and how technical learning is accelerated without sacrificing personal time."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784677667,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
   "name": "PlanetScape AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of an AI startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days, standard for emerging tech startups."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "Estimated: None found in research, though the candidate desires guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
   },
   "sources": [
    {
@@ -246181,14 +246648,53 @@
     "url": "https://www.bing.com/ck/a?!&&p=859b1fd297270be0fb71fbaf995711f7a434f6e5492a929ed7d9eb86b6c7250bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Specific factual details about PlanetScape AI could not be retrieved from the provided sources, as all three returned empty redirect pages. Verify the company's existence or check the source links for correct retrieval."
+  },
+  "synthesized_evidence_sha": "4f51ce8e790ebbd7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Unknown due to inaccessible source links."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677667,
   "web_search_url": "https://duckduckgo.com/?q=PlanetScape+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "90a1c8bd7c",
+    "ad6ac99851",
+    "bd920b7534"
+   ],
+   "value": "Targeting a top-tier AI or data science role here means finding a balance of elite prestige and high pay without the slow bureaucracy. Confirm during interviews that PlanetScape AI truly respects work-life balance, avoids toxic burnout, and actively accelerates technical learning in a fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "90a1c8bd7c"
+   ],
+   "value": "Estimated: Moderate to Good, assuming sane hours and a mission-driven culture."
   }
  },
  "playstation": {
@@ -275500,48 +276006,120 @@
  "samsung": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8322b6ca32"
+   ],
+   "value": "Tier 1 (Samsung Research centers are highly prestigious in AI, silicon, and on-device ML, though secondary to software-native peers)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4",
+    "8322b6ca32"
+   ],
+   "value": "Generates revenue through the mass manufacturing and global sale of consumer electronics, mobile devices, and semiconductor components."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, formal corporate structure (especially in South Korean HQ) mixed with innovative engineering teams; respects hierarchy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f814b25179",
+    "8322b6ca32"
+   ],
+   "value": "Global consumers for electronics and enterprise businesses for semiconductor components and display panels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $150,000 base salary for US new-grad AI/data software roles (excluding sign-on bonuses, equity, and location adjustments)."
   },
   "evidence_sha": "c0c53ffafbe07e6e",
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4"
+   ],
+   "value": "Consumer Electronics and Semiconductor Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To ensure the role meets your goals, ask specific questions about the team's internal pacing versus corporate bureaucracy, actual sprint hours, and on-call expectations to verify their commitment to sane hours. Clarify new-compensation structures to guarantee you secure top-tier pay while confirming that technical learning growth is matched by realistic shutdown and PTO usage."
   },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784680812,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4",
+    "f814b25179"
+   ],
+   "value": "Headquartered in South Korea with major tech and R&D hubs in the US (Silicon Valley, Austin, New Jersey) and worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b1afaa7e4"
+   ],
+   "value": "Inspire the world with innovative technologies, products, and designs that enrich people's lives and contribute to a better global society."
+  },
   "name": "Samsung",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-Fast; project-driven but constrained by corporate bureaucracy and legacy hardware cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4",
+    "8322b6ca32"
+   ],
+   "value": "Smartphones, televisions, home appliances, memory chips (DRAM, NAND flash), display panels, and semiconductor manufacturing nodes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f814b25179"
+   ],
+   "value": "Estimated: 15-20 days of accrued vacation for new US hires, with slight variations based on tenure and sick leave."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f814b25179",
+    "8322b6ca32"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide holiday shutdowns, though major US holidays and lunar holidays are typically observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4"
+   ],
+   "value": "Large-cap, established, publicly-traded global enterprise."
   },
   "sources": [
    {
@@ -275575,14 +276153,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=04ca75dbf0bc0f756f40f754392c60b3535ce23350d9eab0081097208852950aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cuc2Ftc3VuZy5jb20vdXMvP21zb2NraWQ9MjA4OTQxNjViYmNiNmEwYjIyMTY1NmZiYmFiYzZiMTI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "f814b25179"
+   ],
+   "value": "Known to sponsor visas for specialized engineering and AI roles in the US and other global tech hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1afaa7e4",
+    "f814b25179",
+    "8322b6ca32"
+   ],
+   "value": "Samsung is a multinational conglomerate producing consumer electronics, semiconductors, and telecommunications equipment. It makes money by manufacturing and selling hardware components like memory chips and displays, alongside finished consumer goods such as smartphones and televisions."
+  },
+  "synthesized_evidence_sha": "c0c53ffafbe07e6e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8322b6ca32"
+   ],
+   "value": "Hardware and silicon engineering, device software development, semiconductor process R&D, AI model research, and scale infrastructure management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680812,
   "web_search_url": "https://duckduckgo.com/?q=Samsung+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Samsung offers the elite scale and pay new grads seek, but its traditional Chaebol structure may feel bureaucratic and slow compared to fast-paced AI startups. The company drives significant technical learning in semiconductor and AI, though intense work cycles can challenge your need for strict work-life balance and protected personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; varies strictly by team, but silicon and AI research roles may face intense push cycles with pressured deadlines."
   }
  },
  "san diego state university": {
@@ -295622,43 +296229,113 @@
  },
  "st joseph center": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Cannot be determined accurately from redirect-only pages; check if the environment is mission-driven without toxic bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not found in research; compensation data unavailable in the provided sources."
   },
   "evidence_sha": "ba65fe734e308927",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784885462,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Candidates should probe deeply into the tech stack, expected hours, and AI initiatives, as the public sourcing failed to capture these details and it is unclear if the organization aligns with elite, fast-paced tech environments."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784675226,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
   "name": "St. Joseph Center",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Cannot be determined accurately from redirect-only pages; investigate during interviews to see if it matches a fast, innovative culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not found in research; exact policy must be requested from HR."
   },
-  "retry_after": 1784885942,
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -295668,7 +296345,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not found in research; no indication of guaranteed company shutdowns in the provided text."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
   },
   "sources": [
    {
@@ -295702,14 +296388,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=95688419ae4aea977d3f14d81f376b9958e91896d17c24994825cba75c51cddeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cubGFjb3VydC5jYS5nb3YvaG9tZQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Based on the provided sources, which only return redirect notices for the official St. Joseph Center webpage, a Los Angeles County government site, and a residential link, there is no accessible factual information to summarize what the company does or how it makes money."
+  },
+  "synthesized_evidence_sha": "ba65fe734e308927",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "Unknown due to source redirect limitations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=St.+Joseph+Center+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "8f95946448",
+    "8bc27e06bb",
+    "af8cb4afb8"
+   ],
+   "value": "The provided sources do not contain enough detail to assess this employer against the candidate's priorities for a top-tier AI role with high pay, fast culture, and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Cannot be determined accurately from redirect-only pages; investigate during interviews to confirm sane hours and lack of burnout."
   }
  },
  "st luke s university health network": {
@@ -331326,39 +332049,107 @@
  },
  "university of central florida": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "60655632ac",
+    "83de61903b"
+   ],
+   "value": "Strong academic tier (R1, nationally ranked CS/engineering, specialized institutes like IST and CREOL) but not an elite industry AI lab. Prestige is academic/research-oriented."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "Public university funding model: state appropriations, tuition and fees, research grants/contracts, auxiliary enterprises, and philanthropy."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "Large, diverse, collaborative academic culture. Emphasis on interdisciplinary research, student success, and community impact. Can feel decentralized and bureaucratic. Strong school spirit and growing innovation ecosystem in Orlando."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "60655632ac",
+    "83de61903b"
+   ],
+   "value": "Students (≈70,000+), research sponsors (federal agencies, industry partners), alumni, and the Central Florida community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000-$75,000 for research assistant/postdoc/entry-level IT roles. Faculty start higher ($90k-$120k+). Significantly below top-tier industry AI lab offers ($150k-$250k+)."
   },
   "evidence_sha": "acb9c6e4232ad2b9",
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "Higher Education / Public Research University"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on research methodology, grant experience, collaboration across disciplines, and commitment to education/service. Technical depth in your specialty (ML, CV, simulation, etc.) plus ability to communicate to non-experts. Ask about specific center funding stability, mentorship structure, and expectations for publications vs. deliverables."
   },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784679030,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "Main campus in Orlando, FL; additional campuses in Downtown Orlando, Lake Nona (medical), Rosen College (hospitality), and regional sites. Remote/hybrid options vary by department."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "To provide high-quality education, advance research and innovation, and serve the community through partnership and economic development."
+  },
   "name": "University of Central Florida",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, with academic cycles (semesters, grant timelines). Bureaucratic processes for procurement, hiring, and approvals. Research intensity varies by center and funding."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "60655632ac",
+    "83de61903b"
+   ],
+   "value": "Academic degree programs (bachelor's, master's, doctoral), research output, continuing education, and community outreach services. Key research areas include optics/photonics (CREOL), modeling & simulation (IST), engineering, computer science, and health sciences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: ~22-25 days annual leave + 12-14 paid holidays (including winter break shutdown) for full-time staff. Faculty have academic-year schedules with different leave structures."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331368,7 +332159,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes, annual winter break (typically ~10 business days between Christmas and New Year) where most university operations close. Additional closures for federal holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1f7d256d2e",
+    "83de61903b"
+   ],
+   "value": "Large, mature public university (established 1963) with ~70,000 students and ~12,000 faculty/staff. Classified as R1: Doctoral Universities – Very high research activity."
   },
   "sources": [
    {
@@ -331402,14 +332201,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=0b39fe9b7790f86189ba860c4b1d534505dd2a5d08249c941b766d524aa7131bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university, UCF sponsors H-1B visas for faculty and research roles; cap-exempt H-1B possible. OPT/CPT for student employees. Green card sponsorship for permanent positions (faculty, senior research) is available but competitive."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f7d256d2e",
+    "60655632ac",
+    "83de61903b"
+   ],
+   "value": "University of Central Florida (UCF) is a large public research university in Orlando, Florida, offering undergraduate, graduate, and professional degrees across 13 colleges. It operates as a state-funded institution with a focus on education, research, and community engagement."
+  },
+  "synthesized_evidence_sha": "acb9c6e4232ad2b9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "60655632ac",
+    "83de61903b"
+   ],
+   "value": "AI/data science roles exist in research centers (IST, CREOL, College of Engineering & Computer Science), IT operations, and academic departments. Work includes applied research, grant-funded projects, high-performance computing, and educational technology development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679030,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Central+Florida+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "UCF offers a mission-driven, large-scale research environment with strong AI/data science credentials (R1, specialized institutes) and generally reasonable work-life balance for staff roles. However, new-grad pay is significantly below industry elite tiers, pace can be bureaucratic, and 'fast innovative tech culture' is more academic than startup-like. Best fit if you prioritize mission, stability, and learning over top-tier compensation and speed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good for professional staff (standard 40hr weeks, generous holidays, winter shutdown). Faculty/research roles can be demanding with grant pressure, but generally more predictable than industry crunch cycles."
   }
  },
  "university of chicago": {
@@ -354699,37 +355526,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High, due to its pioneering agentic marketing platform (WPP Open) and elite positioning within AI-driven media, though slightly less core-tech focused than pure-play FAANG AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "B2B marketing and media services. The unit monetizes by providing large global brands with AI-driven media operations, data intelligence, and creative personalization at scale to drive their growth."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, client-focused, and innovation-driven, emphasizing 'exceptional talent' and trusted partnerships to deliver transformational growth."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "The world’s leading global brands seeking to navigate market change, capture new opportunities, and achieve transformational growth."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $115,000 base salary, aligning with large holding company media-tech compensation packages rather than elite pure-tech FAANG benchmarks."
   },
   "evidence_sha": "ff55ba010790230f",
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "Advertising, Marketing, and Media (AI-Driven Media Operations)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should advocate for a fast, innovative tech culture free of slow bureaucracy, emphasizing how their skills can accelerate career growth without sacrificing personal time. They should seek confirmation of sane hours and guaranteed shutdowns to ensure a top-tier, high-paying AI role respects work-life balance."
   },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784678870,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "Corporate operations are global, as it serves the world's leading brands by uniting media, data, and partnerships globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "To be the trusted growth partner for the world’s leading brands by helping them navigate change, capture opportunity, and deliver transformational growth."
+  },
   "name": "WPP Media",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, driven by client needs, global brand demands, and the deployment of emerging agentic AI platforms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "The core product is WPP Open, an AI-driven agentic marketing platform that leverages trusted data and intelligence to deliver creative personalization and media activation at scale."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-27 days of standard PTO, reflective of large multinational corporate media policies (varies by region and seniority)."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -354739,7 +355620,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard corporate holidays; no guaranteed firm-wide annual shutdown periods are public."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "A major corporate operating unit within WPP, a large global holding company. It leverages 'exceptional talent' and 'world-class partnerships' to service global brands."
   },
   "sources": [
    {
@@ -354783,14 +355671,41 @@
     "url": "https://job-boards.greenhouse.io/wppmedia/jobs/5366263008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "WPP's media operations frequently leverage 'world-class partnerships' to deliver growth and creative personalization for clients."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "WPP Media is the AI-driven media operating unit of WPP, functioning as a trusted growth partner for major global brands. By uniting media, data, and world-class partnerships through its pioneering agentic marketing platform, WPP Open, the unit delivers creative personalization at scale to drive transformational client growth."
+  },
+  "synthesized_evidence_sha": "ff55ba010790230f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5a928ddb9c"
+   ],
+   "value": "Involves operating a pioneering agentic marketing platform (WPP Open) that handles massive data intelligence pipelines to drive AI-powered creative personalization at scale. Engineering and data science teams focus on media, data operations, and platform scalability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678870,
   "web_search_url": "https://duckduckgo.com/?q=WPP+Media+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role places you at the intersection of applied AI and global media execution, offering strong technical learning in a mission-driven environment. It provides elite data science exposure in a space that requires sane hours and guaranteed shutdowns to avoid the high-burnout culture often found in tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, as large global agency networks often require balancing competing client priorities, though AI platform automation may streamline some workflows."
   }
  },
  "wr systems": {
@@ -359375,38 +360290,105 @@
  "zipline": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ddfe5d303d",
+    "17f8c9c419"
+   ],
+   "value": "High; applying AI to autonomous physical robotics and life-saving logistics offers elite, high-impact technical prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "B2C and B2B on-demand delivery services, utilizing a fleet of zero-emission autonomous drones to fulfill rapid logistics orders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ddfe5d303d",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Innovation-driven and mission-oriented, avoiding bureaucracy to focus on fast, life-saving tech delivery with zero emissions."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "General consumers and businesses needing fast, on-demand delivery of food, groceries, and medicine."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $150,000 - $180,000 base salary, reflecting elite new-grad pay for top-tier AI and data science talent."
   },
   "evidence_sha": "a99b875c711ce5cf",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886072,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Logistics and Autonomous Aviation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419",
+    "ddfe5d303d"
+   ],
+   "value": "Be prepared to discuss how your AI and data science skills scale safely and efficiently for real-time autonomous systems, emphasizing rapid innovation over slow corporate processes."
+  },
+  "last_attempt_at": 1784886072,
   "last_evidence_at": 1784742132,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Operates delivery networks in multiple locations including Dallas, TX."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "To deliver moments that matter, transforming logistics to save time and lives, with over 60,000 lives saved to date."
+  },
   "name": "Zipline",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, driven by rapid delivery metrics (e.g., 86-second delivery times) and a mission-critical operations environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Autonomous delivery drones and supporting logistics infrastructure/software used to достав goods directly to consumers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible PTO, supporting personal time alongside demanding technical work."
   },
+  "refresh_after": 1790070072,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -359417,6 +360399,14 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ddfe5d303d",
+    "17f8c9c419"
+   ],
+   "value": "Late-stage scale-up operating a massive commercial logistics network, evidenced by its '60K+ lives saved' and multi-city operations."
   },
   "sources": [
    {
@@ -359460,14 +360450,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Active new-grad technical hiring pipeline, though specific visa sponsorship details are not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Zipline operates an autonomous drone delivery network that provides the fastest way to get food, groceries, and medical supplies. It makes money by charging businesses and consumers for rapid, on-demand delivery services."
+  },
+  "synthesized_evidence_sha": "a99b875c711ce5cf",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ddfe5d303d",
+    "17f8c9c419"
+   ],
+   "value": "AI, data science, and robotics engineering for autonomous flight navigation, routing optimization, and logistics software systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742132,
   "web_search_url": "https://duckduckgo.com/?q=Zipline+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419",
+    "ddfe5d303d"
+   ],
+   "value": "Zipline aligns perfectly with a desire for elite, fast-paced AI/tech work that.Filters toxic bureaucracy while maintaining a mission-driven focus on saving lives and ensuring personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ddfe5d303d"
+   ],
+   "value": "Estimated: Strong work-life balance with sane hours, designed to support technical learning without burning out employees who execute the mission."
   }
  },
  "zocdoc": {
