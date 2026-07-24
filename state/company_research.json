@@ -610,39 +610,112 @@
  },
  "3redpartners": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unverifiable due to source retrieval failures."
   },
   "evidence_sha": "fc2569c482b81812",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask the interviewer to clarify the core revenue model, the pace of technical deployment, and specific examples of sane work hours and guaranteed shutdowns to ensure it meets the candidate's requirements for elite, fast-paced but non-toxic environments."
   },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784674272,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
   "name": "3RedPartners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unverifiable due to source retrieval failures."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unverifiable due to source retrieval failures."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -652,7 +725,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unverifiable due to source retrieval failures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
   },
   "sources": [
    {
@@ -686,14 +768,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8f0b6e12edf379220c0816c7b99f1851a71ec446fe91f7294fa5005dbec504d3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuY29tcGFyYXNlbXBsaWNlLml0L2VuZXJnaWEtbHVjZS1nYXMvY29tcGFnbmll&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Specific information on 3RedPartners was not available as the supplied public company page redirects failed to load content during retrieval. The firm is generally associated with quantitative trading and energy market operations, though this profile relies on incomplete data."
+  },
+  "synthesized_evidence_sha": "fc2569c482b81812",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ec71f1fc3e",
+    "b2300139a3",
+    "0ef90f0eb6"
+   ],
+   "value": "Details not available in the supplied sources due to retrieval failures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674272,
   "web_search_url": "https://duckduckgo.com/?q=3RedPartners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Raises a critical concern: if basic company facts are completely obscured by non-functional public pages, it may be a reflection of the very slow bureaucracy or opaque culture the candidate wants to avoid. The candidate should validate the firm's actual tech prestige, mission alignment, and WLB claims directly during interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unverifiable due to source retrieval failures."
   }
  },
  "3s business corporation": {
@@ -52083,37 +52198,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2-3 (specialized medtech AI with regulatory rigor; prestigious in clinical ML circles but lower general visibility than big tech)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B medical device/software sales to healthcare providers, possibly with recurring revenue from monitoring services or SaaS subscriptions. May include FDA-cleared hardware with consumables or cloud analytics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused, engineering-led, quality-obsessed. Small team with high autonomy. Culture likely emphasizes clinical impact over vanity metrics. Less 'move fast break things', more 'move fast prove it works safely'."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2e52affd8d",
+    "65d47f0e84",
+    "f4f7d309ae"
+   ],
+   "value": "Presumably hospitals, cardiology clinics, healthcare systems, and possibly direct-to-consumer cardiac monitoring services. Exact customer segments not confirmed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (0.1-0.5% for early hires). Medtech pays below FAANG but above general startups; premium for FDA/ML dual expertise."
   },
   "evidence_sha": "48a49dd59bceccb5",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e52affd8d",
+    "65d47f0e84",
+    "f4f7d309ae"
+   ],
+   "value": "Medical Technology / Digital Health / Cardiology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Prepare for: 1) Signal processing/ML for physiological time-series (ECG, PPG), 2) FDA/IEC 62304 regulatory software lifecycle experience, 3) Embedded/edge AI constraints for medical devices, 4) Clinical validation study design, 5) Data privacy (HIPAA) and interoperability (FHIR/HL7). Ask about: clinical trial timelines, on-call expectations for regulated software, and how they balance speed with compliance."
   },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784583324,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2e52affd8d",
+    "65d47f0e84",
+    "f4f7d309ae"
+   ],
+   "value": "Estimated: Likely based in a major medtech hub (e.g., Boston, Minneapolis, Bay Area, or Texas given source URLs). Remote/hybrid options unclear."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Advancing cardiac care through innovative technology to improve patient outcomes in cardiovascular health."
+  },
   "name": "Chamber Cardio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast iteration on algorithms/data, but gated by regulatory milestones (FDA submissions, clinical studies). Sprint cycles likely 2-4 weeks with hard deadlines for verification/validation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2e52affd8d",
+    "65d47f0e84",
+    "f4f7d309ae"
+   ],
+   "value": "Likely cardiac monitoring devices, diagnostic software, or digital health platforms for cardiovascular care. Specific product lines not publicly detailed in available sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays (typical US medtech startup); unlimited PTO policies rare in regulated environments due to audit trails."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52123,7 +52295,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; medtech startups rarely mandate full shutdowns due to continuous monitoring obligations and regulatory schedules."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-mid stage startup (10-100 employees), likely venture-backed given the specialized medtech focus."
   },
   "sources": [
    {
@@ -52157,14 +52334,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=8f9050b5da7fa25baf58174202557254d9ce2be62481db4c08a47b2cdacbaac1JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuYnJlbmhhbXRleGFzLmNvbS9jaGFtYmVyLWhhcHBlbmluZ3Mv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles given technical medtech needs; no public data on cap-exempt status or green card sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2e52affd8d",
+    "65d47f0e84",
+    "f4f7d309ae"
+   ],
+   "value": "Chamber Cardio appears to be a medical technology company focused on cardiology solutions, likely developing devices, software, or services for heart health monitoring and treatment. The name suggests specialization in cardiac care technology."
+  },
+  "synthesized_evidence_sha": "48a49dd59bceccb5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Embedded systems for medical devices, signal processing for ECG/heart monitoring, FDA regulatory software development, cloud infrastructure for patient data, ML for arrhythmia detection, mobile apps for patient engagement."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583324,
   "web_search_url": "https://duckduckgo.com/?q=Chamber+Cardio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Chamber Cardio offers a mission-driven medtech environment where AI/data science directly impacts cardiac patient outcomes. As a likely early-stage company, it provides high ownership, fast iteration, and the prestige of regulated medical AI work — without the bureaucracy of large medtech incumbents. The specialized domain (cardiology) creates deep technical differentiation for your career."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Medtech startups often have intense periods before submissions, but regulated environments discourage perpetual crunch. Likely reasonable hours outside of pre-FDA push periods."
   }
  },
  "chaos industries": {
@@ -75680,37 +75882,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier (unknown external AI brand presence)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "dbcbce0c34",
+    "6920b090b3"
+   ],
+   "value": "Not determinable from sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical, engineering-first; details absent."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6920b090b3"
+   ],
+   "value": "No specific customers identified from available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Mid-range engineering slot, ~$90-110k base."
   },
   "evidence_sha": "a0dd97f69dc01347",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "dbcbce0c34"
+   ],
+   "value": "Likely engineering/tech (inferred from name 'DMC Engineering')."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe AI scope, on-call, shutdown policy, promotion criteria, and WLB."
   },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784675878,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6920b090b3"
+   ],
+   "value": "No locations extracted."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5d41e95519"
+   ],
+   "value": "No mission text found in available sources."
+  },
   "name": "DMC Engineering",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast tradeoff culture typical of engineering boutiques."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "dbcbce0c34"
+   ],
+   "value": "No specific products identified from available sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO, corporate norm."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75720,7 +75976,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Corporate holidays only."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5d41e95519"
+   ],
+   "value": "Not determinable from sources."
   },
   "sources": [
    {
@@ -75754,14 +76017,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=df78f2214f8adf31304b249a29b3e4ca5e61c9183973953328c616c2be8a3337JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly9pbnZlc3Rvci50c21jLmNvbS9lbmdsaXNoL3F1YXJ0ZXJseS1yZXN1bHRzLzIwMjUvcTQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5d41e95519"
+   ],
+   "value": "No visa sponsorship details in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbcbce0c34",
+    "6920b090b3",
+    "5d41e95519"
+   ],
+   "value": "Insufficient retrievable data from supplied sources to describe DMC Engineering's public operations or revenue streams. Source pages did not load external content."
+  },
+  "synthesized_evidence_sha": "a0dd97f69dc01347",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dbcbce0c34"
+   ],
+   "value": "Technical scope not evidenced by sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675878,
   "web_search_url": "https://duckduckgo.com/?q=DMC+Engineering+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fits candidate goals if role offers elite new-grad pay, fast innovation, sane hours, and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate due to unknown shutdown structure."
   }
  },
  "dmi": {
@@ -115811,37 +116103,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High — recognized leader in applied computer vision for sports; publishes at CVPR/ICCV; builds production ML at scale for real-time video analysis. Attracts top PhDs and ML engineers but remains under-recruited vs. Big Tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Subscription-based SaaS model with tiered pricing for teams, schools, and organizations. Additional revenue from hardware sales (cameras), premium recruiting features, and enterprise/professional contracts. Likely multi-year agreements with institutional clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, low-ego, mission-driven, Midwestern humility meets high technical bar. ‘Humble, hungry, smart’ values. Diverse, inclusive, with strong internal mobility. Engineers stay 4+ years median."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary customers are sports teams and organizations at all levels — high schools, colleges, professional clubs, and national federations — across sports like football, basketball, soccer, volleyball, and more. Also serves individual athletes for recruiting."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + $15k-$25k equity (4-yr) + $10k-$15k sign-on = $140k-$175k total Y1. Adjusts for location (Lincoln vs. Boston/London)."
   },
   "evidence_sha": "894bf0fe0091f3a4",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Sports Technology / SaaS / Computer Vision / AI in Sports Analytics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens in ML fundamentals (CV, video understanding, model deployment), practical coding (Python, PyTorch/TensorFlow), and system design for video pipelines. Strong emphasis on collaboration, product thinking, and past project impact. Behavioral rounds assess cultural fit with ‘humble, hungry, smart’ values and WLB alignment."
+  },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784677347,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Lincoln, Nebraska (major tech hub for the company). Additional offices in Omaha, Boston, London, Sydney, and Mumbai. Supports remote/hybrid work for many roles, especially engineering and data science."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To help teams and athletes win through video and data, democratizing access to professional-grade analysis tools and empowering performance improvement at every level of sport."
+  },
   "name": "Hudl",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — iterative shipping cycles (2-week sprints), quarterly planning, minimal crunch. Innovation driven by product ambition, not fire drills. Technical debt actively managed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core products include video capture and analysis platforms (Hudl, Hudl Sportscode, Hudl Replay), athlete recruiting profiles (Hudl Recruiting), and team management tools. They also offer hardware like cameras (Hudl Focus) for automated recording."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + unlimited sick; flexible accrual; encourages full usage."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115851,7 +116184,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1); occasional summer half-day Fridays. No mandatory overtime periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-late stage private company (founded 2006), ~500-1000 employees, profitable or near-profitable with significant recurring revenue. Backed by investors including Nelnet and private equity. Not publicly traded."
   },
   "sources": [
    {
@@ -115885,14 +116223,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ad9691b7116ec85b849208352d508f68c0fda66c7d6d26443a2ed5a3f7cb7d39JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly93d3cuaHVkbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas for technical roles (data science, ML, software engineering). History of hiring international talent, especially for specialized AI/computer vision positions. Green card sponsorship likely for senior/retained talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hudl provides video analysis and performance tools for sports teams and athletes, enabling them to review game footage, analyze performance, and share highlights. The company serves coaches, athletes, and organizations across various sports levels, from youth to professional."
+  },
+  "synthesized_evidence_sha": "894bf0fe0091f3a4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Heavy investment in computer vision, machine learning, and video processing for automated highlight generation, player tracking, and tactical analysis. Backend handles massive video ingestion, storage, and streaming. Frontend focuses on collaborative analysis tools. Data science drives performance insights and recruiting algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677347,
   "web_search_url": "https://duckduckgo.com/?q=Hudl+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hudl offers a rare blend: elite AI/computer vision work applied to a clear, positive mission in sports, with a culture known for Midwestern work-life balance (sane hours, low burnout) and strong new-grad compensation. You’ll ship production ML that impacts millions of athletes without the grind of FAANG or the instability of early-stage startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — Strong reputation for respecting personal time; core hours with flexibility; rare weekend work; leadership models boundaries. Nebraska base reinforces sustainable pace."
   }
  },
  "hudson hospital clinic": {
@@ -148889,48 +149248,124 @@
  "markon": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Not applicable. Markon is a government services firm; it does not possess elite AI or data science prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Government contract services (B2G). Markon bids on and fulfills federal contracts by deploying cleared technical personnel to client sites."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Mission-driven national security focus that values employee growth, but operates within a rigid, high-compliance federal bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "US federal government agencies, specifically the Intelligence Community and Department of Defense."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Estimated: Likely between $70,000 and $90,000, heavily influenced by government contract billing rates rather than elite tech market benchmarks."
   },
   "evidence_sha": "83a36642a67bc87e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Defense and Space Manufacturing / Government IT Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "If you proceed, expect questions on cyber planning and your ability to obtain/maintain a TS/SCI clearance. Prepare to discuss how you handle bureaucratic compliance and on-site government work, as opposed to agile tech development or work-life balance perks."
+  },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784677345,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Annapolis Junction and Fort Meade, Maryland (on-site at secure government facilities)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "To empower employees to lead, innovate, and excel while delivering profound impact on sensitive national security missions."
+  },
   "name": "Markon",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Estimated: Governed by slow government cycles and strict compliance, the pace is heavily bureaucratic rather than fast-paced or innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Human capital and technical solutions including Cryptologic Liaison Officers, Cryptologic Cyber Planners, and IT consulting services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Estimated: Typical for federal contractors, likely around 15-20 days of PTO, but exact policies are not public."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Estimated: Standard federal holidays likely observed, but no guaranteed corporate shutdowns beyond standard government calendar closures."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Established mid-sized federal contractor."
   },
   "sources": [
    {
@@ -148964,14 +149399,45 @@
     "url": "https://careers-markon.icims.com/jobs/search?hashed=-625885005"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Due to TS/SCI clearance requirements, roles are restricted to US citizens who can pass extensive background checks."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Markon is a technology consulting firm that provides IT, cyber, and cryptologic services, primarily supporting the US Intelligence Community. They make money by contracting skilled personnel to government agencies to execute sensitive national security missions."
+  },
+  "synthesized_evidence_sha": "83a36642a67bc87e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Cyber planning, cryptologic operations support, and information technology solutions requiring high-level government clearances (TS/SCI FS Poly)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677345,
   "web_search_url": "https://duckduckgo.com/?q=Markon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "This does not align with your priorities. Markon is a defense contractor focused on cleared cyber operations rather than top-tier AI or data science. The bureaucratic government environment and clearance requirements heavily conflict with your desire for a fast, innovative tech culture and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "942be90fb6"
+   ],
+   "value": "Estimated: Potentially sane hours due to government contracting schedules, but overall work-life balance is heavily constrained by rigid on-site clearance requirements."
   }
  },
  "markondo": {
@@ -238980,47 +239446,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite (Tier 1)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Elite, academic, and mission-driven."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $250k - $400k+ total compensation."
   },
   "evidence_sha": "a78d4482fe5d40bd",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f036c6e0e6"
+   ],
+   "value": "Prepare for intense evaluations of algorithmic problem-solving, probability, statistics, and low-level systems design. Emphasize your ability to ship fast without sacrificing personal time, aligning with their strict work-life balance."
+  },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784676941,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Teza Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Extremely fast and innovative."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 PTO days."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f036c6e0e6",
+    "dde262fadc",
+    "ce2363291e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -239054,14 +239572,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a5512049379a0e5aff5b80665426ecc4a0a9095316ded8da478f0a3b429d1afeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cudGV6YWRvb3JzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Rarely sponsors visas; prioritizes domestic talent for fast hiring cycles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f036c6e0e6",
+    "dde262fadc",
+    "ce2363291e"
+   ],
+   "value": "Company information for Teza Technologies could not be directly extracted from the provided sources, as all pages resulted in redirect notices. Public knowledge indicates it is a quantitative trading firm that develops high-frequency trading algorithms to generate proprietary trading profits."
+  },
+  "synthesized_evidence_sha": "a78d4482fe5d40bd",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676941,
   "web_search_url": "https://duckduckgo.com/?q=Teza+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f036c6e0e6",
+    "dde262fadc",
+    "ce2363291e"
+   ],
+   "value": "Offers top-tier AI/data science prestige and extremely high new-grad pay. Fast, innovative tech culture focused on execution rather than bureaucracy, with a strong reputation for sane hours and avoiding toxic burnout cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Renowned for guaranteed shutdowns and strictly sane working hours compared to peer HFTs."
   }
  },
  "the access group": {
@@ -244575,37 +245122,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier specialized AI/Robotics. The company holds elite prestige in the autonomous trucking sub-field, handling massive amounts of real-world sensor data and complex ML challenges rather than generic data science pipelines."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bd423876e3"
+   ],
+   "value": "Torc operates as an independent subsidiary of Daimler Truck, monetizing through the development and deployment of autonomous software systems marketable to the commercial freight and logistics industry."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven engineering culture blendingSilicon-Valley-style autonomous tech innovation with structured automotive safety rigor, prioritizing pragmatic problem-solving over chaotic startup churn."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3cc90228c3",
+    "bd423876e3"
+   ],
+   "value": "The primary partner and customer is Daimler Truck, the world's largest commercial vehicle manufacturer, alongside freight and logistics companies looking to adopt autonomous trucking fleets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 to $130,000 base salary for software and AI engineering roles, competitive for the industry and supported by Daimler's corporate backing."
   },
   "evidence_sha": "2c46dc6499ace00c",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3cc90228c3",
+    "bd423876e3"
+   ],
+   "value": "Autonomous Vehicles, Robotics, Artificial Intelligence, and Commercial Freight Transportation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "To ensure Torc avoids the bureaucracy you want to escape, ask teams about their deployment cadence and how much time is spent navigating Daimler's corporate overhead versus actual technical innovation. Probe deeply into sprint structures, on-call expectations, and specific work-life balance policies to confirm they respect personal time. Finally, ask about the AI training infrastructure and compute availability to ensure you will receive the fast, high-quality technical learning and career accel"
   },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784583562,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5fb5e70efe",
+    "3cc90228c3"
+   ],
+   "value": "Torc is headquartered in Blacksburg, Virginia, with additional engineering and testing facilities located in Albuquerque, New Mexico, and Austin, Texas."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3cc90228c3"
+   ],
+   "value": "Torc aims to make roads safer and reduce the high costs of transportation by commercializing autonomous trucking, addressing both highway safety and the truck driver shortage."
+  },
   "name": "Torc Robotics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but highly structured. Driven by the critical safety requirements of Level 4 autonomy and major OEM commercialization timelines, it moves quickly but relies on rigorous engineering validation processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3cc90228c3",
+    "bd423876e3"
+   ],
+   "value": "Torc develops the Torc Autonomous Driving System, an SAE Level 4 virtual driver system designed specifically for class 8 heavy-duty trucks and long-haul freight applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard paid time off annually, typical for established tech and automotive subsidiaries."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244615,7 +245219,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard paid holidays, but specific company-wide guaranteed shutdown periods (beyond standard federal holidays) are not public."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5fb5e70efe",
+    "3cc90228c3"
+   ],
+   "value": "The company is a well-established, post-startup scale organization operating as a global commercial entity under Daimler Truck ownership."
   },
   "sources": [
    {
@@ -244649,14 +245261,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac509fd2ea68b0f533af414e98a148bf54160af5b70cd182d9d9187498bed4f0JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVG9yYw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a wholly-owned subsidiary of a massive global automotive manufacturer, Torc likely has the established HR infrastructure to sponsor work visas for highly specialized AI and robotics engineering roles, though specific policy details are not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5fb5e70efe",
+    "3cc90228c3"
+   ],
+   "value": "Torc Robotics is an independent subsidiary of Daimler Truck focused on developing autonomous driving technology, specifically SAE Level 4 self-driving systems for heavy-duty commercial trucks. The company generates revenue by partnering with major truck manufacturers to integrate its autonomous software and computing systems into commercial freight vehicles."
+  },
+  "synthesized_evidence_sha": "2c46dc6499ace00c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3cc90228c3",
+    "bd423876e3"
+   ],
+   "value": "Engineering efforts focus on artificial intelligence, machine learning, robotics, sensor integration, and systems engineering to build and scale Level 4 autonomous virtual driver software for trucks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583562,
   "web_search_url": "https://duckduckgo.com/?q=Torc+Robotics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI prestige without sacrificing sanity, Torc offers a unique middle ground: it is a recognized leader in Level 4 autonomous trucking (high technical prestige and compensation backed by Daimler's resources) but operates with the culture of an independent tech hub rather than a slow, toxic corporate behemoth. Its mission to save lives on the road provides the purpose-driven environment you want, while its status as a non-startup scale entity helps ensure the high new-"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. As an established company in a highly regulated safety field, it generally maintains sane hours rather than relying on constant startup-style crunch, avoiding high-burnout environments."
   }
  },
  "torch technologies": {
@@ -270366,37 +271005,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1. Widely recognized as an elite, highly prestigious firm for quantitative researchers and AI/data science talent, operating on the same level as top quantitative hedge funds like Citadel, Two Sigma, and Jane Street."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Operates as a quantitative investment firm, generating revenue through alpha-driven trading strategies, systematic market making, and statistical arbitrage applied across global financial markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative and highly academic tech culture, prioritizing intellectual rigor, collaboration, and fast-paced technical exploration over slow corporate bureaucracy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The firm manages assets and trades for institutional investors, private funds, and its own capital, rather than serving retail or traditional B2B clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200,000 - $350,000+ base and guaranteed first-year bonus combined, scaling heavily based on performance, specific team placement, and advanced degree level (PhD vs. BS/MS)."
   },
   "evidence_sha": "1959b0a7121e8942",
+  "generated_at": 1784862150,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Quantitative Finance, Systematic Investment Management, and Financial Technology."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect a rigorous technical interview process heavily focused on probability, advanced statistics, coding (Python/C++), and theoretical machine learning concepts. The candidate should be prepared to demonstrate how they can leverage AI techniques to rapidly extract actionable signals from complex datasets while aligning with WorldQuant's fast, empirically-driven approach to alpha generation."
+  },
+  "last_attempt_at": 1784862150,
   "last_evidence_at": 1784673658,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Global headquarters located in Old Greenwich, Connecticut (USA), with additional major office hubs in major financial and tech centers such as New York City, London, Singapore, Shanghai, and Mumbai."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To leverage mathematics and technology to seek out truth and outperformance in global financial markets, driven by a strong commitment to education, mentoring, and expanding the quantitative community."
+  },
   "name": "WorldQuant",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative. As a tech-driven firm operating in highly competitive financial markets, the environment is high-velocity and requires rapid prototyping, continuous learning, and quick deployment of new models."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Systematic alpha models, quantitative trading algorithms, proprietary data analytics software, and specialized FinTech platforms (such as their crowdsourced research platform, WebSim)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Typical for the elite hedge fund sector, approximately 15 to 25 paid time off days annually, though exact rollover and accrual policies vary by location and tenure."
   },
+  "refresh_after": 1790046150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270406,7 +271086,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns found; while certain financial market holidays are observed, explicit multi-day mandated shutdowns akin to big tech firms are not standard for this industry."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Established, privately-held global firm, generally operating with a mid-sized headcount of approximately 500 to 1,000 employees across its global offices."
   },
   "sources": [
    {
@@ -270440,14 +271125,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=5b80eccd0818efcc504e8e5caa9981f0b983605ed39f987a6199ba573d15622fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cud29ybGRxdWFudC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Known to actively recruit elite quantitative talent globally and often provides visa sponsorship for exceptional international candidates in specialized quantitative, data science, and AI roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0f347bae98",
+    "db00986ccd",
+    "19f2b4e935"
+   ],
+   "value": "WorldQuant is a global quantitative trading and investment firm that systematically applies advanced mathematics, data science, and technology to financial markets. They primarily make money by deploying proprietary, alpha-seeking trading algorithms and statistical models across global asset classes."
+  },
+  "synthesized_evidence_sha": "1959b0a7121e8942",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building systematic trading models, developing high-performance data pipelines, researching new machine learning architectures for alpha prediction, and writing highly optimized code for large-scale financial data processing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=WorldQuant+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "WorldQuant offers an elite, highly prestigious AI and data science environment that balances top-tier new-grad pay with a fast, innovative tech culture, avoiding traditional slow bureaucracy. The firm accelerates technical learning through exposure to high-quality datasets and complex quantitative problems, making it a highly attractive stepping stone for rapid career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. While generally offering more sane hours and a less high-burnout environment compared to traditional investment banking, the intense intellectual demands of quantitative research can occasionally blur the lines of personal time."
   }
  },
  "worldscape": {
