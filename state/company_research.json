@@ -89451,11 +89451,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89467,6 +89469,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784675037,
   "name": "Daybreak Game Company LLC",
   "pace_of_work": {
@@ -89479,6 +89482,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883198,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89522,7 +89526,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3161e6ccdc056be27977da02fc4a9f388d9b0e7b0bfd5e1f37af6c44687da378JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cuZGF5YnJlYWtnYW1lcy5jb20vaG9tZS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675037,
   "web_search_url": "https://duckduckgo.com/?q=Daybreak+Game+Company+LLC+company+careers+benefits",
@@ -96172,52 +96176,155 @@
  "dominion enterprises": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. The provided sources do not contain any technical, product, or market data to determine if the company qualifies as a top-tier AI or data science employer."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "The revenue model and business operations are not described in the supplied source materials."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No cultural descriptions, employee feedback, or workplace vibe indicators are present in the provided redirect sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No target customer or demographic data is present in the supplied redirect notice sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. No compensation data, salary bands, or new-grad pay estimates are present in the supplied materials."
   },
   "evidence_sha": "daa2383d6c53cbb5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784882891,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No specific industry classification is available in the supplied redirect notice sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Focus entirely on probing the company's actual AI projects, tech stack modernity, and engineering pace to ensure it matches the candidate's desire for fast, non-bureaucratic innovation. Also clarify compensation expectations, on-call duties, and explicit PTO policies to verify they meet the standard for elite new-grad pay and guaranteed shutdowns avoiding burnout."
+  },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784675035,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No specific office locations or headquarters data are provided in the supplied redirect pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No company mission or vision statement is extractable from the provided redirect notice sources."
+  },
   "name": "Dominion Enterprises",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. No employee reviews, cultural descriptions, or operational details are present in the provided redirect sources to gauge if the work environment is fast or bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No product information is available in the supplied sources, as all provided pages are redirect notices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. The supplied sources do not contain human resources policies or precise vacation day counts."
   },
-  "retry_after": 1784883011,
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. No information regarding guaranteed company shutdowns or block-out time off is available in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "The company's current headcount, funding stage, and organizational scale are not available in the provided redirect notice sources."
   },
   "sources": [
    {
@@ -96251,14 +96358,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=3c2037670de4c1468bd73340c74c03ce11f9f99b9acfcc7203cb917df08794bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cuZG9taW5pb25lbmVyZ3kuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: No information on visa sponsorship or employment eligibility context is available in the provided sources. Candidates should verify directly with the company."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "The supplied public sources for Dominion Enterprises consist entirely of redirect notice pages and do not provide any substantive plain-English explanation of what the company does or how it makes money. Consequently, no factual business description can be synthesized from the provided materials."
+  },
+  "synthesized_evidence_sha": "daa2383d6c53cbb5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "No details regarding engineering tech stacks, data science workflows, or AI initiatives are present in the provided redirect sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675035,
   "web_search_url": "https://duckduckgo.com/?q=Dominion+Enterprises+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Because the candidate prioritizes a top-tier AI role with high new-grad pay, fast innovation, and strict work-life balance, assessing this company is highly difficult without technical context. The candidate must interview the employer to see if their data science work aligns with elite technical prestige, accelerated learning environments, and guaranteed personal time, as no public proof of these factors exists in the supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b6c0647a4b",
+    "193590252f",
+    "ba603835c0"
+   ],
+   "value": "Estimated: Unknown. No data regarding work hours or work-life balance culture is available in the provided materials."
   }
  },
  "doordash": {
@@ -106162,7 +106310,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106180,7 +106328,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784882891,
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784674080,
   "name": "Enterprise Bank & Trust",
   "pace_of_work": {
@@ -106193,7 +106341,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784883011,
+  "retry_after": 1784883318,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117726,39 +117874,97 @@
  },
  "flatiron health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Tier 1 (elite): Recognized leader in applying ML/NLP to oncology real-world evidence; publishes in top venues (NEJM, Nature, KDD, AMIA); alumni placed at top AI labs and biotech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "B2B SaaS and data licensing: subscription revenue from oncology EHR software, real-world evidence data subscriptions and analytics services to pharma, and clinical trial matching services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Mission-obsessed, intellectually humble, cross-functional (clinicians + engineers + data scientists), transparent with internal 'town halls' and open Q&A; diversity and health equity are operational priorities, not slogans."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Oncology practices and health systems, Pharmaceutical and biotech companies, Academic researchers, Payers and regulators"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k-165k base + $20k-35k signing + $30k-50k RSU (4-year) = $195k-250k total first-year; Roche equity refreshers competitive with top-tier tech."
   },
   "evidence_sha": "2ee26ea1178eca91",
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Healthcare technology / Real-world evidence / Oncology data analytics"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Expect deep dives on: (1) Handling messy, high-stakes clinical data (NLP, EHR normalization, missing data); (2) Causal inference and observational study design for real-world evidence; (3) Production ML in regulated environments (model validation, audit trails, HIPAA); (4) System design for scalable, compliant data pipelines; (5) Mission alignment — be ready to articulate why oncology data matters to you personally."
+  },
+  "last_attempt_at": 1784883078,
+  "last_evidence_at": 1784585998,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Headquarters: New York, NY; Major hubs: San Francisco, CA; Research Triangle Park, NC; Remote-friendly hybrid model post-COVID."
   },
-  "last_evidence_at": 1784585998,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "To improve and extend lives by learning from the experience of every person with cancer."
+  },
   "name": "Flatiron Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — iterative sprints with regulatory rigor; quarterly planning with room for research spikes; not a 'move fast and break things' culture due to patient safety."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Oncology EHR (OncoEMR), Real-World Evidence analytics platform, Clinical trial enrollment solutions, Patient-facing tools, Data services for pharma and research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick leave; unlimited policy not used — explicit accrual encourages usage."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117768,7 +117974,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 25-Jan 1) plus summer 'recharge' week (early July); team-level no-meeting days common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~1,200-1,500 employees; acquired by Roche/Genentech in 2018 for $1.9B, operates as independent subsidiary; late-stage growth company with stable funding."
   },
   "sources": [
    {
@@ -117802,14 +118013,41 @@
     "url": "https://flatiron.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for technical roles; as a Roche subsidiary, has established immigration processes. Cap-exempt status via university affiliations possible for research roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Flatiron Health is an oncology-focused health technology company that learns from the experience of every cancer patient to generate real-world evidence and improve cancer care decisions. They make money by selling real-world data analytics, electronic health record (EHR) software for oncology practices, and research services to pharmaceutical companies, providers, and payers."
+  },
+  "synthesized_evidence_sha": "2ee26ea1178eca91",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Large-scale healthcare data engineering (ETL, normalization of unstructured clinical notes), NLP for oncology data extraction, causal inference and real-world evidence methodology, ML for treatment pattern analysis and trial matching, full-stack EHR development, cloud infrastructure (AWS/GCP), data privacy/compliance (HIPAA, GDPR)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784585998,
   "web_search_url": "https://duckduckgo.com/?q=Flatiron+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "48bdc14125"
+   ],
+   "value": "Flatiron offers elite AI/DS prestige in healthcare's highest-impact domain (oncology real-world evidence) with new-grad compensation competitive with top tech. The Roche-backed subsidiary structure provides stability without big-corp bureaucracy, and the mission-driven culture is widely cited for respecting work-life balance through sane hours, protected weekends, and a 'no heroes' engineering ethos that avoids burnout while accelerating technical growth on complex, regulated data problems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — Strong reputation for protected weekends, core hours flexibility, minimal on-call for most teams, and leadership that models boundaries; occasional crunch around FDA submissions or major releases."
   }
  },
  "fleet packs company page": {
@@ -170157,49 +170395,132 @@
  },
  "kekst cnc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Not Applicable. The firm is a strategic communications agency and holds no prestige or tier in the AI or Data Science sector."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "B2B consulting model charging premium fees for strategic advisory and crisis management retainers, typically serving clients during high-stress corporate events and major announcements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intense corporate consulting. Professional, discreet, client-first, and likely lacking a fast, tech-driven innovation loop in favor of intense corporate advisory."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Corporate boards, executive leadership teams, financial sponsors, and global organizations facing critical inflection points, crises, or major market transactions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $0 - $0 base salary for a top-tier AI or data science role, as the firm operates as a non-technical communications consultancy."
   },
   "evidence_sha": "cf78c12bf241ea3a",
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Public Relations and Strategic Communications Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Zero alignment with your goals for top-tier tech pay, AI roles, or a data-driven culture; candidates should instead prepare for case studies based on corporate crisis management and media strategy."
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784674617,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Headquartered in New York with key global offices in London, Munich, Tokyo, and Frankfurt."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "To deliver elite, discreet, and highly strategic counsel that helps clients navigate complex corporate events and protect their reputational assets."
+  },
   "name": "Kekst CNC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, high-pressure, and deadline-driven, dictated by clients breaking news and unfolding crises, which heavily contradicts a slow, sane innovation environment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Service offerings include crisis management (incident response, workplace safety, data breaches), transaction communications (M&A, shareholder activism, IPOs), ongoing reputation management, and strategic positioning counsel."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of standard PTO, typical for elite professional services consulting, though unpredictable client crises may practically limit takeoff."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard holiday time off may be discouraged or interrupted during client crises, lacking the guaranteed, firm-wide shutdowns you prioritize."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Established global consultancy operating across major financial hubs in the US, UK, Germany, and Japan, having grown through its merger and subsequent independent evolution."
   },
   "sources": [
    {
@@ -170233,14 +170554,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=c4bd9a78145d971a293071413d81655c974636b61cfa1ba84e6cd33bdead1db1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9kaWV0YXJ5aGFiaXQuY29tL2Jlc3QtbXVsdGl2aXRhbWlucy1mb3Itd29tZW4tb3Zlci03MC8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Not publicly detailed for specialized tech roles, though generalist corporate roles likely offer standard employment without robust, guaranteed tech-focused H-1B sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Kekst CNC is a premier global strategic communications firm that specializes in corporate reputation management, crisis communications, and transactions. The firm makes money by providing high-level advisory services to corporations, financial sponsors, and institutions navigating complex, high-stakes challenges."
+  },
+  "synthesized_evidence_sha": "cf78c12bf241ea3a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "31fae1d4f3",
+    "9a365727d4",
+    "c824c8c923"
+   ],
+   "value": "Non-technical strategic advisory work focused on corporate communications, media relations, and reputation management rather than software development, AI, or data science engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674617,
   "web_search_url": "https://duckduckgo.com/?q=Kekst+CNC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While it offers elite prestige in corporate communications, it entirely misses your priorities for AI or data science work, fast innovative tech culture, and technical learning growth; it is fundamentally a non-technology firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Poor to Average. Due to the crisis-driven nature of PR advisory, expect unpredictable, demanding hours and high burnout risk rather than guaranteed personal time."
   }
  },
  "kemper": {
@@ -255053,11 +255407,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255069,6 +255425,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784675041,
   "name": "Repsol",
   "pace_of_work": {
@@ -255081,6 +255438,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883198,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255124,7 +255482,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c0019d64aaea26af543bc539bb83d1e2333d92c4c96ce2d486d8e41945ac885JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cucmVwc29sLmNvbS9lbi9pbmRleC5jc2h0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675041,
   "web_search_url": "https://duckduckgo.com/?q=Repsol+company+careers+benefits",
@@ -290901,37 +291259,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4: Applied analytics in traditional industrial company. No published research, no AI brand, limited conference presence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capital-intensive rental model: acquire heavy equipment fleet, rent on daily/weekly/monthly rates, maintain and transport assets, sell used equipment after rental life. Revenue driven by utilization rates, rental pricing, and fleet turnover."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established industrial corporate culture: safety-first, process-oriented, hierarchical. Values tenure and operational knowledge. Tech team is a support function, not the core product."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "439a0374ff"
+   ],
+   "value": "Commercial construction firms, industrial facilities, municipalities, homeowners, and specialty contractors across the US and Canada."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + modest bonus/RSU (parent Ashtead shares). Well below top-tier tech ($150k+)."
   },
   "evidence_sha": "a5453a8082c93955",
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "439a0374ff"
+   ],
+   "value": "Equipment Rental / Industrial Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical SQL, Python, and modeling questions tied to demand forecasting, pricing optimization, or equipment utilization. Behavioral focus on stakeholder management in non-tech org, translating analytics to ops decisions. Less emphasis on latest ML architectures, more on business impact and deployability."
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784675036,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "142025df2d"
+   ],
+   "value": "Headquartered in Fort Mill, SC (Charlotte metro). 1,000+ branches across US and Canada. Tech roles may be at HQ or remote-eligible depending on team."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "142025df2d"
+   ],
+   "value": "To be the first choice for equipment rental by delivering superior service, a deep fleet, and local expertise through a national network."
+  },
   "name": "Sunbelt Rentals, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Corporate tech follows standard enterprise cycles; operational urgency during peak construction seasons. Not 'move fast and break things.'"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "439a0374ff"
+   ],
+   "value": "Rental fleet includes aerial work platforms, earthmoving equipment, power generation, HVAC, pumps, scaffolding, and specialty tools. Also offers sales of used equipment, training, and managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays typical for large US industrial corp. No public policy found."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290941,7 +291351,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some offices may observe reduced hours around July 4 and Christmas/New Year week."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "142025df2d"
+   ],
+   "value": "Large, mature subsidiary of FTSE 100 parent Ashtead Group. ~1,000+ locations, ~15,000+ employees, multi-billion dollar revenue. Publicly traded via parent (LSE: AHT)."
   },
   "sources": [
    {
@@ -290975,14 +291392,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=d53b7977e523088c2552f70cb4fad8e319a2793ff11da3e584e5ecc1199e8a18JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cuc3VuYmVsdHJlbnRhbHMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large US employer, likely sponsors H-1B for specialized tech roles. No public data on green card policy or cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "142025df2d"
+   ],
+   "value": "Sunbelt Rentals is one of North America's largest equipment rental companies, providing construction, industrial, and specialty equipment to commercial and residential customers. It operates as a subsidiary of UK-based Ashtead Group plc."
+  },
+  "synthesized_evidence_sha": "a5453a8082c93955",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core tech focuses on fleet management systems, ERP, e-commerce rental platform, telematics/IoT for equipment tracking, and internal data analytics. Not an AI-first or research-driven org; data science roles likely support ops, pricing, demand forecasting, and maintenance optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675036,
   "web_search_url": "https://duckduckgo.com/?q=Sunbelt+Rentals%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sunbelt is a stable, large-scale industrial company with massive physical assets and operational data—not an elite AI research hub. Pay for new-grad data science will trail top-tier tech firms. Culture leans operational/industrial, not fast-moving innovation. Work-life balance may be reasonable for corporate roles but not guaranteed shutdowns. Best fit if you want applied DS on real-world logistics/fleet problems at scale with job security, not prestige or cutting-edge ML."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Corporate roles typically 40-45 hrs/week; some on-call for production systems. No public policy on guaranteed shutdowns."
   }
  },
  "sunbird software inc": {
@@ -305234,11 +305674,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305250,6 +305692,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784583376,
   "name": "Theiagen Genomics",
   "pace_of_work": {
@@ -305262,6 +305705,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883198,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305305,7 +305749,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c43764bba3f8886f3e0a781d8f65dc573aef10572344246feede60899e6c9323JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuaW5kZWVkLmNvbS9jbXAvRmlkZWxpdHktTmF0aW9uYWwtRmluYW5jaWFsL3Jldmlld3M_ZmpvYnRpdGxlPUNvdW5zZWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583376,
   "web_search_url": "https://duckduckgo.com/?q=Theiagen+Genomics+company+careers+benefits",
@@ -309858,37 +310302,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not recognized as an AI/data science destination; analytics roles exist but are operational, not research-driven."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grower-owned cooperative: member growers deliver fruit to the cooperative, which processes, markets, and sells finished products; profits are returned to members as patronage dividends."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Practical, collaborative, mission-oriented (grower-owned), low-politics, safety-first, with long-tenure employees; not a 'move fast and break things' tech culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. grocery retailers, foodservice distributors, industrial food manufacturers, and international export markets; also sells direct-to-consumer via online store."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k–$85k base for food science/process engineering roles; data/analytics roles may reach $80k–$100k; equity not applicable (cooperative)."
   },
   "evidence_sha": "7ce09e23eeadec39",
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Food & Beverage Manufacturing / Agricultural Cooperative"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical, domain-focused interviews: food safety (FSMA/HACCP), process improvement, statistical process control, supply chain analytics, and cooperative business understanding. LeetCode-style algorithmic coding is unlikely; prepare for case studies on yield optimization, quality variance, or grower logistics."
+  },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784673257,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and main processing in Selah, WA; additional facilities in Prosser, WA and other Pacific Northwest locations; remote roles rare."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide grower-owners with stable markets and fair returns while delivering high-quality fruit products to consumers."
+  },
   "name": "Tree Top, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, seasonal peaks (harvest season); generally steady, process-driven pace with emphasis on reliability over speed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Apple juice, apple sauce, fruit snacks, dried fruit, and other processed fruit products sold under the Tree Top brand and private labels."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 8–10 paid holidays; cooperative may offer additional seasonal flexibility."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -309898,7 +310384,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some seasonal slowdowns post-harvest but not formalized."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized cooperative with ~$300M–$500M annual revenue and 400–600 employees; mature, stable organization founded in 1960."
   },
   "sources": [
    {
@@ -309932,14 +310423,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a42067fd6c6d6c8b715cda82e88b50bd768f2e3da4213b7c036e11987012da6cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJlZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized food science/engineering roles; not known as a frequent sponsor for general software or data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tree Top, Inc. is a grower-owned fruit cooperative based in Selah, Washington, primarily known for processing apples into juice, sauce, and other fruit products. It operates as a cooperative owned by fruit growers in the Pacific Northwest."
+  },
+  "synthesized_evidence_sha": "7ce09e23eeadec39",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Food science, process engineering, supply chain optimization, quality assurance, sensory science, and increasingly data analytics for crop forecasting and plant efficiency; limited public-facing AI/ML roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673257,
   "web_search_url": "https://duckduckgo.com/?q=Tree+Top%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tree Top is a stable, mission-driven cooperative in the food/ag space, not a high-paying, fast-paced AI/tech elite employer. It offers work-life balance and technical depth in food science/operations, but does not match the candidate's priority for elite AI prestige, top-tier new-grad pay, or rapid innovation culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good — typical 40–45 hr weeks, limited on-call outside harvest; cooperative culture values grower/employee sustainability."
   }
  },
  "treehouse foods": {
@@ -328508,11 +329020,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328524,6 +329038,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784677109,
   "name": "Versant Health",
   "pace_of_work": {
@@ -328536,6 +329051,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883198,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328579,7 +329095,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=7ddbcecfdb1e3fe3eeae4e7fa10bba216afd0df433ff792f9fda8b1c21aeb9fcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9lY3AudmVyc2FudGhlYWx0aC5jb20vcHJlbG9naW4vbG9naW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677109,
   "web_search_url": "https://duckduckgo.com/?q=Versant+Health+company+careers+benefits",
@@ -329849,37 +330365,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — healthcare systems typically build applied ML teams for clinical/operational use cases but rarely match FAIR/DeepMind-level research prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, process-oriented; likely more structured and compliance-focused than startup culture, with emphasis on patient safety and regulatory adherence."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k–$120k base + modest bonus/equity; healthcare systems generally pay below top-tier tech but above non-tech corporate."
   },
   "evidence_sha": "7c37a636269c47dc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "24223a5c16",
+    "9f24467a32",
+    "5dd16ffc2d"
+   ],
+   "value": "Healthcare / Hospital Systems (inferred from domain names; not confirmed by source content)"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784583400,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5dd16ffc2d"
+   ],
+   "value": "No information found in provided sources; domain suggests Virginia, USA presence."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "VHC Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — clinical/regulatory constraints often slow iteration vs. pure tech companies, but modernization initiatives may create pockets of faster pace."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 holidays typical for US hospital systems; no public policy found."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -329889,7 +330453,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some healthcare orgs observe winter holiday week but not universal."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -329923,14 +330492,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=16948a0082f647640ed571dfbcc931e6e197124d545d02ba84af7c98d1a14583JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9teXZoYy52aXJnaW5pYWhvc3BpdGFsY2VudGVyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "24223a5c16",
+    "9f24467a32",
+    "5dd16ffc2d"
+   ],
+   "value": "Based on the provided sources, no extractable factual content about VHC Health's operations or revenue model was found; the source pages return only redirect notices. The domain names (vhchealth.org, virginiahospitalcenter.com) suggest a healthcare provider or hospital system, but this cannot be confirmed from the supplied excerpts."
+  },
+  "synthesized_evidence_sha": "7c37a636269c47dc",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583400,
   "web_search_url": "https://duckduckgo.com/?q=VHC+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — healthcare IT often has better WLB than consumer tech, but on-call for clinical systems and project crunches near go-lives can erode boundaries."
   }
  },
  "viasat": {
@@ -333495,39 +334089,104 @@
  },
  "washington university school of medicine in st louis": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "High prestige in biomedical and healthcare AI, but less recognized in mainstream commercial tech compared to FAANG companies."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "98d8d0f81b"
+   ],
+   "value": "Funded by a combination of clinical healthcare revenue, federal and private research grants, tuition, and philanthropic endowments."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "Mission-driven, collaborative, and academic, with a strong emphasis on education but susceptible to institutional bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "Patients seeking advanced medical treatment, students pursuing medical and graduate-level healthcare degrees, and funding organizations like the NIH and private donors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. While competitive for the academic and local St. Louis market, it lags behind top-tier commercial tech salaries."
   },
   "evidence_sha": "285406e2732e1509",
+  "generated_at": 1784883078,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "Higher Education and Healthcare."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe whether the AI or data science role is purely academic or tied to a tech-driven commercialization effort. Ask about the speed of their deployment cycles, the balance of clinical vs. technical mandates, and how the team handles workloads to avoid toxic burnout."
   },
+  "last_attempt_at": 1784883078,
   "last_evidence_at": 1784583377,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "St. Louis, Missouri."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "5703b2485f"
+   ],
+   "value": "To advance human health through innovative research, exceptional clinical care, and the education of future medical professionals."
+  },
   "name": "Washington University School of Medicine in St. Louis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace due to academic review cycles, clinical regulations, and administrative bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "The institution delivers specialized clinical patient care, advanced medical education and degree programs, and cutting-edge biomedical and clinical research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard paid vacation plus university and federal holidays."
   },
+  "refresh_after": 1790067078,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -333537,7 +334196,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Usually offers reduced administrative operations or closure around major winter holidays, though clinical operations remain active."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "98d8d0f81b"
+   ],
+   "value": "Large, established academic medical center affiliated with Washington University; operations are non-profit."
   },
   "sources": [
    {
@@ -333571,14 +334237,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=29ac70e9ca04930cd0d5305d064277da72eff98ccc2dac1c295225d378ea4d09JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvV2FzaGluZ3RvbixfRC5DLg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "98d8d0f81b"
+   ],
+   "value": "Estimated: As a major university, likely offers structured post-graduate academic training (fellowships) and occasionally sponsors H-1B visas for specialized senior staff, though standard tech roles are usually filled by local talent or existing students."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a81c69c6b4",
+    "5703b2485f",
+    "98d8d0f81b"
+   ],
+   "value": "Washington University School of Medicine in St. Louis is a premier academic medical institution dedicated to advancing human health through patient care, research, and medical education. As a non-profit academic medical center, it sustains its operations through clinical revenue, federal and private research grants, tuition, and philanthropic endowments."
+  },
+  "synthesized_evidence_sha": "285406e2732e1509",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a81c69c6b4",
+    "98d8d0f81b"
+   ],
+   "value": "Involves biomedical data science, bioinformatics, computational biology, machine learning for genomics and clinical imaging, and IT architecture to support large-scale medical research and hospital operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583377,
   "web_search_url": "https://duckduckgo.com/?q=Washington+University+School+of+Medicine+in+St.+Louis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While the institution offers elite academic prestige and a mission-driven environment, academic medical centers typically cannot match the high new-grad tech pay and fast-paced, innovative tech culture you are seeking. Bureaucracy and regulatory compliance often slow the pace of technical deployment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance with sane, predictable academic hours, though specific research deadlines may cause cyclical spikes."
   }
  },
  "waste management": {
