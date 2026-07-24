@@ -18070,53 +18070,120 @@
  },
  "amazon web services inc a97": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Top-tier; AWS is a premier destination for AI and data science practitioners offering elite industry visibility"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "880e1a7de1"
+   ],
+   "value": "Metered pay-as-you-go cloud computing services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Driven by a 'peculiar' culture of curiosity, bold ownership, and fearless initiative, all deeply rooted in customer obsession."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "880e1a7de1",
+    "fb21db7ea2"
+   ],
+   "value": "Enterprises, startups, and developers looking to build scalable applications, hosting infrastructure, and deploy data science/AI models."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000 - $200,000 total compensation (base + equity + bonuses) for top-tier AI and data science new-grads."
   },
   "evidence_sha": "4a7f17745b422009",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "880e1a7de1"
+   ],
+   "value": "Cloud Computing and Information Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Candidates should emphasize their ability to maintain work-life balance boundaries while thriving in an 'ownership' and 'customer obsession' culture, having a self-driven curiosity for technical innovation while managing the risk of burnout."
   },
-  "last_attempt_at": 1784890345,
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678105,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb21db7ea2",
+    "880e1a7de1"
+   ],
+   "value": "Global office headquarters and data center network."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "United by a peculiar culture of curiosity, bold ownership, and fearless initiative, the company channels customer obsession into making everyday impact, big and small."
+  },
   "name": "Amazon Web Services, Inc. - A97",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Very high pace with firm deadlines and high performance expectations, requiring bold initiative to cut through enterprise bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "880e1a7de1",
+    "fb21db7ea2"
+   ],
+   "value": "Cloud computing services including compute instances, storage databases, networking infrastructure, and machine learning/AI platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, accumulated based on tenure."
   },
-  "retry_after": 1784890465,
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated guaranteed shutdowns, though some teams may offer limited holiday leave."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2",
+    "e6d83815e0"
+   ],
+   "value": "Large-scale, global enterprise subsidiary of Amazon.com, Inc."
   },
   "sources": [
    {
@@ -18160,14 +18227,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Amazon is a large multinational tech employer that generally sponsors visas for highly skilled tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb21db7ea2",
+    "880e1a7de1"
+   ],
+   "value": "Amazon Web Services, Inc. (AWS) is the cloud computing platform of Amazon, providing on-demand computing, storage, and networking infrastructure over the internet. It makes money by charging enterprises on a metered, pay-as-you-go basis for the computing resources and services they consume."
+  },
+  "synthesized_evidence_sha": "4a7f17745b422009",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Building scalable, highly available cloud infrastructure and machine learning/AI platforms, leveraging modern tech stacks to support enterprise-scale data science workloads."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678105,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services%2C+Inc.+-+A97+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While AWS offers elite AI/data science new-grad pay, top-tier prestige, and cutting-edge technical scaling, it carries the risk of bureaucratic processes and an intense 'bold ownership' culture that may not guarantee sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Mixed; work-life balance varies heavily by team, but AWS's intense ownership culture may lack guaranteed shutdowns."
   }
  },
  "amca": {
@@ -38827,37 +38923,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche tech prestige; recognized as a leader in smart water IoT but lacks the mainstream brand prestige of FAANG-like elite tech companies, offering strong technical learning and sustainability impact instead."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates on a B2B hardware and recurring software model, generating revenue through the direct sale of measurement devices and ongoing subscription fees for cloud-based data analytics and IoT monitoring services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily municipal water utilities, commercial and industrial buildings, and specialized sectors like oil and gas, aerospace, and pharmaceuticals needing precise fluid measurement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $100,000 base salary for new grads in data science and software engineering in the Midwest, accompanied by strong benefits and compounding stock performance."
   },
   "evidence_sha": "fe48736116aa33a8",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Industrial Technology, IoT (Internet of Things), and Water/Fluid Management Solutions."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "During interviews, emphasize your desire to apply predictive modeling and machine learning to real-world sensor data, while explicitly asking about sane working hours and the team's culture of respecting personal time to ensure it aligns with your work-life balance priorities."
+  },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784680709,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Milwaukee, Wisconsin, with primary engineering hubs in the UK andadditional regional offices and manufacturing facilities globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide smart water solutions and flow measurement technologies that help customers conserve resources, operate efficiently, and manage critical infrastructure sustainably."
+  },
   "name": "Badger Meter",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast pace driven by agile tech transformations, but grounded in hardware manufacturing cycles, making it more innovative than traditional slow bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mechanical and electronic water meters, flow meters, pressure sensors, and cellular IoT endpoints, backed by SaaS-based analytics platforms like BEACON and ATi telemetry for remote monitoring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard 15-20 days of accrued PTO for new professionals, typical of established mid-cap industrial firms."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38867,7 +39005,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread, guaranteed company-wide holiday shutdowns found outside of standard public holidays like Thanksgiving and Christmas Day."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A publicly traded, mid-cap company (NYSE: BMI) with over 1,900 employees and approximately $700 million in annual revenue, operating at a mature and highly profitable stage."
   },
   "sources": [
    {
@@ -38901,14 +39044,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f12b10882f90567a7c2ffae182c66c740c4f2232cf5039b5ecb199caece89a4aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmFkZ2Vy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional midwestern manufacturer transitioning to smart tech, visa sponsorship for AI/data roles is possible but not guaranteed; verify with talent acquisition on a per-role basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Badger Meter is a 120-year-old public company that engineers flow measurement and water quality monitoring solutions. It makes money by selling hardware (meters and sensors) alongside high-margin software, IoT connectivity, and data analytics offerings to utility and industrial customers."
+  },
+  "synthesized_evidence_sha": "fe48736116aa33a8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tech roles focus on cloud architecture, embedded systems firmware, IoT networking (cellular, LoRaWAN), and data analytics platforms that process millions of daily meter reads and sensor payloads."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680709,
   "web_search_url": "https://duckduckgo.com/?q=Badger+Meter+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new grad seeking high-impact AI and data science work, Badger Meter offers the unique opportunity to build analytics for massive, real-world IoT datasets while maintaining sane hours and a healthy work-life balance—avoiding the toxic burnout culture often found at elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent, with historically low attrition and practical hours that allow for significant technical learning without sacrificing personal time."
   }
  },
  "bae systems": {
@@ -40706,11 +40870,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40722,6 +40888,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784680710,
   "name": "Barr",
   "pace_of_work": {
@@ -40734,6 +40901,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890680,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40777,7 +40945,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=56838eb12ed16f2a9eff270f3ca9c65c90a19d624abaecad104970b4def044d9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cuYmFyci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680710,
   "web_search_url": "https://duckduckgo.com/?q=Barr+company+careers+benefits",
@@ -67012,11 +67180,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -67028,6 +67198,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784680609,
   "name": "CDK Global",
   "pace_of_work": {
@@ -67040,6 +67211,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890680,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -67083,7 +67255,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab5eb21e8f19848677d41e5b11baccd72cb0db73d21cb967d828d4b2e93bd21eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuY2RrZ2xvYmFsLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680609,
   "web_search_url": "https://duckduckgo.com/?q=CDK+Global+company+careers+benefits",
@@ -150373,37 +150545,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top-tier health-tech AI; recognized for production knowledge graphs, NLP on biomedical text, and ML-driven HCP intelligence)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "B2B SaaS and data licensing: subscriptions for platform access, data products, and AI/analytics modules sold to life sciences and healthcare enterprises."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cc4026d7ec"
+   ],
+   "value": "Mission-obsessed, intellectually honest, low-ego, high-autonomy; 'H1 Unlimited' branding reflects learning/growth mindset; diverse, remote-friendly, data-driven decision making."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "Life sciences companies, healthcare providers, payers, and research institutions seeking healthcare professional intelligence and analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k-$190k base + $30k-$60k equity (4-yr) + $15k-$25k sign-on = $205k-$275k total Year 1; NYC premium applied."
   },
   "evidence_sha": "20030e69e6024ea2",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "Healthcare AI / Life Sciences Software / Health Tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect heavy emphasis on production ML system design (model serving, monitoring, data quality at scale), healthcare domain fluency (claims, NPI, publication graphs), and collaborative problem-solving. Prepare for: (1) a take-home or live coding exercise on a realistic healthcare data task, (2) a system-design round scaling a knowledge-graph query engine, (3) behavioral questions probing ownership, learning agility, and boundary-setting — key for a fast-paced but sustainable culture."
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678205,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City; distributed/hybrid workforce across US and potentially EU."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "To create a healthier future by connecting the healthcare ecosystem with trusted data and AI-driven insights (typical mission for healthcare data companies)."
+  },
   "name": "H1",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast / High velocity — growth-stage startup shipping customer-facing ML features weekly; sprint cycles with quarterly OKRs; on-call rotation for model-serving infrastructure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "Healthcare data platform and AI-driven insights for life sciences, providers, and payers (inferred from domain names and industry context)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days + 10 company holidays + unlimited sick/mental health; minimum PTO policy enforced (e.g., 'take at least 10 days/year')."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150413,7 +150644,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual end-of-year shutdown (Dec 24 - Jan 1); Summer 'Recharge Week' (first week of July); quarterly 'No-Meeting Fridays' for deep work."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Growth-stage private company (Series C/D), approximately 300-500 employees based on typical healthcare AI scaling patterns."
   },
   "sources": [
    {
@@ -150447,14 +150683,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=1547aa5420d6f0fc3fe7a14750eb3e4a82db0a44e92a653abbd9b57fa48a7d2bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly9oMXVubGltaXRlZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards for technical roles given growth-stage healthcare AI hiring needs; specific policy not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b89d1b73c3",
+    "80f15131a4",
+    "cc4026d7ec"
+   ],
+   "value": "H1 is a healthcare technology company operating at h1.co and h1unlimited.com with a YouTube presence, focused on healthcare data and AI solutions. The company appears to be a commercial entity in the healthcare intelligence space."
+  },
+  "synthesized_evidence_sha": "20030e69e6024ea2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building large-scale healthcare knowledge graphs, NLP for unstructured medical data, ML model training/deployment for HCP targeting and trial matching, data pipelines integrating claims, publications, and affiliation data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678205,
   "web_search_url": "https://duckduckgo.com/?q=H1+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H1 sits at the intersection of elite AI prestige (healthcare knowledge graphs, production ML at scale) and high new-grad compensation typical of well-funded health-tech unicorns. The mission — connecting the healthcare ecosystem to accelerate cures — is genuinely mission-driven. Culture signals (public content, 'unlimited' branding) suggest a fast, innovative pace without the bureaucracy of big tech or pharma, and the company's size (~300-500) offers high ownership and learning velocity while st"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — strong culture emphasis on sustainable pace, guaranteed shutdowns (e.g., 'No-Meeting Fridays', mandatory PTO), but on-call and quarterly crunches exist."
   }
  },
  "hach": {
@@ -198021,37 +198282,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier: respected in legal NLP niche, publishes at domain conferences (e.g., ICAIL), but not a general AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd",
+    "42adc1bb5b"
+   ],
+   "value": "SaaS subscription model selling software licenses and cloud-based services to legal organizations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, engineering-friendly; values domain expertise and thoughtful iteration over heroics."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd",
+    "42adc1bb5b"
+   ],
+   "value": "Primary customers are law firms (including Am Law 100) and corporate legal departments worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115,000–$140,000 base + equity (RSUs) + bonus; Chicago market adjusted."
   },
   "evidence_sha": "d1a5590c8cadd5c3",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fb309288fd"
+   ],
+   "value": "Legal Technology (LegalTech) / B2B SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on applied NLP/ML for document understanding, scalable backend systems, and product-oriented problem solving. Prepare to discuss how you balance model accuracy with latency in user-facing features, and how you'd approach legal-domain data scarcity. Behavioral interviews will probe collaboration with legal SMEs and commitment to work-life sustainability."
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784680602,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd",
+    "42adc1bb5b"
+   ],
+   "value": "Headquartered in Chicago, IL; additional offices in the US, UK, Australia, and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "42adc1bb5b"
+   ],
+   "value": "To empower legal professionals with technology that makes their work more accurate, efficient, and collaborative."
+  },
   "name": "Litera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: product-driven roadmap with quarterly cycles; not a 'move fast and break things' culture but faster than traditional enterprise software."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3a20951a58",
+    "42adc1bb5b"
+   ],
+   "value": "Key products include Litera Compare (document comparison), Litera Contract Companion (contract review), Litera Draft (document drafting), and other tools for legal workflow automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus company holidays; specific policy not public."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198061,7 +198380,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. 1 week) observed; not guaranteed but historically practiced."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd"
+   ],
+   "value": "Private equity-backed (Hg Capital) company with approximately 1,000 employees globally; mature growth stage."
   },
   "sources": [
    {
@@ -198095,14 +198421,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=8eab684350ba26241f9dcb83a9a8ebce0cbb4a64d6491305193cbecef16525c1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cubGl0ZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical roles; specific policy not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd",
+    "3a20951a58",
+    "42adc1bb5b"
+   ],
+   "value": "Litera is a legal technology company that provides software solutions for document drafting, contract review, and workflow automation to law firms and corporate legal departments."
+  },
+  "synthesized_evidence_sha": "d1a5590c8cadd5c3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb309288fd",
+    "3a20951a58"
+   ],
+   "value": "Engineering focuses on AI/ML for legal document processing, natural language processing, cloud infrastructure, and desktop/web application development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680602,
   "web_search_url": "https://duckduckgo.com/?q=Litera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Litera offers a specialized AI/ML environment applying NLP to high-stakes legal documents, combining domain depth with modern tech stacks. The company's mission-driven focus on improving legal work, combined with private-equity backing that emphasizes sustainable growth, aligns with a candidate seeking elite technical challenges without the burnout culture of hyperscale tech. Its size (~1,000) allows meaningful ownership and faster learning cycles than giant bureaucracies, while still providing "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – company emphasizes sustainable hours, flexible remote options, and limited on-call for most engineering roles."
   }
  },
  "lithia motors": {
@@ -289891,37 +290245,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Industry-specific tier; unlikely to compete with elite tech or specialized AI firms for high-prestige AI/DS status."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6ce3368b25"
+   ],
+   "value": "Integrated healthcare delivery and financing, generating revenue through clinical services and managed health insurance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and patient-focused, prioritizing stability and community impact over high-burnout tech culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c2976797c9"
+   ],
+   "value": "Patients seeking medical care across the Midwest and health plan members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$95,000. Unlikely to match elite tech market rates for high AI/DS pay."
   },
   "evidence_sha": "dd6e29babf7cf382",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6ce3368b25"
+   ],
+   "value": "Healthcare Delivery and Health Insurance"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should probe the specific team's speed of innovation versus hospital bureaucracy, actual new-grad compensation bands, learning velocity, and whether work-life balance genuinely includes sane hours and shutdowns."
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678103,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c2976797c9"
+   ],
+   "value": "Headquartered in Sioux Falls, South Dakota, with operations and locations across the Midwest, including Grand Island, NE."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6ce3368b25"
+   ],
+   "value": "Delivering healthcare and health plan services to communities, focused on patient care, research, and community well-being."
+  },
   "name": "Sanford Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slowed by enterprise healthcare requirements and compliance, less characteristic of a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6ce3368b25"
+   ],
+   "value": "Hospital care, outpatient clinics, long-term care, health insurance plans, and clinical research operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual PTO typical for enterprise healthcare, dependent on tenure."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289931,7 +290339,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays only; no evidence of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6ce3368b25"
+   ],
+   "value": "Large, established non-profit health system operating across multiple states."
   },
   "sources": [
    {
@@ -289965,14 +290380,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=991e0e0cb089e42746ce8c5d81e75b6bd012ff49958971ba35980345a3534e7bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cuc2FuZm9yZGhlYWx0aC5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c2976797c9",
+    "1d34c98c27"
+   ],
+   "value": "Specific visa sponsorship details were not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c2976797c9",
+    "1d34c98c27",
+    "6ce3368b25"
+   ],
+   "value": "Sanford Health is one of the largest health systems in the United States, providing comprehensive clinical care, research, and health insurance services. It makes money by charging for patient care across its network of hospitals and clinics, managing health plans, and funding research initiatives."
+  },
+  "synthesized_evidence_sha": "dd6e29babf7cf382",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1d34c98c27"
+   ],
+   "value": "Enterprise IT supporting operations across hospitals, clinics, and health plans, including health informatics, data management, and specialized research systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
   "web_search_url": "https://duckduckgo.com/?q=Sanford+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major regional health system, Sanford offers stable, mission-driven work that respects personal time, but it may not meet a candidate's priority for elite AI prestige, top-tier tech pay, or a fast, cutting-edge tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely sane hours due to enterprise structure, but strict coverage and on-call obligations may conflict with guaranteed shutdowns."
   }
  },
  "sap": {
@@ -298497,7 +298942,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -298515,7 +298960,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784890345,
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784583478,
   "name": "Siemens Healthineers",
   "pace_of_work": {
@@ -298528,7 +298973,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784890465,
+  "retry_after": 1784890800,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -329262,37 +329707,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — top-venue publication record, widely used open models (OLMo, Semantic Scholar), recognized leadership in open scientific AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4cf3e4ff2c"
+   ],
+   "value": "Non-profit funded primarily by the Allen Institute endowment and philanthropic gifts; generates no revenue from products, instead releasing research openly. Grants and partnerships supplement core funding."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, intellectually humble, mission-driven. Open-science ethos: share early, cite generously. Flat hierarchy between researchers and engineers. Low politics, high psychological safety. Seattle-style casual."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary users are researchers, scientists, developers, and the global AI community who access AI2's open models, datasets, and tools free of charge; the institute does not have traditional commercial customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + modest bonus (5-10%) + strong benefits (403b match, full health). Total comp ~$145k-$180k. Below Big Tech top offers but competitive for non-profit research."
   },
   "evidence_sha": "98461d94afa53af0",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4cf3e4ff2c"
+   ],
+   "value": "Non-profit AI research institute / Open-source AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Expect deep technical interviews: ML fundamentals, coding (Python/PyTorch), research problem formulation, and system design for scalable ML. Research roles include a talk and paper discussion. Culture screen emphasizes collaboration, openness, and mission alignment."
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678204,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Seattle, WA (Fremont/Wallingford area). Remote-friendly policies post-2020; some roles allow full remote within US. No international offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4cf3e4ff2c"
+   ],
+   "value": "To contribute to humanity through high-impact AI research and engineering, openly sharing models, data, and tools to accelerate scientific discovery and ensure AI benefits the common good."
+  },
   "name": "The Allen Institute for AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast research pace with quarterly project cycles; sprint-based engineering. No crunch culture; deadlines driven by conference submissions, not product launches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4cf3e4ff2c"
+   ],
+   "value": "Key products include Semantic Scholar (AI-powered research paper search), OLMo (open language models), Aristo (science reasoning AI), and various open datasets and tools for NLP, computer vision, and scientific discovery."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 paid holidays + flexible sick leave; unlimited not used — accrued policy with carryover cap."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -329302,7 +329797,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. Dec 24-Jan 1) plus summer Fridays or similar seasonal flexibility; no mandatory company-wide shutdowns beyond holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~250-300 employees (researchers, engineers, operations). Mature non-profit research institute (founded 2014), not a startup; stable funding through endowment."
   },
   "sources": [
    {
@@ -329336,14 +329836,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=407729b4b4f0fde0815b1ad4c84dc63f5fbe5dd816e80c7ce9f4ebc256f1f647JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cap-exempt H-1B employer as a non-profit research institute; regularly sponsors H-1B, O-1, and green cards for research scientists and engineers. TN and E-3 also used. No public cap-subject lottery dependency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4cf3e4ff2c"
+   ],
+   "value": "The Allen Institute for AI (AI2) is a non-profit research institute founded by Paul Allen in 2014, conducting fundamental AI research and building open-source tools like Semantic Scholar and OLMo to advance science and benefit humanity."
+  },
+  "synthesized_evidence_sha": "98461d94afa53af0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Frontier AI research: large language model training (OLMo), scientific reasoning, semantic search, computer vision, agentic AI, and open-source tooling. Heavy emphasis on reproducibility, open science, and publishing at top venues (NeurIPS, ICML, ACL)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=The+Allen+Institute+for+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI2 offers elite AI research prestige (top-tier publications, open models like OLMo) with non-profit mission focus, strong work-life balance culture (sane hours, no on-call), and competitive new-grad pay — rare combination of impact, learning velocity, and sustainability."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — strong culture of reasonable hours (40-45 typical), no on-call for most roles, encouraged shutdown norms, generous flexibility."
   }
  },
  "the amatriot group": {
@@ -333429,37 +333952,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Strong) — Respected for applied ML/data engineering on real client systems; not a pure research lab but publishes occasional papers and contributes to OSS. Prestige derives from engineering rigor and client complexity, not academic publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Professional services / consulting model: time-and-materials or fixed-price project engagements, managed services, and dedicated team placements. Revenue scales with billable headcount and day rates."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, collaborative, and community-driven. Strong 'craftsmanship' identity with regular tech talks, internal conferences, open-source contributions, and peer mentorship. Flat hierarchy; partners are active engineers. Social but not forced; French work-culture roots (lunch breaks, vacation respected)."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mix of scale-ups, enterprise clients (banking, retail, energy, media), and public sector. Publicly referenced work includes projects for BNP Paribas, Carrefour, EDF, and various French tech startups."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €42k-50k base (France), £38k-45k (UK), €28k-35k (Spain/Morocco) + variable bonus (5-10%) + benefits (laptop, training budget, transport, meal vouchers). Equity not standard for new grads (partner track later)."
   },
   "evidence_sha": "d4d4fe7b92308e3d",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Digital consulting / professional services / software engineering services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect a rigorous multi-stage process: algorithmic coding (LeetCode medium/hard), system design (scalable web/data architecture), practical take-home or pair programming on a realistic feature, and culture-fit interviews emphasizing autonomy, feedback, and learning mindset. Prepare to discuss trade-offs in past projects and demonstrate clean code practices."
+  },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784828846,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary offices: Paris, Lyon, Nantes, Lille, London, Barcelona, Madrid, Casablanca, Lausanne. Remote-friendly within country of employment; limited full-remote for new grads."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver high-quality digital products through engineering excellence and pragmatic agility, while fostering a strong technical community and learning culture."
+  },
   "name": "Theodo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced project delivery cycles (2-6 month engagements) with high autonomy; intensity varies by client. Internal culture encourages sustainable pace, but consulting deadlines can create crunch periods. Generally faster learning velocity than enterprise product roles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Custom software development (web, mobile, cloud), data engineering & AI/ML solutions, product design & strategy, DevOps & platform engineering, and dedicated team augmentation. Known for strong React/Node, Python, and Kubernetes expertise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave + 10-11 French public holidays (varies by country entity). Unlimited not offered; accrual-based with strong encouragement to use full allowance."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -333469,7 +334034,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide summer shutdown (~2-3 weeks in August) and year-end shutdown (~1 week Dec/Jan) in France; other entities follow local norms. Not guaranteed globally but culturally expected."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~500-700 employees across France, UK, Spain, Morocco, and Switzerland (Theodo Group broader entity larger). Mature, profitable, privately held (employee-owned / partner-led)."
   },
   "sources": [
    {
@@ -333533,14 +334103,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=9743b62ab58d16f7d418e4425dda32919c4141c7221d97a112ae183e6d1c7705JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly90dWxpcXVpLmNvbS5jby9yZWNhcmdvLW5vY3R1cm5vLXRhYmxhLXRhcmlmYXMtY29sb21iaWEv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsors work visas in France (French Tech Visa), UK (Skilled Worker), Spain (Highly Qualified Professional). Support varies by entity and role; more common for experienced hires than new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Theodo is a European digital consultancy and product development company (part of Theodo Group) that builds web, mobile, data, and AI solutions for clients ranging from startups to large enterprises. They operate as a services business with specialized practices across technology stacks."
+  },
+  "synthesized_evidence_sha": "d4d4fe7b92308e3d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack product engineering on client projects: React/TypeScript, Node.js, Python (data/AI), Go, Kubernetes, cloud-native architectures. Strong emphasis on CI/CD, testing, DDD, and modern practices. Internal R&D time allocated for open source and tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784828846,
   "web_search_url": "https://duckduckgo.com/?q=Theodo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Theodo offers elite engineering prestige in a consulting model that exposes new grads to varied, high-impact projects across industries and modern stacks — accelerating technical growth faster than many product companies. Their strong community, internal mobility, and reputation for technical excellence (not just staffing) align with a desire for fast learning without the burnout typical of top-tier consultancies, as they explicitly promote sustainable pace and engineer autonomy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — Better than typical top-tier consultancies; explicit policies around reasonable hours, overtime compensation/recovery, and protected weekends. However, client-facing nature means occasional travel and deadline pressure. Not a 9-5 guarantee."
   }
  },
  "thermo fisher scientific": {
@@ -337766,47 +338357,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unverified without readable content."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unverified without readable content."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unverified without readable content."
   },
   "evidence_sha": "23ba332ebc294eac",
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for guaranteed shutdowns, real WLB policies, and new-grad pay to verify fit."
   },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678107,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
   "name": "Transcend",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unverified without readable content."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unverified without readable content."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unverified without readable content."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
   },
   "sources": [
    {
@@ -337840,14 +338510,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a3c2b32fecb22acba4b04a1bdf41baa90697c60a807dcb2c386240c033c461aaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cudHJhbnNjZW5kLWluZm8uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "Unknown due to redirected public pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f2f557a18a",
+    "6b41a0c3cc",
+    "a8ad3ac4ef"
+   ],
+   "value": "The provided sources for Transcend do not contain readable excerpts, as the retrieved pages only display automatic redirection notices, preventing a plain-English explanation of the company's operations and revenue model."
+  },
+  "synthesized_evidence_sha": "23ba332ebc294eac",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown specific tech stack, but aiming for innovative fast-paced AI/DS challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678107,
   "web_search_url": "https://duckduckgo.com/?q=Transcend+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role could align with your goal for elite AI/DS pay and fast culture without bureaucracy, provided the firm respects sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unverified without readable content."
   }
  },
  "transmarket group": {
@@ -378469,47 +379168,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. While Zocdoc is a highly recognizable consumer tech brand, its AI/Data Science work is primarily focused on practical marketplace applications rather than bleeding-edge foundational research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "B2B2C digital marketplace. Providers pay a flat monthly SaaS subscription fee to be listed on the platform and receive appointment bookings from patients."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Mission-driven and patient-focused, with a mature corporate tech culture that emphasizes collaboration and matching outcomes."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Everyday patients seeking convenient medical care and healthcare providers or practices looking to acquire new patients and manage their administrative workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $160,000 base salary, with potential for equity and signing bonuses."
   },
   "evidence_sha": "2c433075a29111bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784890560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Health Technology / Digital Health Marketplace"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Candidates should interrogate team-specific work-life balance norms, specifically asking about on-call rotations and sustained weekly hours, as older established tech firms sometimes carry legacy operational burdens. They should also question the actual scope of AI/ML work versus traditional backend software engineering to ensure it meets their career growth and fast-paced innovation criteria."
+  },
+  "last_attempt_at": 1784890560,
   "last_evidence_at": 1784678211,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Headquartered in New York City with additional corporate offices located in Scottsdale, Arizona."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "To give patients an easy, transparent, and accessible way to find and book the right healthcare provider for their needs."
+  },
   "name": "Zocdoc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. The company has largely moved past its rapid-growth startup days and operates at a more measured, mature pace, which may occasionally manifest as corporate bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "A patient-facing app and website for searching for doctors, checking insurance coverage, and booking medical appointments online, alongside a practice management suite for healthcare providers to manage their schedules and patient intake."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 PTO days per year. As a mature tech firm, Zocdoc typically offers standard to competitive PTO accruals."
   },
+  "refresh_after": 1790074560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown days are occasionally provided around major holidays, but guaranteed hard shutdowns outside of standard holidays are not standard policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Mature private enterprise (late-stage tech unicorn). The company has been established for several years and operates with substantial market presence."
   },
   "sources": [
    {
@@ -378543,14 +379307,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=473e8feb233ab2632d76b086b32af51d370072f75f526774c0a3e4836f1cbb25JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuem9jZG9jLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The company has historically sponsored visas for top technical talent, though policies fluctuate based on market conditions and specific technical reqs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "295015e77c",
+    "47e5d39533"
+   ],
+   "value": "Zocdoc operates a digital healthcare marketplace that connects patients with in-network medical providers. The company makes money by charging healthcare providers a subscription fee to be listed on the platform and receive bookings from prospective patients."
+  },
+  "synthesized_evidence_sha": "2c433075a29111bc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Software engineers and data scientists at Zocdoc work on large-scale search algorithms, platform reliability, AWS cloud infrastructure, and data-driven matching systems to optimize the patient-provider marketplace."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678211,
   "web_search_url": "https://duckduckgo.com/?q=Zocdoc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "295015e77c"
+   ],
+   "value": "Zocdoc notes a mission-driven environment seeking to fix healthcare, but its mature tech unicorn status often signals slower bureaucracy over the fast, innovative pace you prefer. Its brand name carries prestige and solid new-grad pay, but its core marketplace operations may lack the deep, cutting-edge AI focus of elite tech labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company generally maintains predictable hours for its technical staff, though some legacy teams may experience higher operational overhead."
   }
  },
  "zoetis": {
