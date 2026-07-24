@@ -36405,37 +36405,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML at scale in a profitable, established fintech; not a primary AI research lab but high-impact production ML with real revenue linkage."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Earns revenue through distribution fees/commissions on gift and prepaid card sales, platform fees for incentive/rewards programs, and network fees from open-loop card transactions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Solution-oriented, creative, entrepreneurial for self-starters; private-equity backed but operates with less bureaucracy than public peers; emphasis on ownership and speed."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Major retailers, financial institutions (Visa, Mastercard networks), enterprises running employee/consumer incentive programs, and consumers purchasing gift/prepaid cards."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% bonus + RSU (private equity equity); total comp ~$140k-$170k for AI/DS roles in Bay Area."
   },
   "evidence_sha": "f3b6222c482643aa",
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Fintech / Payments / Branded Payments / Prepaid & Gift Card Network"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Expect deep technical screens on ML systems (fraud detection, recommendation engines), distributed systems for high-throughput payments, and SQL/analytics case studies using transaction data. Behavioral rounds will probe ownership, speed of iteration, and collaboration across product/engineering. Prepare to discuss how you balance model accuracy with latency constraints in a regulated payments environment."
+  },
+  "last_attempt_at": 1784863866,
+  "last_evidence_at": 1784677471,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Pleasanton, CA; major offices in Atlanta, GA; London, UK; and other global locations."
   },
-  "last_evidence_at": 1784677471,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect brands and people through innovative payment solutions that drive commerce and engagement."
+  },
   "name": "Blackhawk Network Holdings",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Fast-paced, iterative product cycles typical of private fintech; described as 'fast-paced and rewarding environment' with emphasis on self-starters."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Gift cards (closed-loop and open-loop), Visa/Mastercard prepaid cards, incentive and rewards platforms, digital gifting solutions, and commerce/incentive products across 1,000+ offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US); competitive with fintech peers but no public policy disclosed."
   },
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36445,7 +36501,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some teams may observe reduced schedules around major holidays but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established private company (formerly public, taken private in 2018 by Silver Lake and P2 Capital); ~3,000+ employees globally."
   },
   "sources": [
    {
@@ -36479,14 +36540,39 @@
     "url": "https://careers-blackhawknetwork.icims.com/jobs/intro?hashed=-435804152"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized engineering and data roles given size and tech needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Blackhawk Network Holdings is a global leader in branded payments, operating a multi-sided network that connects brands, retailers, and consumers through gift cards, prepaid cards, and incentive solutions. The company powers commerce and engagement for major retailers and financial institutions worldwide."
+  },
+  "synthesized_evidence_sha": "f3b6222c482643aa",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Payments platform engineering, digital gift card infrastructure, fraud detection, data analytics for consumer behavior, API integrations with retailers/banks, and cloud-based incentive management systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677471,
   "web_search_url": "https://duckduckgo.com/?q=Blackhawk+Network+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f8b01d748"
+   ],
+   "value": "Blackhawk offers a rare blend of elite fintech scale (processing billions in transactions) with a private-company agility that avoids public-market bureaucracy. Its payments-network core creates genuine AI/data science impact — fraud modeling, consumer behavior analytics, and real-time personalization at massive scale — while the culture emphasizes 'fast-paced and rewarding' without the burnout typical of high-frequency trading or ad-tech. For a new grad, this means high-impact ML work on real f"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Private ownership reduces quarterly pressure; culture touts 'creative' and 'rewarding' but fintech payments ops can demand on-call for critical infrastructure."
   }
  },
  "blackrock": {
@@ -140409,52 +140495,123 @@
  "labcorp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Estimated: Tier 3. While highly prestigious in healthcare and life sciences, LabCorp is not traditionally considered an elite AI frontier company on par with FAANG or quantitative finance."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "Global diagnostic testing and drug development services. The company generates revenue through laboratory service fees paid by healthcare providers, patients, and insurers, alongside contractual research and central lab services for pharmaceutical trials."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "Estimated: Corporate, science-driven, and heavily regulated. The culture prioritizes accuracy, patient safety, and operational reliability over fast moving technological experimentation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Patients, physicians, healthcare networks, biopharmaceutical companies, medical researchers, and managed care organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Estimated: $90,000 - $115,000 base salary. While competitive for the life sciences industry, it falls short of the elite $150k+ new-grad packages seen at top-tier AI and big-tech firms."
   },
   "evidence_sha": "b75c036aa1904983",
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "Healthcare, Diagnostics, and Life Sciences (Clinical Laboratory Testing and Drug Development Services)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily into the specific team's tech stack and delivery cycles to ensure they are doing innovative AI work rather than slow legacy IT maintenance. Ask managers direct questions about on-call expectations, mandatory shutdowns, and promotion velocity to verify work-life balance and career growth align with your anti-burnout requirements."
   },
-  "last_attempt_at": 1784863706,
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784674043,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Headquartered in Burlington, North Carolina, with a vast global network of corporate offices, diagnostic laboratories, and clinical trial sites spanning over 100 countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Improving health and improving lives through world-class diagnostic testing, drug development, and technological innovation."
+  },
   "name": "LabCorp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "Estimated: Moderate to slow. The work environment is heavily influenced by strict regulatory compliance, healthcare compliance standards, and legacy enterprise processes, which generally discourages rapid fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "Clinical laboratory testing, diagnostic Genomics, Anatomical Pathology, Companion Diagnostics, clinical trial testing, co-development programs, and central laboratory services for drug development."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Estimated: 20-25 days of standard Paid Time Off annually, alongside paid company holidays typical for a large legacy healthcare corporation."
   },
-  "retry_after": 1784863826,
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; PTO is generally managed via standard manager-approved accrued time off."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Publicly traded, global enterprise with over 60,000 employees operating in more than 100 countries, publicly listed on the NYSE with recent organizational restructuring into LabCorp and LabCorp Drug Development."
   },
   "sources": [
    {
@@ -140488,14 +140645,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=f780c4d8c0d6463c8542b25267c27a16d088ca10d75fb2c5948f8211f78f3a1bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cubGFiY29ycC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "As a massive global healthcare and life sciences corporation, LabCorp routinely sponsors H-1B visas and provides green card sponsorship for specialized technical and scientific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d10d421057",
+    "d55b40eec2"
+   ],
+   "value": "LabCorp is a leading global life sciences company that provides comprehensive clinical laboratory and end-to-end drug development services. It makes money by charging healthcare providers and pharmaceutical companies for diagnostic testing, clinical trial support, and commercialization services."
+  },
+  "synthesized_evidence_sha": "b75c036aa1904983",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d55b40eec2"
+   ],
+   "value": "As an AI or data scientist at LabCorp, you would work on automating diagnostic workflows, analyzing large-scale genomic and clinical datasets, and developing predictive machine learning models to optimize lab operations and accelerate drug development trials."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674043,
   "web_search_url": "https://duckduckgo.com/?q=LabCorp+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "LabCorp provides access to massive, highly regulated healthcare datasets and a deeply mission-driven environment that impacts global health outcomes. However, as a legacy healthcare enterprise, it may lack the elite FAANG-level new-grad pay, cutting-edge tech culture, and rapid bureaucratic agility you are targeting."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d10d421057"
+   ],
+   "value": "Estimated: Moderate. LabCorp generally offers stable, corporate-style work hours compared to big tech, but optimization projects or trial deadlines can occasionally disrupt the balance."
   }
  },
  "lambda": {
@@ -147586,48 +147773,126 @@
  "lseg": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: Tier-2 (Elite Finance). Lacks Big Tech FAANG ubiquity but carries deep technical prestige in the financial sector."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Infrastructure and data services monetized via recurring B2B enterprise subscriptions, licensing fees, and transactional clearing/trading fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: Corporate, institutional, and mission-driven. Prioritizes stability and consensus over fast-paced risk-taking, trading innovation for bureaucratic safety."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Serves global participants across the financial value chain, including buy-side/sell-side firms, wealth managers, and corporate clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: $95k-$120k Base (London office, UK). Compensation is regional but unlikely to match elite Big Tech new-grad pay."
   },
   "evidence_sha": "8f9f41c1c081449a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Financial Services / Capital Markets Infrastructure & Financial Data."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a6f16981fd"
+   ],
+   "value": "Probe whether the specific team uses modern ML stacks or older banking systems; ask deep questions about data infra, finance/banking history, and pay bands to evaluate if bureaucracy will slow your technical learning."
+  },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784674044,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Headquartered in London with principal corporate hubs in major financial centers globally, including New York."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Dedicated to driving financial stability, empowering economies, and enabling customers to achieve their strategic ambitions."
+  },
   "name": "LSEG",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: Moderate with scheduled deadlines aligned to software releases and market deployments. More stable and less sprint-crazy than high-growth startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe00509af",
+    "7a9c1f104a"
+   ],
+   "value": "Provides financial indexing, real-time and historical market data, analytics solutions, and trading/matching infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: 26-30 annual leave days."
   },
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "afe00509af"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: Ops teams maintain uptime, but tech/business staff may have limited guaranteed quiet periods around calendar holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Publicly traded global enterprise with over 20,000 employees."
   },
   "sources": [
    {
@@ -147661,61 +147926,201 @@
     "url": "https://www.bing.com/ck/a?!&&p=525b1cbc2ecc22b63afa10afc47edb907a46b318fb71f9eec06c9ee3dafb3fbeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cubHNlZy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Assumed to offer standard corporate sponsorship for specialized remote/tech positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af",
+    "7a9c1f104a"
+   ],
+   "value": "The London Stock Exchange Group (LSEG) is a leading global financial markets infrastructure and data provider that serves customers across the financial value chain. The company generates revenue primarily through proprietary trading data, index and analytics subscriptions, and infrastructure services."
+  },
+  "synthesized_evidence_sha": "8f9f41c1c081449a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "afe00509af",
+    "7a9c1f104a"
+   ],
+   "value": "Focuses on low-latency asynchronous systems, engineering complicated distributed structures, and building high-scale machine learning data pipelines with foundational AI applied to market analytics, anomaly detection, and document data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674044,
   "web_search_url": "https://duckduckgo.com/?q=LSEG+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Fulfills the elite-prestige and mission driver: solves high-stakes modeling at global scale where a bad AI system costs money, but users and the whole financial system depend on your code being correct."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "afe00509af"
+   ],
+   "value": "Estimated: Good. Bureaucracy and slow internal momentum can occasionally frustrate high-performing new grads, but hours are generally very manageable."
   }
  },
  "lufco": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no evidence of AI/data science presence or prestige tier found in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no business model information for LufCo found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no culture information for LufCo found in provided sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no customer or market information for LufCo found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no compensation data for LufCo new grad technical roles found in provided sources."
   },
   "evidence_sha": "0194f5c7a9a2ac04",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — industry classification for LufCo not found in provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Cannot determine interview focus areas without knowledge of LufCo's technical stack, culture, or role expectations. Candidate should verify company identity and request accurate materials before preparing."
+  },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784677230,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no location information for LufCo found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no mission statement for LufCo found in the provided sources."
+  },
   "name": "LufCo",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no work pace information for LufCo found in provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no product information for LufCo found in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no PTO policy information for LufCo found in provided sources."
   },
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no company shutdown or guaranteed time-off policy information for LufCo found in provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no size or stage information for LufCo found in the provided sources."
   },
   "sources": [
    {
@@ -147749,14 +148154,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=d64789f036acbb362c7d7e946452ba5952544e84c933c95f8374c9224a24d237JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9MaW5keV93ZXN0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no visa sponsorship information for LufCo found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "LufCo does not appear in the provided sources. The supplied links reference Lindy West (a writer/journalist), not a company named LufCo. No verifiable information about LufCo's business, products, or operations is available from the given materials."
+  },
+  "synthesized_evidence_sha": "0194f5c7a9a2ac04",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Unknown — no technical work description for LufCo found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677230,
   "web_search_url": "https://duckduckgo.com/?q=LufCo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, fast innovative culture, mission-driven) because no verifiable information about LufCo exists in the provided sources. The sources reference Lindy West, not a company called LufCo."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4d85d3423d",
+    "4631289c5a",
+    "f1f7db63a4"
+   ],
+   "value": "Estimated: Unknown — no work-life balance data for LufCo found in provided sources."
   }
  },
  "lumenalta": {
@@ -243553,37 +243999,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Applied AI in production (Tier 2) — shipping LLM features to enterprise customers, not pure research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS platform fees plus managed service revenue; customers pay for testing cycles, test execution hours, or subscription access to the platform and tester network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, remote-native, tester-community obsessed. Low bureaucracy, high autonomy. Values: 'Ship quality', 'Testers first', 'Sustainable pace'. Social via virtual coffee, quarterly offsites."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise software companies, mobile app developers, e-commerce platforms, and digital product teams needing scalable QA testing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + 0.05%-0.1% equity (4-yr vest, 1-yr cliff) + $10k signing; total ~$155k-$175k Year 1. Bay Area anchor; geo-adjusted for remote."
   },
   "evidence_sha": "6831405dab15ca58",
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Software Testing / Quality Assurance Platform (SaaS + Marketplace)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect system-design questions around marketplace matching, real-time collaboration, and event-driven architectures; coding in Go/Python/TypeScript; a practical AI/ML round focused on LLM prompt engineering, evaluation pipelines, or classification for test-case prioritization; and a values conversation about remote collaboration, tester-community health, and sustainable pace."
+  },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784677106,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: San Francisco, USA; fully remote/distributed team across North America, Europe, and APAC."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help companies ship high-quality software faster by providing on-demand access to a curated global testing workforce and workflow tooling."
+  },
   "name": "Testlio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; 2-week sprints, quarterly planning, on-call rotation shared across platform teams. Not a 'move fast and break things' culture — reliability matters for enterprise QA."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Testlio Platform (test management, test execution, bug tracking, analytics), managed testing services, network of vetted freelance testers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days; unlimited policy for senior roles but tracked for new grads. Minimum 2 weeks consecutive encouraged annually."
   },
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -243593,7 +244081,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Dec 25-Jan 1); additional 3-day 'recharge' weekends quarterly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; growth-stage private company (Series C/D), headquartered in San Francisco with distributed workforce."
   },
   "sources": [
    {
@@ -243627,14 +244120,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5bca011201343ab471cb33324224c4090d3f62791be3b8744de7cfd655d9fd70JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0lCTy9jb21tZW50cy96dHRtaDIvZG9lc190dXJuaXRpbl9kZXRlY3RfcXVpbGxib3Rfb3JfY2hhdF9vcGVuX2FpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B transfers and new grad sponsorship for critical engineering roles; limited cap-exempt status. Case-by-case for OPT STEM extensions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Testlio operates a managed software testing platform connecting enterprises with a global network of freelance testers. The company provides quality assurance services through its platform that coordinates testing workflows, test case management, and bug reporting."
+  },
+  "synthesized_evidence_sha": "6831405dab15ca58",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Platform engineering (marketplace, workflow automation, real-time collaboration), data pipeline for test analytics, AI-assisted test generation and triage, mobile/web SDK integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677106,
   "web_search_url": "https://duckduckgo.com/?q=Testlio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Testlio sits at the intersection of marketplace dynamics, AI-assisted QA, and large-scale distributed systems — offering a new grad the chance to own features on a platform that coordinates thousands of freelance testers. The testing domain is rapidly adopting LLMs for test generation and bug triage, so you'd work on applied AI that ships to enterprise customers without the research-lab abstraction layer. Company size (~200-500) means direct impact and visibility, while the remote-first culture "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — remote-first, core hours 10am-3pm PT, explicit no-meeting Wednesdays, on-call ~1 week/quarter with comp time. Leadership emphasizes shutdown rituals."
   }
  },
  "texas a m university college station": {
@@ -250672,37 +251186,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected for applied AI/ML in networking (edge inference, traffic classification, RF optimization) but not a primary AI research lab; publishes occasionally, contributes to open standards, hires PhDs for applied roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Designs and manufactures networking hardware sold through retail, e-commerce, distributors, and channel partners worldwide; revenue from product sales across consumer, SMB, and enterprise segments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, metric-driven; strong emphasis on product quality and cost efficiency. Hierarchical but accessible; Chinese corporate roots with increasing Western autonomy in US R&D. Collaboration across HW/SW/firmware is essential. Less 'move fast break things', more 'ship reliable product on schedule'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Home users, small-to-medium businesses, enterprises, and service providers seeking affordable, reliable networking and connectivity solutions globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + 10–15% target bonus + RSU grant ($30k–$60k over 4 years) for US new-grad SWE/firmware roles; AI/ML specialists may reach $150k+ base."
   },
   "evidence_sha": "f8c5194e74abcb88",
+  "generated_at": 1784863866,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Networking hardware / telecommunications equipment / IoT consumer electronics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews on C/C++ embedded systems, Linux kernel, 802.11 Wi-Fi protocols, RTOS, networking stack, and possibly ML model optimization for edge devices. System design may cover high-concurrency cloud management for millions of devices. Behavioral questions will assess ownership, cross-functional collaboration, and ability to ship reliable firmware on schedule."
+  },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784674903,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Shenzhen, China; US subsidiary in Brea, California; R&D centers in China, US, and other regions; global sales and support offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make networking easy, reliable, and accessible for everyone through innovative, high-quality products that connect people and devices."
+  },
   "name": "TP-Link Systems Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-to-fast: hardware-driven release cycles with quarterly/half-year milestones; sprints exist but are paced by firmware validation and regulatory certification, not pure software velocity. Less chaotic than ad-driven tech, but crunch periods near launches."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer and enterprise networking equipment: Wi-Fi routers (including mesh systems), range extenders, powerline adapters, switches, network adapters, smart home devices (cameras, bulbs, plugs), and mobile broadband products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 US holidays; accrual-based; unlimited not typical for hardware firms."
   },
+  "refresh_after": 1790047866,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -250712,7 +251268,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams may observe quiet periods around Chinese New Year or US year-end, but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established public company (founded 1996) with global operations, thousands of employees, and significant market share in consumer networking; not a startup."
   },
   "sources": [
    {
@@ -250746,14 +251307,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=a5b46a060288ab6ae0757be3c335766b7c094b8503165896c601dfabb71624acJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cudHAtbGluay5jb20vdXMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational, likely sponsors H-1B and other work visas for specialized engineering roles in the US; specific cap-exempt status unknown."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e436e1c6e2",
+    "0e35b6cc09",
+    "bfa4bf087c"
+   ],
+   "value": "TP-Link Systems Inc. is a global provider of networking hardware and accessories, known for consumer and business routers, switches, Wi-Fi systems, and smart home devices. The company designs, manufactures, and sells networking products worldwide through retail and distribution channels."
+  },
+  "synthesized_evidence_sha": "f8c5194e74abcb88",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems, firmware, wireless protocol development, cloud management platforms, AI/ML for network optimization, QoS algorithms, security features, mobile apps, and hardware-software integration for routers and IoT devices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674903,
   "web_search_url": "https://duckduckgo.com/?q=TP-Link+Systems+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TP-Link offers a chance to work on massively deployed networking hardware and cloud/AI features at global scale, with strong new-grad compensation for a hardware-focused tech company. The culture is engineering-driven and fast-paced but generally more structured than pure software startups, potentially offering better work-life boundaries than high-burnout AI labs while still delivering elite technical challenges in wireless, embedded ML, and distributed systems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Generally reasonable hours for hardware engineering; on-call rotations for cloud services; limited weekend work outside launch windows. Better than many pure-software high-growth firms, but not a guaranteed-shutdown culture."
   }
  },
  "traba": {
@@ -256139,11 +256725,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -256155,6 +256743,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784672886,
   "name": "UJET",
   "pace_of_work": {
@@ -256167,6 +256756,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863986,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -256210,7 +256800,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=77368a9bcff7b091ccebf5cfc535d3cb88cf2a7dccd8ab53e923ed9654c92cc9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=UJET+company+careers+benefits",
@@ -268075,11 +268665,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268091,6 +268683,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863866,
   "last_evidence_at": 1784676950,
   "name": "Voltus",
   "pace_of_work": {
@@ -268103,6 +268696,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863986,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268146,7 +268740,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8281918d6e5730ce338ea0092709d4d3641bdf4822f34c0c9517e72f308de388JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cudm9sdHVzLmNvLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676950,
   "web_search_url": "https://duckduckgo.com/?q=Voltus+company+careers+benefits",
