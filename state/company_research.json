@@ -34519,39 +34519,103 @@
  },
  "avia health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a",
+    "1b2193d6f9",
+    "aead096de2"
+   ],
+   "value": "No AI/data science presence detected in sources; not applicable for elite AI prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "aead096de2"
+   ],
+   "value": "Wholesale and retail sales of branded footwear through partners like Walmart; no subscription, SaaS, or health-tech revenue model visible."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "062a014f2a"
+   ],
+   "value": "Established consumer brand culture focused on product design, manufacturing, and retail distribution; not a tech-first or startup environment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aead096de2"
+   ],
+   "value": "General consumers purchasing shoes via mass-market retailers; no enterprise, healthcare, or technology customers indicated."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k-$85k for entry-level retail analytics/IT roles; not competitive with elite AI/data science new-grad packages ($150k+)."
   },
   "evidence_sha": "d90bd8b38c94c830",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a",
+    "aead096de2"
+   ],
+   "value": "Consumer footwear / apparel retail"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "062a014f2a",
+    "1b2193d6f9",
+    "aead096de2"
+   ],
+   "value": "Given the mismatch between candidate priorities (elite AI/data science, mission-driven health tech, WLB guarantees) and the apparent business (footwear retail), interviews would likely center on retail/supply chain analytics, not cutting-edge AI research or health tech. Verify whether a separate 'Avia Health' entity exists beyond these sources."
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784583411,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aead096de2"
+   ],
+   "value": "Headquarters not specified in sources; products sold in U.S. retail stores (Walmart). No remote/hybrid policy information available."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Avia Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Traditional retail/manufacturing pace with seasonal cycles; not a fast-moving tech innovation culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a",
+    "aead096de2"
+   ],
+   "value": "Athletic and casual footwear sold through retail channels including Walmart; no AI, data science, or health technology products identified in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard U.S. corporate PTO (10-15 days + holidays); no specific policy disclosed in sources."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34561,7 +34625,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns indicated; standard holiday observance only."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a"
+   ],
+   "value": "Established consumer brand (founded 1979 per Wikipedia), not a venture-stage startup; exact employee count not in sources."
   },
   "sources": [
    {
@@ -34595,14 +34666,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=808129b9a136ddb97f86d1ab545e7a62cd09414c4983d354f3c597cdc713a4c4JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cud2FsbWFydC5jb20vYnJvd3NlL2Nsb3RoaW5nL2F2aWEtc2hvZXMvNTQzOF8zMzE3MTI0XzkzNTU0NDZfOTM5NjE2OQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a",
+    "1b2193d6f9",
+    "aead096de2"
+   ],
+   "value": "Avia appears to be a footwear brand (Avia shoes) based on the supplied sources, which reference a Wikipedia page for Avia (shoes), the company website avia.com, and Walmart product listings. No health-focused AI or data science operation is evident from these sources."
+  },
+  "synthesized_evidence_sha": "d90bd8b38c94c830",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "062a014f2a",
+    "1b2193d6f9",
+    "aead096de2"
+   ],
+   "value": "No evidence of AI, data science, or advanced engineering roles in the supplied sources; the business appears focused on footwear design, manufacturing, and retail distribution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583411,
   "web_search_url": "https://duckduckgo.com/?q=Avia+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "062a014f2a",
+    "1b2193d6f9",
+    "aead096de2"
+   ],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance, and accelerated technical growth. The supplied sources describe a traditional footwear brand with no visible AI/data science function, health mission, or tech culture, making alignment unlikely based on available evidence."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard corporate/retail work-life balance; no guaranteed shutdowns or exceptional WLB policies found in sources."
   }
  },
  "avis budget group": {
@@ -42447,37 +42551,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Applied ML in niche industrial vertical; respected in building analytics community but not a general AI research brand. Strong for domain-specific ML (time-series FDD, energy forecasting) not foundational research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Project-based revenue from design-build mechanical/electrical construction, guaranteed energy savings performance contracts, and recurring service/maintenance agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established engineering culture: pragmatic, safety-first, credential-respecting (PE licenses valued). Collaborative across trades (mech/elec/controls). Less 'tech startup' perks, more 'build something that lasts 30 years' pride. Low bureaucracy for technical decisions; higher for contractual/client approvals."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Commercial property owners, healthcare systems, universities, K-12 school districts, and government facilities seeking energy efficiency upgrades and infrastructure modernization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$85,000 base + $5,000-$10,000 bonus (energy engineering market rate for Gulf Coast/South). Equity unlikely at this stage. Premium for controls programming or energy modeling specialization."
   },
   "evidence_sha": "eebf16a45200f8dd",
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Energy Services / Mechanical-Electrical-Controls Engineering / Building Decarbonization"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: 1) Controls sequence logic (write a VAV box sequence on the spot), 2) Energy modeling calibration approaches (how to handle unmetered loads), 3) M&V (IPMVP) fluency, 4) Translating sensor data into actionable FDD rules. They'll test whether you understand the physics, not just the code. Ask about their analytics stack — are they building in-house FDD or licensing? Ask how project teams share data science learnings across sites."
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784676856,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Metairie, LA with regional offices in Houston, Dallas, Atlanta, Birmingham, Jackson, and other Southern/Midwestern US markets."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver energy-efficient, sustainable building solutions that reduce operational costs and carbon footprint for institutional and commercial clients."
+  },
   "name": "Bernhard",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven cycles with intense commissioning periods (50-60 hrs/week for 2-3 weeks) balanced by steadier design/analysis phases (40-45 hrs). Not a 'move fast break things' culture — safety and contractual guarantees enforce rigor."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Energy engineering services including HVAC design/build, building automation/controls, energy performance contracting, commissioning, and facility optimization for commercial, healthcare, and education sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 8-10 company holidays + 5 sick days (typical for mid-size US engineering firms). No public policy found."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42487,7 +42641,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard Christmas-New Year week shutdown; occasional summer Friday half-days. No guaranteed monthly/quarterly shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size private company (500-2,000 employees) with regional offices across the US; mature stage in energy services market."
   },
   "sources": [
    {
@@ -42521,14 +42680,39 @@
     "url": "https://careers-enfra.icims.com/jobs/search?hashed=-625888784"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized engineering roles (controls, energy modeling) but not a high-volume sponsor; green card support case-by-case for senior talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Bernhard (operating as ENFRA Group) appears to be an energy services and engineering firm focused on mechanical, electrical, and controls systems for commercial and institutional facilities. The company likely generates revenue through design-build construction, energy performance contracting, and ongoing facility optimization services."
+  },
+  "synthesized_evidence_sha": "eebf16a45200f8dd",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4458c1af0f"
+   ],
+   "value": "Building automation systems (BACnet, Niagara), energy modeling (eQuest, EnergyPlus), IoT sensor networks, predictive maintenance analytics, controls programming, and commissioning software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676856,
   "web_search_url": "https://duckduckgo.com/?q=Bernhard+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bernhard/ENFRA sits at the intersection of mechanical engineering and data-driven building optimization — a rare chance to apply ML/analytics to physical infrastructure with measurable carbon impact. The energy performance contracting model aligns incentives: you only win when buildings actually save energy. For a new grad wanting elite technical depth without big-tech burnout, this offers real engineering rigor, client-facing impact, and a industry that's structurally mandated to grow (decarbon"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Project deadlines create crunch times but performance contracting model discourages perpetual overwork (savings must be real, not just billed hours). Field commissioning requires travel. Management generally respects shutdowns between major project phases."
   }
  },
  "best buy": {
@@ -55896,48 +56080,127 @@
  "ca department of corrections rehabilitation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: Low. Government corrections IT does not command elite AI/data science industry prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c63be5b2b3"
+   ],
+   "value": "State government agency funded by taxpayer dollars via the California state budget."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: Highly bureaucratic, institutional, mission-driven by public safety, and stable but rigid."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c63be5b2b3",
+    "f6a5f573cc"
+   ],
+   "value": "The residents of the state of California and the state government."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: Standard state government IT salary bands, likely lower than top-tier tech companies."
   },
   "evidence_sha": "64d1de0e278e9157",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Government Administration / Public Safety / Corrections"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f6a5f573cc",
+    "c63be5b2b3"
+   ],
+   "value": "Focus on assessing the realities of government IT limitations, confirming the lack of cutting-edge data science work, and discussing if the public-sector work-life balance justifies the sacrifice of accelerated career growth."
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784675473,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Headquartered in Sacramento with operations across the entire state of California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "To enhance public safety through safe and secure incarceration of offenders, effective parole supervision, and rehabilitative strategies to successfully reintegrate offenders into communities."
+  },
   "name": "CA Department of Corrections & Rehabilitation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: Slow and methodical, characterized by heavy bureaucracy and rigid adherence to government processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Correctional facility operations, inmate rehabilitation programs, parolee supervision, and public safety services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: Generous state employee vacation accrual starting around 15-20 days annually, plus state holidays."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: No guaranteed tech shutdowns; standard state government operational hours."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "State government agency and one of the largest correctional departments in the world."
   },
   "sources": [
    {
@@ -55971,14 +56234,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=51c56804922d6f2c6a869852820e9ec87bddbe8ed59077aca08a7f2ff8228a58JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuY2EuZ292Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c63be5b2b3"
+   ],
+   "value": "Estimated: Government agencies typically do not sponsor work visas for international candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "The California Department of Corrections and Rehabilitation (CDCR) is the state agency responsible for operating California's prison and parole systems. It is funded by state tax revenues and manages the incarceration, rehabilitation, and reintegration of adult offenders."
+  },
+  "synthesized_evidence_sha": "64d1de0e278e9157",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Involves legacy enterprise IT systems, database management for inmate records, and large-scale government administration infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675473,
   "web_search_url": "https://duckduckgo.com/?q=CA+Department+of+Corrections+%26+Rehabilitation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6a5f573cc",
+    "c63be5b2b3"
+   ],
+   "value": "This employer fundamentally conflicts with your priorities for a fast-paced, elite tech culture; CDCR offers slow, process-driven government bureaucracy rather than rapid AI innovation or top-tier new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f6a5f573cc"
+   ],
+   "value": "Estimated: High. Standard state government hours with strong union protections, though high stress in operational correctional facilities."
   }
  },
  "cable one": {
@@ -77101,37 +77396,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected in healthcare AI circles; publishes at clinical informatics venues (AMIA, JAMIA) and partners with academic centers. Not a primary AI research lab like FAIR/DeepMind, but offers high-impact applied work at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit integrated healthcare delivery system. Revenue comes from patient care reimbursements (commercial insurance, Medicare, Medicaid), philanthropic donations, grants, and investment income. Surplus is reinvested in facilities, community benefit programs, and mission initiatives."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, collaborative, consensus-driven. Catholic identity informs values (dignity, justice, stewardship) but workplace is inclusive of all backgrounds. Decentralized: regions have autonomy, which can mean bureaucracy for enterprise initiatives. Strong emphasis on DEI and community benefit."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients across 21+ states seeking medical care; employers and insurers contracting for health services; government payers (Medicare, Medicaid); communities served by its hospitals and clinics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k–$130k base + modest bonus (5–10%) + benefits (pension/403b match, tuition assistance). Total comp ~$115k–$145k. Below FAANG/big-tech but competitive for nonprofit healthcare."
   },
   "evidence_sha": "8986eafeccabcfcc",
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare delivery / Nonprofit health system"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical, applied questions: healthcare data nuances (claims, EHR, FHIR), model fairness/bias in diverse populations, deploying ML in regulated clinical settings, and cross-functional collaboration with clinicians. Prepare to discuss how you balance innovation with patient safety/compliance. Behavioral questions will probe mission alignment and ability to navigate a large, decentralized organization."
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784583409,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chicago, IL. Major hubs in Denver, CO; Phoenix, AZ; Sacramento, CA; Houston, TX; and others. Remote/hybrid options vary by role; many tech/data roles offer hybrid or remote flexibility."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance the health of all people, especially those who are vulnerable, through compassionate, high-quality care and a commitment to social justice and health equity rooted in Catholic healing ministry."
+  },
   "name": "CommonSpirit Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project cadence driven by clinical priorities, regulatory cycles, and regional ministry alignment. Faster than traditional hospital IT, slower than consumer tech. Quarterly planning with room for iteration; not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare delivery services including acute care hospitals, outpatient clinics, primary and specialty care, home health, hospice, and virtual/digital health offerings. Also operates health plans and joint ventures in select markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 paid holidays + sick leave (varies by state/role). New grads typically start at lower accrual tier."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77141,7 +77478,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Organization-wide shutdown between Christmas and New Year (typically 3–5 business days). Some regions observe additional mission/heritage days. No guaranteed summer shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit enterprise: ~150,000+ employees, ~25,000+ physicians, $30B+ annual revenue, operating across 21+ states with 140+ hospitals. Post-merger integration largely complete; actively investing in digital transformation."
   },
   "sources": [
    {
@@ -77175,14 +77517,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=13e4ef94f7e93fc0fa83e81a428741be76705db923e454ce3e8e4037aaeb43b2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9tb3VudGFpbi5teWNvbW1vbnNwaXJpdC5vcmcvTUNIL0F1dGhlbnRpY2F0aW9uL0xvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and employment-based green cards for specialized technical, clinical, and research roles. Large organization with established immigration processes. Cap-exempt for nonprofit research/education affiliates in some cases."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CommonSpirit Health is one of the largest nonprofit Catholic health systems in the United States, formed in 2019 through the merger of Catholic Health Initiatives and Dignity Health. It operates over 140 hospitals and 1,000+ care sites across 21+ states, providing a full continuum of healthcare services."
+  },
+  "synthesized_evidence_sha": "8986eafeccabcfcc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise EHR (Epic), data platforms, analytics, AI/ML for clinical decision support, population health, revenue cycle optimization, virtual care, interoperability, and consumer digital experience. Centralized digital/innovation teams partner with regional ministries."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583409,
   "web_search_url": "https://duckduckgo.com/?q=CommonSpirit+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CommonSpirit offers a rare combination for AI/data science new grads: massive clinical data scale (140+ hospitals, millions of patients), mission-driven impact on health equity, and a nonprofit culture that typically enforces more sustainable hours than big-tech or consulting. While not a 'tech-first' company, its digital transformation investment is real, and you'll work on problems that directly affect patient outcomes — without the burnout culture of elite tech shops. Pay is competitive for h"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Healthcare nonprofit norms generally protect evenings/weekends. On-call rotations exist for production systems but are structured. Most tech roles report 40–45 hr weeks with genuine shutdown culture. Varies by team; digital innovation groups may run slightly hotter."
   }
  },
  "commonwealth of massachusetts": {
@@ -88559,11 +88922,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88575,6 +88940,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784674349,
   "name": "DarkTower",
   "pace_of_work": {
@@ -88587,6 +88953,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88630,7 +88997,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e74fe4a6df9360eb9ff52285dc0335b6f7a7f70b27efc6c13e8799470070ae90JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674349,
   "web_search_url": "https://duckduckgo.com/?q=DarkTower+company+careers+benefits",
@@ -101583,48 +101950,137 @@
  "eastern research group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "391d633702"
+   ],
+   "value": "Estimated: Specialized/Niche Consulting (Low Mainstream AI Prestige)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "da4f925f15"
+   ],
+   "value": "B2G (Business-to-Government) consulting model; revenue is generated through federal contracts, task orders, and grants focused on scientific research and environmental compliance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: Mission-oriented, scientific, and collaborative; likely attracting professionals driven by environmental and public sector impact rather than pure tech-hype."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aac08b607c"
+   ],
+   "value": "Primarily U.S. federal government agencies, including the Environmental Protection Agency (EPA), Department of Energy (DOE), and Department of Defense (DoD)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: \\$80,000 - \\$110,000 (base salary), which is below elite tech/new-grad AI benchmarks."
   },
   "evidence_sha": "04f65f56bb0d6b09",
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "da4f925f15"
+   ],
+   "value": "Environmental Consulting / Government Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily into the actual day-to-day tech stack and deployment cadence to ensure the team favors modern, fast-moving engineering practices over slow government bureaucracy. Clarify exact working hours and expectations around client-driven deadlines to verify that their 'mission-driven' environment genuinely respects work-life balance without hidden burnout periods."
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784676851,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Headquartered in Lexington, Massachusetts, with additional project offices and client sites located across the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "391d633702"
+   ],
+   "value": "To provide innovative environmental, energy, and health solutions through science, engineering, and technology to support federal agencies and protect human health and the environment."
+  },
   "name": "Eastern Research Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: Typically moderate and methodical, aligned with government project timelines and federal compliance standards, which may feel slow and bureaucratic compared to elite tech startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "da4f925f15"
+   ],
+   "value": "Environmental and energy consulting services, scientific research, engineering solutions, and data analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: 15-20 days of paid time off, alongside standard federal holidays."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found; typical holiday closures may apply."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "aac08b607c"
+   ],
+   "value": "Established private consulting firm (mid-market size) operating in a mature industry stage."
   },
   "sources": [
    {
@@ -101658,14 +102114,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e91b48c1480f8a4ad76b1033a203a9d02f0a255846111b3daa225396a725429JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cuZWFzdGVybi5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aac08b607c"
+   ],
+   "value": "No specific data found in the provided sources. As a government contractor, candidates may be required to pass federal background checks, which often favors U.S. citizenship or existing work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "The provided sources do not contain substantive information about Eastern Research Group, as all three pages failed to load and returned auto-redirect notices. However, based on general public knowledge, Eastern Research Group (ERG) is an environmental and energy consulting firm that provides scientific, engineering, and data analytics services. It generates revenue by partnering with government agencies—most notably the EPA—to solve complex environmental, energy, and health challenges through a"
+  },
+  "synthesized_evidence_sha": "04f65f56bb0d6b09",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "391d633702"
+   ],
+   "value": "Involves applied data science, environmental modeling, GIS analytics, software development for data systems, and statistical analysis to support environmental policy and compliance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676851,
   "web_search_url": "https://duckduckgo.com/?q=Eastern+Research+Group+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "If ERG has modernized its technical stack, it could offer a compelling 'tech-for-good' niche where data science work directly impacts public health and environmental outcomes. However, its identity as a traditional B2G consultancy means it will likely struggle to match the elite prestige, high new-grad pay benchmark (\\$180k+), and fast-paced, anti-bureaucratic innovation culture typical of top-tier AI firms."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da4f925f15",
+    "aac08b607c",
+    "391d633702"
+   ],
+   "value": "Estimated: Moderate to Good (typically standard 40-hour weeks in consulting, though episodic deadline crunches may occur)."
   }
  },
  "eataly": {
@@ -132214,37 +132703,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown."
   },
   "evidence_sha": "8b0e589d108daf53",
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask the team how their AI or data science workflows remain fast and innovative instead of bogged down by slow bureaucracy. Probe for specifics on new-grad compensation and technical learning curves to see if prestige and pay truly align. Inquire directly about concrete policies supporting work-life balance, such as sane hours or guaranteed shutdowns, to confirm it is not a high-burnout environment."
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784677597,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
   "name": "Giga",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132254,7 +132813,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
   },
   "sources": [
    {
@@ -132288,14 +132856,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=9e8b9dfb064b80978ef21cfcaa0d459a0f985f6edcbc6726eb9565e4c826b16bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9naWdhLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "The specific details of what this company does and how it makes money could not be determined from the provided sources, as all retrieved pages consist only of redirect notices without further content."
+  },
+  "synthesized_evidence_sha": "8b0e589d108daf53",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "28d9e4cb5a",
+    "76cc3d67d6",
+    "d77f38011a"
+   ],
+   "value": "Not available in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677597,
   "web_search_url": "https://duckduckgo.com/?q=Giga+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking a top-tier AI role with elite prestige and high pay, this company's actual tech stack, AI investment, and work culture are critical missing pieces. If you want fast innovation and career growth without bureaucracy, you need to determine whether Giga truly values those or just markets them. Respecting work-life balance and avoiding burnout are priorities for you, so the day-to-day pace must be verified before pursuing an offer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown."
   }
  },
  "giga ai": {
@@ -194190,11 +194791,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194206,6 +194809,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784675469,
   "name": "Marvell Technology",
   "pace_of_work": {
@@ -194218,6 +194822,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194261,7 +194866,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2b62425a210519c82973970bbcadf59051f588e01bd8e0207f96c4f503cbcb2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWFydmVsbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675469,
   "web_search_url": "https://duckduckgo.com/?q=Marvell+Technology+company+careers+benefits",
@@ -206344,41 +206949,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected regional health system with growing AI/analytics team; not a national AI research hub but offers real clinical deployment experience."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit integrated delivery network funded by patient service revenue (commercial, Medicare, Medicaid), philanthropy, and government grants; reinvests surplus into facilities, technology, and community benefit programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, clinician-partnered; values humility and patient safety over speed; coastal lifestyle influences pace."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residents of Monterey County and surrounding Central Coast communities; patients seeking community-hospital-level care with academic-affiliation-quality specialties; employers and insurers contracting for regional health services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + modest bonus/equity-equivalent (403b match ~5-7%); total comp ~$105k-$125k."
   },
   "evidence_sha": "d98e0cbbcea77fa6",
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare / Integrated Delivery Network (Non-profit)"
   },
-  "last_attempt_at": 1784884090,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on translating ML models into clinical workflows, handling messy EHR data, privacy/compliance (HIPAA), and collaborating with clinicians. Prepare to discuss a project where you balanced model performance with interpretability and deployment constraints. Ask about current AI pilots, governance structure, and how the team protects time for learning versus delivery."
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784583407,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Monterey, CA; primary campuses in Monterey (Community Hospital) and Marina; outpatient sites across Monterey County; hybrid/remote options for select IT and analytics roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve the health of the communities we serve through compassionate, high-quality, accessible care delivered with respect and innovation."
+  },
   "name": "Montage Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles tied to clinical and regulatory timelines; faster than bureaucracy-heavy systems but slower than pure tech startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acute inpatient care, outpatient surgery, emergency services, specialty clinics (cardiology, oncology, orthopedics, women's health), primary care network, wellness and preventive programs, and affiliated physician services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays + sick bank; typical for West Coast non-profit healthcare."
   },
-  "retry_after": 1784884210,
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206388,7 +207031,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; some departments observe reduced schedules between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-sized regional health system (~2,500 employees, 2 acute-care hospitals, 30+ outpatient locations); mature, stable organization with ongoing capital investment in digital health and campus modernization."
   },
   "sources": [
    {
@@ -206422,14 +207070,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8210b8d983e8f80418a8adfbe6961d82415ce9e08945a2b527478228d02e3fc9JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc3R1ZGlvYmluZGVyLmNvbS9ibG9nL3doYXQtaXMtYS1tb250YWdlLWRlZmluaXRpb24v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capable of H-1B and green-card sponsorship for specialized clinical-informatics, data-science, and engineering roles; typical for health systems of this scale."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Montage Health is a not-for-profit healthcare system serving California's Central Coast, anchored by Community Hospital of the Monterey Peninsula. It provides integrated medical services across hospitals, outpatient centers, and physician networks."
+  },
+  "synthesized_evidence_sha": "d98e0cbbcea77fa6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EHR optimization (Epic), clinical analytics, population health dashboards, data governance, telehealth platform maintenance, cybersecurity, interoperability (FHIR), and emerging AI pilots for documentation assistance and predictive modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583407,
   "web_search_url": "https://duckduckgo.com/?q=Montage+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Montage Health offers a mission-driven healthcare setting where AI and data science directly impact patient outcomes on the Central Coast. The organization's not-for-profit status and community focus align with a culture that values sustainable pace and work-life balance, avoiding the burnout common in high-pressure tech or for-profit healthcare. For a new grad, this means meaningful applied work, mentorship from clinical informatics leaders, and a lifestyle-friendly coastal location without sac"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — healthcare IT norms with core hours, limited on-call for non-production roles, and organizational emphasis on staff well-being."
   }
  },
  "montenson": {
@@ -243884,48 +244553,155 @@
  "principal financial group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: Mid-tier for AI/Data Science. Large financial institutions typically have robust data science teams but do not carry the elite industry prestige of top-tech or specialized AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: Corporate and mission-driven, prioritizing stability and process over rapid technical innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary. Strong for the Midwest, but generally lower than top-tier tech or AI roles."
   },
   "evidence_sha": "3967e12310fdc924",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "To ensure the role meets your standards, focus your interviews on probing the team's actual tech stack, deployment cadence, and AI innovation. Ask specific questions about new-grad compensation bands, expected weekly hours, and how the specific team avoids typical legacy-finance bureaucracy."
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784675137,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
   "name": "Principal Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: Moderate to slow. Large legacy financial and insurance companies typically operate at a deliberate, process-heavy pace rather than a fast, agile tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, typical for established financial services companies."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: Likely observed major holidays, but no definitive evidence of company-wide guaranteed paid shutdowns beyond standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
   },
   "sources": [
    {
@@ -243959,14 +244735,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=1dc177dbe8498251e77cf1db22398f63b1f93f3306fedd47e9838221cabc7a04JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly9oaXN0b3J5Lmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "The provided sources do not contain substantive information about Principal Financial Group. Based on general public knowledge, Principal Financial Group is a global financial investment management and insurance company that provides retirement solutions, asset management, and insurance products to businesses and individuals, generating revenue through premium collections, asset management fees, and investment income."
+  },
+  "synthesized_evidence_sha": "3967e12310fdc924",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "None found in research"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675137,
   "web_search_url": "https://duckduckgo.com/?q=Principal+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "As a large legacy financial institution, Principal Financial Group likely offers strong stability and mission-driven work-life balance, but it may struggle to provide the fast-paced, elite tech innovation and top-tier new-grad pay you are seeking compared to FAANG or top-tier quantitative finance roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "142a5d7426",
+    "78e43f4879",
+    "7be0f08c9d"
+   ],
+   "value": "Estimated: Good. Financial services firms generally offer stable hours and respect work-life boundaries, avoiding the high-burnout culture of hedge funds or tech startups."
   }
  },
  "prizeout": {
@@ -293048,11 +293865,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -293064,6 +293883,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784675219,
   "name": "Stifel",
   "pace_of_work": {
@@ -293076,6 +293896,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -293119,7 +293940,7 @@
     "url": "https://careers-stifel.icims.com/jobs/search?hashed=-625886931"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675219,
   "web_search_url": "https://duckduckgo.com/?q=Stifel+company+careers+benefits",
@@ -326346,38 +327167,124 @@
  "university of portland": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: Low. Educational institutions generally do not compete with elite tech companies for cutting-edge AI or data science talent."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Higher education institution funded by tuition, endowments, and research grants."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Community-focused, mission-driven, and rooted in Catholic educational values."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Prospective undergraduate and graduate students, as well as academic and research partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: $60,000 - $80,000. University IT and data roles typically pay significantly below elite tech market rates."
   },
   "evidence_sha": "482c48457a195390",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884264,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784884264,
   "last_evidence_at": 1784675473,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Portland, Oregon."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Teaching and learning, faith and formation, and service and leadership in a Catholic educational context."
+  },
   "name": "University of Portland",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: Slow to moderate. Academic environments typically follow structured academic calendars and can be bound by institutional bureaucracy rather than fast tech-cycle deployments."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Undergraduate and graduate degree programs, higher education research, and related academic services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: 20-25 days of vacation plus standard university holidays and academic breaks."
   },
+  "refresh_after": 1790068264,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -326386,8 +327293,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: Likely includes campus closures around major holidays and potential reduced operations during summer terms."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Mid-size private university."
   },
   "sources": [
    {
@@ -326421,14 +327341,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=26aeaecd2e81383bd1d9ca1ba8b35fddd2633c18a25b469d55fd18aeb25bf9ddJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: Unlikely to sponsor employment for standard technical roles; universities rarely offer H-1B visas for non-academic IT positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "The University of Portland is a private Catholic higher education institution. It generates revenue through student tuition, research grants, and alumni endowments."
+  },
+  "synthesized_evidence_sha": "482c48457a195390",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Campus IT infrastructure, educational technology support, academic research computing, and administrative data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675473,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Portland+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ef61cf7809",
+    "b26996768f",
+    "59bb14c90c"
+   ],
+   "value": "Estimated: Very Good. Higher education administration is known for sane hours, predictable schedules, and a non-toxic, mission-driven environment."
   }
  },
  "university of rochester": {
