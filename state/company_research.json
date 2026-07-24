@@ -66888,11 +66888,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66904,6 +66906,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784752592,
   "name": "CesiumAstro",
   "pace_of_work": {
@@ -66916,6 +66919,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886586,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66989,7 +66993,7 @@
     "url": "https://jobs.lever.co/CesiumAstro/d7a3ee1e-86fc-4fdb-9e3e-0469499591bd"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679534,
   "web_search_url": "https://duckduckgo.com/?q=CesiumAstro+company+careers+benefits",
@@ -105328,11 +105332,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105344,6 +105350,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784679539,
   "name": "Eataly",
   "pace_of_work": {
@@ -105356,6 +105363,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886586,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105399,7 +105407,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679539,
   "web_search_url": "https://duckduckgo.com/?q=Eataly+company+careers+benefits",
@@ -109277,41 +109285,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI in industrial settings; publishes at top conferences (NeurIPS, ICML workshops, ACC, IEEE CDC) but not a primary AI research lab like FAIR or DeepMind."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e78338feb7",
+    "aad8709e5b"
+   ],
+   "value": "Sells engineered equipment, proprietary instrumentation, and software licenses; grows recurring revenue through services, maintenance contracts, and digital subscriptions; invests in acquisitions to expand automation and software portfolio."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "148bca58c1"
+   ],
+   "value": "Engineering-first, safety-obsessed, collaborative across disciplines; low politics in R&D, strong mentorship culture; hierarchy respected but ideas judged on merit; diversity initiatives accelerating in digital orgs."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e78338feb7"
+   ],
+   "value": "Process industries (oil & gas, chemicals, power, life sciences), hybrid manufacturers (food & beverage, automotive, packaging), discrete manufacturers, commercial building operators, and residential HVAC contractors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU grant ($15k–$25k vesting over 3–4 yrs) for U.S. roles; higher in Bay Area/Austin hubs."
   },
   "evidence_sha": "245e2438bae4dbbc",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e78338feb7"
+   ],
+   "value": "Industrial Automation / Electrical Equipment / Climate Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical ML/system-design questions rooted in industrial data (time-series, sensor fusion, edge constraints). Prepare to discuss model deployment on resource-limited hardware, data quality in brownfield plants, and cross-functional collaboration with mechanical/chemical engineers. Behavioral rounds emphasize safety mindset, stakeholder translation, and long-term ownership—bring concrete examples of shipping production models or owning a technical area end-to-end."
   },
-  "last_attempt_at": 1784886268,
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784678873,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e78338feb7",
+    "aad8709e5b"
+   ],
+   "value": "Headquarters in Ferguson, MO (St. Louis area); major engineering hubs in Austin TX, Boulder CO, Raleigh NC, Pune India, Shanghai China, and multiple European sites; global sales/service presence in 150+ countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aad8709e5b"
+   ],
+   "value": "To drive innovation that makes the world healthier, safer, smarter, and more sustainable through advanced automation and climate technologies."
+  },
   "name": "Emerson Electric",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured to moderate; quarterly planning cycles, rigorous safety/quality gates, and regulated-industry compliance slow raw speed vs. pure software firms, but digital teams run 2-week sprints with protected focus time."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e78338feb7",
+    "aad8709e5b"
+   ],
+   "value": "Industrial automation systems (DeltaV, Ovation, Rosemount instruments), test & measurement equipment, compression and climate technologies (Copeland compressors, thermostats), software suites (Plantweb, AspenTech stake), and related lifecycle services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10 company holidays + 2–3 floating days; accrual increases with tenure; unlimited not offered."
   },
-  "retry_after": 1784886388,
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109321,7 +109384,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: One full-week summer shutdown (early July) and one week year-end (Christmas–New Year) where most offices close; additional site-specific holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e78338feb7"
+   ],
+   "value": "Large public company (NYSE: EMR); ~$16–17B annual revenue; ~85,000–90,000 employees globally; mature, dividend-paying industrial conglomerate."
   },
   "sources": [
    {
@@ -109355,14 +109425,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd2b2e2a96c3e1000464154e9fe3ee2e2e270cffd1e70b0a5e48ec3744f83f81JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cuZW1lcnNvbi5jb20vZW4vY29ycG9yYXRl&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "148bca58c1"
+   ],
+   "value": "Active H-1B sponsor for engineering, data science, and IT roles; green-card sponsorship common for advanced-degree hires in R&D and digital teams; university recruiting includes visa-eligible candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e78338feb7",
+    "aad8709e5b"
+   ],
+   "value": "Emerson Electric is a global industrial technology and software company providing automation solutions for process, hybrid, and discrete manufacturers, plus climate technologies for commercial and residential markets. It generates revenue by selling hardware, software, and services that optimize industrial operations, energy efficiency, and building comfort."
+  },
+  "synthesized_evidence_sha": "245e2438bae4dbbc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e78338feb7",
+    "148bca58c1"
+   ],
+   "value": "Embedded software/firmware for instruments and controllers; cloud/edge platforms for industrial IoT; data science & ML for predictive maintenance, process optimization, and energy modeling; simulation and digital twin development; cybersecurity for OT environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678873,
   "web_search_url": "https://duckduckgo.com/?q=Emerson+Electric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Emerson offers a rare blend: deep industrial domain expertise with a growing, well-funded digital/AI agenda, giving you real-world impact at scale without the burnout culture of pure-play tech. Its size funds serious ML research (e.g., physics-informed models for process control) while its 130+ year history provides stability and structured career ladders. Work-life norms are closer to traditional engineering than Silicon Valley—core hours, predictable schedules, and limited on-call—yet the comp"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~9–5, minimal weekend work, on-call rotations rare outside mission-critical cloud ops; flex/remote policies vary by site but generally supportive."
   }
  },
  "emoney advisor llc": {
@@ -192698,41 +192797,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low to Medium; academic prestige within state-region research circles but not considered a top-tier destination for elite AI/data science career growth."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3ad1d144e6"
+   ],
+   "value": "Public higher education funded by state appropriations, tuition, private grants, and endowment income."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, mission-driven, steady, and structured rather than scrappy, fast-paced, or highly innovative."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "417a3c2892",
+    "3ad1d144e6"
+   ],
+   "value": "Undergraduate and graduate students, researchers, and the state of Louisiana's residents and workforce."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000-$75,000 base salary for new-grad data science or AI staff roles, well below top-tier market rates."
   },
   "evidence_sha": "4f2833b74bcbcb08",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892"
+   ],
+   "value": "Higher Education / Research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be clear that high new-grad pay, fast innovation, and aggressive technical growth are strict requirements. Press for specifics on funding stability, tuition and fee benefits, shutdown windows, and whether state-employment bureaucracy will slow your projects. Push back on any indication of slow academic IT processes."
   },
-  "last_attempt_at": 1784886072,
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784678560,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892"
+   ],
+   "value": "Main campus in Baton Rouge, Louisiana and associated campuses and research facilities throughout Louisiana."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892"
+   ],
+   "value": "To provide high-quality education, conduct groundbreaking research, and perform public service to benefit the state of Louisiana and society at large."
+  },
   "name": "Louisiana State University (LSU)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate, tied to academic semesters and grant cycles rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892"
+   ],
+   "value": "Academic degree programs, educational instruction, and institutional research outputs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Staff receive roughly 20-25 vacation days plus state holidays; faculty follow academic calendars."
   },
-  "retry_after": 1784886312,
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192742,7 +192896,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: The university typically observes winter holidays and some state holidays, but formal guaranteed shutdowns beyond that are not standard public policy."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "3191537e3f",
+    "3ad1d144e6"
+   ],
+   "value": "Large public institution with on the order of tens of thousands of students and thousands of staff and faculty."
   },
   "sources": [
    {
@@ -192776,14 +192938,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=b660f10179a3e723aa9ec2bcae36b0aa2c4961850081b3661ef49f3100dcbb40JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTG91aXNpYW5h&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Academic visas and post-graduation academic training are available to international students; standard employer visa sponsorship for staff roles is ad hoc and limited."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892",
+    "3ad1d144e6"
+   ],
+   "value": "Louisiana State University (LSU) is a public land-grant research university and the flagship institution of Louisiana. It makes money primarily through state appropriations, student tuition and fees, research grants, and endowment returns."
+  },
+  "synthesized_evidence_sha": "4f2833b74bcbcb08",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3191537e3f",
+    "417a3c2892"
+   ],
+   "value": "Data science and AI work happens in an academic research setting: developing models, managing institutional data, and supporting grant-funded projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678560,
   "web_search_url": "https://duckduckgo.com/?q=Louisiana+State+University+%28LSU%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "University research roles provide meaningful, mission-driven work but are unlikely to rival the elite prestige, fast tech culture, or high new-grad pay of top-tier tech firms. This environment will not offer the rapid technical learning curve or aggressive private-sector compensation you want, though it tends to have slower bureaucracy and more predictable hours than some private tech employers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; sane hours are common in staff roles, though workloads vary by research lab and grant deadlines."
   }
  },
  "lovasco": {
@@ -221598,37 +221788,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b5ef9fa2b6",
+    "69398eb11f"
+   ],
+   "value": "B2B service and brokerage fee model. Newmark earns commissions on leasing and investment sales transactions, alongside recurring management fees and consulting retainers for outsourced real estate operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, corporate, and real-estate-focused. Tech and data teams may experience less of a traditional 'Silicon Valley' tech culture and more of an enterprise IT services environment."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "69398eb11f"
+   ],
+   "value": "Commercial real estate owners, tenants, investors, lenders, and developers ranging from large global corporations to mid-market and local property investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000 base salary for entry-level data/tech roles."
   },
   "evidence_sha": "8e7841b529a7d1ea",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b5ef9fa2b6",
+    "11a0513d27"
+   ],
+   "value": "Commercial Real Estate Services / Brokerage"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "69398eb11f"
+   ],
+   "value": "Probe whether your data science work will be a core driver of business strategy or just a supporting function for brokers. Ask about the balance between leveraging existing enterprise tools versus greenfield AI innovation, and confirm team expectations on after-hours availability to ensure the work-life balance aligns with your personal boundaries."
+  },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784742132,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "11a0513d27",
+    "69398eb11f"
+   ],
+   "value": "Global headquarters located in New York City, NY, with a major corporate presence in San Diego, CA, and offices spanning hundreds of locations globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "11a0513d27"
+   ],
+   "value": "To provide unparalleled commercial real estate services and insights to clients, empowering them to make strategic property and investment decisions that maximize asset value and operational efficiency."
+  },
   "name": "Newmark Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and client-driven, ranging between a supportive 3/10 and a bureaucratic 7/10 depending on division. Pace is dictated by real estate market cycles rather than fast-paced agile tech sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b5ef9fa2b6"
+   ],
+   "value": "Commercial real estate services including tenant and landlord leasing representation, capital markets and investment sales, commercial mortgage brokerage, property and facilities management, and appraisal/valuation services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days (4-5 weeks) of Paid Time Off per year for full-time corporate employees."
   },
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221638,7 +221887,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard corporate holidays, but specific guaranteed company-wide shutdowns outside of standard public holidays are not indicated."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b5ef9fa2b6"
+   ],
+   "value": "Publicly traded company (NASDAQ: NMRK) operating as a large, established enterprise. It manages billions of square feet of commercial space globally with thousands of employees across six continents."
   },
   "sources": [
    {
@@ -221672,14 +221928,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=ee319803b7cd63b8196d8d3bb6c99ce7be187c92c14e9b4924398a7af6009724JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=3ea6421f-8f9c-69f2-04ab-55818e356880&u=a1aHR0cHM6Ly93d3cubm1yay5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5ef9fa2b6"
+   ],
+   "value": "As a large, publicly traded U.S. corporation, Newmark typically has the infrastructure to offer visa sponsorship for specialized technical roles that lack sufficient domestic talent, though specific role sponsorship is evaluated on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b5ef9fa2b6",
+    "69398eb11f"
+   ],
+   "value": "Newmark Group is a prominent global commercial real estate services firm that provides a comprehensive suite of services to commercial real estate tenants, owners, and investors. It makes money by charging fees and commissions for leasing, investment sales, property management, and valuation consulting, acpturing value across every phase of the real estate lifecycle."
+  },
+  "synthesized_evidence_sha": "8e7841b529a7d1ea",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b5ef9fa2b6",
+    "69398eb11f"
+   ],
+   "value": "Data analytics and software development supporting real estate valuation, market research, portfolio management, and client-facing platforms. Tech teams work on data integration, financial modeling, and enterprise system architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742132,
   "web_search_url": "https://duckduckgo.com/?q=Newmark+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "11a0513d27"
+   ],
+   "value": "While Newmark operates in traditional commercial real estate, applying AI and data science here positions you to disrupt a paper-heavy industry with massive datasets. The company offers a stable foundation for building predictive real estate models, but a new grad should verify if tech teams are insulated from broader corporate bureaucracy to ensure a sufficiently innovative culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (6/10). The company runs on traditional corporate hours, but urgent client needs during active real estate deals can occasionally disrupt standard flow."
   }
  },
  "newport news shipbuilding a division of hii": {
@@ -253001,40 +253288,105 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 – The company is a recognized leader in manufacturing technology and process automation, but it is not historically recognized for elite, top-tier AI/Data Science prestige compared to FAANG or dedicated AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "B2B service model that generates revenue by charging clients for digital manufacturing processes, relying on automated systems to enable fast-paced, scalable production."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745",
+    "33caabc1bb"
+   ],
+   "value": "Diverse, smart, genuine, and humble. The culture is passionate and centered around meaningful work that fosters creativity and feels like home."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745",
+    "04c0dccf66"
+   ],
+   "value": "Engineers, product designers, and companies across diverse industries who need to bring new and innovative products to market quickly."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "a9459576ab3f4e95",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745",
+    "33caabc1bb"
+   ],
+   "value": "Digital manufacturing and manufacturing services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the implementation of AI/data science within their digital manufacturing automation, actual compensation for new-grad roles, and hours expectations. Ask whether the fast-paced culture (unprecedented speeds) comes with mandated shutdowns or contributes to burnout cultures to ensure it aligns with your personal time and WLB priorities."
   },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784678864,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Global operations, providing services to clients across various regions."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "To drive meaningful work that brings new and innovative products to market at unprecedented speeds, fueled by a diverse, smart, and passionate team."
+  },
   "name": "Protolabs",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly highlights bringing products to market at 'unprecedented speeds' and operating in a fast-paced, evolving environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Custom prototypes, 3D printed parts, CNC machining, and injection molding services delivered through a digital manufacturing platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745",
+    "33caabc1bb",
+    "04c0dccf66"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
@@ -253042,6 +253394,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Public company (NYSE: PRLB), operating at scale as a leader in the digital manufacturing industry."
   },
   "sources": [
    {
@@ -253105,14 +253464,45 @@
     "url": "https://jobs.lever.co/protolabs/32044363-dd57-496f-bbd4-a6841a36097c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Not explicitly mentioned in the provided sources; unknown if they sponsor visas for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745",
+    "33caabc1bb"
+   ],
+   "value": "Protolabs is a digital manufacturing leader that produces custom prototypes and low-volume production parts at unprecedented speeds. It makes money by providing fast-turnaround manufacturing services—leveraging automation and software to streamline the transition from 3D CAD design to physical parts for its clients."
+  },
+  "synthesized_evidence_sha": "a9459576ab3f4e95",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed937745"
+   ],
+   "value": "Focuses on automating and scaling digital manufacturing workflows, requiring a fast pace to support process improvement, quality systems at scale, and software-driven manufacturing technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678864,
   "web_search_url": "https://duckduckgo.com/?q=Protolabs+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "For a candidate seeking high new-grad pay and elite prestige, Protolabs offers a fast-paced, tech-driven environment that automates physical manufacturing, though its core brand prestige is in manufacturing rather than AI. It may serve as a strong launchpad for technical learning and career growth, but pay is estimated and may not match top-tier AI roles; you must verify if the pace aligns with your work-life balance needs."
+  },
+  "wlb_rating": {
+   "confidence": "low",
+   "source_ids": [
+    "d8ed937745",
+    "33caabc1bb"
+   ],
+   "value": "Estimated: Moderate. They state their culture makes the workplace feel like home, but the relentless focus on 'unprecedented speeds' and high-impact process improvements may indicate a demanding pace that could impact personal time."
   }
  },
  "proximate technologies": {
@@ -260389,11 +260779,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -260405,6 +260797,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784680702,
   "name": "Radius Limited",
   "pace_of_work": {
@@ -260417,6 +260810,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886586,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -260460,7 +260854,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680702,
   "web_search_url": "https://duckduckgo.com/?q=Radius+Limited+company+careers+benefits",
@@ -260831,48 +261225,141 @@
  "ramboll": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: Tier 2 - Prestigious within engineering and sustainability, but lacks the elite tier 1 status of dedicated big-tech or top AI-first companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "B2B and B2G consulting model that generates revenue by contracting specialized engineering, architectural, and digital advisory services for complex infrastructure and environmental projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: Collaborative and mission-driven with a European-style emphasis on teamwork, sustainability, and avoiding toxic burnout environments."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Corporate clients, public sector organizations, and private real estate developers seeking engineering and architectural expertise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: $70,000 - $90,000 USD base salary for technical roles, which is lower than elite AI tech firms but competitive for European engineering sectors."
   },
   "evidence_sha": "2787d13432536ec9",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Architecture, Engineering, and Construction Consulting."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Discuss how the team balances innovative AI development with slow bureaucracy, clarify exact new-grad compensation against industry benchmarks, and ask about technical learning accelerators and staffing models to ensure continuous career growth without sacrificing personal time."
+  },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784678788,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Headquartered in Denmark, with a widespread global presence across multiple regions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "To create sustainable societies and drive positive change through engineering, design, and consultancy services."
+  },
   "name": "Ramboll",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: Moderate to slow pace, typical of large engineering consultancies with established corporate protocols."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Engineering and design services, environmental consulting, architecture, project management, and sustainability advisory solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: 25-30 days of paid time off annually, supplemented by public holidays."
   },
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46",
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: Likely office closures around major holidays, though guaranteed company-wide shutdowns are unverified."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Established global consultancy operating with a large corporate structure."
   },
   "sources": [
    {
@@ -260906,14 +261393,51 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Global presence suggests potential visa sponsorship options for specialized roles, though exact policies are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Ramboll is a global architecture, engineering, and consultancy company that designs and advises on major infrastructure, buildings, and environmental projects. It makes money by providing specialized technical consulting, design, and project management services to corporate and public sector clients."
+  },
+  "synthesized_evidence_sha": "2787d13432536ec9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46",
+    "f16eec2a6f"
+   ],
+   "value": "Data science, digital engineering, and technology consulting roles focused on building solutions for the built environment, sustainability, and smart infrastructure projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678788,
   "web_search_url": "https://duckduckgo.com/?q=Ramboll+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "While the company is mission-driven and explicitly values work-life balance with normalized hours, its traditional engineering consultancy model may lack the elite prestige and high new-grad tech salaries of top-tier AI firms, and its corporate structure could feel slower and more bureaucratic for candidates seeking a fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2ea4462bae",
+    "1f48e33c46"
+   ],
+   "value": "Estimated: High rating; strongly focused on employee well-being and sustainable working hours aligned with European corporate norms."
   }
  },
  "ramp": {
@@ -261965,41 +262489,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong applied AI in a specialized vertical; not a primary AI research lab but high-impact production ML for pharma clients."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Agency/consulting model: project-based and retainer fees from healthcare clients for communications, analytics, and technology-enabled services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Collaborative, excellence-oriented, 'best together' people-first rhetoric; agency culture with healthcare mission focus."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Pharmaceutical, biotech, medical device, and healthcare companies seeking commercialization, brand strategy, and data-driven engagement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + bonus/equity; agency pay often trails Big Tech but competitive for healthcare analytics."
   },
   "evidence_sha": "27a313c2a4d46c71",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Healthcare communications / Life sciences marketing & analytics agency"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Probe for concrete WLB signals: typical weekly hours, on-call expectations, project turnover rate, and how 'fast-paced agency environment' translates to sustainable delivery. Ask about AI/ML model deployment lifecycle, data access governance, and mentorship structure for early-career technical hires."
+  },
+  "last_attempt_at": 1784886466,
+  "last_evidence_at": 1784679088,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in San Francisco; offices across US (NYC, Chicago, Boston, Raleigh, etc.) and remote/hybrid options."
   },
-  "last_attempt_at": 1784886268,
-  "last_evidence_at": 1784679088,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Making the world a healthier place through everyday reality of excellence for clients and colleagues."
+  },
   "name": "Real Chemistry",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Fast-paced agency environment; client-driven deadlines and multi-project loads typical. Expect variability by account team."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Integrated communications, marketing, data analytics, AI-driven insights, and commercialization services for healthcare and life sciences brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US holidays; no public policy details."
   },
-  "retry_after": 1784886388,
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262009,7 +262587,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None publicly documented; agency model typically does not have company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, mid-to-large agency (estimated 1,000–3,000 employees across multiple entities under Real Chemistry group)."
   },
   "sources": [
    {
@@ -262053,14 +262636,43 @@
     "url": "https://job-boards.greenhouse.io/realchemistry/jobs/5366100008"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Likely sponsors H-1B for specialized data science/engineering roles; Greenhouse posting shows W-2 contract roles. No public policy details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Real Chemistry is a healthcare-focused communications and marketing agency that combines data analytics, AI, and creative strategy to serve pharmaceutical and life sciences clients. They operate as a private, mid-to-large sized agency network."
+  },
+  "synthesized_evidence_sha": "27a313c2a4d46c71",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science, AI/ML for healthcare analytics, NLP for medical literature, predictive modeling, dashboarding, and MarTech platform development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Real+Chemistry+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Real Chemistry offers a rare blend: elite healthcare data/AI work at agency scale with a stated culture of excellence and people-first values. For a new grad seeking high-impact technical work in a mission-driven health tech environment without Big Tech bureaucracy, this balances prestige, pay, and a claimed commitment to sustainable pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "764a86f925"
+   ],
+   "value": "Estimated 3.5/5 – Agency claims people-first culture but client-facing work often entails crunch periods; no public guaranteed shutdowns."
   }
  },
  "reality defender": {
@@ -268523,47 +269135,110 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche or specialized tech tier. Highly reputable in its specific global heavy-equipment and industrial B2B sector, though not generally considered a top tier AI or Data Science company for new graduates."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "B2B marketplace and auction model generating revenue through transaction commission fees, buyer premiums, and value-added service offerings (financing, inspections, and logistics)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate and mission-driven. Ritchie Bros. focuses on core corporate values, such as psychological safety and trust, to create a respectful environment. However, the corporate culture is somewhat subject to a vast network of online and onsite teams."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Construction companies, transportation and logistics firms, agricultural businesses, oil and gas operators, and government entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $120,000 CAD/USD depending on geographic location and role level. While highly competitive for industrial tech, it may not strictly match top-tier FAANG scale new-grad pay."
   },
   "evidence_sha": "4ea06ef8b9d90714",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Commercial Equipment Disposition, Industrial B2B Marketplaces, and Auctioneering."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Candidates should prepare for interviews focused on scalable platforms and monetizing the online commercial asset marketplace. Prospective interviewers should also ask whether their work-life balance and learning opportunities are actually prioritized or if corporate processes make the environment slower and more bureaucratic for data science projects."
+  },
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784680700,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Headquartered in Vancouver, British Columbia, Canada, with an online and onsite operational presence globally."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "To create transparent, trusted, and efficient marketplace solutions for complex commercial assets."
+  },
   "name": "Ritchie Bros.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As an established, publicly traded auctioneer, Ritchie Bros. has focused heavily on modernizing its operational processes to meet model digital standards, but continues to face some legacy system processes that create a slower pace compared to startup environments."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Online and onsite auction platforms for heavy machinery and commercial assets, alongside asset management and appraisal software solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, alongside paid holidays, dependent on tenure and specific regional policies."
   },
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "Ritchie Bros. leadership development or new-grad rotational program details are not explicitly published in the provided sources. None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No standard, company-wide guaranteed shutdowns found; shutdown decisions typically vary by location and operational demands rather than a fixed corporate mandate."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Publicly traded company (NYSE: RBA), operating globally with thousands of employees."
   },
   "sources": [
    {
@@ -268597,14 +269272,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=dfe5262aae6dac010a45f09b5f9f8368ccc8e35735965c1ac75a11760ea14a54JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly92b2thLmlvLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "As a large, established public company, Ritchie Bros. has the resources to offer visa sponsorship for certain technical roles, though specifics vary by location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Ritchie Bros. is a global commercial asset management and disposition company (auctioneer) specializing in the sale of heavy equipment, trucks, and other industrial assets. They make money by facilitating these B2B transactions and taking commissions, fees, and providing associated marketplace services."
+  },
+  "synthesized_evidence_sha": "4ea06ef8b9d90714",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Building and maintaining large-scale online auction platforms, pricing algorithms, logistics data systems, and marketplace software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680700,
   "web_search_url": "https://duckduckgo.com/?q=Ritchie+Bros.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17b7dbf89"
+   ],
+   "value": "Ritchie Bros. has shifted heavily toward digital platforms, which heavily rely on data science and enterprise-grade technology updates to maintain its largest global auction status. Though AI and tech learning are heavily accelerated by its high-impact marketplace, its primary focus alongside work-life balance and culture is a stable corporate environment rather than the prestige or high initial financial pay structures that new-grads expect from top-tier AI firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Industry discussions suggest the company supports positive work-life balance with reasonable hours, though aggressive market pace and demanding corporate outreach may cause occasional spikes in workload."
   }
  },
  "rivet industries": {
@@ -298038,51 +298742,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. Stantec is an engineering firm, not an AI powerhouse; data science roles support infrastructure projects rather than pushing the boundaries of AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "B2B and B2G consulting services billed through project-based contracts and framework agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Corporate, established, and traditional engineering culture focused on sustainability and community impact."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Government municipalities, real estate developers, energy companies, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$85k USD. Competitive for traditional engineering/AEC roles, but below elite tech new-grad standards."
   },
   "evidence_sha": "736bbf9d82bd0035",
+  "generated_at": 1784886466,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Professional Services and Engineering Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on assessing the bureaucracy and internal mobility of the specific team. Ask questions about the pace of innovation, whether hours are truly capped at 40 to avoid consulting burnout, and if guaranteed PTO/shutdowns are protected from client pressures. Probe the actual hands-on AI/ML stack used versus traditional engineering IT to ensure it meets career growth expectations."
   },
-  "last_attempt_at": 1784886268,
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784679087,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Headquartered in Edmonton, Canada with offices across North America and globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "To design with community in mind, focusing on sustainable and responsible infrastructure development."
+  },
   "name": "Stantec",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Traditional consulting firm pace, likely lacking the rapid iteration and innovation speed of a pure tech company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Engineering design, architecture, environmental consulting, project management, and infrastructure planning services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard corporate accrual increasing with tenure."
   },
-  "retry_after": 1784886388,
+  "refresh_after": 1790070466,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdowns. Standard public holiday schedule only."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Established, publicly traded global corporation."
   },
   "sources": [
    {
@@ -298116,14 +298895,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=52f0f612ddbfc7748844d76265eb2f3db6145c8aca1948de16d70e6250c375dfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuc3RhbnRlYy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely Sponsor. Large global firms of this scale typically offer visa sponsorship for specialized roles, but case-by-case for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Stantec is a global professional services firm specializing in engineering, architecture, and environmental consulting. It generates revenue by designing and managing infrastructure and development projects for public and private sector clients worldwide."
+  },
+  "synthesized_evidence_sha": "736bbf9d82bd0035",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "66ad6aa7bf",
+    "7d3c686b08",
+    "469cba55db"
+   ],
+   "value": "Traditional engineering, CAD, BIM,GIS, and environmental modeling. Limited bespoke AI/data science; tech roles primarily support internal operations and project delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679087,
   "web_search_url": "https://duckduckgo.com/?q=Stantec+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Stantec is a slow-paced traditional engineering consultancy, making it a poor cultural fit for candidates seeking elite AI prestige, top-tier new grad pay, or a fast-paced, innovative tech culture. It offers stable, mission-driven work in sustainable infrastructure but operates with traditional bureaucracy and lacks the deep technical learning curve of a pure tech or data science firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Generally stable consulting hours, though varying by project deadlines and client demands."
   }
  },
  "starsling x25": {
@@ -307453,7 +308261,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307471,7 +308279,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784886268,
+  "last_attempt_at": 1784886466,
   "last_evidence_at": 1784680197,
   "name": "T-Mobile",
   "pace_of_work": {
@@ -307484,7 +308292,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784886388,
+  "retry_after": 1784886706,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
