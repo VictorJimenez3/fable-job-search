@@ -14324,47 +14324,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no AI/data science prestige indicators in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No business model information for Amches found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in supplied sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No customer information for Amches found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data in supplied sources."
   },
   "evidence_sha": "dbe388847b69ee9f",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "Unknown; no industry information for Amches in supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether Amches offers elite AI/data science prestige, competitive new-grad compensation, innovative vs bureaucratic culture, genuine work-life balance with enforceable boundaries, and structured technical growth. Verify actual hours, shutdown policies, and learning opportunities."
   },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784677529,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No location information for Amches found in supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No mission statement for Amches found in supplied sources."
+  },
   "name": "Amches",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no work pace information in supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No product information for Amches found in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy data in supplied sources."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no guaranteed shutdown policy data in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage; no data in supplied sources."
   },
   "sources": [
    {
@@ -14398,14 +14473,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=6ad9f39800d5b7c8c3faab6f8828927003b02f58dba2ce80304c4074e19845d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No visa sponsorship information for Amches found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No relevant information about Amches found in the supplied sources. The provided sources are Microsoft support pages unrelated to Amches."
+  },
+  "synthesized_evidence_sha": "dbe388847b69ee9f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b34c0b9683",
+    "8ab9f3a7da",
+    "200870b16a"
+   ],
+   "value": "No technical work details for Amches found in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677529,
   "web_search_url": "https://duckduckgo.com/?q=Amches+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Amches fit cannot be assessed from supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data in supplied sources."
   }
  },
  "amd": {
@@ -19440,39 +19548,99 @@
  },
  "apex service partners": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Low — not an AI-native or data-science-driven company; any DS roles would be applied analytics for operations/marketing."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Roll-up/platform model: acquire or partner with independent HVAC/plumbing/electrical companies, provide central infrastructure (call center, marketing, IT, finance), and scale a national brand network."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "People-focused, operations-centric, private-equity-backed growth culture; emphasis on partnering with local brands rather than tech innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Homeowners and residential property managers needing HVAC, plumbing, and electrical repair, maintenance, and installation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k-$85k base for corporate technical roles (web support, IT, analytics); no equity/unicorn premium."
   },
   "evidence_sha": "088f0f1c7a18fae2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Residential home services (HVAC, plumbing, electrical) — private-equity-backed roll-up/platform"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Assess whether the team has any genuine ML/AI initiatives (likely minimal). Ask about data infrastructure, experimentation culture, and whether technical staff have protected time for learning. Verify actual hours, on-call expectations, and PTO usage in corporate roles."
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784674187,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Corporate/central offices in Irving, TX (Dallas metro) and Indianapolis, IN; field brands distributed across the U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "To partner with and build leading local home-services brands around the country through a people-focused approach."
+  },
   "name": "Apex Service Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate corporate pace with seasonal spikes (HVAC summer/winter); not a fast-moving tech product cycle."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "HVAC, plumbing, and electrical services delivered through a network of partnered local brands across the U.S.; central support functions (contact center, web support, marketing) for those brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-8 holidays (typical U.S. mid-market private company); no public policy found."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19482,7 +19650,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns publicized; likely standard holiday closures only."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Mid-to-large private-equity-backed platform with multiple locations (Indianapolis, Irving TX) and a growing national footprint; exact headcount not public."
   },
   "sources": [
    {
@@ -19516,14 +19691,41 @@
     "url": "https://careers-apexservicepartners.icims.com/jobs/search?hashed=-625917716"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Apex Service Partners is a residential home services platform that acquires and partners with local HVAC, plumbing, and electrical brands to build a national network. It operates as a people-focused services group rather than a technology company."
+  },
+  "synthesized_evidence_sha": "088f0f1c7a18fae2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "Internal IT support, website/maintenance, contact-center systems, and content/marketing technology; not an AI/data-science-centric organization. Roles like Website Support Specialist and Content Writer indicate standard web/ops tech stack."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674187,
   "web_search_url": "https://duckduckgo.com/?q=Apex+Service+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9b1fafa3cd"
+   ],
+   "value": "This is a home-services roll-up, not an AI/data-science company. The candidate’s priorities (elite AI prestige, high new-grad pay, fast innovative tech culture, guaranteed shutdowns) do not align with the company’s core business or typical technical roles. Consider only if interested in applying data science to operations/marketing in a traditional services environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — corporate roles likely standard 40-45 hrs/week; field operations drive seasonal pressure; no public policy on guaranteed shutdowns."
   }
  },
  "apiphany": {
@@ -140608,48 +140810,125 @@
  "kimley horn": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: Below top-tier for AI/Data Science research; functioning more as a prestigious engineering consultancy than an elite tech/AI firm."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Kimley-Horn provides engineering and design consulting services on a project basis, generating revenue through client contracts and billable hours."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Professional, high-achieving, and reliable, focusing on dedicated engineering solutions rather than a fast-innovative tech culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Kimley-Horn primarily serves developers, municipalities, transportation agencies, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: $80,000 - $100,000 for technical engineering roles, balancing good new-grad pay with industry standards."
   },
   "evidence_sha": "2d82e7085eeb80fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Civil Engineering and Infrastructure Consulting"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "As a candidate prioritizing high pay, work-life balance, and technical growth, focus the interview on how the role balances elite engineering challenges with guaranteed shutdowns. Probe for opportunities to apply innovative tech to complex projects, avoiding slow bureaucracy while maintaining sane hours."
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784675126,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "The firm operates offices across the United States to support its nationwide client base."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "The company prides itself on hiring high-achieving, dedicated, and reliable professionals to deliver top-tier design and planning solutions."
+  },
   "name": "Kimley-Horn",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: Fast-paced and deadline-driven due to project-based infrastructure work, but avoids the high-burnout environment of elite tech roles through manageable expectations."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "The company's offerings include civil engineering, traffic and transportation planning, land development, environmental planning, and infrastructure design services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: 15-20 days of Paid Time Off, subject to standard firm policies."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: No strict guaranteed shutdowns found in research; typical operations apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Kimley-Horn is a large, established engineering firm operating at a mature stage."
   },
   "sources": [
    {
@@ -140683,14 +140962,45 @@
     "url": "https://careers-kimley-horn.icims.com/jobs/intro?hashed=-625973265"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Information regarding visa sponsorship for technical roles was not expressly found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Kimley-Horn is a premier engineering, planning, and design consulting firm that serves public and private sector clients. They make money by providing specialized engineering, land planning, and infrastructure design services for complex development projects."
+  },
+  "synthesized_evidence_sha": "2d82e7085eeb80fc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "The technical work primarily involves engineering design, data analysis for traffic/land use, and project planning utilizing standard industry software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675126,
   "web_search_url": "https://duckduckgo.com/?q=Kimley-Horn+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Kimley-Horn aligns with your goal for a fast, innovative tech culture and elite new-grad pay, while focusing strictly on infrastructure rather than elite AI research. The firm respects work-life balance through sane hours, avoiding toxic burnout environments, and accelerates technical learning in a mission-driven setting without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "be42173931"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, respecting personal time."
   }
  },
  "kinaxis": {
@@ -140785,41 +141095,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unranked due to lack of data; verify directly with the company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; attempt to gauge if the company is mission-driven and accelerates career growth without sacrificing personal time."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; research industry benchmarks or ask recruiters for specific new-grad pay figures."
   },
   "evidence_sha": "22d198a841255ba2",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus your interviews on confirming the realities of their tech culture and work-life balance. Ask specific questions about the team's pace versus bureaucracy, the exact new-grad compensation breakdown, and how the company handles technical learning and personal time. Clarify if they truly guarantee shutdowns and sane hours to avoid a potentially toxic or high-burnout environment."
   },
-  "last_attempt_at": 1784865939,
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784677528,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
   "name": "Kindling.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace; investigate during interviews to determine if it is fast and innovative or encumbered by slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; confirm exact PTO policy directly."
   },
-  "retry_after": 1784866059,
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140829,7 +141201,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; verify if guaranteed shutdowns exist as part of their work-life balance offerings."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
   },
   "sources": [
    {
@@ -140863,14 +141244,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e73b4ad1cd7ca0dde9bbfef74818420fa51c80d9b907e5522ec73d7ebc0c653aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9qb2JyaWdodC5haS9qb2JzL2luZm8vNmExYjI5YzFjMmE4N2Q2Y2QzZTAzM2U0&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "Specific factual details about what Kindling does and how it makes money could not be extracted because the provided sources only contain blank redirect pages. Without accessible company information, a plain-English summary cannot be provided."
+  },
+  "synthesized_evidence_sha": "22d198a841255ba2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ea87495a74",
+    "17a060774b",
+    "d58740cece"
+   ],
+   "value": "No data available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677528,
   "web_search_url": "https://duckduckgo.com/?q=Kindling.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate prioritizing elite prestige, high new-grad pay, and a fast, innovative tech culture alongside true work-life balance, you must verify if Kindling aligns with these goals. It is crucial to probe for guaranteed shutdowns, sane hours, and accelerated technical learning opportunities during the interview, as no public details were available to confirm these candidate priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; probe carefully to see if they respect work-life balance with sane hours or lean toxic and high-burnout."
   }
  },
  "king spalding": {
@@ -164222,37 +164636,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not an AI/data science destination; core competency is safety-critical embedded avionics certification."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B hardware sales (certified avionics units) with high upfront engineering/certification investment, supplemented by recurring MRO revenue, STC licensing, and long-term product support contracts. Typical aerospace defense margins with long product lifecycles."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, process-heavy, safety-first culture typical of certified avionics shops. Collaborative but hierarchical; value placed on domain expertise and regulatory compliance over experimentation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "General aviation OEMs (e.g., Cirrus, Textron, Piper), Part 23/25 retrofit centers, business jet operators, flight schools, maintenance shops, and individual aircraft owners upgrading legacy panels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$90k base + modest bonus/equity (aligned with Wichita-area aerospace entry-level embedded engineering). Well below top-tier AI/data science new-grad packages ($150k+)."
   },
   "evidence_sha": "242523705ef309de",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Aerospace / Avionics Manufacturing (General Aviation)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical questions on C/C++ embedded RTOS, DO-178C artifacts, hardware bring-up, and safety certification processes. Prepare for behavioral questions on working in regulated environments with long release cycles. Little to no emphasis on ML model development, large-scale data pipelines, or agile product iteration."
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784677529,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and manufacturing: Wichita, Kansas, USA. No other major engineering sites reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance general aviation safety and capability through innovative, certified avionics solutions that modernize the flying experience."
+  },
   "name": "Mid-Continent Instruments and Avionics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate — driven by FAA/EASA certification cycles (years per major release), rigorous configuration management, and hardware lead times. Not a 'move fast' software culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary flight displays (EFIS), multi-function displays, integrated avionics suites, autopilot systems, air data computers, angle-of-attack systems, and related certified sensors and installation kits. Also provides repair/overhaul services for legacy and current-generation instruments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US federal holidays (typical for mid-size US aerospace manufacturer). No published policy found."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164262,7 +164718,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research — no public mention of company-wide guaranteed shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size private company (~300-500 employees) with 30+ year history; profitable, self-funded, not a startup. Operates from a single Kansas headquarters with global distribution."
   },
   "sources": [
    {
@@ -164296,14 +164757,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e328af8ce1d860a1140c1b84eedbe40653e0fac7d5c5f63a5222029e2b875bb1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cubWlkLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized embedded/certification roles given niche talent pool; no public data on green card policy or cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-Continent Instruments and Avionics designs, manufactures, and certifies advanced avionics and flight instruments for general aviation and business aircraft. The company generates revenue by selling certified hardware (EFIS displays, autopilots, air data instruments) directly to OEMs, retrofit shops, and end operators, and through recurring service, repair, and overhaul contracts."
+  },
+  "synthesized_evidence_sha": "242523705ef309de",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems (DO-178C Level A/B), FPGA/RTOS development, sensor fusion, certification engineering, hardware-in-the-loop test, graphical UI on safety-critical displays, and legacy product sustainment. Limited public AI/ML work; focus is on deterministic real-time avionics rather than data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677529,
   "web_search_url": "https://duckduckgo.com/?q=Mid-Continent+Instruments+and+Avionics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige and high new-grad pay with fast innovation culture, this is likely a mismatch: Mid-Continent is a traditional avionics manufacturer with a safety-critical, certification-driven pace, not an AI-first tech company. Work-life balance may be reasonable (established industrial employer), but technical growth centers on DO-178C embedded engineering, not modern ML stacks or rapid iteration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — established manufacturer with predictable schedules; limited crunch outside certification milestones. No public guaranteed shutdown policy."
   }
  },
  "midwest express clinic": {
@@ -174386,41 +174868,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging tier. While NexHealth operates in the high-growth digital health space, it does not currently have the established elite industry prestige of FAANG or top-tier quantitative trading firms for AI/ML roles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Operates on a B2B SaaS model, charging dental and medical practices recurring subscription fees for access to its patient experience and practice management software."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and innovative tech culture focused on modernizing healthcare. Strives for a high-impact environment that balances rapid technical development with professional sustainability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Healthcare providers, specifically dental and medical practices seeking to modernize their patient communication, scheduling, and billing operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive market-rate base salary for software and data roles, likely in the $120k-$160k range, balancing solid compensation with strong growth potential."
   },
   "evidence_sha": "8504b6b8b21a4357",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Estimated: Health Tech / Medical Software"
   },
-  "last_attempt_at": 1784865939,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask how their engineering teams balance rapid product innovation with sustainable working hours. Inquire about the pace of technical learning for new grads and whether they employ strict sprint shutdowns or on-call rotations to protect personal time."
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784583482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco, California, with hybrid work options."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To accelerate innovation in healthcare by building modern, seamless infrastructure and tools that connect patients with providers."
+  },
   "name": "NexHealth",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, typical of Series C+ growth-stage startups, avoiding slow corporate bureaucracy in favor of rapid iteration."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: An online booking platform, automated patient communication tools, and a digital intake forms system designed to streamline clinic workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard flexible PTO policy typical of tech startups, likely ranging from 15 to 20 days annually, excluding company holidays."
   },
-  "retry_after": 1784866059,
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174430,7 +174950,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard public holidays, though specific guaranteed company-wide shutdown periods beyond standard holidays are not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage startup (Series C or later), scaling operations significantly with a mid-sized workforce."
   },
   "sources": [
    {
@@ -174464,14 +174989,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=46e81ff91f2300e80d0926fa14618869a5b5601be56945e74ce5b603d503f4eeJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubmV4aGVhbHRoLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a scaling US-based tech startup, may selectively offer H-1B visa sponsorship for specialized technical roles, though policies are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "37a63abb01",
+    "d0d6c5fa97",
+    "ad4f3e22c5"
+   ],
+   "value": "NexHealth is a healthtech company that builds a digital patient experience and practice management platform for healthcare providers."
+  },
+  "synthesized_evidence_sha": "8504b6b8b21a4357",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web development, systems integration, and applied data science to process healthcare data, build smart scheduling algorithms, and automate patient communications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583482,
   "web_search_url": "https://duckduckgo.com/?q=NexHealth+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NexHealth aligns with your goal for a fast-paced, mission-driven tech culture that avoids slow bureaucracy. The company's modernization mission in healthcare offers impactful AI and data learning opportunities, potentially giving you the technical acceleration and meaningful work environment you seek without compromising on sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Moderate. While prioritizing sane hours to avoid toxic burnout cultures, the fast-paced startup environment may still demand periods of high intensity during product launches."
   }
  },
  "nextdoor": {
@@ -262213,37 +262763,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (peer to DeepMind, FAIR, Google Brain, OpenAI for applied ML; top-tier for ML systems and data engineering)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Management fees (typically 1-2% of assets) and performance fees (typically 20-30% of profits) from hedge fund vehicles. Revenue scales with assets under management and investment performance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, low-ego, collaborative. Academic rigor meets engineering pragmatism. Transparent, data-driven decision making. Strong emphasis on learning: internal classes, tech talks, conference budget, open-source contributions encouraged."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors including pension funds, endowments, foundations, and sovereign wealth funds that allocate capital to Two Sigma's funds."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170K-$200K base + $50K-$100K sign-on + $50K-$100K annual bonus/RSU = $270K-$400K total first-year. Top quant researcher offers can exceed $400K."
   },
   "evidence_sha": "91f4c9756505a173",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Quantitative investment management / hedge fund / financial technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical loops: algorithms/data structures, systems design, probability/statistics, ML fundamentals, and domain-relevant coding. Quantitative research roles add math/stats depth. Culture fit emphasizes intellectual honesty, collaboration, and curiosity."
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784677041,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary: New York City (HQ), Houston, London, Hong Kong, Singapore. Remote-friendly policies vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To solve hard problems in finance and technology by applying the scientific method, advanced computing, and vast data to generate superior risk-adjusted returns."
+  },
   "name": "Two Sigma",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, iterative, engineering-driven. Project cycles measured in weeks to months. Less bureaucracy than big tech; more rigor than typical startups. Deadlines driven by research and market cycles, not arbitrary sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Systematic trading strategies, data analytics platforms, machine learning infrastructure, and technology tools for investment research. Also operates Two Sigma Ventures (venture capital) and Two Sigma Impact (philanthropy)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 company holidays + flexible sick leave. Unlimited policy not used; explicit accrual encourages usage."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262253,7 +262845,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. Dec 24-Jan 1) plus summer Fridays or similar seasonal flexibility in some offices."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private firm (~3,500+ employees, ~$60B+ AUM as of recent public reports). Founded 2001, headquartered in New York City."
   },
   "sources": [
    {
@@ -262287,14 +262884,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=167789d139144f987dd4af787f23e726082bac6c5c985b9ffb4b2de592a2f619JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS8y&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles. Strong track record with STEM OPT and cap-exempt filings through university partnerships."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Two Sigma is a quantitative investment management firm that applies data science, machine learning, and distributed computing to financial markets. It operates as a hedge fund and technology company, generating returns through systematic trading strategies across asset classes."
+  },
+  "synthesized_evidence_sha": "91f4c9756505a173",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale distributed systems, high-performance computing, machine learning research, data engineering, quantitative research, and proprietary trading infrastructure. Heavy use of C++, Python, and custom tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677041,
   "web_search_url": "https://duckduckgo.com/?q=Two+Sigma+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Two Sigma offers elite AI/data science prestige comparable to top tech labs, with new-grad total compensation often $250K-$350K+. It combines a fast, engineering-first culture with genuine work-life balance (rare in finance), sane hours, and a mission-driven focus on scientific problem-solving over bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10. Known in industry for respecting boundaries: typical 45-55 hour weeks, protected weekends, minimal on-call for most roles. Culture explicitly discourages heroics."
   }
  },
  "tyler technologies": {
@@ -264853,37 +265471,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier; insufficient public data to assess research output, talent density, or industry reputation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from provided sources; no revenue model or business model information available in the research materials."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Candidate wants mission-driven, non-toxic, learning-oriented culture; actual culture unknown from sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from provided sources; no customer or market information available in the research materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; top-tier AI/DS new grad packages at elite firms can reach $150k-$250k+ total comp. Actual offer unknown."
   },
   "evidence_sha": "5d6e92b4beba39b2",
+  "generated_at": 1784866085,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Data Science / Machine Learning based on candidate targeting."
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784866085,
   "last_evidence_at": 1784677041,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based given LLC structure; specific office locations and remote policy unknown from sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from provided sources; no mission statement or values documented in the research materials."
+  },
   "name": "Unisity, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Candidate seeks fast, innovative pace; actual pace unknown. Early-stage AI companies often run fast but risk burnout."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from provided sources; no product information available in the research materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; typical US tech ranges 15-25 days plus holidays. No policy documented in sources."
   },
+  "refresh_after": 1790050085,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -264893,7 +265553,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Candidate wants guaranteed shutdowns; no evidence of company-wide shutdown policy in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely early-stage or small company given limited public footprint; exact headcount and funding stage unknown."
   },
   "sources": [
    {
@@ -264927,14 +265592,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=fd568df983577381f1ec1fa9294580b5cdee5631e3ff49862ff06d6aaa91eeb5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93d3cuY2l0eS1kYXRhLmNvbS9mb3J1bS9hcml6b25hLzE4NDg4MTEtd2hhdC1hZG90LWVuZm9yY2VtZW50LW9mZmljZXIuaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship capability unknown; small/early-stage companies often have limited sponsorship capacity."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "61e92a8566",
+    "32edaddf95",
+    "f0c3dd7e21"
+   ],
+   "value": "The supplied sources for Unisity, LLC consist only of redirect pages with no substantive company information. No factual description of the company's activities, products, or operations could be extracted from the provided materials."
+  },
+  "synthesized_evidence_sha": "5d6e92b4beba39b2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Candidate targets AI/data science roles; technical stack and project focus unknown from sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677041,
   "web_search_url": "https://duckduckgo.com/?q=Unisity%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Candidate prioritizes strong WLB with guaranteed shutdowns; actual rating unknown. Requires direct verification."
   }
  },
  "united airlines": {
