@@ -41527,11 +41527,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41543,6 +41545,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784674771,
   "name": "BHE Compression Services",
   "pace_of_work": {
@@ -41555,6 +41558,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879134,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41598,7 +41602,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=1fcfdfe39c535027ed23c02fdc5b33616d077f45fb10d530d416a47e684929d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuYmxhY2toaWxsc2VuZXJneS5jb20vbXktYWNjb3VudC8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674771,
   "web_search_url": "https://duckduckgo.com/?q=BHE+Compression+Services+company+careers+benefits",
@@ -71270,11 +71274,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71286,6 +71292,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784583542,
   "name": "Coinbase",
   "pace_of_work": {
@@ -71298,6 +71305,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879134,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71341,7 +71349,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4605cd6811ced4468a9d2ebea95e6850e5f16dd0e8f3d7dca8a030f1b170368cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9hY2NvdW50cy5jb2luYmFzZS5jb20vc2lnbmlu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583542,
   "web_search_url": "https://duckduckgo.com/?q=Coinbase+company+careers+benefits",
@@ -82730,41 +82738,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Industry-tier. It will not carry the elite prestige of top-tier AI labs, but its scale offers good stability for data science professionals."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Manufactures commercial vehicles and generates revenue through product sales, aftermarket parts, financing, and maintenance services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, engineering-focused, and mission-driven toward sustainable transportation. Bureaucratic elements might challenge fast-paced tech innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Commercial fleet operators, logistics and transportation companies, and municipal transit authorities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000 USD. Not top-tier BigTech pay, but offers a highly competitive salary for the automotive manufacturing sector."
   },
   "evidence_sha": "99546aa110c505ad",
+  "generated_at": 1784879014,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Automotive and Commercial Vehicle Manufacturing."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe hard to see if its AI / data science teams operate with a fast, innovative tech culture or if they are weighed down by slow bureaucracy and legacy systems. Ask detailed questions about how new ideas are championed and whether technical learning and career growth pathways are truly accelerated or bottlenecked by corporate processes."
   },
-  "last_attempt_at": 1784878881,
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784674768,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Global operations with headquarters in Stuttgart, Germany, and major North American headquarters in Portland, Oregon."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f8663387da"
+   ],
+   "value": "Daimler Truck focuses on pioneering sustainable and safe transportation solutions."
+  },
   "name": "Daimler Truck",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and structured. Typical of large legacy manufacturers, prioritizing safety and rigorous testing over rapid software iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f8663387da"
+   ],
+   "value": "Trucks and buses."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of base vacation for salaried roles, reflecting standard German corporate benefits."
   },
-  "retry_after": 1784879001,
+  "refresh_after": 1790063014,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82774,7 +82836,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes days off around major holidays (e.g., Christmas to New Year), though specific corporate-wide shutdown periods are not confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a"
+   ],
+   "value": "Large-cap, publicly traded global enterprise."
   },
   "sources": [
    {
@@ -82808,14 +82877,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5e8110e01dcdd569f523087c09bb27de790985c9c6ea82c87157862dfebbc03fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuZGFpbWxlcnRydWNrLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Global company with major engineering and R&D hubs in Germany and the US. Likely corporate sponsorship for full-time commercial vehicle roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a",
+    "f8663387da"
+   ],
+   "value": "Daimler Truck is a commercial vehicle manufacturer that develops and sells trucks and buses. It makes money by manufacturing and distributing these commercial vehicles, related parts, and services globally."
+  },
+  "synthesized_evidence_sha": "99546aa110c505ad",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7d1b94329a"
+   ],
+   "value": "Daimler Truck employs over 100,000 people globally across its commercial vehicle operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674768,
   "web_search_url": "https://duckduckgo.com/?q=Daimler+Truck+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a legacy manufacturer, Daimler Truck offers sanctuary from the high-burnout culture of elite tech through sane hours, European work norms, and guaranteed shutdowns. While it lacks the prestige and top-tier pay of BigTech AI labs, its mission-driven focus on sustainable transportation provides meaningful work that protects your personal time for a sustainable career."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. European-rooted corporate culture typically enforces healthy working hours and respects personal time."
   }
  },
  "danaher": {
@@ -114387,37 +114485,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (strong domain-specific AI application, not pure research lab)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS platform, professional services, and managed security services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, engineering-focused, transparent leadership, low bureaucracy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Energy utilities, oil & gas companies, manufacturing firms, government agencies, and critical infrastructure operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity + bonus; total comp ~$130k-$160k."
   },
   "evidence_sha": "dc9a9846c199f7bb",
+  "generated_at": 1784879014,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cybersecurity / Critical Infrastructure Protection"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on ML for anomaly detection, time-series analysis, OT/ICS protocols, cloud security, and scalable data pipelines. Prepare to discuss real-world cybersecurity applications."
+  },
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784674482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Orlando, Florida; remote-first culture with employees across the United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To secure the world's critical infrastructure from cyber threats through innovative technology and expertise."
+  },
   "name": "Fortress Information Security",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but sustainable; sprint cycles with emphasis on delivery without chronic overtime."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fortress Platform (centralized risk management), Asset Guardian (asset tracking), AI-driven threat intelligence, managed security services, and professional consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays; unlimited PTO policy not confirmed."
   },
+  "refresh_after": 1790063014,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114427,7 +114567,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams may observe holiday breaks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Growth-stage private company, approximately 200-500 employees, backed by venture capital."
   },
   "sources": [
    {
@@ -114461,14 +114606,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f07ea6ac015f1c1a6dd12fe6ff7be4163f246580afbcaabdca1b0d5549a22fa4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2ZvcnRyZXNz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical roles; candidates should confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fortress Information Security is a cybersecurity company specializing in critical infrastructure protection, operational technology (OT) security, and supply chain risk management. They provide a platform for asset visibility, vulnerability management, and compliance for energy, utilities, and government sectors."
+  },
+  "synthesized_evidence_sha": "dc9a9846c199f7bb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cybersecurity platform development, data analytics, machine learning for anomaly detection, OT/ICS protocol analysis, cloud infrastructure, and scalable data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=Fortress+Information+Security+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a top-tier AI/data science candidate, Fortress offers mission-critical impact securing critical infrastructure, competitive pay, and a culture that values work-life balance with sane hours, though exact policies are not public."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; company promotes work-life balance, but incident response may require occasional off-hours."
   }
  },
  "foth": {
@@ -117196,11 +117362,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117212,6 +117380,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784674482,
   "name": "GAINS",
   "pace_of_work": {
@@ -117224,6 +117393,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879134,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117267,7 +117437,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=728a36db6b88694802b1ecb4b889d55fa54ae719fca6469754f0984b31fbb4fbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9nYWlucy5jb20vP2V4dGVybmFsPTE&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=GAINS+company+careers+benefits",
@@ -141370,41 +141540,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong applied AI/ML within a Fortune 500 bank; respected for production-scale models in risk and fraud, but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Diversified regional bank model: earn spread between loan interest and deposit costs, supplemented by non-interest fee income from wealth, payments, and capital markets. Revenue driven by loan growth, deposit gathering, and cross-selling across segments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, process-oriented, midwestern pragmatic. Strong DEI focus, community involvement. Engineering culture modernizing but still influenced by risk/compliance mindset."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail consumers, small businesses, middle-market companies, large corporates, and institutional clients across its Midwest footprint (Ohio, Michigan, Indiana, Pennsylvania, Kentucky, West Virginia, Illinois)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105,000–$130,000 base + 10–15% target bonus + RSU grant (~$15–25k vesting over 4 years). Total comp ~$130k–$165k year one."
   },
   "evidence_sha": "6058241509da0832",
+  "generated_at": 1784879014,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd7ce01b3",
+    "3b10001ac6",
+    "be4be0ecbc"
+   ],
+   "value": "Regional Banking / Financial Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on collaboration and regulatory awareness, plus technical depth in ML model lifecycle, data engineering at scale, and responsible AI. Prepare for case studies on credit risk or fraud. Emphasize ability to deliver innovation within compliance guardrails."
   },
-  "last_attempt_at": 1784878881,
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784674482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Columbus, Ohio. Major hubs: Detroit, Pittsburgh, Cleveland, Columbus. Branch network across 11 Midwest states. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "“Looking out for people” – stated purpose is to help people, businesses, and communities thrive through financial services and community investment."
+  },
   "name": "Huntington Bancshares",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – structured sprints with regulatory review gates; faster than legacy core banking but slower than pure tech. Predictable release cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer and commercial banking (checking, savings, loans, mortgages), wealth management and investment services, payments and treasury management, capital markets and advisory, digital banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–11 company holidays; additional volunteer time off. Accrual increases with tenure."
   },
-  "retry_after": 1784879001,
+  "refresh_after": 1790063014,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141414,7 +141626,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal guaranteed company-wide shutdowns; some teams observe informal slowdowns around major holidays. Managers encourage disconnecting."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: HBAN), ~$200B assets, ~20,000 employees, Fortune 500 company. Mature, regulated financial institution."
   },
   "sources": [
    {
@@ -141448,14 +141665,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=f5d0d5a93086fc5aac6f3693506f60bc41538b584f72a07a708b54ad4dd1b5efJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cuaHVudGluZ3Rvbi5jb20vP21zb2NraWQ9MjZhNGMyY2U1NzVlNjFhODI3Y2FkNTUzNTY1MzYwZTI&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for specialized tech and data roles; green card sponsorship likely for senior positions. Standard big-bank immigration support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9cd7ce01b3",
+    "3b10001ac6",
+    "be4be0ecbc"
+   ],
+   "value": "Huntington Bancshares is a regional bank holding company headquartered in Columbus, Ohio, operating primarily across the Midwest. It makes money through traditional banking activities: net interest income from loans and deposits, fee-based services (wealth management, payments, treasury management), and capital markets revenue."
+  },
+  "synthesized_evidence_sha": "6058241509da0832",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking systems modernization, cloud migration, data platform engineering, AI/ML for credit risk, fraud detection, marketing personalization, and regulatory reporting. Mix of legacy mainframe and modern cloud-native stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=Huntington+Bancshares+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a top-tier AI/data science role within a mission-driven, regulated bank that balances prestige and competitive new-grad pay with a culture that emphasizes work-life balance (sane hours, limited weekend work) and technical growth without the burnout typical of pure tech or high-frequency finance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Banking hours with protected weekends, limited on-call for non-production roles. Culture encourages shutdown after hours; overtime rare for individual contributors."
   }
  },
  "huntington ingalls industries": {
@@ -171067,41 +171309,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier for AI/Data Science; tech roles are in support of retail operations rather than being the core product."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "Discount retail via physical grocery stores, relying on high inventory turnover and private-label products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate retail culture, which may lack the innovation-focused tech vibe the candidate prioritizes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "General consumers seeking discount groceries and everyday household goods."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely $70,000-$100,000, below the elite new-grad tech pay the candidate seeks."
   },
   "evidence_sha": "fb21af9884dd4313",
+  "generated_at": 1784879014,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "Retail / Grocery"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should clarify the actual scope of technical work, team structure, and whether the role offers the advanced AI/DS learning and work-life balance they seek, rather than traditional retail IT operations."
   },
-  "last_attempt_at": 1784878881,
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784675879,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "Stores and operations located across the US."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a845be19b4"
+   ],
+   "value": "Not explicitly stated in the provided sources, but traditionally focused on providing high-quality goods at low prices."
+  },
   "name": "Lidl US",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace typical of traditional retail, which may conflict with the candidate's desire for a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "Groceries, private-label food products, household items, and general merchandise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard retail PTO, likely 10-20 days depending on tenure, but exact policy not found."
   },
-  "retry_after": 1784879001,
+  "refresh_after": 1790063014,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171111,7 +171403,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed tech shutdowns found; retail operations run continuously."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a845be19b4"
+   ],
+   "value": "Large multinational enterprise operating within the US; specific headcount and stage not found in the sources."
   },
   "sources": [
    {
@@ -171145,14 +171444,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab99b0e3f185fdbcf55114e63fd311d41c08dd80a4e02a180220243a120d401eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cubGlkbC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b822cc6de5",
+    "a845be19b4"
+   ],
+   "value": "Lidl US is the American arm of the German global discount supermarket chain Lidl, which operates a network of brick-and-mortar grocery stores. The company makes money through high-volume, low-margin retail sales of private-label and branded goods."
+  },
+  "synthesized_evidence_sha": "fb21af9884dd4313",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b822cc6de5"
+   ],
+   "value": "Specific AI or data science technical work not found in the sources; likely involves supply chain optimization, pricing analytics, and inventory management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675879,
   "web_search_url": "https://duckduckgo.com/?q=Lidl+US+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional grocery retailer, Lidl US does not align with the candidate's priority for a top-tier AI or data science role with elite tech culture; it is unlikely to offer the fast-paced, innovative tech environment or guaranteed shutdowns desired."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; retail operations may not offer the guaranteed shutdowns or structured sane hours found in elite tech companies."
   }
  },
  "light wonder": {
@@ -324209,49 +324534,139 @@
  },
  "witron group": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "Low prestige. Best known for mechanical engineering and warehouse automation, rather than elite AI research, data science innovation, or modern tech culture."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6a751a2453",
+    "a370d0adfe"
+   ],
+   "value": "Business-to-business (B2B) provider that generates revenue by selling custom-engineered automated logistics systems, along with long-term integration, maintenance, and support services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a370d0adfe",
+    "6a751a2453"
+   ],
+   "value": "Pragmatic, engineering-first, traditional German mittelstand enterprise culture. Highly focused on precision, physical infrastructure, and long-term client relationships rather than disruptive bleeding-edge tech culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "Primarily large-scale enterprises in the retail, wholesale, and industrial sectors that require extensive, high-throughput distribution centers to manage complex global supply chains."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "30e8fa3c1c"
+   ],
+   "value": "Estimated: $65,000 - $85,000 USD (or local currency equivalent), with compensation bands more typical of engineering and manufacturing than Big Tech or elite AI firms."
   },
   "evidence_sha": "c1d24abe186ff936",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879014,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6a751a2453",
+    "a370d0adfe"
+   ],
+   "value": "Intralogistics, Robotics, and Supply Chain Automation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6a751a2453",
+    "a370d0adfe"
+   ],
+   "value": "Because the core deployments are physical warehouse automation, the interview will likely probe systems integration, enterprise software lifecycle, and logistics data flow. Fast-innovative AI candidates should ask about modernization, remote work flexibility, and weekend/evening total-work expectations tied to physical deployment schedules."
+  },
+  "last_attempt_at": 1784879014,
   "last_evidence_at": 1784676243,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a370d0adfe"
+   ],
+   "value": "Headquartered in Bavaria, Germany, with operational and office footprints globally to support widespread international client deployments."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "To drive innovation and efficiency in global intralogistics by providing highly automated, turnkey warehouse solutions tailored to the specific needs of clients."
+  },
   "name": "WITRON Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6a751a2453",
+    "a370d0adfe"
+   ],
+   "value": "Moderate to slow. Steady engineering pace is bound by long hardware deployment cycles and industrial supply chain reality, lacking the fast-pivot, fast-iterate nature of elite tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "Custom highly automated warehousing and logistics systems, including Automated Storage and Retrieval Systems (AS/RS), conveyor technology, order picking systems, and the proprietary WITRON software (WMS WCS) used to drive these supply chain operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "30e8fa3c1c"
+   ],
+   "value": "Estimated: 25 to 30 days annual paid time off, standard for the German engineering market, but outside the US there is limited transparency without direct inquiry."
   },
+  "refresh_after": 1790063014,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "30e8fa3c1c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "30e8fa3c1c"
+   ],
+   "value": "Estimated: Likely standard German public holidays, with no guaranteed company-wide holiday shutdown periods found in public research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a370d0adfe",
+    "30e8fa3c1c"
+   ],
+   "value": "Established, privately-held global mid-to-large-cap enterprise operating internationally with a significant multi-thousand employee footprint."
   },
   "sources": [
    {
@@ -324285,14 +324700,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6802bcf36a06d6182d4dfb35db3c42153d88818580a6445cecc4d37c1095e8eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93aXRyb24uZGUvZW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30e8fa3c1c"
+   ],
+   "value": "Potentially available for specialized, high-need technical roles, though non-executive searches outside of borderless remote work are usually infrequent for IT staff."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "WITRON Group is an international logistics and supply chain company that designs, manufactures, and implements highly automated warehouse and material flow systems. The company makes money by engineering bespoke intralogistics solutions—often utilizing its proprietary mechanical and software systems—and deploying them for large-scale retail and industrial clients."
+  },
+  "synthesized_evidence_sha": "c1d24abe186ff936",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a751a2453",
+    "a370d0adfe"
+   ],
+   "value": "Involves software development for warehouse management and control systems (WMS/WCS), integrating automation hardware with control software, and logistics data flow modeling. Roles center around optimizing legacy and proprietary systems rather than modern elite AI frameworks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676243,
   "web_search_url": "https://duckduckgo.com/?q=WITRON+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c",
+    "a370d0adfe"
+   ],
+   "value": "Although the company utilizes a sophisticated internal software stack (WMS/WCS), this does not align with a top-tier AI or Data Science role. The engineering culture is heavily centered around integrating mechanical automation and proprietary systems, lacking the fast-paced, bleeding-edge AI focus desired, and operates more like a traditional enterprise integrator."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6a751a2453",
+    "30e8fa3c1c"
+   ],
+   "value": "Estimated: Generally conservative with sane hours, but can experience crunch phases tied to large-scale physical warehouse commissioning and go-lives, which might disrupt work-life balance constraints."
   }
  },
  "wolters kluwer": {
