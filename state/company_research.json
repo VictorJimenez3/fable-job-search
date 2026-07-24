@@ -14257,37 +14257,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Industrial applied analytics; respected in materials informatics niche but not a headline AI research shop."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6ae4202f6",
+    "e611a1c8eb"
+   ],
+   "value": "B2B manufacturer selling engineered specialty materials directly and through distributors; revenue from product sales, long-term supply agreements, and co-development contracts with OEMs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-conscious, continuous-improvement mindset; post-merger integration means some process flux; collaborative but hierarchy present."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6ae4202f6",
+    "6265f893b1"
+   ],
+   "value": "Industrial manufacturers, automotive OEMs and suppliers, aerospace, energy (including battery), petrochemical, and appliance companies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + modest bonus/RSU (private equity); total comp ~$95k–$115k; below top-tier software/AI new-grad packages."
   },
   "evidence_sha": "03967828dbe9c6db",
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b6ae4202f6",
+    "6265f893b1"
+   ],
+   "value": "Advanced Materials / Specialty Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect materials-domain questions (thermal, filtration, battery), statistical process control, design of experiments, and practical ML for sensor/process data; less emphasis on cutting-edge model architecture, more on deployable analytics in a regulated manufacturing environment."
   },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680501,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6265f893b1"
+   ],
+   "value": "Headquartered in Richmond, VA; major sites in NY, OH, TN, NC, Europe (Germany, France, UK), China, Japan, India; R&D centers in Tonawanda NY and Europe."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b6ae4202f6"
+   ],
+   "value": "To create advanced material solutions that enable cleaner energy, safer environments, and more efficient industrial processes."
+  },
   "name": "Alkegen",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured — project cycles tied to product qualification and customer validation; slower than pure software, faster than traditional heavy industry."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6ae4202f6",
+    "6265f893b1"
+   ],
+   "value": "High-temperature insulation (ceramic fibers, microporous), filtration media (air, liquid), battery separators, specialty gaskets, and engineered composites for thermal management and emissions control."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 US holidays; accrual-based; no published unlimited or mandatory-shutdown policy."
   },
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14297,7 +14355,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None publicly documented; occasional plant maintenance shutdowns, not company-wide office closures."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e611a1c8eb",
+    "6265f893b1"
+   ],
+   "value": "Private equity-backed (Clearlake Capital), ~4,000 employees globally, multiple manufacturing sites across Americas, Europe, Asia; post-merger integration phase."
   },
   "sources": [
    {
@@ -14331,14 +14397,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=aeeadb54f6bbdd562ed58401451bd7dfd306b4ac26caac8c63c103f198ef64a8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuYWxrZWdlbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized R&D and engineering roles; green card support for senior technical staff; less common for entry-level data science unless niche expertise."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6ae4202f6",
+    "6265f893b1"
+   ],
+   "value": "Alkegen is a global specialty materials company formed from the merger of Unifrax and Lydall, producing high-performance insulation, filtration, and engineered materials for industrial, automotive, and energy markets."
+  },
+  "synthesized_evidence_sha": "03967828dbe9c6db",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6ae4202f6",
+    "6265f893b1"
+   ],
+   "value": "Materials science R&D, process engineering, product development, quality systems, manufacturing automation, and increasingly data analytics for process optimization and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680501,
   "web_search_url": "https://duckduckgo.com/?q=Alkegen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alkegen offers a mission-driven industrial technology role where data science directly impacts sustainability and energy efficiency, but it is not a top-tier AI prestige destination; pay is solid industrial-engineering scale, not FAANG-level; culture is engineering-driven with manufacturing pace, not a fast-moving tech startup; work-life balance is typical for industrial R&D (reasonable hours, limited crunch), but guaranteed shutdowns are not a stated policy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — standard industrial R&D hours (40–45/wk), occasional plant trials or customer trips; no public guaranteed-shutdown policy."
   }
  },
  "alkira": {
@@ -28470,11 +28563,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28486,6 +28581,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680501,
   "name": "Apptronik",
   "pace_of_work": {
@@ -28498,6 +28594,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898647,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28541,7 +28638,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5df57c97ba15dbc69195597536f59566c3966d732c99bf018d9f59d4e84ad927JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9hcHB0cm9uaWsuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680501,
   "web_search_url": "https://duckduckgo.com/?q=Apptronik+company+careers+benefits",
@@ -83443,37 +83540,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 - Strong applied DS/ML in critical infrastructure, but not a primary AI research lab. Prestige derives from scale of assets and climate impact rather than algorithmic novelty."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Owns and operates long-term contracted renewable and conventional generation assets; revenue from power purchase agreements, capacity payments, and thermal services. No business model details found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, engineering-heavy, safety-first culture. Likely more structured than startup; cross-functional collaboration between commercial, operations, and tech. Diversity initiatives typical for large public co."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Utilities, commercial/industrial off-takers, and wholesale power markets via PPAs and merchant sales. No customer details found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% bonus + RSU (vesting 4yr). Total comp ~$130k-$160k. Below top-tier tech (FAANG/quant) but competitive for energy/climate tech."
   },
   "evidence_sha": "c89fc89e7f637bc3",
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Renewable Energy / Independent Power Producer (IPP)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: 1) Applied ML for time-series forecasting (generation, prices), 2) Anomaly detection on SCADA sensor streams, 3) Optimization under physical constraints, 4) Cloud/edge deployment for remote assets. Ask about: model lifecycle governance, on-call rotation for production models, dedicated research time, and whether DS reports to engineering or commercial."
+  },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680414,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco, CA; asset operations across US (CA, TX, Midwest, Northeast). Remote/hybrid options likely for tech roles. No location details found in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver clean, reliable energy and accelerate the transition to a sustainable future. No mission statement found in supplied sources."
+  },
   "name": "Clearway Energy",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate - Regulatory/compliance gates and physical asset cycles impose slower release cadences than pure software. Sprint cycles likely 2-4 weeks with quarterly planning horizons."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Renewable energy generation (wind, solar), natural gas generation, and thermal infrastructure services. No product details found in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays + sick leave. Standard large-employer package; unlimited PTO unlikely in regulated energy."
   },
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83483,7 +83622,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams may observe summer/winter breaks informally. Not a documented policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large public company (NYSE: CWEN, CWEN.A) with ~2,000-3,000 employees and ~$1B+ annual revenue. No size data found in supplied sources."
   },
   "sources": [
    {
@@ -83517,14 +83661,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6aa849bceab338b078012ad309a4c0b1ff0839ea674e43c9e9e9cc4fa4cb500JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20veW91dHViZXR2Lz9obD1lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering/DS roles given public company status. No sponsorship data found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ea77908f51",
+    "7bd644b41f",
+    "9b96e91a7f"
+   ],
+   "value": "Clearway Energy appears to be a publicly traded energy company, likely focused on renewable energy generation and infrastructure. The available sources did not return extractable content about its operations."
+  },
+  "synthesized_evidence_sha": "c89fc89e7f637bc3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Asset performance analytics, SCADA/ICS cybersecurity, predictive maintenance, forecasting, and grid integration software. No technical work details found in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680414,
   "web_search_url": "https://duckduckgo.com/?q=Clearway+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/DS prestige with high new-grad pay, fast innovation, and genuine work-life balance: Clearway's renewable mission offers purpose-driven impact in climate tech. As a large public company, it likely provides structured compensation and stability, but the actual pace, bureaucracy level, and shutdown culture are unverified. The energy sector's regulatory constraints may slow iteration speed compared to pure tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Energy sector norm: reasonable hours for corporate roles, but asset operations may require on-call rotations. No guaranteed shutdown policy known."
   }
  },
  "cleerly": {
@@ -102384,7 +102553,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102402,7 +102571,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784898117,
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784677606,
   "name": "Dassault Systèmes",
   "pace_of_work": {
@@ -102415,7 +102584,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784898357,
+  "retry_after": 1784899007,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146843,51 +147012,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier. The retrieved sources do not contain accessible information to evaluate the company's elite prestige or standing in the AI and data science market."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "No accessible data was found in the provided sources to explain GCI's business model or how it generates revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. The provided sources lack accessible details to determine if the company is mission-driven or fits a fast, innovative tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "Target customer demographics and market segments for GCI are not detailed in the supplied source materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. Accessible data regarding high new-grad compensation or precise pay scales was not found in the provided sources."
   },
   "evidence_sha": "f327bf0afb1f7e31",
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The provided sources do not contain accessible information regarding the specific industry GCI operates in."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the team's actual pace of innovation versus bureaucratic overhead. Ask questions to gauge day-to-day work-life balance and whether shutdowns are respected. Discuss technical mentorship and learning opportunities to ensure career growth without personal sacrifices."
   },
-  "last_attempt_at": 1784898314,
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680313,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "Information regarding GCI's office locations or geographic footprint was not successfully retrieved from the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The company's formal mission statement or core strategic objectives were not available in the retrieved sources."
+  },
   "name": "GCI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. The provided sources do not contain accessible information to determine if the work pace is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The provided sources do not contain accessible information regarding GCI's specific products or service offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. Accessible data regarding exact paid time off policies or daily hour expectations was not found in the provided sources."
   },
-  "retry_after": 1784898434,
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. The provided sources do not contain accessible information regarding guaranteed company shutdowns or hard hours boundaries."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The retrieved sources do not contain accessible information regarding GCI's company size, funding stage, or employee headcount."
   },
   "sources": [
    {
@@ -146921,14 +147165,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=81fa7319cfac3951c450988cacde4b18792af0a359e74396e2e3d0821d2e6a70JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly9nY2lvdXRkb29yLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The provided sources do not contain accessible information regarding GCI's visa sponsorship policies or international hiring context."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "Based on the retrieved sources, specific public details regarding GCI's core operations and revenue model could not be extracted as the provided URLs resulted in redirect pages. Consequently, the company's precise day-to-day business activities and monetization strategies are not available in this dataset."
+  },
+  "synthesized_evidence_sha": "f327bf0afb1f7e31",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "3728c6ca0c",
+    "58d3bdb444",
+    "bf64448fce"
+   ],
+   "value": "The supplied sources do not provide accessible details on the specific technical work, engineering stacks, or data science projects at GCI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680313,
   "web_search_url": "https://duckduckgo.com/?q=GCI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the company's tech culture aligns with your priority for a fast, innovative environment over slow bureaucracy. It is critical to evaluate if the role supports your need for rapid technical learning and career acceleration. Confirm that their work-life balance policies, including sane hours and shutdowns, genuinely prevent burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. Insufficient accessible data in the provided sources to evaluate work-life balance, sane hours, or burnout risks."
   }
  },
  "gdit": {
@@ -188364,52 +188641,128 @@
  "intertek": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Mid-tier (Industry-Focused). AI and data science are applied to internal business operations rather than being a primary revenue driver."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "B2B service revenue generated by charging organizations for third-party quality, safety, and compliance assurance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Traditional, process-driven, risk-averse, and prioritizing operational accuracy over rapid digital innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f48fb0fc6",
+    "77bfb617ce"
+   ],
+   "value": "Multinational businesses and manufacturers spanning consumer goods, energy, healthcare, transportation, and construction sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: $80,000 - $95,000 USD base salary for new-grad technical roles, varying by geographic location."
   },
   "evidence_sha": "939682718c7bd8dc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784897895,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a885adc8fc",
+    "0f48fb0fc6"
+   ],
+   "value": "Testing, Inspection, and Certification (TIC); Business Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Highlight your enthusiasm for applying cutting-edge AI to optimize complex, real-world physical supply chains and quality assurance processes. Ask targeted questions about the technical team's autonomy, deployment cycles, and whether they operate with a startup-like agility or strict corporate governance to gauge if the culture aligns with your desire for speed."
+  },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784679540,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Headquartered in the UK with a global network of laboratories and offices in over 100 countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "77bfb617ce"
+   ],
+   "value": "Bringing quality and safety to life through comprehensive testing, inspection, and certification services worldwide."
+  },
   "name": "Intertek",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Moderate to slow. Governed by strict corporate procedures, compliance, and standardization typical of a global assurance corporation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f48fb0fc6"
+   ],
+   "value": "Industry testing, inspection, and certification services, alongside systems certification and advisory solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: 20-25 days of standard paid time off, typical for corporate employees in established global enterprises."
   },
-  "retry_after": 1784898375,
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a885adc8fc",
+    "0f48fb0fc6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Some regional offices may observe standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Established publicly traded enterprise with a massive global footprint."
   },
   "sources": [
    {
@@ -188443,14 +188796,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=858194522931fab3fea2740660c71ba22ca86e12d1ed253038c9c504524dbb7dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuaW50ZXJ0ZWsuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Large global enterprise likely offers visa sponsorship for specialized data and tech roles across various regions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a885adc8fc",
+    "0f48fb0fc6"
+   ],
+   "value": "Intertek is a global Total Quality Assurance provider that offers testing, inspection, and certification services across various industries. The company makes money by charging clients to assess the safety, quality, and compliance of their products, supply chains, and infrastructure."
+  },
+  "synthesized_evidence_sha": "939682718c7bd8dc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Developing internal digital systems, data platforms, and laboratory information management systems to streamline global quality assurance processes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679540,
   "web_search_url": "https://duckduckgo.com/?q=Intertek+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: While you seek elite AI prestige and a fast, innovative tech culture, Intertek is fundamentally a legacy testing and inspection corporation where AI/data science is treated as internal support rather than a core product. The company allows you to accelerate technical learning on real-world enterprise data while generally maintaining sane hours, but it will likely carry the bureaucratic pace of a massive global firm rather than the high-octane culture of a top-tier tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a885adc8fc"
+   ],
+   "value": "Estimated: Good. Standard corporate hours are typical for non-lab roles, avoiding the high-burnout environment of product-focused tech companies."
   }
  },
  "into university partnerships": {
@@ -194048,7 +194433,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194066,7 +194451,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897895,
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680207,
   "name": "JM Family Enterprises",
   "pace_of_work": {
@@ -194079,7 +194464,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784898375,
+  "retry_after": 1784899487,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259301,37 +259686,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected niche leader; publishes at SPIE/OSA, collaborates with national labs, but not a household AI brand. Strong for applied ML/physics hybrid roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Product sales of spectrometers and accessories (high-margin hardware), recurring revenue from software licenses and SDKs, custom OEM engineering services for integrated sensing solutions, and educational/outreach partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-ego; cross-functional teams (optics, firmware, software, apps) sit together; Halma's decentralized model gives autonomy; diverse, international workforce; social but not mandatory fun."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Academic and government research labs, life sciences and biotech companies, environmental monitoring agencies, semiconductor and thin-film manufacturers, OEM integrators building medical or industrial instruments, and food/agriculture quality control."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 5-10% target bonus + RSU (Halma shares, ~$5k-10k/yr vesting); Orlando COL-adjusted."
   },
   "evidence_sha": "eeae617423b099ee",
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Photonics / Optical Instrumentation / Scientific Instruments"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a mix of fundamentals (Python/C++ coding, statistics, signal processing) and domain-flavored problems: denoising spectra, peak fitting, chemometric calibration (PLS, PCA), or deploying a lightweight model on embedded hardware. Be ready to discuss how you'd validate a model when ground truth is scarce and acquisition time is expensive. System-design questions center on the spectrometer–software–cloud pipeline. Cultural screens probe collaboration with optical/mechanical engineers and comfo"
   },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680502,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Headquarters in Orlando, Florida (USA); additional offices in Dunedin (FL), Rochester (NY), Oxford (UK), Munich (Germany), Tokyo (Japan), Shanghai (China), and Seoul (Korea). Hybrid work options vary by site."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "To enable researchers and engineers to understand the world through light by providing accessible, modular, and high-performance optical sensing tools that accelerate discovery and innovation."
+  },
   "name": "Ocean Optics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – project cycles tied to hardware releases (12-18 months) and customer POCs; sprints exist but no crunch culture; quarterly planning with realistic scope."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Miniature fiber-optic spectrometers (e.g., Flame, Ocean HDX, Maya2000 Pro), light sources (LED, tungsten, deuterium), sampling accessories (probes, cuvettes, integrating spheres), and software (OceanView, OceanDirect SDK) for spectral acquisition and analysis."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 US holidays (accrues from day one); additional floating days in some regions; unlimited sick leave."
   },
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259341,7 +259780,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) paid; optional summer half-day Fridays in Florida office."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Established private company (founded 1989), ~200-300 employees globally, acquired by Halma plc (UK FTSE 100) in 2019, operating as a semi-autonomous subsidiary with stable revenue and no immediate exit pressure."
   },
   "sources": [
    {
@@ -259375,14 +259821,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=60a8336d8e26f19737766e94c185fc88f11a42cbf15ca0139e3218e16476cb77JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2NlYW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (Halma plc entity); routine cap-subject and cap-exempt filings for engineering and data science roles. Green card sponsorship (PERM) available for senior hires; new-grad sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Ocean Optics is a manufacturer of miniature spectrometers and optical sensing instrumentation used for spectral analysis across research, industrial, and OEM applications. The company makes money by selling hardware (spectrometers, light sources, accessories), software, and custom optical sensing solutions to customers in life sciences, environmental monitoring, semiconductor, and academic research."
+  },
+  "synthesized_evidence_sha": "eeae617423b099ee",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bb35b4ebd7"
+   ],
+   "value": "Optical engineering (spectrometer design, detector integration), embedded firmware (FPGA, microcontrollers), desktop/cloud software (C++, Python, Qt, React), data science for chemometrics and ML-based spectral classification, mechanical/thermal design, and application science support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680502,
   "web_search_url": "https://duckduckgo.com/?q=Ocean+Optics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ocean Optics sits at the intersection of photonics, data science, and real-world impact—your models run on instruments that monitor oceans, diagnose disease, and inspect semiconductors. As a Halma subsidiary, it offers big-company stability and benefits without the bureaucracy of a tech giant, and the domain (spectral sensing) is niche enough that you build deep, differentiated expertise fast. The culture leans engineering-first with sane hours, making it a rare place where elite technical work "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – core hours 9-5 with flexibility; on-call rare (only for cloud services); Halma policy encourages disconnecting; minimal weekend work."
   }
  },
  "ochsner health": {
@@ -290119,39 +290590,109 @@
  },
  "quera computing": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "Niche but elite; working on quantum compiler toolchains and hardware simulation represents top-tier deep-tech prestige, though it differs from traditional big-tech data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c025aa19",
+    "0444a1c60f"
+   ],
+   "value": "QuEra builds and provides access to proprietary neutral-atom quantum hardware and supports it with an open-source compiler toolchain (Kirin), likely generating revenue through cloud access, hardware partnerships, and research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Deeply technical, academic, and collaborative, focused on creative problem-solving alongside physicists to tackle unique hardware challenges."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5"
+   ],
+   "value": "Customers are computational and experimental physicists, quantum software engineers, and research institutions requiring cutting-edge quantum computing capabilities for advanced problem-solving."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$150k base salary, highly competitive for deep-tech engineering, though potentially lower than top-tier big-tech AI roles."
   },
   "evidence_sha": "5bee849cf0b9c17c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "0444a1c60f"
+   ],
+   "value": "Quantum Computing / Deep Tech / Scientific Software Engineering"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5"
+   ],
+   "value": "Evaluate if the startup environment genuinely respects personal time while offering the fast-paced innovation and elite mission-driven prestige you desire. Confirm that the technical growth and new-grad compensation meet your high standards without leading to burnout."
+  },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680503,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "Research and engineering roles are posted as remote-friendly, tied to their main research hub."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "To co-design compilers and hardware infrastructure for the next generation of quantum computing using cutting-edge neutral-atom and quantum error correction technologies, solving unique software challenges to deliver the best performance out of their quantum computers."
+  },
   "name": "QuEra Computing",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and highly innovative, driven by the need to co-design cutting-edge hardware and software in a rapidly evolving quantum landscape."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "QuEra's products include neutral-atom quantum computers and software infrastructure such as the Kirin open-source compiler toolchain. They also develop multi-level hardware simulation tools, shuttle compilation heuristics, and programming language designs for quantum error correction."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO, standard for early-to-mid stage deep-tech startups."
   },
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290161,7 +290702,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; typical startup operations apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "A specialized deep-tech startup currently in a growth and hiring phase, particularly expanding its scientific software engineering and compiler teams."
   },
   "sources": [
    {
@@ -290225,14 +290775,49 @@
     "url": "https://job-boards.greenhouse.io/queracomputinginc/jobs/5128092008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5"
+   ],
+   "value": "Specific visa sponsorship details are not explicitly found in the provided sources, but active hiring for highly specialized scientific roles suggests a potential openness to international talent if needed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "0444a1c60f"
+   ],
+   "value": "QuEra Computing is a quantum computing company that develops quantum computers utilizing neutral-atom technology and quantum error correction. The company builds both hardware and open-source compiler software toolchains, like Kirin, to enable advanced computational and experimental physics workloads."
+  },
+  "synthesized_evidence_sha": "5bee849cf0b9c17c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "Technical work involves co-designing compilers and hardware simulation infrastructure, developing optimization methods for shuttling workflows (routing/scheduling/planning heuristics, constraint-aware transformations), and implementing cost-model-driven compilation decisions for quantum error correction technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680503,
   "web_search_url": "https://duckduckgo.com/?q=QuEra+Computing+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "93c025aa19",
+    "fc3f082ca5",
+    "0444a1c60f"
+   ],
+   "value": "This role provides an opportunity to work at the cutting edge of quantum computing and AI-adjacent compiler design without the slow bureaucracy of a legacy tech giant. You will rapidly accelerate your technical learning by collaborating directly with elite experimental and computational physicists on next-generation hardware."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Highly variable depending on project deadlines, typical of a deep-tech startup pushing new technological boundaries."
   }
  },
  "quicken loans": {
@@ -297075,11 +297660,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297091,6 +297678,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680502,
   "name": "Redwood Materials",
   "pace_of_work": {
@@ -297103,6 +297691,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898647,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297176,7 +297765,7 @@
     "url": "https://boards.greenhouse.io/redwoodmaterials/jobs/5737879004?gh_jid=5737879004"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680502,
   "web_search_url": "https://duckduckgo.com/?q=Redwood+Materials+company+careers+benefits",
@@ -312126,41 +312715,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2—highly respected in storage systems and applied ML for infrastructure; not a headline AI research lab but elite for systems+ML intersection."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Designs and manufactures NAND flash-based storage products, selling through retail channels, OEM partnerships, and direct enterprise sales. Revenue comes from hardware product margins across consumer, client, and enterprise segments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics; strong mentorship; diverse global teams; pride in 'making the bits that store the world's data.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Consumer electronics buyers, PC and smartphone OEMs, enterprise data centers, cloud providers, automotive and industrial equipment makers, and retail consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + 10-15% target bonus + $30k-$50k RSU vesting over 4 years (total first-year ~$180k-$220k)."
   },
   "evidence_sha": "3f0ef10ec54be439",
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Semiconductor memory & data storage (NAND flash, SSDs, controllers)"
   },
-  "last_attempt_at": 1784898314,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on C/C++ embedded systems, storage stack internals (FTL, wear-leveling, garbage collection), NAND physics basics, and system-level debugging. AI/ML roles will test applied ML for storage optimization (predictive health, workload classification). Prepare for behavioral questions on cross-team collaboration and delivering quality under hardware constraints."
+  },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680410,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Headquarters in Milpitas, CA; major R&D in Silicon Valley, Colorado, Israel, India, China, Japan, and Europe; manufacturing in Malaysia, Taiwan, and China (via joint ventures)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "To unlock the potential of data through innovative storage solutions that help people and organizations capture, preserve, and access their digital content."
+  },
   "name": "Sandisk",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast—project cycles tied to hardware tape-outs and product launches; intense sprints near milestones but predictable cadence; not continuous crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Solid-state drives (SSDs), SD/microSD memory cards, USB flash drives, portable SSDs, embedded flash storage, and enterprise storage solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + sick leave; accrual increases with tenure."
   },
-  "retry_after": 1784898434,
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312170,7 +312815,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December); occasional summer Fridays or extended holiday weekends."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Large public company (Western Digital subsidiary); ~10,000+ employees globally; mature stage with established market position in flash storage."
   },
   "sources": [
    {
@@ -312204,14 +312857,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas for specialized engineering roles (firmware, storage architecture, ML); green card support for senior talent; typical for large semiconductor/storage firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "SanDisk is a major manufacturer of flash memory storage solutions including SSDs, memory cards, USB drives, and embedded storage. The company designs, manufactures, and sells data storage products for consumer, enterprise, and industrial markets."
+  },
+  "synthesized_evidence_sha": "3f0ef10ec54be439",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "200c444a63",
+    "cf5ee32a52"
+   ],
+   "value": "Flash controller firmware, NAND physics/characterization, storage system architecture, embedded software, SSD/enterprise storage software stacks, data reduction algorithms, reliability engineering, and AI/ML for predictive failure analysis and storage optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680410,
   "web_search_url": "https://duckduckgo.com/?q=Sandisk+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SanDisk offers elite prestige in storage hardware and firmware—core infrastructure for AI/data workloads—with new-grad compensation competitive with top semiconductor firms. The culture emphasizes engineering depth and innovation in flash technology without the extreme burnout reputation of some pure-play AI labs, and Western Digital's scale provides structured career ladders and work-life boundaries (e.g., core-hours policies, protected weekends) that align with your priority for sustainable gr"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5—core-hours culture, protected weekends typical, on-call rotation for firmware/escalation paths; better than FAANG average for hardware orgs."
   }
  },
  "sanford health": {
@@ -315207,53 +315887,127 @@
  },
  "scor": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d5ffc19397",
+    "2fb43a2eb7"
+   ],
+   "value": "Mid-tier / Domain-Specific. Highly respected within insurance and actuarial circles, but does not carry the elite AI prestige of top tech firms or ML research labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "B2B reinsurance: assuming risk from primary insurers in exchange for premiums, generating revenue through underwriting profit and investment income on those premiums."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: Corporate, mission-driven, and traditional. Emphasizes long-term stability, actuarial expertise, and calculated enterprise decision-making over high-growth tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Primary insurance companies, large corporations, and financial institutions seeking risk transfer and asset management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: $75,000 - $95,000 USD equivalent (varies heavily by region). Financial services generally offer solid, stable compensation, but lag behind top-tier tech firms' elite new-grad pay."
   },
   "evidence_sha": "101880fe81c477de",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898527,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898314,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Reinsurance / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Probe deeply into the specific team's engineering culture and whether bureaucratic red tape stifles technical learning and innovation. Ask direct questions about new-grad compensation bands and actual work hours to verify if sane work-life balance and guaranteed shutdowns exist or if slow-paced, traditional expectations dominate."
+  },
+  "last_attempt_at": 1784898527,
   "last_evidence_at": 1784680404,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Global headquarters in Paris, France, with major hubs and offices across Europe, the Americas, Asia, and Africa."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "To invest in the future of risk by applying world-class expertise, innovation, and science to finance risk and create value for clients and shareholders."
+  },
   "name": "SCOR",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: Slow to moderate. Traditional financial and insurance institutions typically prioritize risk-aversion, compliance, and stability over rapid, fast-paced innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Reinsurance treaties, facultative coverage, life and health insurance solutions, and enterprise risk management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: 25-30 days of paid time off annually, aligning with standard French and European corporate norms for senior professionals, excluding public holidays."
   },
-  "retry_after": 1784898434,
+  "refresh_after": 1790082527,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: Likely standard European public holidays, but no explicit data found on guaranteed corporate-wide holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Large, established global enterprise. SCOR is a publicly traded, mature corporation with a massive international footprint."
   },
   "sources": [
    {
@@ -315287,14 +316041,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=c3a637f1889a4bcde984c7fba80d0bee12fdd178fb0c31f890c260ebf8b71d8eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuc2Nvci5jb20vZW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: As a global multinational, they likely offer visa sponsorship for specialized roles in major hubs, but specific new-grad policies are not explicitly published."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "SCOR is the fourth-largest global reinsurance company, providing risk transfer and insurance solutions to clients worldwide. It makes money by collecting premiums from insurance companies in exchange for taking on portions of their risk, then investing those premiums and accurately pricing the underlying risks."
+  },
+  "synthesized_evidence_sha": "101880fe81c477de",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d5ffc19397",
+    "2fb43a2eb7"
+   ],
+   "value": "Risks are evaluated and priced using actuarial science, data analytics, and machine learning models to predict mortality, morbidity, and natural catastrophe risks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680404,
   "web_search_url": "https://duckduckgo.com/?q=SCOR+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "As a massive, traditional financial institution, SCOR inherently brings slow bureaucracy rather than a fast, innovative tech culture. The elite prestige associated with top-tier AI roles may be lacking compared to tech firms, and the data science work is heavily focused on actuarial pricing rather than cutting-edge AI products."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2fb43a2eb7"
+   ],
+   "value": "Estimated: Good. European corporate norms generally support solid work-life balance, though strict shutdowns are not explicitly guaranteed in public records."
   }
  },
  "scotiabank": {
