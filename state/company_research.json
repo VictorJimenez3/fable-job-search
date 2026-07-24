@@ -362,11 +362,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -378,6 +380,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680917,
   "name": "2U",
   "pace_of_work": {
@@ -390,6 +393,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900877,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -443,7 +447,7 @@
     "url": "https://job-boards.greenhouse.io/2u/jobs/8551048002"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=2U+company+careers+benefits",
@@ -19971,41 +19975,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no evidence of AI/data science presence in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture information in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data in sources."
   },
   "evidence_sha": "14e209631de4a1ec",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900757,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900565,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "7dce764daa",
+    "4f98a2f443",
+    "134b6d930e"
+   ],
+   "value": "Industry unclear from sources. URLs suggest possible motorcycle enthusiast organization (antiquestmotorcycle.org) or certification/exam provider (amcaexams.com), but no confirmation."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680915,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Amca",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no work pace information in sources."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy data in sources."
   },
-  "retry_after": 1784900685,
+  "refresh_after": 1790084757,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20015,7 +20061,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no company shutdown policy data in sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -20049,14 +20100,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b751a5c8ec948bf70149b4e55580c553e2336b2965857eba9e0ce4f43668a0e8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYW1jYWV4YW1zLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7dce764daa",
+    "4f98a2f443",
+    "134b6d930e"
+   ],
+   "value": "No substantive information about Amca's business, products, or operations could be extracted from the provided sources. The three source URLs redirect to pages that returned no readable content (antiquestmotorcycle.org, amcaexams.com/certifications/, amcaexams.com/)."
+  },
+  "synthesized_evidence_sha": "14e209631de4a1ec",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680915,
   "web_search_url": "https://duckduckgo.com/?q=Amca+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no work-life balance data in sources."
   }
  },
  "amches": {
@@ -38198,42 +38274,100 @@
  "aurelius systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Estimated: Emerging/Niche tier. High technical complexity in edge AI and autonomous defense systems, but not yet a household name in general AI."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Contract-based defense technology development, funded by venture capital."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Mission-driven, stoic, disciplined, focused on doing the work without excuses."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Defense and military organizations requiring counter-drone technologies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k base salary, competitive for defense tech startups in high cost-of-living areas."
   },
   "evidence_sha": "d7121ff98befc05f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900757,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900565,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Defense Tech / Autonomous Systems"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Candidates should expect interviews to evaluate technical excellence, adaptability in a startup culture, and alignment with the company's mission-driven approach."
+  },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680917,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Not explicitly stated in available sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Inspired by Marcus Aurelius, the company focuses on doing the work in front of you, every day, without excuses, to build advanced defense technologies."
+  },
   "name": "Aurelius Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Estimated: Very fast. As a VC-backed startup, the environment likely requires rapid iteration and quick deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Autonomous, edge-deployed directed energy systems (laser weapons) designed for counter-UAS operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO, typical for VC-backed startups."
   },
-  "retry_after": 1784900685,
+  "refresh_after": 1790084757,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38243,7 +38377,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Startup, backed by venture capital."
   },
   "sources": [
    {
@@ -38287,14 +38428,43 @@
     "url": "https://jobs.ashbyhq.com/aureliussystems/81fca3a4-7f50-4730-9a18-55c0da74130c"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Aurelius Systems is a VC-backed defense tech startup that builds autonomous, edge-deployed directed energy systems for counter-UAS applications. The company generates revenue through defense contracts, developing hardware and software solutions to shoot down drones."
+  },
+  "synthesized_evidence_sha": "d7121ff98befc05f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Edge deployment AI, autonomous systems, directed energy hardware, counter-drone technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=Aurelius+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Aurelius Systems values elite technical work in a fast-paced startup environment, potentially offering high new-grad pay and technical learning. The company's mission-driven focus aligns with candidates seeking meaningful work in defense technology."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e960316ed2"
+   ],
+   "value": "Estimated: Moderate to low. Startup culture often demands long hours, though the stoic philosophy may promote disciplined work rather than chaotic burnout."
   }
  },
  "auria space": {
@@ -76092,41 +76262,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown culture vibe."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "63b1b4c359"
+   ],
+   "value": "None found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown new grad pay."
   },
   "evidence_sha": "4cef21a4e9b79baa",
+  "generated_at": 1784900757,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "63b1b4c359",
+    "e2b33133ad"
+   ],
+   "value": "Estimated: Technology portal services, potentially intersecting with media or healthcare."
   },
-  "last_attempt_at": 1784900565,
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b33133ad",
+    "63b1b4c359"
+   ],
+   "value": "Probe deeply into their core technical work to ensure it matches your desire for a fast-paced, innovative AI culture rather than slow bureaucracy. Ask explicit questions about expected working hours, on-call expectations, and shutdown policies to guarantee they meet your requirement for sane hours and personal time."
+  },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680916,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "CGS Immersive",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "63b1b4c359"
+   ],
+   "value": "A web-based portal for user access and account login."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown PTO policy."
   },
-  "retry_after": 1784900685,
+  "refresh_after": 1790084757,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76136,7 +76354,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown shutdown policy."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -76170,14 +76393,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=69fa9ea267d459264d00a6db639bee31c8f64d85964fd303fc5c2e61368bb16bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY2dzbWVkaWNhcmUuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "63b1b4c359",
+    "e2b33133ad"
+   ],
+   "value": "Public-facing pages for CGS Immersive redirect through a login portal (mycgsportal.com) and a specific media care domain (cgsmediacare.com). The company provides immersive services likely managed via this portal, potentially in healthcare or media."
+  },
+  "synthesized_evidence_sha": "4cef21a4e9b79baa",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=CGS+Immersive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b33133ad",
+    "63b1b4c359"
+   ],
+   "value": "As a candidate seeking an elite AI/data science role with high new-grad pay, fast tech culture, and strong work-life balance, you must determine if CGS Immersive develops proprietary AI in-house or operates as a portal/IT services company, which could impact technical growth and prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown work-life balance rating."
   }
  },
  "chamber cardio": {
@@ -122290,37 +122540,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: High prestige within consulting for technical delivery; recognized for AI/ML implementation capability. Not a pure AI research lab (Tier 1), but top-tier for applied AI in consulting context."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees (time & materials, fixed price), retainer engagements for ongoing transformation support, and equity/venture partnerships with select startups and scale-ups through their Elixirr Ventures arm."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Entrepreneurial, 'challenger' mindset, flat hierarchy, meritocratic. 'No assholes' policy emphasized. Diverse backgrounds (not just traditional consulting). Social, collaborative, with strong alumni network. Less formal than Big 4; more delivery-obsessed than strategy shops."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large enterprises across financial services, insurance, energy, retail, telecommunications, and public sector. Client base includes FTSE 100 / Fortune 500 companies seeking transformation and digital capability building."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: UK £45-55k base + £5-10k bonus; US $90-110k base + $10-20k bonus (varies by office: NY/SF higher). Signing bonus £5-10k / $10-15k sometimes. RSUs not standard for new grads. Below FAANG/quant but top of consulting tier."
   },
   "evidence_sha": "262a897d2e81ec71",
+  "generated_at": 1784900757,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Management Consulting / Professional Services / Data & AI Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: (1) Case studies with heavy data/AI technical depth—expect to design ML solutions for business problems, not just framework recitation. (2) Coding assessments in Python/SQL for data engineering and modeling tasks. (3) Client-facing scenarios—how you translate technical complexity to non-technical stakeholders. (4) 'Builder' mindset evidence: side projects, deployed models, open source, or hackathon wins. (5) Consulting fundamentals: structured problem solving, hypothesis-driven thin"
+  },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680917,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "London (HQ), New York, San Francisco, Chicago, Toronto, Sydney, Melbourne, Singapore, Hong Kong, Dubai, Frankfurt, Paris, Madrid, Mumbai, and other satellite offices. Hybrid working model standard."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To challenge the consulting status quo by delivering tangible outcomes and building client capabilities rather than creating dependency. Emphasis on 'hands-on' delivery and entrepreneurial culture."
+  },
   "name": "Elixirr",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced, project-driven with variable intensity. Typical consulting cycles: intense 2-3 week sprints during delivery phases, lighter between engagements. Less bureaucratic than Big 4/MBB—decisions move quickly. Estimated 50-60 hrs/week average during active projects; protected downtime between."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consulting services across strategy, digital transformation, data & analytics, AI/machine learning implementation, financial services regulation, risk & compliance, and operational improvement. They also build proprietary digital products and platforms for clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-28 days annual leave + 8-10 public holidays (UK); 15-20 days + holidays (US) with accrual. Unlimited not offered. Sabbatical option after 5 years. PTO generally respected with coverage planning."
   },
+  "refresh_after": 1790084757,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122330,7 +122622,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full firm shutdown between Christmas and New Year (~5-7 business days). No additional mandatory shutdowns. Some offices may observe local summer Fridays or reduced summer hours informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~1,500-2,000 employees globally across 20+ offices. Private, founder-led, profitable growth stage. Founded 2009, UK-headquartered with significant US and APAC presence."
   },
   "sources": [
    {
@@ -122364,14 +122661,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f9a0d5d26796f17675a89606ea26658f96c007bca1f198a71e6f18fea716fb08JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMzgzMzM1NjkvYWRkaW5nLW5vY2FjaGUtMS10by1ldmVyeS11cmwtaW5jbHVkaW5nLXRoZS1hc3NldHMtbGlrZS1zdHlsZXNoZWV0LWJlaGluZC10aGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors visas (H-1B, UK Skilled Worker, etc.) for experienced hires and specialized technical roles. New grad sponsorship likely case-by-case given consulting deployment model. Confirm with recruiting for current policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Elixirr is a global management consulting firm that helps organizations with strategy, digital transformation, data analytics, and AI implementation. They position themselves as a challenger to traditional Big 4 and MBB firms with a focus on practical delivery over slideware."
+  },
+  "synthesized_evidence_sha": "262a897d2e81ec71",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science, ML engineering, AI/ML model development, data platform architecture, cloud data engineering (AWS/Azure/GCP), MLOps, generative AI applications, advanced analytics, and building data products for clients. Internal tooling and platform development for consulting delivery acceleration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=Elixirr+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Elixirr offers elite consulting prestige with genuine hands-on AI/data science delivery work—not just strategy decks. The challenger-firm culture means faster ownership, less bureaucracy than MBB/Big 4, and a 'builder' mindset aligned with your priority for innovative tech culture. Work-life balance is reported as better than traditional consulting (protected weekends, sane travel), though project crunches exist. Strong technical learning via diverse client problems across industries. Pay is com"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 3.5/5 for consulting. Better than MBB/Big 4 averages due to explicit 'no weekend work' culture push, limited travel (local staffing model), and protected PTO. Still client-service driven—crunches happen near go-lives. Not a 9-5 tech company."
   }
  },
  "ellipsis labs": {
@@ -168611,7 +168929,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168629,7 +168947,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784900565,
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680916,
   "name": "Headway",
   "pace_of_work": {
@@ -168642,7 +168960,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900685,
+  "retry_after": 1784900997,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227401,7 +227719,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227419,7 +227737,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784900370,
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784674622,
   "name": "Marsh",
   "pace_of_work": {
@@ -227432,7 +227750,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900610,
+  "retry_after": 1784901237,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -263613,47 +263931,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not enough verifiable information in the provided sources to estimate their AI/DS prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "How the company generates revenue is not detailed in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "Information regarding the target customer base is not available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
   },
   "evidence_sha": "b903445b66367541",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900757,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "The specific industry is not explicitly stated in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "Because the retrieved sources only contain redirect notices, there is no verified company information to prepare an interview focus. The candidate should independently verify the company's tech stack and culture, and come prepared to ask recruiters about new-grad compensation, technical learning paths, guaranteed shutdowns, and project turnaround speed to ensure it meets their expectations."
+  },
+  "last_attempt_at": 1784900757,
   "last_evidence_at": 1784680917,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "The physical or geographic locations of the company's offices are not listed in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "The company mission could not be retrieved from the supplied public page links."
+  },
   "name": "Observable Space",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "The company's specific products or services are not detailed in the provided sources, which only display redirect messages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
   },
+  "refresh_after": 1790084757,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "The current company size, funding stage, or employee headcount is not available in the retrieved data."
   },
   "sources": [
    {
@@ -263687,14 +264088,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=649b8bd5ccb09072d68de9ad35bd2799d3eeab9b71b5e8dc03eb4880ff646072JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9vYnNlcnZhYmxlaHEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "There is no information regarding visa sponsorship or international hiring policies in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "Observable Space is a technology company whose specific product offerings and monetization strategies could not be determined from the retrieved public pages, as all supplied sources resulted in a redirect notice. Consequently, the exact nature of their business operations remains unverified in this research."
+  },
+  "synthesized_evidence_sha": "b903445b66367541",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "Specific details on the technical work, engineering stack, or data science projects are not mentioned in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=Observable+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "4ec92279f6",
+    "31a56f7ac3",
+    "7f62aee37f"
+   ],
+   "value": "It is currently unclear how Observable Space aligns with a job candidate's desire for elite AI prestige, high new-grad pay, fast tech culture, and strong work-life balance. Since the provided sources only display redirect notices, the company's actual mission, technical reputation, and internal policies remain unverified in this research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown due to lack of accessible company information in the provided sources."
   }
  },
  "ocean optics": {
