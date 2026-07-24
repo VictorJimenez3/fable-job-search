@@ -14512,11 +14512,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14528,6 +14530,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784678102,
   "name": "Amazon.com Services LLC",
   "pace_of_work": {
@@ -14540,6 +14543,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873934,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14593,7 +14597,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678102,
   "web_search_url": "https://duckduckgo.com/?q=Amazon.com+Services+LLC+company+careers+benefits",
@@ -17093,37 +17097,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — recognized leader in applying AI/ML to biologics discovery; publishes in top conferences; attracts PhD talent; but not a pure 'AI-first' brand like FAIR or DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from sales of proprietary biologics and biosimilars; profits fund R&D for new therapies. High margins on patented drugs support reinvestment in pipelines and acquisitions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, science-first. Hierarchical but respectful. Emphasis on quality, compliance, and patient safety. Less 'move fast break things'; more 'move deliberately, validate thoroughly'. Good diversity efforts. Low toxicity reported."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare providers, hospitals, pharmacies, specialty distributors, government payers (Medicare/Medicaid), private insurers, and patients globally across ~100 countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k–$170k base + 10–15% target bonus + RSU grant ($40k–$80k over 4 years). Total Year 1 ~$190k–$260k. Varies by location (CA/MA higher)."
   },
   "evidence_sha": "701ddeeac3fc90db",
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Biotechnology / Pharmaceuticals"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical screens: ML fundamentals, statistics, Python/SQL, and domain-relevant case studies (e.g., clinical data, genomics). Behavioral questions emphasize collaboration, regulatory awareness, and patient impact. Prepare for cross-functional scenarios with scientists and clinicians."
+  },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784742131,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Thousand Oaks, CA. Major hubs: South San Francisco, Cambridge (MA), Tampa, Puerto Rico, Turkey, and sites across Europe/Asia. Hybrid work common; some roles remote-eligible."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To serve patients by transforming the promise of science and biotechnology into therapies that restore health or save lives."
+  },
   "name": "Amgen",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured to moderate. Regulated environment requires validation, documentation, and compliance — slower than consumer tech. Sprints exist but with longer horizons. Innovation balanced by safety/quality gates."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Key products include Enbrel, Neulasta, Prolia, Xgeva, Otezla, Repatha, Aimovig, Amjevita, Lumakras, Tezspire, and a growing pipeline of biosimilars and novel biologics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays + sick leave. Increases with tenure. No unlimited PTO policy."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17133,7 +17179,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns. Some sites may have reduced ops around winter holidays, but not formalized."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NASDAQ: AMGN); ~27,000 employees worldwide; mature, profitable, with multi-billion dollar R&D spend annually."
   },
   "sources": [
    {
@@ -17167,14 +17218,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c6efca47256714116a16af5a3de079fc76aa0732d1ddf9e74ed61b7bcb0615ffJmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=3ea6421f-8f9c-69f2-04ab-55818e356880&u=a1aHR0cHM6Ly9tZWV0LmppdC5zaS8_ckNvdW50ZXI9MQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for specialized STEM roles; files green cards for eligible employees. Cap-exempt status not typical (not a university/nonprofit)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Amgen is a leading global biotechnology company that discovers, develops, manufactures, and delivers innovative human therapeutics. It focuses on treating serious illnesses in areas like oncology, cardiovascular disease, inflammation, bone health, nephrology, and neuroscience."
+  },
+  "synthesized_evidence_sha": "701ddeeac3fc90db",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to drug discovery (generative chemistry, protein design), clinical trial optimization, real-world evidence, manufacturing analytics, commercial analytics, and digital health. Heavy use of cloud, ML platforms, and bioinformatics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742131,
   "web_search_url": "https://duckduckgo.com/?q=Amgen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Amgen offers elite biotech prestige with top-tier new-grad compensation, applying AI/ML to high-impact drug discovery. Its mature, regulated environment provides stability and structured growth, though pace is slower than pure tech firms. Work-life balance is generally respected with predictable hours, but guaranteed shutdowns are not standard. Mission-driven culture aligns with candidate's desire for purpose."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5. Generally sane hours (40–45/wk typical); limited weekend work. No company-wide guaranteed shutdowns. Some crunch near regulatory submissions. Hybrid flexibility supports balance."
   }
  },
  "amigo ai": {
@@ -20196,11 +20268,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20212,6 +20286,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784678096,
   "name": "Anysphere (Cursor)",
   "pace_of_work": {
@@ -20224,6 +20299,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873934,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20277,7 +20353,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3dbd20a7236b84d071f86394fb55b65ba2847edf25dd92ce32608b3fe0466bd9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3Vyc29yXyhjb21wYW55KQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678096,
   "web_search_url": "https://duckduckgo.com/?q=Anysphere+%28Cursor%29+company+careers+benefits",
@@ -65794,38 +65870,107 @@
  "cloudflare": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5af2099874"
+   ],
+   "value": "Estimated: Tier 1 prestige for infrastructure engineering; tier 2 for dedicated AI/DS. While elite for distributed systems, its AI prestige is rapidly rising as it pushes AI inference to the edge."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620",
+    "471724e3de"
+   ],
+   "value": "Freemium-to-enterprise SaaS model with subscription tiers for both individuals and hyper-growth enterprise businesses, scaling up from basic free web services to custom global traffic solutions."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "5af2099874",
+    "e96496b620"
+   ],
+   "value": "Curious, builder-focused, and anti-bureaucracy. The culture rewards engineers who see problems others ignore and values high performance."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620"
+   ],
+   "value": "Ranges from individual WordPress bloggers using free services to large global enterprise businesses with petabytes of web traffic."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000 - $200,000 total target compensation (base + equity) for new grad software engineers in high-cost US metros."
   },
   "evidence_sha": "3774a7aead299a2d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620",
+    "471724e3de"
+   ],
+   "value": "Internet infrastructure, cloud networking, and cybersecurity."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "5af2099874",
+    "e96496b620"
+   ],
+   "value": "Be prepared to demonstrate how you act as a 'builder' who seeks out cracks in systems rather than waiting for polished roadmaps. Emphasize your curiosity, your ability to leverage AI as a partner in problem-solving, and your drive to maintain high performance without yielding to slow bureaucratic processes."
+  },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784842446,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8a23dbd6ea"
+   ],
+   "value": "Fully distributed global workforce with a significant office presence in San Francisco (hybrid/remote options vary by team)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620",
+    "471724e3de",
+    "5af2099874"
+   ],
+   "value": "To help build a better Internet."
+  },
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "471724e3de",
+    "e96496b620"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative. Officially classified as a hyper-growth technology company, meaning rapid shipping cycles and a builder-centric culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620"
+   ],
+   "value": "Content delivery network (CDN), DDoS protection, Zero Trust network security, Web Application Firewall (WAF), DNS resolution, and developer edge computing platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible or unlimited PTO standard for tech employees, with recommended minimums to ensure time off is taken."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65835,7 +65980,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Typical tech variations apply; no global mandatory shutdowns found in research, but floating holidays are usually provided."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "471724e3de"
+   ],
+   "value": "Large, publicly-traded technology company operating in a state of hyper-growth."
   },
   "sources": [
    {
@@ -65899,14 +66051,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=61f852c6c02cfd0da7fb68142c711b8ca6ce2b9eb7e16fe4996d9ab24ede8b1aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Cloudflare frequently sponsors engineering visas for top talent, though policies may vary by specific role and geography."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e96496b620",
+    "471724e3de"
+   ],
+   "value": "Cloudflare operates a global cloud network designed to make the Internet faster, more secure, and more reliable for everyone. It makes money by offering freemium web performance and security services, converting free users into paid enterprise customers through subscriptions and usage-based pricing."
+  },
+  "synthesized_evidence_sha": "3774a7aead299a2d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5af2099874",
+    "e96496b620"
+   ],
+   "value": "Building and securing global network infrastructure, realtime edge computing systems, and network security protocols. Heavy focus on high-scale, low-latency challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
   "web_search_url": "https://duckduckgo.com/?q=Cloudflare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "5af2099874",
+    "e96496b620"
+   ],
+   "value": "For a candidate seeking an elite, highly-paid AI/tech role without burning out, Cloudflare's mission-driven focus on 'building a better Internet' offers deep technical impact. The company specifically calls out valuing 'curiosity over bureaucracy' and utilizing AI to solve tough problems, aligning with your desire for a fast, innovative culture that accelerates learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e96496b620",
+    "471724e3de"
+   ],
+   "value": "Estimated: Good. Recognized on Entrepreneur Magazine’s Top Company Cultures list, indicating a strong baseline of employee respect, though typical hyper-growth paces require active boundary management."
   }
  },
  "cna national": {
@@ -66932,37 +67117,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (Tier 1) - Recognized as a leading LLM research lab alongside OpenAI, Anthropic, and Google DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "B2B SaaS model selling API access to large language models and custom enterprise deployments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Research-first, intellectually intense, low bureaucracy. Canadian-rooted collaborative culture with high autonomy for researchers and engineers. Mission-driven but pragmatic about commercialization."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Enterprise customers across industries seeking to integrate advanced NLP capabilities into their products and workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k base + equity (RSUs) + signing bonus; total comp $220k-$300k+ for ML research/engineering roles."
   },
   "evidence_sha": "612fdbfe211a1d99",
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Artificial Intelligence / Large Language Models / Enterprise SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Expect deep technical interviews covering ML fundamentals, transformer architecture, distributed systems, and practical LLM experience. Prepare for research-oriented questions and coding assessments focused on model implementation. Emphasize both theoretical depth and production engineering skills."
   },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784678097,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Headquartered in Toronto, Canada with offices in San Francisco, London, and New York. Remote-friendly culture."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "To build machines that understand the world and make AI accessible and useful for enterprises."
+  },
   "name": "Cohere",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced research environment with aggressive project timelines; sprint-driven but with technical depth expectations."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Large language models, NLP APIs, and enterprise AI solutions for text generation, classification, and embedding tasks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus statutory holidays (Canada/US variations); unlimited policy not confirmed."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66972,7 +67223,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; some teams observe informal year-end slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees, well-funded startup stage (Series C/D), valuation over $2B."
   },
   "sources": [
    {
@@ -67006,14 +67262,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=270d36c9c7afd24f1b90e7a565e4fc8fd8634c786f5eebf9a3a13efc7b2444eaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cud2VzdGNsaWZmYXBhcnRtZW50LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B and other visa sponsorship for qualified candidates; Canadian immigration support for Toronto roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Cohere is an AI company focused on large language models and natural language processing. The company develops enterprise-grade AI solutions for businesses."
+  },
+  "synthesized_evidence_sha": "612fdbfe211a1d99",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8647a7f9d3",
+    "6c79060aa5",
+    "263f37080a"
+   ],
+   "value": "Research and engineering on large language models, distributed training, model optimization, and production ML infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678097,
   "web_search_url": "https://duckduckgo.com/?q=Cohere+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cohere offers elite AI research prestige comparable to top labs with competitive new-grad compensation. The company emphasizes research excellence and fast innovation cycles over bureaucracy, with a mission to make LLMs useful for enterprises. Culture signals suggest reasonable work-life boundaries for a high-performance AI lab."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Better than many top AI labs; known for reasonable hours relative to output expectations, but still demanding during model pushes."
   }
  },
  "coherent": {
@@ -175554,48 +175839,125 @@
  "medline": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: Tier 3. Unlikely to offer the top-tier prestige or elite new-grad pay typical of big-tech or specialized AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Manufacturing and distributing medical and biomedical supplies directly to healthcare facilities and providers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: Traditional corporate environment focused on healthcare logistics and supply chain stability rather than high-tech disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Hospitals, surgery centers, and long-term care facilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Likely below the elite new-grad pay bands of top-tier tech or AI firms."
   },
   "evidence_sha": "ed20c48a06f33e27",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Medical Equipment Manufacturing and Healthcare Supply Distribution."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Candidates should ask about the specific tech stack, the pace of innovation within internal teams, and how the company ensures work-life balance and avoids burnout in a legacy industry."
+  },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784678213,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Headquartered in the United States with a global presence."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Providing quality medical products and clinical solutions to healthcare providers to improve patient care."
+  },
   "name": "Medline",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: Moderate to slow. Operations in a legacy healthcare distribution giant are likely more deliberate and bureaucratic than a fast-paced startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Medical supplies, surgical instruments, personal protective equipment (PPE), and biomedical products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: 15-25 days annually, standard for large healthcare corporations."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a6b54912a6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found in research, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6fae77fb1"
+   ],
+   "value": "Large, established private corporation operating in the healthcare sector."
   },
   "sources": [
    {
@@ -175629,14 +175991,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=dbe96ee3230a72d751fdaf09101eb67374e30a801240e4434c05041558d360b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cubWVkbGluZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "No specific information found in the provided sources regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c6fae77fb1",
+    "a6b54912a6"
+   ],
+   "value": "Medline is a privately-held American healthcare company that manufactures and distributes medical supplies and clinical solutions to healthcare facilities. It makes money by selling surgical instruments, personal protective equipment, and biomedical products to hospitals, surgery centers, and long-term care providers."
+  },
+  "synthesized_evidence_sha": "ed20c48a06f33e27",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Specific technical and data science roles are not detailed on the main page, but generally involve supply chain optimization, healthcare data analytics, and clinical solution platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678213,
   "web_search_url": "https://duckduckgo.com/?q=Medline+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Falls short of the candidate's desire for a fast, innovative tech culture and elite AI/data science prestige. As a traditional medical supply distributor, the environment leans heavily toward bureaucratic operations rather than cutting-edge tech innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a6b54912a6"
+   ],
+   "value": "Estimated: Good. A large, established non-tech company often maintains standard corporate hours, though specific shutdown policies are unknown."
   }
  },
  "medpace": {
@@ -269131,37 +269525,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier; recognized within the financial sector but lacks FAANG-level prestige in specialized AI or advanced Data Science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4922b303b",
+    "9d17cb4d88"
+   ],
+   "value": "Earns revenue through traditional banking activities: net interest margin from lending, transaction fees, wealth management commissions, and premium account services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, traditional corporate banking culture with collaborative teams but heavy focus on compliance and risk management."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4922b303b"
+   ],
+   "value": "Individual consumers, small businesses, and corporate clients seeking retail and commercial banking solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $90,000 base salary for general new grad software engineering roles."
   },
   "evidence_sha": "e600995b8b345954",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8e350c94c2"
+   ],
+   "value": "Financial Services / Retail and Commercial Banking."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784678333,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e350c94c2"
+   ],
+   "value": "Headquartered in Toronto, Canada, with major corporate offices in Charlotte, NC, Cherry Hill, NJ, and Auburn, ME."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e350c94c2"
+   ],
+   "value": "To enrich the lives of customers, communities, and colleagues by delivering comfortable and convenient banking experiences."
+  },
   "name": "TD Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; heavily regulated environment leads to methodical engineering cycles rather than rapid shipping."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4922b303b",
+    "9d17cb4d88"
+   ],
+   "value": "Personal and business checking accounts, credit cards, mortgage and lending services, wealth management, and digital/online banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of base PTO with additional holidays and floating days."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269171,7 +269621,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited guaranteed shutdowns; may observe major bank holidays but does not typically feature mandatory week-long closures."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e350c94c2"
+   ],
+   "value": "A large, established public financial institution operating across North America."
   },
   "sources": [
    {
@@ -269205,14 +269662,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=a803a4c9217ef7bd00c2511eecec70e96f8a7544d7dd59155023c03b65ba5177JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cudGQuY29tL3VzL2VuL3BlcnNvbmFsLWJhbmtpbmc&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8e350c94c2"
+   ],
+   "value": "Estimated: As a large institution, may offer limited visa sponsorship for highly specialized tech roles, but prioritizes local talent for entry-level positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8e350c94c2",
+    "e4922b303b",
+    "9d17cb4d88"
+   ],
+   "value": "TD Bank is a major financial institution providing retail, commercial, and personal banking services. It makes money through net interest margin on loans and deposits, as well as fees from financial services and products."
+  },
+  "synthesized_evidence_sha": "e600995b8b345954",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e350c94c2",
+    "e4922b303b"
+   ],
+   "value": "Building and maintaining digital banking platforms, mobile applications, fraud detection systems, and customer-facing financial technology infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678333,
   "web_search_url": "https://duckduckgo.com/?q=TD+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; large banks generally enforce 40-hour weeks with on-call expectations varying by specific team."
   }
  },
  "td synnex": {
@@ -283873,38 +284360,110 @@
  "twilio": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5a0c1f3b99"
+   ],
+   "value": "Estimated: Mid-to-High Tier. While not an AI-first company, Twilio's data-driven workflows and automation infrastructure present strong technical opportunities, though not on the same prestige level as dedicated elite-AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Usage-based cloud communication APIs, charging developers and enterprises for messaging, voice, and compliance infrastructure."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Vibrant, inclusive, and collaborative, with a strong emphasis on connection and continuous innovation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c1f3b99",
+    "3b4166895e"
+   ],
+   "value": "Software developers and businesses seeking to embed secure, compliant communication capabilities into their applications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary. Twilio compensates competitively for tech talent."
   },
   "evidence_sha": "a8ac4a4e9e322175",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784873814,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Cloud Communications and Software as a Service (SaaS)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c1f3b99",
+    "3b4166895e"
+   ],
+   "value": "Candidates should highlight their ability to thrive in a fast-paced, innovative environment while demonstrating proactive problem-solving and a strong drive for autonomy. Discussing readiness to tackle high-scale technical challenges and showing how one manages personal growth without burning out aligns with Twilio's career-driven mission."
+  },
+  "last_attempt_at": 1784873814,
   "last_evidence_at": 1784842446,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Remote-first organization, allowing employees to work from the comfort of their homes regardless of location."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Shaping the future of communications by empowering developers and building trust through secure, compliant operations."
+  },
   "name": "Twilio",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5a0c1f3b99"
+   ],
+   "value": "Estimated: Fast-paced and innovative. Environment challenges employees to bring their best every day to keep up with the demand."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c1f3b99",
+    "3b4166895e"
+   ],
+   "value": "Programmable communication APIs for SMS, voice, and video; customer engagement tools; and compliance/onboarding security infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Estimated: 20-25 days of annual PTO. Public company remote-first policies typically include flexible vacation alongside standard state holidays."
   },
+  "refresh_after": 1790057814,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -283912,9 +284471,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Estimated: No official guaranteed corporate shutdowns found; remote-first workers generally rely on flexible PTO."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Publicly traded, established technology company with a global, remote-first workforce."
   },
   "sources": [
    {
@@ -283968,14 +284536,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=b12d57aab0154481ea593ecf30ba1cd56605d7736ddea074c443995e1af3cc7eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cudHdpbGlvLmNvbS9lbi11cw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3b4166895e"
+   ],
+   "value": "Not explicitly mentioned in provided sources; however, as a large global tech company, sponsorship opportunities may exist."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Twilio is a cloud communications platform that allows developers to programmatically integrate voice, text, chat, and video into applications via APIs. The company makes money by charging its customers on a usage-based, pay-as-you-go model for executing these communications."
+  },
+  "synthesized_evidence_sha": "a8ac4a4e9e322175",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Building scalable communication infrastructure, developing cloud-based software, and creating security/compliance systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678006,
   "web_search_url": "https://duckduckgo.com/?q=Twilio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Twilio offers a dynamic, remote-first culture that accelerates technical learning and puts career growth directly in the hands of the employee. The focus on high-impact communication infrastructure provides new grads with elite, fast-paced technological challenges while maintaining global flexibility."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3b4166895e",
+    "5a0c1f3b99"
+   ],
+   "value": "Estimated: Moderate to Good. Remote-first setup provides flexibility, but pace and demanding initiatives can require strict boundary-setting to maintain balance."
   }
  },
  "twitch": {
