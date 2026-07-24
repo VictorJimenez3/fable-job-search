@@ -88239,11 +88239,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88255,6 +88257,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784583508,
   "name": "Dexcom",
   "pace_of_work": {
@@ -88267,6 +88270,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878345,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88310,7 +88314,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=94a03fe55467c513700124bbd248bd251dc8fe27970600a42baf7a4f0f40d561JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGV4Y29t&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583508,
   "web_search_url": "https://duckduckgo.com/?q=Dexcom+company+careers+benefits",
@@ -114983,37 +114987,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate prestige within the financial services sector, though less recognized compared to elite tech firms or quantitative hedge funds driving cutting-edge AI innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1a0b66cfdf",
+    "0735bb9b71"
+   ],
+   "value": "Purchases residential mortgages from lenders, securitizes them, and sells guaranteed MBS to investors. Revenue is driven by guaranty fees on the securitized loans and net interest income from its retained investment portfolio."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, stable, and mission-driven focused on housing affordability, but can be burdened by bureaucratic processes typical of heavily regulated industries."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1a0b66cfdf"
+   ],
+   "value": "Primary customers are mortgage lenders (such as banks and credit unions) who sell loans to Freddie Mac, and global investors who buy the guaranteed mortgage-backed securities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary for new graduate data science and tech roles, with potential for annual bonuses."
   },
   "evidence_sha": "26447b65909d0fc0",
+  "generated_at": 1784878225,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1a0b66cfdf",
+    "0735bb9b71"
+   ],
+   "value": "Financial Services · Mortgage Finance · Government-Sponsored Enterprise"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for a rigorous dive into macroeconomic modeling and compliance engineering; verify whether your tech stack aligns with a conservative enterprise structure rather than granular, fast-paced AI experimentation."
   },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784675350,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0735bb9b71"
+   ],
+   "value": "Headquartered in McLean, Virginia, with additional major hubs identified via internal career mapping."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0735bb9b71"
+   ],
+   "value": "To provide liquidity, stability, and affordability to the U.S. housing market, ensuring families have access to rental and homeownership opportunities."
+  },
   "name": "Freddie Mac",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady. Regulated enterprise environment with methodical release cycles rather than an agile, fast-paced tech startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0735bb9b71",
+    "1a0b66cfdf"
+   ],
+   "value": "Mortgage-backed securities (MBS), credit risk transfer (CRT) securities, mortgage finance tools, and servicer technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard PTO annually for full-time corporate employees, alongside standard public holidays."
   },
+  "refresh_after": 1790062225,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115023,7 +115084,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited company-wide shutdowns; holidays generally align with standard federal and banking holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1a0b66cfdf"
+   ],
+   "value": "A publicly traded, government-sponsored enterprise operating since 1970, operating at massive scale with billions of dollars in assets."
   },
   "sources": [
    {
@@ -115057,14 +115125,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9e8c027fd0b7918e5dc0f2d8565cf7268a925854c9e15f7d1fdc15f12f505726JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuZ29mcmVkZGllLmNvbS91cw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a0b66cfdf"
+   ],
+   "value": "As a U.S. government-sponsored enterprise, Freddie Mac is heavily restricted in hiring non-U.S. citizens and typically has strict citizenship or permanent residency requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1a0b66cfdf",
+    "0735bb9b71"
+   ],
+   "value": "Freddie Mac (Federal Home Loan Mortgage Corporation) is a publicly traded, government-sponsored enterprise (GSE) that buys residential mortgages, packages them into mortgage-backed securities (MBS), and guarantees them for sale to investors. It makes money primarily by charging guaranty fees on these securities, as well as earning interest on its retained mortgage portfolio."
+  },
+  "synthesized_evidence_sha": "26447b65909d0fc0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0735bb9b71",
+    "24307ae7a1"
+   ],
+   "value": "Heavy reliance on Python, SQL, cloud platforms (AWS), machine learning for underwriting and credit risk modeling, and large-scale data engineering to process housing datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675350,
   "web_search_url": "https://duckduckgo.com/?q=Freddie+Mac+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While the mission is noble, Freddie Mac's government-sponsored enterprise status enforces strict compliance, meaning the tech culture is often entangled in slow bureaucracy rather than true innovation. High new-grad pay and WLB exist, but the slower pace may clash with a desire for a fast-paced, elite-tier tech environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally positive, with sane hours expected due to the conservative nature of a government-sponsored enterprise."
   }
  },
  "freedom technology solutions group": {
@@ -128286,37 +128383,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied ML org with production scale, publishes occasionally (e.g., RecSys, KDD workshops), known for marketplace ML rather than foundational research. Strong for applied scientists, less so for pure research careers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grubhub generates revenue primarily through commission fees charged to restaurants on each order (typically 15-30%), delivery fees paid by consumers, subscription revenue from Grubhub+ memberships, and advertising/promotional fees from restaurants seeking placement. Corporate catering contracts provide additional B2B revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Pragmatic, midwestern-rooted, engineering-led but product-collaborative. Less performative than Bay Area peers; values shipping measurable impact. Diverse workforce, decent inclusion scores. Post-acquisition integration with Just Eat Takeaway adds some process overhead but also stability."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are hungry consumers ordering food for delivery/pickup and restaurants seeking online ordering and delivery infrastructure. Secondary customers include corporate clients using Grubhub Corporate for employee meals and catering."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145,000-$175,000 base + $20,000-$40,000 sign-on + $40,000-$80,000 RSU over 4 years. Total Year 1 ~$210,000-$260,000. Adjusts by location (NYC/SF higher)."
   },
   "evidence_sha": "a84ea0aeb81800b6",
+  "generated_at": 1784878225,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Food delivery / Online marketplace / Consumer technology / Logistics tech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on practical ML system design (ranking, recommendation, marketplace matching), statistical rigor (A/B testing, causal inference for experimentation), and productionization skills (feature stores, model monitoring, latency constraints). Coding bars are standard LeetCode medium/hard. Domain questions may cover demand forecasting, dynamic pricing, or logistics optimization. Behavioral screen looks for collaboration with product/ops and comfort with ambiguity in a two-sided mar"
+  },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784674661,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chicago, IL. Major engineering hubs in Chicago, New York City, Boston, and remote-first options. Operations across 4,000+ U.S. cities."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect people with the food they love from local restaurants, making food ordering seamless and supporting restaurant partners' growth."
+  },
   "name": "Grubhub",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Steady feature velocity driven by quarterly planning cycles. Not 'move fast and break things'; more 'ship reliably and measure.' On-call varies by team; core marketplace/infra teams rotate, many DS roles are on-call light."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grubhub's core products include its consumer-facing food delivery marketplace (website and mobile apps), restaurant-facing order management tools, delivery logistics network, and corporate catering platform (Grubhub Corporate). The platform also offers membership programs like Grubhub+ for unlimited free delivery."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick time. Unlimited PTO not offered; accrual-based typical for mature public company."
   },
+  "refresh_after": 1790062225,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128326,7 +128465,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdown periods. Some teams observe informal slowdowns between Christmas and New Year. No 'summer Fridays' or mandatory recharge weeks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (acquired by Just Eat Takeaway in 2021, now operating as subsidiary). Approximately 5,000+ employees. Mature, late-stage marketplace with significant market share in U.S. food delivery."
   },
   "sources": [
    {
@@ -128360,14 +128504,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d18c78699d92a4a85705d6a12f7ecf5f3c2caabdf3285d053d551b46213802f3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly93d3cuZ3J1Ymh1Yi5jb20vP21zb2NraWQ9MDA3MzIzMjQwNzM2NjVlZDI1ZTYzNGI5MDYyYjY0M2I&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Grubhub sponsors H-1B visas and green cards for technical roles, particularly in ML, data science, and engineering. As a large tech employer, they have established immigration processes but sponsorship is role-dependent and not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grubhub is a leading online and mobile food ordering and delivery marketplace connecting diners with local restaurants. The company operates a platform that enables consumers to browse menus, place orders, and have food delivered or ready for pickup."
+  },
+  "synthesized_evidence_sha": "a84ea0aeb81800b6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core technical domains include: real-time marketplace matching and logistics optimization, large-scale recommendation and ranking systems, ML-powered demand forecasting and dynamic pricing, high-throughput order management and payment processing, restaurant and driver-facing tooling, data platform and experimentation infrastructure. Active AI/ML applications in search ranking, ETA prediction, fraud detection, and personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674661,
   "web_search_url": "https://duckduckgo.com/?q=Grubhub+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grubhub offers a legitimate AI/DS track at scale—real-time marketplace problems, ranking/recommendation systems, and logistics optimization—with compensation competitive for new grads (estimated $150-180K base + equity). As a mature marketplace now under Just Eat Takeaway, it has stabilized from hyper-growth chaos but retains meaningful technical depth. Culture leans pragmatic over hype; work-life balance is generally reported as reasonable for a consumer tech company, with limited mandatory on-"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Generally reasonable hours (40-45 typical), limited weekend work, remote-friendly post-COVID. No formal 'right to disconnect' policy but culture respects boundaries. Some seasonal spikes (holidays, promos)."
   }
  },
  "grvty": {
@@ -170837,11 +171002,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170853,6 +171020,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784589347,
   "name": "Link",
   "pace_of_work": {
@@ -170865,6 +171033,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878345,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170908,7 +171077,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=63575850b85c2a7cb0a7a777afc05845b5f23f958da241340b4722a6c7a2facbJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=1f4f8270-2f38-6b26-14f8-95ec2ec36aec&u=a1aHR0cHM6Ly9saW5rLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784589347,
   "web_search_url": "https://duckduckgo.com/?q=Link+company+careers+benefits",
@@ -175499,41 +175668,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respectable applied AI/ML in a regulated enterprise; not a research lab or elite tech brand, but strong for production ML at scale in finance."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional bank holding company model: earns net interest income from loans and securities funded by deposits, plus non-interest revenue from fees, wealth management, mortgage banking, and insurance. Profitability driven by net interest margin, credit quality, and operating efficiency."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, low-ego, community-oriented, and risk-aware. Long-tenured employees, internal mobility encouraged, diversity initiatives active. Less \"move fast\" energy, more \"do it right\" pride. Leadership accessible; town halls and feedback loops exist."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual consumers, small to mid-sized businesses, middle-market and large corporate clients, institutional investors, and high-net-worth individuals across its Northeast and Mid-Atlantic footprint."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU (~$10k–$20k/yr vesting) = ~$115k–$145k total Year 1. Varies by role (Data Science > Software Eng > Analytics) and location (NYC/Buffalo differential)."
   },
   "evidence_sha": "06a843ebe506cd6c",
+  "generated_at": 1784878225,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Regional Banking / Financial Services"
   },
-  "last_attempt_at": 1784878071,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical, domain-aware questions: building reliable ML pipelines for fraud/credit risk, explaining model decisions to regulators, handling imbalanced financial data, and modernizing legacy data stacks. Emphasis on communication, ethics, and production readiness over novel research. Prepare for behavioral questions on collaboration, compliance mindset, and balancing innovation with risk."
+  },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784583503,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Buffalo, NY. Major tech hubs: Buffalo, NY; Baltimore, MD; New York, NY; Wilmington, DE; remote/hybrid options expanding. Branches across NY, PA, MD, DC, VA, WV, NJ, DE, CT, MA, VT, FL."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the best bank our employees ever worked for, the best bank our customers ever did business with, and the best bank our shareholders ever invested in — emphasizing relationship-based banking and community commitment."
+  },
   "name": "M&T Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured / Deliberate — Regulated environment requires thorough review, documentation, and compliance gates. Projects move in quarters, not sprints. Innovation happens but with governance overhead."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail banking (checking, savings, loans, credit cards), commercial banking (lending, treasury management), wealth management and trust services, mortgage origination and servicing, insurance agency services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–11 paid holidays + 2–3 floating days; increases with tenure. No public unlimited PTO policy."
   },
-  "retry_after": 1784878191,
+  "refresh_after": 1790062225,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175543,7 +175750,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns. Some teams observe quiet periods around major holidays (Dec 24–Jan 1) but not guaranteed or universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public regional bank (NYSE: MTB); ~$200B+ assets, ~23,000 employees, 1,000+ branches across 12+ states and D.C. Mature, stable, dividend-paying institution."
   },
   "sources": [
    {
@@ -175577,14 +175789,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0e51e18e86ab02a82a631c3e76d023a7cabc637cd2e455f6020737cea783351fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9tLnlvdXR1YmUuY29tL3dhdGNoP3Y9WWlLN0lMMGtxZDA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for technology, data science, and quantitative roles; supports STEM OPT extensions and green card sponsorship for eligible positions. Sponsorship typical for specialized tech and analytics roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "M&T Bank is a regional bank holding company headquartered in Buffalo, New York, operating primarily in the Northeastern and Mid-Atlantic United States. It provides retail and commercial banking, wealth management, and mortgage services to consumers and businesses."
+  },
+  "synthesized_evidence_sha": "06a843ebe506cd6c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking systems modernization, cloud migration (AWS/Azure), data platform engineering, AI/ML for fraud detection, credit risk modeling, customer personalization, marketing analytics, regulatory reporting automation, and digital channel development. Growing investment in data science and AI capabilities but within a regulated, legacy-environment context."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583503,
   "web_search_url": "https://duckduckgo.com/?q=M%26T+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "M&T offers a stable, mission-driven culture with community banking roots that genuinely values work-life balance — rare in finance. Its growing AI/data science investments provide meaningful technical challenges without the burnout culture of pure-play tech or quant hedge funds. You get large-scale data, regulatory complexity, and real customer impact, plus sane hours and a respected brand that accelerates long-term career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — Strong for finance; 40–45 hr weeks typical for ICs, limited on-call, cultural respect for boundaries. Some crunch during regulatory deadlines or major releases."
   }
  },
  "mach industries": {
@@ -212966,37 +213199,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging / Niche. No public AI research publications, conference presence, or known AI talent brand. Prestige likely tied to autonomy hardware achievements rather than pure AI/DS research."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mixed revenue from government contracts (defense, homeland security), commercial infrastructure-as-a-service contracts, and potential data/communications services. No public financials or detailed model disclosed."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Small, mission-obsessed, hands-on, in-person, Midwest grit. Values initiative and ownership. Likely flat hierarchy with direct access to leadership. Culture untested at scale."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Likely government agencies (defense, disaster relief), NGOs, telecommunications providers, and remote communities lacking reliable infrastructure. No public customer list found."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Estimated: $80,000-$110,000 base + equity (options). Technician role lists 45-75K base; engineering/AI roles typically 1.5-2x technician base at similar startups. Equity likely 0.1-0.5% for early hires. No public data."
   },
   "evidence_sha": "8fcd262361a5f3b5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878225,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Aerospace / Autonomous Systems / Critical Infrastructure / Defense Tech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Probe for: (1) concrete WLB policies (core hours, shutdowns, on-call expectations), (2) new-grad AI/DS compensation structure (base, equity, refresh), (3) technical mentorship and learning budget, (4) roadmap for autonomy stack and where AI/DS fits, (5) team size and hiring plan to gauge bureaucracy risk, (6) actual hardware/flight test cadence vs. simulation work."
+  },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784677183,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Midwest United States (exact city not specified); in-person work required per job posting. No other offices disclosed."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Reindustrialize the Midwest and turn autonomous aircraft into on-demand infrastructure to reach every village on the planet with power, logistics, and communications."
+  },
   "name": "Orb Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Estimated: Fast / High intensity. Early-stage hardware startup with flight test deadlines, government milestones, and 'initiative, creativity, and dedication' language suggests rapid iteration but risk of crunch periods."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Autonomous aircraft platforms for resilient communications, power delivery, and logistics infrastructure; autonomous resilient communications systems (per job posting)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + US federal holidays (typical early-stage startup). No published policy found."
   },
+  "refresh_after": 1790062225,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213006,7 +213299,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Early-stage hardware startups rarely mandate full shutdowns due to flight test / integration schedules."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Estimated: Small early-stage startup (seed to Series A), described as a 'small mission-driven team'. Likely 10-50 employees based on 'small team' language and single job posting."
   },
   "sources": [
    {
@@ -213050,14 +213350,43 @@
     "url": "https://jobs.lever.co/orbaerospace/2f233c29-a4c8-490e-be99-0feaae9b75dd"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "US Citizen or Permanent Resident required (explicit in job posting). No visa sponsorship mentioned."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Orb Aerospace develops autonomous aircraft systems to provide on-demand infrastructure — power, logistics, and communications — to remote and underserved communities worldwide. The company appears to be an early-stage, mission-driven aerospace startup focused on reindustrializing the Midwest while deploying autonomous aircraft as scalable infrastructure."
+  },
+  "synthesized_evidence_sha": "8fcd262361a5f3b5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Autonomous flight systems, resilient communications (RF/mesh/satellite), power systems for aircraft, logistics algorithms, embedded software, robotics, and potentially AI/ML for autonomy and network optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677183,
   "web_search_url": "https://duckduckgo.com/?q=Orb+Aerospace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6643e8d1"
+   ],
+   "value": "Offers a rare combination: elite aerospace/autonomy mission with potential for high technical impact, small-team ownership, and explicit Midwest reindustrialization focus. The 'small mission-driven team' language suggests low bureaucracy and fast innovation cycles. However, the 45-75K base for a technician role implies new-grad AI/DS pay may be below top-tier market rates, and in-person Midwest location may not suit all candidates. Work-life balance claims are untested; early-stage hardware star"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 (Moderate). Mission-driven small team may offer flexibility, but hardware/flight test cycles and government deliverables often demand unpredictable hours. No public policy on shutdowns or guaranteed time off."
   }
  },
  "order co": {
@@ -299502,7 +299831,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -299520,7 +299849,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784878071,
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784674659,
   "name": "UBS",
   "pace_of_work": {
@@ -299533,7 +299862,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784878191,
+  "retry_after": 1784878465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314147,41 +314476,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4 — Low prestige for AI/DS. Not a tech brand; limited research output, no known ML publications, small internal team. Roles are applied analytics in a regulated services context."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service reimbursement model driven by Medicare Hospice Benefit (per diem rates by care level), Medicaid, and commercial payers. Revenue scales with daily census and acuity mix. Operates as a wholly owned subsidiary of publicly traded Chemed Corp (NYSE: CHE)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, compliance-focused, clinically led. Hierarchical with strong nursing/clinical leadership. Values documentation, audit readiness, and patient safety over speed. Collaborative but process-heavy. Low bureaucracy for a Fortune 1000 subsidiary, but not 'tech culture.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Terminally ill patients (typically life expectancy ≤6 months) and their families; referred by physicians, hospitals, skilled nursing facilities, and health plans; reimbursed primarily through Medicare Hospice Benefit, Medicaid, and commercial insurance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + modest bonus/RSU (Chemed stock). Well below top-tier tech new-grad offers ($150k+). Reflects healthcare services pay bands, not software market."
   },
   "evidence_sha": "371255ca48f07191",
+  "generated_at": 1784878225,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare Services — Hospice & Palliative Care (NAICS 621610)"
   },
-  "last_attempt_at": 1784877636,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect healthcare domain questions (HIPAA, Medicare conditions of participation, clinical workflows). Technical depth assessed but secondary to regulatory/compliance awareness. Behavioral emphasis on compassion, documentation rigor, and cross-functional collaboration with clinicians. Prepare for slow decision cycles and structured, committee-driven hiring."
+  },
+  "last_attempt_at": 1784878225,
   "last_evidence_at": 1784678104,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Miami, FL. Operations in 14+ states (CA, FL, TX, OH, VA, PA, IL, GA, KS, MO, NV, WI, IN, NJ) and D.C. Mix of corporate, field clinical, and remote roles. Limited tech hub presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To preserve the quality of life for those experiencing terminal illness by providing compassionate, expert hospice and palliative care."
+  },
   "name": "VITAS Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate. Regulated healthcare services environment with compliance gates, clinical governance, and legacy systems. Project cycles measured in quarters. Not a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hospice care services (routine home care, continuous care, inpatient respite care, general inpatient care); palliative care consultations; grief and bereavement support; specialized programs for dementia, cardiac, pulmonary, and oncology patients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 holidays (accrual-based, tenure-dependent). Chemed Corp benefits standard. No public unlimited PTO policy."
   },
-  "retry_after": 1784878116,
+  "refresh_after": 1790062225,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314191,7 +314558,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Clinical operations run 365/24/7. Corporate offices may observe standard holiday closures only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature subsidiary (Chemed Corp market cap ~$8B). VITAS serves 20,000+ daily patients across 14+ states and D.C. with 12,000+ employees. Stable, regulated, slow-growth healthcare services business."
   },
   "sources": [
    {
@@ -314225,14 +314597,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=af944ed008f3b5248f1c0f655327d80803115c98d5c33a95fb3c6aa572c51e41JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cubWF0dHJlc3NmaXJtLmNvbS9zaG9wL2Nvb2xpbmctaHlicmlkLXBpbGxvd3M&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized clinical and corporate roles; less common for pure software/AI roles given limited headcount. Green card sponsorship possible for tenured employees. Verify with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "VITAS Healthcare is a leading provider of hospice and palliative care services in the United States, operating as a subsidiary of Chemed Corporation. The company delivers end-of-life care to patients in homes, hospitals, and dedicated inpatient hospice centers across multiple states."
+  },
+  "synthesized_evidence_sha": "371255ca48f07191",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical systems (EMR, point-of-care mobile apps for nurses), scheduling/routing optimization, revenue cycle management, regulatory reporting, data analytics for census forecasting and quality metrics. Legacy-heavy stack; modernization underway but not a software-product company."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678104,
   "web_search_url": "https://duckduckgo.com/?q=VITAS+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "VITAS is a mission-driven healthcare services leader, not a tech-first company. AI/data science roles are scarce, likely embedded in analytics or operations rather than core product. Pay and prestige trail top-tier tech firms. Culture reflects clinical operations: regulated, process-oriented, with shift-based clinical workloads. Work-life balance varies by role—corporate/tech roles may have sane hours, but on-call and regulatory demands exist. Not a fit for elite AI prestige, fast innovation, or"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 for corporate/tech roles. Standard business hours typical; limited on-call for non-clinical staff. Clinical roles have higher variability. No guaranteed shutdowns policy known."
   }
  },
  "voltus": {
