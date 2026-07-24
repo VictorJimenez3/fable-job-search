@@ -60785,11 +60785,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60801,6 +60803,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784677411,
   "name": "Collective",
   "pace_of_work": {
@@ -60813,6 +60816,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863318,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60856,7 +60860,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c18279ada274a6aab098a0497e6ec6c6371f02684afd7e6db37e9a9726520cb0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1007e481-0202-6d0a-33e8-f31c033a6cfd&u=a1aHR0cHM6Ly9wdXJlbGVhZmNvbGxlY3RpdmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677411,
   "web_search_url": "https://duckduckgo.com/?q=Collective+company+careers+benefits",
@@ -122325,38 +122329,102 @@
  "illinois tool works": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Estimated: Low to medium for AI/Data Science. As a legacy industrial manufacturer, ITW does not offer the elite AI prestige or fast tech culture found at top-tier tech companies."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Decentralized operations where diverse, industry-leading businesses are located globally. The model focuses on staying curious and developing skills to learn new responsibilities."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Decentralized, respectful, and ownership-driven. The culture encourages curiosity, collaboration, and skill development across diverse business units."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Industrial customers across the globe, served directly by market-empowered business units."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Estimated: Competitive industrial pay (often $70k-$90k base), below the elite new-grad pay bands ($150k+) seen in top-tier tech or AI firms."
   },
   "evidence_sha": "b999233a26d5d713",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863198,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Manufacturing and specialized industrial equipment."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "The candidate should ask how data science or AI initiatives are prioritized within the decentralized business units and whether the pace of technical innovation matches their expectations for a fast tech culture. They should also clarify expected working hours and new graduate compensation bands to ensure the role meets their high pay and strict work-life balance requirements."
+  },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784677408,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Diverse location footprint across the globe, including the United States, China, and Europe (e.g., ITW GSE)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "To create value-added solutions and innovative products for customers, driven by a decentralized structure that fosters a strong sense of ownership, collaboration, and mutual respect."
+  },
   "name": "Illinois Tool Works",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Estimated: Moderate to slow. While the company highlights empowerment and curiosity, its status as a large, established industrial manufacturer suggests a bureaucratic pace rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Diverse, industry-leading industrial products and specialized equipment across multiple segments, engineered for specific customer applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate PTO for a legacy US manufacturer (typically 15-20 days for new hires, increasing with tenure)."
   },
+  "refresh_after": 1790047198,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122366,7 +122434,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research, typical of decentralized manufacturers though some facilities may align shutdowns with holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "A large, established global enterprise with diverse businesses located across the globe."
   },
   "sources": [
    {
@@ -122400,14 +122475,43 @@
     "url": "https://careers.itw.com/us/en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Illinois Tool Works (ITW) is a global manufacturer of specialized industrial products and equipment. It operates through a decentralized structure of business units, making money by engineering high-margin components for specific customer applications across diverse industries."
+  },
+  "synthesized_evidence_sha": "b999233a26d5d713",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Roles involve developing skills and learning new responsibilities across various functions, segments, and cities, driven by a culture that encourages curiosity and ownership."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677408,
   "web_search_url": "https://duckduckgo.com/?q=Illinois+Tool+Works+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "The candidate seeks top-tier AI/Data Science prestige and pay with a fast-paced, innovative tech culture and strong work-life balance. ITW's decentralized structure is designed to empower employees and foster curiosity, but it is a legacy industrial manufacturer, meaning the tech culture will likely be much slower and less high-prestige than elite tech firms. However, the emphasis on mutual respect and ownership culture may align with the candidate's desire to avoid toxic or high-burnout environ"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c56e1c7cfe"
+   ],
+   "value": "Estimated: Good. The company emphasizes a culture of mutual respect, mindfulness, and pride, which suggests a healthy work environment that avoids toxic traits, though it may not feature guaranteed shutdowns or strictly enforced sane hours common in elite tech."
   }
  },
  "illumina": {
@@ -150273,11 +150377,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150289,6 +150395,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784676551,
   "name": "Mapjects",
   "pace_of_work": {
@@ -150301,6 +150408,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863318,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150344,7 +150452,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=0978fc09d13f775b063c7682129341337a5652884f9a0a38451932e705045a0fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly9naXRodWIuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676551,
   "web_search_url": "https://duckduckgo.com/?q=Mapjects+company+careers+benefits",
@@ -167127,38 +167235,106 @@
  "netapp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Mid-tier data infrastructure brand; holds some prestige for applied storage and cloud engineering, but less recognized for elite core-AI or data science roles compared to FAANG or top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Gross margin mix of enterprise hardware sales and recurring software subscriptions, transitioning from perpetual licenses to cloud-based SaaS and consumption-based pricing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Mission-driven, collaborative, and mature. Known for respecting work-life balance and fostering a supportive environment over a toxic hustle culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Large enterprises, government agencies, and midsize businesses spanning various sectors such as financial services, healthcare, manufacturing, and technology."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Estimated: $120k-$160k total compensation (base + stock + bonus), providing high pay with less burnout risk than top-tier FAANG."
   },
   "evidence_sha": "088e8058d150d36c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863198,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "abbf742498",
+    "146f0cc089"
+   ],
+   "value": "Technology / Data Storage and Cloud Computing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Highlight your drive to leverage this WLB stability for deep technical innovation in cloud data and AI/ML workloads. Emphasize how your passion for fast learning and fresh ideas can push their legacy systems toward cutting-edge standards while operating within their non-burning-out, mission-driven environment."
+  },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784677226,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Global presence with major US engineering hubs in Research Triangle Park (NC), Sunnyvale (CA), Boulder (CO), and Waltham (MA), plus numerous international offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "To help organizations build a data fabric that makes their data available, secure, compliant, and actionable across hybrid and multi-cloud environments."
+  },
   "name": "NetApp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Estimated: Moderate. Can feel slightly slower and more bureaucratic due to large size and legacy hardware business lines, but cloud service teams operate at a fast pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089",
+    "d98a6a2a21"
+   ],
+   "value": "Enterprise data storage hardware (e.g., AFF, FAS arrays), ONTAP data management software, and cloud data services like Cloud Volumes and Astra."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "abbf742498"
+   ],
+   "value": "Estimated: 15-25 days of standard Paid Time Off annually, consistent with traditional large enterprise tech benefits."
   },
+  "refresh_after": 1790047198,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167167,8 +167343,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "Estimated: Potential for limited holiday periods off, but no widespread guaranteed corporate-wide weekly or monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "abbf742498",
+    "146f0cc089"
+   ],
+   "value": "Large-cap, publicly traded global tech company (S&P 500 component) with approximately 11,000+ employees worldwide."
   },
   "sources": [
    {
@@ -167202,14 +167388,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac5c0672c29f0660d8d08673bb8127eca491f256ddf2f8369f4646928daa5a33JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cubmV0YXBwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "abbf742498",
+    "146f0cc089"
+   ],
+   "value": "As a large, publicly traded technology firm, historically known to support F-1 OPT to H-1B sponsorship for specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "abbf742498",
+    "146f0cc089"
+   ],
+   "value": "NetApp is a publicly traded enterprise data storage and cloud data management company that provides hardware, software, and cloud services for storing, sharing, and protecting data. It makes money by selling storage infrastructure like its ONTAP system and offering subscription-based cloud data services, helping enterprise customers manage data across hybrid and multi-cloud environments."
+  },
+  "synthesized_evidence_sha": "088e8058d150d36c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "146f0cc089",
+    "d98a6a2a21"
+   ],
+   "value": "Distributed file systems, data replication, storage operating systems (ONTAP), backend development in C/C++/Python/Go, and cloud platform engineering for data services in AWS, Azure, and GCP."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677226,
   "web_search_url": "https://duckduckgo.com/?q=NetApp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "146f0cc089"
+   ],
+   "value": "NetApp balances elite enterprise prestige and competitive new-grad tech pay with a famously strong culture of work-life balance. Rather than a slow legacy bureaucracy, its heavy pivot toward cloud and AI-adjacent data services offers a fast, innovative tech environment that accelerates technical learning without sacrificing your personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "abbf742498",
+    "146f0cc089"
+   ],
+   "value": "Estimated: Strong. Often recognized for sane hours and avoiding high-burnout crunches common at top consumer tech companies."
   }
  },
  "netdocuments": {
@@ -170065,11 +170286,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170081,6 +170304,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784677102,
   "name": "Nightwing",
   "pace_of_work": {
@@ -170093,6 +170317,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863318,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170136,7 +170361,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ee6b9d1cf3d88c514eff17ddc49e59f58bef8caebba95b15bc42bd52a6f4c395JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmlnaHR3aW5n&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677102,
   "web_search_url": "https://duckduckgo.com/?q=Nightwing+company+careers+benefits",
@@ -197407,37 +197632,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 - Specialized healthcare AI applications with domain depth but not a primary AI research lab; prestige comes from healthcare data complexity and production impact rather than publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "SaaS subscription fees for revenue cycle management platform, transaction-based fees for claims processing and clearinghouse services, professional services for implementation and optimization, and managed services for full outsourcing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, domain-focused, compliance-aware engineering culture; collaborative cross-functional teams (product, client success, engineering); Cleveland Midwest work ethic with long-tenured employees."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Healthcare providers including hospitals, health systems, physician practices, ambulatory surgery centers, and medical billing companies across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest equity/bonus; Cleveland market adjustment applies. Total comp likely $90k-$115k."
   },
   "evidence_sha": "0265647c929f2696",
+  "generated_at": 1784863198,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Healthcare Technology / Revenue Cycle Management (RCM) / Health IT"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for healthcare data standards (X12 837/835, HL7, FHIR), claims adjudication logic, denial pattern analysis, and revenue cycle workflows. Expect questions on building production ML for structured healthcare transactions, model explainability for compliance, and scaling batch/stream processing for high-volume payer exchanges. Demonstrate interest in healthcare domain complexity, not just generic ML."
   },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784676552,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Headquartered in Cleveland, Ohio with remote/hybrid work options. Primary development center in Cleveland metro area."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "To simplify healthcare revenue cycle management through innovative technology, enabling providers to maximize reimbursement and focus on patient care."
+  },
   "name": "Quadax, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate - Steady feature delivery cycles driven by payer regulatory changes and client implementations; not a 'move fast break things' culture due to compliance requirements."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Revenue cycle management platform, medical billing software, claims processing automation, denial management tools, patient billing and payment solutions, EDI clearinghouse services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays; typical for established Midwest tech companies."
   },
+  "refresh_after": 1790047198,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197447,7 +197738,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; standard holiday schedule observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Established mid-size private company (estimated 200-500 employees), profitable with 20+ years in healthcare RCM market."
   },
   "sources": [
    {
@@ -197481,14 +197781,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=fe7d4f45cde4428672ea1044aed1cd85fac61251a0ee6589f4cc31e2e7b2ca88JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly9kZXRhaWwuY2hpZWJ1a3Vyby55YWhvby5jby5qcC9xYS9xdWVzdGlvbl9kZXRhaWwvcTEyMzAwMTg1Nzc3&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized technical roles given healthcare IT domain complexity; no public data on green card sponsorship frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Quadax, Inc. is a healthcare technology company specializing in revenue cycle management and medical billing solutions for healthcare providers. The company provides software and services to streamline claims processing, payment posting, denial management, and patient billing."
+  },
+  "synthesized_evidence_sha": "0265647c929f2696",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "74cff6cdc5",
+    "19c3c86f8c",
+    "9fe6c133a9"
+   ],
+   "value": "Healthcare data integration (HL7, FHIR, X12 EDI), claims processing engines, payer connectivity, denial prediction analytics, payment posting automation, patient engagement platforms, cloud infrastructure (AWS/Azure), data warehousing and reporting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676552,
   "web_search_url": "https://duckduckgo.com/?q=Quadax%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quadax offers a mission-driven healthcare technology role where AI/data science directly impacts provider revenue and patient billing transparency. The established, profitable company likely provides stability without startup burnout, with domain expertise in complex healthcare data (X12, HL7, FHIR) that accelerates specialized technical growth. Cleveland cost-of-living advantage may translate to strong purchasing power for new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Established company in non-coastal market with reasonable hours; on-call rotations for production healthcare systems but likely predictable compared to startup/FAANG."
   }
  },
  "quadric": {
@@ -203109,37 +203438,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2.5. While highly prestigious in the open-source and infrastructure communities, it is not an elite AI-first company. AI/DS roles here carry strong enterprise prestige but lack the specialized industry fame of top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Subscription-based revenue model charging for enterprise-grade support, security patches, certifications, and consulting services around open-source software."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and deeply rooted in open-source principles of transparency and meritocracy. It values technical learning and community contribution."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Enterprises across various industries seeking robust, scalable, and secure open-source infrastructure and cloud solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base salary, plus potential bonus and equity, reflecting an established large-cap tech company rather than a top-tier AI startup."
   },
   "evidence_sha": "2f477c919b3beb67",
+  "generated_at": 1784863198,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Enterprise Software & Cloud Computing."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on securing a role directly tied to cutting-edge AI or data science initiatives to ensure rapid, innovative tech work rather than legacy enterprise maintenance. Probe team-specific WLB, on-call expectations, and promotion velocity to guarantee the role meets your high new-grad pay and sane hours requirements without bureaucratic drag."
   },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784676547,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Headquartered in Raleigh, North Carolina, with a vast global footprint of remote and office-based roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "To be the catalyst in communities of customers, contributors, and partners creating better technology the open-source way."
+  },
   "name": "Red Hat",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Red Hat is heavily mission-driven by the open-source model, but as a mature enterprise organization, its pace is steady rather than fast-paced or hyper-growth."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Red Hat Enterprise Linux (RHEL), OpenStack Platform, OpenShift, Ansible Automation, and JBoss Middleware."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible vacation time, alongside standard holidays."
   },
+  "refresh_after": 1790047198,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203149,7 +203532,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited company-wide shutdowns; typical office holidays are observed but guaranteed extended holiday shutdowns are not a core policy across the broader organization."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Mature, large-cap public company (subsidiary of IBM) with over 10,000 employees globally."
   },
   "sources": [
    {
@@ -203183,14 +203573,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=282f8fd405861a6ba3a0b2e4c1c721d9bea646761c4ed51c2542d6de08c233b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL3JlZGRpdC93aWtpL2luZGV4Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "As a large multinational technology company, Red Hat typically sponsors work visas for qualified technical roles, though specific visa availability varies by role and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Red Hat is a leading provider of open-source enterprise software solutions, best known for its enterprise Linux operating system. The company makes money by offering subscription-based support, training, and consulting services for open-source software to enterprise clients."
+  },
+  "synthesized_evidence_sha": "2f477c919b3beb67",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cefce5b5e"
+   ],
+   "value": "Involves upstream open-source development, cloud-native application development (Kubernetes/containers), infrastructure automation, and enterprise software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676547,
   "web_search_url": "https://duckduckgo.com/?q=Red+Hat+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns with your desire for a mission-driven environment focused on open-source innovation and learning, though as an established enterprise player, its prestige and pay are conservative compared to elite AI labs. The open-source culture provides high technical growth and intrinsic mission alignment, but the wider organization may carry some enterprise bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company generally respects personal time with a collaborative culture, but WLB can fluctuate based on specific product team deadlines."
   }
  },
  "red oak sourcing": {
@@ -276709,48 +277126,142 @@
  "yes energy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Estimated: High niche technical prestige with top-tier compensation, but without the broad public brand recognition of elite consumer tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Yes Energy generates revenue by deploying its capital into electronic markets to capture inefficiencies, acting as a principal market maker rather than charging client fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Collaborative environment led by a tight cohort of technology generalists who rapidly prototype and deploy new features."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Primary clients are likely institutional participants in financial markets, such as hedge funds, asset managers, and other liquidity providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Estimated: $200,000 - $300,000 total package, heavily weighted toward performance bonuses."
   },
   "evidence_sha": "aafdc0ee695de693",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863198,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Financial Markets"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Prepare for rigorous evaluations of probability theory, systems design, and practical machine learning applications rather than rote behavioral questions."
+  },
+  "last_attempt_at": 1784863198,
   "last_evidence_at": 1784677226,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "The company maintains a prime downtown office in a major metropolitan financial hub."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "The company does not articulate a formal mission statement in its public materials, but its evident objective is capturing market share through technological superiority."
+  },
   "name": "Yes Energy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Estimated: High pressure and extremely fast-paced, resulting in very strict weekly performance metrics and minimal built-in learning ramp."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "The company appears to offer unspecified proprietary electronic financial services, specifically automated execution systems and algorithmic trading tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Estimated: 15-20 discretionary days, with limited ability to take consecutive leave."
   },
+  "refresh_after": 1790047198,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1",
+    "1b03eedf99"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Estimated: Partial closures limited to crucial public holidays, with stringent coverage schedules."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8e11f2a5e1",
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "The firm operates as a highly profitable, privately held boutique entity, sustainably reinvesting earnings without relying on outside investors."
   },
   "sources": [
    {
@@ -276784,14 +277295,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2549801a81e97f7bf7d699839ca95bee41c533de82541f9ed5033cdffee5143JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvWWVzXyhiYW5kKQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1",
+    "1b03eedf99"
+   ],
+   "value": "There is no available information regarding H-1B visa sponsorship or international candidate support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "1b03eedf99"
+   ],
+   "value": "Yes Energy is a private micro-cap operating in volatile wholesale electricity markets, focusing on high-frequency data rather than traditional retail banking."
+  },
+  "synthesized_evidence_sha": "aafdc0ee695de693",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Technical teams build ultra-low latency trading systems in C++ and optimize high-performance network infrastructure, while analytical teams develop predictive models."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677226,
   "web_search_url": "https://duckduckgo.com/?q=Yes+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Cuts through bureaucracy with a flat structure, guaranteeing elite total compensation and technically intense learning, though it requires accepting low stability."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f831bd77a9",
+    "8e11f2a5e1"
+   ],
+   "value": "Estimated: Slightly unbalanced, demanding long hours during core trading sessions while maintaining off-hours weekend availability."
   }
  },
  "york space systems": {
