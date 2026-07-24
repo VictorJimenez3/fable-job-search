@@ -6094,37 +6094,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not applicable/low. AEG is not a recognized leader in AI or data science, meaning an elite AI role here is highly unlikely."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Revenue is generated from live event ticketing, premium hospitality, corporate sponsorships, and real estate/venue operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused on delivering live experiences, likely fostering a creative and corporate environment rather than a hacker culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Sports fans, concertgoers, corporate sponsors, and artists/athletes."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000 base salary, significantly lower than top-tier tech/AI firms."
   },
   "evidence_sha": "0cfaa1d9406ff42d",
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Sports and Entertainment"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific team's tech stack and pace of work to ensure it isn't slow enterprise IT. Ask about guaranteed shutdowns and sane hours to verify work-life balance, and clarify new-grad compensation brackets to see if they match elite tech standards."
   },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784673652,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Headquartered in Los Angeles, California, with global venues and offices."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "To deliver world-class sports and entertainment experiences globally."
+  },
   "name": "AEG",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of large legacy entertainment enterprises rather than fast-moving tech startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Sports and entertainment venues (e.g., Crypto.com Arena, O2 Arena), music festivals, sports franchises, and talent management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard corporate PTO, plus public holidays."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6134,7 +6200,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide tech shutdowns observed; likely standard holiday policies rather than guaranteed offline periods."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "Large, established global private enterprise."
   },
   "sources": [
    {
@@ -6168,14 +6243,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=4e94219e1cfb6366c5e080111cb2a55d0f2de17bd42cdf5ff79f6ce9b8e7f397JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuYWVnd29ybGR3aWRlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a US-headquartered entertainment firm, likely offers standard H-1B sponsorship for critical tech roles but lacks Big Tech-scale international mobility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "80e0107163",
+    "db806f5fda",
+    "67f6cbbcba"
+   ],
+   "value": "AEG (Anschutz Entertainment Group) is a global sports and entertainment company that operates venues, produces events, and manages talent. It makes money through ticket sales, sponsorships, venue concessions, and proprietary entertainment content distribution."
+  },
+  "synthesized_evidence_sha": "0cfaa1d9406ff42d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves traditional enterprise IT, data engineering for analytics, and digital platform development rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
   "web_search_url": "https://duckduckgo.com/?q=AEG+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AEG is an elite prestige brand in entertainment, not tech. While it may offer a mission-driven environment surrounding live events, it likely lacks the top-tier AI prestige, high new-grad pay, and fast-paced innovative tech culture you prioritize. Technical learning may be constrained by traditional enterprise bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Likely offers standard corporate PTO and reasonable hours, though event-driven weekend/evening work may be required for certain roles."
   }
  },
  "aerovect": {
@@ -67131,48 +67231,139 @@
  "cisco": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "Mid-tier. Prestigious tech brand overall, but its AI division lacks the elite, cutting-edge reputation of top-tier pure-play AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "Sells physical networking infrastructure alongside recurring software subscriptions, licensing, and IT consulting services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "aa993d0b93",
+    "7e6a4d0745"
+   ],
+   "value": "Mission-driven collaborative enterprise culture emphasizing inclusion and flexibility, though it can feel bureaucratic."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "aa993d0b93",
+    "7e6a4d0745"
+   ],
+   "value": "Large enterprises, public sector organizations, service providers, and small to medium-sized businesses."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Estimated: $110,000 - $130,000 base salary for high cost-of-living areas, plus stock options and signing bonuses."
   },
   "evidence_sha": "b18ee2260bcd25d1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Networking, enterprise information technology, and cybersecurity."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "For a top-tier AI or data science candidate, it is critical to interview the hiring manager to determine if the specific team operates with startup-like innovation or is hindered by larger corporate processes."
+  },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784674432,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "aa993d0b93",
+    "7e6a4d0745"
+   ],
+   "value": "Headquartered in San Jose, California with a massive global footprint of offices and remote workers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "aa993d0b93"
+   ],
+   "value": "To power an inclusive future for all by shaping the internet and enabling digital transformation."
+  },
   "name": "Cisco",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Estimated: Slower, more deliberate and process-heavy; prioritizes stability and enterprise reliability over fast-paced, chaotic innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "Networking hardware (routers, switches), software (Webex, Meraki), cybersecurity solutions (Secure Endpoint), and observability tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Estimated: 20-25 days of standard Paid Time Off alongside standard company holidays."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481",
+    "aa993d0b93"
+   ],
+   "value": "Information on new grad rotational programs was not found in the supplied sources."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "Estimated: Typical shutdown days around major holidays like Thanksgiving and the week of Christmas to New Year's."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "aa993d0b93"
+   ],
+   "value": "Publicly traded, large-cap legacy tech behemoth with tens of thousands of employees globally."
   },
   "sources": [
    {
@@ -67206,14 +67397,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0348cd7d1b4c317d6f29abcd97ff10d2d07ca90a37f6e7bf715aea44ba9e75bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuY2lzY28uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Estimated: Large, established tech companies like Cisco typically sponsor H-1B visas for full-time roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7e6a4d0745",
+    "aa993d0b93"
+   ],
+   "value": "Cisco is a global technology leader that designs, manufactures, and sells networking hardware, software, and services. The company generates revenue by providing enterprise networking infrastructure, security, and collaboration solutions to businesses worldwide."
+  },
+  "synthesized_evidence_sha": "b18ee2260bcd25d1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "Involves cloud networking, software-defined infrastructure, AI/ML integration into collaboration tools, and cybersecurity data analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Cisco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7e6a4d0745",
+    "e16d2d4481"
+   ],
+   "value": "While historically prone to the slow bureaucracy inherent to large legacy tech giants, Cisco offers industry prestige, strong work-life balance (including time off for major holidays), and competitive tech compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "aa993d0b93",
+    "e16d2d4481"
+   ],
+   "value": "Estimated: High. Employee reviews frequently cite strict sane hours, long tenures, and a widely respected work-life balance culture."
   }
  },
  "cision": {
@@ -108505,11 +108732,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108521,6 +108750,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784674271,
   "name": "EY",
   "pace_of_work": {
@@ -108533,6 +108763,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784880826,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108576,7 +108807,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=291871906b50ffecc8e39563d7e9bc636f36aec7203e004300e12a42ea9fe879JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuZXkuY29tL2VuX3Vz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674271,
   "web_search_url": "https://duckduckgo.com/?q=EY+company+careers+benefits",
@@ -114755,37 +114986,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High within the logistics tech sector. It offers stronger prestige and pay compared to traditional logistics companies but is generally a tier below elite big tech AI labs (OpenAI, Google DeepMind) regarding pure research prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "Asset-light logistics and software-as-a-service (SaaS). Revenue is generated through traditional freight forwarding margins, service fees for customs and trucking, and SaaS subscription fees for accessing its supply chain software."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c550235a2"
+   ],
+   "value": "A blend of Silicon Valley tech culture and traditional supply chain operations. Emphasizes modernizing old-school systems through data-driven solutions and agile development."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "Businesses ranging from emerging e-commerce brands to large global enterprises needing international shipping and supply chain management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $160,000 base salary. Annual equity grants vary based on funding rounds and role specifics."
   },
   "evidence_sha": "0cc36d3d89f1121a",
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "Logistics, Supply Chain Management, Freight Forwarding, and Technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should prepare for standard algorithmic interviews typical of high-tier tech companies. Emphasize your ability to thrive in an agile, innovative environment that moves faster than traditional slow bureaucratic companies. Highlight strong technical learning acceleration and a passion for modernizing complex real-world systems without expecting extreme burnout hours."
   },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784675868,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aa6502c9",
+    "3faf145be8"
+   ],
+   "value": "Headquartered in San Francisco, California, with offices and fulfillment centers located globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "To make global trade easy and accessible for everyone by modernizing logistics with software."
+  },
   "name": "Flexport",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Pace is moderately high. Flexport promotes an innovative tech culture, but the company has experienced hyper-growth and recent market-driven reorganizations that can cause short-term operational disruptions."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "The company provides a cloud-based platform for supply chain management, freight forwarding, customs brokerage, and trade financing. It also offers managed logistics services integrating ocean, air, rail, and truck transportation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard annual paid leave, alongside standard public holidays."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114795,7 +115088,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Typical tech industry standard closures for major winter holidays (Christmas/New Year), but no guaranteed year-round shutdowns found in public research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5aa6502c9",
+    "8c550235a2"
+   ],
+   "value": "Privately held, late-stage venture-backed company valued at over $1 billion. Employs thousands of professionals globally."
   },
   "sources": [
    {
@@ -114829,14 +115130,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=1661d75dd06efc6d29af1556736c009d77a0278730fe981c1e227bae7b85a0eeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cuZmxleHBvcnQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a5aa6502c9",
+    "3faf145be8"
+   ],
+   "value": "As a large global logistics tech company, Flexport typically hires through professional visas. However, recent industry-wide tech layoffs may impact new graduate sponsorship budgets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "Flexport is a technology-driven freight forwarder and logistics platform. It makes money by charging fees for managing the shipping of physical cargo across international borders via ocean, air, rail, and trucking."
+  },
+  "synthesized_evidence_sha": "0cc36d3d89f1121a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3faf145be8",
+    "8c550235a2"
+   ],
+   "value": "Building and maintaining a large-scale cloud logistics platform. Engineers work on data infrastructure, routing optimization algorithms, internal tooling, and customer-facing software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675868,
   "web_search_url": "https://duckduckgo.com/?q=Flexport+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Balances elite tech compensation with a modern supply chain mission. AI and data science roles focus on complex optimization and automation problems. Important for career growth if you seek technical impact without traditional big-tech bureaucracy, though rapid scaling may introduce periods of high operational pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. The company works to maintain an innovative tech vibe with sane developer hours, but logistics complexity and restructuring phases sometimes require extended effort."
   }
  },
  "flextrade": {
@@ -121201,48 +121532,131 @@
  "ge aerospace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7282d858b9"
+   ],
+   "value": "Estimated: High technical prestige within the industrial AI and digital twins space, but not a top-tier consumer tech or Silicon Valley pure-play AI powerhouse."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3acb791ff4",
+    "7282d858b9"
+   ],
+   "value": "Revenue is generated through the sale of new aircraft engines and a highly profitable aftermarket services segment providing maintenance, repairs, and spare parts over the engine lifecycle."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3acb791ff4",
+    "7282d858b9"
+   ],
+   "value": "Estimated: Mission-driven, safety-focused, and respectful of personal time. The culture prioritizes deep technical learning without an aggressive 'hustle culture' mentality."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7282d858b9",
+    "cabc36b772"
+   ],
+   "value": "Major commercial airlines, aircraft manufacturers (such as Boeing and Airbus), and the United States Department of Defense."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: Competitive total compensation packages estimated in the $85K to $115K base salary range for new grads, with strong(long-term)retirement matching accounts."
   },
   "evidence_sha": "e62e80928a36d13f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "7282d858b9"
+   ],
+   "value": "Aerospace and Defense"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: Be ready to highlight your desire for a stable, mission-driven environment where you can apply cutting-edge AI to physical systems. Emphasize that you value a company culture respecting work-life balance and guaranteed shutdowns, and frame your long-term goals around continuous technical learning rather than chasing the hyper-paced startup environment."
+  },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784672017,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3acb791ff4",
+    "7282d858b9"
+   ],
+   "value": "Headquartered in Evendale, Ohio (Cincinnati), with major engineering, manufacturing, and research hubs globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cabc36b772",
+    "7282d858b9"
+   ],
+   "value": "To invent the future of flight, advancing technologies for a safer, more sustainable, and more connected world."
+  },
   "name": "GE Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: Moderate pace typical of a legacy aerospace giant. Workers experience structured, process-driven workflows that may feel slower than modern tech, but offer high stability."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7282d858b9",
+    "cabc36b772"
+   ],
+   "value": "Commercial and defense aircraft jet engines, aerospace systems, and engine retrofitting services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: 15-25 days of accrued vacation time backed by corporate shutdowns, offering more total time off than the typical Silicone Bay Area startup."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "3acb791ff4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: Includes guaranteed corporate or end-of-year shutdowns allowing employees to disconnect without using personal PTO days."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "A large-cap, publicly traded, post-divestiture standalone corporate giant."
   },
   "sources": [
    {
@@ -121276,14 +121690,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=c473381b05bc87ffd357097429cac0ca7cac33163065568ccf8b52f16dc4c651JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cuZ2VhcHBsaWFuY2VzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: As a major legacy aerospace and defense contractor, GE Aerospace is highly likely to sponsor US work visas for specialized AI, data science, and engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3acb791ff4",
+    "cabc36b772"
+   ],
+   "value": "GE Aerospace is a global aerospace leader that designs and manufactures advanced commercial and defense aircraft engines and systems. The company makes money by selling these engines to aircraft manufacturers and generating long-term, high-margin revenue through service agreements and spare parts for the airline and defense industries."
+  },
+  "synthesized_evidence_sha": "e62e80928a36d13f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7282d858b9",
+    "cabc36b772"
+   ],
+   "value": "AI and data science work centers on industrial applications, predictive maintenance for engines, digital twins, manufacturing optimization, and the GE Aerospace Collier Center for AI and machine learning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=GE+Aerospace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: This role offers mission-driven impact and prestige in the aerospace sector with a strong respect for work-life balance. While it may not have the blistering fast-paced tech culture of a top-tier AI startup, it avoids toxic burnout and provides sane hours and guaranteed shutdowns, allowing for high technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3acb791ff4"
+   ],
+   "value": "Estimated: Excellent work-life balance characterized by strict 40-hour work weeks, sane hours, and guaranteed shutdowns, aiming to prevent burnout."
   }
  },
  "ge appliances": {
@@ -124621,7 +125068,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124639,7 +125086,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784880549,
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784807865,
   "name": "GenLogs",
   "pace_of_work": {
@@ -124652,7 +125099,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784880669,
+  "retry_after": 1784880946,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137599,38 +138046,112 @@
  "helix electric": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Not applicable. Helix Electric is an electrical contracting firm and does not have an AI or data science prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Project-based B2B contracting. The firm secures large electrical construction tenders and generates revenue through the execution, labor, and materials provided during the build-out phase."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional construction and engineering firm culture likely prioritizing hands-on field work, safety, and project execution over modern, high-tech innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Large-scale commercial developers, corporate enterprises, industrial facilities, and renewable energy developers seeking specialized electrical infrastructure build-outs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown public data for technical roles. Base pay would likely reflect local market rates for IT or project-engineering staff rather than elite new-grad data science compensation."
   },
   "evidence_sha": "c38ebfe6471f3737",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Commercial and Industrial Electrical Construction"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "The candidate should negotiate or interview carefully to ensure any non-core roles (like IT or data analytics) actually provide the learning speed, sane hours, and AI-focus they desire, as traditional electrical contractors often lack fast-paced tech culture and prioritize field operations over software innovation."
+  },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784674432,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Headquartered in the United States with operations tied to regional commercial and industrial construction hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "To deliver high-quality, complex electrical construction projects with a focus on innovation, safety, and client satisfaction in the built environment."
+  },
   "name": "Helix Electric",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven and tied to construction schedules, which can be demanding but lacks the rapid iterative pace of a cutting-edge tech company."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Electrical construction services, including commercial and industrial wiring, power distribution system installations, renewable energy infrastructure, and preventative maintenance solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Limited public information; typically offers a standard industry baseline of 10-15 days per year for entry-level professionals, falling short of flexible tech-country norms."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137640,7 +138161,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public information indicating guaranteed company-wide shutdowns or week-long office closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Established, mid-to-large-scale private contractor operating in the commercial construction industry."
   },
   "sources": [
    {
@@ -137674,14 +138204,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=c868df52e224ea250519c7803affd52e71365ea419372c5589d8787a492d3190JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9oZWxpeHNsZWVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "No public details found regarding H-1B visa sponsorship for technical or engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Helix Electric is a large-scale electrical contracting firm that designs, installs, and maintains complex electrical systems for commercial, industrial, and renewable energy projects. The company makes money by serving as a specialized contractor for large construction initiatives, bidding on and executing significant electrical infrastructure projects."
+  },
+  "synthesized_evidence_sha": "c38ebfe6471f3737",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "Electrical engineering, construction project management, power systems design, and specialized industrial electrical installations rather than software development or data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Helix+Electric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c52a0bbfaf",
+    "6057e2e2ad",
+    "6eab23bd50"
+   ],
+   "value": "As a traditional electrical contracting firm, Helix Electric is unlikely to offer a top-tier AI or data science role with elite new-grad pay, fast tech-culture innovation, or modern Silicon Valley-style perks. This company is fundamentally misaligned with a candidate seeking a fast-paced, mission-driven tech environment offering guaranteed shutdowns and rapid technical acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard for the commercial construction industry, potentially lacking the guaranteed shutdowns or strict hour boundaries sought by elite tech workers."
   }
  },
  "hellbender": {
@@ -211306,48 +211873,155 @@
  "notability": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: Tier 3 - Prestigious consumer brand but not an elite AI-first company. AI/ML work is applied and niche (OCR, handwriting), not core LLM research, limiting FAANG-level technical prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Operates on a freemium subscription model, with Notability Plus offering premium clouds services, unlimited editing, and advanced features for a paid tier."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: Mission-driven and user-centric, focused on empowering students and creatives. Small team environment emphasizes ownership and direct impact on the product."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Primarily students, educators, and professionals who rely on detailed digital documentation, visual learning, and organized note-taking."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: $120k - $150k base, with limited equity. Below top-tier FAANG pay but competitive for mid-sized consumer apps."
   },
   "evidence_sha": "12e0aea58eed620b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Consumer Software & Mobile Applications"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Lean into your passion for productivity tools and how you can scale AI/ML features for mobile environments. Ask questions about team structure to ensure the small-company pace they offer does not entails burnout, and clarify exact compensation and PTO early to gauge if they meet a top-tier new-grad standard."
+  },
+  "last_attempt_at": 1784880706,
   "last_evidence_at": 1784677346,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Did not find specific textual locations via the provided sources, but known to be based in the San Francisco Bay Area."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Not found explicitly via the provided redirecting source pages, but historically focused on inspiring ideas and improving how people capture and organize information."
+  },
   "name": "Notability",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: Fast-paced and highly agile. As a smaller company maintaining a massively popular app, release cycles are tight, but bureaucracy is minimal."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "A note-taking and PDF annotation app available on iOS, macOS, and via a web app, featuring handwriting recognition, audio recording synced to text, and collaborative tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: 15-20 days of PTO, standard for boutique tech companies in the Bay Area."
   },
+  "refresh_after": 1790064706,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; likely relies on flexible PTO and standard holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Acquired by Ginger Labs, operates as a private app development company with an undisclosed but small, specialized team."
   },
   "sources": [
    {
@@ -211381,14 +212055,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=eea392d6edc7e36a7ba899f50224dd4c2e58d86330581f44cd878d155f2ff0bdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly9ub3RhYmlsaXR5LmNvbS93ZWI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: Sponsoring is difficult to assess from the provided redirect links, but generally small app shops have limited capacity to sponsor visas."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Notability is a popular productivity application that enables users to take notes, annotate documents, and sketch. It primarily generates revenue through a freemium subscription model, offering advanced features to paying users."
+  },
+  "synthesized_evidence_sha": "12e0aea58eed620b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Did not find specific source text; but generally includes mobile and web development (iOS, Swift), cloud sync infrastructure, and AI integration for handwriting recognition."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677346,
   "web_search_url": "https://duckduckgo.com/?q=Notability+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Fits a selective, innovation-first technical culture as a prestigious consumer-facing app brand if AI/ML roles (like handwriting recognition or audio sync) are available. It promises apprenticship-like growth in mobile ML/data, though it may fall short of FAANG-level new-grad compensation and simple WLB consistency."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "804798303e",
+    "180c81b010",
+    "8b7f245dbc"
+   ],
+   "value": "Estimated: Moderate to Good. Generally respected in the mobile app space, but small teams handling popular apps can face crunch periods during major iOS updates."
   }
  },
  "notion": {
