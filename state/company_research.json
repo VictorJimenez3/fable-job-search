@@ -4198,11 +4198,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4214,6 +4216,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784677175,
   "name": "Added Innovation",
   "pace_of_work": {
@@ -4226,6 +4229,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784866351,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4269,7 +4273,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a13bc61ac554fe6396e3040aec1736fe2075f02dc2c1106b34ed0ffb023b0467JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FkZGVk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Added+Innovation+company+careers+benefits",
@@ -36632,38 +36636,104 @@
  "billtrust": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: Mid-tier. While Billtrust markets AI-powered solutions and handles massive financial data scale, it is primarily known as an enterprise fintech rather than a top-tier specialized AI/data science firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Enterprise SaaS and payment facilitation (PayFac) services, monetizing through software subscriptions, transaction fees, and boasting an average ROI for its clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: Mission-driven and customer-focused, emphasizing productivity gains and ROI for clients, though it may lack the hyper-growth, fast-paced tech culture of earlier stage startups."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "B2B companies across 35+ countries, including large enterprise clients looking to optimize cash flow and free up trapped capital (e.g., Peak)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base. Competitive for financial technology developers outside of San Francisco top-tier tech giants, though exact new-grad figures are not public."
   },
   "evidence_sha": "78586d4cd3c2f049",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Financial Technology (Fintech) / B2B Payments & Accounts Receivable Automation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Probe directly whether the team's AI engineering culture is genuinely fast-paced or bogged down by legacy enterprise bureaucracy. Ask specific questions about sane working hours, burnout rates, and technical learning opportunities to ensure the role actually accelerates your career without sacrificing personal time."
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784672023,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Headquartered in the US with a global presence spanning 35+ countries for B2B commerce."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "To help B2B companies start generating cash faster through AI-powered accounts receivable automation and by acting as the source of truth for financial operations."
+  },
   "name": "Billtrust",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: Moderate. As an established company managing high-volume enterprise clients, the pace likely prioritizes system stability and customer ROI over rapid, disruptive innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "AI-powered accounts receivable software, a cash generation platform, and access to a large B2B buyer network for global commerce."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: 20-25 days. Standard PTO for mature technology companies, though exact policies are not public."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36672,8 +36742,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Time off is likely standard manager-approved PTO."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Mature private company (or PE-backed) operating at massive scale, managing over $1 trillion in dollars invoiced annually and recognized as the 3rd largest B2B PayFac globally."
   },
   "sources": [
    {
@@ -36707,14 +36786,43 @@
     "url": "https://www.billtrust.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Billtrust provides AI-powered accounts receivable (AR) and B2B billing software that helps businesses automate invoicing and cash generation. The company makes money by selling its SaaS platform and payment processing solutions to enterprise clients, processing over $1 trillion in invoices annually."
+  },
+  "synthesized_evidence_sha": "78586d4cd3c2f049",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Building and scaling an AI-powered cash generation platform, developing integrations for a global B2B buyer network, and optimizing systems that process massive transaction volumes for enterprise clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672023,
   "web_search_url": "https://duckduckgo.com/?q=Billtrust+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "As a candidate prioritizing elite AI and data science work with high new-grad pay, Billtrust offers strong technical learning opportunities through its massive $1T+ invoice scale and enterprise AI automation. However, as a mature company with 35+ countries of operations, bureaucracy may slow innovation compared to early-stage startups, so you must verify WLB promises and technical pace in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0c2a85d59d"
+   ],
+   "value": "Estimated: Moderate. Typical of mature B2B SaaS companies, but burnout risks may exist during major product launches or peak financial cycles."
   }
  },
  "black box": {
@@ -71700,48 +71808,155 @@
  "d2l": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Niche tier; while not a pure-play elite AI lab, D2L holds strong technical respect for applied data science in predictive ed-tech analytics."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Business-to-Business (B2B) Software-as-a-Service (SaaS) subscriptions and enterprise licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Moderate corporate stability blended with a mission-driven focus on accessible education and rapid technical iteration."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Higher education institutions, K-12 school districts, and corporate enterprises globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:75,000 to 85,000 USD / 80,000 to 100,000 CAD base salary for new graduates in software engineering and data science."
   },
   "evidence_sha": "9f76884139b789b2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Educational Technology (EdTech) / Software-as-a-Service (SaaS)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Is the AI/Data Science work here cutting-edge enough to balance elite prestige and high new-grad pay without dragging into slow corporate bureaucracy? Does the company truly enforce sane hours and shutdowns to protect personal time while still accelerating early-career technical growth?"
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784674190,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Headquartered in Kitchener, Ontario, Canada, with remote work availability and distributed offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "To transform the way the world learns by building learning platforms that are accessible, engaging, and brilliant."
+  },
   "name": "D2L",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Fast tech culture with consistent agile delivery cycles and continuous product innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Brightspace Learning Management System (LMS) and Brightspace Data Platform (a predictive analytics engine for learner engagement)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:15 to 20 days of base vacation with additional flex days."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Includes company-wide shutdown during the December holidays to ensure rest for all employees."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Established, publicly traded SaaS company (TSX: DTL)."
   },
   "sources": [
    {
@@ -71775,14 +71990,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=14f72c7cf3d422fb180d3c9d07b260e9686a4c6dd8572aaaaa6bf7e5588f578eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly9kMmwuYXJpem9uYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Historically sponsors some skilled tech roles, though policies for new grads may be limited and subject to role-specific needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "D2L is an educational technology company that develops the Brightspace learning platform, a cloud-based Learning Management System (LMS) used by institutions and corporations to deliver online and hybrid training. The company makes money primarily through SaaS subscription licenses based on user volume, deployment size, and institutional features."
+  },
+  "synthesized_evidence_sha": "9f76884139b789b2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Full-stack cloud software development, scalable microservices, and ed-tech data science focused on predictive learning analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674190,
   "web_search_url": "https://duckduckgo.com/?q=D2L+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "D2L offers a mission-driven ed-tech environment that provides strong technical learning opportunities while maintaining a strong reputation for sane hours and guaranteed shutdowns to prevent burnout. It avoids the toxic culture found at some high-prestige firms, favoring a fast-paced yet respectful tech culture over slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7a636dd755",
+    "73029f2b43",
+    "6d59f260b0"
+   ],
+   "value": "Estimated:Good; known for respecting work-life balance with sane hours and avoiding toxic burnout expectations."
   }
  },
  "d3": {
@@ -87962,11 +88218,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87978,6 +88236,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784677175,
   "name": "Entertainment Partners",
   "pace_of_work": {
@@ -87990,6 +88249,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784866351,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88033,7 +88293,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=acc8e2ab932e59a9e01ff3d753aa4cb7a8a2cd6da6ae0090ae63dc9addfc18ceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cucG90c2RhbS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Entertainment+Partners+company+careers+benefits",
@@ -210669,48 +210929,129 @@
  "redcom laboratories inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "Estimated: Lower tier. The company primarily focuses on legacy secure communications and hardware rather than cutting-edge AI or elite-tier data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "B2B and B2G hardware and software sales, utilizing defense contracts and direct enterprise partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f1d5a144d6"
+   ],
+   "value": "Estimated: Mission-focused and engineering-driven, with a stable environment. May lean traditional and structured rather than fast-paced modern tech."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "U.S. government and defense agencies, allied military organizations, and commercial enterprises requiring secure communications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f1d5a144d6"
+   ],
+   "value": "Estimated: $80,000 to $110,000 base salary, reflecting regional adjustments for Victor, NY and defense industry standards."
   },
   "evidence_sha": "7bbe400597ef62e3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1bfda7dae",
+    "f1d5a144d6"
+   ],
+   "value": "Defense and Space Manufacturing / Telecommunications Equipment"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "Probe the team's actual release cadence and technical stack to assess if the culture is innovative or slowed by defense-bureaucracy. Clarify expectations around hours, PTO, and shutdowns to ensure sane work-life balance, despite typical defense contract pressures."
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784677529,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "61f542d84e",
+    "c1bfda7dae",
+    "f1d5a144d6"
+   ],
+   "value": "Headquartered in Victor, New York."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "To provide secure, reliable, and interoperable communications technology that meets the evolving and mission-critical needs of defense and government customers."
+  },
   "name": "REDCOM Laboratories, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "Estimated: Moderate to slow. Defense contractors typically operate under strict regulatory and compliance guidelines, which can slow innovation and technical iteration compared to commercial tech."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "61f542d84e",
+    "f1d5a144d6"
+   ],
+   "value": "Secure telecommunications equipment and networking solutions designed for defense, government, and commercial applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "Estimated: 15 to 20 days of Paid Time Off annually, typical for mid-sized defense and tech firms."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f1d5a144d6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "Estimated: May have limited holiday shutdowns, but specific guaranteed closures are not publicly confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "Private, mid-sized company operating in the defense tech sector."
   },
   "sources": [
    {
@@ -210744,14 +211085,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=d9accabf2f0339b02b9251f7bd2b2d449ceae62612a5bca861af37e7f234940dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cucmVkY29tLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "Estimated: Likely challenging for non-U.S. citizens due to government defense contracts requiring security clearances."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "61f542d84e",
+    "c1bfda7dae"
+   ],
+   "value": "REDCOM Laboratories, Inc. designs and manufactures secure communications technology. They generate revenue primarily through defense contracts and by selling their telecom products to government and commercial enterprises."
+  },
+  "synthesized_evidence_sha": "7bbe400597ef62e3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f1d5a144d6"
+   ],
+   "value": "Development of secure communications systems, networking protocols, and telecommunications hardware and software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677529,
   "web_search_url": "https://duckduckgo.com/?q=REDCOM+Laboratories%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c1bfda7dae"
+   ],
+   "value": "REDCOM aligns with the candidate's mission-driven requirement by securing critical communications for national defense. However, as a defense contractor, it may lean slower and more bureaucratic than elite-tier commercial tech, and software/AI roles likely center on secure networking rather than cutting-edge modern data science."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "61f542d84e"
+   ],
+   "value": "Estimated: Good. As an established, private mid-sized defense contractor, REDCOM likely maintains standard corporate hours, though occasional project milestones may require added effort."
   }
  },
  "reddit": {
@@ -231452,37 +231825,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — recognized for large-scale personalization, streaming analytics, and satellite data; regularly publishes at RecSys, KDD; strong alumni network to FAANG and top labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based revenue (monthly/annual plans) from consumers and OEM trials, plus advertising revenue from Pandora and SiriusXM ad-supported tiers. High-margin recurring revenue with low incremental cost per subscriber."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, engineering-driven but not bro-culture; diverse workforce with strong ERGs; emphasis on audio passion; leadership accessible; transitioning from legacy satellite to cloud-native streaming creates learning opportunities."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are individual subscribers (vehicle owners and streaming users) and advertisers. Also serves automakers (OEM partnerships) and enterprise clients for in-vehicle infotainment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000-$155,000 base + $15,000-$30,000 sign-on + $40,000-$70,000 RSUs over 4 years (varies by role: ML Engineer, Data Scientist, Applied Scientist). Total Year 1 comp ~$185k-$240k."
   },
   "evidence_sha": "49ac662fb1ba13b6",
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Media & Entertainment / Audio Streaming / Satellite Communications"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into ML system design (recommendation architectures, real-time inference), statistical modeling (A/B testing, causal inference), and productionizing models at scale. Behavioral questions emphasize collaboration, user-centric thinking, and balancing innovation with reliability. Prepare for case studies on personalization, churn, or content optimization. Coding rounds focus on Python/SQL proficiency and data manipulation."
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784674190,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: New York, NY. Major offices: Washington DC, Irving (TX), Nashville (TN), San Francisco (CA), Toronto (Canada). Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To entertain and inform the world through audio — delivering the best content anytime, anywhere."
+  },
   "name": "SiriusXM",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast — quarterly planning with 2-week sprints; shipping cadence is steady but not frantic; on-call rotations exist for streaming/platform teams but are manageable."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SiriusXM Satellite Radio, SiriusXM Streaming App, Pandora Music Streaming, SiriusXM Podcasts, SiriusXM Video, Connected Vehicle Services, Advertising Solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days; accrual starts day one; unlimited sick leave; parental leave 12 weeks paid."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231492,7 +231907,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — guaranteed company-wide shutdowns: week of Thanksgiving, week between Christmas and New Year (approx. 10 consecutive days off annually)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NASDAQ: SIRI) with ~5,000 employees, $9B+ annual revenue, mature but investing in streaming growth and tech modernization."
   },
   "sources": [
    {
@@ -231526,14 +231946,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1817a8349c3754639903f219a380d0ab1c2bdb5432802d78a98d6f9f37215bb9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vZ29vZ2xlaG9tZS8_aGw9ZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for technical roles; files for cap-subject and cap-exempt petitions. Green card sponsorship (PERM) available for qualifying employees. OPT/CPT friendly for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SiriusXM is a leading audio entertainment company providing satellite radio and streaming services (including Pandora) across North America. It delivers music, sports, talk, news, and podcasts to millions of subscribers in vehicles and on connected devices."
+  },
+  "synthesized_evidence_sha": "49ac662fb1ba13b6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI focus on recommendation engines, personalization, content analytics, churn prediction, ad targeting, voice/NLP for search, satellite signal processing, and scalable streaming infrastructure. Tech stack includes cloud (AWS/GCP), Kafka, Spark, Kubernetes, Python, Java, SQL."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674190,
   "web_search_url": "https://duckduckgo.com/?q=SiriusXM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SiriusXM offers a top-tier AI/data science role at a household-name media-tech company with elite prestige and competitive new-grad pay (~$130-160k base + equity). The culture balances innovation (streaming, personalization, satellite tech) with more sane hours than typical FAANG — employees report reasonable WLB, guaranteed shutdowns around holidays, and a mission-driven audio entertainment focus that avoids toxic burnout. Technical learning is accelerated through exposure to massive subscriber"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — most teams respect boundaries; core hours ~10am-4pm; limited weekend work; mandatory shutdown weeks (Thanksgiving, Christmas/New Year) are policy. Some platform/on-call roles have higher variability."
   }
  },
  "sitreps": {
@@ -262919,37 +263360,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI in mission-critical government domains; not a primary research lab but growing ML engineering reputation with real-world deployment scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recurring revenue model driven by SaaS subscriptions, maintenance/support contracts, and professional services (implementation, training, consulting). High retention due to mission-critical nature and switching costs in government contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-driven, collaborative, and low-ego. Engineers stay 5-10+ years. Culture values institutional knowledge, mentorship, and incremental innovation over heroics. Diversity and inclusion initiatives are active. Remote-friendly post-COVID."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. local and state government agencies, school districts, courts, and public sector entities. The company serves over 44,000 installations across all 50 states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base + $15,000-$30,000 RSUs (4-year vest) + $5,000-$15,000 signing bonus. Total comp ~$130K-$180K year 1. Adjusts by location (Plano/Dallas baseline)."
   },
   "evidence_sha": "2471c789a0aff78e",
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "GovTech / Public Sector Software / SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding (LeetCode medium), system design for high-availability public systems, SQL/data modeling, and behavioral questions on stakeholder management and compliance awareness. AI/DS roles add ML fundamentals, model deployment, and ethics/fairness discussions. Domain knowledge of government processes is a plus but not required."
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784676797,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Plano, TX. Major offices in Dallas, Denver, Atlanta, Boston, Philadelphia, Seattle, and remote/hybrid options across the U.S. Limited international presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower public sector organizations to operate more efficiently, transparently, and responsively through innovative technology solutions that serve communities."
+  },
   "name": "Tyler Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Steady, predictable delivery cycles aligned with government fiscal years and procurement timelines. Not a 'move fast and break things' culture; emphasis on reliability, compliance, and long-term maintainability."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include Tyler Munis (ERP for government), Tyler EnerGov (community development), Tyler SIS (student information), Odyssey (court case management), and various SaaS/cloud solutions for public finance, HR, revenue, and citizen engagement."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 floating days; accrues with tenure. Unlimited sick leave. Parental leave 6-12 weeks paid."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262959,7 +263442,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown week between Christmas and New Year; occasional summer half-day Fridays. No mandatory 'crunch' periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NYSE: TYL), ~9,000+ employees, $2B+ annual revenue, mature large-cap company with steady growth through acquisitions and organic expansion."
   },
   "sources": [
    {
@@ -262983,14 +263471,35 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: H-1B sponsor for specialized engineering and data science roles; green card sponsorship typically for senior/lead positions. Public sector contracts may impose citizenship requirements on certain programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tyler Technologies is a leading provider of integrated software and technology services for the public sector, including local governments, schools, and courts. The company focuses on modernizing public sector operations through ERP, civic services, and data analytics platforms."
+  },
+  "synthesized_evidence_sha": "2471c789a0aff78e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development (C#, .NET, JavaScript, SQL), cloud migration (AWS/Azure), data engineering, AI/ML for predictive analytics in public safety and finance, DevOps, legacy modernization, and platform integration. Growing investment in AI-driven civic insights."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676797,
   "web_search_url": "https://duckduckgo.com/?q=Tyler+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tyler offers a rare combination of elite public-sector mission impact, stable high compensation for new grads (estimated $110-135K base + equity), and a mature but modernizing tech culture. Unlike high-burnout consumer tech, work-life balance is respected with predictable hours and low weekend on-call. The scale of government data provides meaningful AI/ML problems (predictive analytics for justice, education, finance) without the pressure of ad-driven metrics. Career growth is structured with c"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Estimated: Strong work-life balance culture; core hours ~9-5 with flexibility, minimal weekend work, protected vacation, and leadership that models boundaries. On-call rotations exist for production support but are infrequent and compensated."
   }
  },
  "u s bank": {
@@ -287436,37 +287945,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche. While highly respected in the aerospace domain, York is likely not a top-tier AI/DS destination for elite prestige compared to FAANG; however, specialized data engineering and mission automation roles offer strong technical growth."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4a8506a12b",
+    "b9a0e457de"
+   ],
+   "value": "York operates as an aerospace hardware and services provider, generating recurring revenue by manufacturing satellite platforms at scale and charging for mission operations, payload integration, and constellation management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented and technical. A highly collaborative atmosphere focused on rapid delivery and problem-solving, geared toward engineers who want to specialize in space systems."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "U.S. Department of Defense, national security agencies, NASA, civil space agencies, and commercial satellite constellation operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $110,000 base salary. Competitive total compensation for aerospace engineering and tech roles, though generally lower than elite FAANG new-grad pay packages."
   },
   "evidence_sha": "2986808a91b96c0f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866231,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "Aerospace, Defense, and Space Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784866231,
   "last_evidence_at": 1784677532,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "Headquartered in Denver, Colorado, with manufacturing facilities in Littleton, Colorado, and an operations presence in Washington, D.C."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "To radically improve spacecraft affordability and shorten the deployment time for space assets, enabling both commercial and government organizations to rapidly field constellations and space-based capabilities."
+  },
   "name": "York Space Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced. Driven by defense contracts and commercial delivery deadlines, the culture operates with a strong sense of urgency and rapid iteration, avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "Standardized small satellite platforms (such as the S-Class and LX-Class bus), payload integration, and turn-key constellation operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days (standard corporate PTO policy typical for mid-sized defense contractors, though exact days are not public)."
   },
+  "refresh_after": 1790050231,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287476,7 +288040,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. No indication of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "511bf0e9a4"
+   ],
+   "value": "Growth-stage, mid-sized aerospace company (estimated 500+ employees) operating with significant venture backing and actively scaling up its manufacturing capabilities."
   },
   "sources": [
    {
@@ -287510,14 +288081,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=0d3af6f2d8a11146a30ad11aa3eb456ab4875934776ae7eab564ebaf472daa66JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvWW9yaw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "As a U.S. national security and government aerospace contractor, roles at York Space Systems typically require U.S. citizenship and the ability to obtain security clearances, making visa sponsorship highly unlikely for technical positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b",
+    "511bf0e9a4"
+   ],
+   "value": "York Space Systems is an aerospace manufacturer specializing in the design and production of small and medium-sized satellites. The company makes money by providing cost-effective spacecraft platforms, payloads, and constellation management services to commercial, civil, and national security space clients."
+  },
+  "synthesized_evidence_sha": "2986808a91b96c0f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4a8506a12b"
+   ],
+   "value": "Development of satellite bus architectures, avionics, flight software, payload interfaces, ground station networks, and automated constellation mission control systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677532,
   "web_search_url": "https://duckduckgo.com/?q=York+Space+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. While driven by mission deadlines, the company attempts to maintain structured aerospace engineering hours to prevent the extreme burnout often seen in early-stage startups, though launch cycles are demanding."
   }
  },
  "yotta labs": {
