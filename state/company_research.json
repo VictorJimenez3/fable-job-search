@@ -23174,11 +23174,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23190,6 +23192,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680304,
   "name": "Ancestry",
   "pace_of_work": {
@@ -23202,6 +23205,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897803,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23245,7 +23249,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e8270d0cea6f23cf4717e7e6389a81ca16a46048396b06f81230d3cc596419bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cuYW5jZXN0cnkuY29tLz9tc29ja2lkPTBlNTZmMWI0ZjRiYTZmNmUzNWEyZTYyYWY1MmE2ZTY0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680304,
   "web_search_url": "https://duckduckgo.com/?q=Ancestry+company+careers+benefits",
@@ -51352,43 +51356,113 @@
  },
  "blackstone": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Could not be determined from sources; treat as unknown and confirm via offer data."
   },
   "evidence_sha": "4ab12a219ad5f36a",
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether pace and hours expectations match candidate's desired balance; ask about weekend or on-call expectations and whether shutdowns/guaranteed time off exist. Probe mission alignment and actual day-to-day technical learning, growth paths, and team culture to detect bureaucracy or burnout risks."
   },
-  "last_attempt_at": 1784897274,
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680198,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
   "name": "Blackstone",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Could not be evaluated due to lack of source content; typical elite- prestige firms often run fast, but this must be verified directly."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Could not be determined from sources; assume unknown and confirm exact policy directly."
   },
-  "retry_after": 1784897514,
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -51398,7 +51472,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Could not be determined from sources; candidate should ask HR/recruiter directly if guaranteed shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
   },
   "sources": [
    {
@@ -51432,14 +51515,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=05956d0d57641c91bd2867cb63432c465b4864574edb03a494ff23fa1efc2e52JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuYmxhY2tzdG9uZS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine: The provided sources point to Blackstone's public company pages, but all source excerpts are placeholder redirect notices and contain no usable content."
+  },
+  "synthesized_evidence_sha": "4ab12a219ad5f36a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1a04e39724",
+    "aac2bfff88",
+    "8ff81e63cb"
+   ],
+   "value": "Could not determine from sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680198,
   "web_search_url": "https://duckduckgo.com/?q=Blackstone+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate wants top-tier AI/data science role with high prestige, high new-grad pay, fast pace, strong work-life balance, sane hours, and mission-driven tech culture. Sources do not contain evaluable specifics, but target companies matching this are typically rare; fast pace and elite prestige often conflict with guaranteed sane hours/burnout avoidance. Candidate should verify these traits directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Could not be evaluated due to lack of source content; candidate priority is sane hours and shutdowns, which should be explicitly validated."
   }
  },
  "blissway": {
@@ -129459,39 +129575,129 @@
  },
  "every electric": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No AI or Data Science team prestige information could be extracted from the provided source texts."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No revenue model or business strategy details could be extracted from the provided source texts."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No company culture insights could be extracted from the provided source texts."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No customer information could be extracted from the provided source texts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Estimated: Cannot be determined from the provided sources."
   },
   "evidence_sha": "363e61304266404e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No industry classification could be deduced from the provided source texts."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Data is unavailable to assess for your requirements regarding mission-driven focus, sane hours, guaranteed shutdowns, accelerated learning, and low-burnout environments."
+  },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784677604,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No office or remote work location data could be extracted from the provided source texts."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No mission statement or company values could be extracted from the provided source texts."
+  },
   "name": "Every Electric",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Estimated: Cannot be determined from the provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No product information could be extracted from the provided source texts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Estimated: Cannot be determined from the provided sources."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129500,8 +129706,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Estimated: Cannot be determined from the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No company size, headcount, or funding stage data could be extracted from the provided source texts."
   },
   "sources": [
    {
@@ -129535,14 +129754,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd11ae86eec588d7ff6febc5b759e926323727dfbe005583648ffdbf7676f6ddJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2V2ZXJ5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No visa or H-1B sponsorship policy details could be extracted from the provided source texts."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Information unavailable in the provided sources. The supplied links only contain redirect notices with no descriptive text about the company's operations or revenue model."
+  },
+  "synthesized_evidence_sha": "363e61304266404e",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "No specific engineering, AI, or data science workflows could be extracted from the provided source texts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677604,
   "web_search_url": "https://duckduckgo.com/?q=Every+Electric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Data is unavailable to align with your priorities for top-tier prestige, high new-grad pay, fast innovative culture, and sustainable work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fadf3e3bf9",
+    "3e44ee66af",
+    "58db0cdcae"
+   ],
+   "value": "Estimated: Cannot be determined from the provided sources."
   }
  },
  "evolver": {
@@ -214811,37 +215071,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown, pending further data on their AI/DS portfolio."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown, pending compensation benchmarking data."
   },
   "evidence_sha": "84bcfb49f70e7271",
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: In interviews, probe deeply into the actual day-to-day pace,hours, and work-life balance to ensure it avoids toxic or high-burnout environments. Ask technical leads about the learning curve, mentorship, and how much bureaucracy impacts innovation versus fast execution."
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680303,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
   "name": "LoVasco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown, pending verification of their engineering culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; the source links attempt to redirect to pages seemingly related to the browser game 'Akinator', but no content is provided for LoVasco's actual products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown, pending confirmation of their benefits package."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -214851,7 +215181,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown, pending confirmation of their holiday calendar."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
   },
   "sources": [
    {
@@ -214885,14 +215224,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=2986b4138b1faadb113045e5c522d8d579a33a09acd664a561424464120d9e3aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly9lcy5ha2luYXRvci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Information regarding what LoVasco does and how it makes money is not explicitly available in the provided sources, as they consist entirely of non-redirecting web pages. Without further data, a plain-English summary cannot be confirmed."
+  },
+  "synthesized_evidence_sha": "84bcfb49f70e7271",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9e7977af5b",
+    "b04b654099",
+    "924db1e298"
+   ],
+   "value": "Unknown; no information available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680303,
   "web_search_url": "https://duckduckgo.com/?q=LoVasco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: This company may potentially align with your desire for a top-tier AI or data science role that balances elite prestige, high new-grad pay, and a fast, innovative tech culture without bureaucracy. Further research is needed to confirm if it provides sane hours, guaranteed shutdowns, and rapid technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown, pending verification of their work hour expectations."
   }
  },
  "loveholidays": {
@@ -235553,11 +235925,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235569,6 +235943,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680410,
   "name": "MixRank (YC S11)",
   "pace_of_work": {
@@ -235581,6 +235956,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897803,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235624,7 +236000,7 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680410,
   "web_search_url": "https://duckduckgo.com/?q=MixRank+%28YC+S11%29+company+careers+benefits",
@@ -248342,37 +248718,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 - Respected applied AI in regulated fintech, not pure research; strong for production ML career growth."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "68e83220eb"
+   ],
+   "value": "Revenue from loan origination fees, servicing income, interest spread, and potential marketplace/referral fees; likely combines direct lending with broker/partner channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, compliance-aware, collaborative between tech and loan ops; mission-driven around homeownership access; less 'move fast break things' than consumer tech."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7869d139f1",
+    "68e83220eb"
+   ],
+   "value": "Homebuyers, homeowners seeking refinancing, real estate agents, and mortgage brokers across service areas listed on nexa.com/service-area/."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity/bonus (total $130k-$170k) for AI/DS roles; competitive for fintech outside FAANG."
   },
   "evidence_sha": "45f3f1db16697248",
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "68e83220eb"
+   ],
+   "value": "Fintech / Mortgage Lending / Financial Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on ML for credit risk/fraud, data pipelines for loan processing, regulatory compliance in model deployment, and balancing innovation with mortgage industry constraints. Prepare for practical system design around high-volume, auditable workflows."
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680303,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7869d139f1"
+   ],
+   "value": "Headquarters likely in Chandler, AZ (known NEXA Mortgage HQ); remote/hybrid roles across licensed states per service-area page."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To simplify and modernize the mortgage experience through technology and service (inferred from fintech mortgage positioning)."
+  },
   "name": "NEXA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast - Mortgage tech cycles driven by rate environments and compliance deadlines; sprint-based but with regulatory gates."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "68e83220eb",
+    "6197e651a7"
+   ],
+   "value": "Mortgage lending services including home purchase loans, refinancing, and loan servicing; likely digital mortgage platform and broker/loan officer network."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays; unlimited not typical in regulated lending."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -248382,7 +248812,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; possible reduced hours during major holidays (Christmas week)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage growth company (200-1000 employees) with national mortgage licensing and multi-state operations."
   },
   "sources": [
    {
@@ -248416,14 +248851,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=eab730e15b85044ba4236086b8d573feafe4ee5c28a2e28591ee91db6e919457JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly9uZXhhbW9ydGdhZ2UuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized tech/data roles given national mortgage tech needs; green card sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6197e651a7",
+    "68e83220eb"
+   ],
+   "value": "NEXA appears to be a mortgage lending and financial services company operating through nexa.com and nexamortgage.com, likely providing home loan origination, servicing, and related financial products."
+  },
+  "synthesized_evidence_sha": "45f3f1db16697248",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mortgage technology platform development, loan origination systems, data engineering for credit/risk modeling, automation of underwriting/closing, and consumer-facing digital tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680303,
   "web_search_url": "https://duckduckgo.com/?q=NEXA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a data/AI role in a fintech mortgage context where you can modernize a massive, regulated industry with real consumer impact. The company's digital-first mortgage platform suggests meaningful technical challenges in risk modeling, automation, and scale without the burnout culture of big tech or pure consulting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Fintech mortgage typically avoids extreme crunch; cyclical busy periods during rate drops/refi waves; guaranteed shutdowns unlikely but weekends generally protected."
   }
  },
  "nexhealth": {
@@ -292285,37 +292744,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging/specialized) - PropTech niche with applied ML focus but not a primary AI research destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely transaction-based fees (commissions, referral fees), subscription revenue from agents/brokers, and/or advertising revenue from property listings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, product-focused engineering culture with domain expertise in real estate; likely less 'move fast break things' than pure software shops due to regulated industry constraints."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fe176a6db"
+   ],
+   "value": "Estimated: Home buyers, sellers, renters, real estate agents, and potentially institutional real estate investors seeking property data and transaction services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$125k base + equity (0.05-0.15%) + bonus; proptech typically pays below FAANG but above non-tech corporates."
   },
   "evidence_sha": "be66853135b97f19",
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "4fe176a6db"
+   ],
+   "value": "PropTech / Real Estate Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for: (1) Actual engineering culture—deployment frequency, on-call expectations, and overtime norms; (2) Data infrastructure maturity—MLS data pipelines, feature stores, model monitoring; (3) Compensation structure—base/equity/bonus split for new grads and refresh policies; (4) Concrete WLB policies—core hours, shutdown dates, PTO enforcement; (5) AI/DS project examples—recent models shipped, business impact measured."
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680308,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61a7e65316"
+   ],
+   "value": "Estimated: Headquartered in a major US metro area (likely Massachusetts based on 'Massachusetts' appearing in source URL), with possible remote/hybrid arrangements."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To simplify real estate transactions through technology and provide transparent property information to consumers and professionals."
+  },
   "name": "RE/SPEC Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast - Product-driven cycles with seasonal real estate market pressures, but likely less extreme than consumer tech giants."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fe176a6db"
+   ],
+   "value": "Estimated: Real estate search platform, property listing services, and potentially real estate technology tools based on URL structure mentioning 'realestate' and 'search'."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (typical US private tech), but no public policy found."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292325,7 +292834,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; may observe standard holiday breaks only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Mid-stage private company (50-500 employees) based on having a dedicated careers page on SmartRecruiters and proprietary real estate search platform."
   },
   "sources": [
    {
@@ -292359,14 +292875,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas for specialized technical roles given tech hiring needs, but no public confirmation found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "RE/SPEC Inc. appears to be a real estate technology or services company based on URL references to real estate search functionality. The company likely generates revenue through real estate transactions, technology platforms, or related professional services. Limited public information is available from the provided sources."
+  },
+  "synthesized_evidence_sha": "be66853135b97f19",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web development for property search platforms, data engineering for MLS/property data ingestion, machine learning for property valuation/recommendation, and mobile application development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680308,
   "web_search_url": "https://duckduckgo.com/?q=RE%2FSPEC+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f16eec2a6f",
+    "4fe176a6db"
+   ],
+   "value": "RE/SPEC operates in the proptech space where AI/ML applications for property valuation, search ranking, and market prediction are high-impact. As a mid-sized private company, it may offer faster iteration cycles and more ownership than large tech firms, with real estate's massive transaction volumes providing rich data for ML work. The SmartRecruiters presence suggests structured hiring, but WLB and pay transparency remain unverified."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Mid-sized private tech company may offer reasonable balance, but real estate seasonality (spring/summer peaks) could drive periodic crunches."
   }
  },
  "real chemistry": {
@@ -303017,41 +303560,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-to-high prestige for aerospace technology, though primarily known for aerospace rather than elite AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ad6d6770c8",
+    "853035310b"
+   ],
+   "value": "Delivers end-to-end space solutions by selling launch services and manufacturing complete spacecraft, payloads, and satellite components."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "68c04d586f"
+   ],
+   "value": "Mission-driven culture focused on hiring innovators to support an expanding space program."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "853035310b",
+    "ad6d6770c8"
+   ],
+   "value": "Clients requiring space access for scientific exploration, Earth observation, climate change monitoring, national security, and technology demonstrations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad compensation (likely $120k-$160k base) reflecting elite aerospace tech talent demands, though precise figures are not public."
   },
   "evidence_sha": "635293b6bfc9992b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784897274,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ad6d6770c8"
+   ],
+   "value": "Aerospace and space technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "853035310b",
+    "68c04d586f"
+   ],
+   "value": "Highlight your ability to thrive in a fast-paced, mission-critical environment while asking detailed questions about team expectations for work hours and project deadlines. Emphasize your readiness to accelerate technical learning and contribute to innovative space systems, but clarify boundaries to ensure the culture avoids high-burnout toxicity and respects personal time."
+  },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784679642,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "68c04d586f"
+   ],
+   "value": "Operates across global teams."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "68c04d586f",
+    "ad6d6770c8"
+   ],
+   "value": "To open up access to space to improve life on Earth."
+  },
   "name": "Rocket Lab USA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "68c04d586f",
+    "853035310b"
+   ],
+   "value": "Estimated: Fast-paced with high urgency due to rapidly expanding programs and critical launch schedules."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "853035310b",
+    "ad6d6770c8"
+   ],
+   "value": "Electron launch vehicles, satellites, spacecraft, and satellite components."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard competitive tech PTO (typically 15-20 days annually), though exact policy is not public."
   },
-  "retry_after": 1784897514,
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303061,7 +303666,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in public sources; breaks are likely standard holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "853035310b",
+    "68c04d586f"
+   ],
+   "value": "Public company (USA) with rapidly expanding global programs and a high launch frequency."
   },
   "sources": [
    {
@@ -303125,14 +303738,44 @@
     "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7763996003"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ad6d6770c8",
+    "853035310b"
+   ],
+   "value": "Rocket Lab is an end-to-end space company that designs, manufactures, and launches rockets and satellites to open access to space. It generates revenue by providing responsive launch services, complete spacecraft design, satellite components, and other space systems to commercial and government clients."
+  },
+  "synthesized_evidence_sha": "635293b6bfc9992b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "853035310b",
+    "ad6d6770c8"
+   ],
+   "value": "Involves satellite flight and ground software development, thermofluids analysis, and other aerospace engineering tasks supporting orbital launch and space systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679642,
   "web_search_url": "https://duckduckgo.com/?q=Rocket+Lab+USA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "853035310b",
+    "68c04d586f"
+   ],
+   "value": "Rocket Lab offers a mission-driven environment that requires fast-paced innovation to support vital space missions, aligning well with a desire for elite technical work and career growth. However, candidates should carefully evaluate if the work-life balance meets their expectations for sane hours and guaranteed shutdowns, as aerospace launch schedules can be demanding."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, with high demands during critical launch and project phases."
   }
  },
  "rockhaven homes": {
@@ -330723,7 +331366,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330741,7 +331384,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897476,
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680301,
   "name": "SPAICE Technology",
   "pace_of_work": {
@@ -330754,7 +331397,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897596,
+  "retry_after": 1784897923,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -352571,48 +353214,125 @@
  "texas water development board": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: Mid-tier for state work; not globally recognized as elite AI research or fast-paced technical innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "State-funded agency that disburses financial assistance (loans and grants) for water projects and provides regulatory and planning data."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: Mission-driven and public-service-oriented, prioritizing stability, compliance, and consistent processes over disruptive innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Regional water planning groups, local municipalities, utility districts, and agricultural water users within the state of Texas."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: $65,000 - $85,000 annually, which is below big tech benchmarks but aligns with state government compensation scales."
   },
   "evidence_sha": "94697f2954d22157",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Public Administration / Government Water Management"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Candidates should probe the specific team's tooling and innovation pace to see if the role allows for applied AI or modern data science, rather than legacy database maintenance. It is also worth confirming exact work schedules and potential remote flexibility to ensure the bureaucratic structure still supports personal time and accelerated technical learning."
+  },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680302,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Austin, Texas (Headquarters and primary operations)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "To provide leadership, planning, financial assistance, and information to enable Texas to meet its water needs in a way that preserves the state's natural resources."
+  },
   "name": "Texas Water Development Board",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: Slow to moderate, characteristic of state government bureaucracy with methodical, compliance-driven workflows."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Water planning reports, financial assistance programs for water infrastructure, and hydrological data collection and analysis tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: 15-22+ days of annual leave depending on tenure, alongside state holidays, and sick leave accrual."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: Minimal to none outside of standard Texas state holidays, though some roles may offer flexible scheduling."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Established state government agency with hundreds of employees operating in a stable bureaucratic framework."
   },
   "sources": [
    {
@@ -352646,14 +353366,46 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "As a state agency, typically restricted to hiring U.S. citizens or those legally authorized to work without sponsorship; unlikely to sponsor visas."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591",
+    "dba38c2ac6"
+   ],
+   "value": "The Texas Water Development Board (TWDB) is a state agency dedicated to leading the state's efforts in water planning, financial assistance, and data collection to ensure adequate water supplies for Texas. As a government entity, it does not operate for profit but is funded through state appropriations and the issuance of bonds to provide financing for water-related infrastructure projects."
+  },
+  "synthesized_evidence_sha": "94697f2954d22157",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Data science and IT operations focus on hydrological modeling, geographic information systems (GIS), and maintaining public-facing water data portals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680302,
   "web_search_url": "https://duckduckgo.com/?q=Texas+Water+Development+Board+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "This agency offers respected mission-driven work with sane hours and guaranteed work-life balance, which fulfills the desire to avoid toxic or high-burnout environments. However, the culture is inherently bureaucratic rather than fast-paced or innovative, meaning it will likely miss the candidate's priorities for elite AI prestige and top-tier new-grad tech pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0881b19591"
+   ],
+   "value": "Estimated: High. State government roles typically respect sane hours (40-hour weeks) with low overtime expectations and strong job security."
   }
  },
  "teza technologies": {
@@ -378289,11 +379041,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -378305,6 +379059,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680302,
   "name": "US Conec",
   "pace_of_work": {
@@ -378317,6 +379072,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897803,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -378370,7 +379126,7 @@
     "url": "https://job-boards.greenhouse.io/usconec/jobs/4324285009"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680302,
   "web_search_url": "https://duckduckgo.com/?q=US+Conec+company+careers+benefits",
@@ -380329,47 +381085,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Solid tier within fintech, recognized for modernizing legacy systems, though not at the elite R&D tier of specialized AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c60a9b2d69"
+   ],
+   "value": "Charges mortgage servicing fees and licenses its proprietary software platform to institutional clients."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "bc1e41a35d"
+   ],
+   "value": "技术研究驱动, mission-driven, and focused on solving complex legacy inefficiencies through software engineering."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bc1e41a35d"
+   ],
+   "value": "Institutional mortgage buyers, loan originators, and homeowners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $165,000 base salary, plus meaningful equity and performance bonuses."
   },
   "evidence_sha": "89448a5967cbf074",
+  "generated_at": 1784897683,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c60a9b2d69"
+   ],
+   "value": "Financial Technology (Fintech) / Mortgage Servicing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To ensure it meets your work-life balance and anti-burnout requirements, ask targeted questions about team on-call expectations, sprint velocity, and whether they offer guaranteed shutdowns. You should also clarify new-grad total compensation packages to verify they hit your elite pay benchmark."
   },
+  "last_attempt_at": 1784897683,
   "last_evidence_at": 1784680304,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c60a9b2d69"
+   ],
+   "value": "Headquartered in New York City."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9da7228c80"
+   ],
+   "value": "To modernize the mortgage servicing experience through technology, benefiting both institutional buyers and homeowners."
+  },
   "name": "Valon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative startup-like environment, prioritizing rapid deployment over slow corporate bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c60a9b2d69"
+   ],
+   "value": "A cloud-based proprietary mortgage servicing platform designed for homeowners and institutional clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech policy of 15-20 days of accrued PTO per year."
   },
+  "refresh_after": 1790081683,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "9da7228c80"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns likely align with major holidays, but specific guaranteed days are not publicly detailed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9da7228c80"
+   ],
+   "value": "Venture-backed scaling technology company."
   },
   "sources": [
    {
@@ -380403,14 +381224,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=9066191c04429a1cacd295ad2655b24eb8da1a30f035731dcddebb08a57a8d9fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly9naXRodWIuY29tLzB4azFoMC9DaGF0R1BUX0RBTg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9da7228c80"
+   ],
+   "value": "Public confirmation of H-1B or OPT visa sponsorship for technical roles is not available in recent public records."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9da7228c80"
+   ],
+   "value": "Valon is a financial technology company that modernizes the mortgage servicing industry by providing a cloud-based platform for homeowners and loan originators. It makes money by charging servicing fees and licensing its proprietary software to institutional mortgage buyers."
+  },
+  "synthesized_evidence_sha": "89448a5967cbf074",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "bc1e41a35d"
+   ],
+   "value": "Cloud-native platform engineering, scalable backend systems, and AI/data science integrations for financial workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680304,
   "web_search_url": "https://duckduckgo.com/?q=Valon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Valon aligns well with your priority for a fast-paced, innovative tech culture where you can accelerate your data science learning. It commands elite fintech prestige and high new-grad pay, providing mission-driven impact in the housing finance sector without the slow bureaucracy of legacy financial institutions."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally sane hours, though quantitative reporting on extreme burnout or high turnover is not publicly verified."
   }
  },
  "valsoft corporation": {
