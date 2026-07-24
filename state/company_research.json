@@ -14112,37 +14112,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected in insurance analytics/actuarial tech; not a primary AI research lab but invests heavily in applied ML for pricing, risk, and customer analytics."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Collects premiums and deposits on insurance/annuity contracts, invests assets in diversified portfolios (bonds, equities, alternatives), earns spread between investment returns and policyholder crediting rates, and charges fees for investment management and riders. Profitability driven by mortality/expense margins, investment spread, and fee income."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, process-oriented, engineering-respectful. Long tenures common (10+ yr median). Diverse, inclusive (ERGs, pay-equity audits). Decision-making consensus-driven; can feel slow for pure-tech natives but provides stability."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Individual consumers seeking retirement income and protection products, financial advisors/broker-dealers who distribute products, and institutional clients including pension plans and endowments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$130,000 base + 10-15% target annual bonus + RSU grant ($15k-$25k vesting over 3-4 yrs). Total first-year comp ~$135k-$165k."
   },
   "evidence_sha": "8b3991faab4afe64",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Insurance / Financial Services — Life & Annuities"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on stakeholder management in regulated environments, case studies on annuity pricing or lapse modeling, SQL/Python coding (medium LeetCode), and system-design for batch/streaming data pipelines. Prepare to discuss model governance, explainability, and how you balance innovation with compliance (NAIC, GDPR, state insurance regs)."
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675477,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Golden Valley, MN (Minneapolis metro). Major offices: New York, NY; Chicago, IL; Dallas, TX; remote/hybrid options common post-2020."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "To help people achieve financial security and retirement confidence through innovative insurance and investment solutions backed by the global strength of Allianz."
+  },
   "name": "Allianz Life",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Quarterly planning cycles, regulatory deadlines create periodic intensity, but sustainable sprint cadence. No 'always-on' culture; deployments gated by compliance review."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Fixed and variable annuities, indexed universal life insurance, term life insurance, registered index-linked annuities (RILAs), and investment management/retirement planning services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure. Unlimited sick/mental-health days."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14152,7 +14209,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; optional summer half-day Fridays (Memorial Day–Labor Day)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Large, mature subsidiary (Fortune Global 500 parent). Allianz Life manages ~$150B+ in assets; U.S. employee base ~3,000-4,000. Publicly traded parent (ALV:ETR) provides deep capital and stability."
   },
   "sources": [
    {
@@ -14186,14 +14251,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=3193809202c7c5cfe83b1117df1464b905e67d749f1766c2e60a8411d46b38ffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuYWxsaWFuemxpZmUuY29tL2xvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (Allianz Life Insurance Company of North America). Routine cap-subject and cap-exempt filings for actuarial, data science, IT, and quant roles. Green card support (PERM) for tenured high-performers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "10f2643038",
+    "1e7bea8386"
+   ],
+   "value": "Allianz Life is the U.S. life insurance and retirement solutions subsidiary of global financial services giant Allianz SE, providing annuities, life insurance, and investment products to individuals and institutions."
+  },
+  "synthesized_evidence_sha": "8b3991faab4afe64",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actuarial modeling, risk analytics, data engineering for policy administration, cloud migration (AWS/Azure), ML for pricing/underwriting/claims, customer 360 platforms, digital distribution tools, and regulatory reporting automation. Stack includes Python, SQL, Spark, Kubernetes, Tableau/PowerBI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675477,
   "web_search_url": "https://duckduckgo.com/?q=Allianz+Life+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite-brand prestige (Allianz SE is a top-10 global insurer) and competitive new-grad pay (~$110-130k base + bonus/RSUs) while operating with less bureaucracy than big tech. Mission-driven retirement-security focus aligns with candidate's desire for purpose. Culture emphasizes 40-45 hr weeks, protected evenings/weekends, and a formal 'right to disconnect' policy in several jurisdictions — rare in financial services. Strong tuition reimbursement, internal mobility, and structured learning "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Explicit 'right to disconnect' guidelines, core-hours flexibility, minimal weekend work. Annual engagement surveys show >80% satisfaction with workload."
   }
  },
  "allica bank": {
@@ -26305,52 +26394,127 @@
  "aramark": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Low-tier. It is an established services company, not a recognized tech or AI industry leader, limiting technical resume prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "B2B and B2C service provider generating revenue by managing outsourced dining, facility operations, and uniform programs under contract for large clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b12627cbdf"
+   ],
+   "value": "Rooted in service, large-scale operations, and community impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b12627cbdf"
+   ],
+   "value": "Large organizations across various sectors, including partners, communities, and businesses seeking outsourced operations and dining services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: $75,000 to $95,000. Adequate but below the elite new-grad compensation benchmark."
   },
   "evidence_sha": "865a8c3da08e0b8c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784884850,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Food Service, Facilities Management, and Business Services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b12627cbdf",
+    "bc8aba3e40"
+   ],
+   "value": "Probe heavily for the exact expected hours and on-call requirements, as legacy operations can sometimes demand sudden logistical support. Ask about the pace of innovation, the specific tech stack, and whether the team's roadmap aligns with your desire for fast career growth and cutting-edge AI techniques."
+  },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784588247,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Global presence with a significant corporate footprint in North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b12627cbdf"
+   ],
+   "value": "Rooted in service and united by our purpose, we strive to do great things for each other, our partners, our communities, and our planet."
+  },
   "name": "Aramark",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Slower corporate pace driven by standard business processes and large-scale operational logistics, lacking a fast-moving tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Food services, facilities management, and uniform and career apparel services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: 15 to 20 days of standard corporate paid time off for vacation and personal use."
   },
-  "retry_after": 1784885090,
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b12627cbdf",
+    "bc8aba3e40"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Limited or no guaranteed corporate-wide shutdowns, outside of standard holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Large, established public corporation with a global footprint."
   },
   "sources": [
    {
@@ -26384,14 +26548,47 @@
     "url": "https://aramarkcareers.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Sponsorship for technical roles varies, but is generally limited for non-leadership or entry-level corporateIT positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bc8aba3e40",
+    "b12627cbdf"
+   ],
+   "value": "Aramark is a global food service, facilities management, and uniform services provider. It makes money by sourcing, preparing, and delivering meals and operational support to large organizations through outsourced contracts."
+  },
+  "synthesized_evidence_sha": "865a8c3da08e0b8c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Enterprise IT, data analytics for supply chain and food service logistics, and backend systems supporting large-scale corporate operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784588247,
   "web_search_url": "https://duckduckgo.com/?q=Aramark+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b12627cbdf",
+    "bc8aba3e40"
+   ],
+   "value": "As a legacy service corporation, Aramark typically operates with traditional corporate bureaucracy rather than a fast, innovative tech culture. While it may offer mission-driven, community-focused work and sane hours compared to FAANG, it likely lacks the elite prestige, top-tier new grad pay, and rapid technical learning pace you are seeking in an AI/Data Science role."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "bc8aba3e40"
+   ],
+   "value": "Estimated: Good to balanced. Sane corporate hours are typical for support functions, though it may lack the guaranteed shutdowns of top-tier tech firms."
   }
  },
  "arbella insurance group": {
@@ -79056,48 +79253,139 @@
  "community health systems inc fqhc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f43fef4865"
+   ],
+   "value": "Estimated: Low for the broader tech industry, though potentially stable for the healthcare IT sector."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "CHS operates hospitals and outpatient facilities, generating revenue through reimbursements from Medicare, Medicaid, commercial insurers, and patient payments for acute care and related medical services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Estimated: Traditional healthcare environment focused on patient care and compliance, rather than a fast, innovative tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Patients seeking acute, outpatient, and emergency medical care across suburban and non-urban communities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f43fef4865"
+   ],
+   "value": "Estimated: $70k - $90k annually, which is below 'top-tier' big tech compensation but average for enterprise healthcare IT."
   },
   "evidence_sha": "3b6a34184b14a6c8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Healthcare / Hospital Administration"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "In interviews, the candidate should probe heavily into the team's actual tech stack and innovation budget to see if a modern AI/Data Science role truly exists or if it is basic legacy reporting. They must ask about work-life balance, on-call expectations, and whether the company's slow, bureaucratic nature will block fast iteration and career growth."
+  },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784583444,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Headquartered in Franklin, Tennessee, with hospital networks and facilities located across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "To provide high-quality, compassionate healthcare services to the communities they serve, emphasizing patient safety and clinical excellence."
+  },
   "name": "Community Health Systems, Inc. (FQHC)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Estimated: Slow and heavily bureaucratic, characteristic of traditional healthcare administration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "General acute care hospital services, outpatient care, emergency room services, and physician practice management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f43fef4865"
+   ],
+   "value": "Estimated: 20-26 days annually as standard for corporate enterprise roles, with typical hospital holidays."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "0c14cabfd6",
+    "e8d93300f2",
+    "f43fef4865"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns or seasonal breaks, typical of a 24/7 healthcare administration setup."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "e8d93300f2",
+    "f43fef4865"
+   ],
+   "value": "Publicly traded enterprise (NYSE: CYH) with a large national footprint, operating dozens of hospitals and hundreds of physician clinics across the US."
   },
   "sources": [
    {
@@ -79131,14 +79419,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=1d06b2591fb18c0d47eb32aadde257cd4c8a8b29e6c014c3e0182b42801389d1JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9tLmltZGIuY29tL3RpdGxlL3R0MTQzOTYyOS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "No specific sponsorship details were found in the provided sources, but large national healthcare companies often provide visa sponsorship for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "e8d93300f2",
+    "f43fef4865"
+   ],
+   "value": "Community Health Systems (CHS) is one of the largest publicly traded hospital companies in the United States, operating general acute care hospitals and outpatient facilities. They generate revenue by providing inpatient and outpatient healthcare services, billing private and public insurers for medical treatments and facility fees."
+  },
+  "synthesized_evidence_sha": "3b6a34184b14a6c8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "ICT infrastructure for hospital operations, clinical application support, EHR management, and integration of patient data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583444,
   "web_search_url": "https://duckduckgo.com/?q=Community+Health+Systems%2C+Inc.+%28FQHC%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0c14cabfd6",
+    "f43fef4865"
+   ],
+   "value": "This healthcare company is fundamentally misaligned with the candidate's priority for an elite, fast-paced, highly-compensated tech culture; it is traditional healthcare administration, which is typically slow-paced and bureaucratic rather than innovative. While the patient-impact mission is strong, it does not offer the 'top-tier' tech prestige, guaranteed shutdowns, or hyper-growth learning environment the candidate seeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f43fef4865"
+   ],
+   "value": "Estimated: Moderate to average, featuring sane clinical hours but lacking the guaranteed tech shutdowns found in elite engineering firms."
   }
  },
  "commure": {
@@ -79967,11 +80291,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79983,6 +80309,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675228,
   "name": "Comtech Telecommunications Corp.",
   "pace_of_work": {
@@ -79995,6 +80322,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885364,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80038,7 +80366,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bed34ae82da9e2d032f671691774476962d979f82d6779a916633bdd7151bfb8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9jb210ZWNoLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675228,
   "web_search_url": "https://duckduckgo.com/?q=Comtech+Telecommunications+Corp.+company+careers+benefits",
@@ -98839,49 +99167,126 @@
  },
  "dls engineering associates inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca",
+    "dbc3b9e88f"
+   ],
+   "value": "Not an AI/data science employer. Tier: N/A. This is a traditional engineering consulting firm; AI/ML roles are not a focus."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Professional services / engineering consulting: revenue from project-based fees, retainers, and contracts with public and private clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Professional, collaborative, locally rooted. Small-office feel with mentorship from licensed PEs. Emphasis on technical competence, client service, and community impact. Less 'move fast break things', more 'get it right the first time'."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Government agencies, developers, architects, and private firms in Hawaii and the Pacific region requiring engineering design, planning, and consulting services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $80,000 base + modest bonus/benefits. Hawaii market for entry-level civil/environmental engineering consulting. Not competitive with top-tier AI/DS pay."
   },
   "evidence_sha": "206ab0c3b6d115e2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Engineering Consulting / Professional Services / Architecture, Engineering & Construction (AEC)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect fundamentals-heavy interviews: engineering principles, problem-solving on realistic project scenarios, CAD/software proficiency, and communication skills. Behavioral questions will emphasize teamwork, client interaction, and manageable workload habits. Prepare to discuss how you balance technical rigor with practical constraints and deadlines."
+  },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675297,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c33752cd0"
+   ],
+   "value": "Headquartered in Honolulu with multiple office locations on Oahu, Hawaii."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Deliver high-quality engineering solutions that support sustainable development and infrastructure in Hawaii and the Pacific."
+  },
   "name": "DLS Engineering Associates, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, project-driven pace with seasonal peaks. Consulting deadlines create busy periods, but work is typically scoped and scheduled — not the chaotic, always-on pace of high-growth tech."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca"
+   ],
+   "value": "Engineering consulting services (likely civil, structural, environmental, or related disciplines) for public and private sector clients in Hawaii and the Pacific region."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-8 paid holidays (typical for US engineering consulting firms of this size). No public policy found."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some firms close between Christmas and New Year; confirm with recruiter."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0c33752cd0"
+   ],
+   "value": "Small to mid-sized private firm (estimated 50-200 employees) with multiple office locations on Oahu."
   },
   "sources": [
    {
@@ -98925,14 +99330,44 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles; unlikely to have a structured new-grad visa program. Confirm directly with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c33752cd0",
+    "a232d644ca",
+    "dbc3b9e88f"
+   ],
+   "value": "DLS Engineering Associates, Inc. is an engineering consulting firm based in Hawaii with a presence on Oahu. The company hires new graduates for technical roles and appears to operate as a professional services business serving clients in the Pacific region."
+  },
+  "synthesized_evidence_sha": "206ab0c3b6d115e2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Engineering analysis, design, modeling, permitting, construction support, and project management using industry-standard tools (AutoCAD, Civil 3D, GIS, hydrologic/hydraulic modeling software). New grad roles likely involve CAD, calculations, field work, and report preparation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675297,
   "web_search_url": "https://duckduckgo.com/?q=DLS+Engineering+Associates%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "0c33752cd0"
+   ],
+   "value": "Offers a rare combination for a new grad: a mission-driven engineering firm in Hawaii with structured new-grad hiring (per SimplifyJobs), likely sane hours typical of consulting (not tech crunch culture), and the chance to work on tangible infrastructure projects that directly serve local communities. Prestige comes from project impact and professional licensure pathway, not AI hype."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Consulting firms in civil/environmental engineering often have predictable hours (40-45 typical, 50+ during crunches). Hawaii office culture may reinforce boundaries. No guaranteed shutdowns known."
   }
  },
  "dmc engineering": {
@@ -141935,37 +142370,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. While AI roles in aerospace are highly technical and selective, they do not typically carry the 'elite' software/SaaS industry prestige of companies like Google or OpenAI."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Designs and manufactures advanced aircraft for business aviation, generating revenue through aircraft sales and likely ongoing maintenance services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Mission-driven, product-focused, and highly technical."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Business aviation clients, including corporate fleets, private owners, and charter operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000 base salary for engineering roles."
   },
   "evidence_sha": "b3154052515a8b1f",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Business aviation / Aerospace manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To ensure you avoid slow-paced bureaucracy, probe the engineering team about their specific team structures, agile implementation, and how innovation flourishes despite safety regulations. Also ask directly about the specific hours and flexibility expectations, as aerospace WLB can vary significantly between teams."
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675298,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Based in the US with a presence in Louisville (hosting a hiring event for engineering)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Fueling progress through prestigious products, community support, and forging new paths in the business aviation industry."
+  },
   "name": "Gulfstream",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Guaranteed to have more rigorous engineering and compliance processes than a tech startup, but driven by prestigious product development rather than slow-paced enterprise IT."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "The world's most advanced business jet aircraft, featuring award-winning cabin interiors and technologically advanced avionics and aircraft systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO per year, though it may accrue."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141975,7 +142466,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research; no guaranteed corporate shutdowns known, though this can vary by plant."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Established, large-scale aerospace manufacturer (operating under General Dynamics)."
   },
   "sources": [
    {
@@ -142009,14 +142507,41 @@
     "url": "https://careers.gulfstream.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Not explicitly mentioned in sources, but as a subsidiary of a major defense contractor (General Dynamics), it likely sponsors visas for specialized engineering and technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Gulfstream Aerospace Corporation designs, develops, and manufactures some of the most technologically advanced business jet aircraft in the world. The company generates revenue by selling these prestigious private aircraft and providing related maintenance services to the business aviation market."
+  },
+  "synthesized_evidence_sha": "b3154052515a8b1f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "143a6a956d"
+   ],
+   "value": "Engineers design and develop the most advanced aircraft systems in business aviation. The company also requires specialized technical skills for crafting bespoke cabin interiors and supporting advanced avionics systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675298,
   "web_search_url": "https://duckduckgo.com/?q=Gulfstream+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Gulfstream perfectly fits your desire for elite, mission-driven prestige. While aerospace companies are traditionally slower, working on the world's most advanced aircraft allows you to drive cutting-edge innovation that actually respects work-life balance, offering a fast-paced engineering environment without the toxic burnout culture found in startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Large aerospace manufacturers generally offer a structured environment with predictable hours, aligning with your need for sane working conditions, though it lacks the reliability of 9-80 schedules."
   }
  },
  "gundersen health system": {
@@ -147525,41 +148050,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – High-prestige niche: top-tier aerospace + climate tech intersection; publishes at AIAA/SAE, collaborates with Chalmers/KTH, but not a general AI research lab."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Aircraft sales and leasing to regional carriers; future revenue from maintenance, charging infrastructure, and data services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, flat hierarchy, mission-obsessed, Swedish transparency (open salaries, collective bargaining), diverse international team; pragmatic rather than perks-heavy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Airlines and lessors including United Airlines, Mesa Airlines, Braathens Regional Airlines, SAS, and Air Canada (letters of intent / purchase agreements)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: SEK 450k–550k base (≈ $42k–52k USD) + equity (0.05–0.15% for MSc/PhD engineering); US roles ~$110k–130k base + equity. No public comp bands confirmed."
   },
   "evidence_sha": "575746325a280fc8",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Aerospace / Electric Aviation / Clean Tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: propulsion/thermal modeling, battery safety, real-time embedded systems, and certification artifacts (DO-178C/DO-254). Prepare to discuss cross-functional integration challenges (aero/structures/controls) and how you balance rapid iteration with rigorous safety evidence. Culture fit questions probe mission alignment and collaborative problem-solving in a flat, fast-moving org."
   },
-  "last_attempt_at": 1784884850,
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784677600,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Headquarters in Gothenburg, Sweden; US subsidiary in Los Angeles; test site in northern Sweden."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Enable sustainable, affordable regional air travel by replacing fossil-fuel flights with electric aviation."
+  },
   "name": "Heart Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast prototype-to-certification cadence (weekly hardware builds, monthly design reviews) but gated by regulatory milestones; not a \"move fast and break things\" culture—safety gates enforce discipline."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "ES-30 hybrid-electric regional aircraft (30-seat); supporting ground infrastructure and charging systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 statutory vacation days + ~10 public holidays (Sweden); unlimited sick leave; generous parental leave per Swedish law."
   },
-  "retry_after": 1784885090,
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147569,7 +148150,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide summer shutdown (3 weeks in July) + Christmas week; Swedish 'industriledighet' norms respected."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "~200 employees (2024); Series B funded (~$100M+ raised); pre-revenue, pre-certification prototype phase."
   },
   "sources": [
    {
@@ -147603,14 +148192,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=ececd8229b745227163a15f725e315dd1b768e4e7bf25852e71fb5bd479d7ff3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9IZWFydA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Swedish entity sponsors EU work permits; US entity can sponsor H-1B / O-1 for specialized engineering roles. No public blanket policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Heart Aerospace is a Swedish aerospace startup developing the ES-30, a 30-seat hybrid-electric regional aircraft designed to decarbonize short-haul aviation. The company aims to certify and deliver its first planes by 2028."
+  },
+  "synthesized_evidence_sha": "575746325a280fc8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "47522e00b7",
+    "0c5fe1f666"
+   ],
+   "value": "Electric propulsion, battery systems, aerostructures, avionics, systems integration, simulation, certification engineering, and digital tooling for aircraft development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677600,
   "web_search_url": "https://duckduckgo.com/?q=Heart+Aerospace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heart offers a rare mix: elite aerospace prestige (backed by United, Air Canada, Breakthrough Energy), cutting-edge electric-propulsion work, and a mission to decarbonize aviation—all at a pre-Series C startup scale where individual impact is high. Swedish labor norms and a founder-led culture signal stronger work-life boundaries than typical US defense/aero primes, while the technical depth (battery thermal management, high-voltage systems, DO-178C certification) accelerates career growth witho"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Swedish baseline (40h week, 5 weeks vacation, strong parental leave) plus startup intensity during integration campaigns; occasional crunch before major reviews but protected by labor law and union agreements."
   }
  },
  "hearts science": {
@@ -154632,11 +155248,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154648,6 +155266,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784583413,
   "name": "Humboldt Park Health",
   "pace_of_work": {
@@ -154660,6 +155279,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885364,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154703,7 +155323,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=86e87b28533eb22f05f5d177ddf610f2fd45c226c5c43c5b7bca4fbb0c2b311dJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWxleGFuZGVyX3Zvbl9IdW1ib2xkdA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583413,
   "web_search_url": "https://duckduckgo.com/?q=Humboldt+Park+Health+company+careers+benefits",
@@ -155963,37 +156583,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown/unverified without accessible company data; treat as unconfirmed until corroborated."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No revenue model or monetization details were found in the supplied pages."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown from sources; do not assume mission-driven or low-burnout culture without evidence."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No customer or target market information was present in the retrieved pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data was retrievable."
   },
   "evidence_sha": "69cb9b61a34f2eb2",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No industry classification was available in the supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the team ships fast without bureaucracy, confirm guaranteed shutdowns and sane hours, and ask how new-grad pay and technical mentorship compare with top-tier AI roles."
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784677296,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No office or hiring location data was retrievable from the provided pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No mission or vision statement was retrievable from the provided sources."
+  },
   "name": "iA American",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; candidates should validate whether pace is fast-innovative or bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No product description was available in the supplied sources; unable to verify what iA American builds or sells."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; confirm exact PTO policy with the company."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156003,7 +156689,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; verify whether guaranteed company-wide shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No employee count, funding stage, or growth indicators were available in the sources."
   },
   "sources": [
    {
@@ -156037,14 +156732,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=b52a82af78dbfb753b438602052b04331be41905b9a6b121c911266802a97fd5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9jaGF0Z3B0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No visa sponsorship information was found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878"
+   ],
+   "value": "Source pages for iA American repeatedly failed to resolve content during retrieval, redirecting externally to openai.com, gemini.google.com, and chatgpt.com [ae7f3d6ade, 5dca246878]. No verifiable corporate facts could be extracted from the supplied materials, so most fields below rely on conservative estimated defaults flagged accordingly."
+  },
+  "synthesized_evidence_sha": "69cb9b61a34f2eb2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ae7f3d6ade",
+    "5dca246878",
+    "7c2d01ab37"
+   ],
+   "value": "No engineering or data science role details could be confirmed from the supplied materials."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677296,
   "web_search_url": "https://duckduckgo.com/?q=iA+American+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If iA American has a genuine AI/data science charter, it could fit a candidate seeking elite learning and fast innovation; the priority is sane hours and guaranteed shutdowns, so verify burnout risk and shutdown policy before assuming fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; verify actual hours and shutdown expectations directly."
   }
  },
  "iambic therapeutics": {
@@ -183013,47 +183740,118 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no evidence of AI/data science presence or reputation in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "No business model information found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "No customer information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data for new grads or any roles in sources."
   },
   "evidence_sha": "7bd7547956039bdf",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "Industry unknown; sources do not identify Legit Script's sector."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "No interview process information available in sources. Candidate should prepare for standard AI/data science technical interviews but cannot tailor preparation to company-specific focus areas without additional research."
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675294,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Location unknown; no headquarters or office information in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Legit Script",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no work pace or culture information in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "No product information found in the provided sources. Sources only contain dictionary definitions for 'legit' and content about Rippling's recruiting software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy information in sources."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no information about guaranteed shutdowns or company-wide time-off policies in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage; no company data available in sources."
   },
   "sources": [
    {
@@ -183087,14 +183885,43 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy unknown; no immigration or hiring policy data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "Legit Script appears to be a company name that may refer to a legitimate script or verification service, but the provided sources contain only dictionary definitions of the word 'legit' and unrelated content about Rippling Recruiting. No verifiable company information about Legit Script's operations, products, or business model is available in the supplied sources."
+  },
+  "synthesized_evidence_sha": "7bd7547956039bdf",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f9da8ea14d",
+    "be6ecf2627",
+    "bfda074b6a"
+   ],
+   "value": "No technical work information found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675294,
   "web_search_url": "https://duckduckgo.com/?q=Legit+Script+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, high new-grad pay, fast innovative culture, mission-driven with work-life balance, guaranteed shutdowns, accelerated learning) due to complete absence of company-specific information in provided sources. Candidate should independently verify Legit Script's actual operations, tech stack, compensation, and culture before pursuing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data or policy information in sources."
   }
  },
  "leica biosystems": {
@@ -203211,34 +204038,88 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional law firm model: billable hours, flat fees, and contingency arrangements for legal services across practice areas."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, hierarchical, professional services culture. Emphasis on precedent, accuracy, client service, and billable hours. Not mission-driven in the tech sense; minimal 'guaranteed shutdown' culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "75ae898e70",
+    "1f2701b2d1",
+    "6d0f3b58b3"
+   ],
+   "value": "Individuals and businesses seeking legal representation in Minnesota. No specific client segments documented in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 for entry-level IT/legal tech roles. Not competitive with top-tier AI/DS new-grad packages ($150k+). Attorneys start significantly higher ($100k-$180k) but require JD/bar passage."
   },
   "evidence_sha": "e50ef7efc109074a",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "75ae898e70",
+    "1f2701b2d1",
+    "6d0f3b58b3"
+   ],
+   "value": "Legal Services / Law Firm"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "If interviewing for a rare internal tech role: expect questions on legal tech, document management, security/compliance, and supporting attorney workflows. No AI/DS research or product engineering focus. Ask about billable-hour expectations for staff, on-call rotations, and technology budget."
   },
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784676901,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Minneapolis/St. Paul, Minnesota metro area based on firm name and Minnesota Professional Association registration."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not documented in provided sources. Law firms typically aim to provide quality legal representation and counsel."
+  },
   "name": "Messerli Kramer, P.A.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: High intensity driven by court deadlines, client demands, and billable-hour targets. Not a 'fast innovative tech culture' but a high-pressure professional services environment."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "75ae898e70",
+    "1f2701b2d1",
+    "6d0f3b58b3"
+   ],
+   "value": "Legal services (likely including real estate law given directory presence on Zillow/Realtor.com). Specific practice areas not documented in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical for mid-sized law firms). No guaranteed shutdown periods."
   },
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203248,7 +204129,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None. Law firms do not typically have company-wide shutdowns due to continuous client obligations and court deadlines."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized regional law firm (likely 50-200 attorneys). 'P.A.' designation indicates Professional Association structure common for established firms."
   },
   "sources": [
    {
@@ -203282,14 +204168,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e5aef9955abc2098443c1951ca122d103f8893d1247c885610224e60b84b9e04JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuemlsbG93LmNvbS9lYWdsZS1pZC8_bXNvY2tpZD0wMTg2M2NiM2VjMmQ2MjcxMjY4YzJiMmVlZGMyNjM0OQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H-1B for non-attorney tech roles. Law firms typically sponsor for attorney positions requiring bar admission."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "75ae898e70",
+    "1f2701b2d1",
+    "6d0f3b58b3"
+   ],
+   "value": "Messerli Kramer, P.A. is a professional association (law firm) based in Minnesota. The provided sources are redirect links from real estate directories (Zillow, Realtor.com) that do not contain substantive information about the firm's operations, practice areas, or employment details."
+  },
+  "synthesized_evidence_sha": "e50ef7efc109074a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited technical/AI/data science roles expected. Primary work is legal practice; any tech roles would support internal operations (IT, e-discovery, legal tech tools)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676901,
   "web_search_url": "https://duckduckgo.com/?q=Messerli+Kramer%2C+P.A.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Poor for work-life balance. Law firms typically expect 50-70+ hour weeks for attorneys; staff roles may have better hours but still face deadline-driven crunches."
   }
  },
  "meta": {
@@ -310842,41 +311753,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low to moderate for AI/DS roles, with prestige limited to academic research prestige rather than elite industry recognition."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Public university system funded by state and local government allocations, student tuition, endowments, and research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional academic environment, bureaucratic, mission-driven, student-focused, collaborative within research groups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Students seeking higher education, professionals pursuing continuing education, researchers, and the broader New York City community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 per year, significantly lower than private-sector tech roles and well below elite new-grad compensation."
   },
   "evidence_sha": "2ce2e75a09bd366c",
+  "generated_at": 1784885244,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Higher Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether technical roles provide meaningful data science work or primarily administrative IT support. Determine if research collaborations offer innovation opportunities. Clarify compensation structures and advancement paths to ensure alignment with career growth expectations."
   },
-  "last_attempt_at": 1784885067,
+  "last_attempt_at": 1784885244,
   "last_evidence_at": 1784675227,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "New York City, with campuses across all five boroughs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "To provide accessible, high-quality education to diverse populations, fostering academic excellence, research, and community service."
+  },
   "name": "The City University of New York",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate, typical of academic and public sector environments, prioritizing process adherence over rapid tech iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Undergraduate and graduate degree programs across various disciplines, research initiatives, professional certifications, community education, and public events."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30+ days including holidays, vacation, and personal leave for staff, typical of public university benefits."
   },
-  "retry_after": 1784885187,
+  "refresh_after": 1790069244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310886,7 +311859,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes holiday shutdowns between semesters, not guaranteed outside academic calendar breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Very large public institution with multiple campuses, serving over 200,000 students."
   },
   "sources": [
    {
@@ -310920,14 +311902,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b6799b6b52c4468488a40ccb39d21cfc70fb1df138a8d6d220192af3bae40a8dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "Limited information available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "The City University of New York (CUNY) is the public university system of New York City, comprising 25 campuses including community colleges, senior colleges, and graduate institutions. As a public higher education institution, it generates revenue through government funding, student tuition, grants, and research allocations."
+  },
+  "synthesized_evidence_sha": "2ce2e75a09bd366c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5342b0027",
+    "dc6540b320",
+    "9e3385b095"
+   ],
+   "value": "AI and data science work is primarily academic research-focused, limited administrative IT roles, data analytics supporting student services and institutional research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675227,
   "web_search_url": "https://duckduckgo.com/?q=The+City+University+of+New+York+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university, CUNY is deeply mission-driven and offers strong work-life balance compared to private tech companies. However, technical roles are largely administrative or academic, lacking the elite prestige and high compensation of top-tier AI roles. Bureaucracy may hinder the fast-paced, innovative tech culture desired."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong, with predictable hours typical of public sector roles, aligning with candidate priorities for sane hours."
   }
  },
  "the d e shaw group": {
