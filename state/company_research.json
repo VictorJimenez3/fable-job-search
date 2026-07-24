@@ -33989,41 +33989,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong automotive domain prestige, massive deployment scale, but less pure-AI brand recognition than tech-first companies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Astemo operates as a tier-1 automotive supplier, generating revenue by designing, engineering, and manufacturing proprietary systems and components sold directly to vehicle manufacturers under long-term contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, consensus-driven, safety-obsessed, hierarchical but respectful; strong mentorship (senpai/kohai), low politics, high stability; English is corporate language but Japanese fluency accelerates career."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Global automotive OEMs including Japanese, European, and American manufacturers; motorcycle OEMs; and tier-1 suppliers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US new grad total compensation ~$100k-$130k (base $85k-$105k + bonus/RSU); Japan ~¥4.5M-¥6M; varies by site and role."
   },
   "evidence_sha": "45f9329809c84740",
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Automotive technology / Tier-1 supplier"
   },
-  "last_attempt_at": 1784894953,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical assessment on embedded ML, control theory, and real-time systems (C/C++, Python, MATLAB/Simulink). Prepare for behavioral questions on cross-cultural collaboration (global teams), safety-critical development processes (ISO 26262), and balancing innovation with automotive-grade reliability. Ask about dedicated learning time, internal mobility between Japan/US/EU sites, and how data science integrates with traditional mechanical/hydraulic engineering teams."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784678954,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Tokyo, Japan; major R&D and manufacturing sites in Japan, US (Michigan, Ohio), Europe (Germany, UK), China, India, Southeast Asia, and South America."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To contribute to a sustainable society through advanced mobility technologies that enhance safety, environmental performance, and driving pleasure."
+  },
   "name": "Astemo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Automotive development cycles (2-4 years) enforce structured pacing; crunch periods near program milestones but generally predictable compared to consumer tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Powertrain systems (engine management, transmissions, electrification), chassis systems (steering, suspension, braking), motorcycle systems, and advanced driver assistance systems (ADAS)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual leave + 10-15 national holidays (Japan); US sites typically 15-20 days + 10 holidays."
   },
-  "retry_after": 1784895193,
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34033,7 +34071,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Company-wide shutdowns for Obon (mid-August, ~1 week) and Year-End/New Year (late Dec-early Jan, ~1 week) are standard in Japan; US sites observe similar summer/winter breaks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large global enterprise with approximately 50,000+ employees across 20+ countries; established 2021 via joint venture, backed by Hitachi and Honda."
   },
   "sources": [
    {
@@ -34067,14 +34110,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=633f5b5e8462b8a3865746616d7d8b09a87a1bd54581e321cda041f9ee893f28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly93d3cuYXN0ZW1vLmNvbS9lbi8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and other work visas for specialized engineering roles in the US; global mobility programs exist for internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Astemo is a global automotive technology supplier formed from the merger of Hitachi Automotive Systems, Keihin, Showa, and Nissin Kogyo. The company develops and manufactures advanced mobility solutions including powertrain, chassis, and motorcycle systems for automakers worldwide."
+  },
+  "synthesized_evidence_sha": "45f9329809c84740",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Embedded software, control systems, model-based development, electrification (inverters, motors, BMS), ADAS/autonomous driving algorithms, simulation, and hardware-in-the-loop testing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678954,
   "web_search_url": "https://duckduckgo.com/?q=Astemo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Astemo offers new-grad AI/data scientists a rare combination: elite automotive tier-1 prestige with massive scale (50k+ employees, global footprint), direct impact on vehicle electrification and ADAS deployed on millions of cars, and a Japanese-engineering culture that historically emphasizes stability and reasonable hours over burnout. The Hitachi/Honda backing provides financial security while the 2021 formation means modern tech stacks and less legacy bureaucracy than older suppliers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Japanese corporate culture emphasizes work-life harmony; guaranteed shutdowns (Obon, New Year) and overtime caps exist, but global teams may require early/late calls."
   }
  },
  "astranis space technologies": {
@@ -52922,11 +52986,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52938,6 +53004,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679037,
   "name": "BMO",
   "pace_of_work": {
@@ -52950,6 +53017,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895485,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53003,7 +53071,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679037,
   "web_search_url": "https://duckduckgo.com/?q=BMO+company+careers+benefits",
@@ -80769,37 +80837,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - limited public data on AI/data science reputation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Business model not publicly disclosed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no public culture information."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Customer base not publicly disclosed."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not publicly disclosed."
   },
   "evidence_sha": "7997f1ddbb45755b",
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology / Civic Tech / GovTech (inferred from name)."
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679036,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Office locations not publicly disclosed."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission statement not publicly available."
+  },
   "name": "Civitech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no public information on work pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No specific product information found in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not publicly disclosed."
   },
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80809,7 +80919,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public policy information on guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Company size and stage not publicly available."
   },
   "sources": [
    {
@@ -80843,14 +80958,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e2c0acc7e2ae1678a43018fe808f8aa102bf644a91336c09dbf39f65219e36faJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI3MTU3OTU0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy not publicly available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Civitech appears to be a technology company with limited public information available in the provided sources. The supplied sources are Zhihu discussion links that do not contain extractable details about the company's products, business model, or operations."
+  },
+  "synthesized_evidence_sha": "7997f1ddbb45755b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technical focus areas not publicly documented."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679036,
   "web_search_url": "https://duckduckgo.com/?q=Civitech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no public work-life balance data."
   }
  },
  "clarity innovations": {
@@ -164252,11 +164388,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164268,6 +164406,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679036,
   "name": "HELLBENDER",
   "pace_of_work": {
@@ -164280,6 +164419,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895485,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164323,7 +164463,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2bf454a6153d3dcdf84cca2dbd2dc14c80abc2e412a4c5adc047833c5d910978JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9IZWxsYmVuZGVy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679036,
   "web_search_url": "https://duckduckgo.com/?q=HELLBENDER+company+careers+benefits",
@@ -173551,11 +173691,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173567,6 +173709,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679095,
   "name": "iboss",
   "pace_of_work": {
@@ -173579,6 +173722,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895485,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173622,7 +173766,7 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679095,
   "web_search_url": "https://duckduckgo.com/?q=iboss+company+careers+benefits",
@@ -225018,52 +225162,125 @@
  "merck co": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High domain prestige due to impactful healthcare AI applications, though slightly below top-tier big tech in general software engineering prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce"
+   ],
+   "value": "Research-driven pharmaceutical model that generates revenue through the commercialization of patented drugs and vaccines."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "Estimated: Mission-driven and patient-focused, characterized by large corporate structure and scientific rigor rather than hacker-culture speed."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce"
+   ],
+   "value": "Healthcare providers, hospitals, pharmacies, governments, and patients globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Highly competitive base salary around $130k-$160k, reflecting large pharmaceutical industry standards for elite new-grad data scientists."
   },
   "evidence_sha": "18c07e8f857036f2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784895176,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce"
+   ],
+   "value": "Pharmaceuticals and Biotechnology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Be prepared to discuss how you can drive fast, innovative AI solutions within a regulated environment. Ask interviewers about team autonomy, technical mentorship speed, and how the group balances sane work hours with agile delivery to ensure it avoids heavy bureaucracy."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679030,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "Global operations with a significant US presence, including major R&D hubs in New Jersey and Massachusetts."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "To discover, develop, and provide innovative products and services that save and improve lives around the world."
+  },
   "name": "Merck & Co.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "Estimated: Generally slower and more process-driven than pure tech companies due to strict regulatory compliance, though specific innovation labs may move faster."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce"
+   ],
+   "value": "Prescription medicines, vaccines, biologic therapies, and animal health products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "da770d9436"
+   ],
+   "value": "Estimated: Standard large pharma package likely offering 20-25 days of flexible PTO annually."
   },
-  "retry_after": 1784895296,
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "da770d9436"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical large pharma operates year-round with standard floating holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce"
+   ],
+   "value": "Large-cap, established publicly traded global enterprise."
   },
   "sources": [
    {
@@ -225107,14 +225324,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da770d9436"
+   ],
+   "value": "Estimated: As a large global pharma company, likely to sponsor work visas for highly specialized AI and data science talent, though specific new-grad policies are not confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "893686bfce",
+    "15ef376b95"
+   ],
+   "value": "Merck & Co. (known as MSD outside the US and Canada) is a global pharmaceutical company that develops medicines, vaccines, and animal health products. It makes money by discovering, manufacturing, and selling these prescription therapies and biologics to healthcare providers and patients worldwide."
+  },
+  "synthesized_evidence_sha": "18c07e8f857036f2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "15ef376b95",
+    "17f8c9c419"
+   ],
+   "value": "AI and data science roles focused on drug discovery, clinical trial optimization, and bioinformatics, utilizing machine learning to accelerate pharmaceutical research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679030,
   "web_search_url": "https://duckduckgo.com/?q=Merck+%26+Co.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "While pharma is traditionally slower than big tech, Merck offers elite mission-driven prestige and highly competitive new-grad pay. Securing a core AI role here can accelerate technical learning on massive datasets, but you will need to navigate a large corporate structure to maintain fast-paced innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "15ef376b95"
+   ],
+   "value": "Estimated: Generally good work-life balance with sane hours compared to high-burnout tech startups, though it varies by specific team and project deadlines."
   }
  },
  "mercor": {
@@ -227066,41 +227316,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied AI in engineering context; not a primary AI research destination"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based professional services fees (time-and-materials, fixed-price, and cost-plus contracts) from public and private sector infrastructure engagements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, engineering-centric, collaborative within project teams. Hierarchical by discipline; strong safety/quality focus. Not a 'move fast and break things' tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal, state, and local government agencies (DOTs, DoD, EPA), transit authorities, private developers, and commercial clients across transportation, water, energy, and federal markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + modest bonus (AEC market rate); well below top-tier tech ($120k-$180k+)."
   },
   "evidence_sha": "7d8470e1ba1430ad",
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Architecture, Engineering & Construction (AEC) / Infrastructure Consulting"
   },
-  "last_attempt_at": 1784894953,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: (1) Specific AI/DS team structure and whether work is R&D vs. applied implementation; (2) Billable utilization targets and typical weekly hours; (3) Mentorship and technical ladder for data scientists; (4) Digital twin/asset management product roadmap; (5) Remote/hybrid flexibility and overtime norms."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784678955,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Pittsburgh, PA; 90+ offices across the US and select international locations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Delivering innovative infrastructure solutions that improve communities and enable sustainable growth through engineering excellence and client partnership."
+  },
   "name": "Michael Baker International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven; moderate to high intensity near deliverables. Billable-hour culture creates variable pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering design, planning, program management, construction management, environmental consulting, and technology solutions for infrastructure and transportation projects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (varies by tenure/role); no public policy details found."
   },
-  "retry_after": 1784895193,
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227110,7 +227398,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns publicly documented; some offices may observe limited holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-to-large private firm (~3,000-4,000 employees) with 80+ years of operation, owned by private equity (Arcus Infrastructure Partners) since 2022."
   },
   "sources": [
    {
@@ -227144,14 +227437,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3239a1b0d5f8bf7266009feeeb6e7f14957893ff05efc211fb6a005dd48c21e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9NaWNoYWVsXygyMDI2X2ZpbG0p&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized engineering roles; limited public data on new-grad GC sponsorship. Candidate should confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Michael Baker International is an engineering, planning, and consulting firm providing services for infrastructure, transportation, and environmental projects. The company generates revenue through professional services contracts with government agencies and private sector clients."
+  },
+  "synthesized_evidence_sha": "7d8470e1ba1430ad",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Civil/structural engineering, GIS/geospatial, BIM/VDC, transportation modeling, water resources modeling, environmental analysis, and emerging digital twin/asset management platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678955,
   "web_search_url": "https://duckduckgo.com/?q=Michael+Baker+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new grad seeking elite AI/data science prestige with high pay and work-life balance: Michael Baker is a traditional engineering consultancy, not a tech-first AI shop. AI/DS roles likely support digital delivery/BIM/digital twin initiatives rather than core product R&D. Pay is competitive for AEC but below top-tier tech. Culture is project-driven with billable-hour expectations; guaranteed shutdowns are uncommon. Learning is strong in domain-specific engineering tech, but pace varies by pro"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Billable targets and client deadlines can extend hours; limited guaranteed shutdowns."
   }
  },
  "michigan medicine": {
@@ -254615,37 +254929,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied data science at scale within a holding company, but not a primary AI research destination. Prestige derives from Omnicom brand and client access rather than AI breakthroughs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Agency model earning revenue via media commissions (percentage of media spend), fixed fees for strategy and planning, and performance-based incentives. Operates as part of Omnicom Media Group holding company."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-service oriented, hierarchical. Collaboration across strategy, data, and media teams. Innovation encouraged within guardrails of media compliance and brand safety. Less 'hacker culture' than tech-native firms."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large national and multinational advertisers across consumer packaged goods, automotive, financial services, technology, retail, and entertainment sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$105k base USD (US entry-level data scientist/analyst). Brazil: R$6k–R$10k/month CLT. Varies significantly by market. Bonus potential 5–15%."
   },
   "evidence_sha": "827ede2c8e23c71b",
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Advertising / Media Agency / Marketing Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case studies on media optimization, attribution modeling, and audience segmentation. Probe for: (1) engineering vs. analytics role clarity, (2) client-facing vs. internal tooling balance, (3) on-call expectations during campaign launches, (4) mentorship structure for new grads, (5) actual shutdown policies vs. agency crunch periods."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784678871,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb1ad694ac",
+    "72c429e903",
+    "45c368ebb3"
+   ],
+   "value": "Global presence with major hubs in New York, London, Shanghai, Singapore, São Paulo, and 100+ offices worldwide. Brazilian entity indicated by .br source domains."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver better outcomes for clients through data-driven media decisions, combining scale, technology, and talent to optimize advertising investment."
+  },
   "name": "OMD",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — Project-driven with campaign cycles causing periodic intensity. Agency deadlines and client requests can create bursts; not a constant 'ship daily' tech culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Media planning and buying, audience analytics, programmatic advertising, search and social media management, commerce media, and marketing effectiveness measurement."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual leave + local holidays (varies by country). Brazil sources suggest compliance with CLT (30 days after 1 year). US offices typically 15–20 days + 10 holidays."
   },
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254655,7 +255015,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some regions may observe year-end slowdown (Dec 24–Jan 2) but not policy. Client needs dictate availability."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb1ad694ac",
+    "72c429e903",
+    "45c368ebb3"
+   ],
+   "value": "Estimated: Large, mature subsidiary of publicly traded Omnicom Group (NYSE: OMC). Global workforce ~12,000+ across 100+ offices. Brazil entity referenced in sources."
   },
   "sources": [
    {
@@ -254689,14 +255058,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=67212ee9bfde3448868b2fae02bc54f00298e50ae069e1f52e59761d102b1975JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cDovL3BjcHJldmVudGl2by5jb20uYnIvaW1nL25vcm1hcy9uYnIxNDAzNy1tYW51YWxkZW9wZXJhY2FvdXNvZW1hbnV0ZW5jYW9kYXNlZGlmaWNhY29lcy1jb250ZXVkb2VyZWNvbWVuZGFjb2VzcGFyYWUtMTIxMjI4MTM0NTMwLXBocGFwcDAxLnBkZg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational, likely sponsors H-1B and other work visas in key markets (US, UK, EU, APAC). Specific policies not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "OMD is a global media agency network within Omnicom Group that specializes in media planning, buying, and optimization for advertisers across digital and traditional channels. It generates revenue through commissions and fees for media purchasing and strategic advisory services."
+  },
+  "synthesized_evidence_sha": "827ede2c8e23c71b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science for audience segmentation, media mix modeling, attribution, programmatic bidding algorithms, marketing analytics dashboards, and automation of media workflows. Tech stack includes cloud data platforms, Python/R, SQL, and ad-tech APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678871,
   "web_search_url": "https://duckduckgo.com/?q=OMD+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "OMD offers data science roles at massive scale with access to proprietary media spend and audience data across global brands. However, as a traditional media agency, its tech culture may be slower and more process-driven than pure-play tech firms, and work-life balance can vary by client demands and office. Prestige comes from Omnicom scale and blue-chip client roster, but innovation pace may lag dedicated AI companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Agency environment means client emergencies and pitch periods can disrupt balance. Some offices promote 'right to disconnect' but enforcement varies. Not a guaranteed-shutdown culture."
   }
  },
  "omega home health care services inc": {
@@ -302051,41 +302441,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. While they handle large-scale TV viewership data, there is no evidence of elite, cutting-edge AI research or top-tier industry prestige for data scientists."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "75f0963c34"
+   ],
+   "value": "Operates on consumption-based project billing (where revenue depends on customer drawdowns against commitments) and subscription arrangements with renewal, expansion, and churn dynamics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "75f0963c34",
+    "9551b04591"
+   ],
+   "value": "Corporate but fast-moving, centered around a strong revenue engine and operational backbone."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34"
+   ],
+   "value": "Enterprise clients in the media, advertising, and television sectors seeking TV measurement and audience analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $140,000 base salary for new grads in technical roles, commensurate with mid-stage media-tech companies."
   },
   "evidence_sha": "9a9dac4647670aa8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784894953,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34",
+    "9551b04591"
+   ],
+   "value": "Media measurement and media intelligence."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "75f0963c34"
+   ],
+   "value": "Candidates should probe whether the 'high-stakes, high-visibility' revenue-driven culture translates to high pressure and long hours for technical teams. Ask about the actual day-to-day involvement of AI/ML in the analytics products and the balance between rapid feature shipping and technical debt."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784678956,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "140e82bfc4"
+   ],
+   "value": "Global presence, with operations referenced in the US and international markets (e.g., Brazil/Samba)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6307672b0"
+   ],
+   "value": "Not explicitly stated in sources, but focuses on empowering media and advertising clients through trusted, measurable data intelligence solutions."
+  },
   "name": "Samba TV",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "75f0963c34"
+   ],
+   "value": "Estimated: Fast-paced and high-stakes, driven by active enterprise sales and consumption-based revenue targets."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0"
+   ],
+   "value": "Enterprise products focusing on Media Activation, TV measurement, planning, tune-in analysis, and outcomes-based strategies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO annually, though exact policy is not public."
   },
-  "retry_after": 1784895193,
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -302095,7 +302545,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed company-wide shutdowns; any shutdowns would likely be limited to standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34"
+   ],
+   "value": "Mid-stage, private company with an established revenue engine and active enterprise sales operations."
   },
   "sources": [
    {
@@ -302159,14 +302617,44 @@
     "url": "https://jobs.lever.co/sambatv/220ac39b-ad50-4d4a-83c2-4cf734ed4b7a"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34"
+   ],
+   "value": "Samba TV is a media intelligence company that provides data and analytics for the television industry. It makes money by offering enterprise products and SaaS subscriptions for TV measurement, media activation, planning, and tune-in analysis to clients."
+  },
+  "synthesized_evidence_sha": "9a9dac4647670aa8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34"
+   ],
+   "value": "Involves building and maintaining audience analytics platforms, large-scale TV measurement data pipelines, and media activation tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678956,
   "web_search_url": "https://duckduckgo.com/?q=Samba+TV+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f6307672b0",
+    "75f0963c34"
+   ],
+   "value": "May not perfectly align with the candidate's priorities, as the focus appears to be on commercial and revenue-driving roles rather than top-tier AI/data science research. The environment is described as high-stakes and high-visibility, which may conflict with the desire for guaranteed work-life balance and strict shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. The emphasis on high-visibility, high-stakes commercial roles may indicate a demanding environment."
   }
  },
  "sambanova systems": {
@@ -347391,11 +347879,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -347407,6 +347897,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679037,
   "name": "The Information Lab",
   "pace_of_work": {
@@ -347419,6 +347910,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895485,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -347482,7 +347974,7 @@
     "url": "https://jobs.lever.co/theinformationlab/851d2d0b-b554-4d7c-8dc0-aa390366b6ea"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679037,
   "web_search_url": "https://duckduckgo.com/?q=The+Information+Lab+company+careers+benefits",
@@ -374122,7 +374614,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -374140,7 +374632,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784895176,
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784678781,
   "name": "Velera",
   "pace_of_work": {
@@ -374153,7 +374645,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784895296,
+  "retry_after": 1784895605,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -385833,37 +386325,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied research team solving genuine OR/ML problems at scale, recognized in mobility tech but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Commission-based revenue from each ride booked through the platform; corporate subscription contracts for managed transportation services; possible surge/peak pricing margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, metrics-driven, international team with high autonomy. Values precision and rider experience over hyper-growth-at-all-costs. Likely lower political friction than large unicorns."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Affluent individual riders, corporate clients for employee/executive transport, luxury hotels and concierge services in major metropolitan areas."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: London new grad total comp £55k–£75k base + equity (significantly below US FAANG but competitive for UK premium tech); US new grad $120k–$150k base + equity if hired in NYC."
   },
   "evidence_sha": "fc0a0a641aadaca0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Premium ride-hailing / luxury transportation technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Expect deep technical screening on operations research (vehicle routing, assignment problems), stochastic optimization, and production ML systems. Prepare for case studies on demand-supply balancing, dynamic pricing, and real-time dispatch. Behavioral questions will likely probe ownership, cross-functional collaboration, and ability to ship in a fast-paced but quality-focused environment."
+  },
+  "last_attempt_at": 1784895365,
   "last_evidence_at": 1784679037,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Headquarters in London; operational cities across Europe (e.g., Paris, Moscow, Zurich), US (e.g., New York), and Middle East (e.g., Dubai); engineering hubs likely in London and possibly other European tech centers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Redefining premium transportation by combining luxury service with technology-driven reliability and convenience."
+  },
   "name": "Wheely",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced feature delivery with 2-week sprints; on-call rotations for production systems; quarterly planning cycles. Not a 9-5-6 culture but avoids death marches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Consumer and corporate mobile app for booking premium chauffeur-driven vehicles; enterprise transportation management platform; driver fleet management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (UK/EU statutory minimum 28 days including bank holidays) plus public holidays per country."
   },
+  "refresh_after": 1790079365,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -385873,7 +386421,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; team-level holiday coverage planning typical for 24/7 operations."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200–500 employees; Series B/C stage, expanding internationally across Europe, US, and Middle East."
   },
   "sources": [
    {
@@ -385917,14 +386470,41 @@
     "url": "https://boards.greenhouse.io/wheely/jobs/7655287003?gh_jid=7655287003"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers visa sponsorship for technical roles in UK and EU given international hiring needs; US sponsorship likely for key hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Wheely is a premium chauffeur service operating in major cities across Europe, the US, and the Middle East, offering high-end ride-hailing via a mobile app."
+  },
+  "synthesized_evidence_sha": "fc0a0a641aadaca0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Operations research for routing and matching algorithms; demand forecasting and dynamic pricing; real-time dispatch optimization; data science for rider/driver behavior analytics; backend services for high-availability booking platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679037,
   "web_search_url": "https://duckduckgo.com/?q=Wheely+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5215af518"
+   ],
+   "value": "Wheely offers a top-tier AI/data science role in operations research at a premium mobility company that balances elite technical challenges (complex routing, real-time matching) with a mission-driven culture. The international footprint and focus on premium service suggest high engineering standards without the bureaucracy of mega-corps, and the European base may provide stronger work-life norms than typical US ride-hailing firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — European labor norms provide baseline protections; premium service demands reliability but engineering culture appears to respect boundaries. Some on-call burden for real-time platform."
   }
  },
  "white cap supply holdings": {
