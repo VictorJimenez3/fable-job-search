@@ -137356,78 +137356,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Respected industry practitioner with real production ML at scale, but not an AI research lab or tech-first brand."
+   "value": "Estimated: Tier 2, lacking the elite prestige and dedicated innovative tech culture of top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Traditional bank revenue model: net interest income from loans and deposits, plus non-interest income from fees, wealth management, and payment services."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Banking as a Service, commercial banking, retail banking, and investment advisory. They generate revenue via net interest income from lending, plus non-interest income from banking fees."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Collaborative, process-aware, mission-oriented; engineers describe it as 'adult supervision with autonomy' — less hackathon energy, more sustainable delivery."
+   "value": "Estimated: Traditional corporate banking culture requiring navigation of slower bureaucracy, which might conflict with a preference for fast innovation."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Individual consumers, small businesses, middle-market companies, and institutional clients primarily in the Midwest and Southeast U.S."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85"
+   ],
+   "value": "Individual consumers, businesses, and wealth management clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $110k-$130k base + 10-15% target bonus + RSU grant (~$20k-$30k over 4 years); total comp ~$140k-$170k year one."
+   "value": "Estimated: $75,000 USD (conservative). Large regional banks do not typically match elite tech compensation."
   },
   "evidence_sha": "dc630a964cc4b7e2",
-  "generated_at": 1784893681,
+  "generated_at": 1784916377,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Financial Services / Regional Banking"
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Banking, Financial Services."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect practical ML system design (fraud, credit risk, personalization), SQL/analytics case studies, and behavioral questions on stakeholder management in a regulated environment. Prepare to discuss model governance, fairness, and deployment constraints."
+   "value": "In your interview, prioritize questions about how innovative the tech culture really is versus slow bureaucracy. Additionally, probe for exact details on expected working hours, on-call duties, and how much personal time is actually protected from burnout."
   },
-  "last_attempt_at": 1784915802,
+  "last_attempt_at": 1784916377,
   "last_evidence_at": 1784908633,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Cincinnati, OH. Major tech hubs: Cincinnati, Chicago, Detroit, Tampa. Remote/hybrid options vary by role."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Operations and branches are located across multiple U.S. states; remote work options may be available for specific roles."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To improve lives and communities through financial services, with stated commitments to inclusion, sustainability, and community reinvestment."
+   "confidence": "low",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "To help people and businesses achieve their financial goals. (Inferred from standard banking operations)."
   },
   "name": "Fifth Third Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate — Project cycles measured in quarters; regulatory gates add review steps but leadership pushes agile delivery for digital products."
+   "value": "Estimated: Steady and measured, typical of legacy banking institutions, which may lack a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Consumer banking (checking, savings, loans, mortgages, credit cards), commercial banking, wealth management, and digital/mobile banking platforms."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Personal and mobile banking platforms, credit cards, loans, mortgages, and wealth management services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2-3 'recharge days' annually; accrues with tenure."
+   "value": "Estimated: 0-21 days depending on tenure and role tier."
   },
-  "retry_after": 1784916282,
+  "refresh_after": 1790100377,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137437,12 +137460,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus two company-wide 'recharge days' per quarter; not a guaranteed weekly shutdown."
+   "value": "Estimated: Not known for guaranteed shutdowns; standard bank holidays observed."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large public company (NASDAQ: FITB), ~$210B assets, ~19,000 employees, mature stage with established market position."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Large regional bank and public company."
   },
   "sources": [
    {
@@ -137487,20 +137514,33 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles; typical for large U.S. banks with dedicated immigration teams."
+   "confidence": "low",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Sponsorship opportunities may vary by role; typically standard for large U.S. regional banks."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fifth Third Bank is a regional U.S. bank headquartered in Cincinnati, Ohio, offering consumer and commercial banking services across 11 states. It operates through a mix of physical branches and digital channels."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Fifth Third Bank is a regional bank offering retail and commercial banking services. They make money through lending, deposit services, and wealth management."
   },
+  "synthesized_evidence_sha": "dc630a964cc4b7e2",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core banking systems modernization, cloud migration, data analytics, fraud detection, digital/mobile app development, and emerging AI/ML applications in risk and customer experience."
+   "confidence": "medium",
+   "source_ids": [
+    "5a7219dc85",
+    "740ef39c7f",
+    "9bac1933d6"
+   ],
+   "value": "Mobile banking platform development, online banking features, and digital banking infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678727,
@@ -137508,12 +137548,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Offers a rare blend for a new-grad AI/data scientist: a top-20 U.S. bank with serious data scale and regulatory-grade ML use cases, competitive pay packages, and a public commitment to 'no-meeting Fridays' and 40-hour norms that signals genuine WLB intent—without the burnout culture of pure-play tech or quant finance."
+   "value": "As a candidate, your focus is on a top-tier AI/data role balancing elite prestige and high new-grad pay with a fast, innovative tech culture. Fifth Third Bank would need to convince you that its environment accelerates technical learning and truly respects work-life balance, unlike the slow bureaucracy typical in banking."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "4/5 — Public 'Flexible Work' policy, core-hours expectation, and explicit 'recharge days' suggest strong WLB for a large bank; on-call rotation exists for critical platforms."
+   "value": "Estimated: The company claims to support work-life balance, but it is lacking guaranteed protections like shutdowns typically associated with the banking industry."
   }
  },
  "figma": {
