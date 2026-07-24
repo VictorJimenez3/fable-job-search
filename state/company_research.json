@@ -168926,51 +168926,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. High engineering caliber and brand recognition in the tech-enabled healthcare space, though not considered a Big Tech or top-decile AI research lab."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699"
+   ],
+   "value": "Takes a percentage-based fee or administrative cut from the billing operations and patient-therapist matches facilitated through its platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented and highly collaborative. Teams are driven by the social impact of improving mental health while maintaining a startup-style execution mindset."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "11a9ffa699"
+   ],
+   "value": "Individuals seeking affordable mental health care, and mental health professionals and therapists looking to grow their private practices."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $170,000 base, supplemented by meaningful equity. Late-stage funding rounds likely push total compensation to compete with elite tech companies."
   },
   "evidence_sha": "785d36788d6a0732",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784901029,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900757,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699"
+   ],
+   "value": "Healthcare Technology / Mental Health Services."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784901029,
   "last_evidence_at": 1784680916,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77"
+   ],
+   "value": "Remote-first with a distributed workforce (primary operational roots in New York)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "11a9ffa699"
+   ],
+   "value": "To build a new mental healthcare system that is accessible to everyone, by removing the bureaucratic and financial hurdles of insurance."
+  },
   "name": "Headway",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and dynamic. As a venture-backed tech scale-up, the culture is driven by innovation and rapid deployment to capture market share."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699"
+   ],
+   "value": "A patient-facing marketplace to find in-network therapists, and provider-facing software for scheduling and insurance billing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days per year. Standard for late-stage tech scale-ups aiming to attract and retain competitive engineering and data talent."
   },
-  "retry_after": 1784900997,
+  "refresh_after": 1790085029,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official guaranteed company-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77"
+   ],
+   "value": "Venture-backed, late-stage scale-up."
   },
   "sources": [
    {
@@ -169004,14 +169067,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=52c961ff90a44d9d765f7c699abdf9f5352e58eccfc603b33ab22a5aefa210aaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9oZWFkd2F5LmNvLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699"
+   ],
+   "value": "Not explicitly found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "df3adb4a77",
+    "11a9ffa699",
+    "96613a6c54"
+   ],
+   "value": "Headway is a healthcare company that builds software and infrastructure to make mental healthcare more accessible and affordable. It makes money by providing a platform that connects patients with therapists and managing insurance billing to reduce costs for both patients and providers."
+  },
+  "synthesized_evidence_sha": "785d36788d6a0732",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "11a9ffa699"
+   ],
+   "value": "Engineering and data teams focus on building scalable U.S. healthcare infrastructure, likely involving complex marketplace algorithms, insurance billing automation, and data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=Headway+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Fast-paced startup environment typically entails high expectations and occasional intense pushes, though the mission-driven nature of the work fosters a supportive culture."
   }
  },
  "healf": {
