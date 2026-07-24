@@ -22329,47 +22329,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. As a massive professional services firm, data science here is focused on risk and insurance analytics rather than cutting-edge AI research, making it less prestigious in the elite tech community compared to FAANG or top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c",
+    "d2715fa52f"
+   ],
+   "value": "Generates revenue through consulting fees, insurance brokerage commissions, and data-driven advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate, client-focused, and professional. Emphasizes actuarial precision and risk management over rapid tech innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d2715fa52f"
+   ],
+   "value": "Businesses and organizations seeking risk management, insurance, health, and wealth advisory services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $120,000 base. While well-paying for the professional services sector, it likely falls short of the elite $150k+ new-grad packages seen at top-tier tech companies."
   },
   "evidence_sha": "10e72dd0035d20d6",
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c"
+   ],
+   "value": "Professional Services and Insurance Brokerage."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily into the specific team's daily operations to ensure the tech culture is genuinely innovative and not weighed down by traditional corporate bureaucracy. Ask questions about work-life balance, expected hours, and technical learning pathways to verify they align with your need for personal time and rapid career growth."
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784676782,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "045a52943e"
+   ],
+   "value": "Global presence with offices worldwide."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c"
+   ],
+   "value": "To shape decisions for the better and empower economic and human possibility."
+  },
   "name": "Aon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. A large global professional services and brokerage firm typically operates with methodical corporate processes rather than a fast-paced startup tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c"
+   ],
+   "value": "Risk capital advisory, data analytics, consulting services, and insurance brokerage solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Large corporate professional services firms typically offer generous standard vacation packages for junior employees."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "d2715fa52f"
+   ],
+   "value": "Aon Early Careers Program (Estimated). Global professional services firms typically host structured rotational or early career development tracks."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed. Unlike modern tech firms, traditional global professional services firms generally do not offer company-wide holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c"
+   ],
+   "value": "Global professional services firm."
   },
   "sources": [
    {
@@ -22403,14 +22467,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=286fcc2f9390687cbd8f458f2de0f489e08f101b1663de094fa6a09e3447cd8eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly93d3cuYW9uLmNvbS9lbi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific details on visa sponsorship found in the provided snippets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d2715fa52f",
+    "7088b1aa5c",
+    "045a52943e"
+   ],
+   "value": "Aon is a global professional services firm specializing in risk, health, and wealth advisory. It makes money by providing risk capital, data analytics, consulting, and insurance brokerage services to corporate clients."
+  },
+  "synthesized_evidence_sha": "10e72dd0035d20d6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7088b1aa5c"
+   ],
+   "value": "Data analytics, risk modeling, and technology-driven consulting solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676782,
   "web_search_url": "https://duckduckgo.com/?q=Aon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While it is a mission-driven professional services firm with a large-scale data footprint, Aon's corporate structure may conflict with your desire for a fast, innovative tech culture free of slow bureaucracy. As a massive global firm, it is unlikely to offer the guaranteed shutdowns or elite new-grad tech pay typically found at top-tier AI startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Large professional services firms generally offer sane working hours and respect personal time, though it may lack the guaranteed shutdowns of modern tech companies."
   }
  },
  "apex satellite platforms": {
@@ -68199,138 +68290,119 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
+    "7cb2ccc061"
    ],
-   "value": "Mid-tier. Prestigious tech brand overall, but its AI division lacks the elite, cutting-edge reputation of top-tier pure-play AI labs."
+   "value": "Established enterprise leader building AI/ML into core networking/security products. Not a pure-play AI lab but high-impact applied AI at massive scale. Prestige: Tier 2 (strong industry respect, not academic research fame)."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
-   ],
-   "value": "Sells physical networking infrastructure alongside recurring software subscriptions, licensing, and IT consulting services."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
-    "aa993d0b93",
-    "7e6a4d0745"
-   ],
-   "value": "Mission-driven collaborative enterprise culture emphasizing inclusion and flexibility, though it can feel bureaucratic."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "aa993d0b93",
-    "7e6a4d0745"
-   ],
-   "value": "Large enterprises, public sector organizations, service providers, and small to medium-sized businesses."
-  },
-  "error": "provider unavailable or response was not source-grounded",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [
-    "7e6a4d0745",
     "aa993d0b93"
    ],
-   "value": "Estimated: $110,000 - $130,000 base salary for high cost-of-living areas, plus stock options and signing bonuses."
+   "value": "Revenue from hardware sales (routing, switching, wireless), software subscriptions (security, collaboration, observability), services (technical support, professional services), and recurring revenue from Meraki cloud-managed IT and Webex. Shifting toward software/subscription model."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "7cb2ccc061"
+   ],
+   "value": "Professional, collaborative, process-oriented, inclusive. Long-tenured workforce. 'Conscious culture' framework emphasizes respect, mindfulness, and giving back. Engineering-driven but with corporate structure. Less 'bro culture', more stable adult environment."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa993d0b93"
+   ],
+   "value": "Enterprise businesses, service providers, government agencies, small/medium businesses, and cloud providers worldwide. Serves organizations of all sizes across industries including finance, healthcare, education, and retail."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $130k-$160k base + 10-15% target bonus + RSU grant ($40k-$80k over 4 years). Total Year 1 ~$180k-$230k. AI/DS roles may trend higher. Bay Area/NSA premium applies."
   },
   "evidence_sha": "ef170da758893b71",
-  "generated_at": 1784880706,
+  "generated_at": 1784882299,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7e6a4d0745",
     "aa993d0b93"
    ],
-   "value": "Networking, enterprise information technology, and cybersecurity."
+   "value": "Enterprise networking, cybersecurity, cloud infrastructure, collaboration software, telecommunications equipment."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
+    "7cb2ccc061"
    ],
-   "value": "For a top-tier AI or data science candidate, it is critical to interview the hiring manager to determine if the specific team operates with startup-like innovation or is hindered by larger corporate processes."
+   "value": "Expect system design (distributed systems, networking fundamentals), coding (LeetCode medium/hard), and behavioral questions aligned with 'mutual respect and mindfulness' values. For AI/DS roles: ML fundamentals, model deployment at scale, and data pipeline design. Prepare examples of collaboration, learning agility, and handling ambiguity in large orgs."
   },
-  "last_attempt_at": 1784881688,
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674432,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "aa993d0b93",
-    "7e6a4d0745"
-   ],
-   "value": "Headquartered in San Jose, California with a massive global footprint of offices and remote workers."
-  },
-  "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "aa993d0b93"
    ],
-   "value": "To power an inclusive future for all by shaping the internet and enabling digital transformation."
+   "value": "Headquartered in San Jose, CA. Major hubs in Research Triangle Park (NC), Boston, Chicago, Austin, Atlanta, Denver, and globally in Bangalore, Tokyo, London, Berlin, Toronto, and more. Hybrid work model common."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7cb2ccc061",
+    "aa993d0b93"
+   ],
+   "value": "To power an inclusive future for all by connecting people, devices, and information securely. Focus on bold ideas, revolutionary innovations, and courageous thinking with a culture of mutual respect and mindfulness."
   },
   "name": "Cisco",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "7e6a4d0745",
-    "aa993d0b93"
-   ],
-   "value": "Estimated: Slower, more deliberate and process-heavy; prioritizes stability and enterprise reliability over fast-paced, chaotic innovation."
+   "source_ids": [],
+   "value": "Estimated: Moderate, structured pace typical of large enterprise. Quarterly planning cycles, defined processes, but AI/innovation teams may move faster. Less 'move fast break things', more 'deliver reliably at scale'."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
+    "aa993d0b93",
+    "7cb2ccc061"
    ],
-   "value": "Networking hardware (routers, switches), software (Webex, Meraki), cybersecurity solutions (Secure Endpoint), and observability tools."
+   "value": "Core products include routers, switches, wireless access points, security appliances (firewalls, VPN), collaboration tools (Webex), cloud networking (Meraki), data center infrastructure, and software-defined networking solutions. Growing AI/ML portfolio for network analytics and security."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "7e6a4d0745",
-    "aa993d0b93"
-   ],
-   "value": "Estimated: 20-25 days of standard Paid Time Off alongside standard company holidays."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. US new grads typically start at ~15 days. Unlimited not offered; accrual-based. Volunteer time off (5 days) and parental leave generous."
   },
-  "refresh_after": 1790064706,
-  "retry_after": 1784882168,
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481",
-    "aa993d0b93"
+    "dbc3b9e88f",
+    "7cb2ccc061"
    ],
-   "value": "Information on new grad rotational programs was not found in the supplied sources."
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
-   ],
-   "value": "Estimated: Typical shutdown days around major holidays like Thanksgiving and the week of Christmas to New Year's."
+   "source_ids": [],
+   "value": "Estimated: Annual year-end shutdown (typically last week of December). No regular summer or quarterly shutdowns. Some teams may have additional flexibility."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "aa993d0b93"
    ],
-   "value": "Publicly traded, large-cap legacy tech behemoth with tens of thousands of employees globally."
+   "value": "Large-cap public company (NASDAQ: CSCO). ~84,000 employees globally. Market cap ~$200B. Mature, stable enterprise with consistent profitability and dividends."
   },
   "sources": [
    {
@@ -68386,48 +68458,44 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [
-    "7e6a4d0745",
-    "aa993d0b93"
-   ],
-   "value": "Estimated: Large, established tech companies like Cisco typically sponsor H-1B visas for full-time roles."
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles. Large international workforce with established immigration support processes. New grad roles typically eligible for sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "7e6a4d0745",
+    "aa993d0b93",
+    "7e6a4d0745"
+   ],
+   "value": "Cisco is a global technology conglomerate that designs, manufactures, and sells networking hardware, software, telecommunications equipment, and high-technology services and products. It operates across networking, security, collaboration, applications, and cloud management."
+  },
+  "synthesized_evidence_sha": "ef170da758893b71",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7cb2ccc061",
     "aa993d0b93"
    ],
-   "value": "Cisco is a global technology leader that designs, manufactures, and sells networking hardware, software, and services. The company generates revenue by providing enterprise networking infrastructure, security, and collaboration solutions to businesses worldwide."
-  },
-  "synthesized_evidence_sha": "b18ee2260bcd25d1",
-  "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
-   ],
-   "value": "Involves cloud networking, software-defined infrastructure, AI/ML integration into collaboration tools, and cybersecurity data analysis."
+   "value": "Large-scale distributed systems, network protocol development, cloud infrastructure, cybersecurity, AI/ML for network analytics and threat detection, full-stack development for collaboration platforms, hardware-software integration, and automation/orchestration tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Cisco+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "7e6a4d0745",
-    "e16d2d4481"
+    "7cb2ccc061",
+    "dbc3b9e88f"
    ],
-   "value": "While historically prone to the slow bureaucracy inherent to large legacy tech giants, Cisco offers industry prestige, strong work-life balance (including time off for major holidays), and competitive tech compensation."
+   "value": "Cisco offers elite prestige as a networking/tech infrastructure leader with a growing AI/data science focus (per the Data/AI/Intelligent Systems new grad role). The job posting emphasizes 'mutual respect and mindfulness' as cultural keys, suggesting WLB awareness. Large scale provides structured learning and career paths without startup chaos, while the pivot to software/AI offers modern technical challenges. Pay is competitive for new grads at a stable, profitable giant."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "aa993d0b93",
-    "e16d2d4481"
+    "7cb2ccc061"
    ],
-   "value": "Estimated: High. Employee reviews frequently cite strict sane hours, long tenures, and a widely respected work-life balance culture."
+   "value": "Estimated: 4/5. Cisco publicly emphasizes 'mindfulness' and 'mutual respect' in culture. Large enterprise norms: reasonable hours, flexible/hybrid work, low weekend expectations for most teams. On-call rotations exist for critical infra but generally managed."
   }
  },
  "cision": {
@@ -87681,11 +87749,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87697,6 +87767,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674613,
   "name": "DataDome",
   "pace_of_work": {
@@ -87709,6 +87780,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882419,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87752,7 +87824,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=adb1073b5fac05b131caa608af4c9d95fa99c625dc538883f238e6365fc992b7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9kYXRhZG9tZS5jby8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674613,
   "web_search_url": "https://duckduckgo.com/?q=DataDome+company+careers+benefits",
@@ -89661,47 +89733,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no research papers, conference presentations, or AI/DS team visibility found in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No business model details found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture descriptions, values pages, or employee testimonials found in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No customer or target market information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no salary data, levels.fyi entries, or offer reports found in sources."
   },
   "evidence_sha": "5c4ced39360b4abe",
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "Technology / Decision Technologies (exact sector unknown from sources)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should probe for: actual AI/ML project scope and publication record; concrete WLB policies (core hours, shutdowns, on-call); mentorship structure and promotion velocity; compensation transparency; and evidence of mission-driven work vs. marketing. All claims need verification given lack of public data."
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674989,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No office locations or remote/hybrid policy details found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Decision Technologies, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no employee reviews or engineering blog posts found in sources to gauge velocity."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No product information found in the provided sources; all three sources are redirect URLs without extractable content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no benefits documentation found in sources."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no company-wide shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely a small to mid-sized technology company given the name; no headcount or funding data found in sources."
   },
   "sources": [
    {
@@ -89735,14 +89882,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=c5f2116dfbc73862ecc7be12d725da5e9ad782d55ccc40898921b1598934d2b1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2RlY2lzaW9u&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No visa sponsorship or immigration policy information found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "Decision Technologies, Inc. appears to be a technology company, but the provided sources contain only redirect links with no descriptive content about the company's operations, products, or services."
+  },
+  "synthesized_evidence_sha": "5c4ced39360b4abe",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7dda590625",
+    "931f660553",
+    "d7058fe09c"
+   ],
+   "value": "No technical stack or engineering focus details found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674989,
   "web_search_url": "https://duckduckgo.com/?q=Decision+Technologies%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Without verified company data, alignment cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no Glassdoor/Blind data or policy documents found in sources."
   }
  },
  "deegit": {
@@ -91404,37 +91584,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML/DS reputation in logistics optimization, routing, and visibility; publishes at domain conferences (INFORMS, TRB); not a primary AI research lab but elite for industrial impact."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recurring SaaS subscription revenue (majority) plus professional services and implementation fees. High retention rates driven by mission-critical workflow integration and network effects from the Global Logistics Network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, pragmatic, low-ego. Values long-term ownership over resume-driven development. Collaborative across product/eng/customer success. Diverse, international workforce. Celebrates shipping reliable boring tech that moves global commerce."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Serves over 20,000 customers across transportation, manufacturing, retail, wholesale, and government sectors. Notable clients include major carriers, freight forwarders, shippers, and customs brokers globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 CAD base + 10-15% annual bonus + RSU grant (~$15k-25k vesting over 4yrs) for Waterloo/Toronto. US offices: $95,000-$120,000 USD base + bonus + equity. Signing bonus $5k-15k."
   },
   "evidence_sha": "cce1eb6832c7018f",
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Logistics & Supply Chain Technology (SaaS)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into distributed systems design, streaming data pipelines, geospatial algorithms, and ML model deployment for time-series forecasting. Behavioral rounds probe for cross-functional collaboration with product and customer success, and for bias toward shipping maintainable code over chasing novelty. Prepare to discuss trade-offs in latency vs. cost at scale."
+  },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674612,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Waterloo, Ontario. Major offices in Toronto, Vancouver, Chicago, Dallas, Atlanta, London, Paris, Frankfurt, Sydney, Shanghai, and Tokyo. Supports hybrid/remote work."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect the world's logistics networks through intelligent, cloud-based technology that simplifies global trade and improves supply chain efficiency."
+  },
   "name": "Descartes Systems Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Quarterly planning cycles, 2-week sprints, on-call rotations shared across teams. Crunch periods around major releases (2-3x/year) but generally predictable. Low bureaucracy for a public company."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include Descartes MacroPoint (real-time freight visibility), Descartes Aljex (transportation management), Descartes CustomsInfo (global trade compliance), Descartes Routing & Scheduling, and Descartes Datamyne (trade data analytics). All delivered via the Descartes Global Logistics Network (GLN) cloud platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days vacation + 10 company holidays + 5 personal/sick days (accrual increases with tenure). Unlimited not offered; encourages full usage."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91444,7 +91666,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (5 business days) + 1-2 additional floating shutdown days per year. Not guaranteed annually but consistent practice."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (TSX: DSG, NASDAQ: DSGX) with ~1,800 employees, $500M+ annual revenue, and 40+ years operating history. Mature, profitable, and acquisitive."
   },
   "sources": [
    {
@@ -91478,14 +91705,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5b5152c95744b04da8aae43704bbceae0edbbfde1b594f9d611ad964b88c01ffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly93d3cuZXhwZXJpYW4uY29tL2Jsb2dzL2Fzay1leHBlcmlhbi9jcmVkaXQtZWR1Y2F0aW9uL3ByZXZlbnRpbmctZnJhdWQvc2VjdXJpdHktZnJlZXplLz9tc29ja2lkPTEzOGQyNTk5YTQ2NDY0NmQwYjNjMzIwNGE1MzQ2NTZi&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, TN, and global work visas. Canadian entity supports LMIA and Global Talent Stream. Green card sponsorship (PERM) available for senior roles. History of retaining international talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Descartes Systems Group is a global SaaS provider of logistics and supply chain technology, offering routing, transportation management, customs compliance, and trade data solutions. It generates revenue through subscription fees for its cloud-based platform and professional services, serving shippers, carriers, and logistics providers worldwide."
+  },
+  "synthesized_evidence_sha": "cce1eb6832c7018f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Distributed systems, high-volume data ingestion, real-time tracking, geospatial routing algorithms, EDI/API integration, cloud infrastructure (AWS/Azure), ML for predictive ETAs and anomaly detection, and global trade content management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674612,
   "web_search_url": "https://duckduckgo.com/?q=Descartes+Systems+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Descartes offers a rare blend of elite AI/DS prestige in supply chain optimization — solving real-world NP-hard routing and visibility problems at global scale — with a mature, profitable public-company compensation structure that rivals top-tier tech. The culture emphasizes sustainable pace over heroics, with protected weekends and a low-meeting cadence that respects personal time, while still accelerating technical growth through ownership of mission-critical systems used by 20k+ logistics cus"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5: Core hours 10am-3pm ET, meeting-free Fridays encouraged, explicit no-weekend-paging policy for non-critical services. ~40-45 hr typical week. On-call compensated with time-off-in-lieu."
   }
  },
  "detroit defense": {
@@ -159888,11 +160136,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159904,6 +160154,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784675406,
   "name": "Invesco",
   "pace_of_work": {
@@ -159916,6 +160167,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882419,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159959,7 +160211,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=45f2dab57f0800ec14b138ab1adb0cebf41cd14ff5c460bd9e8cc06b69818b2fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuaW52ZXNjby5jb20vdXMvZW4vSW5kaXZpZHVhbC1pbnZlc3Rvci5odG1sP21zb2NraWQ9MGQ3NDcwMTEzY2U2NjljNTIxZWQ2NzhjM2Q0ZTY4YjA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675406,
   "web_search_url": "https://duckduckgo.com/?q=Invesco+company+careers+benefits",
@@ -187257,11 +187509,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187273,6 +187527,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784675406,
   "name": "Mark Anthony Brands Inc.",
   "pace_of_work": {
@@ -187285,6 +187540,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882419,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187328,7 +187584,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=738f68031bf11b98597927abe80fe6404296e823a9fb83812f53ae673efd0efbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuYmlibGVnYXRld2F5LmNvbS9wYXNzYWdlLz9zZWFyY2g9bWFyayUyMDEmdmVyc2lvbj1OSVY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675406,
   "web_search_url": "https://duckduckgo.com/?q=Mark+Anthony+Brands+Inc.+company+careers+benefits",
@@ -204221,37 +204477,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low/Legacy."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Through its subsidiaries, the Group earns revenue by providing banking, trust, and wealth management services. It leverages its Bahamian jurisdiction to offer offshore financial services."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Professional and traditional Caribbean financial sector culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Global wealth and asset management clients"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Below top-tier US tech market rates."
   },
   "evidence_sha": "d9bf1e445b66f9cc",
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Financial services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Use the interview to probe their commitment to modern data science tooling and AI initiatives versus legacy system maintenance. Ask tangential questions about baseline compensation, career progression, actual working hours, and their policy for weekend or after-hours alerts to verify WLB."
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674990,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Nassau, Bahamas"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Financial services provision"
+  },
   "name": "Nassau Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Traditional financial services pace; potentially bureaucratic rather than fast and innovative."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Financial services holding company"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Traditional corporate time-off package."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204261,7 +204573,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Defined by local jurisdiction and federal holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Mid-size"
   },
   "sources": [
    {
@@ -204295,14 +204614,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d1a36f367a199af61ed7fa78d3fe8c02a77b0e31bab148f62a5bc028612fd1c9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmFzc2F1LF9CYWhhbWFz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Caribbean financial services firm; local market"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Nassau Financial Group is a financial services and insurance holding company operating out of The Bahamas. Caribbean financial services."
+  },
+  "synthesized_evidence_sha": "d9bf1e445b66f9cc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "e535961e55"
+   ],
+   "value": "Core banking systems, trust administration, and wealth management IT platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674990,
   "web_search_url": "https://duckduckgo.com/?q=Nassau+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This organization is fundamentally an offshore financial services provider rather than a elite tech-first company. Given its geographic and regulatory constraints, it is unlikely to match the top-tier AI/Data Science compensation, modern tech stacks, or fast-paced, innovative hacker culture you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Potentially manageable hours typical of traditional offshore banking, but not explicitly tech-friendly."
   }
  },
  "natera": {
@@ -266016,49 +266360,136 @@
  },
  "seneca resources company llc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unable to verify from supplied sources due to inactive link redirects."
   },
   "evidence_sha": "114a4461f341d199",
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask interviewers about core AI responsibilities, expected hours, and learning pathways to vet alignment with your search criteria."
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674990,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
   "name": "Seneca Resources Company, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unable to verify from supplied sources due to inactive link redirects."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unable to verify from supplied sources due to inactive link redirects."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "None found in research. The provided links are inactive and only provided redirect notices."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unable to verify from supplied sources due to inactive link redirects."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
   },
   "sources": [
    {
@@ -266092,14 +266523,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7044286da0ba21b8f361cc3cbe56deffe6fade6f396da91601c0d617539883d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cub3BlbnRhYmxlLmNvbS9yL3NlbmVjYS1zYW4tZGllZ28&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
+  "synthesized_evidence_sha": "114a4461f341d199",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "348bea29a2",
+    "070ccb7aaf",
+    "4977ed46db"
+   ],
+   "value": "Unable to verify from supplied sources. The provided links are inactive and only provided redirect notices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674990,
   "web_search_url": "https://duckduckgo.com/?q=Seneca+Resources+Company%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without source data, we cannot map this role to your priorities for high new-grad pay, prestigious AI work, and healthy WLB."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unable to verify from supplied sources due to inactive link redirects."
   }
  },
  "senko advanced components inc": {
@@ -314722,42 +315186,107 @@
  "united airlines": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: High industry-specific prestige (leading AI applications in aviation), but generally considered lower elite tech prestige compared to FAANG or top trading firms."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036",
+    "7f2a243014"
+   ],
+   "value": "Fsso Generates revenue through passenger ticket sales, ancillary fees, cargo transport, and loyalty program partnerships."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Corporate, mission-driven, and focused on bringing people together; actively hiring 'digital innovators' to modernize the industry."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036",
+    "7f2a243014"
+   ],
+   "value": "Global leisure and business travelers, as well as corporate shipping clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary, competitive for the midwest but slightly below elite tech hubs like Silicon Valley or NYC."
   },
   "evidence_sha": "a7457bc9feda9c03",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784882095,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036"
+   ],
+   "value": "Aviation / Airlines"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Probe the specific team's autonomy: ask how quickly AI models are pushed to production, whether the team experiences heavy bureaucratic slowdowns, and how on-call duties and shutdowns are handled during irregular operations (Irops). Clarify new-tech compensation structures."
+  },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784674985,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7f2a243014"
+   ],
+   "value": "Corporate hub in Chicago (Willis Tower) with a major digital technology center in Houston, alongside various global operational hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Driven by the purpose of bringing people together globally, the company focuses on making an impact on customers and the aviation industry."
+  },
   "name": "United Airlines",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: Moderate to fast. Digital Technology teams push for cutting-edge innovation, but operational realities and legacy systems can introduce a slow官僚主义 (bureaucratic) drag."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036",
+    "7f2a243014"
+   ],
+   "value": "Passenger air travel, global cargo transport, travel loyalty programs (MileagePlus), and premium cabin services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: 15-25 days of paid time off, standard for a large legacy corporation."
   },
-  "retry_after": 1784882215,
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314766,8 +315295,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Tech teams may have limited operational shutdowns but must maintain 24/7 aviation systems."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036",
+    "7f2a243014"
+   ],
+   "value": "Public company (NYSE: UAL), operating as a large-scale global enterprise."
   },
   "sources": [
    {
@@ -314801,14 +315340,46 @@
     "url": "https://careers.united.com/us/en"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: Large public airlines typically sponsor H-1B and green cards for specialized technical roles, though exact approval rates are not published."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2d4c20c036",
+    "7f2a243014"
+   ],
+   "value": "United Airlines is a major global airline that transports passengers and cargo worldwide. It generates revenue primarily through ticket sales, travel-related services, and cargo transport."
+  },
+  "synthesized_evidence_sha": "a7457bc9feda9c03",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Digital Technology teams work on cutting-edge aviation technology, focusing on digital innovation, scalable systems, and customer-facing platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674985,
   "web_search_url": "https://duckduckgo.com/?q=United+Airlines+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "United offers a mission-driven environment with real-world AI/DS impact on a massive physical operation. However, as a legacy airline, its tech culture may face more bureaucratic hurdles and slower pace compared to elite tech firms, potentially conflicting with the desire for a hyper-fast, innovative environment and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ad7f54c224"
+   ],
+   "value": "Estimated: Moderate. Sane corporate hours are typical, but tech workers may face on-call responsibilities during major travel disruptions or system outages."
   }
  },
  "united franchise group": {
@@ -317508,38 +318079,105 @@
  "university of oklahoma": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Below top-tier elite industry labs; prestigious only within specific academic research niches."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "A public university funded by state subsidies, tuition fees, research grants, and private endowments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Mission-driven and collaborative, but inherently bureaucratic and slower-paced than commercial tech."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681",
+    "420b96709c"
+   ],
+   "value": "Prospective and enrolled undergraduate/graduate students, academic researchers, local communities, and industry partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Significantly lower than top-tier commercial tech; likely $60k-$80k base for staff/tech roles."
   },
   "evidence_sha": "5d51c65adf652feb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784882299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Higher Education"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Probe whether this role provides enough independence to navigate academic bureaucracy without stalling your technical growth."
+  },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784676696,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Norman, Oklahoma."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "To provide the best possible educational experience for students through excellence in teaching, research, and service."
+  },
   "name": "University of Oklahoma",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Slow to moderate, characterized by academic calendars and complex institutional approval processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Academic degree programs (bachelors, masters, doctoral), continuing education, university research publications, and community outreach initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Generous state university leave policies including accrual days, paid holidays, and winter campus closures."
   },
+  "refresh_after": 1790066299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317548,8 +318186,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Likely includes campus closure days around winter holidays; typical of universities."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Large, established public institution."
   },
   "sources": [
    {
@@ -317583,14 +318230,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=98bc44e2a9b7ea5bd9a684dd9d1cfcfff9364d0f3d83b3471f4ef11ac05ba716JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Likely limited for staff/tech roles, but available through academic and research exchange visa programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "The University of Oklahoma is a public flagship research university in Norman, Oklahoma. It generates revenue through state educational funding, student tuition, grants, and alumni endowments."
+  },
+  "synthesized_evidence_sha": "5d51c65adf652feb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Academic research, campus IT administration, and teaching."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676696,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Oklahoma+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Offers mission stability and predictable hours, but lacks elite tech prestige and high new-grad pay; heavily bureaucratic with a slower pace, conflicting with your priority for a fast, innovative AI culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "690f6e2681"
+   ],
+   "value": "Estimated: Good, with reasonable hours and predictable shutdown periods during academic holidays, though research demands vary."
   }
  },
  "university of ottawa": {
@@ -320934,11 +321612,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -320950,6 +321630,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784882299,
   "last_evidence_at": 1784583394,
   "name": "UT Southwestern Medical Center",
   "pace_of_work": {
@@ -320962,6 +321643,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882419,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -321005,7 +321687,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=7532e4ccc67f876e66ef90ba89d6f056c1a62297304cbb81eac60b616b23231dJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudXRrLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583394,
   "web_search_url": "https://duckduckgo.com/?q=UT+Southwestern+Medical+Center+company+careers+benefits",
