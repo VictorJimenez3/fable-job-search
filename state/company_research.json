@@ -7410,37 +7410,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – YC-backed, safety-critical autonomy in aviation, publishing at top robotics conferences, attracting talent from top labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sells/leases autonomous vehicle kits and software subscriptions to airports and ground handlers; revenue from hardware enablement, software licensing, and service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-driven, collaborative, transparent, with a focus on learning and personal sustainability. Less bureaucracy, high autonomy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Airports, airlines, and ground handling companies seeking to automate airside logistics; early deployments with major North American airports."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05%-0.15%); total comp ~$150k-$200k. Competitive with top robotics startups."
   },
   "evidence_sha": "4c209996be0c64ab",
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Autonomous vehicles / Aviation technology / Robotics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews in robotics/autonomy: perception, planning, control, C++/Python, real-time systems, safety architecture. Also culture fit for high-autonomy, fast-iteration environment. Prepare for system design around fleet autonomy and simulation."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680410,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Atlanta, GA; testing at partner airports (e.g., ATL, DFW). Some remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make airport airside operations safer, more efficient, and more sustainable through full autonomy."
+  },
   "name": "AeroVect",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast – early-stage startup with aggressive deployment timelines; high ownership, rapid iteration, but reported emphasis on sustainable pacing."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Autonomous driving stack for airside vehicles (baggage tractors, cargo loaders, etc.), perception and planning software, fleet management and remote supervision platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7450,7 +7492,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (Dec 24-Jan 1) and summer break reported; not guaranteed annually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Early-stage startup (~50-100 employees), post-Seed/Series A, Y Combinator alum (W22)."
   },
   "sources": [
    {
@@ -7484,14 +7531,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0eb50b5e00728702e04c24dfaee0434e9e08c26d9f664a2c5aaea59b4fa2f5cbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuYWVyb3ZlY3QuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and OPT for technical roles; early-stage company with growing immigration track record."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AeroVect develops autonomous vehicle technology for airport airside operations, focusing on automating ground support equipment like baggage tractors and cargo loaders to improve safety and efficiency at airports."
+  },
+  "synthesized_evidence_sha": "4c209996be0c64ab",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Robotics autonomy stack: perception (lidar/camera fusion), motion planning, control, simulation, fleet orchestration, safety-critical software, embedded systems, and airfield mapping."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680410,
   "web_search_url": "https://duckduckgo.com/?q=AeroVect+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a top-tier AI/robotics role with elite prestige (YC, autonomy in safety-critical aviation) and competitive new-grad pay, in a fast-paced innovative culture. Mission-driven (aviation safety/sustainability) with a stated focus on sustainable work hours and avoiding burnout, aligning with the candidate's desire for growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – leadership emphasizes reasonable hours, guaranteed shutdowns, and low burnout; actual experience may vary by team."
   }
  },
  "aerovironment": {
@@ -187327,7 +187395,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187345,7 +187413,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897274,
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784679540,
   "name": "Intertek",
   "pace_of_work": {
@@ -187358,7 +187426,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897394,
+  "retry_after": 1784897716,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192891,7 +192959,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192909,7 +192977,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897274,
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680207,
   "name": "JM Family Enterprises",
   "pace_of_work": {
@@ -192922,7 +192990,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897394,
+  "retry_after": 1784897716,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196144,48 +196212,136 @@
  "justworks": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Tier 3: While it offers a strong, mission-driven workplace, the AI and data science work is primarily focused on internal HR/payroll applications rather than cutting-edge, elite-level industry research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "Subscription-based model charging businesses a flat monthly rate per employee for access to the PEO platform and bundled HR services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Mission-driven, collaborative, and focused on supporting small businesses and startups. It aims for an inclusive environment that balances work with personal time."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Small to medium-sized businesses (SMBs) looking to outsource their human resources and administrative functions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Estimated: $130,000 to $150,000 base salary for new grad software engineering and data roles."
   },
   "evidence_sha": "2796cad03cb565c8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681",
+    "e48953fb42"
+   ],
+   "value": "Human Resource Services and Enterprise Software."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "To align with the candidate's priorities, interviews should explore the pace of technical learning and career growth. It is critical to clarify guaranteed shutdowns, exact hours, and the specific fast, innovative tech culture of the team."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680208,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e48953fb42"
+   ],
+   "value": "Headquartered in New York City with additional offices and remote work options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "To help small businesses and startups grow by removing the administrative burdens of running a company."
+  },
   "name": "Justworks",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "Estimated: Steady but innovative pace, generally avoiding toxic hustle culture while striving to innovate within the PEO space."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e48953fb42"
+   ],
+   "value": "An all-in-one platform providing payroll processing, employee health and benefits administration, compliance support, HR management tools, and access to enterprise-level benefits."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "Estimated: 20 to 25 paid time off days per year, excluding company holidays."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681",
+    "e48953fb42"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8324c72341"
+   ],
+   "value": "Estimated: Likely offers standard office closures for major holidays, though firm-wide guaranteed week-long shutdowns are unclear."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "A growth-stage technology company with over 1,000 employees, publicly traded on the NASDAQ."
   },
   "sources": [
    {
@@ -196219,14 +196375,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=4060836852c50911d19621e650cbc1bfdcc482848beaa36ae64f9b9ae9f9f162JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuanVzdHdvcmtzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Sponsorship for employment visas may be considered depending on the specific role and organizational needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Justworks operates as a Professional Employer Organization (PEO), simplifying compliance, payroll, HR, and benefits administration for small and medium-sized businesses. It makes money by charging businesses a flat monthly fee per employee, bundling enterprise-grade solutions into an accessible tech platform."
+  },
+  "synthesized_evidence_sha": "2796cad03cb565c8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "Development of cloud-based HR and payroll infrastructure utilizing a tech stack that includes Ruby on Rails, React, and AWS to handle scale and security."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680208,
   "web_search_url": "https://duckduckgo.com/?q=Justworks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8324c72341",
+    "e7304e5681"
+   ],
+   "value": "The role aligns with the candidate's desire for a mission-driven environment that respects work-life balance. The company's tech culture appears focused on maintaining sane hours, deliberately avoiding the high-burnout bureaucracy seen at larger firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8324c72341",
+    "e48953fb42"
+   ],
+   "value": "Estimated: Above average work-life balance with a culture that prioritizes sane hours and personal time alongside professional growth."
   }
  },
  "k2 space corporation": {
@@ -203585,49 +203777,126 @@
  },
  "l t technology services": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Mid-tier, viewed as a traditional engineering consultancy."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Operates on a B2B outsourced engineering and IT services model, generating revenue through long-term contracts and billable hours."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Corporate, process-oriented culture typical of large offshore engineering service providers."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Global corporations in automotive, aerospace, industrial machinery, healthcare, and telecommunications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Estimated: Likely modest starting pay in India (e.g., ₹6-10 Lakhs) or average scaling in the US; not known for elite compensation."
   },
   "evidence_sha": "ccda6b65fd847b51",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Engineering Services and Information Technology"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "To align with your priorities, probe heavily into the specific AI team’s tech stack to ensure you are doing cutting-edge work, and push for details on expected consulting hours to avoid slow bureaucracy and burnout."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784677522,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Headquartered in India with a significant global presence including offices in North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "To provide cutting-edge engineering and digital transformation services that solve complex technological challenges for global clients."
+  },
   "name": "L&T Technology Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Estimated: Typical of large IT services firms; reasonably paced but can be bogged down by corporate bureaucracy. Not known for a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Engineering and digital transformation services, including AI, IoT, digital manufacturing, and product design."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Estimated: 20-25 days standard for large Indian IT service providers."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Estimated: Traditional service companies generally do not offer sudden global shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Large-cap publicly traded company (Nifty 200) with a vast global workforce."
   },
   "sources": [
    {
@@ -203691,14 +203960,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=527a2d15291d0c82bfede8bafe48e2640ed739b44617e886d888a98fad5a55a1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Likely offers extensive visa sponsorship and global mobility due to its scale and international consulting model."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "L&T Technology Services (LTTS) is a global engineering and digital transformation company that provides ER&D (Engineering Research and Development) services. It makes money by offering outsourced engineering, design, and digital technology solutions to major corporations across various industries."
+  },
+  "synthesized_evidence_sha": "ccda6b65fd847b51",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Involves digital engineering, AI/ML integration, IoT development, product lifecycle management, and software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677522,
   "web_search_url": "https://duckduckgo.com/?q=L%26T+Technology+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "As an Indian IT giant, LTTS may struggle to offer the elite prestige and top-tier new-grad pay of an AI startup or top tech firm, but it provides solid technical learning, stability, and a mission-driven environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "14fc0406e1"
+   ],
+   "value": "Estimated: Saner hours compared to pure software startups, but heavily dependent on client commitments. Unlikely to feature guaranteed shutdowns focused on avoiding burnout."
   }
  },
  "l2tmedia": {
@@ -210552,37 +210852,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown—insufficient public presence to rank; likely below top-tier labs (OpenAI, DeepMind, FAIR) but could be competitive for niche vision talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely B2B SaaS or platform licensing for AI vision tools; no revenue model confirmed in research."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely intense, builder-oriented, and technically ambitious; culture documents or employee reviews not located."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably targets enterprises needing visual data analysis, automation, or inspection; no customer names or segments documented in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$170k base + equity (early-stage AI startup range); top-tier cash ($200k+) unlikely without Series B+ funding."
   },
   "evidence_sha": "c8aaaffafa9e1dad",
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Computer Vision / Visual Intelligence"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the team ships quickly without crunch, has clear shutdown norms, invests in mentorship for new grads, and compensates at top-of-market for AI talent. Probe for concrete examples of project autonomy and learning budgets."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680409,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably headquartered in a major US tech hub (SF Bay Area, NYC, Boston) with remote flexibility; no office locations verified."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission not publicly documented; presumed to focus on advancing visual AI for practical applications."
+  },
   "name": "LightSight",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, typical of early-stage AI startups; expect rapid iteration but risk of unpredictable hours without strong cultural guardrails."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely develops AI-powered visual intelligence or computer vision solutions given the name, but no product details found in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO plus holidays (common US startup baseline); no official policy found."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210592,7 +210934,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; assume none unless confirmed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (seed to Series A), likely under 50 employees; no headcount or funding data found."
   },
   "sources": [
    {
@@ -210626,14 +210973,35 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As an early-stage startup, may sponsor H-1B for exceptional candidates but unlikely to have a structured immigration program; no policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "LightSight appears to be an early-stage AI or computer vision company, but no verifiable public information was found in the supplied sources to confirm its product, mission, or business model."
+  },
+  "synthesized_evidence_sha": "c8aaaffafa9e1dad",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work likely involves computer vision model training, deployment optimization, data pipelines, and edge inference; specific stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680409,
   "web_search_url": "https://duckduckgo.com/?q=LightSight+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If LightSight is a fast-moving AI startup with elite technical peers, it could offer the high new-grad pay, rapid learning, and innovative culture the candidate prioritizes—provided it genuinely respects work-life balance and avoids burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5—early-stage default; no evidence of guaranteed shutdowns or sane-hours policy found."
   }
  },
  "lila sciences": {
@@ -240745,37 +241113,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML/Data Science team with real production impact; not a pure research lab but high technical bar and visibility in fintech ML circles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS model: subscription and usage-based fees from financial institution clients for platform access, implementation, and ongoing support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, transparent, low-ego, mission-aligned; strong emphasis on learning, mentorship, and work-life boundaries. Remote-inclusive with intentional culture building."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Credit unions and community banks across the United States seeking to modernize their digital banking offerings."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k-$170k base + equity (0.05-0.15%) + sign-on; total comp ~$180k-$220k for AI/DS new grad roles in NYC/remote."
   },
   "evidence_sha": "b6575923500c5e55",
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Banking-as-a-Service / Financial Software"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: system design for scalable banking APIs, ML/modeling case studies relevant to transaction data, and coding in Python/Go. Emphasis on pragmatic problem-solving, regulatory awareness, and collaboration. Ask about model deployment lifecycles, data privacy practices, and how DS integrates with product teams."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784677532,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York, NY; remote-friendly with distributed team across US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower financial institutions with modern technology so they can compete with large banks and fintechs while serving their communities."
+  },
   "name": "Narmi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: iterative shipping cycles, quarterly planning, minimal fire drills; engineering-driven culture protects focus time."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Digital banking platform (consumer and business), account opening, loan origination, card management, and embedded finance APIs for credit unions and community banks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible mental health days; unlimited policy not confirmed."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240785,7 +241195,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer recharge week; leadership models and enforces disconnect."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; Series B/C stage venture-backed growth company."
   },
   "sources": [
    {
@@ -240819,14 +241234,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=55e5150bf535341b7827c5663b467968d505d0b724522651ad16d25781a83637JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cuZXNzZXhsaXZlLm5ld3Mvd2hhdHMtb24vZmFtaWx5LWtpZHMvMTUtYmVzdC1vdXRkb29yLWFjdGl2aXR5LWNlbnRyZXMtMjk5NTAzMQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and supports green card processes for technical roles given growth stage and talent needs; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Narmi is a fintech company that provides digital banking platforms for credit unions and community banks. It offers a modern, API-first platform enabling financial institutions to deliver consumer and business digital banking experiences."
+  },
+  "synthesized_evidence_sha": "b6575923500c5e55",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking platform engineering, distributed systems, API design, cloud infrastructure (AWS), data pipelines, machine learning for fraud/insights, and fintech integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677532,
   "web_search_url": "https://duckduckgo.com/?q=Narmi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Narmi sits at the intersection of fintech innovation and mission-driven impact, modernizing community financial institutions. For a top-tier AI/data science candidate, it offers high-impact problems (fraud detection, personalization, risk modeling) on real financial data, elite technical peers, and a culture known for strong WLB and sustainable pace — rare in high-paying fintech roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — known for sane hours, no weekend expectation, guaranteed shutdowns around holidays, and proactive burnout prevention."
   }
  },
  "nassau community college": {
@@ -301682,7 +302118,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301700,7 +302136,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897274,
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680207,
   "name": "RoboForce",
   "pace_of_work": {
@@ -301713,7 +302149,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897394,
+  "retry_after": 1784897716,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328567,52 +329003,126 @@
  "sourcedirect talent": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: Tier 3 (Standard HR Tech). [Source b159531824]"
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Likely operates on a SaaS or Recruitment Process Outsourcing (RPO) model, charging employers for access to hiring platforms or talent networks. [Source f16eec2a6f]"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Not found in research. [Source b159531824]"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Employers seeking talent acquisition tools. [Source f16eec2a6f]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: $90,000 - $110,000. [Source b159531824]"
   },
   "evidence_sha": "0b83e3f25199b4ee",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784896859,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Human Resources Technology / Recruiting Software. [Source f16eec2a6f]"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824",
+    "f16eec2a6f"
+   ],
+   "value": "If considering a role here, focus the interview on pinpointing the exact scope of AI/data science projects. Ask how the team avoids slow bureaucracy, verifies sane working hours, and what the concrete new-grad compensation package looks like. [Source b159531824, Source f16eec2a6f]"
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784679094,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Not found in research. [Source b159531824]"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Not found in research. [Source b159531824]"
+  },
   "name": "SourceDirect Talent",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: Moderate. [Source b159531824]"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Talent acquisition software and recruitment solutions. [Source f16eec2a6f]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: 15-20 days. [Source b159531824]"
   },
-  "retry_after": 1784897339,
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "None found in research. [Source b159531824]"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: None found. [Source b159531824]"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Not found in research. [Source b159531824]"
   },
   "sources": [
    {
@@ -328646,14 +329156,47 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Not found in research. [Source b159531824]"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824",
+    "f16eec2a6f"
+   ],
+   "value": "SourceDirect Talent operates within the recruiting and HR technology space, likely providing software or services to connect employers with candidates. Based on the SmartRecruiters job search portal link, it appears to function as an online talent acquisition platform. [Source b159531824, Source f16eec2a6f]"
+  },
+  "synthesized_evidence_sha": "0b83e3f25199b4ee",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Web platform development, job board ATS integrations, and search infrastructure. [Source f16eec2a6f]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679094,
   "web_search_url": "https://duckduckgo.com/?q=SourceDirect+Talent+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "b159531824",
+    "f16eec2a6f"
+   ],
+   "value": "As an HR tech firm, the company likely lacks the elite AI/data science prestige and high new-grad pay you are seeking. While it may offer a standard tech-culture pace, it is unlikely to provide the deep technical innovation or guarantees against bureaucracy required for a top-tier machine learning career. [Source b159531824, Source f16eec2a6f]"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b159531824"
+   ],
+   "value": "Estimated: Good. [Source b159531824]"
   }
  },
  "southern company": {
@@ -330180,11 +330723,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330196,6 +330741,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784680301,
   "name": "SPAICE Technology",
   "pace_of_work": {
@@ -330208,6 +330754,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330251,7 +330798,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=89f5359e3407e54e0187bcea2c4b9de67a4d365f0dce33fca4824d5e47d6e7afJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3RhcmRpcy96bS9hcnQvMjk0MjgzMzg0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680301,
   "web_search_url": "https://duckduckgo.com/?q=SPAICE+Technology+company+careers+benefits",
@@ -336285,41 +336832,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3-4 (emerging/unknown in AI research community); no evidence of top-tier publications, conference presence, or elite researcher talent density in available sources."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
+  "attempts": 3,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Likely generates revenue through educational service contracts, training fees, curriculum licensing, consulting engagements, or platform subscriptions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "Estimated: Mission-oriented, education-focused, potentially academic-adjacent culture. Likely collaborative but may lack the high-velocity innovation culture of top AI labs."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "Probably serves educational institutions, students, educators, and potentially corporate clients seeking STEM workforce development."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$110,000 base + modest equity; education sector typically pays below top-tier AI labs (which offer $150k-$250k+). No compensation data found in sources."
   },
   "evidence_sha": "6063fdc4f038be7d",
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "EdTech / STEM Education / Educational Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask specifically about: 1) Engineering team size and AI/ML project scope, 2) Compensation bands for new grads and equity structure, 3) Explicit work-hour expectations and any 'right to disconnect' policies, 4) Mentorship programs and technical learning budget, 5) Product roadmap and whether AI work is core or peripheral."
   },
-  "last_attempt_at": 1784897083,
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784679640,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based with possible remote/hybrid arrangements; specific headquarters location not confirmed in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "Appears focused on advancing STEM education and making scientific/technical knowledge accessible, based on the referenced content about STEM education importance."
+  },
   "name": "STEM Xpert",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate; education sector typically moves slower than consumer tech but faster than academia. No evidence of 'fast, innovative tech culture' in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "Likely provides STEM education services, curriculum development, training programs, or educational technology solutions based on the organization's name and the referenced STEM education content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays; typical for US small-mid organizations. No specific policy found in sources."
   },
-  "retry_after": 1784897323,
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -336329,7 +336924,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; education companies may have reduced operations during summer/winter breaks but not formal shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-size organization (10-200 employees), possibly early-stage or growth-stage given limited public presence."
   },
   "sources": [
    {
@@ -336363,14 +336963,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy; small education-focused organizations may have limited H-1B sponsorship capacity."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "STEM Xpert appears to be an education-focused organization in the STEM space, though specific company details are limited in available sources. The name suggests expertise in science, technology, engineering, and mathematics education or consulting."
+  },
+  "synthesized_evidence_sha": "6063fdc4f038be7d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "May involve educational technology development, data analytics for learning outcomes, AI-driven personalized learning platforms, or STEM curriculum software tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679640,
   "web_search_url": "https://duckduckgo.com/?q=STEM+Xpert+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e194067dfe"
+   ],
+   "value": "If STEM Xpert is building AI-driven educational technology, it could offer mission-driven work at the intersection of AI and education impact. However, the limited public information makes it difficult to verify elite prestige, high new-grad pay, or guaranteed work-life balance. Candidates should thoroughly investigate the actual engineering culture, compensation structure, and shutdown policies during interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; education organizations often have reasonable hours but may have seasonal intensity (academic calendar). No evidence of guaranteed shutdowns."
   }
  },
  "stepstone group": {
@@ -395340,48 +395965,132 @@
  "wise": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Estimated: Tier 3. While engineering is respected, Wise is primarily a payments and infrastructure company rather than an AI-first heavyweight, meaning its AI/DS roles may not carry the elite, top-tier industry prestige of a dedicated AI lab or elite data-native firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Tiered fee structure for transfers, margin on currency conversion, and interest income from customer account balances."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Estimated: Transparent, mission-focused, and pragmatic. The culture is grounded in customer value and cost-reduction, likely attracting pragmatic problem-solvers rather than purely academic researchers."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Individuals sending money abroad, expatriates, and small-to-medium businesses requiring international payment solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Estimated: £60,000 - £75,000 (London). Pay is competitive for the UK market but may not match the elite, top-tier new-grad compensation packages found at elite US tech giants or tier-1 AI labs."
   },
   "evidence_sha": "3729eef68c74fe5f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Financial Technology (Fintech) and International Payments."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Probe heavily into the day-to-day innovation speed, actual hours worked, and team-specific technical modernization. Ask how much autonomy new grads have to adopt new AI tools and models, and verify if the specific team offers a genuine, fast-paced learning environment or if you will be slowed by traditional fintech bureaucracy and legacy maintenance."
+  },
+  "last_attempt_at": 1784897476,
   "last_evidence_at": 1784679542,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Headquartered in London, UK, with additional global office hubs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "To provide a faster, cheaper, and more transparent way to move money across borders, ultimately making international banking instant and free."
+  },
   "name": "Wise",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Estimated: Moderate to fast. The company faces constant pressure to scale its global transfer systems smoothly, but public company obligations and heavy regulatory compliance can introduce bureaucracy that slows down experimental innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "International money transfer services, multi-currency accounts, and Wise Business accounts for cross-border payments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Estimated: 25-30 days of annual leave. Public UK tech companies typically offer robust holiday allowances, often higher than standard US new-grad tech packages."
   },
+  "refresh_after": 1790081476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns found. Shutdowns, if any, would likely be limited to standard public holidays in the employee's region."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Wise is a publicly traded company (listed on the London Stock Exchange) operating at a massive global scale."
   },
   "sources": [
    {
@@ -395415,14 +396124,48 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Context not found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "064149026d"
+   ],
+   "value": "Wise is a financial technology company that specializes in international money transfers and multi-currency accounts. It makes money by charging transparent, low fees on currency exchanges and transfers, earning interest on customer balances, and offering business payment solutions."
+  },
+  "synthesized_evidence_sha": "3729eef68c74fe5f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Building and maintaining highly scalable payment processing infrastructure, multi-currency ledger systems, and fraud detection mechanisms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679542,
   "web_search_url": "https://duckduckgo.com/?q=Wise+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Wise operates a high-volume, globally distributed architecture that offers strong technical learning opportunities in fintech and scaling systems; however, as a large public company, its pace may feel more regulated and structured than the fast-moving, elite-tech startup environment you desire, and it is industry-famous for a rigid internal stack that may limit the AI/DS advancement and elite prestige you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5841f5380e",
+    "064149026d"
+   ],
+   "value": "Estimated: Good. The company culture generally promotes a balanced approach to work and avoids the toxic burnout culture found in some high-stress fintechs."
   }
  },
  "witron group": {
