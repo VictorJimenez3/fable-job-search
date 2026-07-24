@@ -64754,11 +64754,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64770,6 +64772,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784678870,
   "name": "Cartesia",
   "pace_of_work": {
@@ -64782,6 +64785,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784888049,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64855,7 +64859,7 @@
     "url": "https://jobs.ashbyhq.com/cartesia/16cd6cd7-454b-4e44-9a04-6a4677a3e920"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678870,
   "web_search_url": "https://duckduckgo.com/?q=Cartesia+company+careers+benefits",
@@ -68714,48 +68718,140 @@
  "chapman university school of pharmacy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Low (academic health sciences, not a dedicated tech or AI firm)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Education and research driven by tuition fees, alumni endowments, and academic research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Mission-driven, academic, and academic-calendar-bound, prioritizing research and education over rapid tech innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Prospective pharmacy students, graduate researchers, and academic professionals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: $55,000 - $75,000 (competitive for university IT/data staff, but far below elite tech new-grad pay)."
   },
   "evidence_sha": "f5c500f850b12335",
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Higher Education & Health Sciences"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Screen them on whether they actually use modern AI/data science tooling for real pharmacological research, and aggressively vet for severe academic bureaucracy and low compensation ceilings versus your desire for fast tech culture and high pay."
+  },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784583362,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "013bf92199",
+    "6d9095a24c"
+   ],
+   "value": "Irvine, California"
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "To advance health sciences education and research, preparing future leaders in pharmacy and patient care."
+  },
   "name": "Chapman University School of Pharmacy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Slow, structured academic calendar pace, lacking the fast, innovative tech culture you want."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Doctor of Pharmacy (PharmD) degree programs, continuing education, and academic research output."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Generous academic leave, often including holidays, spring break, and reduced summer hours (15-25+ PTO/holidays days)."
   },
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7bc8559457",
+    "013bf92199",
+    "6d9095a24c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Likely observes holiday closures between academic semesters (e.g., winter break), though not formal corporate tech 'shutdowns'."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "013bf92199",
+    "6d9095a24c"
+   ],
+   "value": "Mid-size established academic institution."
   },
   "sources": [
    {
@@ -68789,14 +68885,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=4c6a3f2a430e4ac9efa1b5a102596a28d0443cec5b25035ceb7cb73d6a4f59f2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly90aGVjaGFwbWFuLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Academic institutions occasionally sponsor H1-B visas for specialized faculty or high-level research staff, but rarely for administrative or entry-level tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "013bf92199",
+    "6d9095a24c"
+   ],
+   "value": "Chapman University School of Pharmacy operates as an academic institution focused on pharmaceutical education and research. It generates revenue primarily through student tuition, academic grants, and research funding."
+  },
+  "synthesized_evidence_sha": "f5c500f850b12335",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Academic research projects potentially involving bioinformatics, pharmacokinetics, and medical data analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583362,
   "web_search_url": "https://duckduckgo.com/?q=Chapman+University+School+of+Pharmacy+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This academic environment heavily conflicts with your priorities: it lacks the elite AI/data science prestige, has a notoriously bureaucratic pace, and offers academic (lower) tech pay rather than competitive new-grad tech salaries."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7bc8559457",
+    "6d9095a24c"
+   ],
+   "value": "Estimated: Generally good work-life balance with sane hours due to academic schedules, but heavily encumbered by slow bureaucracy."
   }
  },
  "charles river laboratories": {
@@ -71548,39 +71678,99 @@
  },
  "cimarron inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "None — not an AI/data science employer. No public research, publications, or ML infrastructure."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "B2B2C import/distribution model: Cimarron designs/specifies firearms, contracts Italian manufacturers for production, imports them, and sells wholesale to U.S. retailers. Revenue comes from wholesale margins on firearms and accessories. No public financials available."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Established, niche, enthusiast-driven. Employees tend to be firearms hobbyists/historians. Culture values authenticity, craftsmanship, and industry relationships. Not a 'tech culture' — more traditional manufacturing/distribution with a passionate customer base."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Firearms collectors, Cowboy Action Shooting competitors, historical reenactors, hunters, and general shooting enthusiasts. Sales occur through a national network of retail dealers and limited direct-to-consumer channels where legally permissible."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k–$75k base for mechanical engineering/quality roles in Fredericksburg, TX. No equity, no signing bonus. Not competitive with AI/DS new-grad offers at tech firms."
   },
   "evidence_sha": "766c5951c2fa2d5f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Firearms manufacturing / Sporting goods wholesale / Outdoor recreation"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "If interviewing for a mechanical engineering, quality, or operations role: expect practical questions on GD&T, firearms mechanics, manufacturing processes, supplier quality, and regulatory compliance. For any data/software role (unlikely to exist): clarify scope — likely internal reporting/ERP work, not ML. Ask about on-call expectations, seasonal demand cycles (SHOT Show, hunting season), and career path in a small niche manufacturer."
+  },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784677766,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Headquarters: Fredericksburg, Texas, USA. Warehousing/distribution likely in Texas. No evidence of remote-first or multi-site engineering hubs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "To provide the most authentic, high-quality reproduction firearms of the American West, preserving historical accuracy while meeting modern safety and performance standards."
+  },
   "name": "Cimarron Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, seasonal (peaks before SHOT Show and hunting seasons). Not 'fast innovative tech culture'; pace driven by manufacturing cycles, regulatory deadlines, and trade shows. Low bureaucracy but also low velocity of technical change."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Reproduction single-action revolvers (e.g., 1873 Peacemaker variants), lever-action rifles, break-top shotguns, and related accessories. Products are manufactured by Italian partners (primarily Uberti and Pietta) to Cimarron's specifications and quality standards."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 6–8 paid holidays (typical for small TX private company). No public policy details."
   },
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71590,7 +71780,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. May close for major holidays (Christmas week) but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small-to-mid-sized private company (~50–150 employees). Operates as a niche player in the firearms industry with decades of market presence (founded 1984). Not a startup; mature, stable business."
   },
   "sources": [
    {
@@ -71624,14 +71819,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=fac17f8d092036316ea52573e05a68560bd322921d419731d8191b754ca52de8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cuY2ltYXJyb24tZmlyZWFybXMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H-1B or other work visas at scale. Small private company in a regulated manufacturing niche; visa sponsorship would be exceptional and role-specific."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Cimarron Inc. (Cimarron Firearms) is a U.S.-based importer and distributor of reproduction Old West firearms, specializing in historically accurate revolvers, rifles, and shotguns for collectors, competitive shooters, and historical reenactors. The company partners with Italian manufacturers like Uberti and Pietta to produce models that replicate 19th-century American firearms, then markets them through dealers and directly to enthusiasts."
+  },
+  "synthesized_evidence_sha": "766c5951c2fa2d5f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "Product engineering (mechanical design, metallurgy, CNC machining specs), quality assurance/testing, ballistics analysis, supply chain coordination with overseas manufacturers, regulatory compliance (ATF, ITAR), and ERP/inventory systems. Limited public evidence of AI/ML or advanced data science roles; core tech is mechanical engineering and manufacturing ops."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Cimarron+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a077356fcc"
+   ],
+   "value": "This is a traditional firearms manufacturer/distributor, not an AI or data science company. The candidate's priorities (elite AI prestige, high new-grad pay, fast innovative tech culture, mission-driven tech, WLB guarantees) do not align with Cimarron's business. Technical roles here are mechanical engineering, quality, and operations — not AI/ML. Culture is likely stable, low-bureaucracy but also low-tech-innovation. Work-life balance may be reasonable (standard manufacturing hours), but 'guara"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Typical manufacturing/wholesale hours (Mon–Fri, ~40–45 hrs). No evidence of crunch culture, but no 'guaranteed shutdowns' policy. Seasonal peaks may require overtime."
   }
  },
  "cincinnati children s": {
@@ -96205,7 +96427,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96223,7 +96445,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784887724,
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784677759,
   "name": "DebtBook",
   "pace_of_work": {
@@ -96236,7 +96458,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784887844,
+  "retry_after": 1784888169,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130335,39 +130557,114 @@
  },
  "funding circle": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "High — strategic AI/ML roles embedded in core product, building user-facing applications and core data assets with executive backing."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Marketplace lending platform earning revenue through origination fees, servicing fees, and interest spreads on loans facilitated between SME borrowers and investors."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191",
+    "8f3ed2544a"
+   ],
+   "value": "Mission-oriented, engineering-centric, data-first culture with 'Circler' identity; emphasizes flexibility, autonomy, and tangible impact on small businesses."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2c8371230",
+    "8f3ed2544a"
+   ],
+   "value": "Small and medium-sized enterprises seeking fast access to capital; institutional and retail investors funding loans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Estimated: £50k–£65k base + equity/benefits (UK new grad AI/ML engineering); competitive with London fintech tier but below US big-tech peaks."
   },
   "evidence_sha": "10bf9fa36e8e1037",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Fintech / Marketplace Lending / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Expect deep technical assessment on full-stack ML engineering (model deployment, APIs, monitoring), analytics engineering best practices (dbt, SQL, data modeling), and credit-risk domain knowledge; behavioral emphasis on autonomy, collaboration, and delivering user value quickly."
+  },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784678641,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2c8371230",
+    "8f3ed2544a"
+   ],
+   "value": "UK-headquartered (London) with hybrid/remote flexibility mentioned in job postings; likely additional offices in US and Europe based on public company footprint."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3267124191",
+    "8f3ed2544a"
+   ],
+   "value": "Build a better financial world by using data and technology to help small businesses get the funding they need quickly."
+  },
   "name": "Funding Circle",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a2c8371230"
+   ],
+   "value": "Estimated: Fast, product-driven iterations with strategic AI/ML hiring; not a slow bureaucracy but regulated environment adds compliance guardrails."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Online lending platform for SMEs; AI/ML-powered credit decisioning; analytics engineering infrastructure; internal and external user-facing AI applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–28 days annual leave + UK bank holidays (typical for UK public fintech); no explicit policy found in sources."
   },
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130376,8 +130673,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8f3ed2544a"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; UK statutory minimums apply; flexibility allowance may support self-managed time off."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Public company (LSE: FCH) with established market presence; platforms generated £7.2bn for UK economy in the last reported year."
   },
   "sources": [
    {
@@ -130441,14 +130748,48 @@
     "url": "https://jobs.ashbyhq.com/fundingcircle/e311b8e5-c840-497b-a31f-40bf17f58ef4"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191",
+    "8f3ed2544a"
+   ],
+   "value": "Funding Circle operates a data-driven lending marketplace that connects small businesses with investors, using AI and analytics to deliver funding decisions in minutes rather than weeks."
+  },
+  "synthesized_evidence_sha": "10bf9fa36e8e1037",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191"
+   ],
+   "value": "Full-stack AI/ML engineering embedding models into user-facing applications; analytics engineering building core data assets; platform engineering for high-throughput lending infrastructure; credit risk modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=Funding+Circle+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a2c8371230",
+    "3267124191",
+    "8f3ed2544a"
+   ],
+   "value": "Offers elite AI/data science prestige at a mission-driven public fintech that moves fast with modern tech stacks, yet explicitly promotes flexibility and tailored benefits to protect work-life balance — rare for high-paying, high-impact roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8f3ed2544a"
+   ],
+   "value": "Estimated: 4/5 — explicit 'Flexibility' pillar with tailored benefit allowance; public company scale suggests structured policies, but fintech regulatory demands can create crunch periods."
   }
  },
  "further": {
@@ -150170,11 +150511,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150186,6 +150529,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784678956,
   "name": "Healf",
   "pace_of_work": {
@@ -150198,6 +150542,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784888049,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150271,7 +150616,7 @@
     "url": "https://jobs.ashbyhq.com/healf/0fe15922-b5c7-4090-9c69-fbae70d17041"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678956,
   "web_search_url": "https://duckduckgo.com/?q=Healf+company+careers+benefits",
@@ -163688,37 +164033,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 / Mission-Prestige: Highly respected within the life sciences and bioinformatics community, offering complex data challenges and a strong mission-driven brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cc2a52d30"
+   ],
+   "value": "Sells scientific hardware, reagents, and services to genomic research and healthcare institutions, operating on a razor-and-blades model where ongoing consumable sales drive revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and highly collaborative, focused on scientific advancement and improving human health."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cc2a52d30",
+    "ab5eb1b24a"
+   ],
+   "value": "Academic and government research institutions, pharmaceutical and biotechnology companies, and healthcare providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 to $160,000 base salary, depending on location and specific technical role."
   },
   "evidence_sha": "53a65e5f8208754c",
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2cc2a52d30",
+    "ab5eb1b24a"
+   ],
+   "value": "Biotechnology and Life Sciences Equipment"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should emphasize their desire to apply elite AI and data science techniques to large-scale genomic datasets while probing for teams that maintain a fast, innovative tech culture within the broader corporate structure. It is critical to ask specific questions about actual day-to-day work hours and project management to ensure the specific team values sane hours and avoids toxic, high-burnout environments, thereby ensuring personal time isn't sacrificed for career growth."
   },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784826847,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2cc2a52d30"
+   ],
+   "value": "Headquartered in San Diego, California, with numerous global offices and manufacturing facilities."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ab5eb1b24a",
+    "03f00dd482"
+   ],
+   "value": "To improve human health by unlocking the power of the genome."
+  },
   "name": "Illumina",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced within technical product teams, but can experience slow-moving administrative and bureaucratic processes typical of a large public enterprise."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cc2a52d30",
+    "ab5eb1b24a"
+   ],
+   "value": "DNA sequencing systems, microarrays, and associated consumables and software used for genomic analysis."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 vacation days annually, alongside paid sick leave and company holidays."
   },
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163728,7 +164131,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though standard paid holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2cc2a52d30"
+   ],
+   "value": "Publicly traded, large-cap global enterprise."
   },
   "sources": [
    {
@@ -163762,14 +164172,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=6232f033dd4cfef1d88d026d775355ab088c040bb9726dc680923603cce1f339JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuaWxsdW1pbmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2cc2a52d30"
+   ],
+   "value": "As a large, publicly traded multinational biotechnology firm, Illumina typically sponsors work visas and handles green card processes for specialized technical and scientific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cc2a52d30",
+    "ab5eb1b24a",
+    "03f00dd482"
+   ],
+   "value": "Illumina is a global biotechnology company that develops, manufactures, and sells integrated systems for the analysis of genetic variation and biological function. It makes money by selling sequencing and array equipment, as well as the reagents and consumables required to run them, alongside providing genomic sequencing services."
+  },
+  "synthesized_evidence_sha": "53a65e5f8208754c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ab5eb1b24a",
+    "03f00dd482"
+   ],
+   "value": "Developing software and computational pipelines for massive genomic data processing, sequencing instrument control, and bioinformatics analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784826847,
   "web_search_url": "https://duckduckgo.com/?q=Illumina+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a top-tier genomics leader, Illumina offers elite AI and data science talent the chance to work on impactful, mission-driven projects that directly improve human health. While capable of offering highly competitive new-grad pay and a fast-paced innovative tech stack, candidates should be aware that its scale as a large, public biotech enterprise inherently introduces some slow-moving corporate bureaucracy rather than a purely agile startup culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally good work-life balance with sane hours, though this can vary by team and project deadlines."
   }
  },
  "illumio": {
@@ -216789,42 +217229,112 @@
  "motorway": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "503e4f925c",
+    "943f966ef7"
+   ],
+   "value": "Estimated: Mid-tier. While well-funded and tackling marketplace optimization, it is not primarily known as an elite AI-first company like Google DeepMind or OpenAI."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e40edd3853"
+   ],
+   "value": "Motorway acts as a platform intermediary for used car sales, generating revenue through transactions between sellers and dealers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "943f966ef7",
+    "503e4f925c"
+   ],
+   "value": "Supportive and inclusive, designed to help people maximize their full potential while thriving in a collaborative, fast-paced environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e40edd3853"
+   ],
+   "value": "Individual car sellers looking for a fair and easy sales process, and car dealers looking to source vehicles."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "503e4f925c"
+   ],
+   "value": "Estimated: £45,000 - £60,000. UK tech scale-ups generally offer competitive entry-level salaries in this bracket depending on the specific role."
   },
   "evidence_sha": "48168020d114a65e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784887724,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e40edd3853"
+   ],
+   "value": "Automotive Technology / Digital Marketplaces."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e40edd3853",
+    "503e4f925c"
+   ],
+   "value": "Probe the specific balance of speed and structure now that the company is post-Series C. Ask about hours, on-call expectations, and how the Analytics team prioritizes projects to ensure work-life balance and avoid burnout."
+  },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784678735,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "943f966ef7",
+    "503e4f925c"
+   ],
+   "value": "United Kingdom (based on job postings and regulatory filings)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e40edd3853",
+    "943f966ef7",
+    "503e4f925c"
+   ],
+   "value": "To help change the automotive sales industry for the better by making it easier and fairer for everyone involved."
+  },
   "name": "Motorway",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e40edd3853",
+    "943f966ef7"
+   ],
+   "value": "Estimated: Fast-paced and collaborative, typical of a venture-backed scale-up operating in a fast-paced environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e40edd3853",
+    "943f966ef7"
+   ],
+   "value": "A digital marketplace platform that connects car sellers with dealers, streamlining the vehicle sales process to make it smoother and more transparent."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "943f966ef7"
+   ],
+   "value": "Estimated: 25-30 days. UK scale-ups typically offer generous holiday packages, often including bank holidays."
   },
-  "retry_after": 1784887844,
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216834,7 +217344,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official company-wide shutdowns mentioned, though UK startups sometimes close between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "943f966ef7",
+    "e40edd3853",
+    "503e4f925c"
+   ],
+   "value": "Fast-growing scale-up backed by leading technology investors, having raised £143 million in Series C funding."
   },
   "sources": [
    {
@@ -216898,14 +217417,47 @@
     "url": "https://jobs.ashbyhq.com/motorway/193ecf91-5c70-4880-bd3f-ccb0bfbbd070"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e40edd3853",
+    "503e4f925c"
+   ],
+   "value": "Motorway operates a digital platform that makes it easier and fairer for car sellers and dealers to transact. The company makes money by facilitating used car sales, taking a fee or margin on the vehicles sold through its network."
+  },
+  "synthesized_evidence_sha": "48168020d114a65e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "503e4f925c",
+    "e40edd3853"
+   ],
+   "value": "Building and maintaining a scalable digital platform that handles large transaction volumes, utilizing data science and analytics (such as BI Data Analysts) to optimize the marketplace."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678735,
   "web_search_url": "https://duckduckgo.com/?q=Motorway+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "503e4f925c",
+    "943f966ef7"
+   ],
+   "value": "Aligns well with the desire for a fast, innovative tech culture at a Series C scale-up. The presence of a dedicated Analytics team offers strong technical learning opportunities and career growth in data-driven marketplace optimization."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "503e4f925c",
+    "e40edd3853"
+   ],
+   "value": "Estimated: Moderate to Good. The company highlights a supportive and inclusive environment, though scale-up growth phases can occasionally demand extra hours."
   }
  },
  "mphasis": {
@@ -234600,41 +235152,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected in environmental data science circles but not competitive with top-tier tech/AI labs for prestige or publication velocity."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "Government agency funded through state general revenue, federal grants (e.g., U.S. EPA), and fee-for-service programs (permitting, licensing). No profit motive."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, mission-focused. Collaborative but hierarchical. Values institutional knowledge and regulatory rigor over speed. Low toxicity, high stability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "Ohio residents, businesses requiring environmental permits, local governments, and federal EPA partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$70,000 base (state pay bands, IT/Analyst classifications). No equity, no signing bonus. Strong benefits (pension, health, tuition remission)."
   },
   "evidence_sha": "7ac986dd2d50192d",
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "State Government / Environmental Regulation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on public service motivation, regulatory knowledge, and handling ambiguity. Technical assessments may focus on Python/R, GIS, statistical modeling, and communicating results to non-technical stakeholders. Prepare for structured, panel-style interviews with civil-service scoring rubrics."
   },
-  "last_attempt_at": 1784887724,
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784677761,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d61dedcc2a"
+   ],
+   "value": "Headquarters in Columbus; five district offices (Northwest, Northeast, Central, Southwest, Southeast). Hybrid/telework options vary by division."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "To protect public health and the environment by ensuring clean air, safe drinking water, and proper waste management across Ohio."
+  },
   "name": "Ohio EPA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate — regulated by rulemaking cycles, legislative sessions, and bureaucratic processes. Project timelines measured in months/years."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "Regulatory programs for air quality, water quality, waste management, drinking water, and environmental cleanup; permitting, inspections, enforcement, and technical assistance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 12–15 sick days + 11–13 paid holidays (varies by tenure and bargaining unit)."
   },
-  "retry_after": 1784887844,
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234644,7 +235256,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Observes all state and federal holidays; offices typically closed between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d61dedcc2a"
+   ],
+   "value": "Established state agency (~1,100 employees across central and district offices)."
   },
   "sources": [
    {
@@ -234678,14 +235297,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=81b76ef916e6014f4c4afb07fad3424ca4836d1df0771acad8172741b642a072JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2hpbw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state agency, Ohio EPA generally does not sponsor H-1B or employment-based visas; roles typically require U.S. citizenship or permanent residency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "Ohio EPA is a state government agency responsible for protecting Ohio's environment and public health by ensuring compliance with environmental laws. It does not operate as a for-profit business; its funding comes from state appropriations, federal grants, and regulatory fees."
+  },
+  "synthesized_evidence_sha": "7ac986dd2d50192d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4d4ad8ee42",
+    "eea8d60e8e",
+    "d61dedcc2a"
+   ],
+   "value": "Environmental monitoring, data analysis, GIS mapping, modeling, laboratory science, database management, and emerging AI/ML applications for pollution prediction and compliance analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677761,
   "web_search_url": "https://duckduckgo.com/?q=Ohio+EPA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven environmental impact with strong work-life balance (standard state hours, generous leave, no crunch culture). AI/DS roles exist but are niche (environmental modeling, sensor analytics) — prestige and pay lag elite tech firms, but learning depth in regulatory data science is unique. Best for candidates prioritizing public service, stability, and sustainable pace over high compensation or cutting-edge AI research velocity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — Standard 40-hour weeks, rare overtime, strong union protections, generous holidays/leave. Guaranteed shutdowns on state/federal holidays."
   }
  },
  "ohio state university": {
@@ -257154,37 +257802,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite institutional reputation in finance, though not recognized as a 'prestigious tech leader' akin to FAANG or top quantitative hedge funds."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Manages pension contributions and invests them globally across various asset classes, generating returns through asset appreciation, yield, and active investment strategies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Estimated: Mature, risk-averse, mission-driven to protect retirees' futures. Bureaucratic elements exist, but the culture is generally respectful, collaborative, and focused on long-term thinking."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "The Government of Canada and federal public service pension plans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 CAD base, supplemented by a robust annual performance bonus structure, highly competitive within Canadian financial services."
   },
   "evidence_sha": "da504a88b3562f27",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784887929,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Financial Services / Investment Management"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784815758,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Headquarters in Ottawa, Canada, with major offices in Montreal, Toronto, New York, London, and Hong Kong."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "To maximize long-term returns for the pension funds it manages, ensuring the financial security of federal public service retirees, maritime forces personnel, and RCMP members."
+  },
   "name": "PSP Investments",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Estimated: Predictable, deliberate, and relatively slow-paced compared to commercial software; focuses on stability and risk mitigation over rapid feature deployment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Investment management services across asset classes including public equities, private equities, real estate, infrastructure, natural resources, and fixed income."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of base vacation, plus statutory holidays and personal days, typical for Canadian institutional investors."
   },
+  "refresh_after": 1790071929,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -257194,7 +257900,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers partial holiday shutdowns between Christmas and New Year's, a common perk in the Canadian pension and financial sector."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Large-scale institutional investor with over $200 billion in net assets under management."
   },
   "sources": [
    {
@@ -257228,14 +257941,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=663127df59d162743d133e2be861202032503da19ccdc7e6077a3f5cd04a5a21JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=3e31a83d-a280-6358-36e6-bfa2a3f66266&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheVN0YXRpb25fUG9ydGFibGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "As a Canadian federal Crown corporation, it is generally well-structured to support permanent residency and relocation for specialized finance and tech talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "The Public Sector Pension Investment Board (PSP Investments) is one of Canada's largest pension investment managers. It invests the pension funds of federal public service employees to generate long-term returns, making money through asset appreciation and passive income across diverse classes."
+  },
+  "synthesized_evidence_sha": "da504a88b3562f27",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Data engineering, quantitative analytics, risk modeling, and software development to support investment decisions, portfolio optimization, and internal operational platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784815758,
   "web_search_url": "https://duckduckgo.com/?q=PSP+Investments+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8ebf47349b"
+   ],
+   "value": "Estimated: Strong. Pension funds typically offer heavy work-life balance emphasis, reduced hours compared to investment banking, and strict boundaries around personal time."
   }
  },
  "ptc": {
@@ -270739,11 +271481,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270755,6 +271499,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784677765,
   "name": "Resmed",
   "pace_of_work": {
@@ -270767,6 +271512,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784888049,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270810,7 +271556,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b5397c03c7ba3480fd3eabfbfcbad15543e4e923e0904fc9d56bde52d6b86215JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cucmVzbWVkLmNvbS9lbi11cy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677765,
   "web_search_url": "https://duckduckgo.com/?q=Resmed+company+careers+benefits",
@@ -313057,7 +313803,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313075,7 +313821,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784887724,
+  "last_attempt_at": 1784887929,
   "last_evidence_at": 1784583338,
   "name": "Tactile Medical",
   "pace_of_work": {
@@ -313088,7 +313834,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784887844,
+  "retry_after": 1784888169,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
