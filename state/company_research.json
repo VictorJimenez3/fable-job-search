@@ -27671,11 +27671,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27687,6 +27689,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784674222,
   "name": "Arixa Capital",
   "pace_of_work": {
@@ -27699,6 +27702,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884602,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27742,7 +27746,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2ca218c9c4e54fc0cb6a67162f632213fb862eaf8728211d1a66c6f16e7325a7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cud2VidXljYXJzLmNvLnphL2J1eS1hLWNhcg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674222,
   "web_search_url": "https://duckduckgo.com/?q=Arixa+Capital+company+careers+benefits",
@@ -54706,41 +54710,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. As a traditional inspection and certification firm, elite AI or data science prestige is likely low compared to top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual business model details are unavailable in the provided text."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate, mission-driven, and risk-averse, focusing heavily on safety and compliance rather than rapid technical disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual customer details are unavailable in the provided text."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000. Likely below big tech standards, reflecting its non-tech-core industry and traditional corporate structure."
   },
   "evidence_sha": "3dd060f3bf7d4b1a",
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual industry details are unavailable in the provided text."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the specific team's tech stack, deployment cadence, and innovation budget to see if any divisions operate like a fast-paced tech firm rather than a traditional inspection body. Ask detailed questions about new-grad compensation ceilings, overtime expectations, and the reality of their work-life balance to ensure it meets your sane-hours and high-pay requirements."
   },
-  "last_attempt_at": 1784884090,
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784675467,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual location details are unavailable in the provided text."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual mission details are unavailable in the provided text."
+  },
   "name": "Bureau Veritas",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Traditional TIC firms generally prioritize compliance, accuracy, and standard processes over fast, innovative tech-culture agility."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual product details are unavailable in the provided text."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days. Large established multinational companies typically offer robust European-style or competitive corporate PTO policies."
   },
-  "retry_after": 1784884330,
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54750,7 +54816,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely to have guaranteed company-wide tech shutdowns, though standard public holidays apply."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual size and stage details are unavailable in the provided text."
   },
   "sources": [
    {
@@ -54784,14 +54859,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf3b0efafb05facf937707525d09700144b79423fdceb5c7ad05c47114b64458JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2J1cmVhdQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual sponsorship context is unavailable in the provided text."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Based on the provided sources (which only contained redirect notices and did not provide usable excerpts), a factual summary cannot be extracted. Historically, Bureau Veritas is a global leader in testing, inspection, and certification (TIC), making money by helping clients ensure compliance, manage risk, and improve quality across various industries."
+  },
+  "synthesized_evidence_sha": "3dd060f3bf7d4b1a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c9f65ee",
+    "cab13dbdd8",
+    "86540c61b9"
+   ],
+   "value": "Factual technical work details are unavailable in the provided text."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675467,
   "web_search_url": "https://duckduckgo.com/?q=Bureau+Veritas+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bureau Veritas is an established global TIC corporation, which typically implies slow bureaucracy and lower new-grad tech pay rather than the elite AI prestige and fast, innovative tech culture you are seeking. While it may offer mission-driven work and better work-life balance than high-burnout tech firms, this environment likely conflicts with your priority for accelerated technical learning and high new-grad compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Enterprise firms outside of big tech often have more predictable, sane hours and lower toxic-burnout environments, though this varies by team."
   }
  },
  "burjline builders": {
@@ -73439,48 +73547,134 @@
  "cleerly": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3b86d26a0d"
+   ],
+   "value": "Estimated: Tier 2. Highly specialized prestige in healthtech AI with FDA-cleared algorithms, but not as broadly recognized as FAANG."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Healthtech Software-as-a-Service (SaaS) and enterprise B2B contracts for clinical decision support."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Mission-driven, highly collaborative, and patient-focused."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Healthcare providers, hospital systems, and medical professionals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3b86d26a0d"
+   ],
+   "value": "Estimated: $130,000 - $170,000 base salary, complemented by equity."
   },
   "evidence_sha": "5e3007e885a95574",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b86d26a0d"
+   ],
+   "value": "Healthcare Technology / Medical Devices / Software-as-a-Service"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784674350,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6ad02b05f6"
+   ],
+   "value": "Headquartered in Denver, Colorado with a distributed workforce."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "To create a world without heart attacks by providing digital care pathways for comprehensive cardiovascular disease evaluation."
+  },
   "name": "Cleerly",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6ad02b05f6"
+   ],
+   "value": "Estimated: Fast-paced, high-innovation startup environment driven by continuous product enhancements and FDA clearances."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Digital health platforms and software care pathways for heart disease identification and treatment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6ad02b05f6"
+   ],
+   "value": "Estimated: 20-25 days of accrued PTO annually, typical for well-funded growth-stage tech startups."
   },
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6ad02b05f6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b6221a0cd6",
+    "6ad02b05f6"
+   ],
+   "value": "Estimated: Likely standard holiday shutdowns, but continued operation of critical clinical systems requires on-call rotations."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Venture-backed, Series C or later growth stage startup."
   },
   "sources": [
    {
@@ -73514,14 +73708,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=dd32330430d3eab06adf70ac2d0fa97b80468ad4a86e88a7a21bb44cd6e921deJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9jbGVlcmx5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Estimated: Likely open to visa sponsorship for specialized technical and AI roles due to high-growth healthtech profile."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Cleerly is a healthcare technology company that develops digital care pathways to identify and characterize coronary artery disease earlier. It makes money by selling its software-as-a-service (SaaS) solutions to healthcare providers and systems."
+  },
+  "synthesized_evidence_sha": "5e3007e885a95574",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b86d26a0d"
+   ],
+   "value": "Developing AI/machine learning algorithms for medical image analysis, building scalable cloud infrastructure, and maintaining FDA-cleared healthcare applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=Cleerly+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b6221a0cd6",
+    "3b86d26a0d",
+    "6ad02b05f6"
+   ],
+   "value": "Estimated: Moderate-to-strong WLB due to mission-driven healthtech nature, punctuated by growth-stage sprints."
   }
  },
  "clera": {
@@ -81638,37 +81866,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Top-ranked economic consultancy with PhD-heavy staff, academic publishing culture, and recognized expert network."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees billed hourly or per engagement for expert services, data analysis, and testimony in litigation and regulatory matters."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectually intense, collaborative, and academically rigorous; low ego, high psychological safety; values precision over speed; diverse PhD/advanced-degree cohort."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Law firms, corporations, government agencies, and financial institutions involved in complex litigation, regulatory investigations, and dispute resolution."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115,000-$135,000 base + $15,000-$25,000 signing/performance bonus + comprehensive benefits; total comp ~$140k-$170k Year 1."
   },
   "evidence_sha": "84249b985be2a1c2",
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Economic & Litigation Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on statistical reasoning, econometric intuition, and coding proficiency (Python/R). Case studies will test your ability to structure ambiguous problems, defend assumptions under cross-examination scrutiny, and communicate complex findings clearly. Prepare for behavioral questions about intellectual honesty and handling pressure."
+  },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784675221,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Menlo Park, CA with offices in San Francisco, Los Angeles, New York, Boston, Washington DC, Chicago, London, and Brussels."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To bring scientific rigor and academic excellence to the resolution of complex legal and business disputes through independent, objective economic analysis."
+  },
   "name": "Cornerstone Research",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: High-intensity project sprints around deadlines/depositions, but predictable workflow between engagements; slower bureaucracy than tech, faster than academia."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expert witness testimony, economic and statistical analysis, data analytics, damages modeling, intellectual property valuation, antitrust/competition analysis, securities litigation support, and regulatory consulting services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + guaranteed 2-week year-end shutdown; unlimited sick leave."
   },
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81678,7 +81948,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Firm-wide year-end shutdown (typically Dec 24-Jan 1) plus occasional summer Fridays or reduced hours."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private partnership with 700+ employees across multiple U.S. offices; mature, stable consulting firm founded in 1989."
   },
   "sources": [
    {
@@ -81712,14 +81987,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f25e2bcd9af88d3427d50419923107800a104675d72acf9b5a47074f8f763867JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cuY29ybmVyc3RvbmVvbmRlbWFuZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor for analytical and research roles; green card sponsorship typically available for high-performing senior analysts and associates after 1-2 years."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cornerstone Research is an economic and financial consulting firm that provides expert testimony and data-driven analysis for complex litigation and regulatory matters. The firm applies rigorous academic methodologies to high-stakes legal disputes across industries."
+  },
+  "synthesized_evidence_sha": "84249b985be2a1c2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Advanced econometric modeling, large-scale data processing, machine learning for document review and predictive coding, statistical analysis in Python/R/Stata, database management, and custom analytics tooling for litigation support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=Cornerstone+Research+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cornerstone offers elite prestige in economic consulting with top-tier new-grad compensation, applying cutting-edge data science to high-impact litigation. The firm maintains a rigorous academic culture with strong mentorship and reasonable hours compared to Big Tech or banking, enabling accelerated technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — Typical 50-55 hrs/week with protected weekends outside trial periods; firm enforces 'no work' vacation policy and predictable staffing."
   }
  },
  "corning": {
@@ -85775,37 +86071,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. As a traditional food packaging company, it is not recognized in the tech industry for AI or Data Science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Manufactures and packages sweeteners at scale, earning revenue through wholesale retail distribution and food service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, stable, family-oriented manufacturing culture. Unlikely to resemble a modern, high-growth, or highly technical startup environment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Grocery retailers, food service businesses, restaurants, and coffee shops, as well as general consumers purchasing packaged sweeteners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000. Unlikely to match elite tech company new-grad salaries ($150k+), as pay is typically benchmarked to the manufacturing and CPG industry rather than big tech."
   },
   "evidence_sha": "6d4cf106651de68b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Consumer Packaged Goods (CPG), Food Manufacturing, and Packaging."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Candidates should verify if a legitimate AI/Data Science team even exists here. The focus should be on questioning the pace of innovation, actual daily technical work, and whether the company offers competitive tech-tier compensation or merely standard CPG industry salaries."
+  },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784676858,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Historically headquartered in Brooklyn, New York, with subsidiary or operational presence in Houston, Texas."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "To provide high-quality, trusted sweetener products to consumers and food service operators, building on a long family-owned heritage of manufacturing and packaging."
+  },
   "name": "Cumberland Packing Corp.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Legacy CPG manufacturing companies typically operate on longer product cycles with traditional corporate bureaucracy rather than fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Sweet'N Low (sugar substitute packets), Sugar in the Raw (turbinado sugar), Stevia in the Raw, and various other commercial sweetener and food packing products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, typical for an established mid-sized company, alongside standard public holidays."
   },
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85815,7 +86181,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed corporate-wide shutdowns found; likely relies on standard public holidays and personal PTO rather than week-long tech-style company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Established, mid-sized private company. Originally based in Brooklyn, NY, with operations and subsidiary offices in other regions like Houston, TX."
   },
   "sources": [
    {
@@ -85849,14 +86224,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=da577bd091ded36257c2ec3ac7c9944830b0d22dcabd6b86ecee8b6f00e18363JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9ob3VzdG9uY291bnR5YXJ0c2Mud2l4c2l0ZS5jb20vaG9tZS9jdW1iZXJsYW5kd2luZHM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H-1B visas or provide relocation for AI/Data Science roles, typical of legacy manufacturing and CPG firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Cumberland Packing Corp. is a private, family-owned manufacturer best known for producing Sweet'N Low, as well as Sugar in the Raw and Stevia in the Raw. The company makes money by manufacturing, packaging, and distributing these iconic sugar substitutes and sweetener products to retail and food service channels globally."
+  },
+  "synthesized_evidence_sha": "6d4cf106651de68b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The tech stack is likely traditional and focuses on supply chain, logistics, manufacturing, and sales reporting. Unlikely to feature modern deep learning workflows, large-scale data infrastructure, or advanced AI/data science pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676858,
   "web_search_url": "https://duckduckgo.com/?q=Cumberland+Packing+Corp.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "2e896526a4",
+    "0b0f4a2dcc",
+    "b4ea63ed83"
+   ],
+   "value": "Cumberland Packing does not align with the candidate's priorities for elite AI prestige, high new-grad tech pay, or a fast, innovative tech culture. As a legacy consumer packaged goods manufacturer, it likely lacks the advanced technical learning environment and fast pace of a top-tier tech company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Traditional family-owned companies often offer sane, standard business hours without the high-burnout culture of big tech, though it may lack guaranteed tech-industry shutdowns."
   }
  },
  "cummins": {
@@ -88922,7 +89326,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88940,7 +89344,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884264,
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784674349,
   "name": "DarkTower",
   "pace_of_work": {
@@ -88953,7 +89357,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884384,
+  "retry_after": 1784884722,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96736,11 +97140,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96752,6 +97158,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784675473,
   "name": "DISH TV",
   "pace_of_work": {
@@ -96764,6 +97171,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884602,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96807,7 +97215,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a4fa6bd7f73c151f814a50758344bb5fb8d6fffeb4401706af1405f42b2338a3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9teS5kaXNoLmNvbS9sb2dpbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675473,
   "web_search_url": "https://duckduckgo.com/?q=DISH+TV+company+careers+benefits",
@@ -194791,7 +195199,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194809,7 +195217,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884264,
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784675469,
   "name": "Marvell Technology",
   "pace_of_work": {
@@ -194822,7 +195230,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884384,
+  "retry_after": 1784884722,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213709,37 +214117,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low-to-Medium. AI and data science roles in CPG are primarily focused on operational efficiency and supply chain over cutting-edge R&D, lacking the elite industry prestige found at top tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7988bad444",
+    "b4c2585b5d"
+   ],
+   "value": "Operates as a North American division of Nestlé S.A., manufacturing and distributing consumer packaged goods (CPG) to generate revenue via mass retail sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and traditional. Focuses heavily on pet well-being, sustainability, and long-standing corporate values."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "263dfb4d90",
+    "b4c2585b5d"
+   ],
+   "value": "Everyday pet owners, mass retail grocery stores, pet specialty retail chains, and veterinary clinics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary. Comfortable and competitive for the Midwest, but notably below elite FAANG-tier new-grad compensation."
   },
   "evidence_sha": "d9045a9801d8f6cc",
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "263dfb4d90",
+    "b4c2585b5d"
+   ],
+   "value": "Consumer Packaged Goods, Pet Food, and Pet Care."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the team's actual tech stack and deployment cadence to confirm if their data science environment operates with genuine agility or is bottlenecked by traditional CPG IT bureaucracy. Request concrete examples of recent AI project lifecycles to ensure the role provides accelerated technical growth and operates at a modern pace rather than simply maintaining legacy systems."
   },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784676858,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "263dfb4d90"
+   ],
+   "value": "Headquartered in St. Louis, Missouri, with additional manufacturing facilities and offices located throughout North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "263dfb4d90"
+   ],
+   "value": "To enrich the lives of pets and the people who love them through innovative, high-quality nutrition and care."
+  },
   "name": "Nestlé Purina North America",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and deliberate. Driven by traditional manufacturing, physical supply chains, and corporate governance rather than fast-paced, rapid-release tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "263dfb4d90"
+   ],
+   "value": "Flagship pet food, treats, and litter brands including Purina Pro Plan, Purina ONE, Fancy Feast, Dog Chow, Cat Chow, and Tidy Cats."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, standard for large legacy CPG conglomerates."
   },
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213749,7 +214214,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard corporate holidays. Guaranteed corporate-wide shutdown periods are not typical for North American CPG operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7988bad444",
+    "b4c2585b5d"
+   ],
+   "value": "Established enterprise component of Nestlé S.A., the world's largest publicly traded food and beverage company."
   },
   "sources": [
    {
@@ -213783,14 +214256,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=f8119f846f4dfafc4d6eb0c2f60117c73050697b5beb9c1a89b8779300f80033JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cubmVzdGxlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b4c2585b5d"
+   ],
+   "value": "As part of a massive global conglomerate, standard corporate visa sponsorship for specialized technical roles in the US is generally available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7988bad444",
+    "263dfb4d90",
+    "b4c2585b5d"
+   ],
+   "value": "Nestlé Purina North America, a division of the global Nestlé S.A. conglomerate, is the world's leading manufacturer of pet food and pet care products. It generates revenue by producing and selling widely recognized premium and everyday pet nutrition brands through global retail and veterinary channels."
+  },
+  "synthesized_evidence_sha": "d9045a9801d8f6cc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7988bad444"
+   ],
+   "value": "Involves supply chain optimization, CPG manufacturing technology, and data analytics to support operations and product distribution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676858,
   "web_search_url": "https://duckduckgo.com/?q=Nestl%C3%A9+Purina+North+America+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You are seeking fast-paced, top-tier tech innovation, but Nestlé Purina operates within a massive, legacy consumer packaged goods conglomerate that typically prioritizes process over rapid technological disruption. While highly mission-driven with a strong emphasis on work-life balance, the culture here gravitates toward structured corporate bureaucracy rather than the elite, fast-paced tech culture you desire."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. Pet care companies generally boast strong, positive corporate mission cultures with highly sustainable hours and low burnout rates."
   }
  },
  "net health": {
@@ -215355,11 +215857,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215371,6 +215875,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784676858,
   "name": "New Mexico Forest and Watershed Restoration Institute",
   "pace_of_work": {
@@ -215383,6 +215888,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884602,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215426,7 +215932,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2b17ef3498cdc6aed9c4c0045f047dafec28fc726bece0e1b3a7d9da599b572JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9uZXdzLmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676858,
   "web_search_url": "https://duckduckgo.com/?q=New+Mexico+Forest+and+Watershed+Restoration+Institute+company+careers+benefits",
@@ -265452,11 +265958,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265468,6 +265976,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784583382,
   "name": "Ronco",
   "pace_of_work": {
@@ -265480,6 +265989,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884602,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265523,7 +266033,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=541604b9456e56743f1cd536644cf54b7ec728b5b6dde96310e41a9621aad270JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9uY28&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583382,
   "web_search_url": "https://duckduckgo.com/?q=Ronco+company+careers+benefits",
@@ -293861,52 +294371,131 @@
  "stifel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: Tier 2/3. While impactful internally within financial services, AI at Stifel is focused on enterprise enablement and governance rather than cutting-edge industry-defining research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c5b54baf8",
+    "71fca14b16"
+   ],
+   "value": "Stifel generates revenue by providing specialized banking and financial services. This includes executing venture debt syndications, managing assets, and delivering AI-enabled governance enhancements within a regulated framework."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Traditional financial services with a high-impact startup-like urgency for certain roles. There is a high expectation to manage multiple projects at once in an onsite setting."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c5b54baf8",
+    "71fca14b16"
+   ],
+   "value": "Individual investors, venture-backed companies seeking growth debt, institutional clients, and corporations requiring capital markets and advisory services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: $110,000 - $150,000 base salary. Financial institutions typically offer competitive base pay with moderate bonuses, but may lack the massive equity grants seen at elite tech firms."
   },
   "evidence_sha": "1a7daf50cbbfeb1b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884482,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784884264,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "11f393eb44",
+    "71fca14b16"
+   ],
+   "value": "Financial Services / Investment Banking & Wealth Management"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Candidates should probe the specifics of the 'fast-paced environment' to gauge actual expectations versus tech-industry norms. Ask how AI governance and regulatory constraints impact technical innovation, and clarify whether the culture truly accelerates learning or simply demands high-volume, hard work at the cost of personal time."
+  },
+  "last_attempt_at": 1784884482,
   "last_evidence_at": 1784675219,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Headquartered in St. Louis, MO, with a major corporate presence in New York, NY, operating onsite."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4c5b54baf8",
+    "71fca14b16"
+   ],
+   "value": "No explicit mission statement was found in the provided sources, but the firm clearly focuses on driving high-impact financial growth and market-leading advisory solutions for its clients."
+  },
   "name": "Stifel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: Very Fast. Job descriptions demand a willingness to work hard in a fast-paced environment while managing multiple projects simultaneously."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c5b54baf8",
+    "71fca14b16"
+   ],
+   "value": "Investment banking services (debt and equity underwriting, M&A advisory), wealth management, venture debt syndication, and institutional securities trading."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: 15-25 days of standard annual PTO. The bank is unlikely to offer unlimited PTO for new grads, but exact figures are not public."
   },
-  "retry_after": 1784884384,
+  "refresh_after": 1790068482,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "4c5b54baf8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: No guaranteed shutdowns outside of standard market holidays. Do not expect Big Tech-style end-of-year collective time off."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "11f393eb44",
+    "71fca14b16"
+   ],
+   "value": "Stifel is a publicly traded, established financial institution operating at a large scale, with offices in major financial hubs."
   },
   "sources": [
    {
@@ -293940,14 +294529,48 @@
     "url": "https://careers-stifel.icims.com/jobs/search?hashed=-625886931"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "11f393eb44",
+    "71fca14b16",
+    "4c5b54baf8"
+   ],
+   "value": "No specific information regarding visa sponsorship for technical or AI roles was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "11f393eb44",
+    "71fca14b16"
+   ],
+   "value": "Stifel is a full-service investment banking, securities trading, and wealth management firm. It makes money primarily through transaction fees, advisory services for mergers and acquisitions, underwriting, and asset management fees."
+  },
+  "synthesized_evidence_sha": "1a7daf50cbbfeb1b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Tech roles at Stifel involve leading the adoption and implementation of AI-enabled solutions, managing multiple technical projects, and ensuring new enhancements meet regulatory, compliance, and risk management governance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675219,
   "web_search_url": "https://duckduckgo.com/?q=Stifel+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "For a new grad seeking a top-tier AI role, Stifel offers a fast-paced environment with high-impact AI adoption projects. However, as a traditional financial institution, it may lack the elite tech prestige of FAANG or guaranteed shutdowns, and the onsite banking culture could conflict with desires for strict work-life balance and avoidance of bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4c5b54baf8"
+   ],
+   "value": "Estimated: Moderate to Low. The explicit desire for candidates who 'work hard' in an onsite banking environment heavily implies long hours and priorities that may challenge personal time boundaries."
   }
  },
  "stoke space": {
