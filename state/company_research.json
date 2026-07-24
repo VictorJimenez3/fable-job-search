@@ -362,7 +362,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -380,7 +380,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784904266,
+  "last_attempt_at": 1784907924,
   "last_evidence_at": 1784680917,
   "name": "2U",
   "pace_of_work": {
@@ -393,7 +393,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784906186,
+  "retry_after": 1784911764,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89362,80 +89362,104 @@
  "collins aerospace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Respected applied AI/ML in aviation (predictive maintenance, autonomy, digital twin) but not a primary AI research lab; prestige stems from safety-critical deployment scale."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: Mid-tier. Defense contractors handle complex, large-scale systems and mission-critical software, but generally lack the 'elite prestige' or fast, fast-paced innovation culture of top-tier tech firms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue from OEM sales to airframers, aftermarket spare parts and services, MRO contracts, and long-term service agreements (power-by-the-hour). Heavy reliance on installed base recurring revenue."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Operates as a business segment of the larger RTX conglomerate, generating revenue by securing contracts to develop and deliver advanced aerospace and defense technologies to government and commercial clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first, safety-obsessed, collaborative but hierarchical; strong union presence in some sites; increasing digital transformation push."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: Mission-driven but traditionally corporate. Expect a structured, slow-moving bureaucratic environment focused on national defense rather than a fast, innovative tech culture."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Commercial airlines (Boeing, Airbus platforms), business jet operators, military forces globally, regional airlines, and MRO providers."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Commercial aerospace, national defense, military, and industrial sectors requiring satellite communication and advanced aerospace technologies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000-$105,000 base + 5-10% target bonus + RSU (RTX stock) ~$10k-20k/yr vesting; total comp ~$100k-$130k."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: $57K - $109K/yr base for entry-level Software Engineer I roles."
   },
   "evidence_sha": "0384915fa429c349",
-  "generated_at": 1784835971,
+  "generated_at": 1784907924,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Aerospace & Defense"
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Aerospace and Defense."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens on C/C++, real-time OS, DO-178C awareness, systems thinking, and model-based design (Simulink). Behavioral questions emphasize safety culture, requirements traceability, and cross-functional collaboration. Prepare for domain-specific scenarios (e.g., fault-tolerant architecture, certification artifacts)."
+   "confidence": "medium",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Probe heavily into the specific team's work-life balance, daily pace of innovation versus bureaucracy, and exact expectations for after-hours availability. Ask how they guarantee shutdowns to avoid burnout and how quickly an elite AI/Data Science new grad can scale to high-impact technical work."
   },
-  "last_attempt_at": 1784904062,
+  "last_attempt_at": 1784907924,
   "last_evidence_at": 1784902760,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Major hubs: Cedar Rapids (IA), Charlotte (NC), Burnsville (MN), Windsor Locks (CT), Ann Arbor (MI), Rockford (IL), Irvine (CA), and numerous international sites (UK, France, Canada, India, etc.)."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Cedar Rapids, IA (onsite)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To deliver innovative aerospace solutions that make aviation safer, more efficient, and more sustainable for customers worldwide."
+   "confidence": "low",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Not found in research."
   },
   "name": "Collins Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — Program-driven cadence with certification gates; faster on digital/IRAD projects, slower on hardware certification cycles. Generally predictable compared to consumer tech."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: Moderate to slow. Defense and aerospace industries are heavily regulated, meaning software development relies on strict procedures and documentation rather than fast, iterative innovation."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Avionics, flight controls, aircraft interiors (seating, lighting, galleys), environmental control systems, landing gear, actuation systems, simulation and training solutions, and connected aviation services."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Technologically advanced solutions for the aerospace and defense industry, including software for satellite communication, military, and industrial aerospace applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-11 company holidays + 9/80 alternate Fridays off (varies by site/grade)."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually, typical for a large corporate aerospace subsidiary."
   },
-  "refresh_after": 1790019971,
-  "retry_after": 1784904302,
+  "refresh_after": 1790091924,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89444,13 +89468,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (~1 week between Christmas and New Year); some sites observe summer shutdown week."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; likely requires using standard PTO for extended time off."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large enterprise (~68,000 employees globally), mature public company subsidiary of RTX (NYSE: RTX)."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Large, established enterprise operating as a major subsidiary of RTX."
   },
   "sources": [
    {
@@ -89495,34 +89523,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Established H-1B sponsor; routine OPT/STEM-OPT and green card support for engineering roles. Defense-related positions may require US citizenship/clearance."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Does not provide H1B sponsorship (indicated as 'No H1B U.S. Company')."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Collins Aerospace is a major aerospace and defense supplier, providing avionics, aircraft interiors, mechanical systems, and mission-critical solutions for commercial and military aircraft. It operates as a business unit of RTX Corporation (formerly Raytheon Technologies)."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Collins Aerospace is a leader in technologically advanced solutions for the aerospace and defense industry, operating as a business unit of RTX (formerly Raytheon Technologies). It designs and manufactures critical systems for commercial and military aircraft, space exploration, and national defense."
   },
-  "synthesized_evidence_sha": "a63b252954fd06c6",
+  "synthesized_evidence_sha": "0384915fa429c349",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Embedded software (DO-178C), model-based design, systems engineering, avionics certification, cybersecurity, data analytics for predictive maintenance, digital twin, and emerging AI/ML for autonomy and health monitoring."
+   "confidence": "high",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Entry-level software engineering tasks focused on aerospace and national defense systems, including satellite communication software."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677665,
   "web_search_url": "https://duckduckgo.com/?q=Collins+Aerospace+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Collins offers elite aerospace prestige and competitive new-grad pay within a massive installed-base business that funds serious R&D. The culture leans engineering-driven with structured processes; work-life balance is generally respected (9/80 schedules common), but defense programs can impose crunch periods. Technical growth is strong in safety-critical embedded systems and emerging digital aviation, though bureaucracy exists at scale."
+   "confidence": "medium",
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "While defense contracting offers strong technical learning and mission-driven work, you will need to clarify how the specific team accelerates career growth without sacrificing personal time. It is critical to ask how they balance sane hours with the rigorous, slow-paced bureaucracy typical of regulated defense entities."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "7/10 — 9/80 or flexible schedules common; overtime occurs during integration/test phases but not chronic. Defense surges can disrupt."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: Moderate. Defense contractors often offer sane 40-hour weeks without the high-burnout culture of tech startups, though project deadlines can occasionally require extra effort."
   }
  },
  "columbia sportswear company": {
@@ -105491,7 +105529,7 @@
    "value": "Estimated: Tier 1.5-2. While not an pure-play AI company, Datadog is an elite tech employer with strong technical prestige and complex data challenges in observability."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -105543,7 +105581,7 @@
    ],
    "value": "Assess whether their 'fast-paced' environment genuinely respects work-life balance or if it masks a high-burnout culture. Ask about typical project timelines, on-call expectations, and how the hybrid model practically ensures 'work-life harmony' while maintaining rapid innovation."
   },
-  "last_attempt_at": 1784904266,
+  "last_attempt_at": 1784907924,
   "last_evidence_at": 1784902760,
   "locations": {
    "confidence": "high",
@@ -105582,7 +105620,7 @@
    "value": "Estimated: 20-25 days standard PTO, typical for large public tech companies. Exact policy not public in provided sources."
   },
   "refresh_after": 1790070268,
-  "retry_after": 1784904506,
+  "retry_after": 1784908404,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254041,104 +254079,131 @@
  "new york state office of mental health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4071ad6673"
+   ],
+   "value": "Estimated: Low. As a state government agency, it is not recognized as an elite tech employer for AI or data science."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "180d92f227",
+    "4071ad6673"
+   ],
+   "value": "A publicly funded government agency. It is sustained through state budget allocations, federal grants, and Medicaid funding rather than commercial sales or VC investments."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4071ad6673",
+    "67c33c93bc"
+   ],
+   "value": "Estimated: Mission-driven traditional bureaucracy. It emphasizes civic duty and public service to New Yorkers over technical learning and competitive career growth."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227",
+    "4071ad6673"
    ],
-   "value": "Hospitals and practices across New York State."
+   "value": "New York State residents requiring psychiatric care and community mental health support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4071ad6673"
+   ],
+   "value": "Estimated: $70,000 - $90,000. State salaries are tied to public pay grades, meaning they will fall far short of elite new-grad tech salaries (e.g. $180k+ TC)."
   },
   "evidence_sha": "565a30b06e4621c9",
-  "generated_at": 1784452911,
+  "generated_at": 1784907924,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227",
+    "67c33c93bc"
    ],
-   "value": "Probe whether the role offers accelerated technical learning and career growth without sacrificing personal time, and clarify if compensation and work pace meet your expectations for an elite, fast-moving tech culture."
+   "value": "Government Administration / Public Health & Mental Healthcare"
   },
-  "last_attempt_at": 1784902434,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe the interviewers about the specific technology stack to see if any modernization or AI initiatives exist. Ask about the structure of the actual data projects to determine if the pace is too bureaucratic for the candidate's growth goals and verify the actual pay bands versus the high new-grad salary expectations."
+  },
+  "last_attempt_at": 1784907924,
   "last_evidence_at": 1784583334,
   "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227"
    ],
-   "value": "New York State"
+   "value": "Headquartered in Albany, NY, with psychiatric centers, regional offices, and affiliated facilities located throughout New York State."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227",
+    "67c33c93bc"
    ],
-   "value": "Promote health care quality and patient safety in hospitals and practices across the state."
+   "value": "To promote the mental health and well-being of all New Yorkers through comprehensive public health programming and direct clinical services."
   },
   "name": "New York State Office of Mental Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "180d92f227",
+    "67c33c93bc"
+   ],
+   "value": "Estimated: Slow and bureaucratic. Agency operations follow rigid government procedures, government procurement rules, and compliance regulations, lacking a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227",
+    "67c33c93bc"
    ],
-   "value": "Research, analysis, reporting, and evaluation activities related to health care quality and patient safety."
+   "value": "Mental health services, state psychiatric hospital management, and community behavioral health program oversight."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "180d92f227"
+   ],
+   "value": "Estimated: 20-25 days vacation in addition to state holidays and generous accruals. Public sector jobs typically offer robust leave benefits that respect personal time."
   },
-  "retry_after": 1784904354,
+  "refresh_after": 1790091924,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "180d92f227",
+    "67c33c93bc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "180d92f227"
+   ],
+   "value": "Estimated: No guaranteed tech shutdowns, but state employees enjoy paid holidays and may use accrued leave to take time off."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "180d92f227"
+   ],
+   "value": "A large, established state government administrative body."
   },
   "sources": [
    {
@@ -254173,39 +254238,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "4071ad6673"
+   ],
+   "value": "Estimated: As a state government employer, it typically does not sponsor work visas for international candidates and requires U.S. citizenship or permanent residency for most state roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "2d57052b32"
+    "180d92f227",
+    "4071ad6673",
+    "67c33c93bc"
    ],
-   "value": "New York State Office of Mental Health is a government agency hiring for research roles to promote health care quality and patient safety."
+   "value": "The New York State Office of Mental Health (OMH) operates psychiatric centers and community-based mental health programs across New York State. Instead of generating revenue like a traditional company, it is a state government agency funded by taxpayer dollars and Medicaid reimbursements."
   },
+  "synthesized_evidence_sha": "565a30b06e4621c9",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "2d57052b32"
+    "4071ad6673",
+    "67c33c93bc"
    ],
-   "value": "Involves Biostatistics, Health Informatics, Health Economics, SAS, and SQL."
+   "value": "Estimated: Involves traditional IT operations, electronic health record (EHR) management, healthcare data compliance, and state data infrastructure. Fast-paced, elite AI and data science innovation is not typically associated with state agencies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583334,
   "web_search_url": "https://duckduckgo.com/?q=New+York+State+Office+of+Mental+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
-   "source_ids": [
-    "2d57052b32"
-   ],
-   "value": "This is a state government agency role, which typically contrasts with a fast, innovative tech culture; it may lean toward structured bureaucracy rather than the elite, high-paying new-grad AI/data science environment you prioritize. However, it could align with your mission-driven focus and preference for sane hours, provided the role avoids burnout."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This aligns poorly with a candidate seeking a top-tier, elite AI/data science role with high new-grad pay and a fast, innovative culture. While a government entity may offer sane hours and job security, it runs on slow bureaucracy rather than the accelerated tech-driven pace the candidate is looking for, and compensation will likely fall well below elite tech standards."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "180d92f227"
+   ],
+   "value": "Estimated: High. As a state government entity, positions are heavily regulated with predictable hours, not a toxic or high-burnout tech environment."
   }
  },
  "new york university": {
@@ -382022,38 +382093,44 @@
  "ultra intelligence and communications": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Niche defense, likely Tier 3 for general tech prestige; while interesting applied problems exist, it lacks the elite AI/data science brand recognition of FAANG or top tech peers."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: Niche or specialized tier. While highly respected in defense engineering, it may lack the elite commercial AI/data science prestige of FAANG-tier tech companies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ac7c508683"
+    "06f3901eb4"
    ],
-   "value": "Revenue is generated through B2G/B2B defense contracting, including large platform programs, sub-system component delivery, and long-term engineering services."
+   "value": "B2G (Business-to-Government) defense contracting, building customized engineering and software solutions for critical defense platforms."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-oriented, structured, and process-heavy. Likely favors deep engineering rigor and stability over rapid disruption or startup agility."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: Mission-focused and structured. Heavily emphasizes life-saving battlefield technology and defense operations over a loose, commercial tech vibe."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "6ec6b88cb4"
+    "06f3901eb4"
    ],
-   "value": "Primary customers include defense ministries, armed forces, and government intelligence agencies."
+   "value": "Government and defense sector entities requiring mission-critical operational support, such as the military and allied forces."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000 - $105,000 base salary, typical for engineering new grads in the defense sector, usually lower than elite commercial tech but offering strong job security."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: $85,000 - $120,000. Competitive for the defense sector and cleared roles, but may not match top-tier commercial tech new-grad pay."
   },
   "evidence_sha": "30b279fca21d4a21",
-  "generated_at": 1784862889,
+  "generated_at": 1784907924,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -382062,70 +382139,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "6ec6b88cb4"
+    "06f3901eb4"
    ],
-   "value": "Aerospace and Defense, Secure Communications, Intelligence Technology."
+   "value": "Defense and Space Manufacturing / Military Technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe deeply into the actual day-to-day pace of the team, whether red tape slows down deployment, and if the engineering culture genuinely respects work-life balance or falls victim to defense-sector burnout and rigid governance."
+   "confidence": "medium",
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Probe whether the Agile teams operate with fast, innovative deployment cycles or are bound by defense bureaucracy. Ask about typical working hours and expectations for engineers during mission-critical deadlines."
   },
-  "last_attempt_at": 1784904062,
+  "last_attempt_at": 1784907924,
   "last_evidence_at": 1784903047,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "90827f592e",
-    "ac7c508683"
+    "06f3901eb4"
    ],
-   "value": "Operations are distributed across North America (US) and the UK, with engineering centers located in both regions."
+   "value": "Tampa, FL, United States (based on current job postings), in addition to other defense-related locations."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "6ec6b88cb4"
+    "06f3901eb4"
    ],
-   "value": "To provide advanced intelligence, secure communications, and electronic warfare capabilities to protect military personnel and national security."
+   "value": "To engineer systems that save lives and lead programs that change the battlefield, providing innovative solutions that streamline intricate, mission-critical operations."
   },
   "name": "Ultra Intelligence and Communications",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to slow. Defense lifecycles, compliance, and government regulations typically slow down development compared to commercial tech."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: Moderate and structured. The use of Waterfall alongside Agile suggests a somewhat traditional process that may conflict with a fast, innovative tech culture preference."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ac7c508683"
+    "06f3901eb4"
    ],
-   "value": "The company designs and manufactures electronic warfare systems, tactical data links, secure communications equipment, and intelligence platforms for military applications."
+   "value": "Mission-critical embedded software platforms and engineering systems designed to streamline the preparation and execution of intricate, mission-critical operations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days of paid time off annually, consistent with standard defense contractor benefits."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: 20-25 days. Defense contractors typically offer robust standard benefits packages, though exact policy is not explicitly stated in research."
   },
-  "retry_after": 1784904302,
+  "refresh_after": 1790091924,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "06f3901eb4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely offers a winter holiday shutdown period between Christmas and New Year, though specific guaranteed policies are not confirmed."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found. Defense contractors occasionally close for major federal holidays but lack the firm shutdown periods seen in commercial tech."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "90827f592e",
-    "ac7c508683"
+    "06f3901eb4"
    ],
-   "value": "Ultra Intelligence and Communications operates as a specialized global subsidiary employing several thousand staff as part of Ultra Electronics, targeting the defense market."
+   "value": "A division of the Ultra Group, operating with dedicated business units like 'Mission Solutions' that focus on specific defense technology segments."
   },
   "sources": [
    {
@@ -382180,40 +382266,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "90827f592e"
+    "06f3901eb4"
    ],
-   "value": "As a defense contractor, the company frequently requires candidates to be eligible for high-level government security clearances, which may restrict hiring to citizens of the operating country."
+   "value": "Sponsorship is not mentioned. However, roles require security clearance, which requires US citizenship and typically precludes standard visa sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "6ec6b88cb4",
-    "90827f592e"
+    "06f3901eb4"
    ],
-   "value": "Ultra Intelligence and Communications is a defense-sector technology provider that develops secure communications, intelligence, and electronic warfare systems. As a subsidiary of the larger Ultra Electronics group, it makes money by securing long-term defense and government contracts globally."
+   "value": "Ultra Intelligence and Communications (UIC) is a defense and mission-critical systems provider that designs and develops specialized hardware and embedded software, such as solutions for intricate military operations. It generates revenue by securing government and defense contracts to engineer technology that streamlines battlefield preparation and execution."
   },
+  "synthesized_evidence_sha": "30b279fca21d4a21",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac7c508683"
+    "06f3901eb4"
    ],
-   "value": "Technical staff work on RF engineering, signal processing, cryptography, software-defined radios, and embedded systems."
+   "value": "Designing, developing, and optimizing embedded software for critical platforms. Work environments include both Agile and Waterfall development methodologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583463,
   "web_search_url": "https://duckduckgo.com/?q=Ultra+Intelligence+and+Communications+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "This role supports critical national security missions, but defense contracting is fundamentally slowed by government bureaucracy and rigid clearance processes, which aggressively conflicts with your desire for a fast, innovative tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "While UIC offers strong mission-driven work, it is a defense contractor that requires security clearance and uses Waterfall methodologies. The culture may not fit a candidate seeking a fast-paced, innovative tech environment with top-tier new-grad pay and flexible remote options."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mixed. Large defense contractors tend to offer standard 40-hour weeks, but deadline-driven surges in program delivery can disrupt balance."
+   "source_ids": [
+    "06f3901eb4"
+   ],
+   "value": "Estimated: Varies. Defense contractors often offer stable hours, but mission-critical deployments can occasionally require intense bursts of work."
   }
  },
  "ultra intelligence communications": {
