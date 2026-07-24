@@ -28603,52 +28603,130 @@
  "astreya": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "Tier 4. Astreya is focused on IT managed services and AI-first service desks rather than cutting-edge AI research or data science product development, making it less prestigious for elite AI candidates."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "93a0018093",
+    "b280dabff5"
+   ],
+   "value": "Outsourced IT managed services and technical talent solutions. Astreya generates revenue by taking over IT operations and service desks for tech companies, recently leveraging AI to enhance these services at scale."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b280dabff5",
+    "93a0018093"
+   ],
+   "value": "Estimated: Global and service-oriented, focused on operational excellence, efficiency, and scaling IT capabilities for enterprise tech clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a90c68f13d",
+    "93a0018093"
+   ],
+   "value": "Astreya primarily serves large, fast-scaling technology companies that need to optimize and scale their IT operations and managed service desks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b280dabff5"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Aligned with standard IT managed services compensation rather than elite tech industry rates."
   },
   "evidence_sha": "cb35922e34b301c1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878071,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784877931,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b280dabff5",
+    "93a0018093"
+   ],
+   "value": "IT Services and IT Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "Probe whether the AI-first capabilities involve building proprietary algorithms or simply integrating existing IT automation tools. Ask about the balance between innovative AI development and slow corporate bureaucracy post-Cognizant acquisition, and confirm expectations for sane hours and guaranteed shutdowns to avoid burnout."
+  },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784678734,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b280dabff5"
+   ],
+   "value": "Global operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "To deepen its AI-first managed service capabilities at scale, driving innovation and efficiency in IT operations for its clients."
+  },
   "name": "Astreya",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "Estimated: Fast-paced due to serving scaling tech companies, but potentially constrained by standard IT service level agreements and corporate integration post-Cognizant acquisition."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "93a0018093",
+    "b280dabff5"
+   ],
+   "value": "Astreya's offerings include IT managed services, talent solutions, and AI-first managed service desk capabilities. They focus on scaling IT operations and technical support for large tech enterprises."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b280dabff5"
+   ],
+   "value": "Estimated: 15-20 days. As an IT services firm, they likely offer a standard corporate paid time off package."
   },
-  "retry_after": 1784878051,
+  "refresh_after": 1790062071,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "b280dabff5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b280dabff5"
+   ],
+   "value": "Estimated: None found in research. Standard IT services typically do not have guaranteed company-wide shutdowns due to client SLAs."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "Astreya operates on a global scale and was recently acquired by Cognizant to deepen its AI-first managed service capabilities, indicating it is in a scaling or integration phase within a larger corporate parent."
   },
   "sources": [
    {
@@ -28682,14 +28760,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=9c508e7a26c7c892221ee065dafa9af0f688e0843b2114a8a3a3e61c89eeaa20JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly9hc3RyZXlhLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b280dabff5",
+    "93a0018093"
+   ],
+   "value": "As a global IT managed services provider recently acquired by Cognizant, visa sponsorship is likely possible for specialized roles, though not explicitly detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b280dabff5",
+    "a90c68f13d",
+    "93a0018093"
+   ],
+   "value": "Astreya is a global IT managed services and solutions provider that partners with technology companies to manage, scale, and optimize their IT operations. The company makes money by providing outsourced technical talent, managed services, and AI-first service desk capabilities to enterprise clients."
+  },
+  "synthesized_evidence_sha": "cb35922e34b301c1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93a0018093",
+    "b280dabff5"
+   ],
+   "value": "Technical work involves building and scaling AI-first IT service desk solutions, managing enterprise IT operations, and providing outsourced technical support and talent. The focus is heavily on IT operations and service automation rather than core data science or algorithmic AI product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678734,
   "web_search_url": "https://duckduckgo.com/?q=Astreya+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "93a0018093"
+   ],
+   "value": "Astreya's recent acquisition by Cognizant to scale AI-first capabilities may appeal to a candidate looking for innovative tech culture, but a core IT services and acquisition context raises concerns about potential bureaucracy and a lack of elite AI prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b280dabff5"
+   ],
+   "value": "Estimated: Moderate. IT managed services often require strict SLAs and on-call expectations, though Astreya's specific culture may offer standard corporate hours."
   }
  },
  "astro mechanica": {
@@ -37985,48 +38098,128 @@
  "bdo canada": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: Mid-tier (Tier 3). Prestige is high within the accounting and audit world, but it does not hold elite prestige within the dedicated AI and data science community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Professional services firm generating revenue through billable hours, project-based consulting fees, and retained advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: Collaborative and professional, prioritizing mentorship, relationship-building, and work-life integration."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Canadian mid-market enterprises, large corporate clients, and entrepreneurial businesses."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: $70,000 - $90,000 CAD for new graduate technology, data, or AI roles in Canada."
   },
   "evidence_sha": "5dffea544d234123",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878071,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Professional Services / Accounting and Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Probe whether the AI or data science role involves building novel models and driving fast-paced innovation, or if it is limited to supporting traditional advisory engagements. Ask about typical consulting billable hours, how 'BDO Time' flex-work policies actually protect personal time during non-peak seasons, and the exact compensation structure to ensure it meets your high new-grad pay expectations."
+  },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784674660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Offices located across Canada."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "To help people and businesses succeed by providing high-quality professional services and fostering long-term client relationships."
+  },
   "name": "BDO Canada",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: Moderate to fast, driven by client deadlines and seasonal accounting cycles, which can sometimes slow down internal technical innovation and introduce bureaucratic processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e9d044340f",
+    "cd7d9f04d8"
+   ],
+   "value": "Audit and assurance, tax services, advisory consulting, and BDO Online digital solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: 20 to 25 days of base vacation plus statutory holidays, potentially augmented by flex-time policies during non-peak seasons."
   },
+  "refresh_after": 1790062071,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "e9d044340f",
+    "4b3762f729",
+    "cd7d9f04d8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: No firm-wide guaranteed tech shutdowns, though some offices may close for statutory holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Large, established professional services firm operating as a member firm of the global BDO network."
   },
   "sources": [
    {
@@ -38060,14 +38253,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=dbe0a4d577ab80c09077e82b13b6f35e90d733ba44e5de40016267ded46193d1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly93d3cuYmRvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Not explicitly stated in the provided sources, though large Canadian professional services firms typically offer visa sponsorship for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e9d044340f",
+    "4b3762f729",
+    "cd7d9f04d8"
+   ],
+   "value": "BDO Canada is a leading professional services firm providing audit, tax, and advisory solutions. It generates revenue by consulting on complex business challenges, including digital transformation and AI strategies, for corporate clients."
+  },
+  "synthesized_evidence_sha": "5dffea544d234123",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9d044340f",
+    "4b3762f729"
+   ],
+   "value": "Digital transformation consulting, enterprise technology implementation, and cloud-based digital product delivery via BDO Online."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=BDO+Canada+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e9d044340f",
+    "cd7d9f04d8"
+   ],
+   "value": "While BDO Canada offers digital transformation consulting, it is fundamentally an accounting and advisory firm rather than an elite tech company, meaning it lacks the top-tier AI prestige and extremely high new-grad tech pay you are looking for. The traditional consulting structure and large firm bureaucracy may also feel slow and restrictive compared to a fast, innovative tech culture, though it generally maintains better work-life balance through its 'BDO Time' initiative rather than guarantee"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cd7d9f04d8"
+   ],
+   "value": "Estimated: Moderate. Generally respects work-life balance through flexible working arrangements, but usage can vary by team and client demands."
   }
  },
  "beacon ai": {
@@ -102403,37 +102631,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong consumer-scale data, niche language/content challenges, but less published research visibility than FAIR/Google Brain/DeepMind)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely SVOD (subscription video on demand) with tiered pricing; possibly AVOD (ad-supported) tiers and content licensing revenue. Not confirmed from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-driven product culture with Bollywood/entertainment DNA; likely hierarchical in non-tech functions. No employee reviews in supplied sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer subscribers in India and diaspora markets seeking Indian entertainment content; potentially also B2B licensing partners. Specific customer segments not detailed in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: ₹18-30 LPA base (₹25-45 LPA CTC) for AI/DS roles in India; $110-140k base in US offices. Wide range reflects limited public data."
   },
   "evidence_sha": "7005c40e6ec655f3",
+  "generated_at": 1784878071,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce082a245d",
+    "38e0ecb345"
+   ],
+   "value": "Media & Entertainment / OTT Video Streaming"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: large-scale recommender systems, video understanding/NLP for Indian languages, AB testing at millions of users, low-latency streaming architecture. Ask directly about: on-call rotation, guaranteed shutdown rituals, PTO enforcement, and mentorship structure for new grads."
   },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784675817,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Mumbai, India; likely offices in Singapore, UAE, UK, US. Supplied sources do not confirm current locations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not explicitly stated in supplied sources. Typical for streaming platforms: democratize access to Indian entertainment globally."
+  },
   "name": "EROS Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast (competitive streaming market, rapid feature cycles, live event scaling). No internal tempo data in supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ce082a245d",
+    "38e0ecb345"
+   ],
+   "value": "Likely operates Eros Now, a subscription-based streaming service offering Indian movies, TV shows, music videos, and original content. Exact product portfolio not verifiable from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + Indian national holidays (typical for Indian tech employers). Not confirmed in supplied sources."
   },
+  "refresh_after": 1790062071,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102443,7 +102719,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some Indian tech firms observe Diwali/year-end breaks but not universal. Verify with hiring manager."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-large stage media/tech company (Eros Now reported ~36M paid subscribers in 2021). Exact current headcount and funding stage not in supplied sources."
   },
   "sources": [
    {
@@ -102477,14 +102758,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As an Indian-headquartered company with international presence, may sponsor visas (H-1B, etc.) for specialized tech roles in US/UK offices. No policy details in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ce082a245d",
+    "38e0ecb345"
+   ],
+   "value": "EROS Technologies appears to be associated with Eros Now, an Indian over-the-top (OTT) video streaming platform. The provided sources redirect to the company's about page and Wikipedia entry but do not return accessible content for verification."
+  },
+  "synthesized_evidence_sha": "7005c40e6ec655f3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Video streaming infrastructure, recommendation systems, content delivery optimization, mobile/web apps, data analytics, DRM, cloud scaling. Specific AI/DS roles not detailed in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675817,
   "web_search_url": "https://duckduckgo.com/?q=EROS+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare blend of elite AI/DS prestige in consumer-scale video streaming with a mission to globalize Indian entertainment. Candidate priorities align with fast innovation in recommendation/content-understanding systems, but work-life balance guarantees and shutdown policies are unverified; due diligence needed on actual culture vs. industry norms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 (streaming ops often require on-call; unknown if guaranteed shutdowns exist). Candidate should verify directly."
   }
  },
  "esri": {
@@ -167696,7 +168001,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167714,7 +168019,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784877931,
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784737480,
   "name": "Lendable",
   "pace_of_work": {
@@ -167727,7 +168032,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784878051,
+  "retry_after": 1784878311,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175197,11 +175502,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175213,6 +175520,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784583503,
   "name": "M&T Bank",
   "pace_of_work": {
@@ -175225,6 +175533,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878191,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175268,7 +175577,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=0e51e18e86ab02a82a631c3e76d023a7cabc637cd2e455f6020737cea783351fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9tLnlvdXR1YmUuY29tL3dhdGNoP3Y9WWlLN0lMMGtxZDA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583503,
   "web_search_url": "https://duckduckgo.com/?q=M%26T+Bank+company+careers+benefits",
@@ -183883,41 +184192,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected domain-specific impact (national health data, EMS optimization) but lower external visibility than consumer AI labs; strong for publication in healthcare ML venues (AMIA, MLHC, Nature Medicine)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit health solutions provider generating revenue through government contracts for EMS, health administration services, and insurance partnerships; surpluses reinvested into community health initiatives."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, collaborative, low-ego. Teams describe 'public service mindset' — people stay 10+ years. Decision-making involves clinical/ops stakeholders, not just engineering. Less 'hero culture', more 'reliable delivery'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provincial governments, health authorities, employers, insurance companies, and individual Canadians seeking health services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD 70,000-85,000 base + modest bonus/benefits; below FAANG but competitive for Canadian healthcare tech and includes pension (HOOPP/equivalent)."
   },
   "evidence_sha": "135f8fc8343793d4",
+  "generated_at": 1784878071,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare technology / Health insurance / Emergency medical services"
   },
-  "last_attempt_at": 1784877931,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: (1) How data science teams are structured — embedded in product vs centralized; (2) Concrete examples of models deployed to production that changed EMS dispatch or claims outcomes; (3) On-call rotation and incident response expectations for ML systems; (4) Career ladder for ICs vs management; (5) How the not-for-profit status influences roadmap prioritization vs quarterly revenue pressure."
+  },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784677861,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Moncton, NB with major operations in Nova Scotia, Ontario, Alberta, and other Canadian provinces."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve the wellbeing of Canadians through innovative health solutions and compassionate care."
+  },
   "name": "Medavie",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Government/healthcare regulatory cycles impose deliberate pace; sprints exist but releases require compliance review. Faster than pure bureaucracy, slower than startup."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Emergency medical services (EMS), health insurance administration, healthcare management, home care, and telehealth services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 vacation days + 10-12 statutory holidays (varies by province); competitive with Canadian public sector norms."
   },
-  "retry_after": 1784878051,
+  "refresh_after": 1790062071,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183927,7 +184274,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Organization-wide shutdown between Christmas and New Year (typical 5-7 business days); additional summer shutdown not standard but some teams observe informal slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large established organization with 5,000+ employees across Canada; mature stage with stable government contracts."
   },
   "sources": [
    {
@@ -183961,14 +184313,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8a97a0a2359c1b45c1d878f9dee3cbbb4c979d9823496192cf91e014b14053a6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuaWtlYS5jb20vY2gvZGUvY2F0L2F1ZmJld2FocnVuZ3Nib3hlbi0xMDc5Ny8_bXNvY2tpZD0wMWVjMjQ4ZjVhZDE2ODA5MGY4OTMzMTI1YjFmNjkzYQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports work permits for specialized tech roles given national operations; Canadian employer with experience hiring international talent in healthcare IT."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medavie is a Canadian health solutions company that provides emergency medical services, health insurance administration, and healthcare management services. The company operates as a not-for-profit organization focused on improving the wellbeing of Canadians."
+  },
+  "synthesized_evidence_sha": "135f8fc8343793d4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare data analytics, claims processing systems, telehealth platforms, EMS dispatch optimization, population health management tools, and digital health applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677861,
   "web_search_url": "https://duckduckgo.com/?q=Medavie+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medavie offers a rare combination of mission-driven healthcare impact with the technical complexity of national-scale health data systems. As a not-for-profit, it prioritizes sustainable work practices over burnout-driven growth, aligning with your need for guaranteed shutdowns and sane hours. The scale of provincial EMS and insurance data provides elite-caliber ML/DS problems — optimization, forecasting, population health — without the 'move fast and break things' culture of ad-tech or fintech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Not-for-profit mission and unionized workforce (paramedics) create cultural expectation of reasonable hours; tech teams report minimal weekend work and protected vacation."
   }
  },
  "medical college of wisconsin": {
@@ -299129,11 +299502,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -299145,6 +299520,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784674659,
   "name": "UBS",
   "pace_of_work": {
@@ -299157,6 +299533,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878191,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -299190,7 +299567,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=6d1ca94789d1dbe3fd20934acd3e6d99b879e821bd14b35a70576a959ae2ec32JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly93d3cudWJzLmNvbS91cy9lbi5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
   "web_search_url": "https://duckduckgo.com/?q=UBS+company+careers+benefits",
@@ -309496,39 +309873,110 @@
  },
  "veeva systems": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Top-tier — Veeva is the recognized category leader in life sciences cloud, attracts strong ML talent for regulated AI applications, and appears in curated new-grad data science hiring lists alongside FAANG and elite unicorns."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Subscription-based SaaS (Software-as-a-Service) model selling industry-specific cloud applications to life sciences customers on recurring contracts, with high retention driven by regulatory compliance needs and deep workflow integration."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Mission-driven, collaborative, and pragmatic — engineers and consultants work closely with life-sciences domain experts; culture rewards doing the right thing for customers and patients over heroics, with low politics and high autonomy for senior ICs."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Life sciences companies — pharmaceutical, biotechnology, and medical device firms — ranging from large global enterprises to emerging biotechs that need compliant cloud software for R&D, clinical trials, and commercialization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% target bonus + RSU grant ($40k-$70k over 4 years) for software engineering/data science roles; total first-year comp ~$180k-$230k, competitive with top-tier enterprise SaaS peers."
   },
   "evidence_sha": "9f2c8cfc1598b7a7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878071,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Enterprise SaaS / Life Sciences Technology (Industry Cloud)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Expect deep technical assessments in cloud architecture, data modeling, and domain-specific problems (clinical trial supply, regulatory data). Behavioral interviews will probe alignment with the four core values — especially Customer Success and Speed. Prepare for case studies on scaling compliant systems and demonstrating how you balance innovation with the rigor life sciences demands."
+  },
+  "last_attempt_at": 1784878071,
   "last_evidence_at": 1784673555,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Headquartered in Pleasanton, California; \"Work Anywhere\" remote-first policy with offices in major US hubs (NYC, Boston, Raleigh, etc.) and international locations across Europe, Asia-Pacific, and Latin America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "To help life sciences companies bring therapies to patients faster through industry cloud innovation, guided by values: Do the Right Thing, Customer Success, Employee Success, and Speed."
+  },
   "name": "Veeva Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Estimated: Fast but sustainable — \"Speed\" is a core value, but the regulated domain and Employee Success value discourage reckless pace; teams ship frequently within compliance guardrails rather than chaotic crunch cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Industry cloud solutions for life sciences including Veeva Vault (content management), Veeva CRM, Veeva RTSM (randomization and trial supply management), and other cloud applications for clinical, regulatory, quality, and commercial operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick time; unlimited PTO not reported — Veeva traditionally uses accrued vacation buckets for clarity and liability management."
   },
+  "refresh_after": 1790062071,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -309538,7 +309986,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; typical US corporate calendar with week between Christmas and New Year as low-activity period, but not a formal guaranteed shutdown policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2414cf1d5d"
+   ],
+   "value": "Public company (NYSE: VEEV) with 7,000+ employees, founded in 2007, profitable and growing; a established leader in life sciences cloud software."
   },
   "sources": [
    {
@@ -309602,14 +310057,48 @@
     "url": "https://jobs.lever.co/veeva/7cb47452-8298-4523-81cf-40906f45ebad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large public company, Veeva routinely sponsors H-1B visas and supports green card processes for eligible technical roles; specific new-grad sponsorship details should be confirmed with recruiting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Veeva Systems is a mission-driven industry cloud company that provides software solutions for the life sciences sector, helping pharmaceutical and biotech companies bring therapies to patients faster. It operates as a \"Work Anywhere\" organization with values emphasizing customer success, employee success, and speed."
+  },
+  "synthesized_evidence_sha": "9f2c8cfc1598b7a7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "a9a478dea1"
+   ],
+   "value": "Cloud-native development on AWS, microservices, data platforms, AI/ML for life sciences analytics, vault platforms, clinical data management, and regulatory compliance tooling. Roles include software engineering, data science, technical consulting, and platform architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673555,
   "web_search_url": "https://duckduckgo.com/?q=Veeva+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef",
+    "17f8c9c419"
+   ],
+   "value": "Veeva offers a rare combination: elite prestige as the dominant life-sciences cloud platform, competitive new-grad compensation, and a mission-driven culture that explicitly values Employee Success and Speed over bureaucracy. The \"Work Anywhere\" model and stated values suggest genuine work-life balance respect, while the technical scope (AI/ML on regulated clinical data) accelerates high-impact learning without the burnout typical of consumer-tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a9a478dea1",
+    "38e99c57ef"
+   ],
+   "value": "Estimated: 4/5 — Remote-first \"Work Anywhere\" policy, explicit Employee Success value, and enterprise SaaS rhythm (quarterly releases, not daily fire drills) support strong boundaries; on-call exists for production systems but is typically well-rotated and compensated."
   }
  },
  "vega americas": {
