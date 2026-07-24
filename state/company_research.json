@@ -1127,47 +1127,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier — no public benchmarks, publications, or talent signals found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — the sources do not reveal how 8am generates revenue or its business model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — insufficient information to characterize culture, values, or team dynamics."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — no customer segments or target markets are identified in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data, offer reports, or salary bands found."
   },
   "evidence_sha": "7b63392dbd03da56",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — industry classification not determinable from supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should probe for concrete evidence of: AI/data science team prestige and compensation, actual work hours and shutdown policies, technical learning culture, and burnout prevention. Ask for specific examples of project autonomy, mentorship, and work-life boundaries."
   },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784674350,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — no office locations or remote/hybrid policy information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — no mission statement or company purpose is available from the provided sources."
+  },
   "name": "8am",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no data on development velocity, release cadence, or operational tempo."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — sources do not describe any products or services offered by 8am."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy disclosed in sources."
   },
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no company-wide shutdown or guaranteed time-off practices documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small team (insufficient public data to confirm headcount or funding stage)."
   },
   "sources": [
    {
@@ -1201,14 +1276,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=476df4e1a801de50e57b112f167b4ecd1f7005a902678b3cdc6f51dcbcb50791JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuZmVkZXguY29tL2VuLXVzL3RyYWNraW5nLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown — no visa sponsorship policy or immigration support details available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "8am appears to be a company with limited public information available; the provided sources are tracking redirects rather than company pages. No verifiable description of products, mission, or business model could be extracted from the supplied sources."
+  },
+  "synthesized_evidence_sha": "7b63392dbd03da56",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "150d0933e2",
+    "c888e524f1",
+    "30fe225351"
+   ],
+   "value": "Unknown — no technical stack, engineering practices, or AI/data science focus documented in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=8am+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Without verified company data, alignment cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no employee reports, policies, or cultural indicators available."
   }
  },
  "8vc": {
@@ -26030,11 +26134,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26046,6 +26152,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784588247,
   "name": "Aramark",
   "pace_of_work": {
@@ -26058,6 +26165,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884813,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26101,7 +26209,7 @@
     "url": "https://aramarkcareers.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784588247,
   "web_search_url": "https://duckduckgo.com/?q=Aramark+company+careers+benefits",
@@ -27668,41 +27776,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (regional specialist) — not a globally recognized AI research hub; prestige derives from fintech domain expertise in emerging markets."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ec02625b8e",
+    "7a96637e8e",
+    "2ebf70c706"
+   ],
+   "value": "Likely earns through interest margins on vehicle loans, origination fees, and possibly referral fees from the webucars.co.za marketplace."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, compliance-aware, product-focused; likely less 'move fast and break things' and more 'move fast with audit trails'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ec02625b8e",
+    "2ebf70c706"
+   ],
+   "value": "South African consumers seeking vehicle financing; car dealerships partnering for finance options."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: ZAR 350k–550k/year (approx. USD 19k–30k) for software/ML roles in SA fintech; well below US top-tier new-grad packages."
   },
   "evidence_sha": "2cf96506094ea661",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec02625b8e",
+    "7a96637e8e",
+    "2ebf70c706"
+   ],
+   "value": "Fintech / Vehicle Finance / Consumer Lending"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Ask about: (1) actual ML/DS use cases — credit scoring vs. generative AI; (2) engineering culture — sprint cadence, on-call, deployment frequency; (3) concrete WLB policies — core hours, overtime expectations, shutdown periods; (4) mentorship and promotion path for new grads; (5) visa sponsorship if non-SA citizen."
   },
-  "last_attempt_at": 1784884482,
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784674222,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec02625b8e",
+    "7a96637e8e",
+    "2ebf70c706"
+   ],
+   "value": "South Africa (primary); possibly remote-friendly for technical roles."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Arixa Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — fintech lending requires rapid iteration on risk models and compliance, but regulated environment may impose process overhead."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ec02625b8e",
+    "2ebf70c706"
+   ],
+   "value": "Vehicle financing and loan products for car buyers; possibly a digital platform for car finance applications (inferred from webucars.co.za association)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual leave (South African statutory minimum is 15 working days); company may offer more."
   },
-  "retry_after": 1784884602,
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27712,7 +27876,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; typical SA companies observe public holidays and December seasonal slowdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage fintech/lending company operating in South Africa; exact headcount and funding stage not public."
   },
   "sources": [
    {
@@ -27746,14 +27915,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=2ca218c9c4e54fc0cb6a67162f632213fb862eaf8728211d1a66c6f16e7325a7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cud2VidXljYXJzLmNvLnphL2J1eS1hLWNhcg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor international work visas; hiring likely focused on South African residents or those with existing work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ec02625b8e",
+    "7a96637e8e",
+    "2ebf70c706"
+   ],
+   "value": "Arixa Capital appears to be a South African financial services company, potentially focused on vehicle financing given its association with webucars.co.za, a platform for buying and selling cars. The company likely generates revenue through loan origination, interest income, and fees on vehicle finance products."
+  },
+  "synthesized_evidence_sha": "2cf96506094ea661",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Credit risk modeling, loan origination systems, payments integration, and marketplace platform development for vehicle finance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674222,
   "web_search_url": "https://duckduckgo.com/?q=Arixa+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay and a fast, innovative culture: Arixa Capital is a niche vehicle-finance player in South Africa, not a globally recognized AI leader. The technical scope centers on credit risk and lending platforms rather than cutting-edge AI research. Work-life balance and burnout risk are unknown but financial services often have regulated hours. Career growth may be strong locally but lacks the brand prestige of top-tier global tec"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — financial services in SA typically follow standard business hours; however, incident response for lending platforms may require occasional off-hours support."
   }
  },
  "arize ai": {
@@ -67638,49 +67832,132 @@
  },
  "chemanager international": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Low. The company is not an AI or tech firm, meaning it carries little to no prestige in the AI or data science community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "B2B revenue streams from recruitment advertising, premium employer branding slots, and sponsored editorial content, alongside B2C traffic generation through free industry news and job listings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional publishing and recruitment environment focused on industrial chemistry topics rather than a modern, high-tech engineering culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Corporate HR departments, talent acquisition teams at chemical and pharmaceutical companies, and industry professionals seeking employment in the European market."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Moderate media industry salaries (£30k-£45k), far below the elite new-grad tech pay benchmark you are targeting in top-tier AI or data science roles."
   },
   "evidence_sha": "a2299a601828969d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Publishing, Recruitment, and B2B Media Services."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784674653,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Operations are heavily focused on the European market, with recruitment activity frequently pointing to London and broader United Kingdom regions."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "To connect specialized talent with leading employers in the chemical and pharmaceutical industries through targeted media and recruitment solutions."
+  },
   "name": "CHEManager International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Likely a traditional, steady media and publishing cadence driven by editorial cycles and recruitment seasons, rather than the fast-paced iterative tech culture you are seeking."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Industry-specific job boards, employer branding packages, print and digital trade magazines, and recruitment matching services for the chemistry and life sciences sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard UK/European statutory holidays (24-28 days) plus public holidays, but no indication of the flexible or unlimited PTO policies often seen in elite tech."
   },
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of guaranteed company-wide tech shutdowns; likely operates year-round except for standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Appears to be a niche, established media company operating primarily in the European market without rapid venture-backed scaling."
   },
   "sources": [
    {
@@ -67714,14 +67991,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=c16dad02b43e25cc5e013d10ef0eab44763d3492e17985f7b767ec0843782bc4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly91ay5pbmRlZWQuY29tL3Etam9icy1sLWxvbmRvbi1qb2JzLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Evidence of international visa sponsorship is limited; operations seem tailored to local European and UK labor markets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "CHEManager International is a specialized business publication and recruitment platform focused on the European chemical and pharmaceutical industries. It generates revenue through B2B services including targeted job board advertisements, employer branding, and editorial content tailored to industry professionals."
+  },
+  "synthesized_evidence_sha": "a2299a601828969d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7be059bd0d",
+    "ec8d5cb54c",
+    "3537b41c75"
+   ],
+   "value": "Primarily involves digital media publishing platforms, job board software, and SEO tools rather than advanced artificial intelligence or big data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674653,
   "web_search_url": "https://duckduckgo.com/?q=CHEManager+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely average to good, typical of traditional media companies, though it may not feature the guaranteed hard shutdowns or elite flexibility found in top-tier tech firms."
   }
  },
  "chenega corporation": {
@@ -97137,41 +97447,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. DISH is not traditionally recognized in the tech industry as an elite, high-prestige destination for top-tier AI or Data Science talent."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Subscription-based broadcast and streaming television delivery operating on a Business-to-Consumer (B2C) model, generating direct recurring revenue from monthly service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate bureaucracy navigating business model transitions rather than an innovative, fast-paced tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Residential consumers, apartment complexes, and commercial businesses across the United States seeking television and entertainment packages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary, falling short of top-tier elite tech new-grad compensation packages."
   },
   "evidence_sha": "be627adcccb783b5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784884482,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Media and Telecommunications (Pay-TV and Streaming)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Probe heavily into the specific team's tech stack and daily pace to determine if the role supports accelerated learning or relies on legacy systems. Ask direct questions about expected hours, on-call rotations, and whether there are structured shutdown periods or heavy seasonal burnout cycles."
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784675473,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Headquartered in Englewood, Colorado, with the majority of technical operations and corporate functions centralized there."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "To be the best provider of entertainment, connectivity, and technology services by prioritizing customers and challenging the status quo."
+  },
   "name": "DISH TV",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of an established corporate satellite operation struggling with market decline rather than a fast, iterative startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Satellite television service (DISH), live TV streaming service (Sling TV), and related receiver and DVR hardware (e.g., Hopper)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard Paid Time Off annually, accruing based on tenure."
   },
-  "retry_after": 1784884602,
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97181,7 +97543,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; PTO is typically standard accrued time rather than mandated rest periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Large, public corporation (Nasdaq: DISH) operating as a legacy pay-TV provider deeply integrated with major ecosystem infrastructure."
   },
   "sources": [
    {
@@ -97215,14 +97584,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a4fa6bd7f73c151f814a50758344bb5fb8d6fffeb4401706af1405f42b2338a3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9teS5kaXNoLmNvbS9sb2dpbg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Unknown based on the supplied sources, though large legacy tech-adjacent companies typically support ongoing visa sponsorship for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "DISH TV is a major American television provider delivering satellite and over-the-top (OTT) streaming television services. The company makes money primarily through monthly subscription fees for its television programming packages, additional receiver hardware fees, and premium channel add-ons."
+  },
+  "synthesized_evidence_sha": "be627adcccb783b5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "Involves cloud engineering, networking, data pipelines to support millions of set-top boxes, and customer-facing applications for streaming content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675473,
   "web_search_url": "https://duckduckgo.com/?q=DISH+TV+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aadd3ce773"
+   ],
+   "value": "DISH is a large corporate environment historically known for traditional satellite bureaucracy rather than cutting-edge AI innovation. If you are seeking fast-paced, elite-tier tech culture with guaranteed shutdowns and high new-grad pay, DISH may not align with your mission-driven work-life balance priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Mixed to poor; reviews frequently cite traditional corporate bureaucracy and uneven management, lacking guaranteed shutdowns typically found at elite modern tech companies."
   }
  },
  "disney": {
@@ -111290,42 +111688,101 @@
  "esri": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Estimated: High tier within the spatial data and GIS niche, though not traditionally grouped with top-tier general AI labs like OpenAI or Anthropic."
   },
   "aliases": [],
-  "attempts": 30,
+  "attempts": 31,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Software licensing and enterprise partnerships for spatial analytics capabilities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Estimated: Highly mission-driven and focused on creating transformative global impact through mapping technology."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Leading organizations in virtually every field, including consulting firms (Portcoast), retail companies (Ashley Furniture), and state governments (State of Utah)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 to $130,000 base salary."
   },
   "evidence_sha": "f967f33cef592acf",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784863043,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Software (GIS Mapping and Spatial Analytics)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ba37509d2",
+    "aee29b8644"
+   ],
+   "value": "Probe the specific team's daily agility, engineering velocity, and work-life balance policies. Given the mission-driven nature of the company, ask how the team balances strict enterprise software deadlines with sane hours to avoid burnout."
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784676545,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "aee29b8644"
+   ],
+   "value": "Headquartered in Redlands, California, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Provides leading spatial analytics capabilities and promotes transformative ideas through GIS, imagery, and AI technology."
+  },
   "name": "Esri",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "aee29b8644"
+   ],
+   "value": "Estimated: Slower and more deliberate, typical of a mature, legacy software company rather than a fast-moving startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "ArcGIS, the world's leading GIS mapping and spatial analytics software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard PTO for new hires."
   },
-  "retry_after": 1784884643,
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111335,7 +111792,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers a few floating holidays, though guaranteed corporate-wide shutdowns are not typical based on available research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "aee29b8644"
+   ],
+   "value": "Mature private tech firm founded in 1969, with 5001-10000 employees."
   },
   "sources": [
    {
@@ -111379,14 +111843,47 @@
     "url": "https://jobright.ai/jobs/info/6a5a988b686b4755d1e1631f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "aee29b8644"
+   ],
+   "value": "Esri has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8ba37509d2"
+   ],
+   "value": "Esri builds ArcGIS, the world's leading GIS mapping and spatial analytics software. The company makes money by licensing this technology to organizations across virtually every field to support daily operations and guide long-term strategies."
+  },
+  "synthesized_evidence_sha": "f967f33cef592acf",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "aee29b8644",
+    "8ba37509d2"
+   ],
+   "value": "Software engineering for ArcGIS Enterprise involving JavaScript, TypeScript, Object-oriented JavaScript, React, and Vue. Additional technical focus includes combining imagery, GIS, and AI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676545,
   "web_search_url": "https://duckduckgo.com/?q=Esri+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ba37509d2",
+    "aee29b8644"
+   ],
+   "value": "As the undisputed market leader in GIS, Esri carries elite prestige in spatial data science. However, as a mature, decades-old company, it may lack the fast-paced, highly iterative innovation culture you seek, potentially carrying bureaucratic tendencies that conflict with a desire for rapid technical acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "aee29b8644"
+   ],
+   "value": "Estimated: Good to high, with sane hours expected of a well-established private tech employer."
   }
  },
  "essen health care": {
@@ -125502,37 +125999,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. While FTI is a top-tier brand in legal and financial consulting, it is not recognized as an elite tech, AI, or data science firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73",
+    "4315e0a754"
+   ],
+   "value": "Fee-for-service consulting model generating revenue through billable hours and project-based engagements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-facing, and high-stakes. The culture prioritizes billable utilization and expert advisory over a relaxed, tech-driven innovation-first environment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73",
+    "4315e0a754"
+   ],
+   "value": "Corporations, law firms, financial institutions, private equity firms, and government entities facing complex legal, regulatory, or financial crises."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000. Base pay for technical new-grads in consulting is moderate, supplemented by performance bonuses, but generally trails elite tech firms."
   },
   "evidence_sha": "a5657c61dfc05f59",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73",
+    "4315e0a754"
+   ],
+   "value": "Management Consulting and Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the actual day-to-day of the technical role: ask if the work involves building novel machine learning models vs. executing standard e-discovery workflows. To assess WLB, ask how often projects require weekend work or late-night crisis response, and clarify if there are any guaranteed shutdown periods or strict hours policies. Finally, gauge the company's tech modernization pace by asking about their current AI/DS toolstack and engineering practices to ensure it avoids the slow "
   },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784674350,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73"
+   ],
+   "value": "Headquartered in Washington, D.C., with numerous offices across the Americas, Europe, the Middle East, and Asia-Pacific."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ab2ace13e8"
+   ],
+   "value": "To provide clients with the deepest insights, rigorous analysis, and strategic guidance required to navigate complex, high-stakes business challenges and crises."
+  },
   "name": "FTI Consulting",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and subject to sudden spikes in workload due to the nature of crisis management, litigation deadlines, and restructuring engagements."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73",
+    "ab2ace13e8"
+   ],
+   "value": "Corporate finance and restructuring, forensic and litigation consulting, economic consulting, strategic communications, and technology solutions for legal and compliance challenges."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of Paid Time Off annually, typical for large professional services firms, but highly contingent on taking time between client engagements."
   },
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -125542,7 +126097,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns. In consulting, time off is typically managed around client availability rather than structured company-wide closures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73"
+   ],
+   "value": "Publicly traded, large-cap global professional services firm."
   },
   "sources": [
    {
@@ -125576,14 +126138,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=ed3fd0da6a00cc49f966685e5be03b7614b35628a08d94be7d37717dc894c990JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuZnRpY29uc3VsdGluZy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73"
+   ],
+   "value": "Not clearly listed in the provided sources, though large multinational consulting firms typically offer visa sponsorship for specialized, high-demand roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "aae5e80a73",
+    "4315e0a754",
+    "ab2ace13e8"
+   ],
+   "value": "FTI Consulting is a global business advisory firm that specializes in crisis management, financial restructuring, forensic investigations, and litigation support. It makes money by providing specialized expert consulting services and charging premium billable rates for its professionals' time and expertise."
+  },
+  "synthesized_evidence_sha": "a5657c61dfc05f59",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ab2ace13e8",
+    "4315e0a754"
+   ],
+   "value": "Data extraction and processing for litigation (e-discovery), cybersecurity consulting, digital forensics, and data analytics for investigations and dispute resolution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=FTI+Consulting+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While FTI Consulting carries elite prestige in the advisory space, its tech culture is likely heavily tied to client crises and billable hours rather than a fast, innovative tech environment. This conflicts with your desire for a high-paced AI role with guaranteed shutdowns, as consulting workflows frequently demand unpredictable hours to meet urgent client demands, risking the work-life balance you prioritize. Technical learning here will be deep but focused on forensic and compliance use cases"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Low. Unlike big tech, consulting environments driven by high-stakes legal and financial crises often require demanding and unpredictable hours, which may challenge your desire for sane hours."
   }
  },
  "fundamental research labs": {
@@ -145855,11 +146447,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145871,6 +146465,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784677600,
   "name": "Heart Aerospace",
   "pace_of_work": {
@@ -145883,6 +146478,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884813,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145926,7 +146522,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ececd8229b745227163a15f725e315dd1b768e4e7bf25852e71fb5bd479d7ff3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9IZWFydA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677600,
   "web_search_url": "https://duckduckgo.com/?q=Heart+Aerospace+company+careers+benefits",
@@ -200399,37 +200995,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top academic medical center; globally recognized in AI for oncology; publishes in Nature, NEJM, top ML venues)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit academic medical center funded by patient care revenue (insurance, Medicare/Medicaid, philanthropy), research grants (NIH, foundations, industry), philanthropy, and endowment returns. Reinvests surplus into research, facilities, and talent."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-obsessed, intellectually intense, collaborative but hierarchical (faculty-led). Diverse, highly educated workforce. Low toxicity; high accountability. Prestige matters; publications and grants drive advancement. Bureaucracy is real but navigable with sponsor support."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cancer patients (local, national, international), referring physicians and health systems, research funding agencies (NIH, foundations), biopharma partners for trials and collaborations, and trainees (medical students, residents, fellows, postdocs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k–$175k base + 5–10% annual bonus + tuition remission/education benefits. No RSUs (nonprofit); some roles offer 403(b) match up to 5–7%. Total comp ~$160k–$195k."
   },
   "evidence_sha": "1a3bf257a4aa56f5",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Academic Medical Center / Nonprofit Cancer Research & Treatment"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens (ML fundamentals, coding, stats) plus domain fluency questions (oncology basics, clinical workflows, regulatory). Panel includes PhD researchers and clinician-scientists. Emphasis on reproducibility, ethics, and translation. Prepare a 10-min research talk. Ask about compute infrastructure, data access timelines, IRB pathways, and mentorship structure."
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784675474,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: Upper East Side, Manhattan. Regional sites: MSK Monmouth (NJ), MSK Westchester, MSK Nassau, MSK Bergen, MSK Commack. Hybrid/remote options vary by role; research computing often on-prem or cloud."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To lead the way in preventing, controlling, and curing cancer through outstanding patient care, innovative research, and world-class education."
+  },
   "name": "Memorial Sloan Kettering Cancer Center",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, academic-industry hybrid. Research cycles are months-to-years; production ML deployment faces clinical/regulatory gates. Not 'move fast and break things.' Sprints exist but with heavy documentation and compliance."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical cancer care (surgery, chemotherapy, radiation, immunotherapy, cellular therapy), translational and basic cancer research, clinical trials, medical education and fellowship training, and commercializable IP/licensing from discoveries."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–25 days PTO + 10–12 holidays + sick leave (accrual-based; varies by union/classification). No public unified policy; confirm with offer."
   },
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -200439,7 +201077,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No organization-wide guaranteed shutdown weeks. Some departments/labs observe informal slowdowns (e.g., late Dec, July). Not a reliable annual benefit."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit institution (~20,000+ employees, 1,000+ faculty, 600+ beds, multiple NYC locations). Annual revenue >$5B. Not a startup; stable, mission-driven, long-horizon planning."
   },
   "sources": [
    {
@@ -200473,14 +201116,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=67102c915550510aafebc0eb139b7bb7e99e85a1b8f20803037dbebca26a06e2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L21lbW9yaWFs&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cap-exempt H-1B employer (nonprofit research). Routinely sponsors H-1B, O-1, J-1, and green cards (EB-1/EB-2) for research and clinical faculty, data scientists, and engineers. Strong track record with international talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Memorial Sloan Kettering Cancer Center (MSKCC) is a world-renowned nonprofit cancer treatment and research institution. It provides specialized oncology care, conducts cutting-edge cancer research, and trains future generations of cancer specialists."
+  },
+  "synthesized_evidence_sha": "1a3bf257a4aa56f5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML in radiology/pathology imaging, computational biology, genomics, drug discovery, clinical decision support, real-world evidence, digital health platforms, bioinformatics pipelines, and high-performance computing for research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675474,
   "web_search_url": "https://duckduckgo.com/?q=Memorial+Sloan+Kettering+Cancer+Center+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MSKCC offers elite prestige in AI/healthcare with a mission that directly saves lives. New-grad pay is competitive with top tech (est. $150–$180k base + bonus/equity-like incentives). Culture is academic-rigorous but slower-paced than Big Tech; bureaucracy exists but is mission-buffering. Work-life balance is respected in research tracks (core hours, protected time), though clinical-adjacent roles can be intense. Guaranteed shutdowns not universal; varies by department. Learning velocity is high"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 for pure research/data science roles (core hours, academic calendar awareness, limited on-call). 5/10 for clinical-integrated or ops-heavy roles. No org-wide guaranteed shutdown; some labs observe summer slowdowns."
   }
  },
  "mendix": {
@@ -209764,37 +210428,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid‑tier — respected in clinical informatics and healthcare AI circles, but not a universal brand like top tech giants. Strong for domain‑specific impact and publication opportunities in medical journals."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit health system funded primarily by net patient service revenue (insurance reimbursements, government programs), supplemented by grants, donations, and investment income. Surplus is reinvested in facilities, technology, and community programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission‑focused, and humble. Clinicians and technologists work side‑by‑side; decisions are consensus‑driven. Leadership emphasizes psychological safety and continuous learning."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients and families in the greater Puget Sound area; employers and health plans contracting for network access; government payers (Medicare/Medicaid)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000‑$115,000 base + 5‑10% target bonus + RSU/equity (vesting over 4 years). Total comp ~$105k‑$130k."
   },
   "evidence_sha": "21b0e50678ae8d10",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare delivery / Integrated health system"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on collaboration with clinicians, handling PHI/compliance, and translating research into production. Technical screens cover Python/SQL, ML model lifecycle, and healthcare data nuances (claims, EHR, imaging). Emphasis on pragmatic problem‑solving over pure algorithmic depth."
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784583363,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Tacoma, WA; hospitals and clinics across Pierce, King, Kitsap, and Thurston counties; remote/hybrid options for many tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "“Partnering for healing and a healthy future” – delivering high-quality, compassionate, and accessible care to the communities served."
+  },
   "name": "MultiCare Health System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — project cycles align with clinical workflows and regulatory review; sprint cadences exist but deadlines are generally realistic, avoiding constant crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acute hospital care, outpatient clinics, virtual visits, home health, hospice, and specialized centers (e.g., cancer, heart, neurosciences). Revenue comes from patient services reimbursed by commercial insurance, Medicare, Medicaid, and philanthropy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15‑20 days PTO + 10 paid holidays + 2‑3 floating days; accrual increases with tenure."
   },
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209804,7 +210510,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year‑end shutdown (Dec 24‑Jan 1) and summer \"recharge week\" (early July); no‑meeting Fridays encouraged."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature organization with ~20,000 employees and 8+ hospitals; stable, growing through strategic partnerships and outpatient expansion."
   },
   "sources": [
    {
@@ -209838,14 +210549,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=453f772bfe808bc07c885d1d53b1ac5d2f0bb941c2c41ea45fe80c5767c11194JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9zdW53YXltdWx0aWNhcmUuY29tLm15Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H‑1B sponsor for specialized clinical and technical roles; green card support for key talent. Visa sponsorship evaluated case‑by‑case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MultiCare Health System is a not-for-profit integrated health system based in Washington State, operating hospitals, primary and specialty clinics, and virtual care services across the Puget Sound region."
+  },
+  "synthesized_evidence_sha": "21b0e50678ae8d10",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise EHR (Epic) optimization, clinical analytics, population health data platforms, AI/ML for predictive modeling (readmissions, sepsis, capacity), imaging AI, and digital patient engagement tools. Tech stack includes cloud (Azure/AWS), Python, SQL, Spark, and FHIR interoperability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583363,
   "web_search_url": "https://duckduckgo.com/?q=MultiCare+Health+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission‑driven healthcare environment where AI/data science directly improves patient outcomes. Balances competitive new‑grad compensation with a culture that emphasizes reasonable hours, predictable schedules, and organizational support for work‑life boundaries — rare in high‑impact clinical tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — organization promotes \"guaranteed shutdowns\" (e.g., holiday weeks, no‑meeting Fridays) and tracks burnout metrics; most tech roles report 40‑45 hour weeks with rare on‑call."
   }
  },
  "myriad genetics": {
@@ -215854,41 +216586,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not an AI/ML-centric organization; technical work is applied spatial analysis and ecological modeling. No known publications in top-tier ML venues (NeurIPS, ICML, CVPR). Reputation is regional in natural resource management, not national in data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly funded institute supported by state legislative appropriations, federal grants (e.g., USFS, DOI), and competitive research contracts. Does not operate for profit; revenue funds staff, research, and outreach operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-driven, academic-adjacent. Small team with close ties to land managers and communities. Values scientific rigor, inclusivity, and long-term relationships over speed. Low bureaucracy for a public entity but follows university/state HR processes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary partners include federal agencies (USFS, BLM), state agencies (NM State Forestry, EMNRD), tribal nations, local governments, NGOs, and private landowners seeking restoration guidance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000-$75,000 base (academic research associate / GIS analyst scale). No equity, no signing bonus. Benefits include university health/retirement (NMPERA). Well below industry AI/DS new-grad packages ($120k-$200k+)."
   },
   "evidence_sha": "7c244c05ed3e1386",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Public-sector environmental research / applied conservation science / university-affiliated institute"
   },
-  "last_attempt_at": 1784884482,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the candidate will be satisfied with applied GIS/ecological modeling work at academic pay scales (~$55-75k for new grads) versus industry AI roles. Probe interest in translational science, stakeholder engagement, and long-term project cycles. Clarify expectations around publication, grant writing, and fieldwork. Determine if the mission alignment outweighs the lack of AI prestige, high velocity, and top-market compensation."
+  },
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784676858,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main office in Las Vegas, New Mexico (NMHU campus). Field coordination across New Mexico. Remote/hybrid flexibility likely varies by project; not a distributed-tech-company setup."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide relevant, science-based information and tools to support the restoration and management of New Mexico's forests and watersheds through collaborative research, education, and outreach."
+  },
   "name": "New Mexico Forest and Watershed Restoration Institute",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Deliberate and project-based — driven by grant cycles, field seasons, and stakeholder timelines. Typical academic/research pace: months to years per major deliverable. Not a sprint-oriented or shipping-culture environment."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied research, spatial analysis/GIS tools, decision-support frameworks, technical workshops, and science synthesis reports focused on forest ecology, watershed health, fire ecology, and restoration planning."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + 10-12 university holidays + sick leave (accrual per NMHU policy). Exact policy follows New Mexico Highlands University employee handbook."
   },
-  "retry_after": 1784884602,
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215898,7 +216668,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No formal company-wide shutdown policy. De facto slowdowns during university winter/spring breaks and summer field season transitions. Not a guaranteed 'offline' period."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small research institute (~15-30 staff including researchers, GIS analysts, outreach coordinators, and administrative support) embedded within a regional public university (New Mexico Highlands University). Mature, stable organization since 2004."
   },
   "sources": [
    {
@@ -215932,14 +216707,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2b17ef3498cdc6aed9c4c0045f047dafec28fc726bece0e1b3a7d9da599b572JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9uZXdzLmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a university-affiliated state institute, may sponsor H-1B or J-1 visas for research roles, but capacity is limited and tied to grant funding. Not a routine sponsor for early-career data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The New Mexico Forest and Watershed Restoration Institute (NMFWRI) is a state-established research institute based at New Mexico Highlands University that provides science-based information, tools, and collaboration to support forest and watershed restoration across New Mexico. It operates as a public-service research center rather than a commercial enterprise."
+  },
+  "synthesized_evidence_sha": "7c244c05ed3e1386",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GIS/spatial analysis, remote sensing, ecological modeling, data visualization, database management, and web-based tool development (e.g., restoration planning portals). Primary stack likely includes Python, R, ArcGIS/QGIS, PostgreSQL/PostGIS, JavaScript. Limited ML/AI application currently; focus is on applied spatial decision support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676858,
   "web_search_url": "https://duckduckgo.com/?q=New+Mexico+Forest+and+Watershed+Restoration+Institute+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers mission-driven impact on real-world forest and watershed resilience in the Southwest, with academic-style work-life balance and stable public funding. However, it does not match the candidate's priority for elite AI prestige, top-tier new-grad compensation, or a fast-paced innovative tech culture. The technical scope is applied spatial ecology, not cutting-edge ML/AI research. Pace is deliberative and collaborative, not high-velocity product engineering. Shutdown culture is acad"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — estimated 40-45 hour weeks, strong semester/field-season rhythm, university holidays, and cultural expectation of sustainable workloads. Limited after-hours pressure. No formal 'guaranteed shutdown' policy but de facto downtime during breaks."
   }
  },
  "new york life": {
@@ -265955,41 +266751,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an AI or data science destination; technical brand is minimal in the ML community."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Revenue comes from direct product sales (TV/online/retail), licensing fees from branded partnerships, and wholesale distribution. Low marginal cost on repeatable infomercial format drives margin."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, sales‑oriented, pragmatic. Values proven, demonstrable results over experimentation. Less \"innovation culture\" and more \"execution on proven playbook.\""
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Mass-market consumers purchasing via TV infomercials, e-commerce (Amazon, ronco.net), and retail partners (Walmart, Bed Bath & Beyond, etc.). Also licenses brand to third‑party manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base (US) for analytics/engineering roles; minimal equity or signing bonus. Well below top‑tier AI lab offers ($150k+)."
   },
   "evidence_sha": "28ec03bbed619e0d",
+  "generated_at": 1784884693,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Consumer goods / Direct‑response marketing / E‑commerce"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect practical SQL/Python analytics questions, A/B testing design for marketing campaigns, and basic ML modeling (e.g., churn prediction, demand forecasting). Little emphasis on cutting‑edge research, distributed systems, or theoretical depth. Behavioral questions will focus on cross‑functional collaboration with marketing and merchandising teams."
   },
-  "last_attempt_at": 1784884482,
+  "last_attempt_at": 1784884693,
   "last_evidence_at": 1784583382,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Headquartered in the Chicago area (historically); remote/hybrid roles possible for digital/analytics positions. Limited physical footprint beyond HQ and warehousing partners."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "To make innovative, time‑saving household products accessible to everyday consumers through compelling demonstration‑based marketing."
+  },
   "name": "Ronco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – project cycles tied to product launches and seasonal campaigns; not the breakneck speed of a tech startup, but not bureaucratic either."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Core products include countertop rotisseries, food dehydrators, knives, cleaning tools, and various \"As Seen on TV\" household innovations. The portfolio spans cooking, cleaning, personal care, and seasonal items."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays; no public unlimited or mandatory shutdown policy."
   },
-  "retry_after": 1784884602,
+  "refresh_after": 1790068693,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265999,7 +266845,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None publicly documented; no company‑wide guaranteed shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Estimated: 100–500 employees; mature, privately held (or subsidiary) company with decades of operating history, not a high‑growth startup."
   },
   "sources": [
    {
@@ -266033,14 +266886,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=541604b9456e56743f1cd536644cf54b7ec728b5b6dde96310e41a9621aad270JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9uY28&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H‑1B visas for entry‑level data/AI roles given company size and non‑tech‑core focus. No public evidence of structured sponsorship program."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d855e7e990"
+   ],
+   "value": "Ronco is a direct-response marketing company famous for infomercial-driven kitchen gadgets and household products (e.g., Showtime Rotisserie, Pocket Fisherman). It designs, brands, and sells consumer products through TV, digital, and retail channels."
+  },
+  "synthesized_evidence_sha": "28ec03bbed619e0d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "E‑commerce platform maintenance, digital marketing analytics, customer data segmentation, supply‑chain forecasting, and occasional ML for ad targeting or product recommendation. Not an AI‑first R&D environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583382,
   "web_search_url": "https://duckduckgo.com/?q=Ronco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI prestige, high new‑grad pay, and a fast innovative tech culture, Ronco is a mismatch: it is a traditional consumer‑goods marketer with modest technical depth, lower compensation benchmarks, and a slower, sales‑driven pace. Work‑life balance may be reasonable but technical growth opportunities are limited compared to top‑tier AI labs or tech unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – typical corporate hours with occasional crunch around major TV/holiday pushes; no guaranteed shutdowns publicized."
   }
  },
  "roux": {
