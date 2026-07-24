@@ -51289,7 +51289,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -51307,7 +51307,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897083,
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680198,
   "name": "Blackstone",
   "pace_of_work": {
@@ -51320,7 +51320,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897203,
+  "retry_after": 1784897514,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -74880,37 +74880,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to determine if it meets the candidate's elite tier requirement."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding how the company generates revenue."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's internal culture or work environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's target market or customer base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to determine if new grad pay is competitive or top-tier."
   },
   "evidence_sha": "146b49c1b9cbd2b0",
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's industry sector."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During interviews, the candidate should directly question recruiters and hiring managers about compensation tiers, expected working hours, shutdown policies, and the pace of technical innovation to see if it aligns with the desired elite, fast-paced, yet balanced AI role."
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784677231,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's office or geographical locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's mission or core values."
+  },
   "name": "CHAOS Industries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to determine if it avoids slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's products or services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to verify if precise PTO policies meet balance expectations."
   },
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -74920,7 +74990,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to determine if guaranteed company-wide shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's size, funding stage, or employee headcount."
   },
   "sources": [
    {
@@ -74954,14 +75033,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=1c985a68c92e1d2d2902b1e06a3f6b946beb8f9e8f377d6c79054d0adfe391f8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cuY2hhb3MuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding visa sponsorship or international hiring policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "The supplied source materials for CHAOS Industries consist exclusively of broken redirect links and non-functional web pages, meaning no verifiable public information about the company's core operations or revenue model could be extracted from the provided data."
+  },
+  "synthesized_evidence_sha": "146b49c1b9cbd2b0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d645404a1c",
+    "42acbdb471",
+    "763330f89c"
+   ],
+   "value": "Unknown; the provided sources do not contain any descriptive text regarding the company's engineering stack or technical workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677231,
   "web_search_url": "https://duckduckgo.com/?q=CHAOS+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Evaluating this company based on candidate priorities is currently impossible using the provided sources; the candidate must seek external information to determine if the company offers elite new-grad pay, mission-driven AI work, and a culture that respects work-life balance without toxic burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown based on provided sources; requires external validation to verify sane hours and respect for personal time."
   }
  },
  "chapman university school of pharmacy": {
@@ -113153,38 +113265,76 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no cultural signals, values, or team dynamics documented in supplied sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data, levels.fyi reports, or offer details in supplied sources."
   },
   "evidence_sha": "6b7c985d21e211c9",
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784896859,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate priorities: elite AI/DS prestige + high new-grad pay, fast innovative culture (not bureaucracy), mission-driven with real WLB (sane hours, guaranteed shutdowns), accelerated learning without burnout. Interview should probe: technical depth of AI/DS work, actual hours/shutdown practices, mentorship structure, project autonomy, and burnout prevention."
+  },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680205,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Double Holo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – insufficient data to characterize pace; no employee reports or engineering blogs found."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy disclosed in supplied sources."
   },
-  "retry_after": 1784897099,
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113194,7 +113344,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no company-wide shutdown or guaranteed time-off policy found in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -113228,14 +113383,38 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4c647a1679",
+    "afbc8c85c0"
+   ],
+   "value": "No verifiable public information about Double Holo's business, products, or operations was found in the supplied sources. The provided links redirect to login pages or dictionary definitions rather than a company profile."
+  },
+  "synthesized_evidence_sha": "6b7c985d21e211c9",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680205,
   "web_search_url": "https://duckduckgo.com/?q=Double+Holo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Cannot assess fit because no company data exists in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data, employee reviews, or policy details in supplied sources."
   }
  },
  "dow jones": {
@@ -187148,11 +187327,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187164,6 +187345,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784679540,
   "name": "Intertek",
   "pace_of_work": {
@@ -187176,6 +187358,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187219,7 +187402,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=858194522931fab3fea2740660c71ba22ca86e12d1ed253038c9c504524dbb7dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuaW50ZXJ0ZWsuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679540,
   "web_search_url": "https://duckduckgo.com/?q=Intertek+company+careers+benefits",
@@ -189668,41 +189851,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an AI/data science leader; tech roles support core vehicle business."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Wholesale distribution of vehicles and parts through a dealer network; revenue from vehicle sales, parts, service, and financing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional Japanese corporate culture—respectful, consensus-oriented, hierarchical, with emphasis on quality and long-term employment. Innovation is incremental and process-driven."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Commercial fleet operators, small businesses, municipalities, and vocational truck users across the US and Canada."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$95k base + modest bonus/benefits; below top-tier tech/AI new-grad packages."
   },
   "evidence_sha": "898214632ca9d965",
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Automotive / Commercial Vehicle Manufacturing"
   },
-  "last_attempt_at": 1784896859,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for: (1) Actual scope of AI/data science work—ask for recent projects, team size, and leadership vision. (2) Pace and bureaucracy—how are decisions made, what is the release cycle for tech initiatives? (3) Work-life boundaries—expectations for hours, on-call, and whether 'shutdowns' exist. (4) Career growth—examples of new-grad progression in technical tracks. (5) Cultural fit—balance between Japanese parent processes and North American autonomy."
+  },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784677296,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Anaheim, California; regional offices, parts distribution centers, and technical centers across the US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver reliable, fuel-efficient commercial vehicles and powertrain solutions that support customers' business success."
+  },
   "name": "Isuzu North America",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate; traditional automotive development cycles, regulatory compliance, and hierarchical approvals dominate."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Commercial trucks (N-Series, F-Series), diesel engines, and related parts and accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days vacation + 6-10 holidays (US standard); no public policy details found."
   },
-  "retry_after": 1784897099,
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -189712,7 +189933,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; typical holiday breaks only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established subsidiary of a global OEM (Isuzu Motors Ltd., Tokyo-listed); ~1,000-2,000 employees in North America; mature, stable organization."
   },
   "sources": [
    {
@@ -189746,14 +189972,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=23f3d8ecbff915b4c91096da7140edddef4693434573305ff965f40456b7778fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9pc3V6dWN2LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large global manufacturer, likely sponsors H-1B and green cards for specialized engineering roles; specifics not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Isuzu North America is the regional subsidiary of Isuzu Motors Ltd., focusing on sales, marketing, and distribution of commercial trucks and diesel engines in the North American market. It generates revenue through vehicle sales, parts, and service networks."
+  },
+  "synthesized_evidence_sha": "898214632ca9d965",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Automotive engineering (vehicle integration, emissions certification), powertrain calibration, dealer technical support, and IT/ERP systems. Limited public AI/data science presence."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677296,
   "web_search_url": "https://duckduckgo.com/?q=Isuzu+North+America+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Isuzu NA offers stability and a clear mission in essential commercial transportation, but it is a traditional automotive manufacturer—not an elite AI/data science destination. Prestige and new-grad pay in tech roles are likely below top-tier tech firms. Culture leans Japanese corporate: hierarchical, process-driven, with moderate work-life balance but not the fast, innovative tech culture or guaranteed shutdowns the candidate prioritizes. Technical learning is deep in vehicle systems, not cuttin"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (6/10); typical corporate hours with occasional crunch around launches, but no public guaranteed shutdowns or exceptional WLB policies."
   }
  },
  "isys solutions inc": {
@@ -192644,11 +192891,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192660,6 +192909,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680207,
   "name": "JM Family Enterprises",
   "pace_of_work": {
@@ -192672,6 +192922,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192725,7 +192976,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680207,
   "web_search_url": "https://duckduckgo.com/?q=JM+Family+Enterprises+company+careers+benefits",
@@ -243264,48 +243515,131 @@
  "nelnet": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Lower-tier prestige, functioning as an enterprise IT and analytics team rather than an elite AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5edc29808",
+    "b14a80fa48"
+   ],
+   "value": "Fee-based revenue from student loan origination and servicing, combined with diversified income streams from technology services, asset management, and telecommunications."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d5edc29808"
+   ],
+   "value": "Estimated: Traditional, mission-driven, and professional, prioritizing community enrichment and long-term employee retention over aggressive tech-startup grind."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5edc29808",
+    "a86d82a22f"
+   ],
+   "value": "Student borrowers, educational institutions, government agencies, and retail investors utilizing its asset management and administrative services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $75,000 to $95,000 base salary, commensurate with midwestern cost-of-living and enterprise tech standards."
   },
   "evidence_sha": "18d1aa340949e797",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d5edc29808",
+    "b14a80fa48"
+   ],
+   "value": "Financial Services / Education Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "During interviews, you should strongly validate your WLB expectations and clarify the pace of technical learning, ensuring the team's data science work is genuinely innovative rather than slow-moving corporate bureaucracy. Ask if the specific division offers the accelerated career growth you want without sacrificing personal time, before accepting any slow-paced financial tech role."
+  },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680199,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b14a80fa48"
+   ],
+   "value": "Headquartered in Lincoln, Nebraska, with a distributed network of offices across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5edc29808",
+    "b14a80fa48"
+   ],
+   "value": "To provide educational services and technology solutions that help individuals and communities succeed, rooted in a long-term investment philosophy."
+  },
   "name": "Nelnet",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate to slow pace typical of mature, heavily regulated financial corporations; prioritizes process and stability over rapid, disruptive innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5edc29808",
+    "b14a80fa48",
+    "a86d82a22f"
+   ],
+   "value": "Student loan servicing platforms, fintech payment and administration solutions, educational technology tools (such as Studentaid.gov), and asset management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b14a80fa48"
+   ],
+   "value": "Estimated: 20 to 25 days of paid time off annually, typical for a mature public financial services firm."
   },
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b14a80fa48"
+   ],
+   "value": "Estimated: No widespread mandatory corporate shutdowns, likely relying instead on flexible Paid Time Off for personal breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b14a80fa48"
+   ],
+   "value": "Publicly traded, mature enterprise."
   },
   "sources": [
    {
@@ -243349,14 +243683,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Not explicitly stated in recent job postings, though large financial corporations of this size often sponsor H-1B visas; candidates should verify with recruiters."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5edc29808",
+    "b14a80fa48"
+   ],
+   "value": "Nelnet is a publicly traded company primarily focused on education-related financial services and technology. It makes money by servicing and originating student loans, alongside generating revenue from its diversified subsidiaries in asset management, fintech, and educational services."
+  },
+  "synthesized_evidence_sha": "18d1aa340949e797",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Likely involves building and maintaining scalable software platforms, data pipelines, and AI/ML models for financial servicing, payment systems, and educational technology tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680199,
   "web_search_url": "https://duckduckgo.com/?q=Nelnet+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "This role may conflict with your priority for top-tier AI prestige and fast, innovative tech culture, as Nelnet operates well outside the elite FAANG/Big Tech tier. However, its mission-driven education focus and heavy corporate structure may fulfill your desire for sane hours, guaranteed work-life balance, and an environment free of high-tech burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d5edc29808"
+   ],
+   "value": "Estimated: High balance, with sane hours expected due to its traditional Midwestern corporate culture and absence of Silicon Valley-style burnout."
   }
  },
  "neogen": {
@@ -272111,47 +272477,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 or 3. Without accessible public profiles describing technical teams, prestige in the AI/Data Science community cannot be confirmed, though asset managers typically hold moderate prestige for quant roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1da461beb3"
+   ],
+   "value": "Asset management. The firm primarily makes money by charging management fees on assets under management (AUM) and potentially performance fees on investment returns, though specific financial structures were not confirmed by the sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional and financially driven. Focus on results and investment performance rather than a relaxed tech-startup vibe."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1da461beb3"
+   ],
+   "value": "Institutional investors, wealth management Clients, and private banking Clients (inferred from the asset management industry context, as explicit sources were inaccessible)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k - $150k base. Financial sector new-grad tech pay varies widely based on region and exact role, not verified."
   },
   "evidence_sha": "b72fa7be6bf65a9b",
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1da461beb3"
+   ],
+   "value": "Financial Services / Asset Management"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into their actual work-life balance and hours. Ask interviewers about guaranteed shutdowns, on-call expectations, and whether the environment is genuinely mission-driven or prone to toxic, high-burnout cycles typical of the finance industry."
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680207,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1"
+   ],
+   "value": "Information not available in the provided sources. Office locations and regional footprints could not be verified due to the unavailability of the public pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1",
+    "1da461beb3"
+   ],
+   "value": "Not found in research. The provided sources only contain redirect notices and do not display the company's actual mission statement or guiding principles."
+  },
   "name": "Pharo Management",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and deadline-driven, typical of the financial services and asset management sectors."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1da461beb3"
+   ],
+   "value": "Investment management and financial products (inferred from the firm's identity as an asset manager, though specific product details were not available in the provided sources)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annually. Common ranges for finance/tech roles in similar regions, though exact policies are unverified."
   },
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1",
+    "1da461beb3"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Possibly standard public holidays, but extra firm-wide shutdowns are rare in traditional finance."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1",
+    "4485ef9abd"
+   ],
+   "value": "Information not available in the provided sources. No employee count, growth stage, or company size data could be extracted from the redirect links."
   },
   "sources": [
    {
@@ -272185,14 +272617,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=ace547e6dd8959205ec7e8782ccc46a5f73ae1074853e14447954cbd00483c45JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly9waGFyby5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1",
+    "1da461beb3"
+   ],
+   "value": "Not found in research. The provided sources do not contain information regarding visa sponsorship for international candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0ab8ceb7f1",
+    "1da461beb3"
+   ],
+   "value": "Pharo Management is an asset management firm. While the provided sources confirm its corporate web presence, they contain no accessible plain-English text explaining its exact operations or revenue model due to redirect restrictions."
+  },
+  "synthesized_evidence_sha": "b72fa7be6bf65a9b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1da461beb3"
+   ],
+   "value": "Not found in research. Specific technical roles, engineering stacks, or data science projects were not mentioned in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680207,
   "web_search_url": "https://duckduckgo.com/?q=Pharo+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an asset management firm, Pharo Management likely offers elite quantitative and data science challenges. However, you must verify if it aligns with your new-grad pay expectations and whether its tech culture is truly fast-paced and innovative rather than slowed by traditional finance bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Poor. Financial firms often require long hours, but actual personal time cannot be verified from the sources."
   }
  },
  "philips": {
@@ -301221,11 +301682,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301237,6 +301700,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680207,
   "name": "RoboForce",
   "pace_of_work": {
@@ -301249,6 +301713,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301312,7 +301777,7 @@
     "url": "https://job-boards.greenhouse.io/roboforce/jobs/5196164008"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680207,
   "web_search_url": "https://duckduckgo.com/?q=RoboForce+company+careers+benefits",
@@ -302119,7 +302584,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -302137,7 +302602,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897083,
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784679642,
   "name": "Rocket Lab USA",
   "pace_of_work": {
@@ -302150,7 +302615,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897203,
+  "retry_after": 1784897514,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -304868,37 +305333,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier due to lack of available information; requires further verification of team pedigree and product impact."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts; likely SaaS or digital product sales given web presence."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown exact new-grad pay scale; benchmark against standard tech/AI market rates and confirm total compensation during the process."
   },
   "evidence_sha": "64c16fdb9b99d4aa",
+  "generated_at": 1784897274,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "40c6f35d4a",
+    "6080fd3766"
+   ],
+   "value": "Technology / Software / AI (inferred from domain and platform)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the team's actual work hours, on-call expectations, and whether they offer guaranteed shutdowns or rigid PTO boundaries. Ask specific questions about the new-grad compensation package (base, equity, bonuses) and the day-to-day technical learning curve to ensure the role provides high prestige and rapid growth without creating a toxic or high-burnout environment."
   },
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784680206,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
+  },
   "name": "Rundoo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown, but tech startups often move quickly; verify if the pace is innovative versus chaotic during interviews."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "40c6f35d4a",
+    "6080fd3766"
+   ],
+   "value": "Web-based software or AI platform (specific features not available in source excerpts)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown exact policy; tech companies typically offer 15-20 days but verify if they enforce sane hours and guaranteed shutdowns."
   },
+  "refresh_after": 1790081274,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -304908,7 +305431,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown if they offer guaranteed company-wide shutdowns; ask recruiters directly to ensure it meets your work-life balance standards."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
   },
   "sources": [
    {
@@ -304942,14 +305472,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=3ef8ac096083f06c956dc9986e558b6d2ca1dab2b5d1bdf0707735e4f4f66f7cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly9ydW5kb28uYWkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "78df747e9f",
+    "40c6f35d4a",
+    "6080fd3766"
+   ],
+   "value": "Based on available sources, Rundoo operates a web platform and software products accessible via rundoo.ai, though specific business activities cannot be confirmed from retrieved source excerpts. The company likely monetizes through its digital product offerings, but exact revenue streams are not detailed in available materials."
+  },
+  "synthesized_evidence_sha": "64c16fdb9b99d4aa",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "40c6f35d4a",
+    "6080fd3766"
+   ],
+   "value": "Not determinable from available source excerpts; web platform suggests software engineering, AI, and data infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680206,
   "web_search_url": "https://duckduckgo.com/?q=Rundoo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You are seeking an elite, fast-paced AI or data science role with high new-grad compensation and a mission-driven culture that respects work-life balance. While Rundoo's AI focus and tech stack indicate an innovative environment, it is critical to verify their stance on sane hours, guaranteed shutdowns, and technical mentorship during interviews to ensure they match your low-burnout, high-growth priority."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown metric; requires direct confirmation of whether the culture avoids the toxic, high-burnout environment you want to avoid."
   }
  },
  "runpod": {
@@ -316884,7 +317444,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316902,7 +317462,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896859,
+  "last_attempt_at": 1784897274,
   "last_evidence_at": 1784679629,
   "name": "Sharp Electronics",
   "pace_of_work": {
@@ -316915,7 +317475,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897099,
+  "retry_after": 1784897754,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
