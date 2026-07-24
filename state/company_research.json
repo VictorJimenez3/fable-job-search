@@ -9270,52 +9270,127 @@
  "airbus": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "High in aerospace, but lower general tech prestige than Big Tech or AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Designs and manufactures complex aerospace vehicles and sells them to commercial and government entities, supported by long-term maintenance and parts contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Estimated: Stable, incremental, conservative engineering culture that prioritizes safety and process over speed."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Commercial airlines, defense and military organizations, space agencies, and helicopter operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "medium",
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "Estimated: Not eligible for new grad tech pay."
   },
   "evidence_sha": "58e621fce6aa203b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784874643,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Aerospace and Defense."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "If you want to optimize for fast, innovative tech culture and elite AI pay, you need to prove you can cut through bureaucracy and ask interviewers directly about team autonomy and development speed."
+  },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784678466,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Headquartered in Toulouse, France, with major engineering and manufacturing facilities across Europe, the US, and globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "To pioneer sustainable aerospace for a safe and united world."
+  },
   "name": "Airbus",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Estimated: Slow and steady pace that requires navigating heavy procedural bureaucracy before deploying tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Commercial aircraft, military aircraft, helicopters, and satellites."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Estimated: 25 to 30 days of annual leave, depending on the European or regional contract."
   },
-  "retry_after": 1784874883,
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "db075f5980",
+    "e5405b83ba",
+    "57b7d76daf"
+   ],
+   "value": "Not available."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "Estimated: Likely includes corporate shutdowns during major holidays, particularly in European locations."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Established, publicly traded large enterprise."
   },
   "sources": [
    {
@@ -9349,14 +9424,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=f31cd41455f28a6d3305dc55bb7dfe7d7cb9f3ef403e8853b0b5af9d49b15961JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuYWlyYnVzLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "Not specified in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "db075f5980",
+    "e5405b83ba",
+    "57b7d76daf"
+   ],
+   "value": "Airbus is a European multinational aerospace corporation that designs, manufactures, and sells civil and military aerospace products worldwide. The company makes money by producing commercial aircraft, helicopters, military transports, and satellites, selling them to global airlines, armed forces, and corporate clients."
+  },
+  "synthesized_evidence_sha": "58e621fce6aa203b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "db075f5980",
+    "e5405b83ba"
+   ],
+   "value": "Large-scale embedded systems, aerospace engineering, and digital innovation platforms including data science and AI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678466,
   "web_search_url": "https://duckduckgo.com/?q=Airbus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e5405b83ba"
+   ],
+   "value": "Airbus offers mission-driven work and strong WLB with guaranteed shutdowns, but the tradeoff is slow, deeply bureaucratic pace and lower new-grad tech pay compared to AI unicorns or FAANG."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "db075f5980"
+   ],
+   "value": "Estimated: Excellent work-life balance characterized by sane 40-hour weeks, a mission-driven culture, and strict respect for personal time."
   }
  },
  "aircall": {
@@ -98606,37 +98715,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Specialized grid optimization and time-series challenges, but lacks the elite tech-brand prestige or aggressive innovation culture of top-tier AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d791f3ed09"
+   ],
+   "value": "Non-profit membership corporation funded by system administration fees and market participant charges rather than commercial product sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused utility culture emphasizing reliability and engineering precision over rapid tech-startup disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d791f3ed09"
+   ],
+   "value": "Texas electric utilities, retail electric providers, power generators, and wholesale market participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary, competitive for the Austin/Taylor region but trailing top-tier tech firm pay scales."
   },
   "evidence_sha": "a671a46eb035ec7e",
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c47b14132e"
+   ],
+   "value": "Electric Utility Transmission and Independent System Operator (ISO)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for specific examples of modern ML models in production, team agility versus traditional utility processes, new-grad compensation bands, and strict adherence to sane hours and shutdowns."
   },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784675819,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0daf0f8cf7"
+   ],
+   "value": "Headquartered in Taylor, Texas with additional offices in Austin, Texas."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0daf0f8cf7"
+   ],
+   "value": "To ensure a reliable electric grid and foster a fair and efficient competitive wholesale electricity market for the ERCOT region."
+  },
   "name": "Ercot",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Operates with the caution of critical infrastructure, meaning a slower, stability-focused pace rather than fast-paced tech disruption."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d791f3ed09"
+   ],
+   "value": "Grid management systems, wholesale electricity market administration, power flow forecasting tools, and grid dashboards ensuring reliable power distribution across the Texas interconnection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off plus state holidays, typical for established Texas-based non-profit utilities."
   },
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98646,7 +98811,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official guaranteed global shutdowns beyond standard state holidays; operations run 24/7 for grid management."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0daf0f8cf7"
+   ],
+   "value": "Established non-profit organization employing hundreds of professionals to manage grid operations for millions of end-users."
   },
   "sources": [
    {
@@ -98690,14 +98862,44 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "This employer was found on a new-grad positions tracker indicating they actively hire recent university graduates for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c47b14132e"
+   ],
+   "value": "The Electric Reliability Council of Texas (ERCOT) is the organization that operates the electric grid for most of Texas and manages the deregulated wholesale electricity market. As a non-profit corporation, it makes money through administrative fees and market charges assessed to market participants rather than traditional corporate profits."
+  },
+  "synthesized_evidence_sha": "a671a46eb035ec7e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d791f3ed09"
+   ],
+   "value": "Developing high-performance grid monitoring systems, large-scale data analytics for market settlements, and optimizing power flow algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Ercot+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47b14132e",
+    "0daf0f8cf7"
+   ],
+   "value": "ERCOT offers mission-driven work managing a critical grid, but candidates desire a fast, innovative tech culture with high pay. The reality of a regulated utility may feature slower bureaucracy, meaning the candidate should carefully screen teams for true AI/DS innovation over routine IT operations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Balanced. Critical grid operations occasionally require on-call duty, but the organization generally supports regular hours and a stable work-life balance."
   }
  },
  "erias ventures": {
@@ -110551,47 +110753,134 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High Tier within biotech and computational biology, though distinct from pure tech industry prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's business model or revenue generation is not available in the provided excerpts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and academic-leaning, focusing on scientific innovation and healthcare impact."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's customers or target market is not available in the provided excerpts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely lower than baseline FAANG salaries for new grads, approximately $80k-$110k base."
   },
   "evidence_sha": "37135b4b723fea84",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's industry is not available in the provided excerpts."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "To balance prestige, high new-grad pay, and a fast-paced tech culture, prepare to ask Fred Hutch interviewers about compensation structures for research tech roles versus industry standards. Additionally, probe into the pace of project deployment and whether bureaucratic hurdles affect technical innovation, ensuring the role meets your criteria for accelerated career growth without sacrificing personal time."
+  },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784675359,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's office locations is not available in the provided excerpts."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's mission statement is not available in the provided excerpts."
+  },
   "name": "Fred Hutch",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of a large non-profit research institution, prioritizing rigorous methodology over rapid tech deployment."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's products or services is not available in the provided excerpts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous time off typical of non-profit healthcare and research centers, though precise numbers are not public."
   },
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding institutional or holiday shutdowns is not available in the provided excerpts."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the company's size or developmental stage is not available in the provided excerpts."
   },
   "sources": [
    {
@@ -110625,14 +110914,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=ed8fade10f020f37389db79e0c73435241efdae6e4e3e9f503879e6690d2344cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly9mcmVkLnN0bG91aXNmZWQub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding visa sponsorship for technical roles is not available in the provided excerpts."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "The provided sources consist only of redirect notices and do not contain descriptive information about the company's operations. Therefore, specific details on what the organization does and how it makes money cannot be determined from the supplied text."
+  },
+  "synthesized_evidence_sha": "37135b4b723fea84",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Information regarding the specific technical work or engineering projects is not available in the provided excerpts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675359,
   "web_search_url": "https://duckduckgo.com/?q=Fred+Hutch+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bce2c11949",
+    "60a72396fb",
+    "d2dd0e01c6"
+   ],
+   "value": "Fred Hutch is a prestigious, mission-driven cancer research center that aligns strongly with a candidate's desire for high-impact work and elite prestige while offering a supportive, non-toxic academic-adjacent WLB. It provides opportunities for rapid technical learning in computational biology and healthcare data, though its institutional nature may lack the fast-paced, high-comp tech culture of a top-tier AI startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, characterized by sane hours and a mission-driven, non-toxic environment that respects personal time."
   }
  },
  "freddie mac": {
@@ -151198,11 +151524,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -151214,6 +151542,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784678472,
   "name": "Jones Lang LaSalle (JLL)",
   "pace_of_work": {
@@ -151226,6 +151555,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784875085,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -151269,7 +151599,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=6a531dd0199752607b7eccc6c6f41f5ad8121ed3a0efb0dfe88d88741f113830JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuam9uZXNzb2RhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=Jones+Lang+LaSalle+%28JLL%29+company+careers+benefits",
@@ -169234,37 +169564,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Traditional Healthcare IT). Focus is on enterprise applications rather than cutting-edge AI research, placing it lower on elite tech prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "aede4aea7e",
+    "0124a46d07"
+   ],
+   "value": "Magellan operates as a managed healthcare organization, generating revenue through B2B contracts to manage behavioral and specialty health services, radiology, and pharmacy benefits for other insurers and employers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate healthcare. Mission-driven focus on patient outcomes with a structured, process-oriented work environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aede4aea7e",
+    "0124a46d07"
+   ],
+   "value": "Health plans, employers, government agencies (Medicaid/Medicare), and healthcare consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $90,000 base salary for new graduate tech roles, aligning with corporate healthcare standards rather than elite tech firms."
   },
   "evidence_sha": "5c792e4f7543e3cf",
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "aede4aea7e",
+    "0124a46d07"
+   ],
+   "value": "Healthcare Management and Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Assess expectations regarding development pace and startup culture. Focus on how technical learning translates into health informatics and legacy systems. Clarify boundaries on off-hours expectations to ensure personal time is protected within a traditional corporate healthcare environment."
   },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784583386,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "aede4aea7e"
+   ],
+   "value": "Headquartered in Avon, Connecticut, with operational centers and remote work options across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aede4aea7e"
+   ],
+   "value": "To be a leading healthcare company, focused on addressing unmet needs and improving the quality of care for members."
+  },
   "name": "Magellan Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Typical of large healthcare organizations where regulatory compliance, care management protocols, and legacy systems drive a steady but cautious workflow."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "aede4aea7e",
+    "0124a46d07"
+   ],
+   "value": "Behavioral health and EAP management, specialty pharmacy management, radiology management, and medication management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of standard PTO annually, typical for corporate healthcare management."
   },
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169274,7 +169662,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; standard public holidays likely observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2256dde27b",
+    "aede4aea7e"
+   ],
+   "value": "Established corporate entity (formerly publicly traded, now operating under ownership following Centene's 2022 acquisition of the Magellan Rx business, with Anthem owning the behavioral health unit)."
   },
   "sources": [
    {
@@ -169308,14 +169704,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=a210bb10a511a62f8b1ab7b99c3509b81ad880c2344c50983cf1837b54254e4aJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9tYWdlbGxhbi1vdXRkb29ycy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional corporate sponsorship available for specialized roles but subject to enterprise-wide budget and policy restrictions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2256dde27b",
+    "aede4aea7e"
+   ],
+   "value": "Magellan Health is a Fortune 500 healthcare company specializing in managed behavioral health, specialty pharmaceuticals, and radiology management services. It generates revenue by providing care management and administrative services to health plans, employers, and government agencies."
+  },
+  "synthesized_evidence_sha": "5c792e4f7543e3cf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large-scale data management, health informatics, claims process automation, and system integration for legacy and modern health data architectures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583386,
   "web_search_url": "https://duckduckgo.com/?q=Magellan+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The healthcare focus provides strong mission-driven work, but as a large established organizational, candidates are less likely to find fast, innovative tech culture and elite new-grad pay. The environment usually supports sane hours and learning opportunities, though it may be heavier on bureaucracy than elite AI startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Healthcare management firms generally maintain predictable corporate hours, though health sector stress can occasionally spike."
   }
  },
  "magical": {
@@ -189015,42 +189435,111 @@
  "natwest group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "626b6f2d00"
+   ],
+   "value": "Estimated: Tier B; significant institutional data, but not considered elite AI prestige compared to tech-first firms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Interest margin and transaction fee-based retail/commercial banking."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Estimated: Traditional corporate banking with compliance focus."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Retail consumers, businesses, and corporate clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55k-$70k (London-based graduate base)."
   },
   "evidence_sha": "f3bbf30fbf737d34",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784874643,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Banking/Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "626b6f2d00",
+    "5eca7bf68a"
+   ],
+   "value": "Ask about team-specific AI use cases, new-grad comp, speed of deployment, and exact WLB policies to confirm fit with your balance and learning goals."
+  },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784678954,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "5eca7bf68a"
+   ],
+   "value": "Primarily UK-based retail and online banking operations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849",
+    "5eca7bf68a"
+   ],
+   "value": "Not explicitly found in sources, but operates as a core retail and commercial financial institution."
+  },
   "name": "NatWest Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Estimated: Moderate to slow, typical of large institutional banks."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849",
+    "5eca7bf68a"
+   ],
+   "value": "Retail and commercial banking accounts, mortgages, loans, wealth management, and digital online banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 28-30+ days (standard UK banking sector)."
   },
-  "retry_after": 1784874883,
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -189060,7 +189549,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Strict adherence to UK public holidays, no tech-specific guaranteed shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "Large established enterprise."
   },
   "sources": [
    {
@@ -189094,14 +189591,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=9d4ca37c4b3d05e06f62937e0774d511c9fd89fda06ae54dfa7010f0fbf05352JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly93d3cubmF0d2VzdC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "UK Tier 2/5 visa sponsorship available (role-dependent)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849",
+    "5eca7bf68a"
+   ],
+   "value": "NatWest Group is a major UK-based retail and commercial banking institution. It makes money by providing financial services like retail banking, commercial banking, and wealth management, earning income through net interest margin on loans and transaction fees."
+  },
+  "synthesized_evidence_sha": "f3bbf30fbf737d34",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "169db46849",
+    "5eca7bf68a"
+   ],
+   "value": "Banking platform maintenance, large legacy systems, and digital banking app development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678954,
   "web_search_url": "https://duckduckgo.com/?q=NatWest+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "626b6f2d00",
+    "169db46849"
+   ],
+   "value": "As a major bank, it lacks the fast-innovative tech culture and guaranteed shutdowns you prioritize, though it does feature large-scale data challenges."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "626b6f2d00"
+   ],
+   "value": "Estimated: Good, with manageable hours but potential bureaucracy."
   }
  },
  "nav canada": {
@@ -200656,48 +201189,134 @@
  "ohio state university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Regional or Academic tier. High prestige within academic research spheres, but lacks the elite industry prestige and compensation of top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Funded by a mix of state tax appropriations, student tuition, research grants, and patient care revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Mission-driven, academic, and bureaucratic. Focuses on education and public service rather than aggressive tech innovation or high-burnout environments."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Undergraduate and graduate students, medical patients, and funding agencies like the state and federal government."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: $60,000-$80,000. Lower than private sector tech due to public university compensation bands."
   },
   "evidence_sha": "47de94e2da855d61",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Higher Education and Healthcare."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Probe heavily to see if the specific AI role offers an exception to typical university constraints. Discuss pathways to bypass bureaucracy, access professional development funding, and confirm exact working hours to ensure it meets the sane hours and guaranteed shutdown requirements."
+  },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784678473,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c",
+    "c3dbbe6a4e"
+   ],
+   "value": "Ohio, United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "To serve the people of Ohio through teaching, research, and public service."
+  },
   "name": "Ohio State University",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Slow and bureaucratic. Driven by the academic calendar and institutional processes rather than fast-paced innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Higher education degrees, academic research, and clinical healthcare services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Likely 20-25+ paid time off days, in addition to university holidays and potential academic breaks."
   },
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Likely features holiday closures around late December, but guaranteed tech-wide shutdowns are uncommon outside of academic calendar breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Established public institution."
   },
   "sources": [
    {
@@ -200731,14 +201350,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=3e88b99d64139a34dc22646c7a23e64e9010d0b45f5bf7ace79cd82bfbbfd201JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2hpbw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "Estimated: As a public university, it generally does not sponsor H-1B visas for standard staff roles, though exceptions may exist for specialized researchers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ef34412b5c"
+   ],
+   "value": "The Ohio State University is a large public land-grant research institution. It makes money through state appropriations, tuition, research grants, and healthcare services via its medical center."
+  },
+  "synthesized_evidence_sha": "47de94e2da855d61",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef34412b5c",
+    "1fe0d28df5"
+   ],
+   "value": "Research roles supporting university initiatives, including AI and data sciences applied to academic, medical, and institutional problems. Note: Sources provided did not load specific technical job details."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Ohio+State+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "While OSU offers mission-driven stability and respects work-life balance, it fundamentally conflicts with the candidate's desire for a fast, innovative tech culture and high pay. As a public university, it is characterized by slow bureaucracy and lower compensation rather than elite prestige and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1fe0d28df5",
+    "ef34412b5c"
+   ],
+   "value": "Estimated: Excellent. Public sector roles typically feature sane hours, strong benefits, and a high respect for personal time, though this may come at the cost of a fast pace."
   }
  },
  "oklahoma state government": {
@@ -209709,51 +210362,121 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier, offering solid technical learning in applied software and hardware integration rather than elite, top-tier prestige."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Sales of connected fitness hardware combined with recurring subscription revenues for exclusive digital content."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Forward-thinking, adaptable, and hardworking, with a belief in the power of the company to change people’s lives."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5"
+   ],
+   "value": "Members who engage with fitness at home, outdoors, traveling, or at the gym."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Moderate-to-high new-grad tech pay baseline tailored for a global public tech company, though not explicitly top-tier 'elite' tech packages."
   },
   "evidence_sha": "79f7e912af6b4925",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784874965,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784874470,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0e61f21fd0"
+   ],
+   "value": "Connected Fitness and Wellness"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Candidates should emphasize their ability to thrive in a fast-paced, challenging, and rewarding team environment, demonstrating adaptability and hard work without showing signs of preferring slow-paced, bureaucratic workflows."
+  },
+  "last_attempt_at": 1784874965,
   "last_evidence_at": 1784821848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0e61f21fd0"
+   ],
+   "value": "Global footprint with offices located around the world."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0e61f21fd0"
+   ],
+   "value": "Bring integrated fitness and wellness experiences to Members anytime, anywhere."
+  },
   "name": "Peloton",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "015d625ea5"
+   ],
+   "value": "Estimated: Fast-paced and challenging, requiring a high degree of adaptability and hard work."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Integrated fitness and wellness experiences, including innovative hardware, distinctive software, and exclusive fitness content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate PTO package typical for a global public tech company, requiring actual inquiry for precise new-grad accrual rates."
   },
-  "retry_after": 1784874950,
+  "refresh_after": 1790058965,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0e61f21fd0",
+    "015d625ea5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holiday shutdowns, though specific guaranteed corporate shutdowns are not detailed in the research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e61f21fd0"
+   ],
+   "value": "Global company with offices around the world playing a crucial role in advancing the company's mission and impact."
   },
   "sources": [
    {
@@ -209797,14 +210520,49 @@
     "url": "https://careers.onepeloton.com/en/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0e61f21fd0",
+    "015d625ea5"
+   ],
+   "value": "Not explicitly stated in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Peloton is a fitness and wellness company that brings integrated fitness experiences to members anytime, anywhere through connected hardware, software, and exclusive content. It makes money by selling premium connected fitness equipment and recurring subscription access to its digital fitness classes."
+  },
+  "synthesized_evidence_sha": "79f7e912af6b4925",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Development of distinctive software and integration of innovative hardware for connected fitness experiences."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678334,
   "web_search_url": "https://duckduckgo.com/?q=Peloton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "015d625ea5",
+    "0e61f21fd0"
+   ],
+   "value": "Peloton aligns well with the candidate's desire for a mission-driven company that changes people's lives, featuring a fast-paced and innovative tech environment that accelerates technical learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "015d625ea5"
+   ],
+   "value": "Estimated: Can be demanding due to the fast-paced and challenging environment, potentially requiring careful boundary-setting to maintain sane hours."
   }
  },
  "penn interactive": {
