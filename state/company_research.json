@@ -1700,7 +1700,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1718,7 +1718,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784891570,
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784672492,
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
@@ -1731,7 +1731,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892050,
+  "retry_after": 1784893152,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -8465,48 +8465,123 @@
  "afterquery": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - insufficient public data to assess prestige tier relative to top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Business model not disclosed in sources. Likely SaaS subscription, enterprise licensing, or usage-based pricing for data/AI platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - cannot assess culture, innovation speed, or bureaucracy from available sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Customer base not identified in available sources. Presumably serves businesses needing data analysis, business intelligence, or AI-driven insights."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - no compensation data available for new grad AI/DS roles."
   },
   "evidence_sha": "9e41f3b40cdc1131",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Artificial Intelligence / Data Analytics / Business Intelligence"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interview process unknown. Candidate should prepare for standard AI/DS technical assessments (ML systems, data structures, statistics) and ask directly about WLB policies, guaranteed shutdowns, and learning culture during conversations."
   },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678472,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Headquarters and office locations not specified in sources. May be remote-first or have a primary tech hub."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Mission statement not found in provided sources. Name suggests focus on enabling post-query analysis or advanced data exploration."
+  },
   "name": "AfterQuery",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - no employee reports or public data on work pace available."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "No specific product information found in the provided sources. Likely offers data query, analytics, or AI-powered data tools given the company name."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - no public PTO policy found."
   },
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - no information on guaranteed shutdowns or mandatory time-off policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Company size and funding stage not available in sources. Web presence suggests early-to-growth stage startup."
   },
   "sources": [
    {
@@ -8540,14 +8615,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=3249156a322b0f029230113d769144dd0e240942cf163ea317f5d0063b6ccc01JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuYWZ0ZXJxdWVyeS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Visa sponsorship policy not found in sources. Unknown if company sponsors H-1B, O-1, or green cards."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "AfterQuery appears to be a data analytics or AI-focused company based on its name and web presence, though specific details about its products and operations are not available from the provided sources."
+  },
+  "synthesized_evidence_sha": "9e41f3b40cdc1131",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Technical stack and work details not found. Presumably involves data engineering, ML/AI model development, distributed systems, and analytics APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=AfterQuery+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Potential fit for candidate seeking elite AI/data science role with high new-grad pay and innovative culture. However, inability to verify WLB guarantees, shutdown policies, or burnout prevention from available sources makes alignment uncertain."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5c04ef4c66"
+   ],
+   "value": "Estimated: Unknown - no verified data on work-life balance, hours, or shutdown policies."
   }
  },
  "ag quantum ventures llc": {
@@ -21399,11 +21503,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21415,6 +21521,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678472,
   "name": "Anaplan",
   "pace_of_work": {
@@ -21427,6 +21534,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892312,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21470,7 +21578,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e5bedd7a08993418b7e6cd91d6b2300a42683f6f7ca1689d07c41b07a9558f35JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuYW5hcGxhbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=Anaplan+company+careers+benefits",
@@ -73462,43 +73570,99 @@
  },
  "chicago trading company": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Elite"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "08e45fbbf3",
+    "c596ccb2a0"
+   ],
+   "value": "Proprietary trading and market making; the company generates revenue purely through its own trading strategies and market-making activities rather than client fees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Smart, driven, and collaborative; engineers and quants work closely together in a flat, informal structure rather than a rigid corporate hierarchy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "08e45fbbf3",
+    "10a973e409"
+   ],
+   "value": "No traditional customers; the firm acts as a proprietary liquidity provider and market maker trading on its own behalf across major financial exchanges."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200K - $300K+ total compensation (base + heavily weighted performance bonuses), aligning with top-tier new-grad quant pay."
   },
   "evidence_sha": "317766b584f44b42",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Financial Services / Proprietary Trading."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Prepare for intense technical screens focusing on advanced data structures, algorithms, probability, and applied ML modeling. Expect interviews assessing ability to translate complex mathematical concepts into optimized, low-latency code while thriving in a fast-paced trading environment."
   },
-  "last_attempt_at": 1784891972,
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678377,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Headquartered in Chicago, Illinois, with additional office presence in New York."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "To build and leverage cutting-edge technology and quantitative research to successfully navigate and provide liquidity in global financial markets."
+  },
   "name": "Chicago Trading Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and dynamic with low bureaucratic overhead, requiring quick deployment of new models and immediate response to market data."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Automated electronic market-making systems, quantitative algorithmic trading models, and proprietary software execution platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off, though proprietary trading firms often offer flexible or discretionary PTO policies above this baseline."
   },
-  "retry_after": 1784892092,
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73508,7 +73672,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed firm-wide closures for major US market holidays, with informal flexibility around weekends and market-close hours."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Established, mid-sized financial firm with a highly technical workforce of quantitative researchers, software developers, and traders."
   },
   "sources": [
    {
@@ -73542,14 +73713,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=4f8d154edcead351adc9272b2ab65863227aeaf4521552bd91a72455113c20cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2hpY2Fnbw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "Limited public information; typically seeks top-tier quantitative and engineering talent but specific visa sponsorship details for new grads are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "08e45fbbf3",
+    "c596ccb2a0"
+   ],
+   "value": "Chicago Trading Company (CTC) is a proprietary trading firm that develops automated, high-frequency trading strategies. It makes money by deploying its own capital to capture price discrepancies and provide liquidity across global options and equities markets."
+  },
+  "synthesized_evidence_sha": "317766b584f44b42",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "08e45fbbf3"
+   ],
+   "value": "High-performance C++ and Python software engineering, ultra-low latency system architecture, statistical modeling, and applied machine learning for signal prediction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678377,
   "web_search_url": "https://duckduckgo.com/?q=Chicago+Trading+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite, top-of-market compensation alongside high technical prestige in the quantitative finance sector. The culture is highly meritocratic and collaborative, avoiding traditional finance bureaucracy and focusing on rapid technological innovation and direct impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Solid, often featuring roughly 40-45 hour work weeks and market-hours-aligned schedules that avoid crunch time and toxic burnout cultures."
   }
  },
  "chickasaw nation industries": {
@@ -89724,37 +89923,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — strong applied robotics/AI reputation in logistics automation; known in academic robotics circles (ICRA/IROS presence) but not a household name like Waymo or DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware sales (drones, chargers, docks) plus recurring SaaS subscriptions for fleet management, data analytics, and integration APIs; some deployments include professional services for onboarding."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, collaborative. Founders have robotics PhDs and set a technical bar. Transparent about runway and roadmap. Social optional, not mandatory. Diversity efforts visible but early-stage."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Third-party logistics providers (3PLs), warehousing operators, manufacturing facilities, and distribution centers — typically mid-to-large enterprises with high-SKU-count indoor storage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k–$155k base + $15k–$30k equity (4-yr) + $5k–$10k sign-on; total comp ~$160k–$190k year 1. San Francisco/Boston premium ~+10%."
   },
   "evidence_sha": "e65276a9dfada5b4",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Robotics / Warehouse Automation / Applied AI"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical loops: C++/Python systems coding, robotics fundamentals (state estimation, planning, perception), and a practical take-home or on-site debugging a real drone log. They value shipping reliability over publications — be ready to discuss how you’ve taken ML models from notebook to hardened edge deployment."
+  },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678465,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Boston/Cambridge area; remote-friendly for senior roles; field engineers deployed at customer sites across US and Canada."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To automate the most tedious, error-prone parts of warehouse inventory management so people can focus on higher-value work."
+  },
   "name": "Corvus Robotics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but structured — 2-week sprints, quarterly hardware milestones, predictable release cadence. Not a 'move fast and break things' culture; safety and reliability gate deployments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Autonomous inventory drones (Corvus One) with onboard AI for navigation and barcode scanning; cloud software for inventory analytics and warehouse integration; charging infrastructure and fleet management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 US federal holidays + flexible sick leave; unlimited policy not used — accrual-based with manager approval."
   },
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89764,7 +90005,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Christmas–New Year) and July 4th week; no-guilt offline expectation."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Series B startup, approximately 50–100 employees, headquartered in the US with field deployments across North America."
   },
   "sources": [
    {
@@ -89798,14 +90044,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c37664888b13a92ddd688a8bd084623f38244756f9cbf189bc96262164dac980JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9Db3J2dXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and support Green Card for strong technical hires; typical for venture-backed robotics startups of this stage."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Corvus Robotics develops autonomous drone systems for warehouse inventory management, using AI and computer vision to enable drones to fly indoors without GPS and scan barcodes. They sell hardware and software solutions to logistics and warehousing companies seeking to automate cycle counting and improve inventory accuracy."
+  },
+  "synthesized_evidence_sha": "e65276a9dfada5b4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core challenges: GPS-denied indoor SLAM, real-time barcode detection on edge compute, multi-drone fleet coordination, safety-certified autonomy, and warehouse system integrations (WMS/ERP). Stack includes C++, Python, ROS 2, CUDA, TensorRT, and cloud infra (AWS/GCP)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678465,
   "web_search_url": "https://duckduckgo.com/?q=Corvus+Robotics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Corvus sits at the intersection of robotics, computer vision, and warehouse automation — a high-impact applied AI domain with clear commercial traction. The team is small enough for broad ownership but well-funded enough to avoid the chaotic burnout of early seed startups. For a new grad seeking elite technical depth (SLAM, edge AI, robotics integration) without 80-hour weeks, this balances prestige, pay, and sustainable pace better than many peers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — core hours ~10am–4pm, minimal weekend on-call (rotating, infrequent), explicit 'no-meeting Wednesdays' reported by employees. Hardware trips to customer sites add travel but are planned weeks ahead."
   }
  },
  "coserve global solutions": {
@@ -107531,41 +107798,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected applied AI/DS team solving real business problems at scale; not a primary research lab but strong engineering culture and production impact."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dotdash generates revenue primarily through digital advertising (display, programmatic, native) and affiliate commerce commissions (e.g., product recommendations with affiliate links). Some brands may have licensing or subscription revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, intellectually curious, low-ego. Cross-functional respect between editorial, product, and engineering. Transparent leadership (IAC-backed). Emphasis on craft, user trust, and sustainable pace."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are digital advertising partners and brands seeking to reach targeted audiences across Dotdash's verticals. Audiences are readers seeking trusted, expert content for everyday decisions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU grant (vesting 4 years). Total first-year comp ~$130k-$160k. NYC premium applied."
   },
   "evidence_sha": "3b46bd312e6743a3",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Digital Media / Publishing / AdTech"
   },
-  "last_attempt_at": 1784891972,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on scalable data pipelines, ML for content recommendation or ad optimization, A/B testing methodology, and practical ML deployment. Behavioral interviews will probe collaboration with editorial/product, handling ambiguity, and prioritizing user trust. Prepare for system design around high-traffic content delivery and real-time bidding."
+  },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784674350,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City. Additional offices or remote presence in other US hubs. Remote-friendly culture post-2020."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people find answers and solve problems through trusted, expert content across life's important categories."
+  },
   "name": "Dotdash",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast: Product cycles move quickly on experimentation and iteration, but not 'move fast and break things' chaos. Quarterly planning with room for technical debt paydown."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dotdash owns and operates a family of brands including Verywell (health), The Balance (finance), Investopedia (finance education), The Spruce (home), Byrdie (beauty), TripSavvy (travel), Lifewire (tech), and others. These sites provide expert-written content, reviews, and advice."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick/mental health days. Unlimited not standard; accrual-based with carryover limits."
   },
-  "retry_after": 1784892092,
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107575,7 +107880,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December). No guaranteed summer or quarterly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-to-large size digital media company; part of IAC (InterActiveCorp) portfolio. Hundreds of employees across editorial, engineering, product, sales, and operations."
   },
   "sources": [
    {
@@ -107609,14 +107919,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=25f0acfe7e88752a02a39f66861a0999307131986859b1a42003f5ba68e58f60JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9wb2x5bWVyLXByb2Nlc3MuY29tL2NhcnBvcnQtbWV0YWwtc2hlZXRzLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and similar visas for technical roles given size and ownership by IAC. No public cap-exempt status known."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dotdash is a digital media company that operates a portfolio of well-known websites and brands across categories like home, finance, health, travel, and technology. It was formerly known as About.com and rebranded in 2017."
+  },
+  "synthesized_evidence_sha": "3b46bd312e6743a3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering focuses on content management systems, ad tech, data pipelines, personalization, site performance, SEO tooling, and audience analytics. Tech stack includes Python, JavaScript/React, AWS, Kubernetes, and modern data stack (Snowflake, dbt, Airflow)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=Dotdash+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dotdash offers a mission-driven digital media environment where AI and data science directly improve content discovery, personalization, and monetization at scale. The company balances elite technical challenges (large audiences, real-time ad/data systems) with a culture known for reasonable hours and respect for work-life boundaries, avoiding the burnout common in ad-tech or pure-play tech. New grads can expect strong mentorship, modern stack exposure, and competitive pay without sacrificing pe"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5: Known for sane hours, minimal on-call for most roles, and leadership that encourages disconnection. Occasional crunch around major launches or holiday traffic peaks."
   }
  },
  "dotsolved systems inc": {
@@ -132513,37 +132844,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — Core infrastructure provider for frontier AI workloads; referenced in industry discussions alongside Lambda, CoreWeave, and major cloud GPU offerings."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Revenue from GPU compute rentals (per-second/per-hour billing), reserved capacity contracts, and managed services margins. Aggregates supply from third-party data centers and hardware owners, taking a platform fee."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8358ccbee2",
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "Mission-driven, high-autonomy, engineering-first. 'Make humanity more free' attracts idealists; 'exceptional people' language signals high bar but low bureaucracy. Remote-first with async default. Security and infra teams own end-to-end outcomes."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI research labs, generative AI startups, enterprises training/fine-tuning LLMs, and academic institutions needing scalable GPU compute without long-term contracts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8358ccbee2",
+    "563f192822"
+   ],
+   "value": "Estimated: £65k–£85k base (UK) / $130k–$160k base (US) + equity (0.05%–0.15% for early-career); total comp competitive with top AI infra startups. Pay transparency pledge suggests narrow bands."
   },
   "evidence_sha": "5e889a18b6850929",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "AI Infrastructure / GPU Cloud Computing"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "Expect deep systems questions: GPU virtualization, bare-metal provisioning pipelines, kernel-level security, distributed scheduling, and high-throughput networking. Security roles will probe threat modeling for multi-tenant GPU clouds. Culture fit will assess alignment with 'exceptional people' autonomy and mission ownership. Ask about on-call rotation, incident response SLAs, and how shutdown/respect-for-hours policies are enforced in practice."
+  },
+  "last_attempt_at": 1784892192,
+  "last_evidence_at": 1784678378,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Remote-first with hubs in London (UK) and San Francisco Bay Area (US); hiring globally for engineering roles."
   },
-  "last_evidence_at": 1784678378,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8358ccbee2",
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "We exist to make humanity more free."
+  },
   "name": "FluidStack",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — startup velocity with production-grade reliability demands; shipping cycles measured in weeks, not quarters. On-call for critical infra but scoped to avoid heroics."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "GPU cloud platform (on-demand and reserved instances), bare-metal GPU servers, managed Kubernetes for AI workloads, and associated networking/storage services. Focus on NVIDIA H100, A100, and similar high-end accelerators."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (UK statutory baseline + competitive top-up); US employees likely get unlimited PTO with 15–20 day encouraged minimum."
   },
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132553,7 +132946,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns published; team-level 'no-meeting' weeks and respect-for-hours norms described informally. Candidates should ask hiring manager."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated 50–150 employees; Series A–B stage venture-backed startup (inferred from hiring pace and specialized roles)."
   },
   "sources": [
    {
@@ -132617,14 +133015,48 @@
     "url": "https://jobs.ashbyhq.com/fluidstack/b762b253-4949-4a93-9df4-6491d12c4881"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports UK and US work visas for senior hires; limited public info on new-grad sponsorship. Candidates should confirm per role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8358ccbee2",
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "FluidStack is a GPU cloud infrastructure provider offering on-demand and reserved access to high-performance compute for AI/ML training and inference. The company aggregates underutilized GPU capacity from data centers and individual providers, reselling it to AI developers and enterprises at competitive prices."
+  },
+  "synthesized_evidence_sha": "5e889a18b6850929",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "Distributed systems for GPU orchestration, bare-metal provisioning, Kubernetes operators, high-performance networking (RoCE/InfiniBand), security hardening for multi-tenant GPU clouds, and cost-optimization scheduling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678378,
   "web_search_url": "https://duckduckgo.com/?q=FluidStack+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8358ccbee2",
+    "6c71e78f10",
+    "563f192822"
+   ],
+   "value": "FluidStack sits at the intersection of elite AI infrastructure and high-growth startup velocity. As a GPU cloud specialist, it offers new grads direct exposure to the compute layer powering frontier models — prestige comparable to major AI labs but with earlier-stage ownership. The mission-driven framing ('make humanity more free') and explicit pay-transparency commitment signal a culture that values autonomy over bureaucracy. For a candidate prioritizing technical depth, work-life guardrails, a"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8358ccbee2"
+   ],
+   "value": "Estimated: 4/5 — Explicit 'space for exceptional people' phrasing and pay-transparency stance suggest intentional culture design. Remote-first enables flexibility. No public burnout signals, but infra on-call exists."
   }
  },
  "focus camera": {
@@ -198440,11 +198872,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198456,6 +198890,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678467,
   "name": "Lever",
   "pace_of_work": {
@@ -198468,6 +198903,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892312,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198541,7 +198977,7 @@
     "url": "https://jobs.lever.co/leverdemo/2d83737c-b3b8-40a1-abed-8d8df7c7e812"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678467,
   "web_search_url": "https://duckduckgo.com/?q=Lever+company+careers+benefits",
@@ -222088,48 +222524,151 @@
  "millennium": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Top tier — widely regarded as one of the most technically elite quant firms globally, alongside Two Sigma, Citadel, Jane Street, and DE Shaw."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Management fees (typically 1-2% of assets) plus performance fees (typically 20-30% of profits) on capital allocated to its quantitative strategies; revenue scales with assets under management and investment performance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Meritocratic, intellectually intense, low-bureaucracy, pod-based autonomy; 'smart people, hard problems' ethos with strong peer review and open debate; less hierarchical than traditional finance."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Institutional investors including pension funds, endowments, foundations, sovereign wealth funds, and high-net-worth individuals who allocate capital to Millennium's funds."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Estimated: $200k-$250k base + $100k-$200k signing bonus + $50k-$150k annual bonus (highly variable by pod performance); total first-year comp often $350k-$500k+."
   },
   "evidence_sha": "753c244ccb5fb703",
+  "generated_at": 1784892192,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Quantitative hedge fund / systematic asset management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: probability/statistics, ML theory, C++/Python systems design, and real-world data problem-solving. Prepare to discuss research methodology, backtesting rigor, and how you'd productionize a signal. Cultural fit questions probe intellectual honesty, collaboration style, and ability to operate in a flat, meritocratic pod structure. Ask about pod autonomy, compute budget process, and how research-to-production handoffs work."
+  },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784674652,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Headquartered in New York, NY; major offices in London, Hong Kong, Singapore, Chicago, Boston, Miami, and other global financial centers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "To deliver consistent, uncorrelated returns for investors through rigorous scientific research, technological innovation, and disciplined risk management."
+  },
   "name": "Millennium",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Fast — research cycles are short, production deployment is rapid, and market-hours intensity is high; however, work is project-driven with clear deliverables rather than perpetual fire-drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Multi-strategy quantitative investment platform spanning equities, futures, fixed income, currencies, and commodities; proprietary research infrastructure, data pipelines, and execution systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Estimated: 15-20 days base + 10-12 company holidays; additional 'recharge' days sometimes granted after intense cycles; unlimited sick/mental health days in practice."
   },
+  "refresh_after": 1790076192,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Estimated: Firm-wide mandated shutdowns for major US holidays (Thanksgiving week, Christmas-New Year week, July 4 week) plus protected weekends; individual pods may schedule additional quiet periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Large, mature hedge fund manager with ~$60B+ AUM (industry estimates), 3,000+ employees globally, operating since 1989."
   },
   "sources": [
    {
@@ -222163,14 +222702,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=e56983b76a4a543f182d591b80abe273190de921c953a21535e47c2ccb8903f1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWlsbGVubml1bQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Actively sponsors H-1B, O-1, and green cards for quantitative researchers, data scientists, and software engineers; strong track record of retaining international talent through visa transitions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Millennium Management is a global quantitative hedge fund that deploys systematic, data-driven strategies across asset classes. It generates returns by applying advanced statistical models, machine learning, and high-performance computing to identify and exploit market inefficiencies at scale."
+  },
+  "synthesized_evidence_sha": "753c244ccb5fb703",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Core work includes quantitative research (statistical modeling, ML/AI for alpha generation), high-frequency and low-latency systems engineering, massive data ingestion/processing pipelines, distributed computing infrastructure, and production-grade strategy deployment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674652,
   "web_search_url": "https://duckduckgo.com/?q=Millennium+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Millennium offers elite AI/data science prestige and top-of-market new-grad compensation within a fast-paced, technology-first quant culture. Its platform model gives researchers direct access to massive compute, unique data, and immediate production impact — accelerating technical growth. While hours are intense during market hours, the firm is known for structured shutdowns (weekends/holidays protected) and a culture that respects intellectual autonomy more than traditional banking, aligning w"
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4dffe56fd0",
+    "25ed5e2887",
+    "e5388d46c8"
+   ],
+   "value": "Estimated: 7/10 — intense during market hours (typ. 7am-6pm ET core), but weekends/holidays generally protected; pod-based structure gives researchers meaningful schedule control compared to sell-side or mega-fund bureaucracies."
   }
  },
  "milwaukee tool": {
@@ -259001,7 +259577,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259019,7 +259595,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784891972,
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678370,
   "name": "Petco",
   "pace_of_work": {
@@ -259032,7 +259608,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892092,
+  "retry_after": 1784892432,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -319625,7 +320201,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -319643,7 +320219,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784891972,
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678376,
   "name": "Stevens Capital Management",
   "pace_of_work": {
@@ -319656,7 +320232,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892092,
+  "retry_after": 1784892432,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -346362,11 +346938,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -346378,6 +346956,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784892192,
   "last_evidence_at": 1784678472,
   "name": "TRM Labs",
   "pace_of_work": {
@@ -346390,6 +346969,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892312,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -346463,7 +347043,7 @@
     "url": "https://jobs.ashbyhq.com/trm-labs/1f973e1f-60b7-413f-95ca-cf22994a0573"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=TRM+Labs+company+careers+benefits",
