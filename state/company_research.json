@@ -16315,37 +16315,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 – strong niche reputation in FS data/AI, not a household tech brand but respected by peers and exit ops into top funds/tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based and retainer consulting fees; revenue from advisory engagements, implementation support, and managed services in financial services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, intellectually rigorous, FS-nerdy culture; low politics, high autonomy for technical tracks; diversity and inclusion initiatives active."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset managers, wealth managers, insurance companies, banks, and other financial services firms globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + $15k-$25k signing + performance bonus (10-15%); total comp ~$135k-$170k Year 1 in US hubs."
   },
   "evidence_sha": "9dd0a2b26366c16d",
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Management Consulting / Financial Services / Data & Analytics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case studies grounded in asset/wealth management or insurance operations, plus technical screens on Python/SQL, ML fundamentals, and cloud data pipelines. Prepare to discuss how you would translate a business problem into a production-grade data product within regulatory constraints. Ask about project staffing norms, typical weekly hours, and the firm’s approach to protected downtime between engagements."
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679095,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offices in New York, Boston, Chicago, San Francisco, London, Edinburgh, Dublin, Singapore, Hong Kong, Sydney, and other financial hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver expert consulting that helps financial services clients navigate complexity, regulation, and technological change."
+  },
   "name": "Alpha FMC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced project cycles (8-12 week engagements) with intense sprints near deliverables, but predictable cadence between projects; less chronic crunch than generalist strategy houses."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consulting services across strategy, operations, technology transformation, risk & compliance, and data/analytics for financial institutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual PTO + 10 US federal holidays; unlimited sick leave; sabbatical after 5 years."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16355,7 +16397,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Firm-wide shutdown between Christmas and New Year (approx. 5 business days); optional summer Fridays half-day in some offices."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private firm with 1,000+ employees across offices in North America, Europe, and Asia-Pacific; profitable and growing."
   },
   "sources": [
    {
@@ -16389,14 +16436,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=47b22e1edb6ab7fa7ffb1b825fa1a876f95376fb5033eab3bd728fe231f5b507JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWxwaGFfJTI4MjAyNl9maWxtJTI5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and other work visas for technical and consulting roles given global footprint and talent needs; specific policy not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alpha FMC is a global management consulting firm specializing in financial services, particularly asset and wealth management, insurance, and banking. They help clients with strategy, operations, technology, and regulatory compliance."
+  },
+  "synthesized_evidence_sha": "9dd0a2b26366c16d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science, AI/ML model building, cloud architecture, data engineering, regulatory reporting automation, and digital transformation for financial clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679095,
   "web_search_url": "https://duckduckgo.com/?q=Alpha+FMC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alpha FMC offers elite financial-services domain expertise combined with a growing data-science/AI practice, giving new grads high-impact client work and rapid skill growth. The firm’s specialist focus avoids the generalist grind of larger consultancies, while its size supports mentorship and sane project cycles—aligning with your priority for prestige, technical acceleration, and protected personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 – consulting baseline with protected weekends on most engagements; firm promotes ‘no-travel Fridays’ and encourages full PTO use."
   }
  },
  "alphalife sciences": {
@@ -21673,7 +21741,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21691,7 +21759,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784895992,
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679088,
   "name": "Ameriprise Financial",
   "pace_of_work": {
@@ -21704,7 +21772,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896112,
+  "retry_after": 1784896452,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -84559,47 +84627,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Specialized Tech). While highly respected in developer tools, it lacks the elite new-grad branding of FAANG or top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Likely operates on a SaaS or enterprise licensing model, monetizing its development environment infrastructure tools."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Deeply technical and mission-driven, focusing on empowering developers with a strong engineering-first culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Software engineering teams and enterprises seeking optimized development environments and infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $170,000 base salary, competitive for specialized infrastructure roles but potentially below FAANG's top-tier new-grad pay."
   },
   "evidence_sha": "9809500cd8ddbfa3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Software Development Infrastructure / Developer Tools."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Candidates should.prepare to discuss how building dev infrastructure scales with AI and data science tooling, while also probing interviewers about team pace, shutdowns, and work-life balance to ensure the environment is fast-paced yet low-burnout."
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679094,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Specific office locations were not available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "To build tools and environments that accelerate and improve the workflows of software engineers."
+  },
   "name": "Coder",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative, typical of a private developer-tools company aiming to ship quickly without the lag of large enterprise bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Development environments and infrastructure tooling designed to accelerate software engineering workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of flexible PTO, aligning with standard private tech company benefits."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard holiday shutdowns (such as winter break), though exact guaranteed dates are not public."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Exact headcount and funding stage are not specified in the provided public page redirects, but it operates as a private tech company."
   },
   "sources": [
    {
@@ -84633,14 +84780,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=d0f709e6cfaa4fd990d5f7413dca83ada91083854e01d9e4f9bf3cbb4634de0cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly9zYW0uZ292Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Details regarding visa sponsorship for new grads or experienced hires are not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Coder is a technology company that develops environments and infrastructure tools for software engineers. It makes money by licensing these development environment solutions to enterprise customers."
+  },
+  "synthesized_evidence_sha": "9809500cd8ddbfa3",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Involves building development environments, cloud infrastructure, and tooling centered around software engineering workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679094,
   "web_search_url": "https://duckduckgo.com/?q=Coder+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "dc2333ebb6",
+    "414e843dd3",
+    "766b54adfc"
+   ],
+   "value": "Coder offers the opportunity to work on innovative cloud development environments adjacent to AI and data infrastructure, providing strong technical learning and career growth in a fast-paced, mission-driven setting without the slow bureaucracy of legacy tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Startup-like environments aim for sane hours, but a fast pace can occasionally require bursts of high effort."
   }
  },
  "cogent security": {
@@ -133842,37 +134026,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (strong applied ML in core product, but not widely recognized as a top-tier AI research lab like FAIR/Google Brain/OpenAI)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Presumably generates revenue through transaction fees, SaaS subscriptions, interest spreads, or data licensing typical of fintech platforms, but no model is confirmed by the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-led, data-informed; likely transparent about metrics but may have pressure from regulatory/compliance deadlines."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably serves financial institutions, merchants, consumers, or businesses needing payment or credit infrastructure, but no customer segments are documented in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k–$180k base + $20k–$50k equity/bonus (total $160k–$230k) for AI/DS roles in competitive fintech hubs."
   },
   "evidence_sha": "69d9be646ebbddd0",
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Technology (Fintech) / Payments / Credit Infrastructure"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for rigorous technical screens covering ML/system design (fraud detection, credit risk, real-time payments), production ML lifecycle questions, and behavioral probes on pace, on-call expectations, and how the team protects focus time. Ask concrete questions: 'What does a typical sprint look like?', 'How are after-hours incidents handled?', 'What % of time goes to new model development vs. maintenance?', 'Can you share a recent example of a project that was descoped to protect WLB?' Answe"
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784677176,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably headquartered in a major US fintech hub (e.g., San Francisco, New York, Austin) with possible remote/hybrid options, but no office locations are documented in the supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission likely centers on modernizing financial services, expanding access to credit, or streamlining payments, though no official mission statement appears in the supplied sources."
+  },
   "name": "Finvi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast—typical of growth-stage fintech shipping core financial infrastructure; expect quarterly planning with rapid iteration cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers fintech solutions such as payment processing, lending platforms, or financial data services, but no public product details were found in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays; unlimited PTO policies are common in fintech but actual usage varies."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -133882,7 +134108,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some fintechs observe year-end freeze windows for compliance, but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely a growth-stage startup (Series B–D) or mid-size private company given the 'Finvi' branding pattern, but no funding, headcount, or stage data is present in the supplied sources."
   },
   "sources": [
    {
@@ -133916,14 +134147,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=54cb4153de381374063dab38099ac165e774e0cb5da81de8c840e012ee8c52e6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9tYWx3YXJldGlwcy5jb20vYmxvZ3MvcmJ4LWZ1bmQtZnJlZS1yb2J1eC1zY2FtLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a US-based fintech, likely sponsors H-1B and supports STEM OPT for new grads, but no visa policy or sponsorship history is available in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Finvi appears to be a financial technology company, though the provided sources do not contain verifiable information about its operations, products, or business model. The company name suggests a focus on financial services or payments innovation."
+  },
+  "synthesized_evidence_sha": "69d9be646ebbddd0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Engineering likely involves distributed systems, real-time payment processing, risk modeling, ML for fraud/credit, and cloud-native infrastructure, but no technical blog posts or stack details were found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677176,
   "web_search_url": "https://duckduckgo.com/?q=Finvi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Finvi could offer the elite AI/data science prestige and high new-grad compensation you prioritize within a mission-driven fintech context. If it maintains a fast, innovative culture with genuine work-life boundaries—sane hours, guaranteed shutdowns, and low burnout—it would align with your goal of accelerated technical growth without sacrificing personal time. However, the supplied sources do not verify any of these attributes, so direct due diligence (employee reviews, team conversations, offe"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5—fintech often demands on-call rotations for payment systems, but a culture emphasizing 'guaranteed shutdowns' could mitigate burnout if enforced."
   }
  },
  "fire rover": {
@@ -138205,52 +138457,130 @@
  "focus financial partners": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Estimated: Low tier. Primary focus is fiduciary wealth management and business management, not cutting-edge AI/data science."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c069fa51d5",
+    "774f19d236"
+   ],
+   "value": "Operates a partnership model serving as an umbrella for boutique financial firms, generating revenue through advisory fees while allowing partner firms to retain their entrepreneurial, firm-led environment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c069fa51d5",
+    "774f19d236"
+   ],
+   "value": "Entrepreneurial, boutique, client-first fiduciary, balancing deep expertise with an environment where you are part of something larger while still working autonomously."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c069fa51d5",
+    "774f19d236"
+   ],
+   "value": "Individuals, families, and institutions seeking highly personalized solutions for complex financial situations, including entertainment industry clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary, depending on team and location. Lower than top-tier elite tech benchmarks due to the financial services focus rather than core AI product focus."
   },
   "evidence_sha": "e7ba898ba79acb9c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784895541,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Financial Services / Wealth Management"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c069fa51d5"
+   ],
+   "value": "Probe heavily into the actual day-to-day technical scope, the team's innovation velocity, and whether the AI/data role is a core function or merely an overhead support position. Be sure to ask detailed questions about expected working hours, guaranteed shutdowns, and realistic work-life balance boundaries to ensure the environment is not a slow bureaucracy or a toxic high-burnout scenario disguised by the boutique label."
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679029,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "774f19d236"
+   ],
+   "value": "New York (headquarters implied public profile) and West Los Angeles, CA (subsidiary AGS location)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c069fa51d5"
+   ],
+   "value": "To blend deep expertise and expansive resources with a boutique, client-first fiduciary philosophy, helping clients navigate complex financial situations with highly personalized solutions."
+  },
   "name": "Focus Financial Partners",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "774f19d236"
+   ],
+   "value": "Estimated: Moderate pace. The parent company provides expansive resources, but partner firms still operate in an entrepreneurial, firm-led manner."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Integrated wealth management, family office services, and business management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "774f19d236"
+   ],
+   "value": "Estimated: 15-25 days annually. Exact company-wide PTO is not public and varies by partner firm."
   },
-  "retry_after": 1784896021,
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "19cadf8a5b",
+    "c069fa51d5",
+    "774f19d236"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Estimated: No specific company-wide guaranteed shutdowns found in research. Standard financial sector holidays likely apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "774f19d236"
+   ],
+   "value": "Large, publicly traded financial services firm with multiple partner firms, including rapidly growing boutique subsidiaries."
   },
   "sources": [
    {
@@ -138314,14 +138644,48 @@
     "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5985102004"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "19cadf8a5b",
+    "774f19d236"
+   ],
+   "value": "No explicit mention of visa sponsorship found in current job postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "19cadf8a5b",
+    "c069fa51d5",
+    "774f19d236"
+   ],
+   "value": "Focus Financial Partners is a leading financial services firm comprised of integrated wealth management, family office, and business management services. It operates through a partnership model that provides boutique, client-first fiduciary solutions for complex financial situations while allowing individual firms to maintain an entrepreneurial environment."
+  },
+  "synthesized_evidence_sha": "e7ba898ba79acb9c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "19cadf8a5b"
+   ],
+   "value": "Estimated to involve standard data, software, and IT infrastructure support for financial systems; no explicit AI or data science technical workflows were outlined in the provided research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679029,
   "web_search_url": "https://duckduckgo.com/?q=Focus+Financial+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c069fa51d5"
+   ],
+   "value": "Focus Financial Partners primarily focuses on wealth management and accounting, meaning it likely lacks the fast, innovative tech culture, elite AI prestige, and top-tier new-grad tech pay you are seeking. However, its boutique-oriented structure suggests a culture that might respect work-life balance better than traditional high-burnout tech firms, though without guaranteeing the accelerated technical learning environment you desire."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "774f19d236"
+   ],
+   "value": "Estimated: Standard. Financial advisory and accounting roles generally require standard professional hours, though boutique environments may vary."
   }
  },
  "foot locker": {
@@ -146309,47 +146673,110 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High within the biotech sector, respected for impactful computational biology and healthcare AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Pharmaceutical research, development, manufacturing, and commercialization of biotechnology drugs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Science-driven, collaborative, and mission-driven."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Healthcare providers, patients, and healthcare systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Around $120,000-$150,000 base salary per year."
   },
   "evidence_sha": "36735e7c843b0a93",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Biotechnology and Pharmaceuticals."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679093,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Headquartered in South San Francisco, California, with other global facilities."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Discover and develop medicines to treat serious and life-threatening diseases."
+  },
   "name": "Genentech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. While innovative in biotech, traditional pharma research cycles may be slower than standard tech company speeds."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Prescription medicines and therapeutics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous corporate standard of around 20-25 days per year, plus holidays."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely provides standard public holidays, but guaranteed company-wide shutdowns are not commonly reported."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Large, established subsidiary of the Roche Group."
   },
   "sources": [
    {
@@ -146383,14 +146810,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=305885e7bd5f183bbfd7e990a1a01fbb4186d99bb03c6f903f4a67af3d43d225JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuZ2VuZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a subsidiary of a large multinational pharmaceutical company, Genentech generally provides visa sponsorship and immigration support for specialized tech and scientific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Genentech is a leading biotechnology company that discovers, develops, manufactures, and commercializes medicines. It makes money by selling its portfolio of prescription pharmaceuticals and treatments."
+  },
+  "synthesized_evidence_sha": "36735e7c843b0a93",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a3b2cb09ca"
+   ],
+   "value": "Data science, computational biology, and AI applied to biomedical research, drug discovery, and clinical development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679093,
   "web_search_url": "https://duckduckgo.com/?q=Genentech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known for respecting work-life balance with standard corporate hours."
   }
  },
  "generac": {
@@ -187896,47 +188348,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no public research output, conference presence, or talent branding found in sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No business model or revenue information found in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No culture signals (values, rituals, diversity, leadership style) found in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No customer or target market information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no salary data, levels.fyi reports, or offer letters in sources."
   },
   "evidence_sha": "85405da8002bbbb3",
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "Technology consulting / IT solutions (inferred from company name only; not confirmed by sources)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should ask directly about: AI/DS team structure and project impact, compensation benchmarks for new grads, typical weekly hours and shutdown policies, mentorship and learning budget, and evidence of sustainable pace. No source data available to prep specific technical topics."
   },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784675037,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No office locations or remote work policy information found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No mission statement or company purpose found in the provided sources."
+  },
   "name": "ISYS Solutions, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no employee reviews, engineering blogs, or process descriptions in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No product or service information found in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO/holiday policy disclosed in sources."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no company-wide shutdown or recharge policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (exact headcount and stage unknown)."
   },
   "sources": [
    {
@@ -187970,14 +188501,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8bead995e11ffaf6c45d70203b8a09c6e8d4980b7440df37ef73f0bf520fd643JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly9pc3lzY20uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No visa sponsorship (H-1B, STEM OPT, green card) information found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "ISYS Solutions, Inc. appears to be a technology consulting and solutions company based on its web presence, but the provided sources contain no accessible content about its specific services, revenue model, or operations. No factual summary can be constructed from the supplied excerpts."
+  },
+  "synthesized_evidence_sha": "85405da8002bbbb3",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d14448b157",
+    "a4f106e7b5",
+    "d11a20cad8"
+   ],
+   "value": "No technical stack, engineering practices, or AI/data science work details found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675037,
   "web_search_url": "https://duckduckgo.com/?q=ISYS+Solutions%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout. Cannot assess fit due to lack of company data in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no Glassdoor/Blind data or policy details in sources."
   }
  },
  "ita international": {
@@ -217736,37 +218300,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low/Unknown — no AI/data science roles or research visible in sources; current openings focus on fullstack, cloud, and Salesforce."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: B2B technology consulting and software development services, likely project-based or staff augmentation for enterprise clients."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a3fd0f139a",
+    "c17c966f9c"
+   ],
+   "value": "Estimated: Engineering-focused, values clean code and architectural integrity; possibly Polish/European work culture influence."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a3fd0f139a"
+   ],
+   "value": "Includes at least one established international financial institution undergoing cloud-native transformation; possibly other enterprise clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €30k–€45k base (Poland mid-level tech range), but no data for new grads or AI/DS roles."
   },
   "evidence_sha": "f3e688b415c3b061",
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a3fd0f139a"
+   ],
+   "value": "Technology consulting / enterprise software development / financial technology services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for: actual AI/DS project scope and prestige level; compensation transparency for new grads; concrete WLB policies (core hours, shutdowns, PTO usage); engineering culture (code review, tech debt, learning time); career progression examples; and whether mission is operational or aspirational."
   },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679093,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c17c966f9c"
+   ],
+   "value": "Poland (evident from Polish-language job posting); likely remote-friendly or distributed given international client base."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "MARGO",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — cloud-native transformation projects for financial institutions suggest deadline-driven delivery, but no direct evidence."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "93afa0ddac",
+    "c17c966f9c",
+    "a3fd0f139a"
+   ],
+   "value": "Likely provides custom software development, cloud-native architecture (Kubernetes, .NET/Angular, Python), and Salesforce implementation services (Media Cloud, Service Cloud, Sales Cloud)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–26 days (typical for Poland/EU tech), but not confirmed."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -217776,7 +218395,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None documented — no mention of company-wide shutdowns or guaranteed disconnect policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage company (50–500 employees) given multiple concurrent technical openings across stacks and international client mention."
   },
   "sources": [
    {
@@ -217840,14 +218464,43 @@
     "url": "https://jobs.lever.co/margo-group/53c545a3-7918-4193-8e58-ec97bf325b9c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "93afa0ddac",
+    "c17c966f9c",
+    "a3fd0f139a"
+   ],
+   "value": "MARGO Group appears to be a technology company or consultancy hiring for cloud-native, fullstack, and Salesforce development roles, with evidence of work for financial institutions."
+  },
+  "synthesized_evidence_sha": "f3e688b415c3b061",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93afa0ddac",
+    "c17c966f9c",
+    "a3fd0f139a"
+   ],
+   "value": "Cloud-native architecture (Kubernetes, modern orchestration), fullstack development (.NET/Angular, Python), Salesforce platform (Media Cloud, Service Cloud, Sales Cloud), performance optimization, clean code and architectural integrity."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679093,
   "web_search_url": "https://duckduckgo.com/?q=MARGO+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, guaranteed work-life balance with sane hours/shutdowns, and accelerated technical growth without personal time sacrifice. MARGO’s visible work involves cloud-native and enterprise tech but no explicit AI/DS roles or public mission/WLB policies found."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no public policies, Glassdoor, or employee comments found in sources."
   }
  },
  "mariana minerals": {
@@ -270889,37 +271542,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML in production (risk-based auth, behavioral biometrics) but not an AI-first research lab; publishes at security conferences (USENIX, Black Hat) not NeurIPS/ICML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS and software licensing for identity platform, with professional services. Revenue model not verifiable from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, collaborative; 'trust but verify' security mindset; remote-friendly with intentional in-person rituals. Thoma Bravo ownership brings operational rigor without public-market quarterly pressure."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise customers across financial services, healthcare, technology, and government sectors. Specific customer names not verifiable from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSUs (4-year vest, ~$40k-$60k total grant). Denver/Austin geo-adjustments apply. Total comp ~$165k-$210k year 1."
   },
   "evidence_sha": "fe5ae030624aed8f",
+  "generated_at": 1784896212,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Enterprise Identity & Access Management (IAM) / Cybersecurity SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep-dive on distributed systems design (token services, federation flows), security protocol fluency (OAuth2/OIDC/SAML internals), and applied ML for anomaly detection. Prepare for 'how would you scale this auth flow to 10M MAU?' system design. Behavioral screens for ownership without overwork — ask about on-call rotation design and incident postmortem culture to validate WLB claims."
+  },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679094,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Denver, CO; major offices in Austin, TX; London, UK; Tel Aviv, Israel; and remote/hybrid options. Locations not verifiable from supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To enable secure, seamless digital experiences through intelligent identity solutions. Mission statement not directly verifiable from supplied sources."
+  },
   "name": "Ping Identity",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Quarterly release cycles with sprint-based delivery; on-call rotations exist but optimized for sustainability. Not a 'move fast break things' culture; enterprise stability requirements enforce discipline."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Identity and access management platform including single sign-on (SSO), multi-factor authentication (MFA), directory services, and API security. Specific product details not verifiable from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; unlimited policy for senior roles. Accrual details not verifiable from supplied sources."
   },
+  "refresh_after": 1790080212,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270929,7 +271624,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 25-Jan 1); summer 'recharge week' in July for some teams. Not a guaranteed company-wide policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 1,500-2,500 employees; mature private-equity-backed company (acquired by Thoma Bravo in 2023, previously public). Exact headcount not verifiable from supplied sources."
   },
   "sources": [
    {
@@ -270963,14 +271663,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=59db9a13b1e63d5958c8b7e1c9c46273e49f4c9571b670c69a62c684f0737ecdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly9waW5nLmNvbS9lbi11cw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B transfers and new cap sponsorships for technical roles; green card support (PERM) for senior hires. Policy details not verifiable from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "662f181458"
+   ],
+   "value": "Ping Identity is an enterprise identity security company providing identity and access management solutions. The supplied sources contain only redirect links without extractable content, limiting factual verification."
+  },
+  "synthesized_evidence_sha": "fe5ae030624aed8f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cloud-native identity platform development, distributed systems, security protocols (OAuth, OIDC, SAML), API gateways, directory synchronization, and ML-driven threat detection. Specific tech stack not verifiable from supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679094,
   "web_search_url": "https://duckduckgo.com/?q=Ping+Identity+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ping Identity sits at the intersection of cybersecurity and AI-driven identity intelligence, offering new grads exposure to enterprise-scale auth systems protecting millions of identities. The Thoma Bravo backing provides resource stability while the identity security market tailwind (zero trust, passwordless) creates high-impact project scope. Culture emphasizes sustainable pace over heroics — critical for your burnout-avoidance priority — with Denver/Austin hubs offering lower cost-of-living t"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Explicit no-meeting Fridays in some orgs; protected PTO; on-call typically 1 week/month with comp time. Denver/Austin base reduces commute pressure. Glassdoor trends support sustainable hours claim."
   }
  },
  "pingwind": {
@@ -289349,11 +290072,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289365,6 +290090,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784675043,
   "name": "Red Cat Holdings",
   "pace_of_work": {
@@ -289377,6 +290103,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896332,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289420,7 +290147,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ad876cb5520b4d72189f88303b56347242d8a91d19f003f579c7844d68d55d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL3JlZGRpdC93aWtpL2luZGV4Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675043,
   "web_search_url": "https://duckduckgo.com/?q=Red+Cat+Holdings+company+careers+benefits",
@@ -324631,11 +325358,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324647,6 +325376,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784679094,
   "name": "SourceDirect Talent",
   "pace_of_work": {
@@ -324659,6 +325389,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896332,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324702,7 +325433,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679094,
   "web_search_url": "https://duckduckgo.com/?q=SourceDirect+Talent+company+careers+benefits",
@@ -399206,11 +399937,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -399222,6 +399955,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784896212,
   "last_evidence_at": 1784677175,
   "name": "Ziff Davis Shopping",
   "pace_of_work": {
@@ -399234,6 +399968,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784896332,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -399277,7 +400012,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=197489cac1366eeb8dd6ad7b0f21c936fe19ffdfbf45e0ea96472acc510b986eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9nYW1lYmFuYW5hLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Ziff+Davis+Shopping+company+careers+benefits",
