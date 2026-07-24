@@ -88243,37 +88243,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High; Top-tier within media tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197",
+    "9218ac2f69"
+   ],
+   "value": "Revenue is generated through theatrical releases, streaming licensing, and TV distribution."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Creative, mission-driven, and collaborative with a fast, innovative tech environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197",
+    "9218ac2f69"
+   ],
+   "value": "Global audiences, streaming platforms, and television networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$130,000 base salary for new-grad tech roles."
   },
   "evidence_sha": "f68a92ff96f64630",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874138,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cd58364197"
+   ],
+   "value": "Entertainment / Animation"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784678370,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9218ac2f69"
+   ],
+   "value": "Primary studio locations include Glendale, California, and Redwood City, California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197",
+    "9218ac2f69"
+   ],
+   "value": "To create and deliver innovative animated entertainment that inspires audiences worldwide."
+  },
   "name": "DreamWorks Animation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but manageable, structured around production milestones."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197",
+    "9218ac2f69"
+   ],
+   "value": "Animated feature films, television series, and consumer products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave plus studio holidays."
   },
+  "refresh_after": 1790058138,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88283,7 +88341,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed studio shutdowns during major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197"
+   ],
+   "value": "Large, established studio operating as a subsidiary of NBCUniversal (Comcast)."
   },
   "sources": [
    {
@@ -88317,14 +88382,42 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "May offer visa sponsorship for specialized technology and production roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "cd58364197",
+    "9218ac2f69"
+   ],
+   "value": "DreamWorks Animation is a major animation studio that produces feature films, television series, and related entertainment content. It makes money primarily through box office revenues, licensing deals, and streaming content partnerships."
+  },
+  "synthesized_evidence_sha": "f68a92ff96f64630",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Software engineering, graphics development, pipeline tools, and data infrastructure supporting animated film production."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678370,
   "web_search_url": "https://duckduckgo.com/?q=DreamWorks+Animation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; expected to respect sane hours and avoid toxic burnout."
   }
  },
  "drw": {
@@ -88786,52 +88879,137 @@
  "duke energy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: Mid-tier. Not considered a top-tier tech or elite AI employer, but it offers impactful large-scale data challenges in the energy sector."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Rate-regulated electric utilities generating steady revenue from power delivery, supplemented by commercial renewable energy sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Estimated: Mission-driven but traditional and corporate, focusing on reliability and safety over fast-paced tech disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Residential, commercial, and industrial customers across its service territories."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary. This is solid for the utility sector but may fall below the elite tech pay scale you are seeking."
   },
   "evidence_sha": "9de72a4f6d2a9780",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874138,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873503,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Utilities and Electric Power Generation"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5cd92f51d9",
+    "6915298fcd"
+   ],
+   "value": "Be sure to ask about the pace of technical innovation versus traditional corporate bureaucracy. Inquire about specific AI project timelines and how the team prioritizes rapid learning over slow-moving utility regulations."
+  },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784679541,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Headquartered in Charlotte, North Carolina, with service territories across the US Midwest, Southeast, and Florida."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "6915298fcd"
+   ],
+   "value": "To power the lives of customers and the vitality of communities with reliable, clean energy."
+  },
   "name": "Duke Energy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Estimated: Slow to moderate. Traditional utility structure implies heavy regulation and bureaucratic processes rather than a fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Electricity generation, electric grid transmission and distribution, natural gas distribution, and renewable energy solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: 15 to 20 days of vacation for new hires, alongside standard paid holidays."
   },
-  "retry_after": 1784873983,
+  "refresh_after": 1790058138,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892",
+    "6915298fcd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: No official company-wide shutdowns known, but minor operational flexibility around standard holidays is likely."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "Large, established public utility and Fortune 500 holding company."
   },
   "sources": [
    {
@@ -88865,14 +89043,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa58ac8d95bb906ba8d5d8c0fb561a6bfd61448224d8ceccc0a100878b538f34JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly9kdWtlLmVkdS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: As a large corporate utility, Duke Energy likely offers visa sponsorship for specialized or senior technical roles, but it is not guaranteed for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892",
+    "6915298fcd"
+   ],
+   "value": "Duke Energy is an electric power holding company that generates, transmits, and distributes electricity to millions of customers. It makes money by charging regulated rates for its electricity delivery and selling energy through its commercial and renewable energy divisions."
+  },
+  "synthesized_evidence_sha": "9de72a4f6d2a9780",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd92f51d9",
+    "6915298fcd"
+   ],
+   "value": "Enterprise IT, smart grid infrastructure, predictive maintenance, and data analytics for grid optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Duke+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5cd92f51d9",
+    "ed4e937892"
+   ],
+   "value": "As a utility company, Duke Energy may fall short of your fast, innovative tech culture and top-tier AI prestige expectations. However, it could align well with your mission-driven goals and strong work-life balance desires."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5cd92f51d9"
+   ],
+   "value": "Estimated: Good. Regulated utilities tend to operate on predictable hours, which may meet your requirement for sane work hours and low burnout."
   }
  },
  "duke university": {
@@ -183121,41 +183334,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no evidence of AI/data science reputation, publications, or elite status found in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information found for Montenson in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no cultural signals, employee reviews, or values documentation found in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found for Montenson in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data for new-grad AI/data science roles found in sources."
   },
   "evidence_sha": "da1e96a83b216549",
+  "generated_at": 1784874138,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Possibly AI/tech based on candidate context, but unconfirmed — no industry classification found in sources."
   },
-  "last_attempt_at": 1784873976,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot determine interview focus without company-specific technical or cultural information. Candidate should verify Montenson exists and research independently before investing interview preparation time."
+  },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784674038,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Location unknown — no headquarters or office information found in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found for Montenson in supplied sources."
+  },
   "name": "Montenson",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no information on work pace, bureaucracy level, or innovation speed found in sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found for Montenson in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy information found in sources."
   },
-  "retry_after": 1784874096,
+  "refresh_after": 1790058138,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183165,7 +183416,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no information on guaranteed shutdowns, holiday closures, or mandatory time-off policies found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size/stage — no public data found in sources."
   },
   "sources": [
    {
@@ -183199,51 +183455,130 @@
     "url": "https://www.bing.com/ck/a?!&&p=0033a91f34955b3a58f66b327243aa272dbc2e1ce3377ecfff34160be63c5e8fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cuZm9yYmVzLmNvbS9saXN0cy9haTUwLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy unknown — no information found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6d5e59b91a",
+    "e79f7d60ea",
+    "73761c164c"
+   ],
+   "value": "No verifiable information about a company named Montenson was found in the provided sources. The sources appear to be redirect links to unrelated AI/recruiting content (KPMG, executive search, Forbes AI50) rather than Montenson company pages."
+  },
+  "synthesized_evidence_sha": "da1e96a83b216549",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves AI/data science given candidate context, but no technical details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674038,
   "web_search_url": "https://duckduckgo.com/?q=Montenson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI prestige, high new-grad pay, fast innovative culture, mission-driven, strong WLB, guaranteed shutdowns, accelerated learning without sacrificing personal time) because no factual information about Montenson exists in the provided sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no data on hours, burnout risk, or work-life balance policies found in sources."
   }
  },
  "moog": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Elite Domain-Specific) — recognized leader in flight-critical autonomy and model-based ML; not a consumer-AI brand but highly respected in controls/robotics academia and defense tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Engineered-to-order and configure-to-order hardware/software systems sold via long-term contracts (defense/aerospace programs) and direct sales (industrial/medical). Revenue mix: ~60% defense, ~25% commercial aircraft, ~15% industrial/medical."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, humble, collaborative. 'Build it right, test it hard' mentality. Low politics, long tenures (15+ yr avg), strong mentorship. Diversity improving but still male-dominated in senior technical ranks."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Prime defense contractors (Lockheed Martin, Boeing, Raytheon), commercial airlines (Boeing, Airbus), space agencies (NASA, ESA), industrial OEMs, and medical device manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000–$130,000 base + 10–15% AIP bonus + $15,000–$25,000 RSUs (4-yr vest). Total comp ~$135k–$165k. East Aurora COL ~60% of Bay Area."
   },
   "evidence_sha": "42563d6f1220b655",
+  "generated_at": 1784874138,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Aerospace & Defense / Precision Motion Control"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: Simulink/Stateflow modeling, real-time C++ concurrency, Kalman filtering, and hardware-in-the-loop test thinking. LeetCode-style DS&A is light; they care about physics-aware algorithms, safety-critical design (DO-178C/DO-254 awareness), and system-level reasoning. Prepare a project where you closed the loop between simulation and hardware."
   },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784679540,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Headquarters: East Aurora, NY. Major sites: Torrance CA, Hauppauge NY, Wolverhampton UK, Philippines, Germany, Japan. Hybrid-friendly with core collaboration days."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "To enable motion control solutions that advance exploration, defense, and quality of life through engineering excellence and innovation."
+  },
   "name": "Moog",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, milestone-driven (program increments 6–18 months). Sprints exist but are paced to hardware integration cycles. Crunch only near flight reviews or test campaigns; otherwise predictable."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Flight control actuators, satellite propulsion components, industrial motion controllers, medical infusion pumps, flight simulators, and space vehicles. The portfolio spans hydraulic, electric, and hybrid actuation with embedded software and model-based design tooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 holidays + 9/80 yields 26 extra days off/year. Carryover up to 5 days. No unlimited PTO."
   },
+  "refresh_after": 1790058138,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183253,7 +183588,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) + July 4 week at some sites. Not guaranteed company-wide but widely observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Public (NYSE: MOG.A, MOG.B); ~$3.3B revenue, ~13,000 employees globally. Mature, profitable, low-turnover engineering culture."
   },
   "sources": [
    {
@@ -183287,14 +183629,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=d58e9b3e84080ef2a0709a6c37e41e2fa8e7d32be4418ce5c30579b4051e4810JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cubW9vZy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Active H-1B sponsor for engineering roles; TN and E-3 common. Green card sponsorship (PERM) available for high-performing new grads after 12–18 months. ITAR restrictions apply to ~40% of roles (US person required)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Moog Inc. is a global designer, manufacturer, and integrator of precision motion control systems and components for aerospace, defense, industrial, and medical markets. The company generates revenue by selling highly engineered actuators, valves, simulation systems, and space-rated hardware to OEMs and government contractors."
+  },
+  "synthesized_evidence_sha": "42563d6f1220b655",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea65c08084"
+   ],
+   "value": "Model-based systems engineering (Simulink/Stateflow), real-time embedded C/C++, FPGA/RTOS development, digital twin simulation, physics-informed ML for predictive maintenance, autonomy algorithms for space/air vehicles, and hardware-in-the-loop test infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679540,
   "web_search_url": "https://duckduckgo.com/?q=Moog+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moog offers elite engineering prestige in motion control and autonomy for space/defense—work that literally flies on Mars rovers and fighter jets—with compensation competitive with top tech (Estimated: $110–$130k base + 10–15% bonus + RSUs for new grad AI/DS). The culture is engineering-first, low-bureaucracy, and respects boundaries: core hours, rare weekends, and a 9/80 schedule at many sites. You’ll accelerate technically via model-based design, real-time embedded ML, and exposure to flight-q"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — 9/80 schedule common, core hours 9–3, explicit no-meeting Fridays at some sites, <5% weekend work outside test events."
   }
  },
  "moonman events": {
@@ -207906,7 +208275,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207924,7 +208293,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784873976,
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784821848,
   "name": "Peloton",
   "pace_of_work": {
@@ -207937,7 +208306,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784874096,
+  "retry_after": 1784874378,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246465,41 +246834,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier — regularly publishes at ICRA, RSS, NeurIPS; DARPA/AFWERX performer; attracts talent from FAIR, DeepMind, Waymo, Skunk Works."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Defense contractor model: multi-year procurement and sustainment contracts for autonomous hardware/software systems sold to governments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-obsessed, engineering-first, flat hierarchy; veterans and PhDs work side-by-side; transparent OKRs; 'no politics' ethos; diversity initiatives active but still male-dominated in core autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense, allied foreign militaries, and government defense agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k–$200k base + $30k–$60k equity (4-yr) + $15k–$25k sign-on; total first-year $215k–$285k."
   },
   "evidence_sha": "ff0dd1fa5a60f705",
+  "generated_at": 1784874138,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7bb83d5386",
+    "c1ad716faf",
+    "3a1ebc576d"
+   ],
+   "value": "Defense technology / Autonomous systems / Applied AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Expect deep technical screens on robotics/RL fundamentals, C++ systems design, and real-time latency optimization; behavioral questions probe ownership, cross-team collaboration, and ability to deliver under tight integration schedules. Prepare to discuss how you balance speed with safety-critical rigor."
   },
-  "last_attempt_at": 1784873976,
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784858719,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bb83d5386",
+    "c1ad716faf",
+    "3a1ebc576d"
+   ],
+   "value": "Headquarters in San Diego, CA; additional offices in Dallas TX, Washington DC, and abroad across Europe, the Middle East, and Asia-Pacific."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7bb83d5386",
+    "c1ad716faf",
+    "3a1ebc576d"
+   ],
+   "value": "Protecting service members and civilians with intelligent systems."
+  },
   "name": "Shield AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — 'move fast, break things' culture tempered by flight-safety reviews; 2-week sprints, quarterly flight-test milestones."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Autonomous AI pilots (Hivemind) for military aircraft such as the V-BAT vertical takeoff drone and F-16 fighters; associated simulation, training, and mission-planning software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible 'recharge' days; unlimited sick; 12-week parental leave."
   },
-  "retry_after": 1784874096,
+  "refresh_after": 1790058138,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246509,7 +246928,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) plus one summer 'recharge week' (early July); not guaranteed contractually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 600–1,000 employees; late-stage venture-backed (Series E+), valued >$2.5B."
   },
   "sources": [
    {
@@ -246573,14 +246997,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=33d8db7f559a791e35cf476f840ddbef1dd439632e87a925cc49f7b9c70e855eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3NoaWVsZA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and TN visas for technical roles; defense contracts may require U.S. citizenship or green card for certain cleared positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bb83d5386",
+    "c1ad716faf",
+    "3a1ebc576d"
+   ],
+   "value": "Shield AI is a venture-backed defense technology company founded in 2015 that develops intelligent autonomous systems — including AI pilots for aircraft — to protect service members and civilians. It generates revenue by selling its hardware and software platforms to the U.S. Department of Defense and allied militaries."
+  },
+  "synthesized_evidence_sha": "ff0dd1fa5a60f705",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core work spans deep reinforcement learning, state estimation, multi-agent autonomy, real-time embedded software (C++/Rust), simulation at scale, and hardware-software integration on tactical aircraft."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Shield+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite AI/autonomy prestige (DARPA/AFWERX programs, published research) with top-decile new-grad compensation, while explicitly marketing a mission to protect lives. Candidate priorities align with Shield AI's stated culture of rapid iteration, 'no bureaucracy,' and emphasis on sustainable pace — though defense deadlines can create crunch periods."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — leadership promotes 'sustainable pace' and protected weekends, but integration campaigns and flight tests can demand 50–60 hr weeks for short bursts."
   }
  },
  "shift": {
@@ -266580,11 +267029,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266596,6 +267047,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784680812,
   "name": "Synechron",
   "pace_of_work": {
@@ -266608,6 +267060,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784874258,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266651,7 +267104,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a41803d14f1d41c24db97c53f05cb45f515417a061e1d3752343e096c0ab019JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cuc3BvdGlmeS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680812,
   "web_search_url": "https://duckduckgo.com/?q=Synechron+company+careers+benefits",
@@ -277639,11 +278092,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -277655,6 +278110,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784874138,
   "last_evidence_at": 1784678783,
   "name": "Thermo Fisher Scientific",
   "pace_of_work": {
@@ -277667,6 +278123,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784874258,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -277710,7 +278167,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=1f888ecc0e208b145bb53ee62360735128eb48ab46a839b2fe6cb8a4ee080987JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudGhlcm1vZmlzaGVyLmNvbS91cy9lbi9ob21lLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678783,
   "web_search_url": "https://duckduckgo.com/?q=Thermo+Fisher+Scientific+company+careers+benefits",
