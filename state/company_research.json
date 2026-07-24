@@ -4812,53 +4812,156 @@
  },
  "adaptiva": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown tier in AI/data science prestige, as company profile data was unreachable."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Details on how the company generates revenue and its overarching business model are not available in the sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown culture vibe; cannot verify if it is mission-driven or bureaucratic."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Target customers and client demographics are not detailed in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown new-grad tech pay; high new-grad pay cannot be verified from the supplied sources."
   },
   "evidence_sha": "f74c2fb5db18e4b5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784894341,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Adaptiva's specific industry sector cannot be confirmed from the provided text."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Since profile data is unavailable, focus your interviews on probing for the exact AI or data science scope, visible new-grad compensation bands, and evidence of a fast, innovative tech culture rather than a slow bureaucracy. Try to extract the actual titles of any rotational programs, specifics on shutdowns, and how the team protects sane hours to ensure they meet your anti-burnout and career-growth criteria."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678872,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Office locations and geographical presence are absent from the provided text."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "The company's mission and strategic goals are not extractable from the supplied text."
+  },
   "name": "Adaptiva",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown pace of work due to lack of public source content."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Information on Adaptiva's specific products and services is unavailable in the provided text due to automatic page redirection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown PTO days; no specific policy details were found in research."
   },
-  "retry_after": 1784894461,
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: No information on guaranteed shutdowns or similar burnout-prevention practices found."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Company size, funding stage, and current growth metrics are not found in the provided data."
   },
   "sources": [
    {
@@ -4892,14 +4995,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c157b313e6146add50b0acbb41e9fa32a07ce556615484375211c61e1b6c5a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9hZGFwdGl2YS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Information on visa sponsorship and international hiring policies is not detailed in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Specific details regarding Adaptiva's core business operations and revenue model could not be directly retrieved because the provided public company pages resulted in automatic redirects. Consequently, a plain-English explanation of their day-to-day operations and monetization strategy requires accessing the final destination pages directly."
+  },
+  "synthesized_evidence_sha": "f74c2fb5db18e4b5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "The technical stack, engineering methodologies, and development workflows are not captured in the sourced excerpts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678872,
   "web_search_url": "https://duckduckgo.com/?q=Adaptiva+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Because the sources do not provide external facts, they cannot confirm or deny if Adaptiva offers the elite AI/data science prestige, fast tech culture, guaranteed shutdowns, or strict work-life balance that you prioritize. You must use the interview process to verify if they are a mission-driven company that respects sane hours or if it leans towards slow bureaucracy and high burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5863de9ef0",
+    "4567a75532",
+    "28359357e9"
+   ],
+   "value": "Estimated: Unknown work-life balance rating; unable to verify sane hours or toxic environment claims from redirects."
   }
  },
  "added innovation": {
@@ -12877,37 +13021,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Applied ML at scale on proprietary video/device data; publishes occasionally (CVPR workshops, industry conferences); strong engineering brand in IoT/security niche but not a widely known 'AI lab' like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Recurring SaaS subscription revenue from dealers/end-users for cloud services (video, automation, energy) plus hardware revenue from gateway/module sales; high-margin recurring revenue base with low churn."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Engineering-led, pragmatic, collaborative; low politics; strong dealer/partner empathy; values reliability and long-term platform thinking over heroics; diverse tenure (many 5-10+ yr veterans)."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Professional security dealers/installers (B2B channel) who sell and install Alarm.com-enabled systems to residential homeowners and small-to-medium businesses (B2B2C)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + 10-15% target bonus + RSUs ($30k-$50k/yr vesting) → ~$175k-$215k total Year 1; DC/SF bands at top of range."
   },
   "evidence_sha": "f39aea3c942dfbab",
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Smart Home / IoT SaaS / Physical Security Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system-design questions around IoT scale (device connectivity, message brokers, eventual consistency), ML/applied data topics (video event classification, time-series forecasting for energy), and practical software engineering (testing, deploy pipelines, mobile offline sync). Behavioral rounds emphasize cross-functional collaboration with hardware/firmware/dealer teams and owning features end-to-end. Prepare to discuss trade-offs between cloud vs. edge compute and privacy/security in home"
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678948,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Headquarters: Tysons, VA (DC metro); major engineering hubs in San Francisco, CA and Bangalore, India; remote-friendly hybrid model."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "To make security and automation accessible and intelligent for homes and businesses through a unified cloud platform."
+  },
   "name": "Alarm.com",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — quarterly planning cycles, predictable releases tied to dealer/hardware schedules; on-call rotations exist for platform reliability but generally sustainable; not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Cloud platform for smart home security, video monitoring, automation, energy management, and commercial IoT solutions; mobile apps for end-users; dealer-facing SaaS tools for installation, management, and billing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrual + 10 company holidays + flexible sick; unlimited not offered; tenure-based increases."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12917,7 +13131,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24 - Jan 1) plus summer half-day Fridays; no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Public company (NASDAQ: ALRM); ~1,500+ employees; $500M+ ARR; mature growth stage with profitable, cash-generative operations."
   },
   "sources": [
    {
@@ -12951,14 +13174,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=452f01a5a8f2ba2ce4425ec5d09d26b084f594e5185163dc5de41081cc959882JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly92Y2xvY2suY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Established H-1B sponsor (public company, tech workforce); routinely files for software, data, and ML roles; green card support (PERM) typical for senior hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "Alarm.com is a cloud-based platform provider for smart home and business security, automation, and energy management, delivering services through a network of professional installation partners. The company generates recurring revenue from SaaS subscriptions and hardware sales tied to its IoT ecosystem."
+  },
+  "synthesized_evidence_sha": "f39aea3c942dfbab",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "92dd6cd1bd",
+    "106eee6f45",
+    "30691e2324"
+   ],
+   "value": "IoT platform engineering (cloud, edge, mobile), video pipeline/computer vision, ML for anomaly detection/energy optimization, large-scale device management, real-time messaging, dealer SaaS tools, mobile apps (iOS/Android)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678948,
   "web_search_url": "https://duckduckgo.com/?q=Alarm.com+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alarm.com offers a rare blend for a new grad: a profitable public SaaS/IoT company with real scale (millions of connected devices) that invests seriously in ML/computer vision for video analytics and energy intelligence, yet maintains a sustainable pace typical of a mature B2B platform rather than a burn-the-candle consumer startup. You get prestige from shipping AI to physical devices in homes/businesses, compensation competitive with top-tier cloud companies, and a culture that values stabilit"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Mature public company with explicit focus on retention; typical 40-45 hr weeks; hybrid flexibility; on-call shared and compensated; low weekend firefights outside major incidents."
   }
  },
  "albertsons companies": {
@@ -54552,48 +54808,139 @@
  "boston housing authority": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: Low prestige in the AI/DS startup and big tech ecosystem. It is a civic tech role rather than a high-prestige, high-impact data science position."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6677be8e21"
+   ],
+   "value": "The BHA is a public entity funded primarily by federal operating subsidies from HUD, state grants, and city capital funds, which are used to maintain housing units and subsidize rents for eligible tenants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: Civic-minded, process-oriented, and stable. The culture prioritizes public service and adherence to regulations over cutting-edge tech innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "The primary clients and beneficiaries are low-income families, elderly residents, and individuals with disabilities in the city of Boston who qualify for subsidized housing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: $60,000 to $80,000 base salary for new graduates, reflecting standard public sector compensation scales which prioritize benefits over high pay."
   },
   "evidence_sha": "aef12a4b9bea65c6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Public Administration / Government and Housing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Candidates should interview the BHA heavily on the specific scope of technical projects, as the role likely leans towards traditional IT and database management rather than cutting-edge AI. It is crucial to confirm if the agency's bureaucratic pace will stifle the candidate's need for accelerated technical learning and career growth."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678948,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Headquartered in Boston, Massachusetts, with field offices and housing developments located across various neighborhoods within the city of Boston."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "To sustain and expand affordable housing opportunities for Boston residents, providing safe, decent, and sanitary living environments while helping residents achieve self-sufficiency."
+  },
   "name": "Boston Housing Authority",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: Slow and methodical. As a government agency, the pace is dictated by municipal procedures, public sector compliance, and bureaucratic timelines rather than fast tech cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "The BHA manages and operates conventional public housing developments, administers Housing Choice Vouchers (Section 8) and Moderate Rehabilitation programs, and runs supportive housing initiatives for specific vulnerable populations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: 15 to 25 days of paid time off annually, alongside standard state and municipal holidays, generous sick leave, and personal days."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: No formal company-wide tech shutdowns, but employees typically benefit from paid municipal and state holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "As a public housing authority, it is a stable government agency with hundreds of employees managing operations across multiple neighborhood sites, serving tens of thousands of residents."
   },
   "sources": [
    {
@@ -54627,14 +54974,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=047d69c0c654b3357688175a87c08a5e7782bcf48787946d794458313741f455JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQm9zdG9u&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: Unlikely to sponsor work visas for international candidates due to standard municipal and state government hiring constraints."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21",
+    "6677be8e21"
+   ],
+   "value": "The Boston Housing Authority (BHA) is a public agency responsible for providing affordable housing and rental assistance to low- and moderate-income residents in Boston. It operates using federal, state, and city funding, leveraging federal subsidies from the Department of Housing and Urban Development (HUD) and state programs to administer public housing developments and Section 8 vouchers."
+  },
+  "synthesized_evidence_sha": "aef12a4b9bea65c6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated technical work involves modernizing housing databases, maintaining tenant-facing web portals, managing data security systems, and analyzing demographic data for federal reporting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678948,
   "web_search_url": "https://duckduckgo.com/?q=Boston+Housing+Authority+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "While this role is deeply mission-driven and prioritizes sane hours to avoid burnout, it fundamentally conflicts with the candidate's desire for a top-tier AI/data science role. As a public agency, the technology culture is likely characterized by slow bureaucracy rather than fast, innovative tech development."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6485d3b657",
+    "69ba2b1c21"
+   ],
+   "value": "Estimated: Good. Public sector jobs typically offer predictable 40-hour work weeks with minimal expectation of after-hours or weekend work."
   }
  },
  "boston scientific": {
@@ -145567,52 +145951,155 @@
  "general legal yc26": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Emerging. As a recent YC batch company, it has strong startup pedigree but lacks the established, top-tier industry prestige of a Big Tech AI lab or a mature public tech leader."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: B2B software-as-a-service (SaaS) with subscription-based or usage-based pricing for legal clients. Source links did not resolve to detailed public pages."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Mission-driven and highly technical, typical of early-stage YC companies. Small team size likely means high autonomy and strong ownership, but fewer formal guardrails regarding WLB."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Law firms, corporate legal departments, and legal professionals. Source links did not resolve to detailed public pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary plus early-stage equity options. Reflects competitive market rate for AI/DS new grads at seed-stage startups."
   },
   "evidence_sha": "e177d6d72a1dec24",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784894118,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Legal Technology (LegalTech)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Probe deeply into day-to-day hours, on-call expectations, and whether structured personal time off is actually honored, as early-stage startups often struggle with maintaining strict work-life balance. Also clarify new grad compensation, equity, and the potential for the AI work to be technically prestigious."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784676896,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Early-stage YC companies are typically based in San Francisco or operate remotely. Source links did not resolve to a detailed public page."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: To modernize and accelerate the legal industry through advanced artificial intelligence. Source links did not resolve to a detailed public mission statement."
+  },
   "name": "General Legal (YC26)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Very fast-paced and iterative. Being in the YC26 batch implies a high-growth, high-intensity startup environment with rapid shipping cycles rather than slow bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: AI-powered legal software tools such as document review, contract analysis, or case research automation. Source links did not resolve to detailed public product pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: 15 to 20 days PTO, though at early-stage startups, actual time taken often depends heavily on shipping deadlines rather than formal policy."
   },
-  "retry_after": 1784894358,
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Unlikely to have formal company-wide shutdowns, as early-stage startups typically do not implement these structural breaks until later in their lifecycle."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Early-stage startup (YC Winter 2026 batch). Exact headcount is unknown, but YC companies at this stage typically have a small team of under 20 employees."
   },
   "sources": [
    {
@@ -145646,14 +146133,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=f228a6242ab08d744e7b9daf7feaf90e3db1bd07bbde5b52bcf5a45c14c9ad10JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dlbmVyYWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Early-stage startups usually do not offer visa sponsorship for new grads due to limited resources, though YC graduation may catalyze funding that changes this."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Founded in the YC Winter 2026 batch, this startup operates in the legal technology sector, likely utilizing AI and data science to automate or streamline legal workflows. As an early-stage Y Combinator company, it makes money by selling software-as-a-service to law firms or corporate legal departments seeking efficiency gains."
+  },
+  "synthesized_evidence_sha": "e177d6d72a1dec24",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: AI and data science development focused on legal language models, natural language processing, and deploying machine learning pipelines for legal tech. Rapid prototyping and full-stack engineering are likely required."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676896,
   "web_search_url": "https://duckduckgo.com/?q=General+Legal+%28YC26%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "As a YC26 company, this role offers the fast, innovative tech culture and high early-stage learning velocity the candidate is looking for, though it will require evaluating if the early-stage nature aligns with their desire for guaranteed shutdowns and elite new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0703ee1384",
+    "e4cffb78ad",
+    "650b2b6346"
+   ],
+   "value": "Estimated: Moderate to questionable. YC startups typically demand high intensity and focus, which can conflict with the candidate's desire for a highly respectful work-life balance if the team is small and shipping aggressively."
   }
  },
  "general matter": {
@@ -155810,48 +156338,125 @@
  "guidehouse": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 2-3. It holds prestige in the consulting world, but is not generally recognized as a top-tier, elite tech firm for data science innovation in the way that FAANG or specialized AI labs are."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "B2B client-consulting and contract-based model, billing for specialized advisory and digital implementation services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Estimated: Professional, polished, and collaborative, but highly structured. The culture revolves around client service and delivery rather than a fast-moving, experimental tech startup atmosphere."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Commercial businesses, financial institutions, healthcare organizations, and public sector and government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $85,000 - $115,000 base salary, depending on specific tech stack and location, with potential for performance bonuses."
   },
   "evidence_sha": "e4ea13e0dde5b69f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dcdad1d9d4"
+   ],
+   "value": "Management Consulting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "You must probe heavily into the realities of consulting hours during interviews. Focus on questions about billable hour expectations, client project rotations, and whether involvement in 'fast, innovative tech' is actually feasible when serving government and legacy commercial clients that prioritize slow, steady delivery."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678949,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcdad1d9d4"
+   ],
+   "value": "Headquartered in Tysons, Virginia with offices across North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "To help clients navigate complex business challenges and build resilient, future-ready operations through specialized advisory and technology solutions."
+  },
   "name": "Guidehouse",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Estimated: Fast-paced, demanding, and client-driven. Project work is likely subject to strict deadlines and shifting client priorities rather than an internal, product-focused innovation cycle."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Advisory services, digital transformation solutions, managed services, and technology consulting across sectors like healthcare, financial services, and aerospace."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Estimated: 20-25 days of annual PTO, typical for large consulting firms, though actual utilization may be constrained by active client project deadlines."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Estimated: No official firm-wide guaranteed shutdowns found. Time off is typically managed flexibly among project teams rather than via mandated tech-industry shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcdad1d9d4"
+   ],
+   "value": "Established, large-scale consulting firm operating globally, originally spun off from PwC and currently owned by private equity."
   },
   "sources": [
    {
@@ -155895,14 +156500,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Not explicitly found in research, though large consulting firms frequently offer visa sponsorship for specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d8fef92f4e",
+    "90e545f29f"
+   ],
+   "value": "Guidehouse is a global management consulting firm that provides advisory, digital, and managed services to commercial and public sector clients. It makes money by contracting specialized consultants to solve complex operational, regulatory, and technology problems for large enterprise and government organizations."
+  },
+  "synthesized_evidence_sha": "e4ea13e0dde5b69f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science, analytics, and digital transformation consulting, likely involving client-facing implementation of AI/ML solutions, data strategy, and operational modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678949,
   "web_search_url": "https://duckduckgo.com/?q=Guidehouse+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "While Guidehouse will accelerate your technical learning and career growth through high-impact, mission-driven client work, it does not perfectly align with a desire for fast, innovative tech culture. As a large consulting firm, it inherently carries bureaucratic overhead and billable-hour pressures that may conflict with your strict work-life balance and sane hours expectations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d8fef92f4e"
+   ],
+   "value": "Estimated: Moderate to Low. Large consulting firms typically require unpredictable hours that scale with client demands, making it difficult to guarantee strict boundaries and avoid all high-burnout environments."
   }
  },
  "guidewire": {
@@ -173853,38 +174490,102 @@
  "idexcel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Low. As a traditional IT staffing and services consultancy, it is not recognized for elite, top-tier AI or data science product innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "B2B IT consulting and contingent labor. The company earns revenue by placing technical contractors at client sites or delivering outsourced projects, charging clients a bill rate that exceeds the contractor's pay rate to generate margin."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Estimated: Traditional corporate consulting. The focus is on metrics, billable hours, and client deliverables rather than innovative engineering culture or deep technical learning."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Large enterprises requiring outsourced technical talent and project-based software or cloud engineering support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: $70,000 - $95,000 base, heavily dependent on location and whether the role is classified as a contract W-2 position. This does not align with high new-grad pay expectations for top-tier AI talent."
   },
   "evidence_sha": "f9aeb902d4cac88d",
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "IT Services and Staffing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should aggressively screen for work-life balance and burnout prevention, asking exactly how many hours are billed per week and whether consultants are expected to work weekends to meet client deadlines. They should also probe the learning curve to see if the role provides genuine AI/data science exposure or just generic enterprise IT support."
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678947,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Headquartered in the US with a global delivery footprint, typical of offshore-onsite IT service providers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "749f550149"
+   ],
+   "value": "To deliver innovative IT solutions and top-tier technical talent to help enterprises achieve their digital transformation goals."
+  },
   "name": "Idexcel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Estimated: Variable and client-driven. The pace depends on the specific client project you are staffed on, which often leads to unpredictable deadlines and intermittent high-pressure delivery phases rather than a consistent, innovative tech culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "IT staffing, cloud and infrastructure services, application development, and data management solutions for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Estimated: 15-20 days annually, standard for mid-tier IT consultancies, though actual utilization and client project demands may make taking uninterrupted PTO difficult."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173893,8 +174594,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. As a staffing firm, operations run year-round to support client needs."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Mid-sized, established private firm operating in the global IT staffing and services market."
   },
   "sources": [
    {
@@ -173928,14 +174638,44 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "749f550149"
+   ],
+   "value": "Highly likely to sponsor work visas (such as H-1B) for specialized technical talent, as this is a core component of the global IT staffing business model."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce",
+    "749f550149"
+   ],
+   "value": "Idexcel is a global IT services and staffing firm that provides technical talent, cloud solutions, and custom software development. It makes money by contracting out specialized engineers and consultants to enterprise clients, typically operating on a margin-based billable-hour model."
+  },
+  "synthesized_evidence_sha": "f9aeb902d4cac88d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Project-based consulting and contract software engineering. Roles frequently involve working on client-facing enterprise modernization, cloud migrations, or application maintenance rather than building proprietary internal products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678947,
   "web_search_url": "https://duckduckgo.com/?q=Idexcel+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Idexcel likely fails to meet the candidate's need for elite, top-tier prestige and high new-grad pay. As an IT staffing and consulting firm, the culture may lean toward bureaucratic delivery rather than fast-paced product innovation, and the nature of client-billed work often impedes guaranteed shutdowns and strict work-life balance."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f6e8378ce"
+   ],
+   "value": "Estimated: Moderate to Low. Work-life balance is typically governed by client demands rather than internal company policies."
   }
  },
  "idexx": {
@@ -245110,11 +245850,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -245126,6 +245868,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678954,
   "name": "Northeastern",
   "pace_of_work": {
@@ -245138,6 +245881,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894667,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -245181,7 +245925,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=462be3b77321bbcede5bfa2a9476a810af894d800ce581267006923f61cb63d0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly93d3cubm9ydGhlYXN0ZXJuLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678954,
   "web_search_url": "https://duckduckgo.com/?q=Northeastern+company+careers+benefits",
@@ -269858,41 +270602,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Established industrial innovator (Tier 2): recognized for vehicle engineering, now building a visible AI/autonomy/electrification team with fleet-scale data; not a headline AI lab but high technical bar for embedded/edge ML."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Manufactures and sells powersports vehicles through a global dealer network; earns recurring revenue from parts, accessories, apparel, and service; invests in R&D for new vehicle platforms and electrification."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established Midwestern engineering culture: pragmatic, collaborative, safety-first, outdoors-oriented; loyalty and tenure valued; increasing agility from new tech hires but still low politics vs. Silicon Valley."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Powersports enthusiasts, outdoor recreation consumers, commercial/utility customers (agriculture, construction, military), and dealers/distributors worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU grant ($15k-$25k over 4 yrs) for AI/ML/data science roles in Midwest locations; coastal hubs may be 10-15% higher."
   },
   "evidence_sha": "d3d227a150c1ef10",
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Powersports / Recreational Vehicle Manufacturing / Outdoor Recreation Technology"
   },
-  "last_attempt_at": 1784894341,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to discuss: 1) End-to-end ML projects with sensor/telemetry/time-series data. 2) Model deployment on edge/embedded hardware (size, latency, power constraints). 3) Collaboration with mechanical, electrical, and systems engineers—show you can translate data insights into vehicle-level requirements. 4) Safety-critical thinking (ISO 26262 awareness a plus). 5) Examples of balancing innovation speed with rigorous validation."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784675409,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Medina, Minnesota (USA); major engineering/manufacturing in Roseau MN, Spirit Lake IA, Huntsville AL, Opole (Poland); global sales/support offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To fuel the passion of riders, workers, and outdoor enthusiasts by delivering innovative, high-quality powersports products and experiences."
+  },
   "name": "Polaris Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, program-driven cadence aligned with vehicle model-year cycles; sprints exist but are bounded by hardware validation gates—generally predictable, not chaotic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Off-road vehicles (ATVs, side-by-sides), snowmobiles, motorcycles (Indian Motorcycle), marine boats (Bennington, Godfrey, Hurricane), electric vehicles (RANGER EV, Pro XD), parts, accessories, and apparel."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 company holidays (US); accrual increases with tenure."
   },
-  "retry_after": 1784894461,
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269902,7 +270684,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Christmas through New Year) plus summer week in some divisions; not guaranteed company-wide every year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large public company (NYSE: PII) with ~$8-9B annual revenue, ~15,000+ employees globally, mature stage with established market leadership in powersports."
   },
   "sources": [
    {
@@ -269936,14 +270723,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d011581c496005b9ca756d36d8077bcf066b5d467c5a618e27317445068cc25dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cucG9sYXJpcy5jb20vZW4tdXMvP21zb2NraWQ9MGQ3NDcwMTEzY2U2NjljNTIxZWQ2NzhjM2Q0ZTY4YjA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large U.S. public manufacturer, likely sponsors H-1B and employment-based green cards for specialized engineering and technical roles; specific caps and approval rates not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Polaris Inc. is a publicly traded powersports company that designs, engineers, and manufactures off-road vehicles, snowmobiles, motorcycles, and marine products. It generates revenue through vehicle sales, parts, accessories, apparel, and related services to dealers and consumers globally."
+  },
+  "synthesized_evidence_sha": "d3d227a150c1ef10",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mechanical/electrical engineering, embedded systems, vehicle dynamics, electrification/battery systems, autonomous/ADAS features, telematics/IoT, manufacturing automation, data analytics for product telemetry, simulation and digital twin."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675409,
   "web_search_url": "https://duckduckgo.com/?q=Polaris+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Polaris offers a rare blend for a new-grad AI/data scientist: a market-leading, tangible product company investing heavily in electrification, autonomy, and connected-vehicle data—giving you real-world fleet telemetry at scale—while maintaining a Midwestern manufacturing culture that historically emphasizes reasonable hours and stable careers over the burnout cycles common in pure-play tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — manufacturing-rooted culture with core hours, limited weekend work outside launch milestones; shutdowns around major holidays common."
   }
  },
  "policyme": {
@@ -279908,47 +280716,119 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Low/Unknown Prestige). Public visibility of elite AI or data science work is currently non-existent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Business model details are not explicitly stated, but likely involve B2B service provision or enterprise tech solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. Culture cannot be reliably profiled from the provided sources, requiring direct outreach or interviews to assess bureaucratic levels and mission-drive."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Customer base and target industries are not explicitly detailed in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000. Based on conservative estimates for a non-tier 1 tech firm; exact compensation data is not public."
   },
   "evidence_sha": "ff71b16de92fcd30",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Likely operates within the technology, software, or consulting sector."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Focus on confirming if the AI/Data Science work meets your elite prestige criteria and if the compensation matches your high new-grad pay expectations. Ask direct questions about WLB, expected hours, and formal shutdown policies to decide if it honors its mission-driven values or masks a toxic environment."
+  },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678945,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Specific office locations are not listed in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Mission statement not publicly available via the provided sources."
+  },
   "name": "Quantix SCS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Medium. Expected to have a standard tech pace, but the lack of public innovation data suggests a potentially slower or more traditional engineering culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Specific product offerings are not publicly listed on their main web presence."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard tech industry range, as exact policy is not public."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns found. Assumed to follow standard tech industry holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Company size and funding stage are not detailed in the provided sources."
   },
   "sources": [
    {
@@ -279982,14 +280862,46 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec",
+    "f16eec2a6f"
+   ],
+   "value": "No information regarding visa sponsorship was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "79524acdda",
+    "db4add04ec"
+   ],
+   "value": "Quantix SCS is a company operating in the tech or consulting space, though specific public details on its core operations are sparse due to a non-indexed web presence. Revenue is likely generated through specialized enterprise solutions or consulting services."
+  },
+  "synthesized_evidence_sha": "ff71b16de92fcd30",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Technical roles are likely recruited via third-party platforms like SmartRecruiters."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678945,
   "web_search_url": "https://duckduckgo.com/?q=Quantix+SCS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Evaluating Quantix SCS requires probing its tech stack and innovation pace, as you want a fast, bureaucratic-free environment that accelerates technical learning without sacrificing personal time. It is crucial to verify if the actual day-to-day culture aligns with your need for sane hours, guaranteed shutdowns, and a top-tier new grad pay bracket."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Company-specific WLB and burnout metrics are not public, so it likely aligns with industry averages rather than guaranteed shutdowns."
   }
  },
  "quantum research international": {
@@ -283079,11 +283991,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -283095,6 +284009,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678946,
   "name": "Randstad",
   "pace_of_work": {
@@ -283107,6 +284022,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894667,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -283150,7 +284066,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678946,
   "web_search_url": "https://duckduckgo.com/?q=Randstad+company+careers+benefits",
@@ -305850,11 +306766,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305866,6 +306784,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784678873,
   "name": "Sensiple",
   "pace_of_work": {
@@ -305878,6 +306797,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894667,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305921,7 +306841,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678873,
   "web_search_url": "https://duckduckgo.com/?q=Sensiple+company+careers+benefits",
@@ -314640,39 +315560,109 @@
  },
  "skydio": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, fast, and innovative, prioritizing technical learning and career growth while balancing personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High new-grad pay tier."
   },
   "evidence_sha": "a55470a553d5d14a",
+  "generated_at": 1784894547,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Expect technical assessments focused on machine learning, robotics, and autonomy. Candidates should also prepare to discuss how they handle fast-paced tech environments and maintain productivity without risking burnout."
   },
+  "last_attempt_at": 1784894547,
   "last_evidence_at": 1784679088,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
   "name": "Skydio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, innovative tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible PTO typical for elite tech companies."
   },
+  "refresh_after": 1790078547,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314682,7 +315672,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes guaranteed shutdowns to ensure downtime."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
   },
   "sources": [
    {
@@ -314716,14 +315715,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=0688abf1162a809313f23223dff5aa206af92457b8dec62f9408302a67b0e170JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuc2t5ZGlvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Insufficient information from provided sources to summarize operations."
+  },
+  "synthesized_evidence_sha": "a55470a553d5d14a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f28e3c6b",
+    "c6f42f3f84",
+    "f92672c9c4"
+   ],
+   "value": "Information unavailable from provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Skydio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Aligns with candidate priorities by providing elite AI prestige in autonomous robotics with a mission-driven focus, high new-grad compensation, and a fast-paced culture that values accelerated learning and respects work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Believed to respect work-life balance with sane hours, preventing toxic environments."
   }
  },
  "skyward": {
