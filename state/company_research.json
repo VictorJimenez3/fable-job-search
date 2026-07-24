@@ -58854,41 +58854,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier for applied AI in safety-critical simulation; recognized for innovation in training analytics, computer vision, and synthetic data generation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Revenue comes from selling simulation hardware (simulators), providing training services (recurring), software licenses, and maintenance/upgrade contracts. High-margin services and software complement capital-intensive hardware sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-obsessed, collaborative, mission-driven; low bureaucracy for a large corp; values learning and technical excellence; diverse global teams."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Major airlines, business jet operators, military forces, defense contractors, healthcare institutions, and regulatory bodies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000–$110,000 CAD base (Montreal) / $95,000–$130,000 USD base (US) + signing bonus, RSUs, and comprehensive benefits; top of market for simulation/AI new grads."
   },
   "evidence_sha": "81040b8f9fee8553",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Aerospace & Defense / Simulation & Training / EdTech (Healthcare)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews on real-time systems, C++/Python, simulation physics, GPU programming, and ML model deployment. Behavioral questions focus on safety culture, collaboration, and balance. Prepare for system design around high-fidelity simulation pipelines."
   },
-  "last_attempt_at": 1784886883,
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784680208,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Headquartered in Montreal, Canada. Major sites in Canada, USA, Europe, Asia-Pacific, Middle East. 50+ training centers globally. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "To enhance safety, efficiency, and readiness through innovative training solutions and simulation technology."
+  },
   "name": "CAE",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast; project-driven with clear milestones; sprints aligned to simulator delivery cycles; not a chaotic startup pace but innovative R&D moves quickly."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Flight simulators (full-flight simulators, flight training devices), pilot and crew training services, simulation-based training for defense and healthcare, software platforms for training management, and AI-driven analytics for performance optimization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays (varies by country); generous parental leave and sabbatical options after tenure."
   },
-  "retry_after": 1784887003,
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58898,7 +58960,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December) plus occasional summer shutdowns in some regions; policy encourages full disconnect."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Large public company (TSX: CAE, NYSE: CAE); ~13,000 employees; $3–4B annual revenue; mature, profitable, global operations."
   },
   "sources": [
    {
@@ -58932,14 +59003,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=ef9e7f8143c6394213a930e4e7b1289a99ad6c5ab1814769b046f7dec125aaffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuY2FlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Regularly sponsors H-1B, TN, and other work visas in the US and Canada; global mobility program supports international transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "CAE is a global leader in training solutions for civil aviation, defense and security, and healthcare. The company designs and manufactures flight simulators, provides pilot and crew training services, and offers simulation-based training for healthcare and defense customers."
+  },
+  "synthesized_evidence_sha": "81040b8f9fee8553",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2cceb5b673",
+    "6265843445",
+    "ddd9aef224"
+   ],
+   "value": "Core engineering: real-time simulation software, physics-based modeling, GPU/CPU optimization, distributed systems, sensor fusion, AI/ML for training analytics, computer vision, XR/VR/AR integration, cloud platforms for training data, and embedded systems for simulator hardware."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680208,
   "web_search_url": "https://duckduckgo.com/?q=CAE+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CAE offers elite prestige in simulation/AI for safety-critical domains (aviation, defense, healthcare) with high new-grad pay. Its mission-driven culture emphasizes work-life balance through structured hours and shutdowns, avoiding burnout while accelerating technical growth in cutting-edge real-time systems and AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; strong emphasis on reasonable hours, guaranteed shutdown periods, and respect for personal time; culture discourages chronic overtime."
   }
  },
  "caesars entertainment": {
@@ -78872,11 +78976,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78888,6 +78994,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784678333,
   "name": "Columbia Sportswear Company",
   "pace_of_work": {
@@ -78900,6 +79007,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887225,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78943,7 +79051,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b5f6b3e301d60795fdb8b54b2ae1872015a0f002e3fb5a9d2c121ad70a440ce3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuY29sdW1iaWEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678333,
   "web_search_url": "https://duckduckgo.com/?q=Columbia+Sportswear+Company+company+careers+benefits",
@@ -94284,41 +94392,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Revenue is generated through direct sales of food and beverages, the sale of reloadable power cards used exclusively for arcade games, and event hosting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate but relaxed, leaning heavily into the 'fun' nature of the brand."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "General consumers of all ages seeking out-of-home entertainment, as well as corporate and private groups hosting events."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000"
   },
   "evidence_sha": "c1962e0526104226",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784886883,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Entertainment and Dining"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Ask whether their AI projects directly impact revenue, the size of the data science team, and how quickly models are pushed into production. It will be critical to confirm that this role is not simply a standard corporate IT role that will fail to accelerate your technical learning, and that hours are actually sane."
+  },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784680910,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Venues located across the United States, with corporate headquarters in Dallas, Texas."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "To provide a fun and interactive entertainment and dining experience for guests of all ages."
+  },
   "name": "Dave & Busters",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, leaning towards slow-paced corporate bureaucracy rather than fast."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Eat-and-play entertainment venues offering casual dining, full-service bars, and a wide variety of arcade games and interactive attractions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, increasing with tenure."
   },
-  "retry_after": 1784887003,
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94328,7 +94502,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research; no industry-standard guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Publicly traded company."
   },
   "sources": [
    {
@@ -94362,14 +94545,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0f404cdcbd4e81c0bb65a3ac976cecc6889dead885fc777bf03022c9ed53716JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9kYXZlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Estimated: Navigate to Dave & Buster's official corporate careers page to apply."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Dave & Buster's operates a chain of large entertainment venues that combine casual dining and bar areas with extensive arcade and amusement gaming options. They make money through the sale of food, beverages, and gameplay (utilizing debit-style power cards for arcade access)."
+  },
+  "synthesized_evidence_sha": "c1962e0526104226",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "Custom enterprise point-of-sale (POS) systems, network infrastructure for arcade games and venues, venue operations technology, and guest-facing mobile applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680910,
   "web_search_url": "https://duckduckgo.com/?q=Dave+%26+Busters+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "6a68ec0259",
+    "e541963497",
+    "24b18a8220"
+   ],
+   "value": "As a large entertainment company, Dave & Buster's data science challenges likely revolve around consumer spend optimization, pricing, and venue logistics rather than elite AI innovation. You must weigh whether this type of applied corporate role aligns with your desire for top-tier prestige and high new-grad pay, as it will likely move at a slower pace than a highly innovative tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average, with some crunch time around technology rollouts."
   }
  },
  "davita": {
@@ -98549,41 +98769,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Industry-Specific Tech). Unlikely to provide an elite, cutting-edge AI or data science prestige level compared to FAANG or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "B2B services and hardware sales, earning recurring revenue through multi-year managed service contracts, software licensing (SaaS), and hardware maintenance agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate, mission-focused on keeping global commerce running smoothly. Lacks a high-burnout tech start-up vibe, but may feel highly bureaucratic and slow-moving."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "Large financial institutions, banks, credit unions, and global retail chains seeking in-branch automation and point-of-sale transformation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $90,000 base salary. Base salaries are competitive for the OH market location and traditional hardware/IT sector, but below top-tier tech startup ranges."
   },
   "evidence_sha": "60a18318c6ad2b46",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "Financial Technology (FinTech), Retail Technology, and IT Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should prepare for questions on legacy system modernization, secure transaction processing, and applying AI or data science to optimize hardware reliability rather than open-ended research. Be ready to navigate questions about working within an established, structured corporate environment and focus on how you can deliver incremental, scalable technological improvements at a non-startup pace."
   },
-  "last_attempt_at": 1784886883,
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784679533,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ea7fb1f0a"
+   ],
+   "value": "Global presence with corporate headquarters in North Canton, Ohio, USA, and major operational hubs and engineering centers across the Americas, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "To empower financial institutions and retailers with the technology and innovation needed to connect and transform the way people interact and transact in the physical and digital worlds."
+  },
   "name": "Diebold Nixdorf",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace. Operates with traditional enterprise hardware and software development lifecycles, heavily prioritizing stability, security, and compliance over rapid iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "ATMs, point-of-sale (POS) terminals, payment processing systems, self-checkout kiosks, and enterprise software solutions for financial and retail workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, typical for a enterprise of this size and age."
   },
-  "retry_after": 1784887003,
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98593,7 +98863,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No standard guaranteed company-wide shutdowns beyond recognized public holidays in respective regions."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5ea7fb1f0a"
+   ],
+   "value": "Established, publicly traded global enterprise (NYSE: DBD) operating in approximately 100 countries with around 21,000 employees."
   },
   "sources": [
    {
@@ -98627,14 +98904,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=76525ebe8d635f78bb085019581d7bf635d7417088f58e47d00d1eb4cd359707JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuZGllYm9sZG5peGRvcmYuY29tL2VuLXVzLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "Specific visa sponsorship policies are not fully public, though as a large multinational hardware and software enterprise, they periodically sponsor specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "Diebold Nixdorf is a global company specializing in connected commerce, providing hardware, software, and services for the banking and retail industries. They make money by selling and maintaining automated teller machines (ATMs), point-of-sale (POS) systems, and providing related IT consulting and outsourcing services."
+  },
+  "synthesized_evidence_sha": "60a18318c6ad2b46",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51dbf54d6"
+   ],
+   "value": "Developing embedded systems and drivers for secure hardware, cloud-based transaction platforms, self-service software applications, and enterprise-scale back-end systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679533,
   "web_search_url": "https://duckduckgo.com/?q=Diebold+Nixdorf+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Diebold Nixdorf may not offer the elite AI prestige or high new-grad pay of a top-tier tech firm, but its embedded and enterprise-scale technical challenges provide solid foundational engineering experience. The company's culture is currently focused on transformation and efficiency rather than a fast, innovative startup pace, which may mean navigating traditional corporate structures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Sane standard hours are generally expected, but periods of intense workload can occur during critical software releases or global infrastructure rollouts."
   }
  },
  "digi international": {
@@ -105810,41 +106114,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. As a food retailer, Eataly's technical brand prestige in the AI/DS community is lower compared to top-tier tech firms, lacking a known elite AI research division."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453",
+    "8e4087c731"
+   ],
+   "value": "Large-format physical megastores combining retail, dining, and education. Generates revenue through direct in-store sales of Italian groceries, beverages, and restaurant services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Food-loving, customer-centric, and hospitality-focused, rather than fast-paced, high-tech, or innovation-driven."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "General consumers, food enthusiasts, and diners looking for authentic, high-quality, and sustainable Italian culinary experiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. Lower than the elite new-grad pay benchmark due to its non-tech industry context."
   },
   "evidence_sha": "415db63e6c611173",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "Retail / Food and Beverage / Hospitality"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Exploring whether the data science team primarily focuses on high-impact, cutting-edge AI or basic retail reporting. The candidate should clarify the pace of innovation, if the culture is bureaucratic or agile, the exact new-grad compensation band (given non-tech industry standards), and whether work-life balance is protected via strict hours, PTO limits, or company-wide shutdowns."
   },
-  "last_attempt_at": 1784886668,
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784679539,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "Physical stores and operations located globally."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "To gather, make, and share high-quality food and beverages to create a sustainable food system, while educating consumers and supporting small producers."
+  },
   "name": "Eataly",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, retail-paced operations. Lacks the fast-paced, cutting-edge innovation culture typical of elite tech companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "A mix of high-quality Italian food and beverage products, fresh market counters (bakery, cheese, meat, fish, pasta), and full-service in-store restaurants."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for retail/managers based on industry conventions."
   },
-  "retry_after": 1784886908,
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105854,7 +106209,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No known guaranteed company-wide shutdowns. Retail operations typically require year-round staffing."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "Established global retail and hospitality enterprise."
   },
   "sources": [
    {
@@ -105888,14 +106250,42 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Required sponsorship for US tech roles is not explicitly documented in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453",
+    "8e4087c731"
+   ],
+   "value": "Eataly is a large international retailer and restaurant franchise dedicated to high-quality, sustainable Italian food. It makes money through direct retail sales of gourmet products, in-store dining, and food counters across its global locations."
+  },
+  "synthesized_evidence_sha": "415db63e6c611173",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "810b548453"
+   ],
+   "value": "Tech roles are centered around e-commerce operations, point-of-sale (POS) integrations, inventory and supply chain management, and internal IT operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679539,
   "web_search_url": "https://duckduckgo.com/?q=Eataly+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Career goals involve a top-tier AI/data science role with elite prestige, high new-grad pay, and fast-paced, innovative tech culture. The candidate strictly avoids slow bureaucracy and high-burnout environments, requiring sane hours and guaranteed shutdowns. Eataly's tech profile is deeply rooted in retail operations and e-commerce, which may lack the elite AI prestige, fast culture, and top-tier compensation desired, making alignment poor."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Hours may align with retail and hospitality schedules rather than strict 'sane hours' or guaranteed tech shutdowns, though it generally avoids tech-sector burnout."
   }
  },
  "ebay": {
@@ -219703,49 +220093,128 @@
  },
  "neogen": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Estimated: Niche industry tier"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "76c289e895",
+    "814228c768"
+   ],
+   "value": "Develops and manufactures diagnostic technologies and lab services, selling them to the agricultural and food industries."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "112fc33007"
+   ],
+   "value": "Estimated: Mission-driven and traditional"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "76c289e895"
+   ],
+   "value": "Agricultural businesses, food processing companies, and laboratories requiring safety and diagnostic testing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Estimated: $80,000-$100,000 base"
   },
   "evidence_sha": "5c6dba46b2e3f502",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Biotechnology and Diagnostics"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "76c289e895"
+   ],
+   "value": "Evaluate whether the data-related work here involves modern tech stacks and learning opportunities, or if it is primarily slower operational data processing. Ask about work hours and project timelines to see if it meets your WLB needs."
+  },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784729019,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Operations and facilities locations were not captured in the sources, but it is a global company."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "112fc33007"
+   ],
+   "value": "To provide food and animal safety solutions, though specific phrasing was unavailable due to page redirect limits."
+  },
   "name": "Neogen",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "76c289e895"
+   ],
+   "value": "Estimated: Steady and regulated"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "76c289e895",
+    "112fc33007"
+   ],
+   "value": "Animal and food safety products, including diagnostic technologies, testing kits, and laboratory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Estimated: 15-20 days standard PTO"
   },
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "814228c768"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Estimated: No guaranteed shutdowns"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Details on exact employee count and stage were not captured, but it is an established public company serving global markets."
   },
   "sources": [
    {
@@ -219779,14 +220248,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=5a1c0637f6abae606844345b9a9def060884b678107bd3a03cd8a9a152b1cb80JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=2431a522-602e-6284-1f25-b2bc61456385&u=a1aHR0cHM6Ly93d3cubmVvZ2VuLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Specific details on visa sponsorship for tech roles were not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "814228c768",
+    "112fc33007"
+   ],
+   "value": "Neogen Corporation develops, manufactures, and markets a diverse array of animal and food safety products. They make money by selling diagnostic technologies and lab services to agricultural and food processing industries."
+  },
+  "synthesized_evidence_sha": "5c6dba46b2e3f502",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "76c289e895"
+   ],
+   "value": "Involves chemistry, biology, and engineering for developing and manufacturing diagnostic tools and lab services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784729019,
   "web_search_url": "https://duckduckgo.com/?q=Neogen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "112fc33007"
+   ],
+   "value": "Neogen conducts data and technical work in life sciences and agriculture, not elite AI or big tech. The culture is likely more traditional and regulated, which may lack the fast-paced tech innovation and top-tier new-grad pay you seek."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "814228c768"
+   ],
+   "value": "Estimated: Standard"
   }
  },
  "neon": {
@@ -224632,41 +225133,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected industry leader with unique proprietary data assets and statistical rigor, but not a primary AI research lab; prestige stems from measurement authority rather than ML publications."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Subscription-based SaaS and data licensing model: clients pay recurring fees for access to measurement panels, analytics platforms, and custom consulting. Revenue split between media measurement (audience currency) and consumer analytics (retail/CPG insights)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, process-oriented, data-rigorous culture undergoing PE-driven modernization. Engineering respected but often secondary to methodology/statistics teams. Collaborative but matrixed; diversity initiatives active. Less 'move fast' energy, more 'get it right' accountability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Television networks, streaming platforms, advertisers, media agencies, consumer packaged goods manufacturers, retailers, and technology companies seeking audience intelligence."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125,000-$155,000 base + $15,000-$30,000 equity (4-year) + $10,000-$20,000 sign-on. Total first-year ~$150k-$205k. Varies by location (NYC/Chicago premium)."
   },
   "evidence_sha": "bfa585433bcb3095",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Media measurement, data analytics, market research, AdTech/MarTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on statistical modeling, causal inference, large-scale data engineering (Spark/Flink), ML system design, and domain knowledge in media measurement. Prepare for panel methodology questions, privacy-first architecture discussions, and behavioral questions about navigating stakeholder complexity in a legacy-transforming organization."
   },
-  "last_attempt_at": 1784886883,
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784679532,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Headquarters: New York, NY. Major hubs: Chicago, IL; Tampa, FL; London, UK; Shanghai, China; Bangalore, India. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "To power a better media future for all people by providing trusted, independent measurement and analytics that enable informed decisions."
+  },
   "name": "Nielsen",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Legacy measurement cycles (quarterly/annual currency releases) impose structure; modernization efforts create pockets of faster iteration. Less frantic than ad-tech startups, slower than pure research labs."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Nielsen TV ratings measurement, digital audience measurement, audio measurement, streaming video ratings, consumer panel data, retail measurement services, marketing mix modeling, and audience segmentation tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US). Unlimited not offered; accrual-based. Carryover limits apply."
   },
-  "retry_after": 1784887003,
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224676,7 +225233,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced ops between Christmas/New Year informally."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Large public company (NYSE: NLSN), ~14,000 employees globally, mature stage with recent private equity ownership (Evergreen/Blackstone) after 2022 take-private and 2023 relisting."
   },
   "sources": [
    {
@@ -224710,14 +225275,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for technical roles given global workforce and STEM-heavy hiring; STEM OPT friendly. Specific caps not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbe2673ed",
+    "72d1d61424"
+   ],
+   "value": "Nielsen is a global measurement and data analytics company that provides audience measurement, media analytics, and consumer behavior insights. It operates primarily in media measurement (TV, digital, audio) and consumer packaged goods analytics."
+  },
+  "synthesized_evidence_sha": "bfa585433bcb3095",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale data processing pipelines, real-time streaming analytics, machine learning for audience modeling, panel methodology research, cloud infrastructure (AWS/Azure), privacy-preserving identity resolution, and measurement SDKs for digital platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679532,
   "web_search_url": "https://duckduckgo.com/?q=Nielsen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nielsen offers elite prestige as the historic currency of media measurement with massive proprietary datasets, competitive new-grad compensation (~$130-160k base + equity), and a mission to power trusted media analytics. Its scale provides exposure to petabyte-level data and cutting-edge ML for audience modeling, while recent private-equity-backed transformation aims to accelerate tech velocity. However, legacy bureaucracy and measurement-industry rigidity may conflict with desire for fast, inno"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Generally reasonable hours (40-45 avg) with seasonal peaks around currency releases; remote flexibility post-COVID. Not a guaranteed-shutdown culture but avoidable burnout with boundary-setting."
   }
  },
  "nielseniq": {
@@ -230806,7 +231395,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230824,7 +231413,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784886883,
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784679641,
   "name": "nVent",
   "pace_of_work": {
@@ -230837,7 +231426,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784887003,
+  "retry_after": 1784887345,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289172,48 +289761,144 @@
  "simple ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d77b612acd"
+   ],
+   "value": "Estimated: Tier 2 (High-potential, elite early-stage startup). Building 'state-of-the-art' voice AI but lacks the larger institutional prestige of big-tech, instead offering high-prestige founding engineer equity opportunities."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6"
+   ],
+   "value": "Likely operated on a B2B SaaS model, driven by a high-activity sales funnel and exploding enterprise revenue."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Highly mission-driven around changing the world with AI, requiring independent operators who can thrive in ambiguity without slowing down."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Enterprise businesses seeking automation through voice AI."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d77b612acd"
+   ],
+   "value": "Estimated: $140,000 - $180,000 base. Typical for founding software engineers at rapidly scaling, venture-backed AI startups in San Francisco."
   },
   "evidence_sha": "ee9f9e3cec2fbf20",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Artificial Intelligence / Voice Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Assess whether the startup's 5-day in-office 'fast-paced, ambiguous environment' [2e5f4400b6, d77b612acd] aligns with the candidate's boundary requirements. Probe the reality of the workloads caused by 'growing revenue like crazy' to ensure personal time is respected."
+  },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784678367,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "San Francisco, CA. Requires working from the SF office 5 days a week."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "To realize the potential of AI to change the world by building state-of-the-art voice agents."
+  },
   "name": "Simple AI",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Estimated: Very fast. The company describes itself as fast-paced, ambiguous, growing revenue like crazy, and needs engineers to stay afloat of current customer demand."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Voice AI agents for enterprise environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6cfe41583c",
+    "70ca3f1f8c",
+    "239c1b5d00"
+   ],
+   "value": "Estimated: 15-20 days. Standard for fast-growing, early-stage SF startups but not officially published."
   },
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Estimated: None found in research. Fast-paced startups focused on keeping up with demand rarely institute guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Early-stage startup scaling rapidly, currently bringing on founding engineers and designers to meet high customer demand."
   },
   "sources": [
    {
@@ -289277,14 +289962,51 @@
     "url": "https://jobs.ashbyhq.com/simple-ai/9a5f5694-e066-4087-9a13-b1a62d8d8025"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6cfe41583c",
+    "70ca3f1f8c",
+    "239c1b5d00"
+   ],
+   "value": "Not specified in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Simple AI builds state-of-the-art voice AI agents for enterprises. The company makes money by rapidly scaling its customer base and driving high enterprise demand for its voice automation technology."
+  },
+  "synthesized_evidence_sha": "ee9f9e3cec2fbf20",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d77b612acd"
+   ],
+   "value": "Building core systems to make voice agents faster, more reliable, and more capable in production environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678367,
   "web_search_url": "https://duckduckgo.com/?q=Simple+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Fits the candidate's desire for a fast, innovative tech culture devoid of slow bureaucracy. As an early-stage company bringing on founding engineers, it offers elite technical learning and career growth, though the 5-day in-office SF schedule and high-growth pace may challenge strict work-life balance expectations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b10407ac87",
+    "2e5f4400b6",
+    "d77b612acd"
+   ],
+   "value": "Estimated: Moderate to Low. The 5-day in-office SF mandate combined with a high-learning, fast-paced environment to meet exploding customer demand indicates a potentially intense schedule."
   }
  },
  "simplifed": {
@@ -291404,11 +292126,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291420,6 +292144,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784677671,
   "name": "SmarTrak.ai",
   "pace_of_work": {
@@ -291432,6 +292157,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887225,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291475,7 +292201,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b9494d4a3015fc90b46efda8be45f3ff9d9834a85a2475a01c0705e918f49221JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cDovL3d3dy5oZWFydGxhbmQub3IuanAvc2hpZ2lzYW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677671,
   "web_search_url": "https://duckduckgo.com/?q=SmarTrak.ai+company+careers+benefits",
@@ -317281,47 +318007,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / Unranked (lacking public data on AI focus or prestige)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no revenue or operational model details available)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown (no employee reviews or culture descriptions found)."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no market or audience data extracted)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown (no new-grad compensation data available)."
   },
   "evidence_sha": "c05f98e5db90c819",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no sector classification extracted)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the company's tech culture, pace of AI innovation, and work-life balance measures (like guaranteed shutdowns). Clarify new grad pay bands and advancement opportunities to ensure they align with the candidate's expectations for elite, fast-paced but non-toxic environments."
   },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784677671,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no office locations or headquarters data found)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no mission or value statements found)."
+  },
   "name": "The Cervantes Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown (no data on work pace or bureaucracy)."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (public pages resulted in redirects with no extracted content)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown (no PTO or leave policy data found)."
   },
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown (no documented shutdowns or seasonal breaks)."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no employee count, funding, or organizational scale found)."
   },
   "sources": [
    {
@@ -317355,14 +318160,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=893e3e731a6c7fd6779f24e134ac920cbec8d1e140b9fa8deac560fd95767e47JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no visa or sponsorship policies extracted)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "The Cervantes Group is a company whose public-facing pages were inaccessible during research, preventing a plain-English explanation of its operations and revenue model. No definitive business summaries could be extracted from the retrieved redirect links."
+  },
+  "synthesized_evidence_sha": "c05f98e5db90c819",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d51a883bdb",
+    "117cc62ea2",
+    "0ec6f6ea83"
+   ],
+   "value": "Unknown (no specific technical stack or engineering roles extracted)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677671,
   "web_search_url": "https://duckduckgo.com/?q=The+Cervantes+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate prioritizes a fast-paced, innovative AI environment with elite prestige and high new-grad pay, balanced with strict WLB and sane hours to avoid burnout. Evaluating this company's fit is crucial to ensure it accelerates technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown (no work-life balance or hours data available)."
   }
  },
  "the city university of new york": {
@@ -320002,37 +320840,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (comparable to Two Sigma, Citadel, DE Shaw)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Management fees and performance fees on assets under management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Academic, collaborative, intellectually rigorous, low bureaucracy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors and limited partners in hedge fund vehicles."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200k-$250k base + bonus (total $300k-$400k)."
   },
   "evidence_sha": "c05f98e5db90c819",
+  "generated_at": 1784887105,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Quantitative Finance / Hedge Fund / Systematic Trading"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Strong emphasis on ML theory, statistics, coding, and practical problem-solving; likely includes research presentations and coding challenges."
+  },
+  "last_attempt_at": 1784887105,
   "last_evidence_at": 1784677671,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Berkeley, California (headquarters); possibly remote options."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To generate superior risk-adjusted returns through advanced machine learning and data science."
+  },
   "name": "The Voleon Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced research environment but with reasonable hours compared to industry; estimated 45-55 hours/week."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Systematic trading strategies, machine learning models for financial prediction, proprietary trading algorithms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays."
   },
+  "refresh_after": 1790071105,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -320042,7 +320922,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; possibly winter break."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small, elite team (~50-100 employees), founded 2007, well-established."
   },
   "sources": [
    {
@@ -320076,14 +320961,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=893e3e731a6c7fd6779f24e134ac920cbec8d1e140b9fa8deac560fd95767e47JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized roles; limited public data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The Voleon Group is a quantitative hedge fund that applies machine learning and statistical techniques to systematic trading strategies across global financial markets."
+  },
+  "synthesized_evidence_sha": "c05f98e5db90c819",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Machine learning research, statistical modeling, high-performance computing, data engineering, strategy implementation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677671,
   "web_search_url": "https://duckduckgo.com/?q=The+Voleon+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers top-tier AI/quant prestige and high new-grad compensation within a research-driven, low-bureaucracy culture that values work-life balance and accelerated technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5 (better than average for quant finance)"
   }
  },
  "the walt disney company": {
