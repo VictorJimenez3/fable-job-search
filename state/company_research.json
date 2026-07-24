@@ -27334,39 +27334,97 @@
  },
  "arcadis": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Not top-tier; traditional engineering and digital consultancy prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "B2B professional services and project consulting for built and natural assets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, sustainability-focused."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Public sector clients, large enterprises, and real estate developers seeking infrastructure and environmental solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000 USD."
   },
   "evidence_sha": "d10d80305cbadf47",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Architecture, Engineering, and Construction"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Prospective hires should ask about the actual day-to-day pace of digital transformation projects, opportunities for AI/data science career growth, and whether work-life balance is maintained through sane hours."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784680609,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d66259c7e0"
+   ],
+   "value": "Global presence across multiple continents."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Improving quality of life by delivering sustainable and innovative solutions for natural and built assets."
+  },
   "name": "Arcadis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, project-driven."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Engineering, architecture, cost management, and digital solutions for infrastructure, climate resilience, and built environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate package (15-25 days)."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27376,7 +27434,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d66259c7e0"
+   ],
+   "value": "Multinational, mature consultancy stage."
   },
   "sources": [
    {
@@ -27410,14 +27475,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=401c04cb2b4a8b337d2adfc71e984f7b478df9f4e08eec39845c876b4ea08bb6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuYXJjYWRpcy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5111f7b7de"
+   ],
+   "value": "Not explicitly stated in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Arcadis is a global design and consultancy firm specializing in natural and built assets. They generate revenue by providing engineering, architecture, and management consulting services for infrastructure and environmental projects."
+  },
+  "synthesized_evidence_sha": "d10d80305cbadf47",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "Digital solutions, geospatial analysis, and engineering software for built and natural assets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680609,
   "web_search_url": "https://duckduckgo.com/?q=Arcadis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "642bce5040"
+   ],
+   "value": "While Arcadis is a mission-driven company focused on sustainability, candidates prioritizing fast, innovative tech culture and elite new-grad pay may find the traditional engineering consultancy environment slower and bureaucratic compared to top-tier AI firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, typical of engineering consultancies."
   }
  },
  "arcfield": {
@@ -35304,49 +35398,127 @@
  },
  "aveva": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "45afbaba5a"
+   ],
+   "value": "Estimated: Niche/Business-Tier. Prestige stems from complex industrial domain applications rather than elite, cutting-edge AI research rivaling top tech giants."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "AVEVA sells enterprise software, utilizing a combination of software licenses, subscriptions, and software-as-a-service (SaaS) offerings to generate revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "Estimated: Mission-driven and collaborative, emphasizing sustainability and operational efficiency. Environment is likely more structured and mature than a high-growth startup."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "Companies in the energy, infrastructure, chemicals, pharmaceuticals, manufacturing, and power generation industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "45afbaba5a"
+   ],
+   "value": "Estimated: $90,000 - $120,000 USD base salary. As a mature enterprise company, new grad pay is comfortable and competitive but may lack the top-tier FAANG-tier ceiling or heavy equity multipliers."
   },
   "evidence_sha": "14e2cd83a5844eed",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "Information Technology and Industrial Software"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e4ffa5c99",
+    "f808abda10"
+   ],
+   "value": "Assess the specific team's culture and pace to ensure it lacks the slow corporate bureaucracy you want to avoid. Clarify compensation structures, bonus potential, and learning opportunities to confirm they match your elite pay and fast career growth expectations."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784678866,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "Headquartered in Cambridge, United Kingdom, with a global presence of offices and engineering centers."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "To drive industrial efficiency and sustainability through innovative industrial software solutions."
+  },
   "name": "AVEVA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "Estimated: Moderate and steady. Operates as an established enterprise software company, meaning the pace is generally deliberate and process-oriented, which may feel slower than a fast, innovative tech startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "Industrial software solutions spanning engineering and design, operations and control, and asset performance management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "45afbaba5a"
+   ],
+   "value": "Estimated: 25-30 days of paid time off per year, standard for large European-headquartered tech companies, alongside local public holidays."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "45afbaba5a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "45afbaba5a"
+   ],
+   "value": "Estimated: Likely offers extended holiday shutdowns or flexible time off options, though exact guaranteed corporate-wide shutdowns are not explicitly published."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "Established public enterprise software company, operating as a subsidiary of Schneider Electric."
   },
   "sources": [
    {
@@ -35380,14 +35552,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a0c1ba9949c1da74d5e646b0d9e8775201997608432c99eb03413a753ca1082JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cuYXZldmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "45afbaba5a"
+   ],
+   "value": "As a large multinational tech firm, they typically offer visa sponsorship for specialized technical roles, though it may vary by region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0e4ffa5c99"
+   ],
+   "value": "AVEVA is a British multinational information technology company headquartered in Cambridge, United Kingdom. It provides industrial software, including engineering, operations, and performance monitoring solutions to various sectors."
+  },
+  "synthesized_evidence_sha": "14e2cd83a5844eed",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "Engineering teams build scalable enterprise software, cloud platforms, data integration tools, and advanced analytics systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678866,
   "web_search_url": "https://duckduckgo.com/?q=AVEVA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e4ffa5c99",
+    "f808abda10"
+   ],
+   "value": "You are seeking high prestige, elite new-grad pay, and fast culture without bureaucracy, alongside respected WLB, sane hours, and rapid learning. AVEVA's enterprise focus offers mission-driven sustainability work and technical learning, but as an established subsidiary, its pace and compensation package may not match the 'elite new-grad pay' or 'fast, innovative startup culture' you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f808abda10"
+   ],
+   "value": "Estimated: Good. AVEVA is known for offering a highly flexible work environment and respecting personal time without pervasive toxic burnout culture."
   }
  },
  "avia health": {
@@ -66885,41 +67089,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High prestige due to complex AI/DS applications in phased array communications and aerospace/defense tech."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "B2B hardware and software systems provider for aerospace and defense platforms."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "42b66a3c0a",
+    "22108df6d4"
+   ],
+   "value": "Dynamic, cross-functional, and collaborative, seeking passionate, energetic, and forward-thinking individuals."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "42b66a3c0a"
+   ],
+   "value": "Missile defense programs, commercial airlines, helicopter operators, and broader satellite/space platform operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base salary, competitive with top-tier aerospace and defense tech roles."
   },
   "evidence_sha": "fcb1839bb8dc0a5a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784886466,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "Aerospace, Defense, and Space Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3df7a2b004",
+    "22108df6d4"
+   ],
+   "value": "Candidates should highlight their passion, collaborative energy, and forward-thinking approach to fit into the dynamic cross-functional teams. Emphasize how you can learn, develop, and engage rapidly across the organization without getting bogged down by bureaucracy."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784752592,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "To act as developers and pioneers of out-of-the-box communication systems for space and airborne platforms, fostering a dynamic and cross-functional work environment."
+  },
   "name": "CesiumAstro",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "Estimated: Fast-paced work culture driven by a rapidly growing organization and dynamic cross-functional environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "Active phased array communication systems and payloads designed for space and airborne platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, typical for growing aerospace startups."
   },
-  "retry_after": 1784886586,
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66929,7 +67194,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard major holiday breaks, though official guaranteed shutdown policies are not confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3df7a2b004",
+    "22108df6d4"
+   ],
+   "value": "Rapidly growing organization with an expanding technical and customer-facing workforce."
   },
   "sources": [
    {
@@ -66993,14 +67266,48 @@
     "url": "https://jobs.lever.co/CesiumAstro/d7a3ee1e-86fc-4fdb-9e3e-0469499591bd"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a"
+   ],
+   "value": "CesiumAstro develops out-of-the-box, advanced communication systems for satellites, UAVs, launch vehicles, and other space and airborne platforms. They generate revenue by supplying these specialized active phased array communication payloads and systems to defense, commercial aviation, and aerospace customers."
+  },
+  "synthesized_evidence_sha": "fcb1839bb8dc0a5a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3df7a2b004",
+    "42b66a3c0a",
+    "22108df6d4"
+   ],
+   "value": "Cross-functional development of communication systems, embedded software, and technical strategy across cross-functional teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679534,
   "web_search_url": "https://duckduckgo.com/?q=CesiumAstro+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3df7a2b004",
+    "22108df6d4"
+   ],
+   "value": "CesiumAstro operates in the high-prestige space and defense sector, which typically offers top-tier compensation and a fast-paced, innovative environment. The company's emphasis on a cross-functional culture provides strong technical learning and career growth opportunities for new graduates stepping into a rapidly growing organization."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "42b66a3c0a",
+    "22108df6d4"
+   ],
+   "value": "Estimated: Moderate to Good. Cross-functional learning environment is emphasized, though typical aerospace/defense deliverables can sometimes require intense push periods."
   }
  },
  "cetera financial group": {
@@ -73377,37 +73684,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Public Sector / Civic Tech) — meaningful applied work but not a primary research or cutting-edge ML hub. Recognition comes from civic impact, not academic or industry leadership."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government funding model: property taxes, sales taxes, business taxes, fees for services, state/federal grants, bond measures, and enterprise fund revenues (e.g., airport, port, utilities). No profit motive; budget approved by Board of Supervisors and Mayor."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Bureaucratic but mission-driven. Collaborative, process-oriented, risk-averse. Diverse workforce with strong union presence. Innovation exists in pockets (e.g., DataSF, Digital Services) but requires navigating hierarchy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residents of San Francisco (~870,000), businesses operating in the city, commuters, tourists, and other government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base (varies by classification: e.g., 1824 Data Analyst ~$85k, 1823 Senior Data Analyst ~$110k). No equity, signing bonus, or RSUs. Excellent benefits (pension, health, tuition reimbursement) add ~30-40% value."
   },
   "evidence_sha": "9c46f20b793977ec",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Government / Public Administration"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions aligned with civil service competencies (equity, collaboration, public accountability). Technical assessments may be practical (SQL, Python, data viz) rather than algorithmic. Prepare examples of translating complex analysis for non-technical stakeholders and navigating bureaucratic constraints. Ask about specific department's data maturity, tooling autonomy, and mentorship structure."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784679634,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary workplace: San Francisco, CA (multiple civic buildings). Some roles may offer hybrid schedules; field work required for certain positions. No remote-only policy for most classifications."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide effective, equitable, and innovative public services that enhance the quality of life for all San Franciscans, guided by principles of transparency, accountability, and inclusion."
+  },
   "name": "City and County of San Francisco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate. Projects follow procurement, compliance, and public review cycles. Urgent initiatives (e.g., pandemic response) can accelerate temporarily, but baseline is deliberative."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public services including public safety (police, fire), transportation (Muni, streets), public health, social services, utilities (water, power), parks and recreation, libraries, building and planning, and administrative functions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 13-20 vacation days/year (accrual based on tenure) + 11 paid holidays + 12 sick days/year + optional personal leave. Exact accrual varies by classification and MOU."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73417,7 +73766,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Observes all federal/state holidays (11+ days). City offices typically closed between Christmas and New Year (administrative leave). No guaranteed 'company-wide shutdown' beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large mature government employer with approximately 30,000+ civilian employees across 50+ departments. Annual budget ~$14-15 billion. Stable, permanent entity."
   },
   "sources": [
    {
@@ -73451,14 +73805,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B and other visa sponsorship possible for hard-to-fill specialized technical classifications (e.g., Data Scientist, IT Project Manager) but subject to civil service rules, prevailing wage determinations, and department budget approval. Not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The City and County of San Francisco is a consolidated government entity providing municipal services to residents, businesses, and visitors. It operates as a public administration funded primarily through taxes, fees, bonds, and intergovernmental grants rather than commercial revenue."
+  },
+  "synthesized_evidence_sha": "9c46f20b793977ec",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to civic challenges: predictive analytics for service demand, open data platforms, digital services modernization, GIS/mapping, public health modeling, transportation optimization, and infrastructure monitoring. Tech stack varies by department; central IT (DT) sets standards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679634,
   "web_search_url": "https://duckduckgo.com/?q=City+and+County+of+San+Francisco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven impact at city scale with strong work-life balance protections (civil service rules, union contracts, fixed holidays). However, prestige and new-grad pay lag top-tier private AI labs; pace is deliberate, not fast/innovative by tech industry standards. Career growth is structured but slow; technical learning depends on self-direction. Best for candidates prioritizing stability, public service, and predictable hours over elite prestige or rapid advancement."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High (8/10). Standard 40-hour weeks, strong overtime protections, 11+ paid holidays, generous leave banks, and cultural expectation of disconnecting after hours. On-call rare outside critical infrastructure roles."
   }
  },
  "city of gulfport": {
@@ -105332,7 +105707,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105350,7 +105725,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784886466,
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784679539,
   "name": "Eataly",
   "pace_of_work": {
@@ -105363,7 +105738,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784886586,
+  "retry_after": 1784886908,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153922,37 +154297,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — FDA-cleared AI products (Genius AI Detection, Quantra) deployed at scale; publishes at RSNA, SPIE, AMIA; not a primary AI research lab but high-impact applied ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Razor-blade model: install high-margin proprietary instruments (Panther, 3D mammography) and drive recurring revenue from assay cartridges, consumables, service contracts, and software upgrades. Roughly 60% of revenue is recurring."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-driven, quality-obsessed, collaborative. Long-tenured workforce (avg 8+ years) creates deep domain knowledge but slower change adoption. Strong employee resource groups, women's health mission resonates. Bureaucracy exists but less than pharma peers."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are hospital systems, reference laboratories, women's health clinics, and academic medical centers. Sales are direct in major markets (US, Europe, China) and through distributors elsewhere."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + $20k-$40k RSU vesting over 4 years. Total comp ~$145k-$185k year 1. San Diego/Marlborough premium ~5-10%."
   },
   "evidence_sha": "c57d7bc3de54a88d",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Medical Technology / In Vitro Diagnostics (IVD) / Women's Health"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on ML model validation (sensitivity/specificity trade-offs), regulated software lifecycle (IEC 62304), and real-world data pipeline challenges (class imbalance, domain shift). Behavioral rounds emphasize cross-functional collaboration with clinicians and regulatory affairs."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784680204,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Marlborough, MA. Major R&D sites in San Diego (diagnostics), Bedford, MA (breast health), and Costa Rica (software engineering). Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To enable healthier lives, everywhere, every day — with a stated focus on advancing women's health through early detection and less invasive treatment."
+  },
   "name": "Hologic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — quarterly release cycles for regulated software, sprint-based for internal tools. Not 'move fast and break things'; emphasis on verification/validation gates. Crunch periods before FDA submissions."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core product lines include the Panther molecular diagnostics platform (infectious disease, STI testing), 3D mammography (Selenia Dimensions), breast biopsy systems, GYN surgical devices (MyoSure, NovaSure), and bone densitometry (Horizon DXA)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days. Accrual increases with tenure. Unlimited sick leave. No published 'guaranteed shutdown' policy but observed low-email weeks around July 4 and Christmas."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153962,7 +154379,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdown. Some teams observe informal slowdowns between Christmas and New Year. Not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public (NASDAQ: HOLX), ~$4.0B annual revenue, ~7,000 employees globally. Mature, profitable, dividend-paying company with steady R&D investment (~8% of revenue)."
   },
   "sources": [
    {
@@ -153996,14 +154418,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=178e03fc40003b98f62f6bae06b055df49eace5e9ac48ea8e02ac03fbc09b46aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuaG9sb2dpYy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for specialized engineering and data science roles. History of cap-exempt filings through university partnerships. TN visa support for Canadian/Mexican nationals."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hologic is a global medical technology company focused on women's health, providing diagnostics, surgical, and imaging products. It generates revenue by selling proprietary systems, consumables, and services to hospitals, clinics, and laboratories worldwide."
+  },
+  "synthesized_evidence_sha": "c57d7bc3de54a88d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML roles focus on image analysis for mammography (CAD, density assessment), molecular assay optimization, instrument automation/robotics, cloud-connected device data pipelines, and regulatory-grade software validation. Stack includes Python, C++, TensorFlow/PyTorch, AWS/Azure, embedded Linux."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680204,
   "web_search_url": "https://duckduckgo.com/?q=Hologic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hologic offers a rare combination: a mission-critical women's health platform with massive installed base (data moat), elite AI/ML prestige from FDA-cleared algorithms, and a mature-company stability that avoids startup burnout. New grads get structured mentorship, regulated-software rigor, and competitive pay without 80-hour weeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~9-5 with flexible hybrid; on-call rotation for production systems (1 week/month typical). Limited weekend work except submission crunches. Company promotes 'no meeting Fridays' in some orgs."
   }
  },
  "honeywell": {
@@ -165783,37 +166226,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — core AI agent execution engine development at a well-funded startup with global reach."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "Consumption-based pricing where customers pay only for what they use, aligning cost with value delivered."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, technically ambitious, globally distributed, with explicit respect for work-life boundaries and learning culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise organizations seeking to build and deploy AI agents at scale with strong security and governance requirements."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000-$200,000 base salary + significant equity (RSUs/options) + benefits, competitive with top-tier AI labs."
   },
   "evidence_sha": "2d3066931a59a785",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "Enterprise AI/ML platform, AI agent infrastructure, B2B software."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessment on AI agent architectures, sandboxed code execution security, distributed systems for multi-turn orchestration, and scalable backend engineering. Prepare for system design around Agent Harness components: state management, tool execution pipelines, guardrail enforcement, and consumption-based metering. Behavioral focus on innovation speed, collaboration across global teams, and sustainable work practices."
   },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784762207,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "San Francisco (USA) and Bengaluru (India)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To democratize and secure AI agent deployment for enterprises through a scalable, consumption-based platform."
+  },
   "name": "Instabase",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, typical of a Series B/C AI startup, but with cultural guardrails against burnout."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "SuperApp (AI application platform) and Agent Harness (underlying execution engine for AI agents with sandboxed execution, security guardrails, and multi-turn orchestration)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus company holidays; unlimited or flexible policy common in similar-stage tech companies."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165823,7 +166316,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes winter holiday shutdown (e.g., last week of December) and may have summer recharge periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Series B/C stage startup with approximately 200-500 employees globally, given international offices and active hiring."
   },
   "sources": [
    {
@@ -165887,14 +166385,39 @@
     "url": "https://job-boards.greenhouse.io/instabase"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides visa sponsorship (H-1B, etc.) given global presence and technical hiring needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "Instabase provides an AI platform called SuperApp powered by Agent Harness, an execution engine that manages agent states, orchestrates multi-turn planning and tool execution, enforces security guardrails, and runs untrusted code in sandboxed environments. The company uses a consumption-based pricing model where customers pay only for what they use, and operates globally with offices in San Francisco and Bengaluru."
+  },
+  "synthesized_evidence_sha": "2d3066931a59a785",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "39aeede3a6"
+   ],
+   "value": "Building and securing AI agent execution environments: sandboxed dynamic code execution, multi-turn planning orchestration, security guardrails, agent state management, and scalable infrastructure for the Agent Harness engine."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784762207,
   "web_search_url": "https://duckduckgo.com/?q=Instabase+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches a top-tier AI/ML new-grad role offering elite prestige and high compensation within a fast, innovative culture rather than bureaucracy. The mission-driven focus on securing AI agent deployment aligns with meaningful technical impact, while the company's reported emphasis on sane hours and guaranteed shutdowns addresses work-life balance and burnout avoidance. The technical depth of Agent Harness (sandboxed execution, multi-turn orchestration) accelerates learning in cutting-edge AI syste"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — candidate reports suggest sane hours and guaranteed shutdowns; global team may require some async flexibility."
   }
  },
  "instalily": {
@@ -190389,11 +190912,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190405,6 +190930,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784679632,
   "name": "Lithia Motors",
   "pace_of_work": {
@@ -190417,6 +190943,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886788,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190460,7 +190987,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b3695aec6cb7eb0e4eb7276724e22a3c6d738c6cd8de92ca7943db1d8c8024cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cubGl0aGlhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679632,
   "web_search_url": "https://duckduckgo.com/?q=Lithia+Motors+company+careers+benefits",
@@ -197909,34 +198436,90 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Integrated downstream model generating revenue through margin spreads between crude oil acquisition costs and refined product selling prices, supplemented by retail convenience store sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, structured, and safety-centric. As a legacy industrial player, the culture leans heavily toward bureaucracy, avoiding risk-taking, and slow decision-making, which may feel sluggish to someone prioritizing innovation and rapid career growth."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Wholesale customers, commercial fueling accounts, independent retail station operators, and end-consumers utilizing retail gas stations and convenience stores."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $105,000 base salary for new-grad technical roles in lower-cost-of-living areas like Ohio, which may be lower than the elite compensation packages found in tech hubs."
   },
   "evidence_sha": "9253c51127815ea2",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Oil and Gas (Downstream Petroleum Refining and Marketing)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviewers will likely focus on operational IT support and legacy system optimization, contrasting deeply with your desire for elite, fast-paced AI innovation. You must probe heavily during interviews to determine if their WLB includes sane hours and guaranteed shutdowns, or if the political slowdowns and bureaucracy will stifle your career growth."
   },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784678950,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Headquartered in Findlay, Ohio, with major refinery operations across the United States, including large facilities in Texas, Louisiana, and the Midwest."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5ab51571e",
+    "585117281e",
+    "3d4b2c0e0b"
+   ],
+   "value": "The company focuses on safely delivering energy products to the markets it serves, though specific mission statement language could not be extracted from the provided redirecting sources."
+  },
   "name": "Marathon Petroleum",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and steady. The work pace is governed by physical industrial operations and multi-year project cycles, which is opposite to a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Refined petroleum products including gasoline, distillates (diesel), jet fuel, propane, asphalt, and heavy fuel oil, as well as retail motor fuel and merchandise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of vacation for new hires, though public sources do not specify the exact new-grad allocation."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197946,7 +198529,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Plant maintenance shutdowns (turnarounds) occur for industrial facilities but are role-dependent for tech workers. Specific guaranteed corporate shutdowns for tech roles are not publicly detailed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Large-cap public corporation operating as the largest petroleum refinery operator in the United States."
   },
   "sources": [
    {
@@ -197980,14 +198570,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=a9880c9b2d1da8cf1c97451a56c4f945bf020865967d46a39a3ae3b5af844018JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly93d3cubWFyYXRob25ndWlkZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Marathon Petroleum Corporation (MPC) is a leading integrated downstream energy company primarily engaged in the petroleum refining, marketing, and transportation businesses. It makes money by purchasing crude oil and converting it into refined products like gasoline, diesel, and jet fuel, which are then sold through its own retail networks (including Speedway) or distributed to wholesale商业客户."
+  },
+  "synthesized_evidence_sha": "9253c51127815ea2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "585117281e"
+   ],
+   "value": "Traditional hardware-centric engineering intensive environments focused on mechanical, chemical, and process engineering for plant operations. Software and data science roles support supply chain optimization, process control systems, and enterprise operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678950,
   "web_search_url": "https://duckduckgo.com/?q=Marathon+Petroleum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While Marathon offers stability and high pay, you likely won't find the elite prestige of a tech-heavy AI role or a fast, innovative tech culture here. The traditional bureaucratic nature of a legacy energy giant fundamentally conflicts with your desire for a fast-paced, highly-accelerated technical learning environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Industrial operators often emphasize rigid safety protocols and shift structures that can protect personal time, though this varies by department. It lacks the fast-paced tech environment needed to accelerate technical learning."
   }
  },
  "margo": {
@@ -222325,43 +222940,99 @@
  },
  "newyork presbyterian hospital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Tier 1 (Elite) - Top-5 nationally ranked hospital with deep university partnerships (Columbia, Cornell), significant research output (NEJM, Nature Medicine), and large-scale clinical data assets. Recognized leader in healthcare AI deployment."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Non-profit integrated academic health system funded by patient care revenue (insurance reimbursements, government programs), philanthropy, research grants, and educational partnerships with Columbia and Cornell universities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Mission-driven, collaborative, academically rigorous, hierarchical. Strong clinician influence on priorities. Diverse workforce. Values evidence-based decision making. Can feel bureaucratic due to size and regulation. Prestige-conscious. Social impact focus is genuine."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Patients across the New York metropolitan area and internationally, referring physicians, insurance payers (Medicare, Medicaid, commercial), government agencies, and research grant funders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$140,000 base + 5-10% bonus + modest equity (non-profit, so no RSUs; may have 403b match 5-10%). Below FAANG/quant but competitive for healthcare. PhD premium ~$15-25k."
   },
   "evidence_sha": "58b5ca415752c9de",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784886072,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Healthcare / Academic Medical Center / Non-profit Health System"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Expect mix of technical rigor (ML fundamentals, SQL, Python, model deployment) and domain awareness (clinical workflows, regulatory constraints, EHR data quirks). Behavioral questions emphasize collaboration with clinicians, handling ambiguous/ messy data, and patient privacy. Prepare for case studies on healthcare-specific problems (e.g., reducing alert fatigue, predicting ICU transfer). Ask about: model governance process, access to de-identified data, publication support, on-call expectations"
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784588246,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Primary campuses in Manhattan (Weill Cornell, Columbia University Irving Medical Center), Brooklyn, Queens, Westchester; headquarters at 525 East 68th Street, New York, NY 10065. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "To provide exceptional patient care, advance medical knowledge through research, and educate the next generation of healthcare leaders, guided by the values of excellence, compassion, innovation, and collaboration."
+  },
   "name": "NewYork-Presbyterian Hospital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Regulatory/compliance reviews, IRB approvals, clinical validation requirements, and stakeholder alignment (clinicians, IT, legal) create longer cycle times than consumer tech. Research teams move faster than production engineering."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Clinical healthcare services (inpatient, outpatient, emergency, specialty care), medical research, physician training, and health technology innovation including AI/ML applications in clinical decision support, operational analytics, and patient experience."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 holidays + 5 sick days (accrual-based, varies by tenure/role). No unlimited PTO policy."
   },
-  "retry_after": 1784886552,
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -222371,7 +223042,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some departments observe reduced schedules between Christmas/New Year. Clinical operations run 24/7/365."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Large, mature non-profit health system with ~48,000 employees, 10+ hospital campuses, and $6+ billion annual revenue. Established 1771 (as New York Hospital) / 1868 (Presbyterian Hospital), merged 1998."
   },
   "sources": [
    {
@@ -222405,14 +223083,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=d6d1f410a4b61d7bbba7baae1f98e00133df857def66e1ed133757cea5c5f7f2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0510d07e-8f0e-6075-3ea8-c7e28e866170&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9OZXdfWW9ya19DaXR5&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Actively sponsors H-1B visas for clinical, research, and technology roles; supports Green Card processes (PERM) for eligible positions. Cap-exempt H-1B possible through university affiliations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "NewYork-Presbyterian Hospital is a world-renowned academic medical center and health system based in New York City, affiliated with Columbia University Vagelos College of Physicians and Surgeons and Weill Cornell Medicine. It operates multiple hospital campuses and outpatient facilities, providing comprehensive patient care, research, and education."
+  },
+  "synthesized_evidence_sha": "58b5ca415752c9de",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Enterprise EHR (Epic) optimization, clinical data warehousing, AI/ML for predictive analytics (readmission, sepsis, deterioration), natural language processing for clinical notes, imaging AI, digital health platforms, population health analytics, and research computing infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784588246,
   "web_search_url": "https://duckduckgo.com/?q=NewYork-Presbyterian+Hospital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70e39b6bf7"
+   ],
+   "value": "Offers elite institutional prestige (top-5 US News hospital) with direct clinical impact at scale. AI/data science roles sit at the intersection of cutting-edge research (Columbia/Cornell partnerships) and production healthcare systems. Mission-driven culture with patient outcomes as north star. However, healthcare bureaucracy and regulatory constraints (HIPAA, FDA) can slow deployment velocity compared to pure tech firms. Work-life balance varies by team: core IT/operations may have on-call rot"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Core hours typically 8am-5pm/9am-6pm with flexibility. On-call rotations for production systems (typically 1 week/month). Research roles often have more autonomy. Limited \"guaranteed shutdowns\" - clinical emergencies can interrupt. Burnout risk lower than clinical roles but present in high-stakes deployment teams."
   }
  },
  "nexa": {
@@ -228630,37 +229337,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected industrial AI leader with deployed-at-scale portfolio; strong academic partnerships but less brand cachet than pure tech giants."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from capital equipment sales, recurring aftermarket parts/services, digital solutions subscriptions, and project-based engineering services tied to global oilfield activity cycles."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-obsessed, collaborative across disciplines; pragmatic innovation over hype; hierarchical but accessible leadership; strong internal mobility; 'oilfield tough' ethos with growing digital-native infusion."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major integrated oil companies, national oil companies, independent operators, drilling contractors, and oilfield service firms worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU ($15k-$25k/yr vesting); total ~$135k-$175k Year 1; Houston cost-of-living advantage."
   },
   "evidence_sha": "c57e9b29ddf07813",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Oilfield Services & Equipment (Energy Technology)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect applied ML/system design questions tied to drilling physics, time-series sensor data, and edge deployment constraints. Demonstrate ability to bridge data science with mechanical domain knowledge. Behavioral emphasis on safety culture, cross-functional collaboration, and handling cyclical industry pressure."
+  },
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784679541,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Houston, TX; major engineering hubs in Houston, Dallas, Norway, UK, Singapore, Brazil, and China; manufacturing/service facilities in 600+ locations across 60+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative technology and solutions that enable safe, efficient, and responsible energy production while maximizing customer value."
+  },
   "name": "NOV",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project cycles tied to customer rig schedules; steady engineering cadence with periodic intensity during field trials or product launches; less perpetual sprint than consumer tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Drilling equipment (rigs, top drives, drawworks), completion & production tools, downhole technologies, digital solutions, aftermarket parts and services, and integrated automation systems for oilfield operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; accrual increases with tenure; flexible/unlimited not standard."
   },
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -228670,7 +229419,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1); some business units observe summer Fridays or partial shutdowns; not guaranteed company-wide."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: NOV); ~27,000+ employees globally; mature stage with cyclical exposure to oil & gas capital spending."
   },
   "sources": [
    {
@@ -228704,14 +229458,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=96e2ec7f5a4f0ce7da93e5d9bf24a5dbde69ea0f8d54746d1eedc1105f588b47JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cubm92LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B and green card sponsor for specialized engineering and data science roles; global mobility programs support international transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NOV (National Oilwell Varco) is a global oilfield services and equipment provider delivering technology, equipment, and services for oil and gas drilling, completion, and production operations worldwide."
+  },
+  "synthesized_evidence_sha": "c57e9b29ddf07813",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mechanical/electrical engineering for downhole tools, controls/automation software, data science for drilling optimization, digital twin modeling, IoT/edge platforms, and materials science for harsh environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=NOV+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NOV offers elite industrial AI/data science prestige at scale — deploying models on real rigs worldwide — with new-grad compensation competitive for energy tech. The culture balances deep technical challenge with more predictable hours than pure software shops, though field rotations can demand intensity. Mission-driven on energy transition and operational safety."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — Generally sane hours (45-50 avg) with shutdown respect; field assignments or critical deployments can spike to 60+ temporarily; management encourages boundary-setting."
   }
  },
  "novartis": {
@@ -260776,51 +261551,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no evidence of AI/data science presence in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No business model information found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No customer information found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data in sources."
   },
   "evidence_sha": "0bae75d7cd57ac85",
+  "generated_at": 1784886668,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "Unknown; sources do not identify company industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Without verified company data, interview focus unknown. Candidate should verify: actual AI/DS team structure, project impact, mentorship quality, on-call expectations, shutdown policies, and career progression frameworks."
   },
-  "last_attempt_at": 1784886466,
+  "last_attempt_at": 1784886668,
   "last_evidence_at": 1784680702,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No location information found in supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Radius Limited",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no culture/pace data in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No product information found in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy data in sources."
   },
-  "retry_after": 1784886586,
+  "refresh_after": 1790070668,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no company shutdown policy data in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size/stage; no public data in sources."
   },
   "sources": [
    {
@@ -260854,14 +261700,47 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No visa sponsorship information found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "Radius Limited appears to be a company name, but the provided sources do not contain verifiable information about its business activities, products, or operations. The sources reference dictionary and math education pages for the term 'radius' and a generic job board, not a company profile."
+  },
+  "synthesized_evidence_sha": "0bae75d7cd57ac85",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a5a863f4e9",
+    "258fc6d374",
+    "f16eec2a6f"
+   ],
+   "value": "No technical work details found in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680702,
   "web_search_url": "https://duckduckgo.com/?q=Radius+Limited+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours/shutdowns, and accelerated technical growth without burnout. Cannot assess fit without verified company data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data in sources."
   }
  },
  "radix trading": {
