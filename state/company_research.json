@@ -51166,48 +51166,127 @@
  "california department of justice": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Low to medium tech prestige. High prestige as a legal/mission institution, but generally not recognized as an elite AI or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "State government entity funded by taxpayer dollars and legislative budget allocations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Mission-driven and bureaucratic, prioritizing public service and process adherence over disruptive innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "The State of California, its government agencies, and the public."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1a813ab5a8",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $70,000 to $90,000. Public sector compensation generally trails private tech significantly, capping total comp below top-tier market rates."
   },
   "evidence_sha": "342c0faabe2eca04",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872621,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Government Administration and Law Enforcement"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8",
+    "1db9db9c4d"
+   ],
+   "value": "Assess the team's actual technical learning curve and career growth potential versus the reality of slow government bureaucracy. Ask about the exact hours, tech stack modernization pace, and whether the mission-driven aspect compensates for the lack of competitive tech-industry pay."
+  },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784788842,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Various state offices across California, with primary headquarters in Sacramento."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "To uphold the law and ensure the safety, rights, and well-being of all Californians through legal advocacy and law enforcement."
+  },
   "name": "California Department of Justice",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Slower-paced and bureaucratic, characteristic of state government operations rather than an agile, high-velocity tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Legal representation, civil rights enforcement, criminal prosecution, public safety oversight, and consumer protection services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Robust government leave policies, typically yielding 15-25+ days of annual leave combined with state holidays."
   },
+  "refresh_after": 1790056621,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Likely observes standard state holidays and occasional government furlough days, rather than tech-company style forced shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Large state government agency with thousands of-badge sworn officers and civilian staff."
   },
   "sources": [
    {
@@ -51251,14 +51330,46 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Unlikely to sponsor work visas for new grads, as public sector roles typically require U.S. citizenship or permanent residency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "The California Department of Justice (CA DOJ) is the state's chief legal office, representing California in legal matters and overseeing law enforcement. As a government entity, it is funded by taxpayers rather than operating for profit."
+  },
+  "synthesized_evidence_sha": "342c0faabe2eca04",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Public sector software engineering, IT systems management, and data science supporting legal and law enforcement operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788842,
   "web_search_url": "https://duckduckgo.com/?q=California+Department+of+Justice+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1a813ab5a8",
+    "1db9db9c4d"
+   ],
+   "value": "The CA DOJ offers strong mission-driven work and public sector work-life balance, but it fundamentally conflicts with your desire for a fast-paced, innovative tech culture and top-tier new-grad pay. As a government agency, expect bureaucratic processes and traditional tech stacks rather than elite, AI-driven innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1a813ab5a8"
+   ],
+   "value": "Estimated: Highly respectful of work-life balance due to strict government labor rules, sane hours, and minimal burnout compared to the tech industry."
   }
  },
  "california state treasurer s office": {
@@ -70480,37 +70591,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected specialist shop with proprietary data and platform; not a household AI name but highly regarded in intel/OSINT and risk-tech circles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-based consulting engagements (project and retainer), managed security services, and subscription access to proprietary risk intelligence platforms like RiskMap and Analyst. Employee-owned structure aligns long-term advisory quality over short-term sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collegial, mission-driven; 'quiet professionals' archetype. Low ego, high autonomy, strong peer mentorship. Diversity of background (ex-diplomats, intel officers, engineers)."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Multinational corporations, financial institutions, energy companies, governments, NGOs, and law firms operating in high-risk or emerging markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £45k–£55k base (UK) / $85k–$105k base (US) + modest bonus (5–10%) + benefits; equity not offered (private, employee-owned via internal share scheme after tenure)."
   },
   "evidence_sha": "75f4b26efdd34765",
+  "generated_at": 1784872621,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Risk consulting / Geopolitical risk intelligence / Professional services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case-style problem solving with messy, real-world data (e.g., event extraction from noisy news feeds), production-grade ML engineering questions (model monitoring, drift, latency), and deep curiosity about geopolitical risk domains. Demonstrate ability to translate ambiguous intelligence questions into measurable model tasks. Culture fit: intellectual humility, client-facing communication, and comfort with uncertainty."
+  },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784675043,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in London; major hubs in Washington DC, New York, Singapore, Dubai, Sydney, and 30+ other offices worldwide. Hybrid work policy typical; some roles offer remote flexibility."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help clients take risks with confidence by providing independent, expert insight and practical support to manage political, security, and integrity challenges worldwide."
+  },
   "name": "Control Risks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — project-driven with client deadlines, but employee-owned culture discourages heroic all-nighters; crisis response spikes are real but episodic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Political risk analysis, security consulting, crisis management, integrity due diligence, cyber threat intelligence, travel risk management, and the RiskMap platform for real-time risk monitoring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–28 days annual leave + public holidays (UK baseline); US offices ~15–20 days + 10 holidays. No unlimited PTO policy."
   },
+  "refresh_after": 1790056621,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70520,7 +70673,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown periods; some offices observe quiet periods between Christmas and New Year informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established global firm with ~3,000 employees across 36+ offices; private, employee-owned, profitable, and not venture-backed."
   },
   "sources": [
    {
@@ -70554,14 +70712,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ecc897910187d2c23c670e7cc86a6a82cd870dbe658ac900807877653584fa2dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29udHJvbF8odmlkZW9fZ2FtZSk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established sponsor of skilled-worker visas (UK, US, Singapore, Australia, etc.) for experienced consultants and technical specialists. New-grad sponsorship possible but competitive; varies by office and business need."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Control Risks is a global specialist risk consultancy that helps organizations navigate political, security, and integrity risks in complex environments. It operates as an employee-owned private company, generating revenue through consulting fees, managed services, and technology-enabled risk intelligence subscriptions."
+  },
+  "synthesized_evidence_sha": "75f4b26efdd34765",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to risk intelligence: NLP for open-source threat detection, geospatial analytics, predictive modeling for political instability, and platform engineering for the RiskMap SaaS product. Tech stack includes Python, AWS, Kubernetes, React, and modern data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675043,
   "web_search_url": "https://duckduckgo.com/?q=Control+Risks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Control Risks offers a rare blend of elite prestige in geopolitical risk and a growing, well-funded AI/data science function building proprietary intelligence products. The employee-owned model incentivizes sustainable pace over burnout, and the mission—helping clients operate safely in volatile regions—provides tangible purpose. For a new grad, it means high-impact work on real-world data problems, strong mentorship from domain experts, and compensation competitive with top-tier consultancies, "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — consulting baseline hours with protected weekends outside active crises; guaranteed shutdowns not formal policy but respected by leadership."
   }
  },
  "cooper companies": {
@@ -85077,37 +85256,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Corporate Retail Tech). AI roles here are treated as operational support rather than elite product development. Data scientists work on incremental retail optimizations with little external visibility and do not command the high prestige or new-grad pay of FAANG or specialized AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "938b70c523"
+   ],
+   "value": "High-volume, low-margin retail model. Stores operate under banners like Dollar Tree and Family Dollar. Revenue is generated by sourcing deeply discounted merchandise globally and selling it at fixed price points (e.g., $1.25) heavily relying on impulse buying and foot traffic."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "938b70c523"
+   ],
+   "value": "Traditional, bottom-line focused corporate retail. The environment prioritizes cost control, margin protection, and supply chain efficiency over technical learning, prestige, or personal time. Innovation is incremental rather than disruptive."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "Value-conscious consumers, budget shoppers, and lower-to-middle income households looking for inexpensive everyday items and seasonal goods."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000 base salary per year. Traditional mid-to-large retail tech roles typically pay lower than elite tech companies, reflecting the cost-center nature of internal IT."
   },
   "evidence_sha": "bbefff4cf14ee745",
+  "generated_at": 1784872621,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "Retail (Discount and Variety Stores)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare to be evaluated on optimizing legacy systems rather than cutting-edge AI research. You should grill the interviewers about the speed of their data pipelines, the degree of technical debt in their supply chain analytics, whether sane hours are actually respected or just an unspoken expectation, and where they place on the scale of tech-driven versus traditional retail leadership."
   },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784676694,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1",
+    "938b70c523"
+   ],
+   "value": "Headquartered in Chesapeake, Virginia. Corporate and tech/data offices are primarily in Virginia, with massive distribution networks and thousands of retail stores spread across North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "To provide customers with compelling value and a fun, thrilling shopping experience by offering a wide assortment of quality products at fixed low prices."
+  },
   "name": "Dollar Tree Stores",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. The culture is traditionally corporate retail, meaning hardware and infrastructure budgets are heavily protected, cycles are quarterly, and tech innovation is slow and highly commoditized rather than fast and innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "Consumable goods, food and snacks, health and beauty care, household cleaning supplies, basic electronics, toys, gifts, stationery, seasonal decorations, and party goods."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO. Retail operations rarely offer extensive unlimited PTO, and taking time off during peak retail seasons (holidays) is generally restricted."
   },
+  "refresh_after": 1790056621,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85117,7 +85353,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None. As a massive retailer, store operations, logistics, and supply chains run 24/7/365. Corporate tech does not have guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "Large-cap public enterprise. It is a Fortune 500 company with tens of thousands of retail stores, multiple massive distribution centers, and a global supply chain network."
   },
   "sources": [
    {
@@ -85151,14 +85394,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=532115792cb07bd43ffe4a32c0fa1d00f57b6ee5a0dc37cb193307422b31bee4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVW5pdGVkX3N0YXRlc19kb2xsYXI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "While occasional senior sponsorship may occur for highly specialized supply chain roles, new grad tech sponsorship is generally rare or unavailable for non-US citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a7e821cac1"
+   ],
+   "value": "Dollar Tree is a large retail corporation that operates a chain of discount variety stores across the United States and Canada. The company makes money by purchasing goods at extreme bulk discounts and reselling them to consumers at fixed, low price points (typically $1.25 or less)."
+  },
+  "synthesized_evidence_sha": "bbefff4cf14ee745",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "938b70c523"
+   ],
+   "value": "AI and data science efforts typically center on retail logistics , demand forecasting, price elasticity modeling, supply chain optimization, inventory routing, and merchandising analytics. Tech stack includes large-scale data processing, relational databases, cloud infrastructure, and predictive ML."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676694,
   "web_search_url": "https://duckduckgo.com/?q=Dollar+Tree+Stores+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This opportunity conflicts directly with your top priorities. As a traditional brick-and-mortar retailer, Dollar Tree lacks the elite prestige and fast-paced, innovative tech culture of top-tier AI companies while operating under notoriously slow corporate bureaucracy. AI roles here are strictly cost-center functions designed to optimize supply chains and retail margins, completely detached from mission-driven product innovation, and have no mandatory shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to poor. Sane hours are not guaranteed in retail tech, as system outages during peak seasons or supply chain crunches require long hours. Guaranteed shutdowns are non-existent given the nature of retail operations."
   }
  },
  "dominion enterprises": {
@@ -129598,7 +129868,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129616,7 +129886,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784872483,
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784676249,
   "name": "HUB International",
   "pace_of_work": {
@@ -129629,7 +129899,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784872603,
+  "retry_after": 1784872861,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158142,11 +158412,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158158,6 +158430,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784677994,
   "name": "LG Electronics",
   "pace_of_work": {
@@ -158170,6 +158443,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872741,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158213,7 +158487,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=beec70861b7974beca45381e16c96d0e2300d53d6b5a2126a45b41bed3625e8dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cubGcuY29tL3VzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677994,
   "web_search_url": "https://duckduckgo.com/?q=LG+Electronics+company+careers+benefits",
@@ -265627,7 +265901,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265645,7 +265919,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784872483,
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784676254,
   "name": "Teledyne",
   "pace_of_work": {
@@ -265658,7 +265932,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784872603,
+  "retry_after": 1784872861,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270570,37 +270844,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. Government IT roles are primarily focused on enterprise software like Salesforce rather than cutting-edge AI or data science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "Funded by state and federal government funds to provide public labor and workforce services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Bureaucratic, stable, and public-service oriented."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "Massachusetts residents, job seekers, and local employers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000. State government salaries are standardized and significantly lower than top-tier private tech sector compensation."
   },
   "evidence_sha": "4e7624ab250cec0b",
+  "generated_at": 1784872621,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "Government Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should focus on Salesforce development fundamentals (Apex, LWC, SOQL) rather than cutting-edge AI or data science challenges. Highlight your ability to build stable enterprise applications in a structured government environment, keeping in mind that this conflicts with a preference for fast, high-paying, tech-forward culture."
   },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784725193,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "Massachusetts, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "To foster a competitive labor market and support workforce development across Massachusetts."
+  },
   "name": "The Massachusetts Executive Office of Labor and Workforce Development (EOLWD)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and bureaucratic, typical of state government agencies, which heavily contrasts with a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9212f8e6c0"
+   ],
+   "value": "Public sector services and enterprise software applications supporting labor management, unemployment insurance, and workforce development."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days, typical for Massachusetts state employees."
   },
+  "refresh_after": 1790056621,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270610,7 +270938,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed widespread corporate shutdowns, though state holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a885852d5"
+   ],
+   "value": "Large state government agency."
   },
   "sources": [
    {
@@ -270664,14 +270999,40 @@
     "url": "https://jobright.ai/jobs/info/6a60867ccf6cf477a056122a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor work visas for international candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1a885852d5",
+    "1db9db9c4d"
+   ],
+   "value": "The Massachusetts Executive Office of Labor and Workforce Development (EOLWD) is a state government agency dedicated to managing labor laws, workforce training, and unemployment insurance. Operating as a public sector entity, it does not generate revenue but is funded through state budgets and federal grants to deliver public services that support the state's labor economy."
+  },
+  "synthesized_evidence_sha": "4e7624ab250cec0b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9212f8e6c0"
+   ],
+   "value": "Enterprise application development across all phases of a Salesforce-based enterprise application, including Apex programming, Lightning Web Components (LWC), and SOQL."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784725193,
   "web_search_url": "https://duckduckgo.com/?q=The+Massachusetts+Executive+Office+of+Labor+and+Workforce+Development+%28EOLWD%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state government entity, EOLWD offers strong work-life balance and mission-driven work, but it will not satisfy a candidate seeking top-tier tech prestige, high new-grad pay, or a fast-paced, innovative AI culture. The bureaucratic nature of government tech aligns poorly with the desire for rapid career acceleration and elite learning environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Public sector roles typically feature sane hours, strong benefits, and a respect for work-life balance, though this comes with administrative red tape rather than high technical intensity."
   }
  },
  "the morning star company": {
@@ -291182,48 +291543,125 @@
  "vercel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "High; known for the Vercel AI SDK and generative UI tools, drawing top AI talent from the open-source community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Cloud infrastructure and frontend-as-a-service utilizing a freemium model with paid usage-based scaling for compute, bandwidth, and AI execution, alongside premium enterprise tiers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Developer-centric, open-source, and performance-driven; prioritizes technical excellence and rapid shipping."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Frontend developers, enterprise technology teams, and AI-driven companies looking for scalable deployment infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: $180,000 - $220,000 total compensation (base + equity, excluding benefits)."
   },
   "evidence_sha": "d498b96ca21b6f2d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872621,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Cloud Computing, Developer Tools, Artificial Intelligence"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Candidates should highlight strong fundamentals in advanced web architecture, distributed systems, and AI integration. Emphasize a passion for developer experience and fast execution, aligning with Vercel's mission to accelerate software shipping without burnout."
+  },
+  "last_attempt_at": 1784872621,
   "last_evidence_at": 1784828844,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Globally distributed remote workforce with physical offices in major tech hubs including New York and San Francisco."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "To enable developers to build and ship software quickly by providing the best developer experience."
+  },
   "name": "Vercel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: Extremely fast-paced and highly iterative, aligned with rapid release cycles and developer-focused product updates."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Vercel, Next.js, Vercel AI SDK, v0"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually."
   },
+  "refresh_after": 1790056621,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: No formal mandatory company-wide shutdowns, but flexible remote policies allow for ample personal time."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0995a427e"
+   ],
+   "value": "Late-stage growth company; valuation reported at approximately $3.25 billion as of its Series E funding round in 2024."
   },
   "sources": [
    {
@@ -291287,14 +291725,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=2ac43cff4cabd61f356b5c23fd75a0fe629138545d98f6dc89ae84cb6e62908bJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly92ZXJjZWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: Vercel is a remote-first global company that generally sponsors and relocates top engineering talent for core roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Vercel is a cloud platform that provides developers with the infrastructure and tools to build, preview, and deploy modern web applications quickly. It makes money through usage-based pricing and enterprise subscriptions for its hosting, computing, and developer optimization services."
+  },
+  "synthesized_evidence_sha": "d498b96ca21b6f2d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Full-stack web infrastructure development, database engineering, edge compute optimization, and AI integration via the Vercel AI SDK and generative UI tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784828844,
   "web_search_url": "https://duckduckgo.com/?q=Vercel+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Vercel operates at the intersection of elite web infrastructure and cutting-edge AI tooling. It provides a fast-paced, innovative tech culture that ensures rapid learning for new graduates, with high new-grad pay that competes with top-tier tech firms while maintaining a remote-first flexibility that supports work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e7d85f13b6"
+   ],
+   "value": "Estimated: Good; remote-first flexibility and modern benefits support sane hours, though the fast-paced environment requires strong time management."
   }
  },
  "verition fund management llc": {
