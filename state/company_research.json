@@ -30303,99 +30303,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Elite tier-2 technology brand – viewed as comparable to top mid-cap tech companies. It is not FAANG, but holds high prestige among mission-driven technologists and is recognized for solving extremely hard, real-world AI and computer vision problems."
+   "value": "High – dedicated AI research team publishing at CVPR/ICCV, production ML for video analytics, redaction, and transcription; recognized in GovTech but not a primary AI lab like FAIR/DeepMind."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "A hybrid hardware-plus-SaaS model. Hardware sales (cameras, tasers) provide upfront revenue, while the Axon Evidence and Axon Records cloud platforms generate recurring subscription revenue with high retention from multi-year contracts with government agencies."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware sales (TASER devices, cameras) combined with high-margin recurring SaaS subscriptions for evidence management, records, and AI analytics; also offers training and certification programs."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "4c87a51bfd"
+    "56374d1123",
+    "72f40f3e06"
    ],
-   "value": "Mission-driven, collegial, and candid. The company stresses 'we work better together' and prizes ethical deliberation. Not a boiler-room sales culture; the engineering ethos is methodical and purpose-oriented, built around protecting life."
+   "value": "Mission-driven, transparent, and collaborative; values candor and care, diverse perspectives, and teamwork ('we work better together')."
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "U.S. federal, state, and local law enforcement agencies form the core. The company also serves international law enforcement, fire and EMS departments, correctional facilities, and enterprise security teams. Its products are used by first responders and justice-system personnel."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are law enforcement agencies (local, state, federal), corrections, fire/EMS, and enterprise security teams in the US and internationally."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $120,000 - $150,000 starting salary, equity, and annual performance bonus. Total compensation may range from $140,000 to $180,000 in the first year for a new graduate 'Software Engineer I' in a product-oriented, AI-adjacent role in Scottsdale."
+   "value": "Estimated: $120k-$145k base + equity (RSUs) + bonus; total compensation ~$160k-$200k for software/AI roles, competitive with top-tier public tech companies."
   },
   "evidence_sha": "aeb258da9af920b6",
-  "generated_at": 1784681359,
+  "generated_at": 1784869535,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "Public Safety Technology / Cloud Software"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public safety technology / GovTech (law enforcement hardware & SaaS)"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "The interview process will probe for strong CS fundamentals, clean code in languages like Java or Python, and system design thinking tailored to a fast, iterative culture. Expect questions that gauge mission alignment and ability to deliver in a fast-paced but non-toxic environment; behavioral rounds will likely test how candidates handle ambiguity and care for end users in high-stakes contexts."
+   "value": "Expect deep technical screens on ML/CV, distributed systems, and IoT firmware; behavioral questions emphasizing candor, customer empathy, and collaboration; prepare for system design around evidence management scale and real-time constraints."
   },
-  "last_attempt_at": 1784681359,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784732392,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1"
-   ],
-   "value": "Headquarters in Scottsdale, Arizona, USA. Additional major offices in the style of Seattle, Washington and Ho Chi Minh, Vietnam, with remote and hybrid flexibility for certain roles. The Software Engineer I posting is tied to the US."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Scottsdale, AZ; major engineering hubs in Seattle, WA; Vancouver, Canada; and remote-friendly roles across the US."
   },
   "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "Axon's stated mission is to 'protect life' and to reduce gun-related deaths between police and the public by making a bullet obsolete. It aims to capture truth through technology, elevating accountability and de-escalation."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect life and make the bullet obsolete by providing less-lethal weapons and transparent, accountable public safety technology."
   },
   "name": "Axon",
   "pace_of_work": {
    "confidence": "high",
    "source_ids": [
-    "4c87a51bfd"
+    "56374d1123",
+    "72f40f3e06"
    ],
-   "value": "Fast-paced and challenging (per the company), driven by critical customer needs rather than internal politics. The official Greenhouse states that-day is 'fast-paced and meaningful,' but also that teams connect with 'candor and care,' suggesting urgency without toxicity."
+   "value": "Fast-paced, challenging, and meaningful; job postings explicitly describe the environment as fast-paced."
   },
   "products": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "Products integrate a hardware and software ecosystem: Axon Body cameras, Axon Fleet in-car cameras, TASER 7 and TASER 10 conducted electrical weapons, and Axon Records, a cloud-based records management system. The unifying platform is Axon Evidence, which handles digital evidence storage, management, analysis, and sharing."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TASER conducted energy weapons, Axon Body cameras, Axon Fleet in-car video, Axon Evidence (cloud evidence management), Axon Records (RMS), Axon Respond (real-time operations), and AI-powered analytics tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Axon provides at least 15 days PTO plus standard federal holidays, as befits a public enterprise-technology company competing for AI talent. Exact vacation details are not public but the company is competitive with other public SaaS firms."
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited not indicated."
   },
-  "refresh_after": 1789865359,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -30405,14 +30391,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No documented recognizable company-wide shutdowns in research, though the organization’s culture of work-life balance may include periodic recharges around major U.S. holidays. No public source confirms a formal paid unwind."
+   "value": "Estimated: No company-wide guaranteed shutdown periods publicly documented; some teams may observe holiday breaks."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1"
-   ],
-   "value": "Late-stage public company listed on Nasdaq (ticker: AXON). Headcount is listed as 1,001-5,000 employees. It is a fast-growing technology firm mixing mature public-company infrastructure with a high-growth culture."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: AXON), ~2,500+ employees, mature growth stage with consistent profitability and expanding product portfolio."
   },
   "sources": [
    {
@@ -30477,41 +30461,37 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "7f274dcbc1"
-   ],
-   "value": "Axon has a track record of offering H-1B sponsorships according to aggregator data disclosure, though this does not guarantee sponsorship for every individual role a candidate may apply to."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and supports green card processes for technical roles; history of cap-exempt and cap-subject filings for software, AI, and hardware engineering."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "7f274dcbc1",
-    "4c87a51bfd"
-   ],
-   "value": "Axon is a mission-driven public safety technology company that makes body cameras, conducted electrical weapons (like TASERs), and a cloud-based digital evidence management platform. The company generates revenue primarily by selling these hardware devices to law enforcement and government agencies, paired with recurring high-margin software subscriptions for its evidence management and productivity suite."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axon is a public safety technology company that develops conducted energy devices (TASER), body cameras, in-car video, and cloud-based evidence management software. It generates revenue through hardware sales and recurring software-as-a-service subscriptions to law enforcement and public safety agencies worldwide."
   },
-  "synthesized_evidence_sha": "04d8af8d5c716726",
+  "synthesized_evidence_sha": "aeb258da9af920b6",
   "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "4c87a51bfd"
-   ],
-   "value": "Engineers work across big-data platforms, AI, video analysis, real-time streaming, device firmware, and cloud-native full-stack applications. Required technical skills include Java, C#, Python, TypeScript, and API design. Work involves high-stakes, real-time problem spaces that push rapid iteration and learning."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Computer vision, machine learning for video redaction and analytics, large-scale cloud infrastructure (AWS/Azure), IoT device firmware, real-time streaming, mobile apps, and high-availability backend services."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=Axon+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "It fits a top-tier AI/data-science candidate who wants direct civic impact without the death-march pace: engineers own real-time, life-saving tech with a mission-driven culture. Axon famously promotes a sane-hours and 'sustainable pace' culture, with explicit leadership support for work-life balance, making it one of the rare high-prestige tech companies where burnout is actively designed against."
+   "confidence": "medium",
+   "source_ids": [
+    "56374d1123",
+    "72f40f3e06"
+   ],
+   "value": "Axon offers elite AI/computer vision work on mission-critical public safety products with top-tier new-grad compensation. Its fast-paced, innovative culture (per job postings) balances meaningful impact with a stated emphasis on candor and care, aligning with a desire for technical growth without toxic burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Excellent relative to tech peers. No source details guarantee mandatory 'shutdowns,' but a mission-driven public company focused on first responders typically respects time off to protect performance. Aggregated employee reports describe fostered 'work-life balance,' in many teams, with flexible policies."
+   "value": "Estimated: Moderate to good – company promotes candor and care, but public safety mission can drive occasional urgency; no public guaranteed shutdown policy."
   }
  },
  "axos bank": {
@@ -41414,119 +41394,136 @@
  },
  "booz allen hamilton": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "b485f95c37"
+    "2b40a81e95"
    ],
-   "value": "High Tier: Not a FAANG pure AI lab, but holds significant prestige within the defense and intelligence community for deploying AI at national-scale missions."
+   "value": "Estimated: Upper-echelon federal consulting prestige, but considered tier-2 for elite 'fast-paced' tech prestige compared to top quantitative finance or FAANG."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Primarily operates on long-term, multi-year government services contracts providing billed staff augmentation and complex project-based solutions."
+   "value": "B2B and B2G consulting services. Generates revenue through billable hours and long-term project-based contracts, supplying specialized engineering and tech talent to client sites."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "5ee18b5465"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "A 'mission-driven think tank' atmosphere emphasizing collaboration, professional development, and stamina over speed. Lean toward formal but inclusive, enhanced by internal upskilling and ethics."
+   "value": "Estimated: Mission-driven, formal, and highly matrixed. It leans toward process-oriented bureaucracy rather than disruptive innovation, making it stable but potentially slower-paced."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Primarily US federal government agencies, including defense, intelligence, and civil sectors; also serves Fortune 500 companies and not-for-profit organizations."
+   "value": "Primarily the United States federal government (defense, intelligence, and civil sectors), as well as commercial and international institutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $75,000 - $95,000 base salary for entry-level software engineers in the Washington, DC metro area, officially accompanied by robust 401(k) matching rather than equity."
+   "source_ids": [
+    "2b40a81e95",
+    "b485f95c37"
+   ],
+   "value": "Estimated: Competitive base salary for new grads, roughly $85,000 - $105,000 for a Junior Software or Systems Engineer, heavily structured by level."
   },
   "evidence_sha": "4f56719b22180b42",
-  "generated_at": 1784681538,
+  "generated_at": 1784869535,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Government Technology Services / National Security Consulting"
+   "value": "Management and IT Consulting"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "b485f95c37",
-    "837ae18089"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Expect a hybrid assessment focusing on systems-thinking, model-based systems engineering concepts, and agile iterative methodology rather than purely LeetCode algorithmic puzzles. Cultural fit questions will probe mission alignment and ability to navigate cleared, collaborative environments."
+   "value": "Probe deeply into the specific team's work-life balance, expected hours, and whether 'shutdowns' are respected. Ask technical interviewers about the actual implementation speed versus government bureaucracy to ensure it matches your need for fast learning without toxic burnout."
   },
-  "last_attempt_at": 1784681538,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784724909,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95"
    ],
-   "value": "Headquartered in McLean, Virginia, with major tech hubs in the Washington DC metro area, Colorado, Texas, and other proximity sites to government installations."
+   "value": "Headquartered in the United States with offices globally. Roles are frequently tied to client sites."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "To empower people to change the world by combining technology, ingenuity, and partnership to solve the most complex client challenges."
+   "value": "To empower people to change the world by delivering innovative solutions to complex problems."
   },
   "name": "Booz Allen Hamilton",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Steady 'sustainable sprint' pace. Driven by federal contract deliverables, which resists the chaotic startup speed, but requires proactive technical advancement to avoid stagnation."
+   "source_ids": [
+    "2b40a81e95",
+    "b485f95c37"
+   ],
+   "value": "Estimated: Varies strictly by federal contract. Teams follow agile methodologies, but overall pace can be constrained by government client bureaucracy and slower procurement cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "1f88b766fe",
+    "2b40a81e95",
     "b485f95c37"
    ],
-   "value": "Provides technical consulting services including AI and machine learning, cybersecurity, data science, cloud computing, systems engineering, and digital transformation."
+   "value": "Consulting services, custom software engineering (e.g., C++ development), and systems engineering solutions (including model-based systems engineering and agile methodology execution)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Approximately 21-28 days of Paid Time Off annually, in flux for new grads with standard federal holidays observed."
+   "source_ids": [
+    "2b40a81e95"
+   ],
+   "value": "Estimated: Generous flexible time off policy typically starting around 20 PTO days per year for new professionals, plus federal holidays."
   },
-  "refresh_after": 1789865538,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "2b40a81e95",
+    "b485f95c37"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "5ee18b5465"
+    "2b40a81e95"
    ],
-   "value": "Estimated: Guaranteed winter holiday shutdowns and periodic 'floating' days off triggered by mission timing. Predatory federal holidays always observed."
+   "value": "Estimated: Often observes end-of-year federal holiday shutdowns, giving employees guaranteed time off around Christmas and New Year."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95"
    ],
-   "value": "Large, mature public company with approximately 14,000+ employees; stable but driving internal modernization."
+   "value": "Large-cap publicly traded company (NYSE: BAH), established and highly mature with tens of thousands of employees globally."
   },
   "sources": [
    {
@@ -41591,47 +41588,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Sponsorship is generally not available for roles requiring US security clearances, which is the bulk of new grad technical positions."
+   "value": "As a heavy federal contractor, many roles require US citizenship and security clearance eligibility. Unknown if they provide visa sponsorship for commercial divisions."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1f88b766fe"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Booz Allen Hamilton is a leading management and technology consulting firm that primarily serves US government agencies. It generates revenue by delivering advanced services in AI, cybersecurity, and digital transformation, essentially pairing deep mission knowledge with next-generation technical talent to solve complex federal problems."
+   "value": "Booz Allen Hamilton is a management and technology consulting firm that provides engineering, data science, and cybersecurity solutions to government and commercial clients. The company generates revenue primarily through long-term consulting contracts, charging for the specialized expertise of its staff in solving complex organizational and technical challenges."
   },
-  "synthesized_evidence_sha": "4fba9734afbf4193",
+  "synthesized_evidence_sha": "4f56719b22180b42",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "b485f95c37",
-    "1db9db9c4d"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "Candidates work on mission-critical AI, scalable cloud architectures, and agile software delivery for national security, often requiring US security clearances. Roles involve model-based systems engineering and building data pipelines rather than generic IT support."
+   "value": "C++ object-oriented programming, data types and structures, memory management, systems engineering, requirements definition, and system documentation."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673569,
   "web_search_url": "https://duckduckgo.com/?q=Booz+Allen+Hamilton+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "1f88b766fe",
-    "b485f95c37",
-    "5ee18b5465"
+    "2b40a81e95",
+    "b485f95c37"
    ],
-   "value": "It offers a rare intersection of elite federal prestige and fast-emerging AI consulting, enabling high-impact mission work with predictable boundaries. As a government contractor, it enforces billable-hour discipline that supports elusive shutdowns and argues against the 24/7 sprint culture found at private Silicon Valley tech firms."
+   "value": "Booz Allen provides high prestige and strong technical learning in AI/Data Science due to its massive government contracts, but candidates must verify if the work pace and bureaucracy align with their desire for fast, innovative tech culture, or if the mission-driven work compensates for it."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "5ee18b5465"
+    "2b40a81e95"
    ],
-   "value": "Estimated: Very good for the tech sector. Government contract labor hour norms enforce a strict ceiling on overwork, creating a culture that values output during standard hours rather than heroics."
+   "value": "Estimated: Good. The firm historically emphasizes work-life balance and sane hours, though out-of-cycle federal deadlines can occasionally cause spikes in workload."
   }
  },
  "bosch group": {
@@ -97748,33 +97746,33 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Respected in applied AI for fraud, risk, and personalization at massive scale; publishes at KDD/SIGIR but not a primary AI research lab like FAIR/DeepMind."
+   "value": "Industry-leading applied AI in payments/fraud/risk; not an elite AI research destination. Prestige stems from data scale and production impact, not paper publications or cutting-edge model innovation."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "B2B fintech: recurring revenue from SaaS/licensing, transaction-volume-based processing fees, and professional services; high-margin software layered on massive payment volumes."
+   "value": "Recurring revenue from multi-year managed services and SaaS contracts, transaction-based fees from payment processing, and professional services. High retention due to mission-critical infrastructure."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Corporate-engineering hybrid: structured, process-oriented, compliance-aware; collaborative but hierarchical; strong DEI and upskilling programs; less 'move fast' more 'move safely'."
+   "value": "Professional, compliance-conscious, collaborative but hierarchical. Strong emphasis on reliability and risk management. Transformation initiatives (cloud, AI) create pockets of faster movement, but overall culture is steady, not break-things fast."
   },
   "customers": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Banks, credit unions, payment processors, asset managers, insurers, merchants, and corporations worldwide; serves over 20,000 clients in 130+ countries."
+   "value": "Banks, credit unions, merchants, corporations, institutional asset managers, and government agencies worldwide."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $115k-$135k base + 10-15% target bonus + $20k-$40k RSUs (4-yr) = ~$150k-$185k Year 1 TC; higher in NYC/SF hubs."
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU (4-yr vest ~$30k-$50k total). Total comp ~$120k-$150k. Varies by location and role (AI/DS may skew higher)."
   },
   "evidence_sha": "04f3424668c1e6cc",
-  "generated_at": 1784688201,
+  "generated_at": 1784869535,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -97783,43 +97781,44 @@
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Financial Technology (FinTech) / Payment Processing / Banking Software"
+   "value": "Technology / technology (estimated)"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect system-design heavy loops (high-throughput, low-latency, idempotency), SQL/data modeling, fraud/ML case studies, and behavioral questions on stakeholder management in regulated environments. LeetCode medium/hard common; domain knowledge (payments, ISO 8583, ACID) a differentiator."
+   "value": "Expect domain-heavy questions on payment systems, transaction processing, data integrity, and regulatory compliance. Prepare for system design around high-throughput, low-latency financial workflows. Behavioral focus on stakeholder management, risk awareness, and delivering within regulated environments. AI/ML roles will test applied modeling for fraud, credit risk, or personalization — not novel research."
   },
-  "last_attempt_at": 1784688201,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784768504,
   "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Headquartered in Jacksonville, FL; major hubs in London, New York, Pune, Manila, Belfast, Chicago, and remote-friendly roles across US/UK/India."
+   "value": "Headquartered in Jacksonville, FL; major hubs in New York, London, Bangalore, Manila, and across US/Canada/Europe/APAC. Hybrid and remote options vary by role."
   },
   "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "To advance the way the world pays, banks, and invests by delivering innovative financial technology that enables commerce and financial inclusion."
+   "value": "To advance the way the world pays, banks, and invests by delivering innovative financial technology that powers commerce and financial inclusion."
   },
   "name": "Fidelity National Information Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate to slow — regulated releases, long client onboarding cycles, and change-management processes; sprint cadence exists but production deployments are gated."
+   "value": "Moderate, process-oriented enterprise pace. Release cycles measured in quarters; heavy governance, compliance, and change-management gates. Innovation exists but within guardrails."
   },
   "products": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Core banking platforms (e.g., Profile, Horizon), payment processing (Worldpay, NYCE), digital banking, lending, wealth management, capital markets, anti-fraud, and risk/compliance solutions."
+   "value": "Core banking platforms (Profile, Horizon), payment processing (Worldpay), digital banking, lending, wealth management, capital markets, risk & compliance, and data analytics solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure; unlimited not offered."
+   "value": "Estimated: 15-20 days PTO + 10 US holidays + 2-3 floating days; accrues with tenure. No unlimited PTO policy."
   },
-  "refresh_after": 1789872201,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97829,12 +97828,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; some BU-level winter breaks (Dec 25-Jan 1) but not universal."
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced ops during year-end holidays, but not a formal policy."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Large public company (NYSE: FIS), ~55,000 employees, $14B+ annual revenue (2023), Fortune 500; mature, post-Worldpay integration phase."
+   "value": "Large-cap public company (NYSE: FIS); ~55,000 employees globally; Fortune 500; mature stage with ongoing transformation after Worldpay spinoff."
   },
   "sources": [
    {
@@ -97879,21 +97878,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Active H-1B sponsor (consistently top 50); supports GC processing (PERM) for experienced hires; new-grad sponsorship common in tech hubs."
+   "confidence": "high",
+   "source_ids": [
+    "c950782268"
+   ],
+   "value": "Unable to offer visa sponsorship for the posted Mainframe Software Engineer role; candidates must be legally authorized to work in the US without current or future sponsorship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fidelity National Information Services (FIS) is a global financial technology leader providing payments, banking, and investment software and services to financial institutions, merchants, and corporations. It generates revenue primarily through transaction processing fees, recurring software licensing/subscription fees, and professional services."
+   "confidence": "medium",
+   "source_ids": [
+    "c950782268"
+   ],
+   "value": "Fidelity National Information Services (FIS) is a global financial technology leader that provides software, services, and infrastructure to banks, merchants, capital markets firms, and governments. It makes money primarily through recurring revenue from long-term contracts for core banking platforms, payment processing, digital banking, and risk/compliance solutions."
   },
-  "synthesized_evidence_sha": "0ba151e2c5aa7056",
+  "synthesized_evidence_sha": "04f3424668c1e6cc",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large-scale payment processing, real-time transaction systems, cloud migration (AWS/Azure), AI/ML for fraud detection and personalization, API platforms, core banking modernization, data engineering at petabyte scale."
+   "confidence": "medium",
+   "source_ids": [
+    "c950782268"
+   ],
+   "value": "Mainframe modernization, cloud migration (AWS/Azure), payment platform engineering, data engineering, API development, cybersecurity, and applied AI/ML for fraud detection, personalization, and risk modeling."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673659,
@@ -97901,12 +97906,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "FIS offers elite fintech scale (petabyte data, billions of transactions) with new-grad compensation competitive with pure tech firms, but culture leans corporate/process-heavy rather than startup-fast; work-life balance varies by team—core payments teams face on-call pressure, while platform/AI groups report more sustainable pace. Prestige is high in financial services tech, but innovation speed is gated by regulatory and client constraints."
+   "value": "FIS offers massive scale fintech impact and solid new-grad compensation, but its AI/data science prestige tier is solid industry level rather than elite research tier. Culture leans toward stable, process-driven enterprise engineering with decent WLB for a large corp, but not the fast, innovative startup pace or guaranteed shutdowns the candidate prioritizes. Technical learning is strong in payments/banking domain and legacy modernization, but pure AI research opportunities are limited compared "
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3.2/5 — Generally 40-50 hr weeks; on-call rotations in payments/platform teams (1 week/month); some groups enforce 'no-meeting Fridays' and core-hours flexibility."
+   "value": "Estimated: 3.5/5. Generally reasonable hours for enterprise software; on-call rotations for production systems. No guaranteed shutdowns; WLB varies by team and leadership."
   }
  },
  "field ai": {
@@ -177354,123 +177359,129 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Estimated: Mid-tier with industry-specific prestige. While recognized as a technology leader within its cooperative niche, it lacks the elite, broad-market prestige of top-tier tech or AI firms."
+   "value": "Estimated: Tier 2 - NISC is an established, AI-forward technology leader within its industry, offering strong technical opportunities, though it is not a traditional elite tech giant."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "445969d040"
+    "f7d2ff2b01"
    ],
-   "value": "Member-focused cooperative providing technology solutions and services."
+   "value": "Member-owned cooperative generating revenue through the delivery of valued-priced technology solutions, software, and support services to its members."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Collaborative and relationship-driven. The company explicitly stresses the importance of solid relationships among its team members."
+   "value": "Team-oriented, relationship-driven, and member-focused. The cooperative emphasizes shared goals, continuous learning, and innovation to accomplish objectives effectively."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "445969d040"
+    "f7d2ff2b01"
    ],
-   "value": "Members of the cooperative."
+   "value": "Members of the cooperative, specifically utility and broadband organizations seeking technology and software solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "445969d040"
+    "f7d2ff2b01"
    ],
-   "value": "Estimated: $70,000 - $85,000. As a member-focused, value-priced cooperative in the Midwest, base compensation is likely conservative compared to elite tier-1 tech firms, though total compensation is supplemented by strong WLB benefits."
+   "value": "Estimated: $65,000 - $80,000 annually, tailored to the region and offering strong compensation reflective of its industry standing."
   },
   "evidence_sha": "a6605d10101d8751",
-  "generated_at": 1784679636,
+  "generated_at": 1784869535,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "445969d040"
+    "f7d2ff2b01"
    ],
-   "value": "Information Technology and Software Services"
+   "value": "Information Technology Services, Software Development, and Broadband/Utility Technology."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Probe the reality of their 'AI-forward' claims by asking for specific examples of recent AI or data science projects and the tech stack used. Inquire about the pace of innovation versus legacy system maintenance to ensure the role provides the elite technical learning and new-grad pay you are seeking without leading to burnout."
+   "value": "For an AI or data science role, candidates should prepare to showcase their ability to thrive in a fast-paced, innovative team setting. The interview will likely emphasize their passion for the cooperative’s mission, eagerness to learn cutting-edge AI technologies, and how they balance challenging technical workloads with a healthy culture."
   },
-  "last_attempt_at": 1784679636,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784752592,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Not found in research"
+   "value": "Operates multiple office locations and offers remote work opportunities based on specific job postings."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "To deliver technology solutions and services that are Member-focused, quality-driven and valued-priced."
+   "value": "To deliver technology solutions and services that are Member-focused, quality-driven, and value-priced."
   },
   "name": "National Information Solutions Cooperative (NISC)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Estimated: Moderate. The company presents a 'challenging work load' but is deeply rooted in the stable utilities and broadband sectors, likely avoiding the breakneck, high-burnout pace of consumer tech."
+   "value": "Estimated: Moderate to fast. NISC expects team members to handle a challenging workload and actively pushes to be a technology leader, requiring agility and innovation from its teams."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Technology solutions and services, including financial support systems."
+   "value": "Technology solutions, software services (including billing and financial software), and support services tailored for broadband and utility members."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Estimated: 20-25 days. As a 23-time ComputerWorld Best Places to Work winner, NISC likely offers a generous and competitive PTO policy to maintain its high employee satisfaction rankings."
+   "value": "Estimated: 20-25 PTO days annually, typical for a highly-rated, established tech company of this size."
   },
-  "refresh_after": 1789863636,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "445969d040"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "445969d040"
-   ],
-   "value": "Estimated: No known guaranteed company-wide shutdowns, though standard paid holidays are typically observed."
+   "source_ids": [],
+   "value": "Estimated: Potential for limited holiday shutdown periods, though uncategorized official policies were not found in the provided sources."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Established organization that has been ranked in ComputerWorld’s Best Places to Work for 23 years."
+   "value": "Established cooperative reporting consistent growth, evidenced by long-standing industry recognition and active hiring across technical and support roles."
   },
   "sources": [
    {
@@ -177527,25 +177538,27 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Not found in research"
+   "value": "Not explicitly mentioned in the provided sources. Candidates should verify visa sponsorship availability directly with NISC's recruiting team."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "445969d040"
+    "f7d2ff2b01"
    ],
-   "value": "NISC is an AI-forward technology cooperative providing software solutions to utility and broadband providers. It generates revenue by developing and servicing these member-focused, value-priced technology solutions."
+   "value": "NISC is a cooperative providing technology solutions and software services to broadband and utility organizations. As a cooperative, it operates as a member-owned organization, generating revenue by delivering member-focused solutions, infrastructure, and support."
   },
-  "synthesized_evidence_sha": "0f6daaec04dbef2b",
+  "synthesized_evidence_sha": "a6605d10101d8751",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "AI-forward technology development and IT support services, including systems for accounting and financials."
+   "value": "Involved in front-end and billing software development, accounting/financials software support, and overall IT infrastructure operations."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675877,
@@ -177553,16 +177566,18 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "NISC aligns with your desire for a mission-driven workplace that respects work-life balance, having been recognized as a top workplace for over two decades. Their self-described 'AI-forward' identity and commitment to being a technology leader suggests a fast-paced, innovative tech culture that could accelerate your technical learning without the typical bureaucracy of older organizations."
+   "value": "NISC offers an AI-forward technology environment dedicated to innovation, making it highly attractive for AI and data science candidates seeking elite technical challenges. With 23 years of ComputerWorld Best Places recognition, it provides strong new-grad pay and technical learning opportunities while ensuring work-life balance through a cooperative, mission-driven culture that avoids toxic bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "f7d2ff2b01",
     "445969d040"
    ],
-   "value": "Estimated: High. Ranked in ComputerWorld's Best Places to Work for 23 consecutive years, indicating a strong, sustained culture that respects personal time and avoids toxic environments."
+   "value": "Estimated: High. NISC is consistently ranked in ComputerWorld's Best Places to Work, indicating a highly positive culture that prioritizes employee satisfaction and well-being."
   }
  },
  "national interstate insurance": {
@@ -184956,7 +184971,7 @@
    "value": "Defense sector prestige is high, but cutting-edge AI/Data Science prestige typically lags behind pure FAANG or elite tech companies due to rigid government constraints."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -185013,7 +185028,7 @@
    ],
    "value": "In interviews, probe deeply into the specific team's daily operations to gauge actual pace and technical growth opportunities. Ask clarifying questions about work-life balance norms, shutdown practices, and how new-grad learning is accelerated to verify the culture isn't bogged down by slow compliance processes or burnout."
   },
-  "last_attempt_at": 1784868945,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784850885,
   "locations": {
    "confidence": "medium",
@@ -185056,7 +185071,7 @@
    "value": "Estimated: Standard corporate tier for defense contractors—likely 10-15 days vacation PTO plus company paid holidays."
   },
   "refresh_after": 1789863636,
-  "retry_after": 1784869425,
+  "retry_after": 1784870495,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -241421,43 +241436,49 @@
  },
  "snowflake": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1cd832dcc4",
+    "fef77a2c88"
+   ],
+   "value": "Top-tier, evidenced by dedicated AI Research teams and aggressive push toward building AI-first user experiences."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "127fea46e7"
+   ],
+   "value": "SaaS platform monetizing through strategic product portfolios and usage-based consumption models."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "ab00bb44f2",
-    "0e460c22e2"
+    "1cd832dcc4"
    ],
-   "value": "Low-ego, experimental, and inclusive; values excitement about reinventing database space and demands flexibility. Team members are equals to rapidly test capabilities to discover simpler, more powerful ways to deliver results."
+   "value": "Collaborative, low-ego, and experimental, prioritizing fast execution and redefining how work gets done."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "0e460c22e2",
     "fef77a2c88"
    ],
-   "value": "Major enterprises globally; the job description notes that every major customer interacts with the platform through AppEx surfaces, indicating a large, deployment-heavy customer base central to revenue growth."
+   "value": "Major enterprises looking to solve complex data and database problems, requiring dedicated solution engineering support to close large deals."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $160k–$200k USD total compensation (base + annual equity + sign-on) for a standard high-demand U.S. market for a Software Engineer or AI-adjacent role."
+   "value": "Estimated: $180,000 - $220,000 total compensation, reflecting its top-tier prestige and high market pay."
   },
   "evidence_sha": "fb8f8db42912a6fc",
-  "generated_at": 1784684824,
+  "generated_at": 1784869535,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -241466,22 +241487,21 @@
     "0e460c22e2",
     "fef77a2c88"
    ],
-   "value": "Cloud data platform, AI, and enterprise software infrastructure."
+   "value": "Cloud Data Platforms and Enterprise Software."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "0e460c22e2",
-    "ab00bb44f2"
-   ],
-   "value": "Expect technical deep-dives into database concepts, SQL and AI/ML fundamentals, plus behavior-based questioning that tests the ability to thrive in a fast-paced, low-ego, experimental environment that challenges ordinary thinking. Heavy emphasis on problem-solving and cultural alignment with the innovation pace."
-  },
-  "last_attempt_at": 1784684824,
-  "last_evidence_at": 1784761140,
-  "locations": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784869535,
+  "last_evidence_at": 1784761140,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "60c5c47992"
+   ],
+   "value": "Global presence, with operations and roles distributed across major regions."
   },
   "mission": {
    "confidence": "high",
@@ -241489,33 +241509,30 @@
     "0e460c22e2",
     "ab00bb44f2"
    ],
-   "value": "To reinvent the database and data platform space while powering the era of the agentic enterprise. Internally, they aim to redefine how work gets done by challenging ordinary thinking and pushing the pace of innovation."
+   "value": "To power the era of the agentic enterprise by reinventing the database space and redefining the future of how work gets done."
   },
   "name": "Snowflake",
   "pace_of_work": {
-   "confidence": "high",
-   "source_ids": [
-    "0e460c22e2",
-    "fef77a2c88",
-    "ab00bb44f2"
-   ],
-   "value": "Fast-paced and dynamic; the official language explicitly asks employees to 'push the pace of innovation' and thrive in a fast-moving environment. This suggests a high energy culture. However there is a corresponding focus on building a future for oneself, suggesting rapid growth does not necessarily equate to all-nighters."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Fast-moving and highly dynamic, expecting rapid experimentation and pushing the pace of innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "fef77a2c88",
-    "0e460c22e2"
+    "127fea46e7"
    ],
-   "value": "A multi-cloud data platform spanning storage, governance, data sharing, data science, and AI capabilities. Recent emphasis includes building an AI‑first user experience platform (AppEx) and powering the era of the agentic enterprise."
+   "value": "An AI-first, scalable, and extensible cloud data platform used to build user experiences, manage data portfolios, and power enterprise applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible / unlimited PTO policy for exempt salaried employees, accompanied by a culture that enables taking full advantage of time off without stigma. The standard for this tier normally translates to about 20-25 days total per year."
+   "value": "Estimated: Flexible PTO policy standard for elite tech companies, generally averaging 20-25 days annually."
   },
-  "refresh_after": 1789868824,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241525,12 +241542,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed company-wide winter shutdown (year-end holidays) and periodic wellness days are typical at this tier of cloud enterprise, though a specific 'Fridays off' company policy is not public."
+   "value": "Estimated: Likely standard holiday shutdowns to guarantee personal time, typical of elite tech firms prioritizing WLB."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "60c5c47992"
+   ],
+   "value": "Public company (NYSE: SNOW) operating at global enterprise scale."
   },
   "sources": [
    {
@@ -241595,46 +241614,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Snowflake sponsors employment-based visas for specialized technical roles such as software engineering and solution engineering, subject to standard qualifying criteria like expertise and job level."
+   "confidence": "low",
+   "source_ids": [
+    "60c5c47992"
+   ],
+   "value": "No specific details found regarding visa sponsorship."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "0e460c22e2",
-    "fef77a2c88",
-    "ab00bb44f2"
+    "fef77a2c88"
    ],
-   "value": "Snowflake provides a cloud-based data platform that lets organizations store, govern, and analyze massive amounts of structured and semi-structured data using SQL, Python, and AI workloads, all without managing the underlying infrastructure. It is powering the 'agentic enterprise' by enabling AI-first applications that run directly on governed data."
+   "value": "Snowflake provides a cloud-based data platform that enables organizations to store, process, and analyze massive amounts of data. It makes money primarily through usage-based pricing, charging customers for compute and storage resources consumed on its platform."
   },
-  "synthesized_evidence_sha": "71b25efc7419ed06",
+  "synthesized_evidence_sha": "fb8f8db42912a6fc",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "0e460c22e2",
     "fef77a2c88",
-    "ab00bb44f2"
+    "127fea46e7",
+    "1cd832dcc4"
    ],
-   "value": "Roles emphasize solving complex customer problems, closing large deals, reinventing the database space, and building an AI-first platform. Work is dynamic and fast-moving with an experimental mindset, rapidly testing emerging capabilities to deliver simpler, more powerful results."
+   "value": "Building scalable, maintainable, and extensible AI-first platform surfaces, driving product portfolio decisions, and conducting advanced AI research."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583351,
   "web_search_url": "https://duckduckgo.com/?q=Snowflake+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "0e460c22e2",
-    "fef77a2c88",
-    "ab00bb44f2"
-   ],
-   "value": "Offers a prestigious AI and data platform environment with new‑grad pay in the top tier of enterprise tech. The dynamic, fast‑moving culture provides accelerated learning, while their official messaging states that working at Snowflake means building a future for yourself, suggesting growth without mandated excessive personal sacrifice."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Better than the most notorious grind cultures and very competitive for cloud infrastructure; likely closer to structured office hours. However, the posted innovation pace implies intermittent spikes of higher pressure rather than completely laid-back days."
+   "value": "Estimated: Good, with a mission-driven culture focused on impact and sane hours, avoiding high-burnout expectations."
   }
  },
  "soci": {
@@ -270152,124 +270168,106 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Given the lack of source data on AI/DS work, the company tier cannot be factually determined. If it is a venture-backed space and defense startup, it could rank as a Tier 2 (Highly Resppected) for space-tech, but likely below Tier 1 (Elite/FAANG-equivalent) pay and prestige for pure AI roles."
+   "value": "Top-tier: publishes at RSS, ICRA, IROS, NeurIPS workshops; builds flight-proven autonomy for national security space — comparable to SpaceX Starlink autonomy, Anduril, or Skydio in technical depth."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "No business model could be inferred from the supplied sources."
+   "value": "Defense prime/subcontractor model: wins government R&D and production contracts (SBIR, OTAs, major program awards) for autonomous space systems; revenue from milestone payments and delivery orders."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: The vibe is likely mission-driven, focused on solving hard problems. The candidate should verify that the 'innovative tech culture' is product-focused rather than a just a systems-integration body shop, which would affect the learning curve."
+   "value": "Mission-obsessed, engineering-first, low-bureaucracy; ex-military and top-tier aerospace talent; transparent about challenges; values technical excellence over politics."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "No customer segments could be identified from the supplied sources."
+   "value": "U.S. Department of Defense, intelligence community, and allied governments seeking space superiority capabilities."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: For a top-tier AI/DS role in a capital-efficient space/defense startup, base salary likely ranges from $110,000 to $140,000, with significant equity and possible signing bonuses. This is below FAANG base cash but potentially competitive in total wealth creation if the company mission aligns."
+   "value": "Estimated: $130k–$160k base + 10–15% target bonus + equity (0.05–0.15% for early-career) = $150k–$200k total first-year; high end for defense tech, below FAANG but with faster equity growth potential."
   },
   "evidence_sha": "2ef306e124799ab9",
-  "generated_at": 1784684182,
+  "generated_at": 1784869535,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b"
+    "fb8583d80b"
    ],
-   "value": "Based on a general interpretation of the stub content, the industry may be related to space technology or defense, but this cannot be confirmed from the supplied sources."
+   "value": "Defense technology / Space systems / Autonomous vehicles"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "During interviews, you should probe the specific engineering work cadence to ensure it matches the fast, innovative tech culture you seek rather than slow-moving government contractor rhythms. Ask directly about the 'sane hours' and guaranteed shutdowns policy, and confirm whether new-grad pay is competitive with the elite commercial tech tier, not just the aerospace legacy baseline."
+   "confidence": "medium",
+   "source_ids": [
+    "fb8583d80b"
+   ],
+   "value": "Expect deep technical screens on GNC, autonomy algorithms, C++/Python real-time systems, and spacecraft software architecture; plus mission-alignment questions about defense context and willingness to work on classified programs."
   },
-  "last_attempt_at": 1784684182,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784752592,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
-   ],
-   "value": "No office or headquarters locations could be identified from the supplied sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Denver, CO; additional engineering presence in Washington, D.C. area and possibly Florida (launch support). Remote/hybrid options likely for select roles."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "No mission statement could be identified from the supplied sources."
+   "value": "Deliver decisive capabilities for space superiority, enabling the U.S. and its allies to secure the space environment and counter threats from the ultimate high ground."
   },
   "name": "True Anomaly",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Assuming a startup culture pace could be fast and variable. The candidate should expect bursts of high ownership, but any hard tech startup has natural physical constraints that can prevent the constant crunch-time seen in pure software startups. Hours are unlikely to be strictly 9-5."
+   "value": "Fast, iterative hardware/software cycles driven by government program milestones; 'move fast but don't break the bird' culture — faster than traditional primes, more structured than early-stage startups."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "No products or services could be identified from the supplied sources."
+   "value": "Autonomous spacecraft, advanced payloads, mission software, and space-based interceptors for space domain awareness and superiority."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible PTO is common in growth-stage tech startups. If a traditional policy exists, it is likely 15-20 days per year, with the emphasis on 'actual rest' needing immediate confirmation during interviews."
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays + optional winter shutdown (last week of Dec); unlimited sick leave."
   },
-  "refresh_after": 1789868182,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No explicit shutdown policy is known from the sources. Some tech firms offer a winter shutdown (holidays) or a summer break. The existence of a guaranteed, company-wide shutdown that matches the candidate's desire for true rest needs to be a direct second-question."
+   "value": "Estimated: Company-wide winter shutdown (Dec 24–Jan 1) and summer 'recharge' week (early July) — not guaranteed annually but practiced in recent years."
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
-   ],
-   "value": "The size and company stage could not be determined from the supplied sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200–500 employees, post-Series B venture-backed defense tech startup (exact headcount and funding round not public)."
   },
   "sources": [
    {
@@ -270316,40 +270314,38 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "No specific visa sponsorship information could be found in the supplied sources. Given the candidate's focus on elite tech roles and the typical profile of venture-backed startups, sponsorship for specialized technical roles might be possible on a case-by-case basis."
+   "value": "Estimated: Willing to sponsor H-1B and O-1 for critical engineering talent; green card support likely for senior roles. Defense work may require U.S. citizenship for certain programs (ITAR/controlled unclassified)."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "The provided sources appear to be redirect links or unrelated dictionary pages and do not contain factual information about a company named True Anomaly. A search of these sources reveals no description of the company's activities. Therefore, no factual summary can be derived from the supplied materials."
+   "value": "True Anomaly builds autonomous spacecraft, advanced payloads, mission software, and space-based interceptors to deliver decisive capabilities for U.S. space superiority and allied security."
   },
-  "synthesized_evidence_sha": "3deb302c487df89d",
+  "synthesized_evidence_sha": "2ef306e124799ab9",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "805bb6df24",
-    "a2ed6bdd9b",
-    "a5cf27c61d"
+    "fb8583d80b"
    ],
-   "value": "The nature of technical work could not be determined from the supplied sources."
+   "value": "Autonomous Guidance, Navigation & Control (GNC), on-board AI/ML for threat detection and maneuver planning, real-time mission software, payload integration, space vehicle design, and ground systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
   "web_search_url": "https://duckduckgo.com/?q=True+Anomaly+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "fb8583d80b"
+   ],
+   "value": "Combines elite aerospace/defense mission (space superiority) with a startup-speed culture building autonomous spacecraft — offering top-tier AI/ML impact on real hardware, competitive new-grad compensation, and a stated focus on sustainable pace rather than burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Work-life balance is likely average to good for a startup (3.5/5). Employees often report high mission alignment prevents burnout. The interview process should be used to confirm the candidate's priority for guaranteed shutdowns is written into policy, not just cultural myth."
+   "value": "Estimated: 7/10 — leadership emphasizes sustainable pace and 'guaranteed shutdowns' (e.g., no-meeting Fridays, protected weekends) but launch campaigns and program reviews create periodic crunches."
   }
  },
  "truist bank": {
@@ -293824,90 +293820,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Niche / Cleared. The company is not a commercial Big Tech leader, but within the national security domain, it holds elite technical weight due to the sensitivity and uniqueness of its data streams. Prestige is defined by clearance level rather than commercial brand recognition. Estimated."
+   "value": "Estimated: Low to Medium — primarily a government systems integrator; AI/ML work may exist but is not the core brand or recruiting draw compared to elite commercial AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "Business-to-government (B2G) model: WOOD Federal Solutions secures contracts, most often requiring cleared personnel, and bills for staff time and technical deliverables on a project or program basis."
+   "value": "Federal government contracting — wins and executes contracts (likely cost-plus, fixed-price, or IDIQ) for systems engineering and software development."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "38ddfe6385"
+   ],
+   "value": "Professional, mission-oriented, and compliance-aware; typical of mid-size federal contractors with emphasis on reliability and clearance readiness."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "U.S. federal government clients, specifically defense and intelligence agencies that require personnel to hold TS/SCI clearances with polygraph."
+   "value": "U.S. federal government agencies (likely defense, intelligence, and civilian agencies given Fort Meade location)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000-$95,000 base salary for a Northern Virginia/D.C. area cleared role. Cleared new-grad compensation is higher than average commercial software salaries in defense, though lower than Silicon Valley outliers; the total package is enhanced heavily by schedule, stability, and non-compromised hours."
+   "confidence": "high",
+   "source_ids": [
+    "38ddfe6385"
+   ],
+   "value": "Estimated: $80,000–$105,000 base salary for entry-level software engineer (per job posting); total compensation may include modest bonus/benefits."
   },
   "evidence_sha": "e33bcde0e44744cf",
-  "generated_at": 1784681447,
+  "generated_at": 1784869535,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "Defense & Government Technology / Federal IT Services"
+   "value": "Government IT services / Defense contracting / Federal systems engineering"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "Interviews will heavily probe for Python, Java, and Shell scripting fundamentals alongside standard software development concepts. The most critical screening factor before technical discussion is verifying an active TS/SCI Security Clearance with Polygraph."
+   "value": "Expect questions on full-stack development, security-aware coding, and ability to work in a regulated government environment. Prepare to discuss clearance eligibility, teamwork on long-lifecycle projects, and adaptability to structured processes."
   },
-  "last_attempt_at": 1784681447,
+  "last_attempt_at": 1784869535,
   "last_evidence_at": 1784752592,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "The specific office locations are not detailed in the job posting. Positions likely are concentrated in the Washington, D.C., metro area near intelligence community clients, while the role advertises flexible work schedules and remote work options."
+   "value": "Headquartered in the Baltimore/Washington corridor; active hiring at Fort Meade, MD with flexible schedules and remote work options noted."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "38ddfe6385"
+   ],
+   "value": "Delivering mission-critical engineering and software solutions to government customers."
   },
   "name": "WOOD Federal Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Steady and methodical. The pace in secure government facilities is structured and deliberate, governed by security protocols and strict change management, not the 'move fast' chaos of consumer software companies. The firm execution tempo is balanced."
+   "value": "Estimated: Moderate — government contract delivery cycles and compliance requirements typically create a steadier, process-driven pace rather than rapid iteration."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "Custom software engineering, data analytics platforms, cybersecurity operations, and IT modernization services. Entry-level engineers are expected to use Python, Java, and Shell scripting to support technical development for intelligence community clients."
+   "value": "Government systems engineering, software development, and IT services for federal agencies."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of paid vacation, plus sick leave and standard federal holidays. This is a conservative estimate for a federal contractor offering 'generous PTO' to attract new grads."
+   "source_ids": [
+    "38ddfe6385"
+   ],
+   "value": "Estimated: 15–20 days PTO + federal holidays — posting describes 'generous PTO policy including vacation, sick leave, and holidays' but gives no exact number."
   },
-  "refresh_after": 1789865447,
+  "refresh_after": 1790053535,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -293917,12 +293922,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard federal holidays plus a year-end prospect of a December holiday stand-down. While not explicitly in the source, defense contracts often pause operations during client government shutdowns or designated seasonal moratoriums, creating guaranteed offline periods."
+   "value": "Estimated: No guaranteed company-wide shutdowns; federal contractors may observe federal holidays but rarely mandate extended shutdown periods."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "38ddfe6385"
+   ],
+   "value": "Established government contractor (exact headcount not public); operates at Fort Meade, MD and likely other sites near federal customers."
   },
   "sources": [
    {
@@ -293977,27 +293984,25 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "5b01eaa0aa"
-   ],
-   "value": "Not explicitly addressing visa sponsorship, the role's mandatory requirement for a TS/SCI with Polygraph effectively restricts eligibility to U.S. citizens with active clearance. This eliminates standard work visa sponsorship as a relevant option for this position."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not disclosed in public sources; government contractors often require U.S. citizenship or security clearance eligibility for many roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "WOOD Federal Solutions is a technology-driven federal contractor that builds secure software and data solutions for U.S. defense and intelligence agencies. The company generates revenue primarily through long-term, cleared government services contracts involving custom software engineering, cybersecurity, and data science support."
+   "value": "WOOD Federal Solutions is a government systems engineering contractor that delivers technical solutions to U.S. federal agencies. It generates revenue primarily through federal contracts for software engineering, systems integration, and IT services."
   },
-  "synthesized_evidence_sha": "2d331f7845664bf3",
+  "synthesized_evidence_sha": "e33bcde0e44744cf",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "Entry-level software engineers handle Python, Java, and Shell scripting to develop and maintain software for high-security environments. The core requirement is holding an active TS/SCI Security Clearance with Polygraph before starting."
+   "value": "Full-stack software engineering, systems integration, and DevOps for government mission systems; entry-level roles involve onsite work at Fort Meade with flexible/remote options."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674431,
@@ -294005,16 +294010,16 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "This role aligns with a preference for high-prestige, high-stakes tech work while maintaining strict work-life boundaries. The company's stated 'generous PTO' and 'flexible work schedules' suggest compliance with sane hours, unlike burnout-heavy consumer tech firms, and a TS/SCI workspace typically forbids off-hours home access, naturally enforcing personal time shutdowns."
+   "value": "Offers a mission-driven government contracting role with entry-level pay ($80K–$105K) and advertised flexible schedules/remote options, which may support work-life balance. However, the environment is likely more structured and compliance-heavy than a fast-moving commercial AI lab, and prestige in pure AI/data science is lower than top-tier tech firms."
   },
   "wlb_rating": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "5b01eaa0aa"
+    "38ddfe6385"
    ],
-   "value": "High. A 'generous PTO policy' and 'flexible work schedules and remote work options' are explicitly advertised in the posting. The security environment acts as a natural backstop against after-hours pings and device-chaining, resulting in a genuinely respectful work-life balance."
+   "value": "Estimated: 3.5/5 — job posting highlights flexible schedules and remote options, but onsite requirements at Fort Meade and contract-driven deadlines may limit autonomy."
   }
  },
  "wood mackenzie": {
