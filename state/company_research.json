@@ -55440,37 +55440,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no public research output, conference presence, or known AI teams found; likely lower tier unless proven otherwise."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely revenue from enterprise recruiting partnerships, platform subscriptions, or training programs; no public financials or model disclosed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Presumed innovative, learning-oriented, and mission-driven based on name and candidate priorities; but no employee reviews or cultural artifacts found."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely serves universities, early-career tech candidates, and enterprises hiring junior AI/data talent; no public customer list available."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: AUD 85,000–110,000 base + possible equity/bonus (rough guess for Australian tech new grad); no public data."
   },
   "evidence_sha": "6e44a5f9d9b1877a",
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology / EdTech / Recruiting / Cybersecurity (ambiguous without public data)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: 1) Actual weekly hours and enforcement of shutdown policies. 2) New-grad compensation breakdown (base, equity, bonus). 3) Mentorship structure and project ownership for junior hires. 4) Tech stack and AI/ML project scope. 5) Turnover and promotion rates for early-career engineers."
+  },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784674264,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Domain suggests Australian base (.com.au); may have remote or hybrid presence; no official locations published."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Presumed mission is to bridge campus talent with high-growth tech roles, possibly emphasizing AI/data science career launch; no public mission statement found."
+  },
   "name": "Campus4Tech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Likely fast-paced given startup/tech culture assumptions; but no data on bureaucracy vs. speed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No public product information found; likely offers tech talent platforms, cybersecurity training, or campus recruiting services based on the name."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: ~20 days (typical Australian baseline) plus public holidays; no official policy disclosed."
   },
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55480,7 +55522,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of company-wide shutdowns (e.g., winter break); candidate should ask directly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Appears to be a small-to-mid-stage company (possibly startup or growth stage) given limited public footprint; exact headcount and funding unknown."
   },
   "sources": [
    {
@@ -55514,14 +55561,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d88b75c96c3d53eff65a7e2f9cdc75e4799f083a34113c18b91d7ad60edc0770JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuY29tbXNlYy5jb20uYXUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship likelihood unknown; Australian entity may sponsor local visas (e.g., TSS 482) but no public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Campus4Tech appears to be a technology-focused company possibly operating in the education, recruiting, or cybersecurity space given the name and associated domain (commsec.com.au), but no public details about its core business are available from the supplied sources."
+  },
+  "synthesized_evidence_sha": "6e44a5f9d9b1877a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves building recruiting/talent platforms, AI-driven matching, or edtech tooling; stack unknown but may include Python, cloud, and modern web frameworks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674264,
   "web_search_url": "https://duckduckgo.com/?q=Campus4Tech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Campus4Tech is a fast-moving, mission-driven tech company hiring new grads into AI/data roles, it could offer the elite prestige, high pay, and learning velocity the candidate wants—provided it truly enforces sane hours and shutdowns. Without public evidence, the candidate should verify culture, WLB, and compensation directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: No public data; candidate should probe for guaranteed shutdowns, on-call expectations, and weekend work frequency."
   }
  },
  "canadian tire corporation": {
@@ -88235,42 +88303,99 @@
  "dexcom": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Tier 1 (Elite) — Pioneer in FDA-cleared AI/ML for glucose prediction; publishes at NeurIPS, AMIA, ADA; integrates with automated insulin delivery systems; high-impact physiological time-series work."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Medical device manufacturer with recurring revenue model: sells durable hardware (transmitters, receivers) and disposable sensors (replaced every 10 days); revenue from device sales, sensor subscriptions, and partnerships with insulin pump makers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Mission-driven, engineering-led, collaborative across clinical/regulatory/hardware/software. Low politics, high technical respect. Employees stay long-term (vesting culture). Diverse, inclusive; strong women-in-engineering presence. Not a 'bro' culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "People with diabetes (Type 1 and Type 2), healthcare providers, hospitals, pharmacies, and distributors; reimbursed through insurance, Medicare, and direct pay."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + 10-15% target bonus + $50k-$100k RSUs over 4 years (vesting 25%/yr). Total Year 1: $200k-$250k. San Diego/Seattle premium. Negotiable with competing offers."
   },
   "evidence_sha": "38d2b89f47c6df2c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784878225,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Medical Devices / Digital Health / Diabetes Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Expect deep technical screens on ML for time-series physiological data, embedded systems constraints, regulatory-grade software practices, and system design for safety-critical products. Prepare for behavioral questions on cross-functional collaboration (clinical, regulatory, hardware) and handling ambiguity in a regulated environment. LeetCode medium/hard common for DS/ML roles."
+  },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784583508,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832",
+    "c73a3f1a5d"
+   ],
+   "value": "Headquarters: San Diego, CA. Major sites: Mesa AZ, Atlanta GA, Seattle WA, Boston MA, Ireland (Galway), Italy, Australia. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Empowering people to take control of diabetes through innovative continuous glucose monitoring technology."
+  },
   "name": "Dexcom",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — steady feature velocity with periodic intensity spikes around regulatory submissions (FDA 510(k), PMA) and major product launches (e.g., G7 rollout). Not a 'move fast and break things' culture; safety-critical discipline enforces rigor."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Continuous glucose monitoring systems (e.g., Dexcom G6, G7) including sensors, transmitters, receivers, and companion software/apps for diabetes management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick time; varies by level/tenure. Unlimited not offered."
   },
-  "retry_after": 1784878345,
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88280,7 +88405,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; typical US holiday calendar. Some teams observe quiet periods between Christmas and New Year informally."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Large public company (NASDAQ: DXCM); ~9,000+ employees globally; market cap ~$30B+; mature commercial stage with established FDA-cleared products."
   },
   "sources": [
    {
@@ -88314,14 +88446,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=94a03fe55467c513700124bbd248bd251dc8fe27970600a42baf7a4f0f40d561JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGV4Y29t&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; common for ML, firmware, and data science positions given talent needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Dexcom designs, manufactures, and sells continuous glucose monitoring (CGM) systems for people with diabetes. The company generates revenue primarily through sales of CGM sensors, transmitters, and receivers to patients, hospitals, and distributors, with recurring revenue from sensor replacements."
+  },
+  "synthesized_evidence_sha": "38d2b89f47c6df2c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Embedded firmware, sensor algorithms, signal processing, mobile/cloud apps (iOS/Android), data platform, ML for glucose prediction, regulatory software (IEC 62304), cybersecurity, manufacturing automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583508,
   "web_search_url": "https://duckduckgo.com/?q=Dexcom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0b7ea70832"
+   ],
+   "value": "Dexcom offers elite prestige in medical AI/data science with life-saving CGM algorithms, competitive new-grad pay, and a mission-driven culture focused on diabetes outcomes. The company balances innovative tech (real-time glucose prediction, closed-loop integration) with regulated medical device rigor, providing accelerated technical growth without the burnout typical of consumer tech — though pace intensifies near FDA submissions."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Generally respected hours with flexibility; on-call rotations exist for production systems but are managed. Some teams report crunch near regulatory deadlines. Stronger WLB than FAANG, weaker than pure research labs."
   }
  },
  "dhl supply chain": {
@@ -137225,48 +137384,155 @@
  "hive": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: Tier 2 (Well-funded, industry-recognized applied AI leader with strong investor backing, lacking the pure research prestige of foundational model labs)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "B2B SaaS and API offerings for enterprise AI applications, backed by over $120M in venture capital from investors like General Catalyst, 8VC, Glynn Capital, Bain & Company, and Visa Ventures."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: Highly technical and product-driven, focused on rapidly deploying AI solutions to large enterprise clients."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Hundreds of the world's largest and most innovative organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary, aligning with well-funded AI companies in high-cost tech hubs."
   },
   "evidence_sha": "b9d3c67ca26484b6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Artificial Intelligence / Enterprise Software / Cloud Computing"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Probe for specific details on engineering pace, work-life balance, and team structure. Ensure their fast-paced, innovative culture aligns with your requirement for sane hours and guaranteed shutdowns, avoiding environments that risk high burnout while still accelerating career growth."
+  },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784674720,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Not specified in provided materials."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Transforming content moderation, brand protection, sponsorship measurement, context-based ad targeting, and more through cloud-based AI solutions."
+  },
   "name": "Hive",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: Fast. As a venture-backed AI scale-up, the environment likely prioritizes rapid innovation and product development over slow corporate bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Cloud-based AI solutions for content understanding, search, generation, content moderation, brand protection, sponsorship measurement, and context-based ad targeting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for a venture-backed tech firm of this stage."
   },
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: Unknown if guaranteed company-wide shutdowns exist. Candidates seeking guaranteed shutdowns should verify this directly during interviews."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Late-stage venture-backed company having raised over $120M in capital."
   },
   "sources": [
    {
@@ -137330,14 +137596,55 @@
     "url": "https://jobs.lever.co/hive/1da35c5a-313c-4f3b-a9c7-06e6f2fa20bd"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Not specified in provided materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Hive is a leading provider of cloud-based enterprise AI solutions that help organizations understand, search, and generate content. The company generates revenue by providing B2B APIs and software platforms that transform content moderation, brand protection, sponsorship measurement, and ad targeting for its clients."
+  },
+  "synthesized_evidence_sha": "b9d3c67ca26484b6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Designing, building, and maintaining cloud-based AI systems and infrastructure. Involves scaling enterprise AI models, developing user-facing applications, and managing robust DevOps pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674720,
   "web_search_url": "https://duckduckgo.com/?q=Hive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "As a well-funded leader in applied AI, Hive offers the high-impact technical learning and elite prestige associated with top-tier data science roles, appealing to candidates who want to tackle cutting-edge challenges in a fast-paced, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9e99e84132",
+    "1b19359f9d",
+    "fa0e4a9e80"
+   ],
+   "value": "Estimated: Moderate. Startup-like scaling environments often require intense effort, meaning work-life balance may rely heavily on individual team boundaries rather than company-wide mandated sane hours."
   }
  },
  "hme": {
@@ -168166,7 +168473,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168184,7 +168491,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784878071,
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784737480,
   "name": "Lendable",
   "pace_of_work": {
@@ -168197,7 +168504,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784878311,
+  "retry_after": 1784878880,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170999,41 +171306,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unranked / Unverified."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd",
+    "4a82012d36"
+   ],
+   "value": "Redirection link monetization, routing traffic to cached Wikipedia pages, and click-based caching revenues."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd",
+    "4a82012d36",
+    "05138b6b0b"
+   ],
+   "value": "Enterprises, search portals, content aggregators, and developers (relying on redirect automation workflows)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No public new-grad tech compensation benchmarks available for this entity."
   },
   "evidence_sha": "774c199ca1e70595",
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd"
+   ],
+   "value": "Internet/Web Routing Hardware."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Probe heavily for actual on-call hours, PTO enforcement, AI scope, and new-grad compensation, plus whether learning is prioritized."
   },
-  "last_attempt_at": 1784878225,
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784589347,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd"
+   ],
+   "value": "Worldwide (hosted digital footprint only)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd",
+    "4a82012d36"
+   ],
+   "value": "To provide a login and click-through method that reliably reaches the referenced unified-wiki destination."
+  },
   "name": "Link",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd",
+    "4a82012d36",
+    "05138b6b0b"
+   ],
+   "value": "Short link logging, URL redirection trackers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not publicly stated; assume standard regional minimums if applicable."
   },
-  "retry_after": 1784878345,
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171043,7 +171406,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed annual or holiday shutdown windows."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown."
   },
   "sources": [
    {
@@ -171077,14 +171445,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=63575850b85c2a7cb0a7a777afc05845b5f23f958da241340b4722a6c7a2facbJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=1f4f8270-2f38-6b26-14f8-95ec2ec36aec&u=a1aHR0cHM6Ly9saW5rLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Link is a technology platform designed for logging and managing short URLs and tracking their outbound redirection behavior. It generates revenue by providing routing infrastructure for high-volume link publishers."
+  },
+  "synthesized_evidence_sha": "774c199ca1e70595",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0bf0fde6fd",
+    "05138b6b0b"
+   ],
+   "value": "HTTP 301 / 302 redirect handling, hot/cold cache layers for HTML scrape reproduction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589347,
   "web_search_url": "https://duckduckgo.com/?q=Link+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Matches the candidate's preference for fast, innovative tech culture but may conflict with the need for guaranteed shutdowns, elite AI prestige, and explicit work-life balance policies, as no data confirms alignment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown."
   }
  },
  "linkedin": {
@@ -195168,11 +195560,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195184,6 +195578,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784674432,
   "name": "Nakupuna Companies",
   "pace_of_work": {
@@ -195196,6 +195591,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878520,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195239,7 +195635,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=829e0ded77dbcfee9e3d623a9e1a12e69f9dd2cc2c071e760b9207172f54b318JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9uYWt1cHVuYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Nakupuna+Companies+company+careers+benefits",
@@ -219424,38 +219820,100 @@
  "peregrine": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Estimated: High/Tier-2. As a Silicon Valley-backed hyper-growth company tackling complex data challenges for high-profile government clients, it offers strong elite prestige and technical caliber."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "B2B/B2G SaaS and platform licensing, supported by Silicon Valley investors."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "People-oriented, professional, and inclusive, focused on creative problem-solving and rapid scaling."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Public safety organizations, state and local governments, federal agencies, and private-sector institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base, aligned with top-tier Silicon Valley-backed scale-ups."
   },
   "evidence_sha": "a313e5efb44e59a0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Government Technology / Public Safety Software / Data Analytics."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Probe the reality of their hyper-growth culture: confirm that high speed does not equate to toxic burnout. Ask about daily hours, on-call expectations, and learning budgets to ensure the fast pace still respects work-life balance and accelerates your career without sacrificing personal time."
+  },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784737480,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Silicon Valley area (exact office locations not specified in sources)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "To help public safety and government institutions address society’s challenges with unprecedented speed and accuracy."
+  },
   "name": "Peregrine",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Estimated: Fast-paced and dynamic. The company explicitly states it is in a 'hyper-growth stage,' which typically demands rapid iteration and high velocity."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Data and decision platforms designed to help public safety and government agencies address complex societal challenges."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, typical for Silicon Valley-backed scale-ups."
   },
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -219466,6 +219924,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Hyper-growth stage, backed by leading Silicon Valley investors."
   },
   "sources": [
    {
@@ -219509,14 +219974,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=d16a993a01ebf710daac3d0d3c87568e281f7926f345fbf26f6158b9ee12d187JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9wZXJlZ3JpbmUuaW8v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Peregrine Technologies is a Silicon Valley-backed software company that builds data platforms for public safety organizations, government agencies, and private institutions. They generate revenue by providing these entities with advanced technological solutions to address societal challenges with unprecedented speed and accuracy."
+  },
+  "synthesized_evidence_sha": "a313e5efb44e59a0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Building high-speed, high-accuracy data platforms and software solutions for complex public safety and government challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678865,
   "web_search_url": "https://duckduckgo.com/?q=Peregrine+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Peregrine’s hyper-growth stage and Silicon Valley backing indicate a fast-paced, innovative tech culture with rapid technical learning and elite prestige. Their public safety mission offers purpose-driven work, which aligns with your desire for impactful AI/data science work free from slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4d4227f70b"
+   ],
+   "value": "Estimated: Moderate to Good. While hyper-growth implies a fast pace, their commitment to an inclusive environment suggests a conscious culture, though exact hours and burnout risk require verification."
   }
  },
  "performance team": {
@@ -235520,47 +236014,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier; retail convenience stores do not typically compete for top-tier AI talent or offer high-prestige tech roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000; significantly lower than top-tier tech roles and unlikely to meet elite new-grad pay expectations."
   },
   "evidence_sha": "5cc5f4282f36dace",
+  "generated_at": 1784878400,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific AI, data science, or modern tech stack used, as well as the exact new-grad compensation and work-life balance expectations. Confirm whether the role truly offers a fast, innovative environment or if it is bogged down by traditional retail bureaucracy."
   },
+  "last_attempt_at": 1784878400,
   "last_evidence_at": 1784674722,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
   "name": "RaceTrac",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Likely standard corporate retail pace, potentially slower and more bureaucratic than fast-paced innovative tech companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days, typical for retail corporate roles, but exact policy not found in research."
   },
+  "refresh_after": 1790062400,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; retail operations run 24/7."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
   },
   "sources": [
    {
@@ -235594,14 +236171,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=de157fb2e91d61417f4697c1a6ec089474c98d8974a861a790da47ecfbc5e487JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cucmFjZXRyYWMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
+  "synthesized_evidence_sha": "5cc5f4282f36dace",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "189733f4fe",
+    "90497e744e",
+    "c36a0baf9c"
+   ],
+   "value": "Please click here if the page does not redirect automatically"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674722,
   "web_search_url": "https://duckduckgo.com/?q=RaceTrac+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operating a massive network of gas stations and convenience stores, RaceTrac sits in traditional retail rather than cutting-edge tech. The corporate culture appears standard for the retail sector, which likely does not align with priorities for elite AI/data science prestige, fast-paced innovative tech culture, or high new-grad tech pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average; retail corporate environments typically do not offer guaranteed tech shutdowns or extreme flexibility, though they may offer standard hours."
   }
  },
  "radian": {
