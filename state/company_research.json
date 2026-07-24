@@ -18880,11 +18880,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18896,6 +18898,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784674897,
   "name": "Analysis Group",
   "pace_of_work": {
@@ -18908,6 +18911,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879911,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18951,7 +18955,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f0d88e065df827cb104a7072f93f38c27871b0d6467484410be08c713958ec65JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FuYWx5c2lz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Analysis+Group+company+careers+benefits",
@@ -79397,48 +79401,124 @@
  "crossmark": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: Not applicable/Low. The company is not known for elite AI or data science prestig; technical work appears limited to basic operational analytics rather than cutting-edge machine learning."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "B2B service model generating revenue by contracting with consumer brands and retailers to provide outsourced field teams, sales representation, and retail merchandising."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: Traditional, service-oriented, and heavily field-focused corporate culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Consumer packaged goods (CPG) manufacturers, retailers, and brand partners seeking outsourced sales and merchandising execution."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: $60,000 - $80,000 per year for internal technical/operations roles, far below elite tech pay."
   },
   "evidence_sha": "300ee6c21886cde9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879791,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Sales and Marketing Services / Retail Merchandising"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784675399,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Headquartered in the United States with operations and field personnel distributed globally to serve various retail markets."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "To provide superior sales and marketing services that drive growth for brands and retailers, delivering exceptional in-store experiences and retail execution."
+  },
   "name": "CROSSMARK",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: Moderate to fast, driven by retail client deadlines and in-store promotional schedules, but potentially slow on internal technical innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5",
+    "90b0a48657"
+   ],
+   "value": "Retail merchandising services, headquarter sales representation, field marketing, omnichannel marketing, and data-driven insights/analytics for retail operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: 10-20 days per year depending on tenure and role."
   },
+  "refresh_after": 1790063791,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "38e92723c5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: No known guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Large, established private company with a massive distributed workforce of field representatives operating across multiple retail channels."
   },
   "sources": [
    {
@@ -79472,14 +79552,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=07d54948330ef72a846c231b76dd624127ab81f89f80e73b90a57b5745aa63b9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly9jcm9zc21hcmsuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Not explicitly found in research, but large international service companies of this scale typically have established HR infrastructure for workforce management."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "CROSSMARK is a sales and marketing services company that provides retail merchandising, headquarter sales, and field marketing solutions to consumer goods brands. It makes money by contracted brands paying for CROSSMARK's outsourced labor to execute retail strategies, manage in-store promotions, and drive product sales."
+  },
+  "synthesized_evidence_sha": "300ee6c21886cde9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Primarily involves retail merchandising, in-store execution, and field sales operations rather than proprietary software engineering or AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675399,
   "web_search_url": "https://duckduckgo.com/?q=CROSSMARK+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "38e92723c5"
+   ],
+   "value": "Estimated: Moderate. Field roles often require travel and unconventional hours, though corporate personnel likely have stable schedules."
   }
  },
  "crowdgen by appen": {
@@ -88566,41 +88675,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. Recognized for applied AI in autonomous driving and factory automation, but primarily known as an automotive hardware supplier rather than an elite tier-1 AI/software firm."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c9151cd072",
+    "1f64fc1068"
+   ],
+   "value": "B2B manufacturing and supply of original equipment and aftermarket automotive parts, operating with a global footprint."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Structured engineering and manufacturing focus. Emphasizes safety, reliability, and sustainability rather than fast-paced tech disruption, typical Japanese corporate governance."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1f64fc1068"
+   ],
+   "value": "Major global automakers, localized for its North American operations in the US and Canada."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. Competitive for the automotive manufacturing sector but may not match elite tier-1 tech firm new-grad payouts."
   },
   "evidence_sha": "8c125b8ce55b9cf0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879791,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784879497,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2a341e7b63"
+   ],
+   "value": "Automotive Parts Manufacturing / Mobility Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2a341e7b63",
+    "c9151cd072"
+   ],
+   "value": "Probe the specific team's autonomy and deployment speed to ensure you are entering an agile, innovative tech unit rather than a slow, bureaucratic legacy hardware division. Ask how AI models are integrated into rapid mobility software versus slower manufacturing processes, and clarify exact hours, shutdown periods, and new-grad compensation bands to verify the role matches your financial and WLB priorities."
+  },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784676250,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1f64fc1068",
+    "c9151cd072"
+   ],
+   "value": "Operations span North America (US and Canada) with a broader global footprint across multiple international websites."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9151cd072"
+   ],
+   "value": "To craft innovative mobility solutions enabling a safer, greener, and more sustainable world."
+  },
   "name": "Denso",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. The pace is driven by long automotive hardware development cycles rather than fast software tech culture, typical of established global manufacturing enterprises."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2a341e7b63"
+   ],
+   "value": "Advanced mobility products including vehicle thermal systems, powertrain components, mobility electronics, and factory automation equipment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard accrued vacation for new hires, alongside standard public holidays."
   },
-  "retry_after": 1784879737,
+  "refresh_after": 1790063791,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88610,7 +88774,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard holiday shutdown periods (e.g., Christmas to New Year) typical of automotive manufacturing plants."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1f64fc1068",
+    "c9151cd072"
+   ],
+   "value": "Established global enterprise operating across multiple regional headquarters and global subsidiaries."
   },
   "sources": [
    {
@@ -88644,14 +88816,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=2d8eb0c13d93d594979aab2aef050318ac189378239dbf4914b18f73dfd21fb8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cuZGVuc28uY29tL2dsb2JhbC9lbi8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9151cd072",
+    "2a341e7b63"
+   ],
+   "value": "DENSO is a global automotive components manufacturer that develops and supplies original equipment parts, including mobility electronics, thermal systems, and powertrain components. It makes money by designing, engineering, and selling these systems in high volume to major automakers around the world."
+  },
+  "synthesized_evidence_sha": "8c125b8ce55b9cf0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a341e7b63"
+   ],
+   "value": "Automotive hardware engineering, embedded software development, and manufacturing automation systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=Denso+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f64fc1068",
+    "c9151cd072"
+   ],
+   "value": "This role offers mission-driven work focused on green mobility and sustainability, aligning with your desire for impact while maintaining a traditional engineering environment. The culture of an established global enterprise contrasts with fast-paced tech startups, but positions you for deep technical learning in automotive tech with strict work-life boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Generally offers sane, standard manufacturing industry hours with structured boundaries, though this can fluctuate depending on specific project deadlines."
   }
  },
  "denver health": {
@@ -89682,7 +89883,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89700,7 +89901,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784879665,
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784674490,
   "name": "Digi International",
   "pace_of_work": {
@@ -89713,7 +89914,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784879785,
+  "retry_after": 1784880031,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121163,41 +121364,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — unique proprietary clinical genomic dataset, published ML research (e.g., variant pathogenicity, phenotype-driven ranking), public-company resources, and direct clinical impact differentiate it from typical health-tech startups."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service clinical laboratory testing reimbursed by Medicare, Medicaid, commercial insurers, and health systems; complemented by biopharma partnerships for data licensing, companion diagnostics, and clinical trial services. Publicly traded (NASDAQ: WGS)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, scientific-first, collaborative across bioinformatics/engineering/clinical teams. Low politics, high transparency (public company reporting). Diverse workforce. Engineers treated as peers to PhD scientists. Remote-friendly with quarterly on-sites."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare providers (geneticists, neurologists, oncologists, OB/GYNs), hospital systems, academic medical centers, health plans, biopharma companies for clinical trial enrollment and real-world evidence, and patients directly via physician order."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k–$165k base + 10–15% target bonus + $30k–$50k RSUs (4-year vest) = ~$190k–$230k first-year total compensation for ML/DS/engineering roles in high-cost areas."
   },
   "evidence_sha": "0db8115be935d1ad",
+  "generated_at": 1784879791,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Clinical genomics / precision medicine / diagnostic laboratory"
   },
-  "last_attempt_at": 1784879665,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on ML for genomic data (variant classification, phenotype matching), scalable data engineering (Nextflow/Spark on cloud), and regulatory-aware software practices. Prepare for case studies on model evaluation with noisy labels, class imbalance, and clinical utility metrics. Cultural interviews will probe mission alignment and ability to ship iteratively in a regulated environment."
+  },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784674896,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Stamford, CT. Primary lab: Gaithersburg, MD. Remote/hybrid roles across US. No international offices reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make genomic testing accessible and actionable so that every patient with a rare or inherited condition can receive a precise diagnosis and personalized care."
+  },
   "name": "GeneDx",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast for a regulated diagnostics company—quarterly model releases, hackathons, and 2-week sprints—but gated by CLIA/FDA validation requirements. Faster than Quest/Labcorp; slower than pure-play AI startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Exome sequencing, genome sequencing, targeted gene panels (epilepsy, cardiomyopathy, immunodeficiency, etc.), prenatal and carrier screening, oncology panels, and data interpretation/analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days (accrues). Unlimited not offered; policy encourages full utilization."
   },
-  "retry_after": 1784879785,
+  "refresh_after": 1790063791,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121207,7 +121446,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (between Christmas and New Year). No other guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company; ~600–800 employees (2024 estimates). Revenue ~$200M–$250M annually. Post-SPAC merger (2022), focused on profitability and scaling bioinformatics/AI capabilities."
   },
   "sources": [
    {
@@ -121241,14 +121485,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=2b45e5ef4fe04de4539c74d62ed9947f0f974962ed22e602a7aa38e1fae5eeebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuZ2VuZWR4LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and STEM-OPT for specialized AI/ML, bioinformatics, and engineering roles given talent scarcity; green card sponsorship likely for senior contributors. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GeneDx is a genomic testing company that provides exome and genome sequencing, as well as targeted genetic tests, primarily for rare pediatric diseases, hereditary cancers, and reproductive health. It operates as a CLIA-certified, CAP-accredited laboratory and generates revenue by billing insurers, health systems, and pharmaceutical partners for clinical genetic testing services."
+  },
+  "synthesized_evidence_sha": "0db8115be935d1ad",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale NGS data processing pipelines (Germline/Somatic), variant calling/annotation, ML models for variant pathogenicity classification, phenotype-driven prioritization, LIMS automation, cloud infrastructure (AWS/GCP), regulatory-grade software (FDA/CLIA), and data products for pharma partners."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674896,
   "web_search_url": "https://duckduckgo.com/?q=GeneDx+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GeneDx sits at the intersection of elite genomics data (one of the world's largest clinical exome datasets) and a mission to diagnose rare disease patients—offering a new grad the rare chance to ship production ML models that directly impact clinical care, at a public company with strong compensation, without the burnout culture of big tech or the slow pace of traditional diagnostics firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~9–5 with explicit no-weekend-oncall for most engineering roles; on-call rotations limited to production infra. Leadership publicly emphasizes sustainable pace. Occasional crunch before regulatory submissions."
   }
  },
  "genentech": {
@@ -266761,37 +267026,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no public AI/research publications, conference presence, or technical blog posts found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely SaaS or platform-based given web portal structure; revenue model not documented in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture artifacts, values statements, or team insights in provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "19536ca0bd"
+   ],
+   "value": "Estimated: Appears to serve students and educational institutions based on '/home/students' path; exact customer segments unknown."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no salary data, levels.fyi reports, or offer details in sources."
   },
   "evidence_sha": "864bf127d407a76f",
+  "generated_at": 1784879791,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "19536ca0bd"
+   ],
+   "value": "Estimated: Education technology (EdTech) or student information systems based on student portal URL path."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the role offers genuine AI/data science depth vs. peripheral ML work; probe actual engineering culture, deployment velocity, and mentorship structure; verify WLB claims by asking about on-call rotations, typical sprint cadence, and shutdown policies; clarify career progression for new grads in technical tracks."
+  },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784677225,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters location not specified in sources; web presence suggests US-based operation."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission statement not found in provided sources."
+  },
   "name": "Skyward",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no employee reviews, engineering blogs, or process documentation in sources to gauge velocity vs. bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides software/platform services given web-based login and student portal; specific products not identifiable from sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no benefits documentation or policy details in sources."
   },
+  "refresh_after": 1790063791,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266801,7 +267112,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no mention of company-wide shutdowns, mandatory time-off, or similar policies in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Company size and stage unknown; uses SmartRecruiters for hiring suggesting established recruiting processes."
   },
   "sources": [
    {
@@ -266835,14 +267153,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy not documented in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "19536ca0bd",
+    "ec31d4a74e"
+   ],
+   "value": "Skyward appears to be a company with a public web presence including student-focused pages and a login portal, but the provided sources contain only redirect notices without substantive company information."
+  },
+  "synthesized_evidence_sha": "864bf127d407a76f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technical roles likely involve web/platform development, data systems, and student information management; specifics not in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677225,
   "web_search_url": "https://duckduckgo.com/?q=Skyward+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Skyward's actual alignment with these priorities cannot be verified from available sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no policy documents, employee testimonials, or benefits info in sources to evaluate hours, shutdowns, or burnout risk."
   }
  },
  "slate auto": {
@@ -285857,11 +286199,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285873,6 +286217,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784674490,
   "name": "Tata Consultancy Services",
   "pace_of_work": {
@@ -285885,6 +286230,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879911,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285928,7 +286274,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cf7ad763a5a53c0d85919cb6920caee64db61de2fe8ea6f48e07cfdd0fef849JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cudGF0YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Tata+Consultancy+Services+company+careers+benefits",
@@ -331526,7 +331872,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331544,7 +331890,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784879665,
+  "last_attempt_at": 1784879791,
   "last_evidence_at": 1784674833,
   "name": "XPO",
   "pace_of_work": {
@@ -331557,7 +331903,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784879785,
+  "retry_after": 1784880031,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
