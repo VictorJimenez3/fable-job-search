@@ -7307,47 +7307,117 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — respected private credit platform with increasing investment in quantitative research and data science, though not a pure-play tech firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Traditional alternative asset management model: management fees (typically 1-1.5% on committed capital) plus performance fees (carried interest, typically 15-20% above a hurdle rate)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, intellectual, and collaborative; mission-driven around disciplined investing; hierarchy exists but technical expertise is valued; low toxicity reported."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Institutional investors (pension funds, insurance companies, sovereign wealth funds, endowments) and middle-market borrowers seeking non-bank financing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000-$200,000 base + 20-40% target bonus + potential carry participation; total comp competitive with top quant hedge funds but more stable."
   },
   "evidence_sha": "352819bc0f983498",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Alternative Asset Management / Private Credit"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Emphasize experience with messy financial data, building reproducible modeling pipelines, and translating technical outputs into investment insights. Prepare for case studies on credit risk, portfolio optimization, or alternative data integration. Ask about the ratio of research vs. engineering work, model deployment processes, and how the tech team collaborates with investment professionals."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784674191,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Headquartered in New York, NY; additional offices in London and possibly other financial hubs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "To deliver consistent risk-adjusted returns through disciplined credit investing while building long-term partnerships with investors and portfolio companies."
+  },
   "name": "Affinius Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced during deal cycles and quarter-end reporting, but generally structured with predictable project timelines; less chaotic than trading desks."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Private credit funds, direct lending, structured credit, opportunistic credit strategies, and co-investment vehicles for institutional investors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus 10-12 US federal holidays; unlimited not offered."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0051a9cd99"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns; some teams may have reduced schedules around major holidays (e.g., Christmas/New Year)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Established mid-sized private credit platform with several billion dollars in assets under management; profitable, mature, and privately owned."
   },
   "sources": [
    {
@@ -7381,14 +7451,38 @@
     "url": "https://careers-affiniuscapital.icims.com/jobs/intro?hashed=-435802940"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical roles; green card sponsorship possible for high-performing employees. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0790742153",
+    "8f70613bd7"
+   ],
+   "value": "Affinius Capital is a private credit asset manager that provides flexible capital solutions to middle-market companies. It generates revenue through management fees on assets under management and performance-based carried interest from its credit funds and direct lending strategies."
+  },
+  "synthesized_evidence_sha": "352819bc0f983498",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building data pipelines for credit analysis, portfolio monitoring dashboards, risk modeling tools, deal sourcing automation, and proprietary valuation models. Stack likely includes Python, SQL, cloud infrastructure (AWS/Azure), and modern data engineering frameworks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674191,
   "web_search_url": "https://duckduckgo.com/?q=Affinius+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Affinius offers a rare blend of elite finance prestige and a growing technology function where AI/data science directly impacts credit decisions. The firm’s private credit focus provides stable, long-term capital, reducing the quarterly pressure common at hedge funds, which can support better work-life balance. Technical hires get exposure to large-scale financial data and real-world modeling problems without the burnout culture of high-frequency trading or early-stage startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — reasonable hours for finance (50-60 hrs/week typical), with some weekend work during live deals; culture respects personal time more than many peers."
   }
  },
  "affirm": {
@@ -54106,11 +54200,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54122,6 +54218,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784675467,
   "name": "Bureau Veritas",
   "pace_of_work": {
@@ -54134,6 +54231,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54177,7 +54275,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf3b0efafb05facf937707525d09700144b79423fdceb5c7ad05c47114b64458JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2J1cmVhdQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675467,
   "web_search_url": "https://duckduckgo.com/?q=Bureau+Veritas+company+careers+benefits",
@@ -58615,48 +58713,127 @@
  "canadian tire corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Estimated: General retail tech tier; lower industry prestige for elite AI/ML roles compared to FAANG or dedicated AI labs, but features large-scale enterprise data."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef",
+    "66ef419883"
+   ],
+   "value": "Operates a network of retail stores and gas stations, generating revenue through direct retail sales, automotive services, and a co-branded credit card portfolio."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Traditional corporate retail environment focused on operational excellence and brand loyalty rather than aggressive technical innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Everyday Canadian consumers, DIY automotive enthusiasts, homeowners, and sports/outdoor participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "Estimated: Mid-tier corporate range for Canada, typically CAD $70,000 - $95,000 for new graduate software/data roles, falling short of elite top-tier new-grad pay."
   },
   "evidence_sha": "495a769a4192a332",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "071cc2e3ef",
+    "66ef419883"
+   ],
+   "value": "Retail"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "Assess the specific team's autonomy, exposure to advanced machine learning versus standard data analytics, and daily pace to ensure it meets your high bar for fast-paced technical growth without sacrificing work-life balance."
+  },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784674652,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Headquartered in Toronto, Canada, with retail store locations and corporate offices across all Canadian provinces."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "To equip Canadians for the jobs and joys of everyday life in Canada."
+  },
   "name": "Canadian Tire Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Estimated: Moderate to slow, driven by traditional retail enterprise cycles and corporate processes, rather than a fast-paced startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Automotive parts and accessories, home hardware, sports and leisure equipment, apparel, household goods, and financial services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Estimated: Standard corporate retail package, typically around 10-15 days of vacation for new graduates, along with statutory holidays."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Estimated: Likely observes standard statutory holidays only; no evidence of guaranteed extended corporate shutdowns often found in elite tech."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "Mature public enterprise and one of Canada's largest retail corporations."
   },
   "sources": [
    {
@@ -58690,14 +58867,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=5530032f322b5d51894b74655ecee4aa28835807470b5ded2faf8f72624b305fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9DYW5hZGE&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "Canadian Tire Corporation has historically been a main sponsor of the Canadian Olympic team and Canadian athletes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "071cc2e3ef",
+    "66ef419883"
+   ],
+   "value": "Canadian Tire Corporation is a major Canadian retail conglomerate that sells automotive, hardware, sports, leisure, and household products. It makes money primarily through the retail sales of goods and services across its various banners and an extensive loyalty program."
+  },
+  "synthesized_evidence_sha": "495a769a4192a332",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "Enterprise IT infrastructure, supply chain logistics software, and data platforms supporting retail operations and a national loyalty program."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674652,
   "web_search_url": "https://duckduckgo.com/?q=Canadian+Tire+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "071cc2e3ef"
+   ],
+   "value": "While enterprise retail can carry slow bureaucracy, Canadian Tire's scale and digital transformation initiatives might support impactful AI applications in logistics, though it likely falls short of the elite prestige and guaranteed shutdowns you desire."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "66ef419883"
+   ],
+   "value": "Estimated: Stable corporate retail hours, usually providing reasonable work-life balance, but lacking the fast innovation pace and guaranteed shutdowns of top-tier tech."
   }
  },
  "candid health": {
@@ -71080,37 +71289,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. Municipal governments do not typically offer top-tier AI or data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "Municipal government funded by local taxes and public grants to provide administrative and community services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, mission-driven public service with an emphasis on community impact over technical innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "The citizens and residents of Gulfport."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000 - $70,000. Municipal IT salaries generally lag behind elite tech industry standards."
   },
   "evidence_sha": "9af54efce2cbffae",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "Government and Public Administration."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should assess the actual scope of data initiatives versus administrative IT upkeep to see if any modern tech work exists. It is critical to question the municipality's ability to meet high pay benchmarks and to verify if the standard government hours genuinely provide the work-life balance and guaranteed shutdowns being sought."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784676847,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a410c07c48"
+   ],
+   "value": "Gulfport."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "To serve the Gulfport community by maintaining public infrastructure, ensuring public safety, and administering local government services."
+  },
   "name": "City of Gulfport",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and bureaucratic. Government entities usually follow strict procurement and administrative processes."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "Public administration services, community programs, and municipal infrastructure management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of annual leave, typical for established municipal government employees, plus public holidays."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71120,7 +71383,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Government offices typically close for major public holidays, but continuous guaranteed tech shutdowns are not standard."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a410c07c48"
+   ],
+   "value": "Established local government municipality."
   },
   "sources": [
    {
@@ -71154,14 +71424,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=dac6a72e529406a63117f348721e523aa3823897f9942c79fc20784563b999b3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cubWVzYWF6Lmdvdi9Ib21l&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to offer employment sponsorship for international candidates as is typical for municipal government roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "The City of Gulfport is a municipal government entity providing public administrative, community, and infrastructure services to its residents. It generates revenue primarily through taxation and public funding to maintain and operate city departments and public works."
+  },
+  "synthesized_evidence_sha": "9af54efce2cbffae",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b3867528f1"
+   ],
+   "value": "Primarily enterprise IT systems, civic technology administration, and internal public works operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676847,
   "web_search_url": "https://duckduckgo.com/?q=City+of+Gulfport+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This employer operates as a traditional municipal government, which fundamentally conflicts with the candidate's desire for a fast, innovative tech culture and elite AI prestige. The public sector pace is heavily process-driven and bureaucratic, making it a poor fit for someone prioritizing rapid technical learning and top-tier new grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Public sector roles often feature standard 40-hour workweeks with strict overtime rules and predictable scheduling."
   }
  },
  "city of new york": {
@@ -132858,37 +133153,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier, pending verification of the actual AI/Data Science scope."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High compensation anticipated for elite AI roles, pending verification."
   },
   "evidence_sha": "74f447e5662cc462",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Probe deeply into the actual day-to-day pace of the tech culture versus bureaucracy, the typical new-grad compensation structure, and whether guaranteed shutdowns or strict anti-burnout WLB policies genuinely exist."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784675465,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
   "name": "Global Engineering & Technology, Inc. (GET)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced based on branding, requiring verification to avoid toxic environments."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech market package, unverified."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132898,7 +133263,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None confirmed, verify if guaranteed shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
   },
   "sources": [
    {
@@ -132932,14 +133306,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=99ca80d97f5c8a9432104d6b58dd6d5522d77dd71ade9ccc6b8a7c95ac557f29JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuZ2xvYmFsY3Uub3JnL2FjY291bnRzL29ubGluZS1tb2JpbGUtYmFua2luZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Estimated: Standard corporate sponsorship likely for top-tier AI roles, though unconfirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Global Engineering & Technology, Inc. (GET) appears to be a technology and engineering organization, though specific details regarding its core operations and revenue generation are not publicly available due to website access restrictions."
+  },
+  "synthesized_evidence_sha": "74f447e5662cc462",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c5f24e085e",
+    "91f652a815",
+    "d45dc5667b"
+   ],
+   "value": "Information not available in research"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675465,
   "web_search_url": "https://duckduckgo.com/?q=Global+Engineering+%26+Technology%2C+Inc.+%28GET%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: This company aligns with your priorities for elite AI prestige and rapid technical growth, provided it lives up to its innovative engineering branding rather than falling into slow bureaucracy; the actual work-life balance and sane hours need thorough vetting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unverified, you should confirm if guaranteed shutdowns and sane hours actuallyexist."
   }
  },
  "global infrastructure": {
@@ -139537,37 +139944,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche/Low. While highly prestigious in traditional energy engineering, its data science and AI roles do not carry the elite prestige of top-tier tech companies, FAANG, or quantitative finance."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cebb6e81ad"
+   ],
+   "value": "B2B service and product provider. Generates revenue by deploying specialized field personnel and proprietary technologies to energy operators on a project or contract basis, while also supporting energy startups through Halliburton Labs."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "cebb6e81ad"
+   ],
+   "value": "Safety-conscious, operational, and heavily traditional 'oilfield' culture, emphasizing hands-on field experience, loyalty, and rigorous service quality."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cebb6e81ad"
+   ],
+   "value": "National and international oil companies, independent oil and gas operators, and energy tech startups (via Halliburton Labs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for technical data and software roles in the US. Good, but below the elite top-tier tech new-grad pay bands ($150k+) you are targeting."
   },
   "evidence_sha": "5d78a555f5aa0c45",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "896641e3b8",
+    "cebb6e81ad"
+   ],
+   "value": "Oil & Gas Energy Services / Oilfield Equipment"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784675132,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "896641e3b8"
+   ],
+   "value": "Headquartered in Houston, Texas, with dozens of operational field camps, research centers, and offices located globally across major energy-producing regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cebb6e81ad"
+   ],
+   "value": "To achieve superior results for its customers in the energy industry, setting the standard for superior service quality and sustainability, while advancing energy innovation."
+  },
   "name": "Halliburton",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Bureaucratic and slow-paced. As a large, traditional energy corporation, it is tied heavily to long capital cycles and slow-moving industry standards rather than a fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cebb6e81ad"
+   ],
+   "value": "Offers a wide array of specialized services and technologies including drilling systems, formation evaluation, well completion tools, cementing, stimulation, and digital solutions for reservoir management. The company also operates Halliburton Labs, a collaborative space designed to help energy tech startups scale."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard accrued PTO per year, plus standard public holidays, typical of large legacy energy corporations."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139577,7 +140041,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research for standard operations. Unlike some heavy manufacturing or pure-tech firms, the energy sector typically operates continuously, making guaranteed shutdowns unlikely."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "896641e3b8",
+    "cebb6e81ad"
+   ],
+   "value": "Publicly traded, established global enterprise (NYSE: HAL). It is a mature, large-cap corporation operating in over 70 countries."
   },
   "sources": [
    {
@@ -139611,14 +140083,41 @@
     "url": "https://jobs.halliburton.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors work visas for specialized engineering and technical roles depending on regional needs, but not consistently across all business units. Field-based roles are typically restricted due to domestic sourcing requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "896641e3b8",
+    "cebb6e81ad"
+   ],
+   "value": "Halliburton is one of the world's largest providers of products and services to the energy industry, operating across the oil and gas lifecycle. It makes money by offering specialized services, proprietary technologies, and integrated solutions to national and international oil companies for upstream exploration, drilling, completion, and production."
+  },
+  "synthesized_evidence_sha": "5d78a555f5aa0c45",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "896641e3b8",
+    "cebb6e81ad"
+   ],
+   "value": "Focuses heavily on hardware engineering, field operations, geoscience, and industrial digital solutions. Tech roles involve developing software for drilling optimization, data analytics for reservoir performance, and supporting the digital infrastructure for global field operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675132,
   "web_search_url": "https://duckduckgo.com/?q=Halliburton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. While corporate tech offices may keep standard business hours, the broader company is heavily tied to a demanding, operational field-environment (24/7 rig operations) that can lead to a high-burnout culture."
   }
  },
  "handshake": {
@@ -234008,37 +234507,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Strong Applied AI in Regulated MedTech) - Not a pure AI research lab, but offers high-impact applied ML in FDA-regulated medical devices with clinical validation requirements. Prestige comes from clinical impact and regulatory rigor rather than AI publishing volume."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Penumbra generates revenue through direct sales of proprietary medical devices to hospitals and healthcare providers globally. The model combines capital equipment (aspiration pumps, delivery systems) with recurring single-use disposable devices (catheters, coils, separators). Revenue is driven by procedure volume growth, new product launches, and geographic expansion."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, clinically grounded, collaborative. Culture emphasizes patient impact and technical rigor. Teams are cross-functional (mechanical, electrical, software, clinical, regulatory). Less 'tech bro' culture than pure software companies. Diverse, international workforce. Decision-making can be deliberate due to regulatory constraints. Strong internal mobility and technical mentorship."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Primary customers are hospitals, academic medical centers, and specialized neurovascular/vascular surgery departments worldwide. Products are used by interventional neuroradiologists, neurosurgeons, vascular surgeons, and interventional radiologists treating stroke, aneurysms, AVMs, and peripheral arterial/venous occlusions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base + 10-15% annual bonus + RSUs (vesting over 4 years, ~$20k-$40k annual grant). Total comp ~$140k-$185k year 1. Bay Area premium applied. Lower than FAANG/Unicorn tech but competitive for medtech. Signing bonuses $10k-$20k common for in-demand roles."
   },
   "evidence_sha": "aa3c2d0e5a0e4059",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Medical Devices / MedTech / Neurovascular & Peripheral Vascular Interventions"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on: 1) Applied ML for medical imaging (CT/MRI stroke detection, segmentation), 2) Regulatory-aware ML (FDA SaMD framework, IEC 62304), 3) Embedded/real-time systems for device control, 4) Statistical validation and clinical study design, 5) Cross-functional collaboration with mechanical, clinical, and regulatory teams. Demonstrate ability to translate research into regulated, patient-safe products."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784677043,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Headquarters: Alameda, California (SF Bay Area). Additional US sites: San Jose, CA; Boston, MA area. International: Europe (Netherlands, Germany, France, UK), Australia, Canada, Japan, China, Brazil. Manufacturing primarily in Alameda and Costa Rica."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "To develop innovative medical technologies that improve patient outcomes and transform the treatment of complex vascular and neurovascular conditions, with a focus on stroke and embolism care."
+  },
   "name": "Penumbra, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast for medtech R&D. Hardware development cycles (12-24 months) set the tempo. Software/AI iterations can be faster but are gated by verification/validation and regulatory review. Not a 'move fast and break things' culture—patient safety and compliance dominate. Crunch periods around FDA submissions (510(k), PMA) and clinical trial milestones."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Key product lines include the Penumbra System for mechanical thrombectomy in acute ischemic stroke, aspiration pumps and catheters, embolization coils and systems (Penumbra SMART COIL, POD Packing Coil), and devices for peripheral vascular disease including the Indigo System for aspiration thrombectomy. The company also offers neurosurgical tools and access devices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. Typical for Bay Area medtech. Some roles offer flexible/unlimited PTO policies but utilization varies by team. Separate volunteer time off (VTO) programs often available."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234048,7 +234601,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns. Typical holiday closure Dec 24-Jan 1. Some departments may have summer flexibility. Not a guaranteed annual shutdown policy like some tech companies."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Public company (NYSE: PEN) with approximately 3,500+ employees globally. Founded in 2004, headquartered in Alameda, California. Market capitalization in the multi-billion dollar range. Mature commercial-stage medtech company with established FDA-cleared products and international regulatory approvals."
   },
   "sources": [
    {
@@ -234082,14 +234642,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=a8d30d54c6b360401279833a114c00ee668222ae745070d2c382e586fd8224d1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93d3cucGVudW1icmFpbmMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large public medtech company, Penumbra routinely sponsors H-1B visas for specialized engineering and scientific roles. Green card sponsorship (PERM) is available for qualifying positions. STEM OPT extensions supported. Sponsorship likelihood is higher for hard-to-fill technical roles (R&D, regulatory, software)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Penumbra, Inc. is a global medical device company focused on developing innovative therapies for stroke, embolism, and complex vascular conditions. The company designs, manufactures, and markets minimally invasive devices used by physicians to treat patients with neurovascular and peripheral vascular diseases."
+  },
+  "synthesized_evidence_sha": "aa3c2d0e5a0e4059",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6210d039d4"
+   ],
+   "value": "Engineering roles span mechanical design, biomaterials, fluid dynamics, software/embedded systems for aspiration pumps and navigation, regulatory/quality systems, and clinical research. AI/data science applications are emerging in image analysis for stroke detection, procedural guidance, and outcomes analytics, but core R&D remains hardware/device focused."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677043,
   "web_search_url": "https://duckduckgo.com/?q=Penumbra%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Penumbra offers a mission-driven medtech environment where AI/data science directly impacts stroke and vascular care outcomes. As a public company with strong financials, it provides competitive new-grad compensation and stability. The hardware/software integration culture fosters technical depth, while the medical mission provides purpose. Work-life balance is generally respected in R&D compared to pure software/tech giants, though project deadlines around regulatory submissions can create crun"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. Medtech R&D generally offers better WLB than big tech or startups. Core hours culture with flexibility. On-call rotations exist for clinical support but are typically shared. Regulatory deadlines create predictable busy periods. Limited weekend work outside of submission crunches."
   }
  },
  "people culture talent": {
@@ -234259,37 +234844,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – recognized as a leading enterprise AI adopter in CPG, but not a pure‑play tech company."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Consumer packaged goods (CPG) manufacturer with a direct‑store‑delivery network; revenue comes from brand sales, licensing, and strategic partnerships across 200+ countries."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd50b269"
+   ],
+   "value": "Collaborative, inclusive, and purpose‑oriented; large‑company structure with growing startup‑like digital labs."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Mass-market retailers (Walmart, Target), grocery chains, convenience stores, foodservice distributors, and direct-to-consumer e‑commerce channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated $110k–$130k base + 10‑15% target bonus + RSU grant (vesting 4 years); total first‑year comp ~ $135k–$160k."
   },
   "evidence_sha": "a24b9041899cadd9",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Consumer Packaged Goods (Food & Beverage)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens (ML fundamentals, SQL, Python, system design), case studies on real‑world supply‑chain or consumer‑analytics problems, and behavioral questions aligned to PepsiCo’s “Performance with Purpose” values."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784674623,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Headquarters in Purchase, NY; major tech hubs in Plano (TX), Chicago (IL), and international centers in Mexico City, London, Shanghai, and Bangalore."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd50b269"
+   ],
+   "value": "\"Create more smiles with every sip and bite\" – delivering sustainable growth while positively impacting communities and the planet."
+  },
   "name": "PepsiCo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate‑fast; project cycles driven by quarterly business reviews, with sprint‑based agile teams in digital hubs."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Carbonated soft drinks (Pepsi, Mountain Dew), sports drinks (Gatorade), ready-to-drink teas, juices (Tropicana), snacks (Lay's, Doritos, Cheetos), breakfast foods (Quaker oats), and dairy alternatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated 15–20 days annual PTO plus 10–12 company holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234299,7 +234945,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: company‑wide summer shutdown (1 week) and holiday shutdown (1 week); some business units observe additional “recharge” days."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "Large, publicly traded (NASDAQ: PEP); ~300,000 employees globally; Fortune 50 company with $90B+ annual revenue."
   },
   "sources": [
    {
@@ -234333,14 +234987,42 @@
     "url": "https://uscareers-pepsico.icims.com/jobs/intro?hashed=-625946328"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd50b269"
+   ],
+   "value": "Active H‑1B sponsor for STEM roles; supports green‑card processing for high‑performing technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1c1d31949a",
+    "d34e1ec515"
+   ],
+   "value": "PepsiCo is a multinational food and beverage corporation that manufactures, markets, and sells a portfolio of iconic brands including Pepsi, Lay's, Gatorade, Quaker, and Tropicana. It generates revenue by selling packaged goods to retailers, distributors, and foodservice operators worldwide."
+  },
+  "synthesized_evidence_sha": "a24b9041899cadd9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "aadd50b269"
+   ],
+   "value": "AI/ML for demand forecasting, supply‑chain optimization, consumer‑insight analytics, digital marketing personalization, IoT-enabled manufacturing, and data‑platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674623,
   "web_search_url": "https://duckduckgo.com/?q=PepsiCo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "PepsiCo offers a top‑tier AI/data‑science brand with competitive new‑grad compensation, a mission‑driven sustainability agenda, and a corporate culture that emphasizes work‑life balance through flexible schedules and periodic shutdowns — rare for a Fortune‑50 CPG firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 3.5/5 – generally sane hours, flexible remote options, and company‑wide “summer Fridays” or shutdown weeks, though peak periods (holiday season) can be intense."
   }
  },
  "peraton": {
@@ -263666,37 +264348,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Specialized automation focus; not an elite top-tier AI or data science firm, but offers strong technical exposure in workflow automation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Enterprise software licensing and subscription-based models for robotic process automation tools."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovation-focused tech culture that accelerates technical learning and career growth, usually more dynamic than slow bureaucracy."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Business-to-business (B2B) organizations seeking to streamline operations through business process automation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive enterprise software new-grad pay, though exact figures are not public."
   },
   "evidence_sha": "c464db1688168135",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Enterprise Software and Information Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should emphasize their skills in technical problem-solving, scripting, and systems integration, while seeking clarity on how the company sustains a fast, innovative tech culture. It is important to ask about career growth, learning opportunities, and measures taken to ensure work-life balance and guaranteed shutdowns to avoid toxic or high-burnout environments."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784676797,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "To automate repetitive, rule-based business processes through robotic process automation, improving operational efficiency for enterprises."
+  },
   "name": "RPA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovation-driven, characteristic of the enterprise software automation market."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Robotics process automation software platforms and tools that emulate human interactions with digital systems to execute automated workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -263707,6 +264451,11 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -263740,14 +264489,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=63b0878da97b89debe341c1e908ea20e1e520036ccd335010c90e5bb61680014JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9wb3dlci1wbGF0Zm9ybS9wcm9kdWN0cy9wb3dlci1hdXRvbWF0ZS90b3BpY3Mvcm9ib3RpYy1wcm9jZXNzLWF1dG9tYXRpb24vd2hhdC1pcy1ycGE_bXNvY2tpZD0zMmFmMWJlNWM1NDI2YjZkMmZhMTBjNzhjNDIxNmE2OQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Robotic Process Automation (RPA) refers to software technologies that configure computer systems or software to interpret existing applications and manipulate data to execute business processes. Companies offering RPA generate revenue by selling software licenses, subscriptions, and consulting services to enterprises seeking to automate repetitive, rule-based human tasks."
+  },
+  "synthesized_evidence_sha": "c464db1688168135",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a441f3a06d",
+    "d650efc54b",
+    "7eacd9f128"
+   ],
+   "value": "Development of robotic process automation software platforms, workflow scripting, and systems integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676797,
   "web_search_url": "https://duckduckgo.com/?q=RPA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RPA offers a rapidly growing, mission-driven sector focused on automation and digital transformation. Entering this field provides opportunities to accelerate technical learning in a fast-paced, innovative tech culture rather than dealing with slower bureaucratic environments, while aiming for sane hours and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Company-specific work-life balance varies, but the sector increasingly prioritizes sane hours to attract tech talent against toxic or high-burnout environments."
   }
  },
  "rtx": {
@@ -290391,11 +291169,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290407,6 +291187,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784674651,
   "name": "Stellar Management",
   "pace_of_work": {
@@ -290419,6 +291200,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290462,7 +291244,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=105fd18c0f353eb1a45616f20656857950f5d4fbc40cd10e246df5b99d631aa4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9zdGVsbGFyLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674651,
   "web_search_url": "https://duckduckgo.com/?q=Stellar+Management+company+careers+benefits",
@@ -292193,37 +292975,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected specialized player with meaningful ML applications in healthcare finance, but not a primary AI research lab or household name in general ML community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model selling cloud-based financial planning and analytics software to healthcare organizations on annual contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, collaborative, and engineering-pragmatic. Employees often cite purpose (helping hospitals) as a key motivator. Culture leans toward midwestern pragmatism over coastal hype."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare providers including hospitals, health systems, academic medical centers, and physician groups across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity (RSUs/options) + bonus; total comp ~$130k-$160k. Chicago market adjustment applied; competitive with other healthcare SaaS but below FAANG/quant tiers."
   },
   "evidence_sha": "10f06186d334f488",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Healthcare Technology / SaaS / Financial Planning Software"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect emphasis on scalable cloud architecture, healthcare domain knowledge (or ability to learn), data modeling for financial analytics, and cross-functional collaboration. Prepare for system design questions around multi-tenant SaaS platforms, SQL optimization, and possibly ML model deployment for cost prediction. Behavioral questions will likely probe mission alignment and work-life boundaries."
+  },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784675128,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chicago, IL with remote/hybrid options. Additional offices in Denver, CO and possibly other US locations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help healthcare organizations improve financial performance and make better decisions so they can focus on patient care."
+  },
   "name": "Strata Decision Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast: SaaS product cycles with quarterly releases, but healthcare regulatory constraints and enterprise sales cycles prevent the breakneck speed of consumer tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core product is StrataJazz, a cloud platform for healthcare financial planning, cost accounting, decision support, and analytics. Additional modules include StrataJazz Cost Accounting, StrataJazz Decision Support, and StrataJazz Planning."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays + flexible sick time; unlimited PTO not commonly reported for this company stage."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292233,7 +293057,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns publicly documented; likely observes standard US holidays and may offer winter break flexibility."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-stage private company (approx. 500-1,000 employees), acquired by Symphony Technology Group (STG) in 2022, operating as a standalone portfolio company."
   },
   "sources": [
    {
@@ -292267,14 +293096,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=71b8b881f2217fbae68b1fd0ceea6771ce3c941205a718440084d490ffbacb3bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuc3RyYXRhdHJ1c3QuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical roles given size and tech focus; no public data on green card sponsorship frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Strata Decision Technology provides cloud-based financial planning, decision support, and analytics software for healthcare organizations, helping hospitals and health systems manage budgeting, cost accounting, and strategic planning."
+  },
+  "synthesized_evidence_sha": "10f06186d334f488",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack cloud development (AWS, React, .NET Core, SQL Server), data engineering, analytics, machine learning for healthcare cost prediction and optimization, and integration with EHR/ERP systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675128,
   "web_search_url": "https://duckduckgo.com/?q=Strata+Decision+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Strata sits at the intersection of healthcare impact and technical complexity, offering a mission-driven environment where AI/data science work directly improves hospital finances and patient care. As a private-equity-backed SaaS company, it likely provides competitive new-grad compensation and faster innovation cycles than legacy healthcare IT vendors, while avoiding the burnout culture of big tech or high-frequency trading firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5: Private equity ownership often brings operational discipline around sustainable pacing; healthcare SaaS typically avoids the on-call intensity of consumer-facing platforms. No guaranteed shutdowns publicly documented."
   }
  },
  "stripe": {
@@ -309761,38 +310611,98 @@
  "tiffany co": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6d44496154"
+   ],
+   "value": "Estimated: Low. Tech work is applied to retail operations, e-commerce, and inventory rather than pushing the boundaries of AI research or cutting-edge data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135",
+    "6d44496154"
+   ],
+   "value": "Designs and manufactures luxury goods in-house and sells them directly to consumers through a global network of physical boutiques and direct-to-consumer online channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6d44496154"
+   ],
+   "value": "Estimated: Elegant, brand-focused, and traditional. Emphasizes craftsmanship, heritage, and customer service over a fast-paced, mission-driven technical culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135"
+   ],
+   "value": "Affluent consumers, luxury buyers, and couples purchasing engagement and wedding jewelry globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely ranges from $90k-$120k for tech roles, lower than top-tier tech compensation but potentially supplemented with luxury retail employee discounts."
   },
   "evidence_sha": "e6803a1c41f220cf",
+  "generated_at": 1784883896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135"
+   ],
+   "value": "Luxury Goods, Retail, and Jewelry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe whether the data science team operates with startup-like innovation or is constrained by legacy retail bureaucracy. It is critical to ask about sane hours, guaranteed shutdowns, and actual work-life balance policies to ensure the culture avoids toxic burnout, and to verify if new-grad compensation meets top-tier tech standards."
   },
+  "last_attempt_at": 1784883896,
   "last_evidence_at": 1784675128,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135"
+   ],
+   "value": "Headquartered in New York City, NY, with a global presence of retail boutiques across major cities in the Americas, Asia-Pacific, Japan, and Europe."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "16acaeea51"
+   ],
+   "value": "To enrich the lives of its customers by creating extraordinary objects of desire that represent the pinnacle of design, craftsmanship, and luxury heritage."
+  },
   "name": "Tiffany & Co.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. The culture is driven by luxury retail cycles and corporate heritage under LVMH, lacking the fast, innovative pace of a tech-first company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135",
+    "6d44496154"
+   ],
+   "value": "Luxury jewelry, engagement rings, fine watches, fragrances, and accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate policy, likely 20-25 PTO days annually alongside standard holidays, subject to LVMH employee benefits."
   },
+  "refresh_after": 1790067896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -309802,7 +310712,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard corporate holidays exist, but guaranteed company-wide shutdowns are not public."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135"
+   ],
+   "value": "Established global luxury house operating as a subsidiary of LVMH (Moët Hennessy Louis Vuitton) following a multi-billion dollar acquisition."
   },
   "sources": [
    {
@@ -309836,14 +310753,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=411da45dd49188af5ece33df86de8dcb689508963bf3934b8278227e18a42368JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cudGlmZmFueS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "de2dd1d135"
+   ],
+   "value": "Estimated: As a large subsidiary of LVMH, it may offer visa sponsorship for specialized digital and tech roles, but it is not historically known as a major sponsor of new-grad tech visas like FAANG companies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "de2dd1d135",
+    "6d44496154"
+   ],
+   "value": "Tiffany & Co. is an iconic American luxury jewelry and specialty retailer, famous for its diamond jewelry and signature blue boxes. It makes money by designing, manufacturing, and selling high-end jewelry, timepieces, and accessories through its global retail stores and e-commerce channels. It operates as a subsidiary of LVMH."
+  },
+  "synthesized_evidence_sha": "e6803a1c41f220cf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6d44496154"
+   ],
+   "value": "E-commerce platforms, digital customer experiences, CRM, and supply chain logistics. AI and data science roles likely focus on consumer personalization, demand forecasting, and inventory optimization rather than cutting-edge technical R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675128,
   "web_search_url": "https://duckduckgo.com/?q=Tiffany+%26+Co.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a luxury retail subsidiary, Tiffany & Co. prioritizes brand heritage and e-commerce enablement over fast-paced, elite AI innovation. Its corporate structure under LVMH generally leans toward slow bureaucracy rather than the aggressive, high-paying tech culture typical of top-tier AI roles, which may not satisfy a candidate seeking rapid technical acceleration and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Luxury retail often demands operational uptime, but the established corporate structure may offer sane standard hours compared to high-burnout tech startups."
   }
  },
  "tiktok": {
