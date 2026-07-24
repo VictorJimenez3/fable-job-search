@@ -100619,41 +100619,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging / Early-stage — not yet recognized as a top-tier AI employer; prestige will depend on technical blog output, model-in-production scale, and funding trajectory."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a",
+    "3eb92cd73a"
+   ],
+   "value": "Likely commission-based revenue from cruise line bookings made through the platform; may also earn referral fees or service fees. Operates as an online travel agency (OTA) for cruises."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Small, scrappy startup vibe; culture details not publicly documented. Potential for high autonomy but also ambiguity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "3eb92cd73a",
+    "a22267617a"
+   ],
+   "value": "Consumers looking to book cruise vacations online; likely targets leisure travelers seeking cruise deals across multiple cruise lines and destinations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k-$140k base + equity (early-stage startup range); significantly below top-tier big tech ($200k+). Actual figures unverified."
   },
-  "evidence_sha": "e022e251860d472f",
+  "evidence_sha": "53aa8c87ad1845c1",
+  "generated_at": 1784936387,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a",
+    "3eb92cd73a"
+   ],
+   "value": "Travel Technology / Online Travel Agency (OTA) — Cruise vertical"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for concrete evidence of work-life guardrails: ask about on-call rotation, typical deploy times, and whether the team has explicit \"no-meeting\" blocks or mandatory shutdown rituals. On the technical side, dig into the data stack — what ML models are in production today (ranking, price forecasting, demand prediction), how they handle sparse cruise-inventory data, and whether there's a path to publish or open-source work. Also ask how product decisions are made: is there a clear experiment-r"
   },
-  "last_attempt_at": 1784935022,
-  "last_evidence_at": 1784935026,
+  "last_attempt_at": 1784936387,
+  "last_evidence_at": 1784936386,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a"
+   ],
+   "value": "Headquarters location not confirmed in sources; appears to be a US-based online platform given .com domain and English-language marketing."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a"
+   ],
+   "value": "To simplify cruise booking through an online platform (inferred from product focus); no explicit mission statement found in sources."
+  },
   "name": "Cruisebound",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — early-stage travel startup likely moves quickly to integrate cruise line APIs, iterate on booking flow, and build data moats; but actual pace unverified."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "3eb92cd73a",
+    "a22267617a"
+   ],
+   "value": "Online cruise booking platform (cruisebound.com) with a landing page for booking cruises online; likely includes search, comparison, and booking tools for various cruise lines and itineraries."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No public policy found; typical early-stage startup ranges 10-15 days plus holidays, but unverified."
   },
-  "retry_after": 1784935142,
+  "refresh_after": 1790120387,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100663,9 +100717,46 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No documented company-wide shutdowns or guaranteed offline periods found in sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8f44822f56"
+   ],
+   "value": "Early-stage startup (inferred from limited public presence and Reddit discussion questioning legitimacy); exact employee count and funding stage not publicly verified."
   },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8f44822f56",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784936386,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=795f55deb8b3a23ee2fac1603e3bf21fcf501b24ac8651e658c2ffeb4b95caefJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=226ecdf1-9569-6a60-1c98-da51942e6b2a&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0NydWlzZS9jb21tZW50cy8xZHB0bmN2L2lzX2NydWlzZWJvdW5kX2Ffc2NhbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "3eb92cd73a",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784936386,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=74c7fec68f5fd42b92af201a27cbd4a3404770e67425ed773ca5af8ac905e3aeJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=226ecdf1-9569-6a60-1c98-da51942e6b2a&u=a1aHR0cHM6Ly93d3cuY3J1aXNlYm91bmQuY29tL2xwL2Jvb2stY3J1aXNlcy1vbmxpbmU&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a22267617a",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784936386,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2233bf50d4d51260d0399b0aa1548cfe6bce48f4f34b9a1ef287cd2a5406170cJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=226ecdf1-9569-6a60-1c98-da51942e6b2a&u=a1aHR0cHM6Ly93d3cuY3J1aXNlYm91bmQuY29tLw&ntb=1"
+   },
    {
     "content_sha": "35f1aee2ad38d195",
     "excerpt": "Please click here if the page does not redirect automatically ...",
@@ -100695,36 +100786,45 @@
     "retrieved_at": 1784935026,
     "title": "Cruisebound public company page",
     "url": "https://www.bing.com/ck/a?!&&p=738c45e960aca130d9ee642e0e6a8306f715871317c006240c4570574971fbc2JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tVVMvV2luZG93cy9IYXJkd2FyZS9QcmludGVyL3NldC1hLWRlZmF1bHQtcHJpbnRlci1pbi13aW5kb3dz&ntb=1"
-   },
-   {
-    "content_sha": "fae40f6513d4a1de",
-    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
-    "id": "1db9db9c4d",
-    "kind": "discovery_feed",
-    "publisher": "Cruisebound",
-    "retrieved_at": 1784935026,
-    "title": "Discovery source for Cruisebound",
-    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
-   },
-   {
-    "content_sha": "a1f319d0c33c24d7",
-    "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role SQL Python Statistics Machine learning Model building Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L. Jobright.ai Data Scientist jobs in United States Overview Company Apply on Employer Site APPLY NOW Cruisebound · 4 hours ago Data Scientist East Coast Full-time Onsite Entry, Mid Level $90K/yr - $110K/yr Cruisebound is on a mission to bring the joy of cruising to all travelers by simplifying online booking.",
-    "id": "9bbc61b5da",
-    "kind": "official_job",
-    "publisher": "Cruisebound",
-    "retrieved_at": 1784933777,
-    "title": "Official job posting — Data Scientist",
-    "url": "https://jobright.ai/jobs/info/6a63ae775c7e2d715ebad4c6?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a",
+    "3eb92cd73a"
+   ],
+   "value": "Cruisebound is an online platform for booking cruises, operating as a travel marketplace that connects consumers with cruise line inventory. The company appears to function as a digital travel agency specializing in cruise vacations."
+  },
+  "synthesized_evidence_sha": "53aa8c87ad1845c1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a22267617a",
+    "3eb92cd73a"
+   ],
+   "value": "Travel technology platform: search/ranking algorithms, real-time inventory integration with cruise line APIs, booking engine, payment processing, recommendation systems, and frontend user experience for cruise discovery."
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1784935026,
+  "web_researched_at": 1784936386,
   "web_search_url": "https://duckduckgo.com/?q=Cruisebound+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This role offers a chance to build travel-tech data systems (pricing, recommendations, inventory optimization) at an early-stage company where AI/ML can directly shape product direction. The cruise vertical has rich, under-exploited data — cabin pricing, itinerary preferences, seasonal demand — that a small, fast-moving team can turn into a competitive moat without the bureaucracy of large OTAs. If the culture truly respects shutdowns and sane hours, you get high-impact, high-learning work witho"
+  },
+  "wlb_rating": {
+   "confidence": "low",
+   "source_ids": [
+    "8f44822f56"
+   ],
+   "value": "Estimated: Unknown — Reddit thread questioning legitimacy (source 8f44822f56) raises caution; no employee reviews or policy docs found. Candidate should verify directly."
   }
  },
  "crusoe": {
@@ -144013,48 +144113,125 @@
  "flock": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Estimated: Tier 2-3. Not primarily known as an AI or data science company, but may have data engineering roles supporting their public safety technologies."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Sells public safety hardware and software systems to communities and organizations."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Mission-driven with inclusivity focus, evidenced by four ERGs: Women of Flock, Flock Proud, LEOs, and Melanin Motion. Hybrid work environment in Atlanta."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Communities and organizations seeking crime reduction and public safety technologies, including law enforcement and neighborhood groups."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "$100,000 - $150,000 per year for Associate Wireless Software Engineer role."
   },
   "evidence_sha": "3ba563ce47d454f4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784936387,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Public Safety Technology / Wireless Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Prepare to discuss how you can contribute to building privacy-protecting public safety technologies and demonstrate interest in Flock's mission of crime reduction. Ask about work-life balance policies, training programs, and opportunities for rapid technical growth."
+  },
+  "last_attempt_at": 1784936387,
   "last_evidence_at": 1784935028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Atlanta, GA (Hybrid work model)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "To reduce crime by 25% through building technology that reduces crime and protects privacy."
+  },
   "name": "Flock",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Estimated: Fast-paced tech environment focused on innovation in public safety technology."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Public safety technologies and wireless hardware/software solutions designed to reduce crime and protect privacy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Estimated: 15-25 days annually, typical for growing tech companies with competitive benefits."
   },
+  "refresh_after": 1790120387,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "None found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Growing technology company hiring for entry-level and associate roles."
   },
   "sources": [
    {
@@ -144108,14 +144285,45 @@
     "url": "https://jobright.ai/jobs/info/6a63baaa8d53603449603f7e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Not explicitly stated in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Flock is a technology company dedicated to building safety solutions that reduce crime and protect privacy. It generates revenue by selling its hardware and software systems to various communities and organizations."
+  },
+  "synthesized_evidence_sha": "3ba563ce47d454f4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Wireless software engineering, public safety technology development, and privacy-focused systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784935028,
   "web_search_url": "https://duckduckgo.com/?q=Flock+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Flock aligns with your desire for a mission-driven company (reducing crime) while offering competitive new-grad pay ($100K-$150K) and a fast-paced tech culture in Atlanta. The role provides technical learning opportunities in wireless engineering within a growing company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c2905be16c"
+   ],
+   "value": "Estimated: Moderate. Offers hybrid work and comprehensive benefits, suggesting reasonable work-life balance, though specific policies are not detailed."
   }
  },
  "florida atlantic university": {
@@ -197381,7 +197589,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197399,7 +197607,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784935022,
+  "last_attempt_at": 1784936387,
   "last_evidence_at": 1784935026,
   "name": "Iridium Communications",
   "pace_of_work": {
@@ -197412,7 +197620,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784935142,
+  "retry_after": 1784936627,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259473,52 +259681,132 @@
  "nexxen": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Estimated: Mid-tier. The company requires complex, high-scale optimization logic for real-time bidding decisions, though open roles currently focus on core software engineering rather than dedicated AI or data science titles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Platform-based revenue driven by providing a Demand Side Platform (DSP) that executes high-throughput, low-latency ad bidding transactions at a massive scale."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "751d4dbe34",
+    "36d0e6f7a7"
+   ],
+   "value": "Estimated: Fast-paced, engineering-driven, and highly vigilant about security and operational excellence. The culture values quick results and dynamic deployment in a real-time programmatic ecosystem."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Digital advertisers and media buying agencies seeking automated, real-time bidding for programmatic ad placements."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "751d4dbe34",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary for entry-level roles, given the specialized low-latency distributed systems requirements. Exact pay packages are not public."
   },
   "evidence_sha": "677282737d4dcec9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784936387,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784935022,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Programmatic Advertising / Ad-Tech"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Prepare for deep technical challenges regarding low-latency constraints, high-throughput architecture, and distributed systems optimization. Emphasize your readiness for an agile, fast-paced environment and your interest in learning how optimized bidding decisions are mathematically and systematically derived."
+  },
+  "last_attempt_at": 1784936387,
   "last_evidence_at": 1784935028,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "36d0e6f7a7",
+    "751d4dbe34",
+    "dbc3b9e88f"
+   ],
+   "value": "Hiring is managed globally via AshbyHQ, with active new-grad and DevOps roles currently posted for software engineering teams."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "To power real-time programmatic advertising through optimized bidding decisions and high-performance distributed systems."
+  },
   "name": "Nexxen",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Estimated: Fast. The company explicitly operates in a fast-paced environment leveraging agile methodologies where results and production deployments are quickly visible."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "A real-time programmatic advertising Demand Side Platform (DSP) capable of processing billions of bid requests per day with low-latency and optimized bidding decisions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Estimated: 15-20 days of standard annual paid time off. Exact corporate PTO policies are not publicly listed."
   },
-  "retry_after": 1784935142,
+  "refresh_after": 1790120387,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "751d4dbe34"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Estimated: Unknown. No specific details regarding mandatory company shutdowns or guaranteed offline periods were found in the provided postings."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "36d0e6f7a7",
+    "751d4dbe34"
+   ],
+   "value": "An established technology company singles out for new-grad positions and actively scaling its software engineering and DevOps teams."
   },
   "sources": [
    {
@@ -259582,14 +259870,47 @@
     "url": "https://jobs.ashbyhq.com/nexxen/53cbef54-13b1-4539-9a18-bdd0c3431d32"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "751d4dbe34",
+    "dbc3b9e88f"
+   ],
+   "value": "Standard new-grad and entry-level engineering roles are actively posted, though specific visa sponsorship details are not explicitly advertised in current listings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Nexxen is an ad-tech company that builds core components for a Demand Side Platform (DSP) powering real-time programmatic advertising. It makes money by developing high-throughput distributed systems that process billions of ad bid requests per day to deliver optimized bidding decisions."
+  },
+  "synthesized_evidence_sha": "677282737d4dcec9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34",
+    "36d0e6f7a7"
+   ],
+   "value": "Engineers build high-throughput, low-latency distributed systems and develop core DSP components. Work also involves participating in the monitoring and deployment of new production applications and environments using agile methodologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784935028,
   "web_search_url": "https://duckduckgo.com/?q=Nexxen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "This role aligns with your priority for a fast, innovative tech culture where results are quickly visible in production. The complexity of processing billions of requests per day provides elite, high-scale distributed systems learning, accelerating your technical growth in a fast-paced environment rather than a slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "751d4dbe34"
+   ],
+   "value": "Estimated: Moderate. Their agile, fast-paced environment with highly visible results may demand sustained productivity, but it avoids the slow bureaucracy you want to escape. Exact work-life balance guarantees are not public."
   }
  },
  "niagara bottling": {
