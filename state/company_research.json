@@ -105286,11 +105286,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105302,6 +105304,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678568,
   "name": "Expedia Group",
   "pace_of_work": {
@@ -105314,6 +105317,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105367,7 +105371,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678568,
   "web_search_url": "https://duckduckgo.com/?q=Expedia+Group+company+careers+benefits",
@@ -108662,38 +108666,104 @@
  "figure": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Top-tier. Figure is tackling one of the hardest, most prestigious intersection points of AI and robotics."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Developing and deploying advanced humanoid robots to perform physical labor across commercial and residential sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Intensely focused on hardware-software integration, requiring constant in-person collaboration."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Commercial businesses seeking automated physical labor, and eventually the consumer home market."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Highly competitive AI/robotics new grad pay, likely $150k-$200k+ base to match top-tier talent."
   },
   "evidence_sha": "ae118d7a41c36e50",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "AI Robotics / Humanoid Robotics."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Assess whether the 5-day in-office structure enables the fast, innovative culture you want without bleeding into toxic hours or burnout. Validate technical mentorship availability for new grads and whether you'll get deep, accelerated learning from senior staff."
+  },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784747022,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "San Jose, CA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Building the world's most capable general-purpose humanoid robot."
+  },
   "name": "Figure",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Fast-paced and highly collaborative, as indicated by the rigorous 5-day in-office requirement."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Figure 03, a general-purpose humanoid robot designed for commercial tasks and the home."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Standard tech PTO package (e.g., 15-20 days), exact policy not public."
   },
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108702,8 +108772,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns evident from public sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Stage and exact headcount not available in provided sources, but actively hiring for specialized AI and XR roles."
   },
   "sources": [
    {
@@ -108747,14 +108826,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=082e9e8556de568cce199750f984043a9981f46621532f85ee767f922f82d9f8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuZmlndXJlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Not specified in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Figure is an AI robotics company developing a general-purpose humanoid robot called Figure 03, designed for both commercial tasks and home environments. They generate value by building what they claim to be the world's most capable general-purpose humanoids to automate physical labor."
+  },
+  "synthesized_evidence_sha": "ae118d7a41c36e50",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Involves AI engineering, extended reality (XR), robotics, and in-person hardware-software integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Figure+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Building general-purpose humanoids is one of the most elite, cutting-edge AI and robotics challenges, offering massive technical learning and career growth. The 5-day in-office mandate suggests a fast-paced, highly collaborative 'move fast' tech culture. The mission-driven nature of physical AI could be deeply compelling."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5921b0302e"
+   ],
+   "value": "Estimated: Moderate. The 5-day in-office mandate implies a demanding schedule, though specifics on hours aren't provided."
   }
  },
  "figure ai": {
@@ -152599,37 +152709,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate; focused on applied enterprise AI and data extraction rather than cutting-edge frontier research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "B2B enterprise contracts for secure physical storage and digital information lifecycle management, combining recurring facility rental revenue with managed services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, mission-oriented, and risk-averse, prioritizing security and operational stability over rapid disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "37158c9576"
+   ],
+   "value": "Large enterprises, healthcare organizations, financial institutions, and government agencies requiring strict compliance and secure data management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 to $110,000 base salary for entry-level software and data roles based on industry averages for the region."
   },
   "evidence_sha": "b9b0b3a585ba12f8",
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "Information Management and Data Storage."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Evaluating the team's innovation pace versus bureaucracy, confirming guaranteed shutdowns and sane hours, and verifying opportunities for rapid technical learning without toxic burnout."
   },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678632,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "Headquartered in Boston, Massachusetts with global facilities and data centers across North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "To help organizations lower the cost and risk of managing their physical and digital information assets while ensuring compliance and security."
+  },
   "name": "Iron Mountain",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of large legacy enterprises managing physical and digital assets with strict compliance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "Physical records storage, secure shredding, data centers, digital transformation services, and information lifecycle management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard paid time off for new employees, excluding holidays."
   },
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -152639,7 +152809,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, though standard public holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "Large, established publicly traded corporation with global operations."
   },
   "sources": [
    {
@@ -152673,14 +152851,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=48ddcb0ea2c72103e89efb44cf08306424da2128d6b0e6761fbcd5683de89931JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSXJvbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3270d5a3e9"
+   ],
+   "value": "As a large global enterprise, they likely offer visa sponsorship for specialized tech roles, though specific details are not confirmed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "37158c9576",
+    "cd0d894749"
+   ],
+   "value": "Iron Mountain is a global information management company that helps organizations store, protect, and manage physical and digital assets. They make money by providing secure storage facilities, data centers, and digital transformation services via long-term B2B enterprise contracts."
+  },
+  "synthesized_evidence_sha": "b9b0b3a585ba12f8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3270d5a3e9",
+    "cd0d894749"
+   ],
+   "value": "Legacy system modernization, cloud migration, AI-driven data extraction for digital assets, and enterprise software development for information management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678632,
   "web_search_url": "https://duckduckgo.com/?q=Iron+Mountain+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Balances elite tech prestige and high new-grad pay with a fast, innovative culture, while ensuring a mission-driven environment that strictly respects work-life balance and guarantees shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, with a focus on sustainable hours typical of established non-startup enterprises."
   }
  },
  "isoftstone": {
@@ -153500,41 +153708,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4 – Regional public institution; AI/DS work applied to student analytics, not core product R&D. Limited elite prestige or cutting-edge research visibility."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public funding model: state appropriations, tuition/fees (kept low), federal grants, local property taxes in some areas, and workforce training contracts. Non-profit, tax-exempt status."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-focused, process-oriented, consensus-driven. Values equity, access, and shared governance. Can feel bureaucratic; innovation requires patience and relationship-building."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional and non-traditional students seeking affordable higher education, employers needing skilled talent pipelines, K-12 districts for dual enrollment, and Indiana communities served by 40+ campus locations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$70,000 base (public-sector scale). Comprehensive benefits (pension, tuition remission, health) add ~30% value. No equity/bonus."
   },
   "evidence_sha": "01cf86321c4faf9d",
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Public Higher Education / Community College System"
   },
-  "last_attempt_at": 1784877636,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate commitment to student access/equity, experience with public-sector constraints (procurement, compliance), ability to modernize legacy systems incrementally, and collaborative stakeholder management across academic/admin units."
+  },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678337,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "40+ campuses and sites throughout Indiana; headquarters in Indianapolis. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide affordable, accessible, and high-quality education that transforms lives and strengthens Indiana's workforce and economy."
+  },
   "name": "Ivy Tech Community College",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate – Governance, compliance, and shared governance processes create deliberate pace. Projects measured in quarters/years, not sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Academic programs (associate degrees, technical certificates, transfer pathways), workforce development and corporate training, continuing education, dual-credit partnerships with high schools, and online/hybrid course delivery."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 10–12 paid holidays + sick leave (varies by classification/union)."
   },
-  "retry_after": 1784877756,
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153544,7 +153790,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Week between Christmas–New Year’s typically closed; summer Fridays or reduced hours in some units. No guaranteed company-wide shutdowns beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public institution: ~150,000+ credit students annually, 6,000+ employees across 40+ Indiana locations. Established 1963."
   },
   "sources": [
    {
@@ -153578,14 +153829,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3e719a87b9dc468832a7b28945cbac07289e48105cb01f2519d767b1334726afJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly9pdnlsaXZpbmcuY29tL3RoZWl2eWhhd2FpaWthaS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public institution, may sponsor H-1B for specialized faculty/research roles; less common for standard IT staff. Cap-exempt H-1B possible. Green card sponsorship rare and case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ivy Tech Community College is Indiana's largest public postsecondary institution and the nation's largest singly accredited statewide community college system, offering associate degrees, certificates, and workforce training across dozens of campuses."
+  },
+  "synthesized_evidence_sha": "01cf86321c4faf9d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT infrastructure (SIS, LMS, ERP), data analytics for student success, cybersecurity, instructional technology, cloud migration, and emerging AI/ML applications in enrollment management and personalized learning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678337,
   "web_search_url": "https://duckduckgo.com/?q=Ivy+Tech+Community+College+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven public-service impact with stable, structured environment—aligns with desire for work-life balance and learning growth. Not a high-pay, fast-pace AI elite shop; prestige is regional/public-sector, not Silicon Valley tier. Bureaucracy exists but hours are predictable and burnout risk low."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High – Standard 37.5–40 hr weeks, rare evenings/weekends, generous holiday calendar, strong union/HR protections. Estimated 9/10 for predictability."
   }
  },
  "ixl learning": {
@@ -170693,39 +170965,96 @@
  },
  "llnl": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Elite / Top-Tier. Recognized globally for operating some of the world's fastest supercomputers and pioneering artificial intelligence applications for complex scientific problems."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Primarily funded by United States federal government agencies to conduct mission-critical research, development, and scientific exploration."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, highly academic, collaborative, patriotic, and packed with elite scientists. Tech and business operations move slower than FAANG companies."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "The United States Department of Energy (DOE) and the National Nuclear Security Administration (NNSA)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $160,000 base salary. Total compensation is highly competitive and augmented by strong federal benefits."
   },
   "evidence_sha": "6df318d72c770544",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a7d63738c6",
+    "23d342fc2f"
+   ],
+   "value": "National Research and Development / Federal Government Facilities"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678640,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Headquartered in Livermore, California, with secondary facilities and operations in nearby Silicon Valley and rural testing sites."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "To enable national security and apply science and technology to the basic problems of our time."
+  },
   "name": "LLNL",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower, structured, and deliberate pace. Work is rigorous but prioritizes safety, security, and documentation over rapid deployment or prototype iterations."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "National security solutions, nuclear stockpile stewardship, supercomputing platforms, and advanced technological research in AI, data science, and physical sciences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-30 annual leave days. This typically accounts for generous federal vacation and sick leave policies."
   },
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170735,7 +171064,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed annual shutdowns. The lab commonly provides scheduled holiday closures around the winter season."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "A large, established national laboratory. It is a mature federal facility backed and funded by the United States government."
   },
   "sources": [
    {
@@ -170779,14 +171115,41 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Requires the ability to obtain and maintain a US security clearance. This inherently limits sponsorship to US citizens or permanent residents."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Lawrence Livermore National Laboratory (LLNL) is a federally funded research and development center (FFRDC) managed by the University of California. It advances national security and scientific discovery through high-performance computing, advanced engineering, and breakthrough research."
+  },
+  "synthesized_evidence_sha": "6df318d72c770544",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7d63738c6"
+   ],
+   "value": "Involves high-performance computing, machine learning, artificial intelligence, big data analytics, and advanced modeling and simulation for massive scientific datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678640,
   "web_search_url": "https://duckduckgo.com/?q=LLNL+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Renowned for a 9/80 schedule, reasonable hours, self-managed pace, and an overall culture that strictly respects work-life balance."
   }
  },
  "lloyds bank": {
@@ -209988,48 +210351,126 @@
  "onsemi": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Estimated: Low to Medium for the broader tech industry. While AI applications drive their power management and automotive sensing products, they are primarily viewed as a hardware company, lacking the elite, dedicated AI prestige of top-tier software or research-first AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Fabless and hybrid semiconductor manufacturing model, generating revenue through the design, fabrication, and global sale of power and sensing components."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Mission-driven by sustainability and energy efficiency, though timelines and engineering culture are heavily influenced by physical manufacturing processes."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "df3ae00545"
+   ],
+   "value": "Automotive manufacturers, industrial equipment makers, and cloud computing data centers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "af36fc0814"
+   ],
+   "value": "Estimated: $85,000 - $120,000 base salary for a software or data science new-grad. This is competitive for hardware but falls below the elite pay top-tier pure-software or AI firms offer ($150k+)."
   },
   "evidence_sha": "bd5ad60faf11a011",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "af36fc0814"
+   ],
+   "value": "Semiconductors and electronics."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Probe deeply into the specific innovation pace of the target team to ensure it avoids heavy manufacturing bureaucracy, verify that new-grad compensation matches your high expectations, and confirm directly that work-life balance—including any shutdowns—is actively protected rather than just a vague company talking point."
+  },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678632,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "af36fc0814",
+    "07677ad75d"
+   ],
+   "value": "Headquartered in Phoenix, Arizona, with a global network of manufacturing sites, design centers, and corporate offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Innovating for a smarter, safer, and more sustainable future through energy-efficient power and sensing technologies."
+  },
   "name": "onsemi",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Estimated: Moderate to slow, constrained by hardware development cycles and manufacturing timelines, rather than the fast-turnaround iterative culture seen in pure software startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "df3ae00545"
+   ],
+   "value": "Power semiconductors (including silicon carbide and MOSFETs), image sensors, and custom integrated circuits."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Estimated: 15 to 20 days of standard vacation annually, typical for a public semiconductor company, in addition to standard holidays."
   },
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "07677ad75d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "af36fc0814"
+   ],
+   "value": "Estimated: None found in research. While some large hardware companies mandate plant shutdowns for maintenance, there is no evidence of company-wide guaranteed annual time-offs."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "af36fc0814"
+   ],
+   "value": "Large-cap, established public corporation operating globally."
   },
   "sources": [
    {
@@ -210063,14 +210504,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=499a6fe947df510fe080cab1bc404971aadcec1228aa9aba577ccf6194735822JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cub25zZW1pLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Estimated: As a large multinational hardware corporation, it is highly likely they offer visa sponsorship for specialized roles in hardware and AI, though official policy requires direct HR confirmation."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "onsemi is a major semiconductor manufacturer that designs and produces power and sensing technologies, such as silicon carbide chips. The company makes money by selling these specialized components to automotive, industrial, and cloud computing customers to improve energy efficiency and performance."
+  },
+  "synthesized_evidence_sha": "bd5ad60faf11a011",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "Hardware design, semiconductor fabrication, and AI-driven data initiatives focusing on predictive maintenance, manufacturing optimization, and edge AI for autonomous driving."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678632,
   "web_search_url": "https://duckduckgo.com/?q=onsemi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "07677ad75d"
+   ],
+   "value": "While the company excels in mission-driven work by advancing sustainable energy through power-efficient chips, its hardware-centric legacy, slower corporate pace, and manufacturing-oriented tech culture fall short of your desire for elite AI prestige, fast innovative dynamics, and the hyper-competitive new-grad pay found in pure software or AI-first firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "af36fc0814"
+   ],
+   "value": "Estimated: Generally good to balanced depending on the specific team, benefiting from the steady cadence of established hardware and manufacturing operations rather than constant software fire-drills."
   }
  },
  "ontario teachers pension plan": {
@@ -229702,37 +230174,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied ML shop with production impact at financial-institution scale; not a primary research lab but strong publication record in applied venues (KDD, RecSys) and open-source contributions."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Subscription SaaS (platform fees per account/user), usage-based transaction fees, and professional services for implementation and customization. High retention, recurring revenue model typical of vertical B2B fintech."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, collaborative. 'Adults treating adults like adults' — autonomy with accountability. Strong internal mobility; hackathons and learning stipends encouraged. Diversity numbers published annually."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "U.S. regional and community banks, credit unions, and fintech companies seeking to replace legacy cores or launch digital-first offerings. Notable clients include large regional banks and digital-first brands."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$130k base + 10–15% target bonus + RSUs (~$30k–$45k/yr vesting). Total first-year comp ~$160k–$190k. Austin/Dallas geo differential ~5% lower than SF/NYC."
   },
   "evidence_sha": "93f50570d7e4350a",
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Fintech / Vertical SaaS (Digital Banking Infrastructure)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep-dive system design (scalable ledger/event-sourcing), ML model lifecycle questions (fraud/credit features, monitoring, fairness), and SQL/data modeling exercises. Behavioral rounds probe ownership, cross-team collaboration, and regulatory-aware judgment. Prepare a concise story about a model or pipeline you took from experiment to production."
   },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678561,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Headquartered in Austin, TX. Major engineering hubs in Austin, Dallas, and Raleigh; remote-friendly across U.S. Some roles require proximity to financial institution clients."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "To strengthen communities by empowering financial institutions with technology that makes banking more accessible, secure, and human-centered."
+  },
   "name": "Q2",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — quarterly planning with 2-week sprints; on-call rotation ~1 week/quarter; deployments multiple times daily. Less bureaucracy than big banks, more process than early-stage startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Core digital banking platform (online/mobile), loan origination and decisioning, account opening, financial wellness tools, and developer APIs for embedded finance. Delivered as multi-tenant SaaS with optional managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; unlimited sick/mental-health. New grads start at 15 days; accrues with tenure."
   },
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229742,7 +230268,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Christmas–New Year) + summer 'recharge' Friday off each week in July."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Public company (NYSE: QTWO), ~2,500 employees, $600M+ ARR, profitable on adjusted EBITDA. Mature growth stage with ongoing M&A to expand product suite."
   },
   "sources": [
    {
@@ -229776,14 +230309,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=088c3ca7c91b38c792b66708271c9c8316457d6e9c3b7b8023d74c9b9f0a2c33JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cucTIuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (regular filings for engineering/data roles). Green card support for senior talent. New-grad sponsorship case-by-case; more common for ML/platform engineering than generalist roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Q2 Holdings (NYSE: QTWO) provides cloud-based digital banking and lending platforms that help financial institutions modernize their customer-facing technology. The company sells subscription software and related services to banks, credit unions, and fintechs, generating recurring revenue from platform fees, transaction volumes, and professional services."
+  },
+  "synthesized_evidence_sha": "93f50570d7e4350a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3182fe9c31"
+   ],
+   "value": "Distributed systems, high-scale transaction processing, data pipelines, ML for fraud/credit risk, API platform, cloud infrastructure (AWS), and frontend frameworks. Strong emphasis on security, compliance, and uptime."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678561,
   "web_search_url": "https://duckduckgo.com/?q=Q2+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Q2 sits at the intersection of fintech scale and mission-driven impact: you build systems that move real money for millions of customers while working in a public-company environment that still ships fast. The Austin-rooted culture prizes pragmatism over politics, and the platform scope (banking, lending, data, APIs) gives AI/DS folks genuine production surface area without the burnout reputation of consumer-tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 10am–4pm CT, no-meeting Fridays common, explicit 'no weekend deployments' policy for non-critical paths. On-call is shared and compensated."
   }
  },
  "qa wolf": {
@@ -313576,41 +314134,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 — Respected applied DS/analytics team in utility sector; not an AI research lab; publications rare; impact measured in grid reliability and cost savings; strong for domain expertise, weaker for pure ML prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit generation and transmission (G&T) cooperative funded by member rates; revenue from wholesale power sales to member distribution co-ops covers operating costs, debt service, and capital investments; margins returned to members as capital credits."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established utility culture: safety-first, collaborative, process-oriented, long-tenure workforce; cooperative mission fosters alignment; slower change adoption than tech; engineering-driven decisions; hierarchical but accessible leadership; low politics relative to investor-owned peers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Member distribution cooperatives serving retail customers in Indiana, Illinois, Missouri, and Ohio; 23 member systems serving approximately 350,000 meters across the region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + modest bonus/benefits; utility pay bands lag tech; strong benefits (pension, 401k match, health) improve total comp; relocation assistance likely."
   },
   "evidence_sha": "091ecea152b88508",
+  "generated_at": 1784877792,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Electric utilities / Generation & Transmission Cooperative / Energy"
   },
-  "last_attempt_at": 1784877636,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical power systems questions: load forecasting accuracy, renewable intermittency handling, SCADA data quality, NERC compliance implications. Demonstrate ability to translate ML outputs to operator actions. Ask about: data maturity (historian/PI systems), cloud vs on-prem constraints, cybersecurity boundaries, and how DS team interacts with system operators. Show you understand cooperative governance vs IOU pressure."
+  },
+  "last_attempt_at": 1784877792,
   "last_evidence_at": 1784678466,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Indianapolis, IN; generation assets across Indiana, Illinois, and Ohio; transmission facilities across service territory; remote/hybrid options likely limited for operational roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide reliable, affordable, and responsible power to member cooperatives while maintaining financial strength and environmental stewardship."
+  },
   "name": "Wabash Valley Power Alliance",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Project cycles tied to planning seasons (IRP, budget cycles) and outage schedules; not sprint-driven; operational emergencies create occasional intensity; generally predictable compared to tech/product companies."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wholesale electricity generation and transmission services; power supply portfolio including coal, natural gas, wind, solar, and landfill gas assets; energy management and grid reliability services for member cooperatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 holidays; standard utility package; accrual increases with tenure; check current handbook for exact schedule."
   },
-  "retry_after": 1784877756,
+  "refresh_after": 1790061792,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313620,7 +314216,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdowns; standard holiday schedule (Christmas/New Year week typically light); operational coverage required year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established utility cooperative (founded 1963); ~500 employees; ~$1B+ annual revenue; mature organization with significant generation assets and transmission infrastructure."
   },
   "sources": [
    {
@@ -313654,14 +314255,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized engineering and IT roles given utility sector talent needs; green card sponsorship probable for critical technical positions; verify with HR for current policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wabash Valley Power Alliance is a generation and transmission cooperative providing wholesale power to member distribution cooperatives across the Midwest. It operates as a not-for-profit utility focused on reliable, affordable electricity for its member-owners."
+  },
+  "synthesized_evidence_sha": "091ecea152b88508",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Power systems engineering, grid operations, renewable integration, SCADA/EMS, energy forecasting, asset optimization, cybersecurity for critical infrastructure, data analytics for load forecasting and market operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678466,
   "web_search_url": "https://duckduckgo.com/?q=Wabash+Valley+Power+Alliance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers rare combination: mission-driven energy transition work at a cooperative (not investor-owned utility), meaning profits reinvest in reliability/affordability not shareholders. Technical scope spans fossil to renewables integration with real grid impact. Cooperative culture typically means more stable hours than consulting/tech, but operational roles require on-call rotations. Strong fit if you want data science applied to physical infrastructure decarbonization without FAANG burn"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — Typical utility schedule (8-5 core hours); on-call rotation for grid operations roles; limited weekend work except storms/emergencies; cooperative culture values retention; less pressure than IOUs or consulting."
   }
  },
  "walleye capital": {
