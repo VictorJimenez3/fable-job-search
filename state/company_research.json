@@ -18880,7 +18880,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18898,7 +18898,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784879791,
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784674897,
   "name": "Analysis Group",
   "pace_of_work": {
@@ -18911,7 +18911,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784879911,
+  "retry_after": 1784880170,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83390,37 +83390,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Strong applied ML in production — risk, fraud, credit modeling; not a primary AI research lab but high-caliber DS/ML engineering)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from per-transaction fees paid by employees for instant transfers, subscription or implementation fees from employer partners, and optional tip-based models; no interest or predatory lending."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, engineering-led, transparent, low-ego. Strong emphasis on diversity, financial literacy, and 'no surprise' communication. Social but not forced; remote-inclusive rituals."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Employers (enterprise to mid-market) across industries such as retail, healthcare, hospitality, and logistics who offer DailyPay as a benefit to their hourly and salaried workers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k base + $30k-$60k equity (4-yr) + $10k-$20k sign-on; total comp ~$210k-$290k year 1."
   },
   "evidence_sha": "523d03957b6a26a7",
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Earned Wage Access / Financial Wellness"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives on distributed systems design (idempotency, consistency in money movement), ML/system design for risk/fraud, and product-minded coding. Behavioral screens emphasize ownership, cross-functional collaboration, and alignment with mission. Prepare for a take-home or live coding session reflecting real DailyPay problems (e.g., ledger reconciliation, instant transfer flow)."
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784674897,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City; hybrid/remote-friendly with hubs in NYC, Minneapolis, and distributed across US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build a new financial system that helps people feel financially secure by giving them control over their earned pay."
+  },
   "name": "DailyPay",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — 2-week sprints, continuous deployment, quarterly OKRs; engineers own services end-to-end. Speed driven by product-market fit and regulatory complexity, not death marches."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "081a23e069",
+    "9c72812ed9",
+    "0603618cdd"
+   ],
+   "value": "DailyPay offers a mobile application (iOS/Android) and employer-integrated platform for on-demand pay, payroll integration, and financial wellness tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + unlimited sick/mental health; generous parental leave."
   },
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83430,7 +83476,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide summer shutdown (1 week) and year-end shutdown (1 week between Christmas and New Year); no-meeting Fridays in many teams."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private/unicorn (valued ~$2B+ as of 2022); ~500-1,000 employees; backed by top-tier VCs (e.g., Insight Partners, Tiger Global)."
   },
   "sources": [
    {
@@ -83464,14 +83515,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=56292f00a5d83c57c1b180dda3444627f34042a75337ec9ab260158d0de11474JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly9hcHAuZGFpbHlwYXkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for technical roles; typical for well-funded fintech at this stage."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "081a23e069",
+    "9c72812ed9",
+    "0603618cdd"
+   ],
+   "value": "DailyPay is a financial technology company that provides an earned wage access platform, allowing employees to access their earned but unpaid wages before traditional payday via a mobile app and employer partnerships."
+  },
+  "synthesized_evidence_sha": "523d03957b6a26a7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core engineering includes real-time payroll integrations, high-throughput transaction processing, fraud/risk modeling, data platform, ML for credit/underwriting, and consumer-grade mobile/web apps. Stack: Python, Go, Kotlin/Swift, React, Kafka, Kubernetes, AWS/GCP."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=DailyPay+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DailyPay sits at the intersection of high-impact fintech mission (financial inclusion for hourly workers) and elite technical challenges (real-time money movement, ML risk, massive scale). It offers top-quartile new-grad compensation with a culture known for engineering autonomy, rapid iteration, and explicit work-life boundaries (e.g., no-meeting Fridays, protected weekends) — rare in fintech. The team ships fast without the burnout typical of crypto or high-frequency trading shops."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Protected weekends, core hours, explicit shutdown norms; on-call rotation is compensated and bounded. Culture rejects heroics."
   }
  },
  "daimler truck": {
@@ -112942,48 +113018,140 @@
  "five star bank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "05cae8e781",
+    "c6bacc83e7"
+   ],
+   "value": "Estimated: Low. AI and Data Science functions at a regional bank are typically business-analytics oriented, not considered top-tier or elite.</value>"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "05cae8e781",
+    "61419cd1c8"
+   ],
+   "value": "Five Star Bank earns income through net interest margin from lending, fee-based services, and deposit accounts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "Estimated: Professional, community-focused, and risk-averse. Emphasizes compliance and relationship banking over disruptive innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "Small to mid-sized businesses, commercial real estate developers, and local retail banking consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "61419cd1c8",
+    "05cae8e781"
+   ],
+   "value": "Estimated: $70,000-$85,000 per year for entry-level technology roles, below high-growth tech standards."
   },
   "evidence_sha": "bb714d39b6689014",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05cae8e781",
+    "61419cd1c8"
+   ],
+   "value": "Banking and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7",
+    "05cae8e781"
+   ],
+   "value": "Estimated: Interviews likely emphasize domain fit for banking applications and relational systems rather than elite ML algorithm design or fast-paced startup culture."
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784663559,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "61419cd1c8"
+   ],
+   "value": "Five Star Bank has branch locations serving Minnesota, including offices in the Coon Rapids area."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "The company focuses on providing tailored financial solutions to support the growth and stability of local businesses and communities, though specific mission text was unavailable in the retrieved page snippets."
+  },
   "name": "Five Star Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "Estimated: Moderate to slow. Regional banks generally maintain steady, process-oriented workflows rather than rapid, innovative tech culture.</value>"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "The bank offers commercial and industrial loans, commercial real estate loans, SBA lending, personal banking, and digital treasury management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "05cae8e781",
+    "61419cd1c8"
+   ],
+   "value": "Estimated: 15-20 days of PTO per year for full-time employees, plus standard banking holidays."
   },
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "05cae8e781",
+    "c6bacc83e7"
+   ],
+   "value": "Estimated: No formal company-wide shutdown periods. Observes major federal and banking holidays.</value>"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7"
+   ],
+   "value": "Regional commercial bank; exact asset size and employee count could not be extracted from the available snippet metadata."
   },
   "sources": [
    {
@@ -113017,14 +113185,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=388fc0905f4b9d28f78acf961881af8789067b2e985e56ff01daa76911e33dc5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvNQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05cae8e781",
+    "61419cd1c8"
+   ],
+   "value": "Estimated: As a regional US bank, Five Star Bank is unlikely to sponsor US work visas for new graduates, prioritizing local talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6bacc83e7",
+    "61419cd1c8"
+   ],
+   "value": "Five Star Bank, operating under Five Star Bank and its parent holding company Five Star Bancorp, is a community and regional commercial bank. It generates revenue primarily through lending activities, deposit services, and treasury management solutions for businesses and individuals."
+  },
+  "synthesized_evidence_sha": "bb714d39b6689014",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c6bacc83e7",
+    "61419cd1c8"
+   ],
+   "value": "Estimated: Software engineering work likely centers on digital banking platforms, loan origination systems, and data integrations rather than elite artificial intelligence development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663559,
   "web_search_url": "https://duckduckgo.com/?q=Five+Star+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "61419cd1c8",
+    "c6bacc83e7",
+    "05cae8e781"
+   ],
+   "value": "Estimated: The candidate seeks a top-tier AI/data science role with elite prestige, fast innovation, and strong WLB, which is a mismatch for a regional commercial bank."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "05cae8e781",
+    "61419cd1c8"
+   ],
+   "value": "Estimated: Good. Banking hours typically offer standard 40-hour weeks but lack guaranteed tech-industry shutdowns.</value>"
   }
  },
  "flagship specialty partners": {
@@ -127634,37 +127839,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier due to lack of source data; historically a recognized name in conversational AI, but requires further verification."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2b2946bbb5"
+   ],
+   "value": "The business model cannot be determined from the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unable to determine from sources; assess during interviews whether the mission-driven culture truly respects personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2b2946bbb5"
+   ],
+   "value": "Customer details are not available in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not available in provided sources; research external compensation databases for elite tech pay benchmarks."
   },
   "evidence_sha": "139ce12d3da01383",
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6da5343f1f"
+   ],
+   "value": "Industry information could not be verified from the redirect-only sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the team's daily pace and engineering expectations to confirm the culture avoids high-burnout and bureaucracy while genuinely supporting guaranteed shutdowns and sane hours."
   },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784674897,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2b2946bbb5"
+   ],
+   "value": "Location data is not present in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6da5343f1f"
+   ],
+   "value": "Mission information was not found in the provided redirect-only sources."
+  },
   "name": "Gong",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Information not available in sources; candidates should validate if the environment is fast-paced and innovative or bogged down by bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6c1f1e1dc2"
+   ],
+   "value": "Specific products could not be verified from the provided sources, which only contained page redirect instructions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not found in provided sources; typical tech companies offer 15-20 days but this must be confirmed directly."
   },
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127674,7 +127933,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not found in provided sources; ask HR directly about any guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6c1f1e1dc2"
+   ],
+   "value": "Company size and stage are not extracted in the provided sources."
   },
   "sources": [
    {
@@ -127708,14 +127974,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a0cee4d77b2bdf758f249d22229e053e76a05f13800a5159bb802eae804a3a2eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuZ29uZy5pby8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6c1f1e1dc2"
+   ],
+   "value": "Visa sponsorship information is not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6c1f1e1dc2",
+    "6da5343f1f",
+    "2b2946bbb5"
+   ],
+   "value": "The supplied sources only contain redirect notices and do not provide substantive information about Gong's operations or monetization. Typically, Gong is an AI-driven revenue intelligence platform that captures customer interactions to help sales teams close deals, making money via enterprise SaaS subscriptions."
+  },
+  "synthesized_evidence_sha": "139ce12d3da01383",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6da5343f1f"
+   ],
+   "value": "Technical work specifics are not available from the provided redirect notices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Gong+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A role here could align with your priority for a top-tier AI position that accelerates technical learning in a fast, innovative tech culture, though you must carefully vet their actual work-life balance to ensure it respects your personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown from provided sources; candidates should question current employees about sane hours and actual burnout levels."
   }
  },
  "google": {
@@ -171025,42 +171320,98 @@
  "lendable": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Estimated: Elite/Niche. The company heavily markets its elite in-house AI and ML stack to compete on speed, indicating high technical prestige for AI/DS practitioners."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Financial technology (fintech) lending, generating revenue through AI-driven loan origination and fast capital distribution."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Innovation-focused and automation-first, with a strong emphasis on shared security responsibility and building technology in-house."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Individual consumers seeking fast access to personal loans and financing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £60,000 - £80,000. Competitive UK fintech compensation for new graduates in AI/DS roles."
   },
   "evidence_sha": "685f0fa688094a28",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784878881,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Financial Technology / Lending"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Be prepared to discuss how you can thrive in a fast-paced, cloud-native setting and apply ML/AI to automate complex processes cleanly. Emphasize your drive for rapid career growth and technical excellence, while probing interviewers about engineering team norms to assess work-life balance and avoid toxic or high-burnout environments."
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784737480,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "To get money into customers' hands in minutes instead of days by building the best in-house technology and letting machines do the heavy lifting."
+  },
   "name": "Lendable",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly describes its environment as fast-paced and focused on getting money to customers in minutes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "A proprietary, cloud-native lending platform that leverages machine learning and AI to automate underwriting and disburse funds rapidly."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days. Standard for UK tech firms of this stage, though exact policy is not public."
   },
-  "retry_after": 1784879841,
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171070,7 +171421,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in public sources; expect standard PTO structures instead."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Not explicitly stated in provided sources, but operates as an established tech-driven lender with dedicated InfoSec and engineering teams."
   },
   "sources": [
    {
@@ -171114,14 +171472,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=8710f417f6385993832ea3cb284ecfe5e2bed4958934017a1dcde902e4b4fe73JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cuY29zdGNvdHJhdmVsLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Lendable is a financial technology company that uses AI, machine learning, and new data sources to build in-house technology for fast loan approvals, getting money to customers in minutes. It makes money by originating loans efficiently through its cloud-native, AI-driven platform."
+  },
+  "synthesized_evidence_sha": "685f0fa688094a28",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Development of fast, cloud-native systems using new data sources, machine learning, and AI to automate heavy lifting in loan processing and security operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678733,
   "web_search_url": "https://duckduckgo.com/?q=Lendable+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Lendable offers a fast-paced, AI-driven environment where machines do the heavy lifting, aligning with your desire for innovative tech culture and accelerated learning. The focus on building elite technology in-house provides the technical prestige and impact you seek in a top-tier AI/DS role."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3d2f179118"
+   ],
+   "value": "Estimated: Moderate. The fast-paced AI-driven culture may conflict with guaranteed sane hours, so candidates should rigorously screen for burnout expectations."
   }
  },
  "lentech inc": {
@@ -202549,39 +202936,109 @@
  },
  "netsuite": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Prestige and AI tier are invisible from the supplied text. Estimated: Moderate; recognized strongly in legacy ERP software but lacks the cutting-edge prestige of top-tier pure AI/data science peers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Business model not available in the sources. Estimated: Software-as-a-Service (SaaS) subscription licensing combined with professional services and implementation consulting fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mature, structured, and bureaucratic; emphasizes large enterprise stakeholders, corporate stability, and slow growth over hyper-innovative agility."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Target customer demographics are unavailable in the snippets. Estimated: Small to medium-sized businesses (SMBs) and mid-market enterprises across various global industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 to $130,000 base salary per year for new graduate software engineering and data roles."
   },
   "evidence_sha": "579195fe0feb20a5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Industry information is not provided in the redirect text. Estimated: Enterprise Software / Cloud Computing / Business Technology."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784676949,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Office details are completely inaccessible from the redirect sources. Estimated: Global office footprint with major engineering hubs in North America and the Asia-Pacific region."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Mission statement not found in the sourced redirect pages. Estimated: To provide a unified, cloud-based business management suite enabling companies to manage their core operations efficiently."
+  },
   "name": "NetSuite",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; typical of legacy-enterprise ERP organizations rather than fast-paced innovative tech startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Specific product descriptions are inaccessible from the redirect pages. Estimated: Cloud-based Enterprise Resource Planning (ERP) software suite covering financial management, CRM, e-commerce, and inventory management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days of paid time off annually for standard professional hires."
   },
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202591,7 +203048,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed hard shutdowns found, though like many large enterprise orgs it may offer flexible holiday time around December."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Company size and stage are inaccessible from the supplied links. Estimated: Mature, publicly traded enterprise within Oracle's corporate umbrella."
   },
   "sources": [
    {
@@ -202625,14 +203091,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=98206b556589112fee96946c0a6983a21629e7f0004959ba8f0ee96e3961c67fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly9zeXN0ZW0ubmV0c3VpdGUuY29tL3BhZ2VzL2xvZ2luLmpzcA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "No visa sponsorship context is available from the supplied pages. Estimated: Likely to sponsor visas for specialized technical roles due to its status as a large, established multi-national tech corporation."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "The provided sources consist of redirect pages for NetSuite's customer and employee portals, yielding no accessible descriptive text. Consequently, the company's core operations cannot be definitively summarized from these inputs. Estimating based on standard industry knowledge, NetSuite is a cloud-based enterprise resource planning (ERP) software provider that makes money through software subscriptions and related implementation services."
+  },
+  "synthesized_evidence_sha": "579195fe0feb20a5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f6feb906be",
+    "1202b008dd",
+    "1bac2afede"
+   ],
+   "value": "Technical specifics are unavailable from the redirect URLs. Estimated: Full-stack cloud software development, ERP/integration engineering, and machine learning/data science efforts focused on corporate financial automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676949,
   "web_search_url": "https://duckduckgo.com/?q=NetSuite+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; generally supports standard corporate engineering hours with lower overall burnout probabilities compared to elite pure-AI firms."
   }
  },
  "neuberger": {
@@ -214979,37 +215478,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-Tier (Finance). While OTPP holds immense institutional elite financial prestige, internal AI and Data Science roles are typically recognized as business-support rather than generating industry-leading AI products or research publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "OTPP operates as a defined benefit pension plan. It generates returns by heavily investing the capital of its 330,000 working and retired teacher members into diversified global assets to ensure the long-term funding of the pension."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-driven, and highly risk-averse. It values long-term planning and stability over rapid, agile disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Ontario's public school teachers and educational workers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CA$85,000 - CA$105,000 base salary for general technology and data roles. Total compensation is standard market rate rather than 'high new-grad pay', though it is supplemented by excellent pension and benefits."
   },
   "evidence_sha": "3fef965802f188a0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Financial Services / Pension Fund Management"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Highlight your passion for mission-driven work and emphasize how you thrive in structured, balanced environments that still push for continuous technological innovation. Frame your questions around how legacy systems are being modernized, ask about the pace of AI/ML adoption in capital markets, and probe for examples of how the work-life balance accelerates rather than stagnates technical career growth."
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784676552,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Headquartered in Toronto, Canada, with a network of international offices in major financial hubs including London, Hong Kong, and Singapore."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "To deliver outstanding service and retirement security to Ontario teachers while operating as one of the world's most successful institutional investors."
+  },
   "name": "Ontario Teachers' Pension Plan",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to Slow. It operates with the deliberate caution of a highly regulated institutional investor, which may feel bureaucratic and slow to a candidate desiring a fast, highly disruptive tech startup culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Pension fund management and global investment services covering public and private equity, fixed income, infrastructure, real estate, and natural resources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of base annual paid time off, in addition to standard statutory holidays, typical for a mature Canadian pension fund employer."
   },
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215019,7 +215574,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed. Canadian financial institutions like OTPP commonly enforce paid office closures over the winter holiday season (between Christmas and New Year's)."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "A large-scale, mature organization managing over $250 billion in net assets and employing approximately 1,500 staff globally."
   },
   "sources": [
    {
@@ -215053,14 +215615,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=48894a640cdf77fa85d0488b3a17c68dea69d2536c90dc58b16f10dc7d23d17dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT250YXJpbw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship is highly uncommon for new graduates or entry-level non-specialized tech roles due to IT worker saturation in Toronto, but may be considered for senior or strictly specialized quantitative AI/machine learning positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Ontario Teachers' Pension Plan (OTPP) is a major Canadian pension fund responsible for administering pensions for Ontario's public school teachers. It makes money by managing and investing the pension plan's assets across global markets to pay current and future pensions, with a fund value approaching $250 billion."
+  },
+  "synthesized_evidence_sha": "3fef965802f188a0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "Technical teams primarily focus on enterprise IT, data infrastructure, cybersecurity, and building internal quantitative models to support investment, risk analysis, and the massive member service portal for 330,000+ educators."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676552,
   "web_search_url": "https://duckduckgo.com/?q=Ontario+Teachers%27+Pension+Plan+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c10ce33158"
+   ],
+   "value": "OTPP provides the mission-driven stability and elite prestige of a top global institutional investor, paired with a highly respectful work-life balance featuring guaranteed shutdowns. This makes it an ideal landing spot for a candidate seeking accelerated technical learning and impressive compensation without the toxic, high-burnout culture often found in big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. The traditional finance pension culture prioritizes sane working hours, making it an excellent place to avoid toxic burnout."
   }
  },
  "onyx point llc": {
@@ -286195,52 +286784,133 @@
  "tata consultancy services": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise AI Services). Prestige is corporate-institutional rather than elite AI research, lacking the cutting-edge open-source or R&D prestige of top labs, with most work being applied client solutions."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "B2B IT services and consulting, generating revenue through long-term contracts, managed services agreements, and time-and-materials project billing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: Deeply traditional, corporate, and heavily matrixed. Emphasizes structured learning and institutional stability over agile risk-taking or fast-paced innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "Large multinational corporations across various industries including banking, financial services, insurance, retail, healthcare, and manufacturing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: $70,000 to $85,000 USD base salary for North American new grads in AI/Data roles. Below the elite tier high-pay benchmark for top new grad tech talent."
   },
   "evidence_sha": "546b1241b182522e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879930,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784879791,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "Information Technology Services and Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Focus heavily on which specific AI/data science business unit or project you are being placed in. You must interrogate them during interviews about the exact tech stack of your project, the ratio of legacy maintenance to true AI research, mandatory hours/shutdown policies, and promotion velocity to ensure it meets your strict WLB and innovation requirements."
+  },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784674490,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "Headquartered in Mumbai, India, with a massive global presence featuring hundreds of offices and delivery centers across North America, Europe, Asia-Pacific, and Latin America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "To help customers achieve their business objectives by providing innovative, best-in-class consulting, IT solutions, and services, while fostering a culture of learning and growth."
+  },
   "name": "Tata Consultancy Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: Generally slow-paced and heavily process-driven bureaucratic environment, though specific client-facing deadlines can occasionally cause fast-paced sprints. Innovation is often slowed by corporate hierarchy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "IT outsourcing, enterprise software development, cloud migration services, consulting, and AI/data analytics platforms like TCS BaNCS, TCS Crystallus, and ignio AIOps."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: 20 to 25 days of paid time off per year, accumulating with tenure. Exact policy varies by geographic region."
   },
-  "retry_after": 1784879911,
+  "refresh_after": 1790063930,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a",
+    "729302d920"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: No guaranteed widespread company shutdowns; PTO is generally managed traditionally. Does not typically feature periodic forced company-wide breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a"
+   ],
+   "value": "Massive publicly-traded enterprise (part of the Tata Group) with over 600,000 employees globally. It is an established, mature giant rather than a startup."
   },
   "sources": [
    {
@@ -286274,14 +286944,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cf7ad763a5a53c0d85919cb6920caee64db61de2fe8ea6f48e07cfdd0fef849JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cudGF0YS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "As a global IT services firm, TCS frequently sponsors work visas for international employees, particularly H-1B and L-1 visas in the US, due to its heavy reliance on cross-border talent deployment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892",
+    "a65636721a",
+    "729302d920"
+   ],
+   "value": "Tata Consultancy Services (TCS) is a global IT services, consulting, and business solutions organization. It makes money by providing enterprises with IT outsourcing, software development, cloud and AI transformations, and consulting services on a project or contract basis."
+  },
+  "synthesized_evidence_sha": "546b1241b182522e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Ranges from legacy system maintenance to cloud architecture and enterprise-scale AI deployments. Work is often client-dependent, meaning engineers may work on older legacy tech stacks rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Tata+Consultancy+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Given your desire for top-tier elite AI prestige, fast-paced innovation, and high new-grad pay, TCS may present significant friction. The culture is notoriously bureaucratic and slow-moving, and new grad compensation generally falls below elite FAANG/top-tier AI startup benchmarks. While the scale is massive, the actual day-to-day technical learning and pace will heavily depend on your specific client placement."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "08a8c6f892"
+   ],
+   "value": "Estimated: Mixed. Base WLB is typically standard for the industry, but actual hours are highly dependent on the client and time zones you support. Often not considered a strict WLB champion, especially for on-site consulting."
   }
  },
  "tatari": {
