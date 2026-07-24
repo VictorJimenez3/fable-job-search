@@ -18880,11 +18880,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18896,6 +18898,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879930,
   "last_evidence_at": 1784674897,
   "name": "Analysis Group",
   "pace_of_work": {
@@ -18908,6 +18911,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784880170,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18951,7 +18955,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f0d88e065df827cb104a7072f93f38c27871b0d6467484410be08c713958ec65JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FuYWx5c2lz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Analysis+Group+company+careers+benefits",
@@ -90002,37 +90006,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low Tier II / High Tier III. AI and data science are applied functions supporting IoT device management rather than acting as the core, prestige-driving product of the company."
   },
   "aliases": [],
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Generates revenue by selling physical networking hardware (routers, gateways) alongside recurring SaaS subscriptions for device management software."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Stability and mission-driven engineering focused on building robust, long-lasting physical infrastructure, likely favoring methodical problem-solving over rapid iteration."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Enterprise clients in industrial automation, transportation, smart cities, and medical sectors requiring critical M2M (machine-to-machine) connectivity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for new grads in technical roles, lower than elite tech/AI tiers but competitive for the industrial IoT hardware sector."
   },
   "evidence_sha": "ff7047e134fbf9e8",
+  "generated_at": 1784880087,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Industrial IoT, Networking Hardware, and Embedded Telecommunications."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To align with your priorities, probe whether the specific team genuinely incorporates modern data science and AI at the edge, or if the role is predominantly maintenance on legacy networking systems. Ask detailed questions about new-grad compensation ceilings, off-hours expectations, and the rate of internal promotions to ensure the culture accelerates learning without causing burnout."
   },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784674490,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Global operations with primary corporate headquarters in Minnetonka, Minnesota, and additional engineering offices worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "To deliver reliable, secure, and scalable IoT connectivity solutions that link remote physical operations to digital business infrastructure."
+  },
   "name": "Digi International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Operates with the steady, predictable cadence of an established mid-cap hardware/software company, generally avoiding the high-pressure crunch culture of early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Embedded system-on-modules, cellular routers, gateways, edge computing devices, and the Digi Remote Manager cloud platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days of standard annual PTO, typical for an established public technology company in the Midwest."
   },
+  "refresh_after": 1790064087,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90042,7 +90112,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No known company-wide guaranteed shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Publicly traded mid-cap company (NASDAQ: DGII) with a global footprint, operating as an established hardware and software provider."
   },
   "sources": [
    {
@@ -90076,14 +90155,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=fbf76f7cd751b3e669677c1f7e01e061a00fcadee541483f12785f8e51b93848JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cuZGlnaS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides visa sponsorship for specialized roles in embedded systems and networking engineering, though policies vary by role and region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Digi International is an IIoT (Industrial Internet of Things) company that designs and manufactures embedded networking hardware and cloud software, connecting distributed physical assets to the internet."
+  },
+  "synthesized_evidence_sha": "ff7047e134fbf9e8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e027dba64f",
+    "24f183b8e5",
+    "74c7e94b49"
+   ],
+   "value": "Involves embedded systems engineering, networking protocols, edge computing, and developing cloud-based platforms for large-scale remote device management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Digi+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role may not fully satisfy your desire for top-tier AI/Data Science prestige or new-grad pay, as the company's focus is on networking and connected devices rather than elite ML. However, as an established tech firm, it likely provides a sane work-life balance and structured learning environment, though it may lack the rapid, innovative pace of a startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. As a mature public tech company, it likely respects standard working hours and boundaries more than a high-growth, high-burnout AI startup."
   }
  },
  "digicert": {
@@ -131790,38 +131898,104 @@
  "gundersen health system": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Estimated: Tier 3 (Regional Industry Impact). Highly impactful within healthcare but lacks the elite tech brand recognition and cutting-edge AI prestige found at top tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Revenue is generated through fee-for-service medical treatments, inpatient and outpatient care, and integrated health insurance operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Mission-driven, community-focused, and collaborative. Emphasizes patient care and empathy over aggressive technological advancement."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Patients and families seeking medical care in Wisconsin, Minnesota, Iowa, and the surrounding regions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary for new graduate tech roles, falling below the elite new-grad pay scale found at top-tier tech companies."
   },
   "evidence_sha": "78b69f431a5e61a5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784880087,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Healthcare and Hospitals"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Probe the specific team's tech stack and modernization pace to ensure it meets your desire for fast, innovative work rather than slow legacy maintenance. Ask about exact hours, on-call expectations, and learning budgets to verify their work-life balance aligns with your need for sane hours and career growth."
+  },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784583418,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Headquartered in La Crosse, Wisconsin, with regional facilities extending into Minnesota and Iowa."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "To enhance the health and well-being of the communities they serve."
+  },
   "name": "Gundersen Health System",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Estimated: Moderate to slow. Healthcare systems traditionally prioritize stability, patient safety, and compliance over rapid tech iteration, leading to a more deliberate, bureaucratic pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Hospital care, outpatient clinics, behavioral health services, urgent care, and a health insurance plan."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "19332d86d7"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, with additional holidays, typical of non-profit healthcare benefits."
   },
+  "refresh_after": 1790064087,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131832,6 +132006,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Mature non-profit organization with a large regional footprint across multiple states."
   },
   "sources": [
    {
@@ -131865,14 +132046,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=58460c96fada80233ce5cb270ad4efefaccf362f04b1bc78f47155e768b86c83JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbXBsaWZ5aGVhbHRoLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Estimated: As a regional healthcare provider, high-tier tech sponsorship is uncommon but may be possible for specialized clinical IT roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Gundersen Health System is a non-profit healthcare network based in La Crosse, Wisconsin, operating hospitals, clinics, and community partnerships. As a non-profit health provider, it makes money primarily through patient care services, clinical operations, and health plan premiums."
+  },
+  "synthesized_evidence_sha": "78b69f431a5e61a5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Healthcare IT operations, electronic health record (EHR) systems, clinical data management, and digital health integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583418,
   "web_search_url": "https://duckduckgo.com/?q=Gundersen+Health+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Gendersen provides strong mission alignment for impactful healthcare data work, but may conflict with your priority for a fast, innovative tech culture and elite new-grad pay. The environment is likely more bureaucratic and slower-paced than a top-tier tech firm, though it offers meaningful work and potentially stable hours for work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9f1aaf1d3a"
+   ],
+   "value": "Estimated: Good. Non-profit healthcare networks often offer reasonable hours and strong PTO benefits to compensate for lower base pay compared to big tech."
   }
  },
  "gynger": {
@@ -132851,11 +133063,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132867,6 +133081,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784674278,
   "name": "Harbor",
   "pace_of_work": {
@@ -132879,6 +133094,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784880207,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132952,7 +133168,7 @@
     "url": "https://job-boards.greenhouse.io/harborglobal/jobs/5129989007"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674278,
   "web_search_url": "https://duckduckgo.com/?q=Harbor+company+careers+benefits",
@@ -160331,11 +160547,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -160347,6 +160565,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784583339,
   "name": "Johnson & Johnson MedTech",
   "pace_of_work": {
@@ -160359,6 +160578,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784880207,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -160402,7 +160622,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=19ecdfc124315a9b50df32802c361bc157d08cfa5776e78d00d770e4849db6ffJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuam9obnNvbmNvbnRyb2xzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583339,
   "web_search_url": "https://duckduckgo.com/?q=Johnson+%26+Johnson+MedTech+company+careers+benefits",
@@ -202128,11 +202348,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202144,6 +202366,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784676553,
   "name": "Nestl\u00e9",
   "pace_of_work": {
@@ -202156,6 +202379,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784880207,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202199,7 +202423,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e700ccc7bccdcbc2b5ab436d39ac30f5913c37e92282384adcacb7435bf0910JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cubmVzdGxlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676553,
   "web_search_url": "https://duckduckgo.com/?q=Nestl%C3%A9+company+careers+benefits",
@@ -218403,48 +218627,125 @@
  "overlake hospital medical center": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Low prestige for AI/Data Science; technical roles are focused on internal systems rather than cutting-edge external products."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Fee-for-service healthcare provider operating as a non-profit entity, billing patients and insurers for medical treatments and facility usage."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: Mission-driven, patient-focused, and risk-averse, prioritizing stability and compliance over fast-paced technological disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Patients seeking medical care in the greater Eastside region of Washington state."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: Moderate, roughly aligned with internal IT compensation rather than elite tech sector pay."
   },
   "evidence_sha": "024d79f283fa22e7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784880087,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Hospital and Healthcare."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Probe whether the specific team operates independently from the wider hospital bureaucracy. Seek evidence of modern AI/ML projects rather than traditional IT support to ensure there is a real path for technical learning."
+  },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784583393,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Bellevue, Washington."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Committed to providing compassionate, patient-centered care and improving the health and well-being of the communities it serves."
+  },
   "name": "Overlake Hospital Medical Center",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: Moderate pace driven by clinical needs and strict operational protocols rather than rapid deployment cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Inpatient and outpatient acute medical care, emergency and trauma services, surgical procedures, cancer treatment, and diagnostic imaging."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: 15 to 25 days annually, varying by tenure."
   },
+  "refresh_after": 1790064087,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1f3da8e381"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns; operations run continuously."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Established regional medical center serving the Eastside community."
   },
   "sources": [
    {
@@ -218478,14 +218779,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=ff5c50c1bf565afe57ca18326d586a718433313c96f7e1aad99b906dd94369eeJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cub3Zlcmxha2Uub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Overlake Hospital Medical Center is a non-profit regional hospital and medical center. It generates revenue by providing acute care, emergency services, and specialty medical treatments to the local community."
+  },
+  "synthesized_evidence_sha": "024d79f283fa22e7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Internal data systems, electronic health records (EHR) management, IT infrastructure operations, and healthcare data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583393,
   "web_search_url": "https://duckduckgo.com/?q=Overlake+Hospital+Medical+Center+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "As a community hospital, the tech culture leans toward slow bureaucracy over fast-paced innovation. While it offers mission-driven stability and sane hours, it lacks the elite prestige and high new-grad compensation typical of top-tier AI roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1f3da8e381"
+   ],
+   "value": "Estimated: Good, with sane hours typical of internal healthcare IT, though on-call rotations may exist."
   }
  },
  "ozmo": {
@@ -270455,37 +270787,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. As a traditional mechanical and aerospace hardware manufacturer, AI and data science act as support functions rather than core prestige drivers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b72e1202d9",
+    "40770fc7ac"
+   ],
+   "value": "Generates revenue through the direct sales of turbine and compressor equipment, supplemented by long-term service agreements (LTSA), aftermarket spare parts, and maintenance contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, hardware-focused, stability-driven. Culture leans toward long-term tenure, structured engineering processes, and legacy industrial systems."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78",
+    "b72e1202d9"
+   ],
+   "value": "Oil and gas producers, independent power producers, utility companies, and industrial facilities requiring on-site power generation and gas compression."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $100,000 base salary for new grad software/data roles, significantly below top-tier big tech compensation and lacking the fast-culture equity upside."
   },
   "evidence_sha": "3fac8b1e81727de3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880087,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78",
+    "b72e1202d9"
+   ],
+   "value": "Industrial Manufacturing / Energy Equipment"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784674521,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78"
+   ],
+   "value": "Headquartered in San Diego, California, with major manufacturing facilities and global service centers located worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "edc2b81b78",
+    "40770fc7ac"
+   ],
+   "value": "To provide reliable, efficient, and sustainable energy solutions through advanced gas turbine technology, helping industrial customers meet their power and compression needs globally."
+  },
   "name": "Solar Turbines",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. The company prioritizes rigorous safety, reliability, and physical manufacturing timelines over fast-paced agile software deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78",
+    "40770fc7ac"
+   ],
+   "value": "Mid-sized industrial gas turbines, centrifugal compressors, and combined heat and power (CHP) systems, along with aftermarket parts and maintenance services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days of vacation, plus standard Caterpillar holidays, accrued based on tenure."
   },
+  "refresh_after": 1790064087,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270495,7 +270886,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not typically found in standard manufacturing operations; shutdowns are more common in unionized auto sectors rather than Caterpillar subsidiaries."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78"
+   ],
+   "value": "Established subsidiary of Caterpillar Inc. (Fortune 100) with a large, stable global footprint and thousands of employees."
   },
   "sources": [
    {
@@ -270529,14 +270927,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=cc25e6b0c3c03c05033eecd21491bc6202909b0382dfec8fbffa6100923281c9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9pdC5zdG9ueWJyb29rLmVkdS9zZXJ2aWNlcy9zb2xhcg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "edc2b81b78"
+   ],
+   "value": "As a subsidiary of Caterpillar Inc., Solar Turbines typically offers U.S. employment visa sponsorship for specialized engineering roles that are difficult to fill domestically."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78",
+    "b72e1202d9"
+   ],
+   "value": "Solar Turbines is a subsidiary of Caterpillar Inc. that designs and manufactures mid-sized gas turbines and turbine-driven compressor systems. The company makes money by selling and providing aftermarket support for these systems, primarily serving the oil and gas, power generation, and industrial sectors."
+  },
+  "synthesized_evidence_sha": "3fac8b1e81727de3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "edc2b81b78",
+    "40770fc7ac"
+   ],
+   "value": "Engineering roles focus on mechanical and aerospace engineering (turbine design, thermodynamics), manufacturing, and industrial control systems. Includes software development for equipment diagnostics and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674521,
   "web_search_url": "https://duckduckgo.com/?q=Solar+Turbines+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Heavy manufacturing and engineering firms traditionally emphasize standard 40-hour work weeks and safety over the grueling hours found in big tech."
   }
  },
  "solideon": {
@@ -332743,37 +333170,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 \u2014 Strong applied data science/ML engineering within a Fortune 500 industrial company; respected for scale and production impact, but not an elite AI research destination."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Asset-light logistics model: XPO connects shippers with carrier capacity, earning margins on brokered freight, LTL linehaul, and value-added services; revenue scales with volume and technology-driven efficiency gains."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f9347542b8"
+   ],
+   "value": "Operational, metrics-driven, collaborative across tech and field operations; engineering respected but not the sole power center; diversity initiatives active; culture leans pragmatic over academic."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Serves shippers of all sizes \u2014 from small businesses to Fortune 500 enterprises \u2014 across retail, e-commerce, industrial, automotive, and consumer goods sectors needing freight movement and logistics management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU (~$20k-$40k/yr vest); total ~$140k-$185k; varies by hub (Portland/Chicago/Dallas)."
   },
   "evidence_sha": "43c725725b56c125",
+  "generated_at": 1784880087,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Transportation & Logistics / Freight Tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML/system design questions grounded in logistics: demand forecasting, route optimization, dynamic pricing, ETL at scale; behavioral emphasis on cross-functional collaboration with ops/sales; less focus on novel research, more on productionizing models in a legacy-heavy environment."
   },
+  "last_attempt_at": 1784880087,
   "last_evidence_at": 1784674833,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Headquartered in Greenwich, CT; major tech hubs in Portland (OR), Chicago, Dallas, and European centers; hybrid/office-centric culture with some remote flexibility for corporate roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "To be the leading provider of transportation and logistics solutions by leveraging technology, network scale, and operational excellence to move goods efficiently and reliably."
+  },
   "name": "XPO",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast during peak freight seasons; project cadence tied to quarterly business cycles; some bureaucracy from enterprise processes and safety/regulatory constraints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Core offerings include LTL freight transportation, truck brokerage, managed transportation, last-mile delivery for heavy goods, and technology-driven supply chain optimization platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; accrual increases with tenure; no public unlimited PTO policy."
   },
+  "refresh_after": 1790064087,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332783,7 +333272,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe reduced ops between Christmas/New Year but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "Publicly traded (NYSE: XPO), ~$7.7B annual revenue (2023), ~44,000 employees globally; mature, large-cap enterprise in cyclical freight industry."
   },
   "sources": [
    {
@@ -332817,14 +333314,40 @@
     "url": "https://jobs.xpo.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for specialized tech and analytics roles; green card support typical for senior/key hires; immigration process managed by corporate HR."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d307606341",
+    "9632afd600"
+   ],
+   "value": "XPO Logistics is a global transportation and logistics company providing freight brokerage, less-than-truckload (LTL) shipping, last-mile delivery, and supply chain solutions. It operates a large asset-light network connecting shippers and carriers across North America and Europe."
+  },
+  "synthesized_evidence_sha": "43c725725b56c125",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f9347542b8"
+   ],
+   "value": "Engineering focuses on transportation management systems, route optimization, pricing algorithms, real-time tracking, carrier matching, and data platforms for supply chain visibility; tech stack includes cloud, microservices, and ML for demand forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674833,
   "web_search_url": "https://duckduckgo.com/?q=XPO+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "XPO offers a massive real-world data playground (billions of shipment events) for ML/optimization work at scale, with compensation competitive for industrial tech \u2014 but it is a logistics operator first, not an AI research lab; prestige and pay lag top-tier pure-play tech firms, and pace reflects quarterly freight cycles rather than pure innovation sprints."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 \u2014 Corporate tech roles generally observe standard hours with occasional on-call for production systems; less burnout risk than high-growth startups, but limited guaranteed shutdowns."
   }
  },
  "yale university": {
