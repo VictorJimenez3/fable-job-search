@@ -42731,42 +42731,98 @@
  "biospace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Estimated: Mid-tier. As a small, specialized healthcare tech company, it provides high-impact niche work but lacks the broad industry prestige of top-tier tech giants or elite AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Generates revenue by providing healthcare technology and data analytics solutions for early cancer detection."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Estimated: Mission-driven and collaborative. With a small team dedicated to advancing early cancer detection, the culture is likely focused on meaningful, high-impact work with close teamwork."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Healthcare providers, diagnostic facilities, and organizations involved in cancer detection and treatment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Estimated: $86,000 - $106,000 per year for entry-level data analytics engineering roles based on public salary ranges."
   },
   "evidence_sha": "0fa349f54207e3a6",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Healthcare Technology / Cancer Detection"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe the specifics of work-life balance and daily pace, as guaranteed shutdowns and exact hours are not explicitly confirmed. Ask about the team's technical stack and data science methodologies to ensure the role provides the elite, high-level AI/DS technical learning and career acceleration you prioritize. Clarify the hybrid schedule expectations for the Durham, NC office to ensure it aligns with your personal time requirements."
   },
-  "last_attempt_at": 1784881290,
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784881156,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Headquartered in San Francisco, California. The Data Analytics Engineer role is based in Durham, NC with a hybrid work arrangement."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "To pioneer new technologies that advance early cancer detection."
+  },
   "name": "BioSpace",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative. Small companies typically have dynamic environments that require agility and rapid development, avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "New technologies and data analytics platforms focused on early cancer detection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for a healthcare company of this size, though exact policy is not public."
   },
-  "retry_after": 1784881410,
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42776,7 +42832,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official company-wide shutdowns found in research. Shutdowns are more common at larger tech firms; verify if any exist here."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "11-50 employees. Founded in 1988."
   },
   "sources": [
    {
@@ -42830,14 +42893,41 @@
     "url": "https://jobright.ai/jobs/info/6a62eb8532abf9182432c2fb?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "BioSpace has a track record of offering H1B sponsorships, though this is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "BioSpace is a healthcare company pioneering new technologies to advance early cancer detection. Founded in 1988 and based in San Francisco, the company leverages data and tech to improve diagnostic outcomes."
+  },
+  "synthesized_evidence_sha": "0fa349f54207e3a6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6ab3319c86"
+   ],
+   "value": "Data analytics engineering, likely involving healthcare datasets, diagnostic algorithms, and data infrastructure for cancer detection technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784881156,
   "web_search_url": "https://duckduckgo.com/?q=BioSpace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a small, mission-driven healthcare company, BioSpace offers the fast-paced, innovative tech culture and accelerated technical learning you desire, without the slow bureaucracy of larger firms. The mission to advance early cancer detection provides the meaningful impact you are looking for, while the entry-level pay of $86K-$106K represents solid new-grad compensation. The small team size naturally fosters high-impact learning and career growth in a collaborative environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Small, mission-driven organizations often maintain reasonable hours, but this should be verified during interviews as startup environments can occasionally be demanding."
   }
  },
  "black box": {
@@ -72301,37 +72391,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – core business is packet transport, not AI; data science roles, if any, are internal analytics/optimization, not product-facing ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6db15eba6"
+   ],
+   "value": "Recurring revenue from long-term contracts for dedicated internet access, IP transit, and colocation; pricing based on committed bandwidth and port speed with high incremental margins on a fixed-cost fiber backbone."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, reliability-obsessed, low-bureaucracy for a public utility; culture values network craftsmanship, uptime, and cost discipline over experimentation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4",
+    "b6db15eba6"
+   ],
+   "value": "Enterprises, content providers, cloud platforms, cable operators, mobile carriers, government agencies, and other ISPs requiring high-volume, low-latency global connectivity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + 10–15% bonus + RSU (~$20k–$30k/yr); total ~$140k–$175k for network automation / software engineering new grads in DC metro."
   },
   "evidence_sha": "d43f86831854c6dd",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b6db15eba6",
+    "70fcb24bd4"
+   ],
+   "value": "Telecommunications / Internet Infrastructure / Tier 1 ISP"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on routing protocols (BGP/OSPF/IS-IS), Linux internals, network automation (Python/Go/Ansible), capacity planning math, and troubleshooting at petabit scale. Behavioral screens will test reliability mindset and on-call readiness. Prepare for system-design questions around high-availability backbone architecture rather than ML model deployment."
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784674523,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4",
+    "b6db15eba6"
+   ],
+   "value": "Headquartered in Sterling, VA (DC metro); data centers and POPs across North America, Europe, Asia-Pacific, and Latin America; some hybrid/remote eligibility for software and network automation roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4",
+    "b6db15eba6"
+   ],
+   "value": "To deliver the highest-quality, lowest-latency internet connectivity at scale by owning and operating a facilities-based global IP network."
+  },
   "name": "Cogent World",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, operational cadence with scheduled maintenance windows; incident-driven spikes for backbone events; not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4"
+   ],
+   "value": "Dedicated internet access (DIA), IP transit, wavelength services, colocation, cloud connect, and managed network services delivered over a facilities-based, all-optical IP backbone."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 US holidays; accrual increases with tenure; no unlimited PTO policy publicly documented."
   },
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72341,7 +72489,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research – no company-wide guaranteed shutdown periods publicly documented."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b6db15eba6"
+   ],
+   "value": "Public large-cap (NASDAQ: CCOI); ~1,000+ employees; $600M+ annual revenue; mature, profitable infrastructure operator."
   },
   "sources": [
    {
@@ -72375,14 +72530,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=c4c8139801fb566f79b9962722bad0d51a082aa462d36dcc805348fa217c8c28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cuY29nZW50Y28uY29tL2VuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B and green-card sponsor for specialized network engineering and software roles; routine PERM process for senior technical hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4",
+    "b6db15eba6"
+   ],
+   "value": "Cogent Communications is a Tier 1 global internet service provider and network infrastructure company operating one of the world's largest IP backbones. It sells high-capacity internet access, data center colocation, and cloud connectivity to businesses and carriers."
+  },
+  "synthesized_evidence_sha": "d43f86831854c6dd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "70fcb24bd4",
+    "b6db15eba6"
+   ],
+   "value": "Network engineering, backbone routing architecture, optical transport, capacity planning, automation/DevOps for network operations, data center infrastructure, and internal tooling; limited public-facing AI/ML product work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674523,
   "web_search_url": "https://duckduckgo.com/?q=Cogent+World+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cogent offers elite network-infrastructure prestige and top-tier new-grad compensation in a profitable, mature public company, but it is a telecom backbone operator—not an AI-first product shop. Work-life balance is generally structured with on-call rotations for NOC/backbone teams; shutdowns are not a stated policy. Technical growth is deep in networking, automation, and scale systems, not in cutting-edge ML research or productization."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – structured hours for most engineering roles; NOC/backbone teams have rotating on-call; no public guaranteed shutdown policy."
   }
  },
  "cohere": {
@@ -79432,11 +79614,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79448,6 +79632,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784676688,
   "name": "CoStar Group",
   "pace_of_work": {
@@ -79460,6 +79645,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784881634,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79503,7 +79689,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=cc6051e1e7a0aa6c3b58e30b786d1302888f112e027f56d187909f85eaf038e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9UQUdTL3RhZ19ici5hc3A&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
   "web_search_url": "https://duckduckgo.com/?q=CoStar+Group+company+careers+benefits",
@@ -135097,7 +135283,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135115,7 +135301,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784881145,
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784674278,
   "name": "Harbor",
   "pace_of_work": {
@@ -135128,7 +135314,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784881385,
+  "retry_after": 1784881994,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138110,11 +138296,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138126,6 +138314,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784674904,
   "name": "Healio",
   "pace_of_work": {
@@ -138138,6 +138327,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784881634,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138181,7 +138371,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=0f9b05d3c02dc3ae857ca6583f208f3e625e880a59f57340cc28895302bc7ca0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuaGVhbGlvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Healio+company+careers+benefits",
@@ -140988,48 +141178,118 @@
  "hilbert": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "05c2506f43",
+    "7194ea4cc9"
+   ],
+   "value": "Estimated: High/Medium. Prestige is rapidly accelerating due to co-building alongside leading AI companies and a highly technical, agentic-engine focus, though it remains a startup lacking historical legacy prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "B2B SaaS focused on providing scalable data science growth engines and agentic AI tools for B2C product and revenue optimization."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "05c2506f43",
+    "7194ea4cc9"
+   ],
+   "value": "Fast-moving, high-ownership startup culture where shipping quickly and holistically solving customer revenue gaps outpaces navigating corporate bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "B2C teams seeking predictive clarity into user behavior and sustainable growth drivers, as well as leading AI companies they are co-building alongside."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad scale ($120k-$160k+ base) given the elite AI/data science talent required and fast-paced startup environment, though exact compensation is not public."
   },
   "evidence_sha": "99c84013e567529f",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05c2506f43",
+    "7194ea4cc9"
+   ],
+   "value": "Information Technology / AI & Data Science Growth Engine"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize your product-mindedness as much as your technical depth; be ready to discuss the 'Why' behind your technical decisions. Prepare to demonstrate how your data science or AI knowledge translates into tangible customer revenue impacts, and show comfort with startup-pace ownership and urgency."
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784752592,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "Not explicitly stated, but operating with US, UK, and European privacy law footprints."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "To give B2C teams predictive clarity into user behavior and the actions that drive sustainable growth through a data science-first approach."
+  },
   "name": "Hilbert",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "Estimated: Fast. The company explicitly operates with startup urgency and expects movement at the pace of its engineering and GTM teams."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7194ea4cc9"
+   ],
+   "value": "The Hilbert Portal, an interactive interface for their sophisticated Agentic Engine that handles complex interactions between users and ML models."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO (15-20 days), but not explicitly public."
   },
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. While some AI startups offer holiday shutdowns, nothing is confirmed here and their fast startup pace makes mandatory shutdowns less likely."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "Startup"
   },
   "sources": [
    {
@@ -141083,14 +141343,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=d6749a1e8acd9dce4a1490f0a45747eeb1daf0d9ec37ff110ecdb8c6a3d257e2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cuaGlsYmVydC5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7194ea4cc9",
+    "05c2506f43"
+   ],
+   "value": "Hilbert is a scalable, data science-first growth engine that provides B2C teams with predictive clarity into user behavior, revenue drivers, and the actions that drive sustainable growth. They monetize by offering an agentic AI engine that interacts with ML models to directly solve customer revenue gaps."
+  },
+  "synthesized_evidence_sha": "99c84013e567529f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7194ea4cc9"
+   ],
+   "value": "Building sophisticated agentic AI engines and interactive full-stack portals; engineers act as 'Product Architects' balancing UI/UX with ML model interactions to directly solve customer revenue gaps."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679031,
   "web_search_url": "https://duckduckgo.com/?q=Hilbert+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Perfectly aligns with your goals: a fast-paced, startup culture eliminates slow bureaucracy, while their agentic AI and data science-first platform offers elite technical learning and prestige. The product-architect role allows you to directly impact user behavior and revenue drivers, fulfilling your desire for high-impact, innovative tech work."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05c2506f43"
+   ],
+   "value": "Estimated: Varies/Cautious. The emphasis on startup ownership, urgency, and fast engineering pace may conflict with guaranteed, strict work-life balance."
   }
  },
  "hilcorp": {
@@ -162969,7 +163257,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162987,7 +163275,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784881145,
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784583339,
   "name": "Johnson & Johnson MedTech",
   "pace_of_work": {
@@ -163000,7 +163288,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784881385,
+  "retry_after": 1784881994,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203159,11 +203447,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203175,6 +203465,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784674902,
   "name": "National Life",
   "pace_of_work": {
@@ -203187,6 +203478,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784881634,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203230,7 +203522,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a1a332a61f2a7f25199c1fa792279a032b50a2d3c34a1341e9170d398496d797JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cubmF0aW9uYWxjYXIuY29tL2VuL2hvbWUuaHRtbD9tc29ja2lkPTFmYzg3YzYwNGQ1ZjY4NjkxZmVlNmJmZDRjYWI2OTc5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=National+Life+company+careers+benefits",
@@ -206139,37 +206431,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong finance-brand prestige with serious ML investment, but not a primary AI research lab like FAIR/DeepMind/OpenAI. Known in quant/fin-tech circles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fees based on AUM (typically 0.3%-1.5% annually) plus performance fees on certain alternative products. Revenue scales with assets under management and investment performance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, low-ego for finance. Employee ownership creates alignment. Diverse, academic-leaning tech crowd. Politics exist but less toxic than stereotypes. Meritocratic with long tenures common."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors (pensions, endowments, sovereign wealth), financial advisors, wealth management platforms, high-net-worth individuals, and retirement plan sponsors globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + $20k-$40k sign-on + $10k-$25k annual bonus + RSUs (4-year vest). Total Year 1 ~$170k-$220k. Top of asset-management tech band; below pure-play tech/quant funds."
   },
   "evidence_sha": "53ab62f1e2a29409",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Asset Management / Investment Management / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical screens (Python, SQL, ML fundamentals, system design) plus domain curiosity questions about financial markets. Prepare for: 'How would you apply X technique to portfolio risk?' or 'Walk us through a data quality problem you solved.' Cultural fit emphasizes intellectual honesty, collaboration, and sustainable pace."
+  },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784674902,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: New York, NY. Major hubs: London, Hong Kong, Tokyo, Chicago, Dallas, San Francisco. Remote/hybrid flexibility varies by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver superior investment outcomes for clients through active management, independent thinking, and long-term partnership. Employee ownership aligns incentives with client success."
+  },
   "name": "Neuberger",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project-driven with quarterly planning cycles. Market hours drive some trading/ops urgency, but research and platform teams work at sustainable cadence. Not 'move fast and break things'; more 'move deliberately and validate.'"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Investment management services including mutual funds, ETFs, separate accounts, hedge funds, private equity, real estate, and credit strategies. Technology platforms for portfolio management, trading, risk analytics, and client reporting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days vacation + 10-12 holidays + 2-3 personal days. Unlimited not standard. Carryover limited. Sabbatical after 7-10 years."
   },
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206179,7 +206513,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns. Some teams observe quiet periods around Christmas/New Year (1-2 weeks reduced coverage). Market holidays observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public-equivalent (employee-owned) firm with ~$450B+ AUM and 2,500+ employees globally. Founded 1939, stable and profitable."
   },
   "sources": [
    {
@@ -206213,14 +206552,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3704aec70a061d022af73ffcb95ae4b4a276ecfe834912d9f94025f71b795573JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20veW91dHViZS9hbnN3ZXIvNTc0MDc_aGw9ZW4mY289R0VOSUUuUGxhdGZvcm0lM0REZXNrdG9w&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor for technology and investment roles. Green card sponsorship for senior/key talent. Standard big-finance immigration support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Neuberger Berman is a global investment management firm managing assets for institutions, advisors, and individuals. It operates as an employee-owned, independent asset manager focusing on active management across equities, fixed income, private markets, and multi-asset strategies."
+  },
+  "synthesized_evidence_sha": "53ab62f1e2a29409",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Investment technology: portfolio management systems, algorithmic trading, risk analytics, data platforms, cloud infrastructure, ML for alpha research and operational efficiency. Modern stack including Python, Kubernetes, AWS/Azure, Snowflake."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=Neuberger+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Neuberger offers elite finance-brand prestige with a growing AI/data science mandate, competitive new-grad pay near top-of-market for asset management tech, and a culture that respects boundaries more than typical Wall Street firms. Employee ownership drives long-term thinking over burnout sprints. You'll work on real investment problems with massive datasets, not ad-tech optimization."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — Generally respected hours (50-55 typical, 60+ during crunches). Protected weekends culture in tech groups. No guaranteed shutdowns but management discourages chronic overwork. Better than bulge-bracket banks, similar to top tech-focused buy-side firms."
   }
  },
  "neuralink": {
@@ -210695,52 +211055,128 @@
  "north texas tollway authority": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Lower-tier / Non-elite. As a regional infrastructure agency, the AI and data science work is fundamentally operational rather than cutting-edge industry-leading research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6c01f4908"
+   ],
+   "value": "Revenue is generated primarily through electronic toll collections and customer account management, which is reinvested into maintaining and expanding the regional transportation infrastructure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Traditional public service. Mission-focused and stable, but potentially lacking the dynamic, fast-moving tech culture typical of elite tech companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6c01f4908"
+   ],
+   "value": "Daily commuters, commercial vehicles, and regional travelers utilizing the North Texas toll road network."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $$ ($70,000 - $85,000). Likely falls short of the 'top-tier new-grad pay' benchmark set by elite tech companies, consistent with public sector compensation bands in the Dallas-Plano area."
   },
   "evidence_sha": "4ba4e7be1462a6a7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784881290,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "69b5f838a3",
+    "a6c01f4908"
+   ],
+   "value": "Transportation Infrastructure / Public Sector Tollway Management"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should probe the specific technical learning trajectory and tech stack of the role, asking how innovative the AI/data science work is and how it bypasses the typical bureaucracy of a public agency to ensure it meets expectations for elite, fast-paced career growth."
+  },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784881290,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3aed153ada"
+   ],
+   "value": "Plano, Texas (Headquarters) with operations distributed across the North Texas toll network."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "69b5f838a3"
+   ],
+   "value": "To provide a safe, reliable, and convenient tollway system that advances mobility and economic growth in the North Texas region."
+  },
   "name": "North Texas Tollway Authority",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to slow. Typical of government and public sector agencies, the pace is likely steady and process-driven rather than fast and highly innovative."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "69b5f838a3",
+    "3aed153ada"
+   ],
+   "value": "Physical toll road infrastructure, electronic toll collection systems (TollTag), and mobility data analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: 15-20 days of annual leave, typical for a regional government entity, plus state holidays."
   },
-  "retry_after": 1784881410,
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns, though standard government and state holidays likely provide guaranteed time off."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "a6c01f4908"
+   ],
+   "value": "Established regional public sector agency."
   },
   "sources": [
    {
@@ -210784,14 +211220,46 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: As a regional public agency, visa sponsorship for technical roles is likely limited or unavailable, favoring local talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6c01f4908",
+    "3aed153ada"
+   ],
+   "value": "The North Texas Tollway Authority (NTTA) is a government-created organization that builds, maintains, and operates toll roads across the North Texas region. It generates revenue by collecting tolls from drivers using its electronic tolling systems, such as TollTag, to fund ongoing infrastructure projects and roadway operations."
+  },
+  "synthesized_evidence_sha": "4ba4e7be1462a6a7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "engaging with data processing systems, electronic tolling networks, and potential traffic optimization software for new graduates."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784881290,
   "web_search_url": "https://duckduckgo.com/?q=North+Texas+Tollway+Authority+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The candidate is looking for a mission-driven environment with top-tier new grad pay, fast-paced innovative tech culture, and highly respected work-life balance. As a government agency, NTTA offers a strong mission and good work-life balance, but may require compromises on the elite AI prestige, high new-grad pay, and fast tech culture the candidate desires."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: High. Public sector agencies generally offer very reasonable working hours and a culture that respects personal time, aligning with the candidate's desire to avoid burnout."
   }
  },
  "northab": {
@@ -255784,37 +256252,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "No evidence of AI/data science presence or prestige tier for a company named Roux in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8548f2d756",
+    "03490292ab",
+    "200d582dad"
+   ],
+   "value": "Sources describe a culinary technique, not a business model. No revenue model for a company named Roux is present."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "No culture information for a company named Roux found in sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information for a company named Roux found in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data for new grad technical roles at a company named Roux found in sources."
   },
   "evidence_sha": "64d4d49c09f4acc5",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8548f2d756",
+    "03490292ab",
+    "200d582dad"
+   ],
+   "value": "Sources describe culinary/food topic, not a company industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "No interview process or technical focus information for a company named Roux found in sources."
   },
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784676554,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No office locations for a company named Roux found in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement for a company named Roux found in sources."
+  },
   "name": "Roux",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "No work pace information for a company named Roux found in sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8548f2d756",
+    "03490292ab",
+    "200d582dad"
+   ],
+   "value": "Sources only describe roux as a cooking ingredient/base for sauces, not a company's products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy data for a company named Roux found in sources."
   },
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255824,7 +256346,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy data for a company named Roux found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No company size or stage information for Roux found in sources."
   },
   "sources": [
    {
@@ -255858,14 +256385,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=96ce4184644909a93f4b6692360bf1e047e97ac8bb54b2827cd86fa3ae96fc93JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cuYWxscmVjaXBlcy5jb20vYXJ0aWNsZS9ob3ctdG8tbWFrZS1yb3V4Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information for a company named Roux found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8548f2d756",
+    "03490292ab",
+    "200d582dad"
+   ],
+   "value": "The supplied sources describe 'roux' as a culinary technique (a cooked mixture of fat and flour used as a thickener), not a company. No information about a company named Roux, its products, business model, or employment practices appears in the provided sources."
+  },
+  "synthesized_evidence_sha": "64d4d49c09f4acc5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sources contain no information about technical roles, AI, data science, or engineering work at a company named Roux."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676554,
   "web_search_url": "https://duckduckgo.com/?q=Roux+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The provided sources do not describe a company called Roux; they describe a cooking technique. Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, mission-driven culture) without verified company information."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "No work-life balance data for a company named Roux found in sources."
   }
  },
  "royal bank of canada": {
@@ -342274,41 +342826,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. It is a respected industrial brand but not recognized as an elite tech or AI prestige employer."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Manufactures and distributes commercial and residential water solutions directly or through wholesale distributors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and traditional, with a focus on sustainability, safety, and water quality."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Commercial facilities, educational institutions, healthcare buildings, contractors, and residential consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000, typical for tech and data roles in the industrial manufacturing sector outside of elite tech hubs."
   },
   "evidence_sha": "c2ef33e08734e335",
+  "generated_at": 1784881514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Manufacturing, Water Solutions, and Plumbing Equipment."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should seek to confirm if the specific team operates with a fast, innovative tech culture or is bound by slow industrial bureaucracy. It is critical to ask about exact working hours, on-call expectations, and technical learning budgets to ensure the role accelerates data science career growth without sacrificing personal time."
   },
-  "last_attempt_at": 1784881290,
+  "last_attempt_at": 1784881514,
   "last_evidence_at": 1784676553,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6"
+   ],
+   "value": "Headquartered in Milwaukee, Wisconsin, with various manufacturing facilities and offices across North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6"
+   ],
+   "value": "To deliver safe, clean water and sustainable water management solutions."
+  },
   "name": "Zurn Elkay Water Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and traditional, typical of an established manufacturing corporation rather than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Drinking fountains, water coolers, bottle fillers, plumbing fixtures, drainage systems, and commercial faucets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, consistent with standard corporate manufacturing benefits."
   },
-  "retry_after": 1784881410,
+  "refresh_after": 1790065514,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -342318,7 +342930,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard corporate holidays, but guaranteed company-wide shutdowns are not publicly confirmed by the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Publicly traded mid-to-large cap manufacturing corporation."
   },
   "sources": [
    {
@@ -342352,14 +342973,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9b210c760cddec1a6c65327266a2458f16f352835210f5a411cbb6b50f60b990JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cuc3BlZWR0ZXN0Lm5ldC8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "Zurn Elkay Water Solutions is a publicly traded manufacturer of water management and plumbing products, including drinking fountains, faucets, and drainage systems. The company makes money by designing and selling these commercial and residential water solutions to facilities, contractors, and consumers."
+  },
+  "synthesized_evidence_sha": "c2ef33e08734e335",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d4603d391f",
+    "719576d7a6",
+    "3c0f32f892"
+   ],
+   "value": "The provided sources did not contain specific details regarding the exact nature of the AI, data science, or software engineering technical work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676553,
   "web_search_url": "https://duckduckgo.com/?q=Zurn+Elkay+Water+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Zurn Elkay is a mission-driven company focused on water sustainability and public health, offering the opportunity to apply AI and data science to tangible, real-world environmental challenges. However, as a legacy industrial manufacturer, it is unlikely to match the elite prestige, high new-grad pay, and fast-paced tech culture found at top-tier tech firms, potentially involving a more bureaucratic environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, with standard corporate hours typical of the manufacturing sector, though specific team demands may vary."
   }
  }
 }
