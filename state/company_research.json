@@ -22311,125 +22311,122 @@
  },
  "american systems": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "Estimated: Low to Non-Applicable. The company's technical work focuses on traditional IT hardware integration and Cisco collaboration rather than elite AI or data science."
+   "value": "Standard IT/Defense Contractor. Not a recognized AI/Data Science lab or elite product company; prestige is tied to government mission-work rather than breakthrough AI innovation."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "cb4cb0c52f"
    ],
-   "value": "Government contracting and IT systems integration, providing specialized technical personnel and solutions for secure DoD environments."
+   "value": "Government contractor business model, earning revenue primarily through long-term federal contracts and task orders, with a focus on secure IT, cyber security, and engineering services."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
     "cb4cb0c52f"
    ],
-   "value": "Estimated: Mission-driven, structured, and defense-oriented, prioritizing reliability and security over fast-paced innovative tech culture."
+   "value": "Estimated: Procedural, stability-focused, and compliance-driven due to the defense nature, yet sufficiently collaborative for fast-paced operational support needs to keep communication services going."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "cb4cb0c52f"
    ],
-   "value": "U.S. Department of Defense (DoD) and other government entities requiring secure, mission-critical technical environments."
+   "value": "U.S. Department of Defense (DoD) and other federal government agencies operating in secure, mission-critical environments."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "cb4cb0c52f"
+    "a6cdbe7ead"
    ],
-   "value": "Estimated: $70,000 - $90,000. Government contracting roles typically pay moderately but lack the elite compensation of top-tier tech firms."
+   "value": "$78,000 - $125,000 per year for an entry-level Java Developer I role."
   },
   "evidence_sha": "17edcff6d8f88fd0",
-  "generated_at": 1784796624,
+  "generated_at": 1784933400,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "cb4cb0c52f"
+    "cb4cb0c52f",
+    "a6cdbe7ead"
    ],
-   "value": "Defense Contracting, IT Services, and Systems Engineering."
+   "value": "Federal IT Services & Defense Contracting"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "Given the candidate's goals, interviews should probe the actual pace of innovation versus government compliance cycles, asking how quickly new tech is adopted in their DoD environments. The candidate should also clarify expectations around on-call hours for mission-critical communications and whether the role truly supports personal time and career growth without burnout."
+   "value": "Core Java proficiency, understanding of data integration, and ability to support technical applications in a structured, secure federal setting. Behavioral questions will likely assess reliability, process-following, and capability to work within the constraints of DoD environments."
   },
-  "last_attempt_at": 1784930210,
+  "last_attempt_at": 1784933400,
   "last_evidence_at": 1784929173,
   "locations": {
    "confidence": "medium",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "Operates within secure DoD environments and U.S. government facilities (specific physical headquarters not detailed in provided sources)."
+   "value": "Lakewood, CO is confirmed as a work location. Additional sites expected in proximity to U.S. Department of Defense and federal government facilities."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "cb4cb0c52f"
+    "cb4cb0c52f",
+    "a6cdbe7ead"
    ],
-   "value": "Mission-focused on supporting fast-paced, secure operational settings and mission-critical communications services for government and defense clients."
+   "value": "To deliver IT, cyber security, and engineering solutions that support mission-critical communications and defense operations for U.S. government clients."
   },
   "name": "AMERICAN SYSTEMS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
-   "value": "Estimated: Fast-paced operational setting driven by mission-critical needs, though potentially bottlenecked by government and DoD administrative processes."
+   "source_ids": [],
+   "value": "Estimated: Moderate and steady. Government contracting cycles enforce structured schedules and deliberate execution, avoiding excessive startup-style crunch."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "Hardware designs, technical drawings, installation packages, system integration solutions for IT hardware, and secure Cisco collaboration technologies."
+   "value": "Mission-critical IT and cybersecurity solutions, Java-based application development, data integration services, hardware design and system integration packages, and Cisco collaboration technology support for secure environments. Services also include budget management, cost tracking, and earned value management for government programs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
-   "value": "Estimated: 15-20 days annually, standard for mid-sized government contractors."
+   "source_ids": [],
+   "value": "Estimated: 15 days (standard entry-level PTO for government contractors) plus timely federal holidays, exact accruals are not public."
   },
-  "retry_after": 1784930690,
+  "refresh_after": 1790117400,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found; operations likely run continuously to support mission-critical communications."
+   "source_ids": [],
+   "value": "Estimated: Guaranteed federal holidays and likely a year-end pause consistent with government contractor operations."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
-   "value": "Established government contractor with ongoing recruiting for technical and financial roles across defense projects."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -22484,43 +22481,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "cb4cb0c52f"
    ],
-   "value": "Likely requires U.S. citizenship and the ability to obtain government security clearances due to DoD environment work."
+   "value": "Since work supports secure U.S. DoD environments and often requires security clearances, U.S. citizenship is almost certainly required, and visa sponsorship is likely not available for these roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "cb4cb0c52f"
+    "cb4cb0c52f",
+    "a6cdbe7ead"
    ],
-   "value": "AMERICAN SYSTEMS is an engineering and IT services contractor that designs hardware, integrates complex technical systems, and provides secure communications for mission-critical environments. It makes money by providing expert staffing, budget management, and technical solutions—primarily to the U.S. Department of Defense and other government agencies."
+   "value": "AMERICAN SYSTEMS is a government services contractor specializing in IT, cybersecurity, and engineering solutions for the U.S. Department of Defense and other federal agencies. The company designs, integrates, and supports mission-critical technical systems, generating revenue through long-term government contracts."
   },
+  "synthesized_evidence_sha": "17edcff6d8f88fd0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "IT hardware design, secure Cisco collaboration technology implementation, and complex system integration; additionally includes financial technical work using Deltek Costpoint and Earned Value Management."
+   "value": "Java-based application development, data integration, hardware design and system integration for complex IT environments, and technical support for Cisco collaboration technologies in secure DoD settings."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676793,
   "web_search_url": "https://duckduckgo.com/?q=AMERICAN+SYSTEMS+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "a6cdbe7ead",
     "cb4cb0c52f"
    ],
-   "value": "AMERICAN SYSTEMS' defense contracting focus likely conflicts with the candidate's desire for a fast, innovative AI or data science culture, as government bureaucracy and secure environments typically slow down tech deployment. Additionally, the emphasis on supporting 'fast-paced operational settings' and mission-critical systems may require rigid schedules that contrast with the guaranteed shutdowns and elite work-life balance the candidate prioritizes."
+   "value": "Fits the candidate's desire for a mission-driven company with stable government work and a relatively measured pace. The pay band of $78K–$125K for a junior role meets a high new-grad pay tier, while the contractor environment tends to offer clearer project scopes and more predictable hours than a volatile commercial tech startup."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "cb4cb0c52f"
-   ],
-   "value": "Estimated: Moderate. Supporting mission-critical operations may require strict availability, contrasting with typical flexible tech environments."
+   "source_ids": [],
+   "value": "Estimated: Generally strong by tech standards. Federal work often has clear boundaries, strict 40-hour expectations, and minimal overtime, delivering guaranteed shutdowns for holidays and weekends."
   }
  },
  "american university": {
