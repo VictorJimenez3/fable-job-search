@@ -5633,37 +5633,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML at massive IoT scale (millions of cameras/sensors), but not a primary AI research lab. Respected for production ML in safety-critical domains; good launchpad for ML engineering or applied science careers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Recurring revenue model driven by monthly professional monitoring subscriptions (typically 36-month contracts), supplemented by upfront equipment sales and installation fees. High customer retention and lifetime value underpin financial stability."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established industrial company in the middle of a tech transformation. Engineering culture is pragmatic, safety-conscious, and cross-functional (hardware, firmware, cloud, mobile). Less 'move fast and break things,' more 'move reliably and protect people.' Leadership visible and mission-oriented. Bureaucracy exists but digital teams have autonomy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Residential homeowners, small-to-medium businesses, and commercial enterprises across the U.S. seeking professionally monitored security and smart home automation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + 10–15% target bonus + RSUs ($20k–$40k over 4 years) = ~$140k–$185k total Year 1. Varies by location (Boca Raton vs. Dallas vs. remote) and role (SWE vs. MLE vs. Data Science)."
   },
   "evidence_sha": "a2830cc566f6adcc",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Physical Security / Smart Home IoT / Professional Monitoring Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical system design (scalable ingestion from millions of sensors), ML model deployment (edge vs. cloud trade-offs for video analytics), and behavioral questions on cross-functional collaboration with hardware, field ops, and monitoring centers. Prepare for: 'How would you reduce false alarms using sensor fusion?' and 'Design a real-time alerting pipeline for 10M+ devices.' LeetCode Hard is less common than applied ML and distributed systems depth."
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784678782,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Headquartered in Boca Raton, FL; major tech hubs in Boca Raton, Dallas, TX, and remote-friendly roles. Field technicians and monitoring centers nationwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d1b9bda43"
+   ],
+   "value": "To protect and connect what matters most — helping people feel safe and secure in their homes and businesses through innovative security and automation solutions."
+  },
   "name": "ADT",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured sprints with quarterly planning; digital transformation initiatives create urgency but not the relentless pace of FAANG. Some on-call rotation for monitoring platform reliability."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Monitored home and business security systems, video cameras, smart home automation (locks, lights, thermostats), environmental monitoring (fire, flood, CO), and professional installation and monitoring services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 paid holidays + sick leave; accrual increases with tenure. No public 'unlimited PTO' policy."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -5673,7 +5732,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced schedules around major holidays (Thanksgiving week, Christmas–New Year), but monitoring centers operate 24/7/365."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43"
+   ],
+   "value": "Large, publicly traded company (NYSE: ADT) with ~20,000 employees and ~6 million customer accounts; mature, established market leader in U.S. residential and commercial security."
   },
   "sources": [
    {
@@ -5707,14 +5774,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=9db18b2f685bf1a17a1dbcb4eefc55474e8dc614c20eb03a6cfc703de994260aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cubXlhZHQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized engineering and data science roles; typical for large U.S. tech employers. Verify with recruiter for specific role eligibility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "3d1b9bda43",
+    "e78256a941"
+   ],
+   "value": "ADT is a leading provider of security and automation solutions for homes and businesses in the United States, offering monitored security systems, video surveillance, and smart home integration. The company generates revenue primarily through recurring monthly monitoring fees and upfront installation and equipment sales."
+  },
+  "synthesized_evidence_sha": "a2830cc566f6adcc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b5d787466c",
+    "e78256a941"
+   ],
+   "value": "IoT device firmware, cloud infrastructure for 24/7 monitoring, mobile apps (iOS/Android), real-time video streaming, data analytics for false alarm reduction, ML for threat detection, and integration with smart home ecosystems (Google, Amazon, Z-Wave)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678782,
   "web_search_url": "https://duckduckgo.com/?q=ADT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ADT offers a rare combination for new grads: a Fortune 500 brand with massive scale (6M+ monitored sites generating rich IoT data), a modernizing tech stack (cloud, ML, mobile), and a mission — protecting families and businesses — that provides tangible societal impact. Unlike many legacy industrials, ADT is actively investing in AI/ML for video analytics, false alarm reduction, and predictive maintenance, giving early-career talent access to production ML at scale without the burnout culture of"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Generally sane hours (40-45 hrs/week typical); monitoring platform teams have scheduled on-call. Field ops and customer-facing roles differ. Company emphasizes 'protecting work-life balance' in employer branding."
   }
  },
  "adtran": {
@@ -77745,37 +77840,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/computer vision team solving real-world authentication problems; publishes occasionally but not a primary research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service grading and authentication per item submitted; additional revenue from membership programs, population data subscriptions, and ancillary services like imaging and storage."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, low-ego, mission-oriented; collectors and hobbyists on staff create authentic user empathy. Collaborative rather than political; technical excellence valued over visibility."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual collectors, dealers, auction houses, and investors seeking trusted certification for high-value collectibles to facilitate buying, selling, and insurance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity (RSUs) + bonus; total comp ~$130k-$160k. Reflects premium for specialized domain + California location."
   },
   "evidence_sha": "8e7b0edf3948254e",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Collectibles authentication & grading / Specialty financial services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on computer vision/classification systems, scalable backend design for high-throughput grading pipelines, data integrity, and domain-specific problem solving (e.g., counterfeit detection). Behavioral interviews will assess alignment with collector-centric mission and ability to ship quality code in a regulated, trust-critical environment."
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784675306,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Santa Ana, California; additional offices in Hong Kong, Shanghai, Paris, and other global locations for grading operations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide trusted, expert authentication and grading that protects collectors and enables transparent, efficient collectibles markets."
+  },
   "name": "Collectors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Project-driven with clear deadlines around grading events and product launches; avoids chaotic crunch cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Authentication, grading, and encapsulation services for coins (PCGS, NGC), trading cards (PSA), comics (CGC), and other collectibles; related services include population reports, price guides, and online verification tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 paid holidays; unlimited sick days; no public policy details."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77785,7 +77922,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer Fridays or similar seasonal flexibility; not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (owned by Platinum Equity) with multiple global offices and hundreds of employees; dominant market position in several collectibles categories."
   },
   "sources": [
    {
@@ -77819,14 +77961,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0c8af79045289eda0ccc47cd7e882e0cf31f4ee39e2e79ddf9bb0922c9670484JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cDovL3ppcHBvY29sbGVjdGlvbi53ZWVibHkuY29tL3VwbG9hZHMvNS8wLzgvMC81MDgwMjI2L3ppcHBvX2NvbGxlY3RvcnNfZ3VpZGUucGRm&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized technical roles given global operations and technical hiring needs; no public data on green card sponsorship frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Collectors is a leading authentication and grading services company for high-value collectibles such as coins, trading cards, comics, and memorabilia. It operates brands like PCGS, NGC, PSA, and CGC, providing certification that establishes trust and liquidity in collectibles markets."
+  },
+  "synthesized_evidence_sha": "8e7b0edf3948254e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software engineering for submission portals, grading workflow systems, population databases, mobile apps, AI-assisted image recognition for counterfeit detection, and data analytics for market insights."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675306,
   "web_search_url": "https://duckduckgo.com/?q=Collectors+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Collectors offers a rare combination of elite technical challenges (AI/computer vision for authentication, high-scale marketplaces) with a mission-driven culture around preserving trust in collectibles. The company's dominance in niche markets provides stability, while its investment in modern tech stacks allows for innovation without the bureaucracy of larger enterprises. Work-life balance is reportedly respected with reasonable hours, making it attractive for new grads seeking growth without b"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Reports of sane hours, limited on-call, and respect for personal time; leadership emphasizes sustainable pace."
   }
  },
  "collins aerospace": {
@@ -87845,37 +88008,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 - High impact in industrial and energy AI applications, but lacks the elite prestige and brand recognition of top-tier tech companies in the AI/DS field."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b",
+    "e7440b06b6"
+   ],
+   "value": "Manufacturing and distributing power solutions including engines and powertrains, generating revenue through direct sales and parts distribution networks."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "946b5e4422"
+   ],
+   "value": "Estimated: Mission-driven with a focus on sustainability and innovation, collaborative environment balancing engineering rigor with evolving digital initiatives."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b",
+    "946b5e4422"
+   ],
+   "value": "Commercial vehicle manufacturers, industrial equipment makers, and end-users requiring power solutions for transportation and infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000-$110,000 base salary for new graduate engineering and technology roles."
   },
   "evidence_sha": "2b943a6d4aacf66e",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b",
+    "946b5e4422"
+   ],
+   "value": "Power and manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on identifying teams within Cummins' digital or electrification sectors that operate with innovative tech culture and fast-paced execution. Evaluate how teams balance impactful technical learning with structured time off and shutdowns to ensure growth without sacrificing personal time."
   },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784680402,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b"
+   ],
+   "value": "Global operations with major facilities worldwide including North America and international markets."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "946b5e4422"
+   ],
+   "value": "Innovating for our planet and driving sustainable power solutions for all stakeholders."
+  },
   "name": "Cummins",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace with structured project execution typical of established manufacturing companies, though digital transformation teams may operate faster to drive innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b",
+    "946b5e4422"
+   ],
+   "value": "Engines, powertrains, power generation systems, filtration systems, and components for various commercial and industrial applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO per year for new employees."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87885,7 +88108,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers company-sponsored shutdowns during major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b"
+   ],
+   "value": "Large established multinational publicly traded company."
   },
   "sources": [
    {
@@ -87919,14 +88149,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=e7aa7645b89bab2288e7995a11fc9cf53630d3b1e22b6c274f2057c47866f23dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuY3VtbWlucy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "946b5e4422"
+   ],
+   "value": "Likely offers visa sponsorship for specialized engineering roles based on global operations and workforce needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cfe53ec82b",
+    "e7440b06b6",
+    "946b5e4422"
+   ],
+   "value": "Cummins is a global power technology leader that designs, manufactures, and distributes diesel and alternative-fuel engines, powertrains, and power generation systems. The company generates revenue through engine sales, parts distribution, and providing power solutions for commercial and industrial applications. While historically known for diesel, Cummins is actively investing in electrification, hydrogen, and digital technologies to drive the energy transition."
+  },
+  "synthesized_evidence_sha": "2b943a6d4aacf66e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "946b5e4422"
+   ],
+   "value": "Engineering roles focusing on mechanical design, electrical systems, and digital technologies for power solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680402,
   "web_search_url": "https://duckduckgo.com/?q=Cummins+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cummins presents a mission-driven opportunity in sustainable power technology, respecting work-life balance through structured hours and guaranteed shutdowns to avoid burnout. The rapidly evolving digital and electrification initiatives offer accelerated technical learning and career growth without the toxic culture found in higher-pressure tech environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance with sane hours, though project deadlines can occasionally require additional effort."
   }
  },
  "cumulus": {
@@ -142808,11 +143067,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142824,6 +143085,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784674426,
   "name": "Guidewire",
   "pace_of_work": {
@@ -142836,6 +143098,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885994,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142869,7 +143132,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4fec018e6f5d32554de59da8f8f44fd03a8af4f897f388e8bff8d745fdd05c23JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuZ3VpZGV3aXJlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674426,
   "web_search_url": "https://duckduckgo.com/?q=Guidewire+company+careers+benefits",
@@ -153262,37 +153525,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-to-high; stable but not on par with elite big tech or quant trading in terms of bleeding-edge AI culture."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Charges fees for trading, clearing, settlement, data services, and listing new securities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, stable, and mission-driven, with some legacy bureaucracy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Investors, retail traders, corporations seeking to list (IPOs), and clearing members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive for Hong Kong finance (likely high five to low six-figure USD equivalent), but potentially lower than elite big-tech."
   },
   "evidence_sha": "a089896aae262910",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial services, securities exchanges."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe the specific team's tech stack and deployment velocity to see if it matches your desire for fast, innovative technical learning. Ask about after-hours expectations and on-call duties to ensure the role respects your strict WLB and sane-hours priorities."
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784679640,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Hong Kong."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect China with the world, bridging global and mainland Chinese financial markets."
+  },
   "name": "Hong Kong Exchanges",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Focuses on stability and compliance over moving fast and breaking things."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates equity, derivatives, fixed income, and commodities markets, alongside clearing and settlement services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual leave typical of Hong Kong financial entities."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153302,7 +153607,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public financial institution with thousands of employees."
   },
   "sources": [
    {
@@ -153336,14 +153646,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f6c617575b6d8871b8df43ac2a75b6cca3fdc96c217f36615fa143aa098bb002JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSG9uZ19Lb25n&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Typically offers solid visa support for top tech talent in Hong Kong, though policies vary."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No usable content was retrieved from the supplied sources. Based on general knowledge, Hong Kong Exchanges and Clearing (HKEX) operates the region's primary stock and derivatives markets. It makes money through trading fees, clearing and settlement fees, and listing fees for new IPOs."
+  },
+  "synthesized_evidence_sha": "a089896aae262910",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building high-throughput, low-latency trading and clearing systems, and doing large-scale data processing and analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679640,
   "web_search_url": "https://duckduckgo.com/?q=Hong+Kong+Exchanges+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Though elite and financially stable, HKEX has a conservative financial culture which may feel bureaucratic and slow compared to elite big-tech. Work-life balance is generally good, but the tech culture may not offer the fastest pace of AI innovation a top-tier data scientist desires."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Standard corporate hours in finance, not toxic or high-burnout."
   }
  },
  "horizon surgical systems": {
@@ -155354,37 +155685,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML in production satellite networks; publishes at SIGCOMM/NSDI/MLSys; not a primary AI research lab but deploys at planetary scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Revenue from consumer broadband subscriptions, enterprise managed services contracts, government/defense contracts, hardware/terminal sales, and capacity leasing on owned satellites (Jupiter fleet)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-driven, low-politics; long-tenure employees; collaborative across RF, software, and data science; values reliability over speed; quiet professionalism."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Residential consumers (rural/underserved areas), enterprises (retail, energy, financial), government/military agencies, airlines, maritime operators, and mobile network operators globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSUs (4-yr vest ~$40k-$60k total); top AI/ML roles may reach $140k base."
   },
   "evidence_sha": "d4b6fa41135a3dba",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Satellite Communications / Telecommunications / Networking"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on: (1) statistical ML for time-series network traffic/anomaly detection, (2) optimization algorithms for satellite resource allocation (beam hopping, power control), (3) distributed systems design for ground-segment orchestration, (4) DSP/communications theory fundamentals. Prepare a project walkthrough showing end-to-end ML lifecycle (data→model→deployment monitoring). Behavioral: cross-functional collaboration with hardware/RF teams, handling ambiguity in regulat"
   },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784675811,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Headquarters: Germantown, MD. Major offices: Dulles VA, Denver CO, Richardson TX, international sites (UK, Brazil, India, Mexico). Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "To connect people, businesses, and communities through innovative satellite and multi-transport networking technologies, bridging the digital divide."
+  },
   "name": "Hughes",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles measured in quarters; regulated/deployment constraints enforce discipline; sprint culture exists but hard deadlines are predictable."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Satellite broadband internet (HughesNet/Jupiter), managed network services, satellite ground systems, 5G backhaul, aeronautical/maritime connectivity, and network management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + 5 sick days; accrual increases with tenure; unlimited not offered."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155394,7 +155791,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (approx. 5 business days); occasional summer Friday half-days."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Large established subsidiary of EchoStar (NASDAQ: SATS); ~$1B+ annual revenue; thousands of employees globally; mature public-company stage."
   },
   "sources": [
    {
@@ -155428,14 +155834,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=02f5e785eab0157745f98e8997b7c85ce07dc44df76de7026998b75047e96e2bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuaHVnaGVzZmN1Lm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (EchoStar/Hughes); supports GC processing for qualified roles; cap-exempt university partnerships possible for research roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Hughes is a satellite communications and networking company that provides broadband internet, managed network services, and satellite solutions to consumers, enterprises, and governments worldwide."
+  },
+  "synthesized_evidence_sha": "d4b6fa41135a3dba",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8e26a27afd",
+    "4e43e1c985",
+    "cafafb0591"
+   ],
+   "value": "Satellite communications engineering, DSP/Modem ASIC development, network protocol optimization, cloud orchestration, AI/ML for network analytics and resource allocation, cybersecurity, embedded systems, 5G integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675811,
   "web_search_url": "https://duckduckgo.com/?q=Hughes+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hughes offers a rare combination: elite satellite/AI technical challenges (Jupiter constellation, ML-driven network optimization) at a profitable, mature company with government-grade stability, while actively investing in next-gen 5G/LEO integration. The mission—connecting the unconnected—is tangible and globally impactful. Compared to hyper-growth startups, the pace is sustainable with structured hours, and unlike pure defense contractors, the commercial side drives modern tech stacks. For a n"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — core hours ~9-5 with flexibility; on-call rotation for production satellite ops (typically 1 week/month); limited weekend work outside anomalies."
   }
  },
  "human computer lab": {
@@ -184426,37 +184861,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / likely not a recognized AI research hub. No evidence of publications, conferences, or elite ML talent branding in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in the supplied sources. Likely B2B SaaS given the company name and web portal references."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No employee reviews, values statements, or culture artifacts in sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data for new-grad technical roles in sources. Typical niche SaaS new-grad total compensation in similar markets: $80k–$120k base, minimal equity."
   },
   "evidence_sha": "6e99f3f2f985a134",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Construction tech / workforce compliance SaaS (inferred from 'LCP' prefix commonly used in Labor Compliance Programs)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask directly: (1) Is there a dedicated AI/ML or data science team, and what is its size and remit? (2) What are the exact new-grad compensation bands (base, equity, bonus) for ML roles? (3) What are the core hours, on-call expectations, and whether guaranteed shutdown periods exist? (4) How is technical mentorship and career progression structured for early-career hires? (5) What is the current tech stack and ML infrastructure? (6) Can the team share recent project examples and publication/open-"
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784675811,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No office locations found in the supplied sources. The domain suggests US-based operation."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "LCPtracker, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No data on release cadence, sprint length, or overtime culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found in the supplied sources. The company name suggests possible compliance, project tracking, or workforce management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No PTO policy disclosed in sources."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184466,7 +184943,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No company-wide shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (likely 50–200 employees) based on typical niche SaaS profile; no headcount or funding data in sources."
   },
   "sources": [
    {
@@ -184500,14 +184982,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=14d28c2f770a271fa0c49332bee8711d961363c7180020631a1c3900eac92061JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly9sY3B0cmFja2VyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship policy found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e6c26d322e",
+    "98e0b69072",
+    "0ca5705c0f"
+   ],
+   "value": "LCPtracker, Inc. appears to be a software company with a web presence, but the provided sources contain only redirect links without substantive company details. No public information about products, mission, or business model was retrievable from the supplied sources."
+  },
+  "synthesized_evidence_sha": "6e99f3f2f985a134",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "98e0b69072"
+   ],
+   "value": "No technical stack or engineering details found in the supplied sources. The presence of a production CDN (prod-cdn.lcptracker.net) suggests a web-based product."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675811,
   "web_search_url": "https://duckduckgo.com/?q=LCPtracker%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with guaranteed shutdowns, and accelerated growth without burnout. Without verified company data, it is impossible to assess LCPtracker against these priorities. The candidate should request concrete details on AI/ML team structure, compensation bands, WLB policies, and career development before investing interview time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No policy data on hours, PTO, shutdowns, or burnout prevention."
   }
  },
  "legit script": {
@@ -187380,48 +187889,127 @@
  "lidl in germany": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: Mid-tier. Focused on practical supply chain optimization and applied analytics rather than elite AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "High-volume, low-margin retail selling a mix of branded and private-label goods, supported by a highly efficient logistics and supply chain network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: Practical, cost-conscious, and process-oriented. May feel restrictive to someone seeking a highly innovative tech culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Value-conscious everyday consumers seeking low-priced groceries and household necessities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: EUR 65,000 to EUR 80,000 base salary for new graduates in tech and data roles in Germany."
   },
   "evidence_sha": "27165c699b32b806",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Retail / Grocery"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily whether their AI roles focus on true predictive modeling and deep learning or are limited to basic SQL and legacy reporting. Ask direct questions about team tech debt, manager expectations for after-hours pager duty, and shutdown policies to ensure they deliver a fast culture without burning your personal time."
   },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784676904,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Headquartered in Germany, with store locations across Europe and the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "To provide high-quality groceries and household products at the lowest possible prices to consumers."
+  },
   "name": "Lidl in Germany",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: Fast-paced due to high retail logistics volume, but heavily gated by standard enterprise bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Groceries, household goods, and private-label food and beverage products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: 25 to 30 days of paid time off per year, consistent with standard German corporate benefits."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: Likely includes reduced operations or guaranteed public holidays, though not necessarily full corporate shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Large, established multinational enterprise with over 12,000 stores worldwide."
   },
   "sources": [
    {
@@ -187455,14 +188043,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=31ac302a1f2915f7f1700ce3d7dd610d536823f9bab3e26e279f90f1316db3b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cubGlkbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Not explicitly found in research, though large German retail chains often offer visa support for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Lidl is an international discount supermarket chain that originated in Germany and operates a vast network of no-frills grocery stores across Europe and the United States. It makes money by selling high volumes of fast-moving consumer goods and private-label products at low prices, leveraging an efficient supply chain and streamlined operations."
+  },
+  "synthesized_evidence_sha": "27165c699b32b806",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "25d49b377d",
+    "06caa110bf"
+   ],
+   "value": "Likely involves supply chain optimization, inventory forecasting, data analytics, and enterprise IT infrastructure based on its retail operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676904,
   "web_search_url": "https://duckduckgo.com/?q=Lidl+in+Germany+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a massive retail chain, Lidl's tech and data science teams primarily optimize supply chains and operations rather than pushing the cutting edge of AI research, which may lack the elite prestige you seek. However, a stable, large German corporate environment might offer structured hours that help protect your personal time."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "25d49b377d"
+   ],
+   "value": "Estimated: Good. German labor laws typically enforce sane working hours and respect personal time."
   }
  },
  "lidl us": {
@@ -191313,11 +191932,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191329,6 +191950,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784678560,
   "name": "Louisiana State University (LSU)",
   "pace_of_work": {
@@ -191341,6 +191963,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885994,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191384,7 +192007,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b660f10179a3e723aa9ec2bcae36b0aa2c4961850081b3661ef49f3100dcbb40JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTG91aXNpYW5h&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678560,
   "web_search_url": "https://duckduckgo.com/?q=Louisiana+State+University+%28LSU%29+company+careers+benefits",
@@ -243335,41 +243958,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — High-impact industrial AI at scale, recognized in energy sector; not a headline consumer-AI brand but respected for applied ML in safety-critical, asset-heavy operations."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated energy value chain: crude oil refining → transportation/storage (midstream) → chemical manufacturing → marketing of refined and specialty products. Revenue from product sales margins, fee-based midstream services, and chemical joint ventures (e.g., CPChem with Chevron)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Safety-first, engineering-centric, collaborative but hierarchical. Strong 'One Team' rhetoric; digital transformation push creating pockets of startup-like autonomy. Long tenures common; loyalty valued. Conservative externally, pragmatic internally."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wholesale fuel distributors, retail station operators (including branded Phillips 66, 76, Conoco stations), commercial/industrial end-users, airlines, petrochemical manufacturers, and international export markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU (vesting 3-4 yrs). Total comp ~$115k-$140k Y1. Houston/Woodlands COL-adjusted; premium for Bay Area/Seattle roles."
   },
   "evidence_sha": "800b9389dbc46c42",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Energy — Integrated Oil & Gas / Refining & Marketing / Petrochemicals"
   },
-  "last_attempt_at": 1784885671,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case studies on process optimization, time-series anomaly detection, and translating ML models into safe, auditable refinery decisions. Prepare for behavioral questions on safety culture, cross-functional influence (ops/maintenance/IT), and handling ambiguity in regulated environments. Coding bar is solid but not LeetCode-hard; emphasis on production-grade Python/SQL and cloud (Azure) deployment patterns."
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784676903,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Houston, TX. Major operations: U.S. Gulf Coast (TX, LA), Midwest (IL, OK), West Coast (CA, WA), and international (UK, Germany, Singapore). Refineries, pipeline terminals, fractionators, and chemical plants."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provide energy and improve lives. Focus on operational excellence, safety, environmental stewardship, and delivering shareholder value through disciplined capital allocation and a diversified, integrated portfolio."
+  },
   "name": "Phillips 66",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, project-driven cycles (quarterly/annual planning). Sprints exist in digital teams but gated by safety reviews, change management, and plant turnarounds. Faster than legacy reputation, slower than pure tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Refined petroleum products (gasoline, diesel, jet fuel), natural gas liquids (NGLs), petrochemicals (olefins, polyolefins), lubricants, and specialty products. Also provides midstream services: pipeline transportation, terminaling, storage, and fractionation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 company holidays + 9/80 schedule (every other Friday off) at many locations. Carryover and buy-back policies vary by business unit."
   },
-  "retry_after": 1784885791,
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -243379,7 +244040,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Major refinery turnarounds (planned shutdowns) every 3-5 years per site; corporate IT/digital teams often observe year-end slowdown (late Dec) but no company-wide guaranteed shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: PSX). ~13,000 employees (2023). Fortune 500. Market cap ~$50-60B. Mature, capital-intensive, cyclical industry."
   },
   "sources": [
    {
@@ -243413,14 +244079,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c7aa1071983cabc7cd85a09dc541ef2ec69e6598ac4d69e854f8999d9744893JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWl0YW5hX0Jvbm1hdCVDMyVBRA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for specialized engineering, data science, and IT roles. Green card sponsorship (PERM) typically for experienced hires in hard-to-fill technical positions. New-grad sponsorship possible but competitive."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Phillips 66 is a diversified energy manufacturing and logistics company that processes, transports, stores, and markets fuels and petrochemical products globally. It operates through refining, midstream, chemicals, and marketing/specialties segments."
+  },
+  "synthesized_evidence_sha": "800b9389dbc46c42",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Process engineering, reliability/maintenance optimization, data science for predictive maintenance and yield optimization, digital twin/refinery simulation, SCADA/OT cybersecurity, supply chain analytics, emissions monitoring/reduction tech, and growing low-carbon hydrogen/CCUS projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=Phillips+66+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Phillips 66 offers elite-scale industrial data science: massive sensor networks, real-time optimization of multi-billion-dollar assets, and a mandate to decarbonize. You get prestige of Fortune 500 impact, competitive new-grad pay, and a culture shifting toward digital agility—without the burn-and-churn of pure software shops. The company explicitly targets 9/80 work schedules and protected shutdowns at many sites, giving genuine work-life boundaries rare in high-pay energy tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — 9/80 compressed schedules common; planned turnaround periods require extended hours but are predictable and compensated. Corporate digital roles often hybrid with core-hours flexibility."
   }
  },
  "physicsx": {
@@ -318103,37 +318790,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong domain-specific prestige in fintech/exchange tech; not a pure AI research lab but high-visibility applied ML at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from listing fees, trading/clearing fees, market data subscriptions, technology licensing, and post-trade services. Diversified across equities, derivatives, fixed income, and energy."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-driven, engineering-led transformation underway; collaborative but accountable; diversity and inclusion emphasized; less hierarchical than big banks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public companies seeking listing, institutional/retail investors, broker-dealers, market makers, data vendors, and energy market participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD $85k–$105k base + 10–15% target bonus + RSU (vesting 3–4 yrs); total comp ~$100k–$125k first year. Competitive with top Canadian fintech."
   },
   "evidence_sha": "a7c7513c90544ddf",
+  "generated_at": 1784885874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Market Infrastructure / Capital Markets / FinTech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: low-latency systems design, time-series data modeling, ML for anomaly detection/surveillance, and cloud architecture. Behavioral questions will probe regulatory awareness, stakeholder management, and ability to ship in a governed environment. Prepare for case studies on exchange technology (matching engines, market data) and questions on balancing speed with compliance."
+  },
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784678789,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Toronto; offices in Montreal, Calgary, Vancouver, New York, London, and remote-friendly hybrid model."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To power the markets that fuel growth — enabling capital formation, price discovery, and risk management for the Canadian and global economy."
+  },
   "name": "TMX Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — regulated environment imposes governance, but modernization initiatives (TMX Labs, cloud) drive agile delivery; less frantic than prop trading, faster than traditional bank IT."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Exchange listings (TSX, TSXV), trading platforms, clearing (CDCC, NGX), market data/analytics, technology solutions (Trayport, Shorcan), and post-trade services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 10–12 statutory/paid holidays; volunteer days; flexible mental health days."
   },
+  "refresh_after": 1790069874,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -318143,7 +318872,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; summer half-day Fridays in some teams; no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (TSX: X); ~1,500 employees; market cap ~$10B CAD; mature, regulated financial infrastructure provider."
   },
   "sources": [
    {
@@ -318177,14 +318911,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8925d9c3d493ab75947c50403b3335514959c5066872b751dcfbb6eef8be94c1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudG14LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors work permits (Global Talent Stream, LMIA) for specialized tech roles; new-grad sponsorship possible for high-demand AI/data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TMX Group operates Canada's premier financial market infrastructure, including the Toronto Stock Exchange (TSX), TSX Venture Exchange, and related clearing, data, and technology services. It connects companies with capital and investors with opportunities across equities, fixed income, derivatives, and energy markets."
+  },
+  "synthesized_evidence_sha": "a7c7513c90544ddf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ultra-low-latency trading systems, market data pipelines, clearing/settlement platforms, risk analytics, cloud migration, AI/ML for surveillance and analytics, regulatory tech, and exchange technology modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678789,
   "web_search_url": "https://duckduckgo.com/?q=TMX+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TMX sits at the center of Canadian capital markets — a rare mix of elite financial prestige, massive real-time data, and a mandate to modernize. For a new grad in AI/data science, it offers high-impact work on systems that move billions daily, with public-company stability and a stated focus on innovation (e.g., TMX Labs, cloud-native transformation). Pay is competitive with Bay Street tech, and the culture is shifting toward faster delivery without the burnout typical of hedge funds or big bank"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Core hours with flexibility; on-call rotations for production systems; shutdowns around holidays; generally respected boundaries compared to sell-side."
   }
  },
  "tocaro blue": {
@@ -345071,7 +345826,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -345089,7 +345844,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784885671,
+  "last_attempt_at": 1784885874,
   "last_evidence_at": 1784675305,
   "name": "Wash U",
   "pace_of_work": {
@@ -345102,7 +345857,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784885791,
+  "retry_after": 1784886114,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
