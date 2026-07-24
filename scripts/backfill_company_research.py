@@ -28,7 +28,19 @@ from radar.models import norm  # noqa: E402
 
 
 def groups() -> list[list[dict]]:
+    """Return employers in the same interest-first order as dossier synthesis.
+
+    The source-collection pass used to be score-only while synthesis correctly
+    favoured roles the owner had saved or was already tracking.  That made the
+    two halves of one backlog disagree.  Use persisted owner intent here too;
+    we deliberately do not try to infer what a visitor might click next.
+    """
     jobs = state.load("jobs.json", {})
+    applied_ids = {entry.get("id") for entry in state.applied() if entry.get("id")}
+    shortlist_ids = {entry.get("id") for entry in state.shortlist() if entry.get("id")}
+    web_ids = set(state.load("web_state.json", {}).get("jobs") or {})
+    priority_ids = applied_ids | shortlist_ids | web_ids
+    now = int(time.time())
     grouped: dict[str, list[dict]] = {}
     for job in jobs.values():
         if job.get("closed_at"):
@@ -36,8 +48,17 @@ def groups() -> list[list[dict]]:
         if not job.get("alert_ok") and not company_research.job_is_relevant(job):
             continue
         grouped.setdefault(norm(job.get("company", "")), []).append(job)
-    return sorted(grouped.values(), key=lambda rows: -max(
-        (row.get("score", 0) for row in rows), default=0))
+    def priority(rows: list[dict]) -> tuple[int, int, int, int]:
+        newest = max((row.get("posted_at") or row.get("first_seen", 0) for row in rows), default=0)
+        fresh = int(newest and now - newest <= 24 * 3600)
+        return (
+            int(any(row.get("id") in priority_ids for row in rows)),
+            int(any(row.get("alert_ok") for row in rows)),
+            max((row.get("score", 0) for row in rows), default=0),
+            fresh,
+        )
+
+    return sorted(grouped.values(), key=priority, reverse=True)
 
 
 def ready_count(records: dict) -> int:

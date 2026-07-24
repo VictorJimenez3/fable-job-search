@@ -125,7 +125,10 @@ source links/dates. Non-public employer-profile values are visibly labeled
 **Estimated**, and every posting retains the board or discovery URL that found
 it. New postings trigger this research automatically; the manual company-
 research backfill is resumable and commits bounded checkpoints, so a long run
-can be interrupted without losing completed dossiers.
+can be interrupted without losing completed dossiers. Until the backlog is
+empty, a 30-minute relay keeps that worker restarting after short exits or
+provider cooldowns; it prioritizes companies attached to saved/tracked,
+alert-worthy, high-score, and fresh roles.
 
 Roles with a target technical title and **no stated experience floor**, but no
 actual new-grad proof, are labeled **early-career possible** in Jobs and can be

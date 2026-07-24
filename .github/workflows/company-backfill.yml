@@ -2,9 +2,11 @@ name: company research backfill
 
 on:
   schedule:
-    # One sustained worker every six hours. It drains for up to the runner's
-    # safe limit; the next invocation resumes from committed checkpoints.
-    - cron: "0 */6 * * *"
+    # A short relay interval keeps the worker effectively continuous when a
+    # prior drain exits early or pauses behind provider retry cooldowns. The
+    # concurrency group admits only one running job plus the newest pending
+    # relay, so this cannot build an unbounded Actions queue.
+    - cron: "*/30 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -53,8 +55,11 @@ jobs:
           RADAR_AI_ROTATE_PROVIDERS: "0"
           RADAR_AI_TASK_COMPANY_RESEARCH_LIMIT: "10000"
           RADAR_COMPANY_RESEARCH_WEB_BATCH: "10"
-          RADAR_COMPANY_RESEARCH_SYNTH_BATCH: "8"
-          RADAR_COMPANY_RESEARCH_WORKERS: "8"
+          # Two provider attempts per dossier share the 30-RPM global gate.
+          # Twelve concurrent dossiers keep that gate occupied during normal
+          # API latency without exceeding the configured allowance.
+          RADAR_COMPANY_RESEARCH_SYNTH_BATCH: "12"
+          RADAR_COMPANY_RESEARCH_WORKERS: "12"
           RADAR_COMPANY_RESEARCH_MAX_TOKENS: "2200"
           RADAR_COMPANY_RESEARCH_TIMEOUT: "75"
           RADAR_COMPANY_RESEARCH_MAX_AGE_DAYS: "365"

@@ -195,11 +195,13 @@ never in Actions.
 
 ## Ops
 - **Company-research backlog throughput — ✅ checkpointing + retry visibility shipped.** The
-  manual backfill now prioritizes visible high-score employers, uses GLM-first
-  synthesis with a bounded timeout, commits each small cycle before moving
-  on, and reports retry-waiting/error records separately. A cancelled or
-  rate-limited run resumes from its last checkpoint instead of losing the
-  entire process or hot-looping one unavailable provider.
+  manual backfill now prioritizes saved/tracked employers, then alert-worthy,
+  high-score, and fresh roles; it uses GLM-first synthesis with a bounded
+  timeout, commits each small cycle before moving on, and has a 30-minute
+  continuous relay until the queue is empty. It reports retry-waiting/error
+  records separately. A cancelled or rate-limited run resumes from its last
+  checkpoint instead of losing the entire process or hot-looping one
+  unavailable provider.
 - **Calendar sync** — interview emails → Google Calendar holds.
 - **Weekly Notion rollup** — mirror the Monday memo into Job Search HQ.
 - **Registry hygiene job** — ✅ SHIPPED 2026-07-16 (`discovery.hygiene`,

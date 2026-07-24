@@ -186,9 +186,11 @@ Before changing the radar, read these in order:
   evidence caches. The dossier backfill uses eight bounded concurrent company
   tasks with global request budgets and exponential provider circuit breakers;
   `state/ai_usage.json` is the evidence for actual usage versus configured
-  quota. It runs as a sustained six-hour scheduled worker (up to GitHub's
-  330-minute job limit) and resumes from checkpoints automatically; the
-  two-hour `enrich` workflow remains the fresh/high-priority lane.
+  quota. It runs as a sustained worker (up to GitHub's 330-minute job limit)
+  with a 30-minute relay, so a short exit or provider cooldown is retried
+  promptly and the newest relay follows any long run. It resumes from
+  checkpoints automatically; the two-hour `enrich` workflow remains the
+  fresh/high-priority lane.
 - **Notification cadence:** individual alert issues are silent tracking
   surfaces. `alert-batch.yml` sends up to 15 unsent roles every four hours,
   ranked by score and recency, as the normal alert email. It records delivered IDs in
@@ -199,9 +201,10 @@ Before changing the radar, read these in order:
   every stored score from the latest production snapshot. `tests.yml` and the
   maintenance workflow run `python -m radar.main score-health`, which fails if
   any stored record lacks the current score/rules version. The manual company
-  backfill checkpoints one bounded batch per commit, prioritizes high-score
-  visible employers, and uses GLM-first API synthesis with a 75-second request
-  timeout; rerun `company research backfill` to resume safely. Failed provider
+  backfill checkpoints one bounded batch per commit, prioritizes saved/tracked
+  employers before alert-worthy, high-score, and fresh roles, and uses GLM-first
+  API synthesis with a 75-second request timeout; rerun `company research
+  backfill` to resume safely. Failed provider
   or schema attempts are explicit retryable records with capped exponential
   backoff; checkpoint logs expose ready/pending/retry/error counts.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it

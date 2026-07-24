@@ -908,3 +908,21 @@ opened employer is processed first and the same owner request warms up to four
 distinct, not-yet-ready companies from the current Jobs ordering concurrently.
 The workflow records retryable provider failure rather than making the browser
 wait or claiming a result it did not obtain.
+
+## 66. The company-research backlog uses a continuous relay until caught up (2026-07-24)
+
+Company dossier work is a finite but long-running queue, so a six-hour gap
+after a short worker exit wastes available provider capacity and leaves already
+captured evidence visibly unsynthesized. The Actions backfill is therefore
+scheduled every 30 minutes while retaining one shared concurrency group: one
+worker may run and only the newest relay may wait. This prevents overlapping
+writers or an unbounded Actions queue, while promptly resuming after an empty
+batch, a provider cooldown, or the GitHub job limit.
+
+The source-collection stage and synthesis stage share the same owner-interest
+order: saved/applied or web-tracked roles first, then alert-worthy roles, then
+score and freshness. This relies only on explicit persisted interest, not a
+guess about an arbitrary visitor's next click. Twelve bounded concurrent
+dossiers keep the existing 30-RPM global request gate busy during provider
+latency; the gate, circuit breakers, and per-company exponential retry remain
+the cost and reliability limits.
