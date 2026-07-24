@@ -6620,129 +6620,97 @@
  "adventist health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "c47c1a972f"
-   ],
-   "value": "Estimated: Tech non-entity; the firm is prestigious in healthcare but not recognized as a top-tier, elite AI/DS employer."
+   "source_ids": [],
+   "value": "Low–Mid (healthcare analytics focus, not core AI research; limited publications/conference presence)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f"
-   ],
-   "value": "A non-profit integrated health system generating revenue primarily through patient care services, operating facilities in rural and urban communities."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit health system funded primarily by patient service revenue (insurance reimbursements, government programs), philanthropy, and investment income; surpluses reinvested in facilities and community benefit."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f",
-    "483b132f0f"
-   ],
-   "value": "Faith-based and mission-driven, prioritizing compassionate community care over aggressive technical disruption. The culture emphasizes holistic physical, mental, and spiritual health for both patients and employees."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission-driven, faith-informed, collaborative, hierarchical, service-oriented, risk-averse; values longevity and loyalty over disruption."
   },
   "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f",
-    "5e3f9fbe85"
-   ],
-   "value": "Patients needing medical care across rural and urban communities, as well as insured individuals relying on Medicare, Medicaid, and private insurance."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients and communities served across California, Oregon, Washington, and Hawaii; reimbursed by Medicare, Medicaid, commercial insurers, and self-pay."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "low",
-   "source_ids": [
-    "c47c1a972f"
-   ],
-   "value": "Estimated: $85,000 - $115,000. Lower than elite FAANG AI roles, reflecting the non-profit and non-Big Tech nature of the employer."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $80,000–$110,000 base salary (varies by role: data analyst lower, data scientist/ML engineer higher); minimal equity; benefits include pension/403b match."
   },
   "evidence_sha": "c17e0f8f3cb6fdf2",
-  "generated_at": 1784871147,
+  "generated_at": 1784890746,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
-   "source_ids": [
-    "5e3f9fbe85"
-   ],
-   "value": "Hospital & Health Care"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit healthcare / Integrated health system"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "c47c1a972f"
+    "dbc3b9e88f"
    ],
-   "value": "Focus your questions on the specific tech stack, AI deployment cycles in a clinical setting, and whether the team operates with agile, tech-first autonomy or is gated by hospital compliance and slow decision-making."
+   "value": "Expect heavy emphasis on mission alignment (faith-based whole-person care), healthcare domain knowledge (HIPAA, clinical workflows, value-based care), behavioral questions on collaboration and service orientation, plus technical assessments in SQL, Python, and health data analytics. Prepare for panel interviews with clinical and IT stakeholders."
   },
-  "last_attempt_at": 1784871147,
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784583384,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "5e3f9fbe85"
-   ],
-   "value": "Headquartered in Roseville, California, with health facilities and offices located across the Western United States."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Roseville, CA. Facilities across California, Oregon, Washington, and Hawaii. Remote/hybrid options likely for select tech roles."
   },
   "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f",
-    "483b132f0f"
-   ],
-   "value": "To share God's love by providing physical, mental and spiritual healing."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Living God's love by inspiring health, wholeness, and hope through compassionate, whole-person care."
   },
   "name": "Adventist Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "5e3f9fbe85"
-   ],
-   "value": "Estimated: Slow and methodical. As a traditional non-profit healthcare provider, rapid experimentation is often restricted by strict regulatory, privacy, and compliance guardrails."
+   "source_ids": [],
+   "value": "Slow to moderate; regulated healthcare environment, change management-heavy, committee-driven decisions, limited experimentation speed."
   },
   "products": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f",
-    "5e3f9fbe85"
-   ],
-   "value": "Inpatient hospital care, outpatient clinics, urgent care centers, and telehealth services."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acute care hospitals, outpatient clinics, home health, hospice, urgent care, health plan administration, and population health management services."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "low",
-   "source_ids": [
-    "5e3f9fbe85"
-   ],
-   "value": "Estimated: 20-25 days of Paid Time Off annually, standard for large non-profit health systems."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 15–20 days PTO + 8–10 paid holidays (varies by role/tenure; non-profit standard)"
   },
-  "refresh_after": 1790055147,
+  "refresh_after": 1790074746,
   "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "c47c1a972f"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "483b132f0f"
-   ],
-   "value": "Estimated: No guaranteed company-wide tech shutdowns, though the organization observes traditional holidays."
+   "source_ids": [],
+   "value": "No guaranteed company-wide shutdowns; some departments may observe reduced hours around major holidays."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "c47c1a972f"
-   ],
-   "value": "A large, established non-profit health system operating across multiple states."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature non-profit (~35,000 employees, $6B+ annual revenue), well-established with multi-state hospital network."
   },
   "sources": [
    {
@@ -6787,46 +6755,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "5e3f9fbe85"
-   ],
-   "value": "Standard healthcare industry visa policies for specialized clinical and IT roles, though no specific rotational or new-grad sponsor programs were found."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized clinical and technical roles (data science, health IT) given size and non-profit status; green card sponsorship possible for long-term needs."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "c47c1a972f",
-    "5e3f9fbe85"
+    "dbc3b9e88f"
    ],
-   "value": "Adventist Health is a faith-based, non-profit healthcare delivery system operating hospitals and clinics. It makes money by charging for inpatient care, outpatient services, and physician fees."
+   "value": "Adventist Health is a large, faith-based non-profit integrated health system headquartered in Roseville, California, operating 20+ hospitals and numerous clinics across the West Coast and Hawaii, focused on whole-person care."
   },
-  "synthesized_evidence_sha": "ea66c452e2bafe52",
+  "synthesized_evidence_sha": "c17e0f8f3cb6fdf2",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "5e3f9fbe85"
+    "dbc3b9e88f"
    ],
-   "value": "Health IT infrastructure supporting electronic health records (EHR), clinical workflows, and patient data management."
+   "value": "Health IT (EHR optimization, Epic/Cerner), clinical data analytics, population health modeling, revenue cycle automation, emerging AI/ML for care coordination and predictive analytics."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583384,
   "web_search_url": "https://duckduckgo.com/?q=Adventist+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "c47c1a972f",
-    "483b132f0f"
+    "dbc3b9e88f"
    ],
-   "value": "As a mission-driven non-profit, it inherently values sustainable work-life balance. However, it operates as a traditional healthcare provider, meaning the pace is regulated, safety-focused, and leans toward slow bureaucracy rather than the fast, innovative tech culture of an elite AI startup."
+   "value": "For a candidate seeking elite AI prestige, high new-grad pay, and fast innovative culture: Adventist Health is a mission-driven non-profit healthcare system, not a tech-first company. Technical work centers on health IT and clinical analytics rather than cutting-edge AI research. Pace is bureaucratic and regulated, not fast/innovative. Pay is solid for healthcare but well below top-tier tech. Work-life balance is generally respected in corporate roles, but no guaranteed shutdowns. Growth comes t"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "483b132f0f"
-   ],
-   "value": "Estimated: Good. Non-profit healthcare systems typically enforce sane hours and avoid the hyper-scale burnout culture common in big tech."
+   "source_ids": [],
+   "value": "Moderate–Good (corporate/tech roles typically 40–45 hrs/wk, on-call rare for non-clinical; clinical roles far more demanding)"
   }
  },
  "adways inc": {
@@ -40867,41 +40829,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied AI/DS in niche domain; not a primary AI research lab or top-tier tech brand."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely project-based professional services billing (time & materials or fixed-fee consulting); no financial details in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, collaborative, domain-expertise-driven; engineering-first culture with growing data-science integration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probably private industry clients, government agencies, and municipalities seeking engineering/environmental consulting; no customer specifics in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base (consulting new-grad range); signing bonus possible; equity unlikely. Well below top-tier AI lab offers ($150k+)."
   },
   "evidence_sha": "314b552dbc724ddf",
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d30d64c6cb",
+    "9bafca5cfe"
+   ],
+   "value": "Engineering / Environmental Consulting / Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML/statistics questions tied to environmental/engineering data (time series, spatial data, sensor fusion). Prepare for case studies on real-world modeling problems. Ask about billable-hour expectations, project diversity, and mentorship structure to gauge learning pace vs. burnout risk."
   },
-  "last_attempt_at": 1784890560,
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784680710,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters likely in Minneapolis, MN (Barr Engineering); additional offices across US; exact locations not in sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Barr",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project-driven with deadline cycles; faster than bureaucracy but slower than consumer-tech sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d30d64c6cb",
+    "9bafca5cfe"
+   ],
+   "value": "Likely engineering consulting, environmental services, or technical advisory services based on typical Barr-group firms; no product details found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days + holidays (typical for US mid-size consulting firms); no policy found in sources."
   },
-  "retry_after": 1784890680,
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40911,7 +40917,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns documented; some firms close between Christmas–New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-to-large professional services firm (Barr Engineering and similar firms typically 500–2,000 employees); exact size not in sources."
   },
   "sources": [
    {
@@ -40945,14 +40956,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=56838eb12ed16f2a9eff270f3ca9c65c90a19d624abaecad104970b4def044d9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cuYmFyci5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large established firms typically sponsor H-1B and green cards for technical roles; no specific policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d30d64c6cb",
+    "9bafca5cfe"
+   ],
+   "value": "Barr appears to be a professional services or engineering firm based on available web presence (barr.com, andbarr.co). The company likely provides technical consulting, engineering, or environmental services given the domain names, but specific business details were not accessible from the supplied sources."
+  },
+  "synthesized_evidence_sha": "314b552dbc724ddf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Presumed to involve environmental modeling, data analysis, GIS, water resources, and geotechnical engineering; AI/DS roles likely applied to environmental/engineering problems rather than core product R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680710,
   "web_search_url": "https://duckduckgo.com/?q=Barr+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/DS prestige with high new-grad pay and fast innovation culture, this firm likely offers applied data science in engineering/environmental domains rather than cutting-edge AI research. Work-life balance may be better than big tech (project-based hours), but 'guaranteed shutdowns' and 'sane hours' are not documented. Technical growth comes from domain expertise, not pure ML innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — consulting firms often have busy periods but more predictable hours than high-burnout tech; no guaranteed shutdowns documented."
   }
  },
  "barry wehmiller": {
@@ -67176,42 +67211,112 @@
  "cdk global": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Estimated: Mid-tier. While the scale of automotive data offers strong enterprise-level impact, it is not traditionally recognized as an elite, cutting-edge AI research hub comparable to top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "B2B software and data services: selling SaaS platforms, data analytics, and technology infrastructure to automotive businesses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional enterprise B2B. The culture likely emphasizes industry expertise, reliability, and client solutions over the hyper-modern, disruptive tech culture seen in pure tech companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Automotive dealerships, original equipment manufacturers (OEMs), and aftermarket parts suppliers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. Pay is likely competitive for the enterprise software sector but may not reach the elite new-grad compensation tiers of top-tier tech giants."
   },
   "evidence_sha": "65286834c3d9fd02",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784890560,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Automotive retail technology and data services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Focus on determining the autonomy and velocity of the specific AI/data science team you are joining. Ask about the adoption pace of modern AI methodologies, the rigor of their engineering practices, and how they balance enterprise stability with technical innovation to ensure it aligns with your desire for a fast-paced, high-learning environment without high burnout."
+  },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784680609,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Headquartered in the United States with a global operational footprint serving the automotive industry."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "To provide integrated data and technology solutions that empower the automotive retail industry."
+  },
   "name": "CDK Global",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to structured. As a large enterprise software provider, the pace is likely driven by client needs and enterprise release cycles rather than the rapid, fast-paced innovation typical of a tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Integrated software platforms, data analytics tools, and technology infrastructure designed specifically for automotive retail operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days of standard paid time off annually, which is typical for a mature, large-scale enterprise software company."
   },
-  "retry_after": 1784890680,
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -67221,7 +67326,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Potentially limited to standard public holidays. Guaranteed company-wide shutdowns are not common in enterprise software unless specifically adopted in recent years."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Established, large-scale enterprise software provider operating globally in the automotive sector."
   },
   "sources": [
    {
@@ -67255,14 +67369,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab5eb21e8f19848677d41e5b11baccd72cb0db73d21cb967d828d4b2e93bd21eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuY2RrZ2xvYmFsLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Not explicitly verified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "CDK Global is a technology company that provides integrated data and technology solutions to the automotive retail industry. They make money by selling SaaS platforms, data analytics, and software infrastructure to automotive dealerships, OEMs, and aftermarket parts suppliers to help them manage their operations and customer relationships."
+  },
+  "synthesized_evidence_sha": "65286834c3d9fd02",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "Software development, data engineering, and analytics focused on building scalable platforms and integrating complex automotive data sets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680609,
   "web_search_url": "https://duckduckgo.com/?q=CDK+Global+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4c38c35af6",
+    "868cdaaaab",
+    "a69570be28"
+   ],
+   "value": "As an established enterprise serving a massive, complex industry, CDK Global offers the scale and data volume needed for impactful AI and data science work. However, as a traditional B2B provider, it may lean more toward structured bureaucracy than the fast, innovative tech culture you are seeking, requiring you to probe deeply into specific team dynamics to ensure it meets your standards for rapid learning and modern execution."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Enterprise software companies outside of the hyper-growth startup phase typically offer standard, sustainable working hours, though you should verify specific team expectations regarding on-call duties or launch periods."
   }
  },
  "celigo": {
@@ -77952,11 +78103,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77968,6 +78121,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784678207,
   "name": "Clinical Architecture",
   "pace_of_work": {
@@ -77980,6 +78134,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890866,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78023,7 +78178,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=66dcc144699b331cf2fc2aaeea27fe5687b690816c67d31e90f0dc4f651f5b4aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuZnJlZGh1dGNoLm9yZy9lbi5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678207,
   "web_search_url": "https://duckduckgo.com/?q=Clinical+Architecture+company+careers+benefits",
@@ -100064,7 +100219,7 @@
    "value": "Estimated: High. As a Big Four consulting firm, Deloitte carries elite global brand prestige, though its AI/Data practice may be viewed more as enterprise consulting than cutting-edge pure-tech innovation."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -100089,7 +100244,7 @@
    ],
    "value": "Organizations across various sectors, specifically including Government & Public Services entities facing complex challenges."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -100121,7 +100276,7 @@
    ],
    "value": "Candidates should probe heavily into the specific team's tech stack to ensure it aligns with top-tier AI/data science work rather than legacy systems. It is critical to ask about typical project timelines, expected weekly hours, and on-call expectations to verify if the team truly respects work-life balance, as consulting can sometimes clash with personal time."
   },
-  "last_attempt_at": 1784872320,
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784672493,
   "locations": {
    "confidence": "medium",
@@ -100163,7 +100318,7 @@
    "value": "Estimated: Typical for large consulting firms (often around 20-25 days annually), but exact policy not specified in sources."
   },
   "refresh_after": 1790056320,
-  "retry_after": 0,
+  "retry_after": 1784891226,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100250,7 +100405,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -111914,37 +112069,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Medical AI) — FDA-cleared AI products, publications at MICCAI/RSNA, collaborations with top cancer centers, recognized leader in adaptive radiotherapy AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "d3cd3acdd5"
+   ],
+   "value": "Capital equipment sales (linear accelerators, Gamma Knife), recurring software licenses and upgrades, consumables for brachytherapy, and long-term service/maintenance contracts; high installed base drives recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, patient-outcome obsessed, Scandinavian pragmatism meets global scale; low politics, high cross-functional collaboration (physics, clinical, software), inclusive of remote/hybrid arrangements."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "d3cd3acdd5"
+   ],
+   "value": "Hospitals, academic medical centers, freestanding cancer clinics, and radiation oncology departments globally; major accounts include large health systems and national cancer institutes across 120+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US $110k–$135k base + 10–15% target bonus + RSUs (4-yr vest ~$30k–$50k total); Stockholm €50k–€65k base + pension + warrants; varies by role (ML > SW > QA)."
   },
   "evidence_sha": "b3ed7cf58a944236",
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731"
+   ],
+   "value": "Medical Technology / Radiation Oncology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on ML for medical imaging (segmentation, dose prediction), software engineering for regulated environments (testing, traceability, IEC 62304), and system design for clinical workflow integration. Prepare to discuss model validation, uncertainty quantification, and deployment constraints in hospital IT. Behavioral questions emphasize patient safety mindset and cross-functional collaboration with physicists/physicians."
   },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784680907,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "d3cd3acdd5"
+   ],
+   "value": "Headquarters: Stockholm, Sweden. Major R&D hubs in Stockholm, Atlanta (USA), London (UK), Beijing (China), and Pune (India). Sales/service offices in 30+ countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "6f186ff70a"
+   ],
+   "value": "To improve cancer care by providing innovative radiation therapy and software solutions that enable clinicians to treat more patients with greater precision."
+  },
   "name": "Elekta",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — regulated releases impose structure, but cloud/AI initiatives operate with 2-week sprints and quarterly PI planning; faster than traditional medtech, slower than consumer tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "6f186ff70a"
+   ],
+   "value": "Linear accelerators (Versa HD, Harmony), Gamma Knife radiosurgery systems, brachytherapy afterloaders (Flexitron), treatment planning systems (Monaco, Oncentra), oncology information systems (MOSAIQ), and patient positioning/motion management solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (varies by country; Sweden/UK ~25–30, US ~15–20 + holidays) + 10–12 company holidays; sabbatical eligibility after 7 years in some regions."
   },
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111954,7 +112168,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24–Jan 1) in Europe; US offices observe reduced staffing but not full closure."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "d3cd3acdd5"
+   ],
+   "value": "Publicly traded (Nasdaq Stockholm: EKTA); ~4,500 employees globally; FY 2023/24 revenue ~SEK 16.5B; mature, profitable medtech company with 50+ year history."
   },
   "sources": [
    {
@@ -111988,14 +112210,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=ced5ce50cc799b546edaab33c2abdc344eee44701e5fd1150522eb5d546571bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZWxla3RhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established global employer with history of sponsoring work visas (H-1B, EU Blue Card, UK Skilled Worker) for specialized engineering and physics roles; sponsorship likelihood high for hard-to-fill AI/ML and medical physics positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3f654ef731",
+    "6f186ff70a",
+    "d3cd3acdd5"
+   ],
+   "value": "Elekta is a Swedish medical technology company that develops radiation therapy, radiosurgery, and brachytherapy equipment along with clinical management software for cancer treatment. It sells hardware and software systems to hospitals and cancer centers worldwide, generating revenue through capital equipment sales, software licenses, and ongoing service contracts."
+  },
+  "synthesized_evidence_sha": "b3ed7cf58a944236",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medical physics algorithm development, embedded/real-time software for linac control, cloud-based oncology platforms, AI-driven treatment planning automation, regulatory-compliant software (IEC 62304), and data analytics for clinical outcomes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680907,
   "web_search_url": "https://duckduckgo.com/?q=Elekta+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Elekta offers a rare combination: elite prestige in medical AI (FDA-cleared AI products, top-tier physics/ML talent), competitive new-grad compensation for the medtech sector, and a mission-critical product that directly improves cancer survival. Unlike pure tech firms, the regulated environment enforces sustainable release cycles; unlike traditional medtech, recent leadership has invested heavily in cloud/AI platforms, creating a fast-learning culture without the burnout typical of ad-driven te"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — core hours culture, limited on-call for cloud roles, European-influenced vacation norms; some crunch near regulatory submissions."
   }
  },
  "elevance health": {
@@ -148499,7 +148746,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148517,7 +148764,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784890138,
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784889537,
   "name": "GridCARE",
   "pace_of_work": {
@@ -148530,7 +148777,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784890618,
+  "retry_after": 1784891706,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186508,37 +186755,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected applied AI/DS in banking, not elite research or consumer-tech prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional banking model: earns net interest income from loans and deposits, plus non-interest revenue from fees, wealth management, and capital markets services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, risk-aware, community-focused; less 'move fast' more 'move safely'; diversity and inclusion emphasized."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Serves individual consumers, small businesses, middle-market companies, and large corporate/institutional clients primarily in the Northeast, Northwest, and Great Lakes regions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 5–10% bonus + RSU (vesting 3–4 yrs); total ~$105k–$130k."
   },
   "evidence_sha": "c66bdfff29abbbec",
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Regional Banking / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/applied data science questions: model deployment, SQL, Python, credit risk/fraud use cases, regulatory constraints, and behavioral fit for a regulated, collaborative environment. Less emphasis on novel algorithms, more on productionizing solutions within compliance."
+  },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784678204,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Cleveland, OH. Major tech hubs: Cleveland, Akron, OH; Brooklyn, NY; Seattle, WA; remote options varying by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help clients and communities thrive by delivering trusted financial expertise and innovative solutions."
+  },
   "name": "KeyBank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: structured sprints, regulatory review gates, slower than pure tech; limited crunch culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include checking/savings accounts, credit cards, mortgages, auto loans, commercial lending, treasury management, investment services, and digital banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 paid holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186548,7 +186837,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; standard holiday closures only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: KEY); ~$190B assets, ~17,000 employees, mature/stable stage."
   },
   "sources": [
    {
@@ -186582,14 +186876,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=357f47c6ce04cc989d921f0b09e8b38c4727f55e9bca3d791f7c52e3b9845571JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cua2V5LmNvbS9wZXJzb25hbC9vbmxpbmUtYmFua2luZy9vbmxpbmUtYmFua2luZy5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for tech roles; green card support typical for permanent positions. Visa sponsorship assessed case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "KeyBank is a major U.S. regional bank headquartered in Cleveland, Ohio, operating as the primary subsidiary of KeyCorp. It provides a full range of consumer and commercial banking, lending, and wealth management services across 16 states."
+  },
+  "synthesized_evidence_sha": "c66bdfff29abbbec",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maintains core banking systems, digital/mobile platforms, data analytics, risk modeling, and emerging AI/ML applications for fraud detection, credit underwriting, and customer personalization. Tech stack includes mainframe, cloud, and modern data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=KeyBank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "KeyBank offers a stable, mission-driven financial institution with growing AI/data science investment, but it is a traditional bank rather than a fast-paced tech innovator. Prestige and pay are solid for banking but below elite tech firms; culture emphasizes work-life balance and reasonable hours, though bureaucracy exists. Good for technical growth in applied finance AI, not for cutting-edge research or high-velocity product cycles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – generally sane hours, limited on-call, respect for personal time; some project-dependent variability."
   }
  },
  "keysight technologies": {
@@ -186771,37 +187086,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High – applied AI in education at scale (Khanmigo), research partnerships, publishes ML work; recognized but not a top-tier AI lab like DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Non-profit funded by philanthropic donations, grants, and partnerships (e.g., Gates Foundation, Google.org); no tuition or subscription fees for learners."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-first, intellectually humble, low ego; engineering-led with strong teacher/learner empathy; transparent decision-making."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Students, teachers, parents, and school districts globally; primarily K-12 education sector."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$150k base + modest equity (non-profit, so no RSUs; possibly 403b match); total ~$130k-$160k."
   },
   "evidence_sha": "575a6d459eca717d",
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+   "value": "EdTech / Non-profit Education"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess genuine alignment with educational mission; evaluate engineering craft and ML fundamentals (not just LeetCode); probe for sustainable pace and collaboration style; confirm WLB norms and shutdown culture."
+  },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784678205,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Mountain View, CA; remote-friendly across US; some international contractors."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To provide a free, world-class education for anyone, anywhere."
+  },
   "name": "Khan Academy",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – iterative product cycles, mission-driven deadlines; avoids crunch culture; emphasizes sustainable shipping."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Free online courses, practice exercises, and instructional videos across K-12 and early college subjects; teacher tools; Khanmigo AI tutor (recent)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + winter break shutdown; unlimited sick/mental health days."
   },
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186811,7 +187168,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December); possible summer slowdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~200-500 employees; mature non-profit (founded 2008)."
   },
   "sources": [
    {
@@ -186845,14 +187207,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac7c3b8a895b56c6fcc329c5c54f10580bfd6952a8d21b8ed7aaa2db256e22c6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cud29ya2RheS5jb20vZW4tdXMvc2lnbmluLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering/AI roles; non-profit cap-exempt H-1B possible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Khan Academy is a non-profit educational organization providing free online learning resources. The supplied sources are redirect pages from their Workday career site and contain no substantive company information."
+  },
+  "synthesized_evidence_sha": "575a6d459eca717d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Web/platform engineering (React, Go, Python, Kubernetes), data infrastructure, ML/AI for personalized learning (Khanmigo), content management systems, analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678205,
   "web_search_url": "https://duckduckgo.com/?q=Khan+Academy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission-driven non-profit with elite AI/ML work (Khanmigo) balancing prestige and impact; known for reasonable hours, remote flexibility, and low burnout vs. big tech; strong technical learning culture without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – strong remote/hybrid flexibility, explicit work-hour norms, minimal on-call, encouraged time off."
   }
  },
  "kharon": {
@@ -284476,48 +284859,140 @@
  "rogers behavioral health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Estimated: Low for AI/Data Science. While highly prestigious in the clinical psychology space, the organization is not an elite tech employer and lacks the fast, innovative tech culture of top-tier AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Revenue is generated through clinical fees billed to insurance providers, Medicare/Medicaid, and patient self-pay. As a nonprofit, profits are reinvested into facility operations, patient programs, and research."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Estimated: Compassionate, clinical, and mission-driven, focusing heavily on patient outcomes and evidence-based care rather than technical disruption or elite technical growth."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Children, adolescents, and adults struggling with severe mental health disorders and addiction seeking specialized, evidence-based clinical care."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Estimated: $65,000 - $80,000. Standard corporate healthcare pay is well below FAANG/elite-tier compensation."
   },
   "evidence_sha": "207257a28c1dc0be",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Behavioral Health and Mental Healthcare Provider"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Focus on the actual speed of their tech culture, confirming if innovation happens outside of strict legacy healthcare rules. Ask if they formalize shutdowns and sane hours, or if the mission-driven healthcare environment slips into quiet burnout."
+  },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784678207,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Headquartered in Wisconsin with a network of treatment centers and outpatient clinics spread across multiple US states."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "To provide compassionate, effective, and evidence-based treatment for mental health and addiction, helping patients achieve lasting recovery."
+  },
   "name": "Rogers Behavioral Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Estimated: Slow. Large traditional healthcare nonprofits typically operate under heavy clinical, compliance, and bureaucratic regulatory constraints."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Mental health and addiction treatment services, including Partial Hospitalization Programs (PHP), Intensive Outpatient Programs (IOP), and inpatient residential care."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Estimated: 20-25 days. Mature healthcare systems generally offer competitive standard PTO packages, augmented by paid hospital holidays."
   },
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Estimated: None. Unlike elite tech spaces that often offer guaranteed holiday or end-of-year shutdowns, healthcare providers work through holidays or involve skeleton crews."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Mature nonprofit organization with a large multi-state footprint, multiple inpatient and outpatient facilities, and a workforce in the thousands."
   },
   "sources": [
    {
@@ -284551,14 +285026,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a6d2f1750b2473a594c2a7916b13ffc0da808ae555c9c345f80f5a9f26f0593JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cucm9nZXJzbW9ydHVhcnlubS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Sponsorship for clinical and healthcare tech roles is plausible but not guaranteed; no explicit guarantee or dedicated program for entry-level AI/tech visa sponsorship was found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Rogers Behavioral Health is a nonprofit healthcare system specializing in highly specialized, evidence-based treatment for mental health and addiction. Operating as a 501(c)(3) nonprofit, it reinvests revenue from clinical services into patient care, facility expansion, and research."
+  },
+  "synthesized_evidence_sha": "207257a28c1dc0be",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc1d6e0e03",
+    "f629f460a4"
+   ],
+   "value": "Operates enterprise Healthcare Information Technology (HIT) systems, Electronic Health Records (EHR), and healthcare data analytics rather than developing proprietary AI or data science products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678207,
   "web_search_url": "https://duckduckgo.com/?q=Rogers+Behavioral+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "This allows you to determine if working in a healthcare-adjacent IT role aligns with your goals of maintaining sane hours. It tests whether you can achieve a high-growth, high-prestige tech career in a non-tech industry."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dc1d6e0e03",
+    "7b4c31f65e"
+   ],
+   "value": "Estimated: Good. Respected and mission-driven work culture that generally allows for standard clinical and corporate hours, avoiding the intense 60+ hour weeks common in elite tech."
   }
  },
  "rokt": {
@@ -317930,37 +318441,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 4 (Low). Traditional manufacturing companies typically lack prestige in the AI/DS community as their core products are physical, not digital."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "B2B manufacturing and supply chain operations, selling automotive electrical components directly to vehicle manufacturers based on large-scale contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Formal, structured, and engineering-focused. The culture is characterized by a traditional corporate hierarchy typical of large industrial manufacturers."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Global automotive original equipment manufacturers (OEMs) and Tier 1 automotive suppliers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000. Traditional manufacturing typically pays less than elite tech firms."
   },
   "evidence_sha": "0c7a52e024f02377",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784890746,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Automotive Manufacturing / Electrical Equipment"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784678211,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Global operations, with facilities and offices supporting automotive manufacturing regions worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "No explicit mission statement was recovered from the provided sources, but operations align with the broader Sumitomo Electric Group's focus on global infrastructure and automotive manufacturing."
+  },
   "name": "Sumitomo Electric Wiring Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow/Traditional. Traditional automotive manufacturing relies on long hardware development cycles and structured bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Automotive wiring harnesses, electrical components, and related systems for vehicles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO annually."
   },
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317970,7 +318535,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely supportive of standard holidays and plant shutdowns, but no specific guaranteed shutdown days were found for data/AI roles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Subsidiary of a large, established global enterprise (Sumitomo Electric Group) operating in the automotive manufacturing sector."
   },
   "sources": [
    {
@@ -318004,14 +318576,42 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Exact sponsorship details are not public; however, as a major global automotive supplier, it may fall under the standard auto-industry policy of not sponsoring H-1B visas for software/data roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70",
+    "28086ab074"
+   ],
+   "value": "Sumitomo Electric Wiring Systems, a subsidiary of the Sumitomo Electric Group, designs and manufactures automotive wiring harnesses and related components. The company generates revenue by supplying these complex electrical distribution systems to global automotive manufacturers."
+  },
+  "synthesized_evidence_sha": "0c7a52e024f02377",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8a5ae3ef70"
+   ],
+   "value": "Research, design, and manufacturing engineering of complex automotive wiring harnesses and electrical distribution systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678211,
   "web_search_url": "https://duckduckgo.com/?q=Sumitomo+Electric+Wiring+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Traditional Japanese-affiliated manufacturers often prioritize employee retention and manageable hours."
   }
  },
  "summa health": {
@@ -329960,101 +330560,113 @@
  "the boeing company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2"
+   "source_ids": [
+    "33b88b0b57",
+    "663fd668f0"
+   ],
+   "value": "Likely Non-AI / Traditional Engineering. Does not align with top-tier AI or data science elite prestige."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "33b88b0b57"
+    "33b88b0b57",
+    "663fd668f0"
    ],
-   "value": "Boeing operates as a business-to-business (B2B) and business-to-government (B2G) model. It earns money by selling commercial aircraft, defense systems, and services like software engineering, maintenance, and analytics."
+   "value": "Generates revenue through manufacturing commercial aircraft, executing government and defense contracts, and providing global services such as software deployment and aftermarket support for aerospace and space systems."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "The vibe is mission-driven, collaborative, and high-stakes given the fighter jet and weapons context. It is process-oriented that values satisfaction and safety over moving fast, creating a stable but heavily regulated environment."
+   "value": "Mission-focused, national security-driven, and structured. Prioritizes compliance and process (security clearances, COI assessments) over fast-paced tech innovation."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Primary customers include global commercial airlines, cargo carriers, and the U.S. Department of Defense along with allied governments and NASA. The job postings show a focus on Boeing Defense, Space & Security (BDS) Air Dominance programs."
+   "value": "National security agencies, global armed forces, and commercial airlines."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $90,000 - $105,000 base salary for an associate-level software engineer in the Hazelwood/Saint Charles, MO area. This is moderately high for the region but notably lower than finish year total compensation at elite Meta tech companies."
+   "source_ids": [
+    "33b88b0b57",
+    "663fd668f0"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary for early career software and systems engineering roles."
   },
   "evidence_sha": "99aca57e529ee391",
-  "generated_at": 1784687926,
+  "generated_at": 1784890746,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Aerospace, Defense, and Space"
+   "value": "Aerospace, Defense, and Space Manufacturing."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "33b88b0b57",
-    "50084f7215"
+    "663fd668f0"
    ],
-   "value": "Interviews will assess technical proficiency in embedded C++ and Agile methodologies. They will also evaluate cultural fit for a mission-driven collaborative environment that values process improvement and customer satisfaction, which can help gauge whether the pace and innovation speed truly match your priorities."
+   "value": "You should probe heavily into the daily realities of their Agile environment to ensure it isn't just process-heavy defense contracting. Ask about work-life balance, actual hours, and whether shutdowns or flexible time off are practically accessible or throttled by program demands. Clarify the compensation structure to see if it hits top-tier new-grad pay, and question internal mobility to ensure you can accelerate your learning without stalling in a bureaucratic silo."
   },
-  "last_attempt_at": 1784869098,
+  "last_attempt_at": 1784890746,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Positions require onsite work at major aerospace hubs. Openings are listed for Hazelwood, MO and Saint Charles, MO, supporting the Boeing Defense, Space & Security (BDS) division."
+   "value": "USA locations including El Segundo, CA and Hazelwood, MO, with onsite work requirements."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Boeing aims to connect, protect, explore, and inspire the world through aerospace innovation. It emphasizes being a collaborative environment that takes pride in customer satisfaction and process improvement."
+   "value": "To connect, protect, explore, and inspire the world through aerospace innovation, with a strong focus on national security, global defense, and space systems."
   },
   "name": "The Boeing Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow and deliberate. Aerospace is a heavily regulated industry for safety and security, which creates a methodical and bureaucratic pace with deep documentation requirements, not the rapid ship-and-iterate cycle of a startup."
+   "source_ids": [
+    "663fd668f0",
+    "33b88b0b57"
+   ],
+   "value": "Estimated: Process-heavy and traditionally slow-paced due to defense contracting regulations, though some subsidiaries report being fast and agile."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Boeing designs and builds commercial aircraft, military aircraft, weapons, missiles, space exploration vehicles, and satellites. Associated services include supply chain management, digital analytics, maintenance, and training."
+   "value": "Commercial and military aircraft, embedded software for Air Dominance programs, missile warning systems, Earth observation satellites, and agile small satellite platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 paid days off for a new graduate hire, which is standard for large aerospace and defense companies, combining general vacation and incidental sick time."
+   "value": "Estimated: 15 to 20 days of paid time off annually for early career roles."
   },
-  "refresh_after": 1789871926,
-  "retry_after": 1784890698,
+  "refresh_after": 1790074746,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330064,15 +330676,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: A scheduled winter shutdown between Christmas and New Year's Day is common. Some teams may observe other 9/80 work schedules, leading to every other Friday off."
+   "value": "Estimated: Likely standard public holidays, though specific annual company-wide shutdown periods are not confirmed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "dbc3b9e88f"
    ],
-   "value": "Boeing is a massive, mature public company with over 140,000 employees, not a startup. The job postings indicate specific hiring needs for cleared defense programs within its Phantom Works and Global Services divisions."
+   "value": "Publicly traded, large-cap global enterprise and prime defense contractor."
   },
   "sources": [
    {
@@ -330139,27 +330750,27 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "663fd668f0",
     "33b88b0b57"
    ],
-   "value": "For the Associate Embedded Software Engineer role, Boeing explicitly states 'Employer will not sponsor applicants for employment visa status.' Candidates needing future sponsorship would not meet this specific requirement."
+   "value": "Employer will not sponsor applicants for employment visa status."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "The Boeing Company is a global aerospace leader that designs, manufactures, and services commercial airplanes, defense products, and space systems. It generates revenue by selling these complex platforms and providing extensive aftermarket services to airlines and governments worldwide."
+   "value": "The Boeing Company is a major aerospace and defense manufacturer responsible for designing, producing, and supporting commercial aircraft, defense systems, and space technologies. It generates revenue through long-term government defense contracts, commercial airline sales, and aftermarket services. They operate through divisions like Boeing Defense, Space & Security (BDS) and Boeing Global Services (BGS) to support Air Dominance programs, missile warning systems, and small satellite development"
   },
-  "synthesized_evidence_sha": "063b1e13b2aac588",
+  "synthesized_evidence_sha": "99aca57e529ee391",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "33b88b0b57"
    ],
-   "value": "Technical work involves developing and deploying embedded C++ applications in an Agile environment. Teams use Linux, Docker, Kubernetes, JIRA, and Git, with a focus on host environments, processors, operating systems, real-time systems, and security clearances."
+   "value": "Developing and deploying embedded C++ applications within Agile environments, utilizing Linux, Docker, Kubernetes, JIRA, and Git."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674726,
@@ -330167,15 +330778,17 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "33b88b0b57",
-    "50084f7215"
+    "663fd668f0",
+    "33b88b0b57"
    ],
-   "value": "Boeing offers elite, brand-name prestige in aerospace and defense, but a top-tier AI/data science candidate may find the core work less fast-paced and innovative than a pure tech company. The conservative defense culture and on-site government-regulated work accessible through Secret clearance processes can create a slow bureaucratic environment that conflicts with a desire for a rapid tech culture."
+   "value": "This role offers a deep mission-driven impact on national and global security through missile warning and defense systems. However, the bureaucracy at a massive prime defense contractor is likely to clash with the desire for a fast, innovative tech culture or elite AI/new-grad prestige. Stringent security clearance and COI processes also indicate a highly-regulated, slow-paced environment rather than a high-speed tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. Typical of a large, mature aerospace organization, employees in salaried engineering roles work a standard 40-hour week with a strong emphasis on process and safeguards. Occasional crunch may exist near milestones but burnout is not the norm."
+   "source_ids": [
+    "33b88b0b57"
+   ],
+   "value": "Estimated: Generally moderate to good, characteristic of established defense contractors rather than high-burnout tech startups."
   }
  },
  "the brattle group": {
