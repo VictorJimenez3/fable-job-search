@@ -23921,11 +23921,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23937,6 +23939,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784673654,
   "name": "AQR Capital Management",
   "pace_of_work": {
@@ -23949,6 +23952,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878835,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23982,7 +23986,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=70ca32ae503ebddb6de0ee44fe7202801310e85e0674b1dfd0dd2fe923b82bc6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuYXFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784673654,
   "web_search_url": "https://duckduckgo.com/?q=AQR+Capital+Management+company+careers+benefits",
@@ -99252,42 +99256,104 @@
  "employee navigator": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Mid-tier. Positioned as a solid B2B scale-up where AI and data science work could provide elite new-grad pay and high impact, though it lacks the name-brand prestige of big-tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "B2B SaaS revenue driven by subscription fees and per-employee licensing, primarily distributed through insurance broker partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Mission-driven and highly efficient, prioritizing fast innovation and high performance while respecting personal time."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Insurance brokers, employer groups, and HR departments seeking streamlined onboarding and benefits administration."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: High new-grad pay competitive with elite scale-ups, likely ranging $110,000–$140,000 base salary, reflecting high-impact technical value."
   },
   "evidence_sha": "dd7e7c4754c3df7a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784878544,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "HR Technology / SaaS"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Candidates should highlight their desire for a fast-paced, non-bureaucratic environment to emphasize career acceleration and technical learning. They should also ask pointed questions about guaranteed shutdowns, sane working hours, and how the team ensures work-life balance while maintaining an elite-level AI/data science culture."
+  },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784674728,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Headquartered in Miami, Florida, with remote employment options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "To simplify HR, benefits, and compliance processes through an intuitive, highly automated software platform for brokers and employers."
+  },
   "name": "Employee Navigator",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Fast-paced and innovative tech culture, free from slow bureaucracy, with high seasonal demands during benefits enrollment periods."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "A cloud-based HR portal covering employee onboarding, automated benefits administration, ACA compliance reporting, and PTO/time-off tracking."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually, consistent with top-tier scale-up tech norms."
   },
-  "retry_after": 1784878664,
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99296,8 +99362,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Likely offers guaranteed holiday shutdown periods or relaxed seasonal hours outside of open enrollment peaks to ensure sane hours."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Bootstrapped, private, and highly profitable scale-up stage."
   },
   "sources": [
    {
@@ -99331,14 +99406,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=509f4cb9e1b6e57bc7a84c49fb62319cca2d475f384249db1bc057bcafe88540JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2VtcGxveWVl&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Generally open to standard employment setups; just-in-time sponsorship for highly qualified technical candidates is possible but not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Employee Navigator is a B2B SaaS company that provides an all-in-one software platform for HR departments to manage employee onboarding, benefits administration, compliance, and time-off tracking. It makes money by charging broker networks and employer clients subscription fees and per-employee-per-month (PEPM) licensing for access to its cloud-based portal."
+  },
+  "synthesized_evidence_sha": "dd7e7c4754c3df7a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Developing and scaling a high-traffic cloud platform handling sensitive HR and benefits data, requiring secure architecture, high availability during peak enrollment seasons, and workflow automation integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674728,
   "web_search_url": "https://duckduckgo.com/?q=Employee+Navigator+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Employee Navigator offers a fast-paced, innovative tech culture with high-impact AI and automation work that accelerates technical learning and career growth. The company stands out for actually respecting work-life balance through sane hours, avoiding toxic burnout environments, and allowing mission-driven work to flourish without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7a822ca78b"
+   ],
+   "value": "Estimated: Strong work-life balance for the industry, characterized by sane hours and a culture that actively avoids toxic burnout environments."
   }
  },
  "empower": {
@@ -128482,48 +128588,155 @@
  "great american insurance company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Lower prestige tier for AI/Data Science. Traditional insurance companies are generally not recognized as top-tier destinations for elite AI research, indicating a potential mismatch with the candidate's priority for high new-grad pay and elite tech prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Standard insurance model based on underwriting and premium collection, though exact business model details were not available in the retrieved sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Traditional, risk-averse, and corporate. May lack the dynamic, mission-driven innovation seen in elite tech startups."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Publicly known to serve commercial businesses, agricultural clients, and individuals, though specific customer segments were not retrievable from the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: $80,000 - $100,000. Likely sufficient for a comfortable living but falls below the elite compensation benchmarks expected at top-tier tech companies."
   },
   "evidence_sha": "591b875eeaa0827e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Insurance (Property & Casualty / Specialty Commercial). Retained from general public knowledge due to lack of extractable content."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "During the interview, the candidate should probe deeply into the actual pace of innovation, the technical stack used by data science teams, and work-life balance policies. It is crucial to ask how much time is spent on modern AI research versus legacy system maintenance to ensure it meets the desired fast, innovative culture and career growth goals."
+  },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784593388,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Headquartered in Cincinnati, Ohio, with various regional offices. Specific office locations were not confirmed via the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Specific mission statement not found in the provided sources. Typically, traditional insurance providers aim to offer financial security and risk management solutions."
+  },
   "name": "Great American Insurance Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Likely slow to moderate with standard corporate bureaucracy. Often lacks the fast-paced, cutting-edge tech culture desired by the candidate."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Based on public knowledge, the company provides a range of property and casualty insurance products, including specialty commercial, agricultural, and casualty coverage. However, this was not explicitly detailed in the provided redirect sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: 20-25 days of standard Paid Time Off, typical for established corporate entities in the insurance sector, plus standard holidays."
   },
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Insurance companies often offer modest time off during major holidays, but guaranteed end-of-year or periodic corporate shutdowns are not standard."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Established, mature, private/public insurance entity. Precise headcount and revenue stage could not be verified through the provided sources."
   },
   "sources": [
    {
@@ -128557,14 +128770,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=3c5f36204399d9f2b517cebc085803b8984ac2a37e157f080a7b457b702bcc1eJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dyZWF0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: May provide standard visa sponsorship for highly specialized roles, but not explicitly confirmed in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Could not retrieve specific business details because the provided search result links did not resolve to the company's actual web pages, resulting in redirect placeholders. Great American Insurance Company is generally known as a major U.S. property and casualty insurance provider. Further details on its exact revenue streams and commercial operations require accessible primary sources as none were successfully captured here."
+  },
+  "synthesized_evidence_sha": "591b875eeaa0827e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Tech roles likely involve enterprise software maintenance, actuarial modeling, and data engineering for claims processing. Fast-paced, cutting-edge AI research may be limited compared to elite tech firms due to the legacy nature of the insurance industry."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593388,
   "web_search_url": "https://duckduckgo.com/?q=Great+American+Insurance+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "For a candidate seeking a top-tier AI role with elite prestige, high new-grad pay, and a fast-paced tech culture, this traditional insurance company may not align with those priorities. Legacy insurance firms typically operate with slower bureaucracy and prioritize maintenance over cutting-edge innovation, which could limit both technical learning acceleration and the high compensation benchmarks expected from elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c23a905dce",
+    "68c9f15ca9",
+    "24bf828b78"
+   ],
+   "value": "Estimated: Good. Traditional insurance companies often offer sane hours and may provide guaranteed shutdowns, potentially aligning well with the candidate's requirement for a healthy work-life balance without toxic burnout."
   }
  },
  "groundswell": {
@@ -209337,37 +209591,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an elite AI/data science destination; work is applied analytics and operational support rather than research or product innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Government agency funded by state general revenue, federal grants, and dedicated fees (e.g., driver license fees, vehicle registration). No profit motive; budget allocated by Ohio legislature."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Bureaucratic, hierarchical, mission-focused, stable, risk-averse, and process-heavy; values tenure and procedure over disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Ohio residents, businesses, local governments, law enforcement agencies, and federal partners who rely on state-level public safety coordination, licensing, and emergency services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $50,000–$65,000 base salary (Ohio state pay bands for IT Specialist 1/2) – well below top-tier private sector AI/data science new grad offers."
   },
   "evidence_sha": "f8555773ff509ec8",
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Government / Public Administration / Public Safety"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions about public sector ethics, data privacy (CJIS, HIPAA), experience with legacy systems, and ability to navigate bureaucratic processes. Technical assessments may focus on practical data analysis, SQL, GIS, or Python for reporting rather than cutting-edge ML research. Emphasize commitment to public service and long-term stability."
   },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784674767,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Headquartered in Columbus, Ohio, with regional offices, patrol posts, and facilities statewide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "To protect the lives and property of Ohioans through effective public safety services, including law enforcement, emergency preparedness, and regulatory oversight."
+  },
   "name": "Ohio Department of Public Safety",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow – government procurement, compliance, and multi-layer approval processes lead to long project timelines; limited agile or rapid iteration culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Public safety services: highway patrol and traffic enforcement, emergency management and disaster response, homeland security coordination, driver licensing and vehicle registration (via BMV), criminal justice services, and school safety programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 10–12 paid holidays + sick leave (accrual based on tenure) – typical Ohio state employee benefits."
   },
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209377,7 +209697,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed organizational shutdowns; operations run continuously. Employees may use leave during holiday periods but no mandated company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "Large state agency with thousands of employees across multiple divisions; mature, stable organization with established bureaucratic processes."
   },
   "sources": [
    {
@@ -209411,14 +209740,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=139696e3f0d363e38b817da14588065a346be1ce17a4217f22d305749de752b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2hpbw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state government employer, ODPS generally hires U.S. citizens or permanent residents for most positions; sponsorship for H-1B or other work visas is rare and typically limited to highly specialized technical roles if at all."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9ef2c4d547",
+    "8f98011a72",
+    "0ac3c32216"
+   ],
+   "value": "The Ohio Department of Public Safety (ODPS) is a state government agency responsible for coordinating public safety services across Ohio, including the Ohio State Highway Patrol, Emergency Management Agency, Homeland Security, and other divisions. It operates as a tax-funded public entity rather than a for-profit business."
+  },
+  "synthesized_evidence_sha": "f8555773ff509ec8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data analysis for crash statistics and crime reporting, GIS mapping for emergency management, cybersecurity for state systems, software development for licensing and records systems, and IT infrastructure support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
   "web_search_url": "https://duckduckgo.com/?q=Ohio+Department+of+Public+Safety+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ODPS offers a mission-driven public service career with strong work-life balance, predictable hours, and comprehensive benefits, but it operates within a bureaucratic government structure that prioritizes stability over speed. It does not match the fast-paced, high-pay, elite-prestige AI/data science culture the candidate seeks; new grad pay is significantly lower than top-tier tech firms, and innovation cycles are slow due to procurement and compliance requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High – standard 40-hour workweeks, generous leave policies, rare overtime for non-uniformed staff, and strong union protections support work-life balance."
   }
  },
  "ohio epa": {
@@ -249378,48 +249732,123 @@
  "rural king": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: Low. No evidence of a top-tier AI or data science presence."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Constantly expanding retail chain generating revenue through the direct sale of farm, home, and feed necessities."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "People first environment, growth opportunities, and dedicated associates sharing a passion for rural communities."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Rural communities across 17 states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: $60,000-$80,000 (standard retail tech compensation, below top-tier tech)."
   },
   "evidence_sha": "0989f55af164d1cc",
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Retail / Farm and Home Supply"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the data science work actually drives high-impact innovation or just supports standard retail operations, and ask precisely about sane hours and personal time protection to ensure the pace doesn't bleed into high-burnout territory."
   },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784675356,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Over 150 locations across 17 states."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Providing an exceptional experience and service to rural communities."
+  },
   "name": "Rural King",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: Moderate retail pace, lacking the fast, innovative tech culture found in elite tech companies."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "A wide array of necessities ranging from food and feed to farm and home products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: 10-15 days, standard for retail/corporate."
   },
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: None found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Constantly expanding retail chain with over 150 locations."
   },
   "sources": [
    {
@@ -249453,14 +249882,43 @@
     "url": "https://careers-ruralking.icims.com/jobs/search?hashed=-625976210"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "None found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Rural King is a retail chain providing a wide array of necessities ranging from food and feed to farm and home products. They make money by operating over 150 store locations across 17 states and selling these goods directly to rural communities."
+  },
+  "synthesized_evidence_sha": "0989f55af164d1cc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "None found in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675356,
   "web_search_url": "https://duckduckgo.com/?q=Rural+King+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This role likely falls outside your core priorities, as a retail-focused company will not offer top-tier AI prestige, elite new-grad pay, or a fast-paced innovative tech culture compared to dedicated tech firms, though it may offer a more predictable lifestyle than a high-burnout startup."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cd9773d06f"
+   ],
+   "value": "Estimated: Moderate. Company claims a 'people first environment', but lacks explicit signals of guaranteed shutdowns or elite tech WLB."
   }
  },
  "rws": {
@@ -272867,37 +273325,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respectable public-sector analytics with real-world impact but not a recognized elite AI research or high-velocity ML engineering environment; limited publishing, open-source, or conference presence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Taxpayer-funded government operations financed primarily through state taxes (sales, corporate, documentary stamp), federal grants, fees, and trust funds; not a for-profit entity and does not generate revenue in a commercial sense."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, risk-averse, and hierarchical; strong sense of public service and stability; innovation happens incrementally; diversity and inclusion efforts vary by agency; less 'tech-culture' energy than private sector."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Florida's 22+ million residents, businesses, local governments, and visitors who rely on state services, permits, benefits, infrastructure, and regulatory decisions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$70,000 base salary for entry-level data analyst / junior data scientist roles (Career Service pay bands); no equity, bonuses rare; total compensation significantly below top-tier private-sector AI roles."
   },
   "evidence_sha": "1182b0f6885bd07d",
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Government / Public Administration"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect structured, competency-based panel interviews emphasizing public-sector ethics, Florida statutes, data privacy (HIPAA, CJIS), and experience with regulated data; technical assessments may be lighter than FAANG; prepare for questions on translating analytics to policy decisions and working within procurement/legacy constraints."
+  },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784675352,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Tallahassee (Leon County) with major offices in Orlando, Miami, Tampa, Jacksonville, Fort Lauderdale, and regional sites across all 67 counties; some telework eligibility varies by agency and role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To serve the people of Florida by delivering efficient, accountable, and transparent government services that protect public health, safety, welfare, and natural resources while fostering economic opportunity."
+  },
   "name": "State of Florida",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate — bureaucratic processes, procurement cycles, legislative mandates, and change-management hurdles create multi-month timelines for projects; urgency spikes during legislative session or emergencies (hurricanes, public health)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public services including Medicaid administration, transportation infrastructure, environmental regulation, tax collection, licensing, public health programs, emergency management, and regulatory oversight — delivered through agencies such as FDOH, FDOT, DEP, DOR, and FDLE."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 13–15 days annual leave accrual (pro-rated monthly) + 12 paid holidays + 1 personal day + sick leave (1 day/month); varies slightly by bargaining unit and agency."
   },
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -272907,7 +273407,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Observes all 12+ federal/state holidays with full office closures; no additional company-wide shutdown periods (e.g., winter break) beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature government employer with 100,000+ full-time employees across 30+ executive agencies; stable, permanent institution with no exit or growth stage dynamics."
   },
   "sources": [
    {
@@ -272941,14 +273446,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0b47526a68dfe89dc9344e9bc8fb0fdbfaa393796aa91eadeb5df676bed645d7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuc3RhdGVmYXJtLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "State agencies rarely sponsor H-1B or employment-based visas; most positions require U.S. citizenship or permanent residency due to public-trust and security requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The State of Florida is the government entity governing the third-most-populous U.S. state, providing public services across health, transportation, environmental protection, revenue, and public safety through dozens of executive agencies and a workforce of approximately 100,000+ employees."
+  },
+  "synthesized_evidence_sha": "1182b0f6885bd07d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI roles exist in agencies like FDOH (epidemiology, Medicaid analytics), FDOT (traffic modeling, infrastructure sensors), DOR (fraud detection, revenue forecasting), and DEP (environmental modeling); tech stacks tend toward legacy systems (SAS, SQL Server, mainframes) with gradual cloud/modernization efforts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675352,
   "web_search_url": "https://duckduckgo.com/?q=State+of+Florida+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers genuine mission-driven work impacting millions of Floridians with strong work-life balance (standard 40-hour weeks, generous leave, 12+ paid holidays) and job security — but lacks elite AI prestige, high new-grad pay, or fast-paced innovation culture; bureaucracy and legacy tech slow technical growth compared to top-tier private-sector roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — standard 37.5–40 hour weeks, strong leave policies, 12+ paid holidays, rare on-call expectations outside emergency roles; culture generally respects boundaries and discourages after-hours work."
   }
  },
  "state of indiana": {
@@ -274280,37 +274806,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Elite within alternative asset management; growing data science function but not a primary AI research lab. Prestige comes from asset scale ($150B+) and institutional client base, not ML publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fees (typically 0.5-1.5% on committed capital) plus carried interest/performance fees on investment returns. Also earns advisory fees for customized mandate solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, intellectual, low-ego. Long-tenured investment professionals mixed with newer tech talent. Collaborative across investment/tech boundaries. Not a 'move fast break things' culture — values rigor, auditability, and institutional-quality output. Dress code business casual. Social but not mandatory fun."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors including pension funds, sovereign wealth funds, insurance companies, endowments, foundations, and family offices globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + $20k-$40k sign-on + RSU (4-year vest, ~$40k-$80k total). Total Year 1: ~$190k-$280k. Competitive with top asset managers, below top quant funds/big tech."
   },
   "evidence_sha": "76f33c6e6db02b03",
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Services / Asset Management / Private Markets Investing"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on: (1) Python/SQL proficiency for messy financial data (cash flows, NAVs, capital calls), (2) statistical modeling for illiquid assets (IRR forecasting, vintage analysis, cash flow prediction), (3) system design for data pipelines handling heterogeneous private markets data sources, (4) domain curiosity — they'll test whether you understand private equity mechanics (J-curve, TVPI/DPI, fund structures). Prepare a project demonstrating end-to-end data work on noisy financial"
+  },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784674730,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: New York, NY. Major offices: London, Zurich, Singapore, Sydney, Toronto, Hong Kong, Tokyo, Frankfurt, Dallas, San Francisco."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the leading private markets partner for institutional investors, delivering superior returns and innovative solutions across the private equity, private debt, and infrastructure spectrum."
+  },
   "name": "StepStone Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Financial services cadence with quarterly/annual reporting cycles. Project work is steady but not fire-drill driven. Tech team likely operates on 2-week sprints with predictable delivery cycles. Less chaotic than hedge funds or early-stage startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private equity fund-of-funds, secondaries, co-investment programs, private debt strategies, infrastructure investments, and advisory/mandate solutions for institutional investors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 company holidays (US). Financial services standard. Unlimited not typical for this industry."
   },
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -274320,7 +274888,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns. Standard market holidays observed. Some teams may have informal slow periods around year-end holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (Nasdaq: STEP) with ~$150B+ in assets under management/advisement, ~500+ employees across 10+ global offices. Founded 2000, IPO 2020."
   },
   "sources": [
    {
@@ -274354,14 +274927,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c5570c32dd5f1252b100befadb7515c40a0b4220ffd43dca46cf0f51b4e9f870JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cuc3RlcHN0b25lZ3JvdXAuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large global financial services firm, likely sponsors H-1B and other work visas for technical roles, particularly in US offices (NY, SF, Dallas). Specific sponsorship rates not publicly disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "StepStone Group is a global private markets investment firm that provides private equity, private debt, and infrastructure investment solutions to institutional investors. The firm operates as an asset manager and advisory business, helping clients build and manage private market portfolios across primary funds, secondaries, and co-investments."
+  },
+  "synthesized_evidence_sha": "76f33c6e6db02b03",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data engineering and analytics for private markets data (fund performance, cash flows, portfolio analytics), investment platform development, risk modeling, reporting automation, and alternative data integration. Tech stack likely includes Python, SQL, cloud infrastructure (AWS/Azure), and modern data stack tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674730,
   "web_search_url": "https://duckduckgo.com/?q=StepStone+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "StepStone offers a rare combination: elite private markets prestige with a growing technology/data science function that sits at the center of $150B+ in alternative assets. Unlike pure tech firms, you're building data products that directly drive investment decisions for the world's largest institutions. The public-company structure brings transparency and stability, while the private-markets focus means you're working on complex, illiquid asset problems that few tech companies tackle. For a new"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — Typical for established asset management: ~50-55 hour weeks for technical roles, protected weekends outside quarter-end, minimal on-call. Better than investment banking or quant funds; slightly more demanding than big tech at senior levels."
   }
  },
  "steve madden": {
@@ -286625,52 +287219,143 @@
  "texas capital bank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: Low to Medium. Traditional commercial banks rarely hold elite AI/DS industry prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Interest income from loans and mortgages, fee income from financial services, and managing spreads on deposits."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: Professional and conservative. Emphasizes risk-management and client relationships over fast-paced tech disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Commercial businesses, private wealth clients, real estate professionals, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary."
   },
   "evidence_sha": "bdd5dabd023fbe95",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784878715,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784878544,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Banking and Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Probe the team's adoption speed for new AI/ML technologies to ensure it isn't slow bureaucracy. Assess on-call expectations, shutdown policies, and technical growth avenues to confirm alignment with learning goals and personal time preservation."
+  },
+  "last_attempt_at": 1784878715,
   "last_evidence_at": 1784673652,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Headquartered in Dallas, Texas with branches in major Texas markets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Not explicitly retrieved due to source redirect issues, but typically centers on client-focused banking and local economic growth."
+  },
   "name": "Texas Capital Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: slow to medium (bureaucratic). Legacy financial institutions typically enforce heavy compliance and change-management protocols."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Commercial banking, private wealth management, mortgage origination, treasury management, and institutional services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO for new full-time employees."
   },
-  "retry_after": 1784878664,
+  "refresh_after": 1790062715,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: No formal company-wide guaranteed tech shutdowns noted."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Established public financial institution. Exact size unretrieved due to source technical issues."
   },
   "sources": [
    {
@@ -286704,14 +287389,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e527a3bfc1c50b5474997337f03653fe186bf8548c28513fa71318dfebcef6eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGV4YXM&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: Mid-sized domestic regional bank unlikely to sponsor new-grad visas for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Texas Capital Bank is a commercial bank providing business and personal banking, lending, and treasury services. It makes money through interest on loans and mortgages, fee-based services, and deposits. Note: Research retrieval encountered technical issues, so standard industry facts for this institution are contextualized below."
+  },
+  "synthesized_evidence_sha": "bdd5dabd023fbe95",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: Software engineering, data engineering, and internal tooling likely focus on core banking infrastructure and transaction processing. Exact AI/ML projects unclear."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
   "web_search_url": "https://duckduckgo.com/?q=Texas+Capital+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6541e00e4d",
+    "b1166d3ca8",
+    "d1e1eaad37"
+   ],
+   "value": "Given the target profile, this established commercial bank may struggle to meet elite prestige or top-tier new-grad pay requirements compared to tech giants. Work-life balance is often stable in banking, but technical innovation might be slower than desired."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d1e1eaad37"
+   ],
+   "value": "Estimated: Good (likely 40-45 hours/week). Traditional banking hours are typically sane, though on-call rotations for tech staff may apply."
   }
  },
  "texas instruments": {
