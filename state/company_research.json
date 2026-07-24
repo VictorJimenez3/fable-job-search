@@ -22318,7 +22318,7 @@
    "value": "Estimated: Low to Non-Applicable. The company's technical work focuses on traditional IT hardware integration and Cisco collaboration rather than elite AI or data science."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -22369,7 +22369,7 @@
    ],
    "value": "Given the candidate's goals, interviews should probe the actual pace of innovation versus government compliance cycles, asking how quickly new tech is adopted in their DoD environments. The candidate should also clarify expectations around on-call hours for mission-critical communications and whether the role truly supports personal time and career growth without burnout."
   },
-  "last_attempt_at": 1784929954,
+  "last_attempt_at": 1784930210,
   "last_evidence_at": 1784929173,
   "locations": {
    "confidence": "medium",
@@ -22408,7 +22408,7 @@
    ],
    "value": "Estimated: 15-20 days annually, standard for mid-sized government contractors."
   },
-  "retry_after": 1784930194,
+  "retry_after": 1784930690,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -402238,102 +402238,97 @@
  },
  "visa": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "bd5f4e8ec4"
-   ],
-   "value": "Elite established player in fintech, with strong and growing AI/DS brand, competing for talent alongside top FAANG companies and consultancies in the payments domain but with a more stable industry profile."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 1 (Financial Services / Payments Data)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "bd5f4e8ec4",
-    "15e5904a78"
-   ],
-   "value": "Visa generates the majority of its revenue from service fees based on the total dollar volume of transactions on Visa-branded cards, data processing fees per transaction cleared through VisaNet, and cross-border fees on international transactions. It does not bear credit risk of cardholders, which are managed by its partner financial institutions."
-  },
-  "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
-    "bd5f4e8ec4"
+    "bd5cfc20d4"
    ],
-   "value": "Professional, ethically grounded, and collaborative. The culture reflects a balance of transactional-tech innovation with a mature corporate responsibility mandate due to its role in global financial infrastructure. Diversity and inclusion are promoted, and the feel is often described as collegial rather than intensely competitive."
+   "value": "Charges transaction processing fees and data-related service fees to financial institutions and merchants using its global payment network."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: Professional, mission-driven, and stable, avoiding typical startup toxicity while maintaining a standard 4.1 employee rating on platforms like Glassdoor."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "bd5f4e8ec4",
-    "15e5904a78"
+    "bd5cfc20d4"
    ],
-   "value": "Visa’s direct customers are financial institutions that issue Visa cards to individuals, merchants, and corporations; it also serves governments, payment processors, and corporate travel accounts. The end-users are individual and business cardholders who use the cards worldwide."
+   "value": "Consumers, merchants, financial institutions, and government entities globally."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Entry-level AI/Data Science/Software Engineering compensation packages in major U.S. tech hubs (Bay Area, Austin) typically range from $135,000-$170,000 total annual compensation depending on location and team match, including base salary, signing bonus, and annual performance and potential equity grants."
+   "value": "Estimated: $120k-$150k base salary, plus potential bonuses and stock options, totaling around $150k-$180k total compensation."
   },
   "evidence_sha": "3794d0e5b1134605",
-  "generated_at": 1784681809,
+  "generated_at": 1784930210,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "bd5f4e8ec4",
-    "15e5904a78"
+    "bd5cfc20d4"
    ],
-   "value": "Financial Services / Digital Payments Technology"
+   "value": "Financial Services / Payments Technology"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "f16eec2a6f"
-   ],
-   "value": "Expect case studies and technical deep-dives on system design for high-throughput/low-latency architectures, machine learning model lifecycle (especially fraud/risk), and coding proficiency in Python or Java. Visa interviews also typically emphasize behavioral questions probing collaboration, ethical data-stewardship, and dealing with ambiguity given the company’s risk mitigation and regulatory context."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to assess the specific team's autonomy to ensure you won't be slowed by corporate bureaucracy. Ask about their tech stack modernization pace and how they balance stringent financial security requirements with the drive for rapid technical learning and career growth, ensuring your personal time remains protected."
   },
-  "last_attempt_at": 1784929954,
+  "last_attempt_at": 1784930210,
   "last_evidence_at": 1784929173,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "bd5f4e8ec4"
+    "bd5cfc20d4"
    ],
-   "value": "Visa’s global corporate headquarters is in San Francisco, California, with a major regional headquarters in Foster City, California. Engineering and AI hubs include Austin, Texas, Atlanta, Georgia, Denver, Colorado, and Bangalore, India, with additional offices in London, Singapore, Dubai, and Miami."
+   "value": "Global presence with a massive multinational footprint."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "bd5f4e8ec4"
+    "bd5cfc20d4"
    ],
-   "value": "Visa's stated mission is to be the best way to pay and be paid for everyone, everywhere. Its corporate purpose focuses on enabling individuals, businesses, and economies to thrive through affordable, convenient, secure, and reliable digital payments."
+   "value": "To connect the world through the most innovative, reliable, and secure digital payment network to enable individuals, economies, and businesses to thrive."
   },
   "name": "Visa",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to brisk with measured, process-oriented execution aligned to financial industry reliability rather than chaotic start-up speed. New-grads can expect a structured environment that values engineering rigor and security, avoiding fire-drill “move fast and break things” cultures."
+   "value": "Estimated: Structured, stable, and deliberate, favoring risk mitigation over rapid, fast-paced innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "15e5904a78",
-    "bd5f4e8ec4"
+    "bd5cfc20d4"
    ],
-   "value": "Visa's core products are credit, debit, and prepaid cards operating on the VisaNet processing network, alongside business-to-business payment solutions, commercial cards, and digital wallets. The company also provides fraud protection, data analytics, and consulting services to its financial institution clients."
+   "value": "Global payment processing networks, credit/debit/prepaid cards, risk and identity solutions, and data services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of vacation per year for new graduates, aligning with large-cap American companies, in addition to personal/sick days and separate company-observed holidays."
+   "source_ids": [
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: 15-20 days of Paid Time Off available to new hires, alongside standard observed holidays."
   },
-  "retry_after": 1784930194,
+  "refresh_after": 1790114210,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -402343,14 +402338,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Visa tends to observe all main U.S. public holidays with company-wide closures, but does not typically implement week-long whole-company shutdowns like some technology firms. Some teams may have lighter staffing between Christmas and New Year's informally."
+   "value": "Estimated: No public confirmation of guaranteed corporate-wide shutdowns, but standard public holidays can be expected."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "bd5f4e8ec4"
+    "bd5cfc20d4"
    ],
-   "value": "Visa is a mature large-cap public company (ticker V), with approximately 30,000 employees globally and one of the highest market capitalizations in the world. It is a well-established industry leader, not a startup or growth-stage company."
+   "value": "Multinational, established public corporation."
   },
   "sources": [
    {
@@ -402406,40 +402401,39 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a large publicly traded global technology company, Visa typically sponsors work visas for candidates in highly specialized AI, data science, and engineering positions, especially at its major U.S. tech hubs. Sponsorship will depend on role requirements, the candidate's profile, and current immigration regulations."
+   "source_ids": [
+    "bd5cfc20d4"
+   ],
+   "value": "Typically offers robust immigration support including visa sponsorship for full-time technical roles, though specific policies vary by role and region."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bd5f4e8ec4",
-    "15e5904a78"
+    "bd5cfc20d4"
    ],
-   "value": "Visa operates the world’s largest retail electronic payments network, connecting consumers, merchants, financial institutions, and governments globally. It doesn’t issue cards or extend credit itself, but earns revenue from transaction processing fees, service fees on payment volume, and cross-border transaction charges whenever a Visa-branded card is used."
+   "value": "Visa is a multinational financial services company that facilitates electronic payment systems throughout the world. It makes money by enabling digital payments between consumers, merchants, financial institutions, and government entities, charging processing fees and data services for its global network."
   },
+  "synthesized_evidence_sha": "3794d0e5b1134605",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bd5f4e8ec4",
-    "f16eec2a6f"
+    "bd5cfc20d4"
    ],
-   "value": "Technical teams at Visa work on high-scale real-time payment processing (thousands of transactions per second), AI-driven fraud detection models, generative AI applications, and massive data pipelines analyzing consumer spending patterns. The work spans deep infrastructure engineering, applied ML, and data science on one of the world's largest and most secure transaction networks."
+   "value": "Backend and frontend systems operations, database management, UI/UX design, and risk/identity solution architecture."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593389,
   "web_search_url": "https://duckduckgo.com/?q=Visa+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "bd5f4e8ec4"
-   ],
-   "value": "Visa marries elite brand-name prestige with an AI and data-science challenge at massive scale (the world's payments network), without the chaotic burnout culture sometimes found in pure-play Silicon Valley tech firms. The mission-driven nature of global commerce is balanced by a more measured operational tempo that respects personal time, making it a rare combination of high-impact technical work and sustainable work-life boundaries sought by top new-grad talent."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While Visa offers high pay and mission-driven work handling massive data scale, its large multinational size likely conflicts with your desire for a fast, innovative tech culture free of bureaucracy. However, the structured nature of the financial sector might provide the sane hours and guaranteed shutdowns you seek compared to high-burnout startups."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Above average for a large-cap tech/fintech company. Work weeks typically fall within 35-45 hours, with genuine boundaries and predictable release cycles, though on-call expectations exist for critical and product teams handling real-time payments."
+   "value": "Estimated: Favorable due to predictable corporate hours and mature processes, though large-scale outages can occasionally require high urgency."
   }
  },
  "vishay intertechnology": {
