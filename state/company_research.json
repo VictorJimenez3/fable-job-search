@@ -1528,11 +1528,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1544,6 +1546,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784672492,
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
@@ -1556,6 +1559,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784881103,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1599,7 +1603,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e7c42582b1d7820368b011dc90573c0e89c22338499dd8dd978d061b7b22dcbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672492,
   "web_search_url": "https://duckduckgo.com/?q=A.P.+Moller+-+Maersk+company+careers+benefits",
@@ -11744,41 +11748,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 – solid applied AI/ML practice with production impact, but not a primary research lab. Comparable to mid-tier public SaaS companies (e.g., nCino, Q2)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model: recurring revenue from platform licensing, implementation fees, and ongoing support. Revenue scales with number of financial institution clients and their active users."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, collaborative, pragmatic. Values transparency, customer obsession, and technical excellence. Low politics, high autonomy. Diversity initiatives active. Not a 'bro' culture; inclusive and mission-driven."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily U.S. regional and community banks and credit unions (over 300 financial institutions). Notable clients include large credit unions and mid-sized banks seeking digital transformation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$130k base + 10-15% annual bonus + RSU grant ($20k-$40k over 4 years). Total first-year comp ~$140k-$180k. Dallas cost-of-living adjusted."
   },
   "evidence_sha": "e264ee7ce4d97efe",
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Digital Banking SaaS"
   },
-  "last_attempt_at": 1784880855,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system design questions: building fraud detection pipelines, feature stores, model monitoring, and scalable data architecture. Emphasis on productionizing ML, not just research. Behavioral focus on collaboration with product/security/compliance teams. Prepare for SQL, Python, and cloud (AWS) hands-on exercises. Culture fit: curiosity, pragmatism, and respect for work-life boundaries."
+  },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784677098,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Plano, Texas (Dallas metro). Additional offices in Raleigh (NC), Louisville (KY), and remote-friendly across U.S."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower financial institutions to thrive in the digital age by providing innovative, user-centric banking technology that strengthens relationships with their account holders."
+  },
   "name": "Alkami Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Quarterly release cycles with sprint-based delivery. Occasional crunch around major client go-lives, but generally sustainable. Not a 'move fast and break things' culture due to regulatory constraints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core product is the Alkami Platform – a SaaS digital banking suite covering online banking, mobile banking, account opening, loan origination, bill pay, and analytics. The platform integrates with core banking systems via APIs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days. Unlimited PTO not offered; accrual-based. Summer Fridays or similar flexible schedules may exist."
   },
-  "retry_after": 1784880975,
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11788,7 +11830,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24 – Jan 1). Possible summer shutdown week. Not guaranteed but historically observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (IPO 2021), ~1,500 employees, revenue ~$250M ARR. Post-IPO growth stage with established market position in digital banking."
   },
   "sources": [
    {
@@ -11822,14 +11869,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ce933f57fdcd9fa5f4c6d2e85d0f7f679a6f3944ea61289bdc5a14cccbacf02eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9kZXRhaWwuY2hpZWJ1a3Vyby55YWhvby5jby5qcC9xYS9xdWVzdGlvbl9kZXRhaWwvcTEyMzAwMTg1Nzc3&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: H-1B sponsor (public filings show history), likely supports STEM OPT and green card for senior roles. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alkami Technology is a publicly traded fintech company (NASDAQ: ALKT) that provides a cloud-based digital banking platform for U.S. banks and credit unions. It enables financial institutions to deliver modern online and mobile banking experiences to their customers."
+  },
+  "synthesized_evidence_sha": "e264ee7ce4d97efe",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack cloud engineering (AWS, microservices, Kubernetes), data platform (Snowflake, Kafka, Spark), AI/ML for personalization, fraud detection, and credit risk. Modern stack: Java, React, TypeScript, Python. Strong emphasis on security, compliance, and scalability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677098,
   "web_search_url": "https://duckduckgo.com/?q=Alkami+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alkami offers a genuine fintech mission – modernizing community banking – with public-company stability and a tech culture that balances innovation with sustainable pace. For an AI/data science new grad, it provides exposure to large-scale financial data, real-time analytics, and production ML in a regulated environment, without the burnout typical of elite tech labs or high-frequency trading. The company’s size allows meaningful ownership and mentorship, while its SaaS model ensures steady engi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Typical 40-45 hour weeks, flexible remote/hybrid, respect for off-hours. On-call rotations exist but are managed. Holiday shutdowns between Christmas and New Year."
   }
  },
  "alkegen": {
@@ -26292,37 +26360,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $160,000 base salary, plus meaningful early-stage equity."
   },
   "evidence_sha": "0192f4058a75f5ca",
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "358ac765d6",
+    "d156e7862e",
+    "9596d1165e"
+   ],
+   "value": "Information Technology and Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "To ensure this role matches your priorities, focus the interview on gauging the actual day-to-day pace and whether the company's expected hours align with your need for a sane work-life balance. Ask potential teammates about project deadlines and after-hours expectations to verify there are guaranteed shutdowns and to confirm the culture is mission-driven rather than high-burnout."
   },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784583464,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Arize AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and dynamic, typical of an early-to-mid-stage AI startup."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, standard for venture-backed tech startups."
   },
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26333,6 +26447,11 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -26366,14 +26485,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=427844cee88f7585c232638403ece138f8d54807cfb4dceb60ed38005339c884JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZmlkZWxpdHkuY29tL3JldGlyZW1lbnQvcmV0aXJlbWVudC1hY2NvdW50cw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Arize AI is a machine learning observability platform that helps companies monitor, troubleshoot, and evaluate their production AI models. The company makes money by selling B2B software subscriptions to data science and engineering teams who need to ensure their AI applications perform reliably in real-world scenarios."
+  },
+  "synthesized_evidence_sha": "0192f4058a75f5ca",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583464,
   "web_search_url": "https://duckduckgo.com/?q=Arize+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a fast-growing AI startup, Arize AI offers new grads the opportunity to work on cutting-edge LLM and ML observability tools, aligning with the desire for an innovative tech culture that accelerates technical learning. The startup environment typically bypasses slow bureaucracy, allowing for rapid career growth and direct impact in the booming AI sector."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, though startup scaling phases can cause periodic crunches."
   }
  },
  "arka infotech": {
@@ -31511,34 +31651,76 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High new-grad tech pay is not documented in the supplied sources; salary expectations need to be verified to ensure they meet the candidate's elite prestige requirement."
   },
   "evidence_sha": "a14f5929f01c2020",
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe the company's actual day-to-day tech stack, deployment cadence, and AI/DS project scopes to ensure they match the candidate's desire for fast-paced innovation rather than slow bureaucracy. Ask intimate questions about on-call expectations, PTO usage, and weekend shutdowns to verify their WLB and sane hours claims."
+  },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784677224,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Auria Space",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Pace of work is completely unknown from the supplied sources, so the candidate should confirm during interviews whether it is fast-paced innovation or slow bureaucracy."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Exact PTO days are not documented in the supplied sources; the candidate should verify vacation limits and approval culture directly."
   },
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31548,7 +31730,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns are not found in the supplied sources, despite being a strict requirement for the candidate to avoid burnout."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -31582,14 +31769,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a459af3206fe691c2bde82d4e8c1b15d1c703694d2e9fc948e2121ee2e12023JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cuYXVyaWEuc3BhY2Uv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f27b62ac3f",
+    "e8ce6f911e",
+    "44f01268aa"
+   ],
+   "value": "Information about Auria Space could not be reliably retrieved from the provided sources. The supplied links are inactive or redirect automatically without resolving to a target page."
+  },
+  "synthesized_evidence_sha": "a14f5929f01c2020",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677224,
   "web_search_url": "https://duckduckgo.com/?q=Auria+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Because the candidate desires an elite, fast-paced AI or data science role with top-tier new grad pay and mission-driven work that respects work-life balance, they need a company that avoids bureaucracy and burnout. However, the supplied sources do not contain enough information to confirm if Auria Space aligns with these priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is undocumented in the provided sources, though the candidate prioritizes sane hours and guaranteed shutdowns over toxic environments."
   }
  },
  "aurora": {
@@ -65059,42 +65271,98 @@
  "chevron corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Low–Mid in traditional Silicon Valley circles (mid in the energy sector)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Asset-heavy, vertically integrated energy value chain spanning upstream exploration (finding and producing oil/gas) and downstream refining (processing and selling fuel)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Process-driven, safety-first, and deeply engineered. Bureaucratic and slower-moving compared to tech startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Wholesale and retail consumers, industrial manufacturers, transportation fleets, and global energy markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000–$130,000 base. Strong corporate benefits, but less liquid than FAANG equity."
   },
   "evidence_sha": "4c64c7a43add5307",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784880855,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d",
+    "c636941a7e"
+   ],
+   "value": "Oil, Gas, and Energy"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Ask about the specific reporting structure: whether your team operates as a slow-moving corporate IT cost center or an agile innovation hub. Confirm how AI work is prioritized against traditional engineering revenue streams to ensure your new-grad career growth won't be bogged down by heavy industry bureaucracy."
+  },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784676941,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d",
+    "c636941a7e"
+   ],
+   "value": "Dual-headquartered in San Ramon, California and Houston, Texas, with operations spanning the globe."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "To develop and supply affordable, reliable, and ever-cleaner energy that enables human progress."
+  },
   "name": "Chevron Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally methodical. Inherently slower and risk-averse due to physical safety requirements and heavy industry regulations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Crude oil, natural gas, refined gasoline, diesel, jet fuel, lubricants, petrochemicals, and related energy infrastructure services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 paid days off per year."
   },
-  "retry_after": 1784880975,
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65104,7 +65372,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide tech shutdowns (unlike big-tech seasonal freezes). Industrial maintenance shutdowns do not apply to tech workers."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Public multinational mega-cap. Operates globally and employs tens of thousands of workers."
   },
   "sources": [
    {
@@ -65138,14 +65413,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1a6b517b49675fc9381671a3273b78d38f63c15d7845be00fbae6dc71f24737fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuY2hldnJvbi5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "As a large global corporation, it traditionally supports work authorization and visa sponsorships for hard-to-fill technical and engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Chevron Corporation is a multinational energy giant primarily engaged in hydrocarbon exploration, production, refining, and marketing. It makes money by extracting and selling crude oil and natural gas, and by manufacturing and distributing refined petroleum products and petrochemicals globally."
+  },
+  "synthesized_evidence_sha": "4c64c7a43add5307",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "Geo-spatial analytics for exploration, pipeline optimization, high-performance computing for seismic imaging, and enterprise-scale cloud and IT infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676941,
   "web_search_url": "https://duckduckgo.com/?q=Chevron+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8a8244ed5d"
+   ],
+   "value": "You are targeting an elite, high-paying tech role with fast innovation, guaranteed shutdowns, and perfect work-life balance. Chevron pays well and offers the mission-driven goal of clean energy transition, but as a legacy oil giant, it inherently struggles to match the fast-paced, tech-first, anti-bureaucratic culture of top-tier AI firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Very Good. Traditional energy companies often emphasize safety, sane hours, and sustainable schedules over fast-paced tech crunch."
   }
  },
  "chicago trading company": {
@@ -125276,7 +125580,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -125294,7 +125598,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784880706,
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784807865,
   "name": "GenLogs",
   "pace_of_work": {
@@ -125307,7 +125611,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784880946,
+  "retry_after": 1784881463,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -217081,37 +217385,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High (top-tier AI startup)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Subscription-based SaaS model with professional services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative, mission-driven, collaborative, anti-bureaucracy, values learning and personal time."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise clients across industries seeking AI adoption."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k-$200k base + equity (top-tier new grad package)."
   },
   "evidence_sha": "5c4d308e7bc286c5",
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Machine Learning Software."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical interviews focusing on ML systems, algorithms, and practical problem-solving; cultural fit for fast-paced but balanced environment."
+  },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784677098,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco Bay Area, remote-friendly."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To democratize AI and accelerate enterprise innovation through accessible machine learning."
+  },
   "name": "OmniAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but sustainable; emphasizes efficiency over long hours."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: AI/ML platform, data science tools, enterprise AI solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays; unlimited PTO possible."
   },
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -217121,7 +217467,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns during winter holidays (1-2 weeks)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (Series A/B), ~50-200 employees."
   },
   "sources": [
    {
@@ -217155,14 +217506,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=860a446af51d8c2470f90ab1ed3de223e8448dfc78f832a5ed374a244aafb998JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3ZpbmRpY2F0ZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized roles; no public data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: OmniAI is an AI-focused technology company developing machine learning platforms and solutions for enterprise customers."
+  },
+  "synthesized_evidence_sha": "5c4d308e7bc286c5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building scalable ML infrastructure, model deployment, data pipelines, applied research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677098,
   "web_search_url": "https://duckduckgo.com/?q=OmniAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite AI prestige, high new-grad pay, fast innovative culture, mission-driven, respects work-life balance with sane hours, accelerates technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 (strong work-life balance culture)."
   }
  },
  "omnicom": {
@@ -261409,48 +261781,127 @@
  "scopely": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Estimated: Tier 2. While not a pure-play AI lab, AI and data science roles at a major gaming publisher carry significant domain prestige and impact."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Free-to-play gaming model monetized via microtransactions, in-app purchases, and ad networks."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Global, strategic, and highly collaborative. The culture favors pragmatic, business-minded professionals who approach their roles as strategic partners rather than isolated contributors."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Global mobile gamers and interactive entertainment consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary, competitive with top-tier gaming and tech companies in the Los Angeles/Culver City tech corridor."
   },
   "evidence_sha": "7466819ff52f05d2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880983,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Mobile Gaming and Interactive Entertainment."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Candidates should emphasize their ability to drive strategic solutions in a fast-paced, dynamic tech culture. Highlighting a passion for continuous technical learning and a track record of high performance will align with the company's high-growth, innovative environment."
+  },
+  "last_attempt_at": 1784880983,
   "last_evidence_at": 1784674037,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Corporate operations include an office in Culver City, California, with a broader global footprint."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "88f5153df5",
+    "cdbe72e620"
+   ],
+   "value": "To create uncompromising experiences that make moments of everyday life more playful, driven by a global strategy in interactive entertainment."
+  },
   "name": "Scopely",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly seeks talent that thrives in fast-moving environments geared toward rapid execution."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Free-to-play mobile and deep multiplatform games, though specific titles were not captured in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Estimated: 15-20 days of flexible paid time off annually, typical for mid-to-large sized tech and gaming companies."
   },
+  "refresh_after": 1790064983,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Estimated: No mandatory company-wide shutdowns found; time off is typically flexible and managed by team needs."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "88f5153df5",
+    "cdbe72e620"
+   ],
+   "value": "A global, established gaming enterprise operating on a worldwide scale."
   },
   "sources": [
    {
@@ -261504,14 +261955,46 @@
     "url": "https://job-boards.greenhouse.io/scopely/jobs/5221008008?gh_jid=5221008008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Specific visa sponsorship details are not explicitly stated, though the company's global strategy may support international hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "88f5153df5"
+   ],
+   "value": "Scopely is a mobile-first interactive entertainment company that designs, develops, and publishes video games. It generates revenue primarily through in-app purchases and mobile advertisements within its free-to-play titles."
+  },
+  "synthesized_evidence_sha": "7466819ff52f05d2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "88f5153df5",
+    "cdbe72e620"
+   ],
+   "value": "Engineering and data challenges involve building live-service infrastructure for high-traffic mobile games. Also includes enterprise legal and commercial systems to support global operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674037,
   "web_search_url": "https://duckduckgo.com/?q=Scopely+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Scopely requires talent that thrives in fast-moving, innovative tech environments. A role here balances elite prestige with rapid career growth, catering to high-achieving new grads who want to accelerate their technical learning without getting bogged down by slow corporate bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cdbe72e620"
+   ],
+   "value": "Estimated: Moderate. The dynamic nature of live-service gaming and fast-paced strategy may require intense sprint cycles, though the firm aims for sustainable scaling."
   }
  },
  "scor": {
