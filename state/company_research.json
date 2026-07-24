@@ -81679,39 +81679,111 @@
  },
  "cw": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Not enough information to assess AI/DS prestige tier."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb"
+   ],
+   "value": "Not explicitly confirmed, but likely involves developer tooling, SaaS, or enterprise licensing."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Not explicitly described in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb"
+   ],
+   "value": "Likely software developers and engineering teams using Visual Studio Code."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base, with potential for equity and bonuses."
   },
   "evidence_sha": "83e7f56465a5445a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879665,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Developer tools / Software development, based on Visual Studio Code associations."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784676546,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Specific office locations are not listed in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Mission not explicitly stated in available materials."
+  },
   "name": "CW",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, typical of developer tooling companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Products are associated with Visual Studio Code updates and development tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days, standard for tech industry."
   },
+  "refresh_after": 1790063665,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81721,7 +81793,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely no guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Company size and stage are not specified in the retrieved snippets."
   },
   "sources": [
    {
@@ -81755,14 +81836,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=b9f7d1040a8c4dbdb7668a6efe90750ca55f76b7d365751ef0c4c9c16b4381c8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "Visa sponsorship details are not available in the provided snippets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb",
+    "cc77c0d363"
+   ],
+   "value": "CW appears to be publicly associated with Visual Studio Code updates and extensions, suggesting it builds developer tools or software solutions. It likely makes money through enterprise software licensing, developer subscriptions, or related tech services."
+  },
+  "synthesized_evidence_sha": "83e7f56465a5445a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "941ed7a7df",
+    "2fe49e7ebb"
+   ],
+   "value": "Technical work appears related to Visual Studio Code development, extensions, and platform updates."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676546,
   "web_search_url": "https://duckduckgo.com/?q=CW+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good, balancing high tech demands with sustainable hours."
   }
  },
  "cyber risk analysis group": {
@@ -89569,11 +89682,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89585,6 +89700,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674490,
   "name": "Digi International",
   "pace_of_work": {
@@ -89597,6 +89713,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879785,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89640,7 +89757,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=fbf76f7cd751b3e669677c1f7e01e061a00fcadee541483f12785f8e51b93848JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cuZGlnaS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Digi+International+company+careers+benefits",
@@ -92122,49 +92239,128 @@
  },
  "dollar tree distribution inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Low-tier prestige; it is a traditional retail company rather than a recognized elite tech or AI brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "50eee38d31",
+    "abc184f25d"
+   ],
+   "value": "High-volume retail distribution leveraging economies of scale to sell low-priced goods profitably, supported by complex supply chain logistics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: Traditional, bottom-line-driven corporate retail environment focused on efficiency and cost-reduction."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Value-conscious everyday consumers and families looking for discounted everyday goods and supplies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary, significantly below elite FAANG-level tech pay."
   },
   "evidence_sha": "539184e482e15166",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879665,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "50eee38d31",
+    "abc184f25d"
+   ],
+   "value": "Discount Retail and Supply Chain Distribution."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Evaluate if the specific team operates with modern tech startup敏捷性 or is bogged down by corporate bureaucracy. Ask about expected working hours, on-call logistics automation support, and whether AI/ML projects are true drivers of career growth or just minor operational optimizations."
+  },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674896,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "abc184f25d"
+   ],
+   "value": "Distribution centers and administrative offices located throughout the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "To provide customers with compelling merchandise at extreme value daily, supported by a robust distribution network."
+  },
   "name": "Dollar Tree Distribution, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: Moderate to slow pace burdened by corporate procedures, though warehouse logistics can occasionally create operational urgency."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Discount consumer goods, party supplies, home decor, and everyday household items priced at low fixed price points."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: 10-15 days of PTO annually based on standard U.S. corporate retail benefits."
   },
+  "refresh_after": 1790063665,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "50eee38d31"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: Unlikely to offer guaranteed hard tech shutdowns, as distribution and retail operations are continuous."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "abc184f25d"
+   ],
+   "value": "A large, established, publicly traded enterprise supporting thousands of retail stores across the United States."
   },
   "sources": [
    {
@@ -92198,14 +92394,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e043e2681c374656698e7858b4c16e5b4c1b798a3899309213e983d2a8c8f43bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVW5pdGVkX3N0YXRlc19kb2xsYXI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: Large U.S. retail enterprises occasionally sponsor specialized tech roles but it is not a core feature of their standard new-grad hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "50eee38d31",
+    "abc184f25d"
+   ],
+   "value": "Dollar Tree Distribution, Inc. is the supply chain and warehousing arm of Dollar Tree, a major American discount variety store chain. It generates revenue by efficiently distributing low-price-point merchandise across its massive retail network to drive high-volume sales."
+  },
+  "synthesized_evidence_sha": "539184e482e15166",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "High-volume logistics systems, inventory management software, large supply chain data pipelines, and warehouse automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674896,
   "web_search_url": "https://duckduckgo.com/?q=Dollar+Tree+Distribution%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "50eee38d31",
+    "abc184f25d"
+   ],
+   "value": "While supply chain AI and data science at this scale offer massive logistical challenges, this environment is fundamentally a traditional retail distribution center rather than a fast, prestigious tech firm. It lacks the elite new-grad pay, innovative tech culture, and guaranteed shutdowns desired, leaning more toward slow bureaucracy and standardized operations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "50eee38d31"
+   ],
+   "value": "Estimated: Average, heavily dependent on distribution center shift schedules and operational supply chain demands rather than guaranteed tech shutdowns."
   }
  },
  "dollar tree stores": {
@@ -120937,11 +121166,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120953,6 +121184,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674896,
   "name": "GeneDx",
   "pace_of_work": {
@@ -120965,6 +121197,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879785,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121008,7 +121241,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2b45e5ef4fe04de4539c74d62ed9947f0f974962ed22e602a7aa38e1fae5eeebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuZ2VuZWR4LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674896,
   "web_search_url": "https://duckduckgo.com/?q=GeneDx+company+careers+benefits",
@@ -147691,47 +147924,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not applicable — no evidence of an AI/data science hiring organization named IMP in the supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No business model information found for an employer named IMP in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture information for an employer named IMP in the supplied sources."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No customer information found for an employer named IMP in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data for an employer named IMP in the supplied sources."
   },
   "evidence_sha": "92af8e6e550f089c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879665,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "Not identifiable from sources; no industry classification for an employer named IMP."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No interview process information available for an employer named IMP in the supplied sources. Candidate should verify the correct company name and seek updated sources."
+  },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674489,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No location information found for an employer named IMP in the supplied sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No mission statement found for an employer named IMP in the supplied sources."
+  },
   "name": "IMP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no workplace pace information for an employer named IMP in the supplied sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No products identified for an employer named IMP in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy found for an employer named IMP in the supplied sources."
   },
+  "refresh_after": 1790063665,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no guaranteed shutdown policy found for an employer named IMP in the supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No size/stage data available for an employer named IMP in the supplied sources."
   },
   "sources": [
    {
@@ -147765,14 +148077,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=01b0ad7812917286c14433b3c1d620a964e00a15dfe4f1741eb6342ad3da65e4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9JbXA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No visa sponsorship information found for an employer named IMP in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "IMP does not appear to be an identifiable technology employer in the provided sources. The sources reference a dictionary definition, a YouTube channel, and a Wikipedia entry for 'imp' (a mythological creature), not a company hiring AI/data science talent."
+  },
+  "synthesized_evidence_sha": "92af8e6e550f089c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "No technical work description found for an employer named IMP in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674489,
   "web_search_url": "https://duckduckgo.com/?q=IMP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "bcfc14c7e8",
+    "1d6f629426",
+    "3eede2aa1a"
+   ],
+   "value": "The supplied sources do not describe a company called IMP that matches the candidate's priorities (top-tier AI/data science role, elite prestige, high new-grad pay, fast innovative culture, mission-driven with work-life balance). The sources reference a dictionary term, a YouTube channel, and a mythological creature — not a hiring employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no work-life balance data for an employer named IMP in the supplied sources."
   }
  },
  "impiricus": {
@@ -175463,37 +175812,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — respected in clinical informatics and imaging AI circles; publishes in AMIA, RAD-AI, JAMA Network; not a primary Silicon Valley AI lab destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit integrated delivery network: revenue from patient care (insurer/government reimbursement, self-pay), tuition/fees from health-sciences programs, research grants, and philanthropy; surpluses reinvested in facilities, education, and community benefit."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, service-oriented, faith-informed; multidisciplinary teams (clinicians, educators, researchers); dress code business-casual/scrubs; emphasis on wellness, vegetarian options, and smoke-free campuses."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients across the Inland Empire and beyond; health-sciences students and trainees; research sponsors (NIH, industry, philanthropy)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + modest bonus/relocation; total comp ~$90k–$115k; below FAIR-tier but competitive for Inland Empire nonprofit sector."
   },
   "evidence_sha": "2b2460e37618ea73",
+  "generated_at": 1784879665,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Nonprofit academic health system / integrated delivery network / health-sciences education"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate alignment with faith-based service mission; showcase translational AI/ML experience (EHR, imaging, population health); prepare for questions on clinical validation, regulatory compliance (HIPAA/FDA), and collaborative work with clinicians and educators."
+  },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784583417,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Loma Linda, CA; major campuses in Loma Linda, Murrieta, and San Bernardino; clinics throughout Riverside and San Bernardino counties; remote/hybrid options for select tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "\"To continue the teaching and healing ministry of Jesus Christ\" — integrating whole-person care, education, and research with a focus on service and wellness."
+  },
   "name": "Loma Linda University Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — academic clinical environment with structured sprints for research grants and EHR rollouts; less chaotic than startup, but deadline-driven grant/reporting cycles create periodic intensity."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical care (acute, specialty, and primary), health-professions education (medicine, nursing, dentistry, pharmacy, public health, allied health), and biomedical research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 paid holidays + 2 personal days; accrual increases with tenure; separate sick/CME leave for faculty."
   },
+  "refresh_after": 1790063665,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175503,7 +175894,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; reduced staffing on major holidays and Sabbath hours; academic calendar drives lighter summer schedules for education-focused teams."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit system: ~16,000 employees, 1,000+ licensed beds across multiple campuses, annual revenue > $2B."
   },
   "sources": [
    {
@@ -175537,14 +175933,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=fb8d1507aab75aac334059f6e41d186affde6348ab218802c854e08cf4b36595JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9sb2dpbi5sb21hLm9yZy9hY2NvdW50L2xvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B and J-1 sponsor for clinical and research faculty; likely supports cap-exempt H-1B for university-affiliated roles; green-card sponsorship common for permanent faculty and senior research staff."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Loma Linda University Health is a faith-based, nonprofit academic health system affiliated with the Seventh-day Adventist Church, comprising hospitals, clinics, and health-sciences schools in Southern California's Inland Empire."
+  },
+  "synthesized_evidence_sha": "2b2460e37618ea73",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EHR optimization (Epic), clinical analytics, population-health data science, imaging AI, bioinformatics, health-informatics research, and digital-health tooling for education and patient engagement."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583417,
   "web_search_url": "https://duckduckgo.com/?q=Loma+Linda+University+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven, whole-person-care culture with nonprofit stability; strong academic/research ties enable publication and grant work; Inland Empire location provides lower cost of living than coastal hubs while tackling high-need population-health challenges."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — nonprofit mission and unionized nursing workforce promote schedule predictability; on-call rotations for clinical informatics; limited mandatory overtime; Sabbath observance (Fri sunset–Sat sunset) respected organization-wide."
   }
  },
  "london stock exchange group lseg": {
@@ -268722,48 +269139,138 @@
  "software quality experts": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Estimated: Tier 3 or lower. The company name and research indicate no notable presence in elite AI or Data Science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "B2B software or IT services model involving proprietary SaaS products or specialized consulting contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Estimated: Structured, detail-oriented, and process-heavy. QA-focused companies typically value meticulousness over rapid, loosely-defined innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Likely enterprise businesses or tech companies seeking robust software testing and QA solutions (inferred from industry context)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8410e8de9e",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Standard for new grad QA/Software roles, but below the elite high-pay mark."
   },
   "evidence_sha": "336e22b9d464d551",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879665,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Information Technology and Services / Software Development"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "In interviews, focus on clarifying the actual roleâwhether it involves any data science or AI work, or if it's purely traditional QA. For your priorities, probe deeply into pacing: ask how often code deployments occur to gauge if culture is won't fit your 'fast, innovative tech' requirement. Ensure the role won't just be bureaucratic software validation, as that may lead to career stagnation for your learning goals."
+  },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674036,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Specific office locations are not specified in public-facing pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e"
+   ],
+   "value": "Assumed focus on delivering reliable, high-quality software solutions for enterprise clients (inferred from company name)."
+  },
   "name": "Software Quality Experts",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8410e8de9e"
+   ],
+   "value": "Estimated: Moderate. QA roles often follow structured release cycles with predictable deadlines, which may result in a slower pace than top-tier AI startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Software quality assurance tools, testing software, or enterprise IT consulting services (inferred from company name and software industry context)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8410e8de9e",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO. Conservative industry average for specialized B2B IT firms."
   },
+  "refresh_after": 1790063665,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6",
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8410e8de9e"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns beyond standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "f16eec2a6f"
+   ],
+   "value": "Company size, stage, and exact funding details are not currently public or available."
   },
   "sources": [
    {
@@ -268797,14 +269304,49 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "No specific information found regarding H1-B visa sponsorship or international candidate support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6",
+    "f16eec2a6f"
+   ],
+   "value": "Software Quality Experts operates within the software space, though its specific proprietary offerings are obscured by non-resolving public pages. Given its name, it likely focuses on QA solutions, testing frameworks, or software reliability services."
+  },
+  "synthesized_evidence_sha": "336e22b9d464d551",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "Presumably involves QA automation, software testing methodologies, CI/CD pipeline development, and bug tracking."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674036,
   "web_search_url": "https://duckduckgo.com/?q=Software+Quality+Experts+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8410e8de9e",
+    "37ba00a7b6"
+   ],
+   "value": "This role may not fully align with your desire for top-tier AI/Data Science prestige, as the company appears to focus primarily on software QA rather than cutting-edge AI innovation. However, the focus on quality engineering could offer a low-burnout, stable environment with predictable hours, which partially fits your work-life balance requirements, though it may lack the high new-grad pay you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8410e8de9e"
+   ],
+   "value": "Estimated: Medium. Software quality assurance outfits generally have more structured hours compared to front-line product engineering teams, though this varies."
   }
  },
  "solar turbines": {
@@ -330984,11 +331526,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331000,6 +331544,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879665,
   "last_evidence_at": 1784674833,
   "name": "XPO",
   "pace_of_work": {
@@ -331012,6 +331557,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879785,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331055,7 +331601,7 @@
     "url": "https://jobs.xpo.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674833,
   "web_search_url": "https://duckduckgo.com/?q=XPO+company+careers+benefits",
