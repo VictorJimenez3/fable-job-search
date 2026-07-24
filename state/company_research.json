@@ -8488,38 +8488,100 @@
  "ai2 applicazioni di ingegneria ed informatica s r l": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Estimated: Low; the company's tech stack focuses on traditional .NET desktop development rather than elite AI or data science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "B2B software development and engineering services, likely operating on a project-fee or consultancy basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Estimated: Traditional and structured, focused on desktop enterprise software rather than modern fast-paced tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Commercial and enterprise clients needing custom engineering and software development services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Estimated: $70,000 - $90,000 USD for a junior software developer role in the US, which is moderate and below elite big-tech new-grad salaries."
   },
   "evidence_sha": "d0e64ceca29a7321",
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Software Development and IT Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily into the actual day-to-day technologies, as the posting emphasizes WinForms/WPF over cutting-edge AI/data science. Ask detailed questions about team pace, expected working hours, and on-call expectations to ensure the culture truly respects your boundaries and prioritizes technical learning over slow bureaucracy."
   },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784742133,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Posted roles are available in the United States, though the firm's name suggests an Italian heritage or headquarters."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Not explicitly stated in the provided sources, but focuses on delivering engineering and information technology applications."
+  },
   "name": "Ai2 - Applicazioni di Ingegneria ed Informatica s.r.l.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Estimated: Moderate pace typical of a traditional software engineering consultancy, likely slower and more structured than a fast-paced startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Desktop and enterprise software applications built with .NET technologies, including WinForms and WPF interfaces."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of paid time off annually, reflecting standard US or Italian corporate norms."
   },
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -8529,7 +8591,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official shutdowns mentioned, but typical IT consulting firms do not guarantee them without explicit policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Unknown exact size, but actively hiring for junior roles."
   },
   "sources": [
    {
@@ -8583,14 +8652,44 @@
     "url": "https://jobright.ai/jobs/info/6a609879cf6cf477a0561618?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Not explicitly stated, but junior roles posted in the US suggest local hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "33ca839e4a",
+    "1db9db9c4d"
+   ],
+   "value": "Ai2 - Applicazioni di Ingegneria ed Informatica s.r.l. is an engineering and computer science firm that builds software applications. It makes money by providing technical development services and software solutions to its clients."
+  },
+  "synthesized_evidence_sha": "d0e64ceca29a7321",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Software development utilizing Microsoft Visual Studio, .NET Entity Framework, WinForms, and WPF."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742133,
   "web_search_url": "https://duckduckgo.com/?q=Ai2+-+Applicazioni+di+Ingegneria+ed+Informatica+s.r.l.+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This role leans heavily on traditional desktop/.NET enterprise tech rather than modern AI or data science, which may not satisfy a desire for elite prestige or a fast, innovative tech culture. However, traditional engineering firms can sometimes offer more predictable, sane hours than big-tech or startups, which aligns with your work-life balance goals."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "33ca839e4a"
+   ],
+   "value": "Estimated: Average to Good; traditional Italian engineering firms often respect personal time, but this is not explicitly confirmed for their US offices."
   }
  },
  "aig": {
@@ -35476,48 +35575,125 @@
  "bbva": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Tier 3: High-impact enterprise AI in finance (hard to reach elite AI prestige, but great scale and mission)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Operates as a traditional retail and commercial bank scaled globally. Generates revenue primarily through net interest margins (the difference between interest earned on loans and paid on deposits) and non-interest income like transaction fees and advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Professional and structured corporate culture with a recent emphasis on digital transformation and engineering modernization."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Individual retail consumers, small and medium-sized enterprises (SMEs), large corporations, and institutional clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $80,000 - $120,000 USD equivalent (highly variable based on global office location)."
   },
   "evidence_sha": "db0cf4772700e71b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Financial Services & Banking"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Highlight your ability to deliver tangible impact within structured corporate environments. Emphasize how you can drive technical learning and accelerate AI projects without compromising operational stability or sane work-life boundaries."
+  },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784832496,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Headquartered in Madrid, Spain, with operations and tech hubs across multiple global regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "To bring the age of opportunity to everyone by leveraging technology and data to provide innovative financial solutions."
+  },
   "name": "BBVA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to slow-paced due to corporate compliance requirements and banking bureaucracy, typical of large financial institutions."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Retail and commercial banking products, digital banking applications, credit cards, loans, wealth management, and digital payment solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: 22-30 paid days off annually depending on region and seniority."
   },
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns, though public holidays apply regionally."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Large, established multinational enterprise operating globally."
   },
   "sources": [
    {
@@ -35561,14 +35737,45 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Being a large global bank, visa sponsorship opportunities exist but strictly depend on specific regional hiring needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "BBVA is a prominent global financial institution that provides a wide range of banking and financial services to individuals and businesses. It makes money by generating revenue from net interest income on loans, transaction fees, and wealth management services."
+  },
+  "synthesized_evidence_sha": "db0cf4772700e71b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Likely involves building scalable backend systems, cloud infrastructure, data pipelines, and AI models for fraud detection and risk assessment using modern enterprise tech stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784832496,
   "web_search_url": "https://duckduckgo.com/?q=BBVA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "BBVA offers the scale to work on impactful, high-volume data science, but its size means new grads will likely need to actively navigate bureaucracy to find fast-paced innovation. Work hours are generally stable compared to tech giants, though guaranteed shutdowns aren't standard."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Good balance with generally sane hours, but strict deadlines around financial reporting can create spikes in workload."
   }
  },
  "bcforward": {
@@ -88119,7 +88326,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88137,7 +88344,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784873205,
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784679541,
   "name": "Duke Energy",
   "pace_of_work": {
@@ -88150,7 +88357,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784873445,
+  "retry_after": 1784873983,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128765,42 +128972,118 @@
  "hilton": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate. High internal impact via data science forpricing and loyalty, but not considered an elite tech-tier brand for AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Asset-light model generating revenue through franchise fees, management fees for operating properties, and direct room bookings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Estimated: Emphasizes 'hospitality' values and a mission-driven approach to customer service and employee support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Leisure and business travelers, event organizers, and property developers/owners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $90,000 - $120,000."
   },
   "evidence_sha": "16c3ae6f4e913f21",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873351,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Hospitality and Hotels"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Focus on learning and career growth in a major enterprise - scale systems. You should ask detailed questions about team-specific innovation, tech stack modernization pace, and how the company ensures work-life balance in the specific product group."
+  },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784742767,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Global company with operations and corporate tech hubs across the Americas, Europe, the Middle East, and Asia-Pacific."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "To fill the earth with the light and warmth of hospitality."
+  },
   "name": "Hilton",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Slow to moderate pace; standard enterprise culture which can be bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "Hotels, resorts, timeshare properties, and a digital guest booking and loyalty platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0545272e3d"
+   ],
+   "value": "Estimated: 15-25 days annually for corporate/tech."
   },
-  "retry_after": 1784873471,
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128809,8 +129092,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0545272e3d"
+   ],
+   "value": "Estimated: Holiday closures and floating holidays, but no company-wide guaranteed shutdown。"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Large-cap public enterprise (NYSE: HLT) operating thousands of properties globally."
   },
   "sources": [
    {
@@ -128854,14 +129146,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely offers visa sponsorship for specialized senior roles, but sponsorship for new grads is less common."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0545272e3d",
+    "7dea7962e1",
+    "9cebc9b2ce"
+   ],
+   "value": "The provided sources consist of broken redirect links to Hilton's public website, but generally, Hilton is a global hospitality company that manages, franchises, and owns a vast portfolio of hotels and resorts. They make money by charging franchise and management fees to property owners, as well as through direct revenue from company-owned properties."
+  },
+  "synthesized_evidence_sha": "16c3ae6f4e913f21",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Enterprise software engineering, data science, and architecture for guest booking systems, loyalty programs, and operational efficiency."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742767,
   "web_search_url": "https://duckduckgo.com/?q=Hilton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This offers massive scale (global hotel tech infrastructure) which drives strong technical learning, but being a massive established enterprise, the culture is slower and more bureaucratic than a fast-paced tech startup. Work-life balance is accepted, but it lacks the elite prestige and top-tier new-grad pay of pure-tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Good. Reasonable respect for personal time with fewer toxic conditions compared to high-burnout tech startups."
   }
  },
  "hinge health": {
@@ -228511,39 +228836,106 @@
  },
  "relex solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "High tier, recognized for market-leading AI agents that handle complex demand predictions and supply chain optimizations at an enterprise scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "B2B enterprise SaaS, selling retail and supply chain planning software solutions to retail businesses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Estimated: Collaborative and solution-oriented, focused on building user-friendly tools that retail operational teams genuinely enjoy using."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Retailers, including enterprise brands in the home improvement retail sector such as Family Dollar."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Competitive European SaaS market rates, likely ranging from 60,000-80,000 EUR base depending on the specific country office, with potential for performance bonuses."
   },
   "evidence_sha": "eada5a01a9bc3f1a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Software as a Service (SaaS), Retail Technology, and Supply Chain Management."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "229de9a412",
+    "dbc3b9e88f"
+   ],
+   "value": "To ensure the company respects your work-life balance boundaries, clarify expectations around hours and project pacing. Ask about the team's structure to ensure it is a fast, innovative tech culture rather than slow bureaucracy."
+  },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784776545,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Global presence, demonstrated by participation in international retail events such as NRF 2026 in Paris."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "To close the gap between knowing and doing in retail planning, helping retail customers optimize their supply chain from inventory to promotion optimization."
+  },
   "name": "RELEX Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Estimated: Fast-paced and innovation-driven, though specific internal execution speed is not detailed in public materials."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "A unified retail and supply chain planning platform featuring AI agents for inventory management, demand predictions, and promotion optimization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Estimated: Standard European-leaning tech company policy, typically 25-30 days of paid time off, though exact policy varies by region."
   },
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -228552,8 +228944,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Estimated: Common for European-founded tech companies to have winter holiday shutdowns, but you should verify this specific perk with HR."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Established, market-leading private tech company that has scaled past the initial startup phase."
   },
   "sources": [
    {
@@ -228597,14 +228998,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Surfaces new-grad position postings, indicating an active pipeline for entry-level technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "RELEX Solutions provides a unified supply chain and retail planning platform that ensures smooth data flow across all supply chain tiers. The platform makes money by selling this software to enterprise retail customers to enable accurate demand predictions, optimized inventory levels, and efficient production schedules."
+  },
+  "synthesized_evidence_sha": "eada5a01a9bc3f1a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Building and scaling a unified platform that handles smooth data flow, accurate demand predictions, and production schedule optimization using AI agents."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776545,
   "web_search_url": "https://duckduckgo.com/?q=RELEX+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "229de9a412",
+    "dbc3b9e88f"
+   ],
+   "value": "This role aligns with your goal for a top-tier AI and data science position that accelerates technical learning through cutting-edge AI agent development, while providing the mission-driven focus of optimizing global retail supply chains."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "229de9a412"
+   ],
+   "value": "Estimated: Moderate; supply chain enterprise sales cycles can be demanding, so specific team expectations should be verified."
   }
  },
  "reliaquest": {
@@ -233481,41 +233914,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite): Flight-proven hardware, vertical integration, public-company resources, and genuine ML-on-edge deployment at orbital velocity. Peer set: SpaceX, Relativity, Blue Origin, ABL."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Revenue from dedicated Electron launches (~$7.5M/list price), rideshare slots, Photon spacecraft sales and missions, space systems component sales, and Neutron development contracts. Publicly traded (RKLB) with vertical integration across launch, spacecraft, and components."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, hardware-accountable, transparent. 'Test like you fly' mindset. Flat technical hierarchy — principal engineers sit with new grads in integration halls. Blunt but respectful communication. Strong Kiwi/US cultural blend. Mission obsession unites teams; politics low."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Commercial satellite operators (constellations, Earth observation); U.S. government agencies (NASA, DoD, NRO, Space Force); international defense and civil space agencies; rideshare aggregators; university/research payloads."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU grant ($40k–$60k over 4 years). Total Year 1 ~$165k–$200k. Bay Area/Long Beach premium ~+10%. Signing bonus $10k–$20k common."
   },
   "evidence_sha": "458c5732182c60f8",
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Aerospace & Defense / Space Launch & Satellite Systems"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: C++/Rust systems coding, real-time Linux, statistical signal processing, and domain-specific questions (orbital mechanics, GNC, RF). AI/ML roles add model deployment on edge hardware, time-series anomaly detection, and uncertainty quantification. Behavioral rounds emphasize ownership, cross-discipline communication, and handling ambiguity under schedule pressure. Prepare a project walkthrough showing end-to-end ownership — data ingestion → model → production monito"
   },
-  "last_attempt_at": 1784873351,
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784788843,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Headquarters: Long Beach, CA. Launch sites: Mahia Peninsula, New Zealand (LC-1); Wallops Island, VA (LC-2). Manufacturing/integration: Auckland, NZ; Huntington Beach, CA. Offices: Washington DC, Denver, CO, Toronto."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "To open access to space to improve life on Earth by providing frequent, reliable, and responsive launch and space systems."
+  },
   "name": "Rocket Lab",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but structured: hardware-driven sprints tied to launch campaigns (6–8 week cycles), with mandated post-launch decompression. Not a 'move fast and break things' software culture — breakage costs $7M+ and months of schedule. Sustainable intensity."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Electron small-lift launch vehicle; Photon satellite bus/platform; space systems components (reaction wheels, solar panels, star trackers, flight software); Neutron medium-lift rocket (in development); launch and mission operations services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 'space days' (launch-viewing leave). Unlimited sick. Accrual starts day one. Carryover capped at 5 days."
   },
-  "retry_after": 1784873471,
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233525,7 +234010,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two mandatory company-wide shutdowns per year (Summer: week of July 4; Winter: Christmas–New Year). Plus post-launch stand-downs (1–2 weeks, team-specific). No 'unlimited PTO' ambiguity."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Public company (Nasdaq: RKLB); ~1,500–2,000 employees (2024); operating since 2006; profitable on adjusted EBITDA basis; scaling Neutron development and U.S. launch site (Wallops)."
   },
   "sources": [
    {
@@ -233569,14 +234061,37 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hires on H-1B, TN, E-3, O-1; green card sponsorship (PERM) for qualifying roles; ITAR-sensitive positions require U.S. person status. New-grad roles open to CPT/OPT with sponsorship pathway."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7aff6f511c"
+   ],
+   "value": "Rocket Lab is a space systems company that provides launch services (Electron rocket), spacecraft components, and satellite solutions. It operates as an end-to-end space company serving commercial, civil, and defense customers."
+  },
+  "synthesized_evidence_sha": "458c5732182c60f8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Flight software (C++, Rust, Linux, RTOS); GNC/avionics; propulsion test/analysis; structures/thermals; RF/comms; autonomous flight termination; Photon mission ops; ground segment; data pipelines for telemetry/analytics; ML for anomaly detection and vehicle health."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788843,
   "web_search_url": "https://duckduckgo.com/?q=Rocket+Lab+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rocket Lab offers a rare blend: elite aerospace prestige (flight-proven vehicles, vertical integration), competitive new-grad compensation, and a fast-paced but mission-focused culture. Unlike traditional defense primes, it moves quickly with hardware-in-the-loop iteration. The company respects boundaries through structured launch-campaign cadences and explicit shutdown periods, avoiding the perpetual crunch common in early-stage space startups. For an AI/data scientist, the telemetry-rich envir"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10: Campaign surges (pre-launch) require 50–60 hrs/week for 2–3 weeks, followed by guaranteed 1–2 week 'stand-down' with reduced meetings and no on-call. Normal steady state ~45 hrs. Managers enforce boundaries; weekend work rare outside campaigns."
   }
  },
  "rocket lab usa": {
@@ -253533,37 +254048,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Respected enterprise AI/ML in pricing, ops, and customer experience; not a primary AI research lab but growing applied data science team."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6440cf82b7"
+   ],
+   "value": "Low-cost carrier model: high aircraft utilization, single fleet type (Boeing 737), point-to-point routes, no assigned seating, ancillary revenue, and fuel hedging. Revenue from ticket sales, fees, and loyalty partnerships."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c905fc6a6"
+   ],
+   "value": "People-first, fun, union-friendly, profit-sharing, low hierarchy. 'LUV' values permeate; employees stay decades. Tech side modernizing but retains Southwest heart."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6440cf82b7"
+   ],
+   "value": "Leisure and business travelers across the United States, Mexico, Central America, and the Caribbean; primarily price-sensitive flyers seeking no-change-fee flexibility."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + profit sharing (historically 5-15% of eligible earnings) + RSUs (~$10-20k/yr). Total comp ~$120k-$150k."
   },
   "evidence_sha": "baac7626450d7365",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6440cf82b7"
+   ],
+   "value": "Airlines / Aviation / Travel Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "4c905fc6a6"
+   ],
+   "value": "Expect behavioral questions aligned with 'Warrior Spirit, Servant's Heart, Fun-LUVing Attitude' values; technical screens on full-stack (Java/Spring, React, AWS), testing, and system design for airline-scale reliability. Highlight collaboration and customer obsession."
+  },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784782305,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6440cf82b7"
+   ],
+   "value": "Headquarters: Dallas, TX (Love Field campus). Major tech hubs in Dallas and possibly remote/hybrid options. Operational bases nationwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4c905fc6a6"
+   ],
+   "value": "To connect People to what's important in their lives through friendly, reliable, and low-cost air travel—extending that same care to Employees."
+  },
   "name": "Southwest Airline Career Page",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – steady sprint cycles with operational urgency during irregular ops; slower than Big Tech, faster than government. Legacy migration creates focused project work."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6440cf82b7",
+    "07e5425418"
+   ],
+   "value": "Passenger air transportation, ancillary services (EarlyBird Check-In, Business Select), cargo shipping, and loyalty program (Rapid Rewards)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 holidays + sick time; accrues with tenure. Industry-standard for major airline."
   },
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -253573,7 +254147,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe reduced hours during holiday periods. Operational roles follow bidding schedules."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6440cf82b7"
+   ],
+   "value": "Large public company (NYSE: LUV); ~60,000+ employees; mature, profitable airline with decades of operation."
   },
   "sources": [
    {
@@ -253627,14 +254208,42 @@
     "url": "https://jobright.ai/jobs/info/6a616c1bd51f6101c8fbb965?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized tech roles; new-grad roles may have limited sponsorship. Confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c905fc6a6",
+    "6440cf82b7"
+   ],
+   "value": "Southwest Airlines is a major U.S. low-cost carrier headquartered in Dallas, Texas, operating point-to-point domestic flights with a focus on customer service and employee culture. It connects people to what's important in their lives through affordable air travel."
+  },
+  "synthesized_evidence_sha": "baac7626450d7365",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c905fc6a6"
+   ],
+   "value": "Software engineering across booking, check-in, operations, loyalty, and internal tools; cloud migration (AWS), microservices, data platforms, and ML for pricing/ops. Associate Software Engineer roles focus on full-stack development, testing, and AWS services (Lambda, ElastiCache, S3)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784782305,
   "web_search_url": "https://duckduckgo.com/?q=Southwest+Airline+Career+Page+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "4c905fc6a6"
+   ],
+   "value": "Southwest offers a rare blend of mission-driven culture (employee-first legacy), solid new-grad pay, and improving tech modernization without the burnout typical of elite AI labs. It balances prestige as a Fortune 500 innovator in airline ops with sane hours and genuine work-life respect."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Strong culture of respect for personal time; shift-aware scheduling for ops roles; tech roles typically 40-45 hrs/week with on-call rotation."
   }
  },
  "southwest airlines": {
@@ -289600,37 +290209,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: While respected in academia, it is likely not considered top-tier for AI prestige compared to FAANG or elite research labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Public university funded by state appropriations and student tuition."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Mission-driven higher education institution with 'best idea wins' culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Students seeking undergraduate and graduate degrees, and organizations benefiting from university research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely moderate compensation below top FAANG standards."
   },
   "evidence_sha": "34acbf98bd5b15a7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873503,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Determine flexibility of hybrid work and potential involvement in cutting-edge AI initiatives."
+  },
+  "last_attempt_at": 1784873503,
   "last_evidence_at": 1784795725,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Salt Lake City area, Utah."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "To provide higher education as Utah's flagship public institution."
+  },
   "name": "University of Utah",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally slow to standard academic pace with some innovative projects."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Academic degree programs, higher education, and university research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous public sector/university paid time off with holidays."
   },
+  "refresh_after": 1790057503,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289640,7 +290307,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely breaks around major holidays and university closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Large public institution with 4.2 Glassdoor rating."
   },
   "sources": [
    {
@@ -289694,14 +290368,43 @@
     "url": "https://jobright.ai/jobs/info/6a618b4211edf44d791613a0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a US state university, immigration policies vary but may not match the aggressive fast-track sponsorship of top tech companies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "The University of Utah is Utah's flagship public institution offering more than 100 undergraduate and 92 graduate degree programs. As a state university, it is primarily funded through state appropriations, tuition, and research grants to provide higher education."
+  },
+  "synthesized_evidence_sha": "34acbf98bd5b15a7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Front-end development using React JS, JSX, Component Lifecycle, State, and Virtual DOM."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784795725,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Utah+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "The University of Utah offers mission stability and 8am-5pm hours, but its bureaucratic nature may lack the fast-paced innovative tech culture and high new-grad compensation found at top-tier AI or data science roles."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "24298ac91d"
+   ],
+   "value": "Estimated: Strong WLB with Monday-Friday 8am-5pm schedule and hybrid work."
   }
  },
  "university of utah financial services": {
