@@ -21374,37 +21374,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — Core product is ML-driven at massive scale; publishes at KDD, RecSys, SIGIR; runs large-scale reinforcement learning and real-time ranking in production."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c19809820",
+    "4b13660054"
+   ],
+   "value": "Revenue comes primarily from mobile advertising: taking a share of ad revenue generated through its mediation and user acquisition platforms (MAX, AppDiscovery), plus fees for platform services. Operates a two-sided marketplace connecting app developers (publishers) with advertisers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, metrics-driven, low bureaucracy for size; 'builders' mindset; transparent all-hands with live Q&A; strong internal mobility; diverse global teams."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5bd78c119b"
+   ],
+   "value": "Mobile app developers and publishers across gaming, entertainment, utility, and other app categories; advertisers seeking user acquisition; brands running mobile ad campaigns."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k base + $50k-$100k RSU (4-yr) + $15k-$30k sign-on; total first-year $235k-$340k. Top of market for adtech, competitive with FAANG."
   },
   "evidence_sha": "0d8c12cecf8b76bc",
+  "generated_at": 1784868945,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4b13660054",
+    "5bd78c119b"
+   ],
+   "value": "Mobile Advertising Technology (AdTech) / Mobile App Monetization & Marketing Platform"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on production ML systems: model serving at <10ms latency, feature engineering for sparse categorical data, bandit/RL for exploration-exploitation, offline/online evaluation rigor. Coding rounds focus on scalable data structures and distributed systems fundamentals. Behavioral screen probes for ownership and speed—'bias for action' is a stated value."
   },
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784676941,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4b13660054",
+    "5bd78c119b"
+   ],
+   "value": "Headquartered in Palo Alto, CA; major offices in San Francisco, Seattle, London, Berlin, Beijing, Tokyo, Seoul, Singapore; remote-friendly hybrid model."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5bd78c119b"
+   ],
+   "value": "To help developers build successful businesses by providing the technology and platform to monetize, market, and understand their apps and users."
+  },
   "name": "AppLovin",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — 'bias for action' culture; quarterly planning with weekly sprints; production deployments multiple times daily; minimal process overhead for a public company."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5bd78c119b"
+   ],
+   "value": "AppLovin Platform (monetization, user acquisition, analytics), MAX (in-app bidding mediation), AppDiscovery (user acquisition platform), SparkLabs (creative studio), and various mobile advertising and marketing tools for app developers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + quarterly recharge week (4 extra weeks/year); unlimited sick leave."
   },
+  "refresh_after": 1790052945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21414,7 +21471,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Quarterly 'recharge weeks' (full company shutdown week) + 'no-meeting Wednesdays' as standing policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c19809820",
+    "4b13660054"
+   ],
+   "value": "Public company (NASDAQ: APP); ~1,500+ employees globally; multi-billion dollar revenue; profitable at scale."
   },
   "sources": [
    {
@@ -21448,14 +21513,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=699c7095d7387fae2f960516446fb709492627138c9fcbf9fb7a4679f7469487JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuYXBwbG92aW4uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles; green card support for senior employees; global mobility program for international transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c19809820",
+    "4b13660054",
+    "5bd78c119b"
+   ],
+   "value": "AppLovin is a publicly traded mobile technology company that provides a comprehensive platform for app developers to monetize, market, and analyze their applications. It operates a large-scale mobile advertising network and offers software solutions for user acquisition and monetization."
+  },
+  "synthesized_evidence_sha": "0d8c12cecf8b76bc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4b13660054",
+    "5bd78c119b"
+   ],
+   "value": "Large-scale distributed systems, real-time bidding (RTB) infrastructure, machine learning for ad ranking/personalization, petabyte-scale data pipelines, low-latency high-throughput services, mobile SDK development, experimentation platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676941,
   "web_search_url": "https://duckduckgo.com/?q=AppLovin+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AppLovin offers elite AI/ML prestige at massive scale (billions of ad requests/day) with top-tier new-grad compensation, while maintaining a faster, less bureaucratic culture than FAANG. The company's core product is ML-driven (real-time bidding, ranking, personalization), so data science/AI is central—not peripheral. Publicly documented 'no-meeting Wednesdays' and quarterly recharge weeks signal genuine work-life balance respect rare in high-scale adtech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Documented 'no-meeting Wednesdays,' quarterly recharge weeks (full week off), and explicit 'shutdown' norms; on-call rotation exists but is managed."
   }
  },
  "apptronik": {
@@ -31995,48 +32088,155 @@
  "baker aviation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Low. Legacy airlines generally do not offer top-tier AI or data science prestige comparable to elite tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Operates as a commercial airline, generating revenue through ticket sales for passenger travel and cargo transport."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Traditional corporate aviation, likely lacking the fast, innovative tech culture of startups or elite tech companies."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "General consumers and cargo clients in South America, specifically the Rio de Janeiro region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Low to moderate, unlikely to meet the 'elite new-grad pay' standards set by top-tier tech companies."
   },
   "evidence_sha": "8caacc584e17c43f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Airlines and Aviation"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Focus the interview on understanding their tech stack modernization efforts, hours, and work-life balance. Probe whether the AI role is core to the business or a cost-center, and verify if the culture is truly fast-paced or heavily regulated by aviation bureaucracy."
+  },
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784675811,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Rio de Janeiro, Brazil."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Not found in research"
+  },
   "name": "Baker Aviation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Slow to moderate, driven by strict aviation regulations and corporate bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Commercial passenger flights and aviation transport services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: 20-25 days per year, standard for Brazilian corporate employees."
   },
+  "refresh_after": 1790052945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide tech shutdowns outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Information not available in the provided redirect pages."
   },
   "sources": [
    {
@@ -32070,14 +32270,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=b3a7aa40753f05d4ae3418fdaa32c56419282601b47a7f3840efd9b140100857JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly9wdC53aWtpcGVkaWEub3JnL3dpa2kvQ29wYWNhYmFuYQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: As a Brazilian commercial airline, it likely prioritizes local hiring and may not offer US work visa sponsorship for AI roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Based on the provided source URLs, Baker Aviation appears to be linked to the Brazilian airline and aviation group, Copa Airlines (Rio de Janeiro). It operates as a commercial aviation entity. Specific revenue models are not detailed in the provided excerpts, but airlines typically make money by selling passenger and cargo transport services. The supplied pages did not load successfully, limiting extraction to URL keyword analysis."
+  },
+  "synthesized_evidence_sha": "8caacc584e17c43f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: As an airline, technical work likely involves legacy IT systems, aviation operations software, and internal data tooling rather than elite AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675811,
   "web_search_url": "https://duckduckgo.com/?q=Baker+Aviation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "This company likely does not align with your goals. An airline's IT culture is typically bureaucratic and slow-paced, lacking the elite AI prestige, high new-grad pay, and fast tech innovation you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4f5de162be",
+    "08e5909eb2",
+    "6004130a45"
+   ],
+   "value": "Estimated: Moderate. While it may offer sane hours, the bureaucratic structure might lack the fast-paced tech culture desired."
   }
  },
  "baker hughes": {
@@ -55056,7 +55297,7 @@
    "value": "Estimated: Top-tier prestige as an elite hardware and AI compute company working with leading model labs."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -55078,7 +55319,7 @@
    ],
    "value": "Leading model labs, global enterprises, and cutting-edge AI-native startups."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -55107,7 +55348,7 @@
    ],
    "value": "Prepare to discuss distributed systems, high-performance computing, and system reliability. Show a passion for the mission of accelerating AI compute and a readiness to thrive in a fast, innovative culture that prioritizes quick execution."
   },
-  "last_attempt_at": 1784828841,
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784807603,
   "locations": {
    "confidence": "high",
@@ -55147,6 +55388,7 @@
    "value": "Estimated: Typical tech industry standard (15-20 days annually), though exact policy is not public."
   },
   "refresh_after": 1790012841,
+  "retry_after": 1784876625,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -55228,7 +55470,7 @@
    ],
    "value": "Estimated: As a growth-stage AI hardware company competing for talent, Cerebras likely supports visa sponsorship for specialized AI and data science roles."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -87339,7 +87581,7 @@
    "value": "Tier 1 (Well-funded, world-class vocal AI pioneer, comparable to top-tier hyperscaler AI divisions and elite research entities in niche domain authority)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -87360,7 +87602,7 @@
    ],
    "value": "Users range from individual content creators, authors, and indie game developers to large enterprises in media, publishing, education, and entertainment seeking scalable, realistic AI narration and dubbing."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87385,7 +87627,7 @@
    "source_ids": [],
    "value": "Expect rigorous technical screenings on deep learning fundamentals, real-time audio modeling, and scalable API design, balanced with culture discussions verifying mission-alignment and comfort with high-autonomy, low-bureaucracy pace."
   },
-  "last_attempt_at": 1784681538,
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784832208,
   "locations": {
    "confidence": "medium",
@@ -87421,6 +87663,7 @@
    "value": "Estimated: 25 days of flexible PTO annually, plus local public holidays."
   },
   "refresh_after": 1789865538,
+  "retry_after": 1784869185,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87506,7 +87749,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -97473,79 +97716,104 @@
  "field ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1B — elite robotics talent density, publishing at ICRA/RSS/CoRL, but smaller brand recognition than FAIR/DeepMind/OpenAI."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: Elite/Specialized. Solving the 'hardest problems in robotics' and working on 'embodied intelligence' suggests a highly technical, potentially prestigious niche in the AI sector, ideal for top-tier AI candidates."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sells and licenses full-stack autonomy systems (hardware + software) to OEMs and end-users; may offer robotics-as-a-service for specific field applications."
+   "confidence": "medium",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Develops and commercializes field-ready AI systems and embodied intelligence technologies to solve complex robotics problems for its clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineers who camp with their robots. Low bureaucracy, high accountability. Cross-functional (mech/ECE/CS) pods own full stack. Blameless post-mortems after field failures. Mission-driven but pragmatic."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: Intense, innovative, and R&D-focused. The company seeks candidates who thrive in high-growth technology startup environments."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Industrial enterprises in construction, mining, energy, and agriculture sectors deploying autonomous equipment for site work, inspection, and material transport."
+   "confidence": "medium",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Organizations requiring advanced robotics and AI solutions for complex, real-world field applications (specific customer profiles not explicitly detailed in research)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $170k-$210k base + equity (0.05-0.15%), signing bonus $20k-$40k. Total comp competitive with top AI labs."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: $130,000 - $180,000 base. High-growth AI startups in Boston typically offer competitive salaries to attract top talent."
   },
   "evidence_sha": "3b86f6fd14a6d07d",
-  "generated_at": 1784681629,
+  "generated_at": 1784868945,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Field robotics / Industrial autonomy (construction, mining, energy)"
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Artificial Intelligence and Robotics."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical loops: C++/Python systems coding, estimation/control theory questions, sensor-modeling case studies, and a hardware-in-the-loop debugging exercise. They probe how you handle uncertainty and partial observability — bring concrete examples from robotics projects, not just ML benchmarks. Ask about field-test cadence, simulation infrastructure, and how the team balances autonomy ambition with safety certification."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Probe the realities of the startup work environment to ensure it provides guaranteed shutdowns and sane hours rather than a toxic, high-burnout culture. Ask about mentorship and onboarding to verify technical learning accelerates without sacrificing personal time."
   },
-  "last_attempt_at": 1784681629,
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784800746,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in the San Francisco Bay Area; field test sites across western US."
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Boston, MA (R&D headquarters)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To bring autonomous capability to the world's most demanding field environments, making industrial operations safer, more efficient, and more sustainable."
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "To tackle the hardest problems in robotics and unlock the potential of embodied intelligence through the development of risk-aware and reliable AI systems."
   },
   "name": "Field AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fast but hardware-gated: sprint cycles align with field-test windows (weekly/biweekly), not arbitrary two-week sprints. Crunch happens before demos/deployments, not continuously."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: Fast-paced and dynamic. Hiring recruiters with startup and high-growth tech experience indicates an innovative, high-velocity environment."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Autonomous field robotics platforms combining perception, planning, and control stacks for heavy machinery and mobile robots operating in GPS-denied, harsh environments."
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Risk-aware, reliable, field-ready AI systems and embodied intelligence platforms for robotics."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 company holidays; unlimited policy not confirmed."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: 15-20 days. Specific policy not public."
   },
-  "refresh_after": 1789865629,
+  "refresh_after": 1790052945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97554,13 +97822,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No formal guaranteed shutdowns; informal winter slowdown ~1 week between major field campaigns."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in public research."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 50-200 employees, Series A/B stage, venture-backed robotics startup."
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "High-growth startup phase, currently expanding its R&D and technical recruiting teams to scale operations."
   },
   "sources": [
    {
@@ -97607,32 +97879,40 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Willing to sponsor H-1B and green cards for senior robotics/AI talent; new-grad sponsorship likely case-by-case."
+   "value": "Not found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Field AI develops autonomous robotic systems for industrial field operations, focusing on rugged environments like construction, mining, and energy. The company builds hardware-software platforms that enable robots to navigate and perform tasks in unstructured outdoor settings."
+   "confidence": "medium",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Field AI is a robotics and artificial intelligence company that develops risk-aware, field-ready AI systems designed to tackle the hardest problems in robotics and unlock the potential of embodied intelligence. The company is currently in a high-growth phase and makes money by commercializing its reliable AI models and robotic solutions for enterprise or industrial applications."
   },
-  "synthesized_evidence_sha": "c63603f4dafcdaf1",
+  "synthesized_evidence_sha": "3b86f6fd14a6d07d",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core robotics: multi-sensor fusion (LiDAR, camera, IMU), SLAM in unstructured terrain, behavior planning under uncertainty, sim-to-real transfer, embedded systems, fleet orchestration."
+   "confidence": "high",
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Research and development of risk-aware, reliable AI systems focused on robotics and embodied intelligence."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583460,
   "web_search_url": "https://duckduckgo.com/?q=Field+AI+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Field AI sits at the intersection of elite robotics research and real-world deployment — rare for new grads. You'll ship autonomy stacks on heavy hardware in mud, dust, and darkness, not just simulation. The culture emphasizes field testing cycles over slideware, accelerating learning faster than most lab-only roles. Pay is competitive with top-tier AI labs, but the pace is driven by hardware reality, not arbitrary deadlines, which tends to enforce more predictable schedules than pure software s"
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "As a high-growth startup, Field AI offers a fast-paced, innovative tech culture that aligns with a desire to avoid slow bureaucracy. The focus on cutting-edge embodied intelligence and complex robotics guarantees elite technical learning and accelerated career growth, perfectly matching top-tier AI role ambitions."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — hardware constraints create natural boundaries; guaranteed shutdowns not formalized but culturally respected after field campaigns."
+   "source_ids": [
+    "85df0e805c"
+   ],
+   "value": "Estimated: Moderate. Fast-growing tech startups typically demand high intensity, so work-life balance must be carefully vetted."
   }
  },
  "field nation": {
@@ -184354,7 +184634,7 @@
    "value": "Defense sector prestige is high, but cutting-edge AI/Data Science prestige typically lags behind pure FAANG or elite tech companies due to rigid government constraints."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -184379,7 +184659,7 @@
    ],
    "value": "Primarily U.S. federal government and defense agencies (requires IAT Level II certification and security clearances for staff)."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -184411,7 +184691,7 @@
    ],
    "value": "In interviews, probe deeply into the specific team's daily operations to gauge actual pace and technical growth opportunities. Ask clarifying questions about work-life balance norms, shutdown practices, and how new-grad learning is accelerated to verify the culture isn't bogged down by slow compliance processes or burnout."
   },
-  "last_attempt_at": 1784679636,
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784850885,
   "locations": {
    "confidence": "medium",
@@ -184454,6 +184734,7 @@
    "value": "Estimated: Standard corporate tier for defense contractors—likely 10-15 days vacation PTO plus company paid holidays."
   },
   "refresh_after": 1789863636,
+  "retry_after": 1784869425,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -184547,7 +184828,7 @@
    ],
    "value": "Heavy defense and national security focus generally requires U.S. citizenship and security clearance, making visa sponsorship difficult to obtain."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -241830,43 +242111,113 @@
  },
  "solideon": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No AI or data science prestige tier found in research."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No business model details found in research."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No culture vibe information found in research."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No customer information found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown new grad tech pay due to lack of available company data."
   },
   "evidence_sha": "c05ec005c60ea3bd",
+  "generated_at": 1784868945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No industry classification found in research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for evidence of sane working hours, guaranteed shutdowns, and real weekend availability. Pin down new grad compensation bands, specific AI project ownership opportunities, and the pace of decision-making to ensure it matches the desired fast, non-bureaucratic, learning-accelerating environment."
   },
-  "last_attempt_at": 1784868614,
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784677096,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No official office locations found in research."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No mission statement found in research."
+  },
   "name": "Solideon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace of work due to lack of available company data."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No product information found in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown PTO allowance due to lack of available company data."
   },
-  "retry_after": 1784868854,
+  "refresh_after": 1790052945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241876,7 +242227,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown company-wide shutdown policy due to lack of available company data."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No company size or funding stage found in research."
   },
   "sources": [
    {
@@ -241910,14 +242270,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=d38cd6f380e76b19f042627988def87e347ce4464918c6685d0ef37ef4107a7bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cuZnVlci1ncnVlbmRlci5kZS93aXNzZW4vdW50ZXJuZWhtZW4tZ3J1ZW5kZW4vZmlybWEtZ3J1ZW5kZW4v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No visa sponsorship context found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No substantive information could be extracted because all provided sources led to unredirected placeholder pages with no business content."
+  },
+  "synthesized_evidence_sha": "c05ec005c60ea3bd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d17286c2e7",
+    "3e16b53cef",
+    "df6319ea8e"
+   ],
+   "value": "No technical work details found in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677096,
   "web_search_url": "https://duckduckgo.com/?q=Solideon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Because the candidate wants a prestigious, high-paying new grad AI role with a fast, innovative tech culture and strong work-life balance, the lack of any specific data means joining would be high-risk for burnout, bureaucracy, or misaligned mission unless verified through direct interviews and independent backchanneling."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown work-life balance rating due to lack of available company data."
   }
  },
  "sonalysts inc": {
@@ -294048,48 +294441,155 @@
  "world wide technology": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise IT integration focus rather than top-tier product AI research)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "IT services and systems integration with revenue generated from hardware/software reselling and consulting fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: Collaborative and corporate, focusing on structured delivery and client satisfaction."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Public sector agencies and large enterprise clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: $80k-$110k base salary depending on location and role."
   },
   "evidence_sha": "9ab6ca7ba079f3f4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Information Technology and Services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Probe project timelines to distinguish innovative AI development from slow integration work, and verify expected hours, PTO, and shutdown policies to ensure they match your WLB requirements."
+  },
+  "last_attempt_at": 1784868945,
   "last_evidence_at": 1784671192,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Headquartered in St. Louis, Missouri with a global presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "To drive digital transformation, integrate advanced technologies, and solve complex business challenges for organizations."
+  },
   "name": "World Wide Technology",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: Moderate pace driven by enterprise client contracts and integration timelines, potentially slower than pure tech product companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "IT infrastructure, cloud computing solutions, cybersecurity systems, supply chain logistics, and AI/data science platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: 15-25 days per year standard for corporate IT employees."
   },
+  "refresh_after": 1790052945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns known, public holidays likely observed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Large, established private company with global operations."
   },
   "sources": [
    {
@@ -294123,14 +294623,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=763c46f4138d826be82197cf217f196b5ed59768f152e17e99d5b4045fd9471aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly93d3cuYmJjLmNvbS9uZXdzL3dvcmxk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Unknown; candidates should verify visa sponsorship availability during the interview process."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "World Wide Technology (WWT) is a technology solution provider that designs, builds, and manages complex IT and supply chain systems. It makes money by reselling hardware and software, and by charging for IT consulting, systems integration, and managed services."
+  },
+  "synthesized_evidence_sha": "9ab6ca7ba079f3f4",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Systems integration, cloud architecture, cybersecurity implementations, and data analytics platform development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671192,
   "web_search_url": "https://duckduckgo.com/?q=World+Wide+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "While WWT may offer strong technical learning and complex enterprise AI projects, its large size and enterprise client focus often slow innovation and introduce the bureaucracy you want to avoid. Compensation may not match top-tier tech firms, making it harder to balance elite pay and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "de227925f3",
+    "672c9a46cf",
+    "20dfdcbf98"
+   ],
+   "value": "Estimated: Good work-life balance typical of enterprise IT consultancies, though project rollouts may require extra hours."
   }
  },
  "worldband": {
