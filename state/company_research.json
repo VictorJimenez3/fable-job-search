@@ -4817,11 +4817,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4833,6 +4835,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678872,
   "name": "Adaptiva",
   "pace_of_work": {
@@ -4845,6 +4848,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4888,7 +4892,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c157b313e6146add50b0acbb41e9fa32a07ce556615484375211c61e1b6c5a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9hZGFwdGl2YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678872,
   "web_search_url": "https://duckduckgo.com/?q=Adaptiva+company+careers+benefits",
@@ -19558,37 +19562,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied ML in regulated infrastructure; strong domain impact, growing investment, but not an AI research hub or top-tier talent magnet like FAANG/quant labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regulated utility model: earns authorized return on equity (ROE) on approved rate base (infrastructure investments) set by state commissions (MoPSC, ICC); revenue from tariffed rates for delivery and generation; transmission revenue via FERC-approved formula rates through MISO."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Safety-first, engineering-led, collaborative, long-tenure workforce (many 20+ yr employees); evolving toward digital agility but retains utility conservatism; inclusive DEI efforts; St. Louis cost-of-living advantage; community-focused."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residential, commercial, and industrial customers in Missouri (Ameren Missouri) and Illinois (Ameren Illinois); wholesale power markets; regional transmission organizations (MISO)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + 10-15% annual incentive + RSU grant (~$10-20K vesting over 3-4 yrs); total comp ~$115-140K year 1."
   },
   "evidence_sha": "6585e2d2d1a1982d",
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Regulated Electric & Gas Utilities / Energy Infrastructure"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system design: time-series forecasting, anomaly detection on sensor data, scalable data pipelines (Spark/Databricks), SQL proficiency, domain questions on grid operations. Behavioral emphasis on safety culture, regulatory awareness, stakeholder communication. LeetCode medium common but not extreme. Prepare for 'how would you deploy a model that predicts transformer failure with 99% reliability requirements?'"
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784588247,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: St. Louis, MO. Major operations: St. Louis metro, Central/Southern Illinois (including Champaign, Decatur, Peoria), Missouri (including Jefferson City, Cape Girardeau). Hybrid/remote options vary by role; field-adjacent roles may require on-site presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Power the quality of life for customers, communities, and shareholders by delivering safe, reliable, affordable, and cleaner energy while modernizing the grid for a sustainable future."
+  },
   "name": "Ameren",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — quarterly planning cycles, regulatory compliance gates, change management for OT systems; faster on digital/analytics pilots (6-12 month cycles), slower for production grid deployments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Electricity generation, transmission, and distribution; natural gas distribution and transmission; grid modernization and smart meter deployment; renewable energy integration (wind, solar); energy efficiency and demand-side management programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 company holidays + 2-3 floating holidays; accrual increases with tenure; separate sick/bereavement."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19598,7 +19644,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; typical holiday week between Christmas/New Year observed; some departments encourage summer slowdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: AEE); ~$25B market cap; ~$8-9B annual revenue; ~9,000 employees; mature, stable, capital-intensive infrastructure business."
   },
   "sources": [
    {
@@ -19632,14 +19683,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=75af906c7cd5885553ce40fa2c7457651f8b53d84cae907f7507e2c6e4a4ce9fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0510d07e-8f0e-6075-3ea8-c7e28e866170&u=a1aHR0cHM6Ly93d3cuYW1lcmVuLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (utilities sector typical); green card sponsorship common for specialized engineering/analytics roles; cap-exempt status not applicable (not university/research institute)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ameren is a Fortune 500 regulated utility holding company headquartered in St. Louis, Missouri, providing electric and natural gas service to approximately 2.4 million electric and 900,000 natural gas customers across Illinois and Missouri through its rate-regulated subsidiaries."
+  },
+  "synthesized_evidence_sha": "6585e2d2d1a1982d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Grid analytics, predictive maintenance (asset health), load/demand forecasting, DER integration modeling, AMI/smart meter data science, outage prediction, vegetation management optimization, renewable forecasting, cybersecurity for OT/IT convergence, digital twin development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784588247,
   "web_search_url": "https://duckduckgo.com/?q=Ameren+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ameren offers a mission-critical AI/data science arena — modernizing the energy grid for 3.3M customers — with the stability of a regulated utility, competitive new-grad pay (~$100-120K base + bonus/RSU), and a culture that generally respects work-life balance (40-45 hr weeks, limited on-call for most analytics roles). You'll work on high-impact problems (grid reliability, decarbonization) without the burnout culture of elite tech, but with less AI research prestige and slower shipping velocity "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — typical 40-45 hr weeks for analytics/DS roles; limited on-call (mostly for platform/ops roles); predictable crunch around rate cases or storm response support; strong union culture sets norms."
   }
  },
  "american century investments": {
@@ -26433,37 +26505,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High / Tier 1. Widely recognized as a top-tier employer in the AV simulation and software infrastructure space, attracting talent from elite tech companies and top universities."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B enterprise software licensing and recurring subscription revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Elite, engineering-first, and mission-driven. High ownership, strong technical mentorship, and a low-bureaucracy environment that accelerates deep technical learning and career growth."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive original equipment manufacturers (OEMs), autonomous vehicle startups, and Tier 1 automotive suppliers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $220,000 total comp (Base + Equity). Highly competitive new-grad pay reflecting its tier-1 prestige and high demand for AI/software talent."
   },
   "evidence_sha": "fb8b20ecbaf9bbc7",
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Autonomous Vehicles / Enterprise Software / AI Infrastructure."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To maintain this balance, interviewers will probe your software fundamentals (C++, algorithms) and ML/theoretical knowledge. Highlight your ability to learn quickly and ship robust code fast in a high-ownership culture, demonstrating that you can thrive in this innovative tech culture without burning out."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784677480,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "27d124c37c",
+    "5b4161b2d4",
+    "544f6ea26c"
+   ],
+   "value": "Actively seeking professional context from source URL."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate the world's adoption of safe and intelligent machines through reliable, scalable software infrastructure."
+  },
   "name": "Applied Intuition",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast. The company operates with a startup-like, high-velocity engineering culture while maintaining a strong emphasis on sustainable engineering practices over slow bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A suite of simulation, visualization, and data management infrastructure software tools designed to test and validate autonomous vehicle systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Industry standard flexible PTO (typically 15-20 days for new grads), with culture encouraging employees to actually use it to recharge."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26473,7 +26591,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holiday shutdowns; no widespread data indicating company-wide guaranteed extended shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (Valued at $4B in 2024), scaling aggressively."
   },
   "sources": [
    {
@@ -26507,14 +26630,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1678502f8def46e0b26683082258868edc4db6256125684999a17497533b2d23JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=33461374-d36f-6ad0-1d4c-04e9d2696ba0&u=a1aHR0cHM6Ly93d3cuYXBwbGllZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "27d124c37c",
+    "5b4161b2d4",
+    "544f6ea26c"
+   ],
+   "value": "Actively seeking professional context from source URL."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied Intuition is a Silicon Valley-based technology company that provides autonomous vehicle (AV) simulation, testing, and development software to automotive manufacturers. It makes money by licensing its suite of virtual testing, data management, and simulation infrastructure tools to enterprise OEMs and suppliers, enabling them to safely validate and scale their self-driving algorithms."
+  },
+  "synthesized_evidence_sha": "fb8b20ecbaf9bbc7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "27d124c37c",
+    "5b4161b2d4",
+    "544f6ea26c"
+   ],
+   "value": "Actively seeking professional context from source URL."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677480,
   "web_search_url": "https://duckduckgo.com/?q=Applied+Intuition+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied Intuition aligns strongly with your desire for a fast, innovative AI environment balanced with sane hours. It is a rapidly growing, well-funded startup led by elite ex-Tesla/U Cruise engineers, offering top-tier prestige and competitive tech pay without the traditional toxic burnout culture seen in some AV hardware mills."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known for its strong, systematic approach to prioritization and technical execution, actively avoiding the high-burnout crunch culture prevalent in some hardware-focused AV companies."
   }
  },
  "applied materials": {
@@ -64334,48 +64486,130 @@
  "campbell soup company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Low to Medium. As a legacy CPG company, it does not carry the elite AI prestige or fast tech culture of a FAANG or top-tier tech startup."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Manufacturing and selling branded food and beverage products at volume through major retail and foodservice distribution networks."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Estimated: Traditional, stable, and mission-driven. Fosters a collaborative environment but may lack the fast, innovative tech culture desired by some candidates."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Retail grocery stores, mass merchandisers, club stores, convenience stores, e-commerce platforms, foodservice operators, and general consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $90,000 to $120,000 base salary, typical for data science roles outside elite tech hubs."
   },
   "evidence_sha": "6911b079c2178268",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Consumer Packaged Goods (CPG) / Food and Beverage Manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should emphasize how data science can tangibly impact supply chain efficiency or consumer insights, aligning with a stable corporate setting rather than a disruptive tech culture."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678871,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Headquartered in Camden, New Jersey, with numerous manufacturing facilities and offices globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "To connect people through food they love by providing high-quality, affordable, and accessible meals and snacks."
+  },
   "name": "Campbell Soup Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Estimated: Slow to moderate. Expect traditional corporate bureaucracy and slower decision-making cycles typical of large, legacy CPG organizations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Soup, simple meals, snacks, and beverages under brands like Campbell's, Pepperidge Farm, Goldfish, Milano, V8, and Snyder's of Hanover."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days of paid time off annually, typical for a large legacy corporation, plus standard holidays."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found in research, though standard holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Publicly traded, large-cap multinational corporation (NYSE: CPB) with a long-established global supply chain."
   },
   "sources": [
    {
@@ -64419,14 +64653,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "No specific visa sponsorship information found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "78b9e0ebf1",
+    "205b866970"
+   ],
+   "value": "Campbell Soup Company is a global food and beverage manufacturer that produces, markets, and distributes branded consumer goods. It makes money by selling its well-known portfolio of products through retail channels, foodservice, and e-commerce platforms."
+  },
+  "synthesized_evidence_sha": "6911b079c2178268",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science and AI initiatives likely focus on supply chain optimization, demand forecasting, consumer analytics, and marketing personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678871,
   "web_search_url": "https://duckduckgo.com/?q=Campbell+Soup+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "While not an elite tech firm, Campbell's offers a mission-driven environment focused on food accessibility. It may appeal to candidates seeking stable, guaranteed hours and low burnout rather than fast-paced, top-tier tech prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Good. Generally promotes a healthy work-life balance with predictable hours, lacking the intense burnout culture of fast-paced tech companies."
   }
  },
  "campus usa credit union": {
@@ -72242,37 +72508,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not an elite AI/Data Science prestige firm; government IT services typically fall into a lower tier for top-tier AI prestige compared to FAANG or top quant firms."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Government consulting and IT services contracting; providing specialized personnel and technology solutions to solve federal challenges."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Collaborative, supportive, and entrepreneurial, focused on anticipating needs and solving challenging problems with motivated and creative teams."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "United States government agencies and federal departments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000; standard for government IT consulting roles but below the elite new-grad tech pay scales targeted by the candidate."
   },
   "evidence_sha": "d7f7af0c796e97dc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Government IT Services and Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e",
+    "4b75c65bfa"
+   ],
+   "value": "Assess whether CGS Federal can actually offer the candidate high new-grad pay, fast-paced innovation, and elite technical growth without the typical government consulting bureaucracy. Specifically probe the reality of their work-life balance, sane hours, guaranteed shutdowns, and toxicity avoidance, while verifying if genuine AI/Data Science roles exist or if the technical work leans toward standard IT implementations like ServiceNow."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678872,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Not explicitly stated in the provided sources, though the company operates to support United States government agencies."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "To drive government innovation by solving challenging and dynamic problems through collaboration, anticipating the needs of others, and bringing highly skilled people together."
+  },
   "name": "CGS Federal (Contact Government Services)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Estimated: Moderate; defined by government project cycles which usually feature standard bureaucratic delivery paces despite the company's internal emphasis on cutting-edge innovation and solving dynamic problems."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e",
+    "4b75c65bfa"
+   ],
+   "value": "Cutting-edge technology solutions and IT services for the government, including platform development (e.g., ServiceNow) and recruitment support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, typical for mid-level government contractors, though exact policy is not public."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72282,7 +72624,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard federal holidays observed; no mention of additional corporate-wide guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258"
+   ],
+   "value": "Unclear from provided sources, but operates at a scale sufficient to support dedicated recruitment, technical development departments, and full-time roles across multiple disciplines."
   },
   "sources": [
    {
@@ -72346,14 +72696,52 @@
     "url": "https://jobs.lever.co/cgsfederal/f2b7ca3f-a806-4d91-899f-0e76035bfc38"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258"
+   ],
+   "value": "Not explicitly addressed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "CGS Federal (Contact Government Services) is a government consulting firm that brings together motivated, highly skilled, and creative people to solve the government's most dynamic problems using cutting-edge technology. They make money by providing specialized technical talent and innovative IT solutions—such as ServiceNow development and talent acquisition—to federal agencies."
+  },
+  "synthesized_evidence_sha": "d7f7af0c796e97dc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e"
+   ],
+   "value": "Solving complex government IT challenges using cutting-edge technology; notably includes platform development and customization on ServiceNow, requiring creative and highly skilled technical personnel."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678872,
   "web_search_url": "https://duckduckgo.com/?q=CGS+Federal+%28Contact+Government+Services%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ab96be6258",
+    "53772b666e",
+    "4b75c65bfa"
+   ],
+   "value": "The candidate seeks a top-tier AI/Data Science role that blends elite prestige, high new-grad pay, and a fast, innovative tech culture with strong work-life balance. While CGS Federal emphasizes using cutting-edge technology to solve dynamic problems in a supportive environment that encourages professional growth, government contracting typically involves slower bureaucratic cycles and lacks the high base compensation and intense prestige of top-tier tech firms, making it a potential mismatch fo"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4b75c65bfa",
+    "ab96be6258"
+   ],
+   "value": "Estimated: Good; the company emphasizes a supportive environment, though actual hours depend on federal contract deadlines and client demands."
   }
  },
  "cgs immersive": {
@@ -132421,7 +132809,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132439,7 +132827,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784894118,
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678790,
   "name": "FIS",
   "pace_of_work": {
@@ -132452,7 +132840,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784894238,
+  "retry_after": 1784894581,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -160292,37 +160680,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected niche leader with solid technical depth, but not a brand-name AI lab. Strong for applied ML/DS in a domain that matters."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2G professional services and SaaS: contingency or fixed-fee consulting engagements plus subscription-based software tools for tax administration and compliance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-driven, low-ego. Long-tenured staff, transparent leadership, and a 'public service' mindset. Social but not mandatory fun; remote-friendly with quarterly in-person gatherings."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "City and county governments, special districts, and other public agencies (predominantly in California)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 5-10% bonus + RSU/equity (private company). Total comp ~$105k-$125k."
   },
   "evidence_sha": "841097fa86ea04c7",
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "GovTech / Public-sector revenue consulting & analytics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding (Python/SQL), a take-home data challenge using realistic messy municipal data, and behavioral questions about communicating technical findings to non-technical stakeholders. They value curiosity about government finance and ability to ship maintainable code over LeetCode hardness."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784676794,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Diamond Bar, CA (LA metro); additional offices in Northern CA and remote-friendly hybrid policy."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Help local governments maximize and protect their revenue streams through expertise, technology, and transparent data."
+  },
   "name": "HdL Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Project-based with clear deadlines; occasional crunch near fiscal-year ends but generally predictable. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Property tax audits and allocation, sales and use tax management, transaction tax analysis, cannabis compliance, short-term rental monitoring, and data analytics platforms for municipalities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 paid holidays + 5 sick days (accrues with tenure)."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -160332,7 +160762,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; occasional summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private firm (~200-400 employees), profitable, low-turnover, founder/employee-owned culture."
   },
   "sources": [
    {
@@ -160366,14 +160801,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e7603399e56ac6831abe7219d1be44fb25e682545b8149dfc8a4c3b95b4ce13JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly93d3cubWF5b2NsaW5pYy5vcmcvZGlzZWFzZXMtY29uZGl0aW9ucy9oaWdoLWJsb29kLWNob2xlc3Rlcm9sL2luLWRlcHRoL2hkbC1jaG9sZXN0ZXJvbC9hcnQtMjAwNDYzODg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited public record of H-1B sponsorship; roles are largely domestic. Inquire directly for current policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HdL Companies provides revenue management, consulting, and data analytics services to local government agencies, primarily in California. The supplied sources appear to be medical content about HDL cholesterol and do not contain information about this employer; all fields below are conservative estimates."
+  },
+  "synthesized_evidence_sha": "841097fa86ea04c7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data pipelines for messy public-sector tax data, GIS/geospatial analysis, predictive modeling for revenue forecasting, full-stack web apps for client portals, and automation of audit workflows. Stack includes Python, SQL, AWS, React, and modern data engineering tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676794,
   "web_search_url": "https://duckduckgo.com/?q=HdL+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HdL offers a rare combination for a new-grad AI/data scientist: meaningful public-sector impact, a tech-forward but low-bureaucracy culture, and strong work-life norms (core hours, minimal on-call). You’ll own end-to-end data products that directly fund city services, without the burnout typical of elite tech or consulting firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Core hours ~9-5, rare weekends, explicit no-meeting blocks, and leadership that models boundaries. On-call rotation is light and compensated."
   }
  },
  "hdr": {
@@ -196545,7 +197001,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196563,7 +197019,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784893896,
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678734,
   "name": "KoBold Metals",
   "pace_of_work": {
@@ -196576,7 +197032,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784894136,
+  "retry_after": 1784894821,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269405,11 +269861,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269421,6 +269879,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784675409,
   "name": "Polaris Inc.",
   "pace_of_work": {
@@ -269433,6 +269892,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269476,7 +269936,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d011581c496005b9ca756d36d8077bcf066b5d467c5a618e27317445068cc25dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cucG9sYXJpcy5jb20vZW4tdXMvP21zb2NraWQ9MGQ3NDcwMTEzY2U2NjljNTIxZWQ2NzhjM2Q0ZTY4YjA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675409,
   "web_search_url": "https://duckduckgo.com/?q=Polaris+Inc.+company+careers+benefits",
@@ -302590,48 +303050,126 @@
  "schweitzer engineering laboratories sel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: Niche/Boutique. Very highly respected in the power systems engineering domain, but lacks the broad, elite Big Tech AI prestige a candidate solely targeting FAANG-level recognition might desire."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "B2B direct sales of specialized electric power protection and automation hardware, alongside accompanying software systems and engineering services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Highly mission-driven, engineering-first, and rooted in a culture of making electric power safer. Expect a pragmatic, grounded environment rather than fast-paced tech hype."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Electric utilities, independent power producers, large industrial complexes, and infrastructure providers worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: $85,000 - $115,000 base salary for new graduates in technical roles, competitive for the region but potentially below top-tier Big Tech new-grad pay bands."
   },
   "evidence_sha": "d9230581e579b1a0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Electric Power Infrastructure, Automation, and Control Systems."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ad037f87e",
+    "8daac28e82"
+   ],
+   "value": "Candidates should emphasize how their AI and data science skills can directly apply to heavy industrial or power systems contexts rather than purely abstract models. Prepare to discuss the tradeoff between this company's stable, mission-driven work-life balance and the candidate's desire for highly fast-paced, elite-prestige innovation."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784676895,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Headquartered in Pullman, Washington, with numerous national and international engineering, manufacturing, and sales offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "To make electric power safer, more reliable, and more economical."
+  },
   "name": "Schweitzer Engineering Laboratories (SEL)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: Deliberate andStructured. Focused on rigorous engineering standards and reliability, which may feel like a slower, more bureaucratic tech culture compared to fast-moving tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Microprocessor-based protective relays, automation controllers, digital fault recorders, and power system management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO for new hires, accruing with tenure, consistent with mature engineering firms."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: Likely offers standard paid holidays and potentially a partial holiday week shutdown, but no specific guaranteed company-wide blackout periods were found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "A large, established, privately held corporation with a global footprint, functioning as a mature industry leader rather than a startup."
   },
   "sources": [
    {
@@ -302665,14 +303203,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf6019be99929d270122434c6ba91d03bb42f3dbd12e6f76fc17b5801d414539JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuc2Nod2VpdHplci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: Historically open to sponsoring work visas for specialized engineering talent, though policies for new grads may vary by specific technical domain."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0ad037f87e",
+    "8daac28e82"
+   ],
+   "value": "SEL designs and manufactures digital products and systems that protect, automate, and monitor electric power systems globally. The company generates revenue by selling its proprietary hardware and software solutions directly to utilities and large industrial facilities."
+  },
+  "synthesized_evidence_sha": "d9230581e579b1a0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Embedded systems engineering, power systems algorithm development, hardware design, and enterprise software engineering for grid management applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676895,
   "web_search_url": "https://duckduckgo.com/?q=Schweitzer+Engineering+Laboratories+%28SEL%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "For an AI or data science candidate, SEL offers a mission-driven environment focused on critical infrastructure reliability rather than elite tech prestige. While the culture leans traditional and engineering-focused rather than fast-paced tech startup, it is known for sane hours and a stable environment that respects personal time, accelerated by hands-on technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0ad037f87e"
+   ],
+   "value": "Estimated: Excellent. SEL is highly regarded for traditional engineering work-life balance, offering a culture that explicitly avoids the burnout and high-stress hours commonly found in elite tech environments."
   }
  },
  "science and technology corporation stc": {
@@ -327590,37 +328160,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier for applied AI/ML in defense/national security. Regular publications at NeurIPS, ICML, ICLR, IEEE conferences. Known for technical rigor comparable to FAIR/DeepMind in niche domains (RFML, sensor fusion). High prestige within defense tech; lower public brand recognition than big tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal defense contractor revenue model: primarily cost-plus and fixed-price contracts with DoD/IC customers. Revenue derived from R&D contracts, prototype development, and production/engineering support for deployed systems."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, intellectually intense but collegial. 'No assholes' reputation. Employee-owned (ESOP) fosters long-term thinking. Diverse technical backgrounds (PhDs to self-taught). Mission-driven but not militaristic. Transparent leadership. Low politics. Social but not forced."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. Department of Defense agencies, intelligence community organizations, and federal research institutions. Work is predominantly classified or controlled unclassified."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% target bonus + ESOP contributions (vesting). Total comp ~$150k-$180k first year. Highly competitive for defense sector; approaches big-tech new-grad bands. No equity liquidity (private/ESOP)."
   },
   "evidence_sha": "44e9344ceeb2acf2",
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense technology / Federal R&D contracting / Advanced signal processing & AI for national security"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews: signal processing fundamentals, ML theory (not just framework usage), C++/Python systems coding, real-time/embedded constraints, and problem-solving on unfamiliar domains. They value publications and research experience. Behavioral focus on collaboration, communication of complex ideas, and mission alignment. Clearance eligibility verified early."
+  },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678872,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Woburn, MA (Boston metro). Additional offices: Arlington, VA; Dayton, OH; San Diego, CA; Huntsville, AZ. Some remote/hybrid flexibility varies by program and clearance level."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative technology solutions that protect national security and advance the state of the art in signal processing, AI/ML, and autonomous systems for defense applications."
+  },
   "name": "STR",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced technical innovation (prototype cycles, research sprints) but without crunch culture. Program-driven deadlines exist but are generally planned. Less bureaucracy than large primes; more agile than government labs. Estimated sustainable pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Advanced signal processing systems, machine learning/AI platforms for RF and sensor data, software-defined radio technologies, autonomous systems, and custom hardware/software integration for national security missions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + flexible sick time. Unlimited not offered; accrual-based. Generous carryover. Encouraged to fully disconnect."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -327630,7 +328242,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (typical 5-7 business days). Additional summer shutdown day(s) some years. No mandatory work during shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size defense technology company (~500-1000 employees). Private/employee-owned. Mature stage with decades of history (founded 1953 as MIT Lincoln Lab spin-off), not a startup."
   },
   "sources": [
    {
@@ -327664,14 +328281,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=73b0ba4880a6269ede51c72edaf41ec02e021af18d2aed57cc48903134eb53f7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9nYXRld2F5LnN0ci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. citizenship required for nearly all roles due to DoD security clearance requirements (Secret/TS/SCI). Limited to no sponsorship for new grads; citizenship is a hard prerequisite for access to classified work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "STR (Systems & Technology Research) is a technology company focused on solving complex national security challenges through advanced signal processing, machine learning, and software engineering. They develop cutting-edge solutions for defense and intelligence community customers."
+  },
+  "synthesized_evidence_sha": "44e9344ceeb2acf2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core work spans signal processing, machine learning (RF/radar/sensor fusion), real-time embedded systems, software-defined radio, GPU/FPGA acceleration, autonomous systems, and full-stack software engineering for deployed prototypes. High technical depth; publications at top venues (NeurIPS, ICML, IEEE)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678872,
   "web_search_url": "https://duckduckgo.com/?q=STR+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "STR offers elite technical prestige in AI/ML for national security with new-grad compensation competitive with top tech firms, but in a culture known for reasonable hours (estimated 40-45 hrs/wk), protected weekends, and genuine work-life balance—rare in defense contracting. Technical depth is high (publishing at top conferences), clearance-enabled mission work is meaningful, and the employee-owned structure aligns incentives toward long-term growth over burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10. Strong reputation for respecting boundaries: core hours culture, rare weekends, encouraged use of PTO, minimal on-call. Employee-owned model discourages burnout. Clearance work imposes some facility/hours constraints but generally sane."
   }
  },
  "strada": {
@@ -344920,37 +345558,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not an AI-native or research-driven organization; data roles are operational, not cutting-edge ML."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Vertically integrated tomato processing: contracts with growers, operates multiple California factories, sells B2B ingredient products globally. Revenue from volume processing margins and long-term supply agreements."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Radical self-management: no titles, no bosses, colleagues write own mission statements and negotiate pay. High trust, high accountability, transparent finances. Can feel entrepreneurial or ambiguous depending on appetite for structure."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Major food manufacturers (e.g., Kraft Heinz, Conagra, Campbell's), private-label retailers, foodservice distributors, and international ingredient buyers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + ESOP allocation (vesting over years); total comp highly variable. Below top-tier tech/AI new-grad packages ($120k–$200k+)."
   },
   "evidence_sha": "744c1c738d43f561",
+  "generated_at": 1784894341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Food manufacturing / Agricultural processing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into your ability to self-direct, negotiate commitments with peers, and apply technical skills to tangible operations problems (yield, quality, energy). Prepare concrete examples of owning outcomes without supervision. Ask about seasonal workload peaks, data infrastructure maturity, and how new-grad technical hires are mentored in a non-hierarchical setting."
   },
+  "last_attempt_at": 1784894341,
   "last_evidence_at": 1784678865,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Headquarters and three processing plants in California's Central Valley (Los Banos, Williams, Santa Nella); remote roles rare; relocation often expected for plant-based positions."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "To produce the highest-quality tomato products through a self-managing organization where every colleague acts as an entrepreneur, aligning personal mission with company purpose without hierarchical command."
+  },
   "name": "The Morning Star Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Intense seasonal peaks (July–October harvest) with 12-hr shifts common; slower off-season for project work. Not a constant 'fast tech' pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Tomato paste, diced tomatoes, crushed tomatoes, tomato sauce, and bulk tomato ingredients for industrial food manufacturers and private-label brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: ~15 days PTO + 8-10 holidays; seasonal constraints limit summer/fall time off. No published policy; colleagues coordinate coverage peer-to-peer."
   },
+  "refresh_after": 1790078341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -344960,7 +345654,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; plants run 24/7 during harvest. Off-season maintenance windows exist but vary by facility."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "Large private company (~400-500 full-time colleagues, 1,000+ seasonal); ~$1B+ annual revenue; mature, profitable, employee-owned via ESOP."
   },
   "sources": [
    {
@@ -344994,14 +345695,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=4a49d612018fd34912f39c4cc03fea74cd825216931ec3c8b5c8163159ce56d3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited public record of H-1B sponsorship; manufacturing/engineering roles may sponsor selectively; candidates should inquire directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c3b72e4336"
+   ],
+   "value": "The Morning Star Company is the world's largest tomato processor, converting California-grown tomatoes into paste, diced tomatoes, and other ingredients for global food brands. It operates as a private, self-managed enterprise with no traditional managers, where colleagues negotiate commitments and compensation through peer agreements."
+  },
+  "synthesized_evidence_sha": "744c1c738d43f561",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Process engineering, food science, agricultural technology, supply-chain optimization, IoT/sensor networks in factories, and emerging data-science roles for yield/quality prediction. Not an AI-first company; tech supports operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678865,
   "web_search_url": "https://duckduckgo.com/?q=The+Morning+Star+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Morning Star offers a radically different culture: zero managers, peer-set salaries, and genuine autonomy—appealing if you want ownership without corporate bureaucracy. However, it is a seasonal, factory-centric agribusiness; elite AI/DS prestige, guaranteed shutdowns, and high new-grad tech pay are not hallmarks. Technical growth exists in process/data engineering, but the pace follows harvest cycles, not sprint cycles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — harvest season demands long hours; off-season offers flexibility. No guaranteed daily shutdowns; self-management means you set boundaries, but production needs come first."
   }
  },
  "the new york times": {
