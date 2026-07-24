@@ -1700,7 +1700,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1718,7 +1718,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784892192,
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784672492,
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
@@ -1731,7 +1731,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784893152,
+  "retry_after": 1784895175,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31888,52 +31888,123 @@
  "asml": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Elite: Utilizing AI and computational data science to enable sub-nanometer microchip production secures top-tier prestige and high impact within the tech ecosystem."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Capital equipment manufacturing and direct hardware sales to semiconductor foundries, supplemented by long-term service contracts, software licensing, and upgrades."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: Mission-driven, deeply collaborative, and highly methodical. Emphasizes engineering excellence over rapid tech-bro culture, prioritizing sustainable long-term development."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "The world's top semiconductor foundries and chip manufacturers, including TSMC, Samsung, and Intel."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary for US new-grad AI/Data Science roles, aligning with top-tier hardware industry compensation."
   },
   "evidence_sha": "9a62158e3b70841d",
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Semiconductor Equipment Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probes whether the candidate prioritizes mission-driven scale and WLB over a fast-paced software environment, expecting adaptation to a hardware-paced, highly structured release cycle rather than an agile, quick-iteration tech culture. Assesses learning drive for complex physics-adjacent AI domains and fit for long-term career growth without the immediate toxic burnout of big tech."
   },
-  "last_attempt_at": 1784893038,
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784678639,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Headquartered in Veldhoven, Netherlands, with major R&D and manufacturing hubs in the US (Connecticut, California), Taiwan, South Korea, and other global offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "To develop and manufacture the technology that enables the production of smaller, faster, and more energy-efficient microchips, fueling global technological progress."
+  },
   "name": "ASML",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: Moderate to slow. As a hardware monopoly facing deep engineering complexities, the culture avoids rapid software deployment cycles and favors rigorous, structured processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "EUV and DUV lithography systems, computational lithography software, and metrology tools used in semiconductor manufacturing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: 25-30 days of paid time off annually for standard roles, standard for European-rooted tech firms."
   },
-  "retry_after": 1784893158,
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: Guaranteed holiday shutdowns (typically around Christmas/New Year) apply broadly to standard operations, though critical global teams may have modified schedules."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Established public multinational corporation and the undisputed monopoly leader in EUV lithography equipment."
   },
   "sources": [
    {
@@ -31967,14 +32038,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=701b893e61404c70700fe4cff60515cc509e707910f1b3afcda6002e99890bebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cuYXNtbC5jb20vZW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Extended global footprint implies a high likelihood of visa sponsorship for specialized technical roles, particularly in semiconductor and AI domains."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "ASML is a leading semiconductor equipment manufacturer that designs and produces extreme ultraviolet (EUV) lithography machines. They make money by selling these highly complex systems to major global chipmakers."
+  },
+  "synthesized_evidence_sha": "9a62158e3b70841d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Computational lithography algorithms, machine learning for process control and defect detection, optical data analysis, hardware-software integration, and high-performance computing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678639,
   "web_search_url": "https://duckduckgo.com/?q=ASML+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "ASML offers elite technical prestige in the AI hardware supply chain and competitive new-grad pay, but the deep hardware focus and European engineering roots foster a cautious, slow-paced bureaucracy rather than a fast, innovative tech culture. The mission-driven environment respects work-life balance through sane hours, though guaranteed shutdowns typical of European offices may not apply universally to all global tech teams."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d97c9e1b34"
+   ],
+   "value": "Estimated: Excellent. The company respects personal time with deliberate project timelines and sane hours, mitigating toxic burnout."
   }
  },
  "aspen skiing company": {
@@ -68594,11 +68694,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68610,6 +68712,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784675134,
   "name": "Catapult Federal Services",
   "pace_of_work": {
@@ -68622,6 +68725,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68665,7 +68769,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=12c3eb081b422e288c29c18945306432397999985250b305ecb3844273fc2a58JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuY2F0YXB1bHQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Catapult+Federal+Services+company+careers+benefits",
@@ -75941,38 +76045,104 @@
  "cintas": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Low; tech and data work is a cost-center supporting core logistics and operations rather than a prestige-driven, cutting-edge product."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "B2B service and rental model; generates recurring revenue by providing uniform and facility services on contract, supplemented by direct sales of safety and compliance products."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Collaborative and respectful, emphasizing merit-based hiring and employee growth."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Broad range of B2B clients across various industries requiring uniform programs, facility maintenance, and workplace safety compliance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary, aligned with regional Ohio/Lower Cost of Living standards and traditional industry tech pay rather than top-tier tech company bands."
   },
   "evidence_sha": "7824ef483289ff68",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Business Services / Uniform and Facility Management."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Probe deeply into the specific tech stack, pace of delivery, and autonomy of the data science team. Ask how quickly new models are pushed to production and how much time is spent on legacy system maintenance versus innovative AI work to ensure it meets your fast-paced, elite tech culture requirement."
+  },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784591794,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Headquartered in Cincinnati, Ohio, with numerous distribution centers, laundries, and service hubs across North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "To build a culture of collaboration and respect, helping employees find opportunities to grow and succeed through merit-based hiring."
+  },
   "name": "Cintas",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Estimated: Steady and process-driven. As a mature enterprise, expect methodical execution and standard corporate pace rather than a fast-paced, high-agility startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Corporate identity uniforms, facility services (mats, mops, towels, restroom supplies), first aid and safety products, fire extinguisher services, and compliance training."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO per year, typical for large corporate employers in this sector."
   },
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75981,8 +76151,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Estimated: No known guaranteed tech-wide company shutdowns (e.g., week-long holiday closures are typically standard only for major holidays)."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Large, established publicly traded corporation; highly mature andscaled enterprise."
   },
   "sources": [
    {
@@ -76016,14 +76195,43 @@
     "url": "https://careers.cintas.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Cintas is a publicly traded corporation that provides specialized corporate identity uniform services and workplace safety products. They make money by renting, cleaning, and maintaining uniforms and facility service items (like mats and towels) for businesses on recurring B2B contracts, as well as selling first aid and safety supplies and services."
+  },
+  "synthesized_evidence_sha": "7824ef483289ff68",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Likely focuses on enterprise IT, logistics, route optimization, and data infrastructure to support a massive supply chain and uniform cleaning operations. AI/data science work probably centers on operational efficiency and internal tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784591794,
   "web_search_url": "https://duckduckgo.com/?q=Cintas+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f0349b4dbd"
+   ],
+   "value": "Given your priority for elite new-grad pay, prestigious tech culture, and cutting-edge AI work, Cintas may be a significant mismatch. As a traditional corporate uniform and logistics company, its tech environment is likely more bureaucratic and focused on internal operations rather than innovative, fast-paced, mission-driven data science. Work-life balance is likely sane, but it lacks the high-growth and fast-innovation profile you are looking for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9455db2401"
+   ],
+   "value": "Estimated: Good/Low burnout. Traditional enterprises generally offer sane working hours compared to high-growth tech, though demanding periods may occur around supply chain disruptions."
   }
  },
  "circana": {
@@ -140996,11 +141204,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141012,6 +141222,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784678641,
   "name": "GDIT",
   "pace_of_work": {
@@ -141024,6 +141235,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141077,7 +141289,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=GDIT+company+careers+benefits",
@@ -150798,37 +151010,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: No evidence of AI/data science presence or prestige tier. Sources describe a TV series, not a technical organization."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "TV licensing, advertising, and streaming distribution (per typical network series). No technology business model (SaaS, consulting, products) is evidenced for 'Gotham Technology Group'."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: No culture signals for a technology workplace. Sources only reflect a creative entertainment production."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "TV audience / Fox network viewers. No enterprise, B2B, or consumer technology customer base is described for a 'Gotham Technology Group' in the sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data available for new-grad tech roles at this entity."
   },
   "evidence_sha": "dd34e42f10b8d1c5",
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "Television / Entertainment (per sources). Not classified as a technology industry employer in the provided documents."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cannot assess technical interview process, AI/DS prestige, pace, WLB, or culture for 'Gotham Technology Group' from available sources. Ask directly: team structure, recent ML/AI projects, deployment frequency, on-call expectations, PTO policy, shutdown practices, and new-grad compensation bands."
   },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784678641,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "acc606c7dc"
+   ],
+   "value": "Estimated: No headquarters or office locations found for a 'Gotham Technology Group'. TV series filmed in New York City."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "acc606c7dc"
+   ],
+   "value": "Entertainment storytelling (Batman prequel). No corporate mission statement for a technology firm is present in the sources."
+  },
   "name": "Gotham Technology Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown for a tech team. TV production pace (seasonal, deadline-driven) does not translate to software/AI engineering velocity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "Sources describe a television drama series (Gotham), not technology products. No tech product portfolio is documented for 'Gotham Technology Group' in the provided materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy found for 'Gotham Technology Group'."
   },
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150838,7 +151112,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown / not a verifiable tech employer in public records. Sources describe a completed TV production (100 episodes, 5 seasons), not an operating technology company."
   },
   "sources": [
    {
@@ -150872,14 +151151,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9c3a1d80e0696bd85b16970ff52bd13b6e96cd82dd8babfb448de1245e2da5b2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR290aGFtXyhUVl9zZXJpZXMp&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No H-1B or visa sponsorship data available for a technology employer by this name."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "The provided sources reference 'Gotham' as a Batman-origin TV series (2014-2019) aired on Fox, not a technology company named Gotham Technology Group. No verifiable public information about a company by that exact name was found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "dd34e42f10b8d1c5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical stack, AI/ML, or data science work documented. Sources only cover TV production (writing, acting, filming)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=Gotham+Technology+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "532b469260",
+    "5a7d18ddb0",
+    "acc606c7dc"
+   ],
+   "value": "The supplied sources do not substantiate the existence of a 'Gotham Technology Group' as a top-tier AI/data science employer. Candidates seeking elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong WLB, and guaranteed shutdowns should verify the company's actual presence, tech team, and policies independently — the public records provided point only to a concluded TV show."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: No data. TV crew schedules are often irregular; no tech-team WLB policies documented."
   }
  },
  "gotion": {
@@ -209237,11 +209545,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209253,6 +209563,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784675226,
   "name": "Magna International",
   "pace_of_work": {
@@ -209265,6 +209576,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209308,7 +209620,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=0e13dc0bf3d290ac92d3cc8867b4930f8f72f772dc45f8aff5754caa8625e18bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cubWFnbmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=Magna+International+company+careers+benefits",
@@ -233506,37 +233818,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected applied AI/ML in safety-critical domain, but not a primary AI research lab or top-tier new-grad destination for pure ML prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-share-capital corporation funded entirely by customer service charges (enroute, terminal, daily/annual fees) — no government appropriations; surplus reinvested in infrastructure, technology, and training."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, safety-obsessed, collaborative, low-politics; unionized workforce (CATCA, Unifor) alongside non-union technical staff; strong sense of public service; slow to adopt fads but stable."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commercial airlines, business aviation, general aviation, military flights, and foreign carriers operating in Canadian airspace; revenue comes from service charges levied on aircraft operators based on weight and distance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD 70k–85k base + defined-benefit pension + comprehensive benefits; total comp ~CAD 85k–100k — competitive for Canadian public-sector-adjacent engineering, below FAANG/US Big Tech."
   },
   "evidence_sha": "1ff6bae466e65132",
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "a3e9a65bdb"
+   ],
+   "value": "Air Navigation Services / Aviation Infrastructure"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect safety-culture questions, system-reliability scenarios, and practical ML/system-design problems tied to operational constraints (latency, explainability, regulatory approval); less emphasis on LeetCode, more on engineering judgment in regulated environments."
+  },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784678641,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Ottawa; area control centres in Vancouver, Edmonton, Winnipeg, Toronto, Montréal, Moncton, Gander; towers and flight service stations at major airports nationwide; technical centres in Ottawa and other sites."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide safe, efficient, and environmentally responsible air navigation services for the benefit of all users of Canadian airspace."
+  },
   "name": "NAV CANADA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate and deliberate — safety certification cycles, regulatory review, and 24/7 operational stability dictate measured releases; not a 'move fast' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Air traffic control (enroute, terminal, oceanic), flight service stations, flight information centres, weather and aeronautical information services, airport advisory services, and related aviation technology systems (e.g., CAATS, EXCDS, MAESTRO)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 10–12 statutory holidays + sick/personal leave; generous by Canadian standards, accrues with tenure."
   },
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233546,7 +233902,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24–Jan 2) plus summer flexibility; operational roles rotate coverage but professional staff get true disconnect periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature organization (~4,000–5,000 employees) operating as a monopoly provider of civil ANS in Canada since 1996; stable, regulated, capital-intensive."
   },
   "sources": [
    {
@@ -233580,14 +233941,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=6263c5753194f21b53aec77baf7063548eba9b2c073aadb6d6a5ee7edbcac394JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cubmF2LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly hires foreign nationals for specialized engineering and IT roles; supports work-permit pathways (Global Talent Stream, LMIA-exempt where applicable) and permanent residence; not a high-volume campus sponsor for new-grad AI/DS specifically."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a3e9a65bdb"
+   ],
+   "value": "NAV CANADA is Canada's private, non-share-capital corporation that owns and operates the country's civil air navigation service. It provides air traffic control, flight information, weather briefings, aeronautical information, and airport advisory services across Canadian airspace."
+  },
+  "synthesized_evidence_sha": "1ff6bae466e65132",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Safety-critical systems engineering, real-time ATC automation (CAATS/EXCDS), surveillance/radar integration, flight data processing, weather modeling, aeronautical data management, and growing ML/AI applications for traffic flow prediction, conflict detection, and operational analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=NAV+CANADA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare blend of mission-critical national infrastructure, genuine work-life balance (unionized/non-union professional roles with predictable shifts), and growing AI/ML opportunities in a safety-first culture — without the burnout typical of Big Tech or defense contractors."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — structured hours/shift schedules for ops-adjacent roles; professional/technical roles typically 37.5–40 hrs/wk with strong overtime protections; genuine shutdown culture."
   }
  },
  "navistar inc": {
@@ -261387,41 +261771,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Traditional retail companies typically lack the elite engineering prestige and high compensation found in top tech firms."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a"
+   ],
+   "value": "Omnichannel retail combining e-commerce with physical stores, augmented by an ecosystem of paid service offerings like veterinary care and grooming."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven around pet health, but feels corporate rather than innovative. Standard large-company culture focusing heavily on retail operations and customer service."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a"
+   ],
+   "value": "Pet owners and animal lovers seeking comprehensive care, supplies, and wellness services for companion animals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $115,000 base salary for new grad tech and data roles, generally below top-tier tech company benchmarks."
   },
   "evidence_sha": "455abab6dbbeb6ba",
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "f1ba9082f6"
+   ],
+   "value": "Retail, Pet Services, and Health & Wellness"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether Petco's digital transformation and data science roles are self-directed enough to escape corporate red tape. Ask about team tech stacks, AI project deployment timelines, and how rigid the hours are to see if it matches your work-life balance needs."
   },
-  "last_attempt_at": 1784892638,
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784678370,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f1ba9082f6"
+   ],
+   "value": "Headquartered in San Antonio, TX with a major hub in San Diego, CA, alongside thousands of retail and service locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "f1ba9082f6"
+   ],
+   "value": "To improve the lives of pets, pet owners, and Petco employees through comprehensive health and wellness solutions."
+  },
   "name": "Petco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. As a large retail enterprise, tech culture is often hampered by corporate bureaucracy and legacy system constraints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a"
+   ],
+   "value": "Pet food, toys, and supplies, as well as pet health and wellness services such as veterinary care, grooming, and training."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard annual paid time off for new corporate hires, excluding holidays."
   },
-  "retry_after": 1784893118,
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -261431,7 +261870,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, typical of traditional retail."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a"
+   ],
+   "value": "Large, publicly traded retail and service corporation operating over 1,500 store locations."
   },
   "sources": [
    {
@@ -261465,14 +261912,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=414980d8652a41516744c89021e54a0dca514a0239f7806ba117e8d86cc34b76JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly93d3cucGV0Y28uY29tLz9tc29ja2lkPTNkZTlmMWFhNDM2MzY2MzIzZDBhZTYzNzQyOGI2N2Iy&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a",
+    "f1ba9082f6"
+   ],
+   "value": "Petco is a health and wellness company focused on improving the lives of pets, pet owners, and the company's own employees. It makes money by selling pet food, supplies, and services both online and through its extensive network of physical retail stores."
+  },
+  "synthesized_evidence_sha": "455abab6dbbeb6ba",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae38db0ebc",
+    "36ef2fff3a"
+   ],
+   "value": "Building and maintaining omnichannel e-commerce platforms, digital customer experiences, inventory management systems, and internal technology infrastructures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678370,
   "web_search_url": "https://duckduckgo.com/?q=Petco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an established retail corporation, Petco offers stability and solid benefits, but its scale introduces slower bureaucracy and a more traditional tech culture. New grads seeking a fast-paced, elite AI environment with top-tier pay may find the slower pace and non-tech-native culture misaligned with their innovation goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Enterprise retail typically maintains predictable 40-hour work weeks and offers comprehensive benefits, though not necessarily the cutting-edge perks of tech-first companies."
   }
  },
  "peterson technologies": {
@@ -303925,41 +304400,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's business model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   },
   "evidence_sha": "63a8c5fe54d44299",
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess the company's technical learning trajectory and whether the culture aligns with your need to avoid slow bureaucracy. Clarify the expectations around hours to ensure they respect work-life balance and guaranteed shutdowns. Evaluate if the compensation meets your high new-grad pay expectations while verifying the role provides the elite prestige and fast-paced innovation you desire."
   },
-  "last_attempt_at": 1784893038,
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784675034,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's locations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's mission."
+  },
   "name": "Sev1Tech LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   },
-  "retry_after": 1784893158,
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303969,7 +304506,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's size or stage."
   },
   "sources": [
    {
@@ -304003,14 +304549,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=57bf3bd664569cadbbac327251c18e56d4cac5930a848ec17fd3e6e7eb7e195aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cubmV3c3RhdGVzbWFuLmNvbS9jdWx0dXJlL2ZpbG0vMjAyNS8xMS9waWxsaW9uLWlzLXRoZS1maWxtLWZpZnR5LXNoYWRlcy1mYWlsZWQtdG8tYmU&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's sponsorship context."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Based on the provided sources, which were inaccessible and only yielded auto-redirect messages, no factual information can be extracted regarding what Sev1Tech LLC does or how it makes money."
+  },
+  "synthesized_evidence_sha": "63a8c5fe54d44299",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a1ad04d43f",
+    "3202d5e54a",
+    "b356c79669"
+   ],
+   "value": "Unknown; provided sources did not contain readable content about Sev1Tech LLC's technical work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675034,
   "web_search_url": "https://duckduckgo.com/?q=Sev1Tech+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You are seeking a top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. You want a mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. Ultimately, you are looking for a place that accelerates technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown due to lack of readable sources."
   }
  },
  "sewerai": {
@@ -318220,41 +318799,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Strong applied ML/AI opportunities in federal mission contexts (e.g., defense analytics, intel), but not a primary AI research lab. Prestige comes from clearance level and mission impact, not publications."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Professional services / federal contracting model: fixed-price and time-and-materials contracts for custom software development, modernization, and cloud services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Mission-driven, disciplined, low-bureaucracy, veteran-led. Values competence, reliability, and work-life boundaries. Not 'move fast and break things' — 'move fast and secure things.'"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "U.S. federal agencies (likely DoD, VA, DHS given veteran-owned status) and commercial enterprise clients seeking secure, compliant software delivery."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Estimated: $90,000–$100,000 base + modest bonus (5–10%) + full benefits. Aligns with posted Associate Java Developer range for 1+ yr exp; new grad likely at lower band."
   },
   "evidence_sha": "bf9bd6c4d7392e02",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784893038,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Federal IT consulting / Secure software development / GovTech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Expect deep Java/Spring Boot questions, REST API design, security/compliance awareness (RMF, STIGs), and behavioral questions on mission alignment and veteran-owned culture. Demonstrate ability to deliver in regulated, fast-moving environments without heroics."
+  },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784674530,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Headquartered in Arlington, VA; hybrid work model with on-site expectations for cleared federal work."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Provide elite, secure digital solutions while honoring a veteran-owned, service-first culture that values mission impact over bureaucracy."
+  },
   "name": "Sprezzatura",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — sprint-based delivery for federal contracts with hard deadlines, but culture explicitly rejects burnout. Estimated 40–45 hr weeks with protected weekends."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Custom digital solutions including secure web applications, API development, cloud migration, and DevOps automation; primarily Java/Spring Boot stacks for government and enterprise customers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 federal holidays + potential military leave. No public policy; typical for SDVOSB federal contractors."
   },
-  "retry_after": 1784893158,
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -318264,7 +318899,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (Dec 24–Jan 1) and summer long-weekend Fridays. Culture enforces offline time; no expectation of Slack/email after hours."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Small business (SBA-certified SDVOSB); likely 50–200 employees based on typical veteran-owned federal contractor scale."
   },
   "sources": [
    {
@@ -318308,14 +318950,41 @@
     "url": "https://jobright.ai/jobs/info/6a57442be9b77f668bd6745f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unclear; as a federal contractor requiring clearances, sponsorship is unlikely for entry-level roles. No public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Sprezzatura is a mission-driven, Service-Disabled Veteran-Owned Small Business that delivers secure, scalable digital solutions for federal and commercial clients, with a focus on modern software development and cloud-native platforms."
+  },
+  "synthesized_evidence_sha": "bf9bd6c4d7392e02",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Full-stack Java/Spring Boot development, REST/SOAP APIs, cloud-native deployment (AWS/Azure GovCloud), CI/CD pipelines, security compliance (RMF, FedRAMP), and legacy modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674530,
   "web_search_url": "https://duckduckgo.com/?q=Sprezzatura+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1fa51cba"
+   ],
+   "value": "Offers a rare blend of elite federal mission work, veteran-owned culture that respects work-life balance, and competitive new-grad pay ($90–100K) without the burnout typical of defense contractors or big tech. Fast-paced innovation on modern stacks (Java, cloud, DevOps) with guaranteed shutdowns and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Veteran-owned culture emphasizes mission-first but with military-style discipline: work hard, shut down on time. Guaranteed shutdowns, no on-call for junior roles, hybrid flexibility."
   }
  },
  "spry methods": {
@@ -327461,47 +328130,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no evidence of AI/data science presence or reputation in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No business model information for a company named Supper found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information for a company named Supper in provided sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No customer information for a company named Supper found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data for a company named Supper in provided sources."
   },
   "evidence_sha": "e50e0289c418c7ae",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893255,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "Unknown; sources do not identify a company named Supper in any industry."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784893255,
   "last_evidence_at": 1784672016,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No office locations for a company named Supper found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No mission statement for a company named Supper found in the provided sources."
+  },
   "name": "Supper",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no work pace information for a company named Supper in provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No product information for a company named Supper found in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy for a company named Supper in provided sources."
   },
+  "refresh_after": 1790077255,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no guaranteed shutdown policy for a company named Supper in provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no headcount or funding data for a company named Supper in the provided sources."
   },
   "sources": [
    {
@@ -327535,14 +328279,47 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No visa sponsorship information for a company named Supper found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "The supplied sources do not contain information about a company named Supper; they reference the word 'supper' (the meal) and an unrelated Rippling recruiting product. No verifiable company description is available from these sources."
+  },
+  "synthesized_evidence_sha": "e50e0289c418c7ae",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8791e74cff",
+    "2f63dfbe2b",
+    "bfda074b6a"
+   ],
+   "value": "No technical stack or engineering details for a company named Supper found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672016,
   "web_search_url": "https://duckduckgo.com/?q=Supper+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data for a company named Supper in provided sources."
   }
  },
  "susquehanna international group": {
