@@ -15092,7 +15092,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15110,7 +15110,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784877161,
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784678212,
   "name": "Amazon.com Services LLC - A57",
   "pace_of_work": {
@@ -15123,7 +15123,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784877281,
+  "retry_after": 1784877554,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25038,11 +25038,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25054,6 +25056,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784678472,
   "name": "Argonne National Laboratory",
   "pace_of_work": {
@@ -25066,6 +25069,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877434,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25109,7 +25113,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a114c1deecf4ec90066d2947faad1da2f5fd10e0d920d0982f6f332095c2eef1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cucXVvcmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=Argonne+National+Laboratory+company+careers+benefits",
@@ -78661,37 +78665,110 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High/Tier 2. The company is situated at the critical intersection of AI compute and energy abundance, but as a hardware/infra-first player, it may not offer the same algorithm-centric elite coding prestige as top-tier ML research labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "Monetizes by supplying high-demand AI compute infrastructure and executing corporate transactions to support the build-out of AI data centers."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "Mission-driven, high-performing, and collaborative. They look for individuals who 'believe in each other' and seek 'meaningful work' to advance global AI strategies."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "Organizations advancing AI strategies that require large-scale, power-intensive AI compute capacity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base. Reflects competitive tech compensation in the Denver market for AI infrastructure scale-ups."
   },
   "evidence_sha": "3db3d6983dfbd98e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "AI Infrastructure and Data Centers"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "Be prepared to discuss how you thrive in high-performing teams that execute at high velocity, aligning with your desire for a fast-paced tech culture. Expect to explore how you can contribute to the mission while balancing ambitious career growth with sustainable performance to maintain positive work-life balance and avoid burnout."
+  },
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784788843,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fdbe994247",
+    "6da48b5a98"
+   ],
+   "value": "Headquartered in Denver, Colorado (onsite operations confirmed). Expanding data center campus presence includes Texas."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "To accelerate the abundance of energy and intelligence."
+  },
   "name": "Crusoe",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "Estimated: Very Fast. The company explicitly seeks candidates who execute high-velocity corporate transactions and operate within a high-performing team culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "AI data center campuses and associated compute infrastructure designed to remove power as a bottleneck for AI workloads."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Precise policy not public, but typical for funded AI scale-ups in Denver."
   },
+  "refresh_after": 1790061314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78701,7 +78778,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed. While you prioritize guaranteed shutdowns to prevent burnout, their high-velocity operating model suggests no formal company-wide shutdowns are currently in place."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "High-growth infrastructure company actively executing high-velocity corporate transactions and expanding operations (e.g., hiring supply chain and legal roles)."
   },
   "sources": [
    {
@@ -78765,14 +78851,49 @@
     "url": "https://jobs.ashbyhq.com/Crusoe/21805444-d139-44eb-8359-2b04628acb51"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "Crusoe is an AI infrastructure company that solves the power bottleneck for AI compute by aligning clean energy with high-performance data centers. It generates revenue by providing customers and partners the infrastructure needed to advance their AI strategies."
+  },
+  "synthesized_evidence_sha": "3db3d6983dfbd98e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184",
+    "fdbe994247"
+   ],
+   "value": "Building and operating high-performance AI data centers; managing the supply chain for massive compute infrastructure; executing high-velocity corporate and financial transactions to fund expansion."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788843,
   "web_search_url": "https://duckduckgo.com/?q=Crusoe+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "This role directly addresses your priority for a fast, innovative culture by emphasizing high-velocity execution in the rapidly scaling AI infrastructure sector. The company's mission-driven ethos promises meaningful technical learning and career growth without the slow bureaucracy you want to avoid."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "205a883034",
+    "ba6ab01184"
+   ],
+   "value": "Estimated: Moderate. The high-velocity and high-performing culture suggests a demanding environment, though a company-wide mission emphasis on sustainability indicates an attempt to avoid purely toxic metrics."
   }
  },
  "cs contract solutions": {
@@ -108092,11 +108213,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108108,6 +108231,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784678214,
   "name": "Figure AI",
   "pace_of_work": {
@@ -108120,6 +108244,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877434,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108173,7 +108298,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Figure+AI+company+careers+benefits",
@@ -164875,37 +165000,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot operates on a subscription-based business model, charging users a recurring fee for access to its library of legal documents and templates."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and technical, with a focus on using data and scalable tools to improve efficiency and profitability."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot serves individuals and small to medium-sized businesses seeking affordable, accessible legal document solutions without the need for direct attorney consultation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $80,000 CAD (based on Edmonton, Alberta market rates for digital marketing and data analytics new grad roles)."
   },
   "evidence_sha": "b68789167f764a3a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "Legal Technology (LegalTech)"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "Candidates should highlight their experience with ad platform automation, campaign optimization, and scalable tool development. Emphasize examples of data-informed decision-making and how previous roles balanced rapid innovation with sustainable work practices to avoid burnout."
+  },
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784757617,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot offers hybrid work options from its Edmonton, Alberta office, providing flexibility for employees."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepout's mission is to make legal services accessible and affordable for everyone by providing easy-to-use, customizable legal documents online."
+  },
   "name": "LawDepot",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, with a strong focus on automation and rapid optimization of digital marketing campaigns."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot offers a wide range of legal document templates, including wills, power of attorney, lease agreements, and business formation documents. The platform also provides tools for digital marketing optimization, such as ad platform scripts and campaign management integrations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech PTO (15-20 days annually). Exact policy not public."
   },
+  "refresh_after": 1790061314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164915,7 +165103,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread mention of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot is a digital company with a growing team, as evidenced by its hybrid work options and focus on digital marketing and analytics roles."
   },
   "sources": [
    {
@@ -164969,14 +165165,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=abc674f5dcbae6f200fdf0c743245a9a21943e5d688fe42f33cc5d64c92ef727JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cubGF3ZGVwb3QuY29tLz9tc29ja2lkPTE3OWJhNzdmNzMxOTZlOGEzN2EwYjBlMTcyN2I2ZjVh&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "The job postings do not specify whether LawDepot provides visa sponsorship for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepet is an online platform that provides customizable legal documents and templates for individuals and businesses. The company makes money through a subscription model, allowing users to create, download, and update legal forms for a recurring fee."
+  },
+  "synthesized_evidence_sha": "b68789167f764a3a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "Technical roles at Law Depot involve developing and optimizing ad platform scripts, building scalable marketing tools, and analyzing campaign performance data to drive data-informed decisions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679093,
   "web_search_url": "https://duckduckgo.com/?q=LawDepot+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "LawDepot's AI and data science roles offer a fast-paced, innovative tech culture focused on automation and data-driven marketing, which aligns with the candidate's priority for a dynamic, non-bureaucratic environment. The company's emphasis on 37.5-hour work weeks suggests a commitment to work-life balance, while its mission to democratize legal services provides a meaningful, mission-driven context."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "74e05717b1",
+    "17cbe3bd9e"
+   ],
+   "value": "Estimated: Good. The company explicitly mandates a 37.5-hour work week for full-time roles, indicating a respect for standard hours and boundaries."
   }
  },
  "lawrence livermore national laboratory llnl": {
@@ -198047,38 +198279,103 @@
  "newsbreak": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Estimated: Tier 2–3 (unicorn-stage, ML-focused, but not at the level of FAANG or top-tier AI labs). Prestige comes from unicorn status and end-to-end ML pipeline ownership rather than industry-wide recognition as an AI research leader."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Monetizes through local advertising and by connecting consumers with local businesses and services via an intelligent local search and marketplace platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Estimated: Mission-driven around local content intelligence, with an emphasis on high growth and building infrastructure. Culture likely values technical ownership and rapid innovation, though specific culture data is limited in provided sources."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Consumers seeking local news and local business/service information, as well as local businesses looking to connect with nearby consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Estimated: $140,000–$180,000 base salary plus equity, typical for unicorn-stage ML roles in high-cost U.S. tech markets. Total comp could push higher with equity at a growth company. Verify current ranges."
   },
   "evidence_sha": "13904cc40b4893bc",
+  "generated_at": 1784877314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "994f88d558",
+    "78ce63e8b9"
+   ],
+   "value": "Digital media, local news, and local search/marketplace, powered by machine learning and content intelligence infrastructure."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the high-growth, unicorn-stage culture translates to sustainable hours or burnout risk; ask about on-call rotation, weekend work expectations, and how often ML shipping deadlines slip. Evaluate the technical learning pace—does the team support experimentation and mentorship, or is it purely delivery-driven? Clarify new-grad compensation (base, equity refresh, sign-on) against your top-tier benchmark, and confirm shutdowns or hard PTO policies exist rather than vague 'unlimited' PT"
   },
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784761140,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9fc8318b27",
+    "78ce63e8b9"
+   ],
+   "value": "Company website and app presence indicate U.S.-focused operations; specific office locations not detailed in provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Building the infrastructure layer for content intelligence, connecting consumers with relevant local information, businesses, and services."
+  },
   "name": "NewsBreak",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Estimated: Fast-paced and high-growth, consistent with unicorn-stage trajectory. Expect a culture prioritizing quick iteration and ML model shipping, but specific pace details not publicly documented."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "78ce63e8b9",
+    "994f88d558"
+   ],
+   "value": "A local news app providing breaking news, local alerts, and intelligent systems that connect consumers with local information, businesses, and services. Also includes ML-driven local search and marketplace infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO typical for U.S. tech companies at this stage. Exact policy not publicly documented; confirm with recruiter."
   },
+  "refresh_after": 1790061314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198088,7 +198385,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found in public sources. Ask specifically whether holiday or end-of-year shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Unicorn-stage (reached unicorn status in 2021) private company on a high-growth trajectory."
   },
   "sources": [
    {
@@ -198132,14 +198436,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5e564bc74ec01832919127aead70f08f8ff2fd8420ffd7db5d00b688ac01b3d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cubmV3c2JyZWFrLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "No specific sponsorship details found in provided sources; candidate should verify directly with recruiting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "NewsBreak is a local news app and content platform that connects consumers with relevant local information, businesses, and services. The company makes money by building the infrastructure layer for content intelligence and local marketplaces, monetizing through local advertising and business service connections. It reached unicorn status in 2021 and continues on a high-growth trajectory."
+  },
+  "synthesized_evidence_sha": "13904cc40b4893bc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Building and optimizing end-to-end ML pipelines from data preparation and model training to online serving and monitoring; building intelligent systems for local search and marketplace applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678474,
   "web_search_url": "https://duckduckgo.com/?q=NewsBreak+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "If you want a top-tier AI role with unicorn-level prestige and high new-grad pay, NewsBreak offers end-to-end ML pipeline ownership at a fast-growth tech company. The ML work is mission-driven—connecting people to local information—and promises accelerated technical learning in an innovative culture rather than slow bureaucracy. Work-life balance and sane hours are important to you, so you should probe shutdown policies, on-call expectations, and actual team pace during interviews."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "994f88d558"
+   ],
+   "value": "Estimated: Moderate to Good. Public data does not indicate a toxic environment, but unicorn-stage growth can pressure hours. Verify team-specific expectations during interviews."
   }
  },
  "newyork presbyterian hospital": {
@@ -306114,42 +306447,102 @@
  "vanderbilt health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: High prestige in the specialized subfield of biomedical AI and clinical informatics, though lacking the brand recognition of FAANG for general tech."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Academic medical center generating revenue through patient care services, funded medical research, and educational tuition."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: Mission-driven and highly collaborative, prioritizing patient outcomes, scientific discovery, and academic publication over aggressive product launches."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Patients in the Southeast region requiring healthcare services, as well as research sponsors, medical trainees, and academic partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: $90,000 - $115,000 for new graduate AI/Data Science roles in an academic medical setting."
   },
   "evidence_sha": "657228dd7d65c2fb",
+  "generated_at": 1784877314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Healthcare and Academic Medicine."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe the specific data science group: ask how the team balances clinical validation with rapid algorithmic iteration, how strict compliance affects sprint velocity, and whether new grads are expected to work on-call."
   },
-  "last_attempt_at": 1784877161,
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784680811,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Headquartered in Nashville, Tennessee with hospital facilities and regional clinics across the region."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "To advance health and wellness through exceptional patient care, groundbreaking research, and the education of future healthcare leaders."
+  },
   "name": "Vanderbilt Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: Slower, highly regulated academic environment that favors rigorous peer review over fast-paced tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Acute and outpatient clinical care services, specialized medical treatments, surgical procedures, electronic health records (EHR), and clinical research/trials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: 20 to 25 days of PTO annually, plus university-observed holidays."
   },
-  "retry_after": 1784877281,
+  "refresh_after": 1790061314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306158,8 +306551,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: Likely operates continuously given its status as a hospital, but administrative and tech staff may observe university holiday closures."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Mature, large-scale academic medical center employing tens of thousands of clinical and administrative staff."
   },
   "sources": [
    {
@@ -306193,14 +306595,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=50594e3879280d5a13e80b5c153e42a8ae63c6b9cf12fde94e9e98c93446c1d9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cudmFuZGVyYmlsdC5lZHUv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04fa6dbbed",
+    "8f1cabc5d1"
+   ],
+   "value": "As an arm of a major research university, the organization is likely to support H-1B visa sponsoring for specialized hard-to-fill roles, though specific policies vary by department."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "04fa6dbbed",
+    "8f1cabc5d1"
+   ],
+   "value": "Vanderbilt Health is the academic medical center and healthcare system operated by Vanderbilt University, providing comprehensive patient care, advanced medical research, and clinical education. As a non-profit academic institution, it is sustained through patient revenue, federal and private research grants, and university funding."
+  },
+  "synthesized_evidence_sha": "657228dd7d65c2fb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Development of clinical informatics pipelines, biomedical data processing pipelines, machine learning models for diagnostics, and electronic health record integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=Vanderbilt+Health+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Vanderbilt Health aligns strongly with a mission-driven profile via its life-saving clinical research, providing high technical prestige in biomedical data science without the toxic burnout culture of big tech."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8f1cabc5d1"
+   ],
+   "value": "Estimated: Generally strong work-life balance compared to private big tech, with a culture rooted in academia."
   }
  },
  "vanguard": {
@@ -311282,7 +311715,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -311300,7 +311733,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784877161,
+  "last_attempt_at": 1784877314,
   "last_evidence_at": 1784678104,
   "name": "VITAS Healthcare",
   "pace_of_work": {
@@ -311313,7 +311746,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784877281,
+  "retry_after": 1784877554,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
