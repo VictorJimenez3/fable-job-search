@@ -14600,48 +14600,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "396cb216c7",
+    "5d97aaebcd"
    ],
-   "value": "Top-tier (AWS is a leader in cloud-based AI/ML services, with significant industry recognition and market share.)"
+   "value": "Top-tier (AWS is a leader in AI/ML services and attracts top talent for AI/DS roles)."
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "AWS operates on a subscription-based model, charging customers per usage for cloud resources, with additional fees for premium services like AI tools and managed databases."
+   "value": "AWS operates on a subscription-based model, charging customers for cloud resources used, with pricing tiers based on usage volume."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
-    "772d527fc0"
+    "0396f0b224",
+    "1d97b2401f"
    ],
-   "value": "Innovative and customer-focused, with a strong engineering culture emphasizing speed and scalability, though some teams may have high-pressure environments."
+   "value": "Innovative, customer-focused, and collaborative, with an emphasis on technical excellence and continuous learning."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "AWS serves businesses of all sizes, from startups to large enterprises, including Fortune 500 companies and government agencies."
+   "value": "AWS serves enterprises, startups, governments, and developers across industries, including major companies like Netflix, Airbnb, and NASA."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $140,000 - $180,000 base + bonuses"
+   "source_ids": [
+    "396cb216c7"
+   ],
+   "value": "Estimated: $160,000-$190,000 base salary plus bonus for new grad AI/DS roles (conservative estimate based on public data and role postings)."
   },
   "evidence_sha": "9b5355394361885c",
-  "generated_at": 1784826845,
+  "generated_at": 1784871572,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -14651,63 +14650,63 @@
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "Cloud Computing & AI/ML Services"
+   "value": "Cloud computing and enterprise software."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
+    "5d97aaebcd",
     "772d527fc0"
    ],
-   "value": "AWS prioritizes technical skills in coding, system design, and problem-solving, with a focus on real-world applications in cloud infrastructure and AI/ML development."
+   "value": "Technical problem-solving, system design, and hands-on experience with cloud infrastructure and programming languages like Python and Linux."
   },
-  "last_attempt_at": 1784826845,
-  "last_evidence_at": 1784807865,
+  "last_attempt_at": 1784871572,
+  "last_evidence_at": 1784871255,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
-    "772d527fc0"
+    "0396f0b224",
+    "1d97b2401f"
    ],
-   "value": "AWS has global offices, with major hubs in Seattle, Washington; Palo Alto, California; and international locations like London and Tokyo."
+   "value": "AWS has global data centers, with major hubs in the US (Virginia, Oregon), Europe (Ireland, Germany), and Asia (Singapore, Japan)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "To be the most customer-centric company on Earth, providing reliable, scalable, and secure cloud infrastructure and services."
+   "value": "To be the world's most customer-centric company by providing reliable, scalable, and secure cloud computing services."
   },
   "name": "Amazon Web Services (AWS)",
   "pace_of_work": {
    "confidence": "high",
    "source_ids": [
     "396cb216c7",
-    "772d527fc0"
+    "5d97aaebcd"
    ],
-   "value": "Fast-paced, with rapid iteration on cloud services and AI/ML tools to meet customer demands."
+   "value": "Fast-paced with a focus on innovation and rapid iteration, typical of tech industry leaders."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "AWS offers a wide range of cloud services including EC2 (virtual servers), S3 (storage), Lambda (serverless computing), and AI/ML services like SageMaker."
+   "value": "AWS offers a wide range of cloud services including EC2 (compute), S3 (storage), RDS (databases), Lambda (serverless), and AI/ML tools like SageMaker."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days"
+   "source_ids": [
+    "396cb216c7"
+   ],
+   "value": "Estimated: 15-20 days of PTO annually for new grads (conservative estimate based on industry standards and AWS's public policies)."
   },
-  "refresh_after": 1790010845,
+  "refresh_after": 1790055572,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14715,15 +14714,16 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "396cb216c7"
+   ],
+   "value": "Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's) and potentially other company-wide shutdowns for reflection or planning."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
-    "772d527fc0"
+    "396cb216c7"
    ],
    "value": "AWS is a massive division of Amazon, with over 10,000 employees and a dominant market share in cloud computing."
   },
@@ -14794,26 +14794,25 @@
    "source_ids": [
     "396cb216c7"
    ],
-   "value": "AWS offers H1B sponsorship for eligible roles, as noted in job postings, though it is not guaranteed for every position."
+   "value": "AWS provides H1B sponsorship for eligible roles, as noted in job postings for software engineering positions."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "0396f0b224",
-    "1d97b2401f",
-    "d58b56a7e6"
+    "1d97b2401f"
    ],
-   "value": "Amazon Web Services (AWS) is the cloud computing arm of Amazon, providing scalable infrastructure and services to businesses globally. It generates revenue by charging customers for cloud resources like storage, computing, and AI tools."
+   "value": "AWS is the cloud computing arm of Amazon, providing scalable infrastructure and services to businesses globally. It generates revenue by charging customers for compute, storage, and other cloud services on a pay-as-you-go basis."
   },
-  "synthesized_evidence_sha": "7820b3a0ce44eda8",
+  "synthesized_evidence_sha": "9b5355394361885c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
-    "772d527fc0"
+    "772d527fc0",
+    "5d97aaebcd"
    ],
-   "value": "Engineers work on building and maintaining cloud infrastructure, developing APIs, optimizing performance, and supporting AI/ML services like SageMaker."
+   "value": "Engineers build and maintain cloud infrastructure, develop scalable services, and optimize systems for performance and security."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583361,
@@ -14822,9 +14821,10 @@
    "confidence": "high",
    "source_ids": [
     "396cb216c7",
+    "5d97aaebcd",
     "772d527fc0"
    ],
-   "value": "For a new grad aiming for an elite AI/data science role, AWS offers prestige, high compensation, and a fast-paced tech environment with strong learning opportunities, avoiding the slow bureaucracy of traditional enterprises."
+   "value": "AWS is a top-tier AI and data science employer with high prestige, offering competitive pay for new grads and a fast-paced, innovative culture that accelerates technical growth without excessive burnout."
   },
   "wlb_rating": {
    "confidence": "medium",
@@ -14832,7 +14832,7 @@
     "396cb216c7",
     "772d527fc0"
    ],
-   "value": "Moderate (AWS is known for some work-life balance challenges, but offers programs to support it, though not as strong as some startups.)"
+   "value": "Moderate to High (AWS is known for respecting work-life balance with structured shutdowns, though some teams may have higher intensity)."
   }
  },
  "amazon web services inc": {
@@ -40867,13 +40867,11 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
-  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40885,7 +40883,6 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784850885,
   "name": "Blueprint Technologies",
   "pace_of_work": {
@@ -40898,7 +40895,6 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784871557,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40952,7 +40948,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f172bcbbe5a98f62b515924b1a1983bbeae8e2686ca4e2a10af2df77968e595eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9ibHVlcHJpbnRwcmVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "status": "evidence_only",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Blueprint+Technologies+company+careers+benefits",
@@ -64343,7 +64339,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_evidence_at": 1784842446,
+  "last_evidence_at": 1784871255,
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
@@ -73180,7 +73176,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784678568,
+  "last_evidence_at": 1784871255,
   "name": "CrowdGen by Appen",
   "pace_of_work": {
    "confidence": "estimated",
@@ -80664,7 +80660,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784672493,
+  "last_evidence_at": 1784871524,
   "name": "Deloitte",
   "pace_of_work": {
    "confidence": "estimated",
@@ -88005,11 +88001,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88021,7 +88019,8 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784676688,
+  "last_attempt_at": 1784871572,
+  "last_evidence_at": 1784871524,
   "name": "ECS",
   "pace_of_work": {
    "confidence": "estimated",
@@ -88033,6 +88032,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784871692,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88096,7 +88096,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f524767ab29697be3b1d6d2891127471f0eb4c5537473d6eff801f10e97294d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cuZWNzbGltaXRlZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
   "web_search_url": "https://duckduckgo.com/?q=ECS+company+careers+benefits",
@@ -102552,12 +102552,92 @@
   }
  },
  "flash group": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "0f103201212abcd4",
-  "last_evidence_at": 1784871255,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k\u2013$125k base (estimated; US market)"
+  },
+  "evidence_sha": "f24c2adfe7c5855d",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784871574,
   "name": "Flash Group",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15\u201320 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c68d84ba33",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871574,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5d2c726066cbfa632687557521c1d96b12fbc92a983808ef8334ee302a246fc4JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly93d3cuYWRvYmUuY29tL3Byb2R1Y3RzL2ZsYXNocGxheWVyL2VuZC1vZi1saWZlLWFsdGVybmF0aXZlLmh0bWw_bXNvY2tpZD0xMzk5M2U4MzEzNWE2OTgxMDc5NDI5MjMxMmViNjhjZQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7f2a0300f5",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871574,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a2786363764aa5ff255ea6f36c09731335537d06cf3e3557f2d50a88e7f469d3JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWRvYmVfRmxhc2g&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6f838a526e",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871574,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e23b13439aef46b9e307e772e2b994997b2204ce81e631ae7e9d2eeea5bf5951JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGhlX0ZsYXNoXygyMDE0X1RWX3Nlcmllcyk&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871574,
+    "title": "Discovery source for Flash Group",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "d00206baae2b5e00",
     "excerpt": "Jobright.ai Software Engineer I (DM) jobs in United States Overview Company Apply on Employer Site APPLY NOW Flash Group \u00b7 8 hours ago Software Engineer I (DM) Linthicum Heights, MD Full-time Onsite Entry Level $140K/yr - $152K/yr 1+ years exp Flash Group is a company that values technical ambition and contributions. Your Score - Top Applicants Must-Have Skills for This Role Pig PySpark Analytics Development Optimize my Resume Get Referral Via linkedIn FREE 3\u00d7 Higher Response via Email Outreach M Muhammad Hasan H. Software Engineer I (DM) @ Flash Group",
@@ -102569,7 +102649,15 @@
     "url": "https://jobright.ai/jobs/info/6a62c6711ed5b0056a938a38?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784871574,
+  "web_search_url": "https://duckduckgo.com/?q=Flash+Group+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "flashpoint": {
   "ai_ds_prestige_tier": {
@@ -163727,7 +163815,7 @@
    "value": "Expect technical screens on Python/R statistical modeling, data pipeline design, and scenario-based problem solving for intelligence use cases. Behavioral questions will probe clearance eligibility, teamwork in regulated environments, and handling ambiguity. Prepare for questions on data ethics, model explainability, and experience with classified or sensitive data."
   },
   "last_attempt_at": 1784749117,
-  "last_evidence_at": 1784711509,
+  "last_evidence_at": 1784871255,
   "locations": {
    "confidence": "medium",
    "source_ids": [
@@ -169471,7 +169559,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784674903,
+  "last_evidence_at": 1784871524,
   "name": "McKinsey & Company",
   "pace_of_work": {
    "confidence": "estimated",
@@ -249465,7 +249553,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784768504,
+  "last_evidence_at": 1784871255,
   "name": "Specter",
   "pace_of_work": {
    "confidence": "estimated",
@@ -276339,46 +276427,51 @@
  },
  "twitch": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: High. Operating at massive scale under Amazon's umbrella, AI and data science roles at Twitch are highly regarded, particularly for recommendation systems and real-time data applications."
+   "confidence": "high",
+   "source_ids": [
+    "92ebcabdd2",
+    "a23e7a37d1"
+   ],
+   "value": "Top-tier (Amazon-owned, global scale, innovative projects in AI/ML for live streaming)."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a23e7a37d1"
+    "a23e7a37d1",
+    "dbc3b9e88f"
    ],
-   "value": "Generates revenue through advertising, channel subscriptions, and virtual goods (Bits), while operating under Amazon's comprehensive benefits and corporate structure."
+   "value": "Revenue comes from subscriptions (Twitch Prime, subscriptions to streamers), advertising (pre-roll, mid-roll ads), and partnerships with brands and streamers."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "dd6e0a9242"
+    "a23e7a37d1"
    ],
-   "value": "Inclusive, community-focused, and remote-friendly, with heavy emphasis on gaming and creator culture. Provides career growth opportunities via coaching, mentorship, and workshops, guided by Leadership Principles."
+   "value": "Collaborative, mission-driven, and innovative with a focus on community and real-time engagement."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Content creators (streamers) and viewers who participate in live interactive communities across various categories like gaming and entertainment."
+   "value": "Twitch serves global audiences of streamers and viewers, with communities built around diverse interests like gaming, music, and sports."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f"
+    "dbc3b9e88f",
+    "92ebcabdd2"
    ],
-   "value": "Estimated: $160,000 - $190,000 total compensation (base + equity) pegged to Amazon's new-grad SDE compensation bands."
+   "value": "Estimated: $140,000\u2013$160,000 base + bonuses (based on Amazon's typical new-grad tech pay scale)."
   },
   "evidence_sha": "e44385eb9997a539",
-  "generated_at": 1784861700,
+  "generated_at": 1784871572,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
@@ -276386,51 +276479,57 @@
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Technology / Live Streaming Media."
+   "value": "Live streaming, entertainment, and social media technology."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe the specific team's tech stack, on-call expectations, and sprint pacing to confirm the role provides rapid learning and sane hours without toxic burnout, rather than intense Corporate Amazon-style ops work."
-  },
-  "last_attempt_at": 1784861700,
-  "last_evidence_at": 1784858995,
-  "locations": {
-   "confidence": "high",
    "source_ids": [
-    "dd6e0a9242"
+    "92ebcabdd2",
+    "a23e7a37d1"
    ],
-   "value": "Remote-friendly workplace with various office locations globally."
+   "value": "Technical skills in AI/ML, data engineering, and problem-solving; emphasis on collaboration, innovation, and alignment with Twitch's mission-driven culture."
+  },
+  "last_attempt_at": 1784871572,
+  "last_evidence_at": 1784871524,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "92ebcabdd2"
+   ],
+   "value": "Headquartered in San Francisco, California, with offices globally (specific locations not detailed in sources)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "dd6e0a9242"
+    "a23e7a37d1"
    ],
-   "value": "To empower live communities on the internet."
+   "value": "To be the world's most engaging live streaming platform, fostering communities around shared interests through interactive and real-time content."
   },
   "name": "Twitch",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced due to the real-time nature of live streaming, though pace and bureaucracy may vary depending on integration with Amazon corporate processes."
+   "confidence": "high",
+   "source_ids": [
+    "a23e7a37d1"
+   ],
+   "value": "Fast-paced, innovative tech culture with a focus on real-time systems and rapid iteration."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Live streaming platform, broadcasting tools for creators, and community engagement features."
+   "value": "Twitch is the world's largest live streaming service, hosting live video streams across gaming, entertainment, music, sports, cooking, and more."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "a23e7a37d1"
+    "dbc3b9e88f"
    ],
-   "value": "Estimated: 15-20 days of paid time off, structured under Amazon's comprehensive corporate benefits package."
+   "value": "Estimated: 15 days (based on Amazon's standard for similar roles)."
   },
-  "refresh_after": 1790045700,
+  "refresh_after": 1790055572,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -276439,16 +276538,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in public research; typical downtime relies on standard PTO and standard holidays."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's) and possibly for team retreats or system maintenance."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f",
-    "a23e7a37d1"
+    "92ebcabdd2",
+    "dbc3b9e88f"
    ],
-   "value": "Mature subsidiary of Amazon (discovered via new-grad positions boards with scaled engineering teams)."
+   "value": "1001-5000 employees, publicly traded under Amazon (since 2014) with a global presence."
   },
   "sources": [
    {
@@ -276515,38 +276616,47 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "5c2698b782"
+    "92ebcabdd2",
+    "dbc3b9e88f"
    ],
-   "value": "As a subsidiary of Amazon, Twitch provides immigration support including F-1 STEM OPT, H-1B, E-3, O-1, and TN visa sponsorship."
+   "value": "Twitch has a track record of offering H1B sponsorships, though not guaranteed for every role. It is a sub-organization of Amazon."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a23e7a37d1"
+    "92ebcabdd2",
+    "a23e7a37d1",
+    "dbc3b9e88f"
    ],
-   "value": "Twitch is the world's biggest live streaming service, hosting global communities built around gaming, entertainment, music, sports, and cooking. As a subsidiary of Amazon, it makes money through subscriptions, advertising, and Bits (a virtual currency), sharing revenue with its streamers."
+   "value": "Twitch is a live streaming platform focused on gaming, entertainment, and community-driven content, owned by Amazon since 2014. It generates revenue primarily through subscriptions, ads, and partnerships with streamers and brands."
   },
-  "synthesized_evidence_sha": "447e33ebbd4cafd5",
+  "synthesized_evidence_sha": "e44385eb9997a539",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "92ebcabdd2",
     "a23e7a37d1"
    ],
-   "value": "Engineering work involves building and scaling real-time discovery systems and platform features for massive concurrent global audiences."
+   "value": "Engineers work on scalable live streaming infrastructure, real-time data processing, content recommendation systems, and tools for streamers and viewers."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675359,
   "web_search_url": "https://duckduckgo.com/?q=Twitch+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers the elite new-grad pay and high technical prestige of Amazon alongside a remote-friendly culture, but candidates must aggressively screen teams during interviews to ensure they land in an innovative, fast-paced environment rather than a slow, high-burnout bureaucracy."
+   "source_ids": [
+    "92ebcabdd2",
+    "a23e7a37d1"
+   ],
+   "value": "Twitch offers a top-tier AI/data science role with elite prestige, competitive new-grad pay, and a fast-paced tech culture. It prioritizes work-life balance through sane hours and guaranteed shutdowns, avoiding burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. Remote-friendly policies exist, but the live operations nature of the platform can occasionally require high on-call demands."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "High (guaranteed shutdowns, sane hours, mental health support, and work-life balance initiatives)."
   }
  },
  "twitch interactive inc": {
@@ -295056,7 +295166,7 @@
    "value": "Ask about full-time conversion paths and internal tooling to ensure the role accelerates your data science career rather than stalling in contract work."
   },
   "last_attempt_at": 1784869244,
-  "last_evidence_at": 1784737480,
+  "last_evidence_at": 1784871255,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -295103,7 +295213,6 @@
    "value": "Estimated: Not applicable for freelancers/contractors; full-time corporate PTO details are not public."
   },
   "refresh_after": 1790053244,
-  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
