@@ -14512,7 +14512,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14530,7 +14530,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784873814,
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784678102,
   "name": "Amazon.com Services LLC",
   "pace_of_work": {
@@ -14543,7 +14543,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784873934,
+  "retry_after": 1784874216,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20264,52 +20264,130 @@
  "anysphere cursor": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated top-tier. Cursor is one of the most hyped and popular AI coding tools, offering high visibility in the AI community and prestige among new grads."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5530e8bda8"
+   ],
+   "value": "Cursor operates a B2B/B2C SaaS model with a rapidly growing Enterprise sales pipeline. They offer subscriptions to their AI coding editor, with a specialized finance and GTM strategy focusing on headcount planning and consolidated enterprise P&L."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5530e8bda8",
+    "42e35a6bab"
+   ],
+   "value": "Estimated: Intense, engineering-driven, and highly innovative. Culture focuses on rapid scaling and productivity frameworks, typical of a fast-moving, newly wealthy startup."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5530e8bda8",
+    "42e35a6bab"
+   ],
+   "value": "Software developers and Enterprise businesses looking to accelerate their coding productivity and operational efficiency."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated: $180k - $250k total compensation (base + equity), reflecting elite AI startup market rates for top new-grad talent."
   },
   "evidence_sha": "02506ae46ac7e714",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784873976,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873814,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "AI Software / Developer Tools"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "42e35a6bab",
+    "5530e8bda8"
+   ],
+   "value": "Given your priority for sane hours and fast innovation, probe heavily for their current burnout metrics and startup pressure. Ask about their technical roadmap and how they balance shipping fast with engineering rigor. Inquire about career progression for new grads to ensure they actually respect personal time."
+  },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784678096,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated remote-first with potential hubs based on leadership."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Not explicitly found in research, but publicly emphasized as a mission to build the future of software development."
+  },
   "name": "Anysphere (Cursor)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5530e8bda8"
+   ],
+   "value": "Estimated: Extremely fast. The company is growing rapidly with ambitious goals to accelerate enterprise sales growth, typical for a hyper-growth AI startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "The company builds Cursor, a popular AI-powered code editor and coding tool designed to enhance software development workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO for an early-stage tech startup."
   },
-  "retry_after": 1784873934,
+  "refresh_after": 1790057976,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5530e8bda8",
+    "42e35a6bab"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns typical for fast-growing early stage startups; time off is usually flexible but individual."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "42e35a6bab",
+    "5530e8bda8"
+   ],
+   "value": "Estimated rapid-growth startup. Public company pages suggest they are a newly minted billion-dollar company (bilionaire founders) with ambitious enterprise expansion goals."
   },
   "sources": [
    {
@@ -20353,14 +20431,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=3dbd20a7236b84d071f86394fb55b65ba2847edf25dd92ce32608b3fe0466bd9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3Vyc29yXyhjb21wYW55KQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Not specified in research, but rapidly scaling startups of this tier generally offer visa sponsorships for top AI/talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5530e8bda8"
+   ],
+   "value": "Anysphere (Cursor) is the company behind the Cursor AI code editor, a tool built to make software development vastly more productive. The company makes money by rapidly growing its user base and pushing aggressive Enterprise sales growth, offering subscriptions to businesses and developers."
+  },
+  "synthesized_evidence_sha": "02506ae46ac7e714",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "42e35a6bab"
+   ],
+   "value": "Estimated elite AI/ML implementation, data infrastructure, and advanced software engineering focused on natural language processing, code generation, and real-time developer workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678096,
   "web_search_url": "https://duckduckgo.com/?q=Anysphere+%28Cursor%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "42e35a6bab",
+    "5530e8bda8"
+   ],
+   "value": "Matches your desire for top-tier AI prestige and high new-grad pay. The fast-paced environment places you at the bleeding edge of the AI coding tool revolution, accelerating technical learning. However, its rapid growth and aggressive enterprise goals may threaten your work-life balance expectations compared to slower, more structured companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5530e8bda8",
+    "42e35a6bab"
+   ],
+   "value": "Estimated: Moderate to Low. In hyper-growth startup environments pushing aggressive enterprise sales and competing in the top-tier AI space, hours can be long and demanding."
   }
  },
  "anything": {
@@ -34283,37 +34394,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — Top-tier financial services AI lab with global scale, dedicated research groups, and production ML across risk, fraud, trading, and customer domains; regularly publishes at NeurIPS/ICML/KDD and contributes to open source."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Generates revenue primarily through net interest income (lending minus deposit costs), fees and commissions from banking services, investment banking advisory and underwriting fees, and wealth management fees. Balances diversified universal banking model across geographies and segments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, regulated, and increasingly engineering-led. Strong diversity networks, emphasis on ethics and conduct, and large-scale transformation agenda create purpose. Hierarchy exists but flattened in tech hubs. Collaboration across functions (risk, legal, product) is mandatory. Culture varies: London/NY more intense; Glasgow/Pune often cited as better WLB."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual consumers, small businesses, large corporations, institutional investors, and governments across the UK, US, Europe, Africa, and Asia."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: UK London — £50k–£60k base + £5k–£10k sign-on + bonus (10–20%); US NYC — $110k–$130k base + $10k–$20k sign-on + bonus (10–25%); India Pune — ₹25L–₹35L base. Total comp competitive with top tech but below FAANG peak."
   },
   "evidence_sha": "252eb431f38eb31d",
+  "generated_at": 1784873976,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical screening: Python/SQL proficiency, ML fundamentals (supervised/unsupervised, model evaluation), data structures/algorithms, and applied case studies using financial data (risk, fraud, customer analytics). Strong emphasis on model explainability, fairness, regulatory compliance, and productionizing ML. Behavioral interviews assess alignment with Barclays values (Respect, Integrity, Service, Excellence, Stewardship) and ability to navigate stakeholder complexity in a regu"
+  },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784678329,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in London, UK. Major offices in London (Canary Wharf), Glasgow, New York, New Jersey, Pune (India), Mumbai, Singapore, Hong Kong, Frankfurt, and other financial centers globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people achieve their ambitions in the right way by providing financial products and services that support economic growth and financial wellbeing."
+  },
   "name": "Barclays",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast — Varies significantly by division. Investment banking and quant strat teams operate at high intensity with tight deadlines. Digital banking, data platforms, and AI research teams follow agile sprints with more sustainable cadence. Regulatory change programs can create periodic crunches."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail banking (current accounts, mortgages, credit cards, savings), corporate banking (lending, treasury, trade finance), investment banking (advisory, capital markets, equities, fixed income), wealth management, and digital banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–28 days annual leave + 8 UK/US public holidays (varies by country); plus wellbeing days and volunteer leave. UK standard 25 days + bank holidays; US typically 15–20 days + holidays."
   },
+  "refresh_after": 1790057976,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34323,7 +34476,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe quiet periods over Christmas/New Year (e.g., 2–3 days between holidays). 'Dynamic Working' encourages disconnecting but not enforced shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (LSE: BARC, NYSE: BCS); ~80,000+ employees globally; £1.5T+ balance sheet assets; mature, systemically important financial institution."
   },
   "sources": [
    {
@@ -34357,14 +34515,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=9228c6d8216b9567c2cbe4dc96288320e00cc04c969c45a715fd6ddda3112378JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cubXlydGxlYmVhY2guY29tL3RoaW5ncy10by1kby9mb3Ita2lkcy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors work visas (e.g., H-1B in US, Skilled Worker in UK) for technology and quantitative roles across global hubs; dedicated immigration support for new grads and experienced hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Barclays is a British multinational universal bank headquartered in London, providing retail banking, corporate banking, investment banking, and wealth management services globally. It operates across personal banking, corporate banking, and investment banking divisions serving millions of customers worldwide."
+  },
+  "synthesized_evidence_sha": "252eb431f38eb31d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy investment in cloud migration, data platforms, AI/ML for risk modeling and personalization, digital banking apps, payments infrastructure, cybersecurity, and regulatory technology. Runs significant engineering hubs in London, Glasgow, New York, Pune, and other locations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678329,
   "web_search_url": "https://duckduckgo.com/?q=Barclays+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Barclays offers a top-tier AI/data science platform within a globally systemically important bank, combining elite prestige and competitive new-grad compensation with a growing engineering-first culture. Its scale provides access to massive, unique financial datasets and real-world ML deployment at enterprise level. While banking culture historically meant long hours, recent investments in digital transformation, agile ways of working, and explicit well-being policies aim to improve WLB — though"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Improving due to flexible working policies, 'Dynamic Working' framework, and well-being initiatives. Still, client-facing and regulatory-driven roles may require extended hours. Protected 'right to disconnect' norms emerging but not universal."
   }
  },
  "barnes noble education inc": {
@@ -149823,49 +150002,133 @@
  },
  "jpmorgan chase": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 Banking AI/Quant, recognized for massive-scale data infrastructure, elite compensation, and high-impact fraud/trading ML applications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b8a1368da3",
+    "17f8c9c419"
+   ],
+   "value": "Diversified financial services model generating revenue through net interest income, asset management fees, investment banking advisory fees, and market trading revenues."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Corporate, professional, and risk-averse. Emphasizes structured processes and compliance, which can slow down technical innovation and feel bureaucratic for top-tier tech talent."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "17f8c9c419"
+   ],
+   "value": "Individual consumers, small businesses, large corporations, governments, and institutional investors worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $130k-$180k base salary plus sign-on bonuses and restricted stock units, reflecting top-tier new-grad tech and quant compensation."
   },
   "evidence_sha": "6ab824a26bb12e13",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873976,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "b8a1368da3"
+   ],
+   "value": "Financial Services / Investment Banking"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Assess whether specific AI teams operate with startup-like agility or if they are bogged down by legacy bank bureaucracy. Probe deeply into expected working hours, on-call expectations for critical trading or risk systems, and whether strict work-life boundaries are actually respected. Ask about rotational or fast-track career paths to ensure technical learning is accelerated without leading to burnout."
+  },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784678368,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b8a1368da3",
+    "13cd313dbb"
+   ],
+   "value": "Global footprint with major corporate and technology hubs in New York, London, Delaware, Texas, and India."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "13cd313dbb"
+   ],
+   "value": "To be the world's most trusted financial services firm, driving value for customers, communities, and shareholders through comprehensive financial solutions."
+  },
   "name": "JPMorgan Chase",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Generally moderate-to-fast paced, but heavily encumbered by compliance gates, security protocols, and corporate bureaucracy, contrasting with a purely innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "13cd313dbb"
+   ],
+   "value": "Consumer banking and credit cards, commercial banking, investment banking advisory and underwriting, and asset management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 20-25 days of vacation for new corporate employees, plus standard bank holidays, though team coverage constraints often complicate taking extended time off."
   },
+  "refresh_after": 1790057976,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns. Certain non-critical business units may have limited quiet periods, but ops and tech maintenance generally run year-round."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "13cd313dbb"
+   ],
+   "value": "Mature, large-cap public financial institution with operations in over 100 countries and hundreds of thousands of employees."
   },
   "sources": [
    {
@@ -149909,14 +150172,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Historically provides visa sponsorship for specialized tech and quant roles, though it is subject to strict security clearance requirements and geographic limitations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0507e50200",
+    "b8a1368da3"
+   ],
+   "value": "JPMorgan Chase & Co. is a leading global financial services firm and one of the largest banking institutions in the world. It makes money by providing investment banking, consumer banking, asset management, and commercial banking services to generate revenue from interest, fees, and trading activities. [Source: Public company domain]"
+  },
+  "synthesized_evidence_sha": "6ab824a26bb12e13",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Building and maintaining large-scale enterprise risk systems, algorithmic trading platforms, consumer mobile banking apps, fraud detection ML models, and cloud data infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678368,
   "web_search_url": "https://duckduckgo.com/?q=JPMorgan+Chase+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Matches the candidate's desire for elite tech prestige and high new-grad pay, but falls short on the desire for a fast, non-bureaucratic culture and strict work-life balance. Sane hours and guaranteed shutdowns are highly unlikely in core quantitative or tech divisions, and the environment often leans toward slow corporate processes rather than rapid innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Fair to moderate. Can be highly demanding in institutional trading and risk analytics groups, lacking the guaranteed shutdowns and sane hours found in pure tech firms."
   }
  },
  "jrk property holdings": {
@@ -182829,11 +183124,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -182845,6 +183142,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784674038,
   "name": "Montenson",
   "pace_of_work": {
@@ -182857,6 +183155,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784874096,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -182900,7 +183199,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=0033a91f34955b3a58f66b327243aa272dbc2e1ce3377ecfff34160be63c5e8fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cuZm9yYmVzLmNvbS9saXN0cy9haTUwLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674038,
   "web_search_url": "https://duckduckgo.com/?q=Montenson+company+careers+benefits",
@@ -207607,11 +207906,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207623,6 +207924,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784821848,
   "name": "Peloton",
   "pace_of_work": {
@@ -207635,6 +207937,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784874096,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207688,7 +207991,7 @@
     "url": "https://careers.onepeloton.com/en/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678334,
   "web_search_url": "https://duckduckgo.com/?q=Peloton+company+careers+benefits",
@@ -246165,11 +246468,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246181,6 +246486,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784858719,
   "name": "Shield AI",
   "pace_of_work": {
@@ -246193,6 +246499,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784874096,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246266,7 +246573,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=33d8db7f559a791e35cf476f840ddbef1dd439632e87a925cc49f7b9c70e855eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3NoaWVsZA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Shield+AI+company+careers+benefits",
@@ -281062,37 +281369,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. Significant enterprise-scale data processing and machine learning applications in fraud and risk, but lacks the elite prestige of big tech or specialized AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff"
+   ],
+   "value": "B2B and B2C data-as-a-service and SaaS model. TransUnion charges businesses for data access, analytics, and software solutions used for underwriting and identity verification, while consumers access core credit monitoring via free or subscription-based tiers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate environment focused on compliance and stability, contrasting with fast-paced, high-autonomy startup cultures."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff"
+   ],
+   "value": "Businesses and institutions across financial services, insurance, healthcare, and retail sectors, as well as individual consumers accessing their own credit data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "f4deae983eeee6d0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873976,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff",
+    "f66705b075"
+   ],
+   "value": "Consumer Credit Reporting / Financial Data & Analytics."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "last_attempt_at": 1784873976,
   "last_evidence_at": 1784678790,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff"
+   ],
+   "value": "Headquartered in Chicago, Illinois, with additional offices and data centers spread globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff"
+   ],
+   "value": "To provide information for good, helping consumers and businesses transact with confidence and achieve their financial goals."
+  },
   "name": "TransUnion",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. As a heavily regulated financial data company, the culture leans towards slow bureaucracy and risk-aversion rather than fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff"
+   ],
+   "value": "Consumer credit reports, fraud prevention software, marketing analytics, identity verification tools, and SaaS-based risk management platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1790057976,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -281103,6 +281465,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f66705b075"
+   ],
+   "value": "Publicly traded, large-cap enterprise (NYSE: TRU) operating globally with a multinational workforce."
   },
   "sources": [
    {
@@ -281136,14 +281505,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=13fc34ec2ffc1eddf1a4a73468383b06e29a4992429c2f697a9102fdab9ac21aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudHJhbnN1bmlvbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6268abf8ff",
+    "f66705b075"
+   ],
+   "value": "TransUnion is a global information and insights company that provides consumer credit data, analytics, and risk management solutions. It makes money by licensing data and selling SaaS-based analytical tools to businesses to help them assess consumer creditworthiness, prevent fraud, and optimize marketing."
+  },
+  "synthesized_evidence_sha": "f4deae983eeee6d0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6268abf8ff",
+    "f66705b075"
+   ],
+   "value": "Work involves massive-scale data pipelines, big data processing, identity resolution systems, advanced analytics, machine learning for fraud detection, and cloud-based SaaS development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678790,
   "web_search_url": "https://duckduckgo.com/?q=TransUnion+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Balanced. Sane hours are respected, and the company avoids the high-burnout environment found in high-paced tech deployments."
   }
  },
  "travelers": {
