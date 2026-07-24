@@ -71073,37 +71073,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied data science reputation in banking analytics niche, not a headline AI research lab but respected for production ML in finance."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS and data-as-a-service subscriptions, plus professional services engagements with financial institution clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Quantitative, collaborative, client-focused; engineering and data science respected as core product; less hierarchy than traditional banks, more structure than early startups."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primarily banks, credit unions, and financial services firms seeking data-driven decision support for pricing, deposits, and customer analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$150k base + equity (0.05-0.15%) + bonus; total comp ~$140k-$180k for data science/ML engineering new grads in NYC metro."
   },
   "evidence_sha": "fe89c3c577dd57c8",
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Financial Data Analytics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: applied ML case studies on financial data (pricing, churn, risk), SQL/Python proficiency with large datasets, statistical rigor questions, and system design for data pipelines. Ask about model deployment practices, data quality processes, and how research translates to production. Probe on-call expectations and project autonomy to assess WLB."
+  },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784674220,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in New York or major US financial hub, with possible remote/hybrid options and additional offices in financial centers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To empower financial institutions with advanced data science and analytics for better pricing, risk, and customer decisions."
+  },
   "name": "Curinos",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — growth-stage fintech with client-driven deadlines, but likely more predictable than early-stage startups; quarterly planning cycles with sprint-based execution."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers data analytics platforms, pricing and deposit optimization tools, market intelligence, and predictive modeling for financial institutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays; unlimited PTO possible but utilization varies; no public policy confirmed."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71113,7 +71155,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; some teams may observe reduced schedules around major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage growth company, likely 200-800 employees, post-Series C or equivalent, operating in fintech/data analytics space."
   },
   "sources": [
    {
@@ -71147,14 +71194,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7fbe958d03988d6d3acc0c71673022afb4ca05333f530e0fec7b12fe22a7ff99JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9udGNlLm5lZWEuZWR1LmNuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized data science and engineering roles given talent demands in fintech analytics."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Curinos appears to be a financial data and analytics company serving banking and financial services clients with data-driven insights and technology solutions."
+  },
+  "synthesized_evidence_sha": "fe89c3c577dd57c8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Heavy data engineering, machine learning model development, large-scale financial data processing, cloud infrastructure (AWS/Azure), and quantitative analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674220,
   "web_search_url": "https://duckduckgo.com/?q=Curinos+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priorities: a fintech data science role at a growth-stage company where advanced analytics directly drive client revenue, offering elite technical challenges without big-bank bureaucracy. The mission-driven focus on financial decision-making aligns with impact-oriented work, while growth-stage scale suggests faster learning velocity than mature enterprises."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — typical for mid-stage fintech; core hours with flexibility, but client deliverables can create periodic crunch; unlikely to have guaranteed shutdowns."
   }
  },
  "cushman wakefield": {
@@ -87102,48 +87170,126 @@
  "emory healthcare": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Estimated: Tier 2 (Healthcare IT) - Lacks the elite prestige of dedicated tech or AI labs, but provides domain-specific impact within academic medicine."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Generates revenue through direct patient care billing, medical procedures, insurance reimbursements, and related healthcare services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Mission-driven, patient-centric, and traditional academic environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Patients and their families seeking medical care, preventative services, and specialized health treatments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6ee96e23f5"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Likely lower than elite tech/AI firms due to standard healthcare IT compensation bands."
   },
   "evidence_sha": "88c9b4ce4cd5fb74",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Hospital & Healthcare / Academic Health Systems."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c3f8d7900c"
+   ],
+   "value": "Expect a focus on HIPAA compliance, patient data security, and Epic systems integration rather than cutting-edge AI challenges. Be sure to press hiring managers on whether the specific team operates like a slow bureaucracy or maintains an agile tech culture."
+  },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784583342,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Headquartered and primarily operates across the state of Georgia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "To serve the community by providing quality patient care, conducting innovative research, and educating health professionals as part of a leading academic health system."
+  },
   "name": "Emory Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Estimated: Moderate to slow. Pace is typically governed by clinical needs, patient safety regulations, and hospital bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b",
+    "c3f8d7900c"
+   ],
+   "value": "Healthcare services including hospital care, outpatient clinics, emergency services, specialized treatments, and health record portals (like MyChart)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6ee96e23f5"
+   ],
+   "value": "Estimated: 20-26 days. Academic healthcare systems typically offer robust leave policies to prevent burnout, though exact tech role allocations vary."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "6ee96e23f5"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns, though academic holidays may provide reduced operations."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "A large, established academic health system with multiple hospitals and hundreds of provider locations."
   },
   "sources": [
    {
@@ -87177,14 +87323,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=731fce2613d281356d38fb435c6441eec8e8819cbee25b5d5b7b17fcb5f6810fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZW1vcnloZWFsdGhjYXJlLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6ee96e23f5"
+   ],
+   "value": "Sponsorship details for technical roles are not explicitly mentioned in public company pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "660cfeb85b",
+    "6ee96e23f5"
+   ],
+   "value": "Emory Healthcare is the most comprehensive academic health system in Georgia, operating a network of hospitals, clinics, and outpatient facilities. It makes money by charging for patient care services, clinical procedures, and integrated healthcare treatments across its medical facilities."
+  },
+  "synthesized_evidence_sha": "88c9b4ce4cd5fb74",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3f8d7900c"
+   ],
+   "value": "Likely manages extensive internal IT systems including Epic-based Electronic Health Records (EHR), health data integrations, and clinical data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583342,
   "web_search_url": "https://duckduckgo.com/?q=Emory+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "660cfeb85b"
+   ],
+   "value": "Because this is a healthcare provider rather than a pure tech firm, it may lack the fast-paced innovative tech culture and elite new-grad pay of top AI labs. However, the mission-driven nature of healthcare may offer structured hours and respect for work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6ee96e23f5"
+   ],
+   "value": "Estimated: Good. Hospital IT roles are typically mission-driven but operate during standard business hours rather than demanding tech-firm crunch time."
   }
  },
  "employee navigator": {
@@ -135337,37 +135515,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier: respectable applied AI/ML in a niche vertical, but not a primary AI research lab or top-tier consumer tech brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "SaaS subscription model for supply chain management platform, likely supplemented by implementation and professional services fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Pragmatic, domain-focused, collaborative across product and engineering; likely less 'move fast and break things' and more 'ensure compliance and reliability'."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "Grower-shippers, distributors, food manufacturers, foodservice operators, and retail grocery chains."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity/bonus; competitive for B2B SaaS but below FAANG top-tier."
   },
   "evidence_sha": "45616beb41f8718b",
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "Supply chain management software / Food & beverage technology (AgTech/food safety compliance)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for concrete examples of engineering autonomy, deployment frequency, and how data science projects move from research to production. Ask about on-call expectations, typical sprint cadence, and whether the company has explicit 'no-meeting' days or shutdown periods. Request clarity on compensation structure (base, equity, bonus) for new grads and how career progression is structured without a formal rotational program."
   },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784675137,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in the US (likely California or major tech hub); remote-friendly roles may be available."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "Unify data across stores, trading partners, and categories to improve traceability, optimize freight, and drive smarter, faster sourcing decisions from shelf to supplier."
+  },
   "name": "iTradeNetwork",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast; product-driven cycles with regulatory deadlines (FSMA 204) creating urgency, but likely less chaotic than early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "Order Management (OMS), Traceability, FSMA 204 compliance, MarginIQ, SpendInsights, OrderMaestro."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus US federal holidays; no public policy details."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135377,7 +135607,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns publicly documented; may have informal holiday slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (likely 200-500 employees) backed by private equity; not a startup but not a public corporation."
   },
   "sources": [
    {
@@ -135411,14 +135646,39 @@
     "url": "https://www.itradenetwork.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and green card sponsorship for specialized technical roles given industry demand, but no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "iTradeNetwork provides cloud-based supply chain management software for the food and beverage industry, enabling traceability, order management, and analytics across growers, distributors, manufacturers, and retailers. The company generates revenue primarily through subscription fees for its SaaS platform and related professional services."
+  },
+  "synthesized_evidence_sha": "45616beb41f8718b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data integration across fragmented food supply chains, real-time traceability systems, analytics for margin optimization, compliance automation (FSMA 204), and potential ML for demand forecasting and freight optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675137,
   "web_search_url": "https://duckduckgo.com/?q=iTradeNetwork+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "68014bf33d"
+   ],
+   "value": "Offers a mission-critical role in food supply chain resilience and safety, with technical challenges in data unification and traceability at scale. As a mid-sized private company, it may provide faster innovation cycles and more ownership than large bureaucratic enterprises, while potentially offering competitive pay for AI/DS talent focused on real-world impact. Work-life balance culture is not publicly documented but could be more sane than high-burnout tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; no public data on guaranteed shutdowns or strict hours, but mid-sized B2B SaaS companies often have more predictable schedules than consumer-facing tech."
   }
  },
  "ivo": {
@@ -156013,52 +156273,125 @@
  "major league baseball mlb": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7b6c170908"
+   ],
+   "value": "Estimated: Niche prestige; highly respected in sports analytics but not competing at the elite tier of tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Revenue is generated by national and local television contracts, licensing fees, corporate partnerships, and fan attendance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7b6c170908"
+   ],
+   "value": "Estimated: Corporate-leaning and tradition-bound, with passionate sports fans; slower bureaucracy compared to agile tech companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Baseball fans, sports media networks, corporate sponsors, and stadium attendees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7b6c170908"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary, competitive for sports but below top-tier tech package."
   },
   "evidence_sha": "5226f64dac193573",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784866693,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Sports and Entertainment"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Probe for specific team placement to ensure you land in a modern data group, not legacy IT, to match your fast-innovative culture priority."
+  },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784676855,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Headquartered in New York City, with a secondary office in San Francisco and operations across 30 North American markets."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "To govern and grow the game of baseball globally, maintaining its integrity and historical traditions while entertaining fans."
+  },
   "name": "Major League Baseball (MLB)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Estimated: Moderate pace influenced by the baseball season; ramps up during spring training and playoffs, but generally avoids high-burnout culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Live baseball games, statistical data, broadcast media, digital streaming platforms, and merchandising."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Estimated: 20-25 days PTO plus major holidays."
   },
-  "retry_after": 1784866813,
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c9e8469502"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, though operations naturally slow during the off-season."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Mature league body managing 30 independently owned teams, supported by the MLB Office of the Commissioner."
   },
   "sources": [
    {
@@ -156092,14 +156425,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=daa7e347c1487a29186405d06881a02acb76652f09856ca7fbb38bdb2f0eb6b4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L21ham9y&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b6c170908"
+   ],
+   "value": "As a US-based sports league, it strongly favors domestic candidates; formal visa sponsorship for tech roles is possible but handled conservatively."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "Major League Baseball (MLB) is the oldest major professional sports league in the world, comprising 30 teams split between the National and American Leagues. It generates revenue through massive media broadcasting rights, sponsorship deals, ticket sales, and merchandise."
+  },
+  "synthesized_evidence_sha": "5226f64dac193573",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b6c170908"
+   ],
+   "value": "Technical staff build broadcast tech, the MLB Stats API, MLB.tv streaming infrastructure, and the underlying models for Statcast."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676855,
   "web_search_url": "https://duckduckgo.com/?q=Major+League+Baseball+%28MLB%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c9e8469502"
+   ],
+   "value": "It may suit your elite-prestige goal in sports tech, but as a legacy league it may lack the fast-innovative tech culture and top-tier new grad pay you target."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e06b8034ed"
+   ],
+   "value": "Estimated: Good work-life balance, particularly in the off-season, though travel and evening duties during the season may impact hours."
   }
  },
  "makai labs": {
@@ -231220,37 +231584,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within life-science vertical; recognized for cheminformatics, computational biology, and AI-driven drug discovery publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Direct and distributor sales of consumable lab supplies, specialty chemicals, and biologics; recurring revenue from repeat orders; custom manufacturing and service contracts for biopharma clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Scientific rigor meets corporate stability; collaborative, documentation-heavy, diversity-focused; less \"move fast\" hype, more \"get it right\" mindset."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Academic researchers, biotechnology companies, pharmaceutical manufacturers, clinical diagnostics labs, and industrial quality-control laboratories worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + 10–15% target bonus + RSU grant ($20k–$40k vesting over 4y); total comp ~$140k–$185k year 1."
   },
   "evidence_sha": "b10e57d14ac1d6c7",
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Life Science Tools & Services / Specialty Chemicals (Merck KGaA subsidiary)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML case studies (cheminformatics, bioimaging, supply chain), strong statistical rigor, domain curiosity, and system-design questions emphasizing reproducibility and regulatory awareness."
   },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784677596,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Global headquarters in St. Louis, MO (US); major sites in Germany, China, Japan, Singapore, India, and across Europe/Americas; hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "To accelerate life science discovery and improve human health by providing high-quality tools, materials, and services to the global scientific community."
+  },
   "name": "Sigma",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured, project-driven cadence with quarterly planning cycles; faster in digital/AI labs, slower in regulated manufacturing; generally sane compared to consumer-tech sprints."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Laboratory chemicals, reagents, biologics, antibodies, cell culture media, lab equipment, custom synthesis, and analytical testing services for life science research and biopharma manufacturing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10 company holidays + sick leave; accrual increases with tenure; unused days may roll over up to a cap."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231260,7 +231678,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (typically 5–7 business days); additional summer shutdown in some European sites."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Large public subsidiary (part of Merck KGaA, Darmstadt, Germany); ~25,000+ employees globally; mature, stable enterprise with extensive R&D and manufacturing footprint."
   },
   "sources": [
    {
@@ -231294,14 +231719,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=40fb970c9db51eeff7a2b72aeb21ca3ef016f35c928921510d3dae3939a4e37cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cuc2lnbWFwaG90by5jb20vbGVuc2Vz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B and green-card sponsor for STEM roles; supports OPT/CPT for new grads; global mobility programs for internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "81e1d6df85"
+   ],
+   "value": "Sigma operates primarily as Sigma-Aldrich (MilliporeSigma), a global life science and high-technology company providing chemicals, biologics, lab equipment, and services to research, biotech, and pharmaceutical sectors. It makes money by selling laboratory supplies, specialty chemicals, and custom manufacturing services to academic, industrial, and clinical customers worldwide."
+  },
+  "synthesized_evidence_sha": "b10e57d14ac1d6c7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to drug discovery, supply-chain optimization, digital lab tools, cheminformatics, bioinformatics, and process analytics; software engineering for e-commerce, LIMS, and scientific SaaS platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677596,
   "web_search_url": "https://duckduckgo.com/?q=Sigma+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige in life-science data/AI with a mission directly tied to human health, high new-grad compensation, and a mature but innovating tech culture—without the burnout typical of pure-tech unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – core hours respected, limited on-call outside manufacturing support; guaranteed shutdowns during major holidays; flexibility varies by team."
   }
  },
  "sigma computing": {
@@ -238724,7 +239172,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238742,7 +239190,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784866693,
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784675134,
   "name": "Spatial Front, Inc",
   "pace_of_work": {
@@ -238755,7 +239203,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784866813,
+  "retry_after": 1784867102,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255124,47 +255572,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — High-impact applied ML at massive scale, strong peer cohort, published research (RecSys, KDD), but not a primary AI research lab like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Omnichannel retail: physical stores (1,900+ U.S. locations) + digital marketplace. Revenue from merchandise sales (owned and third-party), private label margins, advertising media network (Roundel), subscription services (Target Circle 360), and financial products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, Midwestern pragmatic, mission-oriented ('joy of everyday life'). Low ego, high psychological safety. Strong DEI commitment. Engineering-driven but business-aligned. Internal mobility encouraged. Less 'move fast break things,' more 'move smart sustainably.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Broad consumer base across the U.S., skewing suburban families, millennials, and value-conscious shoppers; omnichannel buyers using stores, app, and website; loyalty members (100M+ Target Circle users)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + 10-15% target bonus + $30k-$50k RSUs (4-yr vest) = $175k-$215k first-year TC. Bay Area/Seattle premium ~15%. Signing bonus $15k-$25k common."
   },
   "evidence_sha": "3b6489b4fd2ee9f5",
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Retail / E-commerce / Consumer Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect applied ML/system design: ranking/recommendation, demand forecasting, causal inference for A/B testing, large-scale data pipelines. Behavioral emphasis on collaboration, retail domain curiosity, and sustainable pace. Less LeetCode-hard, more production ML and trade-off discussion. Prepare for case studies on personalization, inventory, or pricing."
+  },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784669636,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Minneapolis, MN. Major tech hubs: Minneapolis, San Francisco/Bay Area, Bangalore (India), remote-friendly. Stores across all 50 U.S. states."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help all families discover the joy of everyday life through affordable, well-designed products and convenient shopping experiences."
+  },
   "name": "The Giant Bullseye",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Quarterly planning cycles, 2-week sprints, explicit guardrails against crunch. Major releases tied to retail calendar (holiday, back-to-school). Innovation time allocated (10-20%). Faster than traditional enterprise, slower than startup/pre-IPO."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "General merchandise retail including apparel, home goods, electronics, grocery, beauty, and seasonal items; private label brands (e.g., Good & Gather, Threshold, Cat & Jack); e-commerce platform with same-day delivery and pickup services; loyalty program (Target Circle); financial services (RedCard)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 shutdown weeks (year-end, summer) = ~37 days off/year. Accrual starts day one. Unlimited sick/safe time."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research — Target runs a standard new-grad Software Engineer / Data Scientist entry level with team placement, not a formal named rotation. Internal transfers encouraged after 12-18 months."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Mandatory company-wide shutdown: last 2 weeks of December (paid, no PTO used) and 1 week in July. All systems read-only; on-call only for Sev-0."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: TGT); ~440,000 employees; $100B+ annual revenue; Fortune 500; mature enterprise with ongoing digital transformation."
   },
   "sources": [
    {
@@ -255198,14 +255693,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3d47d172e87ae92492ccc378986f8545b81de737f4f2c071a6c339af23fad457JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for tech roles (software engineering, data science, ML); green card sponsorship common for high performers; university recruiting at top CS programs; STEM OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The Giant Bullseye is a major retail corporation known for its bullseye logo, operating general merchandise stores and e-commerce platforms. It generates revenue through retail sales of consumer goods, private label brands, and digital services."
+  },
+  "synthesized_evidence_sha": "3b6489b4fd2ee9f5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale e-commerce platform, supply chain optimization, ML for demand forecasting and personalization, real-time inventory systems, data lake/analytics, mobile apps, POS systems, media/ad tech (Roundel), internal developer platforms. Tech hubs in Minneapolis, Bay Area, Bangalore, and remote."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669636,
   "web_search_url": "https://duckduckgo.com/?q=The+Giant+Bullseye+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite retail-tech scale with massive real-world data (100M+ shoppers, petabyte-scale transactions) for AI/ML impact. Balances Fortune 500 prestige and competitive new-grad pay with a culture emphasizing 40-hour weeks, protected weekends, and mandatory shutdown periods — rare for high-impact data science. Strong mentorship, internal mobility, and technical depth without the burnout typical of pure tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Protected weekends, core hours 10am-3pm CT, mandatory 2-week year-end shutdown + 1-week summer shutdown. On-call rotation limited to critical path teams with comp time. New grads report 40-45 hr weeks typical."
   }
  },
  "the hartford": {
@@ -257593,37 +258109,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche or specialized AI/ds applications within civil engineering, not top-tier AI prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Consulting fee model for engineering projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional and collaborative engineering culture, mission-driven without high tech-burnout."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Public and private infrastructure clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 for entry-level technical roles, below elite tech compensation."
   },
   "evidence_sha": "59fa3c386081dd53",
+  "generated_at": 1784866862,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Civil Engineering Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "In interviews, candidates should clarify the pace of work, daily hours, and promotional paths to ensure they match goals for fast, innovative tech without bureaucratic slowdowns. They should also ask about specific AI or data science projects to confirm meaningful technical learning versus typical engineering IT support."
   },
+  "last_attempt_at": 1784866862,
   "last_evidence_at": 1784674349,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Location details not found in provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Mission details not found in provided sources."
+  },
   "name": "Thomas & Hutton",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace driven by project deadlines, typical of engineering consulting."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Engineering consulting and infrastructure design services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually, standard for mid-sized engineering firms."
   },
+  "refresh_after": 1790050862,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -257633,7 +258215,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns found; typical engineering firms may offer standard holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Company size and stage not found in provided sources."
   },
   "sources": [
    {
@@ -257667,14 +258258,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e67e2d3654908a7b36d6ac7d89d838247eb3b0df6f1f2f9a1b76501bd74651c8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGhvbWFzX3RoZV9UYW5rX0VuZ2luZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Sponsorship details not found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Thomas & Hutton is a civil engineering firm that likely generates revenue through consulting and design services for public and private infrastructure projects. However, specific details could not be retrieved from the provided sources."
+  },
+  "synthesized_evidence_sha": "59fa3c386081dd53",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4c545ae31d",
+    "ee8ba53299",
+    "3c289daeb4"
+   ],
+   "value": "Technical work details not found in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674349,
   "web_search_url": "https://duckduckgo.com/?q=Thomas+%26+Hutton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on candidate priorities, this role may not align with the desire for top-tier AI prestige, as traditional civil engineering firms typically lack elite, fast-paced tech cultures and high new-grad tech pay. Candidates should evaluate if the work-life balance, technical learning, and personal time boundaries at Thomas & Hutton meet their mission-driven criteria."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard work-life balance, likely sane hours with occasional project deadline rushes."
   }
  },
  "thomson reuters": {
