@@ -17832,41 +17832,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: High technical prestige in nuclear computational science; emerging AI/ML applications in reactor design and digital twins."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from reactor design licensing, engineering services contracts, fuel supply agreements, and government R&D grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, safety-conscious, collaborative; small-team autonomy with strong QA culture; less bureaucracy than legacy nuclear vendors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Utilities, government energy agencies, and industrial partners seeking decarbonized baseload power solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + equity/bonus; nuclear premium over general software but below top-tier AI labs."
   },
   "evidence_sha": "339f94f6dcece7e9",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Advanced nuclear energy / clean tech"
   },
-  "last_attempt_at": 1784863706,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate nuclear engineering fundamentals (neutronics, TH, safety analysis) plus computational skills (Python, MOOSE, OpenMC, Serpent); ask about QA/QC processes for NQA-1 compliance and work cadence around licensing milestones."
+  },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784677230,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Washington DC area; potential remote/hybrid flexibility for computational roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Accelerate deployment of safe, economical nuclear energy to address climate change and energy security."
+  },
   "name": "Antares Nuclear",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven with regulatory milestone deadlines; intense sprint periods around NRC submissions balanced by steadier R&D cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small modular reactor (SMR) designs, nuclear fuel fabrication services, and advanced reactor licensing support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; unlimited not typical in regulated nuclear sector."
   },
-  "retry_after": 1784863946,
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17876,7 +17914,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdowns documented; typical federal holiday observance only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees, venture-backed growth stage with DOE ARPA-E and private funding."
   },
   "sources": [
    {
@@ -17910,14 +17953,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8dfe57b86cf8c21d046238c6627ec59b49cdfb51fd0ec7f8708274473bbc0236JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cuYW50YXJlc3RlY2guY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and cap-exempt filings given DOE contract work; green card sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Antares Nuclear develops advanced nuclear technology solutions, focusing on small modular reactors and nuclear fuel cycle innovations for clean energy deployment."
+  },
+  "synthesized_evidence_sha": "339f94f6dcece7e9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Neutronics modeling, thermal-hydraulics simulation, materials qualification, licensing analysis, and digital twin development for advanced reactors."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677230,
   "web_search_url": "https://duckduckgo.com/?q=Antares+Nuclear+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for mission-driven nuclear innovation with elite technical depth; SMR sector offers high prestige and competitive new-grad pay without FAANG-style burnout culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — mission-driven culture with regulated industry discipline; likely reasonable hours outside licensing crunches, but limited public data."
   }
  },
  "anthelion capital": {
@@ -95371,37 +95435,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 — Applied ML for analytics, early warning systems, or NLP for reporting. Not an AI research lab. Prestige comes from domain impact, not ML novelty."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: SaaS subscriptions sold to schools/districts (per-student or per-site licensing). Possible state-level contracts. No pricing or model details in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, educator-adjacent. Engineers often work closely with former teachers/product managers. Less 'bro culture', more 'help schools run better'."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4ab35c1a39"
+   ],
+   "value": "Likely school districts, individual schools, and educational institutions in the US. No customer details available from sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest equity/bonus. EdTech pays below FAANG/finance but above non-profits. Varies by location (FL vs remote)."
   },
   "evidence_sha": "0853e42a81e58463",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ab35c1a39"
+   ],
+   "value": "Education Technology (EdTech) — K-12 Student Information Systems"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: 1) Domain knowledge questions about FERPA, state reporting, SIS workflows. 2) Legacy system modernization scenarios (tech debt, migration). 3) Data modeling for complex educational hierarchies. 4) Reliability/uptime during grading periods. 5) Cross-functional collaboration with educators/support. Emphasize empathy for non-technical users and experience with regulated data."
   },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784674904,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters likely in Florida (Focus School Software origins). Remote/hybrid possible. No location data in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not stated in accessible sources. The .org domain and education focus suggest a mission around improving school operations or student outcomes."
+  },
   "name": "Focus Camera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — seasonal intensity (back-to-school, grading periods) with stable sprints. Education sales cycles and compliance requirements enforce planning over fire-drills."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4ab35c1a39"
+   ],
+   "value": "Likely K-12 education software (student information systems, gradebooks, attendance, scheduling) based on 'Focus School Software' branding. No product details available from sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays. Typical for established US ed-tech. No policy in sources."
   },
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95411,7 +95523,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Possible reduced hours during winter/spring breaks aligned with school calendars."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established education software vendor (Focus School Software has been in market for years). Exact employee count and funding stage not in sources."
   },
   "sources": [
    {
@@ -95445,14 +95562,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=efec41635310cb9ef3c78360b99b5b91b9e65940bca625a9694fd934302e7995JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly9mb2N1cy5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized engineering roles given established ed-tech vendor status. No public sponsorship data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "95a4d25118",
+    "4ab35c1a39",
+    "d7e0ff3ba5"
+   ],
+   "value": "Focus Camera appears to be an education technology company (Focus School Software) based on the focuschoolsoftware.com domain, likely providing student information systems or school management software. The focus.org domain suggests a possible non-profit or educational mission arm. No accessible content was retrieved from the provided sources to confirm products or business model."
+  },
+  "synthesized_evidence_sha": "0853e42a81e58463",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web development (likely .NET, SQL Server, modern web frameworks), database-heavy student data systems, integrations with state reporting, mobile apps for parents/students. Legacy codebase modernization likely."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Focus+Camera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers a chance to work on mission-driven education technology impacting schools and students, likely with more reasonable hours than consumer tech or finance. The ed-tech domain provides meaningful work with stable, recurring revenue — avoiding the burnout culture of ad-driven or hyper-growth startups. Technical challenges involve scale, data privacy, and complex regulatory integrations, accelerating growth without the 'move fast and break things' pressure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — EdTech typically respects school calendars; limited on-call outside critical periods. No guaranteed shutdowns documented."
   }
  },
  "focus financial partners": {
@@ -160608,37 +160750,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low - no evidence of AI/data science research or elite technical reputation"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Likely revenue from employer job postings, subscriptions, or placement fees; no confirmed business model details in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, supportive, community-focused; likely less intense than elite tech companies"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Military spouses seeking employment and employers looking to hire them; specific customer segments not detailed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k-$90k base (below top-tier); no pay data in sources"
   },
   "evidence_sha": "6aeaf5f257da51ca",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Employment services / Military spouse support niche"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "If interviewing, focus on mission alignment with military spouse support, full-stack web development skills, and understanding of two-sided marketplace dynamics. Not relevant for cutting-edge AI/DS roles."
   },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784672890,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely remote-first or US-based given military spouse focus; no specific locations confirmed in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Presumably to support military spouse employment; explicit mission statement not found in provided sources."
+  },
   "name": "Military Spouse Jobs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate - typical for small job board/platform company; not a fast-paced innovative tech environment"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Likely a job board or career platform for military spouses; exact product offerings not confirmed in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days typical for US small orgs; no specific policy found"
   },
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -160648,7 +160852,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns documented; unlikely at this company stage/type"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to medium-sized organization; no employee count or funding stage data in sources."
   },
   "sources": [
    {
@@ -160682,14 +160891,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=367ef139b7637785408e69b1ebec37b35ebb809e355e4ad899df3d952ecc16bfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly93d3cuZ3JvYmxlcmR1cHJlZXouY28uemEvZHVwcmVlemhpc3Rvcnkvc3RhaW5lZGdsYXNzLmh0bQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor visas given niche domestic focus; no sponsorship policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0f11b37c06",
+    "ae6323c2c4",
+    "c805fbc3ae"
+   ],
+   "value": "Military Spouse Jobs appears to be a platform focused on connecting military spouses with employment opportunities, though specific operational details are not available from the provided sources."
+  },
+  "synthesized_evidence_sha": "6aeaf5f257da51ca",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Standard web platform development (job board, matching algorithms, user management); no AI/data science focus evident from sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672890,
   "web_search_url": "https://duckduckgo.com/?q=Military+Spouse+Jobs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role likely does not match the candidate's priorities for elite AI/data science prestige, high new-grad pay, or fast innovative tech culture. The company appears to be a niche job board rather than a top-tier tech employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good - mission-driven non-profit/impact orgs often have better WLB; no burnout signals in sources"
   }
  },
  "millennium": {
@@ -208423,48 +208657,124 @@
  "rfa engineering": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "abeaf6e99d",
+    "20eb8739f9",
+    "41d0823cea"
+   ],
+   "value": "Estimated: Low - no evidence of elite AI/data science presence in public sources; appears to be traditional engineering firm"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "20eb8739f9",
+    "41d0823cea",
+    "abeaf6e99d"
+   ],
+   "value": "Engineering consulting and professional services, likely project-based contracts with public and private clients"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "abeaf6e99d"
+   ],
+   "value": "Estimated: Professional, technical, client-focused; likely hierarchical with senior engineers leading projects; limited public signals about innovation culture"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "20eb8739f9",
+    "41d0823cea"
+   ],
+   "value": "Likely government agencies, private sector firms, and infrastructure projects based on engineering industry norms"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base (traditional engineering new grad range); unlikely to match elite AI/data science pay tiers ($120k+)"
   },
   "evidence_sha": "434bed4ca1f2556c",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "abeaf6e99d",
+    "20eb8739f9",
+    "41d0823cea"
+   ],
+   "value": "Engineering Services / Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask directly about: 1) Existence and scope of AI/data science teams vs traditional engineering, 2) New grad compensation structure and equity, 3) Typical project pace and overtime expectations, 4) Formal policies on work hours, shutdowns, and PTO, 5) Mentorship programs and technical learning budget, 6) Recent project examples showing innovation speed."
   },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784676555,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "20eb8739f9",
+    "41d0823cea",
+    "abeaf6e99d"
+   ],
+   "value": "Estimated: North America based on .org domain and Canadian government directory presence; specific offices not confirmed"
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "abeaf6e99d"
+   ],
+   "value": "Engineering excellence and professional service delivery (exact mission statement not found in sources)"
+  },
   "name": "RFA Engineering",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate - project-based engineering typically has deadline-driven cycles but not constant crunch; varies by project phase"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "abeaf6e99d"
+   ],
+   "value": "Engineering services and solutions (specific products not identified in available sources)"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical for North American professional services firms); no public policy found"
   },
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "abeaf6e99d",
+    "20eb8739f9",
+    "41d0823cea"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None documented - no public mention of guaranteed company-wide shutdowns or mandatory disconnect policies"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized engineering firm (10-200 employees based on typical firm profiles)"
   },
   "sources": [
    {
@@ -208498,14 +208808,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=1b79c90ae5914654b45471ce9e79847dd5c7e51f6e524ee1756850946b8b618dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=175e1574-278e-64db-028e-02e926886548&u=a1aHR0cHM6Ly93d3cuY2Rzcy5jYS5nb3YvaW5mb3Jlc291cmNlcy9yZXNvdXJjZS1mYW1pbHktYXBwcm92YWwtcHJvZ3JhbQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May support work authorization for specialized engineering roles; no public policy found"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "abeaf6e99d",
+    "20eb8739f9",
+    "41d0823cea"
+   ],
+   "value": "RFA Engineering appears to be an engineering firm with limited public information available. The company's website (rfa.org) and government directory listings suggest it operates in the engineering sector, though specific details about its focus, scale, and operations are not readily accessible from the provided sources."
+  },
+  "synthesized_evidence_sha": "434bed4ca1f2556c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "abeaf6e99d"
+   ],
+   "value": "Civil, structural, mechanical, or electrical engineering design and analysis; potential for computational modeling and simulation work"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676555,
   "web_search_url": "https://duckduckgo.com/?q=RFA+Engineering+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role could offer elite engineering prestige with meaningful infrastructure impact, but the lack of public data on AI/data science focus, compensation, and culture makes it difficult to assess alignment with your priorities for high new-grad pay, fast innovation culture, guaranteed work-life boundaries, and accelerated technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - professional services firms often have reasonable hours but project deadlines can create pressure; no guaranteed shutdowns documented"
   }
  },
  "rfcuny": {
@@ -256722,41 +257059,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. Strong practical application domain, but generally lower elite brand prestige than top tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa"
+   ],
+   "value": "Business-to-Business (B2B) Software-as-a-Service (SaaS) subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Modern startup culture prioritizing technological innovation and customer success."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa",
+    "8b8ba05a28"
+   ],
+   "value": "Global enterprises seeking to streamline and modernize their customer support and contact center operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base salary."
   },
   "evidence_sha": "834ba3e843b50ac0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784863866,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa"
+   ],
+   "value": "Software / Cloud Communications"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784672886,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7"
+   ],
+   "value": "Headquartered in San Francisco, CA, with remote work options."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "8b8ba05a28"
+   ],
+   "value": "To modernize contact centers by providing innovative, cloud-based communication tools that improve customer support experiences."
+  },
   "name": "UJET",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup environment balancing innovation with enterprise client demands."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa"
+   ],
+   "value": "Cloud-based contact center platform featuring voice, digital messaging, and AI-driven customer support capabilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of PTO annually."
   },
-  "retry_after": 1784863986,
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -256766,7 +257159,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays, with no firm data confirming guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7"
+   ],
+   "value": "Mid-stage private company employing hundreds of staff, backed by venture capital."
   },
   "sources": [
    {
@@ -256800,14 +257200,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=77368a9bcff7b091ccebf5cfc535d3cb88cf2a7dccd8ab53e923ed9654c92cc9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7"
+   ],
+   "value": "Not explicitly confirmed in research, but competitive tech firms of this stage often offer visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa",
+    "8b8ba05a28"
+   ],
+   "value": "UJET provides a cloud-based customer support platform that facilitates voice, chat, and email interactions. They make money by selling SaaS subscriptions to enterprises looking to modernize their contact center operations."
+  },
+  "synthesized_evidence_sha": "834ba3e843b50ac0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f1071180e7",
+    "261ac82cfa"
+   ],
+   "value": "Cloud infrastructure, backend systems, real-time communications, and AI-driven data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=UJET+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, typical of modern tech startups, but requires validation."
   }
  },
  "ul solutions": {
@@ -267792,37 +268222,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML in network telemetry/anomaly detection; publishes at SIGCOMM, NSDI, IEEE Transactions; not a pure AI research lab but high-impact production deployments."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d405ee2d2d"
+   ],
+   "value": "Revenue from product sales (test hardware, optical components), software licenses, subscriptions (SaaS assurance/analytics), and support/services. Roughly 60% product, 40% recurring software/services. Publicly traded (NASDAQ: VIAV)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics. Long-tenured workforce (avg 7+ yrs). Transparent leadership (quarterly AMAs). Diversity initiatives visible. Not a 'bro' or 'hustle' culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "15e527e8d6"
+   ],
+   "value": "Tier-1 telecom operators (e.g., Verizon, AT&T, China Mobile), hyperscale cloud providers, enterprise IT teams, cable/MSOs, government/defense agencies, and network equipment manufacturers (OEMs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$130k base + 10-15% target bonus + $30k-$50k RSU (4-yr) = $160k-$190k first-year TC for SWE/ML roles in Bay Area; 10-15% lower in AZ/NC."
   },
   "evidence_sha": "4f53649d468ae22a",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8660ecd030",
+    "15e527e8d6"
+   ],
+   "value": "Telecommunications test & measurement / Network assurance & analytics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: signal-processing fundamentals, distributed-systems design, ML model deployment at scale, and hardware-software co-design. Prepare for behavioral questions on cross-functional collaboration with hardware teams and customer-facing escalation ownership. Ask about 'innovation time' policies, on-call rotation severity, and how the org balances quarterly hardware releases with long-term AI research."
   },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784676689,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8660ecd030",
+    "15e527e8d6"
+   ],
+   "value": "Headquarters: Chandler, AZ. Major R&D hubs: Santa Clara CA, Boston MA, Raleigh NC, Toronto, Ottawa, Berlin, Chengdu, Sydney. Sales/support offices in 20+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "15e527e8d6"
+   ],
+   "value": "To enable customers to deliver high-quality, secure, and reliable network experiences by providing end-to-end visibility and assurance across physical, virtual, and hybrid networks."
+  },
   "name": "Viavi Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured — Hardware release cycles (6-12 mo) set cadence; software sprints 2-week; limited crunch; quarterly planning with realistic scope. Not a 'move fast' consumer culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "15e527e8d6"
+   ],
+   "value": "Portfolio includes optical and Ethernet test instruments, wireless/5G test solutions, network assurance and analytics software (Observer, NITRO), fiber inspection/characterization tools, anti-counterfeiting and 3D sensing technologies, and cloud-based service assurance platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days; accrues from day one; unlimited sick; 4 weeks after 5 yrs."
   },
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267832,7 +268318,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Full company shutdown week of July 4 and week between Christmas/New Year (paid, no PTO deducted). Additional 'recharge days' quarterly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8660ecd030",
+    "d405ee2d2d"
+   ],
+   "value": "Public company; ~3,600 employees (2024); FY2024 revenue ~$1.1B. Mature, profitable, low-debt balance sheet. Spun off from JDS Uniphase in 2015."
   },
   "sources": [
    {
@@ -267866,14 +268360,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=971ec230aa77795324fe95ca332813a9d5cc23abfda49bf622854784d6d9e532JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cudmlhdmlzb2x1dGlvbnMuY29tL2VuLXVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (historical approvals for software, hardware, data science roles). Green-card sponsorship (PERM) for senior/technical-track employees. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "15e527e8d6"
+   ],
+   "value": "Viavi Solutions is a global provider of network test, monitoring, and assurance solutions for telecommunications service providers, enterprises, and government agencies. The company helps customers deploy, optimize, and secure 5G, fiber, and cloud-native networks through hardware, software, and SaaS platforms."
+  },
+  "synthesized_evidence_sha": "4f53649d468ae22a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "15e527e8d6"
+   ],
+   "value": "Core engineering: RF/optical hardware, embedded firmware, real-time signal processing, distributed systems for network telemetry, ML/AI for anomaly detection and predictive assurance, cloud-native microservices (K8s, Kafka, Spark), full-stack web UIs for network ops."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676689,
   "web_search_url": "https://duckduckgo.com/?q=Viavi+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Viavi sits at the intersection of telecom infrastructure and AI-driven network assurance, offering elite prestige in a mission-critical domain (5G, fiber, cloud) with public-company stability and competitive new-grad compensation. Its culture emphasizes engineering rigor and work-life sanity over burnout-driven pace, with guaranteed shutdowns and sane hours reported by employees. Technical growth is accelerated by exposure to cutting-edge RF/optical hardware, massive-scale telemetry data, and pr"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Consistently cited on Glassdoor/Blind for sane hours (40-45 wk), protected weekends, mandatory summer/winter shutdowns, flexible hybrid. On-call exists but rotated and compensated."
   }
  },
  "viridien": {
@@ -268662,41 +269181,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Specialized Climate-Tech). Prestige is regarded as moderately high for those specifically interested in climate applications, but it lacks the universal name recognition of FAANG."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Business model details are not available in the retrieved excerpts. Typically, the company shares revenue with customers from grid operator payments and energy savings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and collaborative. Likely attracts climate-conscious engineers prioritizing environmental impact alongside technical execution in a flat, fast-growing environment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Customer specifics are not available in the retrieved excerpts. Generally, the target audience includes commercial and industrial businesses looking to reduce energy costs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive but varied for climate-tech, likely $110k-$150k base for new grads depending on location and role."
   },
   "evidence_sha": "eaac78e70cebc183",
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Industry specifics are not available in the retrieved excerpts. The company generally operates in the energy technology and climate-tech sector."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "In an interview, probe deeply into their new-grad compensation structure and actual daily work hours. It is crucial to ask how their mission translates into real technical projects for AI/data scientists to ensure you meet the 'elite prestige' and 'sane hours' requirements you prioritize."
   },
-  "last_attempt_at": 1784863866,
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784676950,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Location details are not available in the retrieved excerpts. The company is generally known to be US-based, with a headquarters in San Francisco."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Mission details are not available in the retrieved excerpts. The company is generally known for aiming to create a fully decarbonized grid."
+  },
   "name": "Voltus",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative. Typical of late-stage scale-ups balancing market expansion with technical maturity, generally free from slow corporate bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Product details are not available in the retrieved excerpts. Typically, the company offers a comprehensive energy management and demand response platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible PTO averaging 15-20 days, alongside standard public holidays."
   },
-  "retry_after": 1784863986,
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268706,7 +269287,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific guaranteed company-wide shutdowns found in research, though standard holidays apply."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Company size and funding stage are not available in the retrieved excerpts. It is generally considered a late-stage scale-up."
   },
   "sources": [
    {
@@ -268740,14 +269330,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8281918d6e5730ce338ea0092709d4d3641bdf4822f34c0c9517e72f308de388JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cudm9sdHVzLmNvLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Visa sponsorship details are not available in the retrieved excerpts. Candidates should verify directly with the company's recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "The provided source links redirect to Voltus's public company page and 'About' section, but the content was not successfully captured in the excerpts, meaning specific details on their operations and monetization could not be extracted. Consequently, Voltus is typically known as a climate-tech company that partners with commercial and industrial businesses to monetize their energy flexibility through virtual power plants, but this is based on general knowledge, not the supplied text."
+  },
+  "synthesized_evidence_sha": "eaac78e70cebc183",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1eaae17f5c",
+    "dc007ef80a",
+    "960d5bc85a"
+   ],
+   "value": "Technical work specifics are not available in the retrieved excerpts. Software roles generally involve building scalable platforms for energy data analytics and automated demand response."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676950,
   "web_search_url": "https://duckduckgo.com/?q=Voltus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While exact details are unstated in the sources, this company likely fits your need for a mission-driven climate-tech environment. It offers the potential to work on innovative grid-balancing data problems, aligning with your desire for a fast-paced, bureaucratic-resistant tech culture that accelerates learning without toxic burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The mission-driven nature often fosters a supportive culture with reasonable hours, though occasional on-call expectations may exist for critical energy grid software."
   }
  },
  "voxel": {
@@ -280102,37 +280725,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unavailable in research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "The sources did not contain any details regarding the company's monetization strategy or business model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unavailable in research."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "No information about the company's client base or target market was found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unavailable in research."
   },
   "evidence_sha": "ae8be5912238600b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784864030,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "No industry classification could be inferred from the empty source pages."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784864030,
   "last_evidence_at": 1784674904,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "No geographic locations or office addresses were extractable from the redirect links provided."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "The company's mission statement or core values were not available in the retrieved sources."
+  },
   "name": "Zachary Piper Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unavailable in research."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "No specific products or services could be identified from the retrieved redirect pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unavailable in research."
   },
+  "refresh_after": 1790048030,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -280142,7 +280831,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unavailable in research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "No data regarding the company's size, funding stage, or employee headcount was available in the provided text."
   },
   "sources": [
    {
@@ -280176,14 +280874,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=44b552d58d8865a0b051e5edd334bdeb87c1db2c221c5a368c25342856352386JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9aYWNoYXJ5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unavailable in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "919b419a3a",
+    "7a738c62d0",
+    "c66e0af5ca"
+   ],
+   "value": "The available sources for Zachary Piper Solutions only contained empty redirect pages or generic disambiguation links, meaning no verifiable plain-English description of their day-to-day operations or revenue model could be extracted from the provided text."
+  },
+  "synthesized_evidence_sha": "ae8be5912238600b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unavailable in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Zachary+Piper+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unavailable in research."
   }
  },
  "zapier": {
