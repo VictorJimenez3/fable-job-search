@@ -60098,39 +60098,104 @@
  },
  "cna national": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Not applicable - not an AI/data science employer"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Likely fee-based training programs and certification preparation services. Revenue model appears to be educational/training fees rather than technology products or services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Education and healthcare-focused culture. Not a tech/innovation culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Aspiring certified nursing assistants, healthcare facilities seeking trained staff, and individuals pursuing healthcare certifications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Not applicable for tech roles. Education/training roles typically $35K-$55K for entry-level positions."
   },
   "evidence_sha": "156cc77691ccecf7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784865022,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Healthcare education / vocational training"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Not applicable for AI/data science roles. If interviewing for training/education roles, focus on healthcare education experience, curriculum development, and adult learning principles."
+  },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784677232,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8bf239917"
+   ],
+   "value": "Estimated: Online training presence with possible physical locations in Washington state (per licensing source). No headquarters information found."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "To provide nursing assistant training and certification pathways. No technology-focused mission identified in available sources."
+  },
   "name": "CNA National",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical of educational/training organizations. Not a fast-paced tech environment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Based on sources: nursing assistant training programs, certification preparation, and related educational services. No technology products identified in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Standard US education sector PTO (10-15 days + holidays). No specific policy found."
   },
+  "refresh_after": 1790049022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60140,7 +60205,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns documented. Educational organizations may have holiday breaks but not formal tech-style shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to medium training organization. No public data on employee count or funding stage found in sources."
   },
   "sources": [
    {
@@ -60174,14 +60244,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=07b941fcea08f25fd5bc839aa2433de164fc4b1e5626d20a0f97a3f7bdcc9ad8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly9kb2gud2EuZ292L2xpY2Vuc2VzLXBlcm1pdHMtYW5kLWNlcnRpZmljYXRlcy9wcm9mZXNzaW9ucy1uZXctcmVuZXctb3ItdXBkYXRlL251cnNpbmctYXNzaXN0YW50&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor H-1B visas for technical roles given healthcare training focus. No sponsorship data found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "CNA National appears to be associated with nursing assistant training and certification based on available sources, not a technology company. The sources point to nursing assistant training websites and government licensing pages rather than an AI/data science employer."
+  },
+  "synthesized_evidence_sha": "156cc77691ccecf7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "Estimated: Minimal technical work relevant to AI/data science. Sources indicate healthcare training focus, not software engineering or data science operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677232,
   "web_search_url": "https://duckduckgo.com/?q=CNA+National+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b64593ac42",
+    "d8bf239917"
+   ],
+   "value": "This company does not match your priorities. Sources indicate CNA National is a nursing assistant training organization, not a top-tier AI/data science employer. It lacks the elite prestige, high new-grad tech pay, fast innovative tech culture, and technical career acceleration you seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely reasonable work-life balance typical of training/education sector, but no specific data found."
   }
  },
  "coalition": {
@@ -87111,37 +87211,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected consumer ML team with production recommendation systems at scale, but not an AI research lab. Strong for applied ML career growth, weaker for publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "574c5be595",
+    "676c864287"
+   ],
+   "value": "Freemium subscription model: Epic Unlimited family subscription ($11.99/month or $79.99/year) for home use; Epic School free for educators with optional paid upgrades; revenue from consumer subscriptions and school district partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, kid-centric, collaborative; low ego; diverse team (many parents/former educators); transparent leadership; remote-friendly with intentional culture building."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "574c5be595",
+    "676c864287"
+   ],
+   "value": "Families with children 12 and under (paid subscribers); elementary schools and educators (free access); children directly using the platform for reading and learning."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + $15k-$30k equity (4yr) + $10k-$20k sign-on; total $155k-$205k year 1. Bay Area premium applied."
   },
   "evidence_sha": "b41b4d2061adebcb",
+  "generated_at": 1784865022,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "574c5be595",
+    "676c864287"
+   ],
+   "value": "EdTech / Consumer Subscription / Digital Media for Children"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical ML/system design (recommendation, content ranking, scaling to millions of kids), product sense for child-safe UX, and behavioral questions on mission alignment. LeetCode hard is rare; they prefer take-homes or architecture discussions. Emphasize experience with consumer apps, A/B testing, or educational technology."
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784674342,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Redwood City, CA; remote-friendly with distributed team across US; some roles may require Bay Area presence."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "574c5be595"
+   ],
+   "value": "To inspire a lifelong love of reading and learning in children by providing unlimited access to high-quality books and educational content."
+  },
   "name": "Epic Kids",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable pace (40-45 hrs/week typical); quarterly planning cycles; no crunch culture; education calendar drives release timing (back-to-school, summer reading)."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "574c5be595",
+    "676c864287"
+   ],
+   "value": "Epic! digital library platform (iOS, Android, web) with 40,000+ books, audiobooks, learning videos, and quizzes; Epic School (free for educators); Epic Unlimited (family subscription); reading tracking and recommendation engine."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick/mental health days; unlimited not offered but generous approval culture."
   },
+  "refresh_after": 1790049022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87151,7 +87307,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (between Christmas and New Year); summer Fridays (half-days June-August) common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; Series C/D stage startup; acquired by Byju's in 2021 for ~$500M but operating as independent subsidiary; profitable with millions of subscribers."
   },
   "sources": [
    {
@@ -87185,14 +87346,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ca7718dc723c30624837789fac43498b29703c5441ba48082b9d0c2cba060feJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuZ2V0ZXBpYy5jb20vc2lnbi1pbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B transfers and new H-1B cap sponsorship for senior/engineering roles; limited new-grad sponsorship due to company size; green card sponsorship typically after 1-2 years tenure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "574c5be595",
+    "676c864287"
+   ],
+   "value": "Epic Kids (operating as Epic!) is a digital reading platform providing access to thousands of children's books, audiobooks, and educational videos for kids 12 and under. The company operates a subscription-based service for families and offers free access for educators and schools."
+  },
+  "synthesized_evidence_sha": "b41b4d2061adebcb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer-facing mobile/web platform (React Native, Node.js, Python); recommendation/personalization algorithms; content ingestion and DRM pipelines; scalable backend for millions of concurrent young readers; analytics for reading engagement; educator dashboard and classroom tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674342,
   "web_search_url": "https://duckduckgo.com/?q=Epic+Kids+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Epic Kids offers a mission-driven edtech role with genuine work-life balance (education sector norms, not gaming crunch), consumer-scale data for ML/recommendation work, and a product that directly improves children's literacy. The Byju's acquisition provides stability while the team retains autonomy, avoiding both Big Tech bureaucracy and early-stage chaos. New grads get production ML impact on a kid-safe platform with sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 \u2014 strong boundaries, predictable hours, minimal on-call for non-infra roles; leadership emphasizes sustainability."
   }
  },
  "epsilon": {
@@ -123623,7 +123808,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -123641,7 +123826,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784864708,
+  "last_attempt_at": 1784864865,
   "last_evidence_at": 1784677232,
   "name": "IGT",
   "pace_of_work": {
@@ -123654,7 +123839,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
-  "retry_after": 1784864828,
+  "retry_after": 1784865105,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136544,37 +136729,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier: massive proprietary clinical dataset, published research in top venues (NEJM AI, Nature Medicine, AMIA), dedicated AI/ML centers, and leadership in real-world model deployment across care delivery."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Integrated non-profit managed care: prepaid premiums cover care delivery through Kaiser Foundation Health Plans, Kaiser Foundation Hospitals, and the Permanente Medical Groups. No separate billing for services; incentives align prevention and cost efficiency."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, collaborative, clinician-partnered, and academically rigorous. Diverse workforce with strong DEI focus. Decision-making can be consensus-heavy; bureaucracy exists but is tempered by shared purpose."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "~12.5 million members (individuals, families, seniors, employers, Medicare/Medicaid beneficiaries) across 8 states and Washington, D.C."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% annual bonus + RSU/equity-equivalent (non-profit deferred comp) ~$15k-$25k/yr. Total comp ~$160k-$195k. Bay Area/Seattle premium applies."
   },
   "evidence_sha": "c8d1ab9153bb528f",
+  "generated_at": 1784865022,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Healthcare / Integrated Managed Care / Non-profit Health Systems"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML/system design questions grounded in clinical workflows (e.g., readmission prediction, scheduling optimization). Demonstrate awareness of privacy (HIPAA), fairness/equity in health algorithms, and ability to collaborate with clinicians. Ask about model governance, deployment guardrails, and how DS teams balance research vs. production demands."
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784674072,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Headquarters: Oakland, CA. Major hubs in Northern/Southern California, Colorado, Georgia, Hawaii, Maryland, Oregon, Virginia, Washington, D.C. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "To provide high-quality, affordable healthcare services and improve the health of members and the communities served."
+  },
   "name": "Kaiser Permanente",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: deliberate, evidence-driven development cycles with clinical safety gates. Faster than traditional hospital IT, slower than consumer tech. Quarterly planning with protected time for tech debt and learning."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Health insurance plans (individual, Medicare, Medicaid, employer-sponsored), hospital and physician services, pharmacy, telehealth, wellness programs, and health IT platforms (e.g., KP HealthConnect EHR)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 personal days; accrual increases with tenure. Sabbatical eligibility after 7 years in some regions."
   },
+  "refresh_after": 1790049022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136584,7 +136823,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Organization-wide shutdown between Christmas and New Year (5-7 days). Additional 'wellness days' or summer Fridays in some departments. No guaranteed weekly shutdowns, but strong cultural norm against off-hours work."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Large, mature non-profit (founded 1945); ~220,000 employees, ~23,000 physicians, $100B+ annual revenue. Publicly recognized as a top-tier U.S. healthcare system."
   },
   "sources": [
    {
@@ -136618,14 +136864,39 @@
     "url": "https://kp.taleo.net/smartorg/smartorg/common/toc.jsf?lang=en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and employment-based green cards for technical, clinical, and research roles. Large enough to have dedicated immigration counsel; cap-exempt status for some research/academic-affiliated positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Kaiser Permanente is an integrated managed care consortium operating as a non-profit healthcare provider and health plan. It makes money through insurance premiums from members and employers, which fund its owned hospitals, medical offices, and employed physician groups under a capitated care model."
+  },
+  "synthesized_evidence_sha": "c8d1ab9153bb528f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b106aeb7a5"
+   ],
+   "value": "Enterprise EHR (Epic/KP HealthConnect), data science for population health, predictive modeling, AI/ML for clinical decision support, imaging analytics, member-facing digital apps, cloud infrastructure, cybersecurity, and health equity analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674072,
   "web_search_url": "https://duckduckgo.com/?q=Kaiser+Permanente+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kaiser offers elite-scale healthcare data (12M+ longitudinal records) and a mission-driven non-profit culture that genuinely prioritizes work-life balance\u2014rare in high-paying AI/DS. You get top-tier prestige, competitive new-grad compensation, and a pace that favors sustainable innovation over burnout, with real shutdown norms and strong learning infrastructure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong (estimated 4/5): culture encourages 40-hr weeks, core-hours flexibility, minimal on-call for most DS roles, and explicit 'no weekend email' norms in many orgs. Non-profit mission reduces pressure for aggressive feature velocity."
   }
  },
  "kantar": {
@@ -148358,112 +148629,129 @@
  "louisiana economic development": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Low - Not an AI/ML organization. Any data roles are operational analytics, not research or cutting-edge application."
+   "source_ids": [
+    "e8177b3514",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Low. This is a standard government Java developer role. It does not align with elite, top-tier AI or data science prestige, nor does it operate in a fast-paced tech culture."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "1061ced56c",
-    "4d596678c9"
+    "e8177b3514"
    ],
-   "value": "Government agency funded through state legislative appropriations and federal grants. No profit motive; success measured by capital investment attracted, jobs created/retained, and economic impact metrics."
+   "value": "State government agency funded by public budget; tech roles are fulfilled via IT consulting contracts (e.g., CGI)."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Traditional public-sector culture: mission-driven but process-heavy, risk-averse, hierarchical. Values stability and compliance over innovation. Collegial but not a 'tech culture'."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: Public sector and traditional corporate consulting. Stability-focused, process-driven, and highly structured rather than a cutting-edge technical learning environment."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1061ced56c",
-    "dc4d7f0534"
+    "1061ced56c"
    ],
-   "value": "Primary stakeholders are businesses considering relocation/expansion in Louisiana, existing Louisiana employers, site selectors, and state policymakers. The \"customer\" base is the Louisiana economy broadly."
+   "value": "Louisiana businesses, citizens, and the state government itself."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $45,000-$60,000 base (Louisiana state pay scales for Analyst/IT roles). No equity, bonus, or signing bonus. Benefits include pension, health insurance, tuition reimbursement."
+   "confidence": "high",
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: $58K - $136K base salary. While the top of this band is competitive, the broad range suggests standard government/consulting scaling that does not guarantee the elite new-grad pay of top-tier tech firms."
   },
   "evidence_sha": "df60c67825b36d9e",
-  "generated_at": 1784683367,
+  "generated_at": 1784865022,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "4d596678c9"
+    "1061ced56c"
    ],
-   "value": "Government / Economic Development / Public Administration"
+   "value": "Government / Economic Development"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect behavioral questions about public service motivation, stakeholder management, and compliance experience. Technical assessments would be basic SQL/Excel/Python for reporting, not ML system design. Prepare for slow hiring process (months) with civil service rules."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Candidates should probe for the true division of labor between CGI and the state agency to understand real career growth potential. It is also critical to clarify the government contracting pay band and tech stack modernity to ensure it meets personal and professional goals."
   },
-  "last_attempt_at": 1784683367,
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784752886,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1061ced56c",
-    "4d596678c9"
+    "e8177b3514"
    ],
-   "value": "Headquartered in Baton Rouge, LA with regional offices in New Orleans, Shreveport, Lafayette, Lake Charles, Alexandria, Monroe, and Hammond. Primarily in-office or hybrid with limited remote flexibility for state employees."
+   "value": "Lafayette, LA and other locations across Louisiana; hybrid work model."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "1061ced56c",
-    "4d596678c9"
+    "1061ced56c"
    ],
-   "value": "To cultivate jobs and economic opportunity for the people of Louisiana by attracting new investment, supporting business growth, and developing a competitive workforce."
+   "value": "To promote economic prosperity and job creation for the state of Louisiana."
   },
   "name": "Louisiana Economic Development",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Slow - Government bureaucratic pace with multiple approval layers, legislative cycles, and compliance requirements. Not fast or innovative by tech standards."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: Moderate to slow. State agencies and large legacy consulting firms typically prioritize compliance and steady execution over rapid innovation."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "1061ced56c",
-    "dc4d7f0534"
+    "e8177b3514",
+    "1db9db9c4d"
    ],
-   "value": "LED provides economic development services including business incentives (tax credits, grants), workforce development programs, site selection assistance, export support, and small business resources. It does not sell commercial products."
+   "value": "As a state agency, it provides economic development programs, business incentives, and site-selection services rather than commercial tech products. (Note: The specific job posting is for a Java Developer role at CGI, a consulting firm contracted by the state)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days annual leave + 12-14 paid holidays + sick leave (accrues monthly). Exact accrual depends on tenure and civil service rules."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: 15-20 days of PTO, typical for state government employees and large consulting firms, providing sane hours and personal time."
   },
+  "refresh_after": 1790049022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Yes - All state/federal holidays observed (12-14 days/year). Offices typically closed between Christmas and New Year. No expectation of off-hours work."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: No formal guaranteed tech shutdowns (outside of standard state holidays) found in research."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "4d596678c9"
+    "e8177b3514",
+    "1db9db9c4d"
    ],
-   "value": "State government agency with approximately 100-150 employees. Mature, stable organization established in 1980s (restructured 2008). Not a startup or growth-stage company."
+   "value": "State government agency size; supports a hybrid Junior Java Developer role, indicating a structured but potentially bureaucratic environment."
   },
   "sources": [
    {
@@ -148519,38 +148807,44 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a state agency, LED can sponsor H-1B visas (cap-exempt as governmental research entity) but rarely does for technical roles. Green card sponsorship possible but slow. Most positions require US citizenship or permanent residency due to government hiring rules."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: As a state government entity relying on consulting partners for staffing, visa sponsorship is highly unlikely for this hybrid role."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "1061ced56c",
-    "4d596678c9"
-   ],
-   "value": "Louisiana Economic Development (LED) is the state government agency responsible for driving economic growth, business recruitment, and job creation across Louisiana. It operates as a public-sector organization funded by taxpayer dollars rather than a revenue-generating business."
-  },
-  "technical_work": {
    "confidence": "medium",
    "source_ids": [
     "1061ced56c",
-    "dc4d7f0534"
+    "1db9db9c4d"
    ],
-   "value": "Limited technical roles focused on economic data analysis, GIS mapping for site selection, workforce analytics, and managing incentive compliance databases. Not an AI/ML-centric organization; data science roles would be analytical/reporting rather than research or product development."
+   "value": "Louisiana Economic Development is a state government agency responsible for fostering economic growth and job creation in Louisiana. It operates through government funding rather than traditional commercial revenue, though specific details were limited in the provided sources."
+  },
+  "synthesized_evidence_sha": "df60c67825b36d9e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Agile software development utilizing Java, Angular, JavaScript, SQL, and the Spring framework to build internal and public-facing state systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672022,
   "web_search_url": "https://duckduckgo.com/?q=Louisiana+Economic+Development+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "This role does not match your priorities. LED is a government bureaucracy, not a fast innovative tech culture. It lacks elite AI prestige, high new-grad pay (state salary bands), and the technical depth you seek. Work-life balance is strong with fixed hours, but technical growth is limited to public-sector analytics."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "This role fundamentally conflicts with the candidate's priorities. As a state government tech position (or a consultant embedded in one), it trades elite prestige and high new-grad pay for stability. The pace is likely bureaucratic rather than fast and innovative."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High - Standard 40-hour weeks, generous holidays, strong leave policies, and strict overtime rules typical of state government. Guaranteed shutdowns on holidays/weekends."
+   "source_ids": [
+    "e8177b3514"
+   ],
+   "value": "Estimated: Standard. Government tech roles generally offer a 40-hour workweek without the extreme burnout found in top-tier tech, though they lack guaranteed shutdowns."
   }
  },
  "louisiana state university lsu": {
@@ -163539,37 +163833,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Low; no clear indication of AI/DS practice."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Revenue is generated from guided adventure tours, equipment rentals, lodging services, and retail sales."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Outdoor-focused, adventurous, and community-driven."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Tourists, outdoor enthusiasts, and thrill-seeking travelers visiting the Moab area."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $60k-$80k, typical for entry-level tech roles in tourism."
   },
   "evidence_sha": "a8f08fd13246710a",
+  "generated_at": 1784865022,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Tourism and Outdoor Recreation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Questions should probe the availability of actual AI/DS work, tech stack, and growth opportunities, given the motivations for elite prestige and learning."
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784630054,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Moab, Utah."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "To facilitate unforgettable outdoor experiences and promote appreciation for the natural environment."
+  },
   "name": "Moab",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, fueled by seasonal tourism cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Outdoor adventure packages, guided tours, recreational equipment rentals, and lodging."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 10-15 days, standard for tourism jobs."
   },
+  "refresh_after": 1790049022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163579,7 +163929,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No typical office shutdowns, as operations are seasonal."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Local operation catering to a global tourist base."
   },
   "sources": [
    {
@@ -163613,14 +163970,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=45ddde476a79c98e6199b91159cf131927e656320e97a8ad9a57e9d1f8a4bb0eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=227c6992-93b9-66c6-194e-7e0f92fd67be&u=a1aHR0cHM6Ly93d3cuZGlzY292ZXJtb2FiLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No data found; unlikely to be a major tech sponsor for AI/DS roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Moab is an outdoor adventure hub that serves as a premier destination for recreation, tourism, and\u7b8d outdoor sports. It generates revenue through tourism-related services, retail, and hospitality."
+  },
+  "synthesized_evidence_sha": "a8f08fd13246710a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6b602d3978"
+   ],
+   "value": "Likely involves e-commerce platforms, booking systems, and digital marketing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630054,
   "web_search_url": "https://duckduckgo.com/?q=Moab+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate\u2019s priority for top-tier AI/DS roles with high pay and innovative tech culture, this role may not align well due to the lack of recognized tech infrastructure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, driven by outdoor lifestyle culture."
   }
  },
  "moderna": {
@@ -176069,11 +176451,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176085,6 +176469,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784674078,
   "name": "Northwestern University",
   "pace_of_work": {
@@ -176097,6 +176482,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784865142,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176140,7 +176526,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3c1aa3a2e03d70b4c148560686a3e75a027c38e30a5a700fa693c2fbd5a85dc9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly93d3cubm9ydGh3ZXN0ZXJuLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674078,
   "web_search_url": "https://duckduckgo.com/?q=Northwestern+University+company+careers+benefits",
@@ -236700,11 +237086,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236716,6 +237104,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784674074,
   "name": "Steve Madden",
   "pace_of_work": {
@@ -236728,6 +237117,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784865142,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236771,7 +237161,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=877026c8966f4e104e0fa61cda77238f46c997a4649c7cc3294b25e758d07b27JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9TdGV2ZV8oMjAyNV9maWxtKQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674074,
   "web_search_url": "https://duckduckgo.com/?q=Steve+Madden+company+careers+benefits",
@@ -252315,11 +252705,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252331,6 +252723,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784865022,
   "last_evidence_at": 1784674078,
   "name": "Tocaro Blue",
   "pace_of_work": {
@@ -252343,6 +252736,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784865142,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252386,7 +252780,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a4a11d13bde142fd57deb131260cba4ac9a80f43e86ac8653249714f0236c16eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly9taXh1ZS5hc2lhL21lbnUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674078,
   "web_search_url": "https://duckduckgo.com/?q=Tocaro+Blue+company+careers+benefits",
