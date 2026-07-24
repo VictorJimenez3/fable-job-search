@@ -28558,43 +28558,109 @@
  },
  "apptronik": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "325c5dca77"
+   ],
+   "value": "Tier 1 — Top-3 funded humanoid robotics company globally; attracts elite robotics/AI talent from top labs and Big Tech."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "Robot-as-a-Service (RaaS) and direct sales of Apollo humanoid systems with recurring software/subscription revenue; backed by $935M Series A to scale production and deployment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fdd49166f5"
+   ],
+   "value": "Mission-driven, engineering-first, collaborative; 'no assholes' ethos; Austin pragmatism over SV hype; values first-principles thinking and cross-disciplinary respect."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "325c5dca77",
+    "fdd49166f5"
+   ],
+   "value": "Early commercial pilots with logistics, manufacturing, and retail partners; NASA (historical collaboration on Valkyrie robot); potential defense and space applications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "Estimated: $160k-$200k base + equity (0.05-0.15% typical) + signing bonus; total comp $200k-$280k; competitive with Tier 1 robotics labs and Big Tech."
   },
   "evidence_sha": "6dad01807b22bebf",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898527,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "325c5dca77"
+   ],
+   "value": "Humanoid Robotics / General-Purpose Robotics / Deep Tech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "325c5dca77",
+    "fdd49166f5"
+   ],
+   "value": "Expect deep technical loops on robotics fundamentals (control, estimation, planning), sim-to-real challenges, and safety-critical software practices. Prepare to discuss end-to-end system thinking — not just model performance — and how you handle hardware-software integration ambiguity. Cultural fit emphasis on collaborative, first-principles problem solving and sustainable pace."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680501,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd49166f5"
+   ],
+   "value": "Headquarters: Austin, Texas; potential remote/hybrid for select roles; manufacturing and test facilities in Greater Austin area."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd49166f5"
+   ],
+   "value": "Build general-purpose humanoid robots that can work alongside humans in real-world environments to address labor shortages and elevate human potential."
+  },
   "name": "Apptronik",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "Fast, hardware-gated iteration cycles; aggressive milestones driven by capital and market window, but structured around physical robot constraints — not arbitrary crunch."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "325c5dca77",
+    "fdd49166f5"
+   ],
+   "value": "Apollo humanoid robot — a general-purpose humanoid designed for logistics, manufacturing, and retail tasks; supporting software stack for robot control, perception, and fleet management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited PTO not confirmed; no public policy details."
   },
-  "retry_after": 1784898647,
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28604,7 +28670,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Winter holiday shutdown (Dec 24-Jan 1) likely; summer shutdown not confirmed; no public guarantee."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "~200-400 employees (estimated); post-Series A, pre-commercial scale-up phase with significant capital for hiring and manufacturing."
   },
   "sources": [
    {
@@ -28638,14 +28712,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5df57c97ba15dbc69195597536f59566c3966d732c99bf018d9f59d4e84ad927JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9hcHB0cm9uaWsuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and O-1 visas given deep-tech talent needs and recent large fundraise; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "Apptronik is an Austin-based humanoid robotics company developing general-purpose humanoid robots like Apollo for commercial and industrial applications. The company recently closed a $935 million Series A round, placing it among the top-funded humanoid robotics companies globally."
+  },
+  "synthesized_evidence_sha": "6dad01807b22bebf",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd49166f5"
+   ],
+   "value": "Whole-body control, locomotion, manipulation, perception, sim-to-real transfer, fleet orchestration, safety-critical systems, hardware-software co-design for humanoid form factor."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680501,
   "web_search_url": "https://duckduckgo.com/?q=Apptronik+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "325c5dca77",
+    "623594dc88"
+   ],
+   "value": "Apptronik offers a rare combination: elite prestige in the hottest deep-tech category (humanoid robotics), top-tier new-grad compensation fueled by a $935M war chest, and a mission to build robots that work with humans — not replace them. The Austin base and post-Series A stage mean faster iteration and more ownership than Big Tech, without the burnout culture of early-stage startups still hunting for product-market fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Hardware cycles impose some weekend/late-night test days, but culture emphasizes sustainable pace and guaranteed shutdowns; no public data on formal policies."
   }
  },
  "apten": {
@@ -115293,37 +115396,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not an AI/data science research organization; technical roles support tax compliance and software implementation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-based professional services: hourly billing, fixed-fee projects, and retainer arrangements for ongoing compliance and advisory work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-service oriented, hierarchical; values technical accuracy and regulatory knowledge over rapid experimentation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-market and large corporations across multiple industries needing multi-state tax compliance and strategic planning."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000–$90,000 base + modest bonus; below top-tier AI/data science new-grad packages ($120k+)."
   },
   "evidence_sha": "51be299d6877c978",
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Professional Services / Tax Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the role involves modern data stack (Python, SQL, cloud) or legacy tax software maintenance. Clarify busy-season expectations, on-call policies, and opportunities for AI/ML skill development. Ask about mentorship structure for early-career technologists."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680404,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in the U.S. (likely Midwest or East Coast) with possible remote/hybrid options for experienced staff."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver specialized state and local tax expertise with a client-service focus, helping businesses navigate complex tax obligations."
+  },
   "name": "DuCharme, McMillen & Associates",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to high during filing deadlines (quarterly/annual); project-based with seasonal intensity typical of tax consulting."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "State and local tax consulting, compliance outsourcing, tax technology implementation, audit representation, and transaction tax advisory."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + federal holidays; may vary by tenure."
   },
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115333,7 +115478,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns; some offices may close between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private firm (likely 50–200 employees), established practice with regional or national footprint."
   },
   "sources": [
    {
@@ -115367,14 +115517,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b8fa710949e60bb7051ab9c7ed7fd95e9260a3edce5c7e15892a3fe7819a0e09JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuc3BhbmlzaGRpY3QuY29tL3RyYW5zbGF0ZS9kdWNoYXJtZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for experienced tax technologists; unlikely for new-grad AI/data science roles given firm focus."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DuCharme, McMillen & Associates is a professional services firm specializing in state and local tax consulting, compliance, and advisory services for businesses. It generates revenue through client engagements for tax planning, audit defense, and transaction tax analysis."
+  },
+  "synthesized_evidence_sha": "51be299d6877c978",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tax research, data analysis for compliance, implementation of tax software (e.g., Vertex, Thomson Reuters), and process automation using scripting or low-code tools. Limited AI/ML research; focus on applied tax technology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680404,
   "web_search_url": "https://duckduckgo.com/?q=DuCharme%2C+McMillen+%26+Associates+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This firm offers deep domain expertise in state/local tax—a stable, high-demand niche—but does not match the candidate's priority for elite AI/data science prestige, fast innovative tech culture, or guaranteed work-life shutdowns. Consulting busy seasons often require extended hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – busy seasons (Q1, Q4) may require 50–60 hour weeks; off-peak periods more manageable. No guaranteed shutdowns."
   }
  },
  "duke energy": {
@@ -158943,11 +159114,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158959,6 +159132,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680503,
   "name": "Graphcore",
   "pace_of_work": {
@@ -158971,6 +159145,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159014,7 +159189,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e754a54b55a36c49618a5779bceca70050c68b637887839bd179b42212915a7cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuZ3JhcGhjb3JlLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680503,
   "web_search_url": "https://duckduckgo.com/?q=Graphcore+company+careers+benefits",
@@ -238039,11 +238214,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238055,6 +238232,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680509,
   "name": "Momentive",
   "pace_of_work": {
@@ -238067,6 +238245,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238110,7 +238289,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=7281d618b1ff6f41b7a213a1d81ddb765ceee862a47876d21078968779b82b22JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cubW9tZW50aXZlLmNvbS9lbi11cw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680509,
   "web_search_url": "https://duckduckgo.com/?q=Momentive+company+careers+benefits",
@@ -262575,11 +262754,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262591,6 +262772,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680504,
   "name": "Omni Design Technologies",
   "pace_of_work": {
@@ -262603,6 +262785,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262666,7 +262849,7 @@
     "url": "https://jobs.lever.co/omnidesigntech/003f8d12-e454-4df9-be7f-5dd73faf0dd2"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680504,
   "web_search_url": "https://duckduckgo.com/?q=Omni+Design+Technologies+company+careers+benefits",
@@ -269334,48 +269517,155 @@
  "parkdepot": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. Information not available in the provided sources to evaluate prestige for a new grad."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. No public data found on new grad tech compensation."
   },
   "evidence_sha": "b14d2032fbff8ae5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Assess the team's innovation pace versus bureaucracy, the day-to-day technical learning curve, and ask nuanced questions about work hours and protected personal time to verify the company meets your strict work-life balance and anti-burnout criteria."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680504,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
   "name": "Parkdepot",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. Information not available in the provided sources to determine if the pace is fast-paced or bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. No public data found on exact PTO days."
   },
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. No public data found on company-wide holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
   },
   "sources": [
    {
@@ -269409,14 +269699,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=0a80e000827fcfbde4ee57f1d65ed509a7f7d4cc114cf8e782a084b4db04863bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL2FtYXpvbi9hYm91dC8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Not enough factual information could be extracted from the provided sources to summarize what this company does or how it makes money."
+  },
+  "synthesized_evidence_sha": "b14d2032fbff8ae5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Information not available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680504,
   "web_search_url": "https://duckduckgo.com/?q=Parkdepot+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Aligns with your desire for an elite, fast-paced AI/ML environment that accelerates technical learning and career growth, while carefully confirming whether the company's culture genuinely respects work-life balance and avoids burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "642a7ff876",
+    "e242a8d2b6",
+    "1d5151ab2f"
+   ],
+   "value": "Estimated: Unknown. Information not available in the provided sources to determine if the environment is non-toxic and respects personal time."
   }
  },
  "parsons": {
@@ -297656,52 +297987,129 @@
  "redwood materials": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4297f259ce"
+   ],
+   "value": "Estimated: Specialized Climate-Tech Startup. AI/ML work here focuses heavily on operational technology, infrastructure automation, and predictive analytics for battery processing, rather than serving as a pure-play AI research firm."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Redwood makes money by recycling end-of-life batteries and manufacturing new battery materials, selling these components to organizations requiring large-scale energy storage and domestic supply chain solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4297f259ce",
+    "915777b97d"
+   ],
+   "value": "Estimated: Collaborative, dynamic, demanding but mission-driven, focusing on scaling up sustainable battery materials and energy storage."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Manufacturing organizations and enterprises requiring large-scale energy storage and domestic battery materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary. Aligns with competitive tech startups in the battery/materials manufacturing space."
   },
   "evidence_sha": "aeafb77cbd3d4fb1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898527,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Renewable Energy Services and Battery Recycling."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4297f259ce",
+    "86333c58ca"
+   ],
+   "value": "Use the interview to clarify how the team handles multiple priorities and competing deadlines without causing burnout, and ask if their fast-paced atmosphere includes personal time boundaries. Emphasize your ability to thrive in ambiguous environments and seek an understanding of how 'force-multiplier'Data Science roles can support their manufacturing lifecycle while fostering technical learning."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680502,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Nevada, U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "To build a circular supply chain for lithium-ion batteries and accelerate the transition to sustainable energy by producing low-cost battery materials in the U.S."
+  },
   "name": "Redwood Materials",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4297f259ce",
+    "86333c58ca"
+   ],
+   "value": "Estimated: Very fast-paced, with shifting priorities, competing deadlines, and an ambiguous early-stage culture requiring deep technical expertise."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Recycled battery materials, low-cost large-scale energy storage, and battery components produced in the U.S."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Estimated: 15 to 20 days annually. Specific policies are not outlined, but standard tech startups typically fall here."
   },
-  "retry_after": 1784898647,
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4297f259ce"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. As an early-stage startup, standard holidays are expected but flexible shutdowns are unlikely."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "915777b97d",
+    "4297f259ce"
+   ],
+   "value": "Fast-growing, dynamic, early-stage environment founded in 2017."
   },
   "sources": [
    {
@@ -297765,14 +298173,48 @@
     "url": "https://boards.greenhouse.io/redwoodmaterials/jobs/5737879004?gh_jid=5737879004"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "86333c58ca",
+    "915777b97d"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "86333c58ca"
+   ],
+   "value": "Redwood Materials is a Nevada-based company founded in 2017 that focuses on recycling lithium-ion batteries and manufacturing scaled battery materials. The company generates revenue by collecting end-of-life batteries, breaking them down into core components like lithium, cobalt, and nickel, and supplying low-cost, large-scale energy storage and battery materials back to the U.S. market."
+  },
+  "synthesized_evidence_sha": "aeafb77cbd3d4fb1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4297f259ce",
+    "915777b97d"
+   ],
+   "value": "Involves infrastructure and server provisioning, deployment automation, edge fleet management, and IT/OT systems management including SCADA devices and HMIs to support material processing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680502,
   "web_search_url": "https://duckduckgo.com/?q=Redwood+Materials+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4297f259ce"
+   ],
+   "value": "Redwood Materials perfectly aligns with a candidate seeking deep technical learning in an innovative, ambiguous environment rather than a slow structure. However, to balance your strict guaranteed-shutdown and generous PTO requirements, you must probe their work-life balance deeply, as early-stage environments characterized by shifting priorities and fast pace can sometimes blur boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4297f259ce",
+    "86333c58ca"
+   ],
+   "value": "Estimated: Moderate to Low. Success in technical roles requires managing multiple workstreams and tight deadlines in a fast-paced environment, which may challenge strict work-life balance."
   }
  },
  "regeneron pharmaceuticals": {
@@ -317244,11 +317686,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317260,6 +317704,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680508,
   "name": "Semtech",
   "pace_of_work": {
@@ -317272,6 +317717,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317315,7 +317761,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4b8a2a3efbc3d1c8e866b35239fcb884fab5dab51cbd30d62d69387c5fa98a28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuc2VtdGVjaC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680508,
   "web_search_url": "https://duckduckgo.com/?q=Semtech+company+careers+benefits",
@@ -381549,37 +381995,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low for elite tech industry prestige; prestige is tied to academia rather than cutting-edge commercial AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Revenue is generated primarily through student tuition, state appropriations, and academic research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and academic, prioritizing public service over technical innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Students, academic researchers, and the State of New Hampshire."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 annually."
   },
   "evidence_sha": "58bf03fb9d017db0",
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Probe directly for the specific AI or data science project scope. Ask about the pace of technical innovation, opportunities for rapid career growth and learning, and new-grad compensation bands to ensure they meet your expectations."
   },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680403,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "New Hampshire."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "To provide accessible public higher education and research to the state of New Hampshire."
+  },
   "name": "University System of New Hampshire",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Bureaucratic and slow-paced, typical of public higher education."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Academic degrees, continuing education programs, and institutional research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of vacation plus standard university holidays."
   },
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -381589,7 +382089,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes holiday breaks between semesters, though exact operational shutdown policies are not public."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Established public university system."
   },
   "sources": [
    {
@@ -381623,14 +382130,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2be36528c588716c744f1e6990ffe25ad8a9994bc96adc510434942051ac4f7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cudXd5by5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Public universities occasionally sponsor visas for specialized academic or research roles, though it is not typical for standard administrative IT positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2",
+    "59e4812398",
+    "bb6f4119ba"
+   ],
+   "value": "The University System of New Hampshire (USNH) is a public university system that provides higher education services. It generates revenue primarily through state funding, student tuition, research grants, and endowments."
+  },
+  "synthesized_evidence_sha": "58bf03fb9d017db0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6df99e3ff2"
+   ],
+   "value": "Information technology administration, academic research support, and enterprise systems management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680403,
   "web_search_url": "https://duckduckgo.com/?q=University+System+of+New+Hampshire+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: While it may provide a highly stable environment with good work-life balance that respects personal time, this public academic institution fundamentally lacks the elite AI/data science prestige, fast-paced innovative tech culture, and high new-grad compensation you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, with sane hours and strong respect for personal time."
   }
  },
  "untillabs": {
@@ -385851,48 +386385,136 @@
  "vega americas": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Estimated: Low to None. As an industrial instrumentation manufacturer, VEGA centers on physical engineering rather than elite AI or data science."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "B2B hardware and software sales. VEGA designs and manufactures industrial instrumentation and sells these products directly to processing facilities and through distribution channels."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Mature, stable, and engineering-first. The culture is firmly rooted in industrial process measurement, which may feel slower and more traditional compared to an aggressive startup environment."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Industrial manufacturing, processing, and engineering facilities requiring robust process automation and measurement solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b15b8df3b2",
+    "13ede9662b"
+   ],
+   "value": "Estimated: $70,000 to $95,000. Likely lower than top-tier software firms, as compensation is standard for Ohio manufacturing rather than elite big tech."
   },
   "evidence_sha": "9bb6621411a019a7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Industrial Manufacturing and Process Instrumentation"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Probe heavily into the exact day-to-day technical work to ensure it meets your standard for accelerated learning and innovative AI/data science culture. Ask specific questions about the team's tech stack, work hours culture, and how much time is spent on modern software versus legacy industrial hardware to ensure it isn't slow bureaucracy."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680508,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b15b8df3b2"
+   ],
+   "value": "Headquartered in Ohio, USA, recently expanding its production footprint. The parent company operates globally with a strong presence in Europe."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "To provide innovative and reliable process measurement solutions that drive industrial efficiency and safety."
+  },
   "name": "VEGA Americas",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b15b8df3b2"
+   ],
+   "value": "Estimated: Moderate. The company is growing its physical manufacturing capacity, but as an established, mature European-rooted firm, it likely prioritizes measured reliability over rapid, fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Process instrumentation, including level, pressure, and flow measurement sensors, alongside analytical tools for industrial data and automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "13ede9662b"
+   ],
+   "value": "Estimated: 15 to 25 days annually. Standard corporate leave for a US manufacturing subsidiary, though the European parent company culture may positively influence time-off policies."
   },
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "b15b8df3b2",
+    "c3d4a05475",
+    "13ede9662b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b15b8df3b2"
+   ],
+   "value": "Estimated: None found in research. Guaranteed shutdowns are more common in pure tech; confirm if any plant-wide maintenance closures apply to engineers."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b15b8df3b2"
+   ],
+   "value": "Mature, privately held global company. VEGA Americas recently expanded its production facility in Ohio by 120,000 sq ft, indicating steady physical growth and financial stability."
   },
   "sources": [
    {
@@ -385926,14 +386548,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=b3b0af0ee70c307d7137afc2aaac2a1f988ecd881eee2e93c8fab9963d99e5fcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cudmVnYS5jb20vZW4tdXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "13ede9662b"
+   ],
+   "value": "Standard corporate context for a global manufacturing firm; specific visa sponsorship policies for tech roles are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "VEGA is a global manufacturer of process instrumentation technology. The company makes money by designing, producing, and selling sensors and analytical tools for industrial process measurement."
+  },
+  "synthesized_evidence_sha": "9bb6621411a019a7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c3d4a05475",
+    "13ede9662b"
+   ],
+   "value": "Hardware-focused engineering, instrumentation manufacturing, and industrial data integration. Likely involves embedded systems, industrial IoT, and sensor calibration rather than elite data science or modern AI software stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680508,
   "web_search_url": "https://duckduckgo.com/?q=VEGA+Americas+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b15b8df3b2",
+    "13ede9662b"
+   ],
+   "value": "VEGA Americas may not fully align with your desire for elite AI prestige or top-tier new-grad pay, as it is a traditional industrial manufacturing company rather than a fast-paced tech firm. However, European-rooted manufacturing companies often maintain highly sane working hours and a strong respect for work-life balance, which could fulfill your requirement to avoid toxic burnout cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c3d4a05475"
+   ],
+   "value": "Estimated: Good. European industrial companies typically emphasize employee well-being and predictable hours, which strongly aligns with avoiding a toxic environment."
   }
  },
  "velera": {
@@ -398928,7 +399584,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -398946,7 +399602,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784898314,
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784679534,
   "name": "Williams-Sonoma",
   "pace_of_work": {
@@ -398959,7 +399615,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784898554,
+  "retry_after": 1784899208,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -409197,42 +409853,105 @@
  "zoetis": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High industry prestige in life-sciences, considered a great launchpad for new grads."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Generates revenue through the manufacturing and global sales of animal health medicines, vaccines, and diagnostics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Iconic for mission-driven teams focused on a collaborative and scientific approach rather than tech."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Livestock farmers, veterinarians, and pet owners worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Following standard industry benchmarks for public dedicated health."
   },
   "evidence_sha": "3b2e27ba0896cd9a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898314,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Pharmaceuticals / Animal Health Care"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Focus on confirming the fast-innovative culture and sane hours to ensure this specific role is a fast-paced technical accelerator rather than a slow bureaucratic."
+  },
+  "last_attempt_at": 1784898728,
   "last_evidence_at": 1784680313,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Global operations with products sold in multiple countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "To nurture the world and humankind by advancing care for animals through its dedication to animal health."
+  },
   "name": "Zoetis",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Moderate. Typically slower to operate than FAANG but still heavily tech-driven, offering the opportunity to work."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67",
+    "f1736044d2"
+   ],
+   "value": "Medicines, vaccines, and diagnostic products for livestock and companion animals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Highly generous starting at 3-4 weeks of PTO plus holidays."
   },
-  "retry_after": 1784898554,
+  "refresh_after": 1790082728,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -409241,8 +409960,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Company holidays observed throughout the calendar year but no specific mention of guaranteed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Publicly traded global corporation featured on the New York Stock Exchange."
   },
   "sources": [
    {
@@ -409286,14 +410014,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: As a large, global public company, it is highly likely to offer visa sponsorship for specialized hard-to-fill roles such as data science and AI."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5d927e1614",
+    "c15ec8db67",
+    "f1736044d2"
+   ],
+   "value": "Zoetis is a global animal health company that discovers, develops, manufactures, and commercializes medicines, vaccines, and diagnostic products for livestock and companion animals. It makes money by selling these health solutions to farmers, veterinarians, and pet owners worldwide."
+  },
+  "synthesized_evidence_sha": "3b2e27ba0896cd9a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Zoetis leverages data science and AI in research and development, diagnostics, and commercial operations to drive innovations in animal health."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680313,
   "web_search_url": "https://duckduckgo.com/?q=Zoetis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "A top-tier company like Zoetis fits the elite, well-paying new-grad mission profile by offering AI professionals the chance to drive real-world positive impact without the toxic burnout seen in big-tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c15ec8db67"
+   ],
+   "value": "Estimated: Strong. Large organization strives to offer excellent work-life balance that employees praise."
   }
  },
  "zoll cardiac management solutions": {
