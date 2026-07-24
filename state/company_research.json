@@ -3035,37 +3035,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low/Unknown – no evidence of AI/data science presence or prestige in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991"
+   ],
+   "value": "No business model details available in supplied sources. URLs suggest potential revenue from financial service fees (ACE Cash Express) and retail sales (ACE Hardware)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture information in supplied sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data in supplied sources."
   },
   "evidence_sha": "e0018537dd711003",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991"
+   ],
+   "value": "Financial services (payday lending) and/or retail hardware based on web properties in sources; no tech/AI industry evidence in supplied materials."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991",
+    "8309ffec92"
+   ],
+   "value": "Verify whether this ACE entity operates a distinct technology/AI division separate from the consumer-facing brands shown in sources. Ask for concrete evidence of AI/data science team structure, compensation bands, WLB policies, and technical project scope."
+  },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674069,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991"
+   ],
+   "value": "Sources show San Bernardino, CA location for ACE Cash Express and store #06045 for ACE Hardware; likely nationwide US presence for both brands."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "ACE",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no pace-of-work information in supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991"
+   ],
+   "value": "No product information available in supplied sources. URLs suggest possible payday lending/financial services (acecashexpress.com) and retail hardware (acehardware.com)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy information in supplied sources."
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3075,7 +3133,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no guaranteed shutdown policy information in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large, established public company (both ACE Cash Express and ACE Hardware are known national brands), but exact size/stage not confirmed by sources."
   },
   "sources": [
    {
@@ -3109,14 +3172,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1433c4978d2ea0bb5d3140fd7769165548edb1065a431e8b1df23d5b342fc83cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly93d3cuYWNlaGFyZHdhcmUuY29tLz9tc29ja2lkPTBjZjEyZDg0YjFjZDZmNDgzNzE3M2ExOWIwYjE2ZTdl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991",
+    "8309ffec92"
+   ],
+   "value": "ACE appears to operate in financial services (ACE Cash Express) and retail hardware (ACE Hardware) based on available web properties, but the supplied sources contain only redirect pages with no descriptive content about the company's operations, mission, or technology focus."
+  },
+  "synthesized_evidence_sha": "e0018537dd711003",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674069,
   "web_search_url": "https://duckduckgo.com/?q=ACE+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "0e094ae9c6",
+    "a1933d6991",
+    "8309ffec92"
+   ],
+   "value": "The supplied sources do not demonstrate alignment with candidate priorities: no evidence of elite AI/data science prestige, high new-grad tech pay, fast innovative tech culture, mission-driven focus, guaranteed work-life balance, or accelerated technical learning. The visible brands (payday lending, hardware retail) do not match the candidate's target profile."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance information in supplied sources."
   }
  },
  "acorns": {
@@ -19221,41 +19313,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – highly respected for applied data science and econometrics in high-stakes settings, but not a pure AI research lab."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees billed hourly for experts, analysts, and support staff; engagements typically span months to years."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Academic, collaborative, 'smart and nice' culture; emphasizes rigor and mentorship but expects high availability for client needs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Law firms, corporations, government agencies, and international organizations seeking rigorous quantitative analysis for high-stakes matters."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000-$130,000 base salary plus performance bonus (varies by role and advanced degree)."
   },
   "evidence_sha": "cb327e0dd0ea35a9",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Economic Consulting / Litigation Support Services"
   },
-  "last_attempt_at": 1784881145,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Case-style problem solving, econometric/statistical depth, coding proficiency (Python/R/SQL), ability to communicate complex findings, and behavioral fit for collaborative, client-facing consulting."
+  },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674897,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Boston with U.S. offices in New York, San Francisco, Washington DC, Chicago, Los Angeles, and international offices in Montreal, Paris, and elsewhere."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver objective, empirically grounded economic analysis that helps clients navigate complex legal and business challenges."
+  },
   "name": "Analysis Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced, project-driven with intense deadline periods; estimated 50-60 hours/week during peaks."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Economic consulting services, econometric modeling, data analytics, expert witness testimony, and strategic advisory for legal and regulatory disputes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus observed holidays."
   },
-  "retry_after": 1784881625,
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19265,7 +19395,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some offices may have reduced hours during major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private company founded in 1981 with 1,000+ employees across multiple offices globally."
   },
   "sources": [
    {
@@ -19299,14 +19434,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f0d88e065df827cb104a7072f93f38c27871b0d6467484410be08c713958ec65JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FuYWx5c2lz&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H-1B visas for technical and analytical roles; typical for major consulting firms hiring advanced-degree graduates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Analysis Group is an economic consulting firm that provides data-driven analysis and expert testimony for litigation, regulatory, and business strategy matters."
+  },
+  "synthesized_evidence_sha": "cb327e0dd0ea35a9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied data science, econometrics, statistical modeling, machine learning, and large-scale data processing for litigation and regulatory support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Analysis+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite analytical prestige and competitive new-grad compensation in a mission-driven environment, but consulting-driven deadlines may challenge the work-life balance and guaranteed shutdowns the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "6/10 – intellectually rewarding but demanding; consulting cycles can impede consistent work-life balance."
   }
  },
  "anaplan": {
@@ -67847,7 +68003,7 @@
    "value": "Mid-tier. Prestigious tech brand overall, but its AI division lacks the elite, cutting-edge reputation of top-tier pure-play AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -67904,7 +68060,7 @@
    ],
    "value": "For a top-tier AI or data science candidate, it is critical to interview the hiring manager to determine if the specific team operates with startup-like innovation or is hindered by larger corporate processes."
   },
-  "last_attempt_at": 1784881290,
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674432,
   "locations": {
    "confidence": "high",
@@ -67948,7 +68104,7 @@
    "value": "Estimated: 20-25 days of standard Paid Time Off alongside standard company holidays."
   },
   "refresh_after": 1790064706,
-  "retry_after": 1784881530,
+  "retry_after": 1784882168,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [
@@ -77915,38 +78071,99 @@
  "corbin advisors": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Estimated: Unknown/lower-tier because no public AI/data science presence is evidenced."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not identifiable from available public pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not determinable; no compensation data is available for a tech/AI role here."
   },
   "evidence_sha": "8578bf52ce08cfbf",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Advisory/consulting implied by name, but not confirmed by supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the role is genuinely AI/data science, ask for concrete examples of innovative tech culture versus bureaucracy, request new-grad pay band details, and explicitly confirm work-life balance expectations such as shutdowns or on-call limits before committing."
   },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784675401,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "No mission statement could be retrieved from the public site."
+  },
   "name": "Corbin Advisors",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Estimated: Unknown; no cultural or pace signals are available from the supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "917eeccd70",
+    "4c26bf9c87"
+   ],
+   "value": "Public pages reference a 'projects' section and a 'shop', but product details are not visible due to page redirects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not public; treat as unknown until confirmed in offer documents."
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77956,7 +78173,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed shutdowns; assume none unless stated otherwise."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources."
   },
   "sources": [
    {
@@ -77990,14 +78214,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=1faac94263ed943e49eff0f1169323b124da802a29137ec6296136db7e1c7402JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuY29yYmluLmNvbS9zaG9wLnNodG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a",
+    "917eeccd70",
+    "4c26bf9c87"
+   ],
+   "value": "Corbin Advisors operates the web domain corbin.online, but public landing pages currently redirect without rendering descriptive business content."
+  },
+  "synthesized_evidence_sha": "8578bf52ce08cfbf",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Not determinable from supplied sources; no engineering or AI/data science role content is visible."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675401,
   "web_search_url": "https://duckduckgo.com/?q=Corbin+Advisors+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Given the candidate's priority on a top-tier AI/data science role with elite prestige, high new-grad pay, fast tech culture, and guaranteed work-life balance, Corbin Advisors' public footprint is too thin to confirm fit on any of these dimensions; proceed only if a recruiter can substantiate an actual AI/ML function and sane-hours culture."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "612c51b64a"
+   ],
+   "value": "Estimated: Unknown; no employee reviews or policy details are available to assess hours or burnout risk."
   }
  },
  "core specialty insurance holdings inc": {
@@ -79611,41 +79866,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 established tech. Prestigious within proptech and real estate, but not at the elite tier of FAANG or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Subscription-based revenue for access to proprietary data, analytics, and marketing platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Research-driven, data-obsessed, structured corporate culture valuing accuracy and thoroughness."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Commercial real estate professionals, investors, brokers, and apartment landlords."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $125,000 base salary for new grad tech/software roles."
   },
   "evidence_sha": "2796c85afe553436",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Real Estate / Information Technology / Data Analytics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss how you handle massive data pipelines and apply advanced machine learning to large-scale property datasets. Emphasize your ability to thrive in fast, innovative tech cycles, your drive for rapid career growth, and how you maintain high productivity without sacrificing work-life balance."
   },
-  "last_attempt_at": 1784881514,
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784676688,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Headquartered in Washington, D.C. with offices in major US cities and globally (e.g., UK, Canada)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "To be the most trusted source of commercial real estate information and analytics."
+  },
   "name": "CoStar Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast-paced, driven by a massive ongoing data collection and research initiative."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "CoStar, LoopNet, Apartments.com, Homes.com, and STR."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually, standard for a large publicly traded company."
   },
-  "retry_after": 1784881634,
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79655,7 +79972,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread official company-wide shutdowns; but standard paid holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Established, publicly traded company (NASDAQ: CSGP) with a large global workforce。"
   },
   "sources": [
    {
@@ -79689,14 +80015,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=cc6051e1e7a0aa6c3b58e30b786d1302888f112e027f56d187909f85eaf038e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9UQUdTL3RhZ19ici5hc3A&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May offer visa sponsorship for highly specialized technical roles, though policies are not explicitly published."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "CoStar Group is a leading provider of commercial real estate information, analytics, and online marketplaces. They make money by charging subscriptions for their comprehensive proprietary databases and marketing platforms, which offer data-driven insights to real estate professionals."
+  },
+  "synthesized_evidence_sha": "2796c85afe553436",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ab16278f27",
+    "c4787119ab",
+    "d0331bb487"
+   ],
+   "value": "Building and maintaining large-scale data pipelines, cloud infrastructure, and data-driven real estate applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
   "web_search_url": "https://duckduckgo.com/?q=CoStar+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CoStar Group provides data scientists with the chance to work on massive, high-value proprietary datasets, blending elite technical challenges with a mission-driven focus on real estate transparency. They balance fast-paced, high-impact work with a culture known for sustainable hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance, generally avoiding the high-burnout environment of top-tier tech companies, though heavy emphasis is placed on data accuracy and thorough research."
   }
  },
  "country financial": {
@@ -138296,7 +138651,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138314,7 +138669,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784881514,
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674904,
   "name": "Healio",
   "pace_of_work": {
@@ -138327,7 +138682,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784881634,
+  "retry_after": 1784881928,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203444,41 +203799,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected actuarial/data analytics team; not an AI research hub."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Earns revenue through insurance premiums, investment management fees, annuity fees, and mortality/expense charges on policies. Operates as a mutual company (policyholder-owned)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Conservative, collaborative, mission-oriented, low-politics. Long tenures common. Values stability and policyholder trust over disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Individuals seeking life insurance and retirement solutions, families, small to mid-size businesses, and independent financial advisors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + 5-10% bonus + pension/401k match. Total comp ~$95k-$115k. Below FAANG but high for insurance."
   },
   "evidence_sha": "6e77cbd3bd64008a",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Insurance / Financial Services (Life & Annuities)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect actuarial science, statistical modeling, and SQL/Python practical tests. Behavioral questions on ethics, long-term thinking, and collaboration. Ask about: modern stack adoption (cloud, ML ops), mentorship programs, typical project cycles, and how innovation is balanced with regulatory compliance."
   },
-  "last_attempt_at": 1784881514,
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674902,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Headquarters: Montpelier, Vermont. Additional offices in major U.S. cities. Hybrid/remote options likely for tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "To provide financial security and peace of mind through life insurance and retirement solutions, helping people protect what matters most."
+  },
   "name": "National Life",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-slow: Regulatory constraints and actuarial rigor prioritize accuracy over speed. Sprints measured in months, not weeks."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Life insurance policies (term, whole, universal), annuities, retirement planning products, and investment advisory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + potential year-end shutdown week."
   },
-  "retry_after": 1784881634,
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203488,7 +203893,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes week between Christmas and New Year as company-wide shutdown; additional summer Fridays possible."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Established mutual insurance company founded 1848; ~$100B+ assets under management; ~1,500-2,000 employees; mature, stable, private (mutual) ownership."
   },
   "sources": [
    {
@@ -203522,14 +203934,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=a1a332a61f2a7f25199c1fa792279a032b50a2d3c34a1341e9170d398496d797JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cubmF0aW9uYWxjYXIuY29tL2VuL2hvbWUuaHRtbD9tc29ja2lkPTFmYzg3YzYwNGQ1ZjY4NjkxZmVlNmJmZDRjYWI2OTc5&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized actuarial, data science, and engineering roles. Mutual company structure may mean slower sponsorship processes than big tech."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "National Life is a life insurance and financial services company based in Vermont, offering life insurance, annuities, and investment products to individuals and businesses."
+  },
+  "synthesized_evidence_sha": "6e77cbd3bd64008a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56120e75ed"
+   ],
+   "value": "Actuarial modeling, data analytics, policy administration systems, digital customer platforms, risk modeling, and legacy system modernization. Growing investment in AI/ML for underwriting, claims, and customer experience."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=National+Life+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven, stable environment with strong work-life balance typical of established mutual insurers—predictable hours, low burnout risk, and meaningful consumer protection work. Technical prestige is moderate: solid actuarial/data science reputation but not an AI research leader. Pay is competitive for the industry but below top-tier tech. Culture emphasizes steadiness over speed, which aligns with your desire for sane hours and learning without sacrifice, but may feel slow if you w"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5: Strong work-life balance culture; 40-45 hr weeks typical; minimal on-call; generous holiday shutdowns common in insurance."
   }
  },
  "national life group": {
@@ -207326,11 +207763,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207342,6 +207781,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674282,
   "name": "New York University",
   "pace_of_work": {
@@ -207354,6 +207794,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784881808,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207397,7 +207838,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b8b7906f053d4dfd6f58a9d55f9683768046c0ff8da444a9b85159a9a7e7a826JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly9uZXdzLmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674282,
   "web_search_url": "https://duckduckgo.com/?q=New+York+University+company+careers+benefits",
@@ -279844,37 +280285,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unable to determine from the provided sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unable to determine from the provided sources."
   },
   "evidence_sha": "b8d7b906b9a0aafc",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Tailored to candidate priorities: A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
   },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784676690,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
   "name": "SRM",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unable to determine from the provided sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unable to determine from the provided sources."
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -279884,7 +280395,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unable to determine from the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
   },
   "sources": [
    {
@@ -279918,14 +280438,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=f5e8d76148895732162cc75c022ce76c471ae65e85a13b3a1c4235f4f586a5c4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cucGlubmFjbGVmZXJ0aWxpdHkuY29tL2ZpbmQtYS1jbGluaWMvd2FzaGluZ3Rvbi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "Information not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "82d4961f18",
+    "09e8043de4",
+    "86d93b0c35"
+   ],
+   "value": "The provided sources do not contain any readable content or company information, as all three URLs resulted in redirect pages. Consequently, no factual summary can be synthesized regarding what the company does or how it makes money."
+  },
+  "synthesized_evidence_sha": "b8d7b906b9a0aafc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unable to determine specific AI or data science technical work due to lack of content in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676690,
   "web_search_url": "https://duckduckgo.com/?q=SRM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tailored to candidate priorities: A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unable to determine from the provided sources."
   }
  },
  "ss c": {
@@ -312953,44 +313502,118 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources. Assumed to operate on a fee-for-service or managed-care healthcare model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources. Assumed to be patients, healthcare networks, or institutional partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "8df046d1c15c3065",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Healthcare / Health Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Given the expectation for high pay and guaranteed shutdowns, the candidate should interrogate whether the team actually does cutting-edge AI work or routine data engineering. It is critical to clarify exact compensation, after-hours expectations, tech stack modernity, and whether the role offers genuine technical growth or will be slowed by healthcare bureaucracy."
+  },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784583420,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources."
+  },
   "name": "United Health Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Moderate-to-fast (estimated)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources due to redirection limits. Assumed to be healthcare-related services or clinical solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources."
   },
   "sources": [
    {
@@ -313024,10 +313647,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=eaf94fd69a92a84b62a90362888f28409c066d1268a7887a01192d430747e705JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVW5pdGVkX0FpcmxpbmVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Information not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Based on available sources, detailed operational information could not be extracted. However, the 'United Health Services' name suggests it may be an entity focused on healthcare or hospital management. Revenue would logically derive from providing medical services or related health-system operations."
+  },
+  "synthesized_evidence_sha": "8df046d1c15c3065",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Estimated: Likely involves maintaining electronic health records (EHR) systems, patient data infrastructure, and general hospital IT operations rather than cutting-edge AI or data science development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583420,
   "web_search_url": "https://duckduckgo.com/?q=United+Health+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "f4ba2baa33",
+    "064aef15e4"
+   ],
+   "value": "Because the candidate prioritizes elite prestige, fast innovative tech culture, and top-tier new-grad pay for AI/data science, this traditional healthcare environment likely poses a mismatch. Standard hospital IT rarely offers the elite AI prestige or fast, non-bureaucratic technical learning the candidate is looking for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314381,38 +315037,103 @@
  "university of illinois chicago": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: High academic prestige, particularly in AI research due to proximity to the broader University of Illinois system, though distinct from the elite corporate AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Generates revenue via tuition, government and private research grants, and public funding, reinvesting in academic and research programs."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Educational, research-focused, and mission-driven, valuing knowledge creation over rapid product delivery."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Students seeking higher education and academic professionals, as well as funding bodies and communities benefiting from research and public service."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: $60,000 - $85,000 for academic research roles, significantly lower than top-tier tech industry pay."
   },
   "evidence_sha": "296eaf7067c5edf1",
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Higher Education / Research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on aligning your AI/data science research goals with available grant funding and academic timelines. Determine if the slower, mission-driven academic pace will satisfy your desire for rapid career growth or if it will feel like bureaucracy."
   },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674046,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Chicago, Illinois."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "To provide a broad access to education and foster knowledge creation through research and community service."
+  },
   "name": "University of Illinois Chicago",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: Slower, academic pace dictated by semester schedules and grant cycles, contrasting with fast tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73",
+    "f4e1e7897c"
+   ],
+   "value": "Undergraduate and graduate degree programs, academic research, and public service initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: Academic staff accrue standard university PTO, typically around 20-25 days annually, plus university holidays."
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314421,8 +315142,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: Major university holidays observed, but no structured corporate-style week-long shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "72fb79c6a9"
+   ],
+   "value": "Large public university, established and stable."
   },
   "sources": [
    {
@@ -314456,14 +315186,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=735988f76b6a5a4253508ec8ed91db2db383760eab96c2a4bfbd4715c578f6b9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly9ldmVyZXR0LndzdS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Likely supports H-1B visas for faculty and specialized research staff, though availability varies by grant and role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e058ebbc73",
+    "72fb79c6a9"
+   ],
+   "value": "University of Illinois Chicago (UIC) is a major public research university. As an academic institution, it generates revenue through tuition, government grants, and research funding."
+  },
+  "synthesized_evidence_sha": "296eaf7067c5edf1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e058ebbc73",
+    "72fb79c6a9"
+   ],
+   "value": "Academic research in various fields, including AI and data science, often leveraging university supercomputing resources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674046,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Illinois+Chicago+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Academic research roles offer strong technical learning and work-life balance, but may not match the high compensation, fast pace, and guaranteed shutdowns typical of top-tier tech companies. This environment is better suited for foundational AI or data science research rather than rapid product development."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e058ebbc73"
+   ],
+   "value": "Estimated: Generally good work-life balance with academic holidays and schedules, but without guaranteed tech-style shutdowns."
   }
  },
  "university of maine system": {
@@ -327077,48 +327838,126 @@
  "walmart": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: Fascinating scale and massive datasets, often viewed as high-tier for practical impact, though generally less elite than top-tier FAANG or specialized AI research labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "The company leverages economies of scale and a massive global supply chain to keep costs low, generating revenue through high-volume retail sales both in-store and online."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: Mission-driven by cost-savings for customers, featuring a traditional corporate culture with an increasingly visible push into technology and innovation hubs."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Walmart serves everyday consumers and families, historically focusing on rural and suburban areas but increasingly reaching urban and online shoppers through its digital platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: High pay scale for tech talent, generally ranging $110k-$140k base salary for new grads, reflecting Walmart Global Tech's push to compete with pure tech firms."
   },
   "evidence_sha": "6c8a9f6d2815b861",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881688,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Retail, E-commerce, and Big Box Stores."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Evaluate specific team structure to ensure a fast, innovative tech culture, ask about work-life balance and sane hours over traditional corporate expectations, and confirm technical growth isn't bottlenecked by slow bureaucracy."
+  },
+  "last_attempt_at": 1784881688,
   "last_evidence_at": 1784674280,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0eeb8e64ba",
+    "992d66b173"
+   ],
+   "value": "Operations are headquartered in Bentonville, Arkansas, with physical retail and corporate locations across the globe, as seen in regional stores like those in Chicago."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Walmart's mission is to save people money so they can live better. While specific mission text was not directly captured in the provided source excerpts, it is fundamentally driven by retail accessibility and affordability."
+  },
   "name": "Walmart",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: Pace can be fast and demanding in technical and e-commerce divisions, but mega-corporate bureaucracy may slow execution compared to pure tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "The company offers a wide variety of physical goods including groceries, apparel, electronics, home goods, and pharmacy items, alongside retail services and an expanding e-commerce marketplace."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: Standard corporate PTO policy usually offering 2-3 weeks of vacation for new hires, alongside standard sick leave and paid holidays."
   },
+  "refresh_after": 1790065688,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "bc529c057e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: No known guaranteed company-wide shutdowns, though standard paid holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Walmart is a large, established, publicly traded enterprise (NYSE: WMT) and the world's largest company by revenue, operating thousands of retail units worldwide."
   },
   "sources": [
    {
@@ -327152,14 +327991,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=9579540ce9991b164e9cbb9ddcec5aa1e2f120dcf40eb21c52a3db81963aeab9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cud2FsbWFydC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: As a major US corporation with large technical hiring needs, Walmart is generally known to sponsor work visas for specialized roles such as data scientists and software engineers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Walmart is a multinational retail corporation that operates a massive chain of hypermarkets, discount department stores, and grocery stores. It makes money by purchasing goods in bulk at low costs and selling them at high volumes to consumers through its physical retail locations and growing e-commerce platforms."
+  },
+  "synthesized_evidence_sha": "6c8a9f6d2815b861",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "As a massive retailer, Walmart employs data science and engineering teams for supply chain optimization, e-commerce logistics, inventory forecasting, and AI-driven retail personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674280,
   "web_search_url": "https://duckduckgo.com/?q=Walmart+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Walmart Global Tech offers high new-grad pay and elite-scale AI challenges, but candidates must weigh the risk of retail legacy bureaucracy slowing innovation and a pace that may challenge strict work-life balance goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "bc529c057e"
+   ],
+   "value": "Estimated: Culture varies significantly by team, but corporate retail operations typically demand steady full-time hours that may stretch during peak retail seasons."
   }
  },
  "wanderlog": {
