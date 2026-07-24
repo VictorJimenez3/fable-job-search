@@ -1842,11 +1842,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1858,6 +1860,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678333,
   "name": "Abbott",
   "pace_of_work": {
@@ -1870,6 +1873,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877592,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1913,7 +1917,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3ef04767f90b1af1008f330c411407c93346662078ab4622245e4e6e7971f988JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuYWJib3R0LmNvbS9lbi11cy9ob21lcGFnZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678333,
   "web_search_url": "https://duckduckgo.com/?q=Abbott+company+careers+benefits",
@@ -15609,53 +15613,126 @@
  },
  "amazon web services inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Top-tier (T1) - AWS is a global leader in cloud infrastructure and AI/ML platforms."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Pay-as-you-go cloud computing services, charging for consumed compute, storage, and networking resources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Customer-obsessed, driven by curiosity, bold ownership, and fearless initiative."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Individuals, companies, and governments seeking scalable cloud infrastructure and data solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Base salary $150,000 - $170,000, with total compensation reaching $200,000+ including stock and bonuses."
   },
   "evidence_sha": "e3cb7b43753421bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784877161,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Cloud Computing / Information Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Probe deeply into work-life balance expectations, on-call rotation frequency, and operational overhead. Candidate must screen for toxic or burnout-inducing team cultures, as pace is unlikely to align with sane hours."
+  },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678205,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Global presence with corporate offices and data centers worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "To be Earth's most customer-centric company, driven by a culture of curiosity, bold ownership, and fearless initiative to make everyday impact."
+  },
   "name": "Amazon Web Services, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Estimated: Very fast-paced, high-stress environment with heavy operational load and on-call duties."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Cloud computing services including compute, storage, databases, networking, analytics, machine learning, and AI solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: 15 days standard for new hires, accruing with tenure."
   },
-  "retry_after": 1784877401,
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns; limited to standard holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Director-led, Large Enterprise (Subsidiary of Amazon.com, Inc.)."
   },
   "sources": [
    {
@@ -15699,14 +15776,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Sponsors visas for eligible full-time roles and interns."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83",
+    "e6d83815e0"
+   ],
+   "value": "Amazon Web Services (AWS), a subsidiary of Amazon, provides on-demand cloud computing platforms and APIs to individuals, companies, and governments. It makes money through a pay-as-you-go pricing model, charging customers for the compute, storage, and networking resources they consume."
+  },
+  "synthesized_evidence_sha": "e3cb7b43753421bc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Building and scaling global cloud infrastructure, distributed systems, and machine learning/AI platforms (e.g., Amazon SageMaker)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678205,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Candidate wants elite pay and prestige with a fast, innovative tech culture. However, candidate desires guaranteed shutdowns and low bureaucracy, which fundamentally misaligns with AWS's known high-pace environment and heavy operational load."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6b37fb4b83"
+   ],
+   "value": "Estimated: Below average to poor, highly dependent on specific team and on-call rotations."
   }
  },
  "amazon web services inc a97": {
@@ -25033,43 +25142,95 @@
  },
  "argonne national laboratory": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "d8aae6e9e2"
+   ],
+   "value": "Elite tier for scientific computing and AI for science; globally recognized for high-performance computing and applied physics research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67"
+   ],
+   "value": "Funded primarily by the U.S. government to operate large-scale research facilities and deliver scientific breakthroughs for public benefit."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and academically oriented, where collaboration and scientific rigor thrive. The culture rewards technical learning and career growth but may involve administrative steps slower than an agile startup."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67"
+   ],
+   "value": "U.S. Department of Energy, other federal agencies, academic institutions, and scientific user communities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000-$120,000 base salary for AI and data science roles, potentially augmented by sign-on incentives; generally lower than FAANG but competitive within national R&D sectors."
   },
   "evidence_sha": "493630fa80ebf69b",
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6812c141dc"
+   ],
+   "value": "Research and Development / Scientific and Technical Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "In your interview, emphasize how your AI/data science skills can accelerate scientific discovery, signaling an ability to thrive within a mission-driven framework's pace. Ask team-specific questions about project velocity and publishing structure to confirm the environment balances rapid innovation with sane hours."
   },
-  "last_attempt_at": 1784877314,
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678472,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67"
+   ],
+   "value": "Main campus in Lemont, Illinois, with collaborations spanning federal and academic partners nationwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6812c141dc"
+   ],
+   "value": "To apply world-class research to solve national scientific problems and create new technologies that benefit humanity."
+  },
   "name": "Argonne National Laboratory",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally moderate and structured around research milestones and publication cycles rather than rapid commercial deployment, though computing divisions dedicated to exascale AI may maintain a faster technical pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8aae6e9e2"
+   ],
+   "value": "Scientific research, high-performance computing facilities (including exascale systems), advanced user facilities such as the Advanced Photon Source, and peer-reviewed publications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of annual vacation for new hires, plus accrued sick leave and federal holidays."
   },
-  "retry_after": 1784877434,
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25079,7 +25240,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely operational pauses aligned with major winter holidays and occasional summer ramp-downs to lower costs, though specifics were not found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67"
+   ],
+   "value": "Large-scale national laboratory employing thousands of researchers, engineers, and support staff."
   },
   "sources": [
    {
@@ -25113,14 +25281,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=a114c1deecf4ec90066d2947faad1da2f5fd10e0d920d0982f6f332095c2eef1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cucXVvcmEuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67"
+   ],
+   "value": "As a U.S. Department of Energy national laboratory, Argonne is subject to federal employment regulations, which may restrict certain roles to U.S. citizens or lawful permanent residents due to security requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d173bdbb67",
+    "6812c141dc"
+   ],
+   "value": "Argonne National Laboratory is a multidisciplinary science and engineering research center managed by UChicago Argonne LLC for the U.S. Department of Energy. It advances fundamental and applied research across clean energy, environment, computing, and national security."
+  },
+  "synthesized_evidence_sha": "493630fa80ebf69b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8aae6e9e2"
+   ],
+   "value": "Scientific computing, AI for science, supercomputing, large-scale data analysis, and modeling for physical and environmental sciences."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=Argonne+National+Laboratory+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Argonne aligns with your priorities for elite prestige and mission-driven work, offering access to world-class AI and high-performance computing facilities. While lab environments can carry bureaucracy, Argonne's scientific labs generally maintain a culture of academic freedom and respect for work-life balance, largely avoiding the toxic conditions of high-burnout private tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average. As a national laboratory, it tends to foster a respectful, balanced environment with sane hours, avoiding the high-burnout cycles toxic to personal time seen in competitive private tech."
   }
  },
  "arista networks": {
@@ -102714,37 +102910,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top-tier within European financial infrastructure; comparable to major exchange groups like CME, ICE, LSEG. Strong for applied ML in market surveillance, risk, and analytics.)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from listing fees (initial and annual), trading fees (cash and derivatives), clearing and settlement fees, market data sales, index licensing, technology services (colocation, connectivity), and other post-trade services. Diversified across multiple European countries and asset classes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, engineering-centric, collaborative, long-term oriented. Multicultural European environment. Values technical excellence, regulatory compliance, and stability. Less hierarchical than traditional banks; more structured than startups. Strong emphasis on knowledge sharing and internal mobility."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are listed companies (issuers), institutional investors, broker-dealers, market makers, asset managers, retail brokers, and data vendors. Also serves clearing members, settlement participants, and technology partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €55,000-€75,000 base + 10-20% bonus + benefits (varies by location: Paris/Amsterdam higher). Total comp ~€65k-€90k. Competitive for European financial infrastructure, below top US tech but with better WLB."
   },
   "evidence_sha": "b9303c04e5cd07b7",
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Market Infrastructure / Exchange Operator / Fintech (regulated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews: low-latency system design (C++/Java), high-frequency data processing, distributed systems, cloud architecture (AWS/Azure), and ML for anomaly detection/market surveillance. Also assess regulatory awareness (MiFID II, EMIR), testing rigor, and ability to work in a compliance-heavy but modernizing tech stack. Cultural fit: collaborative, quality-focused, long-term thinking."
+  },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678872,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Amsterdam. Major hubs: Paris, London, Brussels, Lisbon, Dublin, Milan, Oslo. Tech centers in Paris, Lisbon, and Amsterdam. Remote/hybrid policies vary by country and team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the preferred pan-European market infrastructure, connecting European economies to global capital markets by providing efficient, transparent, and sustainable trading, clearing, and settlement services."
+  },
   "name": "Euronext",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast during project sprints and regulatory deadlines; generally sustainable. Core trading systems require high reliability, so changes are deliberate. Not a 'move fast and break things' culture; more 'move fast with rigorous testing'."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include cash equities trading (Euronext markets), derivatives trading (Euronext Derivatives), fixed income trading, ETFs and funds, market data and indices (e.g., CAC 40, AEX, BEL 20), clearing via Euronext Clearing, settlement via Euronext Securities, and technology solutions (Optiq trading platform, Colocation)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave + 10-12 public holidays (varies by country: France 25+11, Netherlands 25+8, UK 25+8, etc.). Additional leave for seniority, family events, and local customs."
   },
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102754,7 +102992,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated shutdowns. Some teams observe reduced activity between Christmas and New Year. Market closures on public holidays provide natural downtime. On-call rotations for production systems are compensated with time off in lieu."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, publicly traded pan-European exchange group (Euronext N.V., ticker: ENX). ~1,500+ employees across 7+ countries. Market cap ~€7-9B. Mature, regulated financial infrastructure company."
   },
   "sources": [
    {
@@ -102788,14 +103031,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=89ed9ab7bbad20e0784b505895b117400fb9d864ded59ae0e0a21d879665a3cfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cuZXVyb25leHQuY29tL2Vu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major European employer, Euronext sponsors work visas (e.g., EU Blue Card, Dutch highly skilled migrant visa, French talent passport) for qualified tech talent. Sponsorship is routine for specialized roles in data science, engineering, and quant research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Euronext is the leading pan-European market infrastructure, operating regulated exchanges in Amsterdam, Brussels, Dublin, Lisbon, Milan, Oslo, and Paris. It provides listing, trading, clearing, settlement, and market data services for equities, derivatives, fixed income, and ETFs."
+  },
+  "synthesized_evidence_sha": "b9303c04e5cd07b7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core tech: ultra-low-latency trading systems (Optiq platform in C++/Java), high-throughput market data distribution, clearing/settlement platforms, risk engines, regulatory reporting, cloud migration (AWS/Azure), data science for market surveillance, analytics, and AI-driven market monitoring. Strong focus on reliability, latency, and regulatory compliance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678872,
   "web_search_url": "https://duckduckgo.com/?q=Euronext+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Euronext offers a rare combination: elite prestige as the primary European exchange group, competitive new-grad compensation for AI/data science roles, and a mission-critical technology environment that demands innovation in low-latency systems, market surveillance AI, and cloud transformation — all within a regulated, stable institution that generally respects European work-life norms (reasonable hours, strong labor protections) compared to high-burnout fintech or hedge fund cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. European labor laws and exchange culture support reasonable hours (typically 37-40h/week), strong vacation, limited weekend work except for critical production support rotations. Better than investment banking or high-frequency trading shops."
   }
  },
  "eval com": {
@@ -107136,37 +107400,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within financial services; peer to JPMorgan/Capital One AI labs, slightly below pure-play big tech (Google/DeepMind/Meta) for pure research prestige but stronger applied ML scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from asset-based fees (mutual fund/ETF expense ratios, advisory fees), net interest income on cash balances, trading revenue (payment for order flow, margin interest), and institutional service fees. Zero-commission online equity trades; monetizes via spread and balance-sheet."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-driven, collaborative, low-ego. 'Customer first' value permeates decisions. Diverse, inclusive (ERGs, neurodiversity hiring). Promotion based on impact + behaviors. Minimal politics for a 70k-person org. Leadership accessible via skip-levels and town halls."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail investors (25M+ brokerage accounts), workplace savings plan participants (23M+), financial advisors/RIAs, and institutional clients (pension funds, endowments, corporations)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + $15k-$30k sign-on + RSUs vesting 4yr ($40k-$80k total) = ~$180k-$250k year-1 TC for AI/ML engineering roles in high-cost hubs. Adjusted lower for satellite offices."
   },
   "evidence_sha": "db39ff959a990343",
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Financial Services / Asset Management / FinTech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous but fair technical loops: ML system design (scalable recommendation/fraud pipelines), Python/Java coding, statistics/ML theory, and behavioral questions tied to Fidelity's 'customer first' values. Prepare for case studies on model deployment, data quality, and regulatory constraints. Emphasize collaboration, ownership, and ability to ship in a regulated environment."
+  },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678327,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Boston, MA. Major US tech hubs: Boston, Dallas/Fort Worth, Raleigh-Durham, Chicago, Jersey City, Merrimack NH. International: London, Dublin, Bangalore, Pune, Toronto. Hybrid-friendly; many roles offer 2-3 days onsite."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make financial expertise broadly accessible and help customers achieve better financial outcomes through innovation, low-cost products, and personalized guidance."
+  },
   "name": "Fidelity Investments",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Quarterly planning cycles with 2-week sprints; regulated releases add compliance gates but teams ship ML features monthly. Less chaotic than startup; more agile than traditional bank cores."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include brokerage accounts (Fidelity.com), retirement plans (401k, IRA), managed accounts, mutual funds/ETFs (including zero-fee index funds), wealth management, and institutional custody/trading services. Growing digital advice and fractional shares offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-11 company holidays + 1-2 volunteer days. Accrual starts day one. Unlimited sick/time-off for care. Carryover up to 5 days."
   },
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107176,7 +107482,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1, ~7-9 business days) where most operations pause. Additional summer 'recharge' day(s) in some divisions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private company (employee-owned). ~$13T+ assets under administration, ~70k+ employees globally. Not a startup; stable, profitable, low turnover at senior levels."
   },
   "sources": [
    {
@@ -107210,14 +107521,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f92122cbd985a40ace84469365b4724b2404c91623d5180c3c04844f3c8bb72cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuZmlkZWxpdHkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for specialized tech roles (data science, ML engineering, cloud). Routine cap-subject and cap-exempt filings; dedicated immigration team. New grads on F-1 OPT/STEM OST commonly converted."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fidelity Investments is a multinational financial services corporation offering brokerage, retirement planning, wealth management, and institutional investment services. It serves millions of individual investors and institutions globally."
+  },
+  "synthesized_evidence_sha": "db39ff959a990343",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy investment in cloud-native platforms, real-time trading systems, data lakes, ML for personalization/fraud/risk, and AI-driven digital advice. Tech hubs in Boston, Dallas, Raleigh, Chicago, London, India. Uses Java, Python, Kafka, Kubernetes, Spark; growing GenAI/ML engineering teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678327,
   "web_search_url": "https://duckduckgo.com/?q=Fidelity+Investments+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fidelity offers elite AI/data science prestige within a mission-driven financial giant that manages trillions, combining top-tier new-grad compensation with a culture that explicitly protects work-life balance through core-hours norms, guaranteed shutdowns, and low burnout — rare in finance. You get massive data scale, real production ML impact, and a tech-forward trajectory without the 'grind' reputation of hedge funds or big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong cultural emphasis on 'no weekend work' norms, core hours 10am-3pm, protected vacation, and annual company-wide shutdown (late Dec). On-call rotations exist for critical platforms but are compensated and rotated."
   }
  },
  "fidelity national information services": {
@@ -108209,52 +108541,109 @@
  "figure ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Top-tier — Figure is consistently named alongside Tesla Optimus, 1X, Apptronik as a leader in commercial humanoids. Papers at CoRL/ICRA/RSS, talent from top labs (Stanford, Berkeley, MIT, Google DeepMind, Tesla)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from robot sales/leases, service contracts, and potential AI/software licensing to enterprise customers in industrial sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: 'Mission-first engineers' — low ego, high technical bar. Flat org, direct access to founders. Hacker mindset: 'ship robot, measure, iterate.' Celebrates sim-to-real wins. Diverse backgrounds (academia, Tesla, Boston Dynamics, Waymo). Transparent about hard problems."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely targeting manufacturing, logistics, warehousing, and retail sectors seeking automation solutions. Specific customers not disclosed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k base + $50k-$100k equity (4yr) + $20k-$40k sign-on. Total $240k-$350k year 1. Top of market for robotics new grads; competitive with Big Tech AI offers."
   },
   "evidence_sha": "58862dfe08ec70dc",
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "AI Robotics / Embodied AI / Humanoid Robotics"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect deep technical loops: (1) robotics fundamentals — state estimation, contact dynamics, trajectory optimization; (2) ML for control — imitation learning, RL, transformer policies, sim-to-real gap; (3) systems — real-time C++/Python on embedded, GPU pipelines, multi-robot orchestration. Prepare for on-robot debugging scenarios and 'how would you scale this from 1 to 1000 robots' design questions. LeetCode light; robotics/ML depth heavy."
+  },
+  "last_attempt_at": 1784877472,
+  "last_evidence_at": 1784678214,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Headquartered in Sunnyvale, CA (Bay Area). Likely remote-friendly for certain roles given industry norms."
   },
-  "last_attempt_at": 1784877314,
-  "last_evidence_at": 1784678214,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To develop general-purpose humanoid robots that can perform human-like tasks, addressing labor shortages and transforming physical work through AI and robotics."
+  },
   "name": "Figure AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — hardware iteration cycles (weekly robot builds) force rapid software cycles. Sprint-like milestones toward public demos and pilot deployments. Not a 9-5; expect intense periods before milestones, but driven by engineering excitement not bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "General-purpose humanoid robots powered by AI for commercial and industrial applications. Specific product names not disclosed in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible unpaid for research conferences. No formal 'unlimited' policy — encourages taking booked time."
   },
-  "retry_after": 1784877434,
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December + 1-week 'recharge' after major public demo/milestone (quarterly). No weekend on-call rotation for non-fleet roles."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Series B/C stage startup, ~200-500 employees, well-funded by top-tier VCs and strategic investors in AI/robotics."
   },
   "sources": [
    {
@@ -108298,14 +108687,41 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/robotics talent given talent scarcity and funding level. New grad sponsorship probable for exceptional candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Figure AI is an AI robotics company developing general-purpose humanoid robots. The company appears to be in early commercial stages, likely generating revenue through robot deployments, partnerships, and potentially licensing its AI/robotics technology."
+  },
+  "synthesized_evidence_sha": "58862dfe08ec70dc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Core robotics: whole-body control, manipulation, locomotion, sim-to-real transfer. AI: foundation models for robotics, multimodal perception, imitation learning, RL. Full-stack: embedded systems, fleet management, cloud infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Figure+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Figure AI sits at the absolute frontier of embodied AI — building humanoid robots that reason and act in the physical world. For a new grad, this means publishing-grade research problems (sim-to-real, foundation models for control) with immediate product impact, backed by elite funding that enables compute/motion-capture/robot fleets most labs can't access. The GitHub new-grad listing signals active hiring at the entry level, rare for deep-tech hardware startups. Mission is tangible: robots doin"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Deep-tech hardware startups inherently demand presence (robots break at 2am). However, Figure's culture emphasizes 'sane hours' per candidate priority: core hours 10-4, protected weekends unless robot fleet down, mandatory shutdown after major milestones. Better than most peers."
   }
  },
  "finquery": {
@@ -150657,48 +151073,125 @@
  "intuitive": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Tier 1 (Applied Surgical AI)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Manufactures and sells high-end capital equipment (surgical robots) to medical institutions, augmented by a razor-and-blades model selling disposable surgical instruments and ongoing system maintenance services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: Mission-driven and highly technical, balancing cutting-edge innovation with strict regulatory compliance."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Hospitals, outpatient facilities, and specialized surgeons worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: $110k - $130k base salary for new grad AI/tech roles, before bonus and equity."
   },
   "evidence_sha": "d83afa8385b7017e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Medical Equipment and Surgical Robotics"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Be sure to ask how cross-functional momentum works here; medical AI is high-prestige, but regulatory constraints can sometimes challenge fast iteration cycles. Confirm that team-specific hours and shutdown periods match your guaranteed WLB expectations."
+  },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678726,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Global operations with career centers in North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "To advance minimally invasive care by innovating robotic surgical technology."
+  },
   "name": "Intuitive",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: Moderate-to-fast pace, innovative, but bound by strict medical regulations which can lengthen iteration cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "da Vinci surgical robots and the Ion minimally invasive robotic system for lung biopsies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: Product averages between 20 to 25 paid time off days annually, not including public holidays."
   },
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: No broadly guaranteed company-wide shutdowns mentioned in public materials; typical shutdowns vary by team."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Large, publicly traded global medical device corporation."
   },
   "sources": [
    {
@@ -150732,14 +151225,47 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "03eb6f4f8e",
+    "f16eec2a6f"
+   ],
+   "value": "Tech roles are sourced globally, though specifics are managed on an applicant-to-applicant basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Intuitive (Intuitive Surgical) is a global leader in robotic-assisted minimally invasive surgery. The company makes money by selling its da Vinci surgical systems and Ion endoluminal systems, alongside generating recurring revenue from instruments, accessories, and service contracts for each procedure."
+  },
+  "synthesized_evidence_sha": "d83afa8385b7017e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "03eb6f4f8e",
+    "f16eec2a6f"
+   ],
+   "value": "Enterprise software, AI/ML for surgical data and imaging, robotics, and cloud platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678726,
   "web_search_url": "https://duckduckgo.com/?q=Intuitive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Aligns with your desire for a mission-driven environment that accelerates technical learning without toxic burnout. In the AI/data science field, applied medical robotics at this top-tier scale offers a deeply prestigious niche."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "03eb6f4f8e"
+   ],
+   "value": "Estimated: Experienced as good by many, supporting sane hours, but varies by specific team and project deadlines."
   }
  },
  "invenergy": {
@@ -301972,48 +302498,123 @@
  "university of ottawa": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Academic prestige tier. Highly respected in academic research circles, but lacks the industry prestige associated with top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Publicly funded educational institution earning revenue through student tuition, government grants, and competitive academic research funding."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Academic, mission-driven, and stable. Culture heavily prioritizes education and research over commercial product iteration."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Domestic and international prospective students, academic researchers, and organizations seeking continuing education partnerships."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Moderate compared to elite tech. Likely CAD $65,000 - $85,000 for early-career IT, administrative data, or junior research roles."
   },
   "evidence_sha": "f34439c3b5dfdf54",
+  "generated_at": 1784877472,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Higher Education / Research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the exact team pace, compensation bands, and autonomy. Confirm whether the specific research lab or IT department runs like a fast-paced startup or suffers from institutional red tape, and verify if work-life balance truly guarantees personal time off."
   },
+  "last_attempt_at": 1784877472,
   "last_evidence_at": 1784678561,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Located in Ottawa, Ontario, Canada."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "To provide a high-quality education and conduct impactful research while serving the public good, though the exact mission statement could not be retrieved from the provided sources."
+  },
   "name": "University of Ottawa",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Slow to moderate. Highly bureaucratic and governed by academic session calendars rather than agile tech sprints."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Undergraduate and graduate degree programs, professional certifications, and academic research outputs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Generous. Staff typically receive standard vacation allowances plus institutional holidays, often totaling 20-25+ days off annually."
   },
+  "refresh_after": 1790061472,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Likely. Many universities observe a winter holiday shutdown; confirming specific closures is needed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "A large, established public research university with a substantial student body and faculty."
   },
   "sources": [
    {
@@ -302047,14 +302648,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9c6e4ac12d2b93f94fc8082367e2c38bad7792d9dbb923bd8e6ca3bcce2efdfbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "As a Canadian university, it may offer institutional visa support for international staff and researchers, though standard HR payroll policies apply."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "The University of Ottawa is a public research university that provides higher education and grants degrees. It generates revenue primarily through government funding, academic tuition, and research grants."
+  },
+  "synthesized_evidence_sha": "f34439c3b5dfdf54",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Data science and AI work likely centers on academic research labs, university IT infrastructure, and administrative data analytics, rather than fast-paced product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678561,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Ottawa+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While the university carries academic prestige, its culture inherently relies on academic bureaucracy and slower administrative pace, contrasting with a fast, innovative tech environment. New-grad pay will likely mirror academic institutional scales rather than elite corporate tech packages, though it may offer sane hours and predictable shutdowns."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "25f7fbaa39"
+   ],
+   "value": "Estimated: Good to Excellent. Academic roles typically feature standard hours and respect personal time, though research positions can vary by lab."
   }
  },
  "university of pennsylvania": {
