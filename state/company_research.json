@@ -129598,11 +129598,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129614,6 +129616,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784676249,
   "name": "HUB International",
   "pace_of_work": {
@@ -129626,6 +129629,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872603,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129669,7 +129673,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=be018e839dc43ce2008ebd85d281cde3f6440787b766ead55f07fd0dde810b99JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly9hcHAuaHVic3BvdC5jb20vbG9naW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676249,
   "web_search_url": "https://duckduckgo.com/?q=HUB+International+company+careers+benefits",
@@ -151758,37 +151762,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High technical prestige in deep-tech and hardware-adjacent data science, though niche compared to big-tech or pure software AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Hardware and systems sales: KLA generates revenue by engineering and selling high-precision capital equipment and solutions to semiconductor fabricators."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, deep-tech, and highly collaborative. Teams value deep physics and engineering expertise, acting as problem-solvers for the world's top tech providers."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "The world's leading technology providers and semiconductor manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base salary, reflecting high compensation for top engineering and data science talent in the Milpitas, CA area."
   },
   "evidence_sha": "d7e50dc11c6b1ba6",
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Semiconductor manufacturing equipment and diversified electronics."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Highlight your desire to apply elite AI and data science skills to deep-tech, physical-world problems. Ask questions about work-life balance, deployment cycles, and team structure to confirm the environment is mission-driven and innovative rather than slow and bureaucratic."
   },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784676253,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Headquartered in Milpitas, CA, with operations and roles situated globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "To accelerate the delivery of tomorrow's electronic devices by working alongside technology providers to solve complex manufacturing challenges."
+  },
   "name": "KLA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and engineering-driven. Fast enough to remain at the forefront of semiconductor innovation, but buffered by long hardware development cycles from chaotic startup-style pivots."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Advanced semiconductor manufacturing equipment, specifically inspection and metrology systems used to detect defects and measure microscopic features in chip production."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard PTO annually, characteristic of large established tech corporations."
   },
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -151798,7 +151856,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed global corporate shutdowns found in research, though standard paid holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "983083f536"
+   ],
+   "value": "Large-cap, established public corporation."
   },
   "sources": [
    {
@@ -151862,14 +151927,41 @@
     "url": "https://kla.wd1.myworkdayjobs.com/Search/job/Milpitas-CA/Systems-Engineer--Electron-Beam-_2636685-1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Not specified in the provided research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "KLA is a global leader in diversified electronics for the semiconductor manufacturing ecosystem. The company makes money by designing, manufacturing, and selling specialized inspection and metrology equipment to the world's top semiconductor manufacturers, enabling them to increase chip yields."
+  },
+  "synthesized_evidence_sha": "d7e50dc11c6b1ba6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fe23d102b0"
+   ],
+   "value": "Expert teams of physicists, engineers, data scientists, and problem-solvers work on complex challenges at the intersection of hardware and software, such as electron beam systems engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676253,
   "web_search_url": "https://duckduckgo.com/?q=KLA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a top-tier AI or data science candidate, KLA offers the prestige of a deep-tech leader without the typical tech-bro burnout culture. The complex physics and data problems provide massive technical learning and career growth, while the mature corporate structure promises more sane hours and elite new-grad pay compared to fast-paced startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Mature corporate structure suggests sane hours relative to top-tier tech, avoiding high-burnout environments."
   }
  },
  "kla corporation": {
@@ -153573,52 +153665,125 @@
  "kroll": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Mid-Tier. It does not have the pure-AI prestige of tech giants, but provides strong domain reputation in financial and security risk analytics."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "B2B professional services and consulting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Mission-driven, investigative, and corporate."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Corporations, law firms, financial institutions, and government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Likely $90,000 - $115,000 in major tech hubs."
   },
   "evidence_sha": "bc93c7296ebe1460",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784872320,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Management Consulting / Risk Consulting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Expect a focus on applying data science to ambiguous, real-world risk and security problems. Highlight your aptitude for mission-driven work, sane hours, and fast technical iteration while exploring how the team balances innovation with corporate compliance."
+  },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784676243,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Global presence with primary hubs in financial centers like New York, London, and Washington D.C."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Delivering data, technology, and insights to help clients make confident decisions and mitigate risks."
+  },
   "name": "Kroll",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Project-driven consulting pace. Generally less grueling than investment banking, but subject to client deadlines and traditional hierarchy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Risk advisory, financial investigations, cybersecurity services, compliance solutions, and data breach response services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Typical professional services packages, likely starting around 15-20 days annually."
   },
-  "retry_after": 1784872440,
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Standard corporate holidays; no recurring firm-wide standalone shutdown weeks found."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Global enterprise with over 6,500 professionals across multiple continents."
   },
   "sources": [
    {
@@ -153652,14 +153817,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=90b44ff676553bb0259dac1cad747e009c093a5b1169d76f5560ce3fa8e80b2eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cua3JvbGwuY29tL2Vu&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Varies by region and specific role; consulting firms of this scale typically sponsor high-need technical and analytical positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Kroll is a corporate investigation and risk consulting firm that helps clients identify and manage risks, such as financial disputes, cybersecurity threats, and background checks. It makes money by charging clients professional fees to investigate, analyze, and resolve complex business and legal challenges."
+  },
+  "synthesized_evidence_sha": "bc93c7296ebe1460",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Developing data analytics for fraud investigations, cybersecurity threat monitoring, and risk assessment platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676243,
   "web_search_url": "https://duckduckgo.com/?q=Kroll+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "While not a pure-tech house, a role here lets you apply AI and data science to high-stakes investigations and cybersecurity. It offers strong exit opportunities into finance and risk, technical skill acceleration, and a traditional corporate work structure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "aa1491e9f0"
+   ],
+   "value": "Estimated: Moderate to Good. Consulting hours can fluctuate, but it typically avoids the aggressive tech-bro culture or extreme hours of high finance."
   }
  },
  "kustomer": {
@@ -219928,37 +220124,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. While they are a tech-forward company utilizing AI to disrupt retail, they do not carry the elite prestige of top-tier tech or dedicated AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Direct-to-consumer (DTC) retail utilizing just-in-time manufacturing to minimize waste and cut out middlemen."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and tech-forward, focused on fair and sustainable production with a heavy emphasis on data and automation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Millions of direct-to-consumer (DTC) online shoppers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive for a mid-tier tech/retail company, but likely below elite FAANG-tier new-grad pay benchmarks. Exact figures not found in research."
   },
   "evidence_sha": "1e067774d4de7c0e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Retail / E-Commerce"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Be sure to ask interviewers about the team's day-to-day pace and how they maintain sane hours, as you are strictly avoiding toxic or high-burnout environments. You should also inquire about guaranteed shutdowns or formal WLB policies, and specifically confirm new-grad pay bands to ensure they match your elite compensation requirement."
+  },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784676250,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "To make really high quality essentials for really low prices, produced fairly and sustainably."
+  },
   "name": "Quince",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative. As a tech company disrupting the retail industry, the environment likely requires rapid adaptation and technological iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "High-quality essential consumer goods produced fairly and sustainably."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard PTO package typical of tech/retail companies (e.g., 15-20 days), but exact policy not found in research."
   },
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -219968,7 +220224,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information on guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Serves millions of customers and partners with world-class manufacturers globally; specific headcount and funding stage not found in research."
   },
   "sources": [
    {
@@ -220022,14 +220286,44 @@
     "url": "https://job-boards.greenhouse.io/quince/jobs/5286244008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Quince is a direct-to-consumer (DTC) retail brand that cuts out middlemen and leverages just-in-time manufacturing to offer high-quality essentials at low prices. They make money by selling these sustainably produced goods directly to millions of consumers online."
+  },
+  "synthesized_evidence_sha": "1e067774d4de7c0e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Putting AI, analytics, and automation at the center of the business, including data science roles focused on planning, forecasting, and storefront optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=Quince+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "735839c214",
+    "9b92fe90e7"
+   ],
+   "value": "Quince positions itself as a tech company disrupting retail with AI and analytics, which aligns with your desire for a fast, innovative tech culture. As a mission-driven company focused on sustainability and fair production, it offers a strong narrative for your career. This role specifically allows you to accelerate your technical learning in data science applied to real-world DTC challenges, though you should verify its work-life balance and new-grad compensation standards to ensure they meet "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. The DTC retail space can be demanding, but specific WLB metrics are not publicly detailed."
   }
  },
  "quinstreet": {
@@ -223371,37 +223665,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low — no public AI/research publications, conference presence, or specialized ML hiring found in sources."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Not disclosed in available sources; likely B2B software or cloud services given engineering hiring focus."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d",
+    "af677d87c9"
+   ],
+   "value": "Estimated: Engineering-focused, likely informal and iterative given new-grad hiring; lacking public culture signals (blogs, talks, Glassdoor) to confirm."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k–$130k base + equity (typical early-stage cloud software new-grad range); no public data to confirm."
   },
   "evidence_sha": "27812777fd900257",
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "Software / Cloud Infrastructure (inferred from hiring roles)"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "Expect technical screens on Java/Python/C++ fundamentals, cloud architecture (AWS/GCP/Azure), distributed systems design, and possibly Maven build tooling. Prepare to ask concrete questions about PTO policy specifics, on-call expectations, shutdown rituals, mentorship structure, and how the company measures engineering velocity vs. sustainable pace."
+  },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784788843,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Red Drum",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d",
+    "af677d87c9"
+   ],
+   "value": "Estimated: Fast — typical of early-stage cloud software companies hiring aggressively for new grads."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "No specific products identified in sources; job postings mention Software Engineer and Cloud Software Engineer roles, suggesting cloud or software infrastructure focus."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "Estimated: Generous and flexible per job posting, but no specific day count disclosed; candidates should confirm exact policy."
   },
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -223411,7 +223761,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in sources; not a documented practice."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Stage and headcount not disclosed in sources; presence on new-grad job board suggests early- to growth-stage."
   },
   "sources": [
    {
@@ -223465,14 +223822,45 @@
     "url": "https://jobright.ai/jobs/info/6a5531b82084cd792b476ded?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "af677d87c9",
+    "1db9db9c4d"
+   ],
+   "value": "Red Drum appears to be a technology company hiring software and cloud engineers, though its core product and business model are not clearly described in available public sources. The company lists openings for Software Engineer and Cloud Software Engineer roles on job boards."
+  },
+  "synthesized_evidence_sha": "27812777fd900257",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "Roles call for Java, Maven, Python, C++, JavaScript; cloud software engineering implies work on distributed systems, cloud infrastructure, and backend services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788843,
   "web_search_url": "https://duckduckgo.com/?q=Red+Drum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "af677d87c9",
+    "1db9db9c4d"
+   ],
+   "value": "The role offers a chance to work on cloud and backend systems with a modern stack (Java, Python, C++, JavaScript) at a company that advertises flexible, generous PTO — aligning with your priority for high new-grad pay and a fast, innovative culture without toxic burnout. However, limited public information makes it hard to verify prestige, work-life balance guarantees, or mission impact; you should probe these directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "af677d87c9"
+   ],
+   "value": "Estimated: Moderate — job posting highlights flexible PTO but provides no details on hours, on-call, or shutdown policies; actual WLB unverified."
   }
  },
  "red hat": {
@@ -227178,41 +227566,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated lower-tier for elite AI/DS prestige. The company is a federal services contractor sourcing support talent, not a foundational AI or data science leader."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Full-time technology consulting and direct contracting for federal government clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated structure oriented around mission support and compliance for federal clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Federal agencies across various environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Estimated: $75K to $100K per year for entry-level full stack engineering roles."
   },
   "evidence_sha": "1b9a809f582db740",
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "IT Services and Federal Government Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "You should assess whether the technical work scales your AI/DS career aspirations or focuses purely on full stack government support. Ask how government clearance and federal bureaucracy impact project turnaround, elite technical mentorship, work-life balance, and new-grad compensation growth."
   },
-  "last_attempt_at": 1784872320,
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784800746,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "United States (offers full-time remote positions)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "To deliver advanced technology solutions and mission support to federal agencies across various environments."
+  },
   "name": "Revolutional",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated moderate-to-slow due to federal agency bureaucracy and compliance procedures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Advanced technology solutions and mission support services, including full stack engineering applications utilizing Java, Spring Boot, RESTful web services, and Palantir Foundry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Federal contractors often provide standard government-style leave packages."
   },
-  "retry_after": 1784872440,
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227222,7 +227662,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide guaranteed tech shutdowns, though contractors may occasionally align with federal holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated mid-sized contractor actively growing and hiring entry-level remote engineers."
   },
   "sources": [
    {
@@ -227266,14 +227711,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=df6982f5117f43fc59ed2e6f513b912d572793817cf22585dcf74ddca6e01546JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26baeef9-727a-6b43-20f5-f964738b6a1e&u=a1aHR0cHM6Ly93d3cuc29sdXRpb250cmVlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated unlikely for federal contracting roles due to standard government clearance requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Revolutional delivers advanced technology solutions and mission support to federal agencies. It makes money by contracting its technical services and engineering talent to the United States government."
+  },
+  "synthesized_evidence_sha": "1b9a809f582db740",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c3f41d5788"
+   ],
+   "value": "Associate Full Stack Engineering involving Java, Spring Boot, RESTful web services, Palantir Foundry, and MVC architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673973,
   "web_search_url": "https://duckduckgo.com/?q=Revolutional+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a federal contractor, Revolutional's pace and innovation cycles are likely tied to government bureaucracy rather than fast-paced, elite tech environments. While remote flexibility may support personal time, federal mission work typcially leans more toward public sector prestige than the high new-grad pay or rapid tech learning you would find in top-tier AI or data science roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated good work-life balance. Remote full-time roles in federal contracting typically feature sane, predictable hours without high-burnout expectations."
   }
  },
  "reyes holdings": {
@@ -252492,38 +252962,104 @@
  "spry methods": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Tier 3: Traditional government IT consulting; prestige is derived from the federal mission rather than elite, cutting-edge AI innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "B2B/B2G services and consulting; they secure government contracts and provide specialized technical talent to execute those programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: Mission-oriented, structured, and traditional government contractor environment."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "The Department of Justice (DOJ) and Federal Bureau of Investigation (FBI)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: $70,000 - $90,000, standard for federal IT contracting roles requiring clearances but lacking elite tech firm bonuses."
   },
   "evidence_sha": "3f33ae71e5b42419",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872483,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "IT Services and Government Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Probe for details on their tech stack modernization, specific AI or advanced data science initiatives versus standard SQL development, and how they handle WLB and shutdowns. Ask about the pace of innovation to ensure it isn't bottlenecked by federal bureaucracy."
+  },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784742471,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Not explicitly detailed in the provided sources, though federal government contracting often requires presence in or around Washington, D.C. or at client facilities."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Not explicitly stated in the provided sources, but they appear focused on delivering critical technical support for federal law enforcement and laboratory programs."
+  },
   "name": "Spry Methods",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: Slow to moderate; work is dictated by federal government contract cycles, security clearances, and agency bureaucracy rather than fast-paced tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Technical staffing, SQL development, and data management services for strategic laboratory programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: 15-20 days annually, following standard federal contractor norms."
   },
+  "refresh_after": 1790056483,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252532,8 +253068,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns mentioned; shutdowns would typically only occur during federal government closures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Likely a boutique or mid-sized federal contractor, as suggested by their online presence and highly specific government contract staffing."
   },
   "sources": [
    {
@@ -252577,14 +253122,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a2aa024227020d9ac39bd54485b3e26614659c8799f26ae61b7733245dcccdbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly9zcHJ5LnNvLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Spry Methods is a technology and consulting firm that provides specialized IT and data solutions, such as SQL development, to support strategic federal government programs. They make money by contracting their technical personnel and services to high-profile government agencies."
+  },
+  "synthesized_evidence_sha": "3f33ae71e5b42419",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "SQL development, database management, and technical support for laboratory programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674826,
   "web_search_url": "https://duckduckgo.com/?q=Spry+Methods+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "As a federal contractor, Spry Methods likely offers a structured, mission-driven environment supporting high-impact law enforcement programs. However, government contracting culture often involves slower, bureaucratic tech stacks and processes, which may contrast with a desire for fast-paced, elite AI innovation and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7a8d0da361"
+   ],
+   "value": "Estimated: Good to moderate; government consulting typically features standard 40-hour weeks, but specific shutdown or PTO policies are not public."
   }
  },
  "srm": {
@@ -265051,11 +265627,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265067,6 +265645,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784872483,
   "last_evidence_at": 1784676254,
   "name": "Teledyne",
   "pace_of_work": {
@@ -265079,6 +265658,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872603,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -265122,7 +265702,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8695e7a0a37d01f8a2e084d9e0f75b7646081b72de19c7a3bdc6c38322cd2028JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cudGVsZWR5bmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676254,
   "web_search_url": "https://duckduckgo.com/?q=Teledyne+company+careers+benefits",
