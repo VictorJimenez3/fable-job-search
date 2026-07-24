@@ -25491,37 +25491,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Nationally recognized for civic innovation (multiple NACo awards, 'Top 10 Digital County' rankings), strong academic partnerships (Virginia Tech, George Mason), but not a primary AI research hub like federal labs or Big Tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Funded primarily through property taxes, local taxes (sales, meals, transient occupancy), state/federal grants, and user fees for specific services. Operates as a governmental entity, not a for-profit business."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-focused, collaborative, and process-oriented. Diverse workforce with strong DEI commitment. Innovation encouraged but within accountability frameworks. Less 'move fast and break things,' more 'move deliberately and sustain impact.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residents, businesses, visitors, and federal agencies located within Arlington County's 26 square miles."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$95,000 base (GS-7/9/11 equivalent or special rates for IT/cyber/data roles) + full federal benefits (FERS pension, TSP 5% match, FEHB health, student loan repayment). Total comp ~$90K-$115K."
   },
   "evidence_sha": "30242da948ba8a60",
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Government / Public Administration / Civic Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Emphasize experience with public-sector data constraints (privacy, FOIA, equity), collaborative projects with non-technical stakeholders, and ability to deliver measurable citizen outcomes. Prepare for structured behavioral interviews (STAR method) and possible technical assessments in Python/R/SQL, GIS, or cloud platforms (AWS/Azure GovCloud). Highlight any civic tech, open data, or social impact portfolio work."
+  },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784680204,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered at 2100 Clarendon Blvd, Arlington, VA 22201; additional facilities throughout the county. Hybrid/telework policies vary by department."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide high-quality, equitable, and sustainable public services that enhance the quality of life for all Arlington residents and visitors."
+  },
   "name": "Arlington County VA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Project timelines governed by procurement, compliance, and stakeholder processes; sprints exist but within structured governance. Faster than federal agencies, slower than startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public services including public safety, transportation, education, human services, community development, environmental services, and government administration."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 13-26 days annual leave (accrual based on tenure) + 13 days sick leave + 11 federal holidays. No 'unlimited PTO' policy."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25531,7 +25573,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established federal/state holiday closures; occasional administrative leave for weather/emergencies. No guaranteed 'company-wide shutdown' weeks beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large municipal government with approximately 4,000+ full-time employees; mature, stable organization with annual budget exceeding $1.5B."
   },
   "sources": [
    {
@@ -25565,14 +25612,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=039ed0fffd7a903729921d8e80138f7a22565454e46eec91f1e7b40bfcdcd325JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuYXJsaW5ndG9udmEudXMvSG9tZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a government entity, may sponsor H-1B visas for specialized technical roles but subject to federal caps and public-sector processes. Permanent residency sponsorship possible but less common than private sector."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Arlington County is a local government jurisdiction in Northern Virginia, directly across the Potomac River from Washington, D.C. It provides municipal services to approximately 230,000 residents and hosts major federal agencies and corporate headquarters."
+  },
+  "synthesized_evidence_sha": "30242da948ba8a60",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data analytics, GIS/mapping, cybersecurity, enterprise applications, open data platforms, smart city initiatives, digital services modernization, and IT infrastructure management across county departments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680204,
   "web_search_url": "https://duckduckgo.com/?q=Arlington+County+VA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven AI/data science work with tangible community impact (smart city, open data, public health analytics) combined with government-sector work-life balance (40-hour weeks, generous leave, federal holidays, telework). Provides elite prestige through national recognition for innovation (e.g., 'Top Digital County' awards) and high new-grad pay via competitive GS/special rate scales, without the burnout culture of private tech. Accelerates growth via rotation across high-impact civi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10: Standard 40-hour weeks, 11+ federal holidays, generous accrual (13-26 days annual leave + 13 sick days), widespread telework (2-3 days/week typical), rare on-call for non-ops roles. Overtime compensated or comp-time."
   }
  },
  "arm": {
@@ -39176,48 +39244,124 @@
  "beth israel deaconess medical center": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Estimated: Moderate. While the medical prestige is elite, AI and data science roles generally lack top-tier tech company prestige, focusing instead on applied healthcare analytics."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5899c26d1a"
+   ],
+   "value": "Revenue is generated through fee-for-service healthcare, patient billing, insurance reimbursements, and government or private research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5899c26d1a"
+   ],
+   "value": "Estimated: Traditional academic medicine and mission-driven. Priority is placed on clinical outcomes and academic publishing rather than rapid technological iteration."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Patients seeking medical treatment and healthcare services across the broader community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary. Traditional healthcare settings typically offer lower new-grad tech compensation compared to elite tech or AI companies."
   },
   "evidence_sha": "c7328ecfa66ee7fb",
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8e5f1c8028",
+    "5899c26d1a"
+   ],
+   "value": "Healthcare and Academic Medical Centers."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should evaluate the specific technical velocity and pay bands of the hiring group, ensuring the specific role provides genuine AI innovation and fast learning opportunities without the traditional limits of hospital bureaucracy. It is critical to confirm that sane hours and respect for personal time are guaranteed."
   },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784621994,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5899c26d1a"
+   ],
+   "value": "Primary main campus located in Boston, Massachusetts."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5899c26d1a"
+   ],
+   "value": "To deliver extraordinary patient care and advance medical science through pioneering research and education."
+  },
   "name": "Beth Israel Deaconess Medical Center",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Estimated: Slow to moderate. Healthcare and academic research environments prioritize compliance, clinical safety, and rigorous peer review over fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8e5f1c8028",
+    "5899c26d1a"
+   ],
+   "value": "Inpatient and outpatient clinical care, trauma and emergency medical services, specialized medical treatments across various disease areas, and academic medical research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Estimated: 20 to 25 days of paid time off annually for full-time staff, depending on tenure and union rules."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "8e5f1c8028",
+    "5899c26d1a"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns. Hospital IT operations require continuous monitoring of critical health systems."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Large, established academic medical center operating as a non-profit healthcare organization."
   },
   "sources": [
    {
@@ -39251,14 +39395,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=7d511421751e782f54a44ed439960908dce521581edf7947150d148b96f345adJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c435ae6-df01-6c4c-2d98-4d7bdea06d36&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmV0aF8oc29uZyk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8e5f1c8028"
+   ],
+   "value": "Large academic medical centers typically offer immigration sponsorship for specialized technical and medical roles, though specifics are subject to current institutional policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8e5f1c8028",
+    "5899c26d1a"
+   ],
+   "value": "Beth Israel Deaconess Medical Center (BIDMC) is a major academic teaching hospital affiliated with Harvard Medical School. It provides a full range of clinical healthcare services and makes money by charging for patient care, medical procedures, and funded research activities."
+  },
+  "synthesized_evidence_sha": "c7328ecfa66ee7fb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e5f1c8028",
+    "5899c26d1a"
+   ],
+   "value": "IT infrastructure, data engineering for electronic health records, healthcare analytics, bioinformatics, and applied machine learning for clinical research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784621994,
   "web_search_url": "https://duckduckgo.com/?q=Beth+Israel+Deaconess+Medical+Center+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a Harvard-affiliated teaching hospital, BIDMC offers high mission-driven prestige. However, the highly regulated, bureaucratic nature of healthcare moves at a much slower pace than elite tech companies, meaning tech culture here typically lacks the fast, high-paying, cutting-edge AI environment found in top tech firms."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5899c26d1a"
+   ],
+   "value": "Estimated: Moderate. Clinical environments often run on rigid schedules which can limit personal time, but non-clinical IT roles tend to offer better hours than fast-paced tech firms."
   }
  },
  "beth israel lahey health": {
@@ -52217,48 +52392,119 @@
  "cai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Low to Medium. As an IT services and staffing firm, CAI does not typically rank as a top-tier AI or data science employer for elite, highly-paid technical talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Business-to-business (B2B) services and consulting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Estimated: Corporate, service-oriented, and inclusive, evidenced by dedicated neurodiverse hiring initiatives."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Enterprise businesses and organizations requiring global technology and IT services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Estimated: $45,000 - $50,000 USD (Approx. $22/hr). This is an entry-level rate for data roles and significantly trails top-tier new-grad tech compensation."
   },
   "evidence_sha": "ba3960e09bf76a75",
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Global IT Services and Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the day-to-day technical work offers genuine accelerated learning and career growth, or if it leans toward slow-paced corporate consulting. Ask specific questions about expected working hours, work-life balance policies, and if the role provides guaranteed downtime to avoid high-burnout environments."
   },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784674990,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "United States with remote work options and global operations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Uniting talent and technology to drive client success."
+  },
   "name": "CAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical of a traditional B2B global services and consulting firm rather than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "IT services, technology staffing, data analytics, and specialized talent solutions such as Neurodiverse Solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO, which is standard for established corporate services firms."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "323454ca39",
+    "46ced5c2a0",
+    "581693f928"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread company-wide guaranteed shutdowns found; standard PTO policies likely apply instead."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Established global services firm."
   },
   "sources": [
    {
@@ -52302,14 +52548,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=085456996adec239d6fac2d3de1d844ddb92bfcb4dd157491c5d120c301775c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly9jaGFyYWN0ZXIuYWkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "323454ca39",
+    "46ced5c2a0",
+    "581693f928"
+   ],
+   "value": "Not explicitly mentioned in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "CAI is a global services firm that unites talent and technology to deliver business solutions. They make money by providing consulting, technology staffing, and software services to enterprise clients."
+  },
+  "synthesized_evidence_sha": "ba3960e09bf76a75",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "323454ca39"
+   ],
+   "value": "Data analysis, IT service delivery, and technology consulting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674990,
   "web_search_url": "https://duckduckgo.com/?q=CAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While CAI shows a commendable mission-driven focus through initiatives like Neurodiverse Solutions, it is an IT services firm rather than an elite tech or AI-first company. The entry-level pay for data roles is low compared to top-tier tech standards, and a global services environment typically involves traditional corporate bureaucracy rather than a fast-paced, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Consulting and services firms generally maintain standard corporate hours, though specific project demands can occasionally increase workload."
   }
  },
  "california correctional health care services": {
@@ -64541,48 +64816,129 @@
  "citizens financial group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Estimated: Tier 3. Traditional retail banks rarely offer top-tier AI prestige comparable to elite tech companies or quant firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Banking products and services generate revenue through interest, fees, and financial solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Estimated: Corporate and risk-averse. The environment prioritizes stability, compliance, and process over rapid disruption."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Retrieved page is a generic homepage without identifying specific customer segments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Estimated: $90k-$110k base. Competitive for the banking sector but below elite tech/quant benchmarks."
   },
   "evidence_sha": "e52302417900b6f5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Banking and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "97c01dc0b3"
+   ],
+   "value": "Probe whether the AI or data science team operates like a modern tech startup or is bound by legacy banking bureaucracy. Ask about actual hours, on-call expectations, and technical stack to ensure it meets your burnout avoidance and growth criteria."
+  },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784674776,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Redirects indicate primary web presence at citizensbank.com for online operations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "97c01dc0b3",
+    "3789fb5cf3",
+    "a7edc937f9"
+   ],
+   "value": "No mission statement was present in the redirect pages or excerpts."
+  },
   "name": "Citizens Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Estimated: Moderate to slow. Large regulated banks typically move carefully with heavy compliance checks rather than fast innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Mobile and online banking platform overview redirected without yielding specific product details."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a7edc937f9"
+   ],
+   "value": "Estimated: 20-25 days. Large financial institutions typically provide standard vacation packages."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "97c01dc0b3",
+    "3789fb5cf3",
+    "a7edc937f9"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Estimated: No guaranteed tech shutdowns. Bank infrastructure requires continuous monitoring."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Large-cap, publicly traded financial institution operating via specific online banking portals."
   },
   "sources": [
    {
@@ -64616,14 +64972,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=f5b0876024549c73c998f47fae70860457774edd663f8fc23f19a550cd863d79JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuY2l0aXplbnNiYW5rLmNvbS9ob21lcGFnZS5hc3B4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "97c01dc0b3",
+    "3789fb5cf3",
+    "a7edc937f9"
+   ],
+   "value": "No information found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "97c01dc0b3",
+    "3789fb5cf3",
+    "a7edc937f9"
+   ],
+   "value": "Public company pages redirected to the main homepage without providing a descriptive summary in the supplied text. Generally, Citizens Financial Group operates as a large retail and commercial bank."
+  },
+  "synthesized_evidence_sha": "e52302417900b6f5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Technical work focuses on maintaining and building online banking infrastructure and mobile platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674776,
   "web_search_url": "https://duckduckgo.com/?q=Citizens+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "97c01dc0b3"
+   ],
+   "value": "Large traditional banks prioritize stability and compliance which can conflict with a fast, innovative tech culture. It may offer strong pay and learning but likely comes with slower bureaucracy than elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3789fb5cf3"
+   ],
+   "value": "Estimated: Good. Banking tech roles often have predictable hours compared to high-burnout tech startups."
   }
  },
  "city and county of san francisco": {
@@ -148076,37 +148467,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not a top-tier tech firm; prestige is academic in nature."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Public university funded via tuition, state/federal funding, and research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven educational and research environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Students, academic researchers, state and federal government agencies, and the Iowa community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Low-to-mid $60,000s, below top-tier tech benchmarks."
   },
   "evidence_sha": "98a384825e98a2d1",
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Higher Education / Research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the academic mandates, slower bureaucratic processes, and lower compensation ranges of a university environment conflict with your strict requirements for high pay and fast culture."
   },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784631338,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Ames, Iowa, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Iowa State University is a land-grant institution dedicated to advancing knowledge, providing high-quality education, and engaging in outreach to serve the state and society."
+  },
   "name": "Iowa State University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower, bureaucratic academic calendar pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Higher education, academic research, and extension/outreach programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous academic leave policies typical of universities."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148116,7 +148573,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely holiday breaks depending on department."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Large public research university."
   },
   "sources": [
    {
@@ -148150,14 +148616,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b96a8d1dab6f06778d5fc9d4079255dd185de106db463c92ca3435d71464fce6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0688024d-89c2-6972-0ee8-15d0887968ae&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSW93YQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Public academic institution; standard university roles are unlikely to offer H-1B sponsorship comparable to corporate tech firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Iowa State University is a public land-grant research university in Ames, Iowa. It generates revenue through tuition, state appropriations, research grants, and private donations."
+  },
+  "synthesized_evidence_sha": "98a384825e98a2d1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8c41a5e061",
+    "7e6ccb5525",
+    "c8e838ec03"
+   ],
+   "value": "Likely involves academic research in AI/Data Science, high-performance computing, and software development to support institutional operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784631338,
   "web_search_url": "https://duckduckgo.com/?q=Iowa+State+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an academic institution, it diverges sharply from seeking an elite, fast-paced tech culture with top-tier new-grad pay; work-life balance is generally good, but technical learning is research-paced rather than driven by industry innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good WLB with sane hours expected."
   }
  },
  "iron mountain": {
@@ -180672,48 +181171,130 @@
  "metropolitan state university of denver": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Low tier. Unlikely to offer prestige or elite new-grad pay compared to top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Publicly funded university charging tuition and fees for academic enrollment and services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Mission-driven, educational, and community-focused, prioritizing student success over rapid technical innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Prospective and current students, primarily working adults, transfer students, and traditional college-age students in the Denver metropolitan area."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000-$90,000, which is below elite tech new-grad standards."
   },
   "evidence_sha": "ceb3ce828bfa5dbe",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Assess if university IT projects are too bureaucratic to match candidate's desired fast-paced technical growth and high compensation."
+  },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784674771,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Denver, Colorado."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "To provide a high-quality, accessible, enriching college experience that empowers students to attain their educational goals."
+  },
   "name": "Metropolitan State University of Denver",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Slow, academic calendar-driven pace with traditional university bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Undergraduate and graduate degree programs, continuing education, and professional certifications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Likely 20-25 days of PTO plus extended winter and spring breaks, typical of university staff."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Likely holiday shutdowns aligned with winter and spring breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Large public educational institution."
   },
   "sources": [
    {
@@ -180757,14 +181338,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Unlikely to offer H-1B sponsorship for standard technical roles, typical of higher education institutions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Metropolitan State University of Denver (MSU Denver) is a public university in Colorado. As an institution of higher education, it generates revenue through student tuition, fees, grants, and state funding, though the specific pages provided did not yield explicit excerpts."
+  },
+  "synthesized_evidence_sha": "ceb3ce828bfa5dbe",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Administrative IT roles supporting university operations and academic infrastructure, with structured timelines rather than fast-paced product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674771,
   "web_search_url": "https://duckduckgo.com/?q=Metropolitan+State+University+of+Denver+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "c5e63b053e",
+    "dbc3b9e88f"
+   ],
+   "value": "Candidate seeks elite new-grad pay and fast innovation but MSU Denver is a slower traditional university providing stable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c5e63b053e"
+   ],
+   "value": "Estimated: Good work-life balance with standard administrative hours and generous holiday time."
   }
  },
  "metropolitan transportation authority": {
@@ -270066,38 +270680,105 @@
  "symetra": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: Moderate. As a traditional insurance carrier, AI/Data Science work is applied to business problems but lacks the cutting-edge prestige of top-tier tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Revenue is generated through insurance premiums, annuity fees, and investment income from the assets under management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: Professional, stable, and collaborative, emphasizing employee well-being while prioritizing compliance and regulatory security."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Individuals planning for retirement and employers seeking group benefits and stop-loss coverage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: $90,000 - $115,000 base salary."
   },
   "evidence_sha": "12c3fc7bea68e7b0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Financial Services / Insurance."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Ask deeply about the specific team's tech stack to ensure you are building with modern AI tools rather than maintaining legacy systems. Probe into project turnaround times to confirm a fast-paced culture exists there. Clarify out-of-hours on-call expectations to verify that the company truly respects sane hours and guaranteed shutdowns."
+  },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784693224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "62217f26a4",
+    "85c5f46fd6"
+   ],
+   "value": "Headquartered in Bellevue, Washington, with an operational footprint across the US."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "85c5f46fd6"
+   ],
+   "value": "To help people and businesses navigate life's twists and turns by providing financial security and peace of mind."
+  },
   "name": "Symetra",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: Moderate. Large financial institutions generally follow calculated release cycles and compliance checks, leading to a slower pace than a hyper-growth startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Retirement planning products, life insurance, and employee benefits such as disability and stop-loss insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, plus standard public holidays."
   },
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270106,8 +270787,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: Likely standard public holidays. Guaranteed company-wide shutdown periods (e.g., end-of-year holidays) may be available but are unverified."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Mid-sized public company in the financial services sector."
   },
   "sources": [
    {
@@ -270151,14 +270841,46 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Not explicitly verified in research, but large US public companies in this sector commonly sponsor H1B visas. Contact recruiting for specifics."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "62217f26a4",
+    "85c5f46fd6"
+   ],
+   "value": "Symetra is a financial services company specializing in retirement planning, life insurance, and employee benefits. It makes money by collecting premiums and fees, investing those assets, and paying out benefits and claims."
+  },
+  "synthesized_evidence_sha": "12c3fc7bea68e7b0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering and data science roles focusing on modernizing legacy systems, automating underwriting, and building scalable platforms for financial services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693224,
   "web_search_url": "https://duckduckgo.com/?q=Symetra+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "As an established financial services firm, Symetra offers mission-driven work in securing people's financial futures, which may provide strong work-life balance. However, as an established insurer, it may struggle to deliver the highly innovative, fast-paced AI/tech culture and new-grad tech-sector prestige you are aiming for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "62217f26a4"
+   ],
+   "value": "Estimated: Good. Traditional insurers typically prioritize standard working hours to avoid burnout, though specific shutdown policies vary by department."
   }
  },
  "synechron": {
@@ -291291,52 +292013,131 @@
  "uline": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely lower-tier AI prestige given the primary industry is industrial distribution rather than core tech or specialized AI. Technical roles appear to be focused on internal tooling and logistics."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "255f91765f",
+    "ed33bd37f0"
+   ],
+   "value": "Direct-to-business distributor model: buying bulk industrial and packaging supplies and selling them direct to customers via catalog and web channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: Traditional, highly structured corporate environment, typical of large private distributors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e53ae36dc9"
+   ],
+   "value": "Businesses and organizations across North America requiring shipping, packaging, and warehouse supplies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary, typical for midwestern supply chain IT roles, but unlikely to hit elite tech pay without significant negotiation."
   },
   "evidence_sha": "99119b73d454f995",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875299,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784875128,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "255f91765f",
+    "ed33bd37f0"
+   ],
+   "value": "Distribution, Packaging, and Industrial Supplies."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Candidates should probe the specifics of the data science stack, metric-driven innovation, and tech culture to ensure it aligns with elite AI work. Be sure to ask about actual hours, work-life balance, and bureaucratic constraints to verify it meets personal growth and lifestyle priorities."
+  },
+  "last_attempt_at": 1784875299,
   "last_evidence_at": 1784674719,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e53ae36dc9"
+   ],
+   "value": "North America, with corporate headquarters in Pleasant Prairie, Wisconsin."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e53ae36dc9"
+   ],
+   "value": "To provide businesses with the high-quality shipping, industrial, and packaging materials they need to operate efficiently."
+  },
   "name": "Uline",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: Likely steady and traditional, leaning toward bureaucratic rather than fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ed33bd37f0"
+   ],
+   "value": "Shipping, packaging, industrial, and warehouse supplies, including boxes, tapes, labels, and safety equipment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: Public PTO policy not explicitly available, though large traditional distributors typically offer 15-25 days annually."
   },
-  "retry_after": 1784875248,
+  "refresh_after": 1790059299,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: No public information found regarding mandatory company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e53ae36dc9"
+   ],
+   "value": "Large, established private company with operations across North America."
   },
   "sources": [
    {
@@ -291390,14 +292191,49 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: Not publicly detailed or confirmed in recent recruiting sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "255f91765f",
+    "ed33bd37f0",
+    "e53ae36dc9"
+   ],
+   "value": "Uline is a privately held distributor of shipping, industrial, and packaging materials. It makes money by purchasing these products in bulk and selling them directly to businesses across North America."
+  },
+  "synthesized_evidence_sha": "99119b73d454f995",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Software development, data science, and analytics to power supply chain logistics, web/catalog sales platforms, and enterprise internal tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674719,
   "web_search_url": "https://duckduckgo.com/?q=Uline+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Uline is currently hiring for new-grad data science and tech roles. While it may offer stable, structured corporate environments, candidates prioritizing fast-paced, elite AI prestige and innovative tech culture may need to assess fit carefully given theoretical slow bureaucracy in traditional distribution companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "255f91765f"
+   ],
+   "value": "Estimated: Unknown, but traditional supply chain companies often enforce sane business hours, though this lacks startup flexibility."
   }
  },
  "ultra": {
