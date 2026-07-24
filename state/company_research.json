@@ -16300,11 +16300,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16316,6 +16318,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784672018,
   "name": "American Century Investments",
   "pace_of_work": {
@@ -16328,6 +16331,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784875580,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16371,7 +16375,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9407257f279467496414e4adb716d050ef74e95df574a96ef6af82e5bc39b30dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cuYWEuY29tL2hvbWVQYWdlLmRvP2xvY2FsZT1lbl9VUw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672018,
   "web_search_url": "https://duckduckgo.com/?q=American+Century+Investments+company+careers+benefits",
@@ -34664,11 +34668,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34680,6 +34686,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784676943,
   "name": "Baker Tilly",
   "pace_of_work": {
@@ -34692,6 +34699,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784875580,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34755,7 +34763,7 @@
     "url": "https://bakertilly.wd5.myworkdayjobs.com/BTCareers/job/USA-TX-Frisco/Associate-Data-Engineer_JR106581"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676943,
   "web_search_url": "https://duckduckgo.com/?q=Baker+Tilly+company+careers+benefits",
@@ -39021,48 +39029,125 @@
  "best buy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: Tier 3. While they employ data scientists for supply chain and e-commerce optimization, AI roles here are not considered top-tier tech prestige compared to FAANG or elite AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Omnichannel retail sales of physical consumer electronics and related accessories, augmented by bundled services, warranties, paid tech support, and home delivery."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: Traditional, Minnesota-nice corporate culture focused on customer service rather than cutting-edge tech innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "General consumers and households seeking electronics, technology solutions, and related support services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary for new graduate software or data roles."
   },
   "evidence_sha": "cfe5608d9237610e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875460,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Consumer Electronics Retail"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "You should explicitly ask which team you are interviewing for and whether the role supports the core retail business or drives new AI innovation. Question how the bureaucracy of a large retailer impacts deployment speeds and daily work-life balance, as the culture will likely clash with your aversion to slow, traditional environments."
+  },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784678789,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Headquartered in Richfield, Minnesota, with numerous retail locations and distribution centers nationwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Best Buy's mission is to enrich lives through technology by addressing customers' unmet technology needs."
+  },
   "name": "Best Buy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: Moderate to slow. Because tech teams exist to support a massive traditional retail operation, the deployment pace and innovation speed may be bottlenecked by corporate governance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Consumer electronics, computing devices, mobile phones, smart home products, appliances, entertainment products, and tech support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: 15 to 25 days of PTO annually for standard corporate employees."
   },
+  "refresh_after": 1790059460,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: None found in research. Retail support operations generally continue year-round."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Very large, established public retail corporation."
   },
   "sources": [
    {
@@ -39096,14 +39181,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=e7848e95e62dd3216bc4c4f65b58450ea58f8849594d7f22424cca9ac635d999JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cuYmVzdGJ1eS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "As a large US retailer, Best Buy likely offers H-1B visa sponsorship for specialized technical roles in data and engineering. Estimated: Exact sponsorship availability varies by role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Best Buy is a major omnichannel retailer specializing in consumer electronics, appliances, and tech services. It makes money by selling hardware and accessories directly to consumers via its physical stores and e-commerce platform, as well as through its subscription and consultation services."
+  },
+  "synthesized_evidence_sha": "cfe5608d9237610e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Likely includes e-commerce platform development, supply chain optimization, digital marketing analytics, and internal tool engineering. Specific AI and data science details are limited in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678789,
   "web_search_url": "https://duckduckgo.com/?q=Best+Buy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "As a legacy brick-and-mortar retailer, Best Buy may not fully align with your desire for a fast, innovative tech culture. While corporate tech roles exist to optimize logistics and e-commerce, the environment tends toward traditional corporate pace rather than the elite, fast-paced AI startup vibe you seek. Guaranteed shutdowns are highly unlikely for retail support tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dfdad16640"
+   ],
+   "value": "Estimated: Good. Corporate tech roles likely feature standard 40-hour weeks with predictable hours, though on-call duties for internal retail systems may occasionally intrude."
   }
  },
  "beta soft systems": {
@@ -50162,38 +50278,106 @@
  "burson": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Tier 2 \u2014 Respected industry leader investing in AI/ML for communications intelligence; not a pure tech/AI research lab but builds and deploys proprietary models at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Revenue from client engagements and retainers for communications consulting, creative services, public affairs, and AI-powered intelligence/advisory work across global markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Professional, collaborative, globally distributed; emphasizes creativity, collective expertise, and 'having fun doing it.' Likely less hacker-culture intensity, more polished client-service orientation with growing tech/innovation subculture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Global brands, corporations, and organizations seeking strategic communications, public affairs, creative campaigns, and data-driven intelligence across 40 international markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "cfbcc1567b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $95k-$120k base + bonus/RSU (agency tech pay typically trails pure tech but competitive for communications sector; WPP scale supports strong packages)."
   },
   "evidence_sha": "02ed9e8088df1053",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875460,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Global Communications / Public Relations / Marketing Services (AI-enabled)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfbcc1567b",
+    "dbc3b9e88f"
+   ],
+   "value": "Expect applied data science questions: NLP for media sentiment, causal inference for campaign measurement, scalable ML pipelines for real-time intelligence. Also prepare for communications-domain case studies (e.g., how would you detect emerging narratives across languages?). Cultural fit questions will probe collaboration, client-facing empathy, and alignment with 'people-first' values."
+  },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784674779,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Global network across 40 markets; headquarters in New York with major hubs in London, Singapore, Chicago, and other major cities worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "To be a new type of partner that brings collective expertise, AI-driven intelligence, and cut-through creativity to counsel clients and deliver transformative ideas that shape culture, spark change, and deliver impact \u2014 while remaining a people-first company."
+  },
   "name": "Burson",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Estimated: Moderate-fast \u2014 client-driven deadlines and real-time intelligence demands create urgency, but agency model with defined engagements may offer more predictability than product-tech sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Communications and PR services including Consumer & Brand, Corporate & Public Affairs, Creative & Content, and Intelligence & Innovation Advisory \u2014 all powered by AI-driven insights and data analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Estimated: 15-20 days PTO + holidays (typical for WPP agencies in US); exact policy not public."
   },
+  "refresh_after": 1790059460,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50202,8 +50386,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Estimated: Company-wide holiday shutdown between Christmas and New Year (common for WPP agencies); no guaranteed summer shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Large global agency (part of WPP network) with presence in 40 markets; mature, established company rather than startup."
   },
   "sources": [
    {
@@ -50247,14 +50440,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "As a large global company (WPP subsidiary), likely sponsors H-1B and other work visas for technical roles; specific policy not detailed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Burson is a global communications agency operating across 40 markets that combines AI-driven intelligence, creative content, and strategic advisory to help clients shape culture and drive impact. They position themselves as a modern, people-first communications powerhouse."
+  },
+  "synthesized_evidence_sha": "02ed9e8088df1053",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfbcc1567b",
+    "dbc3b9e88f"
+   ],
+   "value": "AI-driven intelligence platforms, data analytics for communications insights, proprietary technology for media monitoring and sentiment analysis, and digital creative tooling. New-grad technical roles likely focus on data science, ML for communications intelligence, and platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674779,
   "web_search_url": "https://duckduckgo.com/?q=Burson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfbcc1567b",
+    "dbc3b9e88f"
+   ],
+   "value": "Burson offers a rare blend: a top-tier global brand investing seriously in AI and data science within communications, with explicit 'people-first' values and a stated commitment to work-life balance. For a new grad seeking elite prestige and high pay without the burnout culture of pure tech giants or quant finance, this is a communications-industry leader that actually builds AI products and hires new grads into technical roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cfbcc1567b"
+   ],
+   "value": "Estimated: 3.5/5 \u2014 'People-first' messaging and agency project cycles suggest better boundaries than high-burnout tech, but client emergencies and global time zones can intrude."
   }
  },
  "busek": {
@@ -113712,11 +113938,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113728,6 +113956,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784676245,
   "name": "Galaxy",
   "pace_of_work": {
@@ -113740,6 +113969,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784875580,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113793,7 +114023,7 @@
     "url": "https://job-boards.greenhouse.io/galaxydigitalservices/jobs/5990869004"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676245,
   "web_search_url": "https://duckduckgo.com/?q=Galaxy+company+careers+benefits",
@@ -251578,47 +251808,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Industrial AI/Software): Respected for industrial and infrastructure applications, but lacks the elite prestige and high pay of top consumer big tech or pure-play AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "0e6d7bf53c"
+   ],
+   "value": "B2B sales of complex, high-ticket engineering systems and R&D software solutions, often executed through multi-year implementation projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Structured, mission-driven around sustainability and infrastructure, with a traditional corporate tone rather than a fast-paced, hacker culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "eafc185662"
+   ],
+   "value": "Large-scale enterprises, industrial manufacturers, and utility providers seeking complex electrical products and engineering solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for new-grad R&D software engineers, which is competitive for engineering but below elite tech/AI benchmarks."
   },
   "evidence_sha": "bbb70da14fb3f7d3",
+  "generated_at": 1784875460,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "eafc185662"
+   ],
+   "value": "Industrial Automation, Smart Infrastructure, and Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should emphasize their willingness to thrive in a structured, rotational environment, as the company values long-term technical leadership development. Prove fluency in the required tech stack (C++, Python, Java) during interviews to show you can hit the ground running in R&D, while probing interviewers about how teams locally balance bureaucracy with innovation."
   },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784711509,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "0e6d7bf53c"
+   ],
+   "value": "Global presence; specific hiring tracked for the United States via new-grad postings."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Pioneering technological innovation to drive the digital transformation of industry and smart infrastructure."
+  },
   "name": "Siemens",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured and process-driven. Legacy corporate structures imply a slower pace compared to fast-moving tech startups, though R&D divisions can be moderately innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "eafc185662",
+    "0e6d7bf53c"
+   ],
+   "value": "Smart infrastructure electrical products, industrial automation hardware, and R&D software for engineering applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 days of standard PTO annually, consistent with massive enterprise benefits packages."
   },
+  "refresh_after": 1790059460,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "eafc185662",
+    "0e6d7bf53c"
+   ],
+   "value": "Smart Infrastructure Electrical Products Engineering Leadership Development Program"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical enterprise policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Established, multinational massive enterprise conglomerate."
   },
   "sources": [
    {
@@ -251682,14 +251981,43 @@
     "url": "https://jobright.ai/jobs/info/6a6042a6cf6cf477a056050e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Public sources did not explicitly confirm new-grad visa sponsorship details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "d4748373c4"
+   ],
+   "value": "Siemens is a multinational technology conglomerate that engineers and builds hardware and software for industrial automation, smart infrastructure, and transportation. It makes money by selling complex, high-ticket engineering systems and R&D software solutions to other large enterprises and governments."
+  },
+  "synthesized_evidence_sha": "bbb70da14fb3f7d3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "eafc185662",
+    "0e6d7bf53c"
+   ],
+   "value": "Developing R&D and infrastructure software using languages and technologies like C++, Python, Java, JavaScript, and Node.js."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784711509,
   "web_search_url": "https://duckduckgo.com/?q=Siemens+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a legacy industrial giant, Siemens may struggle to fully satisfy a candidate's desire for a fast, innovative tech culture over slow bureaucracy. While their R&D roles offer strong technical learning, mission-driven work, and sane hours compared to big tech, it is not traditionally known for top-tier AI prestige or elite new-grad pay, which may involve trade-offs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Large legacy engineering firms typically enforce sane hours (around 40-45/week) and offer better work-life balance than high-burnout tech companies."
   }
  },
  "siemens eda siemens digital industries software": {
@@ -287331,37 +287659,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. While global tech, Trimble is industrial-focused rather than recognized for elite, top-tier AI/data science roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Develops proprietary hardware and software applications and connects them to digital workflows, monetizing them for enterprise industrial use."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "A 'hidden gem' internal culture characterized by collaborative, supportive teams that share a sense of purpose, drive innovation, and genuine belonging."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf"
+   ],
+   "value": "Millions of people and businesses in construction, agriculture, transportation, geospatial, and related industries seeking to make operations safer, faster, and more sustainable."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $120,000 USD base, depending on location and specific role."
   },
   "evidence_sha": "6c5bb3dc08cf8046",
+  "generated_at": 1784875460,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Industrial Technology / Hardware and Software."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on evaluating the team's technical pace to ensure it provides elite, fast-paced innovation rather than slow bureaucracy. Ask questions about the learning curve, new-grad compensation, and AI/data science role to confirm it matches top-tier expectations and accelerates career acceleration."
   },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784676245,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Global company with operations and fully remote opportunities across regions including New Zealand and the UK."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf"
+   ],
+   "value": "To build and deliver purpose-driven solutions that make work faster, safer, and more sustainable for millions of people worldwide."
+  },
   "name": "Trimble",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Estimated: Collaborative and purposeful, balancing steady technical innovation with a team culture that promotes growth and innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Industrial-grade hardware and software solutions, including cloud engineering platforms and transportation enterprise software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 days annually, varying by region and tenure."
   },
+  "refresh_after": 1790059460,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287371,7 +287763,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holiday shutdowns likely occur depending on regional and local practices."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Global technology company."
   },
   "sources": [
    {
@@ -287435,14 +287835,47 @@
     "url": "https://trimble.wd1.myworkdayjobs.com/en-US/TrimbleCareers/job/UK---Remote/Software-Engineer_R56506"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Sponsorship varies by specific role and regional needs, such as localized postings in New Zealand and the UK."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Trimble is a global technology company that connects the physical and digital worlds to transform how work gets done. It makes money by developing and deploying industrial hardware and software solutions for industries like transportation, construction, and agriculture."
+  },
+  "synthesized_evidence_sha": "6c5bb3dc08cf8046",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Software and cloud engineering focused on connecting hardware and digital infrastructure, with divisions dedicated to transportation and enterprise systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676245,
   "web_search_url": "https://duckduckgo.com/?q=Trimble+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Trimble's mission aligns with the goal of having meaningful, real-world impact. It is a collaborative, supportive team that fosters genuine belonging and avoids toxic environments. The 'Belong, Grow, and Innovate' values provide a foundation for career growth without sacrificing personal time, sane hours, and guaranteed shutdowns."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0472ee05cf",
+    "d343a9b820"
+   ],
+   "value": "Estimated: Good. The company emphasizes a supportive, collaborative culture where core values like 'Grow' and 'Belong' prioritize employee well-being."
   }
  },
  "trimedx": {
@@ -289239,49 +289672,126 @@
  },
  "turn river capital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Not directly applicable; this is a private equity firm, not a tech employer in the AI/data science space, though its growth engineering strategy may involve data-driven approaches."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Private equity model that acquires or invests in software businesses and applies a proprietary growth engineering strategy to increase their value, generating returns through portfolio appreciation and exits."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Driven, growth-focused environment blending tech and finance expertise; seeks individuals interested in both domains."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Software businesses seeking growth capital and operational partnership to scale their operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Estimated: Not directly stated; private equity entry-level roles often offer strong compensation packages, but precise figures are not publicly available."
   },
   "evidence_sha": "3fb35b35c4d3045d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784875460,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Private Equity / Investment Management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Probe whether growth engineering work involves genuine technical/AI applications, and clarify expectations on hours, pace, and work-life balance, since PE firms typically demanding schedules may not align with the candidate's priorities."
+  },
+  "last_attempt_at": 1784875460,
   "last_evidence_at": 1784636452,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Not specified in retrieved sources, though Turn/River Capital is a US-based firm."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Partnering with software businesses to accelerate growth and build enduring value."
+  },
   "name": "Turn/River Capital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Estimated: Likely fast-paced given the growth-oriented nature of the firm and the demands of Tech + Finance firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Private equity investment services and proprietary growth engineering strategy consulting for software businesses."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Estimated: Specific PTO policy not publicly available; private equity firms typically offer standard corporate PTO packages."
   },
+  "refresh_after": 1790059460,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "2 year, entry-level Analyst program beginning August 2027"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Estimated: No information found on guaranteed company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Private equity firm with a growing Investment & Sourcing Team and a structured 2-year entry-level Analyst program beginning August 2027, indicating a mid-sized, established firm actively expanding."
   },
   "sources": [
    {
@@ -289315,14 +289825,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=117ff735dd03489d02ffa7985db90aaf4df1a76ca824e5b110b5320d1280a329JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=25af3677-2741-673c-22d6-21ea26a5669a&u=a1aHR0cHM6Ly93d3cuaW1kYi5jb20vdGl0bGUvdHQyNTQzMzI4Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Not specified in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Turn/River Capital is a private equity firm that applies a proprietary growth engineering strategy to investing, partnering with software businesses to accelerate growth and build enduring value. It makes money by acquiring stakes in software companies, improving their growth and value, and generating returns through eventual exits or portfolio appreciation."
+  },
+  "synthesized_evidence_sha": "3fb35b35c4d3045d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Investment analysis, sourcing, and application of proprietary growth engineering strategies to portfolio companies; likely involves data analysis, market research, and financial modeling to support investment decisions and accelerate software company growth."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616148,
   "web_search_url": "https://duckduckgo.com/?q=Turn%2FRiver+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Shows promise as a tech-focused firm applying growth engineering, but as a PE firm it does not offer a core AI or data science role; culture and work-life balance details are not publicly available, so the candidate's priorities around guaranteed shutdowns and sane hours cannot be confirmed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7861ab5ba8"
+   ],
+   "value": "Estimated: Unknown or unstated in public sources; typical PE firms may lean intense, so candidates should verify directly."
   }
  },
  "turning point community programs": {
