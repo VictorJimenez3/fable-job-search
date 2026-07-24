@@ -8042,37 +8042,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected applied‑AI/ML in scientific instrumentation; strong publications but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "027fbf88fa",
+    "1021fa6626"
+   ],
+   "value": "Revenue from instrument sales, recurring consumables/service contracts, software licenses, and cross‑lab informatics platforms; high installed‑base annuity streams."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering‑centric, collaborative, low‑politics; long tenures common; emphasis on scientific rigor over speed‑to‑market hype."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1021fa6626"
+   ],
+   "value": "Pharmaceutical, biotech, academic, government, environmental, food safety, and clinical diagnostics labs worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + 10–15% target bonus + RSU grant (~$20k–$40k vesting over 4 yrs); total comp ~$140k–$180k."
   },
   "evidence_sha": "58b45afe02e44435",
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8bcec6d0ef"
+   ],
+   "value": "Life sciences tools & diagnostics / Analytical instrumentation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on signal processing, statistical modeling, or domain‑specific analytics (chromatography, genomics). Prepare for system‑design questions balancing real‑time embedded constraints with cloud scalability. Behavioral rounds probe cross‑functional collaboration and long‑term project ownership."
   },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784802937,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8bcec6d0ef"
+   ],
+   "value": "Headquartered in Santa Clara, CA; major sites in Colorado, Delaware, UK, Germany, Singapore, China; global sales/service footprint."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8bcec6d0ef"
+   ],
+   "value": "To advance quality of life through trusted scientific insights and innovations that help customers solve complex analytical challenges."
+  },
   "name": "Agilent Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – structured waterfall/agile hybrid cycles; quarterly hardware/software releases; limited crunch culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "027fbf88fa"
+   ],
+   "value": "Portfolio includes liquid chromatography (LC), gas chromatography (GC), mass spectrometry (MS), spectroscopy, microfluidics, genomics, and diagnostics instruments plus informatics software and lab services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays + winter shutdown (typically 5–7 business days)."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -8082,7 +8137,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year‑end shutdown (approx. 1 week between Christmas and New Year); occasional summer half‑day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8bcec6d0ef"
+   ],
+   "value": "Public (NYSE: A), ~$6.8B annual revenue, ~18,000 employees, mature large‑cap instrumentation company."
   },
   "sources": [
    {
@@ -8116,14 +8178,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=f651e4a117289db66e8c5f1863058c0eb7f26bdad2340c4f168a84afee045831JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=190b6e35-42c9-6c55-0927-79aa43b46d51&u=a1aHR0cHM6Ly93d3cuYWdpbGVudC5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H‑1B sponsor; files green cards for STEM roles; university recruiting at top US engineering schools."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8bcec6d0ef",
+    "1021fa6626"
+   ],
+   "value": "Agilent Technologies is a global leader in life sciences, diagnostics, and applied chemical markets, providing instruments, software, services, and consumables for laboratory workflows."
+  },
+  "synthesized_evidence_sha": "58b45afe02e44435",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "027fbf88fa"
+   ],
+   "value": "R&D spans precision mechanical/optical engineering, embedded firmware, cloud data platforms, ML for signal processing, bioinformatics, and automation robotics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784802937,
   "web_search_url": "https://duckduckgo.com/?q=Agilent+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Agilent offers elite instrumentation prestige and competitive new‑grad pay while maintaining a measured, engineering‑first pace. Its mission‑driven science focus and predictable project cycles align with a desire for technical depth without the burnout common in pure‑software or high‑frequency trading shops."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Core hours flexibility, rare weekend work, generous holiday shutdowns; on‑call rotations only for critical cloud services."
   }
  },
  "agility pr solutions": {
@@ -53392,41 +53480,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. State government technical roles do not carry industry prestige compared to top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "State-funded government agency operating through public tax revenues and state budget allocations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and public-service oriented, prioritizing stability and correctness over rapid iteration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The citizens of California, local governments, and private industries operating within the state."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000. State government pay scales are standardized and significantly lower than commercial tech."
   },
   "evidence_sha": "acbda7d34d951635",
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Government Administration / Environmental Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Inquire about direct experience with modern AI/ML tech stacks versus legacy government systems. Ask how the specific team balances software modernization with state compliance to assess if any sub-teams operate with an agile, innovative pace outside the standard bureaucracy."
   },
-  "last_attempt_at": 1784876118,
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784802937,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "California, USA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "To manage the state's natural resources for the benefit of California's residents and environment."
+  },
   "name": "California Department of Conservation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and methodical, with heavy compliance and regulatory processes dictating project timelines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Regulatory oversight, scientific mapping, land conservation programs, and geologic hazard assessments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of annual leave, plus state holidays."
   },
-  "retry_after": 1784876358,
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53436,7 +53574,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Occasional unpaid or optional furlough days dictated by the state budget, no guaranteed tech-style holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Large state government agency."
   },
   "sources": [
    {
@@ -53480,14 +53625,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a state government entity, likely restricted from sponsoring work visas; candidates must possess permanent US work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The California Department of Conservation (DOC) is a state government agency dedicated to managing California's natural resources. It generates funding through state and federal tax allocations rather than traditional commercial revenue."
+  },
+  "synthesized_evidence_sha": "acbda7d34d951635",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Supporting state conservation efforts through applied data science, GIS mapping, and software systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784802937,
   "web_search_url": "https://duckduckgo.com/?q=California+Department+of+Conservation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a California state agency, the DOC fundamentally conflicts with a desire for a fast, innovative tech culture and elite new-grad pay. While government roles often provide sane hours and high job security, they are characterized by slow bureaucracy rather than the accelerated technical learning and high compensation typical of top-tier AI roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known for sane hours and strong boundaries between work and personal time."
   }
  },
  "california department of developmental services": {
@@ -57948,47 +58118,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – elite quant/commodity trading tier; comparable to top proprietary trading firms and quantitative hedge funds in technical depth and compensation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated merchant model: buys commodities at source, arranges transportation and storage, sells to end-users or other traders, earning margins on physical movement and associated services. Also earns fees from risk management and financing arrangements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Merchant culture: pragmatic, results-oriented, collegial but competitive. Technical talent is respected as a profit center. Hierarchy is flatter than banks, but decisions are driven by trading P&L."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Producers (miners, oil & gas companies, farmers), consumers (utilities, manufacturers, refineries), financial institutions, and other commodity traders worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k base + significant year-end bonus (often 50-100%+ of base) + signing bonus; total first-year comp potentially $250k-$350k for top quantitative research/engineering hires."
   },
   "evidence_sha": "1ad156f5a464cc3d",
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Commodity Trading / Energy & Natural Resources Merchant"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect deep technical screens in probability, statistics, time-series modeling, and coding (Python/C++). Prepare for case studies on commodity market dynamics, optimization under constraints, and translating noisy data into trading signals. Behavioral questions will assess comfort with ambiguity, rapid iteration, and collaboration with traders."
+  },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784693223,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Stamford, CT, USA. Major offices in Houston, London, Singapore, Geneva, Shanghai, and other commodity hubs worldwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect global commodity supply and demand efficiently, providing reliable access to essential raw materials while managing risk and optimizing logistics."
+  },
   "name": "Castleton Commodities International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced, market-driven; intensity spikes around market hours, supply disruptions, and reporting cycles. Projects move from research to production quickly when they show edge."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Physical commodity trading (crude oil, refined products, natural gas, power, coal, metals, agricultural), logistics and freight, storage and terminaling, risk management and hedging solutions, structured finance for commodity producers and consumers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus US federal holidays; additional leave may be granted at manager discretion. No public policy details."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdown periods; some desks observe quiet periods around major holidays but coverage is required for global markets."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established private company (approx. 1,000+ employees globally), profitable and mature, with significant capital and global operations."
   },
   "sources": [
    {
@@ -58032,14 +58253,37 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized technical roles given global footprint and history of hiring international talent; specific policies not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Castleton Commodities International (CCI) is a global commodity merchant that trades, transports, and stores energy, metals, and agricultural products. It makes money by capturing margins on physical commodity flows, providing logistics and storage services, and managing price risk through hedging and structured transactions."
+  },
+  "synthesized_evidence_sha": "1ad156f5a464cc3d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to commodity market forecasting, price modeling, trade optimization, logistics routing, risk analytics, and alternative data integration. Engineering builds low-latency trading platforms, data pipelines, and quantitative research infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693223,
   "web_search_url": "https://duckduckgo.com/?q=Castleton+Commodities+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "CCI offers a top-tier quantitative environment where data science directly drives P&L in a multi-trillion-dollar commodity market. The firm’s scale and proprietary data assets provide elite prestige and high new-grad compensation comparable to leading quant funds. However, trading hours and market-driven deadlines can challenge work-life balance; candidates prioritizing guaranteed shutdowns and sane hours should probe team-specific expectations carefully."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – market hours and on-call rotations for critical systems can lead to 50-60 hour weeks; some teams protect personal time more than others. No firm-wide guaranteed shutdowns publicly documented."
   }
  },
  "catapult federal services": {
@@ -127963,48 +128207,125 @@
  "hard rock digital": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: Tier 3. Prestige in the online gaming space is high, but it does not carry the same elite, top-tier academic prestige as foundational AI labs or top-tier tech giants."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Online gambling and gaming operations backed by a secure, global physical brand."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Empowered, ownership-driven, and fast-paced. Staff are trusted to drive customer experiences while operating within a secure, globally recognized brand."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Online bettors and digital gaming customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base, competitive with the digital gaming industry but slightly below top-tier tech giants."
   },
   "evidence_sha": "2b2a108ebda28fc2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Digital Entertainment and Online Gaming."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Assess the true pace of the 'fast-paced environment' to ensure it signifies rapid innovation rather than high-burnout crunch, and clarify how the 'flexible vacation' policy translates to guaranteed shutdowns or sane hours. Focus on the technical learning curve and AI/Data Science applications within their gaming platforms to confirm the role meets elite prestige and high new-grad pay expectations."
+  },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784678949,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Offers a hybrid or remote working environment."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "To care deeply about every customer interaction and empower staff to own and drive a high-quality customer experience."
+  },
   "name": "Hard Rock Digital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: Extremely fast-paced with a startup culture that requires identifying and eliminating bottlenecks rapidly."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Online sportsbook and iCasino platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: 15-20 days of flexible vacation allowance, standard for tech divisions of major entertainment brands."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: Unknown if company-wide shutdowns exist, though startup cultures typically do not feature guaranteed holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Startup culture operating as a division of a large, established global brand."
   },
   "sources": [
    {
@@ -128038,14 +128359,45 @@
     "url": "https://hardrockdigital.recruitee.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "No specific visa sponsorship details found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Hard Rock Digital is the digital and online gaming arm of the global Hard Rock brand, tasked with building and operating their online betting and iGaming platforms. It makes money by facilitating online sports wagers and casino games, generating revenue from the house edge on bets and player deposits."
+  },
+  "synthesized_evidence_sha": "2b2a108ebda28fc2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Creating scalable digital platforms for online betting, focusing on eliminating bottlenecks and implementing effective processes for consistent service quality in a fast-paced environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678949,
   "web_search_url": "https://duckduckgo.com/?q=Hard+Rock+Digital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Candidates prioritizing a high-speed, innovative tech culture over slow bureaucracy will find a strong fit here, as the company explicitly fosters a startup environment backed by a secure global brand. The hybrid/remote setup and flexible vacation allowance align with the desire for sane hours and personal time, accelerating technical learning without a highly toxic, traditional corporate structure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "065515f4a2"
+   ],
+   "value": "Estimated: Moderate. Flexible vacation and remote options suggest a baseline of respect for personal time, but the explicit startup culture and fast-paced environment imply that workload demands could occasionally be high."
   }
  },
  "harman international": {
@@ -130835,37 +131187,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected in healthcare consulting, but not an AI/data science destination. Data work is applied analytics for client decks, not core IP or research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based professional services fees (time-and-materials or fixed-fee engagements). Revenue scales with consultant headcount and utilization; no recurring software revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, healthcare-obsessed. Small-firm partnership feel with high autonomy after proving oneself. Culture rewards client impact over technical craft."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large and mid-cap pharmaceutical, biotechnology, medical device, diagnostics, and digital health companies; occasionally investors (PE/VC) conducting due diligence on healthcare assets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k–$120k base + $15k–$30k bonus + modest benefits. Total ~$120k–$150k. Well below top-tier AI/ML new-grad offers at big tech or quant firms."
   },
   "evidence_sha": "dd166c98c1710529",
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare strategy consulting / life sciences professional services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Case interviews (market sizing, commercial strategy), behavioral fit, and light quantitative testing (Excel/modeling). Expect minimal algorithmic coding or ML system design; prepare for healthcare business fluency instead."
+  },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784636762,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Boston (headquarters), San Francisco Bay Area, possibly London. Remote/hybrid policies vary by project and tenure."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance the business of healthcare by providing rigorous, evidence-based strategy that helps clients bring innovative therapies and technologies to patients more effectively."
+  },
   "name": "Health Advances",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced, project-driven consulting cadence: 60–70 hr weeks during live engagements, unpredictable crunch periods, frequent client travel. Not a sustainable 9–5 tech pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Strategic consulting engagements: market assessment, commercial launch planning, reimbursement strategy, M&A due diligence, portfolio optimization, and digital health strategy. Deliverables are typically slide decks, financial models, and implementation roadmaps rather than software products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 holidays. Utilization pressure often limits full take-up."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130875,7 +131269,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None — no firm-wide guaranteed shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~200–300 employees across 3–4 offices (Boston HQ, West Coast, possibly Europe). Privately held, mature consulting partnership; not a startup."
   },
   "sources": [
    {
@@ -130909,14 +131308,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7c072bdd14e6a0efb3020d07a4b00a2798d90e2f0e11a06c4c7329e6dcf0aea2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=27bb3577-60e4-632a-36e0-22ea61eb62ba&u=a1aHR0cHM6Ly93d3cud2VibWQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Will sponsor H-1B and green cards for experienced consultants; new-grad sponsorship likely case-by-case given small class sizes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health Advances is a strategy consulting firm focused exclusively on the healthcare and life sciences sectors. It helps clients with commercial strategy, market access, portfolio planning, and due diligence across pharmaceuticals, medtech, diagnostics, and digital health."
+  },
+  "synthesized_evidence_sha": "dd166c98c1710529",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Lightweight data science: building market models, forecasting, real-world evidence analysis, and analytics in Excel/R/Python to support strategy decks. Not a software engineering or ML research role; coding is a support skill, not the core product."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784636762,
   "web_search_url": "https://duckduckgo.com/?q=Health+Advances+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige in healthcare strategy with strong new-grad compensation, but the role is consulting—not a fast, innovative tech culture. Work-life balance is typical for top-tier consulting: intense project cycles, frequent travel, and no guaranteed shutdowns. Technical learning is broad but shallow (analytics for slides), not deep ML engineering growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — Better than banking, worse than most tech. Protected weekends rare; vacation often interrupted. No company-wide shutdowns."
   }
  },
  "healthfirst": {
@@ -191486,48 +191906,117 @@
  "national center for missing exploited children": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Tier 2: Highly respected in 'AI for social good' niche; publishes at top venues (CVPR, NeurIPS workshops); collaborates with big tech (Google, Microsoft, Meta) on safety tooling; but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Nonprofit 501(c)(3) funded through federal grants (DOJ/OJJDP), corporate partnerships, private donations, and contractual revenue from tech industry partnerships for child safety tooling. Does not operate for profit."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Mission-first, collaborative, multidisciplinary (analysts, engineers, social workers, law enforcement liaisons). Less 'tech bro' culture; more purpose-driven. Hierarchy exists but technical expertise respected. Diversity/inclusion emphasized given victim demographics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Primary stakeholders: law enforcement agencies (federal, state, local), families of missing children, internet platforms/tech companies, policymakers, and the general public. NCMEC serves as a mandatory reporter recipient under federal law."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base (Alexandria, VA). Nonprofit pay bands lower than big tech but competitive for mission-driven sector. No RSU/equity; possible 403(b) match (5-10%). Total comp ~$95k-$125k."
   },
   "evidence_sha": "5127c38b966ecbad",
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Nonprofit / Public Safety / Child Protection Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect emphasis on: 1) Handling imbalanced/sensitive data (CSAM detection ethics), 2) Scalable ML pipelines for high-throughput reporting systems, 3) Cross-functional collaboration with law enforcement/non-technical stakeholders, 4) Privacy-preserving ML (federated learning, differential privacy), 5) Mission alignment and resilience to traumatic content exposure."
+  },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784680811,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Headquarters: Alexandria, VA (DC metro). Regional offices in California, Florida, New York, Texas, and others. Some remote/hybrid flexibility likely for technical roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "To help find missing children, reduce child sexual exploitation, and prevent child victimization. NCMEC operates under a congressional mandate as the national resource center for these issues."
+  },
   "name": "National Center for Missing & Exploited Children",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Mission-driven urgency but nonprofit governance; not 'move fast and break things.' Regulatory/compliance constraints (federal funding, law enforcement partnerships) add process. Sprint cycles likely 2-4 weeks with stable roadmaps."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "CyberTipline for reporting child sexual exploitation material; missing children database and AMBER Alert coordination; forensic technical assistance; training for law enforcement; prevention education programs; and technology platforms like PhotoDNA integration for content hashing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 federal holidays + potential volunteer/time-off for wellness. Nonprofit standard; likely accrual-based. No unlimited PTO."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observes federal government shutdown calendar (Thanksgiving week, Christmas-New Year week). May have summer slowdown. No guaranteed company-wide 'shutdown' policy like some tech firms."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Established nonprofit (founded 1984) with ~300-500 employees across headquarters in Alexandria, VA and regional offices. Mature organization with stable funding but not a startup."
   },
   "sources": [
    {
@@ -191571,14 +192060,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "As a nonprofit with federal contracts, likely sponsors H-1B for specialized technical roles (data science, AI/ML engineering). Cap-exempt H-1B possible due to nonprofit research/education mission. Green card sponsorship less common but possible for senior roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "National Center for Missing & Exploited Children (NCMEC) is a nonprofit organization that serves as the national clearinghouse for missing and exploited children issues in the United States. It operates hotlines, provides technical assistance to law enforcement, and develops technology tools to combat child exploitation."
+  },
+  "synthesized_evidence_sha": "5127c38b966ecbad",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "AI/ML for content classification (CSAM detection), large-scale data ingestion/processing for CyberTipline reports, computer vision/hashing (PhotoDNA), NLP for report triage, geospatial analysis for missing children, and secure platform development for law enforcement collaboration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=National+Center+for+Missing+%26+Exploited+Children+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Rare combination of elite mission impact (direct child protection), technically sophisticated AI/ML work at scale (millions of CyberTipline reports), and nonprofit culture that typically offers better work-life balance than big tech. High prestige in 'tech for good' space with meaningful career capital."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Nonprofit culture typically respects boundaries; no on-call for production ML models in same way as consumer tech; federal holidays observed; limited crunch culture. However, exposure to traumatic content requires intentional wellness support."
   }
  },
  "national information solutions cooperative nisc": {
@@ -236049,49 +236567,128 @@
  },
  "relx": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "f99a0d3d35",
+    "7350432590"
+   ],
+   "value": "Mid-tier for enterprise data and analytics, though legacy aspects may dilute elite prestige for pure tech roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Subscription-based data and analytics services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Professional, corporate, and data-driven."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Professionals and businesses across various industries, including those in risk assessment, legal research, healthcare, and academia."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Estimated: Competitive but not top-tier elite pay, likely in the $90k-$110k range depending on location and exact role, which may fall short of your high new-grad pay expectation."
   },
   "evidence_sha": "b338242c0da6f020",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876429,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Information Services and Analytics."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Probe deeply into the specific team's agile practices, deployment frequency, and tech stack to ensure a fast-paced culture rather than bureaucratic processes. Clarify expectations around work hours and shutdown periods, and ask about mentorship and new-grad career progression."
+  },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784678947,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Global presence."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "To equip customers with actionable intelligence and decision tools that help them make better decisions."
+  },
   "name": "RELX",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Estimated: Steady and process-oriented, typical of large legacy data companies, which may conflict with your preference for a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35",
+    "7350432590"
+   ],
+   "value": "Information-based analytics, decision tools, and data solutions for scientific, technical, medical, risk, legal, and exhibition markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Estimated: Standard corporate package likely offering 20-25 days of PTO annually, balancing your need for personal time."
   },
+  "refresh_after": 1790060429,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Estimated: Potential for standard corporate holidays, though explicit guaranteed shutdowns like a winter break are unconfirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Large, established public company."
   },
   "sources": [
    {
@@ -236125,14 +236722,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=fe2eda84332f9509a4de90aca2b97323d0e6237420ec0aa00ee5751c7c8e021fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f1e3bfb-a7e4-62aa-0c4b-2c65a6046343&u=a1aHR0cHM6Ly9yZWx4bm93LmNvbS9jb2xsZWN0aW9ucy9yZWx4LWRldmljZXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Global company with varied regional policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "12c38b77c0",
+    "f99a0d3d35"
+   ],
+   "value": "RELX is a global provider of information-based analytics and decision tools. The company makes money by operating across four market segments—Scientific, Technical & Medical; Risk; Legal; and Exhibitions—collecting vast datasets and monetizing them through subscriptions, analytics, and decision tools."
+  },
+  "synthesized_evidence_sha": "b338242c0da6f020",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35",
+    "7350432590"
+   ],
+   "value": "Data science, software engineering, analytics, and AI development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678947,
   "web_search_url": "https://duckduckgo.com/?q=RELX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "While RELX is a massive, slow-moving bureaucracy that may lack the fast-paced, elite tech culture you seek, its core business heavily relies on data and AI, which could offer substantial technical learning opportunities. However, it may not align with your desire for a highly innovative, fast-paced environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f99a0d3d35"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, owing to its mature corporate structure, which aligns with your goal of avoiding burnout."
   }
  },
  "remitly": {
@@ -322016,11 +322646,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -322032,6 +322664,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784876429,
   "last_evidence_at": 1784679634,
   "name": "Zebra Technologies",
   "pace_of_work": {
@@ -322044,6 +322677,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -322087,7 +322721,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf516b7c22b719aa212a4110888bb9ccac1f4be2763af6643b5beec071033bfaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuemVicmEuY29tL3VzL2VuLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679634,
   "web_search_url": "https://duckduckgo.com/?q=Zebra+Technologies+company+careers+benefits",
