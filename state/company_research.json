@@ -16279,7 +16279,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16297,7 +16297,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784874643,
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784678734,
   "name": "American Electric Power",
   "pace_of_work": {
@@ -16310,7 +16310,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784874763,
+  "retry_after": 1784875038,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28397,47 +28397,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI within top-tier engineering brand; not a primary AI research destination but high-impact domain deployment."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Fee-for-service consulting, lump-sum EPC contracts, cost-reimbursable agreements, and recurring revenue from operations & maintenance contracts. Diversified across project lifecycle from advisory to asset management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Professional, safety-first, engineering-centric culture with strong technical communities of practice. Hierarchical but collaborative across disciplines. Increasing digital transformation push creating pockets of innovation. Long tenures common; values licensure and professional development."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Government agencies, public utilities, transportation authorities, nuclear operators, and private sector clients in energy, mining, and infrastructure globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 USD base (US); £30,000-£38,000 (UK); CAD $65,000-$75,000 (Canada) for AI/data science roles. Bonus 5-10%. Stock/RSU uncommon at new grad level. Lower than pure-play tech but includes chartership/licensure funding."
   },
   "evidence_sha": "768289081d09e422",
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Engineering, Procurement & Construction (EPC) / Professional Services / Nuclear & Clean Energy"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect domain-fluent interviews: engineering fundamentals + ML applied to physics-constrained problems (nuclear, structural, transport). Prepare for case studies on model deployment in regulated environments, uncertainty quantification, and translating stakeholder requirements into technical specs. Ask about: protected learning time, billable vs. R&D hour allocation, overtime norms on major projects, and how AI teams interface with discipline leads."
+  },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784678726,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Headquartered in Montreal, Canada. Major hubs in UK, US, Canada, Middle East, Asia-Pacific. 250+ offices across 50+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Engineering a better future for our planet and its people through sustainable infrastructure and clean energy solutions."
+  },
   "name": "AtkinsRéalis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven with deadline intensity around milestones; moderate-to-high variability by sector (nuclear/defense slower, commercial faster). Not a 'move fast and break things' culture — safety and compliance govern pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Engineering design, procurement, construction management, nuclear services, digital solutions, asset management, and project delivery for infrastructure, transportation, water, energy, and defense sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days vacation + 10-12 holidays (varies by country/region; Canada/UK typically more generous than US)."
   },
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "None found in research — AtkinsRéalis runs graduate development programs by discipline (engineering, project management) but no centralized AI/data science rotational program identified in public sources."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some regional offices observe holiday closures (e.g., UK Christmas-New Year). Project-dependent."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Large public company (~36,000 employees globally), mature stage with 100+ year history, listed on TSX (ATRL). Formerly SNC-Lavalin, rebranded 2023."
   },
   "sources": [
    {
@@ -28471,14 +28536,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=5f6fadfadb67fb54ec64d0bc5faac9447688dcfaf20da5cd5c8ebf3ce2dba28eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly94aGFtc3Rlci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Established global mobility program; routinely sponsors visas (H-1B, TN, UK Skilled Worker, Canada PR pathways) for engineering and technical roles. Strong track record in US, UK, Canada."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "AtkinsRéalis is a global engineering, procurement, and construction firm providing professional services and project delivery across infrastructure, nuclear, and clean energy sectors. The company generates revenue through fee-based consulting, EPC contracts, and long-term asset management agreements with governments and private clients worldwide."
+  },
+  "synthesized_evidence_sha": "768289081d09e422",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "655efd2093"
+   ],
+   "value": "Applied AI/ML for asset optimization, digital twins, predictive maintenance, generative design, nuclear safety modeling, and infrastructure analytics. Heavy on domain-specific engineering software, simulation, and data platforms rather than pure research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678726,
   "web_search_url": "https://duckduckgo.com/?q=AtkinsR%C3%A9alis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AtkinsRéalis offers elite engineering prestige with massive-scale infrastructure and nuclear projects where AI directly impacts clean energy transition and public safety. As a mature global firm, it provides structured career ladders, formal mentorship, and exposure to regulated, mission-critical work — but operates in a project-driven consulting model where billable hours and client deadlines can challenge work-life boundaries. New grad pay is competitive for traditional engineering but may lag"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.0/5 — Project crunches common; formal flexibility policies exist but utilization pressure varies by business unit and client demands. Nuclear/defense sectors more structured; commercial infrastructure more variable."
   }
  },
  "atlas energy solutions": {
@@ -44069,52 +44161,132 @@
  "bosch group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Mid-tier. As a traditional engineering and hardware conglomerate, its AI prestige is likely lower than dedicated elite tech firms, though specific AI divisions may offer strong applied research opportunities."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Mission-driven, stable, and engineering-focused. Candidates may find a culture that values deep technical learning and long-term impact over rapid iteration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $90,000 - $110,000. While offering strong stability and benefits, traditional engineering firms generally pay lower base salaries for new grads compared to top-tier elite tech companies."
   },
   "evidence_sha": "07f73f3f038c12b9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784874643,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Probe heavily into the team's actual day-to-day pace, autonomy, and tech stack to ensure they offer real technical learning and career growth rather than slow, process-heavy maintenance work. Ask about expected working hours, shutdown policies, and new-grad compensation bands to confirm they align with your requirements for elite pay and guaranteed work-life balance."
+  },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784679038,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
   "name": "Bosch Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate to slow. Large legacy engineering companies typically prioritize rigorous process over fast, innovative tech culture, though specific AI teams might operate more agilely."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 25-30 days. Legacy multinational engineering firms typically offer robust vacation packages, though exact company-wide policy is not publicly specified."
   },
-  "retry_after": 1784874763,
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Likely offers guaranteed holiday shutdowns. Large engineering conglomerates often mandate office closures around major holidays to ensure employee rest."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
   },
   "sources": [
    {
@@ -44158,14 +44330,48 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7"
+   ],
+   "value": "Not found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "771b65951f",
+    "a2fbaac7d7",
+    "f16eec2a6f"
+   ],
+   "value": "No substantive information could be extracted from the provided sources, as they only contain redirect notices or generic job board headers with no details on Bosch Group's operations or revenue model."
+  },
+  "synthesized_evidence_sha": "07f73f3f038c12b9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Surfaced via a monitored new-grad data science job listing repository, suggesting active hiring for entry-level data science or AI roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679038,
   "web_search_url": "https://duckduckgo.com/?q=Bosch+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a massive legacy engineering firm, Bosch may offer mission-driven stability and sane hours, but candidates must verify if its AI division operates with a fast, innovative tech culture or if it is bogged down by slow corporate bureaucracy. It is crucial to ensure the specific team avoids toxic bureaucratic drag while meeting your goals for elite prestige and high new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Good. Established European engineering firms generally respect sane hours and offer strong personal time benefits, avoiding toxic high-burnout environments common in elite tech."
   }
  },
  "bosch home comfort": {
@@ -75804,39 +76010,101 @@
  },
  "crowdstrike": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Top-tier (industry-leading ML for security, publishes at top conferences, large-scale real-world impact)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Subscription-based SaaS model with annual recurring revenue from the Falcon platform and modular add-ons; also offers professional services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Engineering-first, mission-oriented, inclusive, and autonomous; 'CrowdStrikers' valued for ownership and innovation; emphasis on responsible AI and belonging."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Organizations across all industries globally, including enterprises, governments, and small businesses, relying on CrowdStrike to secure workloads and data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k-$200k base + $30k-$60k RSU (4-year) + $15k-$30k sign-on; total first-year $205k-$290k (varies by location and role)."
   },
   "evidence_sha": "27cbcfe564ab984d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Cybersecurity / Cloud Security / Endpoint Protection"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Expect heavy emphasis on ML fundamentals (classification, clustering, anomaly detection), large-scale data processing (Spark, Kafka), cloud infrastructure (AWS/GCP), and applied research experience. Behavioral questions will probe ownership, customer obsession, and collaboration in autonomous teams. Prepare for coding (Python, SQL) and system design for ML pipelines."
+  },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784621687,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Headquartered in Austin, TX; major hubs in Sunnyvale, CA; Seattle, WA; Washington DC; London; Bucharest; Singapore; remote/hybrid options widely available."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "To keep businesses running, communities safe, and lives moving forward by stopping breaches through innovative, customer-focused cybersecurity."
+  },
   "name": "Crowdstrike",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Fast-paced, iterative, customer-driven; quarterly planning with high autonomy; expects rapid experimentation and deployment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Falcon platform (endpoint protection, cloud security, identity protection, threat intelligence, managed hunting, IT operations)"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible time off; no public policy details."
   },
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75846,7 +76114,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams may observe informal slowdowns around major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: CRWD), large-cap, ~8,000+ employees, founded 2011, profitable and growing rapidly."
   },
   "sources": [
    {
@@ -75880,14 +76153,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=cb673652b25febe393a9f1968ae382efc3f23d94e3e4a0aff3b723ea697a7e6bJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2225a6cc-e520-6aea-0cb3-b150e4cf6b90&u=a1aHR0cHM6Ly93d3cuY3Jvd2RzdHJpa2UuY29tL2VuLXVzL2Fib3V0LXVzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles; new-grad positions typically eligible for STEM OPT and H-1B sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "CrowdStrike is a cybersecurity company that provides cloud-native endpoint protection, threat intelligence, and incident response services via a SaaS platform. It generates revenue primarily through subscription contracts for its Falcon platform and associated modules."
+  },
+  "synthesized_evidence_sha": "27cbcfe564ab984d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Fast-paced, customer-focused environment emphasizing responsible AI adoption, experimentation, and innovation; data scientists build ML models for threat detection, anomaly detection, and large-scale data analytics on petabyte-scale telemetry."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784591793,
   "web_search_url": "https://duckduckgo.com/?q=Crowdstrike+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "19d78aa081"
+   ],
+   "value": "Offers elite AI/DS prestige as a market-leading cybersecurity unicorn with top-tier new-grad compensation; culture emphasizes flexibility, autonomy, and responsible innovation without the bureaucracy of legacy tech giants. Mission-driven (stopping breaches) aligns with purpose-seeking candidates. Fast-paced but with stated commitment to flexibility and belonging, suggesting better WLB than high-burnout peers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 (strong flexibility and autonomy culture; hybrid/remote options; no guaranteed shutdowns but generally sane hours compared to FAANG)"
   }
  },
  "crown point technologies llc": {
@@ -85774,47 +86074,110 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within quant finance; publishes in peer-reviewed journals, collaborates with Nobel laureates (Fama, French), and runs one of the industry’s most respected research programs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Asset management fees (expense ratios) on ~$700B+ AUM; revenue scales with assets under management. No performance fees, no proprietary trading, no retail distribution fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, collegial, low-ego; decisions by consensus and evidence; employee-owned so politics are minimal; diversity of thought valued over hours logged."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Registered investment advisors (RIAs), wealth management platforms, institutional consultants, pension plans, endowments, and foundations; not sold directly to individual investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 15-25% target bonus + RSU/phantom equity (vesting 4 yrs) ≈ $165k-$200k total Y1; top quant research hires can exceed $220k."
   },
   "evidence_sha": "acad88e4b140cb0e",
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Asset Management / Quantitative Finance"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: probability/stats, Python/C++ coding, data structures, and system design for low-latency or high-throughput pipelines. Domain questions center on factor modeling, transaction-cost analysis, and portfolio construction. Behavioral rounds probe intellectual humility, collaborative problem-solving, and alignment with long-term, evidence-based thinking."
   },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784674659,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Headquarters: Austin, TX. Offices: Santa Monica, Charlotte, London, Sydney, Singapore, Tokyo, Toronto, Vancouver, Berlin, Amsterdam."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To deliver systematically higher expected returns for clients by translating robust financial science into practical investment solutions, maintaining low costs and broad diversification."
+  },
   "name": "Dimensional Fund Advisors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable, project-driven cadence (40-45 hrs/week typical); quarterly research cycles replace fire-drill sprints."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Mutual funds, ETFs, and separately managed accounts across equity (U.S., international, emerging markets, core, value, small-cap, profitability) and fixed income (short-term, intermediate, global, inflation-protected) strategies, all built on peer-reviewed research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days vacation + 10 company holidays + 2 floating days; unlimited sick; sabbatical after 7 years."
   },
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; summer half-day Fridays (Memorial Day–Labor Day)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Large, private, employee-owned firm founded in 1981; ~1,500 employees globally; profitable and stable with decades-long track record."
   },
   "sources": [
    {
@@ -85858,14 +86221,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "H-1B and green card sponsor for technical and quantitative roles; history of supporting STEM OPT and cap-exempt academic affiliates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Dimensional Fund Advisors (DFA) is a global investment management firm that applies academic financial science to build systematic, factor-based equity and fixed income strategies. It distributes funds primarily through registered investment advisors and institutional channels rather than direct-to-retail."
+  },
+  "synthesized_evidence_sha": "acad88e4b140cb0e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Quantitative research, portfolio implementation, trading systems, data engineering, risk modeling, and technology infrastructure supporting systematic investment process; heavy Python, C++, SQL, cloud (AWS), and internal tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
   "web_search_url": "https://duckduckgo.com/?q=Dimensional+Fund+Advisors+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DFA offers a rare blend: elite quant finance prestige with a collaborative, low-bureaucracy culture that genuinely respects work-life balance. The firm’s academic DNA means you work on intellectually rigorous problems (factor research, execution algorithms, massive data pipelines) without the burnout typical of hedge funds or big tech. Employee ownership aligns long-term incentives, and the advisor-channel model insulates tech teams from short-term revenue pressure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — protected weekends, minimal on-call, explicit 'no email after hours' norm for non-production roles."
   }
  },
  "direct staffing": {
@@ -239605,37 +239995,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected applied AI in a traditional industry leader; not a primary AI research lab but strong production ML impact at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a"
+   ],
+   "value": "Revenue from long-term fleet lease/rental contracts, dedicated transportation service agreements, supply chain management fees, and technology platform subscriptions. High asset base (vehicles, warehouses) with recurring service revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established corporate evolving toward product-centric tech culture; engineering respected as a differentiator; collaborative but process-heavy in places; safety-first mindset from logistics roots."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a"
+   ],
+   "value": "Mid-to-large enterprises across retail, manufacturing, automotive, food & beverage, healthcare, and e-commerce that outsource fleet operations or need integrated supply chain services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + 10-15% target bonus + RSU (~$15-25k/yr vesting); total comp ~$115k-$150k. Below top-tier pure tech but competitive for logistics/industrial."
   },
   "evidence_sha": "615f51a08ba17e2c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a"
+   ],
+   "value": "Transportation & Logistics / Supply Chain Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "fb736a859c"
+   ],
+   "value": "Expect applied ML system design (batch vs. streaming, model monitoring on edge), SQL/analytics case studies using logistics data, and behavioral questions on cross-functional collaboration with operations. Demonstrate ability to translate messy physical-world constraints into tractable ML problems."
+  },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784677182,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a"
+   ],
+   "value": "Corporate HQ: Miami, FL. Major tech hubs: Miami, Chicago, Dallas, Atlanta, Toronto. Operations across US, Canada, UK. Hybrid/remote flexibility varies by team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "619f35bf98"
+   ],
+   "value": "To make the world's supply chains work better by delivering innovative transportation and logistics solutions that keep goods moving safely, efficiently, and sustainably."
+  },
   "name": "Ryder System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles measured in quarters; some legacy-system friction but dedicated modernization budget reduces fire-drills."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a"
+   ],
+   "value": "Full-service fleet leasing and rental; dedicated transportation management; supply chain and warehousing solutions; last-mile delivery; freight brokerage; and proprietary telematics/fleet analytics platforms (RyderGyde, RyderShare)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; accrual increases with tenure; unlimited not standard."
   },
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239645,7 +240098,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; standard holiday calendar; some teams observe informal quiet periods between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fb736a859c",
+    "619f35bf98"
+   ],
+   "value": "Public (NYSE: R); ~$11B annual revenue; ~42,000 employees; founded 1933; headquartered in Miami, FL. Mature enterprise modernizing with digital/AI investments."
   },
   "sources": [
    {
@@ -239689,14 +240150,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Active H-1B sponsor for specialized roles (data science, software engineering, analytics). New-grad roles posted on SimplifyJobs indicate openness to early-career international talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fb736a859c",
+    "bac58d0c9a",
+    "619f35bf98"
+   ],
+   "value": "Ryder System is a Fortune 500 logistics and transportation company providing fleet management, dedicated transportation, and supply chain solutions across North America and the UK. It operates a large commercial fleet and offers technology-enabled services for vehicle maintenance, route optimization, and freight brokerage."
+  },
+  "synthesized_evidence_sha": "615f51a08ba17e2c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "fb736a859c"
+   ],
+   "value": "Applied AI/ML for predictive maintenance, route optimization, demand forecasting, dynamic pricing, and telematics analytics. Cloud-native platforms (AWS), real-time data pipelines, IoT/edge computing on vehicles, and customer-facing apps (RyderGyde, RyderShare)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
   "web_search_url": "https://duckduckgo.com/?q=Ryder+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "fb736a859c"
+   ],
+   "value": "Ryder offers a rare blend: a massive, mission-critical logistics network where AI directly moves physical goods, paired with a public-company stability and a dedicated push to modernize. For a new grad, it means real production scale (petabytes of telematics data, thousands of vehicles) without the hyper-competitive burnout culture of pure-play tech giants. The company's digital transformation is executive-sponsored, so data science work ships to operations, not slide decks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — corporate tech roles generally 40-45 hrs/wk; on-call rotations exist for critical platforms but are managed; ops-adjacent teams may see seasonal spikes."
   }
  },
  "s c electric company": {
@@ -254637,7 +255131,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254655,7 +255149,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784874643,
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784678376,
   "name": "Société Générale de Surveillance (SGS)",
   "pace_of_work": {
@@ -254668,7 +255162,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784874763,
+  "retry_after": 1784875038,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -293630,48 +294124,131 @@
  "university of southern california": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "High. USC is a prestigious R1 research university with highly regarded computer science and AI programs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Higher education model generating revenue from tuition, government and private research grants, philanthropic giving, and endowment investment income."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, mission-driven, and stable. Focuses on long-term research and education rather than fast commercial disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Prospective and current undergraduate, graduate, and professional students, as well as academic researchers, alumni, and organizations receiving research outputs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $120,000 for research staff or junior technical roles, which is lower than top-tier corporate tech but offers strong academic prestige."
   },
   "evidence_sha": "95c0cf29f486eb9c",
+  "generated_at": 1784874798,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on exploring specific AI or data science projects at USC's ISI or Viterbi School to find pockets of technical innovation. Ask about grant-funded compensation bands, work expectations during grant crunches, and how the academic pace impacts technology deployment and career growth."
   },
+  "last_attempt_at": 1784874798,
   "last_evidence_at": 1784672482,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Main campus in Los Angeles, California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "To develop human beings and society through the cultivation of human knowledge, arts, and professional skills, alongside rigorous scholarly research."
+  },
   "name": "University of Southern California",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally slower, bureaucratic pace dictated by academic calendars and grant cycles, contrasting with fast-paced tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Undergraduate, graduate, and professional degree programs, as well as original academic research, athletic programs, and continuing education."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off plus university holidays and winter shutdowns, typical for large R1 university staff."
   },
+  "refresh_after": 1790058798,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes university holidays and a winter recess between Christmas and New Year's."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Large, established private research university with billions in annual revenue and a global alumni network."
   },
   "sources": [
    {
@@ -293705,14 +294282,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=168d93945be04b535385558d834ce1696f1a50937108154afba8ee4613f465f0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9ldmVyZXR0LndzdS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Higher education institutions typically utilize F-1 and J-1 visas for international researchers and staff, though specific corporate sponsorship policies for technical staff were not detailed in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "The University of Southern California (USC) is one of the leading private research universities in the United States. It generates revenue primarily through tuition and fees from student enrollment, alongside substantial funding from research grants, philanthropic donations, and endowment returns."
+  },
+  "synthesized_evidence_sha": "95c0cf29f486eb9c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "00c24c6506",
+    "ce68ff70d3",
+    "591d6a89b8"
+   ],
+   "value": "Academic and administrative enterprise IT, alongside specialized data science and AI research within the Viterbi School of Engineering and Information Sciences Institute (ISI)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672482,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Southern+California+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provides elite academic prestige and strong mission-driven impact, but may conflict with the desire for fast, innovative tech culture and elite new-grad pay typical of top-tier tech firms. Academic environments often feature slower bureaucratic pace and lower industry compensation, despite sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Academic roles typically offer standard 40-hour work weeks and respect holidays, though grant deadlines can cause temporary spikes."
   }
  },
  "university of texas at austin": {
