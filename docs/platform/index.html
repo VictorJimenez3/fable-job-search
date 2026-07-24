@@ -176,13 +176,13 @@ let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"",
-  experience:"", alert:false, lane:"", sort:"best"};
+  experience:"", career:"", alert:false, lane:"", sort:"best"};
 function storedFilter() {
   try {
     const f = JSON.parse(localStorage.getItem("jr_filters") || "{}");
-    if (f._alertFilterVersion !== 2) {
+    if (f._alertFilterVersion !== 3) {
       f.alert = false;
-      f._alertFilterVersion = 2;
+      f._alertFilterVersion = 3;
       localStorage.setItem("jr_filters", JSON.stringify(f));
     }
     if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
@@ -367,6 +367,7 @@ function eligibilityBadges(j) {
   const program = TECH_PROGRAM_TITLE.test(j.title || "");
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
     ${program?'<span class="chip marquee">technical program</span>':""}
+    ${j.early_career_possible?'<span class="chip unknown" title="No stated experience floor, but not verified new-grad">early-career possible</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
     <span class="chip ${exp[0]}">${exp[1]}</span>`;
 }
@@ -405,6 +406,8 @@ function jobList() {
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
   else if (f.experience) rows = rows.filter(j=>experienceStatus(j)===f.experience);
+  if (f.career === "newgrad") rows = rows.filter(j=>j.explicit_new_grad);
+  else if (f.career === "possible") rows = rows.filter(j=>j.early_career_possible);
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
   if (f.sort === "new")
@@ -578,6 +581,11 @@ function rJobs() {
         <option value="unknown" ${S.filter.experience==="unknown"?"selected":""}>experience not stated</option>
         <option value="unread" ${S.filter.experience==="unread"?"selected":""}>experience not analyzed</option>
       </select>
+      <select aria-label="Career evidence" onchange="setFilter('career',this.value)">
+        <option value="">any career evidence</option>
+        <option value="newgrad" ${S.filter.career==="newgrad"?"selected":""}>verified new grad</option>
+        <option value="possible" ${S.filter.career==="possible"?"selected":""}>early-career possible</option>
+      </select>
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
@@ -726,6 +734,10 @@ function foundVia(j) {
   return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`;
 }
 function researchFreshness(d) {
+  if (d?.retry_after && d.retry_after > Date.now()/1000) {
+    const mins = Math.max(1,Math.ceil((d.retry_after-Date.now()/1000)/60));
+    return `official evidence captured · synthesis retry in ~${mins}m`;
+  }
   if (!d?.generated_at) return "official evidence captured · synthesis queued";
   const days = Math.max(0,Math.floor((Date.now()/1000-d.generated_at)/86400));
   return `${days===0?"researched today":days+"d since research"} · ${d.status||"evidence limited"}`;

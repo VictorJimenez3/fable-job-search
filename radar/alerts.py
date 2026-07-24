@@ -17,6 +17,7 @@ from .config import env, github_repo
 API = "https://api.github.com"
 LABEL = "radar-alerts"
 BODY_LIMIT = 60000
+REQUEST_TIMEOUT = (5, 20)
 
 
 def _headers() -> dict:
@@ -83,13 +84,21 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     repo = github_repo()
     from .culture import load as culture_load
     culture_map = culture_load()
-    existing_ids = _existing_alert_ids(repo)
+    # Delivery only ever considers the recent alert-history window.  Looking
+    # through every historical tracking issue on each crawl made this phase
+    # grow forever with the board, even when there were no new jobs.  GitHub's
+    # `since` filter remains safe for the crash case: an issue created for one
+    # of these jobs is necessarily updated after its alert timestamp.
+    since = min((int(j.get("alerted_at", time.time())) for j in new_alerts),
+                default=int(time.time()))
+    existing_ids = _existing_alert_ids(repo, since=since)
+    print(f"alerts: checking {len(new_alerts)} recent job(s); found {len(existing_ids)} durable issue marker(s)")
     last_url = None
     for job in new_alerts:
         if job["id"] in existing_ids:
             continue
         r = requests.post(
-            f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
+            f"{API}/repos/{repo}/issues", headers=_headers(), timeout=REQUEST_TIMEOUT,
             json={"title": _alert_title(job),
                   "body": HEADER + format_line(job, culture_map) + "\n",
                   "labels": [LABEL], "assignees": []})
@@ -98,14 +107,24 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     return last_url
 
 
-def _existing_alert_ids(repo: str) -> set[str]:
-    """Return durable radar IDs already represented by an alert issue."""
+def _existing_alert_ids(repo: str, *, since: int | None = None) -> set[str]:
+    """Return durable markers for the delivery window, not all-time history.
+
+    ``since`` is deliberately based on the alert event rather than a mutable
+    local cache.  That preserves idempotency if a runner dies after GitHub
+    accepts an issue but before any generated state is written.
+    """
     found: set[str] = set()
     page = 1
+    params = {"labels": LABEL, "state": "all", "per_page": 100}
+    if since:
+        # Give clock skew and a manually edited issue a small cushion.
+        stamp = datetime.fromtimestamp(max(0, since - 300), timezone.utc)
+        params["since"] = stamp.isoformat().replace("+00:00", "Z")
     while True:
         response = requests.get(
-            f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
-            params={"labels": LABEL, "state": "all", "per_page": 100, "page": page},
+            f"{API}/repos/{repo}/issues", headers=_headers(), timeout=REQUEST_TIMEOUT,
+            params={**params, "page": page},
         )
         response.raise_for_status()
         issues = response.json()

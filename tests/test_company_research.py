@@ -125,3 +125,25 @@ def test_enrich_is_grounded_cached_and_priority_bounded(tmp_path, monkeypatch):
     assert research.load()["acme health"]["status"] == "ready"
     assert research.enrich(jobs, [], {}, limit=1) == 0
     assert calls["n"] == 1
+
+
+def test_failed_synthesis_gets_bounded_retry_backoff(tmp_path, monkeypatch):
+    monkeypatch.setattr(research.state, "STATE_DIR", tmp_path)
+    records = {}
+    research.capture_into(
+        records, company="Retry Co", title="Software Engineer",
+        url="https://retry.example/jobs/1",
+        text=("Retry Co builds software for customers and has a technology team. ") * 8,
+        retrieved_at=NOW)
+    research.save(records)
+    monkeypatch.setattr(research.llm, "available", lambda task="general": True)
+    monkeypatch.setattr(research.llm, "complete", lambda *args, **kwargs: "not json")
+    jobs = {"j1": {"id": "j1", "company": "Retry Co", "score": 90,
+                    "alert_ok": True, "first_seen": NOW}}
+    assert research.enrich(jobs, [], {}, limit=1) == 0
+    record = research.load()["retry co"]
+    assert record["status"] == "retrying"
+    assert record["error"]
+    assert record["retry_after"] > record["last_attempt_at"]
+    counts = research.backlog_counts({"retry co": record}, now=record["last_attempt_at"])
+    assert counts == {"ready": 0, "pending": 0, "retry_wait": 1, "errors": 1}

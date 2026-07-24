@@ -2,7 +2,7 @@ import time
 
 from radar.models import Job
 from radar import main
-from radar.score import (RULES_VERSION, gates, regate, score,
+from radar.score import (RULES_VERSION, early_career_possible, gates, regate, score,
                          update_feedback_from_applied)
 from radar.sector import infer
 
@@ -52,6 +52,16 @@ def test_gates_direct_ats_needs_entry_signal():
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
                                  desc="We welcome new grad applicants with 0-2 years experience."))
     assert keep and alert_ok
+
+
+def test_early_career_possible_is_visible_but_never_new_grad_evidence():
+    fanatics = mk("AI Engineer", company="Fanatics", source="greenhouse")
+    keep, alert_ok, _ = gates(fanatics)
+    assert keep and not alert_ok
+    assert early_career_possible(fanatics, {}) is True
+    assert early_career_possible(fanatics, {"years_min": 1}) is False
+    assert early_career_possible(mk("Senior AI Engineer", source="greenhouse"), {}) is False
+    assert early_career_possible(mk("AI Engineer", source="simplify"), {}) is False
 
 
 def test_trusted_new_grad_board_source_supplies_missing_title_signal():

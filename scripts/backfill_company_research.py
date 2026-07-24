@@ -47,10 +47,8 @@ def ready_count(records: dict) -> int:
 
 
 def pending_count(records: dict) -> int:
-    return sum(1 for record in records.values()
-               if record.get("sources")
-               and (record.get("status") != "ready"
-                    or record.get("synthesized_evidence_sha") != record.get("evidence_sha")))
+    counts = company_research.backlog_counts(records)
+    return counts["pending"] + counts["retry_wait"]
 
 
 def main() -> int:
@@ -94,10 +92,13 @@ def main() -> int:
         from radar import llm
         llm.save_usage()
         after = ready_count(company_research.load())
-        after_pending = pending_count(company_research.load())
+        final_records = company_research.load()
+        after_pending = pending_count(final_records)
+        health = company_research.backlog_counts(final_records)
         print(f"company backfill: researched={len(selected)} synthesized={synthesized} "
               f"ready={after} delta={after-before} pending={before_pending}->{after_pending} "
-              f"records={len(company_research.load())}", flush=True)
+              f"retry_wait={health['retry_wait']} errors={health['errors']} "
+              f"records={len(final_records)}", flush=True)
         made_any |= bool(selected or synthesized or after_pending < before_pending)
         if not selected and synthesized == 0:
             break

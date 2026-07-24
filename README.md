@@ -74,7 +74,7 @@ every ~30 min (GitHub Actions cron)
       · one silent 🎯 GitHub issue per new alert for tracking/checking boxes
       · 📌 master board issue — every open alert-worthy role in ONE place,
         deliberately unassigned/no extra notification (body + comment pages;
-        rewritten each crawl; checkboxes work there too)
+        changed pages refresh each crawl; checkboxes work there too)
       · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
         you via GitHub's own notification
       · 📬 alert batches every 4h — normally waits for 3 roles, or 12h for a
@@ -126,6 +126,12 @@ source links/dates. Non-public employer-profile values are visibly labeled
 it. New postings trigger this research automatically; the manual company-
 research backfill is resumable and commits bounded checkpoints, so a long run
 can be interrupted without losing completed dossiers.
+
+Roles with a target technical title and **no stated experience floor**, but no
+actual new-grad proof, are labeled **early-career possible** in Jobs and can be
+filtered separately. This is an application-research cue (for example, a
+non-campus AI Engineer role), never an alert or a substitute for verified
+new-grad eligibility.
 
 Scoring is published in three places: the live Vercel dashboard reads
 `state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current
@@ -215,6 +221,8 @@ Optional upgrades:
 - Run **Actions → company research backfill** to drain older employer dossiers.
   It prioritizes high-score visible companies, uses bounded API calls, and
   checkpoints research/telemetry safely when production changes concurrently.
+  Provider/schema failures are marked retryable with exponential backoff, and
+  each checkpoint reports ready, pending, retry-waiting, and error counts.
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
   complete; its one-time OAuth activation is documented in
   [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).

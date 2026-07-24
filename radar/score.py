@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 6
+RULES_VERSION = 7
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -240,6 +240,32 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
 def explicit_new_grad(title: str) -> bool:
     """True when the title carries new-grad or technical-program evidence."""
     return new_grad_signal(title)
+
+
+def early_career_possible(job: Job, posting: dict | None = None) -> bool:
+    """Flag a plausible first-role posting without weakening the alert gate.
+
+    This is intentionally a *discovery label*, not new-grad evidence.  It is
+    for roles such as Fanatics' AI Engineer: a target technical title and no
+    stated experience floor, but no explicit campus/new-grad signal either.
+    It never changes ``alert_ok`` and excludes the same clear mismatches that
+    the main gates exclude.
+    """
+    title = job.title or ""
+    if (new_grad_signal(title, job.description) or source_new_grad(job)
+            or leadership_program_signal(job.company, title, job.description)):
+        return False
+    if (INTERN_RE.search(title) or SENIOR_RE.search(title) or PHD_RE.search(title)
+            or CLEARANCE_RE.search(f"{title}\n{job.description[:1500]}")
+            or MIDLEVEL_RE.search(title) or OFF_FIELD_RE.search(title)
+            or role_bucket(title) is None or not location_ok(job)):
+        return False
+    stated_years = _required_years(job.description)
+    if stated_years is not None and stated_years >= 1:
+        return False
+    if isinstance(posting, dict) and posting.get("years_min") not in (None, 0):
+        return False
+    return True
 
 
 def _strong_role_title(t: str) -> bool:

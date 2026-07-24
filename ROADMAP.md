@@ -34,8 +34,10 @@ none block anything currently running.
 1. **Scoring/state maintenance hardening — ✅ foundation shipped.** CI now
    fails when any stored job lacks the current `score_version`, and a scheduled
    six-hour rescore rebuilds from a fresh upstream snapshot before publishing.
-   The remaining long-term improvement is a shared state transaction layer for
-   all generated writers, but scoring now has an automated repair path.
+   Rules v7 also classifies (but never alerts) no-experience-floor technical
+   roles as `early-career possible`. The remaining long-term improvement is a
+   shared state transaction layer for all generated writers, but scoring now
+   has an automated repair path.
 
 2. **RAG and vector search.** Embed job descriptions, company dossiers,
    candidate profile/CV material, and saved decisions; support semantic search
@@ -192,11 +194,12 @@ never in Actions.
   open/save flow and should reuse the Mac-local privacy boundary from #29.
 
 ## Ops
-- **Company-research backlog throughput — ✅ checkpointing shipped.** The
+- **Company-research backlog throughput — ✅ checkpointing + retry visibility shipped.** The
   manual backfill now prioritizes visible high-score employers, uses GLM-first
-  synthesis with a bounded timeout, and commits each small cycle before moving
-  on. A cancelled or rate-limited run resumes from its last checkpoint instead
-  of losing the entire process.
+  synthesis with a bounded timeout, commits each small cycle before moving
+  on, and reports retry-waiting/error records separately. A cancelled or
+  rate-limited run resumes from its last checkpoint instead of losing the
+  entire process or hot-looping one unavailable provider.
 - **Calendar sync** — interview emails → Google Calendar holds.
 - **Weekly Notion rollup** — mirror the Monday memo into Job Search HQ.
 - **Registry hygiene job** — ✅ SHIPPED 2026-07-16 (`discovery.hygiene`,

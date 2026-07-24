@@ -18,7 +18,8 @@ from .brief import rerank
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
-from .score import RULES_VERSION, explicit_new_grad, gates, regate, score, source_new_grad
+from .score import (RULES_VERSION, early_career_possible, explicit_new_grad,
+                    gates, regate, score, source_new_grad)
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS
@@ -198,6 +199,7 @@ def crawl() -> int:
             rec["manual_added"] = True
         rec["rules_v"] = RULES_VERSION
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
+        rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
         jobs_state[j.id] = rec
     cutoff = now - 365 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
@@ -587,6 +589,10 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
             quality.reapply(rec)
         if rec.get("posting"):
             posting.reapply(rec)
+        rec["early_career_possible"] = early_career_possible(job, rec.get("posting"))
+        if rec["early_career_possible"]:
+            rec["score_reasons"].append(
+                "early-career possible: no stated experience floor (not new-grad verified)")
         changed += 1
         alerts += (not rec.get("closed_at")) and rec["alert_ok"] \
             and rec["score"] >= profile()["thresholds"]["alert"]

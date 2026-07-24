@@ -12,6 +12,7 @@ mail credentials.
 from __future__ import annotations
 
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 import requests
@@ -25,6 +26,7 @@ MASTER_LABEL = "radar-master"
 DAILY_LABEL = "radar-daily"
 BATCH_LABEL = "radar-email-batch"
 PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
+REQUEST_TIMEOUT = (5, 20)
 
 MASTER_HEADER = (
     "Every alert-worthy open role the radar currently knows, best first — "
@@ -58,7 +60,14 @@ def _paginate(lines: list[str], limit: int = PAGE_LIMIT) -> list[str]:
 
 
 def update_master_board(jobs_state: dict, applied: list) -> str | None:
-    """Rewrite the single master-board issue in place. Returns its URL."""
+    """Refresh only the master-board pages whose contents actually changed.
+
+    The master board is intentionally comprehensive, but it must not turn
+    every crawl into N sequential writes for N historical comment pages.  The
+    current comments are the source of truth; comparing their rendered text
+    preserves checkbox semantics and makes a no-change crawl one GET + one
+    header patch instead of dozens of API calls.
+    """
     token = env("GITHUB_TOKEN")
     if not token:
         print("board: GITHUB_TOKEN not set — skipping master board")
@@ -81,16 +90,18 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
 
     r = requests.get(f"{API}/repos/{repo}/issues",
                      params={"labels": MASTER_LABEL, "state": "open", "per_page": 5},
-                     headers=_headers(), timeout=20)
+                     headers=_headers(), timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
     found = r.json()
     if found:
         issue = found[0]
+        # The refreshed timestamp lives in the first page, so it is the one
+        # page intentionally updated every run.  Extra pages below are diffed.
         requests.patch(f"{API}/repos/{repo}/issues/{issue['number']}",
-                       headers=_headers(), timeout=20,
+                       headers=_headers(), timeout=REQUEST_TIMEOUT,
                        json={"body": body, "assignees": []}).raise_for_status()
     else:
-        r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
+        r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=REQUEST_TIMEOUT,
                           json={"title": MASTER_TITLE, "body": body,
                                 "labels": [LABEL, MASTER_LABEL], "assignees": []})
         r.raise_for_status()
@@ -98,23 +109,42 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
 
     # pages 2..n live in the bot's own comments, edited in place
     cr = requests.get(issue["comments_url"], params={"per_page": 100},
-                      headers=_headers(), timeout=20)
+                      headers=_headers(), timeout=REQUEST_TIMEOUT)
     cr.raise_for_status()
     own = [c for c in cr.json() if c["user"]["login"].endswith("[bot]")]
     extra_pages = pages[1:]
+    updates: list[tuple[str, str, dict]] = []
+    unchanged = 0
     for i, page in enumerate(extra_pages):
         text = f"**Page {i + 2}**\n\n{page}"
         if i < len(own):
-            requests.patch(f"{API}/repos/{repo}/issues/comments/{own[i]['id']}",
-                           headers=_headers(), timeout=20,
-                           json={"body": text}).raise_for_status()
+            if (own[i].get("body") or "") == text:
+                unchanged += 1
+                continue
+            updates.append(("patch", f"{API}/repos/{repo}/issues/comments/{own[i]['id']}", {"body": text}))
         else:
-            requests.post(issue["comments_url"], headers=_headers(), timeout=20,
-                          json={"body": text}).raise_for_status()
+            updates.append(("post", issue["comments_url"], {"body": text}))
+    unused = "_(page currently unused)_"
     for c in own[len(extra_pages):]:
-        requests.patch(f"{API}/repos/{repo}/issues/comments/{c['id']}",
-                       headers=_headers(), timeout=20,
-                       json={"body": "_(page currently unused)_"}).raise_for_status()
+        if (c.get("body") or "") != unused:
+            updates.append(("patch", f"{API}/repos/{repo}/issues/comments/{c['id']}", {"body": unused}))
+
+    def write(change: tuple[str, str, dict]) -> None:
+        method, url, payload = change
+        response = (requests.patch if method == "patch" else requests.post)(
+            url, headers=_headers(), timeout=REQUEST_TIMEOUT, json=payload)
+        response.raise_for_status()
+
+    # Comment pages are independent and GitHub's issue endpoint tolerates
+    # modest concurrency.  Four workers keeps the board fast without a burst
+    # that would compete with the radar's other API traffic.
+    if updates:
+        with ThreadPoolExecutor(max_workers=min(4, len(updates)), thread_name_prefix="master-board") as pool:
+            futures = [pool.submit(write, change) for change in updates]
+            for future in as_completed(futures):
+                future.result()
+    print(f"board: {len(lines)} role(s), {len(pages)} page(s), "
+          f"{len(updates)} comment write(s), {unchanged} unchanged")
     return issue["html_url"]
 
 

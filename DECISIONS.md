@@ -867,3 +867,26 @@ discovery provenance. If a user manually captures a role before the crawl sees
 the same stable company/title/location identity, official ATS data replaces the
 manual placeholder while preserving its Pipeline/Notion tracking marker; this
 gains real description-based gates without fabricating new-grad evidence.
+
+## 64. Delivery is bounded by the current alert window; early-career is a label, not a gate bypass (2026-07-24)
+
+The persistent master board and silent one-issue-per-alert surfaces remain the
+delivery contract, but delivery must not get slower forever as historic issues
+accumulate. Per-posting idempotency now scans GitHub only from the oldest alert
+in the replay window, while master-board comments are rendered then patched
+only when their text changed; independent comment updates use modest bounded
+parallelism and log the number of writes. The durable embedded job marker still
+protects the post-then-crash case, so this is a scalability improvement rather
+than a shortcut around correctness.
+
+Some technical roles state no experience floor without actually claiming to be
+new-grad. They receive a visible/filterable `early-career possible` label only
+when they pass the target-role and seniority checks; it never contributes
+new-grad evidence, changes the score, or permits an alert. Every record is
+rebuilt under rules version 7 to carry the auditable classification.
+
+Company-research provider/schema failures are retained as retryable evidence
+records, with per-company exponential backoff capped at six hours. New evidence
+clears that wait immediately. Backfill checkpoints now report ready, pending,
+retry-waiting, and error counts, so a temporary provider outage cannot look
+like finished research or hammer one broken endpoint.

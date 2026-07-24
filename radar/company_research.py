@@ -23,6 +23,8 @@ from .models import norm
 SCHEMA_V = 1
 PROMPT_V = 2
 REFRESH_SECONDS = 60 * 86400
+RETRY_BASE_SECONDS = 2 * 60
+RETRY_MAX_SECONDS = 6 * 3600
 FIELDS = ("summary", "products", "customers", "mission", "business_model",
           "size_stage", "technical_work", "locations", "sponsorship_context",
           "why_it_matters", "interview_focus", "industry", "ai_ds_prestige_tier",
@@ -52,6 +54,41 @@ def load() -> dict:
 
 def save(records: dict) -> None:
     state.save("company_research.json", records)
+
+
+def backlog_counts(records: dict, now: int | None = None) -> dict[str, int]:
+    """Return truthful queue health for logs and checkpoint decisions.
+
+    A provider failure is not a completed dossier.  Keeping it separate from
+    ordinary pending work makes the long-running backfill observable and lets
+    it retry without hot-looping a rate-limited endpoint.
+    """
+    now = int(time.time()) if now is None else now
+    counts = {"ready": 0, "pending": 0, "retry_wait": 0, "errors": 0}
+    for record in records.values():
+        if not record.get("sources"):
+            continue
+        fresh = (record.get("status") == "ready"
+                 and record.get("synthesized_evidence_sha") == record.get("evidence_sha")
+                 and record.get("refresh_after", 0) > now)
+        if fresh:
+            counts["ready"] += 1
+        elif record.get("retry_after", 0) > now:
+            counts["retry_wait"] += 1
+            if record.get("error"):
+                counts["errors"] += 1
+        else:
+            counts["pending"] += 1
+            if record.get("error"):
+                counts["errors"] += 1
+    return counts
+
+
+def _retry_after(record: dict, now: int) -> int:
+    """Exponential backoff for a single company, capped so it self-heals."""
+    attempts = max(1, int(record.get("attempts", 0)))
+    delay = min(RETRY_MAX_SECONDS, RETRY_BASE_SECONDS * (2 ** min(attempts - 1, 11)))
+    return now + delay
 
 
 def _sentences(text: str) -> list[str]:
@@ -165,6 +202,7 @@ def capture_external_into(records: dict, *, company: str, url: str, title: str,
     record["last_evidence_at"] = now
     record.pop("synthesized_evidence_sha", None)
     record.pop("refresh_after", None)
+    record.pop("retry_after", None)
     return True
 
 
@@ -303,6 +341,7 @@ def capture_into(records: dict, *, company: str, title: str, url: str,
     record["sources"] = sources[:6]
     record["evidence_sha"] = evidence_sha(record["sources"])
     record["last_evidence_at"] = now
+    record.pop("retry_after", None)
     if not record.get("summary"):
         record["status"] = "evidence_only"
     return record["sources"] != old_sources
@@ -516,6 +555,8 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
         stale = record.get("refresh_after", 0) <= now
         if not changed and not stale and record.get("schema_v") == SCHEMA_V:
             continue
+        if record.get("retry_after", 0) > now:
+            continue
         queue.append((_priority(record, jobs, priority_ids, now), key, record))
     queue.sort(reverse=True, key=lambda row: row[0])
     def synthesize(key: str, record: dict) -> bool:
@@ -536,6 +577,10 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
         claims = parse_synthesis(raw, ids)
         if claims is None:
             record["error"] = "provider unavailable or response was not source-grounded"
+            record["status"] = "retrying"
+            record["retry_after"] = _retry_after(record, now)
+            print(f"company research: {record.get('name', key)} retry after "
+                  f"{record['retry_after'] - now}s (attempt {record['attempts']})")
             return False
         record.update(claims)
         # A model may omit a non-public policy even when the rest of its JSON
@@ -550,6 +595,7 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
             "refresh_after": now + REFRESH_SECONDS,
             "synthesized_evidence_sha": record.get("evidence_sha"),
             "error": "",
+            "retry_after": 0,
             "generator": {"task": "company_research"},
         })
         event = (llm.usage_report().get("events") or [{}])[-1]

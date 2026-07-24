@@ -71,7 +71,7 @@ Before changing the radar, read these in order:
   `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
   2026-07-18; Gmail app password setup is in README §2). The current 142
   tracked entries are all still `saved`, not confirmed applications.
-- **Scoring (rules v6, 2026-07-20):** verified new-grad or
+- **Scoring (rules v7, 2026-07-24):** verified new-grad or
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee
   companies, high salary, and healthtech no longer bypass that gate. Eligible
@@ -82,7 +82,8 @@ Before changing the radar, read these in order:
   `MIDLEVEL_RE` still outrank every alert path; company-tier reasons explicitly
   mark marquee roles as competitive. `regate()`
   runs at the top of every crawl and re-applies rule bumps
-  (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
+  (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad` +
+  `early_career_possible`)
   to stored jobs; every crawl now fully rebuilds every active stored
   score before publishing; `python -m radar.main rescore` is also available to
   manually rebuild every stored
@@ -94,6 +95,11 @@ Before changing the radar, read these in order:
   `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
   both copies in sync.
+- **Early-career possible is deliberately separate from new grad:** a target
+  technical title with no stated experience floor, but no verified campus/new-
+  grad evidence, gets an explicit Jobs badge and filter. It stays dashboard-
+  only and never changes `alert_ok`; the Fanatics AI Engineer is the model
+  case.
 - **Posting scraping (DECISIONS #35, 2026-07-17):** every crawl runs
   `posting.scrape_pass` — Greenhouse (`content=true`)/Ashby/Lever text is
   analyzed inline, and up to `RADAR_SCRAPE_LIMIT` (20) postings/run are
@@ -178,14 +184,18 @@ Before changing the radar, read these in order:
 - **Notification cadence:** individual alert issues are silent tracking
   surfaces. `alert-batch.yml` sends up to 15 unsent roles every four hours,
   ranked by score and recency, as the normal alert email. It records delivered IDs in
-  `state/notification_state.json`, so overflow is not lost.
+  `state/notification_state.json`, so overflow is not lost. Crawl delivery
+  scans only the active alert replay window and patches only changed master-
+  board comment pages; its log reports the bounded GitHub work performed.
 - **Maintenance:** `score-maintenance.yml` runs every six hours and rebuilds
   every stored score from the latest production snapshot. `tests.yml` and the
   maintenance workflow run `python -m radar.main score-health`, which fails if
   any stored record lacks the current score/rules version. The manual company
   backfill checkpoints one bounded batch per commit, prioritizes high-score
   visible employers, and uses GLM-first API synthesis with a 75-second request
-  timeout; rerun `company research backfill` to resume safely.
+  timeout; rerun `company research backfill` to resume safely. Failed provider
+  or schema attempts are explicit retryable records with capped exponential
+  backoff; checkpoint logs expose ready/pending/retry/error counts.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector
