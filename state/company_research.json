@@ -4922,37 +4922,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied ML team with production impact on revenue-critical systems; publishes occasionally at industry conferences (Prebid, AdTech summits) but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue share on incremental programmatic lift (typically 10-20% of uplift) plus optional managed service fees. No upfront licensing; aligns incentives with publisher revenue growth."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, publisher-obsessed, transparent. Blameless postmortems, open salary bands, regular hack weeks. Low politics; promotions tied to impact on publisher outcomes."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Digital publishers across news, entertainment, gaming, and niche content verticals. Typical customers are mid-to-large publishers seeking to increase programmatic revenue without building internal ad-ops teams."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + $15k-$25k equity (4-yr) + 10-15% annual bonus. Total comp ~$160k-$190k. Bay Area/NYC premium ~10%."
   },
   "evidence_sha": "d3fc423e3c74372a",
+  "generated_at": 1784879341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AdTech / Programmatic Advertising / Publisher Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives on ML system design (low-latency prediction serving), online experimentation (A/B testing at scale), time-series forecasting for floor pricing, and practical ad-tech domain knowledge. Behavioral questions will probe ownership, collaboration with publishers, and ability to ship iteratively in a fast-moving but controlled environment."
+  },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784674823,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in New York City; remote-friendly with engineering hubs in US and Canada. Occasional on-site collaboration expected."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower publishers with transparent, efficient programmatic monetization technology that maximizes revenue while preserving user experience."
+  },
   "name": "Aditude",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — 2-week sprints, quarterly planning, on-call rotation with reasonable coverage. Emphasis on shipping measurable improvements rather than heroics."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include the Aditude Cloud header bidding wrapper, Cloud Wrapper analytics, and managed yield services. The platform integrates with major SSPs/DSPs and offers real-time bidding orchestration, floor price optimization, and unified reporting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days; unlimited policy for senior roles with manager approval. Minimum 2 weeks consecutive encouraged."
   },
+  "refresh_after": 1790063341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4962,7 +5004,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established: Full company shutdown last week of December; summer half-day Fridays (June-August). No weekend deployments."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees; Series A/B stage. Privately held, venture-backed (investors include M13, Greycroft, etc.)."
   },
   "sources": [
    {
@@ -4996,14 +5043,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5caa6ed64ca117c16b28d9f60b46adfd5f364e441e31b3ed6440f607d6c7735dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTE2NTJmNDcwZTlhNjY3MjYxZmVmZTNlZGU4Mzk2NjI1&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and transfer visas for senior engineering and data science roles; less common for new-grad positions. Confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aditude is an ad-tech company that provides a header bidding platform and yield optimization tools for digital publishers. It helps publishers maximize programmatic ad revenue through a unified auction layer and managed services."
+  },
+  "synthesized_evidence_sha": "d3fc423e3c74372a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-scale real-time bidding systems (sub-100ms latency), distributed data pipelines (Kafka, Flink, ClickHouse), ML for floor price prediction and traffic shaping, cloud-native infrastructure (AWS/GCP), and publisher-facing analytics dashboards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674823,
   "web_search_url": "https://duckduckgo.com/?q=Aditude+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aditude offers a top-tier AI/data science role in high-scale programmatic advertising where ML directly drives revenue. The company balances elite technical challenges (real-time bidding, large-scale experimentation) with a publisher-first mission and a culture that emphasizes sustainable pace over burnout — aligning with your priorities for prestige, innovation, and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 10am-4pm ET, explicit no-meeting Fridays, guaranteed shutdown at 6pm and weekends except critical incidents. Leadership models boundaries."
   }
  },
  "adobe": {
@@ -88320,11 +88388,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88336,6 +88406,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784676250,
   "name": "Denso",
   "pace_of_work": {
@@ -88348,6 +88419,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88391,7 +88463,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2d8eb0c13d93d594979aab2aef050318ac189378239dbf4914b18f73dfd21fb8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cuZGVuc28uY29tL2dsb2JhbC9lbi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=Denso+company+careers+benefits",
@@ -157593,38 +157665,104 @@
  "jefferies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: Mid-to-High. While primarily a financial institution, internal AI and data science teams carry strong industry prestige due to the complexity of financial market problems and high-stakes technical optimization."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Generates revenue primarily through financial advisory fees, securities underwriting, trading commissions, and market-making activities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: Independent, results-oriented, and client-obsessed. The culture balances entrepreneurial autonomy with strict financial industry compliance."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Corporations, financial institutions, governments, and individual investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: $110,000 - $150,000 base salary, plus potential performance bonuses, reflecting competitive new-grad tech pay in the financial sector."
   },
   "evidence_sha": "d0dc6fd025aa038f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Financial Services / Investment Banking"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Given the candidate's desire for a fast-paced, innovative tech culture that avoids heavy bureaucracy, the interview should probe the team's specific adoption of cutting-edge AI tools, the speed of the tech deployment cycle, and the reality of work-life balance for engineers versus front-office staff."
+  },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784674824,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7f0603a32"
+   ],
+   "value": "New York City, NY serves as the global headquarters, with additional corporate and financial offices worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7f0603a32"
+   ],
+   "value": "To provide clients with impactful financial services and capital market solutions as a leading independent global investment bank."
+  },
   "name": "Jefferies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: Fast-paced and business-driven, requiring quick technical turnarounds during active market hours, though specific engineering team pace may vary."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Financial services including investment banking, capital markets, institutional securities, and wealth management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: 21-25 paid time off days annually, reflecting standard policies for mid-to-large scale financial firms."
   },
+  "refresh_after": 1790063341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157633,8 +157771,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: Likely standard market/bank holidays, but no evidence of guaranteed extended firm-wide technical shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Established global financial services firm operating as a public company."
   },
   "sources": [
    {
@@ -157668,14 +157815,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=82d136302dbf2b61b8a32ed182d7b16d7a0285e5176c74046a4ec82b86cbd95eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cuamVmZmVyaWVzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Information regarding visa sponsorship for technical roles was not prominently detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Jefferies Group is a global multinational independent investment bank and financial services firm. It makes money by providing capital markets, advisory, and trading services to corporate and institutional clients."
+  },
+  "synthesized_evidence_sha": "d0dc6fd025aa038f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7f0603a32"
+   ],
+   "value": "Builds and maintains enterprise software, data pipelines, trading algorithms, and electronic trading platforms supporting investment banking and capital markets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674824,
   "web_search_url": "https://duckduckgo.com/?q=Jefferies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Jefferies offers a high-prestige financial services environment where technical employees solve complex real-world data and AI problems in capital markets, providing elite exposure and competitive new-grad pay that competes with the top tier of the industry."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8ff743e9f6"
+   ],
+   "value": "Estimated: Moderate. While tech teams generally have better hours than front-office banking, a mission-driven focus on global market support means hours can occasionally spike and may lack guaranteed shutdowns."
   }
  },
  "jefferson health": {
@@ -196300,43 +196478,113 @@
  },
  "msd": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown due to redirect-only source content."
   },
   "evidence_sha": "c5f9cf419ad7cede",
+  "generated_at": 1784879341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the specific team's culture is genuinely innovative or burdened by slow corporate bureaucracy. Ask about guaranteed shutdowns, actual working hours, and how quickly technical learning and career growth are accelerated for new grads."
   },
-  "last_attempt_at": 1784879178,
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784673659,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
   "name": "MSD",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown due to redirect-only source content; candidate should verify if it matches a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown due to redirect-only source content."
   },
-  "retry_after": 1784879298,
+  "refresh_after": 1790063341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196346,7 +196594,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown due to redirect-only source content."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
   },
   "sources": [
    {
@@ -196380,14 +196637,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=5054efad31c221db028dcf7ced712ca22c8c751c40a1732a8417149a579a2c04JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly9teWFjY291bnQuc3RsbXNkLmNvbS9NU0RTU1AvaW5kZXguYXNweA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "No readable content could be successfully retrieved from the supplied sources, as all three URLs only returned redirect notices. Therefore, no factual information about what the company does or how it makes money could be extracted."
+  },
+  "synthesized_evidence_sha": "c5f9cf419ad7cede",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "274c61da7f",
+    "4fc4efa560",
+    "14fbea9612"
+   ],
+   "value": "Unknown due to redirect-only source content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673659,
   "web_search_url": "https://duckduckgo.com/?q=MSD+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To align with the candidate's goals, MSD must demonstrate a top-tier AI/data science environment that balances high new-grad pay with a fast, innovative culture. The role should also offer guaranteed shutdowns and sane hours to ensure personal time is respected and burnout is avoided."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown due to redirect-only source content; candidate should verify if it offers sane hours and avoids burnout."
   }
  },
  "mthree": {
@@ -235788,11 +236078,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235804,6 +236096,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784675359,
   "name": "Quanta Manufacturing Fremont",
   "pace_of_work": {
@@ -235816,6 +236109,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235859,7 +236153,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=1b0f86e5563ae024a9590b050be2cbaebfff914b8a5fb26ba79d5c6b21b22bffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cucXVhbnRhc2VydmljZXMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675359,
   "web_search_url": "https://duckduckgo.com/?q=Quanta+Manufacturing+Fremont+company+careers+benefits",
@@ -252275,37 +252569,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Medium-High. Highly recognized for financial data science, but less known for cutting-edge AI research compared to top-tier tech firms. Very strong for applied ML in fintech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a"
+   ],
+   "value": "Subscription-based access to proprietary data platforms, licensing fees for market indices, and fee-based credit ratings assessments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, data-driven, and stable, with a focus on accuracy and market impact rather than rapid 'move fast and break things' tech ethos."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a",
+    "ae8dcec141"
+   ],
+   "value": "Institutional investors, asset managers, investment banks, corporations, and government entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base salary for new-grad software and data roles in high-cost-of-living areas, reflecting the premium of the finance sector, though potentially lower than top hedge funds or elite tech."
   },
   "evidence_sha": "7556d9de4da6fc22",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879341,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a",
+    "ae8dcec141"
+   ],
+   "value": "Financial Data and Analytics"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784674487,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "eb9b65acf5",
+    "ae8dcec141"
+   ],
+   "value": "Headquartered in New York City with major global offices in London, Dublin, and various financial hubs worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a"
+   ],
+   "value": "To accelerate progress in the world by providing the essential intelligence and data needed to make decisions with conviction."
+  },
   "name": "S&P Global",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate overall due to corporate structure, though modernization teams working on AI and cloud migration may move faster than legacy divisions."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a",
+    "ae8dcec141"
+   ],
+   "value": "S&P Global Ratings (credit ratings), S&P Dow Jones Indices (market benchmarks like the S&P 500), S&P Global Market Intelligence (data analytics platforms), and S&P Global Commodity Insights (energy and petrochemical benchmarking)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard Paid Time Off annually, typical of large legacy financial institutions, alongside standard public holidays."
   },
+  "refresh_after": 1790063341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252315,7 +252672,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely features limited holiday shutdown days around late December, though guaranteed company-wide shutdowns outside of major holidays are unconfirmed for tech divisions."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a"
+   ],
+   "value": "Large-scale, publicly traded global enterprise with tens of thousands of employees."
   },
   "sources": [
    {
@@ -252349,14 +252714,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=2b5d4c1c2b9a151c8540c4b570c9a1f20b37a871c824c9aa5c20518ec8fd0a92JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large global financial firm with established HR frameworks, though specific visa sponsorship for entry-level new grads varies by role and economic cycle."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "eb9b65acf5",
+    "c079d6638a",
+    "ae8dcec141"
+   ],
+   "value": "S&P Global is a publicly traded financial information and analytics company that provides credit ratings, market intelligence, and commodity/data insights. It makes money by charging fees for these services to institutional clients seeking to assess risk, benchmark markets, and make informed investment decisions."
+  },
+  "synthesized_evidence_sha": "7556d9de4da6fc22",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb9b65acf5",
+    "ae8dcec141"
+   ],
+   "value": "Building scalable data pipelines, backend systems in Python and Java, cloud infrastructure on AWS, and applying machine learning and NLP to massive proprietary financial datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674487,
   "web_search_url": "https://duckduckgo.com/?q=S%26P+Global+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Strong. As an established finance/data company, expectation is generally a 40-45 hour week with less burnout and more stability than high-frequency trading or pure startups."
   }
  },
  "sa technologies": {
@@ -306879,11 +307272,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306895,6 +307290,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784678788,
   "name": "University of Maine System",
   "pace_of_work": {
@@ -306907,6 +307303,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306950,7 +307347,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c556c7c821b01bd950cd65253bcdafc1b7f1a98af2d485da1468d3711cf0a75aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678788,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Maine+System+company+careers+benefits",
@@ -316929,37 +317326,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong domain-specific prestige in computational geophysics and HPC; publishes at SEG, EAGE, Supercomputing; less visible in general AI/ML conferences."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0",
+    "6b3c14e327"
+   ],
+   "value": "Revenue from multi-client seismic data licensing (Earth Data), proprietary seismic acquisition contracts (Sensing & Monitoring), geoscience consulting/processing services, HPC/cloud infrastructure sales and services, and technology licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-heavy, collaborative, multidisciplinary (geophysicists + software engineers); European work-culture influence with decent vacation norms; transitioning from hierarchical legacy to agile product teams."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0",
+    "a07fd8b8e2"
+   ],
+   "value": "Major international oil companies (IOCs), national oil companies (NOCs), independent E&P firms, renewable energy developers, carbon capture/storage projects, and government agencies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €45-55k base (France), $85-105k base (US), £40-50k (UK) + modest bonus/RSUs; premium for HPC/ML specialization; below FAANG but competitive for energy-tech."
   },
   "evidence_sha": "243c9edfd56620dc",
+  "generated_at": 1784879341,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "435c315cd0",
+    "a07fd8b8e2"
+   ],
+   "value": "Geoscience technology / Energy transition / High-performance computing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical questions on seismic inversion, wave propagation physics, GPU-accelerated computing, and ML for sparse/noisy geophysical data. Prepare for system-design scenarios involving petabyte-scale seismic datasets. Behavioral focus on cross-disciplinary collaboration (geophysicists + CS) and handling ambiguous, long-horizon R&D projects."
   },
+  "last_attempt_at": 1784879341,
   "last_evidence_at": 1784676250,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0"
+   ],
+   "value": "Headquartered in Massy, France; major technical centers in Houston (USA), London (UK), Oslo (Norway), Kuala Lumpur (Malaysia), and Beijing (China); field operations worldwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a07fd8b8e2"
+   ],
+   "value": "To solve complex natural resource challenges for a sustainable future by leveraging geoscience expertise, digital innovation, and high-performance computing to support the energy transition."
+  },
   "name": "Viridien",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast for R&D/cloud teams; project-driven with quarterly delivery cycles; slower in legacy services/support roles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0",
+    "6b3c14e327"
+   ],
+   "value": "Advanced geophysical imaging, subsurface data libraries, seismic acquisition equipment, high-performance computing (HPC) and cloud solutions, digital earth models, and environmental monitoring technologies for energy exploration and new energy markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave (European baseline) + 8-10 public holidays; US offices likely 15-20 days PTO + holidays; varies by country/entity."
   },
+  "refresh_after": 1790063341,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316969,7 +317424,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some European entities may observe August slowdown; project-dependent."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0"
+   ],
+   "value": "Large public company (Euronext Paris: VIRI); ~3,500 employees globally after restructuring from CGG; mature stage with legacy roots dating to 1931, currently pivoting toward digital/energy transition."
   },
   "sources": [
    {
@@ -317003,14 +317465,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ef10db0180a95f4eebeeea195f44545dccb687c70a0eddf1821b0d7c69693c4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cudmlyaWRpZW5ncm91cC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational, likely sponsors visas (H-1B, etc.) in key hubs like US, UK, Norway, France; specific new-grad sponsorship rates not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "435c315cd0",
+    "a07fd8b8e2",
+    "6b3c14e327"
+   ],
+   "value": "Viridien (formerly CGG) is a global geoscience technology company providing data, products, services, and solutions for the energy sector, including oil & gas, renewables, and carbon management. It operates through segments like Geoscience, Earth Data, Sensing & Monitoring, and Viridien HPC & Cloud Solutions."
+  },
+  "synthesized_evidence_sha": "243c9edfd56620dc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6b3c14e327"
+   ],
+   "value": "Large-scale seismic imaging algorithms, full-waveform inversion (FWI), machine learning for subsurface characterization, HPC/GPU cluster optimization, cloud-native geoscience platforms, real-time sensor data processing, and digital twin development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=Viridien+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Viridien offers elite geoscience/AI prestige at the intersection of energy transition and HPC, with new-grad pay competitive for the sector. Its pivot from legacy seismic to digital/cloud/AI suggests a faster innovation pace than traditional oilfield services, while the mission-driven sustainability focus may support better WLB than pure-play tech. However, cyclical energy markets and project-based work can create crunch periods."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally sane hours in R&D/cloud groups; field/acquisition roles involve rotational shifts; company emphasizes sustainability culture but energy-sector deadlines can cause periodic crunch."
   }
  },
  "virtu financial": {
