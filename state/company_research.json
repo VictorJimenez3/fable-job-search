@@ -17550,11 +17550,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17566,6 +17568,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680510,
   "name": "Altera Corporation",
   "pace_of_work": {
@@ -17578,6 +17581,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899065,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17621,7 +17625,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f1be666d6b956c6e4af570acda0548e3da80947acc65999a50fb12fe2f045f1cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuYWx0ZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680510,
   "web_search_url": "https://duckduckgo.com/?q=Altera+Corporation+company+careers+benefits",
@@ -60292,11 +60296,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60308,6 +60314,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680600,
   "name": "Brookhaven Lab",
   "pace_of_work": {
@@ -60320,6 +60327,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899065,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60363,7 +60371,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2bcad3d77ea26933211398f52d9ea6c8dea736035cf88f2f07dec5f8924db79aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuYnJvb2toYXZlbm55Lmdvdi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680600,
   "web_search_url": "https://duckduckgo.com/?q=Brookhaven+Lab+company+careers+benefits",
@@ -130783,37 +130791,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. While working on genomic and diagnostic data is impactful, the company is primarily known for biotech and clinical lab work rather than elite, cutting-edge AI research or data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5628b3e809"
+   ],
+   "value": "Exact Sciences generates revenue through the sales and processing of their proprietary diagnostic and screening tests, alongside related laboratory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and patient-focused, but heavily structured by clinical and regulatory compliance."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "498dfc48e6"
+   ],
+   "value": "Their main customers are healthcare providers, systems, and ultimately patients who utilize their diagnostic and screening tests."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000 - $115,000 base salary, which is competitive for the Midwest but slightly below elite tech hub compensation, and unlikely to match top-tier AI startup upside."
   },
   "evidence_sha": "07856aa60883c9d1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "7446cccb79"
+   ],
+   "value": "Medical Devices and Diagnostics / Healthcare Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "5628b3e809"
+   ],
+   "value": "Candidates should probe the specific pace of innovation within the software and data teams to ensure it matches their desire for a fast, non-bureaucratic environment. It is critical to ask about on-call rotations, system downtime protocols, and true daily hours to verify if the role actually respects work-life balance and guarantees shutdowns."
+  },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680405,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "498dfc48e6"
+   ],
+   "value": "Headquartered in Madison, Wisconsin, with additional offices and laboratory facilities located across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "498dfc48e6"
+   ],
+   "value": "To help eradicate cancer by preventing it, detecting it earlier, and providing answers to support personalized treatment."
+  },
   "name": "Exact Sciences",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. The environment is likely process-driven and steady due to healthcare regulations and clinical compliance standards, which may frustrate those seeking a highly rapid, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5628b3e809"
+   ],
+   "value": "The company's primary products include Cologuard (a non-invasive stool DNA test for colorectal cancer) and the Oncotype DX suite of genomic tests used for breast, prostate, and colon cancers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible PTO per year, typical for large, mature medical device companies."
   },
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130823,7 +130887,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns mentioned, though standard holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7446cccb79"
+   ],
+   "value": "Large, publicly traded medical diagnostics and technology company."
   },
   "sources": [
    {
@@ -130857,14 +130928,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0ed1aee5b29316e1650c8c0d2186bf2b7bf584a1dbb6f892652caae747704dbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuZXhhY3QuY29tL3VzL3NvZnR3YXJlL2V4YWN0LW9ubGluZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7446cccb79"
+   ],
+   "value": "As a large, publicly-traded medical technology company, they likely offer standard visa sponsorship for specialized technical roles, though specific policies are not detailed in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "498dfc48e6",
+    "5628b3e809"
+   ],
+   "value": "Exact Sciences is a medical diagnostics company that develops non-invasive tests to detect cancer earlier. They make money by selling these proprietary testing kits and related laboratory services to patients through healthcare providers."
+  },
+  "synthesized_evidence_sha": "07856aa60883c9d1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5628b3e809"
+   ],
+   "value": "Technical roles involve supporting the Exact Sciences online portal and other software platforms used for test ordering, results reporting, and data management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680405,
   "web_search_url": "https://duckduckgo.com/?q=Exact+Sciences+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "498dfc48e6",
+    "5628b3e809"
+   ],
+   "value": "Exact Sciences is highly mission-driven, focused on eradicating cancer, which provides a strong sense of purpose. However, as a heavily regulated healthcare diagnostics company, the culture may lean more toward slow bureaucracy and process-heavy tech practices rather than a fast, innovative AI startup environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Moderate. Large established biotech firms often promote sane hours, but on-call duties for clinical software systems can occasionally intrude on personal time."
   }
  },
  "exclusive networks": {
@@ -159109,53 +159211,132 @@
  },
  "graphcore": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "High. Highly recognized in the deep tech space for pioneering the IPU. Though experiencing corporate turbulence, it remains prestigious for AI compiler and hardware engineers."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "Sells proprietary AI hardware (IPUs) and software middleware (Poplar) to organizations running large-scale machine learning compute workloads."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: Mission-driven deep tech culture balancing academic rigor with a startup environment. Attracts engineers focused on machine learning optimization rather than purely product shipping."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "Cloud providers, AI research institutions, and data-center scale enterprises requiring high-performance compute for machine learning."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: High. Likely competitive new-grad compensation scaling to £60k-£80k+ in the UK (equating to $100k-$130k+ USD equivalent depending on exact role and exchange rates) with strong equity components via SoftBank."
   },
   "evidence_sha": "d21b73ce427a6c36",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898728,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "Semiconductors / Artificial Intelligence Hardware"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Emphasize your desire to learn rapidly in a highly innovative, fast-paced semiconductor startup setting rather than older bureaucratic orgs. Highlight your passion for the mission of democratizing AI compute, your self-direction, and your ability to maintain sustainable, high-quality engineering output without high-burnout crunch."
+  },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680503,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Headquartered in Bristol, UK. Operations and offices in the US, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "105247a7da"
+   ],
+   "value": "To build the world's best AI compute systems to accelerate the advancement of machine intelligence."
+  },
   "name": "Graphcore",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: Startup-oriented and fast-paced, with high learning velocity and autonomous task execution rather than slow bureaucratic processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "The Intelligence Processing Unit (IPU), a specialized AI accelerator chip, along with the Poplar software stack for graph-based machine learning programming."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: 25 to 30 days of annual leave depending on location, consistent with UK and European deep-tech norms."
   },
-  "retry_after": 1784898848,
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da",
+    "7303c3c82f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: Likely includes recognized public holidays in primary operating regions (UK, Europe). Guaranteed organizational shutdown periods are not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Former unicorn scale-up; underwent major restructuring and was acquired by SoftBank in 2024. Operates globally but has adjusted its headcount and footprint."
   },
   "sources": [
    {
@@ -159189,14 +159370,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e754a54b55a36c49618a5779bceca70050c68b637887839bd179b42212915a7cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuZ3JhcGhjb3JlLmFpLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: Likely on a restricted basis following SoftBank acquisition and restructuring; candidate eligibility may vary strictly by role and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "Graphcore is a British semiconductor company that develops specialized accelerators (IPUs) designed specifically for artificial intelligence and machine learning workloads. The company generates revenue by designing and selling these AI hardware systems, along with associated software tools like Poplar, to enterprises and research institutions running complex AI models."
+  },
+  "synthesized_evidence_sha": "d21b73ce427a6c36",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0ee3afaf34",
+    "105247a7da"
+   ],
+   "value": "Hardware architecture, AI compiler development, graph-based software stack (Poplar), ML systems engineering, and deep learning optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680503,
   "web_search_url": "https://duckduckgo.com/?q=Graphcore+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "As a hardware startup tackling novel AI chip architecture, Graphcore offers a top-tier entry point into the intersection of AI and systems design. It provides a mission-driven, fast-paced tech culture with high technical learning velocity, allowing new grads to work on cutting-edge ML problems without the standard bureaucracy of legacy tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0ee3afaf34"
+   ],
+   "value": "Estimated: Moderate to good. Generally features sane hours, though startup pressures following recent acquisitions may occasionally cause stress in certain teams."
   }
  },
  "gravie": {
@@ -176583,37 +176797,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an AI/data science leader; roles are applied analytics within manufacturing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated chemical manufacturing: raw material procurement, large-scale production facilities, global supply chain, and technical sales to B2B customers. Revenue from product sales, licensing, and technical services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Traditional industrial, safety-first, hierarchical but with increasing focus on digital transformation. Collaborative within functions, slower decision-making."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive, construction, electronics, aerospace, industrial manufacturing, textiles, and consumer goods companies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base salary for entry-level data science/analytics roles; signing bonus $5k-$10k; RSU grants minimal. Below top-tier tech compensation."
   },
   "evidence_sha": "3795688fd17fdcd2",
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Specialty Chemicals / Materials Science"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on safety, process improvement, and cross-functional collaboration. Technical assessments may cover chemical engineering fundamentals, statistical process control, and basic Python/SQL for data roles. Limited emphasis on advanced ML algorithms or system design."
+  },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680601,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in The Woodlands, Texas, USA. Major operations in North America, Europe, Asia-Pacific (China, Singapore, India), and Latin America."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To create innovative chemical solutions that enhance quality of life and sustainability while delivering value to shareholders."
+  },
   "name": "Huntsman",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – project cycles tied to plant operations and product development timelines; slower than pure software companies."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Polyurethanes (MDI, polyols, TPU), Performance Products (amines, surfactants, epoxy resins), Advanced Materials (epoxy, acrylic, polyurethane formulations), Textile Effects (dyes, chemicals for textile processing)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus 10 US holidays; additional sick leave and personal days per local policy."
   },
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176623,7 +176879,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some sites may have holiday week closures (e.g., between Christmas and New Year) but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: HUN), ~$8B annual revenue, ~9,000 employees globally, mature stage with established market positions."
   },
   "sources": [
    {
@@ -176657,14 +176918,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=2d6f6f1bb6c6eae2965f9a7732a4b48bc99b38fc67aed8b3b8f5b949e9739e61JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly9uaWdodGxpZXMudmlkZW9sYW4ub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Huntsman sponsors H-1B visas for specialized technical roles (chemical engineering, materials science, data analytics) but sponsorship volume is moderate compared to tech giants. Green card sponsorship typically for senior positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Huntsman Corporation is a global manufacturer of differentiated organic chemical products. It makes money by producing and selling specialty chemicals such as polyurethanes, performance products, and advanced materials to a wide range of industrial end markets."
+  },
+  "synthesized_evidence_sha": "3795688fd17fdcd2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Process engineering, materials science, R&D for new chemical formulations, digitalization of manufacturing (IoT, predictive maintenance), data analytics for supply chain optimization, and limited AI/ML applications in process control."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680601,
   "web_search_url": "https://duckduckgo.com/?q=Huntsman+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Huntsman offers a stable, mission-driven industrial career with tangible sustainability impact, but it is not an elite AI/data science destination. Prestige and pay for new grads in AI/DS are below top-tier tech firms. Culture is traditional industrial with moderate pace; work-life balance is generally respected but not guaranteed shutdowns. Technical learning is strong in chemical engineering and process digitization, less so in cutting-edge AI research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Moderate – typical 40-50 hour weeks for salaried roles; shift work for plant positions. No guaranteed shutdowns; vacation culture exists but varies by site."
   }
  },
  "huron": {
@@ -184098,11 +184380,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184114,6 +184398,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680509,
   "name": "Inizio",
   "pace_of_work": {
@@ -184126,6 +184411,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899065,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184169,7 +184455,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=48e7bce0ae6cc8ba628170e8246749021d60627c8996a712292ec1814af55b53JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9pbml6aW8uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680509,
   "web_search_url": "https://duckduckgo.com/?q=Inizio+company+careers+benefits",
@@ -238211,41 +238497,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Solid data-driven SaaS environment, but not recognized as an elite AI research lab)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "950f8486ec"
+   ],
+   "value": "SaaS (Software as a Service)"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and focused on quick iteration, avoiding slow bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "13bed5ac1b"
+   ],
+   "value": "Businesses of all sizes, including market researchers, HR teams, and customer experience professionals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base"
   },
   "evidence_sha": "8008ae61581fd219",
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6f57c3ca2e"
+   ],
+   "value": "Technology / Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss your experience with rapid prototyping, handling real-world messy data from a massive user base, and how you manage work-life boundaries while delivering in a quick-moving SaaS environment."
   },
-  "last_attempt_at": 1784898728,
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680509,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "950f8486ec"
+   ],
+   "value": "San Mateo, CA (HQ)"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f57c3ca2e"
+   ],
+   "value": "To help people make better decisions by providing them with the tools they need to gather and analyze data."
+  },
   "name": "Momentive",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and iterative, focused on shipping product features quickly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "950f8486ec"
+   ],
+   "value": "SurveyMonkey, GetFeedback, and TechCXO (Momentive)"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days"
   },
-  "retry_after": 1784898848,
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238255,7 +238591,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns, but flexible PTO is available."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6f57c3ca2e"
+   ],
+   "value": "Public company (NASDAQ: MNTV)"
   },
   "sources": [
    {
@@ -238289,14 +238632,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7281d618b1ff6f41b7a213a1d81ddb765ceee862a47876d21078968779b82b22JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cubW9tZW50aXZlLmNvbS9lbi11cw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "13bed5ac1b"
+   ],
+   "value": "Not currently sponsoring H1B visas for this role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f57c3ca2e"
+   ],
+   "value": "Momentive (formerly SurveyMonkey) is a software company that provides online survey and datapoints solutions. It makes money through SaaS subscriptions that enable customers to create, distribute, and analyze surveys."
+  },
+  "synthesized_evidence_sha": "8008ae61581fd219",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "13bed5ac1b"
+   ],
+   "value": "Python, React, AWS, Kafka"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680509,
   "web_search_url": "https://duckduckgo.com/?q=Momentive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers a fast, innovative technical culture and sane hours, but falls short of the elite AI/data science prestige and top-tier new-grad pay you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company is known for a reasonable tech culture that avoids toxic bureaucracy."
   }
  },
  "momentum": {
@@ -244464,37 +244834,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite tier, assuming the organization reflects a leading national research laboratory."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "be784b6f67"
+   ],
+   "value": "Revenue generation and business model details are unavailable due to the source pages failing to load."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and collaborative, prioritizing technical acceleration and respect for work-life balance over high-stress environments."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bb3e876cd6"
+   ],
+   "value": "Target customers could not be identified because the provided source links failed to resolve successfully."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad compensation with strong base pay and robust benefits."
   },
   "evidence_sha": "302a9334813476cd",
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "be784b6f67"
+   ],
+   "value": "The industry could not be determined due to inaccessible source pages."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should investigate how the lab sustains a fast, innovative tech culture despite potential government bureaucracy, and verify that compensation, learning opportunities, and strict work-life balance policies meet elite new-grad expectations."
   },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680510,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "be784b6f67"
+   ],
+   "value": "Geographical locations for the company are not listed in the retrieved excerpts."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e44c9c4cad"
+   ],
+   "value": "The organization's mission is unknown as the retrieved URLs did not load the correct content."
+  },
   "name": "National Laboratory of the Rockies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, though potentially constrained by standard laboratory operational procedures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "be784b6f67"
+   ],
+   "value": "Due to redirect errors on the company pages, specific products or services could not be determined."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Comprehensive leave policy typical of national labs."
   },
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244504,7 +244928,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed organizational shutdowns during major holidays to ensure rest."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bb3e876cd6"
+   ],
+   "value": "The company's scale and growth stage cannot be verified from the provided source materials."
   },
   "sources": [
    {
@@ -244538,14 +244969,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9243d3b621be5258ef36023c93d834fc5a8dab0af9a933af9f3b103e018c12c4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cubmF0aW9uYWxjYXIuY29tL2VuL2hvbWUuaHRtbD9tc29ja2lkPTJjNDI2MTUzMzBlMTYyNjMzODA4NzZjZDMxZTc2Mzcw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "bb3e876cd6"
+   ],
+   "value": "No information regarding visa sponsorship is available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "be784b6f67",
+    "bb3e876cd6",
+    "e44c9c4cad"
+   ],
+   "value": "The source URLs for the National Laboratory of the Rockies redirect to National Car Rental pages, suggesting the laboratory may be a fictional entity or the public company page is currently inaccessible."
+  },
+  "synthesized_evidence_sha": "302a9334813476cd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e44c9c4cad"
+   ],
+   "value": "The specific nature of the technical or AI work could not be extracted from the sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680510,
   "web_search_url": "https://duckduckgo.com/?q=National+Laboratory+of+the+Rockies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assuming this aligns with a top-tier national lab environment, it likely offers mission-driven prestige and elite technical challenges without the toxic burnout culture of big tech, providing a balance of high new-grad pay, fast innovation, and respected personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent, featuring sane hours and a strong respect for personal time."
   }
  },
  "national life": {
@@ -262754,7 +263214,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262772,7 +263232,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784898728,
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680504,
   "name": "Omni Design Technologies",
   "pace_of_work": {
@@ -262785,7 +263245,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784898848,
+  "retry_after": 1784899185,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317683,51 +318143,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. As a semiconductor company, AI/data science roles may not carry the elite prestige of top-tier AI labs, but offer solid technical depth."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k-$130k total compensation, typical for new-grad hardware/data roles at established semiconductor firms."
   },
   "evidence_sha": "687ddc8c9e02d5df",
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the AI/data science team operates with a fast, innovative tech culture or is bottlenecked by slower hardware cycles. Ask about exact work hours, shutdown policies, and how technical learning is accelerated without sacrificing personal time."
   },
-  "last_attempt_at": 1784898728,
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680508,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
   "name": "Semtech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Semiconductor cycles can be methodical and bureaucratic, though specific AI teams may move faster."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research. The provided sources contain only redirect notices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO, standard for the semiconductor industry."
   },
-  "retry_after": 1784898848,
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns found in research; typical hardware companies offer floating holidays rather than company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
   },
   "sources": [
    {
@@ -317761,14 +318300,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=4b8a2a3efbc3d1c8e866b35239fcb884fab5dab51cbd30d62d69387c5fa98a28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuc2VtdGVjaC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "The supplied sources for Semtech's company pages did not provide readable content due to redirect limitations. Semtech is generally a public semiconductor company that designs and sells analog and mixed-signal chips, but this cannot be verified from the provided texts."
+  },
+  "synthesized_evidence_sha": "687ddc8c9e02d5df",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "3f3824eb68",
+    "f7b0cd4a25",
+    "259edcbae0"
+   ],
+   "value": "Not found in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680508,
   "web_search_url": "https://duckduckgo.com/?q=Semtech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige and high new-grad pay with guaranteed shutdowns and fast innovation, this role may be a mixed fit. Hardware and semiconductor environments can provide deep technical learning and sane hours, but may carry slower bureaucratic processes and lack the top-tier compensation or prestige of dedicated AI labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Hardware companies often offer sane hours compared to toxic high-burnout tech environments."
   }
  },
  "seneca resources company llc": {
@@ -363839,11 +364411,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -363855,6 +364429,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680511,
   "name": "Titan",
   "pace_of_work": {
@@ -363867,6 +364442,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899065,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -363910,7 +364486,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=cb17a72a894bf10c84a40c8b898508b90935fc5971ad03b2323914bc145c6149JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9hcHAudGl0YW4uZW1haWwvbG9naW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680511,
   "web_search_url": "https://duckduckgo.com/?q=Titan+company+careers+benefits",
@@ -364880,48 +365456,139 @@
  "topsort": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Estimated: Startup tier. While the company touts a 'genius product', its AI or data science prestige is not established enough from the provided sources to be classified as elite."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "A B2B technology startup model emphasizing high autonomy, rapid growth, and balancing business practicality with commercial agreements."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Super collaborative and straightforward. The team values direct communication, embraces feedback with curiosity, and doesn't take things personally."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Customers are not explicitly listed, but the company maintains a customer-first mentality and focuses on commercial agreements, suggesting business-to-business (B2B) clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Estimated: $120k-$150k base. Pay for new grads is not public, but adequately funded global tech startups typically offer competitive packages in this range."
   },
   "evidence_sha": "84d7f2b835f38398",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898945,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Technology/Software (Startup)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Be prepared to discuss how you handle feedback without taking it personally, thrive in a fast-paced startup, and manage high-autonomous tasks while maintaining a collaborative, customer-first mindset."
+  },
+  "last_attempt_at": 1784898945,
   "last_evidence_at": 1784680601,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "A truly global company, operating across multiple regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "To build rapidly and collaboratively through straightforward communication, embracing feedback, and challenging each other to deliver a customer-first product."
+  },
   "name": "Topsort",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Estimated: Fast-paced and high-autonomy. The company operates with rapid growth and places a strong emphasis on working quickly and efficiently."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "While specific product features are not detailed in the sources, the company emphasizes having a 'genius product' that drives rapid growth and customer success."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c42c2384cd"
+   ],
+   "value": "Estimated: 15-20 days. Specific PTO policies are not public, but standard global tech startup packages typically fall in this range."
   },
+  "refresh_after": 1790082945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found. The fast-paced startup nature suggests operations may continue year-round."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "A rapidly growing, global startup born during the pandemic with a hardworking team of talented individuals."
   },
   "sources": [
    {
@@ -364975,14 +365642,50 @@
     "url": "https://job-boards.greenhouse.io/topsort/jobs/5226881008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "No specific information regarding visa sponsorship was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Topsort is a technology company that operates a fast-paced, global startup environment born during the pandemic. It makes money by providing a 'genius product' driven by a customer-first mentality, though specific product details are not fully captured in the provided sources."
+  },
+  "synthesized_evidence_sha": "84d7f2b835f38398",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "The work involves a high-autonomy, fast-paced startup environment emphasizing straightforward communication and rapid, collaborative building."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680601,
   "web_search_url": "https://duckduckgo.com/?q=Topsort+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfa765ca6c",
+    "c42c2384cd"
+   ],
+   "value": "This fast-paced, high-autonomy startup environment aligns with your desire for an innovative tech culture that accelerates technical learning and career growth, free from slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c42c2384cd",
+    "dfa765ca6c"
+   ],
+   "value": "Estimated: Moderate to Low. The culture's strong emphasis on being 'hardworking' combined with a fast-paced startup environment may demand long hours and high intensity, making strict work-life balance uncertain."
   }
  },
  "torc robotics": {
