@@ -28157,82 +28157,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: High / Tier 1. Widely recognized as a top-tier employer in the AV simulation and software infrastructure space, attracting talent from elite tech companies and top universities."
+   "value": "Estimated: Tier 1 (Elite AI/Prestige) due to deep focus on cutting-edge perception, autonomy frameworks, and multi-domain collaborative AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "B2B enterprise software licensing and recurring subscription revenue."
+   "confidence": "medium",
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "B2B software licensing and services, providing tools, operating systems, and autonomy solutions to enterprise clients across heavy industries."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Elite, engineering-first, and mission-driven. High ownership, strong technical mentorship, and a low-bureaucracy environment that accelerates deep technical learning and career growth."
+   "value": "Estimated: Engineering-driven, fast-paced, and deeply technical with an emphasis on in-office collaboration and cutting-edge framework development."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Automotive original equipment manufacturers (OEMs), autonomous vehicle startups, and Tier 1 automotive suppliers."
+   "confidence": "high",
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "Automotive, defense, trucking, construction, mining, and agriculture industries."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180,000 - $220,000 total comp (Base + Equity). Highly competitive new-grad pay reflecting its tier-1 prestige and high demand for AI/software talent."
+   "source_ids": [
+    "40cd52b0ee",
+    "727dd297c0",
+    "fcd11f970d"
+   ],
+   "value": "Estimated: $150K - $200K+ Base salary (augmented by equity/RSUs and comprehensive benefits) reflecting high new-grad pay."
   },
   "evidence_sha": "3e87749d6b00fdf1",
-  "generated_at": 1784894341,
+  "generated_at": 1784915802,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Autonomous Vehicles / Enterprise Software / AI Infrastructure."
+   "confidence": "high",
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "Autonomous vehicle technology and infrastructure."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To maintain this balance, interviewers will probe your software fundamentals (C++, algorithms) and ML/theoretical knowledge. Highlight your ability to learn quickly and ship robust code fast in a high-ownership culture, demonstrating that you can thrive in this innovative tech culture without burning out."
+   "confidence": "medium",
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "Candidates must demonstrate mastery of C++ and autonomy frameworks, but they should also evaluate if the 5-day in-office mandate and fast-paced scale-up culture fit their strict boundary requirements against toxic burnout and their desire for sane hours."
   },
-  "last_attempt_at": 1784894341,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784913843,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "27d124c37c",
-    "5b4161b2d4",
-    "544f6ea26c"
+    "40cd52b0ee"
    ],
-   "value": "Actively seeking professional context from source URL."
+   "value": "In-office presence required; employees are expected to primarily work from an Applied Intuition office 5 days a week."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To accelerate the world's adoption of safe and intelligent machines through reliable, scalable software infrastructure."
+   "confidence": "medium",
+   "source_ids": [
+    "63669a50a4"
+   ],
+   "value": "Not explicitly stated in provided sources, but focused on enabling collaborative autonomy behaviors in multi-domain environments and advancing cutting-edge framework solutions for autonomous systems."
   },
   "name": "Applied Intuition",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast. The company operates with a startup-like, high-velocity engineering culture while maintaining a strong emphasis on sustainable engineering practices over slow bureaucracy."
+   "value": "Estimated: Fast-paced and highly innovative, typical of a scale-up pushing cutting-edge autonomy frameworks, contrasting with slow enterprise bureaucracy."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "A suite of simulation, visualization, and data management infrastructure software tools designed to test and validate autonomous vehicle systems."
+   "confidence": "high",
+   "source_ids": [
+    "40cd52b0ee",
+    "63669a50a4",
+    "fcd11f970d"
+   ],
+   "value": "Tools and infrastructure, operating systems, and autonomy solutions, including frameworks for collaborative autonomy behaviors in multi-domain environments and real-time vehicle telemetry/visualization."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Industry standard flexible PTO (typically 15-20 days for new grads), with culture encouraging employees to actually use it to recharge."
+   "source_ids": [
+    "727dd297c0",
+    "fcd11f970d"
+   ],
+   "value": "Estimated: 15 to 20 days of standard PTO supported by wellness benefits."
   },
-  "refresh_after": 1790078341,
+  "refresh_after": 1790099802,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28242,12 +28262,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard public holiday shutdowns; no widespread data indicating company-wide guaranteed extended shutdowns."
+   "value": "Estimated: No public formal shutdowns listed; holidays may follow standard corporate calendars."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Late-stage private company (Valued at $4B in 2024), scaling aggressively."
+   "value": "Estimated: Growth-stage tech company, scale-up."
   },
   "sources": [
    {
@@ -28312,42 +28332,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "27d124c37c",
-    "5b4161b2d4",
-    "544f6ea26c"
-   ],
-   "value": "Actively seeking professional context from source URL."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship likely evaluated on a case-by-case basis for specialized autonomous systems roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Applied Intuition is a Silicon Valley-based technology company that provides autonomous vehicle (AV) simulation, testing, and development software to automotive manufacturers. It makes money by licensing its suite of virtual testing, data management, and simulation infrastructure tools to enterprise OEMs and suppliers, enabling them to safely validate and scale their self-driving algorithms."
-  },
-  "synthesized_evidence_sha": "fb8b20ecbaf9bbc7",
-  "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "27d124c37c",
-    "5b4161b2d4",
-    "544f6ea26c"
+    "40cd52b0ee"
    ],
-   "value": "Actively seeking professional context from source URL."
+   "value": "Applied Intuition provides software tools, operating systems, and autonomous driving systems for industries like automotive, defense, trucking, and agriculture. It makes money by licensing these infrastructure and autonomy solutions to enterprise clients building autonomous vehicles."
+  },
+  "synthesized_evidence_sha": "3e87749d6b00fdf1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "40cd52b0ee",
+    "727dd297c0",
+    "63669a50a4"
+   ],
+   "value": "Software engineering involving C++ for autonomous systems frameworks, real-time vehicle telemetry visualization, full-stack engineering for autonomy human-machine interfaces (HMI), and offroad perception."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677480,
   "web_search_url": "https://duckduckgo.com/?q=Applied+Intuition+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Applied Intuition aligns strongly with your desire for a fast, innovative AI environment balanced with sane hours. It is a rapidly growing, well-funded startup led by elite ex-Tesla/U Cruise engineers, offering top-tier prestige and competitive tech pay without the traditional toxic burnout culture seen in some AV hardware mills."
+   "confidence": "medium",
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "The company offers elite exposure to AI and autonomous systems engineering at a fast-paced, innovative tech scale-up. Candidates should be aware that the strict 5-day in-office requirement may challenge preferences for guaranteed work-life balance, though the total compensation packages and technical learning curve align well with high new-grad pay and prestige goals."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. Known for its strong, systematic approach to prioritization and technical execution, actively avoiding the high-burnout crunch culture prevalent in some hardware-focused AV companies."
+   "source_ids": [
+    "40cd52b0ee"
+   ],
+   "value": "Estimated: Moderate to Good. The strict 5-day in-office policy implies rigid physical presence expectations, but standard comprehensive benefits suggest attempts to offset burnout, potentially avoiding highly toxic environments."
   }
  },
  "applied materials": {
@@ -105563,120 +105585,133 @@
  },
  "datadog": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 1.5-2. While not an pure-play AI company, Datadog is an elite tech employer with strong technical prestige and complex data challenges in observability."
+   "confidence": "medium",
+   "source_ids": [
+    "a5d06da536"
+   ],
+   "value": "Elite - Recognized industry leader in AI and cloud infrastructure observability."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a54177f0a1",
-    "e9c60cf06b"
+    "a54177f0a1"
    ],
-   "value": "Subscription-based SaaS model charging for cloud monitoring and security products, often tied to infrastructure usage and premium support tiers."
+   "value": "Subscription-based SaaS platform specializing in infrastructure, application, and security monitoring."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "e9c60cf06b",
+    "2f70829d66",
     "fd6c484582"
    ],
-   "value": "Collaborative and value-driven, emphasizing office culture, relationships, creativity, and inclusion as choices made daily."
+   "value": "Collaborative, office-centric but flexible hybrid workplace that values interpersonal relationships, creativity, and continuous inclusion."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "2f70829d66",
     "e9c60cf06b"
    ],
-   "value": "Organizations of all sizes that require cloud monitoring, specifically highlighting a 'Premier Customer base' for top-tier support."
+   "value": "Premier Enterprise Customer base, specifically targeting fast-paced engineering and IT operations teams requiring in-house product experts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180,000-$220,000 total compensation (base + equity) for top-tier tech roles in tier-1 cities. Datadog is known for competitive, elite-level pay."
+   "source_ids": [
+    "a54177f0a1"
+   ],
+   "value": "Estimated: $150,000 - $180,000 total compensation (base + equity + bonus) for new grad AI/tech roles."
   },
   "evidence_sha": "c9a1aa750d4a9439",
-  "generated_at": 1784886268,
+  "generated_at": 1784915802,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a54177f0a1"
+    "a5d06da536"
    ],
-   "value": "Cloud Infrastructure, Software as a Service (SaaS), IT Operations, and Security."
+   "value": "Cloud Computing, IT Operations, SaaS, Artificial Intelligence, and Cybersecurity."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "e9c60cf06b",
+    "2f70829d66",
     "fd6c484582"
    ],
-   "value": "Assess whether their 'fast-paced' environment genuinely respects work-life balance or if it masks a high-burnout culture. Ask about typical project timelines, on-call expectations, and how the hybrid model practically ensures 'work-life harmony' while maintaining rapid innovation."
+   "value": "To ensure the demanding 'fast-paced' environment won't result in burnout and aligns with your work-life balance goals, probe hybrid flexibility expectations, on-call requirements, and daily metrics during behavioral rounds. Emphasize your ability to innovate and drive technical learning autonomously, citing the company's focus on environmental and social governance."
   },
-  "last_attempt_at": 1784907924,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784902760,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "2f70829d66",
     "e9c60cf06b",
     "fd6c484582"
    ],
-   "value": "Operates in a hybrid and flexible work environment, placing value on office culture and collaboration."
+   "value": "Operates via a hybrid and flexible work environment to build office culture and accommodate employees globally."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "fd6c484582"
    ],
-   "value": "Focused on inclusion and fostering an environment where people of all backgrounds can excel, succeed together, and drive sustainable operations as outlined in their ESG report."
+   "value": "To foster an inclusive, sustainable, and innovation-driven environment where people of all backgrounds excel, enabling success through flexible work and environmental, social, and governance (ESG) initiatives."
   },
   "name": "Datadog",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "2f70829d66",
     "e9c60cf06b"
    ],
-   "value": "Estimated: High. Described explicitly as a 'fast-paced environment' where employees are challenged and must immediately witness contributions."
+   "value": "Estimated: Fast-paced with high expectations for immediate customer contributions; expect dynamic, innovation-driven project cycles rather than slow bureaucracy."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "a5d06da536"
    ],
-   "value": "A comprehensive cloud monitoring and security platform that provides visibility into infrastructure, application performance, and logs."
+   "value": "Cloud and AI infrastructure monitoring, application observability, log management, and security analytics products."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days standard PTO, typical for large public tech companies. Exact policy not public in provided sources."
+   "source_ids": [
+    "fd6c484582"
+   ],
+   "value": "Estimated: 15-25 days of standard vacation PTO depending on tenure and role, typical for a mature tech enterprise."
   },
-  "refresh_after": 1790070268,
-  "retry_after": 1784908404,
+  "refresh_after": 1790099802,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "fd6c484582"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in sources. Typically, tech companies may offer a holiday break, but this needs verification."
+   "source_ids": [
+    "fd6c484582"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdown weeks explicitly mentioned in current sources."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e9c60cf06b"
+    "a54177f0a1",
+    "acddd146b6"
    ],
-   "value": "Public company operating at a large, global scale with a hybrid workforce."
+   "value": "Publicly traded company (Nasdaq: DDOG) operating at large enterprise scale with a robust global GTM recruiting function."
   },
   "sources": [
    {
@@ -105743,26 +105778,26 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "fd6c484582"
+    "acddd146b6"
    ],
-   "value": "Specific visa sponsorship policies are not explicitly detailed in the provided materials, but as a large public tech company, it typically sponsors work visas for top talent."
+   "value": "Standard corporate recruiting functions are in place to identify and turn great candidates into employees globally."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a54177f0a1",
-    "a5d06da536"
+    "a54177f0a1"
    ],
-   "value": "Datadog is a public cloud monitoring and security platform that helps organizations observe their infrastructure, applications, and logs. It makes money by selling subscriptions to its various monitoring products based on usage and hosting requirements."
+   "value": "Datadog is a cloud and AI infrastructure monitoring platform that provides observability, security, and analytics for IT operations and development teams. The company generates revenue through a SaaS model, charging businesses based on usage and the number of hosts, containers, or events monitored."
   },
-  "synthesized_evidence_sha": "622552b5f3dffd08",
+  "synthesized_evidence_sha": "c9a1aa750d4a9439",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "2f70829d66",
     "e9c60cf06b"
    ],
-   "value": "In-house roles involve becoming a product expert in cloud monitoring infrastructure, handling customer challenges, and operating in a fast-paced, collaborative environment."
+   "value": "Roles involve deep immersion in a fast-paced tech environment, acting as an in-house product expert, and directly handling contributions to Datadog's Premier Customer base."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
@@ -105770,18 +105805,19 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
+    "2f70829d66",
     "e9c60cf06b",
     "fd6c484582"
    ],
-   "value": "Datadog's fast-paced, innovative tech environment aligns with your desire for accelerated learning and career growth without the typical slow bureaucracy of large tech companies. The hybrid work model and stated focus on 'work-life harmony' suggest an attempt to balance high performance with personal time, though you should verify that the fast pace does not lead to burnout."
+   "value": "Datadog operates at the bleeding edge of cloud and AI infrastructure, aligning with your priority for high new-grad pay, fast-paced technical challenges, and rapid career acceleration. The company's strong emphasis on a hybrid workplace and work-life harmony over traditional bureaucracy respects your need for sane hours, acting as a mission-driven company where you can quickly witness your contributions."
   },
   "wlb_rating": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "e9c60cf06b",
+    "2f70829d66",
     "fd6c484582"
    ],
-   "value": "Estimated: Stable with caveats. The company promotes 'work-life harmony' and flexible work, but the fast-paced environment and customer-facing nature may require active boundary-setting to prevent burnout."
+   "value": "Estimated: Fair to Good. Company emphasizes work-life harmony through hybrid arrangements and flexibility, though observability support functions can experience periods of high demand."
   }
  },
  "datadome": {
@@ -137235,7 +137271,7 @@
    "value": "Tier 2 — Respected industry practitioner with real production ML at scale, but not an AI research lab or tech-first brand."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137251,7 +137287,7 @@
    "source_ids": [],
    "value": "Individual consumers, small businesses, middle-market companies, and institutional clients primarily in the Midwest and Southeast U.S."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137274,7 +137310,7 @@
    "source_ids": [],
    "value": "Expect practical ML system design (fraud, credit risk, personalization), SQL/analytics case studies, and behavioral questions on stakeholder management in a regulated environment. Prepare to discuss model governance, fairness, and deployment constraints."
   },
-  "last_attempt_at": 1784893681,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908633,
   "locations": {
    "confidence": "estimated",
@@ -137303,6 +137339,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days PTO + 10 company holidays + 2-3 'recharge days' annually; accrues with tenure."
   },
+  "retry_after": 1784916282,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137366,7 +137403,7 @@
    "source_ids": [],
    "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles; typical for large U.S. banks with dedicated immigration teams."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139459,11 +139496,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139475,6 +139514,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908633,
   "name": "FirstEnergy",
   "pace_of_work": {
@@ -139487,6 +139527,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784915922,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139540,7 +139581,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784908633,
   "web_search_url": "https://duckduckgo.com/?q=FirstEnergy+company+careers+benefits",
@@ -189607,78 +189648,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - insufficient public data to assess AI/data science prestige tier."
+   "value": "Estimated: High — direct C-suite advisory on AI operating-model transformation across multiple Fortune-tier verticals; brand visibility in elite professional circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "B2B professional services / strategic AI partnership model: high-touch advisory engagements with enterprise buyers, likely billed as retainers or project-based transformation contracts."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown - no culture information in sources."
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Estated: Elite, mission-driven, intellectually intense but principle-guided (Customers, Culture, Code); values deep technical credibility paired with business fluency; likely low bureaucracy given growth-stage multi-office setup."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Leading companies in construction, industrial distribution, logistics, healthcare, and other operationally intensive industries; engagements involve CIOs, CTOs, and revenue leaders."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - no compensation data available for new grad technical roles."
+   "value": "Estimated: $150k–$200k base + bonus/equity (top-tier AI strategy roles at elite firms in NYC/SF/London often start in this band); no public data."
   },
   "evidence_sha": "9547043967f23a9f",
-  "generated_at": 1784862304,
+  "generated_at": 1784915802,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "AI transformation consulting / enterprise AI services for operationally intensive verticals."
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Probe for: (1) actual weekly hours and shutdown norms during peak engagements, (2) career progression for individual-contributor AI strategists, (3) how 'Culture' principle translates to daily work-life guardrails, (4) technical depth vs. advisory balance in the Strategic AI Partner role."
   },
-  "last_attempt_at": 1784862304,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784913843,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Headquartered in New York; additional offices in San Francisco, London, and Toronto."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Help each customer think strategically about how AI changes their operating model — transformation of how their team works, not just adoption of features — guided by principles of Customers, Culture, and Code."
   },
   "name": "InstaLILY",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - no data on work pace or culture speed."
+   "value": "Estimated: Fast, project-driven cadence with weekly customer deliverables; intensity varies by engagement but structured around scheduled executive interactions rather than 24/7 on-call."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Strategic AI advisory and transformation services — weekly engagement with customer leadership to reshape operating models using AI, focused on construction, industrial distribution, logistics, healthcare, and similar sectors."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - no PTO policy information found."
+   "value": "Estimated: 15–20 days PTO + standard holidays (typical for well-funded US growth-stage tech/services firms); no public policy disclosed."
   },
-  "refresh_after": 1790046304,
+  "refresh_after": 1790099802,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -189688,12 +189746,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - no information on company shutdowns or guaranteed time off."
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; professional-services firms often allow team-level holiday breaks between engagements."
   },
   "size_stage": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Growth-stage startup (offices in 4 major cities, serving 'leading companies' across multiple verticals; headcount likely 50–200)."
   },
   "sources": [
    {
@@ -189738,38 +189796,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Likely supports H-1B and similar visas given multi-national offices and elite talent focus; no public policy details found."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "20f52197e8",
-    "a06a6c37eb",
-    "54b78d590d"
+    "5e054f64e4"
    ],
-   "value": "InstaLILY appears to be a company with limited public information available in the provided sources. The sources are redirect links that do not contain substantive company details."
+   "value": "InstaLILY is an AI transformation partner that helps operationally intensive enterprises (construction, industrial distribution, logistics, healthcare) rethink their operating models through strategic AI adoption. They make money by embedding senior AI strategists directly with C-suite leaders (CIO, CTO, revenue heads) to design and guide enterprise-wide AI transformation, not just feature implementation."
   },
-  "synthesized_evidence_sha": "b522d771fc6bc7d8",
+  "synthesized_evidence_sha": "9547043967f23a9f",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "AI strategy and operating-model design at the enterprise level; translating cutting-edge AI capabilities into concrete workflow changes for non-tech industries; heavy client-facing collaboration with technical and business leaders."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677184,
   "web_search_url": "https://duckduckgo.com/?q=InstaLILY+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "5e054f64e4"
+   ],
+   "value": "Matches your priorities: elite AI strategy role with direct C-suite exposure (prestige + high impact), fast innovative culture (principles: Customers, Culture, Code), mission-driven transformation work in real-world industries, and a professional-services model that typically offers more predictable hours than product-on-call environments."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown - no work-life balance data available."
+   "value": "Estimated: 7/10 — professional services model with scheduled executive meetings suggests predictable core hours; travel and crunch periods around key workshops may occur."
   }
  },
  "instalily ai": {
@@ -215204,43 +215264,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b",
+    "891ba4fce0"
    ],
-   "value": "Estimated: Mid-tier. Generally viewed as an applied-AI division within a traditional hardware conglomerate rather than a top-tier elite tech employer for AI or data science."
+   "value": "Estimated: Moderate. As a massive traditional hardware and consumer electronics company, its AI and data science roles tend to support internal operations and product ecosystems rather than leading cutting-edge industry AI research."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b",
+    "891ba4fce0"
    ],
-   "value": "Manufactures and sells physical hardware products across global markets, operating in consumer, home appliance, and automotive B2B sectors."
+   "value": "Relies on continuous innovation and improvement in operations (such as procurement and network optimization) to develop and execute strategies that deliver physical and digital technology products to market."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "891ba4fce0"
+    "d0ebbfc77b",
+    "2f597eb4df"
    ],
-   "value": "An innovative corporate culture grounded in 'Customer-Value Creation' and 'People-Oriented Management', fostering creativity, diversity, and integrity."
+   "value": "Grounded in 'Customer-Value Creation' and 'People-Oriented Management', fostering a corporate culture of creativity, diversity, and integrity."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b"
    ],
-   "value": "Global retail consumers seeking home electronics and appliances, as well as B2B automotive partners requiring vehicle components."
+   "value": "Global consumers and businesses seeking technology and innovative solutions for a better life."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "891ba4fce0"
+    "d0ebbfc77b",
+    "2f597eb4df"
    ],
-   "value": "Estimated: $80,000 - $110,000 USD base for new-grad tech/data roles in the US, below elite software tech standards but competitive for traditional hardware."
+   "value": "Estimated: $80,000 - $110,000 USD base salary for technical/analytical roles, aligned with standard corporate compensation for a global hardware manufacturer rather than elite-tier Silicon Valley tech pay."
   },
   "evidence_sha": "fc4a9863ba865f2e",
-  "generated_at": 1784895764,
+  "generated_at": 1784915802,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -215249,48 +215313,52 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b",
+    "6c80772f2c"
    ],
    "value": "Consumer Electronics, Home Appliances, and Vehicle Components Manufacturing."
   },
   "interview_focus": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "2f597eb4df",
     "891ba4fce0"
    ],
-   "value": "The candidate should probe deeply into the specific team's operational speed, AI development roadmap, and shutdown policies. Essential questions must determine if the AI division operates with startup-like autonomy or inherits the parent company's legacy hardware bureaucracy. It is critical to clarify the exact expectations around after-hours availability and whether the role genuinely supports long-term career growth without toxic burnout."
+   "value": "Be prepared to discuss how you manage multiple priorities in a deadline-driven corporate environment while maintaining high accuracy. You should also highlight your passion for innovation within structured corporate processes, especially if interviewing for data analysis or optimization roles."
   },
-  "last_attempt_at": 1784895764,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147",
-    "687703ba69"
+    "687703ba69",
+    "3516ebe147"
    ],
-   "value": "Global operations with a significant corporate presence in South Korea and regional offices (e.g., USA)."
+   "value": "Operates globally, with a significant presence and open roles in the United States."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "891ba4fce0"
+    "d0ebbfc77b",
+    "2f597eb4df"
    ],
-   "value": "Grounded in the principles of 'Customer-Value Creation' and 'People-Oriented Management', fostering creativity, diversity, and integrity."
+   "value": "Dedicated to creating innovative solutions for a better life, grounded in the principles of 'Customer-Value Creation' and 'People-Oriented Management'."
   },
   "name": "LG Electronics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "891ba4fce0"
+    "2f597eb4df"
    ],
-   "value": "Estimated: Moderate to slow, characterized by traditional corporate processes and longer product cycles typical of large hardware manufacturing, rather than fast-paced tech innovation."
+   "value": "Estimated: Steady but deadline-driven. Employees must manage multiple priorities in a deadline-focused environment, typical of a large, structured global conglomerate rather than a fast-moving tech startup."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b",
+    "891ba4fce0"
    ],
-   "value": "Consumer electronics (OLED TVs, monitors), home appliances (refrigerators, washing machines), air conditioning, and automotive vehicle components."
+   "value": "Innovative technology solutions, including consumer electronics, home appliances, vehicle components, and network/data optimization systems."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -215298,30 +215366,27 @@
    "source_ids": [
     "687703ba69"
    ],
-   "value": "Estimated: 15-20 days of standard annual PTO for US-based corporate roles, depending on tenure and specific location."
+   "value": "Estimated: 15-20 days of standard annual paid time off, varying by seniority and regional corporate guidelines."
   },
-  "refresh_after": 1790079764,
+  "refresh_after": 1790099802,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "891ba4fce0"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "891ba4fce0"
-   ],
-   "value": "Estimated: No evidence of guaranteed, company-wide tech shutdowns; typical manufacturing and global operations require continuous uptime."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed regular company-wide shutdowns found; typical time off likely follows standard corporate PTO policies rather than mandated industry-wide closures."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147"
+    "d0ebbfc77b"
    ],
-   "value": "Public, large-cap global enterprise operating worldwide."
+   "value": "A large, established, global leader in the consumer technology and hardware manufacturing sector."
   },
   "sources": [
    {
@@ -215390,41 +215455,42 @@
    "source_ids": [
     "891ba4fce0"
    ],
-   "value": "Sponsorship is not available for some specific roles, such as the Procurement Data Analyst II position."
+   "value": "Sponsorship is not available for some positions, such as specific Procurement Data Analyst roles, though requirements may vary across departments."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "3516ebe147",
-    "687703ba69"
+    "d0ebbfc77b",
+    "2f597eb4df"
    ],
-   "value": "LG Electronics is a global manufacturer of consumer electronics, home appliances, and vehicle components. It generates revenue by designing, manufacturing, and selling these physical hardware products and related solutions to consumers and businesses worldwide."
+   "value": "LG Electronics is a global leader in consumer electronics, home appliances, and vehicle components, dedicated to creating innovative solutions for a better life. The company generates revenue by designing, manufacturing, and selling these physical technology products and their underlying software ecosystems globally."
   },
-  "synthesized_evidence_sha": "9b4eb8272f7b1a78",
+  "synthesized_evidence_sha": "fc4a9863ba865f2e",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "d0ebbfc77b",
+    "2f597eb4df",
     "891ba4fce0"
    ],
-   "value": "Involves proactive analytical, organizational, and communication skills applied to procurement and operations, with a passion for innovation and continuous improvement."
+   "value": "Provides technical and analytical roles focused on data science, network optimization, procurement operations, and financial accounting. Employees support the development and execution of operational strategies requiring strong analytical, organizational, and communication skills."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677994,
   "web_search_url": "https://duckduckgo.com/?q=LG+Electronics+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
-   "source_ids": [
-    "891ba4fce0"
-   ],
-   "value": "As a large legacy hardware manufacturer, LG is fundamentally unmatched with FAANG in AI/DS elite 'prestige' or fast, unbureaucratic tech culture. The corporate environment likely leans slower and more process-driven, which fundamentally conflicts with the candidate's desire for a fast-paced, highly-accelerated tech learning curve without bureaucracy. While it values 'People-Oriented Management', a traditional hardware conglomerate structure makes the promise of guaranteed shutdowns and strictly "
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While LG offers the technical learning and prestige of a global tech giant, its large-scale manufacturing bureaucracy and deadline-driven corporate culture may lack the fast-paced tech startup vibe and strict work-life boundaries you prioritize. The environment requires managing multiple priorities under deadlines, which could challenge your desire for guaranteed shutdowns and sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "2f597eb4df",
     "891ba4fce0"
    ],
-   "value": "Estimated: Moderate. LG promotes 'People-Oriented Management' but WLB often depends on the specific division, with traditional manufacturing hours prevailing."
+   "value": "Estimated: Moderate. The company emphasizes 'People-Oriented Management' and values like creativity and integrity, but the need to manage multiple priorities in deadline-driven environments may occasionally impact personal time."
   }
  },
  "lg electronics north america": {
@@ -215645,11 +215711,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215661,6 +215729,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784915596,
   "name": "Liberty Mutual",
   "pace_of_work": {
@@ -215673,6 +215742,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784915922,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215726,7 +215796,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784915596,
   "web_search_url": "https://duckduckgo.com/?q=Liberty+Mutual+company+careers+benefits",
@@ -235204,52 +235274,127 @@
  "medtronic": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Prestigious within healthcare technology, though not a pure-play elite tech firm; AI and data roles provide high domain impact but operate within a highly regulated industry."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Develops and sells healthcare technology, including surgical robotics and software solutions, to medical facilities and providers globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Estimated: Highly mission-driven and collaborative in an Agile team environment, prioritizing clear communication between technical and non-technical stakeholders."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Healthcare providers and medical professionals utilizing surgical and robotic technologies in clinical environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f",
+    "fd5a56679a"
+   ],
+   "value": "Estimated: Likely competitive large-company tier (roughly $90k-$110k base) for a Software Engineer I, though it may not match elite big-tech new-grad total compensation packages."
   },
   "evidence_sha": "f471fd7d8cb47ad4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784915802,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784915593,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Healthcare Technology and Medical Devices."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a",
+    "dbc3b9e88f"
+   ],
+   "value": "Assess the team's actual pace of innovation versus slow medical-tech bureaucracy, clarify daily hours and expectations to ensure they prioritize work-life balance, and confirm that the learning curve and technical growth will meet your high-speed career acceleration goals."
+  },
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908632,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Lafayette, Colorado, United States of America (for the AI-Driven Data Solutions Software Engineer role)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "To alleviate pain, restore health, and extend life."
+  },
   "name": "Medtronic",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Estimated: Steady and structured due to strict medical device regulations, which may feel slower and more bureaucratic compared to a fast-paced, high-freedom tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Surgical navigation and robotics platforms, alongside software solutions for AI-driven data applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Estimated: Standard large-medical-company package typically offering 15-20+ days of PTO for new hires, but exact policy not specified in sources."
   },
-  "retry_after": 1784915713,
+  "refresh_after": 1790099802,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found in research, though established tech firms occasionally offer flexible holidays or year-end closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Large, established global enterprise operating as a market leader in the medical technology sector."
   },
   "sources": [
    {
@@ -235273,14 +235418,46 @@
     "url": "https://medtronic.wd1.myworkdayjobs.com/redeploymentmedtroniccareers/job/Lafayette-Colorado-United-States-of-America/Software-Engineer-I--AI-Driven-Data-Solutions----Lafayette--CO_R72435"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Specific sponsorship details were not found in the provided sources, but Medtronic frequently sponsors engineering talent globally."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Medtronic is a global leader in healthcare technology focused on alleviating pain, restoring health, and extending life. The company makes money by developing and manufacturing world-class software solutions, surgical robotics, and medical devices for healthcare providers."
+  },
+  "synthesized_evidence_sha": "f471fd7d8cb47ad4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Involves applying computer science and software engineering fundamentals in an Agile team environment to develop AI-driven data solutions and software for surgical platforms."
+  },
   "web_research_status": "no usable public page",
   "web_researched_at": 1784582970,
   "web_search_url": "https://duckduckgo.com/?q=Medtronic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "fd5a56679a",
+    "dbc3b9e88f"
+   ],
+   "value": "This role provides the mission-driven impact of improving patient lives, but candidates must weigh if a massive, regulated medical tech firm can match their desire for a fast, highly innovative tech culture that prioritizes elite prestige and rapid career growth without bureaucratic slowdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fd5a56679a"
+   ],
+   "value": "Estimated: Generally strong and respectful of personal time, driven by a mission-driven culture rather than a toxic burnout environment."
   }
  },
  "megger": {
@@ -258497,11 +258674,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258513,6 +258692,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784915598,
   "name": "Norfolk Southern",
   "pace_of_work": {
@@ -258525,6 +258705,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784915922,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258578,7 +258759,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784915598,
   "web_search_url": "https://duckduckgo.com/?q=Norfolk+Southern+company+careers+benefits",
@@ -314328,11 +314509,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314344,6 +314527,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908632,
   "name": "RRS Group & Co",
   "pace_of_work": {
@@ -314356,6 +314540,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784915922,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314419,7 +314604,7 @@
     "url": "https://jobright.ai/jobs/info/6a635b888d53603449601ec0?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784908632,
   "web_search_url": "https://duckduckgo.com/?q=RRS+Group+%26+Co+company+careers+benefits",
@@ -318228,130 +318413,126 @@
  },
  "salvo health": {
   "ai_ds_prestige_tier": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Unverified without available data."
+   "value": "Estimated: Mid-tier. Backed by top-tier health investors, but not currently recognized as a household name in elite AI/Data Science prestige like FAANG."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Business model details are currently unavailable or undisclosed in these sources."
+   "value": "Healthcare services delivery, likely monetizing through direct patient care subscriptions, telehealth visits, or B2B partnerships, backed by healthcare investors."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
+   "confidence": "high",
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Inclusive, equitable, and mission-driven, focused on reimagining chronic illness treatment."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Target customers and market base are not detailed in the retrieved data."
+   "value": "Patients suffering from chronic conditions seeking integrative, root-cause medical care."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary, potentially with equity, aligning with remote health-tech startup market rates. Unlikely to match elite-tier big tech new-grad compensation ($180k+)."
   },
   "evidence_sha": "a2caca577f10b5f3",
-  "generated_at": 1784796318,
+  "generated_at": 1784915802,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Given the name and context of the sources' search patterns, the company likely operates in the healthcare or social services sector."
+   "value": "Healthcare / Virtual Care / Health Tech"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ask questions to confirm if they operate with a fast innovative tech culture or if slow bureaucracy will stifle learning. Specifically confirm if they guarantee shutdowns, maintain sane hours, and explicitly avoid toxic or high-burnout environments."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Probe into the startup's engineering culture: questions should target daily pace, actual hours worked vs. expected, technical mentorship for new grads, and how much bureaucracy exists versus blazing new technical trails. Validate compensation structures and equity to ensure it meets the elite new-grad pay threshold you are targeting."
   },
-  "last_attempt_at": 1784796318,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784908352,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Office locations and remote work policies are not listed in the provided materials."
+   "value": "Remote (as indicated by remote job postings)."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "The company's mission could not be extracted from the available documentation."
+   "value": "To bring a scalable and tech-enabled, more integrative approach to chronic conditions, going beyond treating symptoms to identify and address the root causes of chronic illness, while fostering an inclusive and equitable culture."
   },
   "name": "Salvo Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Estimated: Fast-paced and innovative. Early-stage startups backed by notable investors typically move quickly to scale, which avoids slow bureaucracy but can introduce pressure."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "No specific products or services could be identified from the provided source links."
+   "value": "A scalable, tech-enabled healthcare platform for treating chronic conditions by addressing root causes rather than just symptoms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
-  },
-  "refresh_after": 1789980318,
-  "rotational_program_name": {
-   "confidence": "low",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "None found in research"
+   "value": "Estimated: Standard startup PTO (15-20 days annually), though exact policies are not published."
+  },
+  "refresh_after": 1790099802,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "high",
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns found in research; typical of agile startups. Standard public holidays likely observed."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Company size, funding stage, and employee headcount are not specified in these sources."
+   "value": "Startup stage, backed by leading healthcare investors from companies like Livongo, Ro, Ginger, Brightline, and Tia."
   },
   "sources": [
    {
@@ -318398,44 +318579,42 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Visa sponsorship and international hiring policies are not mentioned in these sources."
+   "value": "Details on visa sponsorship are not explicitly mentioned, though the company emphasizes welcoming diverse candidates for essential roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Insufficient information is available in the provided sources to determine exactly what the company does or how it makes money."
+   "value": "Salvo Health is a virtual care provider that takes a tech-enabled approach to treating chronic illnesses. It monetizes by offering scalable, integrative healthcare services focused on identifying and addressing the root causes of chronic conditions."
   },
-  "synthesized_evidence_sha": "828f166b97c50260",
+  "synthesized_evidence_sha": "a2caca577f10b5f3",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "e670338234",
-    "daab19eef9",
-    "340f6a6257"
+    "62064b7c9c"
    ],
-   "value": "Technical stack, engineering challenges, and data science workflows are not detailed here."
+   "value": "Building and maintaining a scalable, tech-enabled platform for remote healthcare delivery and chronic condition management."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583480,
   "web_search_url": "https://duckduckgo.com/?q=Salvo+Health+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "You are seeking an elite, fast-paced AI role with high new-grad pay, but also require a mission-driven company with guaranteed shutdowns and sane hours to prevent burnout. You should probe Salvo Health heavily during interviews to see if their innovation and learning tech culture truly supports your need for aggressive career growth without sacrificing personal time."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Salvo Health offers a mission-driven environment focused on impactful chronic care, typical of early-stage health-tech startups where you can drive fast-paced technical innovation and accelerated learning. However, as a newer startup, the high new-grad pay and guaranteed work-life balance shutdowns typical of elite-tier tech may not be guaranteed."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unverified without available data."
+   "source_ids": [
+    "62064b7c9c"
+   ],
+   "value": "Estimated: Moderate. Fast-growing health startups are mission-driven but often require significant hustle. Notorious for guaranteed shutdowns or strict sane-hours policies are rare at this stage."
   }
  },
  "samba tv": {
@@ -396239,7 +396418,7 @@
    "value": "Estimated: Mid-to-High. Positioned at the center of the 'Physical AI' technology shift, deploying millions of devices globally, offering highly consequential AI and backend data science roles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [
@@ -396261,7 +396440,7 @@
    ],
    "value": "Wide-ranging organizations and communities globally, with more than 2 million devices deployed across 170+ countries."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -396289,7 +396468,7 @@
    "source_ids": [],
    "value": "Assess the true day-to-day pace and schedule expectations of the specific team. Probe whether the engineering culture genuinely protects personal time and guarantees shutdowns, ensuring the elite learning experience does not come at the cost of a high-burnout environment."
   },
-  "last_attempt_at": 1784872155,
+  "last_attempt_at": 1784915802,
   "last_evidence_at": 1784913843,
   "locations": {
    "confidence": "high",
@@ -396330,6 +396509,7 @@
    "value": "Estimated: 15-20 days of standard PTO, typical for a rapidly scaling tech company of this size, though exact policy is not public."
   },
   "refresh_after": 1790056155,
+  "retry_after": 1784916042,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -396417,7 +396597,7 @@
    ],
    "value": "Has a demonstrated track record of offering H1B sponsorship, though sponsorship is not guaranteed for every specific role."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
