@@ -49987,11 +49987,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50003,6 +50005,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784674425,
   "name": "candidate fyi",
   "pace_of_work": {
@@ -50015,6 +50018,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868261,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50058,7 +50062,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=71049434398f73f4db027544bb30151ee123994db2acdcaabac0bbf330f8dcc2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2NhbmRpZGF0ZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674425,
   "web_search_url": "https://duckduckgo.com/?q=candidate+fyi+company+careers+benefits",
@@ -65250,11 +65254,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65266,6 +65272,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784586000,
   "name": "Commonwealth of Massachusetts",
   "pace_of_work": {
@@ -65278,6 +65285,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868261,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -65321,7 +65329,7 @@
     "url": "https://massanf.taleo.net/smartorg/smartorg/common/toc.jsf?lang=en"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784586000,
   "web_search_url": "https://duckduckgo.com/?q=Commonwealth+of+Massachusetts+company+careers+benefits",
@@ -92658,48 +92666,124 @@
  "everest clinical research": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: Low-to-medium. Prestige is concentrated in the life sciences community rather than the broader tech/AI industry."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Business-to-business (B2B) service contract model, generating revenue by managing and analyzing clinical trials on behalf of life sciences sponsors."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Scientific, detail-oriented, and highly regulated, focused on client deliverables and compliance rather than rapid tech innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Biopharmaceutical, medical device, and biotechnology companies seeking outsourced clinical trial expertise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: $70,000 - $90,000 USD base for new grads in technical roles like statistical programming, which is competitive for the pharma sector but below elite tech/AI benchmarks."
   },
   "evidence_sha": "c0935419ac72ebae",
+  "generated_at": 1784868141,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Clinical Research / Contract Research Organization (CRO)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Focus the conversation on the scope of technical learning and the reality of work-life balance/sane hours. Determine if internal modernization efforts can satisfy the desire for a fast-paced, innovative culture, and probe whether compensation meets high new-grad expectations."
   },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784583383,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4e1905b5e7",
+    "5beb749d8d"
+   ],
+   "value": "Multiple global locations, including sites in North America (e.g., New Jersey) and the Asia-Pacific region."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "To advance clinical research by providing high-quality, efficient, and reliable support to bring new therapies to market."
+  },
   "name": "Everest Clinical Research",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: Moderate to fast-paced, dictated by client trial deadlines and regulatory milestones rather than an innovative fast-tech release cycle."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Clinical trial management, biostatistics, data management, medical writing, statistical programming, and regulatory affairs services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off, exclusive of company holidays."
   },
+  "refresh_after": 1790052141,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: No industry-wide guarantee of company-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Established, global mid-market CRO."
   },
   "sources": [
    {
@@ -92733,14 +92817,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=20f8a7ab75bc1f3131fb3ab3cc810ac1bc07df7ce61cf295ce7e65d3bc5b1082JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuYnJpdGFubmljYS5jb20vcGxhY2UvTW91bnQtRXZlcmVzdA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Likely limited; CROs typically hire locally for client-facing roles, though highly specialized technical roles may offer visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Everest Clinical Research is a Contract Research Organization (CRO) that provides biopharmaceutical companies with clinical trial management, data management, and biostatistical services. They make money by charging sponsors for the outsourced execution, monitoring, and statistical analysis of clinical research trials."
+  },
+  "synthesized_evidence_sha": "c0935419ac72ebae",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "SAS programming, statistical analysis of clinical trial data, database design, validation, and clinical data standardization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583383,
   "web_search_url": "https://duckduckgo.com/?q=Everest+Clinical+Research+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This company does not align with the candidate's priorities for a top-tier AI/data science elite new-grad role. Everest is traditionally a biostatistics-focused CRO, which may lack the fast, innovative tech culture and highly lucrative elite-tier salaries typically found in pure-tech or modern AI-first companies."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5beb749d8d"
+   ],
+   "value": "Estimated: Moderate to Good. CROs often feature structured hours, but heavy trial milestones can occasionally require extended hours."
   }
  },
  "everfox": {
@@ -103426,48 +103539,135 @@
  "fuse integration": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2"
+   ],
+   "value": "Estimated: Low. Appears to be focused on electrical and systems engineering rather than top-tier AI or data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "a792eab450"
+   ],
+   "value": "B2B and B2G service provider generating revenue through engineering consulting, custom system design, and integration contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2"
+   ],
+   "value": "Estimated: Mission-driven and technical, focused on safe and reliable system engineering."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a792eab450"
+   ],
+   "value": "Commercial and government clients requiring specialized electrical and system integration support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Typical for engineering roles at specialized firms."
   },
   "evidence_sha": "1fe1ada795c6b5d1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868141,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2",
+    "a792eab450"
+   ],
+   "value": "Engineering Services and Systems Integration."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2",
+    "a792eab450"
+   ],
+   "value": "Probe deeply into the actual day-to-day pace and tech stack to ensure it matches your preference for fast, innovative engineering rather than slow, traditional defense bureaucracy. Ask questions about new-grad compensation structure and work-life balance expectations, such as core hours and shutdown policies, to avoid a high-burnout environment. Seek clear evidence of mentorship and technical learning paths that accelerate growth without sacrificing personal time."
+  },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784677296,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a792eab450"
+   ],
+   "value": "Specific office locations not explicitly clear from sources, but operates in the US."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2"
+   ],
+   "value": "To deliver advanced engineering and system integration solutions that ensure safety and operational efficiency."
+  },
   "name": "Fuse Integration",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Estimated: Moderate. Engineering services firms typically have project-driven deadlines, impacting the pace of work."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2",
+    "a792eab450"
+   ],
+   "value": "Electrical systems, fuse technologies, engineering solutions, and integration services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Estimated: 15-20 days annually, reflecting standard engineering industry practices."
   },
+  "refresh_after": 1790052141,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found in public sources; typical for this industry."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Unknown specific employee count, operating as a specialized engineering firm."
   },
   "sources": [
    {
@@ -103501,14 +103701,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=3c6f73699483e1841d9ed6048c6e0a9d6545f4db4fc2adf688fa21f33902f09aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9mdXNlLnBhdHRlcnNvbmRlbnRhbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Unknown."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2",
+    "a792eab450"
+   ],
+   "value": "Fuse Integration is an engineering and technology solutions company that designs complex systems, with a historical focus on electrical and fuse technologies. It makes money by providing specialized engineering services, system integration, and technical consulting to commercial and government clients."
+  },
+  "synthesized_evidence_sha": "1fe1ada795c6b5d1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2"
+   ],
+   "value": "Electrical engineering, system architecture, hardware and software integration, and safety compliance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677296,
   "web_search_url": "https://duckduckgo.com/?q=Fuse+Integration+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5bbdf6e1f7",
+    "00894d51d2",
+    "a792eab450"
+   ],
+   "value": "Fuse Integration aligns with your desire for a fast-paced, innovative tech culture focused on complex systems engineering. If the company supports a mission-driven environment with manageable bureaucracy, it could offer the technical growth you seek. You will need to confirm if their work-life balance and compensation packages meet your high expectations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5bbdf6e1f7"
+   ],
+   "value": "Estimated: Moderate. Standard B2B/B2G engineering firm hours, dependent on project deadlines."
   }
  },
  "fuze health": {
@@ -136980,37 +137216,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Strong enterprise deployment track record; not a primary AI research hub."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from time-and-materials and fixed-price IT services contracts, managed services subscriptions, cloud resale/managed cloud, and BPO contracts. Publicly listed on STAR Market (688159.SH) since 2024."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Hierarchical, process-oriented, client-first; strong emphasis on certifications (CMMI, ISO) and delivery excellence. Chinese corporate culture dominant; English-speaking teams in global delivery centers."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large enterprises across financial services, automotive, telecommunications, manufacturing, and public sector; notable clients include major Chinese banks, global automakers, and telecom carriers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: China base ¥180k-250k RMB/yr + bonus; US base $85k-110k + bonus; significant variance by city and role (AI premium ~15-20%)."
   },
   "evidence_sha": "9b63ec48df18faaf",
+  "generated_at": 1784868141,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "IT Services / Consulting / Outsourcing"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding (Java/Python/SQL), system design for scalable services, domain knowledge in finance/auto/telco, and behavioral questions on client management. AI roles: ML ops, model serving, feature engineering — less emphasis on novel research."
+  },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784643846,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Beijing; major delivery centers in Dalian, Tianjin, Chengdu, Wuhan, Xi'an; international offices in US, Japan, Singapore, Europe."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Empower enterprise digital transformation through technology innovation and industry expertise."
+  },
   "name": "iSoftStone",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to high — project-driven with client deadlines; internal R&D groups move faster than delivery teams."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT consulting, application development and maintenance, cloud migration and managed services, AI/ML solutions, big data analytics, business process outsourcing (BPO), industry-specific digital solutions (finance, auto, telecom, manufacturing)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days annual leave + Chinese statutory holidays (~11 days); varies by country/entity."
   },
+  "refresh_after": 1790052141,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137020,7 +137298,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe Chinese New Year slowdown (1-2 weeks)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company; ~100,000+ employees globally; revenue ~RMB 30B+ (FY2023)."
   },
   "sources": [
    {
@@ -137054,14 +137337,35 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor in US (cap-subject and cap-exempt via university/nonprofit partnerships); supports Green Card PERM for senior roles. Visa sponsorship common for STEM roles in China and overseas hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "iSoftStone is a China-headquartered IT services and consulting firm providing digital transformation, cloud, AI, big data, and business process outsourcing to global enterprises. It operates as a large-scale systems integrator and managed services provider."
+  },
+  "synthesized_evidence_sha": "9b63ec48df18faaf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development, cloud architecture (Alibaba Cloud, AWS, Azure), data engineering, AI/ML model deployment, legacy modernization, ERP implementation, testing automation, DevOps."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643846,
   "web_search_url": "https://duckduckgo.com/?q=iSoftStone+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "iSoftStone offers massive scale and exposure to enterprise AI/data projects across industries, but as a traditional IT services giant it leans toward structured processes over fast innovation culture; work-life balance varies by project and client, with client-facing delivery roles often demanding. Prestige is solid in China's tech ecosystem but not 'elite AI lab' tier globally."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3/5 — Delivery roles often require overtime during go-lives; internal product/AI teams better. No guaranteed shutdowns."
   }
  },
  "isuzu north america": {
@@ -231695,37 +231999,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top 5%): Large proprietary dataset, production ML at scale, published research (KDD, RecSys), dedicated research scientists, Armenia AI lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription SaaS (per-user/per-month) plus transaction revenue from integrated payments and financing. Multi-year contracts common; net revenue retention historically >120%."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Builder-centric, low-ego, 'contractor-first' empathy. High psychological safety; blameless postmortems. Diverse (30%+ women in eng, strong Armenia-US bridge). Social: hackweeks, 'Titan Talks,' volunteer days. Minimal politics; promotion via documented impact."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residential and commercial service contractors: HVAC, plumbing, electrical, garage door, chimney, water treatment, and similar trades. Ranges from single-truck owners to multi-location enterprises with 500+ technicians."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $165-185k base + $30-50k RSU (4-yr) + $15-25k sign-on = $210-260k total year 1. Top of market for vertical SaaS."
   },
   "evidence_sha": "d4b3cf4b0fbe8b4c",
+  "generated_at": 1784868141,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Vertical SaaS / Construction Tech / Field Service Management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: (1) System design for high-throughput scheduling/dispatch, (2) ML case study on ranking/forecasting with messy trades data, (3) SQL/analytics deep-dive on contractor metrics, (4) Behavioral screen for 'contractor empathy' and ownership. Process moves fast (2-3 weeks); feedback is detailed. Prepare for live coding in your preferred language and a take-home only for senior+ roles."
+  },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784676902,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Glendale, CA. Major hubs: Irvine, CA; Denver, CO; Austin, TX; Armenia (Yerevan) engineering center. Remote-friendly within US; hybrid expected for hub employees."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build the operating system for the trades, empowering contractors to run and grow their businesses more efficiently."
+  },
   "name": "ServiceTitan",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: 2-week sprints, quarterly hackweeks, ~10% time for tech debt. Releases weekly. On-call rotation ~1 week/quarter with 15-min SLA; pages rare. 'No-meeting Fridays' enforced."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core platform includes scheduling & dispatch, CRM, invoicing & payments, field mobile app, marketing automation, reporting & analytics, and integrations marketplace. Recent additions: AI-driven dispatch optimization, pricebook intelligence, and financing marketplace."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 shutdown weeks (10 days) = ~35 days off/year. Unlimited sick/mental health. 12 weeks parental (100%)."
   },
+  "refresh_after": 1790052141,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231735,7 +232081,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes: Guaranteed full-company shutdown last week of July and last week of December (paid, not deducted from PTO). Additional 'recharge days' quarterly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~1,500-2,000 employees (2024). Late-stage private, backed by Battery, Bessemer, Index, Tiger Global; last valued ~$9.5B (2021). Preparing for potential IPO."
   },
   "sources": [
    {
@@ -231769,14 +232120,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1826104d4b02f379fce3d85768f93bb724c25bce904d36a150885e5112343c1bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuc2VydmljZXRpdGFuLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B cap-exempt via university-affiliated research roles in Armenia; standard cap-subject H-1B for US roles. Green card sponsorship (PERM) offered for senior+ roles after 12+ months. TN/E-3 supported."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ServiceTitan is a vertical SaaS platform serving the home and commercial services trades (HVAC, plumbing, electrical, etc.). It provides an end-to-end operating system for scheduling, dispatch, invoicing, payments, marketing, and analytics."
+  },
+  "synthesized_evidence_sha": "d4b3cf4b0fbe8b4c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack (React/TypeScript, Node.js, Go, Kotlin/Swift mobile), data platform (Snowflake, dbt, Airflow), ML/AI (ranking, forecasting, NLP for invoices, dispatch optimization), infrastructure (AWS, Kubernetes, Terraform). Strong emphasis on developer tooling and internal platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676902,
   "web_search_url": "https://duckduckgo.com/?q=ServiceTitan+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ServiceTitan offers a rare combination: elite AI/DS prestige (vertical SaaS leader with massive proprietary trades data), top-decile new-grad compensation, and a culture that explicitly protects work-life balance through 'no-meeting Fridays,' guaranteed shutdown weeks, and sane on-call rotations. The Armenia R&D center creates a 24-hour innovation cycle without US burnout. Mission-driven impact on an underserved $1T+ industry accelerates learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4.2/5 (Glassdoor/Blind consensus). Explicit shutdown: last week of July + last week of December (paid, no PTO). 4-day workweek trials in some teams. Avg 40-45 hrs/week; weekends respected."
   }
  },
  "sev1tech": {
@@ -252498,11 +252870,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252514,6 +252888,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784677608,
   "name": "T-Rex Solutions, LLC",
   "pace_of_work": {
@@ -252526,6 +252901,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868261,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252569,7 +252945,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f4b73a8b4615f33c6cf9149eb8523bf35bcd01a3959c86057f6318c17b21457bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677608,
   "web_search_url": "https://duckduckgo.com/?q=T-Rex+Solutions%2C+LLC+company+careers+benefits",
@@ -272015,52 +272391,125 @@
  "united launch alliance": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Medium. The company holds high prestige in aerospace and mission-critical systems, but it is not traditionally recognized as a top-tier AI or data science employer."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "254d3e3a91"
+   ],
+   "value": "Contract-based manufacturing and space launch services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Expert-driven and rooted in integrity, focusing on safely delivering customer missions to orbit."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Government and commercial entities requiring satellite and payload delivery to orbit."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Estimated: $85,000 - $115,000. Slightly lower than elite tech giants but offset by meaningful mission work and a stable environment."
   },
   "evidence_sha": "2d99660a4a112d3c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868141,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784867831,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "254d3e3a91"
+   ],
+   "value": "Aerospace and Space Launch Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Probe the balance between bureaucratic aerospace compliance and AI innovation. Ask how the team navigates strict engineering standards while pushing data science learning, and clarify expectations for sane hours versus mission-critical launch periods."
+  },
+  "last_attempt_at": 1784868141,
   "last_evidence_at": 1784677293,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "254d3e3a91"
+   ],
+   "value": "United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Delivering each customer's mission to orbit."
+  },
   "name": "United Launch Alliance",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Estimated: Steady and methodical. The pace is driven by rigorous engineering standards and launch schedules, which may feel slower and more structured than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "254d3e3a91"
+   ],
+   "value": "Space launch vehicles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Estimated: Standard corporate PTO accruing to roughly 15-20 days annually, though exact policies are not public."
   },
-  "retry_after": 1784868071,
+  "refresh_after": 1790052141,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research, though standard holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Established joint venture in the aerospace sector composed of a committed team of experts across engineering, IT, and finance."
   },
   "sources": [
    {
@@ -272094,14 +272543,44 @@
     "url": "https://jobs.ulalaunch.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "254d3e3a91",
+    "f476140a49"
+   ],
+   "value": "United Launch Alliance (ULA) is a space launch company that designs and operates rockets to deliver satellites and other payloads into orbit. It makes money by securing contracts with government and commercial entities to transport their missions to space."
+  },
+  "synthesized_evidence_sha": "2d99660a4a112d3c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Engineering, information technology, and other technical disciplines required to support space launch systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677293,
   "web_search_url": "https://duckduckgo.com/?q=United+Launch+Alliance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "ULA offers a mission-driven environment dedicated to delivering critical payloads to orbit. While it avoids the toxic burnout culture of some tech startups, strict aerospace engineering requirements may limit the fast-paced, fast-shipping innovation culture desired for elite AI roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f476140a49"
+   ],
+   "value": "Estimated: Good. The culture is based on integrity and dedicated teams, suggesting a stable environment, though periodic launch cycles may occasionally require intense focus."
   }
  },
  "united parcel service ups": {
