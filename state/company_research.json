@@ -19653,38 +19653,106 @@
  "amazon kuiper manufacturing enterprises llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Tier 1 (Amazon-backed, large-scale engineering prestige)."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "229df8913b"
+   ],
+   "value": "Manufacturing and deploying infrastructure for an internet service provider network."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Peculiar engineering culture focused on customer obsession and high ownership."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "229df8913b"
+   ],
+   "value": "Telecommunications providers, enterprise businesses, and consumers lacking reliable broadband access."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High competitive market rate in the $150k-$200k range."
   },
   "evidence_sha": "1303509a9d054743",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784926000,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "229df8913b"
+   ],
+   "value": "Telecommunications and Aerospace Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419",
+    "e6d83815e0"
+   ],
+   "value": "Probe heavily for guaranteed shutdowns to test the company's respect for work-life balance against Amazon's broader reputation. Ask how much time will be spent on purely technical learning versus dealing with slow bureaucracy."
+  },
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784925817,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Based out of Amazon corporate and Kuiper manufacturing campuses."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "To channel a culture of curiosity, bold ownership, and fearless initiative into making everyday impacts for customers, with a specific focus on internet connectivity here."
+  },
   "name": "Amazon Kuiper Manufacturing Enterprises LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: High intensity and fast-paced, driven by 'bold ownership and fearless initiative', which may present signs of bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "229df8913b"
+   ],
+   "value": "Satellites, ground infrastructure, and manufacturing systems for a low Earth orbit satellite broadband network."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: 15-20 days standard corporate PTO."
   },
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19693,8 +19761,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: No guaranteed shutdowns, aside from standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "229df8913b"
+   ],
+   "value": "Large-cap, scaling division operating within Amazon."
   },
   "sources": [
    {
@@ -19738,14 +19815,48 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Likely strong, as Amazon typically sponsors work visas at scale for technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "229df8913b",
+    "e6d83815e0"
+   ],
+   "value": "Amazon Kuiper Manufacturing Enterprises LLC operates as part of Amazon's Project Kuiper, an ambitious initiative to build a constellation of low Earth orbit satellites. It makes money by providing global, high-speed broadband internet connectivity to unserved and underserved communities, operating under the broader Amazon corporate umbrella."
+  },
+  "synthesized_evidence_sha": "1303509a9d054743",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "229df8913b",
+    "17f8c9c419"
+   ],
+   "value": "Building scalable manufacturing and operational systems, likely involving heavy data analytics, robotics, and AI for satellite production logistics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784925817,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Kuiper+Manufacturing+Enterprises+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419",
+    "e6d83815e0"
+   ],
+   "value": "Prestige from Amazon and a new-grad data science role in cutting-edge space-tech manufacturing fits elite technical growth. However, the large scale may conflict with the desire for purely fast, non-bureaucratic tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Moderate to low; typical Amazon tech culture may lack guaranteed shutdowns."
   }
  },
  "amazon web services aws": {
@@ -28342,42 +28453,50 @@
  "applied intuition": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 1 (Elite AI/Prestige) due to deep focus on cutting-edge perception, autonomy frameworks, and multi-domain collaborative AI."
-  },
-  "aliases": [],
-  "attempts": 4,
-  "business_model": {
-   "confidence": "medium",
    "source_ids": [
+    "63669a50a4",
     "40cd52b0ee"
    ],
-   "value": "B2B software licensing and services, providing tools, operating systems, and autonomy solutions to enterprise clients across heavy industries."
+   "value": "Estimated: Elite Tier. The company works on core AI challenges like perception, autonomy frameworks, and multi-domain collaborative behaviors, placing it at the forefront of applied AI and robotics development."
+  },
+  "aliases": [],
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "40cd52b0ee",
+    "2f9d2b50c5"
+   ],
+   "value": "B2B enterprise software and engineering services, generating revenue by equipping commercial and defense sectors with off-the-shelf and custom autonomy stacks, operating systems, and development tools."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Engineering-driven, fast-paced, and deeply technical with an emphasis on in-office collaboration and cutting-edge framework development."
+   "source_ids": [
+    "2f9d2b50c5",
+    "63669a50a4",
+    "076d6e56e5"
+   ],
+   "value": "Estimated: Intensely engineering-focused and collaborative. The in-office expectation heavily underscores a culture of immediate collaboration, rapid iteration, and hands-on autonomy development."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "40cd52b0ee"
+    "727dd297c0",
+    "076d6e56e5"
    ],
-   "value": "Automotive, defense, trucking, construction, mining, and agriculture industries."
+   "value": "Companies in the automotive, defense, trucking, construction, mining, and agriculture industries seeking to build or deploy autonomous vehicle systems."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "40cd52b0ee",
-    "727dd297c0",
-    "fcd11f970d"
+    "727dd297c0"
    ],
-   "value": "Estimated: $150K - $200K+ Base salary (augmented by equity/RSUs and comprehensive benefits) reflecting high new-grad pay."
+   "value": "Estimated: $150,000 - $200,000 base salary, supplemented by equity (options/RSUs) and comprehensive benefits including 401k match."
   },
   "evidence_sha": "029875340a19da8b",
-  "generated_at": 1784915802,
+  "generated_at": 1784926000,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -28386,59 +28505,64 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "40cd52b0ee"
+    "2f9d2b50c5",
+    "63669a50a4"
    ],
-   "value": "Autonomous vehicle technology and infrastructure."
+   "value": "Autonomous Vehicles, Artificial Intelligence, and Enterprise Software."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "40cd52b0ee"
-   ],
-   "value": "Candidates must demonstrate mastery of C++ and autonomy frameworks, but they should also evaluate if the 5-day in-office mandate and fast-paced scale-up culture fit their strict boundary requirements against toxic burnout and their desire for sane hours."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "During the interview, assess how their fast-paced, in-office engineering culture impacts personal time and burnout rates. Ask the hiring manager how a new graduate's technical learning curve is balanced against the demands of a 5-day-a-week in-office schedule, ensuring the environment aligns with your need for an innovative but respectful work culture."
   },
-  "last_attempt_at": 1784922475,
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "40cd52b0ee"
-   ],
-   "value": "In-office presence required; employees are expected to primarily work from an Applied Intuition office 5 days a week."
-  },
-  "mission": {
-   "confidence": "medium",
-   "source_ids": [
+    "2f9d2b50c5",
+    "40cd52b0ee",
     "63669a50a4"
    ],
-   "value": "Not explicitly stated in provided sources, but focused on enabling collaborative autonomy behaviors in multi-domain environments and advancing cutting-edge framework solutions for autonomous systems."
+   "value": "In-office at Applied Intuition locations. The company emphasizes a strict 5-day-a-week in-office work expectation."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "027d2d9728",
+    "63669a50a4"
+   ],
+   "value": "To provide the tools, operating systems, and autonomy solutions that accelerate the development and deployment of autonomous systems across diverse industries."
   },
   "name": "Applied Intuition",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and highly innovative, typical of a scale-up pushing cutting-edge autonomy frameworks, contrasting with slow enterprise bureaucracy."
+   "source_ids": [
+    "076d6e56e5",
+    "2f9d2b50c5"
+   ],
+   "value": "Estimated: High pace and innovative culture. As an in-office growth-stage company actively scaling autonomy teams, the work environment is highly engineering-driven and fast-paced."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "40cd52b0ee",
+    "2f9d2b50c5",
     "63669a50a4",
-    "fcd11f970d"
+    "40cd52b0ee"
    ],
-   "value": "Tools and infrastructure, operating systems, and autonomy solutions, including frameworks for collaborative autonomy behaviors in multi-domain environments and real-time vehicle telemetry/visualization."
+   "value": "Core offerings are divided into three areas: tools and infrastructure, operating systems, and autonomy. This includes products like an autonomy framework for multi-domain collaborative behaviors, HIL test cases for AUTOSAR Classic RTOS and Adaptive POSIX stacks, and offroad perception systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
     "727dd297c0",
-    "fcd11f970d"
+    "40cd52b0ee"
    ],
-   "value": "Estimated: 15 to 20 days of standard PTO supported by wellness benefits."
+   "value": "Estimated: 15-20 days. The company mentions comprehensive benefits but does not publish an exact PTO policy."
   },
-  "refresh_after": 1790099802,
-  "retry_after": 1784923435,
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28448,12 +28572,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No public formal shutdowns listed; holidays may follow standard corporate calendars."
+   "value": "Estimated: None found in research. The provided sources do not mention guaranteed company-wide shutdowns."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Growth-stage tech company, scale-up."
+   "confidence": "medium",
+   "source_ids": [
+    "63669a50a4",
+    "40cd52b0ee"
+   ],
+   "value": "Growth-stage company actively ramping up engineering hiring across multiple autonomy teams and geographies, supported by a robust enterprise compensation structure."
   },
   "sources": [
    {
@@ -28518,44 +28645,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Sponsorship likely evaluated on a case-by-case basis for specialized autonomous systems roles."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "2f9d2b50c5",
     "40cd52b0ee"
    ],
-   "value": "Applied Intuition provides software tools, operating systems, and autonomous driving systems for industries like automotive, defense, trucking, and agriculture. It makes money by licensing these infrastructure and autonomy solutions to enterprise clients building autonomous vehicles."
+   "value": "Applied Intuition provides tools, infrastructure, operating systems, and autonomy solutions for off-highway and on-road vehicles. The company monetizes by equipping industries like automotive, defense, trucking, construction, mining, and agriculture with the software stack needed to develop and deploy autonomous systems."
   },
-  "synthesized_evidence_sha": "3e87749d6b00fdf1",
+  "synthesized_evidence_sha": "029875340a19da8b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "40cd52b0ee",
     "727dd297c0",
-    "63669a50a4"
+    "63669a50a4",
+    "40cd52b0ee"
    ],
-   "value": "Software engineering involving C++ for autonomous systems frameworks, real-time vehicle telemetry visualization, full-stack engineering for autonomy human-machine interfaces (HMI), and offroad perception."
+   "value": "Engineers work on full-stack autonomy HMI, C++ software frameworks for multi-domain collaborative autonomy, offroad perception systems, and robust embedded firmware validation (HIL test cases for AUTOSAR stacks)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677480,
   "web_search_url": "https://duckduckgo.com/?q=Applied+Intuition+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "40cd52b0ee"
-   ],
-   "value": "The company offers elite exposure to AI and autonomous systems engineering at a fast-paced, innovative tech scale-up. Candidates should be aware that the strict 5-day in-office requirement may challenge preferences for guaranteed work-life balance, though the total compensation packages and technical learning curve align well with high new-grad pay and prestige goals."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied Intuition offers a high-prestige AI and data science pathway by applying cutting-edge autonomous systems technology to critical, multi-domain industries. It provides an innovative, tech-forward environment that accelerates technical learning and career growth, though its strict 5-day in-office policy may impact the work-life balance and sane hours flexibility you prioritize."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "40cd52b0ee"
+    "027d2d9728",
+    "63669a50a4",
+    "727dd297c0"
    ],
-   "value": "Estimated: Moderate to Good. The strict 5-day in-office policy implies rigid physical presence expectations, but standard comprehensive benefits suggest attempts to offset burnout, potentially avoiding highly toxic environments."
+   "value": "Estimated: Moderate. The strict 5-day in-office requirement and fast-moving growth stage may limit flexibility, though standard tech compensation and benefits suggest a professional environment."
   }
  },
  "applied materials": {
@@ -166854,37 +166982,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (applied AI/ML in federal mission systems, not core AI research). Prestige derives from Tetra Tech brand and clearance access, not AI publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Government contracting / federal IT services. Revenue from contracts with executive and independent agencies, likely via Tetra Tech prime or subcontract vehicles."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Structured, mission-oriented, compliance-focused. Engineering culture shaped by federal standards (NIST, FISMA). Less startup agility, more process discipline. Team cohesion around cleared projects."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "U.S. federal executive agencies and independent agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Estimated: $128K-$131K base (per job posting), minimal equity (federal contractor), standard benefits. Total comp ~$140K-$150K with bonus/401k match."
   },
   "evidence_sha": "5417f89071368590",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784926000,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Federal IT consulting / Government contracting"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Expect focus on full-stack fundamentals (JavaScript/TypeScript, Angular, REST APIs, SQL/PL/SQL), federal-compliance awareness, and ability to work onsite in a cleared environment. Behavioral questions around government project delivery, security awareness, and team collaboration in regulated settings."
+  },
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784925819,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Headquarters in Vienna, VA. Onsite requirement for entry-level roles. Other locations not specified in sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Deliver a wide range of technology services to federal government clients. No public mission statement found beyond service delivery."
+  },
   "name": "Halvik",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Federal contract delivery cycles impose milestones, but less intense than commercial product sprints. Onsite presence adds structure."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Software development, IT consulting, and technology services for federal government agencies. Specific products not detailed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays (typical for Tetra Tech subsidiaries). No public policy found."
   },
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166894,7 +167080,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Federal contractors follow government calendar; some offices may close between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Subsidiary of Tetra Tech (large public consulting firm, ~20k+ employees). Halvik headcount not publicly disclosed; operates as a mid-size federal contractor unit."
   },
   "sources": [
    {
@@ -166948,14 +167141,42 @@
     "url": "https://jobright.ai/jobs/info/6a63943c8d5360344960302b?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and GC sponsorship given federal contractor status and Tetra Tech resources, but no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Halvik is a subsidiary of Tetra Tech that provides technology and consulting services to U.S. federal executive and independent agencies. It operates as a government contractor delivering software development and IT solutions."
+  },
+  "synthesized_evidence_sha": "5417f89071368590",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845"
+   ],
+   "value": "Full-stack software development (JavaScript, TypeScript, Angular, REST APIs, PL/SQL). Onsite work in Vienna, VA supporting federal systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784925819,
   "web_search_url": "https://duckduckgo.com/?q=Halvik+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9cddf48845",
+    "1db9db9c4d"
+   ],
+   "value": "Offers new-grad software engineers ~$130K base in a federal-contracting environment backed by Tetra Tech's scale. Balances structured government work with modern stack (Angular/TypeScript). Mission-driven public-sector impact. Onsite culture may limit flexibility but provides stability and clear security-clearance pathways."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Federal contracting often respects 40-hour weeks with overtime comp, but onsite requirement and clearance processes reduce flexibility. No guaranteed shutdowns publicly documented."
   }
  },
  "handshake": {
@@ -188053,42 +188274,104 @@
  "index analytics llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: Tier 3 / Niche Federal Consulting. Lacks the elite prestige and top-tier AI innovation of major tech firms, focusing instead on government health data."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Business-to-Government (B2G) federal contracting and consulting services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: Mission-driven and stable, focused on public health impact. Likely lacks the high-speed disruptive culture of elite AI startups, favoring compliance and steady growth."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "The United States federal government, specifically health-related agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: $62,000 - $84,000 base salary based on current Junior Data Analyst postings. This is below top-tier elite tech pay."
   },
   "evidence_sha": "611c62ba847135a8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784926000,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784925820,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Information Technology, Analytics, and Health-Related Government Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "You should seek to confirm if the day-to-day data work involves modernAI/DS stacks or is slowed by bureaucracy. Probe into actual scheduling, off-hours expectations, and whether the learning curve matches your need for rapid technical growth without high burnout."
+  },
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784924398,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Headquartered in Baltimore, Maryland, with remote work options available for certain roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "To provide health-related consulting services and data solutions to the federal government, supporting public sector health initiatives."
+  },
   "name": "Index Analytics LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: Moderate to slow. As a small business operating in federal consulting, pace is dictated by government contracts, which tend to be bureaucratic rather than fast-paced."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Data visualization, CRM, big data enterprise software, and data integration solutions tailored for health-related analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: 15-20 days per year. Standard for federal consulting small businesses, though exact policy is not public."
   },
-  "retry_after": 1784925940,
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188097,8 +188380,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns. Government contractors generally operate continuously alongside federal schedules."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "A rapidly growing small business."
   },
   "sources": [
    {
@@ -188152,14 +188444,45 @@
     "url": "https://jobright.ai/jobs/info/6a6397370c8e2b4f36dcec11?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "No H1B sponsorship provided; U.S. work authorization is required."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Index Analytics, LLC is a Baltimore-based small business that provides health-related consulting services to the federal government. They earn revenue by contracting with federal agencies to supply data analytics, integration, and visualization solutions."
+  },
+  "synthesized_evidence_sha": "611c62ba847135a8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Big data management, data integration, data visualization, and CRM analytics to support health-related government consulting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784924398,
   "web_search_url": "https://duckduckgo.com/?q=Index+Analytics+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "As a government contractor, the culture is likely driven by structured compliance rather than the fast, innovative tech pace of top-tier AI companies. It also falls short of elite new-grad pay expectations ($62K-$84K) and offers a mission-driven focus, though true work-life balance and technical acceleration may vary in a consulting environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8752c8e020"
+   ],
+   "value": "Estimated: Good. Government consulting roles typically adhere to standard 40-hour work weeks without the extreme hours seen in big tech, supporting a balanced lifestyle."
   }
  },
  "infoblox": {
@@ -213502,11 +213825,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213518,6 +213843,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784924397,
   "name": "Leader Bank",
   "pace_of_work": {
@@ -213530,6 +213856,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784926120,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213593,7 +213920,7 @@
     "url": "https://jobright.ai/jobs/info/6a6396c7979290281c703034?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784924397,
   "web_search_url": "https://duckduckgo.com/?q=Leader+Bank+company+careers+benefits",
@@ -267779,38 +268106,103 @@
  "ofi north america olam food ingredients": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise Data Analytics). As a traditional agribusiness and food ingredient supplier, ofi is not recognized as a top-tier tech employer or a prestigious name in the AI/Data Science community."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d249273669"
+   ],
+   "value": "B2B ingredient supply and processing. ofi manages end-to-end agricultural supply chains, from farming and sourcing raw materials to processing and delivering finished food ingredients to global manufacturers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Mission-driven and sustainability-focused, emphasizing 'good food and a healthy future'. Corporate environment likely prioritizes stability, global collaboration, and traditional enterprise operations."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d249273669"
+   ],
+   "value": "Food and beverage manufacturers, consumer packaged goods (CPG) brands, and retail food companies seeking quality ingredient solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Estimated: $75,000 - $90,000 USD base salary for an Associate Data Science Analyst in Chicago, based on typical market rates for agribusiness/CPG industries."
   },
   "evidence_sha": "da112421e0d4133d",
+  "generated_at": 1784926000,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d249273669",
+    "c0757f868f"
+   ],
+   "value": "Food and Beverage Manufacturing / Agricultural Supply Chain"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe the team's tech stack modernization pace and how much exposure they will get to advanced machine learning versus traditional BI and reporting. It is also key to clarify actual team bandwidth during peak agricultural seasons to ensure the work-life balance truly aligns with the sane hours and guaranteed shutdowns expected."
   },
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784924398,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Chicago, IL, US (with broader global operations)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "To be the change for good food and a healthy future."
+  },
   "name": "ofi North America (Olam Food Ingredients)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d249273669"
+   ],
+   "value": "Estimated: Moderately paced and bureaucratic. Operations are tied to physical supply chains, agricultural seasons, and global logistics, meaning innovation cycles are slower than in pure tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d249273669"
+   ],
+   "value": "Naturally sourced, value-added food ingredients, including coffee, cocoa, dairy, nuts, and spices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Estimated: 15-20 days of vacation. The company explicitly notes that vacation time starts accruing immediately on Day 1 and grows with tenure."
   },
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267819,8 +268211,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Estimated: Standard public holidays. There are no explicit mentions of guaranteed company-wide shutdown periods (e.g., summer or holidays) outside of standard US holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Large enterprise. The company operates globally and has 10,001+ employees in North America."
   },
   "sources": [
    {
@@ -267874,14 +268275,44 @@
     "url": "https://jobright.ai/jobs/info/6a639a6287cef057612c99f2?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "ofi has a historical track record of offering H1B sponsorships for its US-based roles, though sponsorship is not guaranteed for every specific position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c0757f868f",
+    "d249273669"
+   ],
+   "value": "ofi (Olam Food Ingredients) is a global food ingredient company that supplies naturally sourced, value-added ingredients like coffee, cocoa, and spices to consumer brands. They make money by managing complex global supply chains, processing raw agricultural materials, and selling high-quality ingredient solutions to food and beverage manufacturers."
+  },
+  "synthesized_evidence_sha": "da112421e0d4133d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Data science and analytics roles here typically focus on supply chain optimization, demand forecasting, and analyzing agricultural or operational data rather than building cutting-edge AI products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784924398,
   "web_search_url": "https://duckduckgo.com/?q=ofi+North+America+%28Olam+Food+Ingredients%29+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "This Associate Data Science Analyst role suits a candidate who highly values a mission-driven environment and strong baseline WLB, though it may fall short of the 'elite prestige' or 'fast, innovative tech culture' benchmarks desired by top-tier AI talent. Large legacy supply chain companies often operate with slower bureaucracies and technical learning may be paced around enterprise data processes rather than cutting-edge AI."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c0757f868f"
+   ],
+   "value": "Estimated: Moderate to Good. The company emphasizes its purpose and time off, typical of established consumer goods/agribusiness firms, though peak agricultural seasons may cause temporary spikes in workload."
   }
  },
  "ohio department of public safety": {
@@ -273897,39 +274328,45 @@
  },
  "orennia": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: High — niche but technically demanding domain attracting top quantitative talent; comparable to elite energy/climate data science teams."
-  },
-  "aliases": [],
-  "attempts": 1,
-  "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely SaaS subscriptions, data licensing, and professional services for energy analytics; exact revenue mix not public."
-  },
-  "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
     "343e671f49"
    ],
-   "value": "Collaborative, intellectually curious, mission-driven, and adaptable; values diversity of thought and fast learning over hierarchy."
+   "value": "Tier 2 — Strong applied DS/ML on real-world physical systems; respected in energy-climate niche but not a general AI research lab."
   },
-  "customers": {
-   "confidence": "low",
+  "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
    "source_ids": [
+    "85e7fba893"
+   ],
+   "value": "B2B SaaS subscription model: recurring revenue from platform licenses, data access, and analytics modules sold to energy companies and investors."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Energy companies, project developers, investors, and utilities evaluating or deploying low-carbon energy assets."
+   "value": "Collaborative, cross-functional, mission-driven (decarbonization), intellectually curious, embraces change/ambiguity, 'work that matters' ethos."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "85e7fba893",
+    "343e671f49"
+   ],
+   "value": "Energy majors, independent power producers, utilities, financial institutions, and project developers evaluating or investing in low-carbon energy projects."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: CAD 85,000-105,000 base + equity (0.05-0.15%); total comp competitive with top Canadian climate tech firms; USD roles adjusted for location."
+   "value": "Estimated: CAD 85k–110k base + equity (USD 65k–85k equivalent); competitive for Calgary energy-tech, below Bay Area tier but high for region."
   },
   "evidence_sha": "b7ca0e640af72370",
-  "generated_at": 1784889740,
+  "generated_at": 1784926000,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -273940,51 +274377,55 @@
    "source_ids": [
     "343e671f49"
    ],
-   "value": "Climate tech / Energy transition analytics"
+   "value": "Climate tech / Energy transition SaaS"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Expect deep dives into statistical methods, optimization concepts, and analytical problem-solving applied to energy markets. Prepare for case studies on low-carbon project evaluation, ambiguity handling in fast-paced startup scenarios, and demonstrations of intellectual curiosity. Cultural fit questions will probe collaboration, adaptability to change, and alignment with the climate mission."
+   "value": "Expect heavy emphasis on statistical modeling, optimization, geospatial data handling, and ML for physical systems. Prepare for case studies on renewable project economics, carbon sequestration, or hydrogen. Cross-functional communication (product, research, revenue) is valued. Demonstrate ability to thrive in ambiguity and ship quickly in a startup setting."
   },
-  "last_attempt_at": 1784889740,
+  "last_attempt_at": 1784926000,
   "last_evidence_at": 1784924104,
   "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Headquartered in Calgary, Alberta, with remote/hybrid flexibility for technical roles; may have presence in Houston or Toronto."
+   "value": "Headquartered in Calgary, AB; likely hybrid/remote roles across Canada and US."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "343e671f49"
    ],
-   "value": "To contribute to a lower-carbon future by providing actionable intelligence for energy transition decisions."
+   "value": "Accelerate the transition to a lower-carbon future by providing the data and analytics needed to de-risk and scale decarbonization projects."
   },
   "name": "Orennia",
   "pace_of_work": {
    "confidence": "high",
    "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Fast-paced startup environment with high autonomy, rapid iteration, and comfort with ambiguity; intensity balanced by mission-driven focus."
+   "value": "Fast — described as 'fast-paced start-up environment' and 'fast-paced SaaS environment'; iterative shipping, ambiguity embraced."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Data analytics and modeling tools for low-carbon energy projects, including statistical analysis and optimization platforms for energy transition decision-making."
+   "value": "A cloud-based analytics platform combining subsurface, surface, infrastructure, and market data with modeling tools for low-carbon project screening, valuation, and optimization (renewables, CCS, hydrogen, storage)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO plus statutory holidays; flexible/unlimited policy common in Canadian startups but not confirmed."
+   "value": "Estimated: 15–20 days + statutory holidays; typical Canadian tech startup range."
   },
-  "refresh_after": 1790073740,
+  "refresh_after": 1790110000,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -273994,14 +274435,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; likely observes standard Canadian holiday breaks (Dec 24-Jan 1) with encouragement to disconnect."
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; likely observes standard Canadian holiday breaks."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "343e671f49"
-   ],
-   "value": "Early-stage startup (seed to Series A) with a small, fast-growing team; headcount not publicly disclosed."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50–200 employees; growth-stage startup (Series A/B) backed by energy-tech investors."
   },
   "sources": [
    {
@@ -274058,23 +274497,24 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely supports work authorization for exceptional candidates (e.g., TN, H-1B, PGWP) given talent needs in niche energy data science; no public policy disclosed."
+   "value": "Estimated: Willing to sponsor H-1B/TN for specialized data science/engineering roles; no public policy disclosed."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Orennia is a climate technology startup building data and analytics platforms to accelerate the transition to low-carbon energy. The company operates in a fast-paced, collaborative startup environment focused on analytical rigor and optimization for energy markets."
+   "value": "Orennia is a SaaS platform providing data, analytics, and intelligence for the energy transition and low-carbon economy. It helps energy companies, investors, and developers evaluate and de-risk renewable energy, carbon capture, hydrogen, and other decarbonization projects."
   },
-  "synthesized_evidence_sha": "232379469f8a726f",
+  "synthesized_evidence_sha": "b7ca0e640af72370",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
     "343e671f49"
    ],
-   "value": "Applied data science, statistical modeling, optimization algorithms, and large-scale energy market analytics; stack likely includes Python, SQL, cloud infrastructure, and ML pipelines."
+   "value": "Geospatial data pipelines, subsurface modeling, statistical analysis, optimization algorithms, ML for resource assessment, full-stack SaaS development, cloud infrastructure (likely AWS/Azure)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680413,
@@ -274082,14 +274522,18 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
+    "85e7fba893",
     "343e671f49"
    ],
-   "value": "Offers a top-tier AI/data science role at a mission-driven climate tech startup with elite technical prestige and competitive new-grad pay. The culture emphasizes fast innovation, collaborative problem-solving, and a genuine lower-carbon mission, while the startup stage suggests autonomy and rapid learning without the bureaucracy of large firms. Work-life balance appears respected through sane hours and a culture that values sustainable pace over burnout, aligning with the candidate's priorities"
+   "value": "Orennia sits at the intersection of elite data science (subsurface ML, optimization, geospatial analytics) and high-impact climate tech. It offers a fast-paced SaaS startup culture with strong new-grad compensation, mission-driven work on decarbonization, and a collaborative environment that emphasizes sustainable pace over burnout — rare in both energy and AI sectors."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — culture emphasizes sustainable pace, sane hours, and respect for personal time; guaranteed shutdowns not formalized but burnout actively avoided."
+   "source_ids": [
+    "85e7fba893",
+    "343e671f49"
+   ],
+   "value": "Estimated: 3.5/5 — Collaborative culture with 'work that matters' framing; startup pace but no public signals of toxic hours. Likely reasonable expectations for a growth-stage company."
   }
  },
  "oscar health": {
