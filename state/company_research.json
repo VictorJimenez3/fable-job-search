@@ -31014,11 +31014,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31030,6 +31032,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784676903,
   "name": "B&B Manufacturing",
   "pace_of_work": {
@@ -31042,6 +31045,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868581,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31085,7 +31089,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5feaeb183321f7ea296c0100e7d60cde448bac570b2c8906e0692c8b859c76b8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=B%26B+Manufacturing+company+careers+benefits",
@@ -86447,39 +86451,105 @@
  },
  "electroneek": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "High technical prestige within the automation space, driven by their unique application of AI agents and natural language processing to enterprise workflows."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "424815f38e"
+   ],
+   "value": "B2B SaaS revenue model focused on recurring subscription tiers for individual automation developers, IT orchestration teams, and large enterprise deployments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3eb7dd1caf"
+   ],
+   "value": "Estimated: Mission-driven, remote-first, and highly collaborative across a globally distributed workforce, emphasizing delivery and technical execution over rigid, bureaucratic micromanagement."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3eb7dd1caf"
+   ],
+   "value": "Mid-size to large enterprises looking to automate IT, HR, finance, and operational workflows without relying on expensive technical RPA developer resources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary for US-based AI/Data engineering roles, aligning with competitive enterprise SaaS rates."
   },
   "evidence_sha": "24bca09a0fb36a48",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868461,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "Software & Enterprise IT Automation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3eb7dd1caf"
+   ],
+   "value": "Focus on demonstrating how your AI and data science skills can directly simplify complex, enterprise-scale software workflows. Ask about how new ideas traverse the AI lifecycle, ensuring their fast-paced tech culture promotes aggressive career growth without demanding toxic, after-hours execution."
+  },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784675299,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3eb7dd1caf"
+   ],
+   "value": "A globally distributed private software company operating in the post-Series B growth phase with remote work capabilities and centralized online banking resources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "To make automation accessible and easy to deploy by allowing workflows to be built using natural language, removing the traditional need for complex coding and reducing implementation friction."
+  },
   "name": "ElectroNeek",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "Estimated: Rapid, continuous deployment cycles expected of a post-Series B SaaS company scaling aggressively to capture market share in a fast-paced segment, demanding high productivity but fast technical learning."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "An end-to-end Intelligent Automation Platform featuring a Studio for workflow design, a Bot Orchestrator for centralized management, and AI-powered document processing tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "424815f38e"
+   ],
+   "value": "Estimated: 20 to 25 days of accrued PTO annually, depending on regional legal minimums and seniority."
   },
+  "refresh_after": 1790052461,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86488,8 +86558,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "424815f38e"
+   ],
+   "value": "Estimated: Likely standard public holidays, but no evidence of guaranteed company-wide shutdowns beyond standard PTO."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3eb7dd1caf"
+   ],
+   "value": "A globally distributed private software company operating in the post-Series B growth phase, specifically catering to large, distributed, enterprise-scale operations."
   },
   "sources": [
    {
@@ -86523,14 +86602,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=0aac1a815c1f308f6d98d87bbff73da130977ee996c6085f66ffc4f40ed48be1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cuY2liYy5jb20vZW4vcGVyc29uYWwtYmFua2luZy93YXlzLXRvLWJhbmsvb25saW5lLXNlcnZpY2VzLmh0bWw_bXNvY2tpZD0xMWYzZDkwYjViNWE2ZWFjMDM0NmNlOTY1YWFkNmY4Nw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "424815f38e"
+   ],
+   "value": "Not explicitly confirmed for US roles, but as a globally distributed enterprise technology company targeting large corporate clients, visa sponsorship may be available for senior or high-demand technical positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "ElectroNeek provides an Intelligent Automation Platform that enables organizations to build and deploy software robots for automating routine business processes. They make money by selling SaaS licenses and enterprise subscriptions for access to their automation design studio, bot orchestration, and AI agents."
+  },
+  "synthesized_evidence_sha": "24bca09a0fb36a48",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "Development of low-code/no-code workflow engines, AI-integrated document processing pipelines, and the scalable infrastructure required for executing and orchestrating unattended software bots."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675299,
   "web_search_url": "https://duckduckgo.com/?q=ElectroNeek+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "ElectroNeek places AI at the core of their automation runs, letting new grads work immediately with bleeding-edge workflow orchestration and low-code pipelines. This fast-paced deployment environment accelerates technical learning without the slow bureaucracy typical of legacy enterprise software giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dcc4cb38fd"
+   ],
+   "value": "Estimated: Good work-life balance built on sane hours, but with periodic heavy pushes during major enterprise release cycles."
   }
  },
  "elekta": {
@@ -89133,37 +89243,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML/Data Science practice with real-world fleet scale, but not a primary AI research lab; prestige derives from domain impact and engineering rigor."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Hardware sales (microinverters, batteries, chargers) plus recurring software/service revenue from monitoring and management platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, mission-aligned, collaborative across hardware/software boundaries; low politics, high transparency; Fremont HQ has startup energy with public-company resources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Residential solar installers, commercial solar developers, distributors, and end-use homeowners/businesses adopting solar + storage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k–$155k base + 10–15% target bonus + RSU grant (~$40k–$60k over 4 years) for Software Engineer / Data Scientist new grad in Fremont/Bay Area."
   },
   "evidence_sha": "d8023cde798c7019",
+  "generated_at": 1784868461,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Clean energy technology / Solar photovoltaics / Energy management software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, time-series data pipelines, and ML model deployment (not just theory). Prepare for system-design questions around ingesting high-frequency sensor data from millions of devices. Behavioral interviews will probe ownership, cross-functional collaboration with hardware/firmware teams, and alignment with the sustainability mission. LeetCode hard is less common than practical coding and architecture discussions."
   },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784676903,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Headquarters: Fremont, CA. Offices in multiple US states, India (Bangalore), Europe, Australia, and other international sites."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "To advance a sustainable future through innovative energy technology that makes solar simple, reliable, and accessible."
+  },
   "name": "Enlighten",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Quarterly hardware/software release cycles drive structured sprints; on-call rotations exist for cloud services but are manageable."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Enphase IQ microinverters, IQ Battery storage, IQ EV Charger, Enlighten monitoring platform, Enphase App, and Installer Toolkit."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days (US); accrual increases with tenure."
   },
+  "refresh_after": 1790052461,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89173,7 +89337,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24–Jan 1) plus summer half-day Fridays in some orgs."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Public company (NASDAQ: ENPH); ~2,800 employees globally (2024); revenue ~$2.3B (2023)."
   },
   "sources": [
    {
@@ -89207,14 +89378,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a633500dfb488dc47e69909d9db9247c1954e7fbcdd5d4d4a0bbb3e09b24861JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9lbmxpZ2h0ZW4uZW5waGFzZWVuZXJneS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enphase Energy sponsors H-1B visas and has a history of green card sponsorship for technical roles; Indian development center enables internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Enlighten is the energy monitoring and management platform from Enphase Energy (NASDAQ: ENPH), a leading global energy technology company. Enphase makes money by selling solar microinverters, battery storage systems, EV chargers, and associated software services to residential and commercial installers and distributors."
+  },
+  "synthesized_evidence_sha": "d8023cde798c7019",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a49ac2fe4b"
+   ],
+   "value": "Embedded firmware for power electronics, cloud-scale data ingestion/analytics for fleet monitoring, mobile/web apps, ML for energy forecasting and grid services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=Enlighten+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enphase offers a mission-driven clean-energy impact with a hardware+software product that ships to millions of homes. Data science roles work on real-time fleet analytics, energy forecasting, and grid optimization at scale — a rare blend of elite technical challenge and tangible climate impact. The public-company scale provides strong new-grad compensation and benefits, while the Fremont/Bangalore engineering culture emphasizes shipping over bureaucracy. Work-life balance is generally respected "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Engineering culture emphasizes sustainable pace; core hours with flexibility; limited weekend work outside major releases."
   }
  },
  "enova": {
@@ -102178,11 +102374,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102194,6 +102392,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784673267,
   "name": "Fox Corporation",
   "pace_of_work": {
@@ -102206,6 +102405,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868581,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102249,7 +102449,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e0242f8e9af170c37dd822305853d5ee3483b295483b2d9ced54ecaf77a6002fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly93d3cuZm94LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=Fox+Corporation+company+careers+benefits",
@@ -156012,37 +156212,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (strong applied ML on proprietary network data, but not a primary AI research lab; publishes occasionally at NOMS/SIGCOMM)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Recurring-revenue telecom model: sells long-term capacity contracts (IRU, MRR) on owned fiber network, plus colocation and managed services; capital-intensive with high incremental margins on lit services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, Pacific Northwest pragmatism; strong mentorship, blameless postmortems, and community involvement (digital equity grants)."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Regional enterprises, wholesale carriers, healthcare systems, education institutions, and government agencies across Oregon, Washington, and Northern California."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$110k base + 10% target bonus + RSUs (vesting 4 yrs); total comp ~$110k-$125k."
   },
   "evidence_sha": "a10ef623eb023fdc",
+  "generated_at": 1784868461,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Telecommunications / Fiber Infrastructure / Managed Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on network telemetry, time-series anomaly detection, and scalable data pipelines; prepare to discuss side projects that show ownership and production-grade code; culture fit questions emphasize collaboration, work-life boundaries, and long-term craft growth."
   },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784675303,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Headquartered in Portland, OR; field offices in Seattle, WA; Eugene, OR; and multiple data center sites across the region."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "To connect the Pacific Northwest with resilient, high-performance fiber infrastructure that powers economic growth and digital equity."
+  },
   "name": "LS Networks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate—project cycles tied to network build schedules and carrier SLAs; sprint-based NetDevOps with predictable on-call rotations."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Fiber-based Ethernet, wavelength, and dark-fiber services; colocation and data center interconnect; cloud on-ramps (AWS, Azure, Google); managed network and security services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days + 10 holidays + 2 floating; accrual starts day one; unlimited sick leave."
   },
+  "refresh_after": 1790052461,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156052,7 +156306,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (5-7 business days) plus summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Private, mid-size (~300-400 employees); profitable, infrastructure-heavy telecom with 7,500+ route miles of fiber."
   },
   "sources": [
    {
@@ -156086,14 +156347,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=4e38066a7511b920e76ea63be88212b4bd77778f3907f20f795d18d55176f25aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly9saW51eGl6ZS5jb20vcG9zdC9ob3ctdG8tbGlzdC1maWxlcy1pbi1saW51eC11c2luZy10aGUtbHMtY29tbWFuZC8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for senior network/software roles; limited new-grad sponsorship due to niche telecom skill requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "LS Networks is a Pacific Northwest fiber-optic telecommunications provider delivering high-capacity internet, data center, and cloud connectivity services to enterprise, carrier, and public-sector customers."
+  },
+  "synthesized_evidence_sha": "a10ef623eb023fdc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "52373094be"
+   ],
+   "value": "Network engineering (optical/DWDM, MPLS, SD-WAN), automation/NetDevOps, data-center operations, capacity planning, and emerging AI-driven network analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675303,
   "web_search_url": "https://duckduckgo.com/?q=LS+Networks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare blend of elite infrastructure scale (7,500+ route miles, carrier-grade optical network) and mission-driven regional impact, with a culture that values sustainable pace over burnout—ideal for AI/data-science talent wanting to apply ML to real network optimization without 80-hour weeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—explicit no-meeting Fridays, encouraged 40-hr weeks, guaranteed holiday shutdowns; on-call is compensated and rotated."
   }
  },
  "lseg": {
@@ -173852,37 +174138,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Prestige is rooted in enterprise IT consulting rather than cutting-edge, top-tier AI/ML research or FAANG-level compensation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT services, consulting, and business process outsourcing via project-based fees and multi-year managed service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, process-driven corporate culture with a strong operational and delivery focus, rather than a fast, high-innovation 'tech' culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily serves large global enterprises in the banking, insurance, healthcare, logistics, and retail sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k - $95k (US). Pay is generally average for IT consulting, lacking the high new-grad ceilings of elite tech firms."
   },
   "evidence_sha": "b7579afd8c28e4fc",
+  "generated_at": 1784868461,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "IT Services and IT Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Highlight how you thrive in structured, enterprise-scale environments; emphasize your ability to own deliverables completely without needing high-speed hype or elite-market new-grad salaries. Proactively ask current managers about project assignment to ensure you land on a modern tech stack rather than a slow, legacy client system that sacrifices personal time."
+  },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784675810,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "afb9ee08b5",
+    "3f4a907691"
+   ],
+   "value": "Headquartered in Bengaluru, India, with a significant corporate presence in Bangalore, India, and major regional offices globally including New York, NY."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To apply next-generation technology to help enterprises advance their businesses and deliver enhanced customer experiences."
+  },
   "name": "Mphasis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Pace is typically gated by large enterprise clients, standard corporate bureaucracy, and traditional delivery methodologies."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provides cloud migration, cognitive solutions (Xprity), and application management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, standard for large IT service providers."
   },
+  "refresh_after": 1790052461,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173892,7 +174223,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Time off is typically negotiated with project managers based on client delivery schedules."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (subsidiary of Blackstone). Operates globally with tens of thousands of employees."
   },
   "sources": [
    {
@@ -173926,14 +174262,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8f205f559d5e1e4a7a2e38db2c5aa293a7b72154e53b714749f596f7d3ac4a22JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuaW52ZXN0aW5nLmNvbS9lcXVpdGllcy9tcGhhc2lz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large global IT consulting firm, routinely sponsors work visas for international transfers to major tech hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mphasis is an IT services and consulting company that applies next-generation technology solutions to help enterprises transform their businesses. They generate revenue by providing cloud computing, cognitive processing, and application development outsourcing services to global clients."
+  },
+  "synthesized_evidence_sha": "b7579afd8c28e4fc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Involves cloud infrastructure architecture, modernizing legacy systems, and developing AI/data pipelines for enterprise scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675810,
   "web_search_url": "https://duckduckgo.com/?q=Mphasis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional IT services giant, Mphasis emphasizes enterprise scale over elite黑客 prestige or highly-paid new-grad data science roles. The environment is heavily process-oriented and client-driven, which may clash with a desire for a fast, non-bureaucratic, innovative tech culture; true learning velocity and work-life balance also vary significantly by specific client project."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Work-life balance depends entirely on the specific client engagement; some teams enjoy standard hours, while others face toxic crunches during go-lives."
   }
  },
  "msd": {
@@ -174487,47 +174844,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 - A standard digital health company applying AI in healthcare, unlikely to rival elite tech giants for cutting-edge AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Likely charges per consultation or via subscription fees for telehealth access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and patient-focused, likely collaborative."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Patients seeking remote medical care."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $130,000 base salary."
   },
   "evidence_sha": "388619f0626546f3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784868461,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Telemedicine / Digital Health"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Discuss the technical stack and AI initiatives to ensure the role meets top-tier prestige expectations and a fast-paced culture without mirroring toxic bureaucracy or burnout risks."
+  },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784675303,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Specific office locations not found in research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Improving access to healthcare through telemedicine."
+  },
   "name": "MyTelemedicine",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast, typical of a scaling telehealth company."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Virtual care platforms and telehealth consultation services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard new grad PTO of 15-20 days annually."
   },
+  "refresh_after": 1790052461,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific guaranteed company shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "Private company, likely in growth or expansion stage."
   },
   "sources": [
    {
@@ -174561,14 +175001,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=7902bdffb1f9e38e335a610356fbdf5557c4ca93e05af573e3a937b0f5a593b0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No evidence of visa sponsorship found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "MyTelemedicine is a digital health company that provides telehealth services. It makes money by facilitating virtual consultations between patients and licensed medical professionals."
+  },
+  "synthesized_evidence_sha": "388619f0626546f3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Involves building and maintaining the platform that connects patients with providers, likely using web and mobile technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675303,
   "web_search_url": "https://duckduckgo.com/?q=MyTelemedicine+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "71aaf6d22c",
+    "9e90874617",
+    "d4f8981a12"
+   ],
+   "value": "As a mission-driven telehealth company, it offers a meaningful environment for a new grad looking to balance high technical growth and competitive new-grad pay with a fast, innovative tech culture without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good WLB in the digital health sector, though hours may flex with product demand."
   }
  },
  "n1": {
@@ -240205,11 +240674,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240221,6 +240692,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784868461,
   "last_evidence_at": 1784677096,
   "name": "Solideon",
   "pace_of_work": {
@@ -240233,6 +240705,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784868581,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240276,7 +240749,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d38cd6f380e76b19f042627988def87e347ce4464918c6685d0ef37ef4107a7bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cuZnVlci1ncnVlbmRlci5kZS93aXNzZW4vdW50ZXJuZWhtZW4tZ3J1ZW5kZW4vZmlybWEtZ3J1ZW5kZW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677096,
   "web_search_url": "https://duckduckgo.com/?q=Solideon+company+careers+benefits",
