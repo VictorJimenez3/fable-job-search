@@ -79303,7 +79303,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79321,7 +79321,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784887315,
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784678333,
   "name": "Columbia Sportswear Company",
   "pace_of_work": {
@@ -79334,7 +79334,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784887555,
+  "retry_after": 1784888204,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91628,37 +91628,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low – no public research, publications, conference presence, or known AI/ML products."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The company likely earns revenue via management contracts (fixed fees or percentage of revenue), booking commissions, and upselling of ancillary services (spa, dining, activities). It may also license proprietary technology to other operators."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, operations-focused, hierarchical; not a tech-first or startup-like environment."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Resort owners and investors seeking professional management, travelers booking stays, and potentially third-party vendors partnering for services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base (US), below top-tier tech; equity unlikely."
   },
   "evidence_sha": "17113df46af3dfbc",
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Hospitality / Resort Management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If pursuing, focus on: (1) clarifying the actual scope of AI/data science work—likely analytics/reporting rather than model development; (2) asking about engineering culture, deployment pipelines, and innovation budget; (3) probing work-life balance policies, especially during high season; (4) understanding career progression for technical staff in a non-tech-native company; (5) verifying compensation benchmarks against hospitality tech standards."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784677761,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters possibly in the United States (suggested by domain names), with managed resorts in vacation destinations; exact locations not publicly disclosed."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver exceptional resort experiences through efficient management and innovative hospitality solutions, though no public mission statement was found."
+  },
   "name": "Daily Management Resorts",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, driven by seasonal resort operations and long project cycles typical of hospitality IT."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Resort management services, booking and reservation platforms, guest experience programs, operational consulting, and possibly proprietary software for property management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO plus standard US holidays; no public policy found."
   },
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91668,7 +91710,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; resort operations run year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (likely 50–500 employees), given the niche resort management focus and limited public presence."
   },
   "sources": [
    {
@@ -91702,14 +91749,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0a2bfde183bf3e33fac53281f7ff50f0dab06fbe6e300cc675b4cb1e87996476JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvbS91c2hvbWUvaW5kZXguaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No public information on visa sponsorship (H-1B, etc.); assume limited or case-by-case given company size."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Daily Management Resorts appears to be a hospitality management company that operates or oversees resort properties, likely providing services such as property management, guest experience coordination, and operational oversight. Revenue is presumably generated through management fees, booking commissions, and ancillary service charges."
+  },
+  "synthesized_evidence_sha": "17113df46af3dfbc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Some technical roles may exist for property management systems, data analytics for occupancy/pricing, and guest personalization tools, but AI/data science appears not to be a core focus based on available information."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677761,
   "web_search_url": "https://duckduckgo.com/?q=Daily+Management+Resorts+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role may not align with the candidate's top priorities: the company shows no evidence of elite AI/data science prestige, high new-grad tech pay, or a fast innovative tech culture. It operates in traditional hospitality management, which typically involves slower-paced, operations-heavy work rather than cutting-edge research or engineering. Work-life balance could be seasonal and demanding during peak periods. Technical learning opportunities are likely limited to domain-specific tools."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 – likely busy seasons with extended hours, limited guaranteed shutdowns, and on-call expectations for property issues."
   }
  },
  "dailypay": {
@@ -96137,11 +96205,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96153,6 +96223,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784677759,
   "name": "DebtBook",
   "pace_of_work": {
@@ -96165,6 +96236,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887844,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96208,7 +96280,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5ba4a21c2ab21498aa5741b91aff50408d400cfda32fc341226ae7e47d04da25JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cuZGVidGJvb2suY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677759,
   "web_search_url": "https://duckduckgo.com/?q=DebtBook+company+careers+benefits",
@@ -98064,37 +98136,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4 — Applied analytics in a public hospital; not an elite AI research or high-paying commercial DS destination."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Public authority funded by patient revenue (Medicaid, Medicare, commercial, self-pay), local tax subsidies (mill levy), state/federal grants, and philanthropy; operates an HMO (Denver Health Medical Plan) for additional capitation revenue."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Mission-driven, hierarchical, process-oriented, collaborative with clinicians, risk-averse, union-influenced; not a 'move fast' tech culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Residents of Denver and surrounding areas, with a focus on uninsured, underinsured, Medicaid, and Medicare populations; also serves as the medical safety net for the city and county."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base (public-sector grade), minimal equity/bonus; far below elite AI new-grad offers ($150k–$250k+)."
   },
   "evidence_sha": "55fba784c9afab56",
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Public Healthcare / Safety-Net Hospital System"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on healthcare domain knowledge (HIPAA, FHIR, Epic, CMS rules), ethics in vulnerable populations, and experience with messy real-world clinical data. Prepare for panel interviews with clinical stakeholders. Ask about data governance maturity, AI governance committee, and whether the role sits in IT, analytics, or a research institute."
   },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784583336,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Main campus near downtown Denver (777 Bannock St), 10+ community health centers across Denver neighborhoods, school-based clinics, and administrative offices throughout the city."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "To provide high-quality, cost-effective health care to the community, especially the vulnerable, and to train the next generation of health professionals."
+  },
   "name": "Denver Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow — regulatory, procurement, and clinical governance gates; projects measured in quarters/years, not sprints."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Acute hospital care (inpatient, emergency, trauma), primary care clinics, dental, behavioral health, public health services, emergency medical services (EMS), and the Denver Health Medical Plan (Medicaid/CHP+/Marketplace)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays (public-sector standard); accrual-based, increases with tenure."
   },
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98104,7 +98232,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed organizational shutdowns; clinical operations run 24/7/365. IT may have change freezes around holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Large, mature public health system (~8,000 employees, 500+ beds, 10+ community health centers, 300+ EMS personnel); not a startup."
   },
   "sources": [
    {
@@ -98138,14 +98273,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac9ac91ea59a807c87beab22b78d336d693b2cab52dc6b4b08ae410cf59f7be6JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZGVudmVyZ292Lm9yZy9Ib21l&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public entity, may sponsor H-1B visas (cap-exempt) for clinical and research roles; less common for pure tech/AI roles. No public data on green card sponsorship frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "Denver Health is an integrated public health system serving Denver, Colorado, operating a Level I trauma center, community health centers, and a health plan. It functions as the city's safety-net hospital, providing care regardless of ability to pay."
+  },
+  "synthesized_evidence_sha": "55fba784c9afab56",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8355a38b07"
+   ],
+   "value": "EHR optimization (Epic), population health analytics, clinical decision support, health plan data warehousing, EMS telemetry integration, and emerging AI/ML for readmission prediction and resource allocation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583336,
   "web_search_url": "https://duckduckgo.com/?q=Denver+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Denver Health is a mission-driven public safety-net system, not a high-paying elite AI shop. Prestige comes from clinical impact, not tech brand. Pay is public-sector scale (well below FAANG/new-grad AI packages). Culture is bureaucratic and regulated, not fast/innovative tech. Work-life balance is generally respected with unionized nursing and set shifts, but tech roles may face on-call and legacy-system constraints. Learning is deep in healthcare data, but pace is slow and process-heavy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — standard public-sector hours, limited after-hours for non-clinical tech, but on-call rotations exist for critical systems."
   }
  },
  "denver public schools": {
@@ -148257,41 +148417,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: High-impact applied AI at global scale with a single dominant client, respected in supply chain analytics but not a primary AI research lab or consumer-tech brand."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B service model: long-term contracts with QSR brands for end-to-end supply chain management, generating revenue through management fees, volume-based pricing, and technology platform subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, collaborative. Engineering culture is growing but sits within a traditional logistics/services company. Values stability, safety, and incremental innovation. Less 'move fast break things', more 'reliable delivery at scale'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customer is McDonald's (majority of revenue), along with other quick-service restaurant chains and foodservice operators globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$120,000 base + 10-15% bonus + RSU/equity (private company, liquidity limited). Total comp ~$110k-$140k. Competitive for Chicago market, below top-tier FAANG/Unicorn offers."
   },
   "evidence_sha": "307383869dac93bd",
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Supply Chain Management / Logistics / Foodservice B2B Services"
   },
-  "last_attempt_at": 1784887517,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect supply chain domain questions (forecasting, optimization), ML system design for large-scale logistics, SQL/coding proficiency, and behavioral questions on stakeholder management in a complex B2B environment. Prepare for case studies on demand planning or inventory reduction."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784677673,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Downers Grove, Illinois (Chicago metro). Global offices across North America, Europe, Asia-Pacific. Key tech hubs in Chicago, Dallas, and select international locations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative supply chain solutions that help foodservice brands serve their customers safely, efficiently, and sustainably."
+  },
   "name": "HAVI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Structured corporate cadence with quarterly planning cycles. Faster than traditional manufacturing but slower than tech startups. Project timelines measured in months."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include supply chain management, packaging solutions, logistics and distribution, predictive analytics for demand forecasting, and sustainability services. They also provide technology platforms for supply chain visibility and optimization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays. Typical for large US private companies. No public unlimited PTO policy."
   },
-  "retry_after": 1784887637,
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148301,7 +148499,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Standard holiday schedule observed. Some teams may have informal slow periods around major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private company (owned by the Pritzker family) with ~10,000+ employees globally and multi-billion dollar revenue. Not a startup; stable, established player."
   },
   "sources": [
    {
@@ -148335,14 +148538,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=41760f177214c99e6e84a83b6a006b29fdc5258cfba29b44a691949ff76d5a29JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL01pY3Jvc29mdFJld2FyZHMv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized technical roles given global operations and technical talent needs. No public data on cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HAVI is a global supply chain management and logistics company that primarily serves quick-service restaurant (QSR) brands, most notably McDonald's. It handles procurement, packaging, distribution, and supply chain optimization for foodservice clients."
+  },
+  "synthesized_evidence_sha": "307383869dac93bd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI work focuses on demand forecasting, inventory optimization, route optimization, supply chain analytics, and building internal ML platforms. Tech stack includes Python, SQL, cloud (AWS/Azure), and modern data engineering tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677673,
   "web_search_url": "https://duckduckgo.com/?q=HAVI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HAVI offers elite AI/data science impact at massive scale (serving McDonald's global supply chain) with strong new-grad compensation, but operates in a mature corporate environment rather than a fast-moving tech startup culture. Work-life balance is generally respected with structured hours, though innovation pace may be slower than pure-play tech firms. Good fit if you want supply chain AI prestige and stability over breakneck speed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. Generally sane hours (40-45 hrs/week typical), limited on-call for core platforms, respect for personal time. Occasional crunch during peak seasons or major rollouts."
   }
  },
  "havocai": {
@@ -216569,11 +216793,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216585,6 +216811,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784678735,
   "name": "Motorway",
   "pace_of_work": {
@@ -216597,6 +216824,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887844,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216670,7 +216898,7 @@
     "url": "https://jobs.ashbyhq.com/motorway/193ecf91-5c70-4880-bd3f-ccb0bfbbd070"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678735,
   "web_search_url": "https://duckduckgo.com/?q=Motorway+company+careers+benefits",
@@ -234375,11 +234603,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234391,6 +234621,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784677761,
   "name": "Ohio EPA",
   "pace_of_work": {
@@ -234403,6 +234634,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887844,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234446,7 +234678,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=81b76ef916e6014f4c4afb07fad3424ca4836d1df0771acad8172741b642a072JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2hpbw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677761,
   "web_search_url": "https://duckduckgo.com/?q=Ohio+EPA+company+careers+benefits",
@@ -235606,38 +235838,94 @@
  "om group inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Low — role is low-code government application development, not core AI/ML research or advanced data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Likely a government contracting model: winning federal contracts to deliver IT modernization, low-code/no-code automation, and data platform services, billing via cost-plus or fixed-price task orders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Structured, compliance-oriented, mission-focused on government service; less \"fast innovative tech culture\" and more process-driven delivery."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Probably U.S. federal government agencies or defense contractors, given the Secret Clearance requirement for a developer role in Rock Island, IL (near Rock Island Arsenal)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$90k base + modest benefits; cleared roles sometimes pay a premium but junior Power Platform roles are not high-comp AI/DS positions."
   },
   "evidence_sha": "b189f1d94a926af2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Government IT Services / Federal Contracting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Expect technical questions on Power Platform (Canvas Apps, Power Automate, Dataverse), scenario-based low-code architecture, and clearance eligibility verification. Little emphasis on advanced ML/DS algorithms or research."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784677760,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Rock Island, IL (onsite/hybrid likely due to clearance). Other locations unknown."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "OM GROUP INC.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, driven by government contract deliverables and compliance; likely structured sprints with documentation overhead."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Likely provides IT services, application development, and Microsoft Power Platform solutions for government or defense clients, based on a job posting for a Junior Power Platform Developer requiring Secret Clearance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 10 federal holidays (typical for small federal contractors); no public policy found."
   },
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235647,7 +235935,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed; some contractors observe Christmas–New Year shutdowns but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized government contractor (likely 50–500 employees). No public revenue or headcount data found."
   },
   "sources": [
    {
@@ -235691,14 +235984,43 @@
     "url": "https://jobright.ai/jobs/info/6a5a789d856af468ab008bca?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Unlikely to sponsor visas due to Secret Clearance requirement (typically requires U.S. citizenship)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "OM GROUP INC. appears to be a government contractor or technology services firm hiring for roles requiring security clearances, such as Power Platform developers. Public information about the company's core business, size, and mission is extremely limited in available sources."
+  },
+  "synthesized_evidence_sha": "b189f1d94a926af2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "Focus on Microsoft Power Platform (Canvas Apps, Power Automate, Dataverse), low-code/no-code development, and potentially data integration for government systems. Requires active Secret Clearance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=OM+GROUP+INC.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8b9d9b51c5"
+   ],
+   "value": "This role offers a rare entry point into cleared government work with modern low-code tools (Power Platform), but it is not an elite AI/data science role, lacks prestige signaling for top-tier ML careers, and clearance requirements limit flexibility. Work-life balance and learning pace are unknown but government contracting often involves structured hours and compliance overhead."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — government contracting often has defined hours but surge periods near contract deadlines; clearance jobs may limit remote flexibility."
   }
  },
  "omada health": {
@@ -244904,37 +245226,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong academic reputation (top 50 CS/AI), AAU member, notable institutes (ICDS), but not an industry AI powerhouse like Stanford/MIT/CMU for commercial placement."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public university funded by state appropriations, tuition/fees, research grants/contracts, philanthropy, auxiliary enterprises (housing, athletics), and medical center revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collegial, mission-driven, intellectually rigorous. Highly decentralized—culture varies dramatically by college, department, and lab. Bureaucracy is significant. Shared governance model gives faculty voice but slows decisions."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students (undergraduate, graduate, professional), research funding agencies (NSF, NIH, DOE, industry partners), alumni, and the Commonwealth of Pennsylvania."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 for research programmer/data scientist roles; $55,000-$70,000 for postdoc-like positions. Significantly below industry. Benefits (retirement, tuition remission) add value."
   },
   "evidence_sha": "01a25294856561d5",
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Research University"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess: (1) actual team funding stability (hard vs soft money), (2) publishing vs product expectations, (3) bureaucratic overhead for compute/data access, (4) mentorship structure for early-career researchers, (5) concrete work-hour norms in the specific lab/center."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784678787,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: University Park, PA. 20+ Commonwealth Campuses across Pennsylvania. Hershey (College of Medicine). Philadelphia (Dickinson Law). Global online (World Campus)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To serve as Pennsylvania's land-grant university through teaching, research, and service, improving lives locally and globally."
+  },
   "name": "PennState University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow by industry standards. Academic calendar drives cycles. Research pace depends on grant cycles and publication timelines. Administrative processes are bureaucratic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate and graduate degree programs across diverse disciplines, research grants and contracts, continuing education, athletic programs, and technology transfer/licensing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: ~22-25 vacation days + ~12 holidays + sick leave for staff. Faculty have no formal PTO; workload self-managed around academic calendar."
   },
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244944,7 +245308,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns. Winter break (approx. 2 weeks) and summer slowdown are customary but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public university system: ~100,000 students system-wide, ~25,000 employees, $8B+ annual budget."
   },
   "sources": [
    {
@@ -244978,14 +245347,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=08288bfd79d210a07bec3c31177f14d110699af7b9d191c519ac8f3dd35ea6d6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cubXNuLmNvbS8_bWt0PWVuLXVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established history of sponsoring H-1B, J-1, and O-1 visas for faculty, researchers, and specialized staff. New grad tech roles may have sponsorship depending on funding source and role type."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pennsylvania State University is a public research university system with multiple campuses across Pennsylvania. As a land-grant institution, it focuses on teaching, research, and public service."
+  },
+  "synthesized_evidence_sha": "01a25294856561d5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/data science roles exist in research institutes (ICDS, Institute for Computational and Data Sciences), academic departments, and applied research centers. Work spans fundamental research, interdisciplinary collaborations, and some industry partnerships."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678787,
   "web_search_url": "https://duckduckgo.com/?q=PennState+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite university prestige (AAU member, top-tier research) with meaningful mission impact. AI/data science roles in institutes like ICDS provide cutting-edge work, but pay lags industry significantly. Academic calendar and tenure-track paths offer structured work-life boundaries, though soft-money research roles can be high-pressure. Bureaucracy is substantial; innovation speed varies by unit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 for staff/tenure-track roles with clear boundaries; 5/10 for soft-money research positions with grant pressure. Academic calendar provides natural breaks. No guaranteed shutdowns."
   }
  },
  "pennsylvania state university": {
@@ -312667,11 +313057,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312683,6 +313075,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784583338,
   "name": "Tactile Medical",
   "pace_of_work": {
@@ -312695,6 +313088,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784887844,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312738,7 +313132,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9a008a2a3d04382bc1a10470026d9bec8f27d36fecfd8971b9bed09e1d278755JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbmdsaXNod29yZGNoYW1wcy5jb20vdGFjdGlsZS1tZWFuaW5nLWFuZC1leGFtcGxlcy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
   "web_search_url": "https://duckduckgo.com/?q=Tactile+Medical+company+careers+benefits",
@@ -341944,42 +342338,110 @@
  "untillabs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4cfc622bc9"
+   ],
+   "value": "Estimated: High/Niche Prestige - AI/ML applied to complex biological cryoprotectant and vitrification modeling represents a highly exclusive deep-tech niche, though it lacks the broad industry recognition of top-tier consumer AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Research and innovation-driven; likely operating on venture capital or deep-tech grant funding to achieve high-risk biological milestones before commercializing medical hibernation technology."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Estimated: Highly mission-driven and deeply scientific. The environment is centered around an ambitious, multi-disciplinary goal, requiring tight collaboration between ML engineers, biologists, and hardware developers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Currently a research-focused organization targeting scientific and medical breakthroughs rather than commercial consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k - $140k AUD base salary. Deep-tech startups often offer competitive new-grad compensation alongside equity, though moonshot endeavors may redistribute some cash to equity."
   },
   "evidence_sha": "2b068d52ce38b134",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784887517,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Biotechnology / Deep-Tech Engineering"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Probe specifically for actual work-life balance expectations and guaranteed shutdowns. Moonshot startups often demand intense hours that conflict with a strict avoidance of burnout; ask the team to define their sprint pace and weekend expectations. Inspect their AI/ML implementation closely to ensure you will be doing top-tier data science work rather than just generalized software engineering."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784678466,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "974c9117bb",
+    "dd76deaaea",
+    "4225fcd563"
+   ],
+   "value": "Specific office locations are not listed in available sources, but references to Australian legal handbooks suggest operations within Australia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "To achieve a “pause button” for biology through the successful cryopreservation and rewarming of biological tissue."
+  },
   "name": "UntilLabs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Estimated: Fast-paced and highly experimental. As a moonshot company assembling teams to solve complex biological challenges, the startup environment is likely to prioritize rapid iteration and innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Perfusion systems, cryoprotectant formulations, controlled-rate freezers, and vitrification and rewarming hardware/protocols for human tissue and whole-body cryopreservation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard annual leave, based on standard early-stage tech startup packages in Australia."
   },
-  "retry_after": 1784887637,
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -341988,8 +342450,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Estimated: Unknown. No explicit guaranteed shutdown policies are mentioned in company postings."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Early-stage growth; actively assembling an interdisciplinary team to build out core engineering and medical hibernation teams."
   },
   "sources": [
    {
@@ -342043,14 +342516,50 @@
     "url": "https://jobs.lever.co/until/b953a7f9-3024-43c2-abed-45cf5a91ddd3"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Sponsorship details are not explicitly posted."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Until is a moonshot biotech company building a “pause button” for biology by developing whole-body cryopreservation and medical hibernation technologies. They research and engineer perfusion systems, cryoprotectants, and vitrification hardware to safely freeze and rewarm tissue, starting with rodent models."
+  },
+  "synthesized_evidence_sha": "2b068d52ce38b134",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Interdisciplinary engineering and science including ML/AI for biological modeling, alongside hardware engineering for perfusion systems, controlled-rate freezers, and vitrification equipment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678466,
   "web_search_url": "https://duckduckgo.com/?q=UntilLabs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "This role offers the unique prestige of contributing to a highly publicized, potentially world-changing biological moonshot. For a candidate seeking an elite, fast-paced tech culture, a deep-tech startup environment will accelerate technical learning and career growth far faster than slow-moving corporate bureaucracy. The meaningful mission and cutting-edge technical development closely align with your desire for fast, innovative work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b7a5196ec3",
+    "4cfc622bc9"
+   ],
+   "value": "Estimated: Moderate/Low. Moonshot startups driven by high technical risks often require sustained intense effort from small, interdisciplinary teams, which may challenge strict work-life boundaries."
   }
  },
  "us conec": {
@@ -367815,52 +368324,125 @@
  "zscaler": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: High prestige in applied security AI due to access to the world's largest security data lake."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "SaaS/Cloud security subscription model providing Zero Trust access and protection to enterprises."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Culture of execution centered on customer obsession, collaboration, ownership, and accountability. Describes itself as an AI-forward enterprise constantly pushing the envelope."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Enterprises seeking secure digital transformation and protection from cyberattacks and data loss."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: High, competitive with top-tier cloud security companies."
   },
   "evidence_sha": "c4adb83109dc81fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784887724,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784887517,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Cybersecurity and Cloud Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Candidates should balance the appeal of working with massive data lakes against the potential bureaucracy of a large public enterprise, probing for autonomous technical learning opportunities and work-life balance expectations during interviews."
+  },
+  "last_attempt_at": 1784887724,
   "last_evidence_at": 1784678380,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6a29826a1b"
+   ],
+   "value": "Cloud-native/Global operations, heavy presence in India."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "To accelerate digital transformation to ensure customers can be more agile, efficient, resilient, and secure."
+  },
   "name": "Zscaler",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: Fast-paced, execution-focused culture centered on customer obsession, collaboration, ownership, and accountability."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Cloud-native Zero Trust Exchange platform powered by the world's largest security data lake. The platform protects customers from cyberattacks and data loss."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: 20-25 days, standard for large enterprise tech companies."
   },
-  "retry_after": 1784887637,
+  "refresh_after": 1790071724,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: No widespread guaranteed shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Large, established public enterprise cybersecurity company."
   },
   "sources": [
    {
@@ -367904,14 +368486,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=e892e6253279be339d1b231118d828964aba9a3784d0a42487a9d4fad4384bf9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly93d3cuenNjYWxlci5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: Public tech company of this size typically sponsors work visas for specialized technical roles, but specific policy not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Zscaler accelerates digital transformation for its customers to ensure they can be more agile, efficient, resilient, and secure. It operates a cloud-native Zero Trust Exchange platform that securely connects users, devices, and applications in any location."
+  },
+  "synthesized_evidence_sha": "c4adb83109dc81fc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Building and leveraging an AI-forward enterprise utilizing the world's largest security data lake to power cloud-native security platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678380,
   "web_search_url": "https://duckduckgo.com/?q=Zscaler+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Zscaler operates one of the world's largest security data lakes, offering AI/DS candidates massive scale and data volume to tackle real-world cybersecurity challenges, positioning it as a high-impact, mission-driven technical environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9e6b6171b5"
+   ],
+   "value": "Estimated: Moderate; expected to be sustainable but driven by accountability and execution in a public tech environment."
   }
  },
  "zurich north america": {
