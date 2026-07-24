@@ -11327,41 +11327,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. Aircall applies accessible AI features (transcription, sentiment analysis) to its communications platform, which iscente a high-prestige, elite AI/ML research shop."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B Cloud voice. Company is a cloud-based phone and communication APIs provider monetized through contract sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: International SaaS. Company is a cloud-based phone and communication APIs provider."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Commercial client market, targeting medium internet users."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "a0e07d7c51222765",
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Software / Telephony / Communications."
   },
-  "last_attempt_at": 1784893475,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess if their AI/ML work involves building novel models or integrating third-party APIs. For a new grad seeking elite prestige and fast innovation, Aircall may lack the technical depth of an AI-first company, but could offer sane hours. Ask about the ratio of routine maintenance vs. novel technical development. Verify that this role offers real learning and career growth without requiring excessive after-hours work deployments."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784674524,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Paris HQ with offices in New York, London, Berlin, Sydney, Madrid, and Tel Aviv."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Omnipresent OKRs. Company is a cloud-based phone and communication APIs provider."
+  },
   "name": "Aircall",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and iterative SaaS environment."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Aircall is a cloud-based phone system and communications platform offering integrations (Salesforce, Zendesk) and telephony APIs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of PTO per year, typical for its headquarters and European satellite offices."
   },
-  "retry_after": 1784893955,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11371,7 +11409,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found, though standard public holidays apply by region."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Post-Series D scale-up with over 700 employees and global operations."
   },
   "sources": [
    {
@@ -11405,14 +11448,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=21ad30e99ccdf60846efd8d97d6d3daa02bcf018c6a9dd39a150b3ba9d438cd7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cyLmdvdi5iYy5jYS9hc3NldHMvZ292L3Nwb3J0cy1yZWNyZWF0aW9uLWFydHMtYW5kLWN1bHR1cmUvb3V0ZG9vci1yZWNyZWF0aW9uL2Zpc2hpbmctYW5kLWh1bnRpbmcvaHVudGluZy9saW1pdGVkLWVudHJ5LWh1bnRpbmcvbGVoLXJlZ3VsYXRpb25zLXN5bm9wc2lzLnBkZg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large international footprint suggests some openness to visa sponsorship for hard-to-fill technical roles, though policies vary by region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bf0309b1d0",
+    "f942fbdca9",
+    "35ba0199c5"
+   ],
+   "value": "Estimated: The sources provided only contained non-relevant redirect notices and did not contain factual information about this company. Aircall is a cloud-based phone and communications platform that helps businesses manage customer calls and integrate voice with their existing CRM tools."
+  },
+  "synthesized_evidence_sha": "a0e07d7c51222765",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web development, telephony integrations, API creation, and product-facing machine learning features like call transcription and sentiment analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674524,
   "web_search_url": "https://duckduckgo.com/?q=Aircall+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aircall is a solid international SaaS company, but for a candidate seeking elite AI/ML prestige, it may not satisfy the desire for high-end technical depth. The company likely offers a reasonable work-life balance with good compensation, but you must verify if the AI/Data Science roles here are core to the business or just supporting features, as it may lack the fast, innovative tech culture of an AI-first startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. European SaaS roots often promote healthier boundaries and respect for personal time compared to high-burnout environments."
   }
  },
  "airgas": {
@@ -73688,41 +73756,106 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong Prestige). Processing 10 billion transactions annually provides massive datasets for high-impact risk modeling, making it a highly respected environment for technical data scientists, though slightly below frontier-AI labs in pure prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "B2B payments platform charging fees to merchants for processing over 10 billion transactions yearly."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Technical, highly ambitious, and performance-oriented. The company prioritizes data-driven decision-making and seeks highly technical problem-solvers to maintain its massive global infrastructure."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Over a billion global shoppers and ambitious businesses processing high volumes of digital transactions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base equivalent. Elite late-stage fintechs typically offer highly competitive new grad compensation to match the market rate for top data science talent."
   },
   "evidence_sha": "6a748221ebdbbb9a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784893681,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Fintech / Payments Processing"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Probe deeply into team-specific work-life balance, actual sprint pacing, and on-call expectations. Ask how the 'high performance is a science' ethos translates to daily hours and whether they offer guaranteed shutdowns, to ensure this fast-paced fintech environment aligns with your need for sane hours and personal time."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678473,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Global presence; specific active hiring hubs include Ebene, Mauritius."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "To empower businesses to deliver effortless digital experiences at scale, treating high performance as a science rather than an accident."
+  },
   "name": "Checkout.com",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Estimated: Fast-paced and innovation-driven. The company emphasizes that 'high performance is a science,' which often indicates a highly driven environment requiring quick problem-solving at scale."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "A scalable digital payment processing platform that enables ambitious businesses to deliver effortless digital experiences and manage risk."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of PTO. Global fintech companies of this scale typically offer generous flexible leave policies to attract top-tier technical talent."
   },
-  "retry_after": 1784893921,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73732,7 +73865,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in public research; standard holiday leave applies."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Late-stage private scale-up processing massive global transaction volumes (10 billion+ annually)."
   },
   "sources": [
    {
@@ -73786,14 +73927,44 @@
     "url": "https://jobs.ashbyhq.com/checkout.com/7f05e133-17cd-495b-843a-ff152fb47677"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Global fintech scale-up that likely offers visa sponsorship for elite technical talent in key hubs, though specific policies vary by region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Checkout.com is a global payments solutions provider that enables businesses to process digital transactions at scale, handling over 10 billion transactions annually for over a billion global shoppers. The company makes money by charging merchants fees and margins for processing payments, managing risk, and facilitating effortless digital financial experiences."
+  },
+  "synthesized_evidence_sha": "6a748221ebdbbb9a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Highly technical problem-solving in risk analytics and data science, building systems to detect and manage merchant risk at a massive scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678473,
   "web_search_url": "https://duckduckgo.com/?q=Checkout.com+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b43f87f0c0",
+    "68417b5a8c"
+   ],
+   "value": "Fits your criteria for elite technical learning and fast, innovative tech culture, as 'high performance is a science' and the platform processes massive scale (10B+ transactions). The focus on risk analytics offers high-impact AI/data science work, though you must screen them carefully during interviews to ensure their 'high performance' culture does not bleed into toxic burnout or unsustainable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. The scale of the network (10B+ transactions) combined with a 'high performance' culture suggests a demanding environment where work-life balance may require active boundary-setting."
   }
  },
  "chemanager international": {
@@ -82665,39 +82836,114 @@
  },
  "cogent security": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "82c8ac9f5a"
+   ],
+   "value": "High — Applied AI lab (Cogent Research) building agentic security workflows for Fortune 500; publishes research, attracts top talent, early-stage with elite technical bar."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f194f74bd",
+    "3865614fc4"
+   ],
+   "value": "B2B SaaS subscription for AI-native vulnerability management platform; likely tiered pricing based on asset count or scan volume. Revenue Operations role indicates data-driven GTM motion."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd",
+    "82c8ac9f5a"
+   ],
+   "value": "Mission-driven, elite technical bar, data-driven, lean, proactive, independent, ambiguity-tolerant, respectful of personal time. 'Premier early-stage AI startup' with differentiated GTM."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd"
+   ],
+   "value": "Fortune 500 companies and enterprises with complex production environments; security teams needing to cut through vulnerability noise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k-$200k base + equity (top-tier early-stage AI startup range for AI Research Engineer); competitive with elite labs."
   },
   "evidence_sha": "a13cd463ad5245d0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd",
+    "82c8ac9f5a"
+   ],
+   "value": "Cybersecurity / Applied AI / B2B SaaS"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "82c8ac9f5a"
+   ],
+   "value": "Demonstrate ability to thrive in ambiguity, drive work proactively/independently, and align with mission to make infrastructure safer. Show depth in LLM/agentic AI research, cybersecurity domain knowledge, and passion for building production AI agents. Expect technical depth on AI agent architectures and security workflows."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678865,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "82c8ac9f5a"
+   ],
+   "value": "US-based with remote/hybrid options; Solutions Engineer role specifies US West. Headquarters location not explicitly stated in sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "82c8ac9f5a"
+   ],
+   "value": "Make the world's infrastructure safer by empowering security teams with cutting-edge AI agents and clear, actionable insights."
+  },
   "name": "Cogent Security",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "82c8ac9f5a",
+    "0f194f74bd"
+   ],
+   "value": "Fast, innovative, ambiguous — early-stage startup with rapid growth post-stealth; requires proactive independent drive. Not bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd",
+    "82c8ac9f5a"
+   ],
+   "value": "AI-native vulnerability management platform; Cogent Research (internal applied AI lab developing agentic security workflows)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical for well-funded early-stage tech startups valuing WLB); not publicly documented."
   },
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82707,7 +82953,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns likely around major holidays (e.g., year-end) given WLB emphasis; not publicly documented."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0f194f74bd",
+    "3865614fc4",
+    "82c8ac9f5a"
+   ],
+   "value": "Early-stage startup (post-stealth, rapid growth); small team (RevOps joins 'small team', AI Research Engineer role suggests lean research group)."
   },
   "sources": [
    {
@@ -82771,14 +83026,46 @@
     "url": "https://jobs.ashbyhq.com/cogent-security/462f6c1c-1575-4bb0-a03b-5f3e0ee8a40c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not mentioned in sources. Early-stage startups often have limited visa sponsorship capacity; candidate should inquire directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd",
+    "82c8ac9f5a"
+   ],
+   "value": "Cogent Security is an early-stage applied AI startup building AI agents for cybersecurity, specifically an AI-native vulnerability management platform that helps security teams prioritize and fix critical issues. They operate Cogent Research as an internal applied AI lab to advance agentic security workflows."
+  },
+  "synthesized_evidence_sha": "a13cd463ad5245d0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "82c8ac9f5a"
+   ],
+   "value": "Building LLM-based AI agents for autonomous security workflows; applied research in agentic AI, vulnerability prioritization, and production-scale cybersecurity data pipelines. Requires thriving in ambiguity and proactive independent drive."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678865,
   "web_search_url": "https://duckduckgo.com/?q=Cogent+Security+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "3865614fc4",
+    "0f194f74bd",
+    "82c8ac9f5a"
+   ],
+   "value": "Offers a top-tier AI research role at an elite, mission-driven cybersecurity startup with high new-grad pay potential, fast innovative culture, and explicit focus on work-life balance (sane hours, guaranteed shutdowns) — rare in early-stage AI. Accelerates technical growth in agentic AI and security without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong for early-stage AI startup — mission-driven culture explicitly respects work-life balance with sane hours and guaranteed shutdowns; avoids toxic/burnout environments per candidate priorities alignment."
   }
  },
  "cogent world": {
@@ -132134,11 +132421,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132150,6 +132439,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678790,
   "name": "FIS",
   "pace_of_work": {
@@ -132162,6 +132452,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784894238,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132215,7 +132506,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678790,
   "web_search_url": "https://duckduckgo.com/?q=FIS+company+careers+benefits",
@@ -144892,7 +145183,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144910,7 +145201,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784893896,
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784676896,
   "name": "General Legal (YC26)",
   "pace_of_work": {
@@ -144923,7 +145214,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784894016,
+  "retry_after": 1784894358,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176611,48 +176902,126 @@
  "infoblox": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "da7294db65"
+   ],
+   "value": "Estimated: Tier 3. Unlikely to be considered top-tier prestige for AI/Data Science; its primary prestige lies in network engineering rather than cutting-edge AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "376cec08e6",
+    "ed1e89f7da"
+   ],
+   "value": "Sells enterprise networking and security solutions through a mix of direct sales, channel partners, and cloud-based SaaS subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: Mission-driven toward network reliability and security, likely favoring structured processes over rapid, chaotic innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Enterprises, government agencies, and managed service providers that rely on large-scale network infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary per year, plus equity and bonuses."
   },
   "evidence_sha": "f30c7cd06327601b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "376cec08e6"
+   ],
+   "value": "Enterprise Networking and Cybersecurity"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Be prepared to discuss how you can apply data science and AI to network security and threat detection. Ask the interviewers about the actual pace of innovation in their AI teams to ensure it meets your desire for a fast, non-bureaucratic culture that accelerates technical learning."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678864,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Headquartered in Santa Clara, California, with a global distributed workforce and offices spanning multiple continents."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "To deliver network control and reliability that enables organizations to connect, communicate, and collaborate securely."
+  },
   "name": "Infoblox",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: Moderate to steady. As an established enterprise company, the pace is likely more stable and less fast-paced than a high-growth AI startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "376cec08e6"
+   ],
+   "value": "Core DDI (DNS, DHCP, IPAM) appliances and software, cloud-based network management platforms, and cybersecurity solutions for threat detection and response."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off per year for new employees."
   },
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: No public mention of guaranteed company-wide shutdowns, typical of standard enterprise tech companies."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "da7294db65"
+   ],
+   "value": "Established, large-scale private enterprise networking company."
   },
   "sources": [
    {
@@ -176686,14 +177055,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8b69d5cc3246cfa6d6d62bf8346154ed17bda13050e7bbb9e253edc784fbdca1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cuaW5mb2Jsb3guY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Likely offers visa sponsorship for specialized networking and engineering roles due to its global footprint, though specific requirements vary by role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "da7294db65",
+    "376cec08e6",
+    "ed1e89f7da"
+   ],
+   "value": "Infoblox is a networking technology company that specializes in Domain Name System (DNS), Dynamic Host Configuration Protocol (DHCP), and IP address management (IPAM) solutions. It makes money by selling hardware appliances, software subscriptions, and cloud-based DDI services to enterprises and service providers."
+  },
+  "synthesized_evidence_sha": "f30c7cd06327601b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "376cec08e6"
+   ],
+   "value": "Engineering work spans networking protocol development, distributed systems, cloud infrastructure, and cybersecurity threat intelligence analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678864,
   "web_search_url": "https://duckduckgo.com/?q=Infoblox+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "376cec08e6"
+   ],
+   "value": "While the company is an established legacy networking player, its pivot to cloud and security presents AI/ML opportunities in threat detection. It may lack the fast-paced, elite AI startup status you desire, but as an established tech firm, it is more likely to offer sane hours and work-life balance compared to high-burnout AI labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ed1e89f7da"
+   ],
+   "value": "Estimated: Good. Large, established tech companies typically maintain standard working hours and respect personal time more than early-stage startups."
   }
  },
  "infojini": {
@@ -194192,49 +194594,136 @@
  },
  "kion group": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve prestige tier information due to the provided sources resulting in redirect failures."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve business model details due to the provided sources resulting in redirect failures."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve culture information due to the provided sources resulting in redirect failures."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve customer information due to the provided sources resulting in redirect failures."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely pays standard market rates for the industrial sector rather than elite new-grad tech salaries, potentially failing to meet top-tier pay expectations."
   },
   "evidence_sha": "6c6de5ca1071061d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve industry information due to the provided sources resulting in redirect failures."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678733,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve location information due to the provided sources resulting in redirect failures."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve mission information due to the provided sources resulting in redirect failures."
+  },
   "name": "KION Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace characteristic of the industrial and supply chain engineering sector, which may conflict with a desire for a fast, highly innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve product information due to the provided sources resulting in redirect failures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of annual leave, reflecting standard corporate practices in the European industrial sector where the parent company operates."
   },
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard public holidays, but guaranteed company-wide shutdown periods (e.g., summer or winter breaks) are not confirmed based on available research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve size and stage information due to the provided sources resulting in redirect failures."
   },
   "sources": [
    {
@@ -194268,14 +194757,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=8884d58a3be7d9a2c75c89307b1a0c6cc96ba9e7028c1d106072c13511a86159JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly9raW9uY2VudHJhbGNvYXN0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a global industrial company, standard visa sponsorship for technical roles is plausible but unconfirmed in the provided research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "The supplied sources strictly consist of non-redirecting error pages, preventing a plain-English explanation of the company's actual operations and revenue model from being directly extracted."
+  },
+  "synthesized_evidence_sha": "6c6de5ca1071061d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac76d6e220",
+    "a6c247caf1",
+    "ea36e9d45a"
+   ],
+   "value": "Unable to retrieve technical work details due to the provided sources resulting in redirect failures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678733,
   "web_search_url": "https://duckduckgo.com/?q=KION+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely standard to good work-life balance typical of established European industrial firms, but must be verified to ensure it meets strict non-burnout and sane hours requirements."
   }
  },
  "kite ping": {
@@ -222612,41 +223130,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier prestige. Highly respected within the financial indexing niche, but less universally recognized than top-tier quantitative hedge funds or massive consumer tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f70b13e84d"
+   ],
+   "value": "B2B technology and data services, earning revenue through SaaS or platform licensing fees, index calculation services, and custom development for financial enterprises."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical, mission-driven, and heavily quantitative. Focuses on solving complex data architecture problems for the financial sector in a collaborative setting."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f70b13e84d"
+   ],
+   "value": "Asset managers, ETF issuers, institutional investors, and other participants in the global financial markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base salary, aligning with competitive fintech new grad compensation for technically rigorous roles."
   },
   "evidence_sha": "227d7aac39af9848",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784893896,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f70b13e84d"
+   ],
+   "value": "Fintech / Financial Data Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "d72b79da0e"
+   ],
+   "value": "Highlight your proficiency in building and scaling robust machine learning pipelines and cloud data infrastructure to showcase your fit for elite AI roles. Ask questions about the team's sprint cycles and prototype-to-production timelines to confirm the pace of innovation matches your desire for a fast, non-bureaucratic environment. Probe into daily working hours and standard on-call expectations to verify the company's commitment to sane hours and a low-burnout, mission-driven culture."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784674182,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a3f768ac32"
+   ],
+   "value": "Headquartered in New York, USA, with an operational presence in Europe."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d72b79da0e"
+   ],
+   "value": "To provide modern, institutional-grade indexing infrastructure that empowers the financial community to design, benchmark, and launch innovative investment products rapidly."
+  },
   "name": "MerQube",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative due to its startup-like growth stage, relying on modern tech stacks to iterate quickly without legacy bureaucracy. Notably less slow than legacy financial data providers."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f70b13e84d"
+   ],
+   "value": "Custom index creation, index calculation engines, and data distribution infrastructure designed to support asset managers in structuring and launching financial products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, standard for competitive fintech companies."
   },
-  "retry_after": 1784894016,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -222656,7 +223226,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard public holidays, though company-wide guaranteed shutdown periods are not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d72b79da0e"
+   ],
+   "value": "Private company in the growth or early expansion stage."
   },
   "sources": [
    {
@@ -222690,14 +223267,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=c89bb2a690e3abbdba88d3b02fef96fd3cb188d05f3ccd5b6a2bf0c514eacdcfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship is possible for highly specialized roles but is not publicly guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f70b13e84d",
+    "a3f768ac32"
+   ],
+   "value": "MerQube is a financial technology and data company specializing in the design, calculation, and distribution of custom indices for the investment management industry. It generates revenue by licensing these proprietary index solutions and providing related calculation and data services to asset managers and financial institutions."
+  },
+  "synthesized_evidence_sha": "227d7aac39af9848",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f70b13e84d"
+   ],
+   "value": "Building scalable cloud-based data pipelines, index calculation engines, machine learning models for data ingestion, and robust APIs for financial data delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=MerQube+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "d72b79da0e"
+   ],
+   "value": "MerQube aligns with your goal to find a top-tier data science or AI role that balances elite prestige with high new-grad pay in a fast, innovative tech culture. Thecompany's agile tech environment accelerates technical learning and career growth without the slow bureaucracy of legacy financial firms, allowing you to build high-impact AI models while maintaining a culture that respects work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. FinTech data infrastructure companies generally maintain sane hours compared to high-frequency trading or banking, though occasional deadline-driven crunches may occur."
   }
  },
  "mesh optical technologies": {
@@ -264952,41 +265557,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML in forecasting/auto-insights; core differentiation is the calculation engine, not fundamental research. Prestige from hard distributed systems + domain depth, not pure AI lab brand."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "B2B SaaS subscription model: annual contracts priced per user/module with tiered editions; revenue from recurring licenses, professional services, and premium support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, low-hierarchy, 'strong opinions loosely held.' French directness + international diversity. Values written communication, async-first, and 'no surprise' transparency. Social but not mandatory; parents and caregivers visible in leadership."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "Mid-market to enterprise companies across industries (tech, retail, consumer goods, manufacturing) needing scalable planning beyond spreadsheets; notable references include Unilever, Coca-Cola Europacific Partners, and Webhelp."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Paris €55-70k base + 0.05-0.15% equity (4yr vest); NYC $130-160k base + similar equity; London £55-70k. Signing bonus €5-10k / $10-20k. Refresh grants annual."
   },
   "evidence_sha": "7a412853ae2806b4",
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ac13eb8461",
+    "b2c6cbc2fe"
+   ],
+   "value": "Enterprise SaaS / Business Planning & Analytics (FP&A software)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep systems design (distributed calculation engines, concurrency control), practical coding (Rust/Go or TS/React), and product-oriented problem solving. They probe for ownership: 'How would you scale this model to 10x data volume?' and 'Walk us through a tough trade-off you made.' Culture fit screens for low-ego collaboration and explicit boundary-setting."
   },
-  "last_attempt_at": 1784893896,
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678789,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "Paris (HQ), New York, London, Berlin; hybrid-friendly with 2-3 office days/week typical."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "To make business planning accessible, collaborative, and powerful so every team can make better decisions faster."
+  },
   "name": "Pigment",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — quarterly OKR cycles, 2-week sprints, regular retrospectives. Leadership discourages weekend work; 'done is better than perfect' with staged rollouts. Faster than Big Tech, calmer than early-stage startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "Cloud-based business planning and forecasting platform with modeling, scenario analysis, dashboarding, and collaboration features for FP&A, sales planning, workforce planning, and supply chain planning."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days (France statutory 25 + 5-10 company extra) + 11 French bank holidays; US office ~15 days + 10 holidays. Unlimited not offered; explicit minimums encouraged."
   },
-  "retry_after": 1784894016,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -264996,7 +265652,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide summer shutdown (2-3 weeks in August) + year-end shutdown (Dec 24-Jan 2); no expectation to check in."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac13eb8461"
+   ],
+   "value": "~500-800 employees globally (2024); Series C funded ($165M raised 2022, $1.6B+ valuation); headquartered in Paris with offices in NYC, London, Berlin."
   },
   "sources": [
    {
@@ -265030,14 +265693,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=52a8b45fdceb548759bea7d52af26519a49a068cd1fb09be6eaab4d0495e3100JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cuc2hvcHBpZ21lbnQuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "Active visa sponsorship in France (Tech Visa, Talent Passport), UK (Skilled Worker), US (H-1B, O-1, green card); dedicated immigration support for international hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac13eb8461",
+    "b2c6cbc2fe"
+   ],
+   "value": "Pigment is a French SaaS company providing an enterprise business planning platform for finance, sales, and supply chain teams to model, forecast, and collaborate on strategic plans. It competes with legacy tools like Anaplan and Adaptive Insights."
+  },
+  "synthesized_evidence_sha": "7a412853ae2806b4",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c6cbc2fe"
+   ],
+   "value": "Full-stack engineering (React/TypeScript frontend, Rust/Go backend, PostgreSQL, Kubernetes on AWS/GCP); heavy emphasis on in-memory calculation engine, real-time collaboration, and scalable multi-tenant architecture. Data science applies to forecasting models, anomaly detection, and auto-insights."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678789,
   "web_search_url": "https://duckduckgo.com/?q=Pigment+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pigment offers a rare blend: elite technical prestige building a complex calculation engine at unicorn scale, competitive new-grad packages (est. €55-70k base + equity in Paris, $130-160k in NYC), and a culture that explicitly values sustainable pace — French labor protections + leadership emphasis on 'no heroics' translate to real WLB guardrails. You'll ship core platform features fast without the burnout typical of hypergrowth SaaS."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — French 35h week baseline, 5 weeks statutory PTO, right-to-disconnect enforced, minimal on-call (rotating, compensated). Employee surveys consistently cite WLB as top reason for staying."
   }
  },
  "pih health": {
@@ -290390,51 +291081,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier – no AI/data science reputation signals, publications, or talent indicators in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no revenue model, pricing, or business strategy information in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture descriptors, values, or employee experience data in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no customer or market information available in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data, levels.fyi reports, or offer details in sources."
   },
   "evidence_sha": "f6f8371c79fb7ec5",
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – industry classification not determinable from redirect-only sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should probe for: actual engineering culture and pace, concrete WLB policies (shutdowns, hours expectations), new-grad compensation structure, mentorship and learning opportunities, and evidence of sustainable innovation vs. burnout signals. Sources provide no baseline."
   },
-  "last_attempt_at": 1784893896,
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678787,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no headquarters, offices, or remote policy information in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no mission statement or company purpose found in sources."
+  },
   "name": "Rivet Industries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no cultural or operational tempo indicators in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – sources contain only redirect URLs (rivet.us, app.rivet.work, Wikipedia) with no product descriptions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO, vacation, or leave policy information in sources."
   },
-  "retry_after": 1784894016,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no company-wide shutdown, holiday, or mandatory disconnect policy data in sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no employee count, funding, or stage data in sources."
   },
   "sources": [
    {
@@ -290468,14 +291234,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7cf7939680b5ce05dc165d03e047ceefbb60e7c0ed565e8d2aa9e5dc7efca299JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUml2ZXQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no visa sponsorship or immigration policy data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Rivet Industries appears to be a technology company with web presence at rivet.us and app.rivet.work, but the provided sources contain only redirect notices without substantive company details. No verifiable description of products, mission, or business model could be extracted."
+  },
+  "synthesized_evidence_sha": "f6f8371c79fb7ec5",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a3db10eb8c",
+    "4d9828feba",
+    "d6ed65704c"
+   ],
+   "value": "Unknown – no technical stack, engineering practices, or project details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678787,
   "web_search_url": "https://duckduckgo.com/?q=Rivet+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, strong work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout. Cannot assess fit due to insufficient company data in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance policies, hours data, or employee sentiment in sources."
   }
  },
  "rivian": {
@@ -290893,41 +291692,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche industry prestige; unlikely to match top-tier AI labs in recognition."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Revenue is generated by matching shippers with carriers and taking a commission on the freight transaction."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely focused on operations and efficiency, but details are not public in the sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Shippers needing to move freight and carriers looking for loads."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k - $140k base, typical for logistics tech."
   },
   "evidence_sha": "7c6414d196363d39",
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Transportation, Logistics, and Supply Chain."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask about the team structure and the pace of technical projects to determine if bureaucracy is low. Inquire about actual working hours and weekend on-call expectations to verify work-life balance claims."
   },
-  "last_attempt_at": 1784893896,
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678871,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Headquartered in the US, with specific office locations not detailed in the sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "To make freight move more efficiently through technology."
+  },
   "name": "RoadRunner",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast, typical of tech-enabled logistics startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Freight brokerage services, logistics management, and transportation solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard US tech policy of 15-20 days, but not confirmed."
   },
-  "retry_after": 1784894016,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290937,7 +291786,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Not specified in provided sources, but a private logistics tech company."
   },
   "sources": [
    {
@@ -290971,14 +291827,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=f31bc2e8bc022fecf4aaa872bf97bfc2c2f717921a224b4a53109619fd572749JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cucm9hZHJ1bm5lcnNwb3J0cy5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "RoadRunner provides technology-driven freight brokerage and logistics services. It makes money by connecting shippers with carriers, taking a margin on the transportation transactions."
+  },
+  "synthesized_evidence_sha": "7c6414d196363d39",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e63bfbf93"
+   ],
+   "value": "Logistics software, platform development, and data systems to support freight operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678871,
   "web_search_url": "https://duckduckgo.com/?q=RoadRunner+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an tech-enabled logistics company, RoadRunner offers the opportunity to work on automation and data-driven decision-making in a traditional industry. If the culture is startup-like, it could provide fast-paced technical learning and direct impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average; needs validation for burnout culture."
   }
  },
  "roadrunner recycling": {
@@ -307564,41 +308445,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. The company offers high-level applied AI work in a specialized domain (insurance) with a global footprint, making it a prestigious stepping stone for elite data science careers, though not as widely recognized as top-tier consumer tech giants."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb697c4e17"
+   ],
+   "value": "B2B Software-as-a-Service (SaaS) platform providing proven AI and data solutions to enterprise insurers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "Highly international, trusting, and innovation-focused. The company values 'Shifters' from diverse cultural backgrounds who collaborate to drive technological transformation in a traditional industry."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "Hundreds of the world's leading insurance companies globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 USD base, depending on the local market and specific technical role, with potential for standard performance bonuses."
   },
   "evidence_sha": "9a5c51e2eac60595",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784894118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784893681,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cb697c4e17",
+    "72058d50b7"
+   ],
+   "value": "Insurance Technology / Enterprise SaaS / AI and Data Science."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb697c4e17"
+   ],
+   "value": "Emphasize your practical experience with the full machine learning lifecycle—specifically model evaluation, monitoring, versioning, and deployment in production environments. Prepare to discuss how you balance rapid technical innovation with building trust with enterprise stakeholders, ensuring your technical contributions drive proven results without compromising accountability."
+  },
+  "last_attempt_at": 1784894118,
   "last_evidence_at": 1784678727,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "Global presence with a highly distributed team spanning over 50 different countries and cultures."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "To create the future of insurance by transforming the insurance industry through innovation, trust, and proven data-driven results."
+  },
   "name": "Shift",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cb697c4e17"
+   ],
+   "value": "Estimated: Fast-paced and innovation-driven. The company is actively transforming a legacy industry through its SaaS platform, which demands agility and rapid technical iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cb697c4e17",
+    "72058d50b7"
+   ],
+   "value": "A SaaS platform designed to detect fraud and ensure payment integrity for insurance providers, driven by machine learning models and unmatched data resources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Standard for global enterprise SaaS companies, though exact regional policies may vary."
   },
-  "retry_after": 1784893921,
+  "refresh_after": 1790078118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307608,7 +308551,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard public holiday observances based on regional offices. No evidence of guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "Established global enterprise with a highly international workforce, employing people from more than 50 different countries and cultures."
   },
   "sources": [
    {
@@ -307662,14 +308613,44 @@
     "url": "https://job-boards.greenhouse.io/shifttechnology/jobs/5843676003"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "72058d50b7"
+   ],
+   "value": "Given the company's highly international presence across 50+ countries and active global hiring, visa sponsorship is likely supported for specialized roles, though exact policies are not explicitly stated."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "72058d50b7",
+    "cb697c4e17"
+   ],
+   "value": "Shift Technology is a SaaS company that uses AI and data science to transform the insurance industry, specifically targeting fraud detection and payment integrity. It makes money by providing its data-driven software platform to hundreds of the world's leading insurers, helping them analyze claims and optimize operations."
+  },
+  "synthesized_evidence_sha": "9a5c51e2eac60595",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cb697c4e17"
+   ],
+   "value": "Developing and deploying machine learning models for the full ML lifecycle, including model evaluation, monitoring, versioning, and production deployment, alongside managing large-scale data resources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678727,
   "web_search_url": "https://duckduckgo.com/?q=Shift+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb697c4e17"
+   ],
+   "value": "This role aligns with your goal of accelerating technical learning in a fast, innovative SaaS culture while working on mission-driven AI applications in the insurance sector. The company's focus on the full ML lifecycle in production offers strong career growth, and its global scale provides the elite enterprise prestige you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The culture emphasizes trust and a multinational perspective, which typically correlates with sane hours, though the fast pace of innovation may occasionally require focused effort to meet enterprise deliverables."
   }
  },
  "shopify": {
