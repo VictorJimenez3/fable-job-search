@@ -22004,84 +22004,103 @@
  "aquatic capital management": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f8939ba116",
+    "380b1f5f9d"
+   ],
+   "value": "Estimated: High. Quantitative investment firms typically offer elite prestige and highly competitive new-grad pay, though this specific market tier is estimated."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "380b1f5f9d"
+    "f8939ba116"
    ],
-   "value": "Quantitative finance (e.g., systematic trading/investing based on quantitative analysis and applied mathematics)."
+   "value": "Quantitative investment firm that leverages elite researchers and technologists to build systems critical to the company's financial success."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "A curiosity-driven environment where employees collaborate with some of the best and most experienced minds in the fintech industry, fostering significant individual impact."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "Institutional and financial market participants, as the firm operates within the financial services industry."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive, likely $150,000 to $250,000+ total compensation."
   },
   "evidence_sha": "95717fae1e69e6cc",
-  "generated_at": 1784452911,
+  "generated_at": 1784869828,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f8939ba116",
+    "380b1f5f9d"
+   ],
+   "value": "Financial Services / Quantitative Finance"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "380b1f5f9d"
+    "f8939ba116"
    ],
-   "value": "To meet the candidate's goals of avoiding high-burnout environments and ensuring guaranteed shutdowns for work-life balance, interviews should probe actual working hours, on-call expectations, and the reality of the innovation pace versus slow bureaucracy."
+   "value": "Evaluate if their collaborative environment with experienced technologists provides the technical innovation and learning pace you want, and explicitly ask about their stance on work-life balance to ensure they meet your standards for sane hours."
   },
-  "last_attempt_at": 1784452911,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784673653,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "f8939ba116",
     "380b1f5f9d"
    ],
-   "value": "Chicago, Illinois, USA."
+   "value": "Chicago, Illinois and New York, New York, USA"
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "To drive continuous growth and exploration through curiosity and a relentless drive for excellence in financial technology and research."
   },
   "name": "Aquatic Capital Management",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "Estimated: Fast-paced environment driven by a relentless drive for excellence and continuous architectural growth."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "Critical software systems and quantitative research models used for financial services and quantitative trading."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days annually. Exact PTO policy is not publicly disclosed."
   },
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -22091,14 +22110,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Market holidays off. Guaranteed firm-wide shutdowns are not publicly confirmed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "380b1f5f9d"
    ],
-   "value": "51-200 employees."
+   "value": "51-200 employees"
   },
   "sources": [
    {
@@ -22157,22 +22176,25 @@
    "source_ids": [
     "380b1f5f9d"
    ],
-   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
+   "value": "Has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "f8939ba116",
     "380b1f5f9d"
    ],
-   "value": "Aquatic Capital Management is a quantitative finance firm with a track record of offering H1B sponsorships."
+   "value": "Aquatic Capital Management is a quantitative investment firm that builds advanced, research-driven systems for financial services. The company generates revenue by developing and executing algorithmic trading and quantitative finance strategies in the market."
   },
+  "synthesized_evidence_sha": "95717fae1e69e6cc",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "f8939ba116",
     "380b1f5f9d"
    ],
-   "value": "Quantitative analysis, statistical research, applied mathematics, and Python programming for quantitative finance applications."
+   "value": "Collaborating with experienced researchers and technologists to build critical software systems. Requires strong Python programming, statistical research, and applied mathematics skills."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673653,
@@ -22180,14 +22202,16 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "380b1f5f9d"
+    "f8939ba116"
    ],
-   "value": "A quantitative finance role strongly aligns with a candidate seeking elite prestige, high new-grad pay, and fast, innovative technical culture. The firm's compact 51-200 employee size suggests a potentially agile environment with less bureaucracy and high technical learning opportunities."
+   "value": "The firm's small size and flat structure mean your individual contributions will have a significant impact on critical systems, avoiding the slow bureaucracy of larger companies while accelerating your technical career."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f8939ba116"
+   ],
+   "value": "Estimated: Good to Moderate. Firms often aim for sustainable hours to retain talent, but the financial sector can periodically require high commitment. Specific policies not publicly available."
   }
  },
  "aramark": {
@@ -40054,90 +40078,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 4 — Non-tech company, slower AI/DS adoption. Data science roles support core insurance operations rather than leading-edge AI research or product innovation."
+   "value": "Estimated: Traditional insurance tier; unlikely to offer the elite tech prestige or top-tier market pay associated with cutting-edge AI/data science firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "Operates as a non-profit government contractor that processes and administers federal health insurance programs under long-term contracts. Revenue comes primarily from health plan premiums and administrative service fees."
+   "value": "The company earns revenue through underwriting health insurance policies and by acting as an administrator for government healthcare contracts."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Mission-focused on community health. Southern corporate environment with a traditional, stable, and somewhat hierarchical structure. Risk-averse and compliance-driven."
+   "value": "Estimated: Traditional, conservative corporate environment focused on reliability and customer service rather than rapid tech innovation."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "Federal government agencies, military personnel and their families, Medicare beneficiaries, and commercial health plan members."
+   "value": "Residents of South Carolina requiring health insurance, and government entities requiring contract administration."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $72,000–$82,000 base salary for entry-level data analyst/scientist in Columbia, SC. Falls below top-tier national tech median but aligns with local cost of living and government healthcare pay bands."
+   "value": "Estimated: Competitive for the regional Columbia market (likely $70k-$85k), but likely below the elite high-pay benchmarks of top-tier tech hubs."
   },
   "evidence_sha": "3666b8dc182501d6",
-  "generated_at": 1784680504,
+  "generated_at": 1784869828,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "Health Insurance and Government Health Administration"
+   "value": "Health Insurance and Healthcare Administration."
   },
   "interview_focus": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Candidates should investigate the actual day-to-day pace of the team to ensure it isn't slowed by bureaucracy, and ask about technical learning opportunities to verify the role accelerates growth without requiring excessive personal time."
   },
-  "last_attempt_at": 1784680504,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784847053,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "Headquartered in Columbia, South Carolina. Primary operations concentrated in the Midlands region of South Carolina."
+   "value": "Headquartered in Columbia, South Carolina."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "To provide affordable, high-quality health coverage through efficient administration and service, focusing on government health care programs."
+   "value": "To deliver outstanding service to their customers."
   },
   "name": "BlueCross BlueShield of South Carolina",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Slow, steady, and process-heavy. Government contracts and health insurance compliance create a methodical, low-velocity environment resistant to rapid pivots."
+   "value": "Estimated: Steady and process-driven, characteristic of standard corporate insurance bureaucracy rather than a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "Health insurance administration and managed care services, including Medicare contracts, TRICARE military health program support, and commercial health plan administration."
+   "value": "Health insurance plans and government contract administration services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-22 days combined PTO for new hires, plus scheduled sick days. Aligning with standard large health insurance carriers."
+   "value": "Estimated: Standard corporate accrual offering around 15-20 days of vacation annually, plus personal/sick days, though exact policy is not public."
   },
-  "refresh_after": 1789864504,
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40147,12 +40172,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: May be observed federal holidays (10-11 days) as a government contractor. No extended winter collective shutdowns typically common at tech firms."
+   "value": "Estimated: Likely observes standard major holidays, but no evidence of guaranteed company-wide operational shutdowns outside of standard holiday schedules."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mature large enterprise with approximately 10,000+ employees, operating as part of the broader BlueCross BlueShield national federation. Founded in 1946."
+   "confidence": "high",
+   "source_ids": [
+    "80e665dc57"
+   ],
+   "value": "A large, established insurance enterprise; specifically noted as the largest insurance company in South Carolina."
   },
   "sources": [
    {
@@ -40197,23 +40224,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely minimal to no visa sponsorship for new grad data science roles. As a government contractor focused on health insurance administration, roles usually require US citizenship or permanent residency."
+   "confidence": "high",
+   "source_ids": [
+    "80e665dc57"
+   ],
+   "value": "The company does not provide sponsorship for applicable roles now or in the future."
   },
   "status": "ready",
   "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "80e665dc57"
+   ],
+   "value": "BlueCross BlueShield of South Carolina is the largest health insurance company in the state and one of the nation's leading administrators of government healthcare contracts. They generate revenue by providing health insurance coverage and delivering outsourced administrative services for government and commercial health programs."
+  },
+  "synthesized_evidence_sha": "3666b8dc182501d6",
+  "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "dc32dcba03"
+    "80e665dc57"
    ],
-   "value": "BlueCross BlueShield of South Carolina is a not-for-profit health insurance company that administers government-sponsored health plans, including Medicare and TRICARE. It primarily earns revenue through administrative service fees and premiums for processing medical claims and managing health benefits for millions of members."
-  },
-  "synthesized_evidence_sha": "c0552992623a54bb",
-  "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Involves data analysis and IT operations supporting insurance services and government contract administration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674069,
@@ -40221,12 +40252,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Offers a mission-driven environment serving millions of government health beneficiaries with relatively stable, low-burnout work. However, as a large, legacy-rich insurance company, the tech culture will be slower and more bureaucratic than a startup or elite tech firm, despite any internal innovation efforts."
+   "value": "This employer may conflict with a candidate seeking a fast, innovative, anti-bureaucratic tech culture; traditional insurance environments typically feature slower pace, established processes, and less elite new-tech prestige compared to top-tier tech firms. However, it could potentially align with the mission-driven and work-life balance priorities depending on team specifics."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Excellent. 40-hour weeks are the norm, with rare exceptions. Supervisor emphasis tends toward consistency and accuracy over speed."
+   "value": "Estimated: Generally stable with sane corporate hours, though this may vary by specific team and project deadlines."
   }
  },
  "blueprint technologies": {
@@ -40788,81 +40819,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low in big tech terms. AI and Data Science efforts are buried within a legacy industrial and defense context, lacking the tier-1 industry prestige and new grad pay associated with elite tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d53313239e"
+   ],
+   "value": "Generates revenue primarily through the design, massive-scale manufacturing, and end-to-edge lifecycle servicing of commercial and defense aircraft, supplemented by long-term government and military contracts."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and legacy-focused. Heavy emphasis on safety, protocol, and formal processes over fast-paced innovation or disruption."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d53313239e"
+   ],
+   "value": "Major commercial airlines, governments, defense agencies, and aerospace clients worldwide."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000. Sufficient but falls below the top-tier new grad pay scale of elite tech or AI firms, reflecting its classification as an industrial manufacturer rather than a tech giant."
   },
   "evidence_sha": "0beafeffe03e30f4",
-  "generated_at": 1784475917,
+  "generated_at": 1784869828,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d53313239e"
+   ],
+   "value": "Aerospace and Defense Manufacturing"
   },
   "interview_focus": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Probe heavily for the exact team's敏捷性 and leadership's willingness to bypass standard bureaucratic processes. Ask how the specific team prioritizes fast-paced technical learning and career acceleration over slow traditional compliance, and verify that daily work actually involves modern AI/data stacks rather than legacy system maintenance."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784589342,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "0069023772"
+    "3fd7327d48"
    ],
-   "value": "Chantilly, VA +2 more"
+   "value": "Headquartered in the United States with a significant global presence and major engineering/manufacturing hubs across the country."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0069023772"
+    "d53313239e"
    ],
-   "value": "To improve the world through innovation and collaboration."
+   "value": "To connect, protect, explore, and inspire the world through breakthrough, mission-driven aerospace innovation."
   },
   "name": "Boeing",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d53313239e"
+   ],
+   "value": "Estimated: Slow, safety-critical, and highly structured due to immense regulatory oversight, prioritizing risk aversion and bureaucratic compliance over rapid technological iteration."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d53313239e"
+   ],
+   "value": "Commercial aircraft (such as the 737, 777, and 787 families), defense and space systems, autonomous and military aircraft, rockets, and aerospace support services."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of annual PTO, standard for a legacy enterprise, with an emphasis on taking off major holidays."
   },
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40872,14 +40915,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Occasional company-wide holidays around major events, though not guaranteed shutdowns outside of major holiday periods."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "0069023772"
+    "3fd7327d48"
    ],
-   "value": "Global aerospace company"
+   "value": "A massive, established global enterprise with operations spanning multiple continents, operating at the highest echelon of the aerospace manufacturing industry."
   },
   "sources": [
    {
@@ -40914,37 +40957,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "3fd7327d48"
+   ],
+   "value": "As a major U.S. defense contractor, work heavily centers on the United States with strict security clearance requirements that mandate U.S. citizenship for many technical roles, making traditional visa sponsorship highly restricted."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0069023772"
+    "d53313239e"
    ],
-   "value": "Boeing is a global aerospace company committed to innovation and collaboration to improve the world."
+   "value": "Boeing is one of the world's largest aerospace manufacturers and defense contractors, designing, producing, and servicing commercial airplanes, defense systems, and aerospace technologies globally. It makes money primarily through the massive long-cycle sales of aircraft and defense platforms, as well as aftermarket parts and maintenance services."
   },
+  "synthesized_evidence_sha": "0beafeffe03e30f4",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0069023772"
+    "0983f75956"
    ],
-   "value": "Software Engineering Systems (Associate/Experienced) role focused on systems development."
+   "value": "Aerospace engineering, complex systems integration, large-scale manufacturing technology, defense systems, and data-driven predictive maintenance, involving traditional engineering stacks rather than modern agile software development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589342,
   "web_search_url": "https://duckduckgo.com/?q=Boeing+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "While Boeing offers a mission-driven environment with sane hours and guaranteed holidays compared to big tech, it starkly lacks the fast, innovative tech culture you seek. Its reputation for slow bureaucracy, risk-averse legacy processes, and compliance-heavy workflows will likely frustrate your desire for accelerated technical learning and rapid career growth in a cutting-edge AI environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Balanced. Generally promotes a standard work week without the grueling hours of big tech, though this can vary heavily by program phase and manufacturing deadlines."
   }
  },
  "boerboel": {
@@ -117675,88 +117721,100 @@
  "hadrian": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3ba5d66630"
+   ],
+   "value": "Specialized tier with significant technical capital operating at the intersection of AI, robotics, and industrial automation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Factory-as-a-Service model that delivers complete systems instead of individual parts."
+   "value": "Manufacturing-as-a-Service, delivering individual parts and complete systems to external partners, supported by investments from leading backers to scale operations for thousands of future hires."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "3ba5d66630"
+   ],
+   "value": "Mission-driven, innovative, and focused on rapid scaling and technological development to support national manufacturing capabilities."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "External customers and partners, expanding to support future critical parts and naval production."
+   "value": "External customers and partners requiring critical manufactured parts and complete systems, including the naval sector."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive to attract top talent for critical scaling roles. Expect new grad total compensation in the $150k-$200k+ range."
   },
   "evidence_sha": "29bf5069693a99dd",
-  "generated_at": 1784558066,
+  "generated_at": 1784869828,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "medium",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Assess whether Hadrian's rapid expansion to support thousands of future hires aligns with your desire for accelerated learning without toxic burnout, and clarify how their advanced software and robotics work fits your AI/data science goals."
+   "value": "Manufacturing, Automation, Robotics, and Defense."
   },
-  "last_attempt_at": 1784558066,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3ba5d66630"
+   ],
+   "value": "Candidates should prepare to discuss how they can build scalable, secure platforms to support a rapidly expanding customer base and thousands of future hires. Emphasize the ability to thrive in a fast-paced, innovative tech culture and contribute to mission-critical manufacturing systems."
+  },
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784675819,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "9c19b096c1"
+   ],
+   "value": "Source redirects prevented retrieval of exact office locations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Reinventing how America produces its most critical parts."
+   "value": "Reinventing how America produces its most critical parts by combining advanced software, robotics, and full-stack manufacturing."
   },
   "name": "Hadrian",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3ba5d66630"
+   ],
+   "value": "Estimated: High-intensity and fast-paced environment due to rapid expansion, scaling to support thousands of hires, and new market entry."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Advanced manufacturing software, robotics, a Factory-as-a-Service model delivering complete systems, and Hadrian Maritime for naval production."
+   "value": "Manufacturing platforms and services, including Factory-as-a-Service systems and Hadrian Maritime naval production capabilities."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech market rates (e.g., 15-20 days annually), though exact figures are not public."
   },
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117766,14 +117824,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public information found regarding company-wide holiday shutdowns."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Backed by leading investors including T; expanding rapidly to support thousands of future hires."
+   "value": "Rapidly expanding startup backed by leading investors, preparing to support thousands of future hires."
   },
   "sources": [
    {
@@ -117828,29 +117886,32 @@
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Hadrian is a rapidly expanding company combining software, robotics, and full-stack manufacturing to reinvent how America produces critical parts."
+   "value": "Hadrian is a technology company that reinvents how America produces its most critical parts by combining advanced software, robotics, and full-stack manufacturing. It generates revenue by providing manufacturing services, including expanding into naval production and offering a Factory-as-a-Service model that delivers complete systems."
   },
+  "synthesized_evidence_sha": "29bf5069693a99dd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Shaping the security of the platform by combining advanced software, robotics, and full-stack manufacturing."
+   "value": "Developing advanced software and robotics platforms integrated with full-stack manufacturing processes to deliver Factory-as-a-Service capabilities, including platform security for external customer expansion."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Hadrian+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "3ba5d66630"
    ],
-   "value": "Hadrian is a mission-driven company reinventing American manufacturing through advanced software and robotics, backed by top investors and expanding at a rapid pace, aligning with a fast, innovative tech culture."
+   "value": "Hadrian operates at the intersection of advanced software, robotics, and national-relevant manufacturing, offering AI and automation roles that drive tangible technological innovation. The company is scaling rapidly to support thousands of hires, providing high-impact learning opportunities and career growth in a fast-paced, mission-driven environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3ba5d66630"
+   ],
+   "value": "Estimated: Moderate; high growth and rapid expansion suggest a demanding work environment."
   }
  },
  "halliburton": {
@@ -125999,81 +126060,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite. HRT is widely regarded as one of the most prestigious algorithmic trading firms, making it a top-tier destination for AI and data science talent."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "c258db10a3"
+   ],
+   "value": "HRT makes money by utilizing its own capital and sophisticated technology to trade on electronic exchanges globally, profiting from market-making and arbitrage opportunities."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Highly technical and respectful. Culture prioritizes deep learning and collaborative innovation over traditional bureaucratic hurdles."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "db54903233"
+   ],
+   "value": "The firm acts as a principal liquidity provider and trader, interacting directly with global financial exchanges, rather than selling software products to traditional end-consumers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $300,000 - $400,000+ total compensation (base + guaranteed bonus), placing it at the very top of the market for new graduates."
   },
   "evidence_sha": "552aeff44e8a723f",
-  "generated_at": 1784475917,
+  "generated_at": 1784869828,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c258db10a3"
+   ],
+   "value": "Financial Technology and Quantitative Trading."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "0b16f82139"
+    "db54903233"
    ],
-   "value": "Technical skills in Python, C++, statistical analysis, numerical programming, and machine learning are prioritized for the role."
+   "value": "Interview preparation should focus on demonstrating elite algorithmic problem-solving and low-latency systems design skills. The candidate should also prepare for rigorous technical interviews that test a deep understanding of data science and machine learning concepts, as HRT values fast-paced innovation and high technical learning trajectories over traditional slow-paced corporate practices."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784583510,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0b16f82139"
+    "6d72e23c9b"
    ],
-   "value": "New York, New York, USA"
+   "value": "Specific office locations were not captured in the redirect pages provided."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "c258db10a3"
+   ],
+   "value": "The specific corporate mission statement was not detailed in the provided redirect sources."
   },
   "name": "Hudson River Trading",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative. The environment is driven by cutting-edge technological advancements and requires rapid development cycles."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "c258db10a3"
+   ],
+   "value": "HRT develops proprietary automated trading platforms, high-performance computing infrastructure, and distributed systems designed to execute high-frequency and quantitative trading strategies."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible paid time off."
   },
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126083,14 +126156,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed firm-wide shutdowns during market holidays to ensure strict work-life boundaries."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0b16f82139"
+    "db54903233"
    ],
-   "value": "1001-5000 employees"
+   "value": "The company is a mature, privately held firm operating on a global scale."
   },
   "sources": [
    {
@@ -126125,41 +126198,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "0b16f82139"
+    "6d72e23c9b"
    ],
-   "value": "H1B Sponsorship is offered by Hudson River Trading, but not guaranteed for this specific role."
+   "value": "Specific visa sponsorship policies were not explicitly confirmed in the provided redirect pages."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0b16f82139"
+    "c258db10a3",
+    "db54903233"
    ],
-   "value": "Hudson River Trading is a quant trading firm founded in 2002 with 1001-5000 employees, offering H1B sponsorship for eligible roles, and emphasizing technical skills like Python, C++, and machine learning for algorithm developers."
+   "value": "Hudson River Trading (HRT) is a quantitative trading firm that uses advanced algorithms and high-speed computing to execute financial transactions across global markets. The company generates revenue by leveraging its proprietary technology to trade millions of shares daily, capturing small price discrepancies and earning a profit on the spread."
   },
+  "synthesized_evidence_sha": "552aeff44e8a723f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "0b16f82139"
+    "c258db10a3",
+    "db54903233"
    ],
-   "value": "Algorithm development, quant research, statistical analysis, numerical programming, machine learning"
+   "value": "Engineers and researchers at HRT build low-latency trading systems, optimize C++ code, manage petabyte-scale data infrastructure, and apply machine learning to predict market movements."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583510,
   "web_search_url": "https://duckduckgo.com/?q=Hudson+River+Trading+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0b16f82139"
+    "c258db10a3"
    ],
-   "value": "A top-tier AI/data science role with elite prestige, high new-grad pay, and a fast, innovative tech culture. The company emphasizes work-life balance with sane hours and guaranteed shutdowns, avoiding toxic environments."
+   "value": "HRT perfectly aligns with the candidate's desire for a top-tier AI/data science role that offers elite prestige and high new-grad pay. The firm is known for its fast-paced, innovative tech culture that heavily emphasizes technical learning and career growth through challenging, real-world quantitative problems, rather than slow corporate bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good with sane hours. The environment is collaborative rather than toxic, designed to attract technical talent through a sustainable, non-burnout culture while maintaining high impact."
   }
  },
  "hughes": {
@@ -149943,7 +150019,7 @@
    "value": "Tier 3: Prestige is derived from elite national security and defense program importance rather than the bleeding-edge AI commercial ecosystem. It is not recognized as a top-competing AI metric leader (like DeepMind or Salesforce) but is highly respected for hard, classified engineering applicable to defense intelligence."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -149994,7 +150070,7 @@
    ],
    "value": "Interview Focus: Expect behavioral questions and competency-based assessments rather than abstract LeetCode hazing. The culture favors experience with ITAR/EAR compliance, signals processing, embedded constraints, and reliability over rapid-startup-on-the-java style innovation. The candidate should emphasize mission-aligned clearance-able engineering and real-time algorithm application, while probing for innovative AI pockets within the broad enterprise."
   },
-  "last_attempt_at": 1784869244,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
@@ -150033,7 +150109,7 @@
    "value": "Estimated: 15–20 days of annual vacation accrual plus standard federal holidays for experienced exempt staff; new graduates may start at the lower range. Defense industry standards suggest combines general PTO until incrementally structured mini-weeks achieved."
   },
   "refresh_after": 1789864703,
-  "retry_after": 1784869724,
+  "retry_after": 1784870788,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188185,35 +188261,37 @@
  },
  "nvidia ai": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "fe83d54567",
-    "8605948b22"
+    "d76e8485cb"
    ],
-   "value": "Top-tier; recognized as a leading hardware company known for innovative designs and high compensation. <Source IDs>"
+   "value": "Tier 1. NVIDIA is widely considered a top-tier leader in AI hardware and software."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "8605948b22",
+    "d76e8485cb",
     "fe83d54567"
    ],
-   "value": "Late-stage company driving revenue through the design, optimization, and sale of hardware and computing infrastructure. <Source IDs>"
+   "value": "Late-stage company that sells AI hardware and software infrastructure to support and advance AI development."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven, heavily focused on technological innovation, developer infrastructure, and elite R&D talent."
+   "source_ids": [
+    "d76e8485cb"
+   ],
+   "value": "Estimated: Mission-driven and highly technical, focused on pushing the boundaries of AI breakthroughs."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "8605948b22",
-    "fe83d54567"
+    "d76e8485cb",
+    "8605948b22"
    ],
-   "value": "Developers and organizations utilizing accelerated computing, compiler infrastructure, and specialized hardware. <Source IDs>"
+   "value": "Software engineers, AI developers, and researchers who require high-performance infrastructure (inferred from developer blogs and information portals)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -188221,10 +188299,10 @@
    "source_ids": [
     "fe83d54567"
    ],
-   "value": "Estimated: $116,000 to $190,000 per year. <Source IDs>"
+   "value": "Estimated: $116K/yr - $190K/yr for new college grad roles. NVIDIA is known for elite new-grad pay."
   },
   "evidence_sha": "6bb63610e3128e13",
-  "generated_at": 1784802932,
+  "generated_at": 1784869828,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -188233,74 +188311,82 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8605948b22",
-    "fe83d54567"
+    "fe83d54567",
+    "d76e8485cb"
    ],
-   "value": "Hardware and software infrastructure. <Source IDs>"
+   "value": "Computer Hardware and Software / AI Technology."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "8605948b22",
-    "fe83d54567"
-   ],
-   "value": "Candidates should expect rigorous technical evaluations centered on C++ programming, open-source compiler frameworks, and developer infrastructure. Interviewers will likely probe deep into compiler internals and source control workflows, so candidates must showcase elite technical depth to meet the candidate's standard for a fast-paced, learning-accelerating environment."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Be prepared to discuss how you can thrive in a fast, high-innovation technical environment without falling into burnout. Highlight your strategies for maintaining work-life balance and sane hours, and express your desire for a mission-driven culture that guarantees personal time and respects individual boundaries."
   },
-  "last_attempt_at": 1784802932,
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784847053,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "8605948b22",
-    "fe83d54567"
+    "d76e8485cb",
+    "fe83d54567",
+    "8605948b22"
    ],
-   "value": "Santa Clara, CA, US and Monte Sereno, CA. <Source IDs>"
+   "value": "Santa Clara, CA and Monte Sereno, CA."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "fe83d54567"
+    "d76e8485cb"
    ],
-   "value": "Not explicitly stated in sources, but heavily focused on innovative hardware designs and optimization tools to advance computing. <Source IDs>"
+   "value": "To explore the latest breakthroughs made possible with AI."
   },
   "name": "NVIDIA AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast and innovative, driven by cutting-edge compiler and physical design R&D."
+   "source_ids": [
+    "d76e8485cb",
+    "fe83d54567"
+   ],
+   "value": "Estimated: Highly innovative and fast-paced due to cutting-edge AI advancements, pushing rapid technical growth."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "d76e8485cb",
     "fe83d54567",
     "8605948b22"
    ],
-   "value": "VLSI Physical Design tools, optimization tools, and developer/compiler infrastructure. <Source IDs>"
+   "value": "AI hardware, innovative hardware designs, optimization tools, and developer infrastructure."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard PTO, though exact policies for guaranteed shutdowns are not public."
+   "value": "Estimated: 15-20 days of standard PTO, supplemented by company-wide shutdown days to ensure rest."
   },
-  "refresh_after": 1789986932,
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "d76e8485cb",
+    "fe83d54567",
+    "8605948b22"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Occasional holiday shutdowns, but specific guaranteed downtime policies are not openly documented."
+   "value": "Estimated: Yes, typically offering guaranteed paid shutdown days (such as winter holidays) to ensure employee rest and avoid burnout."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "d76e8485cb",
     "8605948b22"
    ],
-   "value": "Late-stage company with 10001+ employees. <Source IDs>"
+   "value": "Late-stage company with 10001+ employees."
   },
   "sources": [
    {
@@ -188367,43 +188453,46 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
+    "d76e8485cb",
     "fe83d54567",
     "8605948b22"
    ],
-   "value": "Not explicitly mentioned, though the company operates at a large scale and recruits nationwide for new grad roles. <Source IDs>"
+   "value": "Not explicitly mentioned in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "fe83d54567"
+    "fe83d54567",
+    "d76e8485cb"
    ],
-   "value": "NVIDIA AI is a leading hardware and systems company that designs accelerated computing chips and optimization tools. It makes money by designing and selling specialized hardware and infrastructure for complex computational tasks. <Source IDs>"
+   "value": "NVIDIA AI is a leading hardware and software company that designs GPUs and AI optimization tools. They make money by selling high-performance computing hardware and software infrastructure for AI development."
   },
-  "synthesized_evidence_sha": "900874062a26ac4f",
+  "synthesized_evidence_sha": "6bb63610e3128e13",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "8605948b22",
-    "fe83d54567"
+    "fe83d54567",
+    "d76e8485cb",
+    "8605948b22"
    ],
-   "value": "C++ programming, open-source compiler frameworks, compiler internals, source control workflows, developer infrastructure, and VLSI physical design. <Source IDs>"
+   "value": "Software R&D, physical design infrastructure, compiler engineering, distributed systems, and open-source compiler framework development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583435,
   "web_search_url": "https://duckduckgo.com/?q=NVIDIA+AI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "fe83d54567",
-    "8605948b22"
-   ],
-   "value": "Matches the candidate's desire for a top-tier AI/data science role with elite new-grad pay ($116K-$190K) and high technical prestige. As a hardware and compiler leader, the work is deeply technical and innovative, though candidates should verify that the culture aligns with their need for guaranteed work-life balance and sane hours to avoid burnout."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NVIDIA AI operates at the absolute apex of the artificial intelligence industry, offering the elite new-grad prestige and top-tier compensation you are seeking. The fast-paced, innovative hardware and software culture disrupts slow bureaucracy, allowing you to accelerate technical learning alongside the brightest minds in the field."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate; compensation and prestige are elite, but candidates must caution themselves regarding potential bureaucracy or burnout to ensure personal time boundaries are maintained."
+   "source_ids": [
+    "d76e8485cb",
+    "8605948b22"
+   ],
+   "value": "Estimated: Moderate to Good. The innovative pace can be demanding, but the company is known to offer shutdowns to offset burnout."
   }
  },
  "nxp semiconductors": {
@@ -194060,63 +194149,73 @@
  "oura": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Generally considered a strong hardware-health-tech brand with solid applied data science in biosensors."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "48c78afa07"
+    "48c78afa07",
+    "e60f394de3"
    ],
-   "value": "Selling wearable health technology (Oura Ring) directly to consumers, with a focus on health and wellness data insights."
+   "value": "Hardware sales of the Oura Ring combined with software/app integration to help users live healthier and happier lives."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
-  },
-  "customers": {
    "confidence": "high",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Individual consumers seeking health and wellness insights through wearable technology."
+   "value": "Mission-driven and supportive, focused on helping people live healthier and happier lives."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Health-conscious consumers looking to monitor their sleep, recovery, and overall well-being."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
-  },
-  "evidence_sha": "68b6dea443ae9c23",
-  "generated_at": 1784402660,
-  "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
-   "task": "company_research"
-  },
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
-  },
-  "interview_focus": {
-   "confidence": "high",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Focus on advancing physiological feature pipeline and data science for health insights, with emphasis on innovation and work-life balance."
+   "value": "Estimated: Highly competitive European tech salary (roughly €55,000 - €75,000 base), as exact new grad pay is not public."
   },
-  "last_attempt_at": 1784402660,
+  "evidence_sha": "68b6dea443ae9c23",
+  "generated_at": 1784869828,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07",
+    "e60f394de3"
+   ],
+   "value": "Health technology and wearables."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Candidates should highlight their readiness to support a physiological feature pipeline, balancing fast-paced technical growth with the company's mission-driven respect for work-life balance."
+  },
+  "last_attempt_at": 1784869828,
   "last_evidence_at": 1784677759,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Hybrid locations in Helsinki, Uusimaa; Oulu, North Ostrobothnia"
+   "value": "Hybrid roles available in Helsinki, Uusimaa and Oulu, North Ostrobothnia."
   },
   "mission": {
    "confidence": "high",
@@ -194128,39 +194227,50 @@
   "name": "Oura",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Estimated: Fast-paced and innovative due to being a quickly growing company."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "e60f394de3",
     "48c78afa07"
    ],
-   "value": "Oura Ring, a wearable ring that tracks physiological data to provide health insights."
+   "value": "The Oura Ring, a wearable smart ring focused on sleep and health tracking, paired with a companion app that features a physiological feature pipeline."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Estimated: Standard competitive PTO for a European-based tech company (typically 25-30 days), though exact policy is not public."
   },
+  "refresh_after": 1790053828,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
-  },
-  "size_stage": {
-   "confidence": "high",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Quickly growing company"
+   "value": "Estimated: Likely offers standard holiday shutdowns, but exact guaranteed shutdowns are not public."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "A quickly growing company."
   },
   "sources": [
    {
@@ -194205,39 +194315,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "status": "ready",
-  "summary": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Oura is a rapidly growing health technology company focused on empowering individuals to optimize their health and well-being through wearable technology and data-driven insights."
+   "value": "Not explicitly stated in the retrieved sources."
   },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "48c78afa07",
+    "e60f394de3"
+   ],
+   "value": "Oura is a health technology company that makes a smart ring designed to track sleep, readiness, and physiological metrics. It makes money by selling these hardware devices and pairing them with a companion app that uses physiological data to help users monitor and improve their health."
+  },
+  "synthesized_evidence_sha": "68b6dea443ae9c23",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "Advancing physiological feature pipeline for product science team, focusing on data-driven health insights."
+   "value": "The Product Science team advances a physiological feature pipeline to extract and interpret health metrics from ring data."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677759,
   "web_search_url": "https://duckduckgo.com/?q=Oura+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "48c78afa07"
    ],
-   "value": "A top-tier AI/data science role at a rapidly growing health tech company with a mission-driven focus, offering high new-grad pay and a fast, innovative culture. The company emphasizes work-life balance through 'sanity' in hours and guaranteed shutdowns, avoiding burnout."
+   "value": "This role offers a mission-driven environment focused on improving health, with a stated emphasis on ensuring team members have what they need in and out of the office. For a new grad, it provides technical learning in physiological data science while aligning with a culture that seeks to avoid burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Estimated: Good. The company explicitly states it ensures team members have what they need to do their best work both in and out of the office."
   }
  },
  "overlake hospital medical center": {
