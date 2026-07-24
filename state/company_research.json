@@ -1930,11 +1930,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1946,6 +1948,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784677760,
   "name": "AbbVie",
   "pace_of_work": {
@@ -1958,6 +1961,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2001,7 +2005,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=AbbVie+company+careers+benefits",
@@ -5416,48 +5420,129 @@
  "adventist health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c47c1a972f"
+   ],
+   "value": "Estimated: Tech non-entity; the firm is prestigious in healthcare but not recognized as a top-tier, elite AI/DS employer."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f"
+   ],
+   "value": "A non-profit integrated health system generating revenue primarily through patient care services, operating facilities in rural and urban communities."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f",
+    "483b132f0f"
+   ],
+   "value": "Faith-based and mission-driven, prioritizing compassionate community care over aggressive technical disruption. The culture emphasizes holistic physical, mental, and spiritual health for both patients and employees."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f",
+    "5e3f9fbe85"
+   ],
+   "value": "Patients needing medical care across rural and urban communities, as well as insured individuals relying on Medicare, Medicaid, and private insurance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "low",
+   "source_ids": [
+    "c47c1a972f"
+   ],
+   "value": "Estimated: $85,000 - $115,000. Lower than elite FAANG AI roles, reflecting the non-profit and non-Big Tech nature of the employer."
   },
   "evidence_sha": "ea66c452e2bafe52",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784871147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Hospital & Health Care"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c47c1a972f"
+   ],
+   "value": "Focus your questions on the specific tech stack, AI deployment cycles in a clinical setting, and whether the team operates with agile, tech-first autonomy or is gated by hospital compliance and slow decision-making."
+  },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784583384,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Headquartered in Roseville, California, with health facilities and offices located across the Western United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f",
+    "483b132f0f"
+   ],
+   "value": "To share God's love by providing physical, mental and spiritual healing."
+  },
   "name": "Adventist Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: Slow and methodical. As a traditional non-profit healthcare provider, rapid experimentation is often restricted by strict regulatory, privacy, and compliance guardrails."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f",
+    "5e3f9fbe85"
+   ],
+   "value": "Inpatient hospital care, outpatient clinics, urgent care centers, and telehealth services."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, standard for large non-profit health systems."
   },
+  "refresh_after": 1790055147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c47c1a972f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "483b132f0f"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns, though the organization observes traditional holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f"
+   ],
+   "value": "A large, established non-profit health system operating across multiple states."
   },
   "sources": [
    {
@@ -5491,14 +5576,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8d1a3898b7ed81db20c0ce4e43f61efe79208c746fdc54039d9ed232de365f55JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuY2hyaXN0aWFuaXR5LmNvbS9jaHVyY2gvZGVub21pbmF0aW9ucy8xMC10aGluZ3MtZXZlcnlvbmUtc2hvdWxkLWtub3ctYWJvdXQtc2V2ZW50aC1kYXktYWR2ZW50aXN0cy1hbmQtdGhlaXItYmVsaWVmcy5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Standard healthcare industry visa policies for specialized clinical and IT roles, though no specific rotational or new-grad sponsor programs were found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c47c1a972f",
+    "5e3f9fbe85"
+   ],
+   "value": "Adventist Health is a faith-based, non-profit healthcare delivery system operating hospitals and clinics. It makes money by charging for inpatient care, outpatient services, and physician fees."
+  },
+  "synthesized_evidence_sha": "ea66c452e2bafe52",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Health IT infrastructure supporting electronic health records (EHR), clinical workflows, and patient data management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583384,
   "web_search_url": "https://duckduckgo.com/?q=Adventist+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c47c1a972f",
+    "483b132f0f"
+   ],
+   "value": "As a mission-driven non-profit, it inherently values sustainable work-life balance. However, it operates as a traditional healthcare provider, meaning the pace is regulated, safety-focused, and leans toward slow bureaucracy rather than the fast, innovative tech culture of an elite AI startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "483b132f0f"
+   ],
+   "value": "Estimated: Good. Non-profit healthcare systems typically enforce sane hours and avoid the hyper-scale burnout culture common in big tech."
   }
  },
  "adways inc": {
@@ -40559,11 +40677,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40575,6 +40695,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784850885,
   "name": "Blueprint Technologies",
   "pace_of_work": {
@@ -40587,6 +40708,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40640,7 +40762,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f172bcbbe5a98f62b515924b1a1983bbeae8e2686ca4e2a10af2df77968e595eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9ibHVlcHJpbnRwcmVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Blueprint+Technologies+company+careers+benefits",
@@ -40752,51 +40874,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2-3 (active new grad hiring but limited public visibility vs. top-tier AI labs)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Business model not disclosed in sources. Presumably B2B software/platform revenue (subscriptions, contracts, or professional services) based on industry norms for data/AI companies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Growth-oriented, technical, mission-driven (inferred from new grad investment and data/AI domain)"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Customer base not specified in available sources. Likely serves enterprise or government clients given typical data/AI company profiles, but unconfirmed."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + equity/bonus (competitive new grad range for non-FAANG AI/data companies)"
   },
   "evidence_sha": "ab757b4a86c27832",
+  "generated_at": 1784871147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Technology / Data & AI (inferred from candidate context and new grad tech hiring)"
   },
-  "last_attempt_at": 1784870975,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Prepare for standard new grad technical interviews: data structures/algorithms, ML fundamentals (if AI/DS role), system design basics, and behavioral questions. Research company's actual products via their website before interviews to demonstrate mission alignment and technical curiosity."
+  },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784856585,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ef17611b6e",
+    "4abc88e9ae"
+   ],
+   "value": "Headquarters and office locations not specified in sources. Website and LinkedIn may list locations but redirects prevent confirmation."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1d34c4f557"
+   ],
+   "value": "Mission statement not available in provided sources. Company about page (source 1d34c4f557) may contain mission details but redirects prevent extraction."
+  },
   "name": "Bluestaq",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced innovative tech culture (typical for venture-backed data/AI companies hiring new grads)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1d34c4f557",
+    "ef17611b6e"
+   ],
+   "value": "Specific products not disclosed in available sources. Company website and LinkedIn redirects suggest a technology/platform focus but details require direct site access."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical US tech new grad offering)"
   },
-  "retry_after": 1784871095,
+  "refresh_after": 1790055147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; verify with recruiter"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4abc88e9ae",
+    "dbc3b9e88f"
+   ],
+   "value": "Company size and stage not specified in sources. LinkedIn presence (source 4abc88e9ae) suggests established entity; new grad hiring indicates growth phase."
   },
   "sources": [
    {
@@ -40840,14 +41022,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy not disclosed. Many tech companies hiring new grads offer H-1B sponsorship but candidate should verify directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Bluestaq is a technology company that appears to hire new graduates for technical roles, surfaced through new graduate job boards. The company likely operates in the data/AI space given candidate interest, but specific product details are not available from the provided sources."
+  },
+  "synthesized_evidence_sha": "ab757b4a86c27832",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Technical stack and work details not available. New grad postings on SimplifyJobs (source dbc3b9e88f) suggest software engineering, data science, or AI/ML roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784856585,
   "web_search_url": "https://duckduckgo.com/?q=Bluestaq+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Bluestaq appears on new graduate hiring boards, suggesting structured entry-level programs. For a candidate prioritizing elite AI/data science prestige with high new-grad pay, fast innovation culture, and genuine work-life balance, the company's presence on SimplifyJobs indicates active new grad recruitment but deeper research is needed to confirm culture, pay tier, and WLB claims."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (new grad programs often have structured hours but project deadlines can vary)"
   }
  },
  "bmo": {
@@ -71047,11 +71256,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71063,6 +71274,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784827102,
   "name": "CorVel Corporation",
   "pace_of_work": {
@@ -71075,6 +71287,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71128,7 +71341,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784827102,
   "web_search_url": "https://duckduckgo.com/?q=CorVel+Corporation+company+careers+benefits",
@@ -98002,52 +98215,155 @@
  "ferrovial": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Likely not top-tier AI prestige; large infrastructure firms typically lack elite newgrad tech status."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Unknown exact pay; likely moderate infrastructure firm salaries, not elite newgrad tech pay."
   },
   "evidence_sha": "f510ce93962a34db",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784870975,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Clarify team autonomy, tech stack modernity, and actual WLB to ensure it aligns with avoiding slow bureaucracy."
+  },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784679035,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
   "name": "Ferrovial",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Likely traditional corporate pace, potentially clashing with a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Standard corporate PTO, likely 22-25 days, but unverified."
   },
-  "retry_after": 1784871095,
+  "refresh_after": 1790055147,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Unknown if guaranteed shutdowns exist; needs direct verification."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
   },
   "sources": [
    {
@@ -98081,14 +98397,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=bcb9a0a7a9b04033ab625d84dab782727d8c244b115cff0719f2eda497cd5403JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93aXQtbW90aW9uLmNuLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "The provided company pages for Ferrovial were inaccessible, returning only automatic redirect notices instead of content."
+  },
+  "synthesized_evidence_sha": "f510ce93962a34db",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Unknown due to page redirection failure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679035,
   "web_search_url": "https://duckduckgo.com/?q=Ferrovial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "If tech and data roles exist, they likely support core infrastructure rather than functioning as elite, fast-paced AI product teams."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b1e631906c",
+    "1688bef2d0",
+    "076a2a8a80"
+   ],
+   "value": "Estimated: Likely standard corporate WLB; confirm if guaranteed shutdowns exist."
   }
  },
  "fhlbank topeka": {
@@ -245459,37 +245816,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not recognized as an AI/data science destination; no public research output, conference presence, or specialized talent brand in ML/AI."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d"
+   ],
+   "value": "Fee-for-service cosmetic surgery model: patients pay directly (or via third-party financing) for elective procedures performed at company-owned outpatient surgical centers; revenue scales with procedure volume and average selling price per case."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "Sales-first, commission-incentivized, high-energy environment; 'dynamic and high-energy' repeated across postings; emphasis on 'proven track record of sales success' and 'excellent work ethic'."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d"
+   ],
+   "value": "Adults seeking elective aesthetic improvements for body contouring and facial rejuvenation; patients typically self-pay or use financing plans for procedures not covered by insurance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base + modest bonus (healthcare IT/services benchmark); no public data for AI/DS new-grad offers."
   },
   "evidence_sha": "eeb96f9e7afff7da",
+  "generated_at": 1784871147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d"
+   ],
+   "value": "Elective cosmetic surgery / aesthetic medical services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d"
+   ],
+   "value": "Probe for: (1) actual scope of any data science/AI function—ask for team size, reporting line, and recent shipped models; (2) on-call expectations for clinical systems; (3) how engineering prioritization works against sales-driven deadlines; (4) concrete PTO/shutdown policy in writing; (5) career ladder for IC technologists vs. management track."
+  },
+  "last_attempt_at": 1784871147,
+  "last_evidence_at": 1784842446,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "80+ outpatient surgical centers across the United States; corporate headquarters in Scottsdale, AZ."
   },
-  "last_evidence_at": 1784842446,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "We believe everyone deserves to have their best body today and pursue their best life now."
+  },
   "name": "Sono Bello",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "Fast-paced, high-energy sales-driven culture; job postings repeatedly emphasize 'fast-paced setting' and 'dynamic high-energy work environment'."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "Minimally invasive cosmetic surgery procedures including laser-assisted liposuction (TriSculpt), facelifts, neck lifts, and other body contouring and facial rejuvenation services delivered through a network of outpatient surgical centers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + standard holidays (typical for U.S. private-equity-backed healthcare services); no public policy disclosed."
   },
+  "refresh_after": 1790055147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -245499,7 +245926,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; surgical centers operate year-round with peak seasonal demand."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established national chain with 80+ locations across the U.S.; private-equity backed (formerly owned by Kinderhook Industries, now part of a larger platform); mature growth stage focused on same-center growth and de novo expansion."
   },
   "sources": [
    {
@@ -245563,14 +245995,46 @@
     "url": "https://job-boards.greenhouse.io/sonobello/jobs/5366231008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public evidence of routine H-1B or green-card sponsorship for technical roles; sponsorship historically limited to clinical physician positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "Sono Bello is a national cosmetic surgery provider specializing in body contouring and facial aesthetic procedures. It operates a network of surgical centers where board-certified plastic surgeons perform minimally invasive treatments such as laser liposuction and facelifts."
+  },
+  "synthesized_evidence_sha": "eeb96f9e7afff7da",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited public information on internal AI/data science teams; core technology needs likely center on patient CRM, marketing analytics, scheduling/OR optimization, and EHR integration rather than cutting-edge research. Most technical roles appear to be supporting clinical operations and sales funnel optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677765,
   "web_search_url": "https://duckduckgo.com/?q=Sono+Bello+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d",
+    "db2ce53d7a"
+   ],
+   "value": "Sono Bello is a high-volume, sales-driven cosmetic surgery chain—not a tech-first or AI-centric organization. The culture emphasizes fast-paced, high-energy sales environments with commission-based incentives. For a candidate seeking elite AI/data science prestige, guaranteed WLB, and structured technical mentorship, this setting is likely a poor fit: technical roles (if they exist) will be subordinate to clinical operations and revenue-driven sales cycles, with limited peer community and unclea"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ae415f74cf",
+    "1bd0a3844d"
+   ],
+   "value": "Estimated: Below average for tech roles — sales-centric hours, potential weekend/evening coverage for patient-facing systems, no public mention of protected shutdowns or guaranteed WLB policies."
   }
  },
  "sonos inc": {
@@ -291214,37 +291678,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Industry-specific AI/Logistics). Highly impactful operational data science, but lacks the brand prestige of top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039"
+   ],
+   "value": "WM operates a vertically integrated network of collection routes, transfer stations, recycling facilities, and landfills, charging fees for collection services and tipping fees for disposal at its own sites."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Safety-first and operationally focused. Emphasizes sustainability and reliability, likely traditional corporate culture rather than aggressive tech culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e0992fbd7a",
+    "985305a039"
+   ],
+   "value": "Residential homes, commercial businesses, industrial facilities, and municipal governments across North America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary. Likely includes standard corporate benefits but lacks the massive equity grants of elite tech firms."
   },
   "evidence_sha": "512d237c832413f1",
+  "generated_at": 1784871147,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e0992fbd7a"
+   ],
+   "value": "Waste Management and Environmental Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific team's tech stack velocity, exposure to cutting-edge AI projects (like automated sorting robotics), and compensation bands to ensure they meet your expectations for fast-paced learning and high pay without bureaucratic drag."
   },
+  "last_attempt_at": 1784871147,
   "last_evidence_at": 1784674426,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039"
+   ],
+   "value": "Headquartered in Houston, Texas, with numerous local service branches, landfills, and recycling facilities across the United States and Canada."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039",
+    "838eb628e5"
+   ],
+   "value": "WM is on a mission to maximize resource value while minimizing environmental impact, focusing on sustainable waste solutions and advancing a circular economy."
+  },
   "name": "Waste Management",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to steady. As an established S&P 500 corporation, the pace is likely more structured and process-oriented than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039",
+    "838eb628e5"
+   ],
+   "value": "Waste collection, recycling, roll-off boxes, transfer stations, landfills, and renewable natural gas/renewable energy generation from landfill gas."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of vacation plus standard paid holidays, typical for a large U.S. corporation."
   },
+  "refresh_after": 1790055147,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291254,7 +291775,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns, though standard holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039",
+    "e0992fbd7a"
+   ],
+   "value": "A large, established public corporation (S&P 500) with tens of thousands of employees and operations across the U.S. and Canada."
   },
   "sources": [
    {
@@ -291288,14 +291817,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=3b07052bde3d3fa78056ac2d8097b5193405a77932f1d210fec54f06573ee220JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly92YW5jb3V2ZXIuY2EvaG9tZS1wcm9wZXJ0eS1kZXZlbG9wbWVudC93YXN0ZS1kaXNwb3NhbC1hbmQtcmVjeWNsaW5nLmFzcHg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "985305a039"
+   ],
+   "value": "WM is a U.S.-based company that hires across North America; standard corporate visa sponsorship guidelines apply but are not explicitly highlighted in general company pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e0992fbd7a",
+    "985305a039"
+   ],
+   "value": "Waste Management (WM) is North America's leading provider of comprehensive waste management and environmental services. The company makes money by collecting, transporting, recycling, and disposing of waste for residential, commercial, and industrial customers, while also generating renewable energy from landfills."
+  },
+  "synthesized_evidence_sha": "512d237c832413f1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "985305a039"
+   ],
+   "value": "Technical teams work on route optimization, fleet telematics, automated dispatch systems, and data analytics for material recovery facilities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674426,
   "web_search_url": "https://duckduckgo.com/?q=Waste+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While WM offers strong mission-driven work in sustainability, a vast dataset for logistics optimization, and stable hours typical of an established corporation, it may lack the fast, innovative tech culture and elite new-grad compensation you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Corporate utility and logistics roles generally maintain regular business hours and avoid the high-burnout culture of big tech."
   }
  },
  "watchfire": {
