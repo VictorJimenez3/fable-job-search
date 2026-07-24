@@ -974,7 +974,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -992,7 +992,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784882707,
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784675035,
   "name": "4theweb",
   "pace_of_work": {
@@ -1005,7 +1005,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784882827,
+  "retry_after": 1784883131,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59786,41 +59786,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected within healthcare analytics, but not a top-tier AI research destination. Strong applied DS/ML for operations, limited pure research output."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Revenue comes primarily from pharmaceutical and medical product distribution (buy/sell spread), plus fees for data analytics, consulting, technology platforms, and specialty pharmacy services. Operates on thin-margin, high-volume distribution with growing higher-margin services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, mission-aware (patient impact), but hierarchical and consensus-driven. Values stability and compliance over experimentation. Employee sentiment: steady, not electrifying."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Hospitals, health systems, retail pharmacies (independent and chain), specialty physician practices, long-term care facilities, and government healthcare agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU (~$15k–$25k/yr vest). Total ~$120k–$150k. Below FAANG/unicorn tiers, competitive for healthcare enterprise."
   },
   "evidence_sha": "21ba4675c422c418",
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Healthcare distribution & services / Health tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on scalable data pipelines, healthcare domain knowledge (claims, NDC, formulary), ML for supply chain/forecasting, and stakeholder management. Prepare for behavioral rounds emphasizing compliance, cross-functional collaboration, and delivery in a regulated environment."
   },
-  "last_attempt_at": 1784882707,
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784583396,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Headquartered in Dublin, Ohio. Major tech hubs in Dublin (OH), Chicago, Denver, Raleigh, and remote-eligible roles. Operations across U.S. and select international sites."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "To improve the cost-effectiveness of healthcare and help customers focus on patient care by providing essential products, services, and data insights."
+  },
   "name": "Cardinal Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow — Large enterprise with regulatory, compliance, and change-management gates. Project cycles measured in quarters; not a 'move fast' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Pharmaceutical distribution (generic and specialty drugs), medical/surgical product distribution, performance and data solutions (analytics, consulting, inventory management), nuclear pharmacy services, and home healthcare solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 company holidays (varies by band/tenure). No public unlimited PTO policy."
   },
-  "retry_after": 1784882827,
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59830,7 +59886,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced schedules around Christmas/New Year, but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Public company (NYSE: CAH), ~$200B+ annual revenue, ~46,000 employees globally, Fortune 15–20 rank. Mature, large-scale enterprise."
   },
   "sources": [
    {
@@ -59864,14 +59928,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=cab85a65ca1c47ac781ec69c5ff160060a97200b1b7c07194de0a5bf8951f991JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuY2FyZGluYWxwcm9qZWN0LnZpcmdpbmlhLmdvdi8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for technical roles (data science, engineering, analytics) given scale and ongoing digital transformation. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f7e7cbf15",
+    "e7b9eefe4d"
+   ],
+   "value": "Cardinal Health is a Fortune 500 healthcare services and distribution company that supplies pharmaceuticals, medical products, and data-driven solutions to hospitals, pharmacies, and healthcare providers across the U.S. and globally."
+  },
+  "synthesized_evidence_sha": "21ba4675c422c418",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise data platforms, supply chain optimization, pharmacy analytics, AI/ML for demand forecasting and clinical decision support, cloud migration, and digital health product development. Tech stack includes cloud (AWS/Azure), Python, SQL, Spark, Tableau/PowerBI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583396,
   "web_search_url": "https://duckduckgo.com/?q=Cardinal+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cardinal Health offers massive healthcare data scale and real-world impact on patient care logistics, but it is a traditional Fortune 15 enterprise—not a fast-moving tech-first company. Prestige and pay are solid for industry, yet pace, bureaucracy, and WLB reflect a large regulated corporation, not an elite AI lab."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally reasonable hours (40–45 hrs/week) for core tech roles, but on-call rotations and quarterly crunches occur. Not a guaranteed-shutdown environment."
   }
  },
  "career guidant": {
@@ -64000,7 +64088,7 @@
    "value": "Tier 2 — Respected enterprise practitioner; not an AI research lab but operates large-scale data platforms for government and finance where applied ML is production-critical."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -64054,7 +64142,7 @@
    ],
    "value": "Expect practical Java/Spring/Angular coding exercises, REST API design, SQL query optimization, and scenario questions about scaling enterprise applications. Behavioral interviews emphasize client-facing communication, handling ambiguous requirements, and teamwork in distributed project settings. Prepare to discuss how you would apply ML or data science techniques to real-world public-sector or financial use cases."
   },
-  "last_attempt_at": 1784881896,
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784747329,
   "locations": {
    "confidence": "high",
@@ -64093,7 +64181,7 @@
    "value": "Estimated: 15-20 days annual vacation + 10-12 company holidays (varies by country/state; US new grads typically start at 15 days PTO)."
   },
   "refresh_after": 1789932944,
-  "retry_after": 1784882856,
+  "retry_after": 1784884811,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89447,42 +89535,100 @@
  "daymark recovery services": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Estimated: Low tier for AI/Data Science prestige. As a traditional healthcare provider, it is not primarily an AI or data science company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Healthcare service provider generating revenue through clinical and recovery treatments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Estimated: Mission-driven and clinical, likely prioritizing patient outcomes over technical learning and fast-paced tech career growth."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Individuals seeking mental health and substance use recovery treatment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $80,000. Standard for non-tech industry IT roles, well below elite tech pay."
   },
   "evidence_sha": "26526ecc6ef8f999",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784882707,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Mental Health & Substance Abuse Recovery Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Probe heavily to see if a real data science team exists. Ask about tech stack, pace of innovation, hours, and whether the role actually uses modern AI or is just basic analytics for clinical reporting. Determine if WLB is due to sane hours or slow bureaucracy."
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784676783,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Not found in research; assumed to be located in areas they serve based on website origin."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "To provide recovery services for mental health and substance use disorders."
+  },
   "name": "Daymark Recovery Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Estimated: Moderate pace typical of healthcare providers, prioritizing patient care and compliance over fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Mental health and substance use disorder recovery services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard healthcare package (15-25 days), though exact policy not public."
   },
-  "retry_after": 1784882827,
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89492,7 +89638,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific company-wide tech shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "aad83385a2",
+    "affbee3d94"
+   ],
+   "value": "Established healthcare provider with online portals for employee and patient access."
   },
   "sources": [
    {
@@ -89526,14 +89680,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=a497d9db40bffabc6fb4803fcdbe3e53b7265f471d150221bb230a9d748f7b1eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly93d3cuZGF5bWFya3NhZmV0eS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Daymark Recovery Services is a healthcare organization that provides mental health and substance use disorder recovery services. They generate revenue by delivering these clinical and support services to patients."
+  },
+  "synthesized_evidence_sha": "26526ecc6ef8f999",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "affbee3d94",
+    "1939cd1b2a"
+   ],
+   "value": "Not detailed in sources; likely standard healthcare IT, clinical data systems, and secure employee/patient web portals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676783,
   "web_search_url": "https://duckduckgo.com/?q=Daymark+Recovery+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "If looking for a top-tier AI/Data Science role, this may not align with your goals. As a clinical healthcare provider, it is highly mission-driven but likely lacks an innovative tech culture, lacking the elite prestige, fast pace, and high new-grad pay typical of specialized tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "aad83385a2"
+   ],
+   "value": "Estimated: Potentially strong WLB with standard healthcare hours and guaranteed shutdowns, avoiding toxic tech burnout."
   }
  },
  "dayton freight lines": {
@@ -95992,11 +96176,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96008,6 +96194,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784675035,
   "name": "Dominion Enterprises",
   "pace_of_work": {
@@ -96020,6 +96207,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883011,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96063,7 +96251,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=3c2037670de4c1468bd73340c74c03ce11f9f99b9acfcc7203cb917df08794bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cuZG9taW5pb25lbmVyZ3kuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675035,
   "web_search_url": "https://duckduckgo.com/?q=Dominion+Enterprises+company+careers+benefits",
@@ -105974,11 +106162,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105990,6 +106180,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784674080,
   "name": "Enterprise Bank & Trust",
   "pace_of_work": {
@@ -106002,6 +106193,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784883011,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106045,7 +106237,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5c2f2119a466db39166f8204d413af5598ac793bd36254276848ea051f9d30e2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly93d3cuZW50ZXJwcmlzZS5jb20vZW4vaG9tZS5odG1sP21zb2NraWQ9MGNmMTJkODRiMWNkNmY0ODM3MTczYTE5YjBiMTZlN2U&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674080,
   "web_search_url": "https://duckduckgo.com/?q=Enterprise+Bank+%26+Trust+company+careers+benefits",
@@ -119086,37 +119278,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2/3. It does not currently hold the *elite prestige* of a pure AI/first-party tech company and may not be recognized as a top-tier destination for elite AI/DS talent."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Global retail and e-commerce sales of third-party and proprietary athletic footwear and apparel, managing a multi-brand store portfolio to reach diverse consumer demographics."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Self-described as a \"melting pot of different walks of life\" that embraces values such as integrity, leadership, excitement, and fun, strongly rooted in global sneaker and youth culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Sneaker enthusiasts, youth culture participants, and everyday consumers seeking athletic footwear and apparel globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $130,000. Likely competitive for traditional retail hub locations but may not hit the *high new-grad pay* benchmarks of elite tech firms in Tier 1 tech hubs."
   },
   "evidence_sha": "0a6ddb1178a2c0b4",
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Retail - Athletic Footwear and Apparel Specialty Stores."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To align with your priorities, focus the interview on the specifics of their tech culture. Ask about the pace of deployment, engineering autonomy, and whether teams are structured in a *bureaucratic* or agile manner. Discuss *technical learning* opportunities, internal promotion paths for new grads, and probe deeply into expected working hours and *WLB* to ensure the environment is non-toxic and respects personal time."
   },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784674615,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Global operations spanning thousands of retail locations across multiple continents, with corporate and technology hubs located in major metropolitan areas (exact corporate HQ details not specified in sources)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "To celebrate sneaker and youth culture around the globe, while dedicating itself to making a safe, exciting, inclusive, and fun work environment for its people, driven by values such as integrity and leadership."
+  },
   "name": "Foot Locker",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Traditional retail corporate environments often feature a steady but methodical pace, which may contrast with a highly *fast, innovative tech culture*."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Athletic footwear, sneakers, and youth-oriented sports apparel sold under various retail brand banners: Foot Locker, Kids Foot Locker, Champs Sports, WSS, and atmos."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days. Public corporate benefits typically fall in this range, though exact new-grad PTO allocation is not publicly specified."
   },
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -119126,7 +119374,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; retail operations typically require year-round backend support."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Public company (NYSE: FL) operating internationally with multiple brand banners and thousands of retail storefronts."
   },
   "sources": [
    {
@@ -119160,14 +119415,43 @@
     "url": "https://careers.footlocker.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Specific information regarding H-1B or new-grad visa sponsorship for corporate technical roles was not found in the supplied sources; candidates should verify directly with talent acquisition."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Foot Locker, Inc. is a specialty athletic retailer that celebrates sneaker and youth culture globally through a portfolio of brands including Foot Locker, Kids Foot Locker, Champs Sports, WSS, and atmos. It makes money by purchasing athletic footwear and apparel from major brands (historically functioning under a wholesale model with its largest supplier being Nike) and reselling these products to consumers through its physical retail stores and e-commerce platforms."
+  },
+  "synthesized_evidence_sha": "0a6ddb1178a2c0b4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "While historically retail-centric, corporate technology groups likely support e-commerce platforms, supply chain logistics, inventory management, and digital customer experience. Specific details on bespoke AI/DS pipelines were not found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674615,
   "web_search_url": "https://duckduckgo.com/?q=Foot+Locker+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "A corporate AI or Data Science role here might offer solid exposure to large-scale retail supply chain and e-commerce optimization. However, based on candidate priorities, Foot Locker may struggle to match the *elite prestige* and *high new-grad pay* of top-tier tech firms. Its traditional retail nature suggests a culture that may lean toward *slow bureaucracy* rather than a fast, innovative tech startup environment, which could bottleneck the desired pace of technical learning and career growth"
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "99ae502145"
+   ],
+   "value": "Estimated: Good. Foot Locker actively emphasizes a \"best people deserve the best workplace\" philosophy centered on safety and inclusivity, which typically translates to standard corporate hours, though this should be validated team-by-team."
   }
  },
  "ford motor company": {
@@ -142189,48 +142473,125 @@
  "hershey": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: 2 (Mid-tier). Large CPG companies generally have robust data science teams but do not carry the elite prestige or cutting-edge cachet of top tech firms or AI-first startups."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Manufactures and sells branded confectionery and snack foods via retail channels."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "Purpose-driven and philanthropic, rooted in Milton Hershey's legacy of helping others (e.g., supporting the Milton Hershey School)."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Everyday consumers purchasing treats, with products likely sold through retail and grocery channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: $90k-$110k. Competitive for the CPG industry but generally lower than top-tier tech companies."
   },
   "evidence_sha": "e78b69e4684b650d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Consumer Packaged Goods (CPG) / Confectionery Manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "Probe heavily into the specific tech stack, the pace of innovation within their data science teams, and new grad compensation bands. Ask about work-life balance policies, actual hours, and guaranteed shutdowns to ensure it meets your strict anti-burnout and sane hours requirements."
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784676786,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Headquartered in Hershey, Pennsylvania, with operations and sales globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "Making more moments of goodness, inspired by Milton Hershey's dedication to creating a better world."
+  },
   "name": "Hershey",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: Moderate to slow. As a legacy manufacturing company, the culture is likely process-oriented and bureaucratic rather than fast and highly innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Chocolate, candies, and snack products (e.g., Hershey's, Reese's, Kisses)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: 15-20 days of vacation for new hires, standard for large legacy CPG corporations."
   },
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: Likely a few floating holidays or minor closures, but a full guaranteed company-wide shutdown is not indicated in the sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Large, established, publicly traded global company."
   },
   "sources": [
    {
@@ -142264,14 +142625,45 @@
     "url": "https://careers.thehersheycompany.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "The Hershey Company is a large, publicly traded consumer packaged goods (CPG) manufacturer that produces and sells chocolate, candies, and snacks. It makes money by manufacturing these products and selling them through retail channels globally."
+  },
+  "synthesized_evidence_sha": "e78b69e4684b650d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Likely involves data science, supply chain analytics, and IT enterprise systems to support manufacturing and sales."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676786,
   "web_search_url": "https://duckduckgo.com/?q=Hershey+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e996389a5"
+   ],
+   "value": "While Hershey is a mission-driven company with a strong legacy of philanthropy, it is a traditional, established CPG corporation rather than a fast-paced, elite tech firm. It is unlikely to offer the top-tier new grad pay, prestigious AI scope, or highly innovative tech culture you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "585f370671"
+   ],
+   "value": "Estimated: Good. Traditional CPG firms often emphasize stable hours, though specific guaranteed shutdowns are unknown."
   }
  },
  "hewlett packard enterprise": {
@@ -161270,41 +161662,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected quantitative finance brand with systematic investing scale, but not a primary AI research lab. Strong for applied ML in finance, weaker for pure research publication."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fee model: earns revenue as a percentage of assets under management (AUM) across diverse investment vehicles. Additional revenue from distribution fees, shareholder servicing fees, and performance-based fees on certain products. Scale advantages in distribution and investment capabilities drive profitability."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, and risk-aware. Engineering culture maturing — some legacy tech debt, but active modernization. Decision-making can be consensus-heavy. Diversity initiatives visible. Less 'move fast' energy; more 'get it right' discipline."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail investors through financial advisors and direct channels, institutional clients including pension funds, sovereign wealth funds, insurance companies, endowments, and foundations, as well as financial intermediaries and platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + $15k-$30k sign-on + RSUs (4-year vest) ~$40k-$60k total. Quantitative research roles may start $130k-$150k base. Varies by location (NYC/SF premium)."
   },
   "evidence_sha": "7351fc4cacab7fe9",
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Asset Management / Investment Management / Financial Services"
   },
-  "last_attempt_at": 1784882511,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect a blend of statistical rigor (probability, time-series, hypothesis testing), ML system design (feature engineering for noisy financial data, model validation, backtesting discipline), and domain fluency (factor models, portfolio construction, transaction costs). Coding assessments lean practical (pandas, SQL, production concerns) over algorithmic puzzles. Prepare to discuss research-to-production workflows and how you handle non-stationary data."
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784675406,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Atlanta, GA. Major hubs in New York, Boston, San Francisco, London, Frankfurt, Hong Kong, Singapore, Sydney, Toronto, and other global financial centers. Hybrid work policies vary by role and location."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people build better financial futures by delivering investment insights, products, and services that meet client needs across market cycles."
+  },
   "name": "Invesco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Project cycles measured in quarters, not sprints. Research has latitude but must clear compliance and risk gates. Less fire-drill culture than hedge funds; more process-driven than tech startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mutual funds, exchange-traded funds (ETFs) including the popular QQQ Nasdaq-100 ETF, institutional separate accounts, model portfolios, retirement solutions, and alternative investments across equities, fixed income, multi-asset, and quantitative strategies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US). Seniority-based accrual. Unlimited not standard. Summer Fridays or similar flexibility in some offices."
   },
-  "retry_after": 1784882751,
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -161314,7 +161744,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns. Some teams observe quiet periods around major holidays (Dec 24-Jan 1) but not policy. Market-driven roles require coverage year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NYSE: IVZ) with approximately $1.5+ trillion in AUM, ~8,000+ employees globally, operating in 20+ countries. Mature, established firm founded in 1935."
   },
   "sources": [
    {
@@ -161348,14 +161783,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=45f2dab57f0800ec14b138ab1adb0cebf41cd14ff5c460bd9e8cc06b69818b2fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuaW52ZXNjby5jb20vdXMvZW4vSW5kaXZpZHVhbC1pbnZlc3Rvci5odG1sP21zb2NraWQ9MGQ3NDcwMTEzY2U2NjljNTIxZWQ2NzhjM2Q0ZTY4YjA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for quantitative research, data science, and technology roles. Green card sponsorship typically available for high-performing employees in specialized technical positions after standard tenure requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Invesco is a global investment management firm that provides a wide range of investment products and services to retail and institutional clients worldwide. The company generates revenue primarily through asset-based management fees on its mutual funds, ETFs, and institutional separate accounts, as well as performance fees and distribution fees."
+  },
+  "synthesized_evidence_sha": "7351fc4cacab7fe9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quantitative research, systematic trading algorithms, risk modeling, portfolio optimization, data engineering for alternative data ingestion, ML for alpha generation and operational efficiency, cloud infrastructure modernization, and fintech platform development for digital distribution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675406,
   "web_search_url": "https://duckduckgo.com/?q=Invesco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Invesco offers a legitimate AI/data science track within a top-10 global asset manager, providing access to massive financial datasets, real-world alpha research, and production ML at scale. While not a 'tech-first' culture like FAANG, it balances prestige in quantitative finance with more sustainable hours than hedge funds or investment banking. The firm is investing heavily in systematic investing and alternative data, creating growth runway for technical talent who want finance domain depth w"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Typical weeks 45-55 hours for IC roles; on-call rare outside core trading/infrastructure. Protected weekends common. Busy periods around rebalancing, regulatory reporting, and market stress events."
   }
  },
  "invisible technologies": {
@@ -220029,37 +220485,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. It is a purely healthcare-focused institution rather than a tech-first or AI-native company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "Operates as a not-for-profit healthcare network, generating revenue through direct medical care, hospital management, and specialized health network services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-driven, and focused on patient welfare, but likely constrained by standard hospital bureaucracy and compliance."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "Patients, families, and corporate partners seeking direct healthcare and specialized medical services across the Gulf South."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000. Salaries are typically lower than elite big tech companies but accompanied by standard healthcare benefits."
   },
   "evidence_sha": "3efd60898135e859",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "514bd7c037"
+   ],
+   "value": "Healthcare, Hospital and Health Systems."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784583399,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "The Gulf South region of the United States, anchored in Louisiana."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "To provide comprehensive patient care and improve the health of the communities it serves through its health network."
+  },
   "name": "Ochsner Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Methodical and process-heavy due to healthcare regulations, clinical safety standards, and large organizational structure."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "Healthcare services including hospitals, Urgent Care centers, pharmacies, and a comprehensive health network."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days annually, which is standard for a large not-for-profit healthcare system."
   },
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220069,7 +220579,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed corporate-wide tech shutdowns. Healthcare operations are continuous and hospitals do not shut down."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73"
+   ],
+   "value": "A large, established not-for-profit health system operating across the Gulf South region."
   },
   "sources": [
    {
@@ -220103,14 +220620,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=4f478c2ba893c0511c3ed77d5012b84cf520049b7e11ca2fe7f349c3ba420e0cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cub2Noc25lcmhlYWx0aG5ldHdvcmsub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1419f30a73",
+    "514bd7c037"
+   ],
+   "value": "No specific information found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1419f30a73",
+    "514bd7c037"
+   ],
+   "value": "Ochsner Health is a comprehensive, not-for-profit healthcare provider and瘤 health system operating across the Gulf South region. It generates money by providing direct patient care, managing hospitals and clinics, and offering specialized health network services."
+  },
+  "synthesized_evidence_sha": "3efd60898135e859",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b38d4ec24b",
+    "514bd7c037"
+   ],
+   "value": "Enterprise IT, data infrastructure, health informatics, systems integration, and digital patient platforms (like the 'OHNMyChart' system)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583399,
   "web_search_url": "https://duckduckgo.com/?q=Ochsner+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Likely offers standard hospital administrative hours, but clinical IT support roles may require off-hours on-call rotations."
   }
  },
  "ohio department of public safety": {
@@ -294150,41 +294697,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (strong domain-specific applied AI, growing research output, not a widely known AI brand but respected in energy tech circles)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mix of capital equipment sales, recurring service contracts, software/analytics subscriptions, and project-based field services for pipeline maintenance and integrity."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, collaborative, safety-obsessed, low-politics; long tenures common; values practical solutions over hype."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Major oil & gas operators, midstream pipeline companies, utilities, and energy infrastructure owners worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + 5–10% bonus + RSU/ESOP allocation (US software/data science new grad); total comp ~$95k–$120k."
   },
   "evidence_sha": "8d70079b5c92ab39",
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Oil & Gas Equipment & Services / Pipeline Integrity / Energy Technology"
   },
-  "last_attempt_at": 1784882707,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on handling noisy industrial sensor data, physics-informed ML, model deployment in low-connectivity field environments, and safety-critical software practices. Prepare to discuss end-to-end project ownership and cross-functional collaboration with mechanical/field engineers."
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784675034,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Tulsa, OK; major offices in Houston, UK (Stockton-on-Tees), Malaysia, Brazil, UAE, and other regional hubs; field crews deployed globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To enable safe, reliable, and efficient pipeline operations through innovative technology and expert services."
+  },
   "name": "T.D. Williamson",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate—project-driven with field deployment cycles; not a 'move fast and break things' culture, but steady innovation tempo."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Pipeline intervention equipment (hot tap, line stop, plugging machines), inline inspection tools, data analytics software, and related field services for pipeline integrity management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 company holidays (US); varies by region and tenure."
   },
-  "retry_after": 1784882827,
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -294194,7 +294779,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; some sites observe reduced schedules between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (employee-owned via ESOP), ~2,500–3,500 employees globally, mature stage with decades of operation."
   },
   "sources": [
    {
@@ -294228,14 +294818,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e41c93ac0f05e74320f319878c68f76508865abe81143b565f0f7b8f0f89b62JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized engineering and data science roles; track record of hiring international talent in US and UK locations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "T.D. Williamson (TDW) is a global provider of pipeline integrity and maintenance solutions for the oil, gas, and energy sectors. It makes money by selling specialized equipment, software, and services—including hot tapping, plugging, and inline inspection—to help operators maintain and repair pressurized pipelines without shutdowns."
+  },
+  "synthesized_evidence_sha": "8d70079b5c92ab39",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mechanical/electrical engineering for pipeline tools, embedded systems, data acquisition & analytics, simulation/modeling, and digital twins for asset integrity. Growing investment in AI/ML for anomaly detection and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675034,
   "web_search_url": "https://duckduckgo.com/?q=T.D.+Williamson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TDW offers a mission-critical role in energy infrastructure with deep domain data (pipeline sensors, inspection logs) for AI/ML impact. As an employee-owned, mature company, it tends toward stable hours and long-term career growth over burnout culture, aligning with your desire for prestige, technical depth, and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10—employee-owned structure encourages sustainable hours; field roles travel, but core R&D/software roles typically 40–45 hrs/wk with rare crunch."
   }
  },
  "t mobile": {
@@ -318719,37 +319330,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Top-5 public university, $70M+ university-wide AI initiative, HiPerGator AI (one of academia's most powerful supercomputers), leading hires in ML/DS, strong federal funding portfolio."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public university model: ~38% state appropriations, ~22% tuition/fees, ~25% grants/contracts (mostly federal), ~10% clinical revenue (UF Health), remainder from auxiliaries, philanthropy, and investment income. Non-profit; surpluses reinvested in mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collegial, mission-driven, bureaucratic but stable. Shared governance means decisions involve faculty senate/committees — slower but inclusive. Strong Gator pride, interdisciplinary collaboration encouraged. Diversity/inclusion initiatives active. Less 'move fast break things', more 'build sustainably for public good'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers: ~60,000 students (undergrad + grad), federal/state research sponsors (NIH, NSF, DOE, etc.), patients at UF Health hospitals/clinics, alumni/donors, and corporate partners for tech transfer and executive education."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base for research engineer / data scientist / ML engineer roles (varies by college/grant). No RSU/equity; benefits package (health, retirement 10%+ match, tuition waiver) adds ~30% value. Negotiation limited by state pay bands."
   },
   "evidence_sha": "c46d65152327a4a6",
+  "generated_at": 1784882891,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Public Research University"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: (1) Technical depth in ML/stats/CS fundamentals; (2) Domain translation — how your work serves research, teaching, or clinical missions; (3) Collaboration stories across disciplines; (4) Grant-writing or open-source sustainability awareness; (5) Questions about academic freedom, shared governance, and long-term project horizons."
+  },
+  "last_attempt_at": 1784882891,
   "last_evidence_at": 1784676787,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: Gainesville, FL. Health campuses: Jacksonville, Orlando. Statewide: IFAS research/extension offices in all 67 counties. Remote/hybrid options vary by unit; many research and IT roles offer flexibility post-COVID."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To enable students to lead and influence the next generation and beyond for economic, cultural, and societal benefit through education, research, and service."
+  },
   "name": "University of Florida",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured / Academic — Project timelines measured in quarters/semesters; grant cycles (3-5 years) set horizon. Limited 'crunch' culture; summer often lighter for teaching faculty. Research staff may have deadline-driven periods (conferences, proposals)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products are accredited degree programs (bachelor's through doctoral), research output (publications, patents, technology transfer), continuing education, and athletic entertainment (Florida Gators). Revenue comes from tuition, state funding, research grants, clinical services (UF Health), and philanthropy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22-25 days annual leave + 12-13 paid holidays + university closure week (typically between Christmas/New Year) + sick leave. Faculty have 9-month contracts with summers unscheduled (research/teaching optional)."
   },
+  "refresh_after": 1790066891,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -318759,7 +319412,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Annual university closure week (typically Dec 24-Jan 1) where most operations shut down and employees are off without using PTO. Additional floating holidays and generous winter/spring breaks aligned with academic calendar."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public university: ~60,000 students, ~30,000 faculty/staff, $1.2B+ annual research expenditures, $6B+ annual budget. Flagship campus in Gainesville with statewide extension (IFAS), health system (UF Health), and growing online presence (UF Online)."
   },
   "sources": [
    {
@@ -318793,14 +319451,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d6db5e6fa88cce43e6d9391a5c66ab79d688b0ad7a0facf9d5f03c0ada56f595JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B and O-1 sponsor for faculty, researchers, and specialized staff. Cap-exempt for university and affiliated nonprofit research roles. New-grad international hires typically use F-1 OPT → H-1B pathway; green card sponsorship common for tenure-track and long-term research faculty."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "University of Florida (UF) is a major public land-grant research university in Gainesville, Florida. It operates as a comprehensive academic institution offering undergraduate, graduate, and professional degree programs across 16 colleges, while conducting extensive research funded by federal agencies, state appropriations, and private grants."
+  },
+  "synthesized_evidence_sha": "c46d65152327a4a6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/DS roles exist in: Herbert Wertheim College of Engineering (CISE, ECE), Informatics Institute, HiPerGator AI supercomputer center, UF Health clinical informatics, IFAS agricultural AI, and Warrington College of Business analytics. Work spans fundamental ML research, applied domain science, high-performance computing, and ed-tech platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676787,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Florida+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "UF offers elite AI prestige (top-5 public university, $70M+ AI initiative, HiPerGator AI supercomputer) with new-grad pay competitive for academia (~$85-110K base for research/engineering roles) and strong work-life balance norms (9-month faculty contracts, generous leave, no corporate crunch culture). Mission-driven public impact with sane hours and academic calendar rhythm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — Estimated 4/5. Faculty on 9-month contracts with summers flexible; staff typically 40-hour weeks with generous holidays/university shutdowns; strong union (UF Graduate Assistants United) for grad workers; sabbaticals and professional development leave standard."
   }
  },
  "university of illinois chicago": {
