@@ -362,7 +362,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -380,7 +380,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784901207,
+  "last_attempt_at": 1784902434,
   "last_evidence_at": 1784680917,
   "name": "2U",
   "pace_of_work": {
@@ -393,7 +393,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784901687,
+  "retry_after": 1784903394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25068,42 +25068,102 @@
  "annapurna labs u s inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "deb97234ed",
+    "04f6f79895"
+   ],
+   "value": "High. As the core silicon and hardware team within AWS, it carries significant elite prestige for infrastructure and AI systems engineering."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
+  "attempts": 5,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "deb97234ed",
+    "04f6f79895"
+   ],
+   "value": "Designs and sells custom silicon and cloud infrastructure, monetizing through AWS cloud computing services and hardware deployment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Innovative and technically demanding, operating under Amazon's culture of 'bold ownership and fearless initiative' with a strong customer obsession."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Cloud computing customers and AWS users, ranging from individual developers to large enterprises and AI/ML organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad compensation, typically targeting $180k - $250k+ total package (base, equity, and sign-on) given its elite Silicon tier within Amazon."
   },
   "evidence_sha": "4e1f2287b7319592",
+  "generated_at": 1784902434,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "deb97234ed"
+   ],
+   "value": "Semiconductor and Cloud Infrastructure Design"
   },
-  "last_attempt_at": 1784900370,
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Your fast, innovative tech culture is a major draw. We want to see your 'bold ownership' and 'fearless initiative' to ensure you can drive rapid hardware/software innovation without getting bogged down by bureaucracy."
+  },
+  "last_attempt_at": 1784902434,
   "last_evidence_at": 1784680610,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "deb97234ed"
+   ],
+   "value": "Israel (Haifa, Tel Aviv) and the United States (Seattle/Austin)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "To continuously innovate and impact the future by channeling curiosity and customer obsession into large and small technical milestones."
+  },
   "name": "Annapurna Labs (U.S.) Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, geared toward quickly shipping cutting-edge cloud and AI hardware solutions ahead of market demand."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "deb97234ed"
+   ],
+   "value": "Custom silicon for cloud infrastructure, including the AWS Graviton processors, AWS Inferentia and Trainium chips for AI/ML, and AWS Nitro Cards."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of base PTO for new hires under standard Amazon policies, with potential for more based on tenure."
   },
-  "retry_after": 1784901330,
+  "refresh_after": 1790086434,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25113,7 +25173,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found in public policies, though standard public holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Large scale, operating as a specialized division within a massive global cloud infrastructure organization."
   },
   "sources": [
    {
@@ -25157,14 +25224,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: High likelihood of U.S. work visa sponsorship for top-tier technical talent, as it operates under Amazon/AWS's large corporate umbrella."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "deb97234ed",
+    "04f6f79895"
+   ],
+   "value": "Annapurna Labs is a specialized semiconductor and cloud hardware division acquired by Amazon that designs custom silicon for AWS. It makes money by deploying these highly efficient custom chips, such as the Graviton and Trainium processors, to power AWS cloud infrastructure and lower operational costs for AI and general computing workloads."
+  },
+  "synthesized_evidence_sha": "4e1f2287b7319592",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "deb97234ed"
+   ],
+   "value": "Design and development of custom silicon, machine learning acceleration hardware, cloud infrastructure, and software stacks that integrate directly with AWS networking and compute services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680610,
   "web_search_url": "https://duckduckgo.com/?q=Annapurna+Labs+%28U.S.%29+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "deb97234ed",
+    "04f6f79895"
+   ],
+   "value": "This division perfectly aligns with your desire for elite prestige and high new-grad pay, providing intensive technical learning at the bleeding edge of AI hardware. The culture emphasizes innovation and technical growth, giving you the opportunity to work on core infrastructure that accelerates modern AI workloads without compromising your mission for substantial impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. While Amazon can have demanding periods, Annapurna Labs generally maintains a more focused, engineering-first atmosphere compared to standard corporate tech orgs, helping to protect personal time."
   }
  },
  "antares nuclear": {
@@ -227809,41 +227907,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier business analytics. While Marsh is highly prestigious in the business and finance world, its AI/Data Science work is primarily actuarial, operational, and enterprise-focused rather than cutting-edge research."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5acc1ee2d8"
+   ],
+   "value": "Earns revenue through commissions and fees by brokering insurance policies and providing risk consulting services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, structured, and corporate. Heavy emphasis on compliance, risk mitigation, and formal communication, contrasting with a highly innovative, fast-moving tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3793ad6dbf"
+   ],
+   "value": "Large corporations, small businesses, and institutional clients seeking risk mitigation and insurance solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary for new-grad data and tech roles, featuring strong benefits but likely lacking the high-end stock multipliers found at elite tech firms."
   },
   "evidence_sha": "6c1c7b32478a1489",
+  "generated_at": 1784902434,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3793ad6dbf",
+    "5acc1ee2d8"
+   ],
+   "value": "Insurance Brokerage and Risk Management"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific technology stack, software development lifecycle speed, and tech-team autonomy to ensure it isn't bogged down by corporate bureaucracy. Validate new-grad compensation bands, work-hour expectations, and on-call structures to confirm they meet your high pay, fast culture, and work-life balance needs rather than traditional financial-services rigidity."
   },
-  "last_attempt_at": 1784900757,
+  "last_attempt_at": 1784902434,
   "last_evidence_at": 1784674622,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5acc1ee2d8"
+   ],
+   "value": "Global presence with major corporate hubs in New York City, London, and Chicago."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "97f764bcb8"
+   ],
+   "value": "To act as a trusted advisor and advocate for clients, helping them manage risk effectively so they can thrive."
+  },
   "name": "Marsh",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady. As a traditional corporate financial services firm, the pace is heavily regulated and process-oriented, lacking the rapid, fast-paced iterative cycles of a top-tier tech company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5acc1ee2d8"
+   ],
+   "value": "Commercial insurance brokerage, risk management services, employee health and benefits brokerage, and cyber risk advisory."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, standard for large corporate financial services entities."
   },
-  "retry_after": 1784901237,
+  "refresh_after": 1790086434,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227853,7 +228002,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No standard guaranteed shutdowns for tech teams. Some corporate offices may close for major holidays, but continuous operations often require staggered coverage, lacking the firm-wide tech shutdowns common in Silicon Valley."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3793ad6dbf"
+   ],
+   "value": "Large, established global enterprise with tens of thousands of employees worldwide, operating as the flagship subsidiary of Marsh McLennan."
   },
   "sources": [
    {
@@ -227887,14 +228043,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=754162f8f71b8ed815604863a533c85d9bb4d77e48dc917fa1318fd329cc98c5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Fib21pbmFibGU&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers H-1B visa sponsorship and OPT support for specialized technical, actuarial, and data roles due to its large global footprint, but candidates must confirm with recruiters as it is not universally guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3793ad6dbf",
+    "97f764bcb8"
+   ],
+   "value": "Marsh is the world's leading insurance broker and risk advisor, providing risk management, insurance brokerage, and advisory services. It makes money by charging brokerage fees and commissions for connecting corporate clients with insurance markets."
+  },
+  "synthesized_evidence_sha": "6c1c7b32478a1489",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3793ad6dbf",
+    "97f764bcb8"
+   ],
+   "value": "Enterprise data engineering, claims analytics, pricing models, actuarial systems, risk transfer platforms, and internal broker tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674622,
   "web_search_url": "https://duckduckgo.com/?q=Marsh+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new graduate seeking elite prestige and high compensation, Marsh offers strong brand recognition and robust data challenges, but it contrasts with the desire for a fast, innovative tech culture. Its corporate structure leans toward traditional bureaucracy rather than the rapid tech-startup pace, and while financial stability is a plus, the traditional corporate environment may not fully align with the highly accelerated technical learning or guaranteed shutdowns you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Sane hours are generally maintained for back-office tech roles, but client-facing teams may experience spikes during major insurance renewal seasons, which may conflict with a desire for guaranteed boundaries."
   }
  },
  "marsh mclennan": {
@@ -253599,7 +253782,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -253642,7 +253825,7 @@
    ],
    "value": "Probe whether the role offers accelerated technical learning and career growth without sacrificing personal time, and clarify if compensation and work pace meet your expectations for an elite, fast-moving tech culture."
   },
-  "last_attempt_at": 1784901099,
+  "last_attempt_at": 1784902434,
   "last_evidence_at": 1784583334,
   "locations": {
    "confidence": "medium",
@@ -253677,7 +253860,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784902059,
+  "retry_after": 1784904354,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285350,7 +285533,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285368,7 +285551,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784900923,
+  "last_attempt_at": 1784902434,
   "last_evidence_at": 1784834269,
   "name": "Poshmark",
   "pace_of_work": {
@@ -285381,7 +285564,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784901403,
+  "retry_after": 1784903394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
