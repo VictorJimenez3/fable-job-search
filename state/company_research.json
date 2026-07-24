@@ -4198,7 +4198,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4216,7 +4216,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784868302,
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784677175,
   "name": "Added Innovation",
   "pace_of_work": {
@@ -4229,7 +4229,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784870222,
+  "retry_after": 1784874154,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9582,103 +9582,105 @@
  },
  "akuna capital": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "54be778e27",
-    "17f8c9c419"
+    "5b8ac27ff7"
    ],
-   "value": "Tier 1 — Akuna holds elite prestige in the quantitative trading industry, directly comparable to top-tier tech and quant hedge funds. It is a sought-after destination for data scientists in finance."
+   "value": "Top-tier within prop trading; offers competitive new-grad compensation"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Akuna uses its own capital to act as a market maker, primarily in options. The firm leverages quantitative research, low-latency technology, and real-time trading strategies to capture the spread between buy and sell prices."
+   "value": "Proprietary trading, specifically generating revenue through options market making and capturing spreads."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Collaborative, technical, and mission-driven with a flat structure. Nurtures individual ownership across Quants, Traders, and Technologists, avoiding slow, bureaucratic decision-making in favor of direct innovation."
+   "value": "Tech-driven and collaborative across Technology, Trading, Quant, and Operations departments, emphasizing rapid prototyping and innovation."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Akuna Capital does not serve external customers in the traditional sense. As a market maker, its counterparties are institutional broker-dealers, exchanges, and other market participants who trade against Akuna's quotes."
+   "value": "Participants in financial markets requiring liquidity for options trading."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: New grad data scientists and quantitative developers can expect a total first-year compensation of $225,000–$350,000, heavily weighted towards a high base salary and performance bonus with a sign-on component."
+   "value": "Estimated: $250,000 - $350,000+ total comp (base + bonus) for top quant/tech roles."
   },
   "evidence_sha": "1014d9e99a104489",
-  "generated_at": 1784683459,
+  "generated_at": 1784870314,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Proprietary trading and quantitative finance"
+   "value": "Financial Services / Proprietary Trading"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "54be778e27",
-    "17f8c9c419"
+    "5b8ac27ff7"
    ],
-   "value": "Interviews will center on balancing elite technical skills with cultural anti-burnout alignment. Expect rigorous testing of AI/quantitative fundamentals, fast-paced problem solving, and behavioral probes for mission-driven collaboration and ownership, explicitly filtering for those seeking to accelerate technical growth while avoiding toxic bureaucracy."
+   "value": "Given the demand for work-life balance and sane hours, candidates should ask specific questions about expected work hours, on-call expectations, and whether the culture supports avoiding toxic environments. Additionally, emphasize your ability to contribute to rapid prototyping and performant code development without sacrificing quality, as the role requires a strong programming background and creative problem-solving."
   },
-  "last_attempt_at": 1784683459,
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784732392,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "54be778e27",
-    "d8312a38d8"
+    "5b8ac27ff7"
    ],
-   "value": "Global offices include the headquarters in Chicago, along with offices in Sydney, Shanghai, and London."
+   "value": "Headquartered in Chicago, IL."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "To power a leading proprietary trading firm through close collaboration across Technology, Trading, Quant, and Operations, providing employees with endless opportunities for individual growth and ownership."
+   "value": "To provide liquidity as an options market-maker by delivering competitive quotes while empowering employees with endless opportunities for individual growth and ownership."
   },
   "name": "Akuna Capital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "54be778e27"
-   ],
-   "value": "Estimated: Fast-paced and intellectually intense, driven by live markets and real-time decisions, but with no client demands or bureaucratic overhead. The speed is a reflection of market challenges, not inefficient management."
+   "source_ids": [],
+   "value": "Estimated: Extremely high, fast-paced, high-burnout risk; frequent context switching, tight deadlines, and high performance expectations."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Akuna does not offer client-facing products; its core activity is options market making, generating continuous two-sided quotes for listed options. This liquidity-provision service is executed fully in-house using proprietary technology and trading systems."
+   "value": "Options market making, providing competitive quotes for buying and selling derivatives."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Competitive for financial services and tech, typically starting around 20 days per year plus sick leave and market holidays."
+   "value": "Estimated: 15-25 days, often difficult to take during active trading periods."
   },
-  "refresh_after": 1789867459,
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9686,19 +9688,16 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "high",
-   "source_ids": [
-    "54be778e27"
-   ],
-   "value": "Guaranteed shutdowns on all U.S. equities and options market holidays, including New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Good Friday, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving, and Christmas."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Firm shutdowns are rare; operations typically only pause on standard market holidays."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "54be778e27",
-    "17f8c9c419"
+    "54be778e27"
    ],
-   "value": "Akuna is a mid-size, mature proprietary trading firm with a global presence. It actively runs Early Careers, Internship, and experienced-hire programs, indicating a stable and growing organization."
+   "value": "Established firm with multiple departments (Technology, Trading, Quant, Operations) and structured early-career programs."
   },
   "sources": [
    {
@@ -9753,45 +9752,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "54be778e27"
-   ],
-   "value": "As a global firm with offices in the US, UK, Australia, and China, work visa sponsorship is supported for highly specialized technical and quantitative roles, but final eligibility will depend on the specific office and position."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "5b8ac27ff7",
     "54be778e27"
    ],
-   "value": "Akuna Capital is a proprietary trading firm that specializes in options market making, providing competitive buy and sell quotes to ensure liquid markets. The firm uses its own capital to trade across major exchanges, profiting from the spread between bid and ask prices."
+   "value": "Akuna Capital is a leading proprietary trading firm that specializes in options market making, providing liquidity by offering competitive quotes to buy and sell financial derivatives. Founded in 2011 in Chicago, the firm generates revenue by capturing spreads and providing liquidity across various financial markets."
   },
-  "synthesized_evidence_sha": "e789251a0a72dece",
+  "synthesized_evidence_sha": "1014d9e99a104489",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "54be778e27"
+    "5b8ac27ff7"
    ],
-   "value": "Technical work involves building low-latency trading systems, developing quantitative pricing and risk models, and analyzing large market data sets. Teams work across technology, quant research, and operations to fuel the proprietary trading desk."
+   "value": "Rapid prototyping of performant production code, developing trading solutions, tightening innovation cycles, and applying deep mathematical and programming backgrounds to financial markets."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675041,
   "web_search_url": "https://duckduckgo.com/?q=Akuna+Capital+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "54be778e27",
-    "17f8c9c419"
+    "5b8ac27ff7",
+    "54be778e27"
    ],
-   "value": "For a candidate seeking a top-tier AI or data science role, Akuna offers an elite blend of high new-grad pay and technical prestige in a fast, innovative culture. The firm is mission-driven around collaboration and growth rather than bureaucracy, and its trading-hours focus data, enabling a culture known for respecting sane hours and a guaranteed market shutdown cadence."
+   "value": "Akuna Capital aligns with your priority for elite new-grad pay and high-speed technical innovation, offering roles that balance quantitative research with rapid software development. However, while the firm accelerates technical learning and career growth, candidates should note that proprietary trading often carries demanding hours rather than guaranteed shutdowns, requiring careful navigation to avoid burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "54be778e27"
-   ],
-   "value": "Estimated: Above average for fintech and top-tier AI roles. The trading day has a definitive close, enabling predictable evenings and weekends. This creates an natural shield against the toxic around-the-clock culture found at many top tech firms."
+   "source_ids": [],
+   "value": "Estimated: Low to medium for new grads due to demanding learning curves and fast market cycles."
   }
  },
  "akuna capital university": {
@@ -125358,39 +125354,96 @@
  },
  "hpe university": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Tier 1 for AI/HPC infrastructure (Cray exascale leadership, top-500 supercomputers); Tier 2 for applied ML productization vs. pure research labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Revenue from hardware sales (servers, storage, networking), software licenses, subscription-based as-a-service (GreenLake), professional services, and financing. Shift toward recurring revenue via consumption-based models."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-driven, collaborative, process-aware but improving agility. Strong inclusion focus; long-tenured talent mixed with new cloud/AI hires. Less 'move fast break things', more 'move fast with reliability'."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Enterprise corporations, government agencies, cloud service providers, telecommunications companies, and SMBs across industries including financial services, healthcare, manufacturing, and public sector."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU (~$25k–$40k/yr vesting). Total ~$150k–$190k Year 1. Higher for PhD/AI-specialized roles."
   },
   "evidence_sha": "3cc68f85b07745e2",
+  "generated_at": 1784870314,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Enterprise IT infrastructure, hybrid cloud, high-performance computing (HPC), AI infrastructure, networking, storage."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system-design depth (distributed storage, consensus, scheduling), coding in Go/C++/Python, and domain questions on cloud-native architecture or HPC/AI infrastructure. Behavioral emphasis on collaboration across large orgs, customer obsession, and adapting to ambiguity during transformation. Prepare for GreenLake platform vision and how your work connects to as-a-service delivery."
   },
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784672017,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Headquartered in Spring, Texas (Houston metro). Major engineering hubs in San Jose, Fort Collins, Houston, Bangalore, Grenoble, and others. Hybrid work model; many roles offer remote flexibility."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "58e673cc33"
+   ],
+   "value": "To help customers unlock value from all their data everywhere — edge to cloud — by delivering open, secure, and intelligent infrastructure and software solutions."
+  },
   "name": "HPE (University)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast in cloud/AI transformation teams (GreenLake, HPC); slower in legacy hardware sustainment. Quarterly planning cycles; some bureaucracy but decreasing."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655",
+    "58e673cc33"
+   ],
+   "value": "HPE GreenLake (edge-to-cloud platform), HPE ProLiant servers, HPE Alletra/Primera storage, HPE Aruba networking, HPE Ezmeral software, HPC & AI solutions (Cray supercomputers), and as-a-service offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days accrued PTO + 10–12 company holidays (US). Unlimited not offered; accrual increases with tenure."
   },
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -125400,7 +125453,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December). No guaranteed summer or quarterly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Public company (NYSE: HPE); ~60,000 employees globally; FY2024 revenue ~$29B. Mature enterprise IT vendor undergoing transformation to high-growth cloud/AI segments."
   },
   "sources": [
    {
@@ -125434,14 +125494,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=007f6adfbd39b0af6f8918362a22e5bd6ba5279d377878e6df52e0d8cd9105a3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cuaHBlLmNvbS91cy9lbi9ob21lLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "5132cd2655"
+   ],
+   "value": "Active H-1B sponsor for specialized technical roles (AI, cloud, systems). University recruiting includes new-grad and intern pipelines; green card sponsorship typically for senior/strategic hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655",
+    "58e673cc33"
+   ],
+   "value": "Hewlett Packard Enterprise (HPE) is a global enterprise technology company that provides servers, storage, networking, software, and services to help organizations manage data and workloads across hybrid cloud environments. It was created in 2015 from the split of the original Hewlett-Packard company."
+  },
+  "synthesized_evidence_sha": "3cc68f85b07745e2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5132cd2655",
+    "58e673cc33"
+   ],
+   "value": "Distributed systems, cloud-native platforms (Kubernetes, GreenLake), AI/ML infrastructure (Cray EX, Slingshot interconnect), storage software-defined data services, networking OS (ArubaOS), firmware/embedded systems, and developer tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=HPE+%28University%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HPE offers elite AI/HPC prestige (Cray exascale systems power top supercomputers) and competitive new-grad pay within a mature enterprise that is actively shifting to a faster, cloud-native culture via GreenLake. Its scale provides resources for deep technical learning, while its transformation agenda creates openings for impact without the burnout typical of hyper-growth startups. Work-life balance is generally respected in engineering groups, with flexible hours and limited mandatory overtime."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5. Core hours flexibility, minimal weekend work in most engineering groups, protected vacation. On-call rotations exist for cloud services but are managed."
   }
  },
  "hr a advisors": {
@@ -163706,11 +163795,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163722,6 +163813,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784673557,
   "name": "Masco",
   "pace_of_work": {
@@ -163734,6 +163826,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784870434,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163777,7 +163870,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4c486af543e67b4acd69c7500ca6d43ef712d06ada21d861ef97a4cbe55d77bdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9tYXNjby5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784673557,
   "web_search_url": "https://duckduckgo.com/?q=Masco+company+careers+benefits",
@@ -188584,52 +188677,61 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Solid technical reputation in embedded systems and hardware, but not considered top-tier for pure AI/Data Science prestige compared to software giants or AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "4bd9e97c18",
+    "605cd40a79"
+   ],
+   "value": "Fabless or hybrid semiconductor manufacturing focused on selling differentiated secure connectivity hardware and embedded software to enterprise and industrial customers."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-focused and collaborative, emphasizing strong analytical mindsets and cross-functional integration."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "4bd9e97c18",
+    "605cd40a79"
+   ],
+   "value": "Electronics manufacturers requiring secure connectivity, including automotive, industrial, and IoT device builders."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "Estimated: $110k-$130k base salary for entry-level software roles, typical of semiconductor firms in high-cost California markets."
   },
   "evidence_sha": "e0fa1c8994597a09",
-  "generated_at": 1784520372,
+  "generated_at": 1784870314,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "cee27dd267",
-    "91836041bf"
+    "4bd9e97c18",
+    "03931c4ccf"
    ],
-   "value": "Emphasize problem-solving skills, an analytical mindset, and any exposure to Smart Card/Java Card OS, secure coding, cryptography, or Global Platform/EMVco standards. Be prepared to discuss how you collaborate across hardware and software boundaries to optimize system performance."
+   "value": "Semiconductors."
   },
-  "last_attempt_at": 1784869982,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe actual sprint cycles, release cadence, and high-level project structure. Confirm if teams get dedicated shutdowns and how rigid the engineering hierarchy is, ensuring it matches your fast-paced, low-burnout expectations."
+  },
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784677224,
   "locations": {
    "confidence": "high",
@@ -188637,21 +188739,20 @@
     "cee27dd267",
     "91836041bf"
    ],
-   "value": "San Diego Innovation Drive (CA) and San Jose Holger Way (CA)."
+   "value": "San Diego (Innovation Drive) and San Jose (Holger Way), California."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "cee27dd267",
-    "91836041bf"
+    "cee27dd267"
    ],
-   "value": "To enable possibilities with NFC, allowing users to interact securely with the world around them with a simple touch."
+   "value": "Enabling possibilities with secure, intuitive technologies like NFC that let users interact securely with the world through a simple touch."
   },
   "name": "NXP Semiconductors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to methodical, typical of secure hardware and semiconductor development cycles, which may feel slower than fast software tech."
   },
   "products": {
    "confidence": "high",
@@ -188659,15 +188760,16 @@
     "cee27dd267",
     "91836041bf"
    ],
-   "value": "NFC System Software and Smart Card Operating Systems (including Java Card OS)."
+   "value": "Near Field Communication (NFC) systems, smart card operating systems (Java Card OS), embedded firmware, and secure hardware."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave, standard for mature tech companies."
   },
-  "retry_after": 1784870222,
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188677,12 +188779,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Possible holiday shutdown, though exact policy not public."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "03931c4ccf"
+   ],
+   "value": "Mature public company."
   },
   "sources": [
    {
@@ -188737,42 +188841,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
     "cee27dd267",
     "91836041bf"
    ],
-   "value": "NXP Semiconductors is a technology company hiring entry-level engineers to develop and validate NFC (Near Field Communication) system software, focusing on secure, fast, and intuitive wireless interactions."
+   "value": "Not explicitly mentioned in current entry-level job postings."
   },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bd9e97c18",
+    "605cd40a79"
+   ],
+   "value": "NXP Semiconductors designs and manufactures semiconductor chips and embedded software for secure connectivity applications. The company makes money by selling these mixed-signal, analog, and embedded processing products to automotive, industrial, and IoT electronics manufacturers."
+  },
+  "synthesized_evidence_sha": "e0fa1c8994597a09",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "cee27dd267",
     "91836041bf"
    ],
-   "value": "Entry-level roles involve collaborating with hardware engineers, firmware developers, and software teams to ensure seamless integration and optimal system performance. Requires secure coding practices, knowledge of cryptography, and exposure to Global Platform and EMVco standards."
+   "value": "Cross-functional collaboration between hardware engineers, firmware developers, and software teams to ensure seamless integration and optimal system performance, applying secure coding practices and cryptography for NFC systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677224,
   "web_search_url": "https://duckduckgo.com/?q=NXP+Semiconductors+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "cee27dd267",
-    "91836041bf"
-   ],
-   "value": "Aligns with the candidate's desire for a fast, innovative tech culture and accelerated technical learning. The entry-level roles offer cross-functional collaboration with hardware and firmware teams, providing an excellent environment to build deep expertise in secure systems, cryptography, and OS development."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NXP offers mission-driven work securing critical connected systems, suiting your desire for impact. However, a mature hardware firm likely carries slower pace and bureaucracy than a fast startup, so test whether your team operates with agile innovation or faces red tape."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally good with sane hours, typical of established hardware companies, though direct mentions of guaranteed shutdowns were not found in current sources."
   }
  },
  "nyc department of health and mental hygiene": {
@@ -197664,100 +197769,123 @@
  "pax": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: Emerging startup tier. Pax lacks the historical prestige of top-tier giants, but its hyper-focus on cutting-edge LLMs provides high foundational prestige and elite technical street cred within the San Francisco startup ecosystem."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Sells AI software solutions, likely operating on a Software-as-a-Service (SaaS) or enterprise licensing model common to early-stage B2B AI startups."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: Intensely technical, founder-driven, and highly collaborative. The tiny team size ensures everyone has a massive footprint in product direction, favoring fast learners who thrive without rigid structure."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Not explicitly stated in available sources, but as an enterprise AI tool provider, likely targets businesses seeking to integrate advanced LLM capabilities into their workflows."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: $140,000 - $170,000 base salary. Early-stage AI startups in San Francisco typically offer competitive cash with significant equity to attract top talent."
   },
   "evidence_sha": "86d321c2eb6077fa",
-  "generated_at": 1784505063,
+  "generated_at": 1784870314,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "LLMs, API design, Backend architecture, Frontend UI, React"
+   "value": "Artificial Intelligence / Software Development."
   },
-  "last_attempt_at": 1784869982,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for concrete details on their actual work-life balance and guardrails. Ask how the 2-10 person team manages on-call responsibilities, what 'sane hours' means in their day-to-day, and how they prevent startup burnout to ensure personal time is genuinely respected."
+  },
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784677231,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "San Francisco, California, USA"
+   "value": "Headquartered in San Francisco, California, USA."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Developing advanced artificial intelligence software and large language model applications to solve complex technical challenges."
   },
   "name": "Pax",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: Extremely fast and iterative. As a sub-10-person startup, the company requires rapid development, high adaptability, and direct ownership of product features without slow bureaucracy."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "AI software solutions built on large language models (LLMs), encompassing end-to-end applications with API design, backend architecture, and React-based frontend user interfaces."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: 15 days. Typical for early-stage San Francisco startups."
   },
-  "retry_after": 1784870222,
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: Unknown/not publicly listed. Unlikely to have formal company-wide shutdowns given the small headcount, but flexible time off is common in this stage."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "2-10 employees"
+   "value": "Seed or early-stage startup with 2-10 employees, founded in 2024."
   },
   "sources": [
    {
@@ -197806,35 +197934,38 @@
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "Pax has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role."
+   "value": "Pax has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "Pax is a newly founded AI company based in San Francisco, California, with a team of 2-10 employees, offering H1B sponsorship for eligible candidates."
+   "value": "Pax is an early-stage artificial intelligence startup founded in 2024 and based in San Francisco. As a stealth-mode AI company, it generates revenue by developing and commercializing AI software solutions for enterprise clients."
   },
+  "synthesized_evidence_sha": "86d321c2eb6077fa",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "a4cefa4a0b"
    ],
-   "value": "LLMs, API design, Backend architecture, Frontend UI, React"
+   "value": "Full-stack AI engineering involving LLMs, API design, backend architecture, and React frontend UI development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677231,
   "web_search_url": "https://duckduckgo.com/?q=Pax+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "As a tiny, early-stage AI startup, Pax offers the fast, innovative tech culture and hands-on learning you prioritize, completely bypassing the slow bureaucracy of larger tech firms. You will have direct access to elite, cutting-edge LLM architecture work, allowing for accelerated career growth and technical skill acquisition in a high-impact, mission-driven environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Estimated: Company-dependent / Unverified. Startups at this stage often require intense hours; candidates must validate during interviews if 'sane hours' and guaranteed personal time are actually respected."
   }
  },
  "paylocity": {
@@ -213565,104 +213696,125 @@
  },
  "quantifind": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "4db8c92421"
+   ],
+   "value": "Unable to determine from the supplied sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "4db8c92421"
    ],
-   "value": "Data science technology company"
+   "value": "Unable to determine from the supplied sources."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "9396b88253",
+    "075835bb47"
+   ],
+   "value": "Unable to determine from the supplied sources."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "9396b88253",
+    "075835bb47",
+    "4db8c92421"
+   ],
+   "value": "Unable to determine from the supplied sources."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive market rate, but exact figures not found in the supplied sources."
   },
   "evidence_sha": "f1c99df2919d3f15",
-  "generated_at": 1784403141,
+  "generated_at": 1784870314,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "9396b88253",
+    "075835bb47"
    ],
-   "value": "Mission-driven company with a focus on innovative solutions for financial crimes, balancing technical learning with work-life balance (hybrid work model, no explicit burnout culture mentioned in posting)."
+   "value": "Unable to determine from the supplied sources."
   },
-  "last_attempt_at": 1784403141,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "During the interview, ask specific questions to confirm elite prestige and high new-grad pay, and probe for examples of how the team maintains a fast, innovative tech culture without bureaucratic slowdowns. Be sure to ask about typical working hours, on-call expectations, and whether they offer guaranteed shutdowns to ensure they respect work-life balance and avoid toxic burnout."
+  },
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784672024,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "4db8c92421"
    ],
-   "value": "Palo Alto, CA"
+   "value": "Unable to determine from the supplied sources."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "9396b88253",
+    "075835bb47"
    ],
-   "value": "Combating financial crimes through innovative solutions"
+   "value": "Unable to determine from the supplied sources."
   },
   "name": "Quantifind",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative, though this must be verified directly with the company as no data was found in the supplied sources."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "4db8c92421"
+   ],
+   "value": "Unable to determine from the supplied sources."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard (15-20 days), but exact policy not found in the supplied sources."
   },
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "9396b88253",
+    "075835bb47",
+    "4db8c92421"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Presence of guaranteed shutdowns is unconfirmed and requires direct verification."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "9396b88253",
+    "075835bb47",
+    "4db8c92421"
    ],
-   "value": "51-200 employees"
+   "value": "Unable to determine from the supplied sources."
   },
   "sources": [
    {
@@ -213699,37 +213851,42 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "9396b88253",
+    "075835bb47",
+    "4db8c92421"
    ],
-   "value": "H1B Sponsorship"
+   "value": "Unable to determine from the supplied sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "4309be9cd8"
+    "9396b88253",
+    "075835bb47"
    ],
-   "value": "Quantifind is a data science technology company founded in 2009, focused on combating financial crimes through innovative solutions. It is a small-scale company with 51-200 employees, offering a hybrid work model and H1B sponsorship."
+   "value": "The provided sources do not contain sufficient data to summarize Quantifind's business or revenue model, as all retrieved pages resulted in redirect notices."
   },
+  "synthesized_evidence_sha": "f1c99df2919d3f15",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "9396b88253",
+    "075835bb47"
+   ],
+   "value": "Unable to determine from the supplied sources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672024,
   "web_search_url": "https://duckduckgo.com/?q=Quantifind+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "4309be9cd8"
-   ],
-   "value": "A top-tier AI or data science role with competitive pay ($100K-$130K/yr) in a fast, innovative tech culture (51-200 employees, hybrid work) that avoids slow bureaucracy, with a mission-driven focus on combating financial crimes."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Quantifind meets your priorities, it would offer a prestigious AI/data science role with strong new-grad pay and a fast, innovative culture, while maintaining sane hours and guaranteed shutdowns to prevent burnout. It is crucial to verify their commitment to work-life balance and rapid technical learning during the interview process."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely moderate to good, contingent on sane hours and guaranteed shutdowns, but requires direct confirmation."
   }
  },
  "quantix scs": {
@@ -301576,102 +301733,134 @@
  },
  "zs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "Top-tier in healthcare analytics; highly respected for data science within the life sciences and pharma consulting domain."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Management consulting and technology firm"
+   "value": "ZS generates revenue through business-to-business (B2B) professional services, charging pharma and biotech clients for consulting projects, custom analytics solutions, and digital platform implementations."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, analytical, and driven by a mission to improve healthcare outcomes. Less cutthroat than traditional high-end strategy consulting, but still maintains a client-focused, professional environment."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "Pharmaceutical companies, biotech firms, medical device manufacturers, and other organizations operating within the global healthcare and life sciences industry."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 to $150,000 total target compensation (base + bonus) for new-grad data science and tech roles, with base salary heavily concentrated in the $110k-$135k range."
   },
   "evidence_sha": "f52c0ddf2e6b5893",
-  "generated_at": 1784402296,
+  "generated_at": 1784870314,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "Management Consulting and IT Services"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Statistical algorithms, hypothesis testing, machine learning, data mining, text mining"
+   "value": "Candidates should prepare for case studies centered on healthcare commercial challenges and technical interviews emphasizing data science, AI modeling, and data engineering. Emphasize adaptability to a fast-paced environment and a strong passion for the healthcare mission when discussing fit and career acceleration."
   },
-  "last_attempt_at": 1784402296,
+  "last_attempt_at": 1784870314,
   "last_evidence_at": 1784672022,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Princeton, NJ +5 more"
+   "value": "Global presence with major offices in North America, Europe, and Asia (including US cities like Chicago, Boston, and New York, as well as London, Paris, Tokyo, and Bangalore)."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Improving life and how we live it"
+   "value": "To help global healthcare organizations solve complex commercial and clinical challenges by providing data-driven insights, strategy, and technology solutions."
   },
   "name": "ZS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and project-driven environment typical of top-tier consulting, with occasional intensive periods around client deliverables."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "Strategy consulting, advanced analytics, AI and machine learning solutions, and digital technology platforms primarily focused on commercial, marketing, and clinical operations within the life sciences sector."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of paid time off per year, plus standard public holidays, which is competitive for the professional services industry."
   },
+  "refresh_after": 1790054314,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "b179f3359e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: May offer limited firm-wide shutdown days around major holidays (e.g., between Christmas and New Year's), although project deadlines can sometimes require limited work during these periods."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "A large, established global professional services firm with over 10,000 employees operating across multiple continents."
   },
   "sources": [
    {
@@ -301706,39 +301895,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
+   ],
+   "value": "As a large global consulting firm, ZS frequently hires international talent and typically provides work visa sponsorship for specialized analytics and tech roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "ZS is a management consulting and technology firm focused on improving life and how we live it, offering a top-tier AI/data science role with competitive pay, hybrid work, and a focus on technical growth in a fast-paced environment."
+   "value": "ZS is a management consulting and technology firm focused on the global healthcare industry, helping clients solve commercial and clinical challenges. It makes money by providing data-driven strategy consulting, advanced analytics, and digital technology transformation services to pharmaceutical and life sciences organizations."
   },
+  "synthesized_evidence_sha": "f52c0ddf2e6b5893",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Statistical algorithms, hypothesis testing, machine learning, data mining, text mining"
+   "value": "Technical roles at ZS involve working on healthcare data pipelines, developing predictive models and machine learning algorithms, building cloud architecture, and creating custom software platforms for commercial analytics."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672022,
   "web_search_url": "https://duckduckgo.com/?q=ZS+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f16f0e71f0"
+    "27764f257d",
+    "b179f3359e",
+    "e9baf9b059"
    ],
-   "value": "Top-tier AI/data science role with elite prestige, high new-grad pay ($105K-$119K), fast innovative tech culture, and mission-driven work that respects work-life balance through sane hours and guaranteed shutdowns."
+   "value": "ZS offers a compelling balance for candidates seeking elite data science work with a mission-driven healthcare focus. It provides structured career growth and high technical learning in a niche analytics market, which can offer better work-life balance and more predictable hours than broader big-tech or high-burnout management consulting."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good work-life balance by consulting standards, with generally predictable hours compared to MBB consulting, though project deadlines can require occasional extra pushes."
   }
  },
  "zscaler": {
