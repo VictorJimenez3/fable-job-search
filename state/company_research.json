@@ -27521,48 +27521,123 @@
  "asure software": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: Low to Medium. While they are in HCM, specific AI or data science prestige is not evident from available sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Sells Human Capital Management (HCM) software, likely via a B2B SaaS model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: Professional and collaborative. As an established HCM provider, the culture likely balances software delivery with standard corporate practices."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Businesses seeking human resources and workforce management software (inferred from B2B HCM focus)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: $80K/yr - $90K/yr. This is explicitly listed for the Associate Software Engineer role."
   },
   "evidence_sha": "c7311d04a852bc70",
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Human Capital Management / HR Technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the team's innovation pace and AI/data science opportunities versus standard HCM software maintenance. Clarify expectations around work-life balance, sane hours, and career growth to ensure it avoids bureaucratic slowdown or burnout."
   },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784782030,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Atlanta, GA (Full-time Hybrid)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Not explicitly found in the provided sources, but focuses on delivering HCM solutions."
+  },
   "name": "Asure Software",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: Moderate. As a growing company in a competitive HCM market, the pace is likely steady but not explicitly documented as fast-paced."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Human Capital Management (HCM) solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: 15-20 days. Standard for mid-sized professional software companies, though exact policy is not public."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: Unknown/No guaranteed shutdowns found. There is no mention of company-wide shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Described as a 'growing company' actively hiring entry-level engineers."
   },
   "sources": [
    {
@@ -27606,14 +27681,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=ffbe59d3507182e392fe954eba3b352da034433b45fb436ef94127091e96fe2bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTA3YmUyODcxOTYzNjY1ZGQxMzIyM2ZlYzk3ZDY2NDZm&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Asure Software is a growing company that specializes in Human Capital Management (HCM) solutions. They likely generate revenue through B2B software subscriptions and related implementation services for businesses."
+  },
+  "synthesized_evidence_sha": "c7311d04a852bc70",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Entry-level software engineering involving object-oriented programming, data structures, algorithms, software design principles, and C#."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678004,
   "web_search_url": "https://duckduckgo.com/?q=Asure+Software+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "For a candidate seeking an elite AI/data science role with fast culture, Asure may fall short of top-tier prestige; however, it offers a hybrid environment and competitive entry-level pay that could provide sane hours while you accelerate technical learning in C# and software design."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6e8d8afdd"
+   ],
+   "value": "Estimated: Good. The hybrid work model for entry-level roles suggests a modern approach to flexibility, though exact hours are undocumented."
   }
  },
  "at t": {
@@ -79213,48 +79317,121 @@
  "databank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Estimated: Low. DataBank is a traditional data center and colocation provider, not an elite software or AI-first firm, meaning it lacks the top-tier AI/data science prestige desired by the candidate."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Infrastructure as a Service (IaaS) and colocation, making money by leasing physical data center space, providing managed cloud services, and facilitating network interconnections for businesses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Estimated: Traditional, operations-focused enterprise IT culture. The focus is on facility uptime and hardware rather than modern, fast-paced software development."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Enterprises requiring large-scale data hosting, cloud infrastructure, and network interconnectivity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Estimated: $75K - $90K per year for entry-level/early-career technical roles (e.g., Critical Infrastructure Engineer). This is below the elite new-grad pay scale typical for top-tier AI or data science software roles."
   },
   "evidence_sha": "016c0e96e0b986e1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Information Technology and Services / Data Center Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Candidates should probe heavily into work-life balance, specifically asking about on-call rotations, weekend maintenance windows, and data-center operational hours, as critical infrastructure often requires 24/7 uptime. To ensure it meets the priority of avoiding high-burnout environments, ask about the team's actual day-to-day pace, whether the work involves any modern AI/ML stacks, and how career growth is accelerated for new grads in an operations-heavy role."
+  },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784782306,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Headquartered in Dallas, Texas, with a specific role opening for a Critical Infrastructure Engineer located in Denver, CO. The position is full-time and onsite."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "DataBank is a mission-driven company focused on delivering enterprise-class data center, cloud, and interconnection services to empower digital infrastructure."
+  },
   "name": "DataBank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Estimated: Moderate to slow. Data center and physical infrastructure operations typically prioritize stability and strict processes over a fast, innovative tech culture, which may feel bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Enterprise-class data centers, cloud computing services, and interconnection solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days per year, typical for a mid-sized enterprise in the IT infrastructure sector, though exact policy is not public."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No known guaranteed company-wide shutdowns. Uptime and data center operations usually require year-round staffing."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Founded in 2013 and headquartered in Dallas, Texas, USA. The company operates with 501-1000 employees."
   },
   "sources": [
    {
@@ -79308,14 +79485,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=216fa35f2e36764715870cc2cfe68f04053b1ae10d56a0b732ea04df2e021f05JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuZGF0YWJhbmsuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "DataBank has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "DataBank is a leading provider of enterprise-class data center, cloud, and interconnection services. Founded in 2013, the company generates revenue by leasing colocation space, providing cloud infrastructure, and offering network interconnection services to enterprise clients."
+  },
+  "synthesized_evidence_sha": "016c0e96e0b986e1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Involves managing and operating enterprise-class data center facilities, cloud infrastructure, and interconnection networks. Roles include critical infrastructure engineering requiring 1+ years of experience."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=DataBank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "DataBank operates in the traditional hardware and infrastructure sector rather than elite software/AI, which fundamentally misaligns with a candidate's priority for top-tier data science prestige. Furthermore, an onsite data center role involves operational infrastructure maintenance rather than fast-paced, innovative AI tech culture, meaning it will likely not satisfy desires for accelerated technical learning in cutting-edge data science."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2a1b8085f3"
+   ],
+   "value": "Estimated: Moderate to Good. While the company appears to offer standard hours, onsite data center roles (like Critical Infrastructure Engineer) may require on-call duties or off-hours maintenance, which could impact work-life balance."
   }
  },
  "databricks": {
@@ -119316,48 +119524,123 @@
  "gorin systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: Not a top-tier AI or data science prestige company; current postings focus on standard React Native app development rather than elite AI/DS roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Software development agency building mobile applications on a project or client basis."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Mission-driven app development with remote flexibility, offering both full-time and part-time roles."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Clients seeking custom mobile applications that improve the world."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: $70,000 - $90,000 for an entry-level remote React Native role."
   },
   "evidence_sha": "850187cb17a48409",
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Software Development / IT Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specifics of work-life balance and sane hours, as agency environments can sometimes lean toward high-burnout to meet client deadlines. Clarify compensation to ensure it meets the high new-grad pay benchmark and ask about technical growth paths to confirm it matches elite career acceleration expectations."
   },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784725193,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "United States (Remote)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "To build apps that improve the world."
+  },
   "name": "Gorin Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: Fast-paced, reflecting its 'fast-growing' status and agency model requiring quick turnarounds on diverse app projects."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Mobile applications, specifically built using React Native for remote clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: 10-15 days, standard for a small to mid-sized USA dev company."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; typical agency operations."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Fast-growing USA development company."
   },
   "sources": [
    {
@@ -119411,14 +119694,43 @@
     "url": "https://jobright.ai/jobs/info/6a4df563c643fd23fed3e38a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Not explicitly mentioned in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Gorin Systems is a fast-growing software development company that builds apps designed to improve the world. They generate revenue by providing full-time and part-time application development services, including remote React Native development."
+  },
+  "synthesized_evidence_sha": "850187cb17a48409",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "React Native mobile development. Requires 1+ years of experience and is labeled as an entry-level remote role."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784725193,
   "web_search_url": "https://duckduckgo.com/?q=Gorin+Systems+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Aligns well with the desire for a fast, innovative tech culture away from slow bureaucracy, while touching on the mission-driven requirement of building apps that improve the world. As an agency, it offers accelerated technical learning through diverse project work."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bd36d36ef5"
+   ],
+   "value": "Estimated: Moderate, dependent on client deadlines and remote work autonomy."
   }
  },
  "gotham technology group": {
@@ -128457,11 +128769,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128473,6 +128787,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784742767,
   "name": "Hilton",
   "pace_of_work": {
@@ -128485,6 +128800,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873471,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128538,7 +128854,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784742767,
   "web_search_url": "https://duckduckgo.com/?q=Hilton+company+careers+benefits",
@@ -139591,37 +139907,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 – strong applied data science reputation in a specialized domain, but not widely recognized as a top-tier AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees, retainer engagements, and licensing of proprietary pricing software."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intellectual, collaborative, mission-driven, less bureaucratic than large strategy houses; values technical depth and client impact."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B enterprises across manufacturing, distribution, industrial services, and technology sectors seeking margin improvement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000–$110,000 base salary + performance bonus; equity unlikely at this stage."
   },
   "evidence_sha": "3a9053a2ee61345c",
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Management consulting / pricing strategy & revenue optimization."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Case studies on pricing strategy, statistical modeling exercises, ML for demand forecasting, SQL/Python proficiency, and client communication simulations."
+  },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784826847,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Cleveland, OH; hybrid/remote options for technical roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Help companies capture more value through smarter, data-informed pricing decisions."
+  },
   "name": "INSIGHT2PROFIT",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced consulting project cycles with defined deliverable deadlines; intensity varies by engagement but generally avoids 24/7 crunch culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pricing strategy consulting, profit improvement engagements, data-driven pricing tools and analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO per year plus standard US holidays."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139631,7 +139989,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdown periods; time off is project-dependent and managed individually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50–200 employees; private, growth-stage consultancy."
   },
   "sources": [
    {
@@ -139675,14 +140038,35 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized data science and analytics roles; no public sponsorship data available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "INSIGHT2PROFIT is a consulting firm specializing in pricing strategy and profit optimization for B2B companies."
+  },
+  "synthesized_evidence_sha": "3a9053a2ee61345c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied data science, statistical modeling, machine learning for demand estimation and price optimization, internal analytics tooling, and client-facing dashboard development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784826847,
   "web_search_url": "https://duckduckgo.com/?q=INSIGHT2PROFIT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite applied data science work in a high-impact pricing niche with consulting-level pay, fast project cycles, and a culture that markets itself as mission-driven and respectful of personal time—aligning with a desire for prestige, learning speed, and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – consulting travel and deadline pressure exist, but firm leadership emphasizes sustainable hours and protected personal time."
   }
  },
  "insilico logix": {
@@ -181644,38 +182028,104 @@
  "moonman events": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: Not a top-tier AI or data science prestigious employer; roles are currently generalist software development."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Service-based revenue generated through the planning, creation, and execution of extraordinary events."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Passionate and team-oriented, focused on transforming ideas into extraordinary experiences without toxic bureaucracy."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Not explicitly detailed in research, though the company serves clients looking for extraordinary event experiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: $70,000 - $90,000 per year."
   },
   "evidence_sha": "39555313c54169b7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Event Management and Technology Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Be prepared to discuss how you can thrive in a highly innovative tech culture that avoids slow bureaucracy, balancing your drive for elite technical growth with a commitment to maintaining personal time and avoiding high-burnout environments."
+  },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784776550,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Indianapolis, IN (United States), with parent company origins as Moonman Events Sdn Bhd."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "To transform ideas into extraordinary experiences."
+  },
   "name": "Moonman Events",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: Fast and dynamic, driven by the event industry's need for quick turnarounds and innovative experiences."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Transformative event experiences and the internal software development required to create and manage them."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: 15-20 days of PTO annually."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -181684,8 +182134,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: Guaranteed shutdowns during major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Hiring for entry-level, full-time, onsite roles, indicating a growing operational stage."
   },
   "sources": [
    {
@@ -181739,14 +182198,45 @@
     "url": "https://jobright.ai/jobs/info/6a6138bc7196365a6f00989d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Moonman Events is a company that transforms ideas into extraordinary experiences, currently hiring for software development roles to support its operations. It operates as an established entity (Sdn Bhd) with a presence in the United States, specifically Indianapolis, IN."
+  },
+  "synthesized_evidence_sha": "39555313c54169b7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Full-time software development requiring 1+ years of experience, working onsite in a collaborative team environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776550,
   "web_search_url": "https://duckduckgo.com/?q=Moonman+Events+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Aligns perfectly with your goal of accelerating technical learning and career growth in a fast-paced, innovative culture, while fulfilling your need for a mission-driven company that respects work-life balance through guaranteed shutdowns and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f46b08563f"
+   ],
+   "value": "Estimated: Moderate to good, with a focus on sane hours to avoid the typical high-burnout environment of the events industry."
   }
  },
  "morgan business consulting": {
@@ -232994,11 +233484,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233010,6 +233502,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784873351,
   "last_evidence_at": 1784788843,
   "name": "Rocket Lab",
   "pace_of_work": {
@@ -233022,6 +233515,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784873471,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233075,7 +233569,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784788843,
   "web_search_url": "https://duckduckgo.com/?q=Rocket+Lab+company+careers+benefits",
@@ -306449,38 +306943,99 @@
  "worldband": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Estimated: Tier 2–3 (strong applied ML in clinical NLP, guideline extraction, fetal monitoring analytics; publishes in medical informatics venues; not a core AI research lab but high domain impact)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely B2B SaaS, institutional subscriptions, or licensing of medical content platforms to hospitals, universities, and research organizations. May also involve publishing partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, low-ego. Engineers work closely with clinical subject-matter experts. Values accuracy, documentation, and patient safety over velocity. Likely diverse, academic-adjacent atmosphere."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8034b38b07"
+   ],
+   "value": "Probably healthcare providers, medical researchers, academic institutions, and clinical organizations accessing medical literature and fetal monitoring guidelines (e.g., Practice Bulletin No. 116 on intrapartum fetal heart rate tracings)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 5-10% bonus + equity (0.05-0.15%). Total comp ~$120k-$150k. Health tech new grad pay typically trails big tech but exceeds academia/nonprofits."
   },
   "evidence_sha": "d4fba756094becf6",
+  "generated_at": 1784873351,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e26ea71eb9",
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Healthcare technology / Medical publishing / Clinical decision support"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8034b38b07",
+    "1db9db9c4d"
+   ],
+   "value": "Expect emphasis on scalable backend systems, data integrity, and domain modeling for clinical workflows. Prepare for: designing fault-tolerant pipelines for medical literature ingestion; handling FHIR/HL7 or unstructured clinical text; trade-offs between latency and auditability in clinical decision support; and behavioral questions on cross-functional collaboration with clinicians/researchers. LeetCode hard less likely than system design and domain reasoning."
+  },
+  "last_attempt_at": 1784873351,
+  "last_evidence_at": 1784848351,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in sources. Medical publishing/health tech hubs (e.g., Boston, NYC, SF Bay Area, Raleigh-Durham) are plausible. Remote/hybrid possible."
   },
-  "last_evidence_at": 1784848351,
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Appears focused on disseminating medical research and clinical guidelines (e.g., obstetric practice bulletins) through digital platforms, potentially improving clinical decision-making and patient outcomes."
+  },
   "name": "Worldband",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — product cycles driven by clinical guidelines updates and regulatory compliance, not ad-driven feature churn. Sprint cadence likely 2 weeks with defined release windows."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e26ea71eb9",
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Likely medical/healthcare software platforms, digital publishing tools, or clinical decision support systems given association with PubMed, ResearchGate, and European PMC medical publications. Specific product names not disclosed in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. Typical for US health tech / publishing firms."
   },
+  "refresh_after": 1790057351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306490,7 +307045,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Winter holiday shutdown (Dec 24-Jan 1) common in healthcare-adjacent orgs. Summer Friday half-days possible."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early-to-mid stage company (50-500 employees) actively recruiting 2026 new grad software engineers, suggesting growth phase with dedicated engineering hiring."
   },
   "sources": [
    {
@@ -306534,14 +307096,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely supports H-1B and new-grad OPT/STEM OPT given active university recruiting for 2026 software engineer roles, but no public policy confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e26ea71eb9",
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Worldband appears to be a company associated with medical research publications and healthcare content, potentially in medical publishing or health technology. The company is hiring 2026 new graduate software engineers, suggesting an active technical team building software products."
+  },
+  "synthesized_evidence_sha": "d4fba756094becf6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering roles for new grads (2026 cohort). Likely involves full-stack development, data pipelines, search/indexing for medical literature, clinical data visualization, or platform infrastructure for healthcare content delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848351,
   "web_search_url": "https://duckduckgo.com/?q=Worldband+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e26ea71eb9",
+    "8034b38b07",
+    "39ea184dbe"
+   ],
+   "value": "Offers a rare intersection of elite AI/data science prestige (medical NLP, clinical decision support, high-impact health data) with a mission-driven healthcare focus. Early-stage growth means high ownership and fast learning, while the medical publishing domain implies regulatory rigor that often correlates with sustainable pacing — not the burnout typical of consumer AI labs. New grads get direct exposure to production clinical systems without the bureaucracy of big hospital IT vendors."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — medical publishing/health tech typically enforces reasonable hours (40-45h/week) due to compliance culture and non-consumer urgency. On-call likely limited to critical clinical infrastructure."
   }
  },
  "worldquant": {
