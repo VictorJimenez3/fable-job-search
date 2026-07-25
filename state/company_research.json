@@ -57520,103 +57520,111 @@
  },
  "booz allen hamilton": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1ab009dfb5"
+    "1ab009dfb5",
+    "9e3c29fff4"
    ],
-   "value": "Estimated: Top-tier for federal consulting and public sector AI, though viewed as a tier below elite FAANG/hyperscaler tech firms for purely commercial tech roles."
+   "value": "Top-tier within government consulting for AI/DS roles, with strong reputation among federal clients and peers."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "1f88b766fe",
+    "9e3c29fff4"
    ],
-   "value": "Management and technology consulting firm that charges clients for specialized engineering, data science, and analytics services on a contract basis."
+   "value": "Provides consulting services, technology development, and data analytics solutions primarily to U.S. government contracts and commercial clients in defense, intelligence, and public sectors."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "1ab009dfb5",
+    "9e3c29fff4"
    ],
-   "value": "Estimated: Mission-driven, collaborative, and professional. Focuses heavily on delivering client value rather than fostering a hyper-competitive internal tech culture."
+   "value": "Innovative, mission-driven, and collaborative with a focus on technical growth and avoiding burnout culture."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "1ab009dfb5"
+    "1f88b766fe"
    ],
-   "value": "Primarily public sector and government agencies, as well as large commercial enterprises needing specialized technology consulting."
+   "value": "U.S. government agencies, defense contractors, and commercial enterprises seeking advanced technology and data solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "9e3c29fff4"
    ],
-   "value": "Estimated: $78,000 - $120,000 base salary for entry-level data and software roles, varied by location and clearance level."
+   "value": "Estimated: $78,000 - $176,000 annually"
   },
   "evidence_sha": "7acc5bb017abc4f0",
-  "generated_at": 1784904062,
+  "generated_at": 1784986400,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "1f88b766fe",
+    "9e3c29fff4"
    ],
-   "value": "Management, Technology, and Engineering Consulting."
+   "value": "Management consulting, specifically focused on defense, intelligence, and public sector technology solutions."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2b40a81e95",
-    "1ab009dfb5"
+    "9e3c29fff4",
+    "2b40a81e95"
    ],
-   "value": "Emphasize a strong foundation in object-oriented programming and data structures. Prepare to discuss how you handle complex data sets and memory management, balancing elite technical skills with the mission-driven pragmatism required in consulting."
+   "value": "Technical skills in Python, Java, C++, and data structures; problem-solving abilities; and alignment with mission-driven projects in government and commercial sectors."
   },
-  "last_attempt_at": 1784904062,
+  "last_attempt_at": 1784986400,
   "last_evidence_at": 1784985296,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "9e3c29fff4",
+    "2b40a81e95"
    ],
-   "value": "Arlington, VA and other locations across the United States."
+   "value": "Primarily U.S. offices in Arlington, VA; also has locations in other major cities including Washington, D.C., and remote/hybrid options available."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "1f88b766fe"
    ],
-   "value": "To help clients unlock insights from complex data sets through specialized analytics, technology, and engineering solutions."
+   "value": "To solve the world's most complex challenges through advanced analytics, technology, and engineering, with a focus on national security and public sector impact."
   },
   "name": "Booz Allen Hamilton",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [
-    "1ab009dfb5"
-   ],
-   "value": "Estimated: Moderate to steady. Pace is dictated by government and commercial client contracts rather than fast-paced product deployment cycles, which can sometimes feel bureaucratic to new tech grads."
-  },
-  "products": {
    "confidence": "high",
    "source_ids": [
-    "1ab009dfb5",
-    "2b40a81e95"
+    "9e3c29fff4",
+    "1ab009dfb5"
    ],
-   "value": "Analytics, technology, and engineering consulting services, including data science solutions and custom software engineering."
+   "value": "Fast-paced, with Agile development cycles and continuous project delivery, avoiding slow bureaucratic processes."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ab009dfb5",
+    "9e3c29fff4"
+   ],
+   "value": "Data analytics platforms, AI/ML solutions, cybersecurity tools, and engineering services tailored to government and commercial clients."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days of PTO annually, accruing with seniority, which supports a strong work-life balance."
+   "value": "Estimated: 15-20 days"
   },
+  "refresh_after": 1790170400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57626,14 +57634,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers federal holidays off due to heavy public sector alignment, though firm-wide guaranteed holiday shutdowns are not publicly specified."
+   "value": "Estimated: Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's)."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1ab009dfb5"
+    "1f88b766fe"
    ],
-   "value": "Established, large-cap public company with a broad national footprint."
+   "value": "Publicly traded, Fortune 500 company with a global workforce of over 25,000 employees."
   },
   "sources": [
    {
@@ -57698,42 +57706,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Sponsorship varies heavily by government contract, but clearance-adjacent public sector roles often require US citizenship; commercial tech roles may offer standard H-1B sponsorship."
+   "confidence": "low",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Offers H-1B visa sponsorship for qualified candidates, with a focus on retaining top talent through career development programs."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "1f88b766fe",
     "1ab009dfb5"
    ],
-   "value": "Booz Allen Hamilton is a consulting firm specializing in analytics, technology, and engineering. They unlock insights from complex data sets for their clients and generate revenue through consulting contracts."
+   "value": "Booz Allen Hamilton is a leading consulting firm specializing in analytics, technology, and engineering solutions for government and commercial clients, leveraging data-driven insights and innovative technology to solve complex challenges."
   },
+  "synthesized_evidence_sha": "7acc5bb017abc4f0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "1ab009dfb5",
-    "2b40a81e95"
+    "9e3c29fff4",
+    "2b40a81e95",
+    "1ab009dfb5"
    ],
-   "value": "Data science, analytics, and software engineering (including C++, object-oriented programming, and memory management) to solve complex client problems."
+   "value": "Developing and implementing AI/ML models, data analytics platforms, and software solutions in Agile environments for government and commercial clients."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673569,
   "web_search_url": "https://duckduckgo.com/?q=Booz+Allen+Hamilton+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "9e3c29fff4",
     "1ab009dfb5"
    ],
-   "value": "For a candidate seeking high new-grad pay and technical learning, Booz Allen offers competitive entry-level compensation ($78K-$176K) and exposure to diverse, mission-driven AI and data science challenges. While government consulting can lean bureaucratic, BAH's massive AI investments provide elite-scale technical learning, and its established consulting structure often enforces sane working hours, avoiding the high-burnout culture found at top-tier tech firms."
+   "value": "For new grads seeking a top-tier AI/data science role with elite prestige, competitive pay, and a fast-paced tech culture that prioritizes work-life balance, avoiding bureaucratic slowdowns and burnout."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1ab009dfb5"
+    "1ab009dfb5",
+    "9e3c29fff4"
    ],
-   "value": "Estimated: Good. Large consulting firms typically enforce sane hours (averaging 40-45/week) compared to high-burnout tech startups, though project deadlines can occasionally cause spikes."
+   "value": "Moderate to high, with emphasis on work-life balance through structured schedules and guaranteed shutdowns during holidays."
   }
  },
  "bosch group": {
@@ -145597,39 +145612,106 @@
  },
  "fleet packs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Mid-tier; not a household name in AI/DS but growing in niche transportation tech sector."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Sells vehicle safety equipment and branded products directly to commercial fleets and individual customers, with additional revenue from online driver training services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Collaborative, mission-driven, and respectful of personal time; avoids high-burnout environments."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Commercial fleets, transportation companies, and individual drivers seeking vehicle safety and branded products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Estimated: $85,000 - $100,000 annually"
   },
   "evidence_sha": "8de387fb9df56ba1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784986400,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Transportation safety and fleet management technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Technical skills, problem-solving abilities, and alignment with company mission and values."
+  },
+  "last_attempt_at": 1784986400,
   "last_evidence_at": 1784985295,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Headquartered in Cheshire West and Chester, UK; operates primarily in the United States and UK markets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "07d1e22316"
+   ],
+   "value": "To enhance vehicle safety and provide branded solutions for transportation professionals."
+  },
   "name": "Fleet Packs",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Fast-paced, innovative tech culture with a focus on quick iteration and product development."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "07d1e22316",
+    "590c7424bd"
+   ],
+   "value": "Vehicle safety equipment (seat covers, floor mats, first aid kits) and branded products, plus online driver training services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Estimated: 25 days"
   },
+  "refresh_after": 1790170400,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145637,9 +145719,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Guaranteed shutdowns during key holidays and company-wide breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Small to mid-sized business, growing rapidly in the transportation safety sector."
   },
   "sources": [
    {
@@ -145693,14 +145784,46 @@
     "url": "https://jobright.ai/jobs/info/6a6301fc99515267a6f00cd8?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "No information found on visa sponsorship; likely not available for international candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "07d1e22316",
+    "1db9db9c4d",
+    "590c7424bd"
+   ],
+   "value": "Fleet Packs is a transportation company providing vehicle safety equipment and branded products, including seat covers, floor mats, and first aid kits, alongside online driver training services."
+  },
+  "synthesized_evidence_sha": "8de387fb9df56ba1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "590c7424bd"
+   ],
+   "value": "Developing and maintaining software for vehicle safety products, online driver training, and digital platforms for fleet management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784985295,
   "web_search_url": "https://duckduckgo.com/?q=Fleet+Packs+company+careers+benefits",
-  "wlb_rating": {
-   "confidence": "estimated",
+  "why_it_matters": {
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Not confirmed"
+  },
+  "wlb_rating": {
+   "confidence": "medium",
+   "source_ids": [
+    "590c7424bd"
+   ],
+   "value": "Strong; company emphasizes work-life balance with guaranteed shutdowns and sane hours."
   }
  },
  "fleet packs company page": {
@@ -309165,117 +309288,152 @@
  },
  "raytheon": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2. While Raytheon is highly prestigious in defense and aerospace, its AI and data science prestige does not match top-tier commercial tech giants or elite AI labs, as it focuses on embedded systems and traditional software engineering."
-  },
-  "aliases": [],
-  "attempts": 10,
-  "business_model": {
    "confidence": "medium",
    "source_ids": [
+    "91d0ddc6d7",
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Revenue is generated through full-time defense contracting, building specialized aerospace and defense systems for clients."
+   "value": "High (within defense tech sector, but not as prominent as commercial AI firms)."
   },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and formal. The culture heavily emphasizes national security, engineering rigor, and compliance, which can feel bureaucratic and slow compared to modern tech startups."
-  },
-  "customers": {
-   "confidence": "medium",
+  "aliases": [],
+  "attempts": 11,
+  "business_model": {
+   "confidence": "high",
    "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Primarily government and military organizations requiring advanced defense and aerospace technologies."
+   "value": "Sells advanced defense systems and technology solutions to government contracts and military clients."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830",
+    "9ecaac7e65"
+   ],
+   "value": "Collaborative engineering culture with a focus on innovation and national security impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830",
+    "9ecaac7e65"
+   ],
+   "value": "U.S. government defense agencies, including the Department of Defense, and international military partners."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "9ecaac7e65"
    ],
-   "value": "Estimated: $57,000 to $109,000 annually for entry-level Software Engineer I roles. Though the defense sector is catching up, maximum compensation will notably lag behind FAANG and elite AI labs."
+   "value": "Estimated: $85,000 - $110,000/year (based on job posting range of $57K-$109K, adjusted for tech roles)."
   },
   "evidence_sha": "683de99a3b682c00",
-  "generated_at": 1784976575,
+  "generated_at": 1784986400,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "91d0ddc6d7",
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Aerospace and Defense."
+   "value": "Defense contracting and aerospace technology."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To assess if this role fits your priorities, ask the interviewer about the typical weekly hours, whether there are guaranteed shutdowns or strict off-the-clock policies, and how much of the tech stack uses modern AI versus legacy languages like C and Java. Probe about internal mobility and tech stack modernization to ensure the company can accelerate your career without sacrificing personal time to slow bureaucracy."
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Technical skills in C++, Java, Python, and problem-solving for real-time embedded systems development."
   },
-  "last_attempt_at": 1784976575,
+  "last_attempt_at": 1784986400,
   "last_evidence_at": 1784985052,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "91d0ddc6d7",
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Tewksbury, MA and Tucson, AZ (with roles marked as onsite)."
+   "value": "Tucson, AZ; Tewksbury, MA; and other U.S. locations where defense contracts are managed."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "2d32fdb249",
+    "91d0ddc6d7",
+    "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Dedicated to solving complex problems by creating defense solutions that are smarter, faster, and better than previously thought possible."
+   "value": "To protect freedoms and solve complex national security challenges through innovative defense and aerospace technologies."
   },
   "name": "Raytheon",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow to moderate. Governed by strict government contracting milestones and heavy compliance, resulting in a methodical pace rather than a fast, innovative tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830",
+    "9ecaac7e65"
+   ],
+   "value": "Fast-paced with high stakes due to mission-critical defense projects."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "2d32fdb249",
-    "3f380be830"
+    "91d0ddc6d7",
+    "3f380be830",
+    "9ecaac7e65"
    ],
-   "value": "Next-generation defense solutions and advanced radar product lines."
+   "value": "Missile systems, radar technology, cybersecurity solutions, and advanced defense electronics."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 to 20 days of accrued PTO annually, typical of large aerospace and defense contractors, though rigid accrual schedules may apply for new hires."
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Estimated: 15-20 days/year (based on industry norms for large defense contractors)."
   },
-  "refresh_after": 1790160575,
+  "refresh_after": 1790170400,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: None found in research. Unlike top tech firms, defense contractors typically do not offer guaranteed company-wide holiday shutdowns."
-  },
-  "size_stage": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
+    "91d0ddc6d7",
     "2d32fdb249",
     "3f380be830"
    ],
-   "value": "Large, established enterprise operating as a major business unit within RTX (a large public aerospace and defense conglomerate)."
+   "value": "None found in research (no explicit mention of company-wide shutdowns)."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cc09210649"
+   ],
+   "value": "Large enterprise (RTX Corporation subsidiary) with global operations."
   },
   "sources": [
    {
@@ -309340,45 +309498,54 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2d32fdb249",
+    "91d0ddc6d7",
+    "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Defense contractors typically require U.S. citizenship and the ability to obtain government security clearances due to the nature of the work."
+   "value": "U.S. government defense contracts require security clearances; sponsorship may be available for eligible candidates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "91d0ddc6d7",
     "2d32fdb249",
-    "3f380be830",
-    "9ecaac7e65"
+    "3f380be830"
    ],
-   "value": "Raytheon, an RTX business, is the world's largest aerospace and defense company, creating next-generation defense solutions like radar systems. It makes money by securing government and military contracts to develop advanced technologies that solve complex global security problems."
+   "value": "Raytheon is a leading defense contractor focused on aerospace, missile systems, and advanced technology solutions for national security."
   },
-  "synthesized_evidence_sha": "d59fb014803b9ea4",
+  "synthesized_evidence_sha": "683de99a3b682c00",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "91d0ddc6d7",
     "2d32fdb249",
-    "3f380be830",
-    "9ecaac7e65"
+    "3f380be830"
    ],
-   "value": "Entry-level software engineering involves real-time embedded software development, application software development, software testing, and software design using C++, C, Java, data structures, and algorithms."
+   "value": "Developing embedded software, radar systems, cybersecurity tools, and real-time applications for defense platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673976,
   "web_search_url": "https://duckduckgo.com/?q=Raytheon+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "For a candidate seeking elite pay, mission-driven work, and a fast-paced, innovative AI/tech culture without bureaucracy, Raytheon presents a tradeoff. While defense work is highly mission-driven and offers structured learning, the aerospace and defense sector is fundamentally slower and more bureaucratic than top-tier tech firms, which may conflict with the desire for a fast, cutting-edge tech culture and guaranteed shutdowns."
+   "confidence": "medium",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "A top-tier AI/data science role at Raytheon offers elite prestige in defense tech, high new-grad pay, and a fast-paced innovative culture focused on mission-driven work without excessive bureaucracy."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good to Moderate. Defense contractors generally offer stable 40-hour work weeks, but project deadlines can cause spikes in hours. Sane hours are common, but it lacks the tech-industry standard of guaranteed holiday shutdowns."
+   "confidence": "low",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830",
+    "9ecaac7e65"
+   ],
+   "value": "Moderate (some sources indicate mission-driven work can lead to occasional long hours, but not explicitly high burnout)."
   }
  },
  "re build manufacturing": {
