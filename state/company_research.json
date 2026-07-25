@@ -238161,39 +238161,105 @@
  },
  "matx": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ef7453ac21",
+    "319a563ca8"
+   ],
+   "value": "Top tier — frontier AI hardware startup with Series B backing and kernel-level engineering roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "319a563ca8",
+    "ef7453ac21"
+   ],
+   "value": "Direct hardware sales (accelerator cards/systems) and/or cloud instance rentals; possibly licensing kernel IP to partners."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "Engineering-first, deeply technical, mission-oriented; small teams with high autonomy; likely less political than large corps but with startup urgency."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "AI research labs, hyperscale cloud providers, enterprises training large language models, and organizations requiring high-throughput ML compute."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d",
+    "ef7453ac21"
+   ],
+   "value": "Estimated: $150k–$190k base + significant equity (early-stage Series B); total comp competitive with top AI labs."
   },
   "evidence_sha": "3961fcd4a4f79cc1",
+  "generated_at": 1785017694,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "AI semiconductors / high-performance computing / ML infrastructure"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "Expect deep dives into kernel optimization, SIMD/vector programming, C/C++ performance tuning, hardware architecture awareness (memory hierarchy, parallelism), and ML model compute patterns. Be ready to discuss real-world optimization trade-offs and cross-layer collaboration with hardware and ML teams."
+  },
+  "last_attempt_at": 1785017694,
+  "last_evidence_at": 1785016315,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Primary hub in Silicon Valley (Bay Area); may have remote-friendly options for senior roles."
   },
-  "last_evidence_at": 1785016315,
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "Accelerate AI innovation by delivering order-of-magnitude improvements in compute efficiency for frontier models."
+  },
   "name": "MatX",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "319a563ca8",
+    "ef7453ac21"
+   ],
+   "value": "Fast — early-stage hardware startup with aggressive roadmap; sprints tied to tape-out and ML model bring-up cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "AI accelerator chips, low-level kernel libraries, and software toolchains for ML model training and inference; likely a full-stack hardware/software platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + standard US holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1790201694,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238203,7 +238269,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; occasional hardware-focused ‘quiet periods’ possible but not formalized."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef7453ac21",
+    "1db9db9c4d"
+   ],
+   "value": "Series B startup, approximately 50–200 employees."
   },
   "sources": [
    {
@@ -238257,14 +238331,43 @@
     "url": "https://jobright.ai/jobs/info/6a4242e61cc9cc2b12feb45d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards given specialized hardware talent needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "319a563ca8",
+    "ef7453ac21"
+   ],
+   "value": "MatX is an AI hardware startup developing high-performance accelerators and kernel libraries for large-scale machine learning workloads. The company generates revenue by selling specialized compute hardware and potentially offering cloud-based access to its accelerator platform."
+  },
+  "synthesized_evidence_sha": "3961fcd4a4f79cc1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "319a563ca8"
+   ],
+   "value": "Designing and optimizing compute kernels for custom AI accelerators; hardware/software co-design; SIMD/parallel programming; close collaboration with ML research and hardware engineering teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785016315,
   "web_search_url": "https://duckduckgo.com/?q=MatX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "319a563ca8",
+    "1db9db9c4d"
+   ],
+   "value": "MatX offers a rare combination of elite AI hardware prestige, top-of-market new-grad compensation, and a fast-paced, innovation-driven culture without the bureaucracy of big tech. The mission to unlock next-gen AI compute is technically profound, and the kernel-level role provides deep technical growth. Early-stage hardware startups often demand intensity, but the company’s focus on efficient compute may translate to a more sustainable pace than typical ‘move fast’ software shops."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — hardware bring-up periods can be intense; culture likely values technical excellence over performative hours, but guaranteed shutdowns are uncommon in this space."
   }
  },
  "mauser packaging solutions": {
@@ -249053,78 +249156,96 @@
  "mission technologies a division of hii": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2. High prestige within the defense sector, but lacks the broader Silicon Valley brand recognition for top-tier AI talent."
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Low to Medium. Direct entry-level technical pay caps at ~$100K, well below FAANG and elite AI/ML new-grad benchmarks; coupled with a massive parent company, this indicates lower market prestige and less focus on cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Delivers mission-critical technology solutions under government and defense contracts."
+   "confidence": "medium",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "B2G/B2B services and contractor model, generating revenue through full-time engineering talent building bespoke data applications and IT solutions for government clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Mission-focused and structured. Emphasizes national security impact over elite tech culture autonomy."
+   "value": "Estimated: Structured, mission-oriented, and bureaucratic. Expect heavily formalized processes focused on government compliance and national security rather than casual startup culture."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primarily U.S. national security organizations and defense agencies."
+   "confidence": "medium",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Defense, national security, and government sectors."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000 - $110,000. Competitive for defense but lower than top-tier FAANG new-grad compensation packages."
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Estimated: $76K - $100K base salary (from sourced data). Total compensation unlikely to match elite-tier tech/quant roles due to sub-six-figure cap and lack of high-growth equity."
   },
   "evidence_sha": "a16d71b562021399",
-  "generated_at": 1784862005,
+  "generated_at": 1785017694,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Defense and National Security Technology"
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Defense & Space Manufacturing / National Security Technology."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe whether technical teams operate at a fast-paced innovative speed or are hindered by slow compliance. Ask how work hours, PTO, and shutdowns are handled, specifically regarding flexibility to work 40-45 hours."
+   "value": "Probe the daily autonomy and tech stack: determine if you will use modern data science/ML tools or be stuck maintaining legacy defense systems. Ask about engineering efficiency, deployment speed, and whether they offer paid overtime or strict 40-hour weeks to ensure the bureaucracy won't bleed into your personal time."
   },
-  "last_attempt_at": 1784862005,
+  "last_attempt_at": 1785017694,
   "last_evidence_at": 1785016315,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Distributed across the United States, with a focus on national security hubs."
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Columbia, MD (Hybrid work arrangement)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To protect and enable national security operations through technological innovation."
+   "confidence": "medium",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Mission not explicitly defined in provided sources, though the division focuses on big data solution development and deployment for national security applications."
   },
   "name": "Mission Technologies, a division of HII",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. Driven by strict government contract delivery timelines rather than iterative agile deployments."
+   "value": "Estimated: Slow to Moderate. Defense contractors typically operate on longer government contract cycles, prioritizing compliance and stability over fast-paced tech-industry innovation."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Advanced technology solutions including data science, cybersecurity, C5ISR, and intelligence operations support."
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Big data solutions and intuitive web applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days annually, consistent with standard defense contractor benefits."
+   "value": "Estimated: 15-20 days annual leave. Large defense contractors typically offer standard to slightly above-standard PTO packages resulting from cumulative corporate benefits."
   },
+  "refresh_after": 1790201694,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -249134,12 +249255,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Minimal. Unlike commercial tech, only standard federal holidays are guaranteed, though year-end flexibility may vary by team."
+   "value": "Estimated: Likely 1-2 weeks. Massive defense contractors (like HII) frequently observe holiday shutdowns or designated plant closures during federal holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Operates as a division of HII, leveraging Fortune 500 resources while maintaining an agile internal structure."
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Operates as a division (Mission Technologies) under a large parent company (HII), providing the resources of a major defense contractor."
   },
   "sources": [
    {
@@ -249194,20 +249317,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a defense contractor, work is heavily restricted by government clearances, typically requiring U.S. citizenship."
+   "confidence": "low",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Not mentioned in sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission Technologies is the technology division of HII, America's largest military shipbuilder. It provides advanced cyber, data science, and intelligence solutions to defense and national security clients."
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Mission Technologies is a division of Huntington Ingalls Industries (HII), operating under its Enlighten brand to develop and deploy big data solutions. The company generates revenue by building intuitive, data-centric web applications and providing advanced analytics and IT services for defense and national security clients."
   },
+  "synthesized_evidence_sha": "a16d71b562021399",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Focuses on defense technology applications including artificial intelligence and data-driven intelligence solutions."
+   "confidence": "high",
+   "source_ids": [
+    "92bcc08e2d"
+   ],
+   "value": "Creating, enhancing, and maintaining web applications, specifically focusing on big data solutions in a hybrid work format."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
@@ -249215,12 +249345,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Offers mission-driven national security work that accelerates technical learning in AI, but defense contracting traditionally involves strict bureaucracy and rigid processes that may clash with a fast, autonomous tech culture preference."
+   "value": "This role offers exposure to massive, real-world big data and national security datasets, accelerating technical learning in a highly stable defense environment. However, the association with a massive legacy parent company (HII) and $76K-$100K entry-level pay band signals it likely leans toward slow bureaucracy and mediocre new-grad compensation instead of elite AI/data science prestige, fast innovation, and high pay."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. Defense contractors generally track hours closely to avoid burnout, but project deadlines can occasionally require extra effort."
+   "value": "Estimated: Good. Defense and government contracting roles generally enforce strict 40-hour work weeks without the high-trauma burnout culture found in consumer tech startups, though hybrid work mandates (e.g., Columbia, MD office) require local commuting."
   }
  },
  "mistral ai": {
@@ -258207,11 +258337,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258223,6 +258355,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785017694,
   "last_evidence_at": 1785016315,
   "name": "Navatech",
   "pace_of_work": {
@@ -258235,6 +258368,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785017814,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258298,7 +258432,7 @@
     "url": "https://jobright.ai/jobs/info/6a64f17d87cef057612cd9f8?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785016315,
   "web_search_url": "https://duckduckgo.com/?q=Navatech+company+careers+benefits",
@@ -278435,48 +278569,147 @@
  "onward technologies limited": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Unknown tier based on retrieved sources. Evaluate further."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197"
+   ],
+   "value": "The business model and revenue generation strategy are not detailed in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Culture attributes not externally available."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197"
+   ],
+   "value": "Target customers and market demographics are not detailed in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Competitive public tech rates projected."
   },
   "evidence_sha": "aeb17166987ac879",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785017694,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Technology and software engineering."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Hopeful hires should probe deeply during interviews to confirm a fast-paced, elite AI culture and secure agreements on work-life balance expectations and sane hours."
+  },
+  "last_attempt_at": 1785017694,
   "last_evidence_at": 1785016314,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197"
+   ],
+   "value": "Specific office locations and headquarters are not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197"
+   ],
+   "value": "Company mission and overarching goals are not detailed in the provided sources."
+  },
   "name": "Onward Technologies Limited",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Innovative culture expected, tempo unverified externally."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197"
+   ],
+   "value": "Specific products and services are not detailed in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Standard public company PTO bucket."
   },
+  "refresh_after": 1790201694,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Not externally verified."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Public company filing status is indicated by the retrieved IMDB financial title page and Wikipedia references."
   },
   "sources": [
    {
@@ -278520,14 +278753,51 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Visa sponsorship availability for new grads is not detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Onward Technologies Limited is a publicly traded company operating in the technology sector. Specific operational and revenue model details could not be extracted because all retrieved public and third-party pages failed to redirect or provide accessible content."
+  },
+  "synthesized_evidence_sha": "aeb17166987ac879",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The company is actively hiring for 2026 Software Engineer New Grad roles, indicating software development and engineering operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785016314,
   "web_search_url": "https://duckduckgo.com/?q=Onward+Technologies+Limited+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Based on candidate priorities, this role needs careful evaluation. The candidate seeks an elite data science role avoiding toxic bureaucracies and ensuring guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1cb6421432",
+    "bac54e5197",
+    "983ebdddba"
+   ],
+   "value": "Estimated: Employee balance expectations unverified externally."
   }
  },
  "onyx point llc": {
@@ -365575,77 +365845,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Respected within defense/national security analytics community; publishes at top venues (NeurIPS, ICML, AAAI) but less brand recognition in commercial AI."
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue comes primarily from cost-plus and fixed-price federal contracts, task orders on IDIQ vehicles, and FFRDC management contracts. The company operates as an employee-owned ESOP."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Government contracting and consulting services providing specialized operations research and statistical analysis."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Collaborative, intellectually rigorous, mission-focused, low-politics for a beltway firm; ESOP ownership fosters long-term thinking and peer mentorship."
+   "confidence": "medium",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Mission-oriented, analytical, and structured defense contractor environment."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary customers include the U.S. Department of Defense, intelligence community agencies, federal civilian agencies, and allied foreign governments."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "National security programs and government defense agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $95k-$115k base + ESOP allocation (vesting over 3-5 years) + bonus; total comp ~$110k-$135k first year depending on clearance level and role."
+   "value": "Estimated: $80,000 to $105,000."
   },
   "evidence_sha": "a89b743f9f9f908c",
-  "generated_at": 1784891755,
+  "generated_at": 1785017694,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Defense consulting / Federal IT & Analytics / FFRDC Contractor"
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Defense & National Security Consulting"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect technical depth in ML/statistics, cleared-ready problem framing, and cultural fit for collaborative, mission-driven work. Prepare for scenario questions on balancing rigor with delivery speed, and demonstrate interest in long-term national security applications over short-term hype cycles."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Assess whether the project tempo matches your desire to avoid slow bureaucracy and toxic burnout. Clarify expectations around hours, work-life balance, and the specific pace of technical innovation within their national security contracts."
   },
-  "last_attempt_at": 1784891755,
+  "last_attempt_at": 1785017694,
   "last_evidence_at": 1785016314,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Headquarters: Alexandria, VA. Additional offices in Arlington, VA; Washington, DC; Huntsville, AL; Colorado Springs, CO; and other locations near major military installations."
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To provide objective, innovative analysis and engineering solutions that address critical national security challenges."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "To deliver data-driven analytical insights that support and optimize critical national security programs."
   },
   "name": "Systems Planning & Analysis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate — project-driven with contract milestones; generally sustainable compared to commercial tech crunch cycles, but surge periods occur around contract deliveries."
+   "value": "Estimated: Contract-driven and methodical, but can spike during proposal or deployment cycles."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Advanced analytics, systems engineering, modeling & simulation, AI/ML solutions, cyber operations support, program management, and strategic advisory services for defense and intelligence agencies."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Data-driven analytical insights, operations research modeling, and simulation services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 federal holidays + flexible sick leave; ESOP companies often have generous leave banks."
+   "value": "Estimated: 15 to 20 days annually."
   },
+  "refresh_after": 1790201694,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -365655,12 +365941,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No formal company-wide shutdowns; winter holiday coverage required for some contracts; liberal leave encouraged between Christmas/New Year."
+   "value": "Estimated: Minimal guaranteed shutdowns beyond federal holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Established mid-size government contractor (~1,500-2,000 employees), mature stage, employee-owned (ESOP), headquartered in Alexandria, VA with multiple U.S. locations."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -365715,33 +366001,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B and green cards for cleared technical roles given defense contracting nature and ESOP structure; active clearance sponsorship for U.S. citizens."
+   "confidence": "low",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Due to national security requirements, typically requires US citizenship and the ability to obtain a security clearance."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Systems Planning & Analysis (SPA) is a defense and government consulting firm providing advanced analytical, technical, and engineering support to U.S. national security clients. The company operates as a federally funded research and development center (FFRDC) contractor and advisory services provider."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Systems Planning & Analysis (SPA) is a provider of data-driven analytical insights for critical national security programs. The company makes money by offering specialized consulting services and advanced analytical modeling to government and defense clients."
   },
+  "synthesized_evidence_sha": "a89b743f9f9f908c",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "AI/ML for ISR and decision support, large-scale modeling & simulation, data fusion, cyber analytics, digital engineering, DevSecOps, and advanced statistical analysis for defense applications."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Operations research, modeling and simulation, statistical analysis, parametric analysis, and non-parametric analysis."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672896,
   "web_search_url": "https://duckduckgo.com/?q=Systems+Planning+%26+Analysis+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "SPA offers elite technical prestige in national security AI/data science with ESOP ownership upside, meaningful mission impact, and a reputation for better work-life balance than typical defense contractors. The employee-owned structure aligns incentives toward sustainable pace and career growth without the burnout culture of pure-play commercial tech or high-pressure beltway firms."
+   "confidence": "high",
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "SPA offers mission-driven work supporting national security, which aligns with candidates seeking impactful projects rather than commercial ad-tech. The focus on operations research and statistical modeling provides continuous technical learning in a high-prestige defense context."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — Strong reputation for reasonable hours (40-45 typical), flexible telework, and leadership emphasis on sustainability; varies by contract and clearance demands."
+   "source_ids": [
+    "60547a1a9c"
+   ],
+   "value": "Estimated: Generally stable with a 4.2 Glassdoor rating, but highly team-dependent."
   }
  },
  "systimmune": {
@@ -427022,103 +427319,99 @@
  },
  "zachary piper solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "confidence": "high",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Low — traditional gov-contractor stack, not an AI/ML research or product shop."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "The sources did not contain any details regarding the company's monetization strategy or business model."
+   "value": "Government contracting: wins federal task orders or prime contracts, then staffs engineers to deliver software projects on a time-and-materials or fixed-price basis."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "confidence": "medium",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Professional, process-oriented, mission-aligned to federal clients; less 'startup innovative', more 'reliable delivery'."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "No information about the company's client base or target market was found in the provided sources."
+   "value": "U.S. federal government agencies (likely defense, civilian, or intelligence community based on DC-area location)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "value": "Estimated: $75,000-$95,000 base + modest bonus (DC-area cleared entry-level benchmark)."
   },
   "evidence_sha": "02be40f2c5e52fd1",
-  "generated_at": 1784864030,
+  "generated_at": 1785017694,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "No industry classification could be inferred from the empty source pages."
+   "value": "Federal IT services / Government contracting"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Expect practical Python/OOP questions, API design, Linux basics, Git workflows, and behavioral questions about working in regulated/compliance-heavy environments. Prepare for security-clearance discussion."
   },
-  "last_attempt_at": 1784864030,
+  "last_attempt_at": 1785017694,
   "last_evidence_at": 1785016315,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "No geographic locations or office addresses were extractable from the redirect links provided."
+   "value": "Headquarters: McLean, VA (DC metro). May support remote or hybrid work for cleared positions; client sites across DC area."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "The company's mission statement or core values were not available in the retrieved sources."
+   "value": "Provide reliable, secure technology solutions that support federal agency missions (inferred from gov-contractor model)."
   },
   "name": "Zachary Piper Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "value": "Estimated: Moderate, driven by contract deliverables and compliance gates; not a 'move fast and break things' culture."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "No specific products or services could be identified from the retrieved redirect pages."
+   "value": "Custom software development, API integration, and IT modernization services for federal government clients, using Python, Linux, Git, and object-oriented design."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "value": "Estimated: 10-15 days PTO + 10 federal holidays (typical for cleared gov contractors)."
   },
+  "refresh_after": 1790201694,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -427128,16 +427421,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts observe federal holiday closures."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "No data regarding the company's size, funding stage, or employee headcount was available in the provided text."
+   "value": "Established small business (201-500 employees, founded 2011)."
   },
   "sources": [
    {
@@ -427192,37 +427483,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "confidence": "high",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Company has a track record of H-1B sponsorship for technical roles; sponsorship not guaranteed for every opening."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "919b419a3a",
-    "7a738c62d0",
-    "c66e0af5ca"
+    "52914c614f"
    ],
-   "value": "The available sources for Zachary Piper Solutions only contained empty redirect pages or generic disambiguation links, meaning no verifiable plain-English description of their day-to-day operations or revenue model could be extracted from the provided text."
+   "value": "Zachary Piper Solutions is a McLean, Virginia-based government IT services contractor founded in 2011, employing 200-500 people. It delivers software development and technical services to U.S. federal agencies."
   },
+  "synthesized_evidence_sha": "02be40f2c5e52fd1",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "confidence": "high",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Entry-to-mid-level backend development: Python, object-oriented programming, REST APIs, Linux environments, Git version control. Work is likely on classified or sensitive unclassified networks."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Zachary+Piper+Solutions+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "52914c614f"
+   ],
+   "value": "Offers a cleared, stable entry point into federal tech with H-1B history and structured Python/API work, but lacks elite AI/research prestige, guaranteed shutdowns, or high new-grad pay typical of top-tier product companies. Culture leans procedural (gov-contract compliance) rather than fast/innovative; WLB is often decent but varies by contract."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unavailable in research."
+   "value": "Estimated: 3.5/5 — many gov contractors enforce 40-hr weeks, but surge periods near delivery dates can occur."
   }
  },
  "zapier": {
