@@ -3086,7 +3086,7 @@
    "value": "Estimated: Tier 2. The global Accenture brand carries elite prestige and scale, but internal AI/data work in the federal branch leans heavily toward government consulting integration rather than top-tier cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -3149,7 +3149,7 @@
    ],
    "value": "Ask about day-to-day client variability, engineering agility vs. red tape, actual hours logged on federal contracts, and whether billable-hour metrics create crunches to determine if this avoids the toxic environments you want to avoid."
   },
-  "last_attempt_at": 1784920449,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "high",
@@ -3199,7 +3199,7 @@
    "value": "Estimated: 20-25 days. Federal consulting subsidiaries typically offer standard accrued PTO matching industry averages for large enterprises, though exact policy is not public."
   },
   "refresh_after": 1790070268,
-  "retry_after": 1784942049,
+  "retry_after": 1784964104,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -53324,43 +53324,45 @@
  "blissway": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Emerging startup tier (lacking elite FAANG-level prestige, but offers high-impact deep tech and AI/ML application scope)."
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Estimated: High — AI/ML is a core pillar alongside hardware and SaaS in a deep-tech startup, offering elite technical depth for new grads."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Operates as a lean startup functioning as multiple startups in one to provide integrated hardware and SaaS solutions for highway systems."
+   "value": "Likely B2B sales or managed-service contracts for hardware/software tolling systems to government and private highway operators; recurring revenue from SaaS/IoT platform fees."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Adaptable, mission-driven, and high-impact, described internally as a startup that operates as multiple startups in one."
+   "value": "Estimated: Mission-driven, multidisciplinary, high-autonomy, engineering-first; \"multiple startups in one\" signals variety and rapid learning."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Tollway authorities and highway management organizations seeking simplified toll collection and improved safety."
+   "value": "Transportation agencies, toll authorities, and highway operators seeking automated, high-reliability tolling and safety infrastructure."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $100,000 - $140,000 base, typical for deep tech/embedded systems roles in lean startups."
+   "value": "Estimated: $120k–$160k base + equity (seed/Series A startup range for embedded/AI roles in US); no public compensation data."
   },
   "evidence_sha": "2ca1db05dbcaeacc",
-  "generated_at": 1784920449,
+  "generated_at": 1784942504,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
@@ -53368,48 +53370,54 @@
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Intelligent Transportation Systems / Deep Tech."
+   "value": "Transportation technology / Intelligent transportation systems (ITS) / Tolling & highway safety"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Candidates should highlight their adaptability and willingness to take on broad technical challenges across AI/ML and embedded systems, while also probing the company's startup pace to ensure it aligns with sustainable work-life balance and sane hours."
+   "value": "Expect deep technical interviews covering embedded systems reliability, sensor fusion, AI/ML model deployment on edge hardware, and power/communications constraints in harsh environments. Be ready to demonstrate adaptability across the stack (hardware → cloud) and discuss how you maintain 99.9% uptime. Cultural fit questions will probe ownership, speed, and collaboration in a lean, multidisciplinary team."
   },
-  "last_attempt_at": 1784920449,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784938029,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Not explicitly stated in sources; job posting hosted on AshbyHQ suggests US-based operations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Simplify toll collection and dramatically improve highway safety."
+   "value": "Simplify toll collection and dramatically improve highway safety through a multi-disciplinary deep-tech approach."
   },
   "name": "Blissway",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and highly adaptable due to being a lean startup handling multiple technological domains."
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Estimated: Fast — lean startup operating across multiple technical domains with 99.9% reliability demands implies high velocity and ownership."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Roadside systems featuring solar power generation, cell connectivity, and high-speed sensors designed for 99.9% reliability in harsh environments."
+   "value": "Roadside toll-collection and safety systems integrating solar power generation, cellular connectivity, high-speed sensors, AI/ML software, and SaaS/IoT platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days, standard for venture-backed tech startups."
+   "value": "Estimated: 15–20 days PTO + holidays (typical for early-stage US tech startups); no public policy found."
   },
+  "refresh_after": 1790126504,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53419,14 +53427,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown if guaranteed shutdowns exist; typical lean startups may only observe standard public holidays."
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; early-stage startups rarely have formal shutdown policies."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Lean startup team."
+   "value": "Early-stage startup; described as a lean team operating as \"multiple startups in one.\""
   },
   "sources": [
    {
@@ -53491,14 +53499,15 @@
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Blissway is a startup that simplifies toll collection and improves highway safety using a combination of Deep Tech, AI/ML, Hardware, SaaS, and IoT. They generate revenue by deploying and maintaining these roadside systems for their clients."
+   "value": "Blissway is an early-stage startup that simplifies toll collection and improves highway safety by combining deep tech, AI/ML, hardware, SaaS, and IoT. It generates revenue by selling or operating roadside systems — including solar power, cellular connectivity, and high-speed sensors — that must achieve 99.9% reliability in harsh environments."
   },
+  "synthesized_evidence_sha": "2ca1db05dbcaeacc",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Developing and maintaining multi-disciplinary systems spanning Deep Tech, AI/ML, Hardware, SaaS, and IoT, with a strong emphasis on high reliability (99.9%) for solar, cellular, and sensor hardware."
+   "value": "Embedded systems, AI/ML, hardware engineering, SaaS, IoT, solar power systems, cellular connectivity, high-speed sensor integration, 99.9% reliability engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630051,
@@ -53508,12 +53517,14 @@
    "source_ids": [
     "a8964d3502"
    ],
-   "value": "Blissway offers new grads the opportunity to build across cutting-edge domains (AI/ML, IoT, Hardware) in a fast-paced, adaptable lean startup environment, accelerating technical learning and career growth without the slow bureaucracy of larger firms."
+   "value": "Blissway offers a rare blend of elite technical prestige — spanning AI/ML, embedded systems, and IoT — with a lean, fast-moving startup culture that avoids big-company bureaucracy. The mission to modernize critical highway infrastructure is tangible and safety-focused, and the lean team structure means high ownership and accelerated learning for new grads without the burnout typical of high-pressure unicorns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate, typical of a lean startup where impact is expected daily, requiring careful boundary setting to avoid burnout."
+   "source_ids": [
+    "a8964d3502"
+   ],
+   "value": "Estimated: Moderate to good — lean team and hardware reliability requirements may require on-call rotations, but startup culture suggests flexibility; no public data on guaranteed shutdowns."
   }
  },
  "blitzy": {
@@ -54446,7 +54457,7 @@
    "value": "Estimated: Regional enterprise tier. It does not carry elite, top-tier industry prestige for AI or data science compared to major tech firms."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -54493,7 +54504,7 @@
    ],
    "value": "Candidates should gauge the specific team's exposure to modern AI tech stacks versus legacy maintenance to ensure there is enough technical learning and growth without sacrificing personal time. Asking about management's stance on sane hours and innovation deadlines will be key."
   },
-  "last_attempt_at": 1784937314,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784933777,
   "locations": {
    "confidence": "low",
@@ -54529,7 +54540,7 @@
    "value": "Estimated: 15 to 25 days of paid time off annually, depending on tenure."
   },
   "refresh_after": 1790083735,
-  "retry_after": 1784937794,
+  "retry_after": 1784943464,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57870,48 +57881,129 @@
  "boston children s hospital": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "High domain prestige in healthcare/clinical data; not a typical tier 1 elite tech firm but highly respected in medical AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "54eee36098",
+    "7bf2d2c8a4"
+   ],
+   "value": "Hospital healthcare services and grant-funded biomedical research."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: Highly mission-driven, collaborative, and focused on child health and research impact."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Pediatric patients and their families, as well as medical researchers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary for Data Analyst I / junior technical roles in the Boston area."
   },
   "evidence_sha": "359742b1caa46565",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784942504,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Healthcare, Hospitals, Medical Research."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Probe deeply into the team's technical culture: ask about the pace of AI/ML innovation, how legacy EMR systems impact technical work, and weekend/on-call expectations. To ensure your work-life balance needs are met, seek guarantees on sane working hours and explicit boundaries around clinical system downtime or outages."
+  },
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784938028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7bf2d2c8a4",
+    "54eee36098"
+   ],
+   "value": "Boston, Massachusetts."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bf2d2c8a4"
+   ],
+   "value": "To provide top-tier pediatric clinical care and advance medical research to improve child health."
+  },
   "name": "Boston Children's Hospital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: Slow to moderate typical of healthcare institutions, with possible high-stress periods during clinical systems outages."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7bf2d2c8a4",
+    "54eee36098"
+   ],
+   "value": "Pediatric clinical care, biomedical research programs, and healthcare data processing pipelines, reporting, and analytical tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, standard for large healthcare and academic institutions."
   },
+  "refresh_after": 1790126504,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide tech shutdowns, though standard hospital holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bf2d2c8a4",
+    "54eee36098"
+   ],
+   "value": "Large established hospital and research institution."
   },
   "sources": [
    {
@@ -57965,14 +58057,46 @@
     "url": "https://jobright.ai/jobs/info/6a63cd0b8d53603449604606?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Not specified in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7bf2d2c8a4",
+    "54eee36098"
+   ],
+   "value": "Boston Children's Hospital is a pediatric healthcare facility and research center. It generates revenue primarily through clinical medical services, biomedical research grants, and philanthropic donations."
+  },
+  "synthesized_evidence_sha": "359742b1caa46565",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Assisting in research, design, development, and maintenance of data processing pipelines, reporting/analytical tools, and querying electronic medical records using Python and SQL."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784938028,
   "web_search_url": "https://duckduckgo.com/?q=Boston+Children%27s+Hospital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "While Boston Children's Hospital offers elite mission-driven prestige in pediatric healthcare and deeply meaningful AI/data science work (e.g., clinical medical records), you must carefully weigh this against the reality of hospital legacy systems. A top-tier tech candidate strictly prioritizing high new-grad compensation, fast-paced innovative culture, and strict boundaries around personal time should verify that specific technical teams here operate like dynamic tech companies rather than slow"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "54eee36098"
+   ],
+   "value": "Estimated: Generally moderate to good WLB due to institutional hospital hours, though clinical IT support can have on-call demands."
   }
  },
  "boston dynamics": {
@@ -84086,45 +84210,49 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67",
     "98e5c55b72"
    ],
-   "value": "Estimated: Tier 2. Big bank prestige applies, but the team's specific role in deploying advanced AI might be constrained by institutional pace."
+   "value": "Estimated: Elite Tier (Top Bulge Bracket Bank) - Citi is a world-class global corporation offering elite financial prestige and competitive new-grad pay for artificial intelligence and data science roles."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "9ac5be308b",
-    "c839e08560"
+    "eb0516766a",
+    "fb46d3cc67"
    ],
-   "value": "Financial services and credit card issuing, leveraging internal technology teams to build and support systems that power banking and capital markets."
+   "value": "Citi operates as a strategic business partner working closely with global management teams, managing risk while generating revenue through financial products and services."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72"
+    "98e5c55b72",
+    "eb0516766a"
    ],
-   "value": "Supportive environment focused on discovering the best fit for skills and long-term career goals while building impactful systems."
+   "value": "A supportive environment aimed at helping employees discover the best fit for their skills and long-term career goals, empowering analysts in a dynamic financial setting."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "9ac5be308b",
-    "c839e08560"
+    "eb0516766a",
+    "fb46d3cc67"
    ],
-   "value": "Consumers, corporations, and governments requiring global financial and card services."
+   "value": "Global consumers and institutional clients managed through the Institutional Clients Group (ICG) and Global Consumer Bank (GCB)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "98e5c55b72"
+    "98e5c55b72",
+    "eb0516766a"
    ],
-   "value": "Estimated: $90k - $120k depending on location and exact role (e.g., Junior Gen AI Application Developer)."
+   "value": "Estimated: $95,000 - $120,000 base salary for junior tech/AI roles in US hubs, reflecting top-tier bulge bracket bank compensation."
   },
   "evidence_sha": "3e4a3fc48d6c188b",
-  "generated_at": 1784888147,
+  "generated_at": 1784942504,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -84133,77 +84261,91 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72",
-    "c839e08560"
+    "eb0516766a",
+    "98e5c55b72"
    ],
-   "value": "Financial Services"
+   "value": "Financial Services and Banking."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe the specific team's autonomy to ensure they operate with a fast, innovative tech culture rather than standard corporate bureaucracy. Ask detailed questions about expected working hours, on-call rotations, and work-life balance policies to confirm they respect personal time and prioritize sane hours over high-burnout environments."
+   "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67"
+   ],
+   "value": "Given your priority for accelerated learning without sacrificing personal time, probe heavily into team-specific bandwidth, on-call schedules, and whether AI innovation is funded or just buzzword. Ask if the role truly empowers you with fast analytical work or if you inherit a slow bureaucratic financial environment."
   },
-  "last_attempt_at": 1784888147,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67",
     "98e5c55b72"
    ],
-   "value": "Irving, Texas, United States (among other global locations)."
+   "value": "United States, with offices in Irving, Texas and Tampa, Florida."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72",
-    "c839e08560"
+    "98e5c55b72"
    ],
-   "value": "To provide financial services that enable growth and progress, harnessing technology to help clients and colleagues find the best fit for their goals while shaping global markets."
+   "value": "The company helps redefine finance through technology, deploying advanced AI to shape global markets and building systems that matter."
   },
   "name": "Citi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "98e5c55b72",
-    "c839e08560"
+    "eb0516766a",
+    "fb46d3cc67"
    ],
-   "value": "Estimated: Moderate to fast. While deploying advanced AI suggests innovation, the scale of the company implies bureaucratic layers that may slow down processes."
+   "value": "Estimated: Fast-paced and dynamic analytical financial environment, characteristic of a global bank."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72",
-    "9ac5be308b",
-    "c839e08560"
+    "eb0516766a",
+    "98e5c55b72"
    ],
-   "value": "Global banking systems, capital markets infrastructure, and commercial/credit card services."
+   "value": "Consumer banking services, institutional banking, risk management systems, and generative AI applications for financial services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67"
+   ],
+   "value": "Estimated: 20-25 days of planned time off (vacation) alongside unplanned time off (sick leave) and paid holidays."
+  },
+  "refresh_after": 1790126504,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "high",
+   "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67",
     "98e5c55b72"
    ],
-   "value": "Estimated: 20-25 days. Large financial institutions typically provide standard to above-average vacation packages for full-time employees."
-  },
-  "refresh_after": 1790072147,
-  "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: None found in research. Large banks rarely offer company-wide guaranteed shutdowns, typically operating continuously."
+   "source_ids": [
+    "eb0516766a",
+    "fb46d3cc67"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found; public data mentions paid holidays as part of the standard time off package."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "c839e08560"
+    "eb0516766a",
+    "fb46d3cc67",
+    "98e5c55b72"
    ],
-   "value": "Large, established globalFinancial institution (Public company)."
+   "value": "Citi is a world-class corporation operating in a global, dynamic financial environment with technology teams supporting and redefining finance."
   },
   "sources": [
    {
@@ -84272,40 +84414,44 @@
    "source_ids": [
     "98e5c55b72"
    ],
-   "value": "Unauthorized to work for candidates requiring sponsorship now or in the future; candidates must be authorized to work in the United States without employer sponsorship."
+   "value": "Positions require authorization to work in the United States without the need for employer sponsorship, now or in the future."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72",
-    "9ac5be308b",
+    "eb0516766a",
+    "fb46d3cc67",
     "c839e08560"
    ],
-   "value": "Citi is a global financial services institution where the tech team redefines finance rather than just supporting it. It makes money through banking, capital markets, and card services. They are currently deploying advanced AI to help shape global markets."
+   "value": "Citi is a global financial services corporation providing consumer and institutional banking. It generates revenue through interest income, lending, and institutional financial services via its Institutional Clients Group (ICG) and Global Consumer Bank (GCB)."
   },
-  "synthesized_evidence_sha": "a8b5e9901307898e",
+  "synthesized_evidence_sha": "3e4a3fc48d6c188b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "98e5c55b72"
+    "98e5c55b72",
+    "eb0516766a"
    ],
-   "value": "The team deploys advanced AI and builds systems that matter for global finance, operating in a supportive environment to help employees discover the best fit for their skills and career goals."
+   "value": "The tech team helps redefine finance, deploying advanced AI and building systems that matter, including junior generative AI application developer roles and quantitative risk management analytics."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
   "web_search_url": "https://duckduckgo.com/?q=Citi+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "While Citi offers the elite prestige and high new-grad pay of a major financial institution, its massive scale inherently involves bureaucracy that may stall the fast, innovative tech culture you seek. However, specific AI deployment teams may offer accelerated technical learning and career growth, though the environment will likely require navigating slower corporate processes rather than maintaining guaranteed shutdowns or strictly sane hours."
+   "source_ids": [
+    "98e5c55b72"
+   ],
+   "value": "Citi's deployment of advanced AI offers the elite prestige and high new-grad pay of a top-tier bank, but its massive size historically conflicts with the fast, innovative tech culture and guaranteed shutdowns you prioritize. The risk of slow bureaucracy and technical stagnation is high here compared to standalone tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "98e5c55b72"
+    "eb0516766a",
+    "fb46d3cc67"
    ],
-   "value": "Estimated: Medium. Financial services traditionally demand higher hours, though the job description highlights a \"supportive environment\"."
+   "value": "Estimated: Medium - Work-life balance is supported through knowledge and skills development programs, but large financial environments often require managing fast-paced analytical demands."
   }
  },
  "citizen health": {
@@ -155488,7 +155634,7 @@
    "value": "Estimated: Tier 3 (Defense / Traditional Tech). While highly respected in defense, the company lacks the elite Silicon Valley prestige typical of top-tier AI or data science firms."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -155512,7 +155658,7 @@
    ],
    "value": "U.S. Department of Defense, federal government agencies, and allied military forces."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -155542,7 +155688,7 @@
    ],
    "value": "Given the candidate's priorities, interviews should probe how quickly teams adopt modern AI/data science practices versus relying on legacy defense protocols. It is also important to ask how much leeway new grads have to drive technical innovation without being bogged down by contracting bureaucracy."
   },
-  "last_attempt_at": 1784869098,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "high",
@@ -155584,6 +155730,7 @@
    "value": "Estimated: 15-20 days of standard PTO, with additional sick leave and standard federal holidays."
   },
   "refresh_after": 1790053098,
+  "retry_after": 1784950184,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -155657,7 +155804,7 @@
    ],
    "value": "Due to the nature of defense contracts, roles typically require the ability to obtain a U.S. government security clearance, which generally restricts eligibility to U.S. citizens."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -166752,7 +166899,7 @@
    "value": "Estimated: Tier 2-3. It holds prestige in the consulting world, but is not generally recognized as a top-tier, elite tech firm for data science innovation in the way that FAANG or specialized AI labs are."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -166803,7 +166950,7 @@
    ],
    "value": "You must probe heavily into the realities of consulting hours during interviews. Focus on questions about billable hour expectations, client project rotations, and whether involvement in 'fast, innovative tech' is actually feasible when serving government and legacy commercial clients that prioritize slow, steady delivery."
   },
-  "last_attempt_at": 1784937135,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784934042,
   "locations": {
    "confidence": "medium",
@@ -166842,7 +166989,7 @@
    ],
    "value": "Estimated: 20-25 days of annual PTO, typical for large consulting firms, though actual utilization may be constrained by active client project deadlines."
   },
-  "retry_after": 1784937615,
+  "retry_after": 1784943464,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -216545,47 +216692,49 @@
  },
  "leidos": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Low to Mid. Leidos is not recognized as an elite, top-tier AI firm; AI work is typically applied to specific government missions rather than pushing core industry boundaries."
+   "confidence": "medium",
+   "source_ids": [
+    "ebc69970a3",
+    "2e60eeeee9"
+   ],
+   "value": "Established defense contractor with strong data science and software teams, though not typically classified alongside elite tech or AI-first companies."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9",
-    "ebc69970a3"
+    "2e60eeeee9"
    ],
-   "value": "Leidos makes money by securing and executing large-scale government and commercial contracts, using a pay range structure across different job levels for their employees."
+   "value": "B2B and B2G services; securing contracts to build custom technical solutions and platforms for government and commercial clients."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "ebc69970a3",
-    "c3886b83cb"
+    "39bd6b54f6",
+    "ebc69970a3"
    ],
-   "value": "Estimated: Mission-driven and collaborative, involving tight-knit teams of data scientists, developers, and senior investigators, but potentially bureaucratic due to the enterprise/government nature of the work."
+   "value": "Mission-focused, collaborative, and diverse. Emphasizes doing the right thing and working within tight-knit, cross-functional teams of developers, engineers, and investigators."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "2e60eeeee9"
    ],
-   "value": "Government and commercial customers, including defense, intelligence, and federal civilian agencies."
+   "value": "Government and commercial organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
+    "39bd6b54f6",
     "ebc69970a3",
-    "c3886b83cb",
     "2e60eeeee9"
    ],
-   "value": "Estimated: $57,850 - $125,725. Pay varies widely by role, location, and experience level (e.g., Data Science vs. Jr. Software Developer)."
+   "value": "Estimated: $58,000 - $125,700 depending on the specific role, level, and geographic location."
   },
   "evidence_sha": "69b33a0adab2f66c",
-  "generated_at": 1784862889,
+  "generated_at": 1784942504,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -216594,57 +216743,64 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9",
-    "c3886b83cb"
+    "2e60eeeee9"
    ],
-   "value": "Defense, Technology, and Government Contracting."
+   "value": "Information Technology, Defense, and Government Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Candidates should closely question potential teams about contract funding stability and expected hours, as Leidos contracts often dictate work-life balance. They should also probe the pace of technical learning and innovation to ensure the role avoids bureaucratic slowdowns and respects personal time without high burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "39bd6b54f6",
+    "c3886b83cb"
+   ],
+   "value": "Candidates should demonstrate how they can drive impactful results and innovate within a structured, mission-driven environment. Be prepared to discuss balancing the desire for rapid technical growth with the realities of working in a large government contracting organization."
   },
-  "last_attempt_at": 1784862889,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "39bd6b54f6",
     "ebc69970a3",
-    "c3886b83cb",
     "2e60eeeee9"
    ],
-   "value": "Bethesda, MD; Valparaiso, FL; Manassas, VA; and United States (remote options may vary by role)."
+   "value": "Huntsville, AL; Bethesda, MD; Manassas, VA; Valparaiso, FL."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "39bd6b54f6",
     "c3886b83cb"
    ],
-   "value": "To outthink, outbuild, and outpace the status quo — because the mission demands it."
+   "value": "To do the right thing for customers, people, and community, guided by a mission to outthink, outbuild, and outpace the status quo because the mission demands it."
   },
   "name": "Leidos",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "c3886b83cb"
+    "2e60eeeee9"
    ],
-   "value": "Estimated: Slow to moderate. The culture is highly focused on government missions and contract requirements rather than fast-paced, hyper-innovative tech product cycles."
+   "value": "Estimated: Moderate and steady, driven by government contract deadlines rather than a fast-paced innovative tech cycle."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ebc69970a3",
-    "2e60eeeee9"
+    "2e60eeeee9",
+    "c3886b83cb",
+    "39bd6b54f6"
    ],
-   "value": "Data science platforms and software solutions optimized to produce and analyze results, along with engineering and network infrastructure services."
+   "value": "Innovative technology solutions, software engineering, and data science platforms designed to evaluate operational effectiveness and system performance."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of PTO per year for new/entry-level employees, standard for large government contractors."
+   "source_ids": [
+    "39bd6b54f6"
+   ],
+   "value": "Estimated: 15 to 20 days of PTO annually, standard for large government contractors, though exact policy is not public."
   },
-  "refresh_after": 1790046889,
+  "refresh_after": 1790126504,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216653,16 +216809,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns for new grads; standard federal holidays are observed."
+   "source_ids": [
+    "2e60eeeee9"
+   ],
+   "value": "Estimated: Likely limited to standard federal holidays rather than guaranteed corporate-wide shutdowns, though specific program schedules may vary."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "1652efb05f",
     "2e60eeeee9"
    ],
-   "value": "Established, large-scale public company and industry leader."
+   "value": "Established, large-scale industry and technology leader with a continuous need for entry-level and senior talent."
   },
   "sources": [
    {
@@ -216727,20 +216884,24 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "39bd6b54f6",
+    "ebc69970a3",
+    "2e60eeeee9"
+   ],
+   "value": "Not explicitly mentioned in the provided job postings."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "2e60eeeee9",
-    "c3886b83cb"
+    "39bd6b54f6"
    ],
-   "value": "Leidos is an industry and technology leader serving government and commercial customers. They apply expertise in data, engineering, and IT to outthink, outbuild, and outpace the status quo because the mission demands it."
+   "value": "Leidos is an industry and technology leader that delivers innovative solutions and IT services to government and commercial customers. The company makes money by engineering complex systems, software, and data science platforms to advance the missions of its diverse client base."
   },
-  "synthesized_evidence_sha": "6926842d9ff02c2a",
+  "synthesized_evidence_sha": "69b33a0adab2f66c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -216748,20 +216909,25 @@
     "c3886b83cb",
     "2e60eeeee9"
    ],
-   "value": "Designing, building, and optimizing data science platforms; working with relational databases, data scripting languages (Python, R), data visualization, cloud-based computing environments, and C++/Java software development."
+   "value": "Designing and optimizing data science platforms, working with relational databases, data scripting (Python, R), data visualization, cloud computing, and software development using C++, Java, and Linux."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784584189,
   "web_search_url": "https://duckduckgo.com/?q=Leidos+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "While Leidos is highly mission-driven, it lacks the fast, innovative, high-prestige tech culture of elite tech firms, functioning more like a traditional government contractor with slower bureaucracy. It offers new-grad compensation, though pay is likely lower than top-tier AI roles, and work-life balance heavily depends on the specific government contract you are assigned to."
+   "confidence": "medium",
+   "source_ids": [
+    "2e60eeeee9",
+    "39bd6b54f6"
+   ],
+   "value": "Leidos offers fulfilling, mission-driven work solving complex problems for government clients. However, as a massive defense contractor, its culture and technical pace may lean toward bureaucracy rather than the fast-paced, elite tech startup environment some candidates seek."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to Good. Work-life balance is generally respected within traditional government contracting constraints, but can vary significantly by specific project deadlines."
+   "source_ids": [
+    "2e60eeeee9"
+   ],
+   "value": "Estimated: Good. Large government contractors typically offer stable hours to attract and retain cleared talent, though specific shifts vary by program."
   }
  },
  "leidos australia": {
@@ -278880,44 +279046,46 @@
  "palantir": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: Top-tier. Building advanced AI systems for the tactical edge places them in an elite, high-impact category."
+   "source_ids": [],
+   "value": "Estimated: Top-tier. Palantir is highly recognized in the data science and AI field for its elite platforms and focus on deploying cutting-edge LLMs and advanced AI to the tactical edge."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Sells enterprise software platforms and deployments to organizations to enable data-driven decisions and operations."
+   "value": "B2B enterprise software provider that builds and deploys data integration and operations platforms directly to government and commercial partners to drive critical decision-making."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Mission-driven, focusing on world-changing outcomes like saving lives and locating missing children, which fosters a high-stakes, impactful engineering environment."
+   "value": "Mission-driven and highly autonomous. The culture strongly encourages using creativity to automate processes and choose the best tools for the job, ensuring technical learning is accelerated through direct impact on critical challenges."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Partners across various sectors ranging from organizations developing lifesaving drugs to those forecasting supply chain disruptions and locating missing children."
+   "value": "Partners across commercial and government sectors, including the US Government."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: Highly competitive top-tier new-grad compensation, likely in the $180k-$220k range (base + equity) given market standards for elite AI/data roles."
+   "source_ids": [],
+   "value": "Estimated: $140,000 - $180,000 base salary, with total compensation potentially exceeding $200,000 due to equity, reflecting high new-grad pay scales."
   },
   "evidence_sha": "c02a6af3e83e2ec8",
-  "generated_at": 1784777137,
+  "generated_at": 1784942504,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -278926,79 +279094,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "f5011c9764",
     "2d271b095e"
    ],
-   "value": "Enterprise Software and Data Analytics"
+   "value": "Enterprise Data Software & AI Systems."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "f5011c9764",
     "2d271b095e"
    ],
-   "value": "Candidates should probe deeply into the day-to-day realities of the 'tactical edge' deployments, asking about on-call expectations, travel requirements, and average working hours to determine if the fast-paced, innovative environment will actually respect their personal time and WLB priorities."
+   "value": "Prepare to demonstrate creative problem-solving for novel challenges and evolving systems, showcase strong systems engineering fundamentals, and discuss practical approaches to deploying AI and LLM technology in high-stakes environments."
   },
-  "last_attempt_at": 1784937314,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784933777,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Not explicitly detailed in provided sources, but opportunities exist for teams focused on tactical edge deployments."
+   "value": "US-based roles, including positions specifically tied to US Government operations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "A world-changing company that empowers partners to develop lifesaving drugs, forecast supply chain disruptions, locate missing children, and more through data-driven platforms."
+   "value": "To bring the right data to the people who need it, empowering partners to solve the world's most critical challenges like forecasting supply chain disruptions and locating missing children."
   },
   "name": "Palantir",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: Fast-paced and innovative, given the reliance on newly-formed teams pushing advanced AI to the tactical edge."
+   "source_ids": [],
+   "value": "Estimated: Fast-paced and highly innovative. Engineers are expected to creatively develop novel solutions for evolving challenges using the latest tools, rather than relying on slow bureaucratic processes."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "f5011c9764",
     "2d271b095e"
    ],
-   "value": "Data-driven decision and operations platforms that empower partners to execute complex tasks, including deploying advanced AI systems to the tactical edge."
+   "value": "Data-driven decision and operations platforms that incorporate industry-leading LLM and AI technology, including systems for advanced AI deployment to the tactical edge."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: Standard tech industry average of 15-20 days of PTO annually, though exact policy is not specified in sources."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of flexible PTO, typical for top-tier tech companies, though actual time off may depend on deployment cycles and team workload."
   },
-  "refresh_after": 1789961137,
-  "retry_after": 1784937794,
+  "refresh_after": 1790126504,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "2d271b095e"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: No explicit mention of guaranteed company-wide shutdowns; typical operations appear continuous given the high-stakes nature of the partner work."
+   "source_ids": [],
+   "value": "Estimated: Limited guaranteed shutdowns. While some holiday closures may exist, Palantir's continuous mission-critical US Government and commercial deployments mean total shutdowns are less common than in slower-paced tech firms."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "68384e2a46",
+    "f38b092370"
    ],
-   "value": "Established public company that identifies itself as a 'world-changing' organization with newly-formed specialized teams."
+   "value": "Public company."
   },
   "sources": [
    {
@@ -279063,44 +279231,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Estimated: Likely offers employment visa sponsorship for specialized engineering roles similar to other top-tier tech firms, but not explicitly confirmed in sources."
+   "value": "US Government roles typically require US citizenship due to security clearance requirements, which limits visa sponsorship opportunities for these specific positions."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Palantir builds the world's leading software for data-driven decisions and operations, creating platforms that bring the right data to the people who need it."
+   "value": "Palantir builds the world's leading software platforms for data-driven decisions and operations, enabling organizations to integrate and analyze massive datasets. The company makes money by deploying these platforms to empower partners in developing lifesaving drugs, forecasting supply chain disruptions, and locating missing children."
   },
-  "synthesized_evidence_sha": "1a12c0b5c62b752c",
+  "synthesized_evidence_sha": "c02a6af3e83e2ec8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "f5011c9764",
     "2d271b095e"
    ],
-   "value": "Involves developing and deploying advanced AI systems to the tactical edge on a newly-formed team."
+   "value": "Engineers use creativity to develop novel solutions to evolving challenges and automate processes, utilizing whichever tools are best for the job including industry-leading LLM and AI technology. Teams also focus on developing and deploying advanced AI systems to the tactical edge."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586004,
   "web_search_url": "https://duckduckgo.com/?q=Palantir+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Palantir offers elite prestige and highly competitive new-grad pay with fast-paced, impactful technical work. However, the culture is known for being demanding; candidates prioritizing guaranteed shutdowns and a strictly bounded 40-hour work-life balance may find the environment misaligned with their goal of avoiding high-burnout tech cultures."
+   "source_ids": [],
+   "value": "Perfectly aligns with the desire for top-tier AI/DS prestige, high new-grad pay, and a fast, innovative tech culture; the recruitment of a newly-formed Edge AI Systems team and emphasis on LLM tech provide strong technical learning opportunities."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "2d271b095e"
-   ],
-   "value": "Estimated: Variable to demanding. While the mission is highly compelling, top-tier pay and cutting-edge tech often require long hours."
+   "source_ids": [],
+   "value": "Estimated: Moderate. While Palantir is mission-driven and calls itself a 'World-Changing Company,' the high ownership and fast-paced deployment cycle can sometimes impact personal time; however, sane hours are often manageable for those who set firm boundaries."
   }
  },
  "palantir technologies": {
@@ -297880,7 +298049,7 @@
    "value": "Tier 2 — Strong industry reputation and scale, with genuine AI investment (Marcel, Sapient AI labs), but perceived as marketing-services-first rather than pure research/tech-first. Prestige high within marketing analytics; moderate in broader AI research community."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297896,7 +298065,7 @@
    "source_ids": [],
    "value": "Major enterprise clients across industries including financial services, telecommunications, automotive, retail, government, FMCG, and technology sectors in Australia and New Zealand."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297919,7 +298088,7 @@
    "source_ids": [],
    "value": "Expect case studies blending technical rigor with business/marketing context: e.g., designing a customer lifetime value model, explaining media attribution methodology, or architecting a CDP integration. Publicis Sapient interviews lean system design, cloud architecture, and agile delivery. Behavioral questions emphasize stakeholder management, ambiguity navigation, and client-facing communication. Prepare for 'how would you explain this to a CMO?' scenarios."
   },
-  "last_attempt_at": 1784688568,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "estimated",
@@ -297949,6 +298118,7 @@
    "value": "Estimated: 20–25 days annual leave + 10–12 public holidays (AU/NZ dependent) + 5 'Recharge' days (group initiative) + sick leave. Exact accrual varies by entity and tenure."
   },
   "refresh_after": 1789872568,
+  "retry_after": 1784942984,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -298012,7 +298182,7 @@
    "source_ids": [],
    "value": "As a large multinational, Publicis Groupe ANZ typically sponsors skilled visas (e.g., TSS 482, Employer Nomination Scheme) for specialized technical and senior roles. Graduate sponsorship less common but possible for high-demand data/AI talent."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316835,127 +317005,122 @@
  "robinhood": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2. Recognized tech prestige in fintech, though not exclusively an AI-first company."
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "T1/T2 - Robinhood's explicit push to build 'elite teams' applying 'frontier technologies' to the world's biggest financial problems places its AI/Data Science roles at the upper tiers of fintech prestige, emphasizing cutting-edge technical rigor."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Information not available in provided sources; generally relies on payment for order flow, margin interest, and subscription services."
+   "value": "Robinhood leverages its financial technology platform to deliver financial services to retail users and government entities. It generates revenue through transaction routing (payment for order flow), interest on cash, and premium subscription tiers."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and collaborative with a focus on democratizing finance."
+   "confidence": "high",
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Elite, ambitious, and anti-complacent. The company culture is built around high performance and continuous innovation in frontier technology to solve historic financial challenges."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Information not available in provided sources; expected to be retail investors."
+   "value": "Retail investors seeking accessible financial markets, as well as government entities utilizing Robinhood's platform for historic national initiatives."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $150k-$200k total comp"
+   "value": "Estimated: $180,000 - $220,000+ total target compensation (base + equity + bonus) for elite AI/Data Science new grads in high-cost-of-living areas."
   },
   "evidence_sha": "32760fd40c43c92e",
-  "generated_at": 1784863366,
+  "generated_at": 1784942504,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Financial Technology / Brokerage"
+   "value": "Financial Technology (Fintech) / Retail Brokerage"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect rigorous technical interviews focused on scaling data infrastructure, machine learning models for fraud or recommendation systems, and practical coding ability. Prompt enforces informational blackout from current sources; see procedural summary."
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Assess whether the team's 'elite' pace and the explicit expectation that ambitious people do their best work translates to sustainable, high-impact technical growth for a new grad. Probe the actual hours and on-call expectations to ensure the fast tech culture avoids the toxic burnout and bureaucracy the candidate wants to avoid."
   },
-  "last_attempt_at": 1784937314,
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784933777,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
-   ],
-   "value": "Information not available in provided sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Menlo Park, CA with offices in major US tech hubs (e.g., New York, Denver) and remote work options depending on the role."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Information not available in provided sources."
+   "value": "To democratize finance for all."
   },
   "name": "Robinhood",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and dynamic, typical of tech-driven fintech companies."
+   "confidence": "high",
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Estimated: Very fast. Robinhood explicitly states it 'isn't a place for complacency' and is structured for 'ambitious people' to do the best work of their careers, indicating a high-velocity tech environment."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Information not available in provided sources; expected to include trading platforms for stocks, options, and cryptocurrencies."
+   "value": "A standalone web and app experience for retail investing, leveraging industry-leading financial technology for national financial initiatives."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days"
+   "value": "Estimated: 20-25 days of flexible PTO annually, typical for top-tier tech companies competing for elite talent."
   },
-  "refresh_after": 1790047366,
-  "retry_after": 1784938274,
+  "refresh_after": 1790126504,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "medium",
-   "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found."
+   "value": "Estimated: No firm evidence of guaranteed company-wide shutdowns; typical policy relies on flexible PTO with potential market-holiday downtimes."
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
-   ],
-   "value": "Publicly traded company (exact employee count not available in sources)."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: HOOD), operating as a large-scale, established fintech firm."
   },
   "sources": [
    {
@@ -317010,46 +317175,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
-   ],
-   "value": "Information not available in provided sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Generally provides visa sponsorship for specialized engineering roles requiring hard-to-find technical talent, evaluated on a case-by-case basis."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "b0bbdf8aa5",
-    "852bc6f679",
-    "bbca26d7d5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "No descriptive content could be retrieved from the provided sources to summarize what the company does. Based on company identity, Robinhood is a fintech company offering a mobile app for commission-free stock, ETF, and crypto trading."
+   "value": "Robinhood is a financial technology company that provides a standalone web and app platform allowing users to invest in stocks, options, and cryptocurrencies. It makes money by routing user trades to market makers and earning interest on uninvested cash and margin lending."
   },
-  "synthesized_evidence_sha": "98d74a6495118ac2",
+  "synthesized_evidence_sha": "32760fd40c43c92e",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bbca26d7d5",
-    "852bc6f679",
-    "b0bbdf8aa5"
+    "7038aeaa92",
+    "2ac0947b99"
    ],
-   "value": "Information not available in provided sources."
+   "value": "Engineers work on a world-class, intuitive investing platform, applying frontier technologies to large-scale financial problems using web and mobile (iOS/Android) architectures."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673989,
   "web_search_url": "https://duckduckgo.com/?q=Robinhood+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Robinhood offers elite AI/data science talent a high-visibility platform affecting millions of retail investors, blending top-tier compensation with a fast-paced innovation culture. Prompt enforces informational blackout from current sources; see procedural summary."
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Robinhood aligns with the candidate's desire for an elite, mission-driven company that applies frontier technologies to massive financial challenges. It provides high new-grad pay and prestige while actively seeking ambitious people who want to do the best, fastest work of their careers without slow complacency."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. Fast growth can be demanding, though general tech benefits are standard."
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Estimated: Moderate. The culture strongly emphasizes ambition and high output, which may conflict with guaranteed shutdowns; however, the mission-driven nature may provide sane hours outside of market-crash events."
   }
  },
  "roblox": {
@@ -406326,11 +406491,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406342,6 +406509,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784942504,
   "last_evidence_at": 1784942194,
   "name": "Volaris Group",
   "pace_of_work": {
@@ -406354,6 +406522,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784942624,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406417,7 +406586,7 @@
     "url": "https://volarisgroup.wd3.myworkdayjobs.com/volaris/job/United-States---Worcester-MA/Software-Developer-I--Analyst-_R70138-1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784942194,
   "web_search_url": "https://duckduckgo.com/?q=Volaris+Group+company+careers+benefits",
