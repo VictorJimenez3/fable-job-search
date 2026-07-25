@@ -52543,48 +52543,127 @@
  "black cape": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: Specialized/Niche. While the work involves advanced AI/ML and data tools, prestige in the broader tech industry is constrained by its federal consulting nature and smaller size compared to FAANG or top-tier tech firms."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: B2B/B2G services and contract-based revenue, primarily providing software engineering, data analysis, and AI/ML integration solutions to federal government agencies."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "From public sources, the team is described internally as a 'COOL and FUN crew that works hard and plays maybe even a little harder.'"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Federal government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary per year, based on standard compensation for software and AI/ML roles requiring security clearance."
   },
   "evidence_sha": "242997b34ab4e461",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784980560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Federal IT Services, Software Engineering, and AI/ML Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Probe heavily during the interview to ensure the role meets your WLB standards: ask about typical working hours, on-call expectations, and whether they offer hard shutdowns or flexible PTO. Also, clarify the pace of innovation versus federal bureaucracy, and confirm the new-grad compensation package to ensure it meets your elite pay tier requirements."
+  },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784979903,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Virginia and the Washington D.C. metro area, based on regional 'Best Places to Work' awards."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "While a formal mission statement was not provided in the sources, the company emphasizes creating a cool, fun, and hard-working environment while delivering advanced tech solutions for the government."
+  },
   "name": "Black Cape",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: Moderate to fast. The company describes itself as a 'cool and fun crew that works hard,' but project pacing is ultimately tied to federal government contract cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Full-stack web applications, advanced data analysis tools, and integrated AI/ML capabilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: 15-20 days of PTO per year, augmented by federal holidays, which is standard for mid-sized government contractors in the D.C. area."
   },
+  "refresh_after": 1790164560,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "fde069de8c",
+    "b5b8601d65"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: Company-wide shutdowns are unconfirmed, but the culture emphasizes a strong work-life balance and may permit flexible hours depending on contract terms."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fde069de8c",
+    "b5b8601d65"
+   ],
+   "value": "Estimated: Likely a small-to-midsize, specialized private contractor given the niche federal focus and specific job board listings."
   },
   "sources": [
    {
@@ -52638,14 +52717,45 @@
     "url": "https://blackcape.applytojob.com/apply/Hxw7V35F52/Full-Stack-Software-Engineer"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Working with federal government customers typically requires U.S. citizenship and the ability to obtain a government security clearance, making visa sponsorship unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Black Cape is a technology company that builds full-stack web applications, advanced data analysis tools, and AI/ML capabilities for federal government customers."
+  },
+  "synthesized_evidence_sha": "242997b34ab4e461",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Developing full-stack web applications, building advanced data analysis tools, and integrating artificial intelligence and machine learning capabilities for federal clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784979903,
   "web_search_url": "https://duckduckgo.com/?q=Black+Cape+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "This role aligns with your desire for high-prestige AI/ML and data science work, offering strong technical learning and career growth through advanced federal projects. The company has won multiple 'Best Places to Work' awards and explicitly promotes a fun, balanced culture, which theoretically supports your requirement for guaranteed shutdowns, sane hours, and a non-toxic environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fde069de8c"
+   ],
+   "value": "Estimated: Good. The company highlights winning 'Best Places to Work' awards, but the reality of maintaining sane hours can vary in federal contracting."
   }
  },
  "blackedge capital": {
@@ -87194,38 +87304,94 @@
  "clasp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Emerging/early-stage – not yet a recognized top-tier brand (e.g., FAIR, Brain, OpenAI, Anthropic), but new-grad hiring suggests ambition to attract strong talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely small, tight-knit, engineering-centric, high autonomy; culture depends heavily on founders and early team."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $120k–$160k base + equity (0.05%–0.2%) + possible sign-on; top of range if well-funded and competing for elite talent."
   },
   "evidence_sha": "55d7031e0276a657",
+  "generated_at": 1784980560,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: AI / Machine Learning / Data Science technology startup."
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Prepare for technical depth in AI/ML or data science (modeling, systems, coding). Ask concrete questions about: typical work hours, explicit shutdown policies, on-call expectations, mentorship structure, project ownership for new grads, and compensation breakdown (base, equity, sign-on). Probe for evidence of sustainable pace vs. crunch."
+  },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784979905,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely US-based (San Francisco Bay Area, New York, or remote) given SimplifyJobs focus."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Clasp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Fast – typical of early-stage startups shipping product quickly; risk of crunch without guardrails."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + company holidays (typical US startup baseline); no published policy found."
   },
+  "refresh_after": 1790164560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87235,7 +87401,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns or mandatory time-off policies found in public sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Early-stage startup (seed to Series A) given presence on new-grad hiring boards and limited public footprint."
   },
   "sources": [
    {
@@ -87279,14 +87452,43 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: May offer visa sponsorship for new grads; common for early-stage tech startups hiring from university pipelines."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Clasp appears to be a technology company hiring new graduates, discovered via the SimplifyJobs New-Grad-Positions GitHub board. Public sources did not yield a detailed company description, product list, or financials."
+  },
+  "synthesized_evidence_sha": "55d7031e0276a657",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely involves AI/ML, data science, or full-stack engineering given candidate context and new-grad targeting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784979905,
   "web_search_url": "https://duckduckgo.com/?q=Clasp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Clasp appears on a curated new-grad board, suggesting active hiring for entry-level AI/data roles. For a candidate seeking elite prestige, high new-grad pay, fast innovation culture, mission-driven work, strong WLB with sane hours/shutdowns, and accelerated learning without burnout, this early-stage presence signals opportunity—but the lack of public detail means you must verify culture, pay, and WLB directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no public policy or employee reviews found; must be assessed in interviews."
   }
  },
  "clean harbors": {
@@ -95609,11 +95811,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95625,6 +95829,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784979902,
   "name": "Concourse",
   "pace_of_work": {
@@ -95637,6 +95842,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784980680,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95710,7 +95916,7 @@
     "url": "https://jobs.ashbyhq.com/concourse/b1222d96-2d02-4809-9533-4fd31e62b8d0"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784979902,
   "web_search_url": "https://duckduckgo.com/?q=Concourse+company+careers+benefits",
@@ -156631,22 +156837,111 @@
   }
  },
  "general atomics aeronautical systems": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High prestige in defense autonomy and real-time sensor analytics, but less recognized in the broader commercial elite tech ecosystem."
+  },
   "aliases": [],
-  "attempts": 6,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 7,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "Defense contracting and direct government sales based on designing, manufacturing, and supporting advanced remotely piloted aircraft systems for the military and allied nations."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven engineering culture heavily focused on reliability and defense technology."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "Primarily the United States Department of Defense, allied foreign militaries, and government agencies."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $90,000 to $110,000 total compensation for new graduate data roles."
+  },
   "evidence_sha": "8050c7d8d032b766",
-  "generated_at": 1784870477,
+  "generated_at": 1784980560,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784976575,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "Defense and Space Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect interviews focused on robust algorithm design for defense scenarios; ask team-specific questions about agile internal software practices versus regulated bureaucratic limitations to ensure the environment aligns with your desire for fast-paced technical growth."
+  },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784858719,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Diego, California with major facilities in Palmdale, California and various other operational sites."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326",
+    "7ba550cd0c"
+   ],
+   "value": "To develop and provide advanced aviation and electro-optic technologies that enhance the safety and mission success of military and government operators."
+  },
   "name": "General Atomics Aeronautical Systems",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Moderate pace dictated by rigid government contracting milestones and defense compliance standards, prioritizing reliability over a fast tech culture."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "Remotely piloted aircraft systems (such as the Predator/Reaper family), high-performance airborne sensors, and mission control systems."
+  },
   "prompt_v": 2,
-  "retry_after": 1784980415,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 15 to 20 days of accrued paid time off annually for new hires."
+  },
+  "refresh_after": 1790164560,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "Established, large-scale private defense contractor operating as a major subsidiary of General Atomics."
+  },
   "sources": [
    {
     "content_sha": "35f1aee2ad38d195",
@@ -156689,10 +156984,38 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Defense contracts often require strict compliance with ITAR regulations, meaning U.S. citizenship or permanent residency is generally required for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "238576d326"
+   ],
+   "value": "General Atomics Aeronautical Systems (GA-ASI) designs, develops, and manufactures remotely piloted aircraft (RPA) systems, radars, and related technologies. The company generates revenue through defense contracts with government and militaries, selling both the hardware and associated software/support services."
+  },
+  "synthesized_evidence_sha": "8050c7d8d032b766",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI and data science work involves developing computer vision algorithms for airborne sensors, autonomy and path-planning software for drones, and analytics for mission data processing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674039,
-  "web_search_url": "https://duckduckgo.com/?q=General+Atomics+Aeronautical+Systems+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=General+Atomics+Aeronautical+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a premier defense contractor specializing in defense autonomy, this role offers mission-driven prestige and competitive new-grad pay, though candidates should be prepared to balance innovative technical work with the gradual pace of the regulated defense industry rather than a fast-paced tech culture."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Good work-life balance with standard corporate hours and defense industry stability, making it less prone to the extreme burnout of big tech."
+  }
  },
  "general dynamics": {
   "ai_ds_prestige_tier": {
@@ -188472,38 +188795,109 @@
  "idexx livestock diagnostics": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "Estimated: Specialized Tier. It does not carry the 'elite prestige' of FAANG or quantitative finance, but holds strong domain-specific respect in bioinformatics and agricultural tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b05ea6372f"
+   ],
+   "value": "The business model relies on a razor-and-blades approach: selling or leasing diagnostic hardware alongside recurring revenue from proprietary test consumables, lab services, and software subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976"
+   ],
+   "value": "Estimated: Stable and mission-driven. Focuses on animal health and safe food supply, but may feel corporate, structured, and siloed compared to agile tech startups."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b05ea6372f"
+   ],
+   "value": "The primary customers are livestock veterinarians, poultry producers, and large-scale agricultural operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $90,000 - $120,000. High enough to be competitive, but unlikely to match the 'elite new-grad pay' ($150k+) of top-tier tech companies."
   },
   "evidence_sha": "5f993ef03e0fab8a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784980560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976"
+   ],
+   "value": "Veterinary Diagnostics & Animal Health Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b05ea6372f",
+    "1db9db9c4d"
+   ],
+   "value": "Probe heavily for autonomy and tech stack modernity. Ask explicit questions about sprint processes, legacy tech debt, and regulatory compliance bottlenecks to determine if work-life balance comes at the cost of the slow pace you dislike. Clarify new-grad compensation structures."
+  },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784979903,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "Headquartered in Westbrook, Maine, with a global corporate footprint; specific tech hub locations for livestock diagnostics are not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "IDEXX's overarching mission is to enhance the health and well-being of pets, people, and livestock, with this division focusing specifically on protecting food supply chains through advanced diagnostics."
+  },
   "name": "IDEXX Livestock Diagnostics",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976"
+   ],
+   "value": "Estimated: Slow to Moderate. As an established, publicly traded healthcare corporation, the pace is dictated by regulatory compliance (FDA, USDA) and enterprise sales cycles rather than fast iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b05ea6372f",
+    "fe832af47f"
+   ],
+   "value": "This division produces diagnostic tests, laboratory instrumentation, and data management software targeted at monitoring and preventing disease in livestock and poultry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "Estimated: 20-25 days. As a large enterprise, IDEXX typically offers standard or slightly above standard PTO accruals for experienced hires."
   },
+  "refresh_after": 1790164560,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188512,8 +188906,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Large medical companies generally do not shut down for holidays like smaller tech firms."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976"
+   ],
+   "value": "IDEXX Laboratories is a established, publicly traded corporation (NASDAQ: IDXX) with over 10,000 employees globally. The Livestock Diagnostics division operates within this mature corporate parent."
   },
   "sources": [
    {
@@ -188557,14 +188961,51 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976"
+   ],
+   "value": "As a large, publicly traded multinational, IDEXX generally provides visa sponsorship for specialized technical roles, though specific details were not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b05ea6372f",
+    "fe832af47f",
+    "98ad8d6976"
+   ],
+   "value": "IDEXX Livestock Diagnostics is a division of IDEXX Laboratories focused on providing diagnostic tests, software, and services for livestock and poultry health. While specific snippets were inaccessible, IDEXX makes money by selling diagnostic equipment, test kits, and SaaS solutions to veterinarians and agricultural producers. This profile synthesizes those facts with broader market knowledge of the publicly traded parent company (IDEXX Laboratories)."
+  },
+  "synthesized_evidence_sha": "5f993ef03e0fab8a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b05ea6372f",
+    "1db9db9c4d"
+   ],
+   "value": "Technical work likely involves full-stack development, data pipelines, and AI/ML modeling for diagnostic imaging and disease prediction, but may be slowed by the legacy tech stacks and regulatory overhead common in MedTech."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784979903,
   "web_search_url": "https://duckduckgo.com/?q=IDEXX+Livestock+Diagnostics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b05ea6372f",
+    "98ad8d6976",
+    "1db9db9c4d"
+   ],
+   "value": "The company offers a strong, mission-driven stability and likely hires AI/DS talent for agricultural tech and bioinformatics. However, as a mature MedTech giant, it inherently conflicts with your desire for a fast, innovative tech culture and is highly likely to feature the slow bureaucracy and red tape you want to avoid."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "98ad8d6976"
+   ],
+   "value": "Estimated: Good. Large, mature tech companies typically enforce sane hours and respect personal time, avoiding the high-burnout culture of early-stage startups."
   }
  },
  "idler": {
@@ -380300,49 +380741,132 @@
  },
  "tierpoint": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "874eb1ad52",
+    "e19cd89ba8"
+   ],
+   "value": "Low. Tierpoint is an IT infrastructure and colocation provider, not an AI or data science product company."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "874eb1ad52",
+    "e19cd89ba8"
+   ],
+   "value": "B2B IT services and infrastructure provider. Generates recurring revenue through enterprise contracts for colocation, managed cloud hosting, and security services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Inclusive and diverse workplace that emphasizes integrity, positivity, and outstanding work. They actively promote their VolunTiers community program."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "874eb1ad52"
+   ],
+   "value": "Businesses seeking outsourced IT infrastructure and managed services, likely ranging from mid-market enterprises to large organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Estimated: $75,000-$95,000. As an established IT services company in standard tech roles, compensation is competitive but lacks FAANG-level new-grad pay."
   },
   "evidence_sha": "a36cb825eb9cc533",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784980560,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "874eb1ad52",
+    "e19cd89ba8"
+   ],
+   "value": "IT Services and Data Centers"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Assess if their technical roles offer any modernization projects or data-driven initiatives. Clarify expectations around on-call duties for data center uptime, as these can conflict with your strict work-life balance and sane hours requirements. Ask about the culture to ensure it lacks the toxic burnout environment you are avoiding."
+  },
+  "last_attempt_at": 1784980560,
   "last_evidence_at": 1784979904,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Multiple office locations and data centers across the United States, with accommodating workspace opportunities at any of their offices, alongside potential remote work."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "To care about people, value outstanding work, demand integrity, embrace positivity, and cultivate inclusivity through their IT business decisions and partnerships."
+  },
   "name": "Tierpoint",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Estimated: Steady and predictable pace typical of managed IT services, prioritizing stability and uptime over rapid innovation cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "874eb1ad52",
+    "e19cd89ba8"
+   ],
+   "value": "Cloud hosting, colocation services, disaster recovery, managed security, and backup solutions. They operate multiple data centers across the US."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for the established IT services sector."
   },
+  "refresh_after": 1790164560,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1900d24049",
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Estimated: No official guaranteed company-wide shutdowns; typical IT services require staff availability or on-call rotations year-round."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1900d24049",
+    "874eb1ad52"
+   ],
+   "value": "Established private company with a national footprint of data centers. Actively hiring for multiple technologist roles."
   },
   "sources": [
    {
@@ -380386,14 +380910,48 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Not explicitly mentioned in current job postings or company descriptions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "874eb1ad52",
+    "e19cd89ba8"
+   ],
+   "value": "TierPoint is a managed IT services provider specializing in cloud, data centers, and disaster recovery. They make money by providing outsourced infrastructure, security, and managed hosting solutions to businesses."
+  },
+  "synthesized_evidence_sha": "a36cb825eb9cc533",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1900d24049",
+    "874eb1ad52"
+   ],
+   "value": "Roles involve infrastructure management, cloud systems engineering, security operations, and data center maintenance rather than software product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784979904,
   "web_search_url": "https://duckduckgo.com/?q=Tierpoint+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e19cd89ba8",
+    "874eb1ad52"
+   ],
+   "value": "This role does not fit the candidate's main priorities. TierPoint is a legacy IT infrastructure company, meaning the tech culture leans toward stable enterprise operations rather than fast, innovative AI development. You will not find the elite AI/data science prestige or the cutting-edge tech culture you are prioritizing here."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1900d24049"
+   ],
+   "value": "Estimated: Generally good work-life balance, though technical staff may need to be on-call for data center outages occasionally."
   }
  },
  "tiffany co": {
