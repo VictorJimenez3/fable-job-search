@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-25 18:17 UTC** · companies polled directly: **1342** (registry 1519) · jobs tracked: **21723** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-25 18:45 UTC** · companies polled directly: **1342** (registry 1519) · jobs tracked: **21723** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -73,7 +73,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 96 🔥 | 4d | Hospital for Special Surgery (HSS) | [Education Outcomes and Data Analytics Assistant](https://hss.wd1.myworkdayjobs.com/HSS_Careers/job/New-York-NY/Education-Outcomes-and-Data-Analytics-Assistant_JR2026-105688) | NYC | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 96 🔥 | 6d | UST HealthProof | [Business Systems & Data Analytics Associate](https://jobright.ai/jobs/info/6a5d1e1b856af468ab010424?utm_campaign=Data%20Analysis&utm_source=1103) | San Jose, CA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 96 🔥 | 8d | Mayo Clinic | [IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward](https://jobright.ai/jobs/info/6a5a2d3063a8f619507c5889?utm_campaign=Software%20Engineering&utm_source=1103) | Rochester, MN, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 96 🔥 | 18d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) |
+| 96 🔥 | 19d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) |
 | 95 🔥 | 9d | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 95 🔥 | 10d | Michigan Medicine | [Graduate Student Events and Data Analyst](https://jobright.ai/jobs/info/6a5805f568d16a30e2411334?utm_campaign=Data%20Analysis&utm_source=1103) | Dearborn, MI, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 95 🔥 | 10d | Flatiron Health | [Data Analyst - Evidence Solutions](https://jobright.ai/jobs/info/6a57e31a8f51964c0404568e?utm_campaign=Data%20Analysis&utm_source=1103) | Durham, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
