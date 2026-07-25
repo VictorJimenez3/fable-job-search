@@ -381702,65 +381702,70 @@
  "tiktok": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 — planetary-scale recommendation & multimodal ML; publishes at top conferences (KDD, RecSys, NeurIPS, ICML, CVPR); defines industry SOTA for short-form video ranking."
-  },
-  "aliases": [],
-  "attempts": 8,
-  "business_model": {
-   "confidence": "medium",
    "source_ids": [
     "f0d23bb18b"
    ],
-   "value": "Advertising revenue (in-feed ads, brand takeovers, sponsored challenges) and growing e-commerce/live-streaming monetization (virtual gifts, TikTok Shop commissions)."
+   "value": "Elite. TikTok is widely considered a top-tier destination for AI and data science, comparable to major Big Tech firms, due to the enormous scale and technical sophistication of its machine learning and recommendation systems."
+  },
+  "aliases": [],
+  "attempts": 9,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a7afaaadc2"
+   ],
+   "value": "TikTok operates a multi-sided platform business model, generating revenue primarily through digital advertising (in-feed ads, branded hashtags, brand takeovers) and commissions from in-app purchases like virtual gifts for live streams and TikTok Shop transactions."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
     "f0d23bb18b"
    ],
-   "value": "High agency, metric-driven, transparent internally (OKRs visible), international collaboration heavy; 'context not control' management style; strong internal mobility; blunt feedback culture."
+   "value": "The culture is direct, entrepreneurial, and data-driven with a high degree of ownership. The company officially embraces values of 'intellectual curiosity, openness, and problem-solving' with minimal bureaucracy, appealing to those who want to build and ship quickly."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "f0d23bb18b"
+    "a7afaaadc2"
    ],
-   "value": "Global consumers (creators and viewers) and advertisers/brands purchasing ad inventory and commerce integrations."
+   "value": "TikTok serves a broad, global user base primarily consisting of Gen Z and Millennials. Its customers also include advertisers and brands who use its ad platform for targeted marketing, and e-commerce sellers leveraging TikTok Shop."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $170k-$210k base + $40k-$80k sign-on (vesting 4yr) + $80k-$150k RSU (4yr) = $290k-$440k year-1 total comp for ML/DS roles in US hubs. Higher in Bay Area/Seattle."
+   "value": "Estimated: A total compensation package of $170,000-$220,000+ for an elite machine learning engineer new graduate role in a Tier 1 city like San Francisco. This typically comprises a base salary ($130,000-$150,000), an annual bonus, and a significant equity grant vesting over four years."
   },
   "evidence_sha": "95e6a7288bd07596",
-  "generated_at": 1784961008,
+  "generated_at": 1785013766,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "a7afaaadc2",
     "f0d23bb18b"
    ],
-   "value": "Consumer internet / Social media / AI-driven content platform"
+   "value": "Consumer Internet, Social Media, Artificial Intelligence."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "f0d23bb18b"
-   ],
-   "value": "Expect deep ML system design (recommendation/ranking at scale), coding (LeetCode Hard), ML fundamentals (loss functions, embeddings, retrieval/ranking), and behavioral alignment with 'self-direction, intellectual curiosity, openness, problem-solving.' Prepare for scale-specific questions (latency, freshness, cold-start, long-tail)."
-  },
-  "last_attempt_at": 1784961008,
-  "last_evidence_at": 1785012386,
-  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Major hubs: Mountain View, San Jose, Seattle, New York, Los Angeles (US); Singapore, London, Dublin, Berlin, Tokyo, Shanghai, Beijing (global). Hybrid/office-centric with some remote flexibility by team."
+   "value": "TikTok interviews for new graduate machine learning roles are known for being highly practical and fast-paced. Candidates should expect a deep dive on machine learning fundamentals, real-world system design for scale (recommender systems, search), and rigorous live-coding tests (Python/SQL), with additional scrutiny on behavioral fit for its direct, ownership-focused culture."
+  },
+  "last_attempt_at": 1785013766,
+  "last_evidence_at": 1785012386,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f0d23bb18b",
+    "17f8c9c419",
+    "dbc3b9e88f"
+   ],
+   "value": "Job postings for 2026 new graduate technical roles, including the Machine Learning Engineer position, have been surfaced for U.S. locations such as San Jose, CA and Seattle, WA."
   },
   "mission": {
    "confidence": "high",
@@ -381772,22 +381777,27 @@
   "name": "TikTok",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — weekly/biweekly experiment cycles, rapid A/B testing, 'move fast' culture; on-call rotations for serving infra; quarterly planning with high shipping velocity."
-  },
-  "products": {
-   "confidence": "medium",
    "source_ids": [
     "f0d23bb18b"
    ],
-   "value": "TikTok (short-form video platform), CapCut (video editing), and related creator tools; enterprise advertising and commerce solutions."
+   "value": "Extremely fast. The culture emphasizes a quick, rapid-iteration model with a 'go-big-or-go-home' mentality, which accelerates learning but can be intensely demanding. The company culture highlights 'speed' and 'self-direction'."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f0d23bb18b",
+    "a7afaaadc2"
+   ],
+   "value": "The core product is a mobile app for creating, sharing, and discovering short-form videos. Key features include an AI-powered recommendation feed ('For You' page), extensive video editing tools, filters, effects, and live streaming. The platform also offers in-app shopping and a music library."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days annual PTO + 10-12 company holidays (US); unlimited sick; 20 days in some EMEA/APAC locations. No public policy; accrual typically monthly."
+   "value": "Estimated: 15-20 days of paid time off annually. Exact amounts are not confirmed in provided documentation but align with competitive tech industry standards in Tier 1 cities where TikTok has offices."
   },
+  "refresh_after": 1790197766,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -381797,12 +381807,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdown; some orgs observe a quiet week between Christmas and New Year. Team-level 'focus weeks' occasionally declared."
+   "value": "Estimated: No guaranteed company-wide shutdowns. While TikTok may offer a fixed number of public holidays, the concept of 'guaranteed shutdown' (e.g., a week-long summer/winter break) is not a standard policy. The candidate's need for guaranteed shutdowns is a specific risk compared to this role's norm."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large public subsidiary (ByteDance); 100,000+ employees globally; mature product with massive scale."
+   "confidence": "high",
+   "source_ids": [
+    "a7afaaadc2",
+    "f0d23bb18b"
+   ],
+   "value": "TikTok is a massive, private subsidiary of ByteDance, a global technology company. It has thousands of employees worldwide and is in a mature, high-growth stage with a user base exceeding one billion."
   },
   "sources": [
    {
@@ -381867,39 +381880,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Actively sponsors H-1B and green cards for new grads and experienced hires; cap-exempt via university partnerships for some roles. Global mobility team supports transfers."
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "TikTok has a history of providing H-1B visa sponsorship and other immigration support for technical roles, making it a known destination for international students in the U.S. Given current new grad pipeline sourcing, it is highly likely for specialized data science and machine learning positions."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f0d23bb18b"
+    "f0d23bb18b",
+    "a7afaaadc2"
    ],
-   "value": "TikTok is the leading destination for short-form mobile video, operating a global platform where users create, share, and discover short videos. The company's core product is its algorithm-driven feed that personalizes content discovery."
+   "value": "TikTok is a global short-form mobile video platform that serves as a leading destination for creative content. It connects a massive user base of creators and viewers with highly engaging, algorithmically-curated video feeds."
   },
+  "synthesized_evidence_sha": "95e6a7288bd07596",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "f0d23bb18b"
+    "f0d23bb18b",
+    "17f8c9c419",
+    "dbc3b9e88f"
    ],
-   "value": "Large-scale recommendation systems, ranking/retrieval infrastructure, multimodal ML (video/audio/text), real-time serving, content understanding, creator tools, ads modeling, and Responsible AI/safety."
+   "value": "New grad roles available, such as the Machine Learning Engineer Graduate position in Data-Search-Recommendation. Technical work involves building and optimizing large-scale recommendation systems and search algorithms using machine learning and deep learning models."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583352,
   "web_search_url": "https://duckduckgo.com/?q=TikTok+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "f0d23bb18b"
    ],
-   "value": "TikTok offers elite AI/ML prestige at planetary scale — your models instantly affect 1B+ users. The new-grad ML role cited emphasizes self-direction, intellectual curiosity, and problem-solving, signaling a fast, innovative culture rather than slow bureaucracy. Mission-driven (inspire creativity, bring joy) with stated cultural values that align with learning velocity and ownership."
+   "value": "This role aligns with the candidate's desire for a 'top-tier AI role,' as TikTok's recommendation system is a world-class machine learning operation boasting elite prestige. The company's culture promotes 'self-direction' and 'intellectual curiosity,' appealing to the preference for a fast, innovative tech culture. A mission focused on 'creativity and joy' signals a more product-driven, less purely enterprise-corporate environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.2/5 — varies by org; core infra/ranking teams report 50-60h weeks during launches; some teams enforce 'no meetings Wednesday' and protected weekends. Not a guaranteed-shutdown culture."
+   "value": "Estimated: Poor to Moderate. Work-life balance at TikTok is widely reported as challenging, particularly for core engineering teams in the U.S., where coordination with China-based teams can lead to early or late meetings. While the candidate's desire for 'sane hours' and 'guaranteed shutdowns' is a priority, this matches the general industry reputation more than official documentation."
   }
  },
  "titan": {
