@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-25 08:32 UTC** · companies polled directly: **1340** (registry 1517) · jobs tracked: **21693** · new this run: **4** · alerts this run: **1**_
+_Last run: **2026-07-25 09:31 UTC** · companies polled directly: **1340** (registry 1517) · jobs tracked: **21693** · new this run: **4** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -95,7 +95,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 4d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 93 🔥 | 4d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 93 🔥 | 4d | PMG | [Graduate Leadership Program - AI & Software Engineering (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587038002) |
-| 93 🔥 | 9d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 93 🔥 | 10d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 93 🔥 | 23d | Amigo AI | [Applied AI Engineer](https://jobs.ashbyhq.com/amigo/77e12c0a-e623-4988-8c60-78e3017f0876/application) | SF | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 93 🔥 | 25d | Medpace | [Junior Software Engineer](https://jobright.ai/jobs/info/6a2a715e2cde2824469c1cdf?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 92 🔥 | 6d | Cadence | [Software Engineer I](https://jobright.ai/jobs/info/6981458aabff4c399aa02d1f?utm_campaign=Software%20Engineering&utm_source=1103) | SAN JOSE | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -146,7 +146,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 16d | Quora | [Machine Learning Engineer, New Grad - Quora (Remote)](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) | Remote - Multiple Locations | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) |
 | 88 🔥 | 17d | Intuit | [Software Engineer 1](https://jobright.ai/jobs/info/69de2058e34484770f1a0cbf?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 17d | Intuit | [Software Engineer 1](https://jobright.ai/jobs/info/6a2a4f460c4972328e7e835f?utm_campaign=Software%20Engineering&utm_source=1103) | Mountain View, CA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 88 🔥 | 17d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 88 🔥 | 18d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 18d | ByteDance | [Software Engineer Graduate (Dev Infra) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a4ceae3c643fd23fed3b151?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 18d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 23d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
