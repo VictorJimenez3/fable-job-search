@@ -204679,41 +204679,46 @@
  "jefferson health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Medium. While the academic medical center is highly prestigious within healthcare, its internal AI and data science functions are unlikely to match the level of top-tier tech companies in terms of industry prestige."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: Low to Medium. Unlikely to provide the 'elite prestige' of a FAANG or specialized AI firm, functioning primarily as an operational IT center."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7f436e8288",
-    "1cfab1a2e5",
-    "d055f43e71"
+    "1cfab1a2e5"
    ],
-   "value": "Operating as a non-profit academic medical center, it generates revenue primarily through patient care fees, hospital services, and academic tuition."
+   "value": "Non-profit healthcare network generating revenue through hospital admissions, outpatient care, and academic tuition."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and traditional, with a strong focus on patient care and academic excellence, contrasting with fast-paced tech startup vibes."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
     "1cfab1a2e5",
     "d055f43e71"
    ],
-   "value": "Patients seeking medical care and hospital treatment in the Greater Philadelphia region, and students enrolled in its higher education and medical programs."
+   "value": "Mission-driven academic medical institution with a traditional, bureaucratic, and professorial culture stemming from its university roots."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1cfab1a2e5",
+    "7f436e8288"
+   ],
+   "value": "Patients seeking medical care and students enrolled in health sciences and academic programs."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000 - $110,000. Likely falls short of elite tech company compensation packages for new graduates."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Likely insufficient to match 'high new-grad pay' demands common in elite tech sectors."
   },
   "evidence_sha": "6f0e2bac5b5f4b04",
-  "generated_at": 1784890345,
+  "generated_at": 1785021229,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -204722,72 +204727,78 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "d055f43e71"
+    "1cfab1a2e5"
    ],
-   "value": "Hospital and Healthcare, Higher Education"
+   "value": "Hospital and Healthcare"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe deeply into the realities of work-life balance—ask if sane hours are truly guaranteed or if on-call/pager duties persist. Focus questions on the AI strategy to determine if they actually deploy fast-paced innovative projects or just maintain legacy infrastructure, ensuring it aligns with your need for rapid career growth without toxic burnout."
+   "value": "Candidates should probe the limits of innovation in the IT org, including the speed of project deploymenting, flexibility of working hours to ensure WLB, and actual AI/DS compensation compared to elite tech firms."
   },
-  "last_attempt_at": 1784890345,
+  "last_attempt_at": 1785021229,
   "last_evidence_at": 1785019890,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "7f436e8288",
-    "1cfab1a2e5",
-    "d055f43e71"
+    "1cfab1a2e5"
    ],
-   "value": "Headquartered in Philadelphia, Pennsylvania, with hospitals, clinics, and university facilities located throughout the Greater Philadelphia area and surrounding regions."
+   "value": "Headquartered in Philadelphia, PA, with hospital sites and facilities across Greater Philadelphia and New Jersey regions."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "7f436e8288",
     "1cfab1a2e5"
    ],
-   "value": "To improve lives through healthcare innovation, clinical excellence, and education, serving the community as a leading academic medical center."
+   "value": "To improve lives and develop healthcare leaders through clinical care, research, and education."
   },
   "name": "Jefferson Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow to moderate. As a large, traditional healthcare organization with regulatory overhead, the pace tends to be bureaucratic rather than fast-paced."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: Moderate. Characterized by standard healthcare enterprise processes and bureaucratic compliance rather than rapid startup velocity."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1cfab1a2e5",
-    "d055f43e71"
+    "1cfab1a2e5"
    ],
-   "value": "Multi-hospital clinical healthcare services, medical and surgical patient care, and higher education programs (including Sidney Kimmel Medical College) under Thomas Jefferson University."
+   "value": "Healthcare services, hospital networks, patient care facilities, and academic medical programs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days of paid time off annually, excluding hospital holidays, typical for large academic medical centers."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, standard for mature healthcare and academic institutions."
   },
+  "refresh_after": 1790205229,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No mandatory corporate shutdowns for technical staff, as hospital IT and data operations require continuous availability."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed tech shutdowns, though hospital holidays may offer some natural pause."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "1cfab1a2e5",
     "d055f43e71"
    ],
-   "value": "A large, established non-profit enterprise operating multiple hospitals, clinics, and university campuses across the region."
+   "value": "Mature, large-scale non-profit organization resulting from the merger of Thomas Jefferson University and Philadelphia University."
   },
   "sources": [
    {
@@ -204833,25 +204844,27 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Not heavily documented in public pages; large healthcare systems occasionally sponsor specialized technical roles but this varies highly by department."
-  },
-  "status": "ready",
-  "summary": {
-   "confidence": "medium",
-   "source_ids": [
-    "7f436e8288",
-    "1cfab1a2e5",
-    "d055f43e71"
-   ],
-   "value": "Jefferson Health is a major non-profit healthcare system and academic institution formed by the merger of Thomas Jefferson University and Philadelphia University. It generates revenue primarily through clinical patient care services, hospital operations, and tuition from its academic programs."
-  },
-  "technical_work": {
-   "confidence": "low",
    "source_ids": [
     "1cfab1a2e5"
    ],
-   "value": "Data science and AI roles likely focus on healthcare analytics, clinical informatics, operational optimization, electronic health record (EHR) management, and medical research data."
+   "value": "Not a top-tier tech employer for standard AI/DS roles, sponsorship for international new grads is generally unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1cfab1a2e5",
+    "7f436e8288"
+   ],
+   "value": "Jefferson Health is a major non-profit healthcare network and university system based in Philadelphia, operating numerous hospitals and outpatient facilities. It generates revenue primarily through patient care services, clinical operations, and medical education programs."
+  },
+  "synthesized_evidence_sha": "6f0e2bac5b5f4b04",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Enterprise IT infrastructure, healthcare informatics, data management for clinical operations, and digital health platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678097,
@@ -204859,12 +204872,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "As a large academic medical center rather than a tech-first enterprise, Jefferson Health conflicts with the priority for elite prestige and high new-grad tech pay. The slow bureaucratic pace typical of healthcare systems also conflicts with the desire for a fast, innovative tech culture."
+   "value": "As a hospital network, Jefferson Health is deeply mission-driven, but the operational pace of a mature healthcare institution may conflict with a desire for a fast, elite tech culture and guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. While healthcare organizations generally emphasize wellness, technical staff may face on-call duties to support critical hospital operations, which can impact work-life balance."
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Estimated: Moderate to High. Enjoyable mission, likely sane clinical hours, but high bureaucratic overhead and strict on-call expectations depending on the IT team."
   }
  },
  "jigsaw": {
@@ -310166,22 +310181,136 @@
   }
  },
  "raytheon": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7"
+   ],
+   "value": "Estimated: High prestige in defense/aerospace, but considered mid-tier for traditional Silicon Valley AI or data science standards."
+  },
   "aliases": [],
-  "attempts": 12,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 13,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830"
+   ],
+   "value": "B2G (Business-to-Government) defense contracting, providing high-tech aerospace and defense systems globally."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d32fdb249",
+    "91d0ddc6d7"
+   ],
+   "value": "Estimated: Mission-driven, engineering-heavy, and highly structured; may feel slow or bureaucratic to someone seeking a fast-paced startup culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3f380be830",
+    "2d32fdb249"
+   ],
+   "value": "Primary customers are government and military entities requiring advanced defense and aerospace technologies."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830"
+   ],
+   "value": "Estimated: $80,000 - $95,000 base salary for entry-level Software Engineer I roles in lower-cost-of-living areas like Tucson, AZ. Pay may be slightly higher in Tewksbury, MA."
+  },
   "evidence_sha": "ce60899f75097fd8",
-  "generated_at": 1784986400,
+  "generated_at": 1785021229,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784997712,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3f380be830",
+    "2d32fdb249"
+   ],
+   "value": "Aerospace and Defense"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Candidates should expect heavily technical interviews focused on C++/Java fundamentals, data structures, and algorithms. To align with your priorities, ask questions about the team's pace of innovation versus defense-industry bureaucracy, typical working hours, and how committed the specific team is to work-life balance."
+  },
+  "last_attempt_at": 1785021229,
   "last_evidence_at": 1784985052,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "3f380be830"
+   ],
+   "value": "Hiring onsite in Tucson, AZ and Tewksbury, MA for entry-level software engineering roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249"
+   ],
+   "value": "Helping to protect freedoms for over a century by creating defense solutions that are smarter, faster, and better than previously thought possible."
+  },
   "name": "Raytheon",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3f380be830"
+   ],
+   "value": "Estimated: Slow-to-moderate pace due to scale, strict government regulations, and long product life cycles, rather than a fast, innovative tech culture."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2d32fdb249",
+    "3f380be830",
+    "91d0ddc6d7"
+   ],
+   "value": "Next-generation defense solutions, radar product lines, and test solutions systems."
+  },
   "prompt_v": 2,
-  "retry_after": 1785019312,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7"
+   ],
+   "value": "Estimated: 15-20 days of standard vacation PTO for new hires, excluding federal holidays and company shutdown periods."
+  },
+  "refresh_after": 1790205229,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7"
+   ],
+   "value": "Estimated: Common in the defense industry; typically features a week-long year-end shutdown, though this is not explicitly confirmed in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3f380be830"
+   ],
+   "value": "Large, established enterprise; cited as the world's largest aerospace and defense company."
+  },
   "sources": [
    {
     "content_sha": "f121abfdb342570b",
@@ -310234,10 +310363,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=0c07918116c6898c00d76ad20ed4a65f953882e4b561f271ac17f452c1101514JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26baeef9-727a-6b43-20f5-f964738b6a1e&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmF5dGhlb24&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Raytheon, an RTX business, is a renowned aerospace and defense contractor that has been creating next-generation defense solutions for over a century. As a major defense contractor, it generates revenue by designing, manufacturing, and selling advanced missiles, radar systems, and aerospace technologies to government and military clients."
+  },
+  "synthesized_evidence_sha": "ce60899f75097fd8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Software engineering for test solutions and radar product lines, primarily involving C, C++, C#, Java, Python, Microsoft Visual Studio, algorithms, and data structures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673976,
-  "web_search_url": "https://duckduckgo.com/?q=Raytheon+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=Raytheon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7",
+    "2d32fdb249"
+   ],
+   "value": "Raytheon offers a highly mission-driven environment centered on national security and defense. While historically more bureaucratic and slower-paced than top-tier tech firms, the company provides excellent technical learning in complex systems, strict 40-hour workweeks with guaranteed shutdowns, and competitive new-grad pay."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91d0ddc6d7"
+   ],
+   "value": "Estimated: Good. Defense contractors typically offer sane hours (40/week) and guaranteed shutdowns, which helps avoid the toxic burnout culture seen in some top-tier tech companies."
+  }
  },
  "re build manufacturing": {
   "ai_ds_prestige_tier": {
@@ -324276,32 +324444,33 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Niche High-Prestige (Aerospace & Defense)"
+   "value": "Estimated: Tier 3 for AI/Data Science. While highly prestigious in defense and embedded software, legacy aerospace engineering typically does not compete with elite tech firms for cutting-edge AI or data science roles."
   },
   "aliases": [],
-  "attempts": 24,
+  "attempts": 25,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "ac1d12454a",
-    "dae57049f7"
-   ],
-   "value": "RTX operates as a prime contractor and subcontractor, earning revenue through long-term fixed-price and cost-reimbursement R&D and production contracts with government agencies, supplemented by commercial aviation product sales and long-cycle service agreements."
-  },
-  "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
+    "ac1d12454a",
     "68934c3bbb"
    ],
-   "value": "Principled and patriotic, but traditional and hierarchical. The culture values mission assurance over rapid innovation, resulting in a stable environment that can feel slow and bureaucratic compared to big tech norms."
+   "value": "Secures revenue through full-time engineering contracts and large-scale manufacturing of defense and aerospace systems."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ac1d12454a",
+    "68934c3bbb"
+   ],
+   "value": "Estimated: Mission-driven and mission-critical with a structured engineering focus. Likely values compliance, thorough documentation, and foundational STEM knowledge over fast-paced application development."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "ac1d12454a",
-    "dae57049f7"
+    "68934c3bbb"
    ],
-   "value": "Primary customers are the U.S. Department of Defense, intelligence agencies, and allied governments, along with commercial airlines, business jet operators, and aircraft manufacturers like Boeing and Airbus."
+   "value": "Government defense agencies and commercial aerospace entities requiring complex system engineering and production support."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -324309,70 +324478,72 @@
    "source_ids": [
     "ac1d12454a"
    ],
-   "value": "Estimated: $52,000 - $115,000 USD annually. Onerous location variance is significant; roles in AWK of underperforming, AZ and Madison, AL may skew to the lower-middle of this range, while Boston-area hubs trend higher."
+   "value": "Estimated: $57,000 to $109,000 per year."
   },
   "evidence_sha": "e44a34c626738bac",
-  "generated_at": 1784935022,
+  "generated_at": 1785021229,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a",
-    "dae57049f7"
+    "ac1d12454a"
    ],
-   "value": "Aerospace and Defense Technology"
+   "value": "Aerospace and defense."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "fdb7969a09"
-   ],
-   "value": "RTX interviews for new grads will likely emphasize fundamental STEM knowledge, specific skill checks in C++ or Python, and behavioral questions assessing collaboration in agile teams. Given your need for a high-learning, low-burnout culture, you should probe for concrete examples of technical debt, tooling age, and how strictly the 9/80 schedule is protected during crunch times."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidates should evaluate if the structured environment provides enough technical learning and career growth to satisfy their goals. They should ask about work-life balance, sane hours, and how strict traditional aerospace processes impact the pace of innovation versus personal time."
   },
-  "last_attempt_at": 1784935022,
+  "last_attempt_at": 1785021229,
   "last_evidence_at": 1785019633,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "68934c3bbb",
     "ac1d12454a",
-    "dae57049f7"
-   ],
-   "value": "RTX is headquartered in Arlington, Virginia, with major software and engineering hubs in Tucson, AZ; Tewksbury, MA; and Fort Wayne, Indiana. The work is typically onsite."
-  },
-  "mission": {
-   "confidence": "medium",
-   "source_ids": [
     "68934c3bbb"
    ],
-   "value": "RTX's stated goal is to defend freedoms and advance aerospace innovation, with a belief that an inclusive culture and diverse workforce are essential to solving the hardest challenges in aerospace and defense."
+   "value": "Hiring for onsite roles in Fort Wayne, IN and Tucson, AZ."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ac1d12454a",
+    "68934c3bbb"
+   ],
+   "value": "To design, develop, and maintain software for advanced systems in collaboration with engineering teams, supporting critical production and maintenance operations."
   },
   "name": "RTX",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow to moderate; constrained by rigorous IT rules, documentation, safety critical certification processes, and budgeting cycles. Not iterative or fast-fail."
+   "source_ids": [
+    "ac1d12454a",
+    "1cfbf2f47a"
+   ],
+   "value": "Estimated: Moderate to slow. The use of Agile methodologies is noted, but aerospace and defense projects involve rigorous requirements, reviews, and compliance checks that generally limit startup-style speed."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "68934c3bbb",
-    "ac1d12454a",
-    "dae57049f7"
+    "1cfbf2f47a",
+    "68934c3bbb"
    ],
-   "value": "RTX develops missile systems, radars, sensors, electronic warfare systems, and test solutions for complex defense systems. It also produces commercial and military aircraft engines through Pratt & Whitney, and avionics, interiors, and communications systems through Collins Aerospace."
+   "value": "Advanced systems, embedded avionics software, and test solution tools that support the full lifecycle of complex systems from engineering labs to production environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 days of paid time per year for new grads, with additional sick days and floating holidays likely standard."
+   "source_ids": [
+    "ac1d12454a"
+   ],
+   "value": "Estimated: 15 to 20 days of vacation with standard federal holidays, typical for large defense contractors."
   },
-  "refresh_after": 1790119022,
+  "refresh_after": 1790205229,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324381,15 +324552,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: The year-end closure between Christmas and New Year's Day is a predictable and common shutdown week in the defense sector, often guaranteed."
+   "source_ids": [
+    "ac1d12454a"
+   ],
+   "value": "Estimated: Many large aerospace and defense firms offer mandated shutdowns during major holidays, but specific details are not public."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dae57049f7"
+    "ac1d12454a",
+    "1db9db9c4d"
    ],
-   "value": "RTX is an established, publicly traded corporation with over 180,000 employees globally. It is a mature, large-cap company, not a startup or growth-stage entity."
+   "value": "Established, large-scale corporate employer hiring entry-level full-time software engineers for onsite roles."
   },
   "sources": [
    {
@@ -324454,45 +324628,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a major defense contractor, many RTX positions require U.S. citizenship and ability to obtain a security clearance, which generally precludes sponsorship. This essentially limits these roles to U.S. Persons per ITAR regulations."
+   "confidence": "medium",
+   "source_ids": [
+    "68934c3bbb"
+   ],
+   "value": "Sourcing details indicate the roles require applicants to upload recent transcripts, which is common for roles compliant with U.S. defense contracting and export control guidelines."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a",
-    "dae57049f7"
+    "ac1d12454a"
    ],
-   "value": "RTX is an aerospace and defense conglomerate formed by the merger of Raytheon and United Technologies, designing, manufacturing, and servicing advanced systems and components for military and commercial customers. It makes money primarily through long-term government defense contracts, as well as selling commercial aviation products and aftermarket services."
+   "value": "RTX (formerly Raytheon Technologies) is a major aerospace and defense company that designs and manufactures advanced systems for global military and commercial customers. It makes money through large-scale government defense contracts and commercial aerospace sales."
   },
-  "synthesized_evidence_sha": "1fdf88d5951bc9ef",
+  "synthesized_evidence_sha": "e44a34c626738bac",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "1cfbf2f47a",
     "fdb7969a09",
-    "ac1d12454a",
-    "dae57049f7"
+    "ac1d12454a"
    ],
-   "value": "Software Engineers design, develop, and maintain software for complex defense systems, often using C++, C#, C, or Python in Agile, Scrum, or SAFe environments. Work includes building test solutions and supporting the full lifecycle of systems from labs to field production."
+   "value": "Embedded avionics software development, requirements-based testing, and software design using C, C++, C#, Python, and Visual Basic in an Agile environment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
   "web_search_url": "https://duckduckgo.com/?q=RTX+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "68934c3bbb",
-    "ac1d12454a",
-    "dae57049f7"
-   ],
-   "value": "RTX offers scarce prestige in the defense tech sector with strong job stability, but its highly regulated, onsite culture and classified work can feel like archaic bureaucracy, directly conflicting with your need for a fast, innovative pace. The requirement for U.S. citizenship and clearances could limit flexibility, while the 9/80 schedule is a rare form of guaranteed shutdown, potentially aligning with your desire for predictable time off."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While this is an elite aerospace company, the defense sector's heavy bureaucracy, strict onsite requirements, and slower tech culture may conflict with the desire for a fast, innovative environment. However, new grads can still accelerate technical learning and gain high prestige while typically enjoying structured hours and sane work-life balance compared to high-burnout tech startups."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. A common 9/80 schedule (nine-hour days with every other Friday off) and the non-linear funding cycles of a defense contractor generally protect against sustained startup-style sprints."
+   "source_ids": [
+    "ac1d12454a"
+   ],
+   "value": "Estimated: Good. Government contractors typically operate on predictable schedules with less demanding crunch culture compared to high-burnout tech sectors, respecting personal time."
   }
  },
  "rubrik": {

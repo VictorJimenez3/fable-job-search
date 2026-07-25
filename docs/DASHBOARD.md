@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-25 22:51 UTC** · companies polled directly: **1342** (registry 1519) · jobs tracked: **21735** · new this run: **2** · alerts this run: **1**_
+_Last run: **2026-07-25 23:18 UTC** · companies polled directly: **1342** (registry 1519) · jobs tracked: **21735** · new this run: **2** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -150,7 +150,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 23d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 25d | TikTok | [Software Engineer Graduate (Experimentation and Evaluation) - 2026 Sta](https://jobright.ai/jobs/info/6a44451e65e80d3c99f2c3c8?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 26d | TikTok | [Software Engineer Graduate (Global CRM) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a432e92e09ecb495964263a?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 87 🔥 | 22h | RTX | [Software Engineer I (Onsite)](https://jobright.ai/jobs/info/6a6513f4e8d8d22e3292de0e?utm_campaign=Software%20Engineering&utm_source=1103) | Cedar Rapids, IA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 87 🔥 | 23h | RTX | [Software Engineer I (Onsite)](https://jobright.ai/jobs/info/6a6513f4e8d8d22e3292de0e?utm_campaign=Software%20Engineering&utm_source=1103) | Cedar Rapids, IA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 1d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36a5c7e2d715ebae77a?utm_campaign=Software%20Engineering&utm_source=1103) | Palo Alto, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 1d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36f0c8e2b4f36dd0533?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 1d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36d979290281c704a1b?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
