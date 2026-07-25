@@ -6983,95 +6983,125 @@
  "adventist health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Low–Mid (healthcare analytics focus, not core AI research; limited publications/conference presence)"
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Lower tier for AI/Data Science. Technical work is likely focused on backend support, EHR integration, and internal operations rather than elite model research or cutting-edge AI products."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Non-profit health system funded primarily by patient service revenue (insurance reimbursements, government programs), philanthropy, and investment income; surpluses reinvested in facilities and community benefit."
+   "confidence": "medium",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Non-profit healthcare network generating revenue through inpatient and outpatient medical billing, physician services, and managed care plans."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-driven, faith-informed, collaborative, hierarchical, service-oriented, risk-averse; values longevity and loyalty over disruption."
+   "source_ids": [
+    "5e3f9fbe85",
+    "483b132f0f"
+   ],
+   "value": "Estimated: Mission-driven and compassionate, grounded in Seventh-day Adventist values. Employees are likely focused on community impact and patient outcomes rather than aggressive technical disruption."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Patients and communities served across California, Oregon, Washington, and Hawaii; reimbursed by Medicare, Medicaid, commercial insurers, and self-pay."
+   "confidence": "high",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Patients seeking medical care across rural and urban communities, as well as enrollees in their health insurance plans."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000–$110,000 base salary (varies by role: data analyst lower, data scientist/ML engineer higher); minimal equity; benefits include pension/403b match."
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Non-profit healthcare typically pays below big tech and elite AI firm standards for new grads."
   },
   "evidence_sha": "3082162f35d19242",
-  "generated_at": 1784890746,
+  "generated_at": 1784942684,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Non-profit healthcare / Integrated health system"
+   "confidence": "high",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Hospitals and Healthcare"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "5e3f9fbe85"
    ],
-   "value": "Expect heavy emphasis on mission alignment (faith-based whole-person care), healthcare domain knowledge (HIPAA, clinical workflows, value-based care), behavioral questions on collaboration and service orientation, plus technical assessments in SQL, Python, and health data analytics. Prepare for panel interviews with clinical and IT stakeholders."
+   "value": "Ask the hiring manager about the specific tech stack and their pace of innovation. Probe into whether the team experiences guaranteed shutdowns or strict hours, and clarify if the compensation structure can meet your top-tier new grad pay expectations despite being a non-profit."
   },
-  "last_attempt_at": 1784890746,
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784938028,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Roseville, CA. Facilities across California, Oregon, Washington, and Hawaii. Remote/hybrid options likely for select tech roles."
+   "confidence": "medium",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Headquartered in Roseville, California, with care facilities and corporate offices across the Western United States."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Living God's love by inspiring health, wholeness, and hope through compassionate, whole-person care."
+   "confidence": "high",
+   "source_ids": [
+    "5e3f9fbe85",
+    "483b132f0f"
+   ],
+   "value": "Living God's love by inspiring health, wholeness and hope."
   },
   "name": "Adventist Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Slow to moderate; regulated healthcare environment, change management-heavy, committee-driven decisions, limited experimentation speed."
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: Slow to moderate. As a large non-profit healthcare system, the culture is heavily regulated and process-driven, meaning tech teams often navigate bureaucratic hurdles rather than moving fast."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Acute care hospitals, outpatient clinics, home health, hospice, urgent care, health plan administration, and population health management services."
+   "confidence": "high",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Hospital care, outpatient clinics, urgent care centers, home care services, and Medicare Advantage health plans."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15–20 days PTO + 8–10 paid holidays (varies by role/tenure; non-profit standard)"
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: 20-25 days. Large non-profit health systems generally offer solid benefits packages, but exact new-grad PTO is not public."
   },
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "No guaranteed company-wide shutdowns; some departments may observe reduced hours around major holidays."
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns. While standard holidays are observed, healthcare operations run 24/7, which can occasionally dictate IT support expectations."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large, mature non-profit (~35,000 employees, $6B+ annual revenue), well-established with multi-state hospital network."
+   "confidence": "medium",
+   "source_ids": [
+    "5e3f9fbe85"
+   ],
+   "value": "Large non-profit health system with over 1,000 beds and operations across multiple states."
   },
   "sources": [
    {
@@ -7128,22 +7158,23 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Likely sponsors H-1B visas for specialized clinical and technical roles (data science, health IT) given size and non-profit status; green card sponsorship possible for long-term needs."
+   "value": "Not found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "5e3f9fbe85"
    ],
-   "value": "Adventist Health is a large, faith-based non-profit integrated health system headquartered in Roseville, California, operating 20+ hospitals and numerous clinics across the West Coast and Hawaii, focused on whole-person care."
+   "value": "Adventist Health is a faith-based, non-profit healthcare system operating numerous hospitals and care facilities. It makes money by billing for medical services, outpatient care, and health plan premiums."
   },
+  "synthesized_evidence_sha": "3082162f35d19242",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "dbc3b9e88f"
+    "5e3f9fbe85"
    ],
-   "value": "Health IT (EHR optimization, Epic/Cerner), clinical data analytics, population health modeling, revenue cycle automation, emerging AI/ML for care coordination and predictive analytics."
+   "value": "Development of clinical data systems, electronic health records (EHR) integrations, and digital health platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583384,
@@ -7151,14 +7182,18 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "5e3f9fbe85",
+    "483b132f0f"
    ],
-   "value": "For a candidate seeking elite AI prestige, high new-grad pay, and fast innovative culture: Adventist Health is a mission-driven non-profit healthcare system, not a tech-first company. Technical work centers on health IT and clinical analytics rather than cutting-edge AI research. Pace is bureaucratic and regulated, not fast/innovative. Pay is solid for healthcare but well below top-tier tech. Work-life balance is generally respected in corporate roles, but no guaranteed shutdowns. Growth comes t"
+   "value": "As a healthcare provider, Adventist Health offers a deeply mission-driven environment, but it may conflict with your desire for elite prestige, top-tier new-grad pay, and a fast, highly innovative tech culture. Large non-profit hospital systems typically feature slow bureaucracy and strict compliance regulations rather than the cutting-edge pace found in tech-first companies."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate–Good (corporate/tech roles typically 40–45 hrs/wk, on-call rare for non-clinical; clinical roles far more demanding)"
+   "source_ids": [
+    "5e3f9fbe85",
+    "483b132f0f"
+   ],
+   "value": "Estimated: Good. Faith-based hospital systems often prioritize employee wellbeing and manageable hours, but this is not guaranteed for tech teams during critical system rollouts."
   }
  },
  "adways inc": {
@@ -14081,11 +14116,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14097,6 +14134,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784942195,
   "name": "Alegeus",
   "pace_of_work": {
@@ -14109,6 +14147,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784942804,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14162,7 +14201,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784942195,
   "web_search_url": "https://duckduckgo.com/?q=Alegeus+company+careers+benefits",
@@ -72589,37 +72628,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Emerging — applied ML opportunities exist (fall risk, engagement scoring, ops optimization) but not a recognized AI research hub; strong for applied data science, not elite prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf2e1e5f2a"
+   ],
+   "value": "B2B SaaS subscription sold to senior living communities; likely per-community or per-bed monthly recurring revenue, with potential marketplace revenue share via PointClickCare integration."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, engineering-led product decisions; low politics, high autonomy; team likely small enough for direct founder/CTO access."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf2e1e5f2a"
+   ],
+   "value": "Senior living operators, skilled nursing facilities, assisted living communities, and continuing care retirement communities (CCRCs) that use PointClickCare or similar EHR systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + equity (0.05–0.15% for early engineer); total comp ~$125k–$165k. Bay Area/NYC remote may reach $150k base."
   },
   "evidence_sha": "f1a45c90adbc1a76",
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cf2e1e5f2a"
+   ],
+   "value": "Healthtech / Senior Living Technology (AgeTech)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect practical full-stack coding (React/TypeScript, Node/Python), system design for multi-tenant SaaS, EHR integration scenarios (FHIR), and behavioral questions on empathy-driven product thinking. Prepare for take-homes reflecting real senior-living workflows (e.g., family portal, staff scheduling)."
   },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784938028,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters likely in the US (exact city not in sources); remote-friendly posture suggested by new-grad hiring on national job boards."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Carefeed",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, iterative startup pace with 2-week sprints; shipping to regulated healthcare customers imposes some compliance gates but avoids big-corp bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "cf2e1e5f2a",
+    "741aa5f294"
+   ],
+   "value": "Senior living community software platform (exact modules not publicly detailed in sources); likely includes family communication, resident engagement, staff workflow, or dining/activity management tools given the PointClickCare marketplace listing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 company holidays; unlimited PTO policies common at this stage but actual usage varies — ask for team norms."
   },
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72629,7 +72719,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns documented; some startups adopt winter break (Dec 24–Jan 1) — verify with recruiter."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Early-to-growth stage startup (estimated 50–200 employees); listed on SimplifyJobs New-Grad-Positions indicating active early-career hiring."
   },
   "sources": [
    {
@@ -72673,14 +72770,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public policy found; early-stage startups often sponsor H-1B but rarely new-grad green cards. Candidates should confirm directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf2e1e5f2a",
+    "b9ad2e0c54"
+   ],
+   "value": "Carefeed is a technology company serving the senior living industry, likely providing communication, engagement, or operational software for senior living communities. It appears integrated with PointClickCare, a major EHR platform for long-term care."
+  },
+  "synthesized_evidence_sha": "f1a45c90adbc1a76",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack web development (React/Node or similar), cloud infrastructure (AWS/GCP), EHR integration (FHIR/HL7), data pipelines for resident/family engagement analytics; potential for AI/ML in care insights or operational optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784938028,
   "web_search_url": "https://duckduckgo.com/?q=Carefeed+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf2e1e5f2a",
+    "dbc3b9e88f"
+   ],
+   "value": "Offers a rare intersection of mission-driven healthcare impact (senior living), modern SaaS engineering, and new-grad accessibility via SimplifyJobs. The PointClickCare partnership signals distribution scale without enterprise bureaucracy, aligning with the candidate's desire for fast innovation, technical growth, and work-life balance in a high-impact vertical."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — senior living SaaS typically avoids 24/7 on-call; reasonable hours culture inferred from mission-driven vertical, but confirm with current engineers."
   }
  },
  "carefirst bluecross blueshield": {
@@ -161252,79 +161376,107 @@
  "globetax": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Low / Not Applicable. Based on the required tech stack (C#, .NET, WinForm/VB.NET), the role is software engineering rather than AI/data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: B2B SaaS and/or service-fee model charging for tax recovery, compliance filing, and data analytics; possibly success-based fees on reclaimed amounts."
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9",
+    "7431a87bbd"
+   ],
+   "value": "B2B financial software and services providing tax processing technology to institutional clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Professional, mission-oriented, likely engineering-led given tax-tech complexity; bureaucracy level unknown."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Stable, finance-oriented environment balancing maturity and steady growth rather than high-speed disruption."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Multinational corporations, financial institutions, asset managers, and institutional investors needing global tax compliance and recovery services."
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9",
+    "7431a87bbd"
+   ],
+   "value": "Financial institutions, asset managers, and banks requiring cross-border tax compliance solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110k-$140k base + equity/bonus; total comp $130k-$170k for AI/DS roles in comparable tax-tech/fintech firms."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Likely moderate compared to elite tech firms, reflecting standard FinTech engineering salaries in the New York area rather than top-tier market rates."
   },
   "evidence_sha": "55c23ef90cf7474e",
-  "generated_at": 1784866527,
+  "generated_at": 1784942684,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tax technology / fintech / regulatory technology (RegTech)"
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Financial Services / Financial Technology (FinTech) / Tax Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe for concrete evidence of engineering velocity (deployment frequency, tech stack modernity), explicit WLB policies (core hours, on-call expectations, shutdown rituals), mentorship structure for new grads, and how AI/DS research translates to product. Ask for recent project examples where ML improved tax recovery accuracy or automation."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Candidate values fast technical learning and work-life balance. Focus on clarifying the company's modernization roadmap, tech stack evolution, work hours, and how the role drives career growth before committing."
   },
-  "last_attempt_at": 1784866527,
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784937742,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Headquartered in New York, New York, USA."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "1d719eaed9",
+    "7431a87bbd"
+   ],
+   "value": "Specific mission statement not found in research, but the company focuses on facilitating international tax compliance and financial operations."
   },
   "name": "GlobeTax",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to fast; tax deadlines drive periodic intensity, but modern tech culture may enable sustainable pacing."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Moderate pace typical of established B2B financial software firms, potentially lacking the fast-paced startup culture desired by highly innovation-driven candidates."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tax compliance automation, withholding tax reclaim platforms, cross-border tax data analytics, and possibly AI-driven tax document processing."
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Proprietary .NET-based tax processing software and operational services for foreign tax relief and reclamation."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 US holidays; typical for mid-size fintech."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Standard corporate financial sector package (likely 15-20 days PTO plus public holidays)."
   },
-  "refresh_after": 1790050527,
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -161333,13 +161485,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Likely standard public holidays, though guaranteed company-wide shutdowns are not confirmed."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Growth stage company founded in 1992, with 51-200 employees based in New York."
   },
   "sources": [
    {
@@ -161364,34 +161520,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "1d719eaed9",
+    "7431a87bbd"
+   ],
+   "value": "No explicit information found regarding visa sponsorship for software engineering roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: GlobeTax appears to be a tax technology or services company, likely providing solutions for global tax compliance, withholding tax recovery, or related financial technology services. Revenue model presumably includes service fees, platform subscriptions, or transaction-based pricing."
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9",
+    "7431a87bbd"
+   ],
+   "value": "GlobeTax is a financial services technology company founded in 1992 that specializes in tax processing, reclaim, and relief services. It makes money by providing B2B software solutions and operational services to financial institutions for managing cross-border tax compliance."
   },
-  "synthesized_evidence_sha": "542892fbda36a7f9",
+  "synthesized_evidence_sha": "55c23ef90cf7474e",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Software engineering focused on the .NET stack including C#, VB.NET, and .NET Framework, along with WinForm and WPF UI technologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676849,
   "web_search_url": "https://duckduckgo.com/?q=GlobeTax+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "If GlobeTax operates at the intersection of AI/data science and complex global tax systems, it could offer a high-impact, technically challenging role with elite prestige. The candidate’s priority for fast innovation, sane hours, and guaranteed shutdowns would need verification, but a mission-driven fintech/tax-tech firm may align with meaningful work and work-life balance if culture supports it."
+   "confidence": "medium",
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Candidate is seeking high innovation, balanced WLB, and career growth without burnout. As a growth-stage firm supporting legacy technologies like VB.NET and WinForm, this role may lack the cutting-edge technical intensity and high new-grad pay sought by the candidate."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5; potential for reasonable hours outside peak filing seasons, but unverified."
+   "source_ids": [
+    "1d719eaed9"
+   ],
+   "value": "Estimated: Good to Moderate. Older, established growth-stage companies often offer more predictable hours than startups, though heavy use of legacy frameworks may imply a slower innovation pace."
   }
  },
  "globus medical": {
@@ -198375,42 +198543,116 @@
  "iqvia": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "High prestige within the healthcare and pharma analytics niche, but may lack the elite general tech prestige of FAANG-tier companies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "It monetizes through consulting fees, software-as-a-service (SaaS) subscriptions, and outsourced clinical trial management contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: Corporate, scientific, and highly mission-driven around improving global health, though sometimes constrained by strict regulatory requirements."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Its primary customers are biopharmaceutical companies, medical device manufacturers, research institutions, and healthcare organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: $90,000 to $120,000 base salary for US technical roles, varying significantly by geography, specific team, and functional role."
   },
   "evidence_sha": "cf1f44639d0a7ce5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784937470,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Healthcare Technology, Clinical Research, and Data Analytics."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Probe deeply into the specific team's tech stack modernization efforts, exact expectations for after-hours on-call duty or weekend work, and the team's historical rate of internal promotion to ensure the role avoids toxic burnout or bureaucratic stagnation."
+  },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784935028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Headquartered in Durham, North Carolina, USA, with a widespread global office footprint spanning North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "IQVIA's mission is to accelerate the development and commercialization of innovative treatments to improve healthcare outcomes globally."
+  },
   "name": "IQVIA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: Generally steady and structured with heavy emphasis on compliance and process, which can slow the pace of pure tech innovation compared to agile startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "The company provides clinical trial management software, real-world evidence platforms, laboratory services, and commercial analytics for healthcare and life sciences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: 20 to 25 days of standard annual paid time off, alongside regular company holidays."
   },
-  "retry_after": 1784937710,
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198419,8 +198661,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: No widespread, guaranteed corporate-wide shutdown periods found; PTO is typically managed on an individual or team-approval basis."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "A large, mature, publicly-traded enterprise operating in over 100 countries."
   },
   "sources": [
    {
@@ -198444,14 +198697,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=1d09daf288ae7f8b7fe0fd3e597990891424f851009537a483c38c1b3f73b78cJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZHMvMTQ4MTQyNjIvZmlsZXMvNC4lMjBSZWdyZXNzaW9uX3dhc2hvdXRfMThNX25vZG9zYWdlY2hhbmdlX3NlbnNpdGl2aXR5XzMwZGF5LlJtZA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "As a large multi-national corporation, it historically sponsors work visas for specialized tech and clinical roles, though approval depends on the specific role and region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "IQVIA is a leading global provider of advanced analytics, technology solutions, and clinical research services to the life sciences industry. It generates revenue by offering end-to-end drug development, data integration, and commercialization services to biopharmaceutical companies."
+  },
+  "synthesized_evidence_sha": "cf1f44639d0a7ce5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Tech roles focus on big data engineering, health-data privacy compliance, predictive modeling, and developing scalable SaaS architectures for clinical data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784935028,
   "web_search_url": "https://duckduckgo.com/?q=IQVIA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "While IQVIA offers significant mission-driven impact in healthcare analytics, new grads must vet specific teams carefully: large enterprise consulting often brings slow bureaucracy, stringent compliance protocols, and structured hours that may conflict with a desire for purely fast-paced tech culture, even if base compensation is competitive."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a297f654df",
+    "a286e94d65"
+   ],
+   "value": "Estimated: Varies heavily by team; core tech and internal product teams often maintain standard sane hours, while client-facing consulting groups may experience intense project deadlines."
   }
  },
  "iridium": {
@@ -221397,38 +221686,104 @@
  "limble cmms": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: Tier 2 or 3. While Limble is a growing SaaS startup, it is not primarily an AI-first company; AI or data science roles may not carry the same elite prestige as a specialized AI lab, but they offer strong technical growth in an applied setting."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "B2B SaaS. Limble sells software solutions to businesses to help them manage and optimize maintenance operations."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Mission-driven, ambitious, and adaptable. The culture values fast-paced growth and empowers the 'unsung heroes' managing maintenance operations."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Businesses looking to optimize maintenance operations, specifically organizations that rely on 'unsung heroes who support the world.'"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: $90,000 - $130,000 base. Pay at high-growth tech startups for new grads can vary based on exact role, location, and equity packages."
   },
   "evidence_sha": "46c2395a0ff997b9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Software / Computer Maintenance Management System (CMMS)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Highlight your adaptability and ambition in high-growth environments. Ask about specific work-life balance policies, sane working hours, and guaranteed shutdowns to ensure personal time is respected. Inquire about the technical stack and learning opportunities to confirm it meets your elite AI/data science career growth goals."
+  },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784942196,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Not explicitly stated in research, though job postings suggest remote or hybrid options may be available."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "To empower the unsung heroes who support the world by providing tools that drive operational excellence."
+  },
   "name": "Limble CMMS",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly mentions operating in a high-growth environment requiring adaptability."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "A comprehensive suite of maintenance management software solutions designed to optimize asset performance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: 15-20 days. Exact numbers not in public source, but tech startups typically offer 3-4 weeks of vacation."
   },
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221437,8 +221792,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Startups sometimes offer holiday shutdowns, but it is not explicitly stated here."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Startup operating in a high-growth environment."
   },
   "sources": [
    {
@@ -221482,14 +221846,45 @@
     "url": "https://jobs.ashbyhq.com/limble/fdacfd17-e297-42b3-95f4-f504b5beb16a"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Limble provides a comprehensive suite of software solutions that help businesses optimize maintenance operations and asset performance. It makes money by selling these CMMS platforms to organizations seeking to drive operational excellence."
+  },
+  "synthesized_evidence_sha": "46c2395a0ff997b9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: Developing and maintaining a SaaS platform for maintenance management, likely involving web application development, cloud infrastructure, and scalable backend systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942196,
   "web_search_url": "https://duckduckgo.com/?q=Limble+CMMS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "This role offers fast-paced growth and an innovative tech culture typical of a startup, accelerating technical learning. It aligns with your desire for a mission-driven company that respects work-life balance, avoiding slow bureaucracy and toxic environments while providing elite new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "214dfa7cf0"
+   ],
+   "value": "Estimated: Moderate. While the environment is fast-paced and high-growth, the mission-driven nature of empowering 'unsung heroes' may reflect a more respectful culture. Specific details on hours or burnout were not explicitly provided."
   }
  },
  "lincoln financial": {
@@ -241183,37 +241578,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Strong applied ML opportunities in fraud detection, risk modeling, and financial intelligence; not a pure AI research lab but high-impact production ML at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from interchange fees on card transactions, subscription fees for premium tiers, interest on deposits, and foreign exchange fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, transparent, low-ego; written communication heavy; values autonomy and customer obsession; diverse remote team with strong documentation culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Early-stage and growth-stage startups, venture-backed companies, and small businesses seeking modern banking alternatives."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Estimated: $130K-$160K base + equity (0.05-0.15% for early career); sign-on bonus $10K-$25K; total comp ~$160K-$200K year 1."
   },
   "evidence_sha": "a8bd15fc8c755d22",
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Fintech / Banking-as-a-Service"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system design for financial systems, product sense for startup banking, coding in Go/TypeScript, and behavioral questions on ownership and collaboration in a remote-first culture."
   },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784942195,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Headquarters in San Francisco, CA; fully remote-friendly across US with H1B sponsorship track record."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Creating exceptional banking experiences for startups by removing friction from financial operations."
+  },
   "name": "Mercury",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup velocity with 2-week sprints; quarterly planning cycles; emphasis on shipping customer value quickly but with regulatory guardrails."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Digital banking platform for startups including business checking accounts, debit/credit cards, API access, invoicing, and financial analytics tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited policy not confirmed; encourages taking time off."
   },
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241223,7 +241672,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated shutdowns reported; team-level flexibility for year-end breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "1,001-5,000 employees; Series C+ stage fintech startup founded in 2017, headquartered in San Francisco with remote workforce."
   },
   "sources": [
    {
@@ -241277,14 +241733,41 @@
     "url": "https://jobright.ai/jobs/info/6a527d548576ec69c014c2d0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Has a track record of offering H1B sponsorships; not guaranteed for every role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Mercury is a fintech company founded in 2017 that provides banking services tailored for startups, offering business bank accounts, cards, and financial tools through a digital platform."
+  },
+  "synthesized_evidence_sha": "a8bd15fc8c755d22",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building scalable banking infrastructure, payments systems, risk/fraud detection, data platforms, and customer-facing product features; stack includes React, TypeScript, Go, PostgreSQL, Kubernetes on AWS."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942195,
   "web_search_url": "https://duckduckgo.com/?q=Mercury+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "28f9895a9d"
+   ],
+   "value": "Mercury offers a top-tier fintech engineering role with competitive new-grad pay ($122K-$158K) at a fast-growing, mission-driven startup that values work-life balance and remote flexibility, avoiding big-bank bureaucracy while accelerating technical growth in payments and banking infrastructure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Remote-first culture with core collaboration hours; no mandatory overtime; engineering-led planning reduces fire drills."
   }
  },
  "merqube": {
@@ -292464,11 +292947,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292480,6 +292965,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784938028,
   "name": "Postscript",
   "pace_of_work": {
@@ -292492,6 +292978,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784942804,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292565,7 +293052,7 @@
     "url": "https://job-boards.greenhouse.io/postscript/jobs/8649676002"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784938028,
   "web_search_url": "https://duckduckgo.com/?q=Postscript+company+careers+benefits",
@@ -344970,37 +345457,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown/Low. Without more info we cannot confirm this employer meets your target of elite, top-tier AI/Data Science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "90f52e7f3b"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice. As indicated by the company name, business activities and revenue generation are presumably tied to financial services and commercial banking."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Cannot confirm if the culture is mission-driven or respects personal time. You should ask about new grad onboarding, actual working hours, and team dynamics."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6eec56b2f6"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. Without location or budget data we cannot assess if it meets the 'high new-grad pay' criteria."
   },
   "evidence_sha": "5a92f528ae07ca41",
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Banking/Financial Services. The company name designates it as a bank, although no detailed public descriptions were accessible."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "During interviews, pinpoint whether this bank genuinely offers top-tier AI work and high pay, or if it's a traditional slow-moving financial institution lacking real tech innovation. Ask probing questions about the team's pace, after-hours expectations, guaranteed shutdowns, and new-grad technical growth opportunities."
+  },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784942192,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6eec56b2f6",
+    "9ea0bb809f",
+    "1db9db9c4d"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice. Search queries and job postings indicate potential links to Somerset region/county (likely UK based on search history)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9ea0bb809f"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice."
+  },
   "name": "Somerset Regal Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderately-paced. Speed and level of innovation are unknown; however, traditional banks can often be slow-moving and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "90f52e7f3b"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Cannot be confidently estimated without any retrieved data on HR policies."
   },
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -345010,7 +345553,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Public holidays are expected, but specifics on guaranteed 'company shutdowns' outside of these are unknown."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice. Active recruiting is confirmed through 2026 new-grad software engineering job postings."
   },
   "sources": [
    {
@@ -345054,14 +345604,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice. No data available regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "90f52e7f3b",
+    "6eec56b2f6",
+    "9ea0bb809f"
+   ],
+   "value": "Based on the retrieved search results, substantive public information regarding the company's core operations and revenue model is unavailable, as all identified public pages resulted in automatic redirects without displaying content. Company details are currently opaque and require direct sourcing from active postings or internal documentation."
+  },
+  "synthesized_evidence_sha": "5a92f528ae07ca41",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Unknown - The public-facing page returned a redirect notice based on retrieved data. Open roles for 2026 Software Engineer New Grads indicate active software and technical development teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942192,
   "web_search_url": "https://duckduckgo.com/?q=Somerset+Regal+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While the bank's public details are currently locked behind redirects, its presence on a 2026 Software Engineer New Grad board indicates active hiring. You must verify if its AI/data science roles truly deliver elite prestige, high new-grad pay, and a culture that accelerates learning without devolving into slow bureaucracy or toxic hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Sane hours and guaranteed shutdowns are common in traditional banking, but this cannot be confirmed for this specific institution."
   }
  },
  "sonalysts inc": {
@@ -374340,102 +374919,106 @@
  "the new york times": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (Elite Brand): A household name in digital transformation, consistently winning awards for data journalism and digital product design. Equivalent in resume prestige to top tech companies, particularly within the New York ecosystem."
+   "source_ids": [
+    "06da652c7b"
+   ],
+   "value": "Estimated: High-tier prestige in media-tech and data science, bolstered by its elite brand name and advanced content data products."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b"
+    "8c2c678609",
+    "9e5306f6dd"
    ],
-   "value": "Subscription-first business model. Revenue is primarily generated through digital and print reader subscriptions, supplemented by advertising and commercial services, with the goal of making journalism so good it is worth paying for."
+   "value": "Subscription-based revenue driven by digital journalism, optimizing conversion surfaces like free trials and driving players to higher value surfaces such as their apps."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "9e5306f6dd",
+    "06da652c7b"
    ],
-   "value": "Mission-oriented, intellectually curious, and inclusive but structured. The culture blends a serious dedication to editorial integrity with a 'craftsmanship' approach in the tech organization. It is a largely unionized environment that encourages respectful debate and standardization to avoid toxic, high-burnout politics."
+   "value": "A collaborative environment that values learning and continuous improvement, focused on building the world's best journalism tools."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b"
+    "8c2c678609",
+    "9e5306f6dd",
+    "06da652c7b"
    ],
-   "value": "A global audience of over 10 million paying subscribers. These include individual digital news, print, and Games subscribers, as well as corporate and educational institutions that purchase group access."
+   "value": "General readers and consumers of news, gamers interacting with NYT Games, and internal development teams or external partners who use their content tools to obtain insights."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $125,000 – $150,000 base salary with an annual equity grant and robust bonus target (10-15%). A minimum competitive offer for AI/Data Science new grads in NYC would not exceed the top-tier publishing structure, aligning with this balance."
+   "value": "Estimated: Highly competitive new-grad compensation aligned with top-tier tech standards, reflecting the elite prestige of the organization."
   },
   "evidence_sha": "6b387e0f5903d49f",
-  "generated_at": 1784682821,
+  "generated_at": 1784942684,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b"
+    "8c2c678609"
    ],
-   "value": "Digital Media / Subscription Services"
+   "value": "Media and Digital Publishing / Journalism."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "9e5306f6dd"
    ],
-   "value": "Interviews rigorously test technical ability (likely SQL, Python, machine learning case studies) alongside a deep commitment to the editorial mission. Candidates must demonstrate they can build fast, innovative data products (like content recommendations) while showing zero tolerance for burnout culture and a high regard for work-life boundaries."
+   "value": "Candidates should emphasize their drive for fast, innovative problem-solving in a collaborative setting, balancing high new-grad pay expectations with a strict boundary for work-life balance and sane hours. Showcase technical learning agility and a passion for building tools that respect personal time without sacrificing impact."
   },
-  "last_attempt_at": 1784682821,
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "9e5306f6dd",
+    "06da652c7b"
    ],
-   "value": "Headquartered in New York City. For technical roles requiring an in-person element, a standard hybrid schedule is expected at the Manhattan office at 620 8th Avenue. Remote work availability is not confirmed for all positions but is not expressly stated as full-time remote."
+   "value": "Hybrid roles based in their New York City headquarters."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "06da652c7b"
    ],
-   "value": "To seek the truth and help people understand the world."
+   "value": "To make the world's best journalism and provide a unified suite of tools that editors and creators can use with confidence."
   },
   "name": "The New York Times",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "238ad01ae1"
+    "9e5306f6dd"
    ],
-   "value": "Estimated: Deliberately fast and collaborative, but not frantic. In Games and subscriptions, squads iterate quickly on A/B tests and new features, but the newsroom influences an intellectual, thoughtful culture that avoids the unnecessary chaos of ad-tech high-burnout startups."
+   "value": "Estimated: Fast and innovative, with teams end-to-end developing features from idea to production."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "06da652c7b",
+    "9e5306f6dd"
    ],
-   "value": "Digital and print news products (NYTimes.com, The New York Times app), the Times Machine archival product, standalone apps for specific interests like Games and Cooking, NYT Audio, and Wirecutter product reviews. Its journalism spans text, interactive data visualizations, podcasts, video, and newsletters."
+   "value": "Digital journalism platforms, content data products, gaming applications (like NYT Games), and unified publishing tools that empower editors and creators to build experiences."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 25–30 days per year combined (PTO + sick/care days plus summer holidays) for new corporate employees, given the influence of the NewsGuild/tech union contracts. Individual casual leave is generally respected with no stigma."
+   "value": "Estimated: Standard for a mature tech and media company, likely offering a generous PTO package (typically 20+ days annually) to support sane hours."
   },
-  "refresh_after": 1789866821,
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -374445,12 +375028,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Strong work-life boundaries absent official shutdowns. Most major U.S. holidays are off, and technical teams typically grant liberal use of leave for the last week of December, though not a guaranteed company-wide shutdown outside of essential news operations."
+   "value": "Estimated: Likely offers standard corporate holiday shutdowns to guarantee personal time and avoid burnout."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Large, mature, publicly-traded enterprise with over 5,000 employees. The company is in a growth phase focused on expanding digital subscription bundles past 15 million subscribers."
+   "value": "Mature, publicly traded global media company."
   },
   "sources": [
    {
@@ -374517,24 +375100,24 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: A large public institution typically sponsoring work visas (H-1B, etc.) for specialized technical roles. Since external job postings often omit specific sponsorship wording, applicants should confirm with the recruiter, but it is highly likely for competitive AI/Data Science roles."
+   "value": "Sponsorship details for new graduates are not explicitly mentioned in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "8c2c678609"
    ],
-   "value": "The New York Times is a global media organization dedicated to seeking the truth and helping people understand the world through independent journalism. It operates as a publicly traded company that generates revenue primarily by selling digital and print subscriptions, along with advertising and other ancillary services."
+   "value": "The New York Times is a premier media organization that creates world-class journalism and digital products. It makes money primarily through a digital subscription model, operating under a business strategy centered on making journalism so good that it is worth paying for."
   },
-  "synthesized_evidence_sha": "21aced551c64a47a",
+  "synthesized_evidence_sha": "6b387e0f5903d49f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "238ad01ae1"
+    "9e5306f6dd",
+    "8c2c678609"
    ],
-   "value": "Software engineering and data science work includes building subscription registration flows, optimizing conversion funnels, developing the Games platform (e.g. Wordle, Connections), building recommendation and personalization engines, and analyzing large datasets to drive product decisions. Roles span full-stack web, mobile apps, machine learning, and data analytics."
+   "value": "Full-stack development using React and TypeScript on the frontend, Node.js for web applications, and Go-based APIs, all running on AWS cloud platform infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676546,
@@ -374542,15 +375125,17 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "8ddb9bda1b",
-    "238ad01ae1"
+    "9e5306f6dd",
+    "06da652c7b"
    ],
-   "value": "This is a top-tier AI/Data Science opportunity for technical new grads seeking powerful brand prestige (NYT) and high compensation, without the toxic 'move fast and break things' culture. It offers a mission-driven environment that truly values fact-based creativity and respects personal time through a predictable, hybrid NYC schedule."
+   "value": "This role aligns perfectly with the need for elite prestige and mission-driven work in a top-tier tech environment. The collaborative tech culture values learning and continuous improvement, accelerating technical career growth while remaining anchored to a highly respected public mission."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5. Candidate feedback and union representation typically result in an exceptional Work-Life-Like balance, respectful sane hours, and strong boundaries compared to Big Tech. Night/weekend work is limited to specific on-call roles."
+   "source_ids": [
+    "9e5306f6dd"
+   ],
+   "value": "Estimated: Generally sane hours with a culture that respects work-life balance, though some periods may require heavy lifting."
   }
  },
  "the nuclear company": {
@@ -406487,52 +407072,117 @@
  "volaris group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Estimated: Tier 2 — Portfolio companies apply ML/AI to domain-specific problems (e.g., insurance analytics) but are not primary AI research labs; prestige derives from production impact in regulated industries."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Acquires and holds vertical market software companies long-term, generating revenue through their recurring software licenses, maintenance, and professional services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Autonomous, pragmatic, domain-focused; each portfolio company retains its own culture, but shared values include customer commitment, long-term thinking, and technical ownership without centralized bureaucracy."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Primarily insurance carriers and other vertical-specific enterprise clients served by portfolio companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + modest equity/RSUs (Constellation Software stock rarely granted directly to OpCo new grads); total comp ~$90k-$120k depending on location and portfolio company."
   },
   "evidence_sha": "ca59d2a01ce81a8c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784942684,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784942504,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Vertical market software / Holding company (Constellation Software subsidiary)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Expect practical coding assessments, system design questions scoped to vertical SaaS challenges (e.g., data pipelines for insurance operations), and behavioral questions aligned with portfolio company values like customer obsession and iterative delivery. Prepare to discuss how you balance technical craft with shipping value in regulated or legacy-heavy environments."
+  },
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784942194,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Headquartered in Toronto, Canada; portfolio companies and roles distributed across North America and Europe (e.g., Worcester, MA for Covenir)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "To build and strengthen vertical market software businesses that deliver mission-critical solutions to their customers."
+  },
   "name": "Volaris Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Decentralized model allows team-level autonomy; pace varies by portfolio company but generally favors sustainable delivery over crunch, especially in regulated verticals."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Portfolio of vertical market software companies; Covenir provides BPO and technology services to insurance carriers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (varies by portfolio company and jurisdiction); US roles typically start at 15 days."
   },
-  "retry_after": 1784942624,
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some portfolio companies may observe year-end slowdowns or summer Fridays at local discretion."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Large subsidiary of Constellation Software (public, TSX: CSU) with dozens of portfolio companies globally; operates as a decentralized group."
   },
   "sources": [
    {
@@ -406586,14 +407236,43 @@
     "url": "https://volarisgroup.wd3.myworkdayjobs.com/volaris/job/United-States---Worcester-MA/Software-Developer-I--Analyst-_R70138-1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and similar visas for technical roles at portfolio companies in the US, but policies vary by operating company."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de",
+    "dbc3b9e88f"
+   ],
+   "value": "Volaris Group is a holding company that acquires and operates vertical market software businesses, operating as a subsidiary of Constellation Software. Its portfolio companies provide specialized software and services to industries such as insurance."
+  },
+  "synthesized_evidence_sha": "ca59d2a01ce81a8c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de"
+   ],
+   "value": "Software development, data engineering, and analytics within portfolio companies; roles involve modernizing legacy systems, building new products, and applying AI/ML to vertical domains like insurance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942194,
   "web_search_url": "https://duckduckgo.com/?q=Volaris+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4617a38de",
+    "dbc3b9e88f"
+   ],
+   "value": "Offers new grads entry into a decentralized network of vertical SaaS companies with real-world impact in industries like insurance, combining the stability of a large public parent (Constellation Software) with the autonomy and technical ownership of smaller operating units. The Covenir posting highlights a culture shifting from BPO to technology-first, suggesting opportunities to build modern data/AI solutions in a domain that values reliability over hype."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Operating companies emphasize long-term ownership and sustainable practices; Constellation's culture discourages burnout, but on-call or project cycles may vary."
   }
  },
  "voltus": {
@@ -416332,44 +417011,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc",
+    "17f8c9c419"
    ],
-   "value": "Estimated: Mid-tier. Recognized within specialized B2B domains but lacks the elite prestige of FAANG or top-tier AI labs in the general tech market."
+   "value": "Solid, mission-driven AI applications in the domain of tax and accounting, but not considered 'elite top-tier' status (e.g., FAANG/quant level) within the broader data science community due to its legacy corporate nature."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "B2B software, subscription-based information services, and workflow tools."
+   "value": "Software licensing, SaaS subscriptions, and the delivery of expert-curated proprietary content and workflow tools."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: Professional, structured, and mission-driven, focusing on deep expertise in specific functional domains (tax, legal, medical)."
+   "value": "Estimated: Mission-driven and focused on deep domain expertise, blending specialized knowledge with technological adaptation. Culture is likely more structured but actively pursues new AI technologies."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Professionals and organizations in the healthcare, tax and accounting, financial and corporate compliance, and legal sectors."
+   "value": "Professionals and organizations in finance, accounting, tax, healthcare, and legal sectors requiring specialized information, analytics, and workflow automation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "17f8c9c419",
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: $80k - $110k. Competitive for mid-tier enterprise software, but generally lower than the elite pay bands of top-tier AI/tech firms."
+   "value": "Estimated: Competitive corporate benefits included (401k, tuition assistance), but likely below top-tier pure-tech new-grad salaries; expect standard market rates for the Kennesaw, GA area."
   },
   "evidence_sha": "2d862a37089c634a",
-  "generated_at": 1784897895,
+  "generated_at": 1784942684,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -416378,62 +417057,63 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Software and Information Services."
+   "value": "Information Technology & Services / Specialist Software (Health, Tax & Accounting, Legal, Finance)"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "3e5f8b94fc",
     "17f8c9c419"
    ],
-   "value": "Candidates should probe the specific team's work-life balance policies, hours, and culture to ensure it aligns with their need for sane hours and guaranteed shutdowns. Additionally, asking about technical learning, career growth, and the autonomy of the role is crucial to avoid slow bureaucracy."
+   "value": "Candidates should probe the actual speed of innovation versus corporate bureaucracy in the division, specific new-grad compensation data to ensure it meets elite benchmarks, and the reality of WLB promises versus actual expected hours, as the role explicitly mentions a fast-paced environment."
   },
-  "last_attempt_at": 1784897895,
+  "last_attempt_at": 1784942684,
   "last_evidence_at": 1784937742,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Global operations."
+   "value": "Global presence with US-based offices, specifically including Kennesaw, GA."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "To help professionals make critical decisions by delivering expert information, software, and services."
+   "value": "To help professionals make better, faster decisions by delivering expert solutions that combine deep domain knowledge with specialized technology."
   },
   "name": "Wolters Kluwer",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: Moderate. Being a large, established public company, the pace is likely steady and structured rather than fast-paced and highly innovative."
+   "value": "Estimated: Adapting in a fast-paced environment for specific AI product teams, though larger corporate structure may still introduce standard bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "The company offers specialized software, cloud-based services, and information solutions."
+   "value": "AI-powered full-stack software engineering solutions (using .Net, Angular, etc.) tailored for tax and accounting professionals, alongside broader expert platforms in health, finance, and legal domains."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: 20-25 days. Standard for large enterprise employers, but exact policy varies by region and tenure."
+   "value": "Estimated: Standard corporate policy with 'Vacation and Sick Time' included as standard benefits, likely 15-20 days of PTO plus holidays."
   },
-  "refresh_after": 1790081895,
+  "refresh_after": 1790126684,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973",
-    "17f8c9c419"
+    "3e5f8b94fc"
    ],
    "value": "None found in research"
   },
@@ -416441,16 +417121,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: Company-wide shutdowns are not guaranteed but may occur during major holidays."
+   "value": "Estimated: Guaranteed shutdowns are not explicitly promised; while not a toxic environment, it does not clearly list guaranteed off-periods beyond standard PTO."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Large established public company."
+   "value": "Publicly traded, established large-cap software and information services company."
   },
   "sources": [
    {
@@ -416505,29 +417185,29 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Likely varies by region, but standard for a large global multi-national."
+   "value": "Not explicitly stated in the provided sources; candidates should verify visa sponsorship eligibility directly with recruiters."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "3e5f8b94fc",
     "ecb0011973",
-    "79ac223b8c",
-    "6a77a3c930"
+    "79ac223b8c"
    ],
-   "value": "Wolters Kluwer is a global provider of professional information, software solutions, and services for the healthcare, tax and accounting, financial and corporate compliance, and legal sectors. They make money by selling specialized B2B software, subscription-based information services, and workflow tools that help professionals make complex, critical decisions."
+   "value": "Wolters Kluwer is a global information services and software company that builds specialized expert solutions for professionals in healthcare, tax, accounting, finance, and legal sectors. They make money by licensing these workflow software products and providing subscriptions to their proprietary, expert-curated content."
   },
-  "synthesized_evidence_sha": "1dbd4bfb01898e26",
+  "synthesized_evidence_sha": "2d862a37089c634a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Involves building and maintaining specialized software, cloud-based services, and information solutions."
+   "value": "Building next-generation AI-powered solutions within their Tax and Accounting division using a .Net, Angular, and full-stack technology stack, requiring the ability to learn new technologies and adapt in a fast-paced engineering environment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680309,
@@ -416535,16 +417215,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
+    "3e5f8b94fc",
     "17f8c9c419"
    ],
-   "value": "As a mission-driven company focused on critical decision-making, the work offers a meaningful impact. However, as a large established corporation, the fast-paced innovative culture and high new-grad pay typically associated with elite tech firms may differ from the bureaucratic and stable environment found here."
+   "value": "While Wolters Kluwer offers an elite, mission-driven brand and actively builds next-gen AI solutions, it is a legacy large-cap software company. This means it may not match the high new-grad pay benchmarks or fast, unhindered tech culture of top-tier pure-tech firms, though it explicitly emphasizes sane work-life balance over toxicity."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "ecb0011973"
+    "3e5f8b94fc"
    ],
-   "value": "Estimated: Good to Excellent. Large enterprise software companies often maintain stable hours, though this can vary by team needs and product launches."
+   "value": "Estimated: Strongly emphasized; the company explicitly markets programs to help balance work and personal life, likely avoiding high-burnout tech culture."
   }
  },
  "wolverine trading": {
