@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-25 03:37 UTC** · companies polled directly: **1338** (registry 1515) · jobs tracked: **21655** · new this run: **40** · alerts this run: **9**_
+_Last run: **2026-07-25 03:40 UTC** · companies polled directly: **1338** (registry 1515) · jobs tracked: **21655** · new this run: **40** · alerts this run: **9**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -115,7 +115,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 91 🔥 | 20d | AMD | [Software Development Engineer](https://jobright.ai/jobs/info/6a3e95a48bfad862bc9a0182?utm_campaign=Software%20Engineering&utm_source=1103) | Austin,Texas,United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 91 🔥 | 20d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 91 🔥 | 21d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 91 🔥 | 22d | RTX | [Research Engineer 1](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-VA-ARLINGTON-111--1300-17Th-St-N--BBN-ARLINGTON/XMLNAME-2026-Research-Engineer-I---Arlington--VA---Cambridge--MA---Hybrid_01855555) | Cambridge, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 91 🔥 | 23d | RTX | [Research Engineer 1](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-VA-ARLINGTON-111--1300-17Th-St-N--BBN-ARLINGTON/XMLNAME-2026-Research-Engineer-I---Arlington--VA---Cambridge--MA---Hybrid_01855555) | Cambridge, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 1d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a6325bf7c70964cbb0559d5?utm_campaign=Software%20Engineering&utm_source=1103) | Tewksbury, MA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 90 🔥 | 2d | Boson Ai | [Software Engineer - Platform & Application](https://jobs.lever.co/bosonai/2b520a0f-556a-4dc2-a5a7-d8845a921335/apply) | Santa Clara, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 4d | PMG | [Graduate Leadership Program - Data Analytics](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
