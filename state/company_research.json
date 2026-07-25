@@ -1,22 +1,24 @@
 {
  "micron": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "d5fccf6276"
    ],
-   "value": "Manufacturing and operational excellence to deliver memory and storage products."
+   "value": "Delivers a rich portfolio of memory and storage products with a relentless focus on customers, technology leadership, and manufacturing and operational excellence."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Customers enabled by solutions making virtual reality experiences and neural networks possible, though specific customer identities are not confirmed."
   },
   "error": "",
   "evidence_sha": "0902bb524e635800",
-  "generated_at": 1784801220,
+  "generated_at": 1784971340,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -25,36 +27,39 @@
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "Ask about safety culture, mentorship structure, exposure to labs or scale-up processes, sustainability initiatives, work-life balance, and details on work authorization/relocation expectations."
+   "value": "Candidates should seek clarity on specific plant and lab exposure, safety culture, mentorship structures, work-life balance expectations, and explicit details regarding work authorization and relocation support."
   },
-  "last_attempt_at": 1784801220,
+  "last_attempt_at": 1784971340,
   "last_evidence_at": 1784932892,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "Fab 10NX, Singapore (based on the internship posting URL and job ID context, though not explicitly excerpted)."
+   "value": "Boise, ID (Main Site) and Fab 10NX, Singapore."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "d5fccf6276"
+    "0e201d4d96"
    ],
-   "value": "Pursuing innovation fueled by delivering solutions that help make everything from virtual reality experiences to breakthroughs in neural networks possible, enabled by a relentless focus on customers, technology leadership, and operational excellence."
+   "value": "To accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and advance faster than ever."
   },
   "name": "Micron",
   "products": {
    "confidence": "high",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "High-performance DRAM, NAND, and NOR memory and storage products through Micron® and Crucial® brands."
+   "value": "High-performance DRAM, NAND, and NOR memory and storage products (including 3D DRAM and wet process technologies) delivered through Micron® and Crucial® brands."
   },
   "prompt_v": 1,
-  "refresh_after": 1789985220,
+  "refresh_after": 1790155340,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -92,24 +97,27 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "Micron delivers a rich portfolio of high-performance DRAM, NAND, and NOR memory and storage products with a focus on technology leadership and manufacturing and operational excellence."
+   "value": "Micron Technology is a world leader in innovating memory and storage solutions, advancing memory innovation through manufacturing and operational excellence."
   },
-  "synthesized_evidence_sha": "d0d9d98e69f5a170",
+  "synthesized_evidence_sha": "0902bb524e635800",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "Internship involves supporting equipment optimisation and reliability initiatives within advanced engineering and manufacturing."
+   "value": "Internships involve developing and optimizing wet process technologies for product performance, supporting equipment optimization, and supporting reliability initiatives."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
+    "0e201d4d96",
     "d5fccf6276"
    ],
-   "value": "This internship offers meaningful technical work in equipment optimisation and reliability, exposing you to real manufacturing processes and advanced engineering environments."
+   "value": "The available roles align directly with chemical engineering priorities by offering meaningful technical work in wet process development, equipment optimization, and manufacturing scale-up within a leading global semiconductor plant."
   }
  },
  "neuralink": {
@@ -219,10 +227,68 @@
  },
  "rockwool group": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Manufacturing premium ceiling solutions and training key contractors on their application and use."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Key contractors who are trained and educated in the use of the company's premium ceiling solutions."
+  },
+  "error": "",
   "evidence_sha": "6811119d3a845f90",
+  "generated_at": 1784971340,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Given the candidate's priority for safety, mentorship, and work-life balance, it is crucial to confirm if the onsite 12-month internship includes structured mentorship, robust safety training, and standard work hours. Additionally, since work authorization and relocation expectations are priorities, candidates should verify the company's policy on sponsorship and relocation assistance for the Chicago facility."
+  },
+  "last_attempt_at": 1784971340,
   "last_evidence_at": 1784932892,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Chicago, Illinois (facility)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "To accelerate solutions to protect ocean health and raise awareness around ocean health challenges."
+  },
   "name": "ROCKWOOL Group",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Premium ceiling solutions, specifically Mono Acoustic ceiling systems."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1790155340,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "48928cb1f688d8ab",
@@ -235,7 +301,34 @@
     "url": "https://rockwoolgroup.wd3.myworkdayjobs.com/ROCKWOOL/job/Chicago-Illinois/Mono---Paint---Coating-Intern_R0035879"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "ROCKWOOL Group is a manufacturer of building materials, operating with anFocus on sustainability and ocean health through partnerships like the One Ocean Foundation and sponsorship of the Denmark SailGP team. The company manufactures premium ceiling solutions under the Rockfon brand."
+  },
+  "synthesized_evidence_sha": "6811119d3a845f90",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "Internship role involves supporting the growing need to train and educate contractors on the use of premium ceiling solutions, with a focus on paint and coating."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfdb0383ef"
+   ],
+   "value": "This internship provides exposure to real manufacturing processes and technical training within product management. The focus on sustainability and ocean health aligns with environmental priorities; the 12-month duration offers extensive exposure to plant operations and scale-up activities. Onsite presence is required."
+  }
  },
  "toyota research institute": {
   "aliases": [],
