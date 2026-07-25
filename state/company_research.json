@@ -368177,41 +368177,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Connector Platform). It does not appear to be a top-tier AI or data science developer itself, but rather a specialized board that places talent at such companies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "Likely operates a recruitment platform generating revenue through employer postings and hiring tools, evidenced by its role surfacing Data Analyst roles for companies like Evidence Solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and purpose-focused, attracting candidates who value social impact and ethical technology alongside technical innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "Social impact organizations, non-profits, and mission-driven tech companies (such as Evidence Solutions) looking to hire technical talent, as well as tech professionals seeking purpose-driven careers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000. Reflects a conservative estimate for a tech/recruitment platform based on a 2026 market baseline, though internal specific compensation data is not public in the provided sources."
   },
   "evidence_sha": "0ed3458bd5138cca",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784971071,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784970940,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "Internet / Job Board and Recruitment Tech"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "aa169f7366",
+    "1db9db9c4d"
+   ],
+   "value": "Based on your priorities for technical growth in AI/data science without burnout, the interview process will likely assess your core technical skills (SQL, R, statistical analysis, and data modeling) to ensure you can deliver impactful insights quickly. Be prepared to discuss how you can apply these skills to healthcare or social impact datasets, and present case studies that demonstrate your desire to learn in a fast, mission-aligned environment while maintaining strict work-life boundaries."
+  },
+  "last_attempt_at": 1784971071,
   "last_evidence_at": 1784968334,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "23f4957e0b",
+    "9557b909d8",
+    "d4c13b4776"
+   ],
+   "value": "Information not found in the provided sources, though it operates online via its web platform."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "To connect talented technical professionals with organizations that are driving positive social impact and doing good in the world."
+  },
   "name": "Tech Jobs for Good",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast. Job board and recruitment matching platforms typically require agile feature development to stay competitive in the tech hiring space."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "A niche job board and candidate matching platform specialized for technical roles focused on social impact, such as data analyst positions in healthcare and evidence-based solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days. Standard tech industry baseline assumed, as specific internal company benefits for Tech Jobs for Good are not public in the provided sources."
   },
-  "retry_after": 1784971060,
+  "refresh_after": 1790155071,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -368221,7 +368276,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard major holiday closures and weekends, though exact guaranteed shutdowns are unknown."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "23f4957e0b",
+    "9557b909d8",
+    "d4c13b4776"
+   ],
+   "value": "Information not found in the provided sources."
   },
   "sources": [
    {
@@ -368275,14 +368339,47 @@
     "url": "https://jobright.ai/jobs/info/6a6435138d53603449605d7a?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "23f4957e0b",
+    "9557b909d8",
+    "d4c13b4776"
+   ],
+   "value": "Information not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa169f7366",
+    "1db9db9c4d"
+   ],
+   "value": "Tech Jobs for Good is a career platform designed to connect technical talent with socially impactful organizations and mission-driven tech companies. It monetizes by operating a job board and providing recruitment tools that bridge the gap between skilled candidates and employers seeking to advance social good."
+  },
+  "synthesized_evidence_sha": "0ed3458bd5138cca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "aa169f7366"
+   ],
+   "value": "Facilitates hiring for technical roles requiring skills such as SQL, R, statistical analysis, and data modeling, with domain applications like healthcare data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784968334,
   "web_search_url": "https://duckduckgo.com/?q=Tech+Jobs+for+Good+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "aa169f7366",
+    "1db9db9c4d"
+   ],
+   "value": "You are seeking elite AI/data science roles at high-growth tech companies that balance strong new-grad pay with a fast-paced, innovative culture. Because Tech Jobs for Good is a connector platform curating roles specifically at mission-driven organizations, it serves as a direct pipeline to help you bypass traditional bureaucracy and find companies that respect work-life balance while still accelerating your technical career."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Excellent. The platform's core mission of aligning tech talent with 'good', mission-driven organizations strongly implies a focus on positive work environments that respect personal time."
   }
  },
  "tech tammina": {
