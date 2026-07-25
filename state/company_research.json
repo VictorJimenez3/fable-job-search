@@ -95807,42 +95807,109 @@
  "concourse": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Emerging startup in the applied AI space with a niche focus on corporate finance, offering strong foundational experience but lacking the established prestige of top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "B2B enterprise software company that scales AI agent adoption across finance teams, increasing sales velocity and becoming core to customers' financial operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Estimated: Mission-driven and customer-focused, with an emphasis on building magical demo environments and scaling impact directly with finance teams."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Corporate finance teams at enterprises seeking to improve decision-making and scale their financial operations using AI."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f",
+    "46149f2c05"
+   ],
+   "value": "Estimated: Competitive startup new-grad pay likely ranging between $120k-$160k base salary, supplemented by early-stage equity, though exact figures are not public."
   },
   "evidence_sha": "cdb78a8eb60f6f3c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784980691,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784980560,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Enterprise AI / Financial Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Probe deeply into the startup's expectations around work-life balance and actual working hours, as early-stage companies often require intense commitment. Ask about the technical stack for AI agents and opportunities for rapid career growth without burnout."
+  },
+  "last_attempt_at": 1784980691,
   "last_evidence_at": 1784979902,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "17ceddbcee",
+    "46149f2c05"
+   ],
+   "value": "To scale the impact of AI agents across every finance team, enabling customers to make better decisions by delivering instant insights through natural language interfaces."
+  },
   "name": "Concourse",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "46149f2c05"
+   ],
+   "value": "Estimated: Fast-paced startup environment focused on increasing sales velocity and shipping high-impact solutions quickly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "AI agents that connect to core enterprise data sources, analyzing financial data through natural language to deliver insights in seconds."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO policy likely offering flexible vacation, though specific day counts are not publicly listed."
   },
-  "retry_after": 1784980680,
+  "refresh_after": 1790164691,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95852,7 +95919,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found regarding guaranteed company shutdowns or standardized holiday breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Early-stage startup actively building out its GTM and AI deployment teams, currently recruiting for new-grad positions."
   },
   "sources": [
    {
@@ -95916,14 +95992,47 @@
     "url": "https://jobs.ashbyhq.com/concourse/b1222d96-2d02-4809-9533-4fd31e62b8d0"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Concourse builds AI agents for corporate finance teams that connect enterprise data sources to analyze data through natural language. The company makes money by deploying these agents to help finance customers deliver insights in seconds and make better decisions."
+  },
+  "synthesized_evidence_sha": "cdb78a8eb60f6f3c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Building and deploying AI agents, creating interactive demo environments, connecting enterprise data sources, and designing systems that ensure the product becomes core to financial operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784979902,
   "web_search_url": "https://duckduckgo.com/?q=Concourse+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "As an early-stage AI startup, Concourse offers the fast-paced, innovative tech culture and accelerated learning environment you seek, with the opportunity to work directly with cutting-edge AI agents in a space less burdened by slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "46149f2c05",
+    "17ceddbcee"
+   ],
+   "value": "Estimated: Potentially challenging work-life balance typical of early-stage startups prioritizing rapid growth and customer adoption."
   }
  },
  "confido": {
