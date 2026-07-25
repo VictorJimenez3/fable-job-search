@@ -35340,7 +35340,7 @@
   "url": "https://cat.wd5.myworkdayjobs.com/en-US/CaterpillarCareers/job/York-Pennsylvania/Parts-Orders-Analyst_R0000381601"
  },
  "0b7eaafa579720c2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The New York Times",
   "description": "",
@@ -35354,25 +35354,40 @@
   ],
   "posted_at": 1783635979,
   "posting": {
-   "analyzed_at": 1784993690,
+   "analyzed_at": 1784993849,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784993849,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784993690,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784993849,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 74,
+  "score": 54,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "trusted new-grad board priority +45",
    "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (2+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -40330,11 +40345,29 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784902760,
+   "analyzed_at": 1784993883,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993883,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only"
+   },
+   "attempts": 1,
+   "checked_at": 1784993883,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, Bachelor's required, no experience mentioned",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -81871,6 +81904,11 @@
    "Baltimore, MD"
   ],
   "posted_at": 1784758490,
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -271606,10 +271644,14 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784768504,
+   "analyzed_at": 1784993949,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993949,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -323618,7 +323660,7 @@
   "url": "https://cmu.wd5.myworkdayjobs.com/en-US/cmu/job/Pittsburgh-PA/Administrative-Coordinator---College-of-Engineering---ECE_2024711"
  },
  "6993a811d3f9561b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "GE Vernova",
   "description": "",
@@ -323631,16 +323673,52 @@
    "Bellevue, WA"
   ],
   "posted_at": 1784851200,
+  "posting": {
+   "analyzed_at": 1784993892,
+   "education_mismatch": true,
+   "education_note": "Required Qualifications - Bachelor&#39;s or Master&#39;s degree in Computer Science, Computer Engineering, Electrical Engineering, or a related technical discipline.",
+   "education_required": "masters",
+   "fetch_status": "readable",
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "will not provide sponsorship",
+   "years_min": 0,
+   "years_note": "0-1 year"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993892,
+    "education_mismatch": true,
+    "education_note": "Required Qualifications - Bachelor&#39;s or Master&#39;s degree in Computer Science, Computer Engineering, Electrical Engineering, or a related technical discipline.",
+    "education_required": "masters",
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "will not provide sponsorship",
+    "years_min": 0,
+    "years_note": "0-1 year"
+   },
+   "attempts": 1,
+   "checked_at": 1784993892,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 73,
+  "score": 28,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "trusted new-grad board priority +45",
    "posted <72h +3",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
   ],
   "score_version": 7,
   "sector": "other",
@@ -329428,11 +329506,29 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784902760,
+   "analyzed_at": 1784993900,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993900,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only"
+   },
+   "attempts": 1,
+   "checked_at": 1784993900,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -346096,11 +346192,15 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784826805,
+   "analyzed_at": 1784993942,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993942,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -354452,13 +354552,33 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784919313,
+   "analyzed_at": 1784993908,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
    "years_min": 0,
    "years_note": "0+ years of experience"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993908,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "yes",
+    "sponsorship_note": "H1B Sponsorship",
+    "years_min": 0,
+    "years_note": "0+ years of experience"
+   },
+   "attempts": 1,
+   "checked_at": 1784993908,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years exp, B.S. required, entry level",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -387321,8 +387441,9 @@
   "url": "https://jobs.ashbyhq.com/openai/770d5c3f-4e72-4b49-aec4-d444e8ad7a64"
  },
  "7f134ce3635fa54c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784993943,
   "company": "Raytheon",
   "description": "",
   "early_career_possible": false,
@@ -387341,6 +387462,11 @@
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784993943,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -387350,7 +387476,8 @@
    "role:swe +20",
    "trusted new-grad board priority +45",
    "posted <72h +3",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -391604,7 +391731,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007"
  },
  "80800a1af69da8c0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Citadel",
   "description": "",
@@ -391618,31 +391745,41 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784993690,
+   "analyzed_at": 1784993818,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784986596,
+    "analyzed_at": 1784993818,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784993690,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784993818,
+   "degree_required": "phd",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "Post Doctorate required.",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 74,
+  "score": 0,
   "score_reasons": [
    "base 5",
    "role:data_science +23",
    "trusted new-grad board priority +45",
    "posted <7d +1",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: requires PhD (bachelor's profile) -60",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -407585,7 +407722,7 @@
   "url": "https://jobright.ai/jobs/info/6a39c6ae06a4fd4b1fabc05e?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "85ccb6c1d7eb9387": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Compass",
   "description": "",
@@ -407599,21 +407736,39 @@
   ],
   "posted_at": 1784845722,
   "posting": {
-   "analyzed_at": 1784850885,
+   "analyzed_at": 1784993933,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993933,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
+   "attempts": 1,
+   "checked_at": 1784993933,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 73,
+  "score": 53,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "trusted new-grad board priority +45",
    "posted <72h +3",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (2+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -428692,7 +428847,6 @@
    "new-grad/early-career priority +45",
    "posted <72h +3",
    "title matches your history +1",
-   "verified new-grad/early-career evidence",
    "quality: non-technical role (Grocery cashier/clerk role; no degree or — LLM-verified) -25"
   ],
   "score_version": 7,
@@ -445636,6 +445790,11 @@
    "fetched": true,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "could not retrieve usable posting text",
+   "fetch_status": "unavailable"
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -457404,7 +457563,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4734570007?gh_jid=4734570007"
  },
  "9668e63d575e4f9a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Ultra",
   "description": "",
@@ -457418,26 +457577,42 @@
   ],
   "posted_at": 1783166092,
   "posting": {
-   "analyzed_at": 1784993691,
+   "analyzed_at": 1784993858,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784993858,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship required"
+   },
    "ai_deferred_at": 1784993691,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784993858,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 74,
+  "score": 54,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "trusted new-grad board priority +45",
    "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (2+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -466719,11 +466894,15 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784752592,
+   "analyzed_at": 1784993951,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993951,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -499870,6 +500049,11 @@
    "fetch_note": "page loaded but did not contain usable job text",
    "fetch_status": "unreadable",
    "fetched": true
+  },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
   },
   "remote": false,
   "rules_v": 7,
@@ -556537,7 +556721,6 @@
    "trusted new-grad board priority +45",
    "posted <72h +3",
    "title matches your history +4",
-   "verified new-grad/early-career evidence",
    "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "score_version": 7,
@@ -570980,11 +571163,29 @@
   ],
   "posted_at": 1777932486,
   "posting": {
-   "analyzed_at": 1784847053,
+   "analyzed_at": 1784993866,
    "fetch_status": "readable",
    "fetched": true,
    "intern_counts": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993866,
+    "fetch_status": "readable",
+    "fetched": true,
+    "intern_counts": true,
+    "sponsorship": "unknown"
+   },
+   "attempts": 1,
+   "checked_at": 1784993866,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Class of 2026, ABET degree required, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -646836,11 +647037,29 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784919313,
+   "analyzed_at": 1784993916,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993916,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only"
+   },
+   "attempts": 1,
+   "checked_at": 1784993916,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, Bachelor's degree required, new grad role",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -656512,7 +656731,6 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +4",
-   "verified new-grad/early-career evidence",
    "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "score_version": 7,
@@ -672615,11 +672833,29 @@
   ],
   "posted_at": 1765383487,
   "posting": {
-   "analyzed_at": 1784889124,
+   "analyzed_at": 1784993875,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. citizen"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993875,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "must be a U.S. citizen"
+   },
+   "attempts": 1,
+   "checked_at": 1784993875,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for class of 2026",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -675811,6 +676047,11 @@
    "fetch_note": "page loaded but did not contain usable job text",
    "fetch_status": "unreadable",
    "fetched": true
+  },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
   },
   "remote": false,
   "rules_v": 7,
@@ -690542,7 +690783,6 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
    "quality: not new-grad (2+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
@@ -715816,10 +716056,14 @@
   ],
   "posted_at": 1784326015,
   "posting": {
-   "analyzed_at": 1784791696,
+   "analyzed_at": 1784993947,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993947,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -717206,11 +717450,29 @@
   ],
   "posted_at": 1784846147,
   "posting": {
-   "analyzed_at": 1784850885,
+   "analyzed_at": 1784993924,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not sponsor"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784993924,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "not sponsor"
+   },
+   "attempts": 1,
+   "checked_at": 1784993924,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with bachelors required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -725783,10 +726045,14 @@
   ],
   "posted_at": 1781360155,
   "posting": {
-   "analyzed_at": 1784800746,
+   "analyzed_at": 1784993947,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993947,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -749137,6 +749403,11 @@
    "years_min": 0,
    "years_note": "0 – 2 years"
   },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "could not retrieve usable posting text",
+   "fetch_status": "unavailable"
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -759127,6 +759398,11 @@
    "Boulder, CO"
   ],
   "posted_at": 1777414147,
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -768577,10 +768853,14 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784858719,
+   "analyzed_at": 1784993944,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784993944,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
