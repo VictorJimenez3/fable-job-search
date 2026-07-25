@@ -43948,112 +43948,109 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Tier 2 (Strong Industry Prestige) - Offers high respect and a household name in defense tech, but not considered a purely elite AI-native lab like DeepMind or OpenAI."
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
+    "4e99d8358f"
    ],
-   "value": "Operates a B2G (Business-to-Government) model, generating revenue through long-term, cost-plus and fixed-price contracts for system design, integration, manufacturing, and sustainment."
+   "value": "Defense ministry/prime-contractor cost-plus and firm-fixed-price contracts, commercial aerospace components, engineering services, and IT modernization."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineer-heavy, formal; less startup/silicon-valley tech culture."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
+    "4e99d8358f"
    ],
-   "value": "Primarily the U.S. Department of Defense, the UK Ministry of Defence, and allied governments (e.g., Australia, Saudi Arabia). A smaller portion of business comes from commercial defense and security contracts."
+   "value": "Defense ministries, allied governments, and commercial aerospace customers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $85,000-$110,000 base salary in average US locations; Austin/NOVA hubs upper limit $115,000. Bonuses are smaller than commercial tech (5%-8%)."
+   "value": "Estimated: US$85,000–$115,000 base salary range for new-grad software engineers."
   },
   "evidence_sha": "f684283d20aec0e9",
-  "generated_at": 1784681721,
+  "generated_at": 1784993329,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
+    "4e99d8358f"
    ],
-   "value": "Defense, Aerospace, and Security."
+   "value": "Defense and Space Manufacturing; Aerospace and Defense."
   },
   "interview_focus": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784681721,
+  "last_attempt_at": 1784993329,
   "last_evidence_at": 1784990945,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "f538007a1a"
+    "4e99d8358f"
    ],
-   "value": "Major U.S. hubs include Falls Church, VA (HQ); San Diego, CA; Nashua, NH; Austin, TX; and Washington DC Metro. Large UK hub in Farnborough and other global offices in Saudi Arabia and Australia."
+   "value": "Major presence in US (e.g., Arlington VA, Nashua NH, San Diego CA, Reston VA) and UK sites [4e99d8358f]."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f538007a1a"
+    "4e99d8358f"
    ],
-   "value": "To protect national security and improve the safety and security of nations, focusing on defense, security, and critical intelligence work."
+   "value": "To protect those who protect us and secure government and commercial infrastructure."
   },
   "name": "BAE Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. Slower than dedicated Silicon Valley startups or Big Tech due to government budgets, annual funding cycles, and compliance gates; faster than legacy civil service."
+   "value": "Estimated: Slower and process-driven."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
+    "b61bff08da",
+    "4e99d8358f"
    ],
-   "value": "Primary products and services include combat vehicles (e.g., Bradley Fighting Vehicles, AMPV), naval ship repair and modernization, electronic warfare systems, precision-guided munitions, cybersecurity services, and AI-based mission systems."
+   "value": "Products include military aircraft, combat vehicles, naval ships, naval submarines, advanced electronics and cyber systems, radar, and software/systems using Model-Based Engineering and Automated Testing and Validation [b61bff08da]."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO for new grads in U.S. programs, plus standard federal holidays, and flexible leave for deployed programs."
+   "value": "Estimated: 20–25 days vacation plus federal holidays; exact policy not in sources."
   },
+  "refresh_after": 1790177329,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "4e99d8358f"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Some sites/departments observe holiday shutdown periods."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "242bfd9022"
+    "4e99d8358f"
    ],
-   "value": "Large, mature public company (FTSE 100) with approximately 100,000 employees globally and annual revenue over £23 billion."
+   "value": "Public multinational (LSE: BA) with ~100,000+ employees and mature defense platform capability."
   },
   "sources": [
    {
@@ -44108,41 +44105,39 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "f538007a1a"
-   ],
-   "value": "Due to strict ITAR and security clearance requirements on most defense programs, a U.S. Person or UK/EU citizenship is generally required; H-1B sponsorship is extremely limited and typically unavailable for new grads."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors many roles in the US, but many defense roles require US security clearance and citizenship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
-   ],
-   "value": "BAE Systems is a global defense, security, and aerospace company that develops, delivers, and supports advanced technology-led systems. It makes money primarily through long-term government contracts for products and services across areas like combat vehicles, precision-guided munitions, electronic warfare, ship repair, and cybersecurity."
-  },
-  "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "f538007a1a",
-    "242bfd9022"
+    "b61bff08da",
+    "4e99d8358f"
    ],
-   "value": "Focuses heavily on systems engineering, software development, AI/ML integration for autonomous systems, electronic warfare, signals intelligence (SIGINT), and cybersecurity. Work is mission-critical and defense-specific rather than consumer technology."
+   "value": "BAE Systems is a multinational defense, security, and aerospace company that designs, manufactures, and supports advanced military and civilian technology. It makes money through government defense contracts and commercial aerospace sales. The company's software engineering roles (e.g., Software Engineer I postings) require Python, C#, and model-based engineering skills [b61bff08da]."
+  },
+  "synthesized_evidence_sha": "f684283d20aec0e9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b61bff08da"
+   ],
+   "value": "Python, C#, NI TestStand, Model-Based Engineering, Automated testing and validation, embedded software in air/land/sea platforms [b61bff08da]."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784645371,
   "web_search_url": "https://duckduckgo.com/?q=BAE+Systems+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "The role carries elite mission-prestige on national defense systems but allows a predictable 40-45 hour week with protected shutdowns, unlike high-burnout Big Tech firms. The technical work on autonomous weapon detection and electronic warfare is sufficiently complex for rapid learning, yet the traditional defense pace respects personal time."
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4.2 out of 5. Very solid work-life balance; standard 40-hour weeks are strict in program offices, and overtime is limited. Minimal 'crunch culture' without sacrificing mission integrity."
+   "value": "Estimated: Good to high; generally sane hours relative to FAANG."
   }
  },
  "bae systems inc": {
@@ -86247,93 +86242,136 @@
  "city of new york": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d",
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: Low to Moderate. Public sector IT rarely commands elite industry prestige for AI/Data Science compared to top-tier tech companies, generally appealing more to mission-driven professionals than prestige-seekers."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public-sector municipal government funded primarily through local tax revenue, federal and state aid, and service fees."
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225",
+    "ad4fe4e0e1"
+   ],
+   "value": "Public sector government fully funded by local taxes (property, income, sales), state and federal grants, and municipal bonds."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-oriented, highly collaborative, and process-driven. The culture values stability, equity, and public service above rapid growth or heroics. Teams generally emphasize knowledge-sharing and responsible stewardship of public resources over individual technical swagger."
+   "source_ids": [
+    "91e2b9f225",
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: Public service-oriented, highly bureaucratic, regulated, and unionized. Focuses on civic duty and stability over rapid tech-driven innovation or aggressive career growth."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "More than 8 million residents of New York City, along with millions of visitors, local businesses, and community organizations."
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225"
+   ],
+   "value": "The residents, businesses, and visitors of the five boroughs of New York City."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: New-grad AI and data science roles (such as City Research Scientist I or entry-level IT Specialist) typically pay a salary of $80,000 to $105,000, based on civil service title and level. This is substantially lower than a Big Tech total-compensation package but provides permanent pension benefits and no-layoff job security."
+   "source_ids": [
+    "1db9db9c4d",
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: $70,000 - $95,000. Constrained by rigid public sector pay bands and civil service scales, falling significantly short of the elite new-grad pay offered by top-tier tech companies."
   },
   "evidence_sha": "1f290bf3ba052f74",
-  "generated_at": 1784683096,
+  "generated_at": 1784993329,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225",
+    "ad4fe4e0e1"
+   ],
+   "value": "Government / Public Administration"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Hiring processes emphasize fairness and standardization, often including structured behavioral questions about working with complex government constraints and stakeholder management, plus technical screenings focused on practical data science and machine learning applications. Candidates should demonstrate passion for public-interest technology while maintaining a low-ego, high collaboration style."
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Evaluate the specific agency's tech stack and culture for fast-paced AI/data innovation versus slow, bureaucratic IT operations. Ask about startup-style tech modernization initiatives versus legacy mainframe systems, strict government pay bands versus market-rate tech roles, and how the team balances public sector hours with technical career acceleration."
   },
-  "last_attempt_at": 1784683096,
+  "last_attempt_at": 1784993329,
   "last_evidence_at": 1784990945,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in New York City, with offices distributed across the five boroughs: Manhattan, Brooklyn, Queens, The Bronx, and Staten Island."
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225",
+    "3174b83be7"
+   ],
+   "value": "Offices located across the five boroughs of New York City (Manhattan, Brooklyn, Queens, The Bronx, Staten Island)."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "91e2b9f225",
+    "ad4fe4e0e1",
+    "3174b83be7"
+   ],
+   "value": "To provide effective, equitable, and responsive municipal services that improve the daily lives and well-being of all New Yorkers."
   },
   "name": "City of New York",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderately paced in most roles. A typical work week is a standard 35-40 hours, governed by civil service regulations, union rules, and agency-specific deadlines. While political urgency can create bursts of intensity, the baseline cadence is significantly more predictable than in startup or Big Tech environments."
+   "source_ids": [
+    "1db9db9c4d",
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: Slow to moderate. Government bureaucracy, hierarchical approvals, procurement rules, and legacy systems typically prevent a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public services and digital tools delivered through 300+ agencies. Data science and AI products include predictive analytics dashboards for the Fire Department, algorithmic equity evaluations, computer vision projects, and the MyCity portal for business and workforce services."
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225"
+   ],
+   "value": "Public services and infrastructure, including public education, sanitation, emergency response, housing assistance, public health programs, and municipal administration."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 vacation days, increasing with tenure, plus 12 paid holidays, and 10-13 sick days annually. Exact accrual depends on labor union contract and years of service."
+   "source_ids": [
+    "ad4fe4e0e1",
+    "91e2b9f225"
+   ],
+   "value": "Estimated: 20-30 days of paid time off annually, depending on tenure and union contract, plus standard government and legal holidays."
   },
+  "refresh_after": 1790177329,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Guaranteed full shutdown on all official public holidays. In addition, many non-emergency offices operate on reduced capacity or close entirely between Christmas and New Year’s Day compensated by additional leave time or an excused absence."
+   "source_ids": [
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: None found in research. Most municipal agencies operate continuously, though specific administrative offices may close on standard public holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Massive, mature public entity. Employs over 300,000 full-time workers across more than 300 agencies and offices, making it the largest municipal employer in the U.S."
+   "confidence": "high",
+   "source_ids": [
+    "91e2b9f225",
+    "ad4fe4e0e1"
+   ],
+   "value": "Massive municipal government employer with hundreds of thousands of public employees across numerous agencies and departments."
   },
   "sources": [
    {
@@ -86379,32 +86417,46 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sponsorship availability varies by role and agency. Many non-competitive civil service titles, including technical roles, may be ineligible for employer-sponsored visas due to public-sector restrictions, though some specialized hard-to-fill positions may receive sponsorship on a case-by-case basis."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: As a US municipal government, visa sponsorship for technical roles is highly unlikely; candidates must generally be US citizens or permanent residents."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "The City of New York is America's largest municipal government, delivering public services across 300+ square miles to over 8 million residents. It is funded primarily by tax revenues, federal and state grants, and fees for services, and its massive scope includes AI and data science applications ranging from predictive fire inspections to social services analytics."
+   "confidence": "medium",
+   "source_ids": [
+    "91e2b9f225",
+    "1db9db9c4d"
+   ],
+   "value": "The City of New York is the municipal government of the five boroughs, providing public safety, healthcare, education, sanitation, housing, and administrative services to over 8 million residents. It is funded through local property and sales taxes, state and federal grants, and other municipal revenues."
   },
+  "synthesized_evidence_sha": "1f290bf3ba052f74",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "AI and data science roles are housed in specialized units such as the Office of Technology and Innovation, the Mayor’s Office of Data Analytics, and agency-specific analytics teams. Work includes building and auditing machine learning models, computer analytics, and developing rules-based and generative AI governance frameworks."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ad4fe4e0e1"
+   ],
+   "value": "Government IT, data analysis, software development, and data science supporting public health, infrastructure, emergency response, and digital services."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674522,
   "web_search_url": "https://duckduckgo.com/?q=City+of+New+York+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Offers deep mission-driven work impacting millions of New Yorkers. However, top-tier AI/data science prestige, elite new-grad pay, and a fast, innovative tech culture are often fundamentally at odds with the slow bureaucracy, strict pay bands, and rigid processes inherent to municipal government."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Excellent, rating 9 out of 10. Core working hours are strictly protected, and overtime is culturally discouraged or must be pre-approved and compensated. Nights and weekends are broadly ignored for non-emergency communications, and employees are fully off when the shift ends."
+   "source_ids": [
+    "1db9db9c4d",
+    "ad4fe4e0e1"
+   ],
+   "value": "Estimated: Moderate. Government roles generally offer structured hours, job security, and sane schedules compared to big tech burnout. However, this can vary widely by specific agency and public sector pressures."
   }
  },
  "city of philadelphia": {
@@ -109864,89 +109916,102 @@
  "datalab usa": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Rising tier — open-source project (Chandra) and DataCamp affiliation provide credibility, but not yet elite-brand recognition like FAIR/DeepMind/OpenAI."
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Estimated: Likely lower-tier for pure AI/Data Science prestige, as the company focuses on database marketing rather than elite, cutting-edge AI research or product development."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Freemium SaaS for data science platform; possible enterprise licensing and educational partnerships via DataCamp affiliation."
+   "confidence": "high",
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Contracted database marketing services, where Datalab coordinates client requirements with its internal programming and analytical teams to execute and support marketing programs."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "8d7e828bb6"
+    "0515781e48"
    ],
-   "value": "Estimated: Technical, builder-oriented, open-source friendly; likely flat hierarchy with high autonomy. DataCamp roots suggest learning culture."
+   "value": "Estimated: Appears to be a traditional, client-focused database marketing agency culture, with strong emphasis on internal-external coordination and support."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Data scientists, ML engineers, analytics teams, and educational institutions seeking collaborative data science environments."
+   "confidence": "high",
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Clients who contract for database marketing services and require coordination with internal technical teams."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $120k-$160k base + equity (0.05-0.2%); below top-tier labs but competitive for early-stage."
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Estimated: Conservative pay range for an analyst role in Westminster, CO (roughly $60,000-$85,000 annually), unlikely to meet top-tier tech pay benchmarks."
   },
   "evidence_sha": "9784d459c465c0b3",
-  "generated_at": 1784862601,
+  "generated_at": 1784993329,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "384e2b97a0",
-    "8d7e828bb6"
+    "0515781e48"
    ],
-   "value": "Data Science Platform / ML Tooling / Developer Tools"
+   "value": "Database Marketing and Marketing Analytics."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "384e2b97a0"
+    "0515781e48"
    ],
-   "value": "Assess engineering culture (pace vs. sustainability), mentorship structure for new grads, open-source contribution expectations, and concrete WLB policies (shutdowns, on-call). Probe technical depth of Chandra project and roadmap ownership."
+   "value": "Probe whether the internal database programming and analytical teams engage in advanced AI/Data Science work or if the role is primarily client-facing marketing coordination. Ask about typical hours, shutdowns, and learning opportunities to ensure the environment avoids bureaucracy and supports your technical growth without sacrificing work-life balance."
   },
-  "last_attempt_at": 1784862601,
+  "last_attempt_at": 1784993329,
   "last_evidence_at": 1784990707,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: USA-based (per company name); likely remote-friendly or major tech hub (SF/NYC/Seattle)."
+   "confidence": "high",
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Westminster, CO (requires candidates to be local to this area)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Accelerate data science workflows through accessible, collaborative tooling and education."
+   "confidence": "medium",
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Not explicitly stated in the available sources, but the core function is providing essential database marketing and analytical support to clients."
   },
   "name": "Datalab USA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — early-stage startup building technical product; likely iterative sprints with shipping focus, but not explicitly measured."
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Estimated: Moderate pace typical of a database marketing agency, likely slower and more client-driven than a fast-paced, innovative tech startup."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "384e2b97a0",
-    "8d7e828bb6"
+    "0515781e48"
    ],
-   "value": "Likely data science platform/tooling (Chandra open-source project on GitHub); possible integration with DataCamp's data science education ecosystem."
+   "value": "Database marketing services, campaign analysis, and internal database programming for marketing programs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + holidays; unlimited policy common at this stage but actual usage uncertain."
+   "value": "Estimated: Conservative standard PTO (approximately 10-15 days annually), but exact policy is not publicly documented."
   },
-  "refresh_after": 1790046601,
+  "refresh_after": 1790177329,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109956,12 +110021,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns documented; may have winter break but not policy."
+   "value": "Estimated: No evidence of guaranteed company-wide shutdowns; assume standard operational hours year-round."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Early-stage startup (seed/Series A), likely <100 employees given limited public footprint."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -110006,27 +110071,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: May sponsor H-1B for senior roles; new-grad sponsorship uncertain at early stage."
+   "confidence": "high",
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "No sponsorship available for roles; candidates must be local to Westminster, CO."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "384e2b97a0",
-    "8d7e828bb6",
-    "fce50ca950"
+    "0515781e48"
    ],
-   "value": "Datalab USA appears to be a data science/AI-focused company with an open-source project called Chandra hosted on GitHub under the datalab-to organization. The company likely operates in the data science tooling or education space given connections to DataCamp and the datalab.to domain."
+   "value": "Datalab USA acts as a liaison between clients and internal database programming/analytical teams to provide database marketing services and support for marketing campaigns. It generates revenue by contracting with clients to coordinate, program, and analyze their database marketing programs."
   },
-  "synthesized_evidence_sha": "ac2c65c4fa7b0ffe",
+  "synthesized_evidence_sha": "9784d459c465c0b3",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "384e2b97a0"
+    "0515781e48"
    ],
-   "value": "Open-source development (Chandra project), data science platform engineering, ML infrastructure, collaborative notebook/tooling development."
+   "value": "Internal database programming and analytical work for marketing campaigns, requiring technical teams to execute client database marketing programs."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675358,
@@ -110034,15 +110099,16 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "384e2b97a0",
-    "8d7e828bb6"
+    "0515781e48"
    ],
-   "value": "Offers early-stage impact on data science tooling with open-source visibility; potential for rapid technical growth in AI/ML infrastructure without big-tech bureaucracy. DataCamp connection suggests education-focused mission and possible work-life balance culture."
+   "value": "This role may not align with a top-tier AI/Data Science mission, as it centers on database marketing liaison duties rather than cutting-edge AI innovation. Additionally, the strict local requirement and lack of sponsorship may limit flexibility, and a traditional database marketing focus might not offer the elite prestige or fast, innovative culture you are targeting."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 — early-stage risk of long hours, but education/Tooling mission and DataCamp link may indicate founder awareness of burnout."
+   "source_ids": [
+    "0515781e48"
+   ],
+   "value": "Estimated: Standard work-life balance expected for a marketing services firm, but specifics on hours and burnout culture are not publicly detailed."
   }
  },
  "datamap": {
@@ -272151,11 +272217,13 @@
  "nyc department of health and mental hygiene": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 (Public Sector). Lacks FAANG/elite prestige in the tech world, but carries strong mission/prestige within public health and civic tech sectors."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Tier 4. Deeply prestigious civic impact, but low technical prestige in the AI/Data Science community compared to big tech or top startups."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -272163,12 +272231,14 @@
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "Government-funded public service. Operations are financed through city taxes, state and federal grants rather than revenue generation."
+   "value": "Government-funded agency operating on city, state, and federal tax revenues rather than traditional commercial income. It provides public goods and regulatory enforcement rather than selling products or services."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and civic-minded. Emphasizes public good, science-based policy, and community impact, but operating within a structured, bureaucratic municipal environment. Interesting public-facing elements like health tours and restaurant info mapping create civic engagement opportunities."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Highly mission-driven, service-oriented, and bureaucratic. Prioritizes public health impact and equity over shipping fast or pushing the technological envelope."
   },
   "customers": {
    "confidence": "medium",
@@ -272177,45 +272247,49 @@
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "The residents of New York City, local businesses, and community organizations receiving public health services and guidance."
+   "value": "The general public of New York City residents, local businesses, healthcare providers, and community organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $70,000 - $90,000 per year based on NYC competitive public sector pay rates (significantly lower than top-tier private tech)."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $70,000 - $95,000. Municipal tech salaries provide stability but are far below the elite new-grad compensation packages found in big tech or top AI startups."
   },
   "evidence_sha": "b016a75b3d0203a8",
-  "generated_at": 1784885067,
+  "generated_at": 1784993329,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "b6e022185f",
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "Government / Public Health Administration"
+   "value": "Public Health / Government"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Be prepared to discuss how you'd apply data science/AI to public health challenges such as disease surveillance or restaurant inspection trends. Given your priority for work-life balance and avoiding bureaucracy, clarify scope and timelines during interviews—government work may lack fast innovation. Ask about data infrastructure, learning/career growth, and whether stable hours are guaranteed to ensure alignment with your values."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Evaluate how you weigh deep public service mission against your desire for high compensation and rapid technical career growth. Prepare to discuss your tolerance for government pace, bureaucracy, and legacy systems versus cutting-edge AI."
   },
-  "last_attempt_at": 1784885067,
+  "last_attempt_at": 1784993329,
   "last_evidence_at": 1784990945,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "b6e022185f",
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "New York City, NY (headquarters around Long Island City with offices/borough offices across NYC's five boroughs)."
+   "value": "Headquartered in New York City with offices and clinics across the five boroughs."
   },
   "mission": {
    "confidence": "medium",
@@ -272224,13 +272298,15 @@
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "To protect and promote the health of all New Yorkers through science-based policies, programs, and public health initiatives."
+   "value": "To protect and promote the health of all New Yorkers, ensuring equitable access to health resources and safeguarding the city against public health threats."
   },
   "name": "NYC Department of Health and Mental Hygiene",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to slow. Bureaucratic processes typical of municipal government decision-making and procurement."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to slow. Progress in civic tech is frequently hindered by administrative overhead, compliance checks, and municipal bureaucracy rather than accelerating fast."
   },
   "products": {
    "confidence": "medium",
@@ -272239,24 +272315,36 @@
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "Public health surveillance, disease control initiatives, mental health programs, restaurant inspections (as seen on waiting room TV displays), and health policy implementation."
+   "value": "Public health interventions, disease surveillance systems, restaurant and facility health inspections, mental health resources, public awareness campaigns, and environmental health monitoring."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days. Generous sick leave plus vacation (per municipal union contracts)."
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Estimated: 20-27 days. NYC government employees typically receive substantial vacation, personal, and sick leave, though exact new grad packages vary."
   },
+  "refresh_after": 1790177329,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No regular corporate shutdowns. Standard government holidays off (approx. 10-12 days/year)."
+   "source_ids": [
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
+   ],
+   "value": "Estimated: Potential occasional government shutdowns or furloughs tied to municipal budgets, though rare."
   },
   "size_stage": {
    "confidence": "medium",
@@ -272265,7 +272353,7 @@
     "068d8097d3",
     "8bebc8069d"
    ],
-   "value": "Large-scale municipal government agency with thousands of employees (including public tours) across the five boroughs."
+   "value": "Very large municipal government agency with thousands of employees across numerous public health disciplines."
   },
   "sources": [
    {
@@ -272310,43 +272398,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "b6e022185f"
+    "b6e022185f",
+    "068d8097d3",
+    "8bebc8069d"
    ],
-   "value": "Estimated: As a municipal government employer, H-1B sponsorship is extremely unlikely."
+   "value": "Estimated: As a NYC municipal agency, employment is strictly subject to NYC residency requirements. Visa sponsorship for foreign nationals is highly unlikely or nonexistent."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "1db9db9c4d",
     "b6e022185f",
-    "068d8097d3",
-    "8bebc8069d"
+    "068d8097d3"
    ],
-   "value": "The NYC Department of Health and Mental Hygiene (DOHMH) is the public health agency for New York City, responsible for protecting and improving the health of all New Yorkers. As a government entity, it is funded through taxpayer dollars rather than operating for profit."
+   "value": "The NYC Department of Health and Mental Hygiene (DOHMH) is the public health agency for New York City, responsible for protecting and promoting the health of over 8 million residents. As a government entity, it does not operate for profit but is funded through city, state, and federal taxes to deliver public health services, regulate inspected entities, and manage health crises."
   },
+  "synthesized_evidence_sha": "b016a75b3d0203a8",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "b6e022185f",
-    "068d8097d3",
-    "8bebc8069d"
+    "1db9db9c4d"
    ],
-   "value": "Public health surveillance, restaurant inspection mapping (e.g., restaurant tours/restaurantinfo), communicable disease tracking. Modernization suggests web/app development integrates these datasets for public access and for internal policy use."
+   "value": "Involves modernizing legacy public health systems, building data pipelines for disease surveillance, and developing analytics tools for health equity. Tech stacks often mix enterprise and modern open-source tools used in civic tech."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583425,
   "web_search_url": "https://duckduckgo.com/?q=NYC+Department+of+Health+and+Mental+Hygiene+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "For a high-paying, high-prestige new-grad offer with guaranteed work-life balance, this role strikes a rare balance: it's unlikely to offer elite private-sector compensation or a fast, innovative tech culture (government pace means slower adoption and less ML focus). However, it provides meaningful mission-driven work on high-impact urban data problems with stable hours and predictable shutdown schedules—an appealing opposite of burnout-heavy tech roles."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Strongly misaligned with a desire for elite prestige, top-tier new grad pay, and a fast, innovative tech culture. The agency is municipal government work, meaning slower tech culture, bureaucracy, and lower pay than big tech."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 7/10. Respected work-life balance with standard government hours (approx. 35-40 hours/week), though subject to crisis-response surges during public health emergencies."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: High. Civic and government roles typically maintain strict boundaries on hours, offering a sanctuary from the toxic burnout culture of big AI and tech startups."
   }
  },
  "nycm insurance": {
@@ -370578,48 +370671,136 @@
  "telus": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "078dbd6dac",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Prestige is high in the Canadian telecom market, scaling AI challenges, though not typically recognized as an elite globally renowned pure-play AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "Subscription-based telecommunications, enterprise IT solutions, and digital health services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ee56ab67ba",
+    "7520e8f77c"
+   ],
+   "value": "Estimated: Mission-driven, social, supportive, and team-oriented, focusing on leveraging world-class technology to help communities and prioritize employee health."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "Individual consumers, large enterprises, small businesses, and government and healthcare institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: CA$75,000 to CA$95,000 for entry-level software and data roles, reflecting standard market rates for large Canadian telecom."
   },
   "evidence_sha": "3737289627836a21",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784993329,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "Telecommunications and IT Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "078dbd6dac",
+    "1db9db9c4d",
+    "7520e8f77c"
+   ],
+   "value": "Candidates should probe the specific team structure to ensure it operates with the fast, innovative tech culture they desire rather than slow bureaucracy. It is vital to confirm the AI and data science role involves cutting-edge technical learning rather than legacy system maintenance."
+  },
+  "last_attempt_at": 1784993329,
   "last_evidence_at": 1784990945,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7520e8f77c",
+    "078dbd6dac"
+   ],
+   "value": "Primarily headquartered in Canada with a globalpresence, including remote and hybrid options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "078dbd6dac",
+    "ee56ab67ba"
+   ],
+   "value": "To leverage technology to improve the human experience, focusing on connectivity and community well-being."
+  },
   "name": "TELUS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d",
+    "078dbd6dac"
+   ],
+   "value": "Estimated: Moderate pace emphasizing thoughtful engineering over fast-paced, high-stakes tech moves; typically prioritizes process and stability over rapid iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "Wireless plans, home internet, TV entertainment, security systems, and digital health/IT services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "078dbd6dac",
+    "7520e8f77c"
+   ],
+   "value": "Estimated: 15 to 20 days of paid time off in addition to statutory holidays, typical for a major Canadian enterprise."
   },
+  "refresh_after": 1790177329,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d",
+    "078dbd6dac",
+    "7520e8f77c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "078dbd6dac",
+    "7520e8f77c"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though flexible policies and personal days likely allow for guaranteed time off around major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "Established, large-cap public enterprise."
   },
   "sources": [
    {
@@ -370663,14 +370844,50 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "078dbd6dac",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely to offer standard visa sponsorship for specialized, student, and entry-level technical roles to attract global talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac"
+   ],
+   "value": "TELUS is a major Canadian telecommunications company that provides wireless, data, internet, voice, health, and entertainment services. It makes money by selling subscription-based connectivity, software, and IT services to consumer, business, and government clients."
+  },
+  "synthesized_evidence_sha": "3737289627836a21",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "078dbd6dac",
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering and data science positions focusing on network infrastructure, digital platforms, and customer analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784990945,
   "web_search_url": "https://duckduckgo.com/?q=TELUS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "078dbd6dac",
+    "1db9db9c4d",
+    "7520e8f77c"
+   ],
+   "value": "TELUS offers a mission-driven environment that genuinely respects work-life balance through sane hours and flexible mobility options. While it may lack the startup-level speed of elite pure-play AI labs, it compensates with strong new-grad pay, stable learning opportunities in large-scale systems, and a culture strictly opposed to toxic, high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7520e8f77c",
+    "078dbd6dac"
+   ],
+   "value": "Estimated: Good to Excellent; known for flexible working environments and respecting personal time boundaries without toxic expectations."
   }
  },
  "telus health": {
