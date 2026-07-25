@@ -78979,11 +78979,15 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784902760,
+   "analyzed_at": 1784964527,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784964527,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -84136,13 +84140,33 @@
   ],
   "posted_at": 1784930847,
   "posting": {
-   "analyzed_at": 1784933777,
+   "analyzed_at": 1784964481,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. Citizen",
    "years_min": 0,
    "years_note": "0-2 years"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964481,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "must be a U.S. Citizen",
+    "years_min": 0,
+    "years_note": "0-2 years"
+   },
+   "attempts": 1,
+   "checked_at": 1784964481,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, bachelor's, new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -127543,8 +127567,9 @@
   "url": "https://edwards.wd5.myworkdayjobs.com/edwardscareers/job/USA-IRV-1442-AltonMIC/Associate-Analyst--Technical-Product-Owner_Req-48666"
  },
  "29ca8b566bbef9dc": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964505,
   "company": "NYCM Insurance",
   "description": "",
   "early_career_possible": false,
@@ -127562,6 +127587,11 @@
    "fetched": true,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964505,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -127573,7 +127603,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "fintech",
@@ -154191,10 +154222,14 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784951151,
+   "analyzed_at": 1784964528,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784964528,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -164648,13 +164683,33 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784871255,
+   "analyzed_at": 1784964497,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
    "years_min": 0,
    "years_note": "0–2 years"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964497,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only",
+    "years_min": 0,
+    "years_note": "0–2 years"
+   },
+   "attempts": 1,
+   "checked_at": 1784964497,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ exp, bachelors required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -165715,10 +165770,14 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784933777,
+   "analyzed_at": 1784964529,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784964529,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -177460,11 +177519,29 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784782030,
+   "analyzed_at": 1784964506,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964506,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "yes",
+    "sponsorship_note": "H1B Sponsorship"
+   },
+   "attempts": 1,
+   "checked_at": 1784964506,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, bachelor's required, new grad role.",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -209604,7 +209681,7 @@
   "url": "https://fa-esgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/23169"
  },
  "447c03a77cd5fe10": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Guardian Life",
   "description": "",
@@ -209622,7 +209699,7 @@
   ],
   "posted_at": 1784326371,
   "posting": {
-   "analyzed_at": 1784957169,
+   "analyzed_at": 1784964437,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown",
@@ -209631,7 +209708,7 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784957169,
+    "analyzed_at": 1784964437,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown",
@@ -209639,20 +209716,29 @@
     "years_note": "0–1 years"
    },
    "ai_deferred_at": 1784957169,
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784964437,
+   "degree_required": "phd",
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "PhD required, 1+ yr exp",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 82,
+  "score": 2,
   "score_reasons": [
    "base 5",
    "role:ai_ml +26",
    "trusted new-grad board priority +45",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: requires PhD (bachelor's profile) -60",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -222447,20 +222533,28 @@
   ],
   "posted_at": 1784729066,
   "posting": {
-   "analyzed_at": 1784957173,
+   "analyzed_at": 1784964454,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784957173,
+    "analyzed_at": 1784964454,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784957173,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784964454,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, bachelor's required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -246180,8 +246274,9 @@
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Autonomous-Systems-Mapping---New-College-Graduate-2026_JR2020838"
  },
  "5059700e89ffcb1b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964514,
   "company": "Optimum Media",
   "description": "",
   "early_career_possible": false,
@@ -246201,6 +246296,11 @@
    "years_min": 0,
    "years_note": "0–2 years"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964514,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -246211,7 +246311,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -269441,7 +269542,7 @@
   ],
   "posted_at": 1775686138,
   "posting": {
-   "analyzed_at": 1784957172,
+   "analyzed_at": 1784964445,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
@@ -269451,7 +269552,7 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784957172,
+    "analyzed_at": 1784964445,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "no",
@@ -269460,9 +269561,16 @@
     "years_note": "00 years of experience"
    },
    "ai_deferred_at": 1784957172,
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784964445,
+   "degree_required": "bachelors",
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with bachelor's required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -293452,12 +293560,11 @@
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 30,
+  "score": 29,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "new-grad evidence absent (below eligible roles)",
-   "posted <7d +1",
    "title matches your history +4"
   ],
   "score_version": 7,
@@ -308209,13 +308316,33 @@
   ],
   "posted_at": 1784930848,
   "posting": {
-   "analyzed_at": 1784937742,
+   "analyzed_at": 1784964472,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. Citizen",
    "years_min": 0,
    "years_note": "0-2 years"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964472,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "must be a U.S. Citizen",
+    "years_min": 0,
+    "years_note": "0-2 years"
+   },
+   "attempts": 1,
+   "checked_at": 1784964472,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years experience, bachelor's degree required, entry-level role.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -398435,7 +398562,7 @@
   "url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20275898"
  },
  "8331833a6a7a8c6a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Clarity Innovations, Inc.",
   "description": "",
@@ -398449,23 +398576,42 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784757617,
+   "analyzed_at": 1784964515,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964515,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only"
+   },
+   "attempts": 1,
+   "checked_at": 1784964515,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 80,
+  "score": 60,
   "score_reasons": [
    "base 5",
    "role:data_science +23",
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",
@@ -404834,8 +404980,9 @@
   "url": "https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---El-Segundo-CA/Hardware-Subsystems-Engineer----Associate-or-Experienced-_JR2026510994"
  },
  "85433e4fecd7f183": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964530,
   "company": "Amentum",
   "description": "",
   "early_career_possible": false,
@@ -404847,6 +404994,11 @@
    "US-DC-Washington, United States of America"
   ],
   "posted_at": 1784851200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964530,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -404857,7 +405009,8 @@
    "trusted new-grad board priority +45",
    "posted <72h +3",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -431725,13 +431878,33 @@
   ],
   "posted_at": 1784930844,
   "posting": {
-   "analyzed_at": 1784933777,
+   "analyzed_at": 1784964489,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. Citizen",
    "years_min": 0,
    "years_note": "0-2 years"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964489,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "must be a U.S. Citizen",
+    "years_min": 0,
+    "years_note": "0-2 years"
+   },
+   "attempts": 1,
+   "checked_at": 1784964489,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, B.S. required, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -478665,12 +478838,16 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784908352,
+   "analyzed_at": 1784964531,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
    "years_note": "0–2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784964531,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -478750,6 +478927,11 @@
    "fetch_note": "page loaded but did not contain usable job text",
    "fetch_status": "unreadable",
    "fetched": true
+  },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
   },
   "remote": false,
   "rules_v": 7,
@@ -484112,9 +484294,11 @@
     "fetch_status": "unreadable",
     "fetched": true
    },
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784964461,
    "fetch_note": "page loaded without enough usable posting text",
-   "fetch_status": "unreadable"
+   "fetch_status": "unreadable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 7,
@@ -506919,13 +507103,33 @@
   ],
   "posted_at": 1778537443,
   "posting": {
-   "analyzed_at": 1784850885,
+   "analyzed_at": 1784964462,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required",
    "years_min": 0,
    "years_note": "00 years of experience"
+  },
+  "quality": {
+   "_posting": {
+    "analyzed_at": 1784964462,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required",
+    "years_min": 0,
+    "years_note": "00 years of experience"
+   },
+   "attempts": 1,
+   "checked_at": 1784964462,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, bachelor's required, no experience needed.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -536873,8 +537077,9 @@
   "url": "https://jobs.smartrecruiters.com/SQexpetsLLC/95330473"
  },
  "b0b8630e0dc4d0cf": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964523,
   "company": "Morgan Stanley",
   "description": "",
   "early_career_possible": false,
@@ -536895,6 +537100,11 @@
    "years_min": 0,
    "years_note": "0-3+ years"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964523,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -536905,7 +537115,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -644599,8 +644810,9 @@
   "url": "https://jobs.ashbyhq.com/PointOne/e57df388-58d1-41b5-b388-6b4ad41a6c57"
  },
  "d3ef738f17d8b63d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964524,
   "company": "PNC",
   "description": "",
   "early_career_possible": false,
@@ -644618,6 +644830,11 @@
    "fetched": true,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964524,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -644628,7 +644845,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -682404,8 +682622,9 @@
   "url": "https://adtran.wd3.myworkdayjobs.com/adtran/job/Atlanta-GA/Software-Engineer-I_R005699"
  },
  "e0a63a31206f0c76": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964525,
   "company": "Altice USA",
   "description": "",
   "early_career_possible": false,
@@ -682425,6 +682644,11 @@
    "years_min": 0,
    "years_note": "0–2 years"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964525,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -682435,7 +682659,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -695897,8 +696122,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8355208002?gh_jid=8355208002"
  },
  "e49fff8a7acfe263": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784964526,
   "company": "Optimum Financial Group",
   "description": "",
   "early_career_possible": false,
@@ -695918,6 +696144,11 @@
    "years_min": 0,
    "years_note": "0–2 years"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784964526,
+   "live": false
+  },
   "remote": false,
   "rules_v": 7,
   "salary": "",
@@ -695928,7 +696159,8 @@
    "trusted new-grad board priority +45",
    "posted <7d +1",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "other",
@@ -715318,10 +715550,14 @@
   ],
   "posted_at": 1784851200,
   "posting": {
-   "analyzed_at": 1784933777,
+   "analyzed_at": 1784964532,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784964532,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 7,
@@ -774405,20 +774641,28 @@
   ],
   "posted_at": 1784758281,
   "posting": {
-   "analyzed_at": 1784961257,
+   "analyzed_at": 1784964428,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784957168,
+    "analyzed_at": 1784964428,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784961257,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784964428,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, bachelor's required, data focus.",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,

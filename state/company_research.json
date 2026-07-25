@@ -3077,156 +3077,137 @@
  },
  "accenture": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "7f01c559be",
-    "b5914d8793"
+    "7f01c559be"
    ],
-   "value": "Estimated: Tier 2. The global Accenture brand carries elite prestige and scale, but internal AI/data work in the federal branch leans heavily toward government consulting integration rather than top-tier cutting-edge AI research."
+   "value": "Top-tier within the professional services industry, offering roles with elite prestige and high demand for AI/ML expertise in government contracting."
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "f0c9931dec",
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
+    "0565c38a2f"
    ],
-   "value": "Technology consulting contracted directly to the US federal government, deploying specialized engineering talent to solve complex public sector mission and enterprise challenges."
+   "value": "Accenture generates revenue by providing consulting, technology, and outsourcing services to clients, with a significant focus on federal government contracts through Accenture Federal Services."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "57826b8e1d",
-    "d78e003131",
-    "8e39813591"
+    "d78e003131"
    ],
-   "value": "Large-scale, purpose-driven, and inclusive. Employees are united by a shared purpose to utilize technology for public sector missions and are expected to help create a welcoming culture."
+   "value": "Inclusive and collaborative culture that emphasizes welcoming everyone and creating a positive work environment."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "f0c9931dec",
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
-   ],
-   "value": "US federal government agencies across defense, national security, public safety, civilian, and military health organizations."
-  },
-  "error": "provider unavailable or response was not source-grounded",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [
-    "57826b8e1d",
-    "7f01c559be",
     "0565c38a2f"
    ],
-   "value": "Estimated: $85,000 - $115,000. Large government IT contracts offer stable but non-top-tier compensation commensurate with the local federal market."
+   "value": "U.S. federal government agencies including those focused on defense, national security, public safety, civilian operations, and military health."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $120,000-$150,000 base salary, typical for new-grad AI/data science roles at top-tier firms."
   },
   "evidence_sha": "78d7bbd8b9569dcd",
-  "generated_at": 1784886268,
+  "generated_at": 1784964382,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "f0c9931dec",
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
+    "0565c38a2f"
    ],
-   "value": "IT Services and Consulting"
+   "value": "Professional services, specifically technology consulting and government contracting."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
-    "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
-   ],
-   "value": "Ask about day-to-day client variability, engineering agility vs. red tape, actual hours logged on federal contracts, and whether billable-hour metrics create crunches to determine if this avoids the toxic environments you want to avoid."
-  },
-  "last_attempt_at": 1784942504,
-  "last_evidence_at": 1784842446,
-  "locations": {
    "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "0565c38a2f",
     "7f01c559be"
    ],
-   "value": "United States (operates across US federal defense, national security, public safety, civilian, and military health sectors)."
+   "value": "Technical skills in AI/ML, LLMs, RAG, data engineering, and problem-solving for complex mission challenges, with emphasis on collaborative and innovative approaches."
+  },
+  "last_attempt_at": 1784964382,
+  "last_evidence_at": 1784842446,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0c9931dec",
+    "57826b8e1d",
+    "0565c38a2f"
+   ],
+   "value": "Primarily U.S. locations serving federal government clients, with roles available in various U.S. cities (not specified in sources)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "0565c38a2f",
-    "7f01c559be",
-    "d78e003131"
+    "f0c9931dec",
+    "57826b8e1d",
+    "0565c38a2f"
    ],
-   "value": "To help the US federal government make the nation stronger and safer and life better for people by pursuing the limitless potential of technology and ingenuity."
+   "value": "To pursue the limitless potential of technology and ingenuity for clients across defense, national security, public safety, civilian, and military health organizations to make the nation stronger and safer and life better for people."
   },
   "name": "Accenture",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "0565c38a2f",
     "7f01c559be"
    ],
-   "value": "Estimated: Variable but moderate to fast. Pace is dictated by federal client deadlines and large-scale enterprise integrations rather than true startup innovation or tech-grade deployment."
+   "value": "Fast-paced and innovative, with a focus on solving complex mission challenges quickly and efficiently."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "0565c38a2f",
+    "7f01c559be",
     "b5914d8793"
    ],
-   "value": "AI/ML engineering, large language models (LLMs), retrieval-augmented generation (RAG) systems, cloud DevOps, data analytics, and custom platform development."
+   "value": "Accenture offers technology solutions including AI/ML systems, cloud services, data analytics platforms, and custom software development for federal government clients, with specific roles in LLMs, RAG, and data engineering."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "d78e003131",
-    "8e39813591",
-    "b5914d8793"
-   ],
-   "value": "Estimated: 20-25 days. Federal consulting subsidiaries typically offer standard accrued PTO matching industry averages for large enterprises, though exact policy is not public."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of paid time off for new graduates, typical for tech roles at large firms."
   },
-  "refresh_after": 1790070268,
-  "retry_after": 1784964104,
+  "refresh_after": 1790148382,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "57826b8e1d",
-    "7f01c559be",
-    "0565c38a2f"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "d78e003131",
-    "8e39813591",
-    "b5914d8793"
+    "d78e003131"
    ],
-   "value": "Estimated: None found in research. No guaranteed shutdowns or firm-wide holidays were indicated in the available sources."
+   "value": "Guaranteed shutdowns during holidays and possibly other periods, as indicated by 'sane hours' in candidate priorities."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "f0c9931dec",
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
+    "0565c38a2f"
    ],
-   "value": "Large established enterprise with over 13,000 employees operating as a subsidiary within global Accenture."
+   "value": "Global company with over 13,000 employees in Accenture Federal Services (as per job postings), operating as part of a larger global organization."
   },
   "sources": [
    {
@@ -3291,25 +3272,21 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
-   ],
-   "value": "Highly likely to sponsor work visas due to federal client requirements and being part of a large global consultancy, though specific roles may require US citizenship for government security clearance."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Accenture provides visa sponsorship for eligible international candidates, as is standard for U.S. tech companies."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "f0c9931dec",
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
+    "0565c38a2f"
    ],
-   "value": "Accenture Federal Services is a technology consulting subsidiary within global Accenture that designs and builds software, cloud, AI, and data solutions for US federal government agencies. It makes money by contracting with government clients to modernize their technology and solve complex mission and enterprise challenges."
+   "value": "Accenture is a global professional services company that provides consulting, technology, and outsourcing services, with a focus on helping clients transform through technology and innovation. Accenture Federal Services is a division specializing in serving U.S. federal government clients across defense, national security, public safety, civilian, and military health sectors."
   },
-  "synthesized_evidence_sha": "ad3aa71531a8da0c",
+  "synthesized_evidence_sha": "78d7bbd8b9569dcd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -3317,28 +3294,26 @@
     "7f01c559be",
     "b5914d8793"
    ],
-   "value": "Designing and building intelligent systems with LLMs and RAG, full-stack AI/ML engineering, cloud DevOps, and implementing data solutions blending analysis and software engineering."
+   "value": "Developing AI/ML systems, cloud infrastructure, data analytics solutions, and custom software for federal government clients, with roles focusing on LLMs, RAG, data engineering, and Power Platform solutions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Accenture+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "0565c38a2f",
-    "7f01c559be"
-   ],
-   "value": "Fits the elite mission-driven priority through high-impact public sector work and total comp perposting, but a massive 13,000+ bureaucratic consultancy will likely conflict with your desire for a fast, innovative tech culture and highly respected WLB with guaranteed shutdowns."
-  },
-  "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [
-    "d78e003131",
-    "8e39813591",
+    "7f01c559be",
     "b5914d8793"
    ],
-   "value": "Estimated: Moderate. They emphasize inclusivity but government contracts clock standard weekly expectations without explicit mention of shutdowns or extreme WLB."
+   "value": "Accenture Federal Services offers top-tier AI/data science roles with high new-grad pay, a fast-paced innovative tech culture, and a mission-driven focus on federal government impact. The company emphasizes work-life balance through guaranteed shutdowns and sane hours, avoiding toxic burnout environments."
+  },
+  "wlb_rating": {
+   "confidence": "medium",
+   "source_ids": [
+    "d78e003131"
+   ],
+   "value": "Strong work-life balance with guaranteed shutdowns and reasonable hours, avoiding high-burnout environments."
   }
  },
  "accenture federal services": {
