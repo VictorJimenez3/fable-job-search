@@ -14112,52 +14112,130 @@
  "alegeus": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Tier 3 (Niche Finance/Health Tech). AI and Data Science roles focus on transaction processing, compliance, and operational analytics rather than cutting-edge ML research."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "B2B SaaS and payment processing platform licensing for healthcare benefits administration."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Mission-driven and collaborative. Focused on optimizing healthcare outcomes through fintech, with a stable, mature engineering culture post-acquisition by Optum."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "Employers, health plans, and financial institutions managing participant benefits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $90,000 - $115,000 base salary. Modest by big-tech AI standards but highly competitive for the healthcare fintech sector and local markets."
   },
   "evidence_sha": "214a93231fa7bb0e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784954338,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784950750,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "Healthcare Fintech / Benefits Administration"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Candidates should emphasize their drive for fast, innovative technical execution and their eagerness to learn and scale software quickly. In interviews, probe the specific team's deployment cadence and daily engineering culture to ensure the environment is genuinely fast-paced and innovative rather than slowed by traditional enterprise healthcare bureaucracy."
+  },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784942195,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7471e4897c"
+   ],
+   "value": "Headquarters in Woburn, MA, with a presence in Dallas, TX and Salt Lake City, UT."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "To optimize the business of healthcare and reimbursements through innovative fintech solutions."
+  },
   "name": "Alegeus",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate. The environment blends fintech/healthcare compliance constraints with agile SaaS delivery, avoiding high-burnout tech hours while maintaining steady deployment pressure."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "SaaS platforms and payment solutions for consumer-directed healthcare benefits, including health savings accounts (HSAs), flexible spending accounts (FSAs), and health reimbursement arrangements (HRAs)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for an established enterprise tech firm, alongside standard paid holidays."
   },
-  "retry_after": 1784950990,
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though major holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b9c0f2a600"
+   ],
+   "value": "Acquired enterprise-stage company (acquired by Optum Financial Services)."
   },
   "sources": [
    {
@@ -14201,14 +14279,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly found in the provided sources; standard enterprise tech sponsorship policies likely apply."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b9c0f2a600",
+    "7471e4897c"
+   ],
+   "value": "Alegeus is a healthcare fintech company that provides technology platforms for consumer-directed healthcare and benefits administration. It makes money by licensing its SaaS solutions to employers, health plans, and financial institutions to manage health savings accounts and other tax-advantaged benefit accounts."
+  },
+  "synthesized_evidence_sha": "214a93231fa7bb0e",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7471e4897c"
+   ],
+   "value": "Development of SaaS platforms, payment processing systems, and integrations for healthcare benefits administration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942195,
   "web_search_url": "https://duckduckgo.com/?q=Alegeus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Alegeus offers the chance to work on high-volume payment processing and secure data systems in healthcare fintech. While it may not carry the FAANG-level prestige of elite AI firms, it provides an accelerated learning environment for new grads to build scalable, compliant tech without the typical big-tech burnout, supported by sane hours and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Typical of established enterprise healthcare tech companies, offering sane working hours and respect for personal time over high-stress crunches."
   }
  },
  "algo1": {
@@ -79012,41 +79122,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High marquee prestige due to founding leadership, though specialized AI/Data Science tier is less publicly defined than big-tech."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d69420af74",
+    "1ae076a5c1"
+   ],
+   "value": "Employs a Meta-like redirect architecture and uses job boards to recruit talent for long-term growth, building infrastructure and capabilities to support its targeted innovators."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Integrity, optimism, urgency, and innovation-focused at the intersection of mission and scale."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Scientists, educators, and innovators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$160k base (competitive tech philanthropy rates)."
   },
   "evidence_sha": "fa62e30de7633950",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784954338,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784954160,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b1a54f6efa",
+    "1ae076a5c1"
+   ],
+   "value": "Philanthropy / Non-Profit Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Emphasize your ability to drive fast-paced innovation and rapid technical learning, mirroring their urgency and respect for work-life balance. Show how you can build scalable infrastructure and capabilities without high burnout, matching their values of integrity and optimism."
+  },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784951429,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ae076a5c1",
+    "e6bc61c605"
+   ],
+   "value": "Active real estate portfolio and physical environments with technical job postings surfaced via greenhouse.io."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "To empower scientists, educators, and innovators to tackle some of the most complex challenges of our time."
+  },
   "name": "Chan Zuckerberg Initiative",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and mission-driven, valuing urgency and innovation while avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Infrastructure, partnerships, and capabilities that support scientists, educators, and innovators tackling complex societal challenges."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous standard accrued PTO plus holidays."
   },
-  "retry_after": 1784954280,
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79056,7 +79223,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Long-term growth stage, focused on scaling physical environments and portfolio facilities."
   },
   "sources": [
    {
@@ -79120,14 +79294,43 @@
     "url": "https://job-boards.greenhouse.io/chanzuckerberginitiative/jobs/7990919"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Sponsors and partners are engaged through physical environments and workplace services designed to effectively support the organization's mission."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "CZI is an organization operating at the intersection of innovation and scale, building infrastructure, partnerships, and capabilities that allow scientists, educators, and innovators to tackle complex challenges. Their teams build support systems for these professionals with urgency, integrity, and optimism."
+  },
+  "synthesized_evidence_sha": "fa62e30de7633950",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "Building infrastructure and workplace services, including shaping physical environments and facilities operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784951429,
   "web_search_url": "https://duckduckgo.com/?q=Chan+Zuckerberg+Initiative+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1ae076a5c1"
+   ],
+   "value": "CZI offers a mission-driven environment that accelerates technical learning for tackling complex challenges with urgency. It aligns with your priority for high-impact AI and data science work that balances elite prestige with a fast, innovative culture, helping you grow without bureaucratic slowdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Sane hours with a culture emphasizing optimism and integrity, avoiding toxic environments."
   }
  },
  "chaos industries": {
@@ -125347,48 +125550,134 @@
  "elevate": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d",
+    "9b6b3319bb"
+   ],
+   "value": "Estimated: Tier 2 or 3. While hiring software engineers, the legal/enterprise focus may not provide the elite, cutting-edge AI/Data Science prestige found at top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "B2B software and service provisioning for legal and commercial sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "Estimated: Corporate-tech blend. Likely mission-driven around client success, but the degree of technical innovation vs. bureaucratic slow-down should be assessed by the candidate."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "Commercial businesses, corporations, and legal teams requiring specialized operational support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base. Reflects competitive new grad tech compensation for a growing enterprise software firm."
   },
   "evidence_sha": "c25985c7b4d7400f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784954338,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "Legal Services and Enterprise Software."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should probe the exact technical stack to ensure it meets their AI/Data Science learning goals, and ask detailed questions about work-life balance policies, actual hours, and team culture to ensure it avoids the bureaucratic or high-burnout environments they want to avoid."
+  },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784954159,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0556db2a04",
+    "9b6b3319bb",
+    "0a7efb44dc"
+   ],
+   "value": "Operates under domain structures suggesting a presence in the US and potentially India (Dach/EN redirect)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "To provide specialized operational platforms and services that support commercial and legal enterprises."
+  },
   "name": "Elevate",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to fast. As a growing tech company actively hiring new grads, the culture is likely focused on innovation, but enterprise clients may introduce structured processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "Enterprise software and operational platforms tailored for commercial and legal workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Standard corporate package (15-20 days annually). Exact policy not public in sources."
   },
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Unknown. The candidate should verify if the company offers guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Actively recruiting for 2026 Software Engineer New Grad roles, indicating a growing engineering team."
   },
   "sources": [
    {
@@ -125432,14 +125721,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9b6b3319bb",
+    "0556db2a04"
+   ],
+   "value": "Elevate operates within the professional legal and commercial services space. The company makes money by providing specialized software and operational platforms to support enterprise workflows."
+  },
+  "synthesized_evidence_sha": "c25985c7b4d7400f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "9b6b3319bb"
+   ],
+   "value": "Software engineering roles focusing on enterprise platform development, likely involving backend, frontend, or full-stack development to support commercial and legal workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784954159,
   "web_search_url": "https://duckduckgo.com/?q=Elevate+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Aligns with the candidate's desire for high new-grad pay and a fast-paced tech culture, though candidates should verify if the enterprise focus matches their expectations for elite AI/Data Science prestige and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to Good. Typical of enterprise software companies, but actual hours and toxic/burnout avoidance should be verified."
   }
  },
  "elevenlabs": {
@@ -293615,52 +293937,125 @@
  "postscript": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: Mid-tier startup prestige. Elite YC pedigree but focused on analytics engineering rather than deep AI research."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Likely a SaaS model offering tiered software subscriptions with usage-based pricing for SMS messaging."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Remote-first, growth-oriented, and backed by top-tier VC firms with an emphasis on scaling and impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "E-commerce brands and retail merchants seeking to scale their direct messaging and marketing campaigns."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary, reflecting competitive tech market rates for remote analytics engineers."
   },
   "evidence_sha": "fca929389ffa5709",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784954338,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784950750,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "E-commerce marketing technology and SaaS."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Prepare to discuss how you build trusted, scalable data assets and leverage analytics to drive company-wide decisions. Be ready to ask detailed questions about the engineering team's on-call expectations and remote synchronization to ensure the culture actually respects your guaranteed shutdowns and sane hours."
+  },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784938028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Fully remote across the United States for all positions."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "To build trusted and insightful data assets that improve decision making at all levels of the company."
+  },
   "name": "Postscript",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: Fast-paced and high-leverage, typical of a rapidly scaling YC startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "SMS marketing platforms and trusted data analytics assets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for a remote tech startup at this stage."
   },
-  "retry_after": 1784950990,
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: Likely offers standard paid holidays, though formal week-long company-wide shutdowns are not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Backed by Greylock and Y Combinator, growing rapidly with fully remote operations established in 2018."
   },
   "sources": [
    {
@@ -293724,14 +294119,45 @@
     "url": "https://job-boards.greenhouse.io/postscript/jobs/8649676002"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Not explicitly mentioned in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Postscript is a fully remote technology company that provides SMS marketing and analytics software for e-commerce brands. The company makes money by charging merchants a subscription and usage-based fee to power their text message marketing campaigns, automations, and customer data analytics."
+  },
+  "synthesized_evidence_sha": "fca929389ffa5709",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "High leverage data and analytics engineering functions, including building scalable data assets and improving decision-making infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784938028,
   "web_search_url": "https://duckduckgo.com/?q=Postscript+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "This role offers the high-impact, fast-paced innovation of a Y Combinator-backed startup without the typical corporate bureaucracy. It aligns with your priority for accelerated technical learning and high new-grad pay, while the fully remote setup provides the foundation for better personal boundaries and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d9039b9a49"
+   ],
+   "value": "Estimated: Moderate. Fully remote flexibility helps, but high-impact scaling roles in startups can occasionally demand heavy hours."
   }
  },
  "power3 solutions": {
@@ -309169,106 +309595,101 @@
  },
  "realtor com": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "ada89ec905"
-   ],
-   "value": "Tier 1 (Elite): Stated 100% AI adoption goal, consumer-scale ML deployment, dedicated AI leadership, and active investment in AI-powered consumer experiences place it among top industry practitioners."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tier 2/3. While recognized in real estate technology, AI roles here may not carry the same elite prestige as top-tier dedicated AI research labs or FAANG."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a5ed6e4033"
+    "2239fd78d4"
    ],
-   "value": "Lead generation marketplace: sells advertising and lead packages to real estate agents (Premier Agent program), mortgage lenders, and rental professionals. Additional revenue from display advertising and partner referrals. Free for consumers."
+   "value": "The platform generates revenue by providing a marketplace that connects buyers and renters to real estate agents and partners, likely supplemented by advertising and lead generation fees."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "2239fd78d4",
     "f0a6f91d7b",
-    "ada89ec905"
+    "a5ed6e4033"
    ],
-   "value": "Engineering-centric, mission-aligned, and pragmatic. 'Paved Path' philosophy shows respect for developer time. Cross-functional collaboration emphasized. AI-forward but grounded in consumer value. Less hype, more execution than typical Bay Area tech."
+   "value": "A collaborative environment that promotes a culture of experimentation, learning, and leveraging the best tools. Engineers have a high-impact opportunity to build internal tools and autonomously identify new technologies."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "2239fd78d4",
     "a5ed6e4033"
    ],
-   "value": "Primary customers are home buyers, sellers, and renters seeking properties and agent connections. Revenue customers are real estate agents and brokers (via Premier Agent advertising), mortgage lenders, and rental property managers purchasing leads and advertising."
+   "value": "Home buyers, renters, and sellers looking for property connections, as well as real estate agents and teams seeking tools to manage listings and grow their businesses."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $130k-$155k base + 10-15% target bonus + RSUs ($30k-$50k/yr vesting). Total comp ~$170k-$210k. Competitive with Tier 1 Bay Area but below FAANG peaks."
+   "value": "Estimated: $110,000 - $140,000 base salary, competitive for mid-tier tech firms but potentially lower than elite AI labs."
   },
   "evidence_sha": "53f3142db7f07e1e",
-  "generated_at": 1784897083,
+  "generated_at": 1784954338,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a5ed6e4033"
+    "2239fd78d4"
    ],
-   "value": "Real Estate Technology (PropTech) / Online Marketplace"
+   "value": "Real Estate Technology / Proptech"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "f0a6f91d7b",
-    "ada89ec905"
-   ],
-   "value": "Expect deep technical assessment on distributed systems, ML/AI application (not just research), and cloud architecture. Behavioral focus on cross-functional partnership, developer experience empathy, and mission alignment. Prepare for system design at consumer scale and questions on balancing speed with reliability in a regulated marketplace."
-  },
-  "last_attempt_at": 1784950750,
-  "last_evidence_at": 1784937742,
-  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Headquarters: Santa Clara, CA. Major offices: Austin, TX; Denver, CO; New York, NY. Remote/hybrid options common for engineering roles."
+   "value": "Assess whether the day-to-day reality of the engineering team matches the supplied sources which describe a culture of experimentation and continuous learning; verify this by asking about project timelines and decision-making speed. Determine if the expected new-grad pay is at a competitive tier appropriate for the role and location, and ensure the team implementation of work-life balance actually respects your personal time and sane working hours."
+  },
+  "last_attempt_at": 1784954338,
+  "last_evidence_at": 1784937742,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "f0a6f91d7b",
-    "a5ed6e4033",
-    "ada89ec905"
+    "a5ed6e4033"
    ],
-   "value": "Empower more people to find their way home by breaking barriers to entry, making the right connections, and building confidence through expert guidance."
+   "value": "To empower more people to find their way home by breaking barriers to entry, making the right connections, and building confidence through expert guidance."
   },
   "name": "Realtor.com",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "f0a6f91d7b",
-    "ada89ec905"
+    "2239fd78d4",
+    "f0a6f91d7b"
    ],
-   "value": "Estimated: Fast but sustainable. 'Ship faster' platform mandate and AI urgency drive velocity, but mature product and platform investment reduce firefighting. Not a 'move fast and break things' culture; more 'paved path' enabled speed."
+   "value": "Estimated: Moderate. The company emphasizes pushing boundaries and shipping fast, cost-effectively, and securely on AWS, but the pace may slow down during typical enterprise software development cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f0a6f91d7b",
-    "a5ed6e4033",
-    "ada89ec905"
+    "2239fd78d4",
+    "f0a6f91d7b"
    ],
-   "value": "Core products include the Realtor.com website and mobile apps for home search, agent matching tools, mortgage calculators, rental listings, and AI-powered consumer experiences. Internal platforms include a 'Paved Path' developer experience framework and cloud infrastructure on AWS."
+   "value": "A consumer-facing property search portal for buying, renting, and selling journeys, alongside best-in-class tools, third-party integrations, and automation software for real estate agents."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. Typical for large tech subsidiaries; no public policy details found."
+   "value": "Estimated: 15-20 days of standard PTO annually, typical for a tech company of this size, though exact policy is not found in the sources."
   },
-  "refresh_after": 1790081083,
-  "retry_after": 1784950990,
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -309278,12 +309699,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns publicized. Some teams may observe summer/winter slowdowns informally."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; standard holiday observances likely."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Large, established public subsidiary (Move, Inc. owned by News Corp). ~1,000-2,000 employees at Realtor.com specifically; mature stage with stable revenue."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -309348,48 +309769,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Likely sponsors H-1B and transfers for specialized engineering/AI roles given size and tech focus; green card sponsorship typical for senior roles. No public policy details found."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f0a6f91d7b",
-    "a5ed6e4033",
-    "ada89ec905"
+    "2239fd78d4",
+    "a5ed6e4033"
    ],
-   "value": "Realtor.com is a leading online real estate marketplace that connects home buyers, sellers, and renters with real estate professionals and listings. It operates as a subsidiary of Move, Inc. (owned by News Corp) and serves as the official website of the National Association of Realtors."
+   "value": "Realtor.com is a digital real estate marketplace that connects consumers with homes for sale or rent, while providing software tools for real estate agents to manage and grow their businesses. The company monetizes by connecting buyers and sellers to real estate professionals and offering advertising and software services to agents and partners."
   },
-  "synthesized_evidence_sha": "26f2827e90ba8c26",
+  "synthesized_evidence_sha": "53f3142db7f07e1e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "2239fd78d4",
     "f0a6f91d7b",
-    "a5ed6e4033",
-    "ada89ec905"
+    "a5ed6e4033"
    ],
-   "value": "Scalable consumer-facing web/mobile applications, real-time search and recommendation systems, ML/AI for personalization and lead scoring, cloud platform engineering (AWS), developer productivity tooling ('Paved Path'), data pipelines, and AI-powered consumer experiences with stated goal of 100% AI adoption."
+   "value": "Engineers treat internal developer experience as a product, building a 'Paved Path' to allow teams to ship faster on AWS. The tech team participates in researching and developing scalable applications, leveraging new technologies, tools, and automation to solve problems efficiently."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679535,
   "web_search_url": "https://duckduckgo.com/?q=Realtor.com+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "f0a6f91d7b",
-    "a5ed6e4033",
-    "ada89ec905"
-   ],
-   "value": "Realtor.com offers a rare combination: a top-tier AI mandate (100% AI adoption goal) at a profitable, mission-driven marketplace with consumer-scale impact. The 'Paved Path' platform investment signals genuine engineering-first culture, while the mission of helping people find homes provides meaningful work without the burnout typical of ad-tech or hyper-growth startups."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI and data science roles here will likely support matching algorithms, property valuations, and search relevance, critical to the company's core real estate transaction business. The position validates your ability to apply cutting-edge AI in a commercial, consumer-facing environment, which provides excellent learning opportunities without requiring an inherently toxic crunch culture, assuming the company's stated engineering values are lived out in practice, and offers competitive compensation"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "f0a6f91d7b"
+    "2239fd78d4"
    ],
-   "value": "Estimated: 4/5. Explicit platform investment to reduce toil, mature org with defined processes, and mission-driven culture suggest strong boundaries. No guaranteed shutdowns publicized, but low burnout reputation in PropTech."
+   "value": "Estimated: Moderate to Good. The company promotes a culture of learning and leverages tools to solve problems faster, which may reduce stress, though specific policies are not detailed in the sources."
   }
  },
  "red bull": {
@@ -325599,22 +326015,116 @@
   }
  },
  "sailpoint": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Regional/Established Tech. As an enterprise security specialist, it may not match FAANG-tier AI prestige or new-grad pay, but offers strong, respected domain expertise."
+  },
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional and mission-driven. The culture likely balances technical innovation with the discipline required for enterprise-grade compliance and security."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $120,000 - $150,000 total compensation. Highly competitive in Austin, TX but slightly below top-tier AI/FAANG extremes."
+  },
   "evidence_sha": "30ba31496fbcbe02",
-  "generated_at": 1784848346,
+  "generated_at": 1784954338,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784950750,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should probe the specific team's use of AI and data science in identity threat detection to ensure the role meets the desire for fast, innovative tech culture. It is also vital to ask about the team's engineering pace and work-life balance directly to confirm guaranteed shutdowns and sane hours are actively supported without bureaucracy."
+  },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784848349,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
   "name": "SailPoint",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Moderate. Enterprise security software development cycles typically prioritize stability and compliance, which can lean toward more methodical pacing rather than a rapid startup rhythm."
+  },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
   "prompt_v": 2,
-  "retry_after": 1784950990,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 20-25 days. Standard for mature enterprise tech companies."
+  },
+  "refresh_after": 1790138338,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Standard major holidays. Guaranteed global company-wide shutdowns are less common outside of top-tier consumer tech firms."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
   "sources": [
    {
     "content_sha": "35f1aee2ad38d195",
@@ -325657,10 +326167,46 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c"
+   ],
+   "value": "Information not available in provided sources; redirect links only."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "597a17786c",
+    "7db32d6a68",
+    "1db9db9c4d"
+   ],
+   "value": "SailPoint is an enterprise cybersecurity company that focuses on identity governance, ensuring employees and systems have the right access to the right resources. While specific business model details were unavailable in the provided sources which only contained redirect links, SailPoint canonically sells its identity security platform as a service to large enterprises."
+  },
+  "synthesized_evidence_sha": "30ba31496fbcbe02",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "SailPoint is actively hiring for 2026 Software Engineer New Grad roles, as indicated by its inclusion in monitored new-grad job postings."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848349,
-  "web_search_url": "https://duckduckgo.com/?q=SailPoint+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=SailPoint+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "SailPoint operates in the high-impact identity security space, which offers excellent technical learning velocity through solving complex, distributed systems and security challenges. The company's established enterprise footprint provides a stable, mission-driven environment that favors sustainable engineering practices over high-burnout crunch."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Good. Mature cybersecurity firms often emphasize sustainable hours to retain talent, though many enterprise companies lack formal, guaranteed shutdown periods."
+  }
  },
  "salesforce": {
   "ai_ds_prestige_tier": {
@@ -369030,37 +369576,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Academic niche). Prestige is domain-specific to clinical or institutional research rather than elite tech industry standards."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Higher education institution funded by tuition, government grants, and clinical revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, mission-driven, and structured. Culture leans towards public sector bureaucracy rather than fast startup agility."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Students and lifelong learners seeking higher education, as well as healthcare patients utilizing university clinical facilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $75,000. Academic and healthcare institutional data roles typically pay significantly less than top-tier tech companies."
   },
   "evidence_sha": "cf309f73276abdbc",
+  "generated_at": 1784954338,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Higher Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss how to optimize implementation strategies and ensure data integrity in healthcare datasets. Also inquire about team structure to gauge how much fast innovation is actually tolerated versus typical university bureaucracy."
   },
+  "last_attempt_at": 1784954338,
   "last_evidence_at": 1784951430,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Main campus located in Philadelphia, Pennsylvania."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "To provide broad access to an excellent higher education and to create new knowledge that improves the human condition."
+  },
   "name": "Temple University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. University environments typically prioritize structured academic governance over fast-paced innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "def9fb0f6b"
+   ],
+   "value": "Academic degree programs, clinical healthcare services, and data-driven research initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. University staff often enjoy generous holiday schedules and time-off accrual policies."
   },
+  "refresh_after": 1790138338,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -369070,7 +369670,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holiday closures. Universities typically observe winter holidays and occasional state holidays with administrative shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Large public university with multiple campuses and a broad network of clinical and research facilities."
   },
   "sources": [
    {
@@ -369124,14 +369731,39 @@
     "url": "https://jobright.ai/jobs/info/6a6416348d536034496058b4?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "45c64c7960"
+   ],
+   "value": "Temple University is a public research university that provides undergraduate and graduate education. It generates revenue through tuition, grants, and sponsored research programs."
+  },
+  "synthesized_evidence_sha": "cf309f73276abdbc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "def9fb0f6b"
+   ],
+   "value": "Roles involve analyzing healthcare data, identifying trends, optimizing implementation strategies, and creating data visualizations using SQL, Python, and Tableau."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784951430,
   "web_search_url": "https://duckduckgo.com/?q=Temple+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "May appeal to candidates seeking a mission-driven environment with work-life balance, but likely falls short of top-tier elite prestige or high new-grad tech compensation. The culture is usually slower and more bureaucratic than fast-paced innovative tech firms, which may not align with rapid career acceleration goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. Academic and clinical data roles generally maintain regular office hours with minimal mandate for overtime."
   }
  },
  "tempus": {
