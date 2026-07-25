@@ -18842,7 +18842,7 @@
    "value": "Top-tier, recognized globally for AI and data science innovation across AWS, retail logistics, and hardware labs."
   },
   "aliases": [],
-  "attempts": 39,
+  "attempts": 40,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -18866,7 +18866,7 @@
    ],
    "value": "General consumers for retail goods and digital services, as well as enterprise businesses and government agencies requiring cloud computing and specialized secured infrastructure."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -18894,7 +18894,7 @@
    "source_ids": [],
    "value": "The candidate should rigorously interview the team and manager to gauge the specific team's on-call schedule, pace expectations, and operational load, ensuring a fast innovative culture without dipping into the toxic bureaucracy or high-burnout hours they are avoiding."
   },
-  "last_attempt_at": 1784848346,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951429,
   "locations": {
    "confidence": "high",
@@ -18935,6 +18935,7 @@
    ],
    "value": "Estimated: Standard corporate policy offering 10-15 days of vacation for new graduates, plus paid sick leave."
   },
+  "retry_after": 1784975760,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19026,7 +19027,7 @@
    ],
    "value": "Amazon has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -26434,51 +26435,44 @@
  },
  "anthropic": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "a7c5740a80",
-    "a34e5fe949"
+    "382dedb75b"
    ],
-   "value": "Top-tier AI research firm focused on frontier models, interpretability, and safety."
+   "value": "Estimated: Top-tier. Anthropic is recognized as a leading AI safety lab developing frontier models like Claude, offering elite prestige comparable to other major AI research institutions."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a2829d49fd",
-    "09eab00c33"
+    "12bda69398"
    ],
-   "value": "Monetizes advanced AI models through enterprise partnerships and API usage, while funding foundational research in AI safety and scaling infrastructure."
+   "value": "Model monetization and enterprise product partnerships, shaping business cases and product economics for AI deployments in priority industries."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "a2829d49fd",
-    "a7c5740a80"
+    "304abdee1d",
+    "12bda69398"
    ],
-   "value": "A collaborative group of committed researchers, engineers, policy experts, and business leaders focused on AI safety and responsible scaling."
+   "value": "A quickly growing, collaborative group of researchers, engineers, policy experts, and business leaders with significant creative license to explore new interaction patterns rather than just optimizing existing ones."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "09eab00c33"
+    "12bda69398"
    ],
-   "value": "Millions of end-users and enterprise partners who interact with and build upon their AI systems, as well as internal stakeholders relying on risk management frameworks."
+   "value": "Enterprise clients and priority industries adopting AI for complex operational workflows."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419",
-    "a34e5fe949"
-   ],
-   "value": "Estimated: $200,000 - $350,000+ total compensation, reflective of elite-tier AI research labs competing for top new-grad talent."
+   "source_ids": [],
+   "value": "Estimated: $250,000 - $350,000+ total compensation. Top-tier AI labs competing for elite new-grad talent typically offer highly competitive base salaries and equity packages."
   },
   "evidence_sha": "ae281f04ea15fcdd",
-  "generated_at": 1784848346,
+  "generated_at": 1784954160,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -26487,62 +26481,63 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a2829d49fd",
-    "a34e5fe949"
+    "382dedb75b",
+    "304abdee1d"
    ],
-   "value": "Artificial Intelligence Research and Development"
+   "value": "Artificial Intelligence Research and Development."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a7c5740a80"
+    "382dedb75b",
+    "304abdee1d"
    ],
-   "value": "Expect interviews to evaluate your ability to handle rapid technical scaling, AI safety principles, and infrastructure reliability. Highlight your motivation for mission-driven work, elite technical aptitude, and how you thrive in a fast, innovative culture over rigid bureaucracy."
+   "value": "Candidates should highlight significant creative license and hands-on LLM projects that demonstrate the ability to handle novel, complex tasks. The interview will likely assess technical learning agility and how well a candidate thrives in a fast-paced, mission-driven environment that respects work-life balance."
   },
-  "last_attempt_at": 1784929954,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784928901,
   "locations": {
    "confidence": "medium",
    "source_ids": [
     "a2829d49fd",
-    "09eab00c33",
-    "a34e5fe949"
+    "382dedb75b"
    ],
-   "value": "Presence is indicated through global remote job postings (e.g., via Greenhouse) and vendor risk management frameworks that span partner relationships."
+   "value": "Not explicitly detailed in available postings, but roles are recruited for applied AI, research, and engineering teams."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a7c5740a80",
+    "304abdee1d",
     "a2829d49fd",
     "09eab00c33"
    ],
-   "value": "Anthropic's mission is to create reliable, interpretable, and steerable AI systems."
+   "value": "To create reliable, interpretable, and steerable AI systems."
   },
   "name": "Anthropic",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a2829d49fd"
+    "382dedb75b",
+    "304abdee1d"
    ],
-   "value": "Estimated: Fast-paced, as the team is described as quickly growing and the infrastructure determines how quickly new models are trained and scaled."
+   "value": "Estimated: Fast-paced and highly innovative. The company operates in a nascent, quickly growing field with rapid adoption of its agentic systems, requiring quick adaptation and creative exploration."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949"
+    "382dedb75b",
+    "12bda69398"
    ],
-   "value": "Claude, a family of large language models, along with the internal infrastructure used to train models, run safety experiments, and scale to millions of users."
+   "value": "Claude-powered agentic systems for coding, research, customer support, and network security, alongside enterprise and industry-specific AI verticals."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-25 days of standard PTO, typical for a top-tier AI firm scaling its operations."
+   "value": "Estimated: 20-25 days. Specific PTO policies are not published, but typical top-tier tech companies offer flexible vacation to ensure sustainable work-life balance."
   },
-  "retry_after": 1784951554,
+  "refresh_after": 1790138160,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26552,16 +26547,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely features standard holiday shutdowns to support work-life balance, though exact dates are not published in job descriptions."
+   "value": "Estimated: Likely offers holiday shutdowns or guaranteed rest periods, common in top-tier tech to prevent burnout and respect personal time, though not explicitly confirmed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a2829d49fd",
-    "09eab00c33"
+    "382dedb75b",
+    "12bda69398",
+    "304abdee1d"
    ],
-   "value": "A quickly growing organization employing researchers, engineers, policy experts, and business leaders, currently scaling its infrastructure, security, and recruiting teams."
+   "value": "A quickly growing group of committed researchers, engineers, policy experts, and business leaders."
   },
   "sources": [
    {
@@ -26626,48 +26621,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "a34e5fe949"
+    "382dedb75b",
+    "a2829d49fd"
    ],
-   "value": "No explicit visa sponsorship details were provided in the current job postings, though growing tech firms of this stage often sponsor STEM roles (estimated)."
+   "value": "No specific visa sponsorship details found in the provided job postings."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a2829d49fd",
-    "09eab00c33"
+    "304abdee1d",
+    "12bda69398"
    ],
-   "value": "Anthropic is an AI safety and research company that builds reliable, interpretable, and steerable AI systems. It generates revenue by offering its flagship Claude AI models to consumers and enterprise clients via API access and subscriptions."
+   "value": "Anthropic is an AI safety company that builds reliable, interpretable, and steerable AI systems. It generates revenue by developing and monetizing model deployments and enterprise AI solutions."
   },
+  "synthesized_evidence_sha": "ae281f04ea15fcdd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a34e5fe949",
-    "a7c5740a80"
+    "382dedb75b",
+    "304abdee1d"
    ],
-   "value": "Frontier model training, safety experiment execution, building reusable safeguards infrastructure to detect and mitigate AI misuse, and scaling Claude to millions of users."
+   "value": "Researching and building agentic AI systems, exploring new interaction patterns, and rapidly deploying LLMs for complex tasks."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580810,
   "web_search_url": "https://duckduckgo.com/?q=Anthropic+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "a2829d49fd",
-    "a34e5fe949"
+    "382dedb75b",
+    "12bda69398"
    ],
-   "value": "Anthropic offers elite AI prestige and rapid technical learning by working on frontier models and safeguards. The company appeals to mission-driven candidates looking to avoid toxic, slow bureaucracy by operating in a fast, innovative culture that respects work-life balance, sane hours, and guaranteed shutdowns."
+   "value": "Anthropic perfectly targets the candidate's desire for a top-tier, mission-driven AI role with immense learning velocity. The company's focus on rapidly deploying agentic systems in a quickly growing team offers high technical prestige and fast-paced innovation, avoiding slow bureaucracy while solving impactful, complex challenges."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "a2829d49fd",
-    "09eab00c33"
+    "12bda69398",
+    "304abdee1d"
    ],
-   "value": "Estimated: Above average for top-tier AI, given the balanced emphasis on policy, research, and business rather than purely hyper-growth engineering."
+   "value": "Estimated: Good. The company culture emphasizes a committed team working together to build beneficial AI, focusing on sustainable, steerable systems rather than toxic burnout cycles."
   }
  },
  "anyscale": {
@@ -48887,88 +48883,109 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unverified. The available research does not substantiate a high AI/Data Science prestige tier, appearing more general tech-focused."
+   "value": "Estimated: Local specialist tier (Entry-level focused, lacking the elite prestige signal of top-tier AI labs for a fast, innovative tech culture)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "Business-to-business (B2B) services and technical staffing, offering full-time tech roles."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "The job posting indicates a desire for 'creative and driven' individuals to join an 'innovative team' in Chicago."
+   "value": "Innovative and creative."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "General business clients requiring technical, data, and software engineering services."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Estimated: $67K/yr - $82K/yr (based on the entry-level UI/UX Developer posting; technical or AI-specific roles may vary, but this serves as a conservative baseline)."
+   "value": "Estimated: $67K/yr - $100K/yr depending on the specific role (Data Scientist or UI/UX Developer)."
   },
   "evidence_sha": "4da979d979821e5d",
-  "generated_at": 1784788838,
+  "generated_at": 1784954160,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Information Technology and Software Development."
+   "value": "Information Technology and Software Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe deeply into the company's tech culture to ensure it lacks slow bureaucracy and doesn't rely on toxic hours. Ask about exact new-grad compensation for AI/Data Science roles and confirm boundaries for work-life balance, particularly any off-hours expectations and guarantees against burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "Probe deeply into actual working hours, company culture, and whether they guarantee shutdowns. Be sure to clarify the steepness of the learning curve before accepting a sub-elite compensation band."
   },
-  "last_attempt_at": 1784788838,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951151,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Chicago, IL. The known role is full-time and strictly onsite."
+   "value": "Chicago, IL."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "To build innovative technical teams and solutions, though the full company mission statement was not found in available research."
   },
   "name": "Benda Infotech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Estimated: The company claims an 'innovative team' culture, implying a steady tech-focused pace, though specific details on pace are not provided in the sources."
+   "value": "Estimated: Fast-paced and innovative, based on job posting descriptions."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "Software and data solutions, including UI/UX development and data science applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unverified. The exact PTO policy is not publicly detailed in the research."
+   "value": "Estimated: Standard tech industry PTO package, though specific daily counts are not publicly listed."
   },
-  "refresh_after": 1789972838,
+  "refresh_after": 1790138160,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48978,12 +48995,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unverified. No mention of guaranteed company-wide shutdowns was found in the sources."
+   "value": "Estimated: No indication of guaranteed shutdown periods from available sources."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "d7e92070fa",
+    "bb7a4cd204"
+   ],
+   "value": "Estimated early-stage or mid-size tech firm actively hiring for entry-level positions in the Chicago area."
   },
   "sources": [
    {
@@ -49048,40 +49068,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Not mentioned in job postings; candidates requiring visa sponsorship should verify directly with the company."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Benda Infotech is a technology company that recently posted a full-time, entry-level UI/UX Developer position in Chicago. The company aims to build innovative technology products and generates revenue through its software and development services. The available sources do not provide a more detailed description of its public-facing business or revenue lines."
+   "value": "Benda Infotech is a technology company that builds software and data solutions, currently expanding its team with roles in data science and UI/UX development. They generate revenue by providing these innovative technical services and products to their clients."
   },
-  "synthesized_evidence_sha": "eea897110e301256",
+  "synthesized_evidence_sha": "4da979d979821e5d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "d7e92070fa",
     "bb7a4cd204"
    ],
-   "value": "Known technical work involves UI/UX design, user research, usability testing, wireframing, and prototyping."
+   "value": "Entry-level data science (Python, R, Machine learning algorithms, Statistics, Tableau) and UI/UX development (User Research, Usability Testing, Wireframing, Prototyping) focused on onsite delivery."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788842,
   "web_search_url": "https://duckduckgo.com/?q=Benda+Infotech+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "bb7a4cd204"
+    "d7e92070fa"
    ],
-   "value": "For a candidate seeking fast career growth and elite technical learning, Benda Infotech describes itself as having an 'innovative team' which may offer strong early-career acceleration. However, the candidate must validate prestige, new-grad pay for AI/Data Science, and WLB commitments, as the company currently fails to publish clear evidence of elite-tier standing or guaranteed shutdowns."
+   "value": "The company offers a starting point for your technical learning journey, but the listed pay ($70K-$100K) falls short of elite high-paying new-grad tiers, and the onsite requirement may impact the work-life balance you desire."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unverified. No public details are available regarding work-life balance or sane hours policies."
+   "value": "Estimated: Moderate. The impact on work-life balance is unclear without verified details on hours."
   }
  },
  "bending spoons": {
@@ -55088,12 +55110,145 @@
   }
  },
  "bluecargo": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: Niche/Emerging tier. The company works on applied predictive algorithms and optimization in a specialized industry, but lacks the broad public prestige of top-tier general AI labs."
+  },
   "aliases": [],
-  "evidence_sha": "2f4301a41bd4a5a7",
-  "last_evidence_at": 1784951151,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "B2B software platform providing operational monitoring, forecasting, and optimization for container ports."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: Innovative and mission-driven, focusing on modernizing a traditional industry through technology, typical of a fast-growing VC-backed tech scale-up."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Businesses operating within the logistics and supply chain industry, specifically those managing container port operations."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: $90,000 - $110,000 per year. This is explicitly listed for the Junior Software Engineer role, which sits at the mid-to-high end for standard new-grad software engineering but below the elite top-tier tier."
+  },
+  "evidence_sha": "020cf7b08b1de9b9",
+  "generated_at": 1784954160,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Logistics, Supply Chain, and Maritime Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe deeply into the team's engineering culture and typical sprint pace to ensure they truly respect sane hours and avoid toxic burnout. Ask about their specific technical mentorship structures for new grads, the quality of their AI/predictive algorithm stack, and whether they offer guaranteed shutdowns or flexible time off to protect personal time."
+  },
+  "last_attempt_at": 1784954160,
+  "last_evidence_at": 1784954159,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Los Angeles, CA (Hyybrid work setup)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Transforming the logistics and supply chain industry through predictive technology."
+  },
   "name": "BlueCargo",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: Fast-paced. Being a fast-growing, VC-backed startup implies an innovative and quick-moving environment, though it may lack the heavy bureaucracy of larger firms."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "A predictive algorithm platform that monitors, forecasts, and optimizes operations in container ports."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: 15-20 days. Exact PTO policy is not public, but VC-backed tech companies of this size typically offer 3-4 weeks of standard vacation."
+  },
+  "refresh_after": 1790138160,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: Unknown. There are no public mentions of guaranteed company-wide shutdowns, so candidates should verify if structured rest periods exist."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Fast-growing, VC-backed technology company."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4b41920ebf",
+    "kind": "company_web",
+    "publisher": "BlueCargo",
+    "retrieved_at": 1784954159,
+    "title": "BlueCargo public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=696a80c3f920b809c643dfaf50b844401f37ff2cd35d8271db1007e00368661cJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly9rb3Bmb3J1bS5saXZlcnBvb2wubm8vdC82Ni10cmVudC1hbGV4YW5kZXItYXJub2xkLzE1MjI&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "BlueCargo",
+    "retrieved_at": 1784954159,
+    "title": "Discovery source for BlueCargo",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "af170ecdbd1bc6db",
     "excerpt": "Jobright.ai Junior Software Engineer jobs in United States Overview Company Apply on Employer Site APPLY NOW BlueCargo · 2 hours ago Junior Software Engineer Los Angeles, CA Full-time Hybrid Entry Level $90K/yr - $110K/yr 1+ years exp BlueCargo is a fast-growing, VC-backed technology company transforming the logistics and supply chain industry. Company BlueCargo BlueCargo is a predictive algorithm platform that monitors, forecasts, and optimizes operations in container ports. Junior Software Engineer @ BlueCargo",
@@ -55105,7 +55260,44 @@
     "url": "https://jobright.ai/jobs/info/6a56b80ff7517b519ad57a55?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Not explicitly stated in the available job posting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "BlueCargo is a VC-backed technology company that builds predictive algorithm platforms to monitor, forecast, and optimize operations at container ports. They make money by transforming and modernizing the logistics and supply chain industry for their clients."
+  },
+  "synthesized_evidence_sha": "020cf7b08b1de9b9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Full-stack and algorithm development for a predictive platform, involving monitoring, forecasting, and optimization features. The entry-level role requires 1+ years of experience and offers a hybrid work setup."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784954159,
+  "web_search_url": "https://duckduckgo.com/?q=BlueCargo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role places you at a fast-growing, VC-backed company building predictive algorithms for container ports, offering solid technical learning and innovation. However, the estimated pay is slightly below the elite new-grad tier, and the company's specific commitments to guaranteed shutdowns or extreme work-life balance are not prominently featured, which may require further evaluation against your strict anti-burnout criteria."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8007a55fb5"
+   ],
+   "value": "Estimated: Moderate. The startup environment likely provides high learning velocity and innovation, but without public details on shutdowns or strict WLB policies, burnout risk remains an unknown."
+  }
  },
  "bluecross blueshield of south carolina": {
   "ai_ds_prestige_tier": {
@@ -58790,119 +58982,144 @@
  "bot auto": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 (emerging/unknown) - no public research presence, conference publications, or industry recognition found"
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Estimated: High; built on a team that has delivered world's firsts in autonomous driving, integrating ML, data, and autonomous vehicle technology."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd"
    ],
-   "value": "Business model not discernible from sources. May involve bot automation services, SaaS, or enterprise solutions."
+   "value": "Develops autonomous driving systems and vehicle architectures likely to be deployed via fleet operations, partnerships, or software/hardware integration within the logistics and trucking industry."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Early-stage startup culture, likely technical-founder led given automation focus"
+   "confidence": "high",
+   "source_ids": [
+    "2febabf4cd",
+    "b6d23db857"
+   ],
+   "value": "Curious, motivated, and deeply experienced; an environment that values hands-on debugging and combines startup energy with established industry expertise."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd"
    ],
-   "value": "Customer base not identifiable from provided sources."
+   "value": "Freight, logistics, and fleet operations companies seeking to transport goods via autonomous trucking."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $40k-70k USD (adjusted for Tanzania market) or $80k-120k if US-remote; no public data available"
+   "source_ids": [
+    "b6d23db857",
+    "2febabf4cd"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary, aligning with autonomous vehicle industry standards for software and electrical engineers, though exact compensation is not publicly listed."
   },
   "evidence_sha": "85f49c4ce5ab05bd",
-  "generated_at": 1784864184,
+  "generated_at": 1784954160,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a26ad327c6"
+    "b6d23db857",
+    "2febabf4cd"
    ],
-   "value": "Bot Automation / RPA / AI Infrastructure"
+   "value": "Autonomous Vehicles / Trucking / Logistics Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ask directly about: engineering culture, actual working hours/shutdown policies, compensation structure, technical stack, product roadmap, and team size. Verify claims about work-life balance and learning opportunities given limited public track record."
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Given the startup environment, candidates should probe interviewers for specifics on work-life balance and how teams avoid burnout. Asking about project deadlines, on-call expectations, and concrete examples of the startup agility not sacrificing personal time will be key to ensuring the fast pace aligns with sane hours."
   },
-  "last_attempt_at": 1784864184,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951151,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
    ],
-   "value": "Estimated: Tanzania (based on .go.tz domain), possibly remote/distributed team"
+   "value": "Location details not explicitly provided in the job postings; operations are structured around simulation, bench testing, and real-world vehicle environments."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
    ],
-   "value": "Mission statement not found in provided sources."
+   "value": "To revolutionize the transportation of goods through autonomous trucking, improving the quality of life for communities worldwide."
   },
   "name": "Bot Auto",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced startup environment typical of early-stage automation companies"
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Estimated: Fast and highly agile, driven by a 'startup spirit' and the ambitious goal of revolutionizing transportation."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
    ],
-   "value": "No specific product information available from sources. Likely bot automation tools or services given company name."
+   "value": "Production-grade autonomous trucking technologies, including advanced vehicle control unit (VCU) embedded software, autonomous driving system software, and production-intent electrical/electronic (E/E) architectures."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No public policy found; typical early startup may offer 10-15 days plus holidays"
-  },
-  "refresh_after": 1790048184,
-  "rotational_program_name": {
-   "confidence": "high",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually, typical for venture-backed startup environments in the tech sector, though exact policies are not public."
+  },
+  "refresh_after": 1790138160,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
    ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed shutdown policy found in research"
+   "source_ids": [
+    "b6d23db857",
+    "2febabf4cd"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; time off during standard holidays is likely standard but unconfirmed."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Early-stage startup (likely seed or Series A) given limited public presence"
+   "confidence": "high",
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Startup-stage company characterized by high agility, though staffed by a highly seasoned team that has achieved numerous industry firsts."
   },
   "sources": [
    {
@@ -58967,38 +59184,51 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unlikely to offer visa sponsorship for international candidates given early stage and Tanzania base"
+   "confidence": "low",
+   "source_ids": [
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "No specific information regarding visa sponsorship found in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "a26ad327c6",
-    "7432a86140",
-    "d0c3eac043"
+    "b6d23db857",
+    "2febabf4cd"
    ],
-   "value": "Bot Auto appears to be a technology company focused on bot automation solutions, potentially operating in or connected to Tanzania based on its .go.tz domain. The company's specific products and market focus could not be determined from the provided sources."
+   "value": "Bot Auto builds autonomous trucks to transform the way goods are transported. They design full-stack autonomous driving technology, connecting vehicle hardware, cloud infrastructure, machine learning, and real-world fleet operations."
   },
-  "synthesized_evidence_sha": "71aeebd88c45ff58",
+  "synthesized_evidence_sha": "85f49c4ce5ab05bd",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Bot development, automation engineering, AI/ML for process automation, backend systems for bot orchestration"
+   "confidence": "high",
+   "source_ids": [
+    "b6d23db857",
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Engineers work on designing, implementing, and validating production-grade embedded software for vehicle control systems, building generalist autonomous driving systems, and integrating machine learning with cloud infrastructure and E/E architectures."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630053,
   "web_search_url": "https://duckduckgo.com/?q=Bot+Auto+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "This role could offer early-stage impact in bot automation/AI with potential for rapid technical growth. The Tanzania connection may provide unique emerging market exposure. However, limited public information makes it difficult to assess prestige, compensation, or work-life balance claims."
+   "confidence": "high",
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "With its startup agility and elite, experienced team, Bot Auto provides the fast-paced, highly innovative tech culture that accelerates learning. The mission-driven work on cutting-edge autonomous AI and machine learning systems offers the technical prestige desired, largely avoiding the slow bureaucracy typical of older tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown - no employee reviews or policy information available"
+   "source_ids": [
+    "2febabf4cd",
+    "de71985ccd"
+   ],
+   "value": "Estimated: Moderate; startup agility often demands intense effort, but the presence of highly seasoned, experienced leadership may temper chaotic burnout cultures commonly seen in younger startups."
   }
  },
  "bottom line": {
@@ -76591,12 +76821,154 @@
   }
  },
  "centene corporation": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tier 3 (Traditional Healthcare IT). It lacks the prestige and elite compensation of FAANG or top-tier quant/tech firms, focusing instead on operational healthcare data."
+  },
   "aliases": [],
-  "evidence_sha": "01c950b2e0522633",
-  "last_evidence_at": 1784951151,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Publicly traded health insurance and managed care company generating revenue through insurance premiums and government contracts. IPO Date: 2003-10-16."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven but highly bureaucratic and conventional. Process and compliance are heavily prioritized over rapid tech innovation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Individuals and families enrolled in government-sponsored healthcare programs (such as Medicaid and Medicare) and commercial plans."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $70,000 - $90,000. Reflects non-tech-industry compensation for a Data Analyst I role."
+  },
+  "evidence_sha": "5401c188620f49d7",
+  "generated_at": 1784954160,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Hospitality / Healthcare Insurance and Managed Care"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe heavily for team-specific tech culture: ask how often they deploy to production, the review process for new tools, and the pace of innovation. Seek evidence of internal mobility platforms to guarantee fast career growth, and ask explicit questions about after-hours expectations and on-call duties to reveal if WLB is genuinely respected or just a corporate talking point."
+  },
+  "last_attempt_at": 1784954160,
+  "last_evidence_at": 1784954159,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Headquartered in St. Louis, Missouri, USA, with a large nationwide footprint of offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "41eac17c9e",
+    "be93033bb8"
+   ],
+   "value": "To transform the health of the communities we serve, one person at a time."
+  },
   "name": "Centene Corporation",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Slow to moderate. Subject to heavy enterprise and government regulation, limiting the fast-paced innovation seen in pure tech companies."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Managed healthcare plans and related clinical and care management services."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 20-25 days of PTO annually, typical for a large-scale enterprise healthcare employer."
+  },
+  "refresh_after": 1790138160,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found; typical large corporate holiday policy applies."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "10001+ employees; Public Company."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "41eac17c9e",
+    "kind": "company_web",
+    "publisher": "Centene Corporation",
+    "retrieved_at": 1784954159,
+    "title": "Centene Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c275f041cbbcf79de44dae38d26c9ae8afe7b991cce14ddec2d04ee4ff9743d3JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly93d3cud2VsbGNhcmUuY29tL2VuL0NvcnBvcmF0ZS9BYm91dC1Vcy9DZW50ZW5l&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ddcaa3deb4",
+    "kind": "company_web",
+    "publisher": "Centene Corporation",
+    "retrieved_at": 1784954159,
+    "title": "Centene Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7122490140ef9ca7ffb057f5c2019082e39f3a70f85942cdaec5b2f8251a9c3eJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly93d3cuY2VudGVuZS5jb20vd2hvLXdlLWFyZS5odG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "be93033bb8",
+    "kind": "company_web",
+    "publisher": "Centene Corporation",
+    "retrieved_at": 1784954159,
+    "title": "Centene Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=49592309b186b4c9483236f6d89ee462168863a62d925992bcda12ddb6e2aca7JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly93d3cuY2VudGVuZS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Centene Corporation",
+    "retrieved_at": 1784954159,
+    "title": "Discovery source for Centene Corporation",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "342de7adba627b55",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role SQL Python R Statistical analysis Data mining Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach S Safir A. Data Analyst I Healthcare Analytics @ Centene Corporation Founded in 1984 St Louis, Missouri, USA 10001+ employees http://centene.com Funding Current Stage Public Company Total Funding unknown 2003-10-16 IPO Leadership Team Brian LeClaire Executive Vice President and Chief Information Officer Michael A.",
@@ -76608,7 +76980,42 @@
     "url": "https://jobright.ai/jobs/info/6a63e4de87cef057612cb1d4?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Not explicitly found in the provided sources for this specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Centene Corporation is a large, publicly traded healthcare enterprise founded in 1984 that functions as a major managed care provider. It makes money by administering government-sponsored and commercial healthcare plans, primarily keeping the spread between the insurance premiums it collects and the medical costs it pays out."
+  },
+  "synthesized_evidence_sha": "5401c188620f49d7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9cc5daad2d"
+   ],
+   "value": "Data analysis and healthcare analytics focusing on SQL, Python, R, statistical analysis, and data mining."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784954159,
+  "web_search_url": "https://duckduckgo.com/?q=Centene+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While Centene offers strong mission alignment in healthcare analytics, it is a massive, traditional insurance bureaucracy that fundamentally conflicts with the desire for a fast, innovative tech culture and elite new-grad pay. The slow, heavily regulated environment is unlikely to provide the top-tier prestige or rapid technical acceleration of a dedicated tech firm, and the technical impact may be constrained by corporate red tape."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Good. Large healthcare companies often offer stable hours, but true work-life balance depends entirely on the specific team and its leadership."
+  }
  },
  "centific": {
   "ai_ds_prestige_tier": {
@@ -78608,11 +79015,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78624,6 +79033,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951429,
   "name": "Chan Zuckerberg Initiative",
   "pace_of_work": {
@@ -78636,6 +79046,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784954280,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78709,7 +79120,7 @@
     "url": "https://job-boards.greenhouse.io/chanzuckerberginitiative/jobs/7990919"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784951429,
   "web_search_url": "https://duckduckgo.com/?q=Chan+Zuckerberg+Initiative+company+careers+benefits",
@@ -124931,6 +125342,104 @@
     "3bf7a447a3"
    ],
    "value": "Estimated: Good. Large legacy healthcare companies generally offer stable hours, making this a low-burnout environment compared to tech."
+  }
+ },
+ "elevate": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c25985c7b4d7400f",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784954159,
+  "name": "Elevate",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0556db2a04",
+    "kind": "company_web",
+    "publisher": "Elevate",
+    "retrieved_at": 1784954159,
+    "title": "Elevate public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e22e63a337c1b3aa8f5f0c557e5b5e6f66dc165799689ae6406859ae1273da16JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly93d3cuaG9sY2ltZWxldmF0ZS5jb20vZGFjaC1lbi9yb29maW5n&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9b6b3319bb",
+    "kind": "company_web",
+    "publisher": "Elevate",
+    "retrieved_at": 1784954159,
+    "title": "Elevate public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2fc7bcf6e3dfe3a77c732abf9c94c759832a7391fe6bd6bf6a236fbe93953018JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly93d3cuZWxldmF0ZWNvbW1lcmNpYWxicC5jb20vdXMtZW4&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0a7efb44dc",
+    "kind": "company_web",
+    "publisher": "Elevate",
+    "retrieved_at": 1784954159,
+    "title": "Elevate public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5865f2ba79868e22db83db2d9f9df72b30f3f878f852ba3a2e8ff8c448ec0c02JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly9lbGV2YXRlLnNlcnZlcmRhdGEubmV0Lw&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Elevate",
+    "retrieved_at": 1784954159,
+    "title": "Discovery source for Elevate",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784954159,
+  "web_search_url": "https://duckduckgo.com/?q=Elevate+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "elevenlabs": {
@@ -225162,34 +225671,33 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "e8177b3514",
-    "1db9db9c4d"
+    "dc4d7f0534"
    ],
-   "value": "Estimated: Low. This is a standard government Java developer role. It does not align with elite, top-tier AI or data science prestige, nor does it operate in a fast-paced tech culture."
+   "value": "Low. As a state economic development agency, it lacks the industry prestige of elite AI or data science firms."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "1061ced56c",
-    "e8177b3514"
+    "e8177b3514",
+    "dc4d7f0534"
    ],
-   "value": "State government agency funded by public budget; tech roles are fulfilled via IT consulting contracts (e.g., CGI)."
+   "value": "Government-funded public sector agency. It does not operate for profit, but rather acts as a state-funded catalyst for state economic growth."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
     "e8177b3514"
    ],
-   "value": "Estimated: Public sector and traditional corporate consulting. Stability-focused, process-driven, and highly structured rather than a cutting-edge technical learning environment."
+   "value": "Estimated: Public sector, government-focused, heavily utilizing Agile methodologies for internal development."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1061ced56c"
+    "e8177b3514"
    ],
-   "value": "Louisiana businesses, citizens, and the state government itself."
+   "value": "Businesses looking to relocate or expand in Louisiana, as well as the citizens of the state who benefit from job creation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -225197,10 +225705,10 @@
    "source_ids": [
     "e8177b3514"
    ],
-   "value": "Estimated: $58K - $136K base salary. While the top of this band is competitive, the broad range suggests standard government/consulting scaling that does not guarantee the elite new-grad pay of top-tier tech firms."
+   "value": "$58K to $136K, varying by role and level. Below the top-tier elite new grad pay benchmark for prestigious AI roles, though outside contractors such as CGI are involved in hiring."
   },
   "evidence_sha": "e9ba6cae13038d99",
-  "generated_at": 1784865022,
+  "generated_at": 1784954160,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -225209,80 +225717,78 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1061ced56c"
+    "aae12eb145",
+    "e8177b3514"
    ],
-   "value": "Government / Economic Development"
+   "value": "Professional Services, Consulting, and Government."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "e8177b3514"
+    "e8177b3514",
+    "aae12eb145"
    ],
-   "value": "Candidates should probe for the true division of labor between CGI and the state agency to understand real career growth potential. It is also critical to clarify the government contracting pay band and tech stack modernity to ensure it meets personal and professional goals."
+   "value": "Probe deeply into the actual pace of technical learning, team autonomy, and the reality of avoiding slow bureaucracy. Clarify expectations around new grad pay versus the broad listed ranges, and confirm whether the hours and work-life balance genuinely align with your professional goals."
   },
-  "last_attempt_at": 1784865022,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951151,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "e8177b3514"
    ],
-   "value": "Lafayette, LA and other locations across Louisiana; hybrid work model."
+   "value": "Jobs are based in Lafayette, LA and operate on a hybrid work schedule."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1061ced56c"
+    "dc4d7f0534"
    ],
-   "value": "To promote economic prosperity and job creation for the state of Louisiana."
+   "value": "To promote economic growth, foster business development, and create jobs within the state of Louisiana."
   },
   "name": "Louisiana Economic Development",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "e8177b3514"
+    "dc4d7f0534"
    ],
-   "value": "Estimated: Moderate to slow. State agencies and large legacy consulting firms typically prioritize compliance and steady execution over rapid innovation."
+   "value": "Estimated: Slow to moderate. Operates with the standard pace of a state government agency, which is heavily process-driven."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "e8177b3514",
-    "1db9db9c4d"
+    "dc4d7f0534",
+    "aae12eb145"
    ],
-   "value": "As a state agency, it provides economic development programs, business incentives, and site-selection services rather than commercial tech products. (Note: The specific job posting is for a Java Developer role at CGI, a consulting firm contracted by the state)."
+   "value": "The agency provides economic development initiatives, business consulting, and incentive programs to attract and retain businesses. It also builds internal government and professional services software using Python, AWS, and MongoDB."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "e8177b3514"
-   ],
-   "value": "Estimated: 15-20 days of PTO, typical for state government employees and large consulting firms, providing sane hours and personal time."
+   "source_ids": [],
+   "value": "Estimated: Standard state government leave package, typically accruing 15-20 days annually."
   },
-  "refresh_after": 1790049022,
+  "refresh_after": 1790138160,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [
-    "e8177b3514"
-   ],
-   "value": "None found in research."
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "e8177b3514"
+    "dc4d7f0534"
    ],
-   "value": "Estimated: No formal guaranteed tech shutdowns (outside of standard state holidays) found in research."
+   "value": "Estimated: State agencies generally observe standard state holidays but do not offer formal corporate shutdown periods."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "e8177b3514",
-    "1db9db9c4d"
+    "dc4d7f0534"
    ],
-   "value": "State government agency size; supports a hybrid Junior Java Developer role, indicating a structured but potentially bureaucratic environment."
+   "value": "State government agency. Specific employee counts were not found in the research, but it operates as a large public sector organization."
   },
   "sources": [
    {
@@ -225348,27 +225854,26 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [
-    "e8177b3514"
-   ],
-   "value": "Estimated: As a state government entity relying on consulting partners for staffing, visa sponsorship is highly unlikely for this hybrid role."
+   "source_ids": [],
+   "value": "No information regarding visa sponsorship was found in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1061ced56c",
-    "1db9db9c4d"
+    "dc4d7f0534",
+    "e8177b3514"
    ],
-   "value": "Louisiana Economic Development is a state government agency responsible for fostering economic growth and job creation in Louisiana. It operates through government funding rather than traditional commercial revenue, though specific details were limited in the provided sources."
+   "value": "Louisiana Economic Development (LED) is the state agency responsible for fostering economic growth and business development in Louisiana. It operates as a government entity, funded by the state rather than generating revenue through traditional commercial sales."
   },
-  "synthesized_evidence_sha": "df60c67825b36d9e",
+  "synthesized_evidence_sha": "e9ba6cae13038d99",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "aae12eb145",
     "e8177b3514"
    ],
-   "value": "Agile software development utilizing Java, Angular, JavaScript, SQL, and the Spring framework to build internal and public-facing state systems."
+   "value": "Involves full-stack engineering (Python, Django, Flask, AWS, MongoDB, Pandas, Spark) and enterprise Java development (Java, Angular, JavaScript, SQL, Spring framework) using Agile methodologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672022,
@@ -225376,16 +225881,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
+    "dc4d7f0534",
     "e8177b3514"
    ],
-   "value": "This role fundamentally conflicts with the candidate's priorities. As a state government tech position (or a consultant embedded in one), it trades elite prestige and high new-grad pay for stability. The pace is likely bureaucratic rather than fast and innovative."
+   "value": "While LED is a mission-driven organization serving the public, it is a government entity and likely does not align with a candidate seeking top-tier AI prestige or a fast, innovative tech culture. State agencies typically feature slower bureaucratic pace rather than the elite high-pay, rapid learning startup environment you prioritize."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "e8177b3514"
    ],
-   "value": "Estimated: Standard. Government tech roles generally offer a 40-hour workweek without the extreme burnout found in top-tier tech, though they lack guaranteed shutdowns."
+   "value": "Estimated: Good. Government roles typically enforce standard operational hours without the extreme burnout found in big tech firms."
   }
  },
  "louisiana state university lsu": {
@@ -244618,74 +245124,75 @@
  "microsoft": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "55408390e0"
-   ],
-   "value": "Elite Top-Tier. Microsoft’s AI and data science divisions are among the most prestigious in the industry, offering the exact elite new-grad pay and high technical cachet you are targeting."
+   "source_ids": [],
+   "value": "Estimated: Top-tier, driven by major investments in enterprise AI and cloud infrastructure."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d",
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Public posting lists full-time entry-level engineering salaries of $85K–$168K/yr and notes a track record of H1B sponsorships. Exact monetization model (e.g., licensing, subscriptions) is not detailed in the sources."
+   "value": "Technology company that generates revenue through software licensing, hardware sales, and enterprise cloud service subscriptions."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Mission-driven and growth-oriented. The company leans into its mission to empower others, fostering a learning environment that accelerates technical and career growth while generally respecting personal time."
+   "value": "Estimated: Mission-driven culture focused on empowering users, emphasizing continuous learning and career growth within a massive corporate structure."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Every person and organization, ranging from individual consumers to large enterprises. No specific customer-segment descriptions were found in the supplied sources."
+   "value": "Every person and organization on the planet, ranging from individual consumers to large enterprises."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Estimated: $85K/yr base to $168K/yr base, based on public entry-level Software Engineer posting data."
+   "value": "Estimated: $85K/yr - $202K/yr, depending on the specific role, level, and team."
   },
   "evidence_sha": "feba649976958bb0",
-  "generated_at": 1784777137,
+  "generated_at": 1784954160,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Global technology / computer software (per job posting; broader sector classification not in sources)."
+   "value": "Technology."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "55408390e0"
-   ],
-   "value": "Probe whether the specific team’s workload respects personal time via sane hours and guaranteed shutdowns, rather than just relying on Microsoft’s broader reputation. Ask new-grad peers about bureaucracy vs. fast-paced innovation within that specific AI group, as culture can vary heavily by org. Clarify the exact learning curve and growth opportunities for new grads in that specific AI product area, ensuring it accelerates your technical learning without sacrificing work-life balance."
+   "source_ids": [],
+   "value": "Candidates should evaluate whether the specific team's tech culture aligns with a fast, innovative pace rather than slow bureaucracy, and probe into actual work-life balance, including sane hours and shutdown policies, to ensure the role accelerates technical growth without sacrificing personal time."
   },
-  "last_attempt_at": 1784777137,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951151,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Redmond, Washington, USA (noted as founding HQ and for this Identity SE role)."
+   "value": "Redmond, Washington, USA (with a global presence)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
    "value": "To empower every person and every organization on the planet to achieve more."
@@ -244694,24 +245201,23 @@
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Varies heavily by team. Core AI and product groups often operate with a fast, innovative tech culture to match market demands, though legacy enterprise wings can occasionally trend toward slower bureaucracy."
+   "value": "Estimated: Generally moderate to fast-paced, but can vary significantly depending on the specific product team and its position within the broader corporate structure."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d",
-    "8ec863c82f",
-    "f075eae283"
+    "55408390e0"
    ],
-   "value": "Developer job postings (not specific products) and public web platforms (e.g., login portals). No direct product descriptions were captured in the supplied sources."
+   "value": "Develops software, hardware, and cloud computing services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20–25 days of standard vacation for new full-time employees, though the exact policy is not public in the provided sources."
+   "value": "Estimated: Around 15-20 days of standard vacation time, not including sick leave or holidays."
   },
-  "refresh_after": 1789961137,
+  "refresh_after": 1790138160,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244721,14 +245227,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Yes. Microsoft typically offers a few guaranteed shutdown days (often around major holidays) to ensure employees disconnect, though exact guaranteed dates are not public."
+   "value": "Estimated: Often includes a few guaranteed company-wide shutdown days around major holidays, though policies may vary."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Founded 1975; 10001+ employees; H1B sponsorship track record. Stage classification not found in sources."
+   "value": "10001+ employees, founded in 1975."
   },
   "sources": [
    {
@@ -244795,40 +245302,41 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Microsoft has a track record of offering H1B sponsorships; specific-role sponsorship not guaranteed."
+   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Microsoft is a global technology company focused on empowering every person and organization to achieve more. Founded in 1975 and headquartered in Redmond, Washington, it develops and sells enterprise software, cloud infrastructure, and productivity solutions. It makes money primarily through commercial cloud subscriptions (Azure, Microsoft 365) and licensing of its software and devices to businesses and consumers."
+   "value": "Microsoft is a global technology company founded in 1975 that focuses on empowering every person and organization on the planet to achieve more. It makes money by developing and licensing a wide range of software, hardware, and cloud services to consumers and businesses."
   },
-  "synthesized_evidence_sha": "f6c6454e6d553b31",
+  "synthesized_evidence_sha": "feba649976958bb0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "bdfe25f197",
     "55408390e0"
    ],
-   "value": "Entry-level full-time Software Engineer roles in Redmond, WA, onsite, 1+ years experience, $85K/yr–$168K/yr."
+   "value": "Software engineering roles involving systems and product development, such as identity and IDNA engineering, requiring 1+ years of experience."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583331,
   "web_search_url": "https://duckduckgo.com/?q=Microsoft+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "55408390e0"
-   ],
-   "value": "Microsoft’s AI and data science groups offer top-tier industry prestige and remain highly competitive on new-grad compensation, fulfilling the candidate's desire for elite pay. Its platform-scale problems drive rapid technical learning and accelerated career growth in cutting-edge AI, creating the fast, innovative tech culture you seek. The company’s mission to “empower every person and organization” aligns with a mission-driven mindset, and it is widely recognized for avoiding toxic burnout com"
+   "source_ids": [],
+   "value": "The scale of Microsoft's AI and cloud initiatives offers elite prestige and high new-grad pay, while its mature infrastructure and mission-driven approach to empowering global users can provide a structured, fast-paced learning environment. Assessing specific team dynamics is crucial to ensure the innovative culture outweighs traditional big-tech bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Strong. Microsoft is generally regarded as respecting work-life balance through sane hours, avoiding the toxic, high-burnout environments seen at some competitors."
+   "value": "Estimated: Typically good with sane hours, though maintaining this depends on the specific team and role expectations."
   }
  },
  "mid continent instruments and avionics": {
@@ -276113,46 +276621,51 @@
  },
  "openai": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 1. Recognized as a top-tier leader in the AI space, offering high visibility and elite technical prestige."
+   "confidence": "high",
+   "source_ids": [
+    "64248241b1",
+    "4c9d654807"
+   ],
+   "value": "Top-tier (Tier 1) frontier AI research, development, and deployment organization."
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "aba3a3e16c",
-    "ec357515cb",
-    "f48a1a3017"
+    "5b9d24a859",
+    "ec357515cb"
    ],
-   "value": "Monetizes through a mix of global consumer subscriptions (product-led growth) and B2B enterprise demand generation across paid, programmatic, and self-serve channels."
+   "value": "OpenAI monetizes its AI technology by offering enterprise solutions through its suite of products and API, while leveraging marketing and demand generation to scale global B2B adoption."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "64248241b1",
-    "f48a1a3017"
+    "4c9d654807"
    ],
-   "value": "Mission-driven and safety-focused, emphasizing diverse perspectives, responsible AI deployment, and a test-and-learn mindset."
+   "value": "Mission-driven, safety-focused, and cross-functional. The culture strongly values diverse perspectives and operational effectiveness while pushing the boundaries of technology."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "5b9d24a859",
-    "aba3a3e16c",
-    "ec357515cb"
+    "ec357515cb",
+    "4c9d654807"
    ],
-   "value": "Both individual consumers and large enterprise organizations, including those in high-stakes security environments seeking to safely adopt AI."
+   "value": "General consumers, Enterprise businesses seeking to adopt AI solutions safely and effectively, and internal organizational teams like the go-to-market and B2B marketing departments."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Highly competitive top-tier market pay for new grads, featuring strong base salaries and equity packages."
+   "source_ids": [
+    "4c9d654807",
+    "85192c22d8"
+   ],
+   "value": "Estimated: $180,000 to $250,000+ total compensation (base + equity) per year, reflecting top-tier market rates to attract elite technical talent in frontier AI roles."
   },
   "evidence_sha": "e6107a3260eb0a3b",
-  "generated_at": 1784861859,
+  "generated_at": 1784954160,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -276168,19 +276681,20 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "f48a1a3017",
-    "64248241b1"
+    "91f97436bc",
+    "4c9d654807",
+    "ec357515cb"
    ],
-   "value": "Candidates should emphasize adaptability in fast-moving environments and a test-and-learn mindset, balancing elite technical execution with sane hours to avoid burnout. Highlighting a passion for the company's mission to safely deploy AI can differentiate candidates who want to accelerate their career without sacrificing personal time."
+   "value": "During the interview, prioritize validating your work-life balance expectations and learning speed. Ask how team members manage end-to-end ownership of deep technical loops without burning out, and clarify how often 'ever-changing' environments or AI-powered workflows lead to_SCOPE_creep versus structured, sane-hour technical growth."
   },
-  "last_attempt_at": 1784861859,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951151,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "aba3a3e16c"
+    "91f97436bc"
    ],
-   "value": "Operates globally with a distributed workforce, supporting international consumer marketing across multiple regions and languages."
+   "value": "Hybrid work model requiring three days in the office per week, with optional work from home on Thursdays and Fridays. Relocation support is also provided to new employees."
   },
   "mission": {
    "confidence": "high",
@@ -276193,25 +276707,29 @@
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "f48a1a3017"
+    "91f97436bc",
+    "64248241b1"
    ],
-   "value": "Estimated: Fast-paced. The company emphasizes operating in fast-moving environments and continuous experimentation."
+   "value": "Estimated: Fast-paced, demanding rapid adaptation and problem-solving within an ever-changing environment where team members must continuously push the boundaries of AI system capabilities."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "5b9d24a859",
-    "64248241b1"
+    "4c9d654807",
+    "ec357515cb"
    ],
-   "value": "AI models and software products, including ChatGPT, and an enterprise suite of AI tools accessible via API."
+   "value": "AI-native software products and frontier AI models designed for consumer use, enterprise B2B marketing, and internal go-to-market scaling."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard flexible PTO for a fast-paced tech company, but exact policy details are not public."
+   "source_ids": [
+    "91f97436bc"
+   ],
+   "value": "Estimated: 20-25 days of flexible PTO per year, based on standard competitive packages for late-stage tech companies in the AI sector."
   },
-  "refresh_after": 1790045859,
+  "refresh_after": 1790138160,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -276220,15 +276738,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No formal guaranteed shutdowns found in research; likely follows standard tech holiday practices."
+   "source_ids": [
+    "91f97436bc"
+   ],
+   "value": "Estimated: Likely standard public holiday office closures, but no specific details on guaranteed end-of-week or end-of-year company-wide shutdowns were found in the provided sources."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "aba3a3e16c"
+    "4c9d654807",
+    "64248241b1",
+    "ec357515cb"
    ],
-   "value": "A rapidly scaling, late-stage unicorn operating across multiple global regions and languages."
+   "value": "Established late-stage technology leader operating at a global enterprise scale, with internal organizations large enough to require dedicated internal GTM, privacy engineering, and field security teams."
   },
   "sources": [
    {
@@ -276293,28 +276815,31 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "91f97436bc"
+   ],
+   "value": "OpenAI offers relocation support to new employees, though specific visa sponsorship details are not explicitly stated."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "5b9d24a859",
-    "64248241b1"
+    "64248241b1",
+    "4c9d654807",
+    "5b9d24a859"
    ],
-   "value": "OpenAI is an artificial intelligence research and deployment company dedicated to building safe and highly capable AI systems. It generates revenue by offering API access to its models for enterprises and developers, alongside consumer subscriptions like ChatGPT Plus."
+   "value": "OpenAI is an artificial intelligence research and deployment organization dedicated to building safe and highly capable AI systems. The company generates revenue by productizing its frontier models (like ChatGPT) through consumer subscriptions, enterprise API access, and tailored B2B go-to-market solutions."
   },
-  "synthesized_evidence_sha": "99c992f9ea385f18",
+  "synthesized_evidence_sha": "e6107a3260eb0a3b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "4c9d654807",
     "85192c22d8",
-    "64248241b1",
-    "f48a1a3017"
+    "64248241b1"
    ],
-   "value": "Involves advanced infrastructure and software engineering, including wide area network (WAN) management, privacy engineering for lawful access, and the development of AI-powered workflows."
+   "value": "Highly specialized engineering and AI roles including deep technical AI agent improvement loops, network operations and WAN infrastructure management, secure privacy engineering for lawful access, and technical solutions engineering for high-stakes security environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
@@ -276322,17 +276847,18 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "64248241b1",
-    "f48a1a3017"
+    "91f97436bc",
+    "4c9d654807"
    ],
-   "value": "OpenAI offers elite prestige in the AI industry and fast-paced, cutting-edge technical work that maximizes learning and career acceleration. The company's mission-driven focus on safe AI deployment aligns with candidates seeking impactful, innovative environments rather than slow corporate bureaucracy."
+   "value": "For a candidate seeking top-tier AI prestige alongside high new-grad pay, OpenAI represents a highly coveted technical learning environment. However, because the firm is scaling its enterprise and engineering capabilities rapidly, you must evaluate whether its fast-paced, ever-changing innovation culture still aligns with your strict requirements for sane hours, guaranteed shutdowns, and a non-burnout work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "f48a1a3017"
+    "91f97436bc",
+    "4c9d654807"
    ],
-   "value": "Estimated: Moderate. As a rapidly scaling, highly technical unicorn, it offers mission-driven work but requires adaptability to fast-moving environments, which can challenge strict work-life boundaries."
+   "value": "Estimated: Moderate to Good. The company supports a hybrid work model (3 days in office, 2 days optional remote) and standard 40-hour work weeks, but the dynamic, high-ownership nature of the technical work may occasionally challenge strict personal time boundaries."
   }
  },
  "openevidence": {
@@ -279879,7 +280405,7 @@
    "value": "Tier 1 — held alongside top FAANG and pioneering AI labs due to its unique combination of technical rigor, national-level mission, and high selectivity among new graduates."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -279902,7 +280428,7 @@
    ],
    "value": "U.S. government defense and intelligence agencies form a major customer base, alongside commercial clients in healthcare, energy, manufacturing, and supply chain as well as public sector bodies such as the National Health Service."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -279927,7 +280453,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784672887,
+  "last_attempt_at": 1784954160,
   "last_evidence_at": 1784951429,
   "locations": {
    "confidence": "unknown",
@@ -279961,6 +280487,7 @@
    "source_ids": [],
    "value": "Estimated: Unlimited flexible paid time off policy, with engineers typically taking 20–25 days annually."
   },
+  "retry_after": 1784975760,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -280047,7 +280574,7 @@
    "source_ids": [],
    "value": "U.S. government-facing roles explicitly require the ability to obtain and maintain a security clearance, which often necessitates U.S. citizenship. Other technical roles may support visa sponsorship, but the company evaluates candidates on a case-by-case basis, and clearance requirements can limit sponsorship in defense-oriented posts."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -328064,12 +328591,165 @@
   }
  },
  "scalence l l c": {
+  "ai_ds_prestige_tier": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Not applicable / Untiered. The company currently hires for general Full Stack Java Development rather than elite, dedicated AI or data science roles."
+  },
   "aliases": [],
-  "evidence_sha": "9539db3ec0035392",
-  "last_evidence_at": 1784951151,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Business-to-business (B2B) IT services and software development, generating revenue by placing full-time engineering talent on client projects."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: Appears to be a traditional, onsite consultancy environment based on the L.L.C. structure and New Jersey location. The actual vibe regarding innovation vs. bureaucracy is not public."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Enterprise clients seeking full stack development and IT staffing solutions."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "high",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: $45/hr to $50/hr (Approximately $90,000 to $100,000 annualized for a full-time entry-level role)."
+  },
+  "evidence_sha": "341b175f9a2e7fca",
+  "generated_at": 1784954160,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "IT Services and Software Development."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Candidates should expect rigorous, fast-paced technical evaluations centered on core Java, Spring Boot, microservices, Kubernetes, and API Gateway concepts. They should probe interviewers about daily hours, project rotation, and learning opportunities to ensure the role accelerates career growth without leading to burnout."
+  },
+  "last_attempt_at": 1784954160,
+  "last_evidence_at": 1784954159,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Mount Laurel Township, NJ (Onsite)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Scalence L.L.C.",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: Typical of IT service providers, the pace is likely project-driven and client-dependent. Candidates should verify if the culture is fast and innovative or constrained by client bureaucracy."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Software engineering services and data-driven applications, specifically including full stack Java development utilizing Spring Boot, microservices, Kubernetes, and API gateways."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: Standard corporate PTO (10-15 days annually), though exact policy is not public."
+  },
+  "refresh_after": 1790138160,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: Standard weekend operations only; no public information on guaranteed company-wide shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Unknown; the company operates as an L.L.C. and actively hires for entry-level positions."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6fb1534b2d",
+    "kind": "company_web",
+    "publisher": "Scalence L.L.C.",
+    "retrieved_at": 1784954159,
+    "title": "Scalence L.L.C. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0a45a28a64306675c924bb2048682c232bdcc3b57c2068ca48572afa7c81ff51JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly9xdWlja2Jvb2tzLmludHVpdC5jb20vY2Evc2lnbi1pbi8_bXNvY2tpZD0zMDhkODc4ODY0MjU2MjBhMjFjYzkwMjk2NTg3NjM2NQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b50a4a766b",
+    "kind": "company_web",
+    "publisher": "Scalence L.L.C.",
+    "retrieved_at": 1784954159,
+    "title": "Scalence L.L.C. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e34b68fe1a5fc17c8cd2ed98156dfed4ca5ac56ba88675c470f740e7867e9ea0JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly9xdWlja2Jvb2tzLmludHVpdC5jb20vP21zb2NraWQ9MzA4ZDg3ODg2NDI1NjIwYTIxY2M5MDI5NjU4NzYzNjU&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ee582bd6fc",
+    "kind": "company_web",
+    "publisher": "Scalence L.L.C.",
+    "retrieved_at": 1784954159,
+    "title": "Scalence L.L.C. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a85cbb4835357356491d9c897c0b2a1e3234bf53142fbf126eb4b8c2f2a3836bJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=308d8788-6425-620a-21cc-902965876365&u=a1aHR0cHM6Ly9xdWlja2Jvb2tzLmludHVpdC5jb20vbG9naW4vP21zb2NraWQ9MzA4ZDg3ODg2NDI1NjIwYTIxY2M5MDI5NjU4NzYzNjU&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Scalence L.L.C.",
+    "retrieved_at": 1784954159,
+    "title": "Discovery source for Scalence L.L.C.",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "7eebcd7ca48025d2",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role Core Java Spring Boot Microservices Kubernetes API Gateway Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L. Full Stack Java Developer @ Scalence L.L.C. Jobright.ai Full Stack Java Developer jobs in United States Overview Company Apply on Employer Site APPLY NOW Scalence L.L.C. · 3 hours ago Full Stack Java Developer Mount Laurel Township, NJ Full-time Onsite Entry Level $45/hr - $50/hr Scalence L.L.C.",
@@ -328081,7 +328761,44 @@
     "url": "https://jobright.ai/jobs/info/6a64075387cef057612cba3e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Scalence L.L.C. is a software development company that hires full-time, entry-level technical talent for onsite roles. It makes money by deploying its developers, such as Full Stack Java Engineers, to build and maintain software solutions for its clients."
+  },
+  "synthesized_evidence_sha": "341b175f9a2e7fca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Full stack Java development involving core Java, Spring Boot, microservices architecture, Kubernetes container orchestration, and API gateway management."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784954159,
+  "web_search_url": "https://duckduckgo.com/?q=Scalence+L.L.C.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "At $45-$50/hr, Scalence offers an estimated baseline salary of roughly $90k-$100k for new grads. However, the firm lacks the elite AI/data science prestige, mission-driven focus, and guaranteed WLB shutdowns desired by top-tier candidates, making it a potential stepping stone for raw technical learning rather than a long-term cultural fit."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f4784877d"
+   ],
+   "value": "Estimated: Unknown without employee reviews. Candidates must verify if the company respects sane hours and avoids toxic burnout environments."
+  }
  },
  "scanscape": {
   "ai_ds_prestige_tier": {
