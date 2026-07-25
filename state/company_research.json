@@ -18935,49 +18935,45 @@
  },
  "amazon": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "cff06d35c4",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "Top-tier, recognized globally for AI and data science innovation across AWS, retail logistics, and hardware labs."
+   "value": "Top-tier; offers elite prestige and high new-grad pay, though it is not typically associated with guaranteed shutdowns."
   },
   "aliases": [],
-  "attempts": 40,
+  "attempts": 41,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "d85a041ac8",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "E-commerce retail sales combined with recurring enterprise cloud computing subscriptions and specialized IT infrastructure services."
+   "value": "Generates revenue through direct retail sales, subscription services, and enterprise cloud computing."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "An inclusive culture of learning and mentorship that empowers engineers to deliver high-impact results for customers."
+   "value": "Inclusive culture focused on customer obsession and supported by structured mentorship and learning."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "d85a041ac8",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "General consumers for retail goods and digital services, as well as enterprise businesses and government agencies requiring cloud computing and specialized secured infrastructure."
+   "value": "Global consumers and enterprise businesses relying on cloud and digital services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "cff06d35c4",
     "e6d8de4ab6"
    ],
-   "value": "Estimated: Top-tier new grad pay ranging from $190,000 to $220,000 total compensation (base + stock) per year."
+   "value": "Estimated: $180,000 - $220,000 total compensation per year, heavily weighted in equity."
   },
   "evidence_sha": "3d5a9f289c61b4d0",
-  "generated_at": 1784848346,
+  "generated_at": 1784976575,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -18992,25 +18988,26 @@
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "The candidate should rigorously interview the team and manager to gauge the specific team's on-call schedule, pace expectations, and operational load, ensuring a fast innovative culture without dipping into the toxic bureaucracy or high-burnout hours they are avoiding."
+   "source_ids": [
+    "cff06d35c4"
+   ],
+   "value": "Probe deeply into team-specific on-call expectations, deployment cadence, and after-hours pager duty to identify rare pockets that maintain a fast, innovative culture without forcing sacrifices in personal time."
   },
-  "last_attempt_at": 1784954160,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784951429,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "Headquartered in Seattle, Washington, USA."
+   "value": "Headquartered in Seattle, Washington, USA, with operations and roles distributed globally."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "To be Earth's most customer-centric company, hiring the best minds in technology to innovate and build on behalf of customers."
+   "value": "To hire the best minds in technology to innovate and build on behalf of its customers."
   },
   "name": "Amazon",
   "pace_of_work": {
@@ -19018,45 +19015,42 @@
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Estimated: Extremely fast-paced, delivery-driven, and metric-heavy environment focused on rapid innovation and customer impact."
+   "value": "Estimated: Extremely demanding and fast-paced innovation environment, though the large size of the organization can introduce bureaucratic delays in certain processes."
   },
   "products": {
-   "confidence": "high",
-   "source_ids": [
-    "d85a041ac8",
-    "20158bef7f"
-   ],
-   "value": "Consumer retail storefronts, Amazon Web Services (AWS) cloud infrastructure, Dedicated Cloud environments, and Annapurna Labs network interface hardware/software like EFA."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "cff06d35c4"
+    "aedb4cec3f"
    ],
-   "value": "Estimated: Standard corporate policy offering 10-15 days of vacation for new graduates, plus paid sick leave."
+   "value": "Estimated: 10-15 days of paid time off annually for new hires, accruing with tenure."
   },
-  "retry_after": 1784975760,
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "e6d8de4ab6"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "d85a041ac8"
-   ],
-   "value": "Estimated: No company-wide guaranteed shutdowns; operational teams require continuous coverage."
+   "source_ids": [],
+   "value": "Estimated: No company-wide guaranteed shutdowns, though some specific sub-teams may offer limited flexibility."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "Large established public corporation with over 10,001 employees."
+   "value": "Mature, large-scale public corporation with over 10,001+ employees globally."
   },
   "sources": [
    {
@@ -19124,41 +19118,42 @@
    "confidence": "high",
    "source_ids": [
     "e6d8de4ab6",
-    "20158bef7f"
+    "aedb4cec3f"
    ],
-   "value": "Amazon has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
+   "value": "Amazon has a historical track record of offering H1B sponsorships, but sponsorship is not guaranteed for all roles; certain infrastructure positions explicitly do not offer immigration sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6",
-    "20158bef7f"
+    "e6d8de4ab6"
    ],
-   "value": "Amazon is a global technology company founded in 1994 that focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It makes money by selling consumer goods, offering digital services, and providing enterprise cloud infrastructure solutions."
+   "value": "Amazon is a multinational technology company founded in 1994 that focuses on e-commerce, cloud computing, and digital innovation. It makes money by selling consumer goods, offering digital services, and providing enterprise cloud infrastructure solutions."
   },
+  "synthesized_evidence_sha": "3d5a9f289c61b4d0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "d85a041ac8",
     "e6d8de4ab6",
-    "20158bef7f"
+    "aedb4cec3f"
    ],
-   "value": "Software development across diverse domains including front-end (React, Typescript), back-end (Golang, Kotlin), embedded systems (C programming, memory management), distributed systems, and network performance optimization."
+   "value": "Developing scalable software solutions using Python, Ruby, React, Golang, Typescript, Kotlin, and Swift; maintaining dedicated cloud infrastructure and network systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582968,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "While Amazon offers elite prestige, top-tier new grad pay, and a massive scope of technical learning in AI/hardware, its reputation for intense pace and high burnout directly conflicts with the candidate's priority for guaranteed work-life balance and sane hours."
-  },
-  "wlb_rating": {
-   "confidence": "estimated",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Estimated: Low to medium, heavily dependent on the specific team and role, with expectations of high availability and demanding operational hours."
+   "value": "Aligns with your desire for a top-tier tech role that accelerates technical learning and career growth. However, its reputation for bureaucracy and intense pace conflicts with your strict guardrails for sane hours and guaranteed shutdowns."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Variable and highly dependent on the specific team, but often below average due to heavy on-call burdens."
   }
  },
  "amazon com llc": {
@@ -95606,37 +95601,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Specialized Fintech). Prestige is high within the niche investment management data sector, but lacks the broad industry prestige of elite big-tech or dedicated AI research labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "B2B software and technology solutions provider serving the investment management sector."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a40f9b6c25"
+   ],
+   "value": "Community-oriented with a grassroots employee-driven charity program (Confluence Cares) and an emphasis on global cultural exposure."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Companies within the investment management industry."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Estimated: $80,000 - $95,000 base salary for the Pittsburgh, PA area, aligning with standard regional fintech rates."
   },
   "evidence_sha": "94ca18c78743a1de",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784976575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Financial technology / Investment management software."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Probe deeply into the 'AI' component of the .NET & AI role to determine if you will be building genuine ML/data pipelines or merely integrating basic APIs. Assess the team's pace of innovation to ensure it aligns with a fast tech culture, and ask specific questions about daily hours and off-the-clock expectations to verify their commitment to work-life balance."
+  },
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974324,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26",
+    "a40f9b6c25"
+   ],
+   "value": "Headquartered in Pittsburgh, PA with a global footprint spanning multiple countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a40f9b6c25"
+   ],
+   "value": "To help clients solve the complex challenges they are faced with and turn investment data into financial intelligence."
+  },
   "name": "Confluence Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a40f9b6c25"
+   ],
+   "value": "Estimated: Moderate pace typical of B2B fintech. Given recent organizational changes and growth, there may be transitional periods, but it is generally slower and less volatile than high-burnout startup environments."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a40f9b6c25",
+    "c7e4b98c26"
+   ],
+   "value": "Technology solutions and software that transform complex investment data into financial intelligence across front, middle, and back office operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of Paid Time Off, which is standard for established mid-to-large financial technology companies."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95646,7 +95705,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific data suggests guaranteed company-wide shutdowns. Standard public holidays are likely observed, but do not expect automatic week-long holiday closures without explicit policy confirmation."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a40f9b6c25"
+   ],
+   "value": "Established global company with a footprint spanning multiple countries, having undergone a great deal of positive change and growth over the past several years."
   },
   "sources": [
    {
@@ -95700,14 +95766,45 @@
     "url": "https://confluence.pinpointhq.com/en/postings/49d5aa65-dc1b-4254-ae94-f645e7488aa1?ats=pinpointhq"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No explicit mention of visa sponsorship in current job postings; candidates should verify directly with the recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26",
+    "a40f9b6c25"
+   ],
+   "value": "Confluence Technologies is a global technology solutions provider for the investment management industry, helping clients solve complex investment data challenges across the front, middle, and back office. They generate revenue by turning client investment data into financial intelligence through their specialized software platforms and services."
+  },
+  "synthesized_evidence_sha": "94ca18c78743a1de",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Software development focused on .NET and AI, operating within a hybrid workplace model."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784974324,
   "web_search_url": "https://duckduckgo.com/?q=Confluence+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7e4b98c26",
+    "a40f9b6c25"
+   ],
+   "value": "As an established player in fintech rather than a pure-play AI lab, Confluence offers specialized technical learning at the intersection of .NET and AI, but may not provide the elite prestige or top-tier new-grad pay found at dedicated AI firms. The global, multi-country footprint could offer career growth, but candidates must interview carefully to ensure the culture prioritizes innovation over legacy bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c7e4b98c26"
+   ],
+   "value": "Estimated: 4/5. B2B software companies often feature mature operational rhythms and hybrid work setups, suggesting above-average work-life balance without toxic crunch loops."
   }
  },
  "connected logistics": {
@@ -156211,7 +156308,7 @@
  },
  "general atomics aeronautical systems": {
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "8050c7d8d032b766",
   "generated_at": 1784870477,
@@ -156220,11 +156317,11 @@
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784973736,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784858719,
   "name": "General Atomics Aeronautical Systems",
   "prompt_v": 2,
-  "retry_after": 1784975656,
+  "retry_after": 1784980415,
   "schema_v": 1,
   "sources": [
    {
@@ -169640,48 +169737,125 @@
  "hakk da an ibm company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: Tier 2. As an IBM subsidiary focused on data engineering rather than core AI research, it lacks the prestige of dedicated top-tier AI labs, but maintains strong credibility in enterprise data."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Professional services and consulting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: Startup-like growth mentality with a quirky, wellness-focused culture (indicated by unique leadership titles like 'Wellness Warrior'), backed by large enterprise stability."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Large enterprises seeking cloud and data infrastructure modernization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary. Fast-growing data engineering consultancies in New York typically offer competitive tech market rates for new graduates."
   },
   "evidence_sha": "ba1e5286e0d89d10",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784976575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "IT Services and IT Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Probe the integration with IBM to ensure the culture remains fast and innovative rather than succumbing to corporate bureaucracy. Ask about their 'Wellness' initiatives to confirm if work-life balance includes guaranteed shutdowns and sane hours, avoiding burnout while supporting rapid technical growth and competitive new-grad pay in AI and data science."
+  },
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974324,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Headquartered in New York, New York, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Not explicitly stated in the provided sources, but focuses on data modernization and talent culture."
+  },
   "name": "Hakkōda, an IBM Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: Fast-paced due to a consulting model and rapid growth since 2021, though IBM ownership may introduce some corporate processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Data engineering, cloud migration, and modernization services for enterprise tech stacks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: 20-25 days. As an IBM-acquired company, PTO likely aligns with standard IBM corporate packages."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: Unknown if complete shutdowns are guaranteed, though wellness-focused tech cultures often feature end-of-year holiday breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Founded in 2021 with 201-500 employees; operates as an IBM Company."
   },
   "sources": [
    {
@@ -169735,14 +169909,45 @@
     "url": "https://jobright.ai/jobs/info/6a64552a5c7e2d715ebafdf7?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though it is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Hakkōda is a data and cloud engineering consultancy that helps enterprises migrate and modernize their data infrastructure. Acquired by IBM, the company generates revenue by providing technical engineering services and managed solutions to large corporate clients."
+  },
+  "synthesized_evidence_sha": "ba1e5286e0d89d10",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Full stack and data engineering involving Java, Vue3, Angular, TypeScript, and JavaScript."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784974324,
   "web_search_url": "https://duckduckgo.com/?q=Hakk%C5%8Dda%2C+an+IBM+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Hakkōda offers the prestige and resources of IBM combined with the fast-paced, innovative tech culture of a rapidly growing modern consultancy. It aligns with your desire for a mission-driven environment that highly values 'Wellness' (as noted by their Chief Talent officer) to maintain work-life balance and sane hours, while accelerating your technical learning on elite enterprise data projects."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0a93965ebf"
+   ],
+   "value": "Estimated: Moderate to Good. The presence of a Chief Talent, Culture and Wellness Warrior suggests a strong focus on work-life balance, though consulting can sometimes require demanding hours."
   }
  },
  "halliburton": {
@@ -280146,94 +280351,105 @@
  },
  "palantir technologies": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 — held alongside top FAANG and pioneering AI labs due to its unique combination of technical rigor, national-level mission, and high selectivity among new graduates."
+   "confidence": "high",
+   "source_ids": [
+    "8ec01f8c77",
+    "7941e51d38"
+   ],
+   "value": "Elite tier. Highly respected in the industry for complex data engineering and deployment, though distinct from pure-play generative AI research labs."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630"
+    "8ec01f8c77",
+    "f089533d2a",
+    "31f48b6a29"
    ],
-   "value": "Palantir makes money by selling multi-year enterprise software subscriptions directly to large government and commercial organizations. Deployments involve forward-deployed engineers who integrate the platform into the customer's systems, and contracts are typically high-value and long-term."
+   "value": "B2B software sales and deployment. Revenue is generated through long-term government contracts and enterprise software deployments by deploying forward-deployed engineers directly to client problems."
   },
   "culture_vibe": {
-   "confidence": "high",
-   "source_ids": [
-    "e2f7f40630"
-   ],
-   "value": "Intellectually intense, free-thinking, and mission-driven, with a uniquely flat internal structure that values engineering craft over traditional hierarchy. Colleagues tend to be deeply curious builders who believe in the product and are empowered to make critical decisions."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Intense, mission-driven, and shrewdly pragmatic. The culture values rapid problem-solving and direct impact over slow, bureaucratic processes."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630",
-    "31f48b6a29"
+    "f089533d2a",
+    "31f48b6a29",
+    "8ec01f8c77"
    ],
-   "value": "U.S. government defense and intelligence agencies form a major customer base, alongside commercial clients in healthcare, energy, manufacturing, and supply chain as well as public sector bodies such as the National Health Service."
+   "value": "Primary customers include the US Government and large commercial enterprises requiring secure, large-scale data operations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $160,000–$185,000 base salary, plus equity of comparable target value and a sign-on bonus, placing total first-year compensation near the elite tier for new graduates."
+   "value": "Estimated: $140,000 - $180,000 base salary, with total compensation (including stock options/bonuses) potentially pushing towards or above $200,000+ for elite new grads."
   },
   "evidence_sha": "9dedd91f200c210b",
-  "generated_at": 1784672887,
+  "generated_at": 1784976575,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630"
+    "8ec01f8c77"
    ],
-   "value": "Enterprise software, data analytics, and artificial intelligence platforms serving government and commercial sectors."
+   "value": "Data Integration and Analytics Software / Information Technology."
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f089533d2a",
+    "31f48b6a29"
+   ],
+   "value": "During interviews, probe deeply into the reality of the on-call rotation and deployment travel. Ask explicitly how often Forward Deployed Engineers work weekends or late nights during government deployments to ensure the pace matches your work-life balance standards."
   },
-  "last_attempt_at": 1784954160,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784951429,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "8ec01f8c77"
+   ],
+   "value": "Headquartered in Palo Alto, CA. Positions are full-time and hybrid, with US Government roles potentially requiring presence in secure facilities."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e2f7f40630"
+    "8ec01f8c77"
    ],
-   "value": "To create the principal data operating system for the most critical institutions, helping them integrate their data, decisions, and operations to address the world's most complex problems."
+   "value": "To build data-driven decision-making software that empowers institutions to solve complex, critical problems."
   },
   "name": "Palantir Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast and execution-driven, with engineers expected to ship solutions directly to users within days or weeks. A collaborative, iterative loop with the customer replaces internal product manager-driven cycles, bringing minimal bureaucracy but continuous responsibility."
+   "value": "Estimated: Extremely fast-paced and high-pressure. Palantir operates with a startup-like intensity even as a public company, with engineers often directly embedded in high-stakes client environments."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630",
+    "8ec01f8c77",
+    "f089533d2a",
     "31f48b6a29"
    ],
-   "value": "Palantir Gotham is used for intelligence, defense, and law enforcement work; Foundry serves commercial clients and government agencies for supply chain, operations, and regulatory analysis; Apollo is a continuous delivery engine for deploying and managing software across cloud and on-premise environments. The company also offers an Artificial Intelligence Platform (AIP) to bring large language models into business and defense workflows."
+   "value": "Data integration and analytics platforms (historically known as Gotham and Foundry), with current open roles focused on Forward Deployed Software and Infrastructure engineering solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unlimited flexible paid time off policy, with engineers typically taking 20–25 days annually."
+   "value": "Estimated: 15 to 20 days of standard PTO, typical for elite tech firms, though taking uninterrupted vacation during active client deployments can be culturally difficult."
   },
-  "retry_after": 1784975760,
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -280243,15 +280459,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Company-wide paid shutdown weeks that align with traditional holiday periods to guarantee a complete break, during which internal operations and communication actively wind down."
+   "value": "Estimated: No company-wide guaranteed shutdowns found; time off is generally at the employee's discretion and subject to project deadlines."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "7941e51d38",
-    "e2f7f40630"
+    "7941e51d38"
    ],
-   "value": "Large-cap public company with thousands of employees and a track record of over 15 years, having transitioned from a secretive startup to a major government and enterprise infrastructure provider."
+   "value": "Publicly traded company (NYSE: PLTR)."
   },
   "sources": [
    {
@@ -280316,37 +280531,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "U.S. government-facing roles explicitly require the ability to obtain and maintain a security clearance, which often necessitates U.S. citizenship. Other technical roles may support visa sponsorship, but the company evaluates candidates on a case-by-case basis, and clearance requirements can limit sponsorship in defense-oriented posts."
+   "confidence": "high",
+   "source_ids": [
+    "31f48b6a29"
+   ],
+   "value": "US Security clearance is required for the US Government roles, which typically restricts hiring to US Citizens."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630"
+    "8ec01f8c77"
    ],
-   "value": "Palantir builds software platforms that integrate, manage, and analyze massive, disparate datasets for organizations that need to make high-stakes decisions. Its core products, Foundry, Gotham, and Apollo, enable users to model complex real-world systems, uncover hidden patterns, and operationalize data-driven workflows."
+   "value": "Palantir Technologies is a leading software company specializing in data-driven decision-making platforms. It builds enterprise software for large-scale data integration and analytics."
   },
+  "synthesized_evidence_sha": "9dedd91f200c210b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "e2f7f40630"
+    "f089533d2a",
+    "8ec01f8c77",
+    "0f3cf82623"
    ],
-   "value": "Work involves full-stack product deployment, data pipeline construction, custom tooling in Python, Java, C++, or TypeScript, and rapid prototyping alongside customers. Forward deployed roles prioritize owning a problem from data ingestion to operational impact, while internally teams build scalable, real-time data infrastructure and AI/ML tooling."
+   "value": "New grad software and infrastructure roles involve working with Java, Python, Go, JavaScript, Bash, C++, and TypeScript to build and deploy data systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583476,
   "web_search_url": "https://duckduckgo.com/?q=Palantir+Technologies+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Palantir merges a high-impact mission with a top-tier engineering reputation and competitive pay, rarely found outside large tech firms. Its non-typical culture favors direct ownership over bureaucracy, and its established shutdown days and unlimited PTO signal a deliberate effort to align intense work with personal sustainability, matching a candidate who wants elite growth without burnout."
+   "confidence": "high",
+   "source_ids": [
+    "f089533d2a",
+    "8ec01f8c77"
+   ],
+   "value": "This role aligns with your goal for an elite, high-paying tech job that accelerates learning. You should heavily weigh that Palantir's Forward Deployed Engineer model is notoriously demanding and client-driven, which presents a real risk of conflicting with your hard requirement for sane hours and a low-burnout culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to above average; the forward-deployed model can require travel and intense client-facing periods, but the company culture publicly disavows 24/7 grind, and unlimited PTO and mandatory shutdown days provide tangible recovery time."
+   "value": "Estimated: Generally poor to mixed for Forward Deployed roles due to client-driven demands and deployment travel, which may fall short of a guaranteed low-burnout environment."
   }
  },
  "palo alto networks": {
@@ -299453,40 +299676,47 @@
  "publicis sapient": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Strong enterprise AI practice with real production deployments; respected in applied ML circles but not a primary research lab like FAIR/Google Brain/OpenAI."
+   "source_ids": [
+    "7748a93646"
+   ],
+   "value": "Tier 2 — Strong enterprise AI portfolio (large-scale ML platforms for global banks/retailers) and regular NeurIPS/ICLR publications, but not a primary AI research lab like FAIR or DeepMind."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
     "415fd8f5c9",
     "7748a93646"
    ],
-   "value": "Project-based and retainer consulting fees for digital transformation engagements; revenue from strategy, build, and run phases of client programs. Part of Publicis Groupe's consolidated revenue."
+   "value": "Project-based and retainer consulting fees (time-and-materials, fixed-price, or outcome-based) plus recurring managed-services revenue; part of Publicis Groupe (EPA: PUB), so consolidated financials roll up to the holding company."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first consultancy: pragmatic, collaborative, and delivery-obsessed. Less hierarchy than traditional firms; strong craft community (guilds, tech talks). Can feel transactional due to client-service model. Diversity and inclusion actively promoted."
+   "confidence": "medium",
+   "source_ids": [
+    "7748a93646",
+    "f0b89a29e1"
+   ],
+   "value": "Engineering-first consultancy: pragmatic, collaborative, 'speak-up' culture; strong guild/chapter model for skill growth; diverse, global teams; less startup chaos, more structured career ladders."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "415fd8f5c9",
-    "7748a93646"
+    "7748a93646",
+    "f0b89a29e1"
    ],
-   "value": "Fortune 500 and Global 2000 companies across financial services, retail, consumer goods, healthcare, telecommunications, energy, and government sectors."
+   "value": "Large enterprises—major banks, insurers, retailers, telcos, healthcare payers/providers, and government agencies—globally."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $105k–$125k base + $10k–$20k signing bonus + RSUs (vesting 4 yrs) in major US hubs; total comp ~$125k–$155k. Varies by role (DS/ML vs SWE) and location."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $105k–$125k base + $10k–$20k signing + RSU (~$15k–$25k/yr vest) = ~$130k–$170k Year 1 TC in US Tier-1 metros; varies by role (Data Scientist vs ML Engineer) and location."
   },
   "evidence_sha": "7b3fd0deb756ba7b",
-  "generated_at": 1784683187,
+  "generated_at": 1784976575,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -299498,51 +299728,55 @@
     "415fd8f5c9",
     "7748a93646"
    ],
-   "value": "Digital consulting / IT services / Professional services"
+   "value": "Digital consulting / IT services / Technology transformation"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect multi-round loops: coding/algorithms (LeetCode medium-hard), system design (scalable ML/data platforms), case studies (digital transformation scenarios), and behavioral interviews assessing consulting mindset (client-facing communication, ambiguity navigation). AI/DS roles add ML fundamentals, MLOps, and applied modeling questions. Prepare for 'how would you architect this for a Fortune 500 client' framing."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "7748a93646"
+   ],
+   "value": "Expect: (1) coding/algorithms (LeetCode medium), (2) system-design for scalable data/ML pipelines, (3) case-style product/consulting scenarios, (4) behavioral 'client-facing' stories. Prepare to explain ML fundamentals, cloud data services, and how you balance technical rigor with stakeholder communication."
   },
-  "last_attempt_at": 1784683187,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974324,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "415fd8f5c9",
-    "7748a93646"
+    "7748a93646",
+    "f0b89a29e1"
    ],
-   "value": "Global offices across North America (US, Canada), Europe (UK, Germany, France, Nordics), APAC (India, Singapore, Australia), and LATAM; major hubs in Boston, New York, London, Bangalore, and Singapore."
+   "value": "Major hubs: Boston, New York, Chicago, Atlanta, Dallas, San Francisco, Seattle, Toronto, London, Berlin, Bangalore, Singapore, Sydney; remote/hybrid options common post-2022."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "415fd8f5c9",
     "f0b89a29e1"
    ],
-   "value": "To help established organizations become digitally enabled and data-driven by combining strategy, consulting, and engineering to deliver measurable business outcomes."
+   "value": "To help established organizations unlock a digital future by combining strategy, consulting, and engineering—'reimagine business through a digital lens.'"
   },
   "name": "Publicis Sapient",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fast — Project-driven delivery cycles (2-week sprints), frequent client demos, and billable utilization targets create sustained intensity; varies by account and role."
+   "value": "Estimated: Fast-paced project cycles (2–6 week sprints) with predictable intensity spikes near go-lives; generally avoids 'always-on' product on-call rotations."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "415fd8f5c9",
-    "7748a93646"
+    "7748a93646",
+    "f0b89a29e1"
    ],
-   "value": "Digital transformation consulting, custom software engineering, data & AI platforms, cloud migration, customer experience design, agile coaching, and product strategy for enterprise clients."
+   "value": "Digital strategy & consulting; custom software engineering (cloud-native, data/AI platforms, CX/commerce); agile delivery & DevOps; managed services for modern applications and data estates."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); varies by region and tenure. No unlimited PTO policy."
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); accrual increases with tenure; unlimited not offered."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -299552,7 +299786,7 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns. Some offices observe reduced hours between Christmas–New Year; project-dependent."
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) + occasional 'recharge Fridays' in summer; not a formal monthly shutdown policy."
   },
   "size_stage": {
    "confidence": "medium",
@@ -299560,7 +299794,7 @@
     "415fd8f5c9",
     "7748a93646"
    ],
-   "value": "Large, mature subsidiary (20,000+ employees globally) of Publicis Groupe (Euronext: PUB), a multinational advertising and communications holding company."
+   "value": "~20,000+ employees across 50+ offices worldwide; mature, profitable subsidiary of a €13B+ revenue holding company."
   },
   "sources": [
    {
@@ -299607,7 +299841,7 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Actively sponsors H-1B visas for technical roles in the US; global mobility programs enable transfers between offices. Green card sponsorship typically available for senior and high-performing roles."
+   "value": "Actively sponsors H-1B (cap-subject and cap-exempt via university affiliations) and supports Green Card (PERM/EB-2/EB-3) for eligible roles; dedicated immigration team."
   },
   "status": "ready",
   "summary": {
@@ -299617,28 +299851,32 @@
     "7748a93646",
     "f0b89a29e1"
    ],
-   "value": "Publicis Sapient is a digital business transformation consultancy that helps large enterprises modernize through technology, data, and AI. It operates as a wholly owned subsidiary of Publicis Groupe, delivering end-to-end digital services across strategy, consulting, engineering, and experience design."
+   "value": "Publicis Sapient is the digital business transformation hub of Publicis Groupe, helping large enterprises modernize technology, product, and customer experience. It makes money by selling consulting, engineering, and managed-services engagements—typically multi-year, multi-million-dollar contracts—to Fortune 500 clients in financial services, retail, health, telecom, and transportation."
   },
+  "synthesized_evidence_sha": "7b3fd0deb756ba7b",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "415fd8f5c9",
+    "1db9db9c4d",
     "7748a93646"
    ],
-   "value": "Full-stack engineering, cloud architecture (AWS/Azure/GCP), data engineering, ML/AI model development and deployment, DevOps, platform modernization, and agile delivery at enterprise scale."
+   "value": "Full-stack product engineering (Java, Kotlin, Go, React, TypeScript), cloud architecture (AWS/Azure/GCP), data engineering & ML platform build-outs (Spark, Databricks, Vertex AI, SageMaker), DevOps/Platform engineering (Kubernetes, Terraform, CI/CD), and agile delivery at scale."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674529,
   "web_search_url": "https://duckduckgo.com/?q=Publicis+Sapient+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Publicis Sapient offers elite AI/data science work on enterprise-scale transformations with the backing of a global holding company, balancing prestige and competitive new-grad pay. Its engineering-led culture emphasizes modern tech stacks and agile delivery, while its consulting model provides exposure to diverse industries and complex problems — accelerating technical growth. However, consulting demands (client travel, billable hours, project crunches) can challenge work-life balance; the firm"
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "415fd8f5c9"
+   ],
+   "value": "Publicis Sapient offers new-grad AI/data roles inside a Fortune-500-backed digital consultancy—meaning elite brand prestige, exposure to massive enterprise data estates, and structured mentorship—while its consulting model incentivizes efficient delivery over heroics, enabling clearer work-life boundaries than many product unicorns."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "6/10 — Consulting baseline: 45–55 hrs/week typical, spikes to 60+ during go-lives. Flexible remote/hybrid options post-COVID; no firm-wide guaranteed shutdowns. Team and account dependent."
+   "value": "Estimated: 3.8/5 — Consulting travel reduced post-COVID; core hours ~45–50/wk with protected weekends on most accounts; utilization targets exist but are managed at engagement level."
   }
  },
  "puget sound energy": {
@@ -307852,24 +308090,29 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Strong applied AI/ML in radar/signal processing and autonomy, but not a primary AI research hub like top tech labs; prestige comes from scale and mission impact rather than AI thought leadership."
+   "value": "Estimated: Tier 2. While Raytheon is highly prestigious in defense and aerospace, its AI and data science prestige does not match top-tier commercial tech giants or elite AI labs, as it focuses on embedded systems and traditional software engineering."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Government defense contracting model — revenue comes from multi-year contracts with U.S. and allied governments for development, production, and sustainment of defense systems."
+   "confidence": "medium",
+   "source_ids": [
+    "3f380be830",
+    "9ecaac7e65"
+   ],
+   "value": "Revenue is generated through full-time defense contracting, building specialized aerospace and defense systems for clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Professional, mission-focused, process-driven, hierarchical; engineering-centric with strong emphasis on reliability and compliance over experimentation. Less 'tech startup' vibe, more 'engineering institution'."
+   "value": "Estimated: Mission-driven and formal. The culture heavily emphasizes national security, engineering rigor, and compliance, which can feel bureaucratic and slow compared to modern tech startups."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primarily U.S. Department of Defense and allied foreign governments through government defense contracts."
+   "confidence": "medium",
+   "source_ids": [
+    "9ecaac7e65"
+   ],
+   "value": "Primarily government and military organizations requiring advanced defense and aerospace technologies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -307877,13 +308120,13 @@
    "source_ids": [
     "9ecaac7e65"
    ],
-   "value": "$57,000 – $109,000 base salary (per job posting range for Software Engineer I)"
+   "value": "Estimated: $57,000 to $109,000 annually for entry-level Software Engineer I roles. Though the defense sector is catching up, maximum compensation will notably lag behind FAANG and elite AI labs."
   },
   "evidence_sha": "d59fb014803b9ea4",
-  "generated_at": 1784904062,
+  "generated_at": 1784976575,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -307892,52 +308135,53 @@
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Aerospace & Defense"
+   "value": "Aerospace and Defense."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "9ecaac7e65"
-   ],
-   "value": "Expect heavy emphasis on C/C++, data structures, algorithms, real-time embedded systems, and software testing. Prepare for behavioral questions on working in regulated, mission-critical environments and obtaining security clearance. Demonstrate ability to deliver reliable code under strict processes."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To assess if this role fits your priorities, ask the interviewer about the typical weekly hours, whether there are guaranteed shutdowns or strict off-the-clock policies, and how much of the tech stack uses modern AI versus legacy languages like C and Java. Probe about internal mobility and tech stack modernization to ensure the company can accelerate your career without sacrificing personal time to slow bureaucracy."
   },
-  "last_attempt_at": 1784904062,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974067,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Major sites in Tewksbury MA, Tucson AZ, and numerous other U.S. locations; some international presence."
+   "value": "Tewksbury, MA and Tucson, AZ (with roles marked as onsite)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "2d32fdb249",
     "9ecaac7e65"
    ],
-   "value": "Dedicated to solving complex problems in aerospace and defense to protect national security."
+   "value": "Dedicated to solving complex problems by creating defense solutions that are smarter, faster, and better than previously thought possible."
   },
   "name": "Raytheon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to slow — Government contract cycles, compliance, and clearance requirements create structured, deliberate pace rather than rapid iteration."
+   "value": "Estimated: Slow to moderate. Governed by strict government contracting milestones and heavy compliance, resulting in a methodical pace rather than a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "2d32fdb249",
     "3f380be830"
    ],
-   "value": "Radar systems, missile defense systems, cybersecurity solutions, electronic warfare systems, command and control systems, and other aerospace and defense technologies."
+   "value": "Next-generation defense solutions and advanced radar product lines."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 10-15 days vacation + 10 federal holidays + sick leave; varies by location and tenure."
+   "value": "Estimated: 15 to 20 days of accrued PTO annually, typical of large aerospace and defense contractors, though rigid accrual schedules may apply for new hires."
   },
-  "refresh_after": 1790088062,
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307947,12 +308191,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Observes federal holidays; some sites may have winter shutdown between Christmas and New Year; not guaranteed company-wide."
+   "value": "Estimated: None found in research. Unlike top tech firms, defense contractors typically do not offer guaranteed company-wide holiday shutdowns."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large public company (RTX Corporation) with ~180,000 employees globally; mature, stable enterprise stage."
+   "confidence": "medium",
+   "source_ids": [
+    "2d32fdb249",
+    "3f380be830"
+   ],
+   "value": "Large, established enterprise operating as a major business unit within RTX (a large public aerospace and defense conglomerate)."
   },
   "sources": [
    {
@@ -308017,42 +308264,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B and green cards for defense roles requiring U.S. citizenship/clearance; many positions require active security clearance."
+   "confidence": "medium",
+   "source_ids": [
+    "2d32fdb249",
+    "9ecaac7e65"
+   ],
+   "value": "Defense contractors typically require U.S. citizenship and the ability to obtain government security clearances due to the nature of the work."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "2d32fdb249",
     "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Raytheon is the world's largest aerospace and defense company, developing advanced technology systems for military and government customers. It generates revenue through government contracts for radar systems, missile defense, cybersecurity, and other defense technologies."
+   "value": "Raytheon, an RTX business, is the world's largest aerospace and defense company, creating next-generation defense solutions like radar systems. It makes money by securing government and military contracts to develop advanced technologies that solve complex global security problems."
   },
-  "synthesized_evidence_sha": "1ec8cb7e0747303f",
+  "synthesized_evidence_sha": "d59fb014803b9ea4",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "2d32fdb249",
+    "3f380be830",
     "9ecaac7e65"
    ],
-   "value": "Real-time embedded software development, application software development, software testing, software design, coding in C/C++, Java; radar signal processing, mission-critical systems."
+   "value": "Entry-level software engineering involves real-time embedded software development, application software development, software testing, and software design using C++, C, Java, data structures, and algorithms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673976,
   "web_search_url": "https://duckduckgo.com/?q=Raytheon+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "3f380be830",
-    "9ecaac7e65"
-   ],
-   "value": "Offers elite prestige as the world's largest defense contractor with competitive new-grad pay ($57K–$109K) and mission-driven work on critical national security systems. However, defense contracting culture tends toward structured processes and compliance over fast, innovative tech culture; work-life balance varies by program but often includes regulated hours due to government oversight. Technical learning is deep in embedded/real-time systems but may not match commercial AI/DS innovation veloc"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite pay, mission-driven work, and a fast-paced, innovative AI/tech culture without bureaucracy, Raytheon presents a tradeoff. While defense work is highly mission-driven and offers structured learning, the aerospace and defense sector is fundamentally slower and more bureaucratic than top-tier tech firms, which may conflict with the desire for a fast, cutting-edge tech culture and guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.5/5 — Many roles follow standard 40-hour weeks with overtime paid; some programs have surge periods. Government oversight can enforce boundaries but also add administrative burden."
+   "value": "Estimated: Good to Moderate. Defense contractors generally offer stable 40-hour work weeks, but project deadlines can cause spikes in hours. Sane hours are common, but it lacks the tech-industry standard of guaranteed holiday shutdowns."
   }
  },
  "re build manufacturing": {
@@ -376480,48 +376730,125 @@
  "the redesign group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: Not top-tier. As a technology and cybersecurity solution provider, the focus is on infrastructure rather than cutting-edge AI or data science R&D."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "B2B solution provider and consulting model, likely generating revenue through IT infrastructure implementation contracts and cybersecurity services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "A rewarding, collaborative environment that fosters teamwork while expecting independence and the ability to thrive in a fast-paced setting."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Organizations seeking meaningful transformation through emerging technology and cybersecurity solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: $70,000 - $85,000. Based on an infrastructure implementation role in a non-big-tech solution provider context."
   },
   "evidence_sha": "c5298f56dd3cec5d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784976575,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Information Technology Services and Cybersecurity"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Assess whether the day-to-day work actually involves modern AI/tech innovation or if it is primarily slow-paced enterprise IT maintenance. Inquire about exact new-grad compensation, expected working hours, and if there are guaranteed shutdowns to ensure the fast pace doesn't lead to burnout."
+  },
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974325,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Global company with at least one location or role placement in Florida (FL)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "To help organizations achieve meaningful transformation by leveraging design thinking, interdependent subject matter expertise, and emerging technology solutions."
+  },
   "name": "The Redesign Group",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly states they operate in a fast-paced environment that moves quickly and challenges employees to grow."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Technology and cybersecurity solutions, including infrastructure implementation services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: 15-20 days. Specific PTO policies are not public, but standard for mid-sized tech consulting firms."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: None found in research. No mention of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Global solution provider, specific headcount or funding stage not disclosed in available sources."
   },
   "sources": [
    {
@@ -376575,14 +376902,45 @@
     "url": "https://ats.rippling.com/redesigncareers/jobs/cf4c6c27-b2c3-4803-ab86-62b4118904aa"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Sponsorship details for new grads are not explicitly mentioned in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "The Redesign Group is a global technology and cybersecurity solution provider that helps organizations achieve meaningful transformation using design thinking and emerging technologies. They likely make money by consulting on and implementing IT infrastructure and security solutions for enterprise clients."
+  },
+  "synthesized_evidence_sha": "c5298f56dd3cec5d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Roles involve infrastructure implementation and cybersecurity solutions in a fast-paced environment. The tech stack likely includes emerging technologies relevant to enterprise IT and security."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784974325,
   "web_search_url": "https://duckduckgo.com/?q=The+Redesign+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "This role offers exposure to both technology and cybersecurity, which could accelerate technical learning in a fast-paced environment that challenges you to grow. However, as an infrastructure implementation consultancy, it may not provide the elite AI/data science prestige or top-tier new-grad pay you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9eb722ae9a"
+   ],
+   "value": "Estimated: Moderate. While the company calls the environment rewarding and collaborative, the emphasis on a fast pace and independent work may lead to fluctuating workloads."
   }
  },
  "the swift group llc": {
@@ -392322,26 +392680,27 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "e31b9bc355",
     "ad7f54c224"
    ],
-   "value": "Estimated: High industry-specific prestige (leading AI applications in aviation), but generally considered lower elite tech prestige compared to FAANG or top trading firms."
+   "value": "Estimated: Tier 2. While not categorized as an elite tech giant, United's scale provides highly impactful, real-world data science applications in aviation logistics and pricing, offering strong but not top-tier industry prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "2d4c20c036",
     "7f2a243014"
    ],
-   "value": "Fsso Generates revenue through passenger ticket sales, ancillary fees, cargo transport, and loyalty program partnerships."
+   "value": "Generates income through airfare sales, cargo transport fees, and ancillary travel services across its global flight network."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Corporate, mission-driven, and focused on bringing people together; actively hiring 'digital innovators' to modernize the industry."
+   "value": "Mission-driven and purpose-oriented, focusing on bringing people together and digital innovation within a historic, globally recognized brand."
   },
   "customers": {
    "confidence": "high",
@@ -392349,18 +392708,19 @@
     "2d4c20c036",
     "7f2a243014"
    ],
-   "value": "Global leisure and business travelers, as well as corporate shipping clients."
+   "value": "Global leisure and business travelers, as well as commercial cargo clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "e31b9bc355",
     "ad7f54c224"
    ],
-   "value": "Estimated: $100,000 - $130,000 base salary, competitive for the midwest but slightly below elite tech hubs like Silicon Valley or NYC."
+   "value": "Estimated: $85,000 - $110,000 base salary for new-grad IT and digital technology roles."
   },
   "evidence_sha": "dea3c41dbfd0203d",
-  "generated_at": 1784882299,
+  "generated_at": 1784976575,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -392369,32 +392729,35 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2d4c20c036"
+    "2d4c20c036",
+    "7f2a243014"
    ],
-   "value": "Aviation / Airlines"
+   "value": "Commercial Aviation and Air Travel."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "e31b9bc355",
     "ad7f54c224"
    ],
-   "value": "Probe the specific team's autonomy: ask how quickly AI models are pushed to production, whether the team experiences heavy bureaucratic slowdowns, and how on-call duties and shutdowns are handled during irregular operations (Irops). Clarify new-tech compensation structures."
+   "value": "Probe heavily into the specific team's tech stack and deployment cadence to confirm they operate with a fast, innovative culture rather than being bogged down by legacy airline bureaucracy. Ask about on-call expectations, after-hours shutdowns, and work-life balance policies to ensure the role respects personal time and avoids a high-burnout environment. Clarify the exact new-grad compensation package and assess whether the technical learning curve and career growth trajectory meet your elite-ti"
   },
-  "last_attempt_at": 1784882299,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974324,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "7f2a243014"
+    "e31b9bc355",
+    "ad7f54c224"
    ],
-   "value": "Corporate hub in Chicago (Willis Tower) with a major digital technology center in Houston, alongside various global operational hubs."
+   "value": "Corporate and tech roles are located in major hubs such as Houston, Texas, Chicago (Willis Tower HQ), and various other global offices."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Driven by the purpose of bringing people together globally, the company focuses on making an impact on customers and the aviation industry."
+   "value": "Driven by the purpose of bringing people together, United aims to make an impact on customers and the industry through global connectivity."
   },
   "name": "United Airlines",
   "pace_of_work": {
@@ -392402,7 +392765,7 @@
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Estimated: Moderate to fast. Digital Technology teams push for cutting-edge innovation, but operational realities and legacy systems can introduce a slow官僚主义 (bureaucratic) drag."
+   "value": "Estimated: Moderate. As a massive legacy airline, the general corporate pace may be stability-focused and bureaucratic, though specific digital technology teams might operate more dynamically at the cutting edge of aviation tech."
   },
   "products": {
    "confidence": "high",
@@ -392410,7 +392773,7 @@
     "2d4c20c036",
     "7f2a243014"
    ],
-   "value": "Passenger air travel, global cargo transport, travel loyalty programs (MileagePlus), and premium cabin services."
+   "value": "Passenger flight transport, global cargo shipping, and travel-related loyalty services."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -392418,11 +392781,15 @@
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Estimated: 15-25 days of paid time off, standard for a large legacy corporation."
+   "value": "Estimated: 15-20 days of paid time off annually for new corporate employees, alongside standard airline travel benefits."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ad7f54c224"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
@@ -392431,7 +392798,7 @@
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Estimated: No guaranteed company-wide shutdowns. Tech teams may have limited operational shutdowns but must maintain 24/7 aviation systems."
+   "value": "Estimated: No regular guaranteed corporate shutdowns, though standard public holidays are observed."
   },
   "size_stage": {
    "confidence": "high",
@@ -392439,7 +392806,7 @@
     "2d4c20c036",
     "7f2a243014"
    ],
-   "value": "Public company (NYSE: UAL), operating as a large-scale global enterprise."
+   "value": "A large-cap, established public enterprise and legacy airline carrier operating on a global scale."
   },
   "sources": [
    {
@@ -392494,11 +392861,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "ad7f54c224"
+    "e31b9bc355"
    ],
-   "value": "Estimated: Large public airlines typically sponsor H-1B and green cards for specialized technical roles, though exact approval rates are not published."
+   "value": "Specific visa sponsorship details are not explicitly stated in standard postings, but large US airlines typically offer visa sponsorship for specialized digital technology roles."
   },
   "status": "ready",
   "summary": {
@@ -392507,14 +392874,16 @@
     "2d4c20c036",
     "7f2a243014"
    ],
-   "value": "United Airlines is a major global airline that transports passengers and cargo worldwide. It generates revenue primarily through ticket sales, travel-related services, and cargo transport."
+   "value": "United Airlines is a major global airline that transports passengers and cargo worldwide. It generates revenue primarily by selling flight tickets, cargo space, and travel-related services."
   },
+  "synthesized_evidence_sha": "dea3c41dbfd0203d",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "e31b9bc355",
     "ad7f54c224"
    ],
-   "value": "Digital Technology teams work on cutting-edge aviation technology, focusing on digital innovation, scalable systems, and customer-facing platforms."
+   "value": "Digital Technology teams work on cutting-edge technology in aviation, including front-end development, digital innovation, and customer-facing platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674985,
@@ -392522,16 +392891,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "ad7f54c224"
+    "ad7f54c224",
+    "e31b9bc355"
    ],
-   "value": "United offers a mission-driven environment with real-world AI/DS impact on a massive physical operation. However, as a legacy airline, its tech culture may face more bureaucratic hurdles and slower pace compared to elite tech firms, potentially conflicting with the desire for a hyper-fast, innovative environment and guaranteed shutdowns."
+   "value": "United offers a mission-driven environment connecting people globally, but as a legacy airline, it may lean toward slower bureaucracy rather than the fast-paced, elite tech culture you are seeking. While it provides large-scale data science opportunities with competitive corporate pay, you should carefully vet their specific tech teams to ensure the role provides rapid innovation without systemic slow-downs or work-life imbalance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "ad7f54c224"
    ],
-   "value": "Estimated: Moderate. Sane corporate hours are typical, but tech workers may face on-call responsibilities during major travel disruptions or system outages."
+   "value": "Estimated: Good to Fair. Large corporate airlines generally offer structured hours and standard work-life balance, but operational tech roles can occasionally require off-hours support during travel disruptions."
   }
  },
  "united franchise group": {
@@ -407486,40 +407856,46 @@
  "visa": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (Financial Services / Payments Data)"
-  },
-  "aliases": [],
-  "attempts": 3,
-  "business_model": {
-   "confidence": "medium",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Charges transaction processing fees and data-related service fees to financial institutions and merchants using its global payment network."
+   "value": "Estimated: Tier 2. While Visa applies massive-scale data engineering, risk, and security modeling within payments, it is generally viewed differently from elite FAANG or pure-play AI labs for prestige"
+  },
+  "aliases": [],
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7df5c68497"
+   ],
+   "value": "Facilitates global digital payments by operating secure infrastructure networks that process over 259 billion transactions annually, generating revenue primarily from fees charged to financial institutions for transaction processing and related value-added services."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
     "bd5cfc20d4"
    ],
-   "value": "Estimated: Professional, mission-driven, and stable, avoiding typical startup toxicity while maintaining a standard 4.1 employee rating on platforms like Glassdoor."
+   "value": "Estimated: Corporate, structured, and mission-driven. With a Glassdoor rating of 4.1, it suggests a stable environment with good benefits but more typical large-enterprise bureaucracy rather than fast, innovative tech culture."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bd5cfc20d4"
+    "7df5c68497"
    ],
-   "value": "Consumers, merchants, financial institutions, and government entities globally."
+   "value": "Consumers, merchants, financial institutions, and government entities worldwide."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $120k-$150k base salary, plus potential bonuses and stock options, totaling around $150k-$180k total compensation."
+   "source_ids": [
+    "7df5c68497",
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary."
   },
   "evidence_sha": "f63eb2f91188078d",
-  "generated_at": 1784930210,
+  "generated_at": 1784976575,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -407530,41 +407906,48 @@
    "source_ids": [
     "bd5cfc20d4"
    ],
-   "value": "Financial Services / Payments Technology"
+   "value": "Financial services and technology payments."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare to assess the specific team's autonomy to ensure you won't be slowed by corporate bureaucracy. Ask about their tech stack modernization pace and how they balance stringent financial security requirements with the drive for rapid technical learning and career growth, ensuring your personal time remains protected."
+   "source_ids": [
+    "7df5c68497",
+    "bd5cfc20d4"
+   ],
+   "value": "Probe deeply into the exact daily pace of the team and the stack's modernity to ensure the technical learning curve is fast and not hindered by corporate bureaucracy. Ask the hiring manager about actual off-hours expectations to confirm sane hours and whether there are guaranteed shutdowns for WLB, as massive payments infrastructure can sometimes require toxic on-call burdens that interfere with personal time."
   },
-  "last_attempt_at": 1784930210,
+  "last_attempt_at": 1784976575,
   "last_evidence_at": 1784974327,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "bd5cfc20d4"
+    "7df5c68497"
    ],
-   "value": "Global presence with a massive multinational footprint."
+   "value": "United States (Foster City, CA) and global offices across more than 200 countries and territories."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bd5cfc20d4"
+    "7df5c68497"
    ],
-   "value": "To connect the world through the most innovative, reliable, and secure digital payment network to enable individuals, economies, and businesses to thrive."
+   "value": "Dedicated to uplifting everyone, everywhere by being the best way to pay and be paid."
   },
   "name": "Visa",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Structured, stable, and deliberate, favoring risk mitigation over rapid, fast-paced innovation."
+   "source_ids": [
+    "7df5c68497",
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: Generally steady and process-oriented due to the critical nature of financial infrastructure, which may lean more toward bureaucratic and slow rather than fast-paced startup innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Global payment processing networks, credit/debit/prepaid cards, risk and identity solutions, and data services."
+   "value": "Global payment processing networks (VisaNet), consumer and commercial credit/debit cards, value-added security, analytics, and payment software solutions."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -407572,25 +407955,33 @@
    "source_ids": [
     "bd5cfc20d4"
    ],
-   "value": "Estimated: 15-20 days of Paid Time Off available to new hires, alongside standard observed holidays."
+   "value": "Estimated: 20-25 paid vacation days per year."
   },
+  "refresh_after": 1790160575,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "7df5c68497",
+    "bd5cfc20d4"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No public confirmation of guaranteed corporate-wide shutdowns, but standard public holidays can be expected."
+   "source_ids": [
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: No guaranteed corporate shutdowns found in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Multinational, established public corporation."
+   "value": "Large, established multinational financial services corporation with global operations in over 200 countries and territories."
   },
   "sources": [
    {
@@ -407655,39 +408046,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Typically offers robust immigration support including visa sponsorship for full-time technical roles, though specific policies vary by role and region."
+   "value": "Not explicitly mentioned in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Visa is a multinational financial services company that facilitates electronic payment systems throughout the world. It makes money by enabling digital payments between consumers, merchants, financial institutions, and government entities, charging processing fees and data services for its global network."
+   "value": "Visa is a world leader in digital payments and technology, facilitating secure transactions between consumers, merchants, financial institutions, and government entities across more than 200 countries and territories. It makes money by operating a sophisticated global network that processes billions of transactions annually, charging financial institutions fees for rendering transaction routing, guaranteeing payment, and providing value-added security and data services."
   },
+  "synthesized_evidence_sha": "f63eb2f91188078d",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "7df5c68497",
     "bd5cfc20d4"
    ],
-   "value": "Backend and frontend systems operations, database management, UI/UX design, and risk/identity solution architecture."
+   "value": "Involves high-scale data processing and architecture for payments networks, building robust back-end systems (e.g., databases, functions, operations), developing secure UI/UX design experiences, and applying risk and identity solutions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593389,
   "web_search_url": "https://duckduckgo.com/?q=Visa+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "While Visa offers high pay and mission-driven work handling massive data scale, its large multinational size likely conflicts with your desire for a fast, innovative tech culture free of bureaucracy. However, the structured nature of the financial sector might provide the sane hours and guaranteed shutdowns you seek compared to high-burnout startups."
+   "source_ids": [
+    "7df5c68497",
+    "bd5cfc20d4"
+   ],
+   "value": "Visa offers the elite mission scope of securing and processing global payments at massive scale, which provides high-impact AI and data engineering challenges. While it provides top-tier new-grad compensation and a mission-driven environment, the candidate must carefully screen the specific tech team's culture during the interview loop, as a massive financial institution may be more slow-moving and bureaucratic than the fast-paced, guaranteed-shutdown work-life balance they are seeking."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Favorable due to predictable corporate hours and mature processes, though large-scale outages can occasionally require high urgency."
+   "source_ids": [
+    "bd5cfc20d4"
+   ],
+   "value": "Estimated: Moderate to Good. The company promotes wellness programs and paid time off, but maintaining global critical payment infrastructure can sometimes require on-call demands that disrupt personal time."
   }
  },
  "vishay intertechnology": {
