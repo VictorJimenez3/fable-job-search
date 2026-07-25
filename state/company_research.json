@@ -258332,43 +258332,101 @@
  },
  "navatech": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Boutique tier. Navatech is a consulting firm, not a product-driven tech giant or a dedicated AI research lab, so it carries less elite prestige for AI/Data Science careers."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Business-to-business (B2B) technology services company generating revenue through professional consulting fees, likely on a project or retainer basis."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Likely a collaborative, learning-oriented environment focused on solving technical problems for clients, without the heavy bureaucracy of much larger enterprises."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Businesses across various industries seeking to plan, migrate, or optimize their cloud infrastructure, typical of a consulting firm's client base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Estimated: $72,800–$83,200 per year. Based on the hourly rate of $35/hr–$40/hr listed for the junior cloud role, multiplied by a standard 2,080-hour work year."
   },
   "evidence_sha": "1e348c80399fb887",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785017826,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785017694,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Technology and IT Services / Cloud Consulting"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Likely centers on practical skills for core cloud platforms (AWS, Azure, GCP), operating systems (Linux, Windows Server), and foundational consulting abilities such as communication and problem-solving, with less emphasis on heavy algorithmic theory."
+  },
+  "last_attempt_at": 1785017826,
   "last_evidence_at": 1785016315,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "New York, NY. The posted role requires a full-time onsite presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "To build and manage robust cloud solutions that power its clients' operations, as a dedicated technology partner."
+  },
   "name": "Navatech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, comparable to typical client-service consulting roles where project deadlines drive urgency. Less likely to have the bureaucratic drag of a large corporation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Technology consulting services with a focus on cloud engineering, including implementation and management across Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days. A small to mid-sized consulting firm often starts with a standard base, though exact policies are not disclosed in the posting."
   },
-  "retry_after": 1785017814,
+  "refresh_after": 1790201826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258378,7 +258436,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None publicly guaranteed beyond standard U.S. public holidays. Smaller companies rarely implement scheduled company-wide full-office shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "A growing consulting team with a presence in New York, likely an early-stage or mid-sized firm based on its hiring for entry-level roles and recent job posting activity."
   },
   "sources": [
    {
@@ -258432,14 +258497,43 @@
     "url": "https://jobright.ai/jobs/info/6a64f17d87cef057612cd9f8?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "The job posting does not specify visa sponsorship availability for the Jr Cloud Engineer role in New York."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Navatech is a growing technology consulting firm that helps businesses adopt and manage cloud infrastructure. The company generates revenue by providing cloud engineering services, likely through client project fees or managed-service contracts."
+  },
+  "synthesized_evidence_sha": "1e348c80399fb887",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Cloud engineering projects involving AWS, Azure, and GCP, including work with Linux and Windows Server environments. Junior engineers likely perform hands-on implementation and support tasks under a consulting framework."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785016315,
   "web_search_url": "https://duckduckgo.com/?q=Navatech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "1ff18e3bc2"
+   ],
+   "value": "Navatech could appeal to a candidate seeking an innovative, high-pace consulting environment where direct work on modern cloud platforms accelerates technical learning. The junior role offers a foot-in-the-door without a stated expectation of toxic high-burnout hours, though pay may be below top-tier new-grad benchmarks and a smaller consulting firm carries less elite brand prestige than a Big Tech product company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Client-based consulting can sometimes require extra hours during project milestones, but there is no indication of a high-burnout culture."
   }
  },
  "navistar inc": {
