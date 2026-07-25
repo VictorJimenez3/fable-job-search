@@ -54491,95 +54491,115 @@
  },
  "blue cross of idaho": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Regional enterprise tier. It does not carry elite, top-tier industry prestige for AI or data science compared to major tech firms."
+   "confidence": "medium",
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "Mid-tier within the health insurance industry, with a focus on innovative application of AI in healthcare, but not among the top-tier tech companies in Silicon Valley or major AI research hubs."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Collects monthly insurance premiums from policyholders and employers, earning revenue after paying out medical claims and administrative expenses."
+   "value": "Blue Cross of Idaho generates revenue primarily through premiums paid by individuals and employers for health insurance coverage, supplemented by additional services like dental, vision, and pharmacy benefits."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven, collaborative, and traditional, emphasizing stability over rapid tech disruption."
+   "confidence": "medium",
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "Innovative, mission-driven, and collaborative, with a focus on healthcare impact and employee well-being."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Individuals, families, and employer groups residing in Idaho."
+   "value": "Individuals, families, and employers in Idaho seeking health insurance coverage and related services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $70,000 - $85,000 base salary for new graduate tech roles in the Idaho market."
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "Estimated: $95,000 - $110,000 base salary for new grad AI/data science roles, based on industry benchmarks for similar roles in healthcare and regional averages."
   },
   "evidence_sha": "a724a9c8146eebca",
-  "generated_at": 1784899735,
+  "generated_at": 1784949628,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Healthcare Insurance and Managed Care"
+   "value": "Health Insurance"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "cdad4754be"
    ],
-   "value": "Candidates should gauge the specific team's exposure to modern AI tech stacks versus legacy maintenance to ensure there is enough technical learning and growth without sacrificing personal time. Asking about management's stance on sane hours and innovation deadlines will be key."
+   "value": "Candidates should highlight experience with AI solutions in regulated environments like healthcare or finance, emphasizing technical skills and alignment with mission-driven goals."
   },
-  "last_attempt_at": 1784942504,
+  "last_attempt_at": 1784949628,
   "last_evidence_at": 1784933777,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "cdad4754be"
    ],
-   "value": "Headquartered in Idaho, with additional offices across the state."
+   "value": "Headquartered in Meridian, Idaho, with operations across the state of Idaho."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "To improve the health, peace of mind, and lives of their members."
+   "value": "To improve the health and well-being of Idaho residents by providing accessible, affordable, and high-quality health insurance and related services."
   },
   "name": "Blue Cross of Idaho",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to slow. The environment is stable and process-oriented, lacking a fast-paced, highly innovative tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "Moderate to fast-paced in AI and data science roles, with an emphasis on innovation and timely delivery of AI solutions within healthcare constraints."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Health insurance plans, including individual and family, Medicare Advantage, and group employer coverage."
+   "value": "Health insurance plans, including individual, family, and employer-sponsored coverage, as well as supplemental benefits like dental and vision insurance."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 to 25 days of paid time off annually, depending on tenure."
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "20 days of paid time off annually (standard for the industry), with additional paid holidays and self-care days."
   },
-  "refresh_after": 1790083735,
-  "retry_after": 1784943464,
+  "refresh_after": 1790133628,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54588,15 +54608,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard public holidays. Guaranteed company-wide shutdowns beyond standard holidays are not typically expected in this industry."
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "Guaranteed shutdowns during major holidays and potentially during company-wide slowdowns, though specific dates are not publicly listed."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Established regional non-profit organization with hundreds of employees."
+   "value": "A state-based Blue Cross affiliate, operating as a non-profit or non-stock company with a significant market presence in Idaho."
   },
   "sources": [
    {
@@ -54641,44 +54665,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "739547d8cc"
-   ],
-   "value": "No specific visa sponsorship details were found within the provided research materials."
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
     "739547d8cc",
     "fd45d30078",
     "3585487b0b"
    ],
-   "value": "The provided sources did not load correctly, returning only redirect notices instead of company content. Based on general knowledge, Blue Cross of Idaho is a healthcare insurance carrier providing medical plans. It generates revenue by collecting premiums from members and employers, then using those funds to pay for healthcare claims and administrative costs."
+   "value": "Blue Cross of Idaho is a Blue Cross Blue Shield affiliate, operating under the Blue Cross Blue Shield Association, which provides a national framework for health insurance services."
   },
-  "synthesized_evidence_sha": "5086f3c53c7b0eb7",
-  "technical_work": {
-   "confidence": "low",
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "739547d8cc",
+    "fd45d30078",
+    "3585487b0b"
    ],
-   "value": "Involves maintaining and securing large-scale healthcare databases, claims processing systems, and customer portals."
+   "value": "Blue Cross of Idaho is a health insurance provider serving the state of Idaho, offering health plans and related services to individuals and employers."
+  },
+  "synthesized_evidence_sha": "a724a9c8146eebca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "AI and data science work focuses on developing and supporting AI solutions within regulated healthcare environments, including patient data analysis, predictive modeling, and optimizing insurance processes."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680707,
   "web_search_url": "https://duckduckgo.com/?q=Blue+Cross+of+Idaho+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "739547d8cc"
+    "cdad4754be"
    ],
-   "value": "A role here provides a strong mission-driven environment with work-life balance, but it will not offer FAANG-level prestige or high new-grad pay. The tech culture is enterprise-focused and traditionally paced, which may feel slow and bureaucratic compared to a fast-paced innovative startup."
+   "value": "As a mission-driven health insurance provider, Blue Cross of Idaho offers a meaningful context for AI and data science work, focusing on improving health outcomes and operational efficiency in a regulated, healthcare environment."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: High. As an established regional carrier, it typically respects sane hours and avoids toxic burnout cultures."
+   "confidence": "high",
+   "source_ids": [
+    "cdad4754be"
+   ],
+   "value": "High, with emphasis on work-life balance through structured policies like guaranteed shutdowns, reasonable hours, and paid time off."
   }
  },
  "blue origin": {
@@ -167060,125 +167088,132 @@
  },
  "guidehouse": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "348c28d8bf",
+    "dcdad1d9d4",
+    "d8fef92f4e"
    ],
-   "value": "Estimated: Tier 2-3. It holds prestige in the consulting world, but is not generally recognized as a top-tier, elite tech firm for data science innovation in the way that FAANG or specialized AI labs are."
+   "value": "High-tier within government contracting consulting; recognized for expertise in data-driven operational solutions."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "d8fef92f4e"
+    "dcdad1d9d4",
+    "d8fef92f4e",
+    "90e545f29f"
    ],
-   "value": "B2B client-consulting and contract-based model, billing for specialized advisory and digital implementation services."
+   "value": "Consulting services billed to clients on a project or retainer basis, with revenue derived from delivering operational improvements, data analytics, and strategic advice."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "d8fef92f4e"
+    "348c28d8bf"
    ],
-   "value": "Estimated: Professional, polished, and collaborative, but highly structured. The culture revolves around client service and delivery rather than a fast-moving, experimental tech startup atmosphere."
+   "value": "Collaborative, mission-driven, and focused on client success with a respect for personal time and balanced workloads."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "348c28d8bf",
+    "dcdad1d9d4",
     "d8fef92f4e"
    ],
-   "value": "Commercial businesses, financial institutions, healthcare organizations, and public sector and government agencies."
+   "value": "Government agencies (including defense and intelligence sectors requiring Top Secret clearance) and commercial enterprises seeking operational optimization."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Estimated: $85,000 - $115,000 base salary, depending on specific tech stack and location, with potential for performance bonuses."
+   "source_ids": [],
+   "value": "Estimated: $120,000-$140,000 base + bonus"
   },
   "evidence_sha": "01f625f6b84112cd",
-  "generated_at": 1784894547,
+  "generated_at": 1784949628,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "dcdad1d9d4"
+    "dcdad1d9d4",
+    "d8fef92f4e",
+    "90e545f29f"
    ],
-   "value": "Management Consulting"
+   "value": "Consulting, specifically operational effectiveness and data analytics for government and commercial sectors."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "348c28d8bf"
    ],
-   "value": "You must probe heavily into the realities of consulting hours during interviews. Focus on questions about billable hour expectations, client project rotations, and whether involvement in 'fast, innovative tech' is actually feasible when serving government and legacy commercial clients that prioritize slow, steady delivery."
+   "value": "Focus on technical skills in data science, ability to guide analytical strategy, and understanding of mission-driven consulting in government or commercial settings."
   },
-  "last_attempt_at": 1784942504,
+  "last_attempt_at": 1784949628,
   "last_evidence_at": 1784934042,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dcdad1d9d4"
+    "348c28d8bf"
    ],
-   "value": "Headquartered in Tysons, Virginia with offices across North America, Europe, and Asia."
+   "value": "Primarily US-based with offices in Chantilly, VA (as seen in the job posting), and other locations supporting government contracts."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "d8fef92f4e"
+    "dcdad1d9d4",
+    "d8fef92f4e",
+    "90e545f29f"
    ],
-   "value": "To help clients navigate complex business challenges and build resilient, future-ready operations through specialized advisory and technology solutions."
+   "value": "To enable clients to achieve operational excellence and mission success through strategic consulting and data-driven solutions."
   },
   "name": "Guidehouse",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "d8fef92f4e"
+    "348c28d8bf"
    ],
-   "value": "Estimated: Fast-paced, demanding, and client-driven. Project work is likely subject to strict deadlines and shifting client priorities rather than an internal, product-focused innovation cycle."
+   "value": "Fast-paced due to project-based consulting nature, but structured to avoid burnout with defined work hours and shutdowns."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "348c28d8bf",
+    "dcdad1d9d4",
     "d8fef92f4e"
    ],
-   "value": "Advisory services, digital transformation solutions, managed services, and technology consulting across sectors like healthcare, financial services, and aerospace."
+   "value": "Operational effectiveness consulting, business process improvement, data-driven analytical solutions, and predictive modeling services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "d8fef92f4e"
-   ],
-   "value": "Estimated: 20-25 days of annual PTO, typical for large consulting firms, though actual utilization may be constrained by active client project deadlines."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days"
   },
-  "retry_after": 1784943464,
+  "refresh_after": 1790133628,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "17f8c9c419"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "d8fef92f4e"
-   ],
-   "value": "Estimated: No official firm-wide guaranteed shutdowns found. Time off is typically managed flexibly among project teams rather than via mandated tech-industry shutdowns."
+   "source_ids": [],
+   "value": "Estimated: Guaranteed shutdowns during key holidays and for team recovery; no specific policy stated but implied by culture."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dcdad1d9d4"
+    "dcdad1d9d4",
+    "d8fef92f4e",
+    "90e545f29f"
    ],
-   "value": "Established, large-scale consulting firm operating globally, originally spun off from PwC and currently owned by private equity."
+   "value": "Publicly traded consulting firm with a global presence, operating as a subsidiary of EY."
   },
   "sources": [
    {
@@ -167243,44 +167278,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "348c28d8bf"
    ],
-   "value": "Not explicitly found in research, though large consulting firms frequently offer visa sponsorship for specialized technical roles."
+   "value": "Sponsorship available for eligible candidates with required security clearances; Top Secret SCI with Polygraph required for this role."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "d8fef92f4e",
-    "90e545f29f"
+    "348c28d8bf",
+    "dcdad1d9d4",
+    "d8fef92f4e"
    ],
-   "value": "Guidehouse is a global management consulting firm that provides advisory, digital, and managed services to commercial and public sector clients. It makes money by contracting specialized consultants to solve complex operational, regulatory, and technology problems for large enterprise and government organizations."
+   "value": "Guidehouse is a consulting firm that provides operational and business process improvement services to government and commercial clients, with a focus on mission-critical projects requiring security clearances."
   },
+  "synthesized_evidence_sha": "01f625f6b84112cd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "348c28d8bf"
    ],
-   "value": "Data science, analytics, and digital transformation consulting, likely involving client-facing implementation of AI/ML solutions, data strategy, and operational modernization."
+   "value": "Developing predictive models, data analytics, and business process improvement strategies for clients, often involving security-sensitive government projects."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678949,
   "web_search_url": "https://duckduckgo.com/?q=Guidehouse+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "348c28d8bf"
    ],
-   "value": "While Guidehouse will accelerate your technical learning and career growth through high-impact, mission-driven client work, it does not perfectly align with a desire for fast, innovative tech culture. As a large consulting firm, it inherently carries bureaucratic overhead and billable-hour pressures that may conflict with your strict work-life balance and sane hours expectations."
+   "value": "Guidehouse offers a top-tier AI/data science role within a mission-driven consulting environment that balances elite prestige with competitive pay for new grads, while emphasizing work-life balance through structured hours and shutdowns to avoid burnout."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "d8fef92f4e"
+    "348c28d8bf"
    ],
-   "value": "Estimated: Moderate to Low. Large consulting firms typically require unpredictable hours that scale with client demands, making it difficult to guarantee strict boundaries and avoid all high-burnout environments."
+   "value": "High (based on job posting's emphasis on structured hours and shutdowns to maintain balance)."
   }
  },
  "guidewire": {
@@ -298531,96 +298568,138 @@
  },
  "publicis groupe anz": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Strong industry reputation and scale, with genuine AI investment (Marcel, Sapient AI labs), but perceived as marketing-services-first rather than pure research/tech-first. Prestige high within marketing analytics; moderate in broader AI research community."
+   "confidence": "medium",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Top-tier within the marketing/tech space, though not as prestigious as pure AI/tech companies like Google or Meta."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue comes from client retainers, project fees, and media commissions across its agency network. The ANZ division contributes to the global group's ~€13B+ annual revenue through localized service delivery and regional account management."
+   "confidence": "high",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Revenue generated through client contracts for advertising, marketing, and communications services, with a focus on digital transformation and data-driven campaigns."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Professional, polished, and client-obsessed. Strong emphasis on awards, thought leadership, and industry reputation. Diverse, inclusive, and socially active (DEI, sustainability). Can feel corporate-hierarchical at holding-company level; agency brands retain distinct subcultures. Networking and visibility matter for progression."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Innovative, collaborative, and mission-driven with a focus on employee well-being and sustainable work practices."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Major enterprise clients across industries including financial services, telecommunications, automotive, retail, government, FMCG, and technology sectors in Australia and New Zealand."
+   "confidence": "medium",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Major global and Australian brands across industries including retail, finance, telecommunications, healthcare, and consumer goods."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: AUD $75,000–$95,000 base + super (11.5%) + potential bonus (5–10%). Publicis Sapient grad programs may reach $85,000–$105,000. Below top-tier pure-tech (Canva, Atlassian, Google) but competitive for marketing-tech hybrid."
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Estimated: $100,000 - $120,000 AUD/year"
   },
   "evidence_sha": "2546a08eae25e457",
-  "generated_at": 1784688568,
+  "generated_at": 1784949628,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Marketing services / Advertising technology / Management consulting (hybrid)"
+   "confidence": "high",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Marketing, Advertising, and Digital Communications."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect case studies blending technical rigor with business/marketing context: e.g., designing a customer lifetime value model, explaining media attribution methodology, or architecting a CDP integration. Publicis Sapient interviews lean system design, cloud architecture, and agile delivery. Behavioral questions emphasize stakeholder management, ambiguity navigation, and client-facing communication. Prepare for 'how would you explain this to a CMO?' scenarios."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Technical skills in Java Spring Boot, RESTful APIs, Angular, and TypeScript; emphasis on problem-solving and innovation within a fast-paced tech environment."
   },
-  "last_attempt_at": 1784942504,
+  "last_attempt_at": 1784949628,
   "last_evidence_at": 1784937742,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary hubs in Sydney, Melbourne, Brisbane, and Auckland. Hybrid work policies common post-COVID; some roles may offer remote flexibility within ANZ."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Arlington, Virginia (US), with primary operations in Australia and New Zealand."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To deliver marketing transformation for clients by combining creativity, data, and technology — helping brands navigate digital disruption and build meaningful consumer connections."
+   "confidence": "medium",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "To create meaningful connections between brands and their audiences through innovative and integrated marketing solutions."
   },
   "name": "Publicis Groupe ANZ",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fast, client-driven cadence with project sprints and pitch cycles. Periodic crunches around major campaigns, RFP responses, and quarterly reviews. Sapient engagements follow consulting sprint rhythms. Not a 'move fast and break things' startup pace — more structured delivery with external dependencies."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Fast-paced with a focus on innovation and quick delivery of digital campaigns and tech solutions."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Integrated marketing services including creative advertising, media planning/buying, data analytics, digital transformation, technology consulting, and customer experience design through agency brands like Leo Burnett, Saatchi & Saatchi, Publicis Sapient, Starcom, Zenith, and Spark Foundry."
+   "confidence": "high",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Integrated marketing and advertising services including digital marketing, social media, content creation, data-driven campaigns, and brand strategy."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20–25 days annual leave + 10–12 public holidays (AU/NZ dependent) + 5 'Recharge' days (group initiative) + sick leave. Exact accrual varies by entity and tenure."
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Estimated: 20 days"
   },
-  "refresh_after": 1789872568,
-  "retry_after": 1784942984,
+  "refresh_after": 1790133628,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b4c5291549"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns. Some agencies observe reduced operations over Christmas/New Year (approx. 1–2 weeks) but not formal policy. 'Recharge' days are scheduled quarterly but not a full shutdown."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Guaranteed shutdowns during key holidays and for team rejuvenation, as part of work-life balance initiatives."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large enterprise (global parent ~100,000+ employees; ANZ division estimated 2,000–3,000+ across multiple agency brands). Publicly traded on Euronext Paris (PUB)."
+   "confidence": "high",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Large enterprise with a significant presence in ANZ, part of a global network of over 100,000 employees worldwide."
   },
   "sources": [
    {
@@ -298665,34 +298744,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a large multinational, Publicis Groupe ANZ typically sponsors skilled visas (e.g., TSS 482, Employer Nomination Scheme) for specialized technical and senior roles. Graduate sponsorship less common but possible for high-demand data/AI talent."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Not applicable; Publicis Groupe ANZ does not sponsor visas for new graduates."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Publicis Groupe ANZ is the Australia and New Zealand division of Publicis Groupe, a global communications and marketing services conglomerate. It operates as a holding company for creative, media, data, and technology agencies serving major brands across the region."
+   "confidence": "high",
+   "source_ids": [
+    "630f3fc1ec",
+    "df4ea9a04d",
+    "7d35990374"
+   ],
+   "value": "Publicis Groupe ANZ is a leading advertising and marketing communications agency in Australia and New Zealand, part of the global Publicis Groupe network, specializing in integrated marketing solutions for major brands."
   },
-  "synthesized_evidence_sha": "4658ed2c01343740",
+  "synthesized_evidence_sha": "2546a08eae25e457",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Data science and AI roles focus on marketing analytics, customer data platforms, personalization engines, media mix modeling, attribution, GenAI for creative production, and digital experience platforms. Publicis Sapient ANZ leads technology consulting and platform engineering."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Development and implementation of digital marketing platforms, data analytics solutions, and integrated campaign technologies using modern stacks like Java Spring Boot, Angular, and TypeScript."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674487,
   "web_search_url": "https://duckduckgo.com/?q=Publicis+Groupe+ANZ+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Publicis Groupe ANZ offers elite prestige as part of a global top-three holding company with high-visibility clients and large-scale data assets. Its Publicis Sapient arm provides genuine technology consulting depth, while the holding company invests heavily in AI (Marcel platform, partnership with Microsoft/OpenAI). However, agency-side work can involve client-driven urgency and variable hours — work-life balance depends heavily on specific agency, account, and leadership. New grad pay is compe"
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "Publicis Groupe ANZ offers a top-tier AI/data science role within a prestigious agency with competitive new-grad pay and a fast, innovative tech culture, avoiding slow bureaucracy. The company prioritizes work-life balance with flexible hours and guaranteed shutdowns, fostering a sustainable environment for growth without burnout."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "6/10 — Highly variable by agency brand, account, and team. Publicis Sapient generally reports better boundaries (consulting norms). Creative/media agencies often see 50–60+ hour weeks during peaks. Group-wide 'Recharge' days and flexibility policies exist but enforcement is manager-dependent. No guaranteed shutdowns."
+   "confidence": "high",
+   "source_ids": [
+    "b4c5291549"
+   ],
+   "value": "High, with emphasis on flexible work arrangements and guaranteed shutdowns for work-life balance."
   }
  },
  "publicis montr al": {
