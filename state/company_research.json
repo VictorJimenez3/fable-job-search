@@ -18972,45 +18972,48 @@
  },
  "amazon": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [
-    "e6d8de4ab6"
-   ],
-   "value": "Top-tier; offers elite prestige and high new-grad pay, though it is not typically associated with guaranteed shutdowns."
-  },
-  "aliases": [],
-  "attempts": 41,
-  "business_model": {
    "confidence": "high",
-   "source_ids": [
-    "e6d8de4ab6"
-   ],
-   "value": "Generates revenue through direct retail sales, subscription services, and enterprise cloud computing."
-  },
-  "culture_vibe": {
-   "confidence": "medium",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Inclusive culture focused on customer obsession and supported by structured mentorship and learning."
+   "value": "Top-tier, recognized as a leader in artificial intelligence and data science."
   },
-  "customers": {
+  "aliases": [],
+  "attempts": 42,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cff06d35c4",
+    "aedb4cec3f"
+   ],
+   "value": "Generates revenue through retail product sales, subscription services (like Prime), and enterprise cloud computing solutions (AWS)."
+  },
+  "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4",
+    "aedb4cec3f"
    ],
-   "value": "Global consumers and enterprise businesses relying on cloud and digital services."
+   "value": "Customer-obsessed, inclusive, and focused on continuous learning and mentorship."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cff06d35c4",
+    "77c102aaad"
+   ],
+   "value": "Consumers worldwide seeking retail goods and digital services, businesses utilizing AWS cloud computing, and government entities requiring dedicated cloud infrastructure."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4"
    ],
-   "value": "Estimated: $180,000 - $220,000 total compensation per year, heavily weighted in equity."
+   "value": "Estimated: Top-tier new grad compensation, often ranging between $150,000 to $200,000 total compensation depending on location and exact role."
   },
   "evidence_sha": "e9dc47350783441e",
-  "generated_at": 1784976575,
+  "generated_at": 1785074266,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -19019,32 +19022,34 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4",
+    "aedb4cec3f"
    ],
-   "value": "Technology, E-commerce, and Cloud Computing."
+   "value": "Technology and E-commerce."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Probe deeply into team-specific on-call expectations, deployment cadence, and after-hours pager duty to identify rare pockets that maintain a fast, innovative culture without forcing sacrifices in personal time."
+   "value": "The candidate should evaluate whether Amazon's intense, customer-obsessed culture aligns with their need for work-life balance and guaranteed shutdowns. They should also clarify the pace of technical learning and career growth opportunities against the risk of high burnout."
   },
-  "last_attempt_at": 1784976575,
+  "last_attempt_at": 1785074266,
   "last_evidence_at": 1785071422,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e6d8de4ab6"
+    "77c102aaad",
+    "aedb4cec3f"
    ],
-   "value": "Headquartered in Seattle, Washington, USA, with operations and roles distributed globally."
+   "value": "Global presence with roles available in various US locations including regions requiring specialized security clearances."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "To hire the best minds in technology to innovate and build on behalf of its customers."
+   "value": "To hire the best minds in technology to innovate and build on behalf of its customers, delivering the best results."
   },
   "name": "Amazon",
   "pace_of_work": {
@@ -19052,12 +19057,16 @@
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Estimated: Extremely demanding and fast-paced innovation environment, though the large size of the organization can introduce bureaucratic delays in certain processes."
+   "value": "Estimated: Very fast-paced, deadline-driven, and highly demanding."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "77c102aaad",
+    "aedb4cec3f",
+    "cff06d35c4"
+   ],
+   "value": "Amazon Web Services (AWS), e-commerce marketplace, digital streaming, and infrastructure delivery systems."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -19065,27 +19074,31 @@
    "source_ids": [
     "aedb4cec3f"
    ],
-   "value": "Estimated: 10-15 days of paid time off annually for new hires, accruing with tenure."
+   "value": "Estimated: Comprehensive paid time off policies, typically accruing 10-15 days for new hires along with standard holidays."
   },
+  "refresh_after": 1790258266,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4"
    ],
-   "value": "None found in research."
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns, though some specific sub-teams may offer limited flexibility."
+   "source_ids": [
+    "aedb4cec3f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns; time off generally requires standard managerial approval."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4"
    ],
-   "value": "Mature, large-scale public corporation with over 10,001+ employees globally."
+   "value": "Large-cap, multinational technology enterprise."
   },
   "sources": [
    {
@@ -19152,42 +19165,45 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6",
     "aedb4cec3f"
    ],
-   "value": "Amazon has a historical track record of offering H1B sponsorships, but sponsorship is not guaranteed for all roles; certain infrastructure positions explicitly do not offer immigration sponsorship."
+   "value": "Amazon does not sponsor for immigration for some roles, including H-1B, TN, and other non-immigrant visas."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e6d8de4ab6"
+    "cff06d35c4",
+    "aedb4cec3f"
    ],
-   "value": "Amazon is a multinational technology company founded in 1994 that focuses on e-commerce, cloud computing, and digital innovation. It makes money by selling consumer goods, offering digital services, and providing enterprise cloud infrastructure solutions."
+   "value": "Amazon is a multinational technology company that focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It makes money primarily through retail sales, Amazon Web Services (AWS) subscriptions, and various digital services and devices."
   },
+  "synthesized_evidence_sha": "e9dc47350783441e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "d85a041ac8",
-    "e6d8de4ab6",
-    "aedb4cec3f"
+    "77c102aaad",
+    "aedb4cec3f",
+    "d85a041ac8"
    ],
-   "value": "Developing scalable software solutions using Python, Ruby, React, Golang, Typescript, Kotlin, and Swift; maintaining dedicated cloud infrastructure and network systems."
+   "value": "Software and cloud development, Linux and Windows systems administration, network infrastructure installation, and production computing support."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582968,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+company+careers+benefits",
   "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cff06d35c4"
+   ],
+   "value": "Amazon provides elite prestige and high new-grad pay for AI and data science roles with a fast, innovative tech culture. However, its reputation for bureaucracy and demanding work conditions may conflict with the candidate's desire for a healthy work-life balance and strictly sane hours."
+  },
+  "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "cff06d35c4"
    ],
-   "value": "Aligns with your desire for a top-tier tech role that accelerates technical learning and career growth. However, its reputation for bureaucracy and intense pace conflicts with your strict guardrails for sane hours and guaranteed shutdowns."
-  },
-  "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Variable and highly dependent on the specific team, but often below average due to heavy on-call burdens."
+   "value": "Estimated: Often challenging; highly variable depending on the team, but many report long hours and high stress."
   }
  },
  "amazon com llc": {
