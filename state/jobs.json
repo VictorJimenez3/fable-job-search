@@ -52357,17 +52357,15 @@
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 62,
+  "score": 61,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "sector:healthtech +16",
    "new-grad evidence absent (below eligible roles)",
    "company tier: marquee (competitive)",
-   "posted <7d +1",
    "you've engaged with Medtronic +8",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "score_version": 7,
   "sector": "healthtech",
@@ -196871,8 +196869,9 @@
   "url": "https://jobs.ashbyhq.com/openai/daa43488-c4a7-4b3d-b93e-283135c65b2e"
  },
  "3fab1492250450c5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1785065925,
   "company": "Pinterest",
   "description": "",
   "early_career_possible": false,
@@ -196887,9 +196886,11 @@
   ],
   "posted_at": 1758917913,
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1785065925,
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "unavailable",
+   "live": false
   },
   "remote": false,
   "rules_v": 7,
@@ -196903,7 +196904,8 @@
    "you've engaged with Pinterest +6",
    "title matches your history +4",
    "culture fit 65/100 +2",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 7,
   "sector": "big_tech",
@@ -216510,14 +216512,28 @@
   ],
   "posted_at": 1779401495,
   "posting": {
-   "analyzed_at": 1785064280,
+   "analyzed_at": 1785065932,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065932,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1785064280,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065932,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Truncated text lacks explicit experience or degree requirements.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -311101,7 +311117,7 @@
   ],
   "posted_at": 1784505600,
   "posting": {
-   "analyzed_at": 1785064277,
+   "analyzed_at": 1785065926,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown",
@@ -311109,8 +311125,24 @@
    "years_note": "0-3 years"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065926,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown",
+    "years_min": 0,
+    "years_note": "0-3 years"
+   },
    "ai_deferred_at": 1785064277,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065926,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level SWE role accepting 0 years experience with a Bachelor's degree.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 7,
@@ -344428,9 +344460,11 @@
   ],
   "posted_at": 1772752715,
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1785065941,
    "fetch_note": "page loaded without enough usable posting text",
-   "fetch_status": "unreadable"
+   "fetch_status": "unreadable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 7,
@@ -424811,7 +424845,7 @@
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 46,
+  "score": 91,
   "score_reasons": [
    "base 5",
    "role:swe +20",
@@ -424819,9 +424853,7 @@
    "trusted new-grad board priority +45",
    "you've engaged with Qualcomm +2",
    "title matches your history +5",
-   "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "SHPE 2026 exhibitor +4"
   ],
   "score_version": 7,
   "sector": "big_tech",
@@ -442650,14 +442682,28 @@
   ],
   "posted_at": 1771640186,
   "posting": {
-   "analyzed_at": 1785064282,
+   "analyzed_at": 1785065941,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065941,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1785064282,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065941,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "College grad role requiring OOP background, internships accepted, no explicit degree.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -481213,9 +481259,11 @@
   ],
   "posted_at": 1762019442,
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1785065924,
    "fetch_note": "page loaded without enough usable posting text",
-   "fetch_status": "unreadable"
+   "fetch_status": "unreadable",
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 7,
@@ -581287,14 +581335,28 @@
   ],
   "posted_at": 1772676547,
   "posting": {
-   "analyzed_at": 1785064270,
+   "analyzed_at": 1785065914,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065914,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1785064270,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065914,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role requiring basic programming skills; no explicit degree or years.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -658365,9 +658427,11 @@
   ],
   "posted_at": 1758689300,
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1785065925,
    "fetch_note": "page loaded without enough usable posting text",
-   "fetch_status": "unreadable"
+   "fetch_status": "unreadable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 7,
@@ -739728,14 +739792,28 @@
   ],
   "posted_at": 1774908272,
   "posting": {
-   "analyzed_at": 1785064281,
+   "analyzed_at": 1785065939,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065939,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1785064281,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065939,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Explicit new grad role; degree not stated; software engineering tasks.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 7,
@@ -753594,7 +753672,7 @@
   "url": "https://jobs.pseg.com/job/Newark-Data-Scientist-NJ-07101/1398268700/?ats=successfactors"
  },
  "f4ccb47ad3f7f037": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Leidos",
   "description": "",
@@ -753609,26 +753687,41 @@
   ],
   "posted_at": 1782956496,
   "posting": {
-   "analyzed_at": 1785063676,
+   "analyzed_at": 1785065909,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1785065909,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1785063676,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1785065909,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2+ years of relevant experience.",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 7,
   "salary": "",
-  "score": 77,
+  "score": 57,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "trusted new-grad board priority +45",
    "you've engaged with Leidos +3",
    "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (2+ yrs — LLM-verified) -20"
   ],
   "score_version": 7,
   "sector": "other",

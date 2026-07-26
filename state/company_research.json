@@ -405890,109 +405890,110 @@
  },
  "veeva systems": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "dbc3b9e88f",
     "17f8c9c419"
    ],
-   "value": "Top-tier — Veeva is the recognized category leader in life sciences cloud, attracts strong ML talent for regulated AI applications, and appears in curated new-grad data science hiring lists alongside FAANG and elite unicorns."
+   "value": "Estimated: High-tier, recognized as a leader in life sciences cloud technology and actively targeting top-tier new-grad data science talent."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Subscription-based SaaS (Software-as-a-Service) model selling industry-specific cloud applications to life sciences customers on recurring contracts, with high retention driven by regulatory compliance needs and deep workflow integration."
+   "value": "Subscription-based enterprise SaaS and industry cloud services."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Mission-driven, collaborative, and pragmatic — engineers and consultants work closely with life-sciences domain experts; culture rewards doing the right thing for customers and patients over heroics, with low politics and high autonomy for senior ICs."
+   "value": "Mission-driven and values-oriented, prioritizing 'Do the Right Thing', 'Customer Success', 'Employee Success', and 'Speed'."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Life sciences companies — pharmaceutical, biotechnology, and medical device firms — ranging from large global enterprises to emerging biotechs that need compliant cloud software for R&D, clinical trials, and commercialization."
+   "value": "Life sciences companies, ranging from emerging biotech to large pharmaceutical enterprises."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $130k-$155k base + 10-15% target bonus + RSU grant ($40k-$70k over 4 years) for software engineering/data science roles; total first-year comp ~$180k-$230k, competitive with top-tier enterprise SaaS peers."
+   "source_ids": [
+    "a9a478dea1",
+    "dbc3b9e88f",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Competitive high-tier base salary ranging from $110K-$140K, complemented by equity and benefits, reflecting its status as a mature enterprise SaaS leader."
   },
   "evidence_sha": "c6098659e9454c7c",
-  "generated_at": 1784878071,
+  "generated_at": 1785065843,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Enterprise SaaS / Life Sciences Technology (Industry Cloud)"
+   "value": "Enterprise Software / Cloud Computing (Life Sciences)."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
     "a9a478dea1",
-    "38e99c57ef"
+    "dbc3b9e88f",
+    "17f8c9c419"
    ],
-   "value": "Expect deep technical assessments in cloud architecture, data modeling, and domain-specific problems (clinical trial supply, regulatory data). Behavioral interviews will probe alignment with the four core values — especially Customer Success and Speed. Prepare for case studies on scaling compliant systems and demonstrating how you balance innovation with the rigor life sciences demands."
+   "value": "Candidates should emphasize exceptional attention to detail, ability to thrive in a remote-first autonomous environment, and an affinity for a 'Customer Success' and 'Speed' driven culture. Highlight how your technical skills can directly contribute to life sciences solutions and faster patient outcomes, sidestepping any toxic or slow-paced work tendencies."
   },
-  "last_attempt_at": 1785064322,
+  "last_attempt_at": 1785065843,
   "last_evidence_at": 1785061223,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Headquartered in Pleasanton, California; \"Work Anywhere\" remote-first policy with offices in major US hubs (NYC, Boston, Raleigh, etc.) and international locations across Europe, Asia-Pacific, and Latin America."
+   "value": "A 'Work Anywhere' company offering remote flexibility, alongside traditional office environments."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "To help life sciences companies bring therapies to patients faster through industry cloud innovation, guided by values: Do the Right Thing, Customer Success, Employee Success, and Speed."
+   "value": "To help life sciences companies bring therapies to patients faster."
   },
   "name": "Veeva Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Estimated: Fast but sustainable — \"Speed\" is a core value, but the regulated domain and Employee Success value discourage reckless pace; teams ship frequently within compliance guardrails rather than chaotic crunch cycles."
+   "value": "Estimated: Fast-paced and efficiency-driven, guided explicitly by 'Speed' as a core company value, cutting through traditional enterprise bureaucracy."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Industry cloud solutions for life sciences including Veeva Vault (content management), Veeva CRM, Veeva RTSM (randomization and trial supply management), and other cloud applications for clinical, regulatory, quality, and commercial operations."
+   "value": "Industry cloud solutions and software tools tailored for life sciences, including Vault, Commercial Cloud, and Clinical platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick time; unlimited PTO not reported — Veeva traditionally uses accrued vacation buckets for clarity and liability management."
+   "source_ids": [
+    "a9a478dea1"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO, typical for a mature, employee-centric tech company of this stage."
   },
-  "retry_after": 1785064562,
+  "refresh_after": 1790249843,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406002,14 +406003,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide mandatory shutdowns; typical US corporate calendar with week between Christmas and New Year as low-activity period, but not a formal guaranteed shutdown policy."
+   "value": "Estimated: Likely offers standard public holidays and potentially a few floating days, though specific guaranteed company-wide shutdowns are not public."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "2414cf1d5d"
+    "a9a478dea1"
    ],
-   "value": "Public company (NYSE: VEEV) with 7,000+ employees, founded in 2007, profitable and growing; a established leader in life sciences cloud software."
+   "value": "Established, publicly traded enterprise company that is a pioneer in industry cloud."
   },
   "sources": [
    {
@@ -406074,26 +406075,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a large public company, Veeva routinely sponsors H-1B visas and supports green card processes for eligible technical roles; specific new-grad sponsorship details should be confirmed with recruiting."
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "17f8c9c419"
+   ],
+   "value": "Veeva is actively recruiting for new-grad data science and technical roles through 2026/2027 pipelines, though specific visa sponsorship details are not explicitly stated in current sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Veeva Systems is a mission-driven industry cloud company that provides software solutions for the life sciences sector, helping pharmaceutical and biotech companies bring therapies to patients faster. It operates as a \"Work Anywhere\" organization with values emphasizing customer success, employee success, and speed."
+   "value": "Veeva Systems is a cloud-based software company that provides industry-specific solutions for the life sciences sector, helping companies bring therapies to patients faster. It makes money by selling subscription-based SaaS platforms to pharmaceutical and biotech clients."
   },
+  "synthesized_evidence_sha": "c6098659e9454c7c",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "17f8c9c419",
     "a9a478dea1"
    ],
-   "value": "Cloud-native development on AWS, microservices, data platforms, AI/ML for life sciences analytics, vault platforms, clinical data management, and regulatory compliance tooling. Roles include software engineering, data science, technical consulting, and platform architecture."
+   "value": "Building and maintaining cloud-based software platforms with a focus on data management, compliance, and system integration for the life sciences industry. The Technical Consultant role involves detailed implementation and configuration of remote clinical technologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673555,
@@ -406101,19 +406104,18 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef",
-    "17f8c9c419"
+    "dbc3b9e88f",
+    "17f8c9c419",
+    "a9a478dea1"
    ],
-   "value": "Veeva offers a rare combination: elite prestige as the dominant life-sciences cloud platform, competitive new-grad compensation, and a mission-driven culture that explicitly values Employee Success and Speed over bureaucracy. The \"Work Anywhere\" model and stated values suggest genuine work-life balance respect, while the technical scope (AI/ML on regulated clinical data) accelerates high-impact learning without the burnout typical of consumer-tech giants."
+   "value": "Aligns with elite data science role seekers by offering mission-driven work focused on accelerating therapies, a 'Work Anywhere' flexibility that respects work-life balance, and a corporate value system emphasizing 'Speed' to avoid bureaucratic stagnation. The active new-grad pipelines indicate high growth and learning opportunities for technical talent."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "a9a478dea1",
-    "38e99c57ef"
+    "a9a478dea1"
    ],
-   "value": "Estimated: 4/5 — Remote-first \"Work Anywhere\" policy, explicit Employee Success value, and enterprise SaaS rhythm (quarterly releases, not daily fire drills) support strong boundaries; on-call exists for production systems but is typically well-rotated and compensated."
+   "value": "Estimated: Strong work-life balance enabled by a 'Work Anywhere' flexibility model that supports both remote and office work, fostering an ideal environment to thrive without burnout."
   }
  },
  "vega americas": {
