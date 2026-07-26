@@ -48332,37 +48332,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (unverified due to absent source content)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown / unverified."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown / unverified."
   },
   "evidence_sha": "5e3f0aa1d6e6ecfd",
+  "generated_at": 1785064322,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Estimated: Software / Presentation Technology (inferred from name; not confirmed)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe whether the AI/data science work is high-impact and fast-moving, confirm compensation meets the elite new-grad bar, and verify that WLB and guaranteed shutdowns exist without bureaucracy."
+  },
+  "last_attempt_at": 1785064322,
   "last_evidence_at": 1785061222,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
   "name": "Beautiful.ai",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast tech culture (unverified due to absent source content)."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown / unverified."
   },
+  "refresh_after": 1790248322,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48372,7 +48434,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown / unverified."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
   },
   "sources": [
    {
@@ -48416,14 +48487,45 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Not found in research (sources returned no content)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2835d206fd",
+    "fda8b7038c",
+    "478e26c158"
+   ],
+   "value": "Company summary could not be extracted because all supplied URLs returned empty redirect pages with no text."
+  },
+  "synthesized_evidence_sha": "5e3f0aa1d6e6ecfd",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not found in research; only evidence is presence on a 2026 Software Engineer New-Grad list."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785061222,
   "web_search_url": "https://duckduckgo.com/?q=Beautiful.ai+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Beautiful.ai matches the candidate brief, it could offer the desired fast, innovative tech culture with elite new-grad pay while respecting work-life balance and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown / unverified."
   }
  },
  "beckman coulter life sciences": {
@@ -405795,7 +405897,7 @@
    "value": "Top-tier — Veeva is the recognized category leader in life sciences cloud, attracts strong ML talent for regulated AI applications, and appears in curated new-grad data science hiring lists alongside FAANG and elite unicorns."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -405820,7 +405922,7 @@
    ],
    "value": "Life sciences companies — pharmaceutical, biotechnology, and medical device firms — ranging from large global enterprises to emerging biotechs that need compliant cloud software for R&D, clinical trials, and commercialization."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -405849,7 +405951,7 @@
    ],
    "value": "Expect deep technical assessments in cloud architecture, data modeling, and domain-specific problems (clinical trial supply, regulatory data). Behavioral interviews will probe alignment with the four core values — especially Customer Success and Speed. Prepare for case studies on scaling compliant systems and demonstrating how you balance innovation with the rigor life sciences demands."
   },
-  "last_attempt_at": 1784878071,
+  "last_attempt_at": 1785064322,
   "last_evidence_at": 1785061223,
   "locations": {
    "confidence": "high",
@@ -405890,6 +405992,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick time; unlimited PTO not reported — Veeva traditionally uses accrued vacation buckets for clarity and liability management."
   },
+  "retry_after": 1785064562,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -405975,7 +406078,7 @@
    "source_ids": [],
    "value": "As a large public company, Veeva routinely sponsors H-1B visas and supports green card processes for eligible technical roles; specific new-grad sponsorship details should be confirmed with recruiting."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
