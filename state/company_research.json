@@ -147751,113 +147751,126 @@
  "fluidstack": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (elite) — Core infrastructure provider for frontier AI workloads; referenced in industry discussions alongside Lambda, CoreWeave, and major cloud GPU offerings."
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Estimated: Specialized AI infrastructure firm. Highly relevant prestige for AI-focused candidates, though not a Tier 1 Big Tech or FAANG company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue from GPU compute rentals (per-second/per-hour billing), reserved capacity contracts, and managed services margins. Aggregates supply from third-party data centers and hardware owners, taking a platform fee."
+   "confidence": "low",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Likely operates by providing compute resources or infrastructure management services to AI projects. Specific revenue mechanics (e.g., leasing, cloud brokerage, or consulting) are not explicitly detailed in the provided sources."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
-    "8358ccbee2",
-    "6c71e78f10",
-    "563f192822"
+    "8358ccbee2"
    ],
-   "value": "Mission-driven, high-autonomy, engineering-first. 'Make humanity more free' attracts idealists; 'exceptional people' language signals high bar but low bureaucracy. Remote-first with async default. Security and infra teams own end-to-end outcomes."
+   "value": "Mission-driven and flexible. The company emphasizes 'making space for exceptional people' and values independent execution over rigid role definitions."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "AI research labs, generative AI startups, enterprises training/fine-tuning LLMs, and academic institutions needing scalable GPU compute without long-term contracts."
+   "confidence": "medium",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Organizations and teams running highly ambitious, compute-intensive AI projects."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "8358ccbee2",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "Estimated: £65k–£85k base (UK) / $130k–$160k base (US) + equity (0.05%–0.15% for early-career); total comp competitive with top AI infra startups. Pay transparency pledge suggests narrow bands."
+   "value": "Estimated: £55,000 - £75,000 (~$70k - $95k USD). Mid-to-high tier for London tech scale-ups, reflecting the specialized AI focus."
   },
   "evidence_sha": "6f95638f7d41c2bb",
-  "generated_at": 1784892192,
+  "generated_at": 1785058366,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "AI Infrastructure / GPU Cloud Computing"
+   "value": "Technology / Artificial Intelligence Infrastructure"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "Expect deep systems questions: GPU virtualization, bare-metal provisioning pipelines, kernel-level security, distributed scheduling, and high-throughput networking. Security roles will probe threat modeling for multi-tenant GPU clouds. Culture fit will assess alignment with 'exceptional people' autonomy and mission ownership. Ask about on-call rotation, incident response SLAs, and how shutdown/respect-for-hours policies are enforced in practice."
+   "value": "Prepare to demonstrate your ability to ship projects independently in fast-paced settings, highlighting proficiency in Python, R, Matlab, and SQL. Emphasize your passion for the AI industry and ask questions about team pace and workload to ensure their fast culture aligns with your need for sane hours and work-life balance."
   },
-  "last_attempt_at": 1784892192,
+  "last_attempt_at": 1785058366,
   "last_evidence_at": 1785053909,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Remote-first with hubs in London (UK) and San Francisco Bay Area (US); hiring globally for engineering roles."
+   "confidence": "high",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "London, England, GBR (Headquarters)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "8358ccbee2",
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e",
+    "8358ccbee2"
    ],
-   "value": "We exist to make humanity more free."
+   "value": "To make humanity more free by removing bottlenecks to compute for the world's most ambitious AI projects."
   },
   "name": "FluidStack",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — startup velocity with production-grade reliability demands; shipping cycles measured in weeks, not quarters. On-call for critical infra but scoped to avoid heroics."
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Estimated: Fast-paced and innovative, requiring the ability to ship projects independently."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "GPU cloud platform (on-demand and reserved instances), bare-metal GPU servers, managed Kubernetes for AI workloads, and associated networking/storage services. Focus on NVIDIA H100, A100, and similar high-end accelerators."
+   "value": "Compute infrastructure solutions and strategic operational support designed to unblock and accelerate large-scale AI projects."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 25–30 days annual leave (UK statutory baseline + competitive top-up); US employees likely get unlimited PTO with 15–20 day encouraged minimum."
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Estimated: 20-25 days. Standard for UK-based tech firms of this size, though exact policy is not public."
   },
+  "refresh_after": 1790242366,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide mandatory shutdowns published; team-level 'no-meeting' weeks and respect-for-hours norms described informally. Candidates should ask hiring manager."
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated 50–150 employees; Series A–B stage venture-backed startup (inferred from hiring pace and specialized roles)."
+   "confidence": "high",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "51-200 employees. Founded in 2017."
   },
   "sources": [
    {
@@ -147922,27 +147935,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely supports UK and US work visas for senior hires; limited public info on new-grad sponsorship. Candidates should confirm per role."
+   "confidence": "high",
+   "source_ids": [
+    "a1a4d84b5e"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8358ccbee2",
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "FluidStack is a GPU cloud infrastructure provider offering on-demand and reserved access to high-performance compute for AI/ML training and inference. The company aggregates underutilized GPU capacity from data centers and individual providers, reselling it to AI developers and enterprises at competitive prices."
+   "value": "Fluidstack accelerates the world's most ambitious AI projects by removing the bottlenecks to compute. Founded in 2017 and headquartered in London, the company provides the underlying infrastructure and strategic resources required for large-scale AI development."
   },
+  "synthesized_evidence_sha": "6f95638f7d41c2bb",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e"
    ],
-   "value": "Distributed systems for GPU orchestration, bare-metal provisioning, Kubernetes operators, high-performance networking (RoCE/InfiniBand), security hardening for multi-tenant GPU clouds, and cost-optimization scheduling."
+   "value": "Involves shipping projects independently in fast-paced environments. Generalist roles require technical skills in Python, R, Matlab, and SQL, with a focus on strategy and operations software."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678378,
@@ -147950,18 +147963,17 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "8358ccbee2",
-    "6c71e78f10",
-    "563f192822"
+    "a1a4d84b5e",
+    "8358ccbee2"
    ],
-   "value": "FluidStack sits at the intersection of elite AI infrastructure and high-growth startup velocity. As a GPU cloud specialist, it offers new grads direct exposure to the compute layer powering frontier models — prestige comparable to major AI labs but with earlier-stage ownership. The mission-driven framing ('make humanity more free') and explicit pay-transparency commitment signal a culture that values autonomy over bureaucracy. For a candidate prioritizing technical depth, work-life guardrails, a"
+   "value": "Fluidstack aligns with your goal to join a mission-driven AI company, aiming to 'make humanity more free' through accelerated AI development. The fast-paced, independent shipping culture offers high learning velocity and elite AI industry exposure without the layers of slow corporate bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "8358ccbee2"
+    "a1a4d84b5e"
    ],
-   "value": "Estimated: 4/5 — Explicit 'space for exceptional people' phrasing and pay-transparency stance suggest intentional culture design. Remote-first enables flexibility. No public burnout signals, but infra on-call exists."
+   "value": "Estimated: Moderate. The explicitly fast-paced environment may challenge strict work-life boundaries, though mission-driven companies often attempt to maintain sane hours."
   }
  },
  "focus camera": {
@@ -324492,45 +324504,40 @@
  "rtx": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 for AI/Data Science. While highly prestigious in defense and embedded software, legacy aerospace engineering typically does not compete with elite tech firms for cutting-edge AI or data science roles."
+   "source_ids": [
+    "1cfbf2f47a"
+   ],
+   "value": "Low for modern AI/Data Science. Prestige is rooted in traditional systems and aerospace engineering, not cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 25,
+  "attempts": 26,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac1d12454a",
     "68934c3bbb"
    ],
-   "value": "Secures revenue through full-time engineering contracts and large-scale manufacturing of defense and aerospace systems."
+   "value": "Generates revenue through government defense contracts and commercial aerospace sales, focusing on engineering, production, and lifecycle support."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a",
-    "68934c3bbb"
-   ],
-   "value": "Estimated: Mission-driven and mission-critical with a structured engineering focus. Likely values compliance, thorough documentation, and foundational STEM knowledge over fast-paced application development."
+   "source_ids": [],
+   "value": "Estimated: Traditional, structured, and bureaucratic with a heavy emphasis on process compliance and mission-driven engineering."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a",
     "68934c3bbb"
    ],
-   "value": "Government defense agencies and commercial aerospace entities requiring complex system engineering and production support."
+   "value": "Government defense agencies and commercial aerospace customers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a"
-   ],
-   "value": "Estimated: $57,000 to $109,000 per year."
+   "source_ids": [],
+   "value": "Estimated: $85,000 - $110,000 base salary, high job security but lower ceiling compared to top-tier tech companies."
   },
   "evidence_sha": "24ec2d48b2eeb8fd",
-  "generated_at": 1785021229,
+  "generated_at": 1785058366,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -324539,41 +324546,39 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a"
+    "1cfbf2f47a"
    ],
-   "value": "Aerospace and defense."
+   "value": "Aerospace and Defense"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Candidates should evaluate if the structured environment provides enough technical learning and career growth to satisfy their goals. They should ask about work-life balance, sane hours, and how strict traditional aerospace processes impact the pace of innovation versus personal time."
+   "source_ids": [
+    "1c7f1ad1c5",
+    "1cfbf2f47a"
+   ],
+   "value": "Your interview prep should focus heavily on traditional software engineering fundamentals (data structures, algorithms, C/C++) and systems engineering (requirements-based testing, embedded environments) rather than modern AI/ML frameworks. Be ready to demonstrate your tolerance for meticulous, highly regulated work, and be prepared to ask questions about internal mobility, learning pathways, and how the team maintains work-life balance within a traditional defense-contracting bureaucracy."
   },
-  "last_attempt_at": 1785021229,
+  "last_attempt_at": 1785058366,
   "last_evidence_at": 1785053661,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a",
     "68934c3bbb"
    ],
-   "value": "Hiring for onsite roles in Fort Wayne, IN and Tucson, AZ."
+   "value": "Tucson, AZ (confirmed) with other locations nationwide."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ac1d12454a",
     "68934c3bbb"
    ],
-   "value": "To design, develop, and maintain software for advanced systems in collaboration with engineering teams, supporting critical production and maintenance operations."
+   "value": "To support the full lifecycle of complex systems and engineered products for defense and aerospace applications."
   },
   "name": "RTX",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a",
-    "1cfbf2f47a"
-   ],
-   "value": "Estimated: Moderate to slow. The use of Agile methodologies is noted, but aerospace and defense projects involve rigorous requirements, reviews, and compliance checks that generally limit startup-style speed."
+   "source_ids": [],
+   "value": "Estimated: Slow to methodical due to strict government regulations, security clearances, and long hardware development lifecycles."
   },
   "products": {
    "confidence": "high",
@@ -324581,17 +324586,16 @@
     "1cfbf2f47a",
     "68934c3bbb"
    ],
-   "value": "Advanced systems, embedded avionics software, and test solution tools that support the full lifecycle of complex systems from engineering labs to production environments."
+   "value": "Embedded avionics software, complex system test solutions, aircraft engines, integrated defense systems, and missiles."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a"
-   ],
-   "value": "Estimated: 15 to 20 days of vacation with standard federal holidays, typical for large defense contractors."
+   "source_ids": [],
+   "value": "Estimated: 15 to 20 days of standard PTO for new hires, typical for large defense contractors."
   },
-  "refresh_after": 1790205229,
+  "refresh_after": 1790242366,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324600,18 +324604,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a"
-   ],
-   "value": "Estimated: Many large aerospace and defense firms offer mandated shutdowns during major holidays, but specific details are not public."
+   "source_ids": [],
+   "value": "Estimated: Some divisions observe a week-long shutdown for holidays, but guaranteed regular shutdowns are not common outside of standard government holidays."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ac1d12454a",
-    "1db9db9c4d"
+    "dbc3b9e88f"
    ],
-   "value": "Established, large-scale corporate employer hiring entry-level full-time software engineers for onsite roles."
+   "value": "Large-cap, established multinational public corporation."
   },
   "sources": [
    {
@@ -324680,25 +324681,26 @@
    "source_ids": [
     "68934c3bbb"
    ],
-   "value": "Sourcing details indicate the roles require applicants to upload recent transcripts, which is common for roles compliant with U.S. defense contracting and export control guidelines."
+   "value": "As a major US defense contractor, roles likely require US citizenship and security clearance, making visa sponsorship highly unlikely."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "ac1d12454a"
+    "1cfbf2f47a",
+    "68934c3bbb"
    ],
-   "value": "RTX (formerly Raytheon Technologies) is a major aerospace and defense company that designs and manufactures advanced systems for global military and commercial customers. It makes money through large-scale government defense contracts and commercial aerospace sales."
+   "value": "RTX (formerly Raytheon Technologies) is a major aerospace and defense company formed by the merger of Raytheon and United Technologies. It makes money by designing, manufacturing, and selling advanced aircraft engines, avionics, missiles, and defense systems to government and commercial customers."
   },
-  "synthesized_evidence_sha": "e44a34c626738bac",
+  "synthesized_evidence_sha": "24ec2d48b2eeb8fd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "1c7f1ad1c5",
     "1cfbf2f47a",
-    "fdb7969a09",
-    "ac1d12454a"
+    "fdb7969a09"
    ],
-   "value": "Embedded avionics software development, requirements-based testing, and software design using C, C++, C#, Python, and Visual Basic in an Agile environment."
+   "value": "Onsite software engineering involving C, C++, Java, C#, embedded avionics development, Python, requirements-based testing, and test solution tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
@@ -324706,14 +324708,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "While this is an elite aerospace company, the defense sector's heavy bureaucracy, strict onsite requirements, and slower tech culture may conflict with the desire for a fast, innovative environment. However, new grads can still accelerate technical learning and gain high prestige while typically enjoying structured hours and sane work-life balance compared to high-burnout tech startups."
+   "value": "RTX allows you to work on mission-driven, highly complex avionics and defense systems that demand elite engineering rigor. However, its strict onsite requirements and heavily regulated, slow-moving bureaucracy clash with your priority for a fast, innovative tech culture, and its rigid government-contracting environment often lacks the hyper-accelerated technical learning and dynamic work-life balance found in top-tier AI or tech roles."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "ac1d12454a"
-   ],
-   "value": "Estimated: Good. Government contractors typically operate on predictable schedules with less demanding crunch culture compared to high-burnout tech sectors, respecting personal time."
+   "source_ids": [],
+   "value": "Estimated: Good to fair. Government contracting often results in strict 40-hour weeks and sane hours, though onsite mandates reduce flexibility."
   }
  },
  "rubrik": {
@@ -404312,43 +404312,43 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: High prestige in the specialized subfield of biomedical AI and clinical informatics, though lacking the brand recognition of FAANG for general tech."
+   "value": "Estimated: Mid-tier. Prestige comes from the academic medical institution brand rather than elite big-tech AI innovation."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Academic medical center generating revenue through patient care services, funded medical research, and educational tuition."
+   "value": "Revenue is generated through hospital and clinical operations, medical research funding, and academic tuition."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: Mission-driven and highly collaborative, prioritizing patient outcomes, scientific discovery, and academic publication over aggressive product launches."
+   "value": "Mission-driven and academic, focused on changing the world through healthcare, discovery, and teaching. Committed to diversity and valuing employee expertise."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Patients in the Southeast region requiring healthcare services, as well as research sponsors, medical trainees, and academic partners."
+   "value": "Patients seeking medical care, researchers, medical students, and academic affiliates."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: $90,000 - $115,000 for new graduate AI/Data Science roles in an academic medical setting."
+   "value": "Estimated: $70,000 - $90,000 base salary. Nashville-based hybrid roles in academic healthcare typically pay below elite big-tech benchmarks but offer strong WLB and benefits."
   },
   "evidence_sha": "7704b4e4566fb27d",
-  "generated_at": 1784877314,
+  "generated_at": 1785058366,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -404357,73 +404357,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Healthcare and Academic Medicine."
+   "value": "Healthcare, Academic Medical Center."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe the specific data science group: ask how the team balances clinical validation with rapid algorithmic iteration, how strict compliance affects sprint velocity, and whether new grads are expected to work on-call."
+   "confidence": "medium",
+   "source_ids": [
+    "726057e286"
+   ],
+   "value": "Candidates should highlight AI knowledge, C#/Angular development skills, and a passion for healthcare technology. Focus on demonstrating ability to learn quickly and thrive in a mission-driven setting that values work-life balance."
   },
-  "last_attempt_at": 1784877314,
+  "last_attempt_at": 1785058366,
   "last_evidence_at": 1785053909,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Headquartered in Nashville, Tennessee with hospital facilities and regional clinics across the region."
+   "value": "Nashville, Tennessee."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "To advance health and wellness through exceptional patient care, groundbreaking research, and the education of future healthcare leaders."
+   "value": "To operate at a global crossroads of teaching, discovery, and patient care with the aim of changing the world."
   },
   "name": "Vanderbilt Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: Slower, highly regulated academic environment that favors rigorous peer review over fast-paced tech culture."
+   "value": "Estimated: Moderate to slow. As a large academic medical center, the pace is likely more bureaucratic and deliberate than a fast-paced tech startup."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Acute and outpatient clinical care services, specialized medical treatments, surgical procedures, electronic health records (EHR), and clinical research/trials."
+   "value": "Healthcare services, medical research, clinical trials, medical education, and healthcare technology applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: 20 to 25 days of PTO annually, plus university-observed holidays."
+   "value": "Estimated: 20-25 days of PTO annually, typical for large academic medical centers."
   },
+  "refresh_after": 1790242366,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "726057e286"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: Likely operates continuously given its status as a hospital, but administrative and tech staff may observe university holiday closures."
+   "value": "None found in research."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Mature, large-scale academic medical center employing tens of thousands of clinical and administrative staff."
+   "value": "Large academic medical center."
   },
   "sources": [
    {
@@ -404478,43 +404484,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "04fa6dbbed",
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "As an arm of a major research university, the organization is likely to support H-1B visa sponsoring for specialized hard-to-fill roles, though specific policies vary by department."
+   "value": "No specific information found in research."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "04fa6dbbed",
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Vanderbilt Health is the academic medical center and healthcare system operated by Vanderbilt University, providing comprehensive patient care, advanced medical research, and clinical education. As a non-profit academic institution, it is sustained through patient revenue, federal and private research grants, and university funding."
+   "value": "Vanderbilt Health (VUMC) is a leading academic medical center in Nashville, Tennessee, dedicated to patient care, research, and medical education. It generates revenue through clinical care services, funded research grants, and educational programs."
   },
+  "synthesized_evidence_sha": "7704b4e4566fb27d",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Development of clinical informatics pipelines, biomedical data processing pipelines, machine learning models for diagnostics, and electronic health record integrations."
+   "value": "Software development for healthcare applications using C# and Angular; AI experience is considered a plus for technical roles."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=Vanderbilt+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Vanderbilt Health aligns strongly with a mission-driven profile via its life-saving clinical research, providing high technical prestige in biomedical data science without the toxic burnout culture of big tech."
+   "confidence": "medium",
+   "source_ids": [
+    "726057e286"
+   ],
+   "value": "For a new grad seeking an AI or data science role, Vanderbilt Health provides a mission-driven environment that respects work-life balance through sane hours and avoids high-burnout culture. It offers the opportunity to accelerate technical learning in a respected academic setting, though the tech culture may lean more toward bureaucracy than fast-paced innovation."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "8f1cabc5d1"
+    "726057e286"
    ],
-   "value": "Estimated: Generally strong work-life balance compared to private big tech, with a culture rooted in academia."
+   "value": "Estimated: Good. Academic medical centers typically emphasize sane working hours to prevent burnout, aligning with a mission-driven, respectful culture rather than a high-burnout tech environment."
   }
  },
  "vanguard": {
