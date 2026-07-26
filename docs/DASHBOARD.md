@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-26 20:54 UTC** · companies polled directly: **1346** (registry 1523) · jobs tracked: **21772** · new this run: **4** · alerts this run: **1**_
+_Last run: **2026-07-26 21:15 UTC** · companies polled directly: **1346** (registry 1523) · jobs tracked: **21772** · new this run: **4** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -58,7 +58,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 99 🔥 | 22d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/683df139abb1ff44979fe7bb?utm_campaign=Software%20Engineering&utm_source=1103) | Fremont, California, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 99 🔥 | 22d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a2213097c30cc2cc516d39a?utm_campaign=Software%20Engineering&utm_source=1103) | Austin - ATX1 | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 99 🔥 | 23d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a0f44fd80bf0430c76322b7?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 98 🔥 | 20h | Vanderbilt Health | [C# / Angular Associate Application Developer](https://vumc.wd1.myworkdayjobs.com/en-US/vumccareers/job/Nashville-TN/C----Angular-Associate-Application-Developer--Local---Hybrid-_R-63031-1) | Nashville, TN | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 98 🔥 | 21h | Vanderbilt Health | [C# / Angular Associate Application Developer](https://vumc.wd1.myworkdayjobs.com/en-US/vumccareers/job/Nashville-TN/C----Angular-Associate-Application-Developer--Local---Hybrid-_R-63031-1) | Nashville, TN | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 98 🔥 | 2d | Boston Children's Hospital | [Healthcare Data Analyst I](https://jobright.ai/jobs/info/6a63cd0b8d53603449604606?utm_campaign=Data%20Analysis&utm_source=1103) | Boston, MA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 98 🔥 | 9d | Ensemble Health Partners | [AI Innovation Specialist](https://ensemblehp.wd5.myworkdayjobs.com/ensemblehealthpartnerscareers/job/Remote---Nationwide/AI-Innovation-Specialist_R048169) | Remote in USA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 97 🔥 | 9d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |

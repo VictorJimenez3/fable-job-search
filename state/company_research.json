@@ -13696,44 +13696,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480"
    ],
-   "value": "Low tier for top tech talent; legacy retail chains generally do not compete with elite tech labs or AI unicorns for new grad talent."
+   "value": "Estimated: Traditional retail/Tier 3 for AI/DS. Unlikely to offer the elite prestige, cutting-edge research environment, or top-tier pay associated with dedicated tech firms."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
-   "value": "Direct-to-consumer retail sales of food and drug products via physical store locations."
+   "value": "Generates revenue through the direct retail sale of food, health, and wellness products to consumers in its physical stores."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
-   "value": "Diverse and inclusive, rooted in traditional grocery and drugstore retail."
+   "value": "Focuses on a diverse and inclusive work culture and community impact. Corporate environment is likely traditional retail management styled rather than a modern, tech-driven vibe."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Everyday consumers and households nationwide."
+   "confidence": "high",
+   "source_ids": [
+    "678b9f5480",
+    "28a7fa49d6"
+   ],
+   "value": "Everyday consumers across the United States seeking groceries, prescription medications, and household retail goods."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
-   "value": "Estimated: Corporate tech roles might sit in the $90k-$120k base range, though specific tech data is absent (note: disclosed entry-level retail positions start at $16.76-$25.15/hr)."
+   "value": "Estimated: $70,000 - $95,000 for corporate tech roles. Notably, the specific entry-level roles found are hourly front-end positions paying $16.76 - $25.15/hr, which falls significantly short of top-tier AI/DS new-grad pay. City of Seattle labor agreements start at $18.94/hr."
   },
   "evidence_sha": "81b512532311d449",
-  "generated_at": 1784937314,
+  "generated_at": 1785100336,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -13742,52 +13745,53 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
    "value": "Food and Drug Retail"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480"
    ],
-   "value": "Probe heavily into the team's iteration speed and tech stack. Ensure any data science role is focused on impactful engineering rather than internal IT tooling, and seek guarantees on personal time to avoid standard corporate retail burnout."
+   "value": "Probe the specific AI/DS team structure, the pace of their tech initiatives, and whether they offer accelerated technical growth or ISTIs. Prepare to ask hard questions about internal tech culture, WLB, and pay bands to ensure they align with your non-negotiables for sane hours and elite compensation."
   },
-  "last_attempt_at": 1784937314,
+  "last_attempt_at": 1785100336,
   "last_evidence_at": 1785099239,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "678b9f5480",
     "6d101fa60b",
     "28a7fa49d6"
    ],
-   "value": "Bellevue, WA and Washington, DC are directly referenced, but operations span across the United States."
+   "value": "Nationwide presence with specific technical and corporate roles located in Kenmore, WA; Bellevue, WA; and Washington, DC."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6"
+    "678b9f5480",
+    "28a7fa49d6",
+    "6d101fa60b"
    ],
-   "value": "Committed to innovation and fostering a culture of belonging."
+   "value": "Committed to innovation, fostering a culture of belonging, and helping in the areas of hunger relief, education, cancer research, and treatment."
   },
   "name": "Albertsons Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480"
    ],
-   "value": "Estimated: Slower corporate retail pace, likely hampered by legacy bureaucracy rather than fast-paced innovative tech culture."
+   "value": "Estimated: Moderate to slow. As a traditional brick-and-mortar retailer, the tech and data culture may lean toward steady, bureaucratic processes rather than a fast, innovative tech pace."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
-   "value": "Food, grocery items, and drugstore/pharmacy services."
+   "value": "Operates a network of food and drug retail stores providing groceries, pharmacy services, and essential household goods."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -13795,26 +13799,32 @@
    "source_ids": [
     "6d101fa60b"
    ],
-   "value": "Estimated: 10-15 days standard for corporate employees, though exact policy is not public."
+   "value": "Estimated: 10-20 days of Paid Time Off annually, varying by tenure, role, and local labor agreements. The company mentions Vacation/PTO as an eligible benefit without specifying exact days."
   },
+  "refresh_after": 1790284336,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "678b9f5480"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "6d101fa60b"
    ],
-   "value": "Estimated: Core retail operations run continuously, major corporate shutdowns unlikely."
+   "value": "Estimated: No guaranteed company-wide shutdowns for tech roles. Retail operations run year-round, and corporate tech teams likely follow standard PTO policies rather than guaranteed closures."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large established U.S. retail enterprise."
+   "confidence": "high",
+   "source_ids": [
+    "678b9f5480",
+    "28a7fa49d6"
+   ],
+   "value": "A leading, established enterprise-scale food and drug retailer operating across the United States."
   },
   "sources": [
    {
@@ -13879,26 +13889,26 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Not specified in the available sources."
+   "confidence": "medium",
+   "source_ids": [
+    "678b9f5480"
+   ],
+   "value": "No specific information regarding Visa or H-1B sponsorship for technical roles was found in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
-   ],
-   "value": "Albertsons Companies is a leading food and drug retailer in the United States. The company makes money by selling groceries, household items, and pharmacy services directly to consumers through its various retail banners."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
   },
+  "synthesized_evidence_sha": "81b512532311d449",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "6d101fa60b",
+    "678b9f5480",
     "28a7fa49d6"
    ],
-   "value": "While entry-level retail positions are explicitly advertised, corporate enterprise tech roles likely focus on internal software, e-commerce infrastructure, and supply chain technologies, potentially lacking elite tech prestige."
+   "value": "While corporate IT and data science roles exist to support retail operations, supply chain, and e-commerce, the specific technical stack and AI/DS roadmap for new grads are not detailed in the provided sources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
@@ -13906,18 +13916,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480",
+    "6d101fa60b"
    ],
-   "value": "For an elite AI/data job seeker wanting fast, innovative tech rather than slow bureaucracy, a massive legacy grocery chain will likely lack the prestige, greenfield technical work, and rapid high-tech pace you are targeting."
+   "value": "Albertsons is a massive enterprise where AI and data science can impact supply chain and retail logistics, but it is a traditional grocery chain, not an elite tech company. It is unlikely to fully satisfy a priority for top-tier tech prestige, elite new-grad pay, or a highly innovative, research-driven culture over traditional corporate bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "6d101fa60b",
-    "28a7fa49d6"
+    "678b9f5480"
    ],
-   "value": "Estimated: Inconsistent; may vary drastically between corporate standard hours and retail operations burnout."
+   "value": "Estimated: Average. Glassdoor rating of 3.2 suggests a mixed work-life balance experience. Traditional retail operations are often shift-based, but corporate tech WLB may vary."
   }
  },
  "aledade": {
@@ -382458,68 +382467,80 @@
  "thunderbolt solutions": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "37422ed09a"
+   ],
+   "value": "Estimated: Medium. The focus on Solaris and information assurance suggests legacy defense/aerospace tech rather than a top-tier AI or data science elite tier."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "0ce6bbf28c"
    ],
-   "value": "No business model details found in the provided sources. The company hires software engineers, suggesting a B2B or government contracting model, but this is not confirmed."
+   "value": "Provides software engineering services and solutions, utilizing agile methodologies for design, implementation, integration, and testing."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "0ce6bbf28c"
    ],
-   "value": "Estimated: Agile team-based culture focused on mission-critical software delivery. No broader culture data available."
+   "value": "Collaborative team environment using agile methodology."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "37422ed09a",
+    "0ce6bbf28c"
+   ],
+   "value": "Likely enterprise or government clients requiring mission-critical systems and information assurance, though specific customer names are not public."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No compensation data found in sources for new grad roles."
+   "source_ids": [
+    "37422ed09a"
+   ],
+   "value": "Estimated: $85,000 - $110,000. Exact new grad pay is not public, typical for software engineering roles outside FAANG."
   },
   "evidence_sha": "55a4a0fde602ead0",
-  "generated_at": 1784876283,
+  "generated_at": 1785100336,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "37422ed09a",
     "0ce6bbf28c"
    ],
-   "value": "Technology / Software Engineering (likely defense or mission-critical systems given 'mission-critical development' and 'information assurance' mentions)."
+   "value": "Software Development and IT Services."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "0ce6bbf28c"
+    "37422ed09a"
    ],
-   "value": "Based on the job posting, expect focus on agile methodology, real-time mission-critical development, open/layered architecture, model-based tools, and information assurance tools development. Candidate should prepare for technical questions on software design, implementation, integration, and testing in such environments."
+   "value": "Probe whether the 'real-time mission-critical' work actually uses modern AI/data stacks or relies on legacy systems like Solaris; ask about on-call expectations to ensure they respect your need for guaranteed shutdowns and sane hours."
   },
-  "last_attempt_at": 1784876283,
+  "last_attempt_at": 1785100336,
   "last_evidence_at": 1785099001,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Specific physical locations are not public, though the company is actively hiring for full-time software engineering roles."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Not explicitly found in research, but the company focuses on designing and testing mission-critical software solutions."
   },
   "name": "Thunderbolt Solutions",
   "pace_of_work": {
@@ -382527,22 +382548,23 @@
    "source_ids": [
     "0ce6bbf28c"
    ],
-   "value": "Estimated: Likely moderate to fast given 'real-time mission-critical development' and agile methodology mentions, but no direct evidence of pace culture."
+   "value": "Estimated: Agile methodology implies iterative fast-paced delivery, common in innovative tech teams."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "0ce6bbf28c"
+    "37422ed09a"
    ],
-   "value": "No specific product details found in the provided sources. The job posting mentions 'software solutions' generically but does not name products."
+   "value": "Real-time mission-critical software solutions and model-based tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No PTO policy information found in sources."
+   "value": "Estimated: Exact PTO days are not public."
   },
-  "refresh_after": 1790060283,
+  "refresh_after": 1790284336,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -382552,12 +382574,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed shutdown policies found in sources."
+   "value": "Estimated: No information found regarding guaranteed company shutdowns."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "37422ed09a",
+    "0ce6bbf28c"
+   ],
+   "value": "Estimated: Exact company size is not public. The presence of junior 'Software Engineer 1' roles suggests a growing firm actively hiring new grads."
   },
   "sources": [
    {
@@ -382622,42 +382647,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Sponsorship details are not public."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d",
+    "37422ed09a",
     "0ce6bbf28c"
    ],
-   "value": "Thunderbolt Solutions appears to be a technology company hiring software engineers for roles involving agile development, design, implementation, integration, and testing of software solutions. The company was surfaced in a 2026 new-grad software engineer job board."
+   "value": "Thunderbolt Solutions is a technology company specializing in software engineering, with a focus on real-time mission-critical development and open architecture environments. Based on current job openings, the company generates revenue by providing agile-driven software design, implementation, and integration services for complex, mission-critical technical systems."
   },
-  "synthesized_evidence_sha": "17c14eefa7df7037",
+  "synthesized_evidence_sha": "55a4a0fde602ead0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "37422ed09a",
     "0ce6bbf28c"
    ],
-   "value": "Software Engineer I role involves collaborating in a team using agile methodology to perform design, implementation, integration, and testing of software solutions. Mentions real-time mission-critical development, open/layered architecture environment, model-based tools, and information assurance tools development."
+   "value": "Involves real-time mission-critical development, information assurance tools, and layered architecture environments using Windows, Solaris, and Linux."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675127,
   "web_search_url": "https://duckduckgo.com/?q=Thunderbolt+Solutions+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "0ce6bbf28c",
-    "1db9db9c4d"
+    "0ce6bbf28c"
    ],
-   "value": "Candidate seeks a top-tier AI/data science role with elite prestige and high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without sacrificing personal time. Thunderbolt Solutions' actual alignment with these priorities cannot be verified from the limited sources, which only confirm a software engineer hiring presence."
+   "value": "This role may offer the high new-grad pay and fast-paced agile culture you desire, though the 'mission-critical' and information assurance focus could carry legacy tech (Solaris) rather than elite AI/data science prestige. The agile methodology suggests innovation, but you must verify if their WLB meets your strict requirements for sane hours and shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown - no work-life balance policies, hours, or culture data found in sources."
+   "source_ids": [
+    "37422ed09a"
+   ],
+   "value": "Estimated: Work-life balance is not explicitly public; due to the 'mission-critical' nature of the software, hours could occasionally be demanding."
   }
  },
  "tickpick": {
@@ -402927,49 +402954,50 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "d6393516b0",
     "dbd745d839"
    ],
-   "value": "Estimated: Tier 3 (IT Consulting). As a broad digital transformation provider, UST focuses on enterprise software development rather than cutting-edge AI/data science research, making it less prestigious for elite AI roles compared to top-tier tech companies."
+   "value": "Estimated: Mid-tier enterprise analytics. While they hire for business systems and data analytics, UST is primarily an IT consulting firm, not an elite, top-tier AI/product company like OpenAI or Google."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "11ff54b2fe",
-    "d6393516b0",
-    "dbd745d839"
-   ],
-   "value": "Consulting and IT services. Generates revenue by placing developers and data analysts at client sites or projects, billing for digital transformation and software engineering services."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
+    "7ecdc8cbdb",
     "dbd745d839",
-    "11ff54b2fe"
-   ],
-   "value": "Estimated: Corporate and client-focused. As a 10,000+ employee consulting giant, the culture is likely mission-driven but structured around client needs, enterprise standards, and traditional hierarchical delivery models rather than high-speed startup innovation."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
     "d6393516b0"
    ],
-   "value": "Enterprise organizations requiring digital transformation, custom software engineering, and business systems modernization."
+   "value": "B2B IT and digital transformation consulting, generating revenue by placing technical talent like full-stack developers and data analysts at client sites to execute enterprise modernization projects."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "dbd745d839",
+    "11ff54b2fe",
+    "d6393516b0"
+   ],
+   "value": "Mission-driven and transformation-focused, operating at a large global enterprise scale with diverse teams placed at various client sites."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbd745d839",
+    "d6393516b0"
+   ],
+   "value": "Enterprise clients seeking digital modernization and business systems optimization, supported by a large-scale global workforce."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
-    "11ff54b2fe",
+    "7ecdc8cbdb",
     "d6393516b0",
     "dbd745d839"
    ],
-   "value": "Estimated: $104,000 to $114,000 base per year (derived from $50-$55/hr fullstack roles), or $86,000 to $129,000 base per year for data analytics roles."
+   "value": "Estimated: $100,000 - $114,000 annualized ($50 - $55/hr for entry-level fullstack roles), or $86,000 - $129,000/yr for entry/mid-level Data Analytics Associates."
   },
   "evidence_sha": "20eced05cf7a7b9d",
-  "generated_at": 1784862450,
+  "generated_at": 1785100336,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -402978,28 +403006,28 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "dbd745d839",
     "d6393516b0"
    ],
-   "value": "IT Services and Digital Transformation Consulting"
+   "value": "IT Services and Digital Transformation Consulting."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "11ff54b2fe",
-    "d6393516b0"
+    "dbd745d839"
    ],
-   "value": "Candidates should weigh the consulting structure against their desire for a fast, innovative AI/data science environment. It is critical to ask about team-specific project pace, after-hours expectations, and how the role balances mission-driven work with strict work-life boundaries to avoid high-burnout client environments."
+   "value": "Candidates should clarify the exact work-life balance expectations, project pacing, and guaranteed shutdowns during interviews to ensure the role avoids slow bureaucracy or sudden high-burnout sprints. Additionally, candidates should ask about the specific AI/data science initiatives to verify if the technical environment is truly innovative or fundamentally traditional IT maintenance, ensuring the role aligns with elite tech culture and learning growth standards."
   },
-  "last_attempt_at": 1784862450,
+  "last_attempt_at": 1785100336,
   "last_evidence_at": 1785099001,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "11ff54b2fe",
-    "d6393516b0",
-    "dbd745d839"
+    "dbd745d839",
+    "7ecdc8cbdb",
+    "11ff54b2fe"
    ],
-   "value": "Global presence with specific US roles located in Frisco, TX; San Jose, CA; and broader Texas."
+   "value": "Headquartered in Waltham, Massachusetts with current US openings in New Jersey, Frisco (Texas), and San Jose (California). All current roles are onsite."
   },
   "mission": {
    "confidence": "high",
@@ -403008,25 +403036,25 @@
     "dbd745d839",
     "d6393516b0"
    ],
-   "value": "A mission-driven group that transforms lives through the power of technology."
+   "value": "UST is a mission-driven group that transforms lives through the power of technology."
   },
   "name": "UST",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "11ff54b2fe",
-    "dbd745d839"
+    "dbd745d839",
+    "d6393516b0"
    ],
-   "value": "Estimated: Medium to Fast. Typical of large IT consulting firms, pace is often driven by client deadlines and project deliverables, which can occasionally lead to bureaucratic delays or sudden busy periods."
+   "value": "Estimated: Project-driven pace typical of large digital transformation consultancies; fast enough to satisfy client deliverables, but generally less innovative and potentially slower-moving than a pure startup tech culture."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "11ff54b2fe",
-    "d6393516b0",
-    "dbd745d839"
+    "7ecdc8cbdb",
+    "dbd745d839",
+    "d6393516b0"
    ],
-   "value": "Digital transformation solutions, custom software development (utilizing React, Angular, Vue.js, HTML, CSS), and business systems/data analytics services."
+   "value": "Digital transformation solutions, business systems modernization, full-stack development services, and data analytics integration."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -403034,28 +403062,31 @@
    "source_ids": [
     "dbd745d839"
    ],
-   "value": "Estimated: 15 to 20 days per year. Standard for large enterprise IT consulting firms in the US, though specific package details are not public."
+   "value": "Estimated: 15 to 20 days of paid time off annually, standard for a large digital transformation consulting firm."
   },
-  "refresh_after": 1790046450,
+  "refresh_after": 1790284336,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "dbd745d839"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "dbd745d839"
+    "7ecdc8cbdb"
    ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found. Large IT consultancies rarely pause client work globally, meaning shutdowns are unlikely and time off depends on project coverage."
+   "value": "Estimated: Standard public holidays only; no specific evidence of guaranteed company-wide shutdown periods."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "dbd745d839"
    ],
-   "value": "Large, established global enterprise. Founded in 1999 with 10,001+ employees."
+   "value": "Large enterprise with over 10,001 employees globally."
   },
   "sources": [
    {
@@ -403124,46 +403155,46 @@
    "source_ids": [
     "dbd745d839"
    ],
-   "value": "UST has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
+   "value": "UST has a track record of offering H1B sponsorships, though this is not guaranteed for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "d6393516b0",
     "dbd745d839",
-    "11ff54b2fe"
+    "d6393516b0"
    ],
-   "value": "UST is a global digital transformation solutions provider founded in 1999 that transforms lives through the power of technology. It makes money by providing digital technology, software engineering, and data analytics consulting services to enterprise clients."
+   "value": "UST is a global digital transformation solutions provider that transforms lives through the power of technology. Founded in 1999 and headquartered in Waltham, Massachusetts, the company leverages technologies like AI, cloud, and data analytics to modernize client operations."
   },
-  "synthesized_evidence_sha": "cc5fe842c50e8bb5",
+  "synthesized_evidence_sha": "20eced05cf7a7b9d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "7ecdc8cbdb",
     "11ff54b2fe",
-    "d6393516b0",
     "dbd745d839"
    ],
-   "value": "Fullstack web development (React, Angular, Vue.js, HTML, CSS) and business systems/data analytics for various client projects."
+   "value": "Full-stack web development and enterprise data analytics. Tech stacks include Python, Java, React, Angular, Vue.js, HTML, CSS, and Microsoft Azure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674776,
   "web_search_url": "https://duckduckgo.com/?q=UST+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "dbd745d839",
-    "d6393516b0"
+    "7ecdc8cbdb",
+    "d6393516b0",
+    "11ff54b2fe"
    ],
-   "value": "As a large global IT consultancy, UST may present a slower, more bureaucratic tech culture rather than the fast-paced, elite innovation environment typical of top-tier AI or data science roles. While the mission is strong, candidates seeking high new-grad pay and rapid technical acceleration without sacrificing personal time may find large consulting environments challenging for work-life balance and guaranteed shutdowns."
+   "value": "UST offers new-grad pay that matches elite industry hourly rates (roughly $100K-$114K annualized) without requiring the intense burnout typical of top-tier tech. The company explicitly markets itself as mission-driven and dedicated to transforming lives, potentially offering a more sustainable work environment that accelerates technical learning across modern enterprise stacks without sacrificing personal time to a toxic, high-stress culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "11ff54b2fe",
-    "d6393516b0"
+    "dbd745d839"
    ],
-   "value": "Estimated: Moderate. Work-life balance in consulting often depends heavily on the specific client project and onsite requirements (as seen in the 100% onsite roles), which can limit flexibility."
+   "value": "Estimated: Moderate. While the company emphasizes a 'mission-driven' ethos, employees in large IT consulting firms often face variable work-life balance depending on client demands."
   }
  },
  "ust healthproof": {
