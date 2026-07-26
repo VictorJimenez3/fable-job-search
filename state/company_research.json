@@ -256021,95 +256021,127 @@
  "nakupuna companies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 (solid applied work in government context; not a primary AI research hub)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Emerging/Developing tier — active new-grad hiring signals investment in technical talent, but no public AI/DS research output, conference presence, or elite brand recognition found in sources."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Government contracting: wins prime and subcontract awards, provides staffed expertise and managed services on a cost-plus, time-and-materials, or fixed-price basis."
+   "confidence": "low",
+   "source_ids": [
+    "2efe7d224c",
+    "bb106ebdce"
+   ],
+   "value": "Business model not publicly detailed; appears to be a multi-entity organization (Companies + Foundation) potentially combining technology services with social impact work."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-oriented, process-driven, collaborative, with emphasis on compliance and veteran/native Hawaiian community values."
+   "source_ids": [
+    "1db9db9c4d",
+    "bb106ebdce"
+   ],
+   "value": "Estimated: Mission-blended, early-career friendly — dual commercial/foundation structure may attract purpose-driven engineers; culture likely less intense than FAANG/AI labs, more structured than early-stage startups."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "U.S. federal government agencies (e.g., Department of Defense, civilian agencies)."
+   "confidence": "low",
+   "source_ids": [
+    "bb106ebdce",
+    "2efe7d224c"
+   ],
+   "value": "Customer base not disclosed in available sources; likely serves government, enterprise, or nonprofit sectors given '.org' foundation presence and 'Companies' plural branding."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000–$110,000 base + modest bonus; clearance-eligible roles may start higher."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $85,000-$110,000 base + modest bonus/equity — aligned with mid-size defense/tech services firms in non-coastal hubs; top-tier AI lab pay ($150k+) unlikely."
   },
   "evidence_sha": "f471683c8172a10b",
-  "generated_at": 1784879497,
+  "generated_at": 1785096137,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Federal Government Contracting / Professional Services"
+   "confidence": "medium",
+   "source_ids": [
+    "2efe7d224c",
+    "bb106ebdce"
+   ],
+   "value": "Technology services / Software development (with nonprofit foundation affiliate)"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect behavioral questions on federal compliance, teamwork, and mission alignment. Technical screens may emphasize practical ML/engineering for regulated environments, security clearance processes, and ability to deliver within government procurement constraints."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Prepare for standard new-grad software engineering fundamentals (data structures, algorithms, system design basics). Ask about: specific AI/DS project opportunities, mentorship structure, typical sprint cadence, on-call expectations, and how the foundation/commercial sides interact technically."
   },
-  "last_attempt_at": 1784879497,
+  "last_attempt_at": 1785096137,
   "last_evidence_at": 1785095182,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters likely in Hawaii or Washington, D.C. area; project sites at federal facilities nationwide."
+   "confidence": "low",
+   "source_ids": [
+    "d91a89a50c"
+   ],
+   "value": "Headquarters location not specified in sources; remote/hybrid policies unknown. Career page suggests US-based opportunities."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
     "bb106ebdce"
    ],
-   "value": "To deliver mission-critical solutions that advance national priorities while fostering a culture of integrity, innovation, and community stewardship (inferred from Nakupuna Foundation presence)."
+   "value": "Mission statement not found in available sources; nakupunafoundation.org suggests a philanthropic or community-focused component alongside commercial operations."
   },
   "name": "Nakupuna Companies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate, driven by contract deliverables and compliance cycles; slower than Silicon Valley but with predictable sprints."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate — new-grad hiring suggests structured onboarding and project allocation; no public signals of 'move fast and break things' culture or death-march delivery cycles."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Professional services including IT modernization, cybersecurity, data analytics, engineering support, and program management for federal clients."
+   "confidence": "low",
+   "source_ids": [
+    "2efe7d224c",
+    "bb106ebdce"
+   ],
+   "value": "Specific products not publicly detailed in available sources; company operates nakupuna.com and nakupunafoundation.org domains suggesting technology services and/or nonprofit activities."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days PTO + 10 federal holidays; may include separate sick leave."
+   "value": "Estimated: 15-20 days PTO + federal holidays — typical for mid-size US tech gov/services contractors; no public policy document found."
   },
+  "refresh_after": 1790280137,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "d91a89a50c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Observes federal holidays and likely a year-end shutdown (Dec 24–Jan 1); some contracts mandate specific shutdown periods."
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; some gov/contractor firms observe winter break but not confirmed."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mid-sized government contractor (estimated 500–2,000 employees), established enough to have a separate foundation entity."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Mid-size (100-500 employees) based on multi-domain presence and active new-grad hiring pipeline; exact headcount not public."
   },
   "sources": [
    {
@@ -256154,37 +256186,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Likely sponsors H-1B and green cards for cleared positions; may require U.S. citizenship for many roles due to security clearance requirements."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "bb106ebdce",
-    "d91a89a50c",
-    "2efe7d224c"
+    "1db9db9c4d",
+    "2efe7d224c",
+    "bb106ebdce"
    ],
-   "value": "Nakupuna Companies appears to be a federal government contracting and professional services firm, likely providing IT, engineering, and management solutions to U.S. government agencies. Revenue is derived primarily from federal contracts and task orders."
+   "value": "Nakupuna Companies appears to be a technology-focused organization hiring for 2026 new graduate software engineering roles, with web presence at nakupuna.com and a related foundation at nakupunafoundation.org."
   },
+  "synthesized_evidence_sha": "f471683c8172a10b",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Software development, cloud migration, DevSecOps, data science/ML model deployment, cybersecurity compliance, and systems engineering for federal programs."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Actively recruiting 2026 new-grad software engineers; specific tech stack, AI/DS focus, and project types not disclosed in available sources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Nakupuna+Companies+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers a mission-driven federal contracting environment with potential for meaningful national security work. The presence of a foundation suggests community values. For a candidate seeking elite AI/data science prestige with work-life balance, the firm’s government focus may provide stable hours and shutdowns, but prestige and pay may lag top-tier tech firms."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "bb106ebdce"
+   ],
+   "value": "Offers a 2026 new-grad software engineering entry point at a multi-entity organization with both commercial and foundation arms, potentially providing varied project exposure and mission-driven work without the bureaucracy of large defense contractors or the burnout risk of elite AI labs."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 – government contracting often enforces 40-hour weeks and shutdowns, but surge periods near contract deadlines occur."
+   "source_ids": [
+    "1db9db9c4d",
+    "bb106ebdce"
+   ],
+   "value": "Estimated: 3.5/5 — foundation affiliation and new-grad program imply some institutional guardrails on hours, but actual shutdown policies, on-call load, and crunch frequency unknown."
   }
  },
  "namsa": {
@@ -428194,115 +428235,121 @@
  },
  "zachary piper solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Low — traditional gov-contractor stack, not an AI/ML research or product shop."
+   "value": "Low. Staffing firms do not typically generate proprietary AI/data science prestige, as technical work is largely outsourced to client projects rather than developed internally."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Government contracting: wins federal task orders or prime contracts, then staffs engineers to deliver software projects on a time-and-materials or fixed-price basis."
+   "value": "B2B staffing and recruitment services, charging client companies for placement and contract management."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "52914c614f"
-   ],
-   "value": "Professional, process-oriented, mission-aligned to federal clients; less 'startup innovative', more 'reliable delivery'."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Recruitment-driven and agency-focused internally. The technical culture depends entirely on the client site you are placed at."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "U.S. federal government agencies (likely defense, civilian, or intelligence community based on DC-area location)."
+   "value": "Companies seeking software engineers, Python developers, cybersecurity professionals, and technical staff."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $75,000-$95,000 base + modest bonus (DC-area cleared entry-level benchmark)."
+   "value": "Estimated: $60,000 - $80,000 annually for entry-level Python/Software engineering roles, subject to client contract budgets."
   },
   "evidence_sha": "6dfc2de7207ff1f8",
-  "generated_at": 1785017694,
+  "generated_at": 1785096137,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Federal IT services / Government contracting"
+   "value": "Staffing and Recruiting."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "Expect practical Python/OOP questions, API design, Linux basics, Git workflows, and behavioral questions about working in regulated/compliance-heavy environments. Prepare for security-clearance discussion."
+   "value": "Clarify whether the employer is the staffing agency itself or the client; probe the specific client team to confirm it aligns with elite AI/data science prestige, sane hours, and a fast tech-driven environment. Ensure the placement offers hands-on technical acceleration rather than a bureaucratic or toxic role, which can be a risk in third-party contracting."
   },
-  "last_attempt_at": 1785017694,
+  "last_attempt_at": 1785096137,
   "last_evidence_at": 1785094939,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Headquarters: McLean, VA (DC metro). May support remote or hybrid work for cleared positions; client sites across DC area."
+   "value": "Headquartered in Mclean, Virginia, USA."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "Provide reliable, secure technology solutions that support federal agency missions (inferred from gov-contractor model)."
+   "value": "To connect skilled technical professionals with client companies requiring specialized software, cloud, and engineering support."
   },
   "name": "Zachary Piper Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate, driven by contract deliverables and compliance gates; not a 'move fast and break things' culture."
+   "value": "Estimated: Fast-paced due to the nature of staffing and consulting demands, but highly dependent on the specific client placement."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Custom software development, API integration, and IT modernization services for federal government clients, using Python, Linux, Git, and object-oriented design."
+   "value": "Staffing and recruiting services for contract, contract-to-hire, and direct-hire technology, cybersecurity, and engineering roles."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 10-15 days PTO + 10 federal holidays (typical for cleared gov contractors)."
+   "value": "Estimated: Typically 10-15 days of PTO for entry-level corporate employees, though contractors may follow the client's specific PTO policy."
   },
-  "refresh_after": 1790201694,
+  "refresh_after": 1790280137,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "4056a2b617",
+    "52914c614f",
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts observe federal holiday closures."
+   "value": "Estimated: No company-wide guaranteed shutdowns; consultants are usually bound to client site schedules."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Established small business (201-500 employees, founded 2011)."
+   "value": "201-500 employees."
   },
   "sources": [
    {
@@ -428369,25 +428416,27 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "Company has a track record of H-1B sponsorship for technical roles; sponsorship not guaranteed for every opening."
+   "value": "H1B sponsorships have a track record of being offered, though it is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "52914c614f"
+    "4056a2b617"
    ],
-   "value": "Zachary Piper Solutions is a McLean, Virginia-based government IT services contractor founded in 2011, employing 200-500 people. It delivers software development and technical services to U.S. federal agencies."
+   "value": "Zachary Piper Solutions is a technology and engineering staffing firm founded in 2011 that places contract, permanent, and project-based tech talent. It makes money by charging client companies a premium on top of the wages paid to placed consultants or by collecting placement fees for permanent hires."
   },
-  "synthesized_evidence_sha": "02be40f2c5e52fd1",
+  "synthesized_evidence_sha": "6dfc2de7207ff1f8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "Entry-to-mid-level backend development: Python, object-oriented programming, REST APIs, Linux environments, Git version control. Work is likely on classified or sensitive unclassified networks."
+   "value": "Jobs currently advertised require Python, object-oriented programming, APIs, Git, cloud environments, and Linux/Unix."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
@@ -428395,14 +428444,15 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
+    "4056a2b617",
     "52914c614f"
    ],
-   "value": "Offers a cleared, stable entry point into federal tech with H-1B history and structured Python/API work, but lacks elite AI/research prestige, guaranteed shutdowns, or high new-grad pay typical of top-tier product companies. Culture leans procedural (gov-contract compliance) rather than fast/innovative; WLB is often decent but varies by contract."
+   "value": "As a staffing firm rather than a top-tier AI/data science company, this role acts as a portal to client engagements rather than a direct pipeline into elite prestige, proprietary innovation, or mission-driven work-life balance. The candidate's desire for guaranteed shutdowns, accelerated learning, and a fast culture may depend strictly on the specific client placement."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.5/5 — many gov contractors enforce 40-hr weeks, but surge periods near delivery dates can occur."
+   "value": "Estimated: Variable. Work-life balance is dictated by the client engagement; there is no guaranteed agency-wide WLB policy for consultants."
   }
  },
  "zapier": {
