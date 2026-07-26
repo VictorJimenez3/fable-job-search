@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-26 23:13 UTC** · companies polled directly: **1346** (registry 1523) · jobs tracked: **21773** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-26 23:59 UTC** · companies polled directly: **1347** (registry 1524) · jobs tracked: **21778** · new this run: **5** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -146,6 +146,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 24d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 26d | TikTok | [Software Engineer Graduate (Experimentation and Evaluation) - 2026 Sta](https://jobright.ai/jobs/info/6a44451e65e80d3c99f2c3c8?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 27d | TikTok | [Software Engineer Graduate (Global CRM) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a432e92e09ecb495964263a?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 87 🔥 | 1h | Retell AI | [Software Engineer](https://jobs.ashbyhq.com/retell-ai/538ecfa9-2315-42a6-89cc-3cae52165526/application?embed=true) | San Carlos, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 2d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36a5c7e2d715ebae77a?utm_campaign=Software%20Engineering&utm_source=1103) | Palo Alto, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 2d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36f0c8e2b4f36dd0533?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 2d | Palantir Technologies | [Forward Deployed Infrastructure Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a63e36d979290281c704a1b?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 10d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a5c8d9c686b4755d1e1c043?utm_campaign=Software%20Engineering&utm_source=1103) | El Segundo, CA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 11d | Bracebridge Capital | [Machine Learning Analyst](https://job-boards.greenhouse.io/bracebridgecapital/jobs/4715042005) | Boston, MA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 11d | RTX | [2026 Raytheon Full Time - Software Engineer I - McKinney, TX (Onsite)](https://jobright.ai/jobs/info/6a57ae1d21f64463ad35aed7?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 87 🔥 | 16d | Ultra Intelligence and Communications | [Software Engineer Associate](https://ultra.wd3.myworkdayjobs.com/uiccareers/job/Huntsville-USA/Associate-Software-Engineer_REQ-12218) | Austin, TX | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
