@@ -350038,37 +350038,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-to-High (Division-dependent; PlayStation and AI research hold higher prestige than legacy hardware)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d",
+    "f0b42b43e6"
+   ],
+   "value": "Hardware manufacturing paired with digital content licensing, subscription services, and media production."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "84c8528b3d"
+   ],
+   "value": "Estimated: Mission-driven with a heavy emphasis on creativity and combining artistry with technology; fosters a corporate blend of legacy Japanese stability and Silicon Valley innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d"
+   ],
+   "value": "Global consumers, gamers, audiophiles, and digital media subscribers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base salary, plus potential sign-on bonuses and equity."
   },
   "evidence_sha": "8aebfe64630bbb95",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Video Games / technology (estimated)"
+  "generated_at": 1785079805,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "84c8528b3d",
+    "6ea645415b",
+    "f0b42b43e6"
+   ],
+   "value": "Consumer Electronics, Gaming, and Entertainment."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785079805,
   "last_evidence_at": 1785077496,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d",
+    "f0b42b43e6"
+   ],
+   "value": "Global presence with major offices in Tokyo, San Mateo, and global tech hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d"
+   ],
+   "value": "Fill the world with emotion through the power of creativity and technology."
+  },
   "name": "Sony",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate overall, but fast-paced in specific gaming and cloud technology divisions."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "84c8528b3d",
+    "6ea645415b",
+    "f0b42b43e6"
+   ],
+   "value": "PlayStation gaming consoles and software, Bravia televisions, Alpha cameras, audio hardware, Sony Pictures film and television content, and Sony Music entertainment recordings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days standard, with additional floating holidays and division-specific policies."
   },
+  "refresh_after": 1790263805,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -350078,7 +350140,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed global shutdowns, though some divisions offer flexible holidays around calendar year-end."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d"
+   ],
+   "value": "Large-cap, established global enterprise."
   },
   "sources": [
    {
@@ -350112,14 +350181,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5b4ec64e3683a853b056d2bae94766c6b7b24bd63e44bf390aa8ed28f7539a90JmltdHM9MTc4NTAyNDAwMA&ptn=3&ver=2&hsh=4&fclid=26e20bfb-99d0-6bb8-27cb-1c5998576abe&u=a1aHR0cHM6Ly9lbGVjdHJvbmljcy5zb255LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6ea645415b"
+   ],
+   "value": "Estimated: Varies significantly by division, with Sony Interactive Entertainment historically offering more new-grad sponsorship than hardware divisions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "84c8528b3d",
+    "6ea645415b",
+    "f0b42b43e6"
+   ],
+   "value": "Sony is a diversified global technology and media conglomerate that designs and manufactures consumer electronics, gaming consoles, and entertainment content. It generates revenue through hardware sales, digital content distribution, subscription services, and media production."
+  },
+  "synthesized_evidence_sha": "8aebfe64630bbb95",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0b42b43e6"
+   ],
+   "value": "Hardware engineering, embedded systems, game development, cloud infrastructure, and AI/ML for personalization and imaging."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785077496,
   "web_search_url": "https://duckduckgo.com/?q=Sony+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, improving in recent years but highly dependent on the specific group and Crunch-prone gaming divisions."
   }
  },
  "sony interactive entertainment": {
