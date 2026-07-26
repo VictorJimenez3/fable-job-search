@@ -7369,121 +7369,132 @@
  "aeg": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Not applicable/low. AEG is not a recognized leader in AI or data science, meaning an elite AI role here is highly unlikely."
-  },
-  "aliases": [],
-  "attempts": 1,
-  "business_model": {
-   "confidence": "low",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "5ccf13d1e4"
    ],
-   "value": "Revenue is generated from live event ticketing, premium hospitality, corporate sponsorships, and real estate/venue operations."
+   "value": "Estimated: Tier 3 (Traditional Corporate). AEG is not an elite tech or AI-first company, meaning it lacks the top-tier prestige associated with FAANG or specialized AI labs."
+  },
+  "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "db806f5fda",
+    "5ccf13d1e4"
+   ],
+   "value": "AEG operates via integrated event promotion, venue management, and ticketing. It monetizes through ticketing fees (via AXS), sponsorships, event promotion, and venue operations."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-focused on delivering live experiences, likely fostering a creative and corporate environment rather than a hacker culture."
+   "source_ids": [
+    "db806f5fda"
+   ],
+   "value": "Estimated: Corporate entertainment. The vibe is likely mission-driven around delivering fan experiences but may carry traditional corporate bureaucracy rather than agile startup energy."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "5ccf13d1e4"
    ],
-   "value": "Sports fans, concertgoers, corporate sponsors, and artists/athletes."
+   "value": "Music fans, sports enthusiasts, and event-goers who purchase tickets and attend events at AEG-operated venues."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000 - $110,000 base salary, significantly lower than top-tier tech/AI firms."
+   "source_ids": [
+    "5ccf13d1e4"
+   ],
+   "value": "Estimated: $90,000 - $120,000. Likely competitive for the technology sector within the entertainment industry, but below elite tech new-grad salaries."
   },
   "evidence_sha": "801517432bb02d80",
-  "generated_at": 1784880706,
+  "generated_at": 1785048569,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "5ccf13d1e4"
    ],
-   "value": "Sports and Entertainment"
+   "value": "Sports and Live Entertainment / Ticketing Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe deeply into the specific team's tech stack and pace of work to ensure it isn't slow enterprise IT. Ask about guaranteed shutdowns and sane hours to verify work-life balance, and clarify new-grad compensation brackets to see if they match elite tech standards."
+   "source_ids": [
+    "5ccf13d1e4",
+    "80e0107163"
+   ],
+   "value": "Candidates should assess whether the engineering culture operates independently at a fast tech pace or is bogged down by wider corporate bureaucracy. It is critical to confirm if the role offers guaranteed shutdowns, sane hours, and a healthy work-life balance to avoid burnout, as well as whether technical learning and career acceleration are prioritized for new grads."
   },
-  "last_attempt_at": 1784880706,
+  "last_attempt_at": 1785048569,
   "last_evidence_at": 1785044914,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "db806f5fda"
    ],
-   "value": "Headquartered in Los Angeles, California, with global venues and offices."
+   "value": "AEG operates globally with a significant corporate presence in Los Angeles."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
-    "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "db806f5fda"
    ],
-   "value": "To deliver world-class sports and entertainment experiences globally."
+   "value": "Mission details were not explicitly captured in the provided sources, but as a live entertainment company, its core mission centers on delivering world-class sports and music experiences."
   },
   "name": "AEG",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to slow, typical of large legacy entertainment enterprises rather than fast-moving tech startups."
-  },
-  "products": {
-   "confidence": "low",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "db806f5fda"
    ],
-   "value": "Sports and entertainment venues (e.g., Crypto.com Arena, O2 Arena), music festivals, sports franchises, and talent management services."
+   "value": "Estimated: Moderate to slow. As a large entertainment conglomerate, the pace is likely driven by corporate cycles and event schedules rather than rapid tech innovation."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5ccf13d1e4"
+   ],
+   "value": "AEG's digital products include AXS, a ticketing and digital marketing platform. Software engineering roles involve modern web technologies like Python, JavaScript, TypeScript, PHP, and Go."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of standard corporate PTO, plus public holidays."
+   "source_ids": [
+    "80e0107163"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off, typical for large established corporations."
   },
+  "refresh_after": 1790232569,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide tech shutdowns observed; likely standard holiday policies rather than guaranteed offline periods."
+   "source_ids": [
+    "80e0107163"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found in research."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "80e0107163"
    ],
-   "value": "Large, established global private enterprise."
+   "value": "AEG is a large, established private corporation operating globally."
   },
   "sources": [
    {
@@ -7538,37 +7549,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: As a US-headquartered entertainment firm, likely offers standard H-1B sponsorship for critical tech roles but lacks Big Tech-scale international mobility."
+   "confidence": "low",
+   "source_ids": [
+    "5ccf13d1e4"
+   ],
+   "value": "Visa sponsorship details were not found in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "80e0107163",
-    "db806f5fda",
-    "67f6cbbcba"
+    "db806f5fda"
    ],
-   "value": "AEG (Anschutz Entertainment Group) is a global sports and entertainment company that operates venues, produces events, and manages talent. It makes money through ticket sales, sponsorships, venue concessions, and proprietary entertainment content distribution."
+   "value": "AEG (Anschutz Entertainment Group) is a major sports and entertainment presenter that owns or operates venues, sports teams, and entertainment districts. The company generates revenue through ticket sales, sponsorships, and its digital platforms like AXS."
   },
+  "synthesized_evidence_sha": "801517432bb02d80",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely involves traditional enterprise IT, data engineering for analytics, and digital platform development rather than cutting-edge AI research."
+   "confidence": "high",
+   "source_ids": [
+    "5ccf13d1e4"
+   ],
+   "value": "Software engineers work on the AXS platform developing ticketing solutions using Python, JavaScript, TypeScript, PHP, and Go."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
   "web_search_url": "https://duckduckgo.com/?q=AEG+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "AEG is an elite prestige brand in entertainment, not tech. While it may offer a mission-driven environment surrounding live events, it likely lacks the top-tier AI prestige, high new-grad pay, and fast-paced innovative tech culture you prioritize. Technical learning may be constrained by traditional enterprise bureaucracy."
+   "source_ids": [
+    "5ccf13d1e4",
+    "80e0107163"
+   ],
+   "value": "AEG offers AI and data science professionals a unique intersection of tech and live entertainment, providing domain-specific challenges in processing large-scale transaction data and user behaviors. However, as a traditional entertainment enterprise, it may lack the elite prestige of top-tier tech firms and could be more prone to slow bureaucracy rather than a fast, innovative tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. Likely offers standard corporate PTO and reasonable hours, though event-driven weekend/evening work may be required for certain roles."
+   "source_ids": [
+    "80e0107163"
+   ],
+   "value": "Estimated: Moderate. While live entertainment can have event-driven crunches, a large corporate entity typically maintains standard working hours."
   }
  },
  "aerovect": {
@@ -21361,40 +21381,43 @@
  "amentum": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Although it provides advanced technology and R&D services, as a traditional defense contractor, Amentum is generally considered lower prestige for mainstream AI/Data Science compared to elite tech firms, but offers solid defense-sector technical credibility."
+   "source_ids": [
+    "c415bfd408"
+   ],
+   "value": "Estimated: Tier 3. Defense contractors rarely match the elite prestige or fast-paced tech culture of top-tier AI or data science firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "c415bfd408"
    ],
-   "value": "Business-to-Government (B2G) and Business-to-Business (B2B) services. Amentum bids on and staffs technical R&D and engineering contracts, charging government and commercial entities for specialized engineering services and delivered software."
+   "value": "B2G and B2B services contracting, generating revenue through staff augmentation and specialized technical project delivery."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Mission-focused, engineering-first defense contractor culture prioritizing security, compliance, and structured R&D, rather than the high-growth, high-risk culture of commercial startups."
+   "value": "Estimated: Mission-driven and structured, prioritizing security and reliability over rapid disruption."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "c415bfd408"
    ],
-   "value": "Government and commercial customers, specifically including the US Navy (USN)."
+   "value": "Government entities (such as the US Navy) and commercial customers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
+    "caeac2959c",
     "c415bfd408"
    ],
-   "value": "Estimated: ~$100,000 - $120,000 base salary, visible on the Journeyman Software Engineer posting (entry/mid-level)."
+   "value": "Estimated: $95,000 - $120,000 per year for entry-level software engineering roles."
   },
   "evidence_sha": "16410042e526c74d",
-  "generated_at": 1784680200,
+  "generated_at": 1785048569,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -21405,51 +21428,52 @@
    "source_ids": [
     "c415bfd408"
    ],
-   "value": "Defense and Government Technical Services / Engineering R&D."
+   "value": "Defense and Government Technical Services / Engineering Services."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Be sure to ask about daily tech stack, work-life balance, and remote/hybrid flexibility—a defense contractor R&D lab can be highly innovative but sometimes shackled by slow government procurement processes. Probe for specifics on technical autonomy, red tape, and how much time is spent on actual coding versus compliance and documentation."
+   "value": "Highlight your technical adaptability and eagerness to learn in an R&D environment. Prepare to discuss how you manage structured requirements and navigate potential bureaucracy while delivering rapid technical results, and be ready to confirm your eligibility for Top-Secret clearance."
   },
-  "last_attempt_at": 1784680200,
+  "last_attempt_at": 1785048569,
   "last_evidence_at": 1785044657,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "c415bfd408",
-    "427bf314f5"
+    "caeac2959c",
+    "c415bfd408"
    ],
-   "value": "Fredericksburg, VA (and potentially other undisclosed locations globally as indicated by the '+1 more' tag and global headquarters presence)."
+   "value": "Washington, DC and Fredericksburg, VA (with additional locations implied). Roles are onsite."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "c415bfd408",
     "427bf314f5"
    ],
-   "value": "Providing technical and engineering services for advanced technology development and global governmental missions. Amentum has also recently signaled growth and expanded mission goals by opening new global headquarters."
+   "value": "To provide advanced technical and engineering services that support critical government and commercial missions. The company is focused on global growth and expanding its mission capabilities."
   },
   "name": "Amentum",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate pace driven by government contracting and R&D development cycles, generally avoiding the toxic crunch culture of consumer tech but sometimes slowed by bureaucratic compliance."
+   "value": "Estimated: Moderate. R&D settings can be innovative, but the broader defense contract structure often imposes steady, bureaucratic pacing rather than fast tech-culture pace."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "c415bfd408"
    ],
-   "value": "Advanced technology R&D and software engineering services, including coding, optimizing, and building software solutions for defense systems such as those used by the US Navy."
+   "value": "Software development, coding optimization, and advanced technology R&D services for defense and technical systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: ~15-20 days of PTO typical for established mid-to-large defense contractors, plus standard federal holidays, though specific policy is unstated."
+   "value": "Estimated: 15-20 days of standard PTO annually, reflecting typical large government contractor benefits."
   },
-  "refresh_after": 1789864200,
+  "refresh_after": 1790232569,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21459,15 +21483,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No public information regarding guaranteed shutdowns, though some defense contractors offer variable paid time off between contract phases."
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns, typical of the defense sector."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "c415bfd408",
     "427bf314f5"
    ],
-   "value": "Large, established global enterprise operating with a substantial workforce across multiple locations, recently opening new global headquarters to reflect ongoing growth."
+   "value": "Large, established global enterprise operating as a major defense and engineering services contractor."
   },
   "sources": [
    {
@@ -21534,9 +21558,9 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
-    "c415bfd408"
+    "caeac2959c"
    ],
-   "value": "Sponsorship is generally unlikely due to employment for defense and US Navy (USN) contracts typically requiring US citizenship and security clearance, though not explicitly stated."
+   "value": "Not explicitly mentioned, but roles require Top-Secret clearance, typically restricting hiring to US citizens without immediate sponsorship needs."
   },
   "status": "ready",
   "summary": {
@@ -21544,15 +21568,16 @@
    "source_ids": [
     "c415bfd408"
    ],
-   "value": "Amentum is a leading global provider of technical and engineering services to government and commercial customers. They make money by contracting out their engineering and R&D expertise, executing advanced technology development projects such as software building and optimization for clients like the US Navy."
+   "value": "Amentum is a leading global provider of technical and engineering services to government and commercial customers. They make money by contracting their engineering and software development expertise, often operating within R&D settings for defense and federal clients."
   },
-  "synthesized_evidence_sha": "d086d75484e4c770",
+  "synthesized_evidence_sha": "16410042e526c74d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "caeac2959c",
     "c415bfd408"
    ],
-   "value": "Involves coding, optimizing, and building software in a dedicated R&D setting. Roles focus on advanced technology development for defense applications rather than commercial consumer products."
+   "value": "Software engineering involving languages such as Java, JavaScript ES6, Go, and Python. Work includes building and optimizing software in applied R&D settings."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
@@ -21560,12 +21585,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "While the role offers competitive base pay ($100K-$120K) and mission-driven R&D work for the US Navy, it is a defense contractor environment which often carries secure clearance requirements and bureaucratic layers that may lack the fast, innovative tech culture of elite AI startups. The government R&D focus is technically interesting but may move slower than consumer tech, making it a safe but potentially less dynamic environment for rapid technical growth."
+   "value": "This role offers competitive new-grad pay ($95K-$120K) and applied learning in an R&D setting, which aligns with your goals for technical growth and prestige. However, the defense contracting context often involves bureaucratic processes that may conflict with a desire for a fast, innovative tech culture and guaranteed shutdowns, making it a mixed fit for your prioritization of elite tech culture and strict work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good, often stable 40-hour work weeks compared to tech startups, but the nature of government defense R&D may occasionally require intense phases."
+   "value": "Estimated: Good. Government contracts typically adhere to standard 40-hour work weeks without the extreme burnout seen in big tech."
   }
  },
  "ameren": {
@@ -352000,109 +352025,101 @@
  },
  "spatial front inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown"
+   "confidence": "high",
+   "source_ids": [
+    "24b0aeb0fc"
+   ],
+   "value": "Low. The current job posting heavily emphasizes PeopleTools and PeopleCode, rather than modern AI or elite data science work."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "The business model and revenue generation strategy could not be determined from the provided sources."
+   "value": "Government technology contracting and software system integration."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: Process-oriented and corporate, typical of a company supporting federal missions. Likely emphasizes stability and compliance over rapid innovation."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Target customers or client demographics were not found in the provided sources."
+   "value": "The United States federal government."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: $75,000 - $95,000. Federal tech contractors typically pay less than elite big tech companies."
   },
   "evidence_sha": "dfd8c801b6fd8c53",
-  "generated_at": 1784867183,
+  "generated_at": 1785048569,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Industry information could not be determined from the provided sources."
+   "value": "IT Services and Government Technology Contracting"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "24b0aeb0fc"
+   ],
+   "value": "Candidates should probe the hiring team on whether there are any AI/data science adjacent projects available, or if the role is strictly entrenched in legacy PeopleSoft development. It is also important to clarify the on-call expectations and actual work hours to ensure they fit within the desired work-life balance."
   },
-  "last_attempt_at": 1784867183,
+  "last_attempt_at": 1785048569,
   "last_evidence_at": 1785044914,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Office locations or geographic footprint could not be identified from the provided sources."
+   "value": "Specific office locations or remote work options are not explicitly stated in the available sources."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Company mission or core objectives were not found in the provided sources."
+   "value": "To support important federal missions through technology."
   },
   "name": "Spatial Front, Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: Moderate-paced. Federal contracting generally moves slower and is bound by rigid compliance and process requirements rather than a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "No specific products or services could be identified from the provided sources."
+   "value": "Technology solutions and enterprise software systems for the federal government, including specific platforms built using PeopleTools, PeopleCode, and Application Engine."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: 15-20 days of PTO typical for a growing technology government contractor supporting federal missions."
   },
+  "refresh_after": 1790232569,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
    "value": "None found in research"
   },
@@ -352110,16 +352127,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though federal holidays are likely observed."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Information regarding company size, funding stage, or employee count is not available in the provided sources."
+   "value": "A rapidly growing technology company actively recruiting recent graduates for its technology team. Exact headcount is not public, but the Associate-level hiring profile suggests a small-to-mid sized organization."
   },
   "sources": [
    {
@@ -352176,43 +352191,40 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Visa sponsorship policies were not mentioned in the provided sources."
+   "value": "Not explicitly stated in the available sources. Though they are hiring 'recent graduates,' US federal mission contracts typically require US citizenship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "What the company actually does and how it makes money could not be determined from the provided sources. All supplied public page links resulted in redirect errors or broken pages, preventing a factual description of the company's operations or revenue model."
+   "value": "Spatial Front, Inc. is a rapidly growing technology company that supports important federal missions. It makes money by contracting with the US government to provide specialized technology solutions, such as enterprise software development."
   },
+  "synthesized_evidence_sha": "dfd8c801b6fd8c53",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "575de98ee9",
-    "e0e615883d",
-    "a3383b4bfc"
+    "24b0aeb0fc"
    ],
-   "value": "Details regarding the technical stack or engineering work were not found in the provided sources."
+   "value": "Development of enterprise applications and federal systems. Current job requirements include programming, PeopleTools, PeopleCode, and Application Engine."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Spatial+Front%2C+Inc+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "24b0aeb0fc"
+   ],
+   "value": "This role does not align with the candidate's priorities. The role focuses on legacy enterprise tech (PeopleSoft) rather than top-tier AI/data science, and federal contracting typically implies slow bureaucracy rather than fast-paced, innovative tech culture. Prestige and new-grad pay are likely lower than elite tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown"
+   "value": "Estimated: Average. While federal consulting can maintain sane hours during steady states, enterprise software deployments can sometimes trigger demanding project go-lives."
   }
  },
  "speakcore": {
