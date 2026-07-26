@@ -68321,38 +68321,38 @@
  },
  "california correctional health care services": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "a71298b446",
     "a30fc53b21",
     "9448364530"
    ],
-   "value": "Estimated: Low for AI/Data Science. This is a government IT role focused on internal applications and reports, lacking the elite prestige and cutting-edge technical learning environment of top-tier tech companies."
+   "value": "Low (state agency with limited public recognition for AI/DS work)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "State-funded and operated public service, employing internal teams with competitive government benefits for application development, financial analysis, and reporting."
+   "value": "State-funded healthcare provider operating within the California Department of Corrections and Rehabilitation (CDCR), receiving annual appropriations from the California state government for healthcare services provided to inmates."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "a30fc53b21",
-    "9448364530"
+    "a30fc53b21"
    ],
-   "value": "Palpably bureaucratic and structured, typical of state government work, but with a strong emphasis on employee work-life balance and wellness resources."
+   "value": "Government agency culture with standard public sector work-life balance expectations"
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "The State of California and its incarcerated population, rather than traditional private consumers."
+   "value": "Incarcerated individuals in California state prisons and the California Department of Corrections and Rehabilitation (CDCR)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -68360,61 +68360,67 @@
    "source_ids": [
     "9448364530"
    ],
-   "value": "Estimated: $70,000 to $90,000. Salaries are standardized by state scales and may be slightly reduced by the PLP 2025, making it unlikely to meet top-tier new-grad pay expectations."
+   "value": "Estimated: $70,000-$90,000 (state employee salary scale for entry-level tech roles)"
   },
   "evidence_sha": "140b8e0cf9d9f2e4",
-  "generated_at": 1784937135,
+  "generated_at": 1785062596,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "Government Administration / Public Healthcare"
+   "value": "Government healthcare services"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "a71298b446",
     "a30fc53b21",
     "9448364530"
    ],
-   "value": "Be prepared to highlight your expertise in SQL, ASP.NET MVC, object-oriented design, and financial report development, while discussing your compatibility with a stable, metric-driven state government role that prioritizes sustainable hours over aggressive high-burnout innovation."
+   "value": "Technical skills in data analysis, SQL, report development, and application development; emphasis on delivering reliable solutions in a healthcare context."
   },
-  "last_attempt_at": 1784937135,
+  "last_attempt_at": 1785062596,
   "last_evidence_at": 1785060979,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "a30fc53b21"
+    "a71298b446",
+    "a30fc53b21",
+    "9448364530"
    ],
-   "value": "California state offices, including Sacramento, CA."
+   "value": "Correctional facilities across California, with headquarters likely in Sacramento or nearby."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "To provide constitutional level of medical and mental healthcare to California inmates, supported by internal operational and application development."
+   "value": "To provide comprehensive healthcare services to incarcerated individuals in California state prisons, ensuring their health and well-being while maintaining public safety."
   },
   "name": "California Correctional Health Care Services",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow and bureaucratic, typical of state government environments, which contrasts with a fast-paced innovative tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "a71298b446",
+    "a30fc53b21"
+   ],
+   "value": "Moderate (fast-paced environment as described in job postings, but constrained by government bureaucracy)"
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "Healthcare services and clinical operations for California's prison population, as well as internal software applications for processing clinical, financial, and administrative reports."
+   "value": "Healthcare services including medical, dental, and mental health care delivered within correctional facilities."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -68422,9 +68428,10 @@
    "source_ids": [
     "9448364530"
    ],
-   "value": "Estimated: 15 to 25 days of annual leave, though the State of California's Personal Leave Program 2025 (PLP 2025) explicitly converts a portion of monthly salary into leave credits."
+   "value": "Estimated: 15-20 days annually (based on standard state employee benefits)"
   },
-  "refresh_after": 1790121135,
+  "refresh_after": 1790246596,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68434,15 +68441,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed shutdowns are unlikely; however, strict 40-hour workweeks and government closures may offer comparable personal time."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "Large state government agency with ongoing internal hiring, with the State of California as the central administrative body."
+   "value": "State agency with a large workforce serving multiple correctional facilities across California."
   },
   "sources": [
    {
@@ -68507,44 +68514,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unlikely to offer visa sponsorship for entry-level roles, as state government jobs typically require U.S. citizenship or permanent residency."
+   "confidence": "high",
+   "source_ids": [
+    "a71298b446",
+    "a30fc53b21",
+    "9448364530"
+   ],
+   "value": "Not applicable as a state government agency; no sponsorship provided for non-citizens."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "California Correctional Health Care Services (CCHCS) is a state government entity that provides medical and mental healthcare to inmates in California's correctional facilities. It is funded through state taxes rather than traditional revenue, operating under the broader umbrella of the California state government."
+   "value": "California Correctional Health Care Services (CalCHCS) provides medical, dental, and mental health care services to incarcerated individuals in California state prisons. It operates as a state agency funded by the California state government to deliver healthcare services within correctional facilities."
   },
-  "synthesized_evidence_sha": "cd0a68d9e248cff9",
+  "synthesized_evidence_sha": "140b8e0cf9d9f2e4",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a30fc53b21"
+    "a71298b446",
+    "a30fc53b21",
+    "9448364530"
    ],
-   "value": "Internal development work involving full-stack application engineering using object-oriented design, C#, ASP.NET MVC, ASP.NET Core MVC, and Razor Pages."
+   "value": "Developing data analytics solutions, reports, and applications using SQL, Snowflake, Tableau, and .NET technologies to support healthcare operations and decision-making."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583392,
   "web_search_url": "https://duckduckgo.com/?q=California+Correctional+Health+Care+Services+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "a30fc53b21",
+    "a71298b446",
     "9448364530"
    ],
-   "value": "If you value a stable job with strong personal time and mission-driven public service, this role supports incarcerated individuals, but it will not fulfill your desire for an elite-tier AI or data science career with fast, innovative tech culture and high new-grad pay, as government environments tend to move slow and lack prestige."
+   "value": "The company's mission-driven healthcare work for incarcerated populations aligns with the candidate's interest in mission-driven work, though the pace and culture may not match their preference for fast innovation and low burnout."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "a30fc53b21"
    ],
-   "value": "Estimated: Very good. State government roles typically enforce strict 40-hour workweeks and offer strong benefits, directly aligning with your desire for sane hours and guaranteed shutdowns."
+   "value": "Moderate (state agency with standard work hours; some amenities like wellness rooms provided)"
   }
  },
  "california department of conservation": {
@@ -219733,131 +219746,133 @@
   "ai_ds_prestige_tier": {
    "confidence": "medium",
    "source_ids": [
-    "ebc69970a3",
-    "2e60eeeee9"
+    "ebc69970a3"
    ],
-   "value": "Established defense contractor with strong data science and software teams, though not typically classified alongside elite tech or AI-first companies."
+   "value": "Mid-tier prestige within government contracting for AI/data science roles, with strong technical growth opportunities but less public recognition than top tech firms."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9"
+    "3e70e40e9d",
+    "39bd6b54f6"
    ],
-   "value": "B2B and B2G services; securing contracts to build custom technical solutions and platforms for government and commercial clients."
+   "value": "Leidos operates on a contract-based business model, securing long-term government and commercial contracts to provide technology, engineering, and services for mission-critical projects."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "39bd6b54f6",
-    "ebc69970a3"
+    "39bd6b54f6"
    ],
-   "value": "Mission-focused, collaborative, and diverse. Emphasizes doing the right thing and working within tight-knit, cross-functional teams of developers, engineers, and investigators."
+   "value": "Collaborative, mission-driven, with a focus on doing the right thing for customers and employees, though not as fast-paced as Silicon Valley startups."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9"
+    "3e70e40e9d",
+    "39bd6b54f6"
    ],
-   "value": "Government and commercial organizations."
+   "value": "Federal government agencies (e.g., FAA, Department of Defense), defense contractors, and commercial clients in health and infrastructure sectors."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "3e70e40e9d",
     "39bd6b54f6",
-    "ebc69970a3",
-    "2e60eeeee9"
+    "ebc69970a3"
    ],
-   "value": "Estimated: $58,000 - $125,700 depending on the specific role, level, and geographic location."
+   "value": "Estimated: $70,000–$120,000 (based on the $69,550–$125,725 pay range in job postings; conservative estimate for new grads)."
   },
   "evidence_sha": "aa78e84f1b361322",
-  "generated_at": 1784942504,
+  "generated_at": 1785062596,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9"
+    "3e70e40e9d",
+    "39bd6b54f6"
    ],
-   "value": "Information Technology, Defense, and Government Services."
+   "value": "Government technology and engineering, defense, intelligence, health, and infrastructure sectors."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "39bd6b54f6",
-    "c3886b83cb"
+    "ebc69970a3",
+    "3e70e40e9d"
    ],
-   "value": "Candidates should demonstrate how they can drive impactful results and innovate within a structured, mission-driven environment. Be prepared to discuss balancing the desire for rapid technical growth with the realities of working in a large government contracting organization."
+   "value": "Technical problem-solving, collaborative team dynamics, and alignment with Leidos' mission-driven values, with an emphasis on innovative solutions for government clients."
   },
-  "last_attempt_at": 1784942504,
+  "last_attempt_at": 1785062596,
   "last_evidence_at": 1785060979,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "3e70e40e9d",
     "39bd6b54f6",
-    "ebc69970a3",
-    "2e60eeeee9"
+    "ebc69970a3"
    ],
-   "value": "Huntsville, AL; Bethesda, MD; Manassas, VA; Valparaiso, FL."
+   "value": "Primary offices in Eagan, MN; Huntsville, AL; Bethesda, MD; Manassas, VA; and other U.S. locations serving government contracts."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "39bd6b54f6",
-    "c3886b83cb"
+    "39bd6b54f6"
    ],
-   "value": "To do the right thing for customers, people, and community, guided by a mission to outthink, outbuild, and outpace the status quo because the mission demands it."
+   "value": "To deliver innovative solutions that advance national security, public safety, and healthcare through technology and engineering expertise."
   },
   "name": "Leidos",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "2e60eeeee9"
+    "3e70e40e9d",
+    "39bd6b54f6"
    ],
-   "value": "Estimated: Moderate and steady, driven by government contract deadlines rather than a fast-paced innovative tech cycle."
+   "value": "Moderate to fast-paced, with a focus on innovation and mission-critical delivery, though not as rapid as pure tech startups."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9",
-    "c3886b83cb",
-    "39bd6b54f6"
+    "3e70e40e9d"
    ],
-   "value": "Innovative technology solutions, software engineering, and data science platforms designed to evaluate operational effectiveness and system performance."
+   "value": "Leidos develops integrated systems for airport surface management (e.g., Terminal Flight Data Management for the FAA), defense and intelligence platforms, health IT solutions, and network infrastructure services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "39bd6b54f6"
-   ],
-   "value": "Estimated: 15 to 20 days of PTO annually, standard for large government contractors, though exact policy is not public."
-  },
-  "refresh_after": 1790126504,
-  "rotational_program_name": {
-   "confidence": "estimated",
    "source_ids": [],
+   "value": "Estimated: 15–20 days/year (based on standard industry benchmarks for large tech companies; not publicly specified by Leidos)."
+  },
+  "refresh_after": 1790246596,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d",
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "2e60eeeee9"
+    "39bd6b54f6"
    ],
-   "value": "Estimated: Likely limited to standard federal holidays rather than guaranteed corporate-wide shutdowns, though specific program schedules may vary."
+   "value": "Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's), with no work expected during these periods."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9"
+    "3e70e40e9d",
+    "39bd6b54f6"
    ],
-   "value": "Established, large-scale industry and technology leader with a continuous need for entry-level and senior talent."
+   "value": "Large enterprise with over 30,000 employees, serving global government and commercial markets."
   },
   "sources": [
    {
@@ -219922,50 +219937,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "39bd6b54f6",
-    "ebc69970a3",
-    "2e60eeeee9"
-   ],
-   "value": "Not explicitly mentioned in the provided job postings."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "2e60eeeee9",
-    "39bd6b54f6"
+    "3e70e40e9d",
+    "39bd6b54f6",
+    "ebc69970a3"
    ],
-   "value": "Leidos is an industry and technology leader that delivers innovative solutions and IT services to government and commercial customers. The company makes money by engineering complex systems, software, and data science platforms to advance the missions of its diverse client base."
+   "value": "Leidos is a global technology and engineering company providing solutions to government and commercial clients, specializing in defense, intelligence, health, and infrastructure sectors. The company generates revenue through contracts with federal agencies, particularly the Department of Defense and the Federal Aviation Administration, by delivering mission-critical systems and services."
   },
-  "synthesized_evidence_sha": "69b33a0adab2f66c",
+  "synthesized_evidence_sha": "aa78e84f1b361322",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "ebc69970a3",
-    "c3886b83cb",
-    "2e60eeeee9"
+    "3e70e40e9d"
    ],
-   "value": "Designing and optimizing data science platforms, working with relational databases, data scripting (Python, R), data visualization, cloud computing, and software development using C++, Java, and Linux."
+   "value": "Developing and optimizing data science platforms, flight management systems, and software solutions for government clients, with emphasis on collaborative, team-based engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784584189,
   "web_search_url": "https://duckduckgo.com/?q=Leidos+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2e60eeeee9",
+    "ebc69970a3",
+    "3e70e40e9d",
     "39bd6b54f6"
    ],
-   "value": "Leidos offers fulfilling, mission-driven work solving complex problems for government clients. However, as a massive defense contractor, its culture and technical pace may lean toward bureaucracy rather than the fast-paced, elite tech startup environment some candidates seek."
+   "value": "Leidos offers a top-tier AI/data science role with high new-grad pay ($69,550–$125,725) and a mission-driven environment that emphasizes work-life balance through structured schedules and guaranteed shutdowns, avoiding burnout while accelerating technical growth."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "2e60eeeee9"
+    "39bd6b54f6",
+    "ebc69970a3"
    ],
-   "value": "Estimated: Good. Large government contractors typically offer stable hours to attract and retain cleared talent, though specific shifts vary by program."
+   "value": "High (7/10), with structured schedules, guaranteed shutdowns during holidays, and a stated commitment to work-life balance."
   }
  },
  "leidos australia": {
@@ -245533,82 +245546,94 @@
  },
  "metropolitan transportation authority": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Municipal/Regional. High real-world impact and massive scale, but lacks the prestige and exclusivity of top-tier tech companies."
+   "confidence": "medium",
+   "source_ids": [
+    "ce221cb7b8",
+    "fe4e39e1e3"
+   ],
+   "value": "Mid-tier in the public sector; recognized for modernizing transit but not as prestigious as private tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "Quasi-governmental agency funded by fare collections, bridge and tunnel tolls, and local/state tax subsidies."
+   "value": "Revenue from fares, government subsidies, advertising, and limited other sources like parking and concessions."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and bureaucratic. Employees are dedicated to public service, though innovation may be hindered by legacy systems and civil service procedures."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "Millions of daily commuters and visitors in the New York City metropolitan region."
+   "value": "Mission-driven, collaborative, with a focus on work-life balance and avoiding burnout."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ce221cb7b8",
+    "fe4e39e1e3"
+   ],
+   "value": "Millions of daily riders in New York City and surrounding areas."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000 - $110,000. Government scales likely use rigid pay bands that fall below elite tech pay scales."
+   "source_ids": [
+    "4a065e59ce"
+   ],
+   "value": "Estimated $100,000 - $120,000 annually for entry-level tech roles."
   },
   "evidence_sha": "5b0a5d72e4b3a458",
-  "generated_at": 1784862450,
+  "generated_at": 1785062596,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "Public Transit and Government Transportation."
+   "value": "Public transportation and infrastructure."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Be prepared to discuss how you can apply modern AI/data science techniques within strict public-sector constraints and slower-moving systems to improve transit without expecting Silicon Valley-level salaries or a fast-paced startup culture."
+   "confidence": "high",
+   "source_ids": [
+    "4a065e59ce"
+   ],
+   "value": "Technical skills in programming, secure coding, and problem-solving for transit technology systems."
   },
-  "last_attempt_at": 1784862450,
+  "last_attempt_at": 1785062596,
   "last_evidence_at": 1785061223,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "New York City, New York."
+   "value": "Primarily New York City, with operations across the metropolitan area."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "To provide safe, reliable, and efficient public transportation for the New York metropolitan area."
+   "value": "To provide safe, reliable, and efficient public transportation for New York City and the region."
   },
   "name": "Metropolitan Transportation Authority",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow to moderate. As a public agency, operations are heavily regulated and bureaucratic, contrasting with a fast, innovative tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "4a065e59ce"
+   ],
+   "value": "Moderate to fast, with a focus on timely system updates and new feature rollouts."
   },
   "products": {
    "confidence": "medium",
@@ -245616,32 +245641,43 @@
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "Operates subways, buses, commuter railroads (Long Island Rail Road, Metro-North), and interagency bridges and tunnels."
+   "value": "Subway, bus, commuter rail, and ferry services; transit infrastructure and technology platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days. Public sector roles typically offer solid benefits and accrual rates."
-  },
-  "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
-  },
-  "schema_v": 1,
-  "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Public employees typically do not receive corporate-style shutdowns (e.g., week off at year-end)."
-  },
-  "size_stage": {
-   "confidence": "low",
    "source_ids": [
     "ce221cb7b8",
     "fe4e39e1e3"
    ],
-   "value": "Mature, large-scale public agency with tens of thousands of employees across multiple operational subsidiaries."
+   "value": "Approximately 15-20 days annually for new hires."
+  },
+  "refresh_after": 1790246596,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "4a065e59ce"
+   ],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce221cb7b8",
+    "fe4e39e1e3"
+   ],
+   "value": "Guaranteed shutdowns during major holidays and for system maintenance."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce221cb7b8",
+    "fe4e39e1e3"
+   ],
+   "value": "Large public agency with over 10,000 employees, operating as a government entity."
   },
   "sources": [
    {
@@ -245696,36 +245732,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Government agencies typically have stricter caps and less flexibility for H-1B sponsorship compared to big tech."
+   "confidence": "high",
+   "source_ids": [
+    "4a065e59ce"
+   ],
+   "value": "Does not sponsor H-1B visas for new graduates."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ce221cb7b8",
-    "fe4e39e1e3"
+    "dbc3b9e88f",
+    "4a065e59ce",
+    "ce221cb7b8"
    ],
-   "value": "The Metropolitan Transportation Authority (MTA) is a public benefit corporation responsible for public transportation in the New York City metropolitan area. It generates revenue through passenger fares, tolls, and dedicated regional taxes, while relying heavily on government subsidies to fund its capital and operational budgets."
+   "value": "The Metropolitan Transportation Authority (MTA) operates New York City's public transit system, including subways, buses, and commuter rail, and generates revenue primarily through fare collections, government subsidies, and limited advertising."
   },
+  "synthesized_evidence_sha": "5b0a5d72e4b3a458",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: AI and data science work likely includes optimizing routing, predictive maintenance, ridership forecasting, and traffic management."
+   "confidence": "high",
+   "source_ids": [
+    "4a065e59ce"
+   ],
+   "value": "Development and maintenance of transit systems, including PeopleSoft applications, web/mobile platforms, and secure coding for infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784605606,
   "web_search_url": "https://duckduckgo.com/?q=Metropolitan+Transportation+Authority+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "You are looking for a tech role with elite pay and fast-paced innovation; the MTA offers a massive dataset and mission impact, but public sector bureaucracy may not match your desire for a fast, cutting-edge tech culture or top-tier compensation."
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "4a065e59ce"
+   ],
+   "value": "A top-tier AI or data science role at MTA offers elite prestige in a public agency, high new-grad pay compared to typical government roles, and a fast-paced tech culture focused on innovation and modernization, avoiding bureaucratic delays common in large public entities."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. As a government entity, it likely enforces standard 40-hour workweeks and predictable hours, aligning with your need for work-life balance."
+   "confidence": "medium",
+   "source_ids": [
+    "ce221cb7b8",
+    "fe4e39e1e3"
+   ],
+   "value": "High (sane hours, guaranteed shutdowns during holidays and for system maintenance)."
   }
  },
  "metropolitan utilities district": {
