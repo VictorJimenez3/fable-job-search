@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-26 10:13 UTC** · companies polled directly: **1343** (registry 1520) · jobs tracked: **21749** · new this run: **6** · alerts this run: **2**_
+_Last run: **2026-07-26 10:20 UTC** · companies polled directly: **1343** (registry 1520) · jobs tracked: **21754** · new this run: **5** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -67,6 +67,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 97 🔥 | 17d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 96 🔥 | 3d | BioSpace | [Data Analytics Engineer 1 # 4878](https://jobright.ai/jobs/info/6a62eb8532abf9182432c2fb?utm_campaign=Data%20Analysis&utm_source=1103) | Durham, NC, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 96 🔥 | 3d | California Correctional Health Care Se | [Financial Data Analyst and Reports Developer](https://jobright.ai/jobs/info/6a629923846162391c936e46?utm_campaign=Data%20Analysis&utm_source=1103) | Sacramento County, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 96 🔥 | 4d | California Correctional Health Care Se | [Associate Data Analytics and Report Developer](https://jobright.ai/jobs/info/6a62994bd5caab4af8baf032?utm_campaign=Data%20Analysis&utm_source=1103) | Sacramento County, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 96 🔥 | 5d | Nomi Health | [Associate Data Analyst](https://jobs.lever.co/nomihealth/e2609b96-33aa-45b9-81d8-4398f704821c/apply) | Salt Lake City, UT | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 96 🔥 | 5d | Hospital for Special Surgery (HSS) | [Education Outcomes and Data Analytics Assistant](https://hss.wd1.myworkdayjobs.com/HSS_Careers/job/New-York-NY/Education-Outcomes-and-Data-Analytics-Assistant_JR2026-105688) | NYC | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 96 🔥 | 9d | Mayo Clinic | [IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward](https://jobright.ai/jobs/info/6a5a2d3063a8f619507c5889?utm_campaign=Software%20Engineering&utm_source=1103) | Rochester, MN, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 3d | Amazon Web Services (AWS) | [EFA Network Software Engineer I, Annapurna Labs](https://jobright.ai/jobs/info/6a61d546d51f6101c8fbd5d6?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 5d | Morris Health Technologies Inc. | [Software Engineer 1](https://jobs.ashbyhq.com/morrishealthtech/21e734ca-b012-438d-af22-ff30ea12bf39/application?embed=true) | Logan, UT | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 5d | RTX | [2027 Conversion - Software Engineer I - St. Petersburg, FL (Onsite)](https://jobright.ai/jobs/info/6a5f989f6e0c3c7c7d3d7b01?utm_campaign=Software%20Engineering&utm_source=1103) | St. Petersburg, FL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 87 🔥 | 10d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a5c8d9c686b4755d1e1c043?utm_campaign=Software%20Engineering&utm_source=1103) | El Segundo, CA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
