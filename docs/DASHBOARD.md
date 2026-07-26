@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-26 09:47 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **46 shown / 11113 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-26 11:09 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **46 shown / 11113 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 90 🔥 | 3d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
+| 90 🔥 | 4d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
 | 90 🔥 | 4d | Micron | [Advanced Engineering & Manufacturing Internship](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
 | 81 ⭐ | 2d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
 | 79 ⭐ | 1d | Micron | [Intern – Process Development Engineer, 3D DRAM Wet Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Wet-Etch_JR106729) | Boise, ID - Main Site | semiconductors | workday |
