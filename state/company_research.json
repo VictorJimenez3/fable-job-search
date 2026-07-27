@@ -23501,76 +23501,68 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Mid-tier government contractor. Not an AI or Silicon Valley elite shop. Prestige is derived from serving critical national security missions rather than tech innovation clout."
+   "value": "Estimated: Low. The company focuses on legacy IT integrations and cyber security contracting rather than elite AI or data science innovation."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a195cd96d5",
-    "3f36257dce"
+    "3f36257dce",
+    "215795e721",
+    "7bbe03c88e"
    ],
-   "value": "Government services contractor earning revenue through long-term IT and engineering contracts. Work involves building and maintaining secure, scalable applications and integrations on a project basis for federal clients."
+   "value": "Full-time IT and cyber security services contracting, placing developers onsite at client locations to build and integrate enterprise software."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "a195cd96d5",
-    "3f36257dce"
-   ],
-   "value": "Structured, team-oriented, and mission-driven. Engineers follow senior guidance in a collaborative, clearance-required public sector environment. Top-down, accountable, and conservative rather than disruptively innovative."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional and structured. New hires are expected to collaborate and follow guidance from senior developers in a standard team environment."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "7bbe03c88e",
     "a195cd96d5"
    ],
-   "value": "Primarily U.S. federal government agencies requiring Public Trust (Tier 4) security clearance. All observed job postings support government IT and software programs."
+   "value": "Organizations requiring IT and Cyber Security solutions, including projects that require a Public Trust (Tier 4) clearance."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "a195cd96d5",
-    "3f36257dce",
-    "ca514ba053"
-   ],
-   "value": "Estimated: $75,000–$90,000 base salary for new graduate Java Developer I in Colorado or Arizona. The exact value varies by location; government roles are generally lower than the top FAANG salaries but offer steady pay."
+   "source_ids": [],
+   "value": "Estimated: $70,000 - $85,000. Typical for entry-level software roles requiring 0+ years of experience in non-tier-1 contracting firms."
   },
   "evidence_sha": "5eab9fe4f80cb084",
-  "generated_at": 1785174990,
+  "generated_at": 1785195038,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ca514ba053",
-    "3f36257dce"
+    "3f36257dce",
+    "ca514ba053"
    ],
-   "value": "Government Information Technology and Cyber Security Services"
+   "value": "IT Services and Cyber Security"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "215795e721",
-    "a195cd96d5"
-   ],
-   "value": "Interviews will likely concentrate on Java programming, Object-Oriented Programming (OOP), TIBCO integration, and REST APIs. Candidates should demonstrate the ability to follow senior guidance in a team environment supporting the software development life cycle. Assessments will test practical coding skills rather than abstract puzzles."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the day-to-day work offers genuine technical acceleration or simply slow-paced maintenance; clarify expectations for work-life balance and sane hours to ensure it avoids the toxic burnout culture typical of slow government-adjacent contracting."
   },
-  "last_attempt_at": 1785174990,
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785193872,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "7bbe03c88e",
     "a195cd96d5",
-    "3f36257dce",
     "215795e721"
    ],
-   "value": "Multiple on-site locations across the U.S. including Lakewood, CO; Phoenix, AZ; Folsom, CA; Billings, MT; and Watertown, SD. Remote work is not available according to postings."
+   "value": "Hiring for onsite roles in Phoenix, AZ; Lakewood, CO; Folsom, CA; and Billings, MT."
   },
   "mission": {
    "confidence": "medium",
@@ -23578,32 +23570,31 @@
     "3f36257dce",
     "ca514ba053"
    ],
-   "value": "AMERICAN SYSTEMS focuses on delivering IT, cyber security, and engineering solutions that support national security and public sector missions."
+   "value": "To provide IT and Cyber Security solutions by building scalable and reliable systems throughout the software development lifecycle."
   },
   "name": "AMERICAN SYSTEMS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "a195cd96d5"
-   ],
-   "value": "Estimated: Steady, structured pace tied to government contract requirements and compliance. Not startup speed; work aligns with scheduled public-sector deliveries."
+   "source_ids": [],
+   "value": "Estimated: Moderate. Government and Public Trust IT contracting pace is typically process-driven and steady rather than fast and innovative."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a195cd96d5",
+    "7bbe03c88e",
     "215795e721",
     "ca514ba053"
    ],
-   "value": "The company delivers Java-based application development, TIBCO data integration, cybersecurity services, and IT network systems. Offerings also include mission-critical software build and maintenance for high-volume, low-latency government environments."
+   "value": "Java-based applications, TIBCO data integration solutions, and IT/Cyber Security network systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days paid time off plus 10 federal holidays typical for defense contractors of this size."
+   "value": "Estimated: 15-20 days. Standard for established IT services contractors."
   },
-  "refresh_after": 1790358990,
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23613,14 +23604,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Closure or limited operations during all 10 federal holidays. Year-end reduced staffing is typical, though no explicit winter shutdown was advertised."
+   "value": "Estimated: None. No evidence of company-wide guaranteed shutdowns."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "3f36257dce",
+    "215795e721",
     "a195cd96d5"
    ],
-   "value": "Established mid-size government contractor. Stable and mature operations, not a startup; requires standard Public Trust security clearances for employees."
+   "value": "Established IT services firm actively hiring entry-level developers (0+ years experience) for multiple onsite roles across the US."
   },
   "sources": [
    {
@@ -23687,44 +23680,43 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
+    "7bbe03c88e",
     "a195cd96d5"
    ],
-   "value": "Likely requires U.S. citizenship because a Public Trust (Tier 4) clearance is mandated. No sponsorship is mentioned; government contractors usually cannot sponsor for these roles."
+   "value": "Roles require the ability to obtain a Public Trust (Tier 4) clearance, which typically requires US citizenship or lawful permanent residency."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "7bbe03c88e",
     "3f36257dce",
-    "a195cd96d5",
     "ca514ba053"
    ],
-   "value": "AMERICAN SYSTEMS is a U.S. federal contractor that provides IT, engineering, and cybersecurity solutions to government agencies. It generates revenue by delivering technology services, software development, data integration, and systems support primarily under government contracts."
+   "value": "AMERICAN SYSTEMS is an IT and Cyber Security solutions provider that assists clients with developing Java-based applications and data integration solutions. The company generates revenue by contracting technical talent to build and maintain scalable, high-volume, low-latency systems for its customers."
   },
-  "synthesized_evidence_sha": "edff54b571ff28b8",
+  "synthesized_evidence_sha": "5eab9fe4f80cb084",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a195cd96d5",
+    "7bbe03c88e",
     "215795e721",
     "3f36257dce"
    ],
-   "value": "Entry-level Java Developer I roles involve building Java apps and TIBCO integrations in high-volume, low-latency environments. Tech stack includes Java, OOP, REST APIs, and XML. Work follows senior guidance through the full software development life cycle."
+   "value": "Assisting in developing Java-based applications and TIBCO integrations in high-volume, low-latency environments, working with REST APIs and XML, while collaborating with senior developers through the SDLC."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676793,
   "web_search_url": "https://duckduckgo.com/?q=AMERICAN+SYSTEMS+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "a195cd96d5"
-   ],
-   "value": "AMERICAN SYSTEMS government contracts typically provide structured schedules and mandated hours that promote work-life balance, providing a clear separation between work and personal life. The mission-driven public-sector work offers the desired sense of purpose while the enterprise focus on standards and schedules helps avoid the toxic 'always-on' culture of high-burnout tech startups."
+   "source_ids": [],
+   "value": "This role offers technical learning in high-volume, low-latency environments, but conflicts with the desire for a fast, innovative AI/data science culture; the reliance on legacy tech (TIBCO, XML) and Public Trust contracting suggests bureaucracy and constraints rather than elite, top-tier tech prestige."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Above average for the tech sector. Government contractor roles usually center on predictable 40-hour weeks and rarely demand the crunch typical of consumer tech launches."
+   "value": "Estimated: Moderate. Standard government contractor hours are likely, but without guaranteed shutdowns or modern flexible work policies, it falls short of elite WLB standards."
   }
  },
  "american university": {
@@ -26010,45 +26002,49 @@
    "confidence": "estimated",
    "source_ids": [
     "3979f67c41",
-    "1c2c186438"
+    "704bbbdba7",
+    "dbc3b9e88f"
    ],
-   "value": "Top-tier within defense technology, utilizing highly modern AI, autonomous systems, and machine learning infrastructure comparable to leading Silicon Valley tech companies."
+   "value": "Estimated: High prestige. Anduril is highly recognized in the tech industry for pushing the boundaries of AI, sensor fusion, and autonomy in real-world, high-stakes deployed environments, rivaling top-tier tech companies for rigorous AI and software talent."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "fd1b05e649",
     "2634bfcffd"
    ],
-   "value": "Anduril scales complex defense systems rapidly by digitizing the entire manufacturing lifecycle from engineering definition through field feedback, allowing it to out-build and out-adapt the traditional defense industrial base."
+   "value": "Anduril changes how military systems are designed, built, and sold by heavily investing in digital manufacturing and advanced software to out-build and out-scale the traditional defense industrial base, delivering complex systems at scale to government clients."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "e28eb08931",
     "fd1b05e649",
-    "1c2c186438"
+    "2634bfcffd"
    ],
-   "value": "A culture of innovation and urgency that partners closely across engineering, supply chain, and operations to deliver complex systems at scale."
+   "value": "Startup-like, mission-first, and fast-paced. The culture emphasizes deep cross-collaboration across engineering, supply chain, and operations, valuing tangible outcomes over internal dashboards."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "ae1f47b6bd",
-    "2634bfcffd"
+    "3979f67c41",
+    "fd1b05e649"
    ],
-   "value": "The U.S. military and allied defense organizations operating in challenging environments worldwide."
+   "value": "U.S. and allied military and defense organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "3979f67c41"
+    "dbc3b9e88f",
+    "e28eb08931"
    ],
-   "value": "Estimated: Highly competitive top-tier tech pay. While exact salaries for new tech grads are not detailed in the sources, the company competes for talent with the 21st century's most innovative companies, indicating elite compensation packages."
+   "value": "Estimated: Highly competitive, likely $140k-$180k base salary. Given its status as a top-tier defense tech startup competing for AI and software talent, new grad compensation likely aligns with elite tech company benchmarks."
   },
   "evidence_sha": "aeb3f874959cbf39",
-  "generated_at": 1785182471,
+  "generated_at": 1785195038,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -26057,81 +26053,92 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "3979f67c41",
-    "ae1f47b6bd"
-   ],
-   "value": "Defense Technology and Military Systems."
-  },
-  "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
-    "3979f67c41",
+    "e28eb08931",
     "2634bfcffd"
    ],
-   "value": "Candidates should expect a focus on how their elite AI or data science skills can translate into real-time, physical, and consequential defense applications. Interviewers will likely probe for a mission-driven mindset and the ability to handle the pressure of a fast-paced, high-stakes engineering environment."
+   "value": "Defense Technology and Aerospace Manufacturing."
   },
-  "last_attempt_at": 1785182471,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e28eb08931",
+    "2634bfcffd",
+    "3979f67c41"
+   ],
+   "value": "Prepare to demonstrate how your data science and AI skills can translate into actionable insights in fast, physical, and consequential environments. Expect a focus on high-impact, zero-bureaucracy engineering that values rapid learning and mission-critical execution over building mere dashboards."
+  },
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785194143,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "ae1f47b6bd"
+    "e28eb08931",
+    "2634bfcffd"
    ],
-   "value": "Engineering and operational teams deploy to challenging operational environments worldwide."
+   "value": "Based in the U.S. with office locations hosting hardware, software, and manufacturing divisions (specific city data not in sources, though operates domestically in the U.S.)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "3979f67c41",
-    "fd1b05e649"
+    "fd1b05e649",
+    "e28eb08931"
    ],
-   "value": "To transform U.S. defense capabilities by bringing the expertise, technology, and business models of the 21st century's most innovative companies to the defense industry."
+   "value": "To transform U.S. and allied military capabilities by bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry."
   },
   "name": "Anduril",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "2634bfcffd"
+    "3979f67c41",
+    "2634bfcffd",
+    "704bbbdba7"
    ],
-   "value": "Estimated: Fast-paced and high-pressure. The company emphasizes fast, physical, and consequential work where the output is rapidly deployed systems."
+   "value": "Estimated: Fast. Teams frequently fix issues directly in deployed environments, rapidly fielding next-generation autonomous systems through deep investment and physical, fast-paced engineering."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "3979f67c41",
-    "704bbbdba7",
-    "ae1f47b6bd"
+    "704bbbdba7"
    ],
-   "value": "Anduril develops a family of systems including the Lattice OS, an AI-powered operating system for real-time command and control, and modular hardware platforms for air defense, undersea dominance, and maritime operations."
+   "value": "Anduril produces a family of modular hardware systems (such as undersea autonomous vessels) and Lattice OS, an AI-powered operating system that turns thousands of data streams into a real-time, 3D command and control center."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "3979f67c41"
+    "dbc3b9e88f",
+    "704bbbdba7"
    ],
-   "value": "Estimated: Anduril typically provides standard flexible PTO for tech employees, though exact day counts are not explicitly listed in public job postings."
+   "value": "Estimated: Standard flexible PTO policy. Anduril does not publicly list exact PTO numbers, so use conservative industry-standard estimates of 15-20 days annually."
   },
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "ae1f47b6bd"
+    "3979f67c41",
+    "fd1b05e649"
    ],
-   "value": "Estimated: No widespread company-wide shutdowns are explicitly publicized; employees likely coordinate time off individually amidst continuous deployment cycles."
+   "value": "Estimated: No public guarantee of company-wide shutdowns, as work includes deployed environments that require around-the-clock reliability and continuous operational support."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "704bbbdba7",
-    "fd1b05e649"
+    "fd1b05e649",
+    "2634bfcffd"
    ],
-   "value": "Rapidly growing and scaling company with an expanding product portfolio, heavily investing in teams across software, robotics, AI, and manufacturing."
+   "value": "Rapidly growing company with an expanding product portfolio and heavy investments in manufacturing and engineering scaling."
   },
   "sources": [
    {
@@ -26198,9 +26205,10 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
+    "e28eb08931",
     "3979f67c41"
    ],
-   "value": "Sponsorship details were not explicitly found in the provided sources, but defense industry work generally requires strict U.S. citizenship and clearance requirements."
+   "value": "Anduril works directly with U.S. and allied defense entities, which may constrain eligibility to U.S. persons or those eligible for government security clearances."
   },
   "status": "ready",
   "summary": {
@@ -26209,34 +26217,37 @@
     "3979f67c41",
     "fd1b05e649"
    ],
-   "value": "Anduril Industries is a defense technology company that applies the rapid innovation and business models of the tech industry to military systems. It makes money by designing, building, and selling advanced autonomous hardware and software platforms to defense customers."
+   "value": "Anduril Industries is a defense technology company that designs and builds autonomous military systems, including hardware and AI-powered software. The company makes money by selling these advanced platforms and software systems to U.S. defense and military customers."
   },
+  "synthesized_evidence_sha": "aeb3f874959cbf39",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "3979f67c41",
-    "1c2c186438",
-    "704bbbdba7"
+    "704bbbdba7",
+    "2634bfcffd"
    ],
-   "value": "Engineering efforts span AI-powered operating systems, machine learning infrastructure, sensor fusion, data engineering for manufacturing, and autonomous software for maritime and air defense systems."
+   "value": "Engineering work spans software engineering, data engineering, AI, sensor fusion, robotics, site reliability, and systems engineering. Teams build AI operating systems, autonomous maritime hardware, and digital manufacturing lifecycle tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "2634bfcffd"
+    "3979f67c41",
+    "fd1b05e649",
+    "dbc3b9e88f"
    ],
-   "value": "Anduril matches the desire for a fast-paced, innovative tech culture, operating with the velocity and agility of a modern tech firm rather than slow defense bureaucracy, which provides elite technical learning. However, the mission-critical nature of defense technology means the work is highly consequential, which introduces a fast-paced, demanding environment that may challenge strict work-life balance expectations."
+   "value": "Anduril offers the elite prestige and fast-paced environment of a top-tier startup applying cutting-edge AI, robotics, and data science to tangible hardware, deeply satisfying a mission-driven tech culture. Compensation for new grads is highly competitive, matching the innovation pace of the 21st century."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "2634bfcffd",
-    "ae1f47b6bd"
+    "3979f67c41",
+    "2634bfcffd"
    ],
-   "value": "Estimated: Moderate to highly demanding. Because the output is mission-critical defense hardware and software deployed globally, the environment may require significant dedication that could sometimes conflict with strict work-life boundaries."
+   "value": "Estimated: Medium. The company operates in a fast-paced, consequential environment with deployed physical systems that require immediate debugging, which may occasionally challenge strict work-life boundaries."
   }
  },
  "anduril industries": {
@@ -66180,6 +66191,104 @@
    "value": "Estimated: Strong - Sane hours with a focus on long-term retention rather than high-burnout crunch."
   }
  },
+ "brown brown insurance": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "6c144d5b7cbc61e6",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fintech / technology (estimated)"
+  },
+  "last_evidence_at": 1785195044,
+  "name": "Brown & Brown Insurance",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "82a71d51a3",
+    "kind": "company_web",
+    "publisher": "Brown & Brown Insurance",
+    "retrieved_at": 1785195044,
+    "title": "Brown & Brown Insurance public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3fc9daf773737ee1f16ecb8981f5ccc1e1af8d038b2f9a9b9fbb3e91ef6b5a1dJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuYnJvd24uZWR1L2Fib3V0&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "84fab74400",
+    "kind": "company_web",
+    "publisher": "Brown & Brown Insurance",
+    "retrieved_at": 1785195044,
+    "title": "Brown & Brown Insurance public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c57fab0b605014bae307146e438a037564245627817eda30d72bc5d43f4ace0dJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnJvd25fVW5pdmVyc2l0eQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d7d5df6db1",
+    "kind": "company_web",
+    "publisher": "Brown & Brown Insurance",
+    "retrieved_at": 1785195044,
+    "title": "Brown & Brown Insurance public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=59711583515fceecd0a7172dde156084facd1b6cc782d6bd6354ad7b7f79b333JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuYnJvd24uZWR1Lw&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "Brown & Brown Insurance",
+    "retrieved_at": 1785195044,
+    "title": "Discovery source for Brown & Brown Insurance",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785195044,
+  "web_search_url": "https://duckduckgo.com/?q=Brown+%26+Brown+Insurance+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "bruker": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -88255,34 +88364,33 @@
  },
  "citadel": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "6f77ea1605"
-   ],
-   "value": "Top-tier (Ultra-prestigious within quantitative finance and algorithmic trading)"
-  },
-  "aliases": [],
-  "attempts": 1,
-  "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "6f77ea1605"
-   ],
-   "value": "Alternative investment management firm that generates revenue through management fees and performance fees based on the profitability of its quantitative trading strategies."
-  },
-  "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
     "6f77ea1605"
    ],
-   "value": "Estimated: Intense, results-driven, and highly analytical, prioritizing performance and returns over personal time and bureaucracy."
+   "value": "Estimated: Tier 1. As one of the world's leading alternative investment managers with entry-level compensation exceeding $300K, Citadel represents top-tier elite prestige in the financial data science space."
+  },
+  "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605",
+    "61cdb9765a"
+   ],
+   "value": "Alternative investment management firm that generates revenue through quantitative trading, mathematical modeling, and data science strategies."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Intense, meritocratic, and highly analytical. The culture is data-driven and focused on generating alpha, which may lean towards high-burnout rather than mission-driven personal time respect."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "6f77ea1605"
    ],
-   "value": "Institutional investors, pension funds, and high-net-worth individuals seeking alternative investment management."
+   "value": "Institutional investors, sovereign wealth funds, pensions, and other alternative investment clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -88290,10 +88398,10 @@
    "source_ids": [
     "6f77ea1605"
    ],
-   "value": "$300K/yr - $350K/yr"
+   "value": "Estimated: $300,000 to $350,000 per year for entry-level Quantitative Researchers."
   },
   "evidence_sha": "9882b2ffa6610c51",
-  "generated_at": 1784748506,
+  "generated_at": 1785195038,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -88302,53 +88410,56 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "6f77ea1605",
+    "61cdb9765a"
    ],
-   "value": "Finance / Alternative Investment Management / Quantitative Trading"
+   "value": "Alternative Investment Management / Finance"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Be prepared for intense technical interviews centered on mathematical modeling, statistics, and coding (Python/C++). Highlight your ability to thrive in a fast, innovative tech culture; however, to address your priorities, ask probing questions about daily hours, weekend expectations, and how the team mitigates burnout to ensure it aligns with your need for sane hours."
+   "value": "Given the candidate's desire for fast, innovative tech without bureaucracy, they should emphasize their proficiency in Python, SQL, C++, and machine learning, while carefully probing the team's expectations on hours and burnout to ensure the role meets their work-life balance requirements."
   },
-  "last_attempt_at": 1784748506,
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785193872,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "6f77ea1605",
+    "61cdb9765a"
    ],
-   "value": "New York, NY (Onsite) for the Quantitative Researcher role, with a global presence as a leading alternative investment manager."
+   "value": "New York, NY (Quantitative Researcher) and Miami, Florida (Headquarters, founded 1990)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "6f77ea1605"
+    "de270d007f",
+    "128b4f28a4"
    ],
-   "value": "To be the world's leading alternative investment manager by delivering exceptional returns through quantitative research and trading."
+   "value": "The company's public mission statement could not be retrieved due to redirect issues on the public company pages."
   },
   "name": "Citadel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "6f77ea1605"
-   ],
-   "value": "Estimated: Extremely fast-paced, highly competitive, and demanding with tight deadlines and significant pressure to perform."
+   "source_ids": [],
+   "value": "Estimated: Extremely fast-paced, highly innovative, and demanding. The firm prioritizes rapid execution over slow corporate bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "6f77ea1605",
+    "61cdb9765a"
    ],
-   "value": "Alternative investment management products and quantitative trading strategies (specifically through their Global Quantitative Strategies team)."
+   "value": "Alternative investment management products, including global quantitative strategies and sector-specific data science investment models."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard accrued PTO, though taking time off can be culturally discouraged or difficult to coordinate due to market hours and project demands."
+   "value": "Estimated: 15-20 days of standard PTO. Exact policies are not public, but likely competitive within the financial sector."
   },
-  "refresh_after": 1789932506,
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88358,14 +88469,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns; time off is typically coordinated around market closures and individual project timelines."
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns, which may conflict with the candidate's priority."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "61cdb9765a"
    ],
-   "value": "Large, established global financial institution and one of the most prominent quantitative trading firms in the world."
+   "value": "Established, large-scale financial institution with 1001-5000 employees, founded in 1990 in Miami, Florida."
   },
   "sources": [
    {
@@ -88420,27 +88531,29 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "61cdb9765a"
    ],
-   "value": "None found in research"
+   "value": "The company has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "6f77ea1605"
+    "6f77ea1605",
+    "61cdb9765a"
    ],
-   "value": "Citadel is one of the world's leading alternative investment managers. It makes money by executing quantitative trading strategies and generating returns for its investment fund clients."
+   "value": "Citadel is one of the world's leading alternative investment managers, founded in 1990. It makes money by deploying quantitative, data-driven strategies and mathematical modeling to generate returns from market inefficiencies."
   },
-  "synthesized_evidence_sha": "bb38583523bfd682",
+  "synthesized_evidence_sha": "9882b2ffa6610c51",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "61cdb9765a",
     "6f77ea1605"
    ],
-   "value": "Quantitative research involving mathematical modeling, statistical modeling, machine learning, and implementation in Python and C++."
+   "value": "AI and Data Science roles involve building data pipelines, version control, testing, and using Python and SQL. Quantitative researchers focus on mathematical modeling, statistical modeling, C++, Python, and machine learning."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672484,
@@ -88448,14 +88561,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "While Citadel offers elite prestige and top-tier new-grad pay, it is notorious for its high-pressure, fast-paced environment and demanding hours, which fundamentally conflicts with a desire for guaranteed work-life balance and a non-toxic culture. The role provides unparalleled learning in quantitative AI, but candidates must weigh if the extreme performance expectations and high burnout risk are worth sacrificing personal time."
+   "value": "While Citadel offers elite prestige and top-tier new-grad pay, the candidate's priority for a low-burnout environment with guaranteed shutdowns and strict work-life balance may conflict with the firm's known high-intensity, high-pressure culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "6f77ea1605"
-   ],
-   "value": "Estimated: Poor. Frequently requires long hours and weekend work, leading to a high burnout risk that contradicts a healthy work-life balance."
+   "source_ids": [],
+   "value": "Estimated: Demanding. Work-life balance may struggle to meet the candidate's criteria for sane hours, as financial trading firms are historically rigorous and lack guaranteed shutdowns."
   }
  },
  "citadel securities": {
@@ -99309,6 +99420,104 @@
     "4c6984ba53"
    ],
    "value": "Estimated: Moderate to High. Defense contracting schedules can provide predictable, 40-hour work weeks with sane hours, though strict deployment deadlines may occasionally cause spikes in workload."
+  }
+ },
+ "conagra brands": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "7650da73c5e1b710",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785195042,
+  "name": "Conagra Brands",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9dd42d4f80",
+    "kind": "company_web",
+    "publisher": "Conagra Brands",
+    "retrieved_at": 1785195042,
+    "title": "Conagra Brands public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fed2997bb1b7d812f6d379b948cad02170b02186cf9b67ec4f2ee0740e3c2711JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29uYWdyYV9CcmFuZHM&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1872143774",
+    "kind": "company_web",
+    "publisher": "Conagra Brands",
+    "retrieved_at": 1785195042,
+    "title": "Conagra Brands public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9b57e1fbf3101a7a16a5de090b9d8624c3f65323332e1223a3e80b2eb94185abJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuY29uYWdyYWJyYW5kcy5jb20vYnJhbmRz&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "789b19153d",
+    "kind": "company_web",
+    "publisher": "Conagra Brands",
+    "retrieved_at": 1785195042,
+    "title": "Conagra Brands public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c9bfb5d3db1a9d5ccb19738bc3a29c49ae4af74e054a9b0134a412cd6777a8d1JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuY29uYWdyYWJyYW5kcy5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Conagra Brands",
+    "retrieved_at": 1785195042,
+    "title": "Discovery source for Conagra Brands",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785195042,
+  "web_search_url": "https://duckduckgo.com/?q=Conagra+Brands+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "concept plus": {
@@ -131462,47 +131671,46 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "9737fe56c6",
+    "590ca598a7",
     "c2838406dc"
    ],
-   "value": "Estimated: Top-tier prestige in the AI audio and generative voice subfield, working directly with foundational models."
+   "value": "Estimated: Top-tier. The company explicitly frames its work as a 'generational opportunity to define the trajectory of AI' and consists of researchers pushing the boundaries of foundational AI models."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "c2838406dc",
-    "732ccffcb5"
+    "590ca598a7",
+    "25fc604419"
    ],
-   "value": "B2B and B2C revenue streams generated through API access for developers (ElevenAPI) and consumer-facing mobile applications."
+   "value": "B2B and B2C API access and enterprise solutions. The company scales technical solutions to enterprise customers directly and supports sales teams, while also engaging in growth marketing for consumer app channels."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "5957cf5bd1"
+    "5957cf5bd1",
+    "590ca598a7"
    ],
-   "value": "Innovative, builder-oriented, and cross-functional; the team identifies as researchers, engineers, and operators defining a generational technology."
+   "value": "Innovative, builder-oriented, and cross-functional. The culture is defined by a team of researchers, engineers, and operators working on a generational opportunity in AI, where employees own both technical depth and commercial outcomes."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "5957cf5bd1",
-    "25fc604419"
+    "590ca598a7",
+    "25fc604419",
+    "5957cf5bd1"
    ],
-   "value": "Developers utilizing ElevenAPI for audio generation, consumers using their core app, and enterprise clients requiring technical and commercial support in regions like Southern Europe."
+   "value": "Developers utilizing the ElevenAPI and enterprise clients requiring scaled technical audio solutions. The company also targets consumer app channels and maintains a presence in regions like Southern Europe and ANZ."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: High new-grad pay ($150k-$200k+ base) supplemented by equity, reflecting elite AI talent market rates."
+   "value": "Estimated: $120k - $160k base. As a top-tier, fast-growing AI company, tech pay is expected to be highly competitive to attract top new-grad talent."
   },
   "evidence_sha": "f1e9d36c83875db7",
-  "generated_at": 1784869244,
+  "generated_at": 1785195038,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -131511,60 +131719,64 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c2838406dc"
+    "c2838406dc",
+    "590ca598a7"
    ],
-   "value": "Artificial Intelligence Research and Product Development"
+   "value": "Artificial Intelligence / Audio Technology"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "5957cf5bd1"
+    "590ca598a7",
+    "5957cf5bd1",
+    "c2838406dc"
    ],
-   "value": "Prepare to discuss how you thrive in a fast-paced, boundary-pushing environment without succumbing to burnout. Be ready to demonstrate technical depth in AI audio domains and ask about how the company's stated 'generational opportunity' translates into concrete WLB protections and sane working hours for engineers."
+   "value": "Candidates should highlight their ability to thrive in a fast, innovative tech culture and push technical boundaries without being slowed by bureaucracy. Demonstrating a builder's mindset that balances elite technical depth with commercial outcomes will be key to proving fit for this high-growth AI environment."
   },
-  "last_attempt_at": 1784869244,
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785193872,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "590ca598a7",
     "5957cf5bd1"
    ],
-   "value": "Globally distributed teams, with specific commercial focuses in regions such as Southern Europe."
+   "value": "Global presence with specific hiring focus in Australia and New Zealand (ANZ) and Southern Europe."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "c2838406dc",
-    "9737fe56c6"
+    "590ca598a7"
    ],
-   "value": "To define the trajectory of AI and transform how we interact with technology, pushing the boundaries of what is possible with AI audio."
+   "value": "To define the trajectory of AI and push the boundaries of what is possible in human-technology interaction, specifically through AI audio. The team is composed of researchers, engineers, and operators driving this generational opportunity."
   },
   "name": "ElevenLabs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "9737fe56c6",
-    "25fc604419"
+    "5957cf5bd1",
+    "590ca598a7"
    ],
-   "value": "Estimated: Very fast-paced and boundary-pushing, requiring adaptability and high performance in a rapidly scaling tech environment."
+   "value": "Estimated: Fast. The company describes itself as a team of 'builders' pushing the boundaries of AI, implying a highly innovative, rapid-development environment rather than slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "c2838406dc",
-    "732ccffcb5"
+    "590ca598a7",
+    "25fc604419",
+    "9737fe56c6"
    ],
-   "value": "ElevenAPI, which grants developers access to their leading AI audio foundational models, alongside consumer applications like their ElevenLabs core app."
+   "value": "AI audio foundational models and the ElevenAPI, which provides developers access to their leading voice generation technology. They also maintain a consumer application and the ElevenCreative brand."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days of standard PTO, based on typical benchmarks for late-stage global tech companies."
+   "value": "Estimated: Standard competitive PTO (e.g., 20-25 days). Exact policy is not public in the provided sources."
   },
-  "refresh_after": 1790053244,
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131574,16 +131786,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely no guaranteed company-wide shutdowns, typical for fast-paced AI startups."
+   "value": "Estimated: No specific guaranteed shutdowns mentioned in public sources, though standard holidays likely apply."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
+    "590ca598a7",
     "5957cf5bd1",
-    "25fc604419",
-    "c2838406dc"
+    "25fc604419"
    ],
-   "value": "Rapidly scaling across multiple cross-functional departments, indicating a high-growth startup or late-stage scaleup environment."
+   "value": "A rapidly scaling AI company with a highly cross-functional team operating across multiple global regions (including ANZ, Southern Europe, and the US). The company is in a growth phase, actively hiring across technical, marketing, and customer success functions."
   },
   "sources": [
    {
@@ -131648,29 +131860,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "5957cf5bd1"
-   ],
-   "value": "Estimated: While global hiring is evident, specific visa sponsorship details for new grads are not explicitly stated in the provided sources."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "c2838406dc",
-    "9737fe56c6"
+    "590ca598a7"
    ],
-   "value": "ElevenLabs is an AI research and product company focused on transforming how humans interact with technology through advanced AI audio foundational models. They monetize this technology by offering ElevenAPI, which provides developers access to their leading AI audio models."
+   "value": "ElevenLabs is an AI research and product company transforming how humans interact with technology through advanced AI audio foundational models. The company generates revenue by granting developers and enterprises access to its ElevenAPI, offering cutting-edge voice and audio generation solutions."
   },
-  "synthesized_evidence_sha": "da4f024d002a8890",
+  "synthesized_evidence_sha": "f1e9d36c83875db7",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "c2838406dc"
+    "590ca598a7",
+    "5957cf5bd1"
    ],
-   "value": "The team comprises researchers, engineers, and operators building and advancing foundational AI audio models and managing the technical depth of enterprise integrations."
+   "value": "The team works on leading AI audio foundational models and the ElevenAPI. Technical roles involve scaling technical solutions for enterprise customers, improving internal processes, and sitting at the intersection of product, engineering, and revenue."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583509,
@@ -131678,17 +131888,19 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "9737fe56c6",
-    "c2838406dc"
+    "590ca598a7",
+    "c2838406dc",
+    "5957cf5bd1"
    ],
-   "value": "Balances elite AI prestige with a fast-paced, generational innovation culture that provides high-impact learning and career acceleration. The environment is mission-driven and focused on defining the trajectory of AI, which aligns with a candidate prioritizing technical growth and high impact."
+   "value": "Aligns with the candidate's desire for a top-tier, fast-paced AI role by offering a position at the forefront of defining the trajectory of AI audio. The company emphasizes an innovative, generational-opportunity culture that accelerates technical learning and career growth through hands-on, cross-functional building."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "9737fe56c6"
+    "590ca598a7",
+    "5957cf5bd1"
    ],
-   "value": "Estimated: Moderate, typical of a high-growth AI startup where weekend or late-night work may happen during product pushes, though specific policies aren't documented."
+   "value": "Estimated: Moderate to Good. While the company seeks builders in a fast-paced AI environment, it does not exhibit overt markers of a toxic or high-burnout environment in its job descriptions."
   }
  },
  "eliseai": {
@@ -163570,94 +163782,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 1 (Elite Defense Prime). Carries elite national-security prestige and massive data scale that rivals Big Tech, while conferring domain gravity in defense, intelligence, and autonomous systems sectors."
+   "value": "Estimated: Tier-3 (Low). Defense contractors hold high prestige in aerospace engineering but lack elite prestige in the AI and data science communities."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "d30a918880"
-   ],
-   "value": "A business-to-government model generating revenue from long-term federal procurement contracts for manufacturing, engineering, IT modernization, and lifecycle support services in aerospace, marine systems, combat vehicles, and technologies."
-  },
-  "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "811b616af2"
    ],
-   "value": "Mission-first, traditional, and stable. Employee communities respect veterans and public service, and ethical setup, non-consistency and self-important politics are uncommon. The environment supports thoroughness over speed, with strong emphasis on process, quality, and clear work boundaries."
+   "value": "Government contract-based manufacturing and systems engineering, heavily reliant on U.S. military procurement cycles and long-term defense budgets."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional, structured, and process-driven. Highly mission-oriented, but heavily bound by government bureaucracy, security constraints, and long-term career stability."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "d30a918880"
+    "811b616af2"
    ],
-   "value": "Primarily the U.S. Department of Defense and its armed services, as well as intelligence agencies, and allied foreign governments."
+   "value": "The U.S. Navy and allied foreign militaries."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Total compensation $115,000–$135,000. Composed of a base salary around $95,000–$110,000, a funded 401(k) stock match representing 6-8% of salary, and a cash performance bonus sometimes hitting 5-10%. This does not include the very high long-term career value of an active security clearance."
+   "value": "Estimated: $80,000 - $110,000. High new-grad pay for the defense sector, but lower than FAANG or top-tier commercial tech."
   },
   "evidence_sha": "413b7b4f12ce8130",
-  "generated_at": 1784672887,
+  "generated_at": 1785195038,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "d30a918880"
+    "811b616af2"
    ],
-   "value": "Defense and Aerospace Prime Contractor"
+   "value": "Aerospace and Defense / Marine Engineering"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Interviews emphasize U.S. citizenship status and ability to obtain a security clearance first, followed by behavioral questions mapped to mission alignment and ethical decision-making. Technical rounds test practical applied AI/ML, Python, and data engineering skills in mission contexts, but prioritize reliability, compliance awareness, and systems thinking over LeetCode speed or whiteboard abstract problem solving."
+   "value": "Given the environment, focus on legacy optimization and stability over explosive new-grad pay growth rapid innovation. You should emphasize your mastery of C++, STL, smart pointers, and mission alignment. questions about slow bureaucracy WLB, keeping sane hours and avoiding burnout in highly classified and rigid environments."
   },
-  "last_attempt_at": 1784672887,
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785193872,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "d30a918880",
+    "5680c8164e",
     "811b616af2"
    ],
-   "value": "Headquartered in Reston, Virginia, with major hub locations across the U.S. including Falls Church, VA, Sterling Heights, MI, and Bath, ME. Many roles are on-site at secure facilities or shipyards; some technical roles in the Technologies segment offer hybrid schedules."
+   "value": "Major engineering and shipyard facilities are located in Groton, CT (Electric Boat) and Bath, ME (Bath Iron Works)."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "d30a918880",
     "811b616af2"
    ],
-   "value": "To deliver innovative defense technologies and services that protect national security and support the U.S. and its allies."
+   "value": "To design, build, and support complex naval combatants and maritime technologies to ensure national security and naval superiority. Bath Iron Works operates under the ethos 'Bath Built Is Best Built'."
   },
   "name": "General Dynamics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Steady and deliberate rather than agile-startup fast. Work is governed by defined federal milestones, compliance gates, and testing cycles, which prevents crunch but also limits rapid tech iteration."
+   "value": "Estimated: Slow/Methodical. Defense prime contractors operate on long government procurement cycles with heavy compliance and security processes, making the engineering pace slower on average than commercial tech."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "811b616af2"
+    "811b616af2",
+    "5680c8164e"
    ],
-   "value": "Complex surface combatants designed and built at shipyards like Bath Iron Works, as well as a broader portfolio including submarines, tanks, combat vehicles, Gulfstream business jets, and C4ISR (command, control, communications, computers, intelligence, surveillance, and reconnaissance) systems."
+   "value": "Complex surface combatants for the U.S. Navy, such as the Arleigh Burke-class destroyers, and nuclear submarines built by Electric Boat."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days of paid time off per year in year one, combing separated or unified PTO banks, plus 10–12 federal holidays."
+   "value": "Estimated: 15-20 paid days off annually."
   },
-  "refresh_after": 1789856887,
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163667,14 +163878,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Scheduled holiday reductions between Christmas and New Year’s Day is widely observed and defended within the defense industrial base, providing a guaranteed week-long end-of-year shutdown regardless of program demands."
+   "value": "Estimated: Limited. Some larger defense sites may offer holiday shutdowns, but guaranteed company-wide shutdown days are not widely documented."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "d30a918880"
    ],
-   "value": "A Fortune 100, publicly traded, mature defense prime contractor with over 100,000 employees and $40+ billion in annual revenue. It operates through four major business groups: Aerospace, Marine Systems, Combat Systems, and Technologies."
+   "value": "Large, mature public corporation. General Dynamics is a Fortune 500 defense prime contractor with tens of thousands of employees across its multiple business units."
   },
   "sources": [
    {
@@ -163729,26 +163940,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Because most work is covered by ITAR, Export Administration Regulations, and security clearance requirements, General Dynamics mandates U.S. citizenship or permanent residency for nearly all positions. It does not generally sponsor H-1B visas for new hires into core technical roles, a policy consistent across major defense primes."
+   "confidence": "medium",
+   "source_ids": [
+    "5680c8164e"
+   ],
+   "value": "Due to the classified nature of the environments and military contracts, software engineering roles typically require U.S. citizenship and the ability to secure security clearances."
   },
   "status": "ready",
   "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "811b616af2"
+   ],
+   "value": "General Dynamics is a global aerospace and defense company that designs and builds complex combatants, such as submarines and surface ships. It makes money by securing large-scale contracts with the U.S. Navy and other government entities to engineer, manufacture, and support military platforms."
+  },
+  "synthesized_evidence_sha": "413b7b4f12ce8130",
+  "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "d30a918880"
+    "4cb7039afa",
+    "5680c8164e"
    ],
-   "value": "General Dynamics is a global aerospace and defense company that designs, builds, and maintains military vehicles, ships, submarines, aircraft, and technology systems. It makes money primarily through long-term contracts with the U.S. government and allied nations for defense products and services."
-  },
-  "synthesized_evidence_sha": "888ef171567dcbc1",
-  "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [
-    "811b616af2",
-    "d30a918880"
-   ],
-   "value": "Roles span designing combat systems and surface ships, embedded software for military grade–hardware, data analytics for intelligence clients, and advanced manufacturing engineering. AI and data science work is concentrated in the Technologies segment, involving mission data processing, C4ISR, cybersecurity analytics, and autonomous platform development."
+   "value": "Developing and maintaining software for military systems, heavily emphasizing C++ programming, Standard Template Library (STL), smart pointers, inheritance, and networking protocols for optimal system performance. Software development occurs in highly secure, classified environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669632,
@@ -163756,12 +163969,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "It gives you a prestigious name in national security tech along with total new-grad compensation that competes with top commercial firms, but without the 60+ hour weeks. The defense mission and long federal timelines enforce a more sustainable, predictable rhythm with genuine office shutdowns, so you accelerate technical learning and clearance-bearing career capital without burning out."
+   "value": "While General Dynamics provides mission-driven work that serves national security and offers elite stability, it fundamentally conflicts with your priority for a fast, innovative tech culture. The strict classified environments limit modern remote work flexibility, and defense primes generally feature slower bureaucratic pace versus fast-paced AI startups. Respect for work-life balance exists, but theCoder-heavy technical learning is focused on legacy systems and performance optimization."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4.0/5.0, among the best in elite AI-relevant firms. Core hours typically center around a standard 40-hour salary week with minimal weekend work outside rare deployment deadlines."
+   "value": "Estimated: Moderate. Sane hours are generally maintained, though mission-critical push periods occur near delivery milestones."
   }
  },
  "general dynamics information technology": {
@@ -251169,37 +251382,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Currently emerging in the data space; prestige is tied to its rapidly growing consumer-tech footprint rather than elite, top-tier AI research pedigree."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "Operates a portfolio of consumer healthcare businesses, generating revenue through direct-to-consumer healthcare products and treatments."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "Collaborative, with an emphasis on in-office interaction and flexibility via a hybrid schedule."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "Patients and consumers seeking direct-to-consumer healthcare solutions and treatments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive new-grad tech pay for the Austin, TX market, likely ranging from $80,000 to $110,000 base salary for entry-level data roles."
   },
   "evidence_sha": "ce59f8e958a417c1",
+  "generated_at": 1785195038,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "Consumer technology / Digital health and healthcare solutions."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should evaluate whether the 'rapidly growing' consumer tech environment truly offers sane hours and guaranteed shutdowns, or if it masks a high-burnout culture. Prepare to discuss how the Entry Level Data Analyst role accelerates technical learning and career growth without sacrificing personal time, probing into the realities of the hybrid schedule and day-to-day pace."
   },
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785194142,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "89c0b0df8b",
+    "c24bf829f8"
+   ],
+   "value": "Austin, TX (features on-site and hybrid roles)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "To better patients' lives through innovative healthcare solutions."
+  },
   "name": "Meds",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, driven by its identity as a rapidly growing consumer technology firm."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "A suite of healthcare businesses, most notably the flagship brands BlueChew and MOD."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard PTO package typical of rapidly growing consumer tech firms, generally ranging from 15 to 20 days annually."
   },
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -251209,7 +251479,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed company-wide shutdowns; standard tech holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c24bf829f8",
+    "89c0b0df8b"
+   ],
+   "value": "Rapidly growing consumer technology firm, currently hiring for entry-level and specialist roles."
   },
   "sources": [
    {
@@ -251273,14 +251551,39 @@
     "url": "https://jobs.lever.co/meds/abddd181-1908-4b31-83e2-41c9d037fb53"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c24bf829f8"
+   ],
+   "value": "Meds (Meds.com) is a rapidly growing consumer technology firm that operates a suite of healthcare businesses, including its flagship brands BlueChew and MOD. It makes money by providing and scaling innovative, consumer-facing healthcare solutions and treatments aimed at bettering patients' lives."
+  },
+  "synthesized_evidence_sha": "ce59f8e958a417c1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "89c0b0df8b"
+   ],
+   "value": "Hiring for data-focused roles such as Entry Level Data Analyst to support their product and consumer healthcare platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785194142,
   "web_search_url": "https://duckduckgo.com/?q=Meds+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a rapidly growing consumer tech firm operating in healthcare, Meds offers new grads the opportunity to drive immediate technical impact in a modern tech culture. The mission-driven nature of bettering patients' lives aligns with candidates seeking purposeful work, while its identity as a consumer technology firm suggests a faster-paced, innovative environment over traditional slow-moving healthcare bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, given the hybrid work schedule that provides some flexibility, though 'rapidly growing' tech environments can sometimes blur work-life boundaries."
   }
  },
  "medtronic": {
@@ -328472,12 +328775,92 @@
   }
  },
  "revvity": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "7f8ae622b40a2cd5",
-  "last_evidence_at": 1785193872,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "cae964f7f12e5a92",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785195043,
   "name": "Revvity",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e94dcc6245",
+    "kind": "company_web",
+    "publisher": "Revvity",
+    "retrieved_at": 1785195043,
+    "title": "Revvity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ea8612bd3dd2cd2b81885c864125c3cd661240e56455a3ce5678d042c4451972JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cucmV2dml0eS5jb20vd2VsY29tZS10by1yZXZ2aXR5LW5vbi1lY29tbWVyY2U&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e72bd84e77",
+    "kind": "company_web",
+    "publisher": "Revvity",
+    "retrieved_at": 1785195043,
+    "title": "Revvity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=18eb990bdeced732af47dd1e115ad52e4e8de44883367f8641a6f69c00c851c2JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmV2dml0eQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "59af54776c",
+    "kind": "company_web",
+    "publisher": "Revvity",
+    "retrieved_at": 1785195043,
+    "title": "Revvity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c7935193e2700047089d98f2cf33fc9df67c35e8d557963c842fdaaf93dc521dJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cucmV2dml0eS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Revvity",
+    "retrieved_at": 1785195043,
+    "title": "Discovery source for Revvity",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
    {
     "content_sha": "f40a851af43baf43",
     "excerpt": "Job Title Associate Software Development Engineer (Remote US) Location(s) US Remote - MA About Us Revvity is a developer and provider of end-to-end solutions designed to help scientists, researchers, and clinicians solve the world’s greatest health challenges. Find your future at Revvity We are looking for a talented Associate Backend Software Engineer - (AI, Java, Vert.x, AWS) to join our Signals Software team, building our next generation cloud notebook application. We pair the enthusiasm of an industry disruptor with the experience of a longtime leader.",
@@ -328489,7 +328872,15 @@
     "url": "https://revvity.wd103.myworkdayjobs.com/External/job/US-Remote---MA/Associate-Software-Development-Engineer--Remote-US-_JR-044961"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785195043,
+  "web_search_url": "https://duckduckgo.com/?q=Revvity+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "reyes holdings": {
   "ai_ds_prestige_tier": {
@@ -360361,12 +360752,163 @@
   }
  },
  "solventum": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Estimated: Mid-tier. It offers meaningful, domain-specific data science and enterprise analytics work in healthcare, but may lack the elite, cutting-edge AI prestige of top-tier tech giants."
+  },
   "aliases": [],
-  "evidence_sha": "7b1cd7a93a313f3a",
-  "last_evidence_at": 1785193872,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "B2B sales of enterprise-scale healthcare analytics applications, software solutions, and medical devices to healthcare providers."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Mission-driven and collaborative, emphasizing empathy, insight, and solving tough healthcare challenges in an agile team setting."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Healthcare professionals, institutions, and systems requiring analytics and health data management solutions."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary, reflecting enterprise healthcare tech standards rather than elite tech-tier compensation."
+  },
+  "evidence_sha": "4ff38f837deb24d1",
+  "generated_at": 1785195038,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Healthcare Technology and Medical Devices"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to discuss building scalable healthcare analytics applications and collaborating effectively in an agile environment. Ask the interviewers about engineering pace, technical mentorship, and how the team balances innovation with enterprise bureaucracy to ensure it meets your goals for fast learning and sane hours."
+  },
+  "last_attempt_at": 1785195038,
+  "last_evidence_at": 1785195041,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Remote options available (e.g., Remote - Georgia) alongside broader US operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "To solve big challenges that improve lives and help healthcare professionals perform at their best, guided by empathy, insight, and clinical intelligence."
+  },
   "name": "Solventum",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Estimated: Moderate. Operating within an agile engineering framework, the pace is likely steady and structured rather than rapidly iterative or chaotic."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Healthcare analytics software solutions, enterprise-scale reporting applications, and Health Information System (HIS) products."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 20-25 days of PTO, standard for a spun-off legacy healthcare enterprise."
+  },
+  "refresh_after": 1790379038,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; PTO is likely managed individually."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7ae51d6a9",
+    "410cb7e247",
+    "267cdb50ef"
+   ],
+   "value": "Publicly traded, independent healthcare company with a long legacy (recently spun off from 3M) employing agile engineering teams."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "267cdb50ef",
+    "kind": "company_web",
+    "publisher": "Solventum",
+    "retrieved_at": 1785195041,
+    "title": "Solventum public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=658f26307b2e4e3bc4afd6cf935291b8c9ca8321eed8c5440852ed36720df9a4JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU29sdmVudHVt&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "410cb7e247",
+    "kind": "company_web",
+    "publisher": "Solventum",
+    "retrieved_at": 1785195041,
+    "title": "Solventum public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b315a662b1c4f11690134e20ce9d70bc19bb1af6f7b074401554d9a1e88cefc1JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuc29sdmVudHVtLmNvbS9lbi11cy9ob21lL2xvZ2luLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9947e8365f",
+    "kind": "company_web",
+    "publisher": "Solventum",
+    "retrieved_at": 1785195041,
+    "title": "Solventum public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=281122d06f840a28d2dcd6f7ba33dfba006b295abeef3a239b5906a07e16c6fbJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cuc29sdmVudHVtLmNvbS9lbi11cy9ob21lLw&ntb=1"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Solventum",
+    "retrieved_at": 1785195041,
+    "title": "Discovery source for Solventum",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
    {
     "content_sha": "00b4f4f317e858dc",
     "excerpt": "Solventum is a new healthcare company with a long legacy of solving big challenges that improve lives and help healthcare professionals perform at their best. Guided by empathy, insight, and clinical intelligence, we collaborate with the best minds in healthcare to address our customers’ toughest challenges. Here, you will make an impact by: Leading healthcare analytics software solutions for HIS products and clients, collaborating within an agile team of engineers and developers Implementing enterprise scale application, and reporting solutions.",
@@ -360378,7 +360920,45 @@
     "url": "https://healthcare.wd1.myworkdayjobs.com/search/job/Remote---Georgia/Analytics-Application-Developer_R01132512"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Unknown; sponsorship details are not explicitly mentioned in the job posting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9",
+    "dbc3b9e88f"
+   ],
+   "value": "Solventum is a newly independent healthcare company (formerly 3M Health Care) that develops software, medical devices, and health data solutions. It makes money by selling clinical intelligence, analytics, and medical products to healthcare providers and systems."
+  },
+  "synthesized_evidence_sha": "4ff38f837deb24d1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Leading healthcare analytics software solutions, implementing enterprise-scale applications, and developing reporting solutions within an agile team of engineers."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785195041,
+  "web_search_url": "https://duckduckgo.com/?q=Solventum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a healthcare data and analytics provider, Solventum offers a mission-driven environment that can appeal to candidates seeking impactful AI/data science work. However, as a newly independent enterprise with a legacy corporate background, its culture may lean toward established processes over the fast, elite tech-startup pace some new grads desire."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7ae51d6a9"
+   ],
+   "value": "Estimated: Good. Healthcare enterprise companies historically prioritize stability regarding work-life balance, though specific shutdowns and pure startup-like speed are not guaranteed."
+  }
  },
  "somerset regal bank": {
   "ai_ds_prestige_tier": {
@@ -381934,110 +382514,146 @@
  "tax relief advocates": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard business IT tier, not recognized for elite AI or data science prestige."
-  },
-  "aliases": [],
-  "attempts": 1,
-  "business_model": {
-   "confidence": "low",
    "source_ids": [
     "934749db17",
     "b4d804f789"
    ],
-   "value": "Fee-for-service model charging clients for tax resolution consulting and negotiation."
+   "value": "Estimated: Low. AI/Data Science focus is typically low priority and rarely recognized."
+  },
+  "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "934749db17",
+    "b4d804f789"
+   ],
+   "value": "B2C and B2B professional services model. Revenue is earned through client retainers and service fees for standardized and customized tax resolution cases."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Service-focused and compliance-driven rather than fast-paced or tech-innovative."
+   "source_ids": [
+    "934749db17",
+    "b4d804f789",
+    "55fdbd2ccd"
+   ],
+   "value": "Estimated: Mission-driven and client-focused, with a professional services atmosphere that values financial accuracy and ethical client advocacy over rapid technological disruption."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "934749db17"
+    "934749db17",
+    "b4d804f789",
+    "55fdbd2ccd"
    ],
-   "value": "Individuals and businesses facing outstanding tax liabilities or IRS audits."
+   "value": "Individual taxpayers and small-to-medium businesses experiencing tax debt, IRS audits, or unfiled returns."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $70,000 - $90,000, aligned with non-big-tech financial services software roles."
+   "source_ids": [
+    "dbc3b9e88f",
+    "934749db17"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary, with standard benefits. Unlikely to meet elite new-grad tech pay benchmarks (> $120k)."
   },
   "evidence_sha": "66d1f4622f24c770",
-  "generated_at": 1784892638,
+  "generated_at": 1785195038,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "934749db17",
-    "b4d804f789"
+    "b4d804f789",
+    "55fdbd2ccd"
    ],
    "value": "Financial Services / Tax Resolution"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Assess whether the technical stack actually supports elite AI/DS learning and innovation. Probe the team's deployment cadence to ensure it is fast rather than bottlenecked by compliance, and ask strict questions about on-call expectations and after-hours work to gauge true work-life balance."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probe their AI/DSEng team structure, tech stack, and whether ML models are actually deployed or stagnant. Ask about team culture, daily hours, and if bureaucracy stifles turnover. Read on 4-week growth."
   },
-  "last_attempt_at": 1784892638,
+  "last_attempt_at": 1785195038,
   "last_evidence_at": 1785194143,
   "locations": {
    "confidence": "low",
    "source_ids": [
+    "934749db17",
     "b4d804f789",
     "55fdbd2ccd"
    ],
-   "value": "Primary operations appear to route through web portals associated with the organization's regional contact pages."
+   "value": "Information not explicitly verified due to redirect loops, but typically operates physical headquarters and satellite offices in major US metropolitan areas alongside remote work options."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
+    "934749db17",
     "b4d804f789",
     "55fdbd2ccd"
    ],
-   "value": "To provide advocacy and relief for taxpayers navigating complex tax debt obligations."
+   "value": "To provide effective and ethical tax relief solutions that resolve client tax burdens and restore their financial peace of mind."
   },
   "name": "Tax Relief Advocates",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard financial services pace with process-heavy workflows."
-  },
-  "products": {
-   "confidence": "low",
    "source_ids": [
     "934749db17",
-    "55fdbd2ccd"
+    "b4d804f789"
    ],
-   "value": "Tax resolution, audit defense, and debt relief negotiation services."
+   "value": "Estimated: Moderate. Leveraging modern practices such as advanced data analytics and model deployment to streamline operations and client case management."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "934749db17",
+    "b4d804f789"
+   ],
+   "value": "Tax resolution and relief services, including Offer in Compromise, installment agreements, penalty abatement, and tax audit defense."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 10-15 days, standard corporate baseline."
+   "source_ids": [
+    "934749db17",
+    "b4d804f789"
+   ],
+   "value": "Estimated: 15-20 days of paid time off per year, plus standard public holidays."
   },
+  "refresh_after": 1790379038,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "934749db17"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard public holidays only."
+   "source_ids": [
+    "934749db17",
+    "b4d804f789",
+    "55fdbd2ccd"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns, though standard public holidays are observed."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mid-size private financial services firm."
+   "source_ids": [
+    "934749db17",
+    "b4d804f789",
+    "55fdbd2ccd"
+   ],
+   "value": "Estimated firm size ranging from 51 to 200 employees, operating as a private company with established steady growth."
   },
   "sources": [
    {
@@ -382083,35 +382699,47 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No public documentation found regarding H-1B sponsorship for technical roles."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated standard corporate practices; tech hires may support engineers but currently unknown."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "dbc3b9e88f",
     "934749db17",
     "b4d804f789"
    ],
-   "value": "Tax Relief Advocates is a financial services firm specializing in tax resolution and debt relief services. The company makes money by charging clients fees for negotiating with tax authorities and structuring repayment plans to settle outstanding tax liabilities."
+   "value": "Tax Relief Advocates is a tax resolution firm that assists individuals and businesses in negotiating and settling unpaid tax debts with the IRS and state tax authorities. They generate revenue by charging clients service fees to navigate tax relief programs, handle audits, and stop wage garnishments or asset seizures."
   },
+  "synthesized_evidence_sha": "66d1f4622f24c770",
   "technical_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Internal CRM and billing operations, as public sources are currently inaccessible to verify specific AI or data science infrastructure."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated to involve CRM systems, client portal management, internal workflow automation, and data processing systems for case tracking. AI/Data roles may focus on automating document intake, predictive case valuation, call center analytics, or marketing optimization."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678568,
   "web_search_url": "https://duckduckgo.com/?q=Tax+Relief+Advocates+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a financial services firm, the technical work here is likely geared toward internal tooling and CRM optimization rather than top-tier AI or data science innovation. The corporate culture may lean toward bureaucracy and slower deployment cycles, which contrasts with fast-paced tech environments."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "This is a professional services firm utilizing technology and data to optimize tax relief services. It may offer solid WLB and compensation, but it is fundamentally not an AI-first tech company. Therefore, it will likely not satisfy a preference for elite AI/Data Science prestige, fast-paced innovation culture, or highly accelerated pure-technical career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate, typical of standard service industry hours."
+   "source_ids": [
+    "934749db17",
+    "b4d804f789",
+    "55fdbd2ccd"
+   ],
+   "value": "Estimated: Good. Emphasizes a supportive work environment with reasonable hours, aimed at avoiding burnout during peak tax seasons."
   }
  },
  "taylormade golf": {
@@ -403823,6 +404451,104 @@
     "7861ab5ba8"
    ],
    "value": "Estimated: Unknown or unstated in public sources; typical PE firms may lean intense, so candidates should verify directly."
+  }
+ },
+ "turner townsend": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "f9129db57eed9f2a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785195042,
+  "name": "Turner & Townsend",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "77e488b797",
+    "kind": "company_web",
+    "publisher": "Turner & Townsend",
+    "retrieved_at": 1785195042,
+    "title": "Turner & Townsend public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c6106ebe9b338d537eca6867619184064bf36fc0ca9ab93a86314e0d407e92e8JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cudHVybmVydXNkMjAyLm9yZy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a7b8563e16",
+    "kind": "company_web",
+    "publisher": "Turner & Townsend",
+    "retrieved_at": 1785195042,
+    "title": "Turner & Townsend public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=61abc11a94d8fcc8b2b3c48a398f41e25b3c19a6e3cceeb56fc881b79ce76936JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=06682a28-3abb-6096-1b58-3d8b3bfb6162&u=a1aHR0cHM6Ly93d3cudHVybmVyY29uc3RydWN0aW9uLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "638b6293e0aefdb9",
+    "excerpt": "SmartRecruiters Job Search SmartRecruiters Jobs Powered by",
+    "id": "f16eec2a6f",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Turner & Townsend",
+    "retrieved_at": 1785195042,
+    "title": "SmartRecruiters Job Search",
+    "url": "https://jobs.smartrecruiters.com/"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Turner & Townsend",
+    "retrieved_at": 1785195042,
+    "title": "Discovery source for Turner & Townsend",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785195042,
+  "web_search_url": "https://duckduckgo.com/?q=Turner+%26+Townsend+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "turning point community programs": {
