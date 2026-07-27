@@ -317078,48 +317078,131 @@
  "retell ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Estimated: High. Reaching $60M ARR with just 40 people backed by Y Combinator indicates elite capital efficiency and technical talent density, though the company is a newer startup rather than a legacy tech giant."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f"
+   ],
+   "value": "Subscription and recurring revenue from enterprise AI deployments, having scaled rapidly to $60M Annual Recurring Revenue (ARR)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2d75a97981"
+   ],
+   "value": "Estimated: High-ownership, high-velocity, and builder-oriented. The culture rewards cross-functional collaboration across product, engineering, GTM, and operations with minimal bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f"
+   ],
+   "value": "Executives, operators, and technical teams seeking to define requirements, scope solutions, drive AI adoption, and realize measurable business outcomes."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "894a4fd16f"
+   ],
+   "value": "Estimated: High. Backed by top-tier investors and reaching $60M ARR with 40 people indicates the ability to pay highly competitive new-grad salaries."
   },
   "evidence_sha": "a3fe334844db510b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1785114333,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Artificial Intelligence / Software as a Service (SaaS)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Be prepared to discuss building and deploying predictive statistical models, designing high-ownership AI systems, and operating effectively in a fast-paced, high-velocity startup environment without sacrificing personal time through guaranteed shutdowns."
+  },
+  "last_attempt_at": 1785114333,
   "last_evidence_at": 1785110360,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d75a97981"
+   ],
+   "value": "To rapidly scale high-velocity AI infrastructure and systems that power how modern businesses hire, sell, operate, and scale."
+  },
   "name": "Retell AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Estimated: Extremely fast. The company describes itself as a high-velocity team that scaled from $5M to $60M ARR in a short timeframe, suggesting a highly innovative, fast-paced environment over slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2d75a97981"
+   ],
+   "value": "The company develops internal and external AI systems and conversational AI agent infrastructure that powers how the company and its customers hire, sell, operate, and scale."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Standard startup PTO (15-20 days), though exact policy is not public."
   },
+  "refresh_after": 1790298333,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2d75a97981"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns mentioned; typical for lean, high-velocity startups."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f"
+   ],
+   "value": "Small, fast-scaling startup with a team of 40 people, backed by Y Combinator, Alt Capital, and other leading investors."
   },
   "sources": [
    {
@@ -317183,14 +317266,48 @@
     "url": "https://jobs.ashbyhq.com/retell-ai/21cf0117-6b44-40df-96ea-0fb2d1d0892f"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Retell AI builds infrastructure and AI systems for voice and conversational AI agents. Backed by Y Combinator and Alt Capital, the company generates recurring revenue by scaling to tens of millions in ARR with a small, high-velocity team."
+  },
+  "synthesized_evidence_sha": "a3fe334844db510b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "Developing predictive and statistical models to evaluate AI system performance, identifying operational risks, forecasting deployment outcomes, and designing core internal and external AI systems infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785110360,
   "web_search_url": "https://duckduckgo.com/?q=Retell+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "894a4fd16f",
+    "2d75a97981"
+   ],
+   "value": "For a candidate seeking elite prestige, high new-grad pay, and a fast-paced, innovative tech culture, Retell AI offers a high-ownership environment that accelerates technical learning. The small, high-velocity team structure minimizes slow bureaucracy and allows for direct impact on core company infrastructure and statistical modeling."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2d75a97981"
+   ],
+   "value": "Estimated: Moderate. The 'high-ownership builder position' and rapid scaling suggest intense but rewarding work; strict sane hours and guaranteed shutdowns are not explicitly confirmed, so candidates should verify this directly."
   }
  },
  "revel": {
