@@ -3291,115 +3291,117 @@
  },
  "accenture": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "57826b8e1d",
-    "7f01c559be"
-   ],
-   "value": "Top-tier within the professional services industry, offering roles with elite prestige and high demand for AI/ML expertise in government contracting."
-  },
-  "aliases": [],
-  "attempts": 23,
-  "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "f0c9931dec",
     "57826b8e1d",
     "0565c38a2f"
    ],
-   "value": "Accenture generates revenue by providing consulting, technology, and outsourcing services to clients, with a significant focus on federal government contracts through Accenture Federal Services."
+   "value": "Tier 2/3 - Accenture offers broad enterprise scale and strong high-tech projects within federal systems, but lacks the prestige of boutique/elite tech AI labs or FAANG-level new-grad compensation."
+  },
+  "aliases": [],
+  "attempts": 24,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b1f1dfef2b",
+    "4abf230e92",
+    "57826b8e1d"
+   ],
+   "value": "Business-to-Government (B2G) services, generating revenue through technology consulting, steady-state production support, and enhancement projects for federal clients."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "d78e003131"
+    "4abf230e92",
+    "57826b8e1d",
+    "e79c881c1d"
    ],
-   "value": "Inclusive and collaborative culture that emphasizes welcoming everyone and creating a positive work environment."
+   "value": "Mission-driven environment with a focus on public service, inclusion, technology ingenuity, and deep responsibility for US government clients."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "f0c9931dec",
-    "57826b8e1d",
-    "0565c38a2f"
+    "4abf230e92",
+    "b1f1dfef2b",
+    "e79c881c1d"
    ],
-   "value": "U.S. federal government agencies including those focused on defense, national security, public safety, civilian operations, and military health."
+   "value": "US federal government agencies across defense, national security, public safety, civilian, and military health organizations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $120,000-$150,000 base salary, typical for new-grad AI/data science roles at top-tier firms."
+   "value": "Estimated: New-grad tech roles at Accenture likely pay between $80k and $95k base, with high variation depending on clearance level and specific role."
   },
   "evidence_sha": "f2a40318ec6f6e77",
-  "generated_at": 1784964382,
+  "generated_at": 1785182200,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "f0c9931dec",
-    "57826b8e1d",
-    "0565c38a2f"
+    "4abf230e92",
+    "b1f1dfef2b",
+    "57826b8e1d"
    ],
-   "value": "Professional services, specifically technology consulting and government contracting."
+   "value": "IT Services and IT Consulting"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "57826b8e1d",
-    "7f01c559be"
+    "b1f1dfef2b"
    ],
-   "value": "Technical skills in AI/ML, LLMs, RAG, data engineering, and problem-solving for complex mission challenges, with emphasis on collaborative and innovative approaches."
+   "value": "Probe whether the target team's AI/ML or Data Science projects involve cutting-edge innovation, or if the role heavily supports steady-state production environments which may feature slower pacing. Also ask specific questions about after-hours expectations and workload predictability to ensure it meets strict work-life balance and shutdown requirements."
   },
-  "last_attempt_at": 1785174990,
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785179882,
   "locations": {
    "confidence": "medium",
    "source_ids": [
+    "4abf230e92",
     "f0c9931dec",
-    "57826b8e1d",
-    "0565c38a2f"
+    "57826b8e1d"
    ],
-   "value": "Primarily U.S. locations serving federal government clients, with roles available in various U.S. cities (not specified in sources)."
+   "value": "Offices and operations across the United States near federal agency hubs, reflecting its focus on US defense, national security, and civilian clients."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "4abf230e92",
     "f0c9931dec",
-    "57826b8e1d",
     "0565c38a2f"
    ],
-   "value": "To pursue the limitless potential of technology and ingenuity for clients across defense, national security, public safety, civilian, and military health organizations to make the nation stronger and safer and life better for people."
+   "value": "To pursue the limitless potential of technology and ingenuity, helping the US federal government make the nation stronger and safer and life better for people."
   },
   "name": "Accenture",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "57826b8e1d",
-    "7f01c559be"
+    "b1f1dfef2b",
+    "4abf230e92"
    ],
-   "value": "Fast-paced and innovative, with a focus on solving complex mission challenges quickly and efficiently."
+   "value": "Estimated: Pace varies by federal project; steady-state production roles may be bureaucratic and routine, while active modernization and migration tasks are potentially fast-paced."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "7f01c559be",
-    "b5914d8793"
+    "0565c38a2f",
+    "e79c881c1d"
    ],
-   "value": "Accenture offers technology solutions including AI/ML systems, cloud services, data analytics platforms, and custom software development for federal government clients, with specific roles in LLMs, RAG, and data engineering."
+   "value": "Technology and engineering services including AI/ML engineering, Cloud DevOps, data conversion, and enterprise application development (e.g., Oracle HCM Cloud, PeopleSoft)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of paid time off for new graduates, typical for tech roles at large firms."
+   "value": "Estimated: 20-25 days PTO is standard for large US enterprise consulting firms, though exact policies vary."
   },
-  "refresh_after": 1790148382,
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3407,20 +3409,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "medium",
-   "source_ids": [
-    "d78e003131"
-   ],
-   "value": "Guaranteed shutdowns during holidays and possibly other periods, as indicated by 'sane hours' in candidate priorities."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No explicit guaranteed shutdowns mentioned; shutdowns may depend on federal client operations and holiday schedules."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "f0c9931dec",
-    "57826b8e1d",
-    "0565c38a2f"
+    "4abf230e92",
+    "b1f1dfef2b",
+    "e79c881c1d"
    ],
-   "value": "Global company with over 13,000 employees in Accenture Federal Services (as per job postings), operating as part of a larger global organization."
+   "value": "Large enterprise with 13,000+ employees operating as a subsidiary within global Accenture."
   },
   "sources": [
    {
@@ -3485,48 +3485,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Accenture provides visa sponsorship for eligible international candidates, as is standard for U.S. tech companies."
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "f0c9931dec",
+    "4abf230e92",
     "57826b8e1d",
     "0565c38a2f"
    ],
-   "value": "Accenture is a global professional services company that provides consulting, technology, and outsourcing services, with a focus on helping clients transform through technology and innovation. Accenture Federal Services is a division specializing in serving U.S. federal government clients across defense, national security, public safety, civilian, and military health sectors."
+   "value": "Accenture Federal Services works on federal contracts requiring US citizenship and security clearance; candidates may need to undergo government background checks."
   },
-  "synthesized_evidence_sha": "78d7bbd8b9569dcd",
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4abf230e92",
+    "b1f1dfef2b",
+    "e79c881c1d"
+   ],
+   "value": "Accenture Federal Services (AFS) is a technology company within global Accenture that helps the US federal government make the nation stronger and safer. It makes money by providing technology consulting, systems integration, and engineering services across defense, national security, public safety, civilian, and military health organizations."
+  },
+  "synthesized_evidence_sha": "f2a40318ec6f6e77",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "57826b8e1d",
-    "7f01c559be",
-    "b5914d8793"
+    "0565c38a2f",
+    "e79c881c1d"
    ],
-   "value": "Developing AI/ML systems, cloud infrastructure, data analytics solutions, and custom software for federal government clients, with roles focusing on LLMs, RAG, data engineering, and Power Platform solutions."
+   "value": "Designing and building intelligent systems using Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG), alongside Cloud DevOps engineering and legacy enterprise application development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Accenture+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "57826b8e1d",
-    "7f01c559be",
-    "b5914d8793"
-   ],
-   "value": "Accenture Federal Services offers top-tier AI/data science roles with high new-grad pay, a fast-paced innovative tech culture, and a mission-driven focus on federal government impact. The company emphasizes work-life balance through guaranteed shutdowns and sane hours, avoiding toxic burnout environments."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AFS has strong mission-driven modernization projects involving elite AI/ML (LLMs, RAG) and Cloud DevOps, aligning with a fast, innovative tech culture and robust technical learning. However, federal consulting can introduce bureaucracy and slower deployment cycles, so candidates should evaluate how project velocity fits their expectations."
   },
   "wlb_rating": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "d78e003131"
+    "b1f1dfef2b",
+    "e79c881c1d"
    ],
-   "value": "Strong work-life balance with guaranteed shutdowns and reasonable hours, avoiding high-burnout environments."
+   "value": "Estimated: Culture emphasizes inclusion, but large federal consulting often involves strict client deadlines and security-driven constraints which may moderate true WLB backing."
   }
  },
  "accenture federal services": {
@@ -10222,94 +10223,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "National Security/Defense Tech (Moderate-High Prestige). Perceived as a stable and mission-critical domain but less glamorous in AI circles than prominent commercial research labs."
+   "value": "Estimated: Mid-tier. Defense AI roles are mission-impactful but generally lack the elite prestige and fast-paced tech culture of top-tier commercial AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Business-to-government (B2G) professional services firm funded through long-term federal IT contracts and task orders."
+   "value": "Government services and federal defense contracting."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "6f41afff9c"
-   ],
-   "value": "Mission-first and team-oriented with an emphasis on serving national security. There is an expectation to deliver tangible value to government clients using collaborative engineering discipline rather than a freewheeling tech culture."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven and patriotic, prioritizing national security outcomes over elite tech culture or fast-paced innovation."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "U.S. Department of Defense and other federal civilian agencies."
+   "value": "U.S. Federal Government and Department of Defense entities."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $80,000–$105,000 base salary for a technical new grad in the Washington D.C. metro area, which is competitive for cleared contractor roles but below top-tier commercial AI labs."
+   "value": "Estimated: $80,000 - $110,000. Defense contractors generally offer lower compensation than top-tier commercial tech firms, though clearance premiums may apply."
   },
   "evidence_sha": "07d923d2c33deec1",
-  "generated_at": 1784680912,
+  "generated_at": 1785182200,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Defense and Government IT Services."
+   "value": "Defense and Space Manufacturing / IT Services."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Interviews likely emphasize technical proficiency, culture fit with mission-focus, and ability to align with government work rather than Silicon Valley-style rapid iteration. Expect questions on structured problem-solving, agile values, and clear communication over flexible perks or pure AI model design."
+   "value": "Probe the team's actual pace of innovation versus standard DoD compliance. Clarify expectations on hours, work-life balance, and whether the role accelerates technical learning or relies on slow bureaucratic approval cycles."
   },
-  "last_attempt_at": 1784680912,
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785179882,
   "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Headquartered in Reston, Virginia with work performed on-site at government facilities or remotely depending on contract requirements."
+   "value": "U.S. defense and government facilities (exact corporate headquarters not found in provided sources)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "5fae39ea5c",
     "6f41afff9c"
    ],
-   "value": "To deliver innovative and adaptive digital solutions that empower federal and defense agencies to overcome complex national security challenges."
+   "value": "Action defines the outcome and new challenges require new solutions."
   },
   "name": "Agile Defense",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. Government contracting environments typically prioritize disciplined sprints and compliance over chaotic startup speed, keeping a structured cadence rather than raw hustle."
+   "value": "Estimated: Slow and process-heavy, characteristic of federal defense contracting."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Agile Defense delivers government-focused IT services including cybersecurity operations, cloud migration, software development, data analytics, and enterprise IT management. The company uses modern DevSecOps practices to build and secure mission platforms for defense clients."
+   "value": "Data engineering, AI, and IT solutions for government clients, such as support for the Chief Digital and Artificial Intelligence Office (CDAO) Central."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days Paid Time Off (PTO) plus 10 federal holidays. This is a conservative estimate common for mid-tier federal contractors."
+   "value": "Estimated: 15-20 days, standard for federal government contractors."
   },
-  "refresh_after": 1789864912,
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10319,14 +10320,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: May offer one company-wide holiday shutdown week; no further guaranteed full-firm suspensions beyond floating bank holidays."
+   "value": "Estimated: No guaranteed corporate shutdowns, but federal government shutdowns may affect operations."
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "6f41afff9c"
-   ],
-   "value": "Established mid-tier federal contractor beyond startup stage; exact revenue or headcount not available in sources."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -10381,40 +10380,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "5fae39ea5c"
+   ],
+   "value": "Defense and federal government contractors typically require U.S. citizenship and the ability to obtain security clearances; active clearance is likely required."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "6f41afff9c"
-   ],
-   "value": "Agile Defense provides digital transformation and cybersecurity services to U.S. defense and federal agencies, helping modernize legacy systems and strengthen mission-critical networks. They make money by competing for and winning government IT contracts, delivering tailored solutions in areas like cloud engineering, DevSecOps, and advanced analytics."
-  },
-  "synthesized_evidence_sha": "d71b7320a6bbf53c",
-  "technical_work": {
    "confidence": "medium",
    "source_ids": [
+    "5fae39ea5c",
     "6f41afff9c"
    ],
-   "value": "Work involves software and systems engineering using modern paradigms like Agile and DevSecOps alongside data engineering and cybersecurity operations. Roles span cloud migration, secure application development, and mission IT support tailored to federal standards."
+   "value": "Agile Defense is a defense contractor that provides technology solutions and mission-critical support to U.S. national security agencies. The company operates on a government services business model, generating revenue by securing federal contracts for IT, data engineering, and defense operations support."
+  },
+  "synthesized_evidence_sha": "07d923d2c33deec1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5fae39ea5c"
+   ],
+   "value": "Technical roles involve data engineering, AI deployment, and IT modernization for defense applications, such as supporting the CDAO."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675820,
   "web_search_url": "https://duckduckgo.com/?q=Agile+Defense+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "6f41afff9c"
+    "5fae39ea5c"
    ],
-   "value": "Aligns with the candidate’s desire for a mission-driven role in national security where modern agile practices may replace slow bureaucracy. The company’s government work often includes fixed delivery deadlines which can foster more predictable schedules, potentially respecting personal time better than ad-hoc commercial startups."
+   "value": "While the role supports high-impact AI and data initiatives (CDAO), government contracting inherently features slow bureaucracy and rigid processes that conflict with the desire for a fast, elite tech culture and guaranteed work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Above Average to Good (3.5/4 out of 5). Defense contractors commonly maintain a standard 40-hour week with predictable cycles, though deadlines near proposal submissions or live events can temporarily spike."
+   "value": "Estimated: Good. Defense contractors rarely feature high-burnout environments, though shutdowns may occasionally occur during government funding gaps."
   }
  },
  "agilent technologies": {
@@ -25707,46 +25709,52 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "704bbbdba7",
     "1c2c186438",
-    "3f6c5f469a",
-    "738f038676"
+    "3979f67c41"
    ],
-   "value": "Estimated: High. As a premier defense technology company bringing cutting-edge AI, ML infrastructure, and autonomous systems to the military, Anduril holds significant prestige in the tech sector for AI and software engineering roles."
+   "value": "Estimated: Top-tier. The company applies cutting-edge AI, sensor fusion, and ML infrastructure to radically evolve autonomous defense capabilities."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "9eb25e3e66"
+    "fd1b05e649",
+    "2634bfcffd",
+    "ae1f47b6bd"
    ],
-   "value": "The company operates at the intersection of the commercial and defense worlds, scaling production of military systems and software while partnering closely with business line engineering teams to iteratively deliver solutions that meet specific customer data requirements and constraints."
+   "value": "Anduril develops, manufactures, and sustains complex defense systems at scale, partnering closely with operations and supply chain to sell directly to government defense customers."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "9eb25e3e66",
-    "3f6c5f469a"
+    "3979f67c41",
+    "1c2c186438",
+    "fd1b05e649"
    ],
-   "value": "Collaborative, diverse, and offering real ownership with significant room to grow. Joining early provides a massive opportunity to directly shape the company's future scale, both in product volume and mission breadth."
+   "value": "Mission-driven, agile, and highly collaborative across engineering, product, and supply chain. It feels more like a modern, innovative tech company that iteratively solves hard problems rather than a slow-moving traditional defense bureaucracy."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "ae1f47b6bd"
+    "704bbbdba7",
+    "ae1f47b6bd",
+    "3979f67c41"
    ],
-   "value": "U.S. and allied militaries, as well as defense operations requiring advanced autonomous systems and air defense in challenging operational environments worldwide."
+   "value": "The U.S. military and its allied forces, specifically customers needing advanced maritime, air defense, and autonomous operational capabilities."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $150k - $200k+ base salary, aligning with top-tier new-grad compensation in high-growth tech and defense sectors, supplemented by equity."
+   "source_ids": [
+    "3979f67c41",
+    "fd1b05e649"
+   ],
+   "value": "Estimated: Highly competitive top-tier tech salary ($150k-$200k+ base), aligning with their positioning as a modern, highly innovative tech company in the defense sector."
   },
   "evidence_sha": "0e7df9c7a8fc9bf5",
-  "generated_at": 1785170215,
+  "generated_at": 1785182200,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -25755,66 +25763,62 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "ae1f47b6bd",
-    "738f038676"
+    "3979f67c41"
    ],
-   "value": "Defense Technology"
+   "value": "Defense Technology and Aerospace"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "3f6c5f469a",
-    "9eb25e3e66",
-    "12fbd9ff36"
+    "3979f67c41",
+    "ae1f47b6bd",
+    "2634bfcffd"
    ],
-   "value": "Assess whether the highly collaborative, fast-paced environment aligns with your need for sane hours and guaranteed shutdowns, as the hyper-growth pace and high ownership model may demand intense execution. Prepare to discuss how you can maintain personal time and avoid burnout while taking on significant ownership and directly shaping the company's scale."
+   "value": "Candidates should emphasize their ability to thrive in a fast-paced, iterative environment where engineered solutions are rapidly deployed into challenging operational environments. Be prepared to discuss how you handle the pressure of building highly reliable, mission-critical AI and data systems where failures have severe real-world consequences."
   },
-  "last_attempt_at": 1785176227,
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785179882,
   "locations": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "9eb25e3e66",
-    "ae1f47b6bd",
-    "12fbd9ff36"
+    "ae1f47b6bd"
    ],
-   "value": "Multinational footprint with operations spanning worldwide challenging environments; facilities planning is actively managed across Air Dominance & Strike and Corporate divisions."
+   "value": "Not explicitly detailed in the provided sources, though roles involve deployments and operations in challenging environments worldwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "738f038676",
-    "9eb25e3e66"
+    "3979f67c41",
+    "fd1b05e649",
+    "1c2c186438"
    ],
-   "value": "To transform U.S. defense by changing how military systems are designed, built, and sold, bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry."
+   "value": "To transform U.S. defense by bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry, changing how military systems are designed, built, and sold."
   },
   "name": "Anduril",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "3f6c5f469a",
-    "12fbd9ff36"
+    "2634bfcffd"
    ],
-   "value": "Estimated: Fast-paced and dynamic. The company is actively navigating a phase of hyper-growth, rapidly scaling drone production and mission capabilities, which requires breaking as few things as possible under tight timelines."
+   "value": "Estimated: Extremely fast, physical, and highly consequential. The company is aggressively scaling and out-building the traditional defense base."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ae1f47b6bd",
-    "738f038676",
-    "3f6c5f469a"
+    "3979f67c41",
+    "704bbbdba7",
+    "ae1f47b6bd"
    ],
-   "value": "Anduril develops a family of networked sensors and effectors for air defense (enabling detection, tracking, identification, deterrence, and defeat of UAS threats), advanced autonomous drone systems, and sophisticated automated software pipelines to optimize production and deployment lifecycles."
+   "value": "Products include the Lattice OS (an AI-powered operating system turning data streams into a 3D command center), modular hardware platforms, autonomous undersea and maritime systems, and an Air Defense Family of Systems designed to counter UAS threats."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard PTO, typical for scaling technology companies in the defense sector, though exact policy is not public."
+   "value": "Estimated: Standard tech PTO (15-20 days), though exact policy is not explicitly stated in the sources."
   },
-  "refresh_after": 1790354215,
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25824,16 +25828,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No specific guaranteed company-wide shutdowns found in research; standard vacation policies likely apply."
+   "value": "Estimated: No guaranteed shutdowns mentioned in the sources; standard holiday closures may apply but are unconfirmed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "9eb25e3e66",
-    "3f6c5f469a",
-    "12fbd9ff36"
+    "704bbbdba7",
+    "2634bfcffd"
    ],
-   "value": "Anduril is in a phase of rapid hyper-growth, actively scaling the volume of drones it builds and the breadth of missions they can fly, while expanding its multinational footprint."
+   "value": "Rapidly growing company with an expanding product portfolio, deep investments in new divisions, and a massive manufacturing lifecycle strategy (Heavy Metal) intended to out-scale the traditional defense industrial base."
   },
   "sources": [
    {
@@ -25902,46 +25905,44 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "ae1f47b6bd",
-    "738f038676"
+    "3979f67c41",
+    "fd1b05e649"
    ],
-   "value": "Anduril Industries is a defense technology company that designs, builds, and sells advanced autonomous systems, such as drones and air defense networks, to military customers. It makes money by bringing the expertise, technology, and business models of the commercial tech sector to the defense industry, rapidly developing and deploying sophisticated hardware and software systems that close the kill chain against modern threats."
+   "value": "Anduril is a defense technology company that builds AI-powered hardware and software systems for the U.S. military and allied forces. It makes money by selling autonomous platforms, sensors, and its Lattice OS command-and-control software to government defense customers."
   },
-  "synthesized_evidence_sha": "923b2f1a5279042d",
+  "synthesized_evidence_sha": "0e7df9c7a8fc9bf5",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "1c2c186438",
-    "738f038676",
-    "ae1f47b6bd"
+    "3979f67c41",
+    "704bbbdba7",
+    "1c2c186438"
    ],
-   "value": "Engineering efforts involve ML infrastructure, flight software for drones, air defense family of systems (FoS) development, and designing sophisticated automated systems to enhance efficiency and reduce manual labor across production pipelines."
+   "value": "Engineering focuses on AI, sensor fusion, robotics, ML infrastructure, data engineering, and systems reliability. Teams build software for autonomous systems, digitized manufacturing, and real-time command centers operating in fast, physical, and highly consequential deployed environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1c2c186438",
-    "3f6c5f469a",
-    "738f038676"
+    "3979f67c41",
+    "2634bfcffd",
+    "1c2c186438"
    ],
-   "value": "Anduril offers elite prestige and top-tier new-grad pay typical of high-growth defense tech, functioning as a mission-driven company where software engineers have massive ownership to directly shape scaling efforts. The fast, innovative tech culture minimizes slow bureaucracy, allowing you to accelerate technical learning and career growth by working on cutting-edge autonomous systems and rapid deployment pipelines."
+   "value": "Anduril perfectly matches the desire for elite prestige and high new-grad pay by tackling highly consequential, fast-paced AI and robotics challenges. However, candidates prioritizing guaranteed work-life balance and sane hours should carefully vet the culture; the environment is described as extremely fast and physical, where the output of work is a deployed ship rather than a dashboard, which may conflict with strict personal time boundaries."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "9eb25e3e66",
-    "3f6c5f469a",
+    "2634bfcffd",
     "ae1f47b6bd"
    ],
-   "value": "Estimated: Moderate to demanding. While the culture is collaborative and offers room to grow, the high ownership, rapid scaling, and deployment in challenging operational environments suggest a demanding workload that may challenge strict work-life balance."
+   "value": "Estimated: Moderate to low. The culture is driven by fast-paced, mission-critical deployments where work outputs are directly tied to physical, highly consequential defense systems."
   }
  },
  "anduril industries": {
@@ -82810,39 +82811,46 @@
  "chase": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 1 (Finance). Prestigious within the fintech and enterprise banking world, though generally considered less elite than top-tier big tech or dedicated AI labs for pure data science."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Estimated: Top-tier within financial services, though generally considered lower prestige than dedicated AI research labs or top-tier big tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "54ab5c3a12",
+    "6b09b22e31",
     "c14ae12ff8"
    ],
-   "value": "Earns net interest income by lending out consumer deposits and charging interest on loans/credit cards, supplemented by transaction fees, service charges, and commercial banking revenues."
+   "value": "Generate revenue through net interest income on loans, transaction fees, service charges, and asset management fees, leveraging massive scale and consumer deposits."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Corporate, professional, and stability-focused. Innovation happens within the strict guardrails of financial regulation, often prioritizing risk management over rapid, disruptive deployment."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Estimated: Corporate and professional, with a strong emphasis on compliance, security, and hierarchy. Mission-driven aspects around community development and financial health are institutionally present but not always deeply felt."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "c14ae12ff8"
+    "c14ae12ff8",
+    "54ab5c3a12"
    ],
-   "value": "Individual consumers, small business owners, and large commercial corporate clients."
+   "value": "Individual consumers, small businesses, commercial corporate clients, and institutional investors."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000 - $140,000 base salary. High-paying for traditional banking, though total compensation may rely less on equity and more on performance bonuses compared to big tech."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Estimated: $100,000 - $160,000 base salary, typically augmented by substantial performance bonuses and comprehensive benefits packages."
   },
   "evidence_sha": "46c068bfdc56fb66",
-  "generated_at": 1784882707,
+  "generated_at": 1785182200,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -82851,69 +82859,82 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "54ab5c3a12",
+    "6b09b22e31",
     "c14ae12ff8"
    ],
-   "value": "Banking and Financial Services."
+   "value": "Financial Services and Banking"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe into actual new-grad compensation packages to ensure they meet your high pay expectations, and ask targeted questions about team pace, work-life balance protections, and career acceleration opportunities to ensure they align with your mission-driven, anti-burnout priorities."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Probe the specific team's tech stack and deployment cadence to ensure a fast, innovative culture. Ask about on-call expectations, weekend work, and work-life balance policies to confirm the role respects personal time and avoids toxic burnout environments."
   },
-  "last_attempt_at": 1784882707,
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785180161,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "54ab5c3a12",
     "c14ae12ff8"
    ],
-   "value": "Headquartered in the United States, with widespread office locations and bank branches globally."
+   "value": "Headquartered in New York City, with major tech hubs and offices globally, including locations in Chicago, Columbus, Dallas, Wilmington, and London."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "c14ae12ff8"
+    "54ab5c3a12"
    ],
-   "value": "The public source did not provide explicit mission text, but Chase focuses on driving inclusive economic growth and helping customers achieve financial health and mobility."
+   "value": "Chase focuses on driving value for its customers, communities, and shareholders by delivering innovative financial solutions and maintaining a strong, inclusive corporate culture under the broader JPMorgan Chase umbrella."
   },
   "name": "Chase",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to Fast. Enterprise banking environments often feature heavy compliance, regulation, and bureaucracy, which can slow the pace of pure technological innovation compared to startup tech cultures."
+   "source_ids": [
+    "c14ae12ff8"
+   ],
+   "value": "Estimated: Variable by team; enterprise legacy systems may move slowly with heavy bureaucracy, while specialized fintech and AI teams may operate at a faster, modern tech pace."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "6b09b22e31",
     "c14ae12ff8"
    ],
-   "value": "Consumer banking, credit cards, mortgages, auto financing, business banking, commercial lending, and digital online banking platforms."
+   "value": "Digital banking platforms, mobile banking applications, credit cards, mortgages, auto financing, business loans, and investment advisory services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days. Large traditional financial institutions generally provide 3-5 weeks of Paid Time Off including vacation and personal days, alongside standard bank holidays."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Estimated: 15-20+ days of vacation for new hires, alongside standard bank holidays and sick leave."
   },
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "54ab5c3a12"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Limited. Unlike top tech firms, large banks generally do not offer company-wide shutdowns, though they may provide a handful of standard public holidays where corporate offices close."
-  },
-  "size_stage": {
-   "confidence": "medium",
    "source_ids": [
     "54ab5c3a12"
    ],
-   "value": "Chase operates as a division of JPMorgan Chase, a massive, established multinational financial institution with tens of billions in annual revenue."
+   "value": "Estimated: No guaranteed week-long company-wide shutdowns like consumer tech firms, though employees typically receive paid holidays for major US bank holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Large Enterprise. As a subsidiary of JPMorgan Chase, the company operates on a massive global scale with over 200,000 employees globally."
   },
   "sources": [
    {
@@ -82958,41 +82979,47 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "54ab5c3a12"
    ],
-   "value": "Information regarding visa sponsorship for this specific division was not found in the provided source text."
+   "value": "As a major global financial institution, Chase typically provides visa sponsorship for highly specialized technical and engineering roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "54ab5c3a12",
+    "6b09b22e31",
+    "c14ae12ff8",
+    "54ab5c3a12"
+   ],
+   "value": "Chase is the consumer and commercial banking arm of JPMorgan Chase, one of the largest financial institutions in the world. It provides a vast array of financial services, generating revenue primarily through net interest income on deposits and loans, as well as fees for banking and payment processing services."
+  },
+  "synthesized_evidence_sha": "46c068bfdc56fb66",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
     "6b09b22e31",
     "c14ae12ff8"
    ],
-   "value": "Chase is the consumer and commercial banking division of JPMorgan Chase, offering services ranging from personal banking and credit cards to commercial lending. It makes money by earning net interest income on deposits and loans, charging transaction and service fees, and generating interest from credit card balances."
-  },
-  "technical_work": {
-   "confidence": "medium",
-   "source_ids": [
-    "6b09b22e31"
-   ],
-   "value": "Building and scaling digital banking applications, backend payment processing architectures, and consumer-facing financial platforms."
+   "value": "Software engineers and data scientists work on large-scale distributed systems, cybersecurity, fraud detection, algorithmic trading, and cloud-based digital banking infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675407,
   "web_search_url": "https://duckduckgo.com/?q=Chase+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "While Chase provides an elite, highly-respected name on a resume and robust learning infrastructure, you must actively evaluate if the day-to-day technical culture feels fast and innovative or if it is bogged down by the bureaucracy typical of legacy banking environments."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Chase offers elite prestige and highly competitive new-grad pay that rivals top tech firms, alongside the opportunity to accelerate learning on massive datasets and complex infrastructure. However, you must carefully vet specific teams to ensure you land on an innovative, fast-paced squad rather than getting bogged down by traditional enterprise bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. While large banks typically offer stable corporate benefits, work hours can spike during major project pushes or financial quarter-ends, and it may lack the guaranteed shutdowns of modern tech companies."
+   "source_ids": [
+    "54ab5c3a12"
+   ],
+   "value": "Estimated: Generally adequate, but can be demanding during product launches or market volatility. Sane hours are common, though specific teams may require periodic heavy lifting."
   }
  },
  "checkout com": {
@@ -139885,38 +139912,94 @@
  "excellus bcbs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Low-to-Medium. Excellus is highly respected in regional healthcare but lacks the elite tech industry prestige and cutting-edge innovation focus of top-tier tech companies or specialized AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Collects premium revenues from individuals and employer groups to fund healthcare claims, operating as a nonprofit that works to balance healthcare costs and reinvest in community health initiatives."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, community-focused, and traditional. Prioritizes compliance, stability, and community health impact over aggressive technical innovation or fast-paced tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Upstate New York residents, large and small employers purchasing group health benefits, and individuals eligible for Medicare or Medicaid."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 to $95,000 base salary for new grad technical roles. This is a respectable regional salary but falls significantly short of the elite new-grad pay (often $150k+ total compensation) seen at top-tier tech firms."
   },
   "evidence_sha": "64aa4c5db820f618",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785182200,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Health Insurance and Managed Care"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785180160,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Headquartered in Rochester, NY, with additional regional offices and operations across upstate New York (Buffalo, Syracuse, Utica, Binghamton, Watertown)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "To provide access to high-quality, affordable healthcare for the communities they serve in upstate New York, acting as a mission-driven nonprofit health insurer."
+  },
   "name": "Excellus BCBS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. As a well-established, traditional health insurance enterprise, the pace is heavily process-driven and compliance-oriented, which may feel bureaucratic compared to fast-moving tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Commercial and individual health insurance plans, Medicare Advantage plans, Medicaid coverage, and pharmacy benefit management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of PTO annually, typical for an established enterprise health insurer."
   },
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139926,7 +140009,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard paid holidays with possible partial holiday season shutdowns, but guaranteed firm-wide tech shutdowns (common in big tech) are not generally standard in the insurance industry."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Established enterprise nonprofit health insurer serving millions of members across upstate New York."
   },
   "sources": [
    {
@@ -139970,14 +140060,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "As a regional enterprise health insurer, sponsorship is rare and typically limited compared to tech-first companies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "62f7131253"
+   ],
+   "value": "Excellus BCBS is a nonprofit, independent licensee of the Blue Cross Blue Shield Association providing health insurance coverage across upstate New York. They generate revenue by collecting insurance premiums from employers and individuals, as well as by processing claims and managing healthcare costs for their member network."
+  },
+  "synthesized_evidence_sha": "64aa4c5db820f618",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Enterprise software engineering, data infrastructure, analytics, and actuarial modeling to support claims processing, member portals, and healthcare cost optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785180160,
   "web_search_url": "https://duckduckgo.com/?q=Excellus+BCBS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Traditional nonprofit insurance organizations generally offer highly predictable hours and good work-life balance, though this comes at the cost of slower innovation cycles."
   }
  },
  "exclusive networks": {
@@ -210702,48 +210819,142 @@
  "jpmorganchase": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Tier 1 within financial services, though newer tech talent may view it as a rigid environment compared to Tier 1 pure-tech AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "Generates revenue through net interest income on loans versus deposits, payment processing fees, and commissions from investment banking and asset management activities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "51d46541fd",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Corporate, professional, and mission-structured. High learning potential and elite brand recognition, but can feel constrained by traditional banking bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "Individual consumers, small businesses, large corporations, and institutional investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $110,000 - $150,000 base salary, with potential for substantial performance-based bonuses, bringing total compensation near $150,000 - $200,000+."
   },
   "evidence_sha": "b2da9973c3585827",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785182200,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "Financial Services and Banking."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "1db9db9c4d"
+   ],
+   "value": "Probe deeply into how regulatory requirements impact deployment cycles versus cutting-edge AI development, and explore what 'innovation' means within their financial constraints. Ask current engineers how team boundaries prevent burnout, whether autonomous shutdowns are actually respected, and how new-grad pay scales with actual expected working hours."
+  },
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785180160,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "51d46541fd"
+   ],
+   "value": "Headquartered in New York with major corporate hubs and software engineering offices distributed globally."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "The firm's corporate mission and core principles were not explicitly captured in the provided search excerpts."
+  },
   "name": "JPMorganChase",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8031477349",
+    "51d46541fd"
+   ],
+   "value": "Estimated: Moderate to high pace, driven by enterprise scale and compliance requirements. It tends to be slower and more bureaucratic than cutting-edge tech firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "Consumer banking accounts, credit cards, digital payment platforms, commercial loans, and institutional investment banking services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75"
+   ],
+   "value": "Estimated: Standard corporate package of 15-25 PTO days annually (varying by tenure and role), accrued over time."
   },
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "51d46541fd"
+   ],
+   "value": "Estimated: Bank-wide shutdowns are not standard policy beyond occasional personal floating holidays. Specific endpoints or teams might be quiet on bank holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "Large-cap, publicly traded enterprise operating globally."
   },
   "sources": [
    {
@@ -210787,14 +210998,51 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "No explicit details regarding visa sponsorship policies were found in the provided research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "51d46541fd"
+   ],
+   "value": "JPMorganChase is a leading global financial services firm and major US bank. It makes money by managing consumer deposits, processing payments, and providing investment banking and asset management services."
+  },
+  "synthesized_evidence_sha": "b2da9973c3585827",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "8031477349"
+   ],
+   "value": "Software and AI engineers develop large-scale financial processing systems, fraud detection models, and digital banking infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785180160,
   "web_search_url": "https://duckduckgo.com/?q=JPMorganChase+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75",
+    "1db9db9c4d"
+   ],
+   "value": "JPMC is a financial institution prioritizing stability, compliance, and elite prestige over the exceptionally fast, risk-tolerant innovation typical of top tech firms or agile startups; financial regulation inherently introduces bureaucratic processes. The firm offers massive scale and unparalleled technical learning, but candidates must actively clarify standards for sane hours and personal time, as guaranteed shutdowns and strict work-life balance are not historically standard in the banking s"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8031477349",
+    "d8d7930c75"
+   ],
+   "value": "Estimated: Moderate to low, depending heavily on the specific team. Bank-wide strict shutdowns are rare, and hours can spike during financial reporting or major system migrations."
   }
  },
  "jrk property holdings": {
@@ -235652,37 +235900,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not top-tier; operates as an established regional consultancy rather than a high-prestige tech or AI firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Consultancy model generating revenue through professional engineering services, energy audits, and specialized technical consulting for the built environment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Established and stable, focusing on engineering expertise and sustainability rather than rapid tech disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Clients requiring engineering, building performance, and energy efficiency expertise, including real estate developers, property managers, and construction firms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive for regional engineering/BI roles, but likely below elite big-tech new-grad benchmarks."
   },
   "evidence_sha": "644b63a588cd053e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785182200,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Engineering and Energy Consulting."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Candidates should clarify the company's tech culture pace, as established consultancies can sometimes lean toward bureaucracy rather than fast innovation. It is critical to ask about exact working hours, work-life balance policies, and specific technical growth opportunities to ensure the role meets personal time and career acceleration goals without sacrificing sanity."
+  },
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785180160,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Monroe Township, New Jersey, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "To provide expert engineering and energy consulting that improves building performance, sustainability, and energy efficiency for their clients."
+  },
   "name": "MaGrann Associates",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and project-driven, typical of an established engineering consultancy, which may lack the fast-paced innovation of a pure tech company."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Consulting services and technical solutions for energy efficiency, building performance, and sustainability, supported by internal business intelligence and data analysis tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate accrual (e.g., 15-20 days annually), unspecified in public listings."
   },
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235692,7 +235996,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not publicly listed; typical for standard engineering firms to remain operational year-round without guaranteed tech-style shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "51-200 employees; founded in 1982, indicating a stable, established small-to-medium business."
   },
   "sources": [
    {
@@ -235746,14 +236057,43 @@
     "url": "https://jobright.ai/jobs/info/6a6780e13b5e6b116a54efa1?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Has a historical track record of offering H1B sponsorships, though availability is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "MaGrann Associates is an established engineering and energy consulting firm based in Monroe Township, New Jersey. They provide specialized technical solutions for the built environment, leveraging data analysis and software development to optimize building performance and sustainability."
+  },
+  "synthesized_evidence_sha": "644b63a588cd053e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "Business intelligence and data analysis requiring Python, Java, C#, SQL, and knowledge of the Software Development Life Cycle (SDLC)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785180160,
   "web_search_url": "https://duckduckgo.com/?q=MaGrann+Associates+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "140b60ad57"
+   ],
+   "value": "This role may not align with the desire for a top-tier AI/Data Science role or elite new-grad pay associated with fast-paced tech companies. However, as a mission-driven consultancy focused on energy efficiency, it may offer a healthier work-life balance and sane hours compared to high-burnout tech environments, while still providing hands-on technical learning in BI and data analysis."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Sane and predictable, consistent with a traditional consultancy model, though specific shutdown or personal time policies are not public."
   }
  },
  "maigrate": {
@@ -396327,12 +396667,92 @@
   }
  },
  "ttm technologies": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "d5d236a4a6fbad67",
-  "last_evidence_at": 1785179882,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "81ea43fe6812ad2e",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785182204,
   "name": "TTM Technologies",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bcc15803bf",
+    "kind": "company_web",
+    "publisher": "TTM Technologies",
+    "retrieved_at": 1785182204,
+    "title": "TTM Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b4457b00a0a1f0f987cb55cb62b9882387aad7ab9616468222ffdbddef582738JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=12424671-8572-66c5-2ae6-51d28486677c&u=a1aHR0cHM6Ly9pbnZlc3RvcnMudHRtLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fb88df6dbe",
+    "kind": "company_web",
+    "publisher": "TTM Technologies",
+    "retrieved_at": 1785182204,
+    "title": "TTM Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=117e7835252c6d1b0529260e830c508d91fd09816a459782d6de266c99efe8d7JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=12424671-8572-66c5-2ae6-51d28486677c&u=a1aHR0cHM6Ly93d3cuaW52ZXN0b3BlZGlhLmNvbS90ZXJtcy90L3R0bS5hc3A&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1c7ae520af",
+    "kind": "company_web",
+    "publisher": "TTM Technologies",
+    "retrieved_at": 1785182204,
+    "title": "TTM Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b8219489106b1a722bc397a380e89f05e2a560b134b39dc0e0c106a73bb0be86JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=12424671-8572-66c5-2ae6-51d28486677c&u=a1aHR0cHM6Ly93d3cudHRtLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "TTM Technologies",
+    "retrieved_at": 1785182204,
+    "title": "Discovery source for TTM Technologies",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "d1ed50407bf74d5d",
     "excerpt": "Company TTM Technologies Glassdoor 3.0 TTM Technologies is a global provider of time-critical and technologically complex printed circuit board products. is a leading global manufacturer of technology products, including mission systems and advanced printed circuit boards. For some positions, only PTO and holiday benefits are offered. Embedded Software Engineer I @ TTM Technologies",
@@ -396344,7 +396764,15 @@
     "url": "https://jobright.ai/jobs/info/6a677931872eb74f9ead936c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785182204,
+  "web_search_url": "https://duckduckgo.com/?q=TTM+Technologies+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "tuesday health": {
   "ai_ds_prestige_tier": {
@@ -403504,37 +403932,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche Regional Player. Not a 'Tier 1' firm in artificial intelligence/data science prestige, but a stable, mission-driven regional employer where AI/DS is applied to core business operations rather than sold as a product, which makes this a poor fit for top-tier AI prestige perception a role at a top-tier research or big-tech shop would provide."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Operates on a nonprofit, community-rated insurance model where member premiums and government reimbursements fund the cost of care, with any surplus reinvested into the plan's reserves or community health initiatives rather than paid out to shareholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "The culture is likely community-oriented, stable, and collaborative, which resonates with the local mission commitment. The comparative pace of change is slow and decision-making can feel bureaucratic and hierarchical."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Individuals, families, employer groups, and government program beneficiaries (Medicare and Medicaid) located in upstate New York, where the company is a dominant regional payer."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 – $90,000 base, reflective of regional and industry pay for new-grad data analyst/scientist roles in upstate New York at a health insurer."
   },
   "evidence_sha": "5d448eb17a722430",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785182200,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Healthcare: Health Insurance / HMO"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785182200,
   "last_evidence_at": 1785180159,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Headquartered in Buffalo, New York, with a primary operational focus exclusively in upstate New York. Likely offers hybrid or remote options within the region, but no evidence of a highly distributed global workforce was found."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "To be a community-based, nonprofit health plan dedicated to improving the health and well-being of the communities it serves by collaborating with local doctors and hospitals."
+  },
   "name": "Univera Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and process-driven. Projects are expected to be slower than a tech startup or 'FAANG' due to heavy regulatory compliance (HIPAA, NY State Department of Financial Services). Innovation is applied carefully, creating a calm, predictable, low-urgency environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b",
+    "77a90c690c"
+   ],
+   "value": "Core products include HMO, PPO, EPO, Medicare Advantage, and Medicaid managed care health plans, supplemented by prescription drug coverage, dental, and vision plans. The company also offers wellness programs and employer-focused health management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: conservative 15-20 days of PTO to start, plus standard holidays, which is typical for a large health insurer."
   },
+  "refresh_after": 1790366200,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -403544,7 +404027,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns are expected, though a standard range of federal holidays is certain. Slow periods during the winter holidays (Christmas to New Year's) are common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Estimated: Large, mature organization. Univera is part of the Lifetime Healthcare Companies family (which includes Excellus BCBS and Univera), serving hundreds of thousands of members, though exact employee count and revenue are not readily available for Univera alone."
   },
   "sources": [
    {
@@ -403588,14 +404078,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsorship for new-grad tech roles is unlikely. As a regional, nonprofit health plan with a local community focus, the standard is typically hiring candidates with permanent, unrestricted US work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Univera Healthcare is a regional nonprofit health plan serving upstate New York, providing medical, dental, and vision coverage to individuals, families, and employers. The company operates as a health maintenance organization (HMO) and functions as a licensee of Excellus BlueCross BlueShield, earning revenue primarily through member premiums and administrative fees."
+  },
+  "synthesized_evidence_sha": "5d448eb17a722430",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "Technical work likely centers on healthcare data management, claims processing, and analytics to support population health and risk adjustment. The focus is on data-driven decision-making within a highly regulated insurance environment, leveraging technologies like Snowflake, Databricks, or similar data platforms. No evidence of consumer-facing 'big data' products like recommendation engines was found; the core is internal operational and clinical analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785180159,
   "web_search_url": "https://duckduckgo.com/?q=Univera+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c9d2564f7b"
+   ],
+   "value": "For a candidate seeking a mission-driven role, Univera offers a clear community impact in healthcare and a nonprofit structure that potentially translates to a less cutthroat, more stable environment. The insurance industry's slow pace is a double-edged sword: it directly counters a 'toxic hustle culture' and provides sane hours, directly addressing the candidate's need for hard shutdowns and guaranteed work-life balance, but it lags on 'fast, innovative tech culture.' The location in upstate Ne"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. The nonprofit, strong regional insurance model reliably provides minimal 'fire drills' and the ability to fully disconnect. Strong boundaries are the norm."
   }
  },
  "university of alabama at birmingham": {
