@@ -41320,41 +41320,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche Prestige. Highly respected in industrial AI and mission-critical government sectors."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "B2B enterprise AI platform providing measurable operational results and asset optimization for industrial and government sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Deeply technical, domain-focused, and mission-driven, centered on complex systems optimization."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "Industrial, logistics, and government partners, including specific mentions such as Draslvoska for mining and the Air Force Life Cycle Management Center."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base salary."
   },
   "evidence_sha": "707ddaadc527858f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785165287,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785161454,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "Enterprise Software / Industrial Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c7c31f8a1",
+    "17f8c9c419"
+   ],
+   "value": "Candidates should emphasize readiness to tackle complex, mission-critical AI challenges in industrial and government settings. Be prepared to discuss how to balance fast-paced innovation in an enterprise B2B environment while maintaining sustainable work practices and rapid technical learning."
+  },
+  "last_attempt_at": 1785165287,
   "last_evidence_at": 1785161114,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "Dayton, OH (based on upcoming event participation); overall company headquarters or remote work policy not explicitly detailed."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "To provide operational clarity across complex networks by delivering AI-powered solutions that optimally manage assets, fleets, people, and networks."
+  },
   "name": "Avathon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven pace typical of enterprise AI contracts, requiring fast delivery but avoiding toxic consumer-tech burnout."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "AI and agentic applications including preventive maintenance optimization for power grids and real-time video intelligence for field operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO annually."
   },
-  "retry_after": 1785161694,
+  "refresh_after": 1790349287,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41364,7 +41417,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Potential standard holiday closures, though specific guaranteed shutdowns were not found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage enterprise AI company with established partnerships in government and heavy industry."
   },
   "sources": [
    {
@@ -41408,14 +41466,44 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Standard enterprise AI company sponsorship footprint; not explicitly confirmed for new grad roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "Avathon develops an Industrial AI platform designed to equip industrial, logistics, and government partners with deep domain knowledge powered by AI and agentic applications. The company monetizes by enabling these partners to optimally manage and future-proof their assets, fleets, people, and networks."
+  },
+  "synthesized_evidence_sha": "707ddaadc527858f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3c7c31f8a1"
+   ],
+   "value": "Developing AI and agentic applications focused on industrial autonomy, preventive maintenance, and real-time video intelligence."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785161114,
   "web_search_url": "https://duckduckgo.com/?q=Avathon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c7c31f8a1",
+    "17f8c9c419"
+   ],
+   "value": "Avathon aligns with a mission-driven AI career by offering technical work on complex, real-world industrial applications rather than abstract consumer tech. The focus on operational clarity and measurable enterprise results suggests a fast-paced, innovative environment where AI directly impacts critical infrastructure challenges."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard toGood. B2B enterprise environments generally foster predictable, sustainable hours compared to consumer tech."
   }
  },
  "aveva": {
@@ -259676,109 +259764,141 @@
  "national life": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3: Respected actuarial/data analytics team; not an AI research hub."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: Low. As a traditional life insurance firm, it is not recognized as a top-tier AI or data science employer."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Earns revenue through insurance premiums, investment management fees, annuity fees, and mortality/expense charges on policies. Operates as a mutual company (policyholder-owned)."
+   "value": "Premium-based revenue generated from underwriting life and annuity policies."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Conservative, collaborative, mission-oriented, low-politics. Long tenures common. Values stability and policyholder trust over disruption."
+   "confidence": "high",
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Professional, compliance-oriented, and focused on continuous learning regarding regulations and organizational processes."
   },
   "customers": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Individuals seeking life insurance and retirement solutions, families, small to mid-size businesses, and independent financial advisors."
+   "value": "Individuals and organizations seeking life insurance coverage and annuity products."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85k-$105k base + 5-10% bonus + pension/401k match. Total comp ~$95k-$115k. Below FAANG but high for insurance."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: $75,000 - $95,000. Typical for analyst or entry-level tech roles in the insurance sector, falling short of elite tech compensation."
   },
   "evidence_sha": "eb483ed0d8d08d57",
-  "generated_at": 1784881688,
+  "generated_at": 1785165287,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Insurance / Financial Services (Life & Annuities)"
+   "value": "Insurance (Life and Annuity)"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect actuarial science, statistical modeling, and SQL/Python practical tests. Behavioral questions on ethics, long-term thinking, and collaboration. Ask about: modern stack adoption (cloud, ML ops), mentorship programs, typical project cycles, and how innovation is balanced with regulatory compliance."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Probe deeply into actual tech stack modernization, AI project runway, and day-to-day engineering pace to ensure you aren't stepping into a purely compliance-driven, slow bureaucracy that contradicts your desire for fast technical learning and innovation."
   },
-  "last_attempt_at": 1785161296,
+  "last_attempt_at": 1785165287,
   "last_evidence_at": 1785158646,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
+    "17fb2e2051",
+    "88fbb0fd5f",
     "56120e75ed"
    ],
-   "value": "Headquarters: Montpelier, Vermont. Additional offices in major U.S. cities. Hybrid/remote options likely for tech roles."
+   "value": "Not explicitly stated in available sources, though URLs suggest ties to National Car Rental redirects which may indicate twisted or masked source links."
   },
   "mission": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "To provide financial security and peace of mind through life insurance and retirement solutions, helping people protect what matters most."
+   "value": "The company's mission extends beyond the insurance and annuities policies that they offer, emphasizing professional expertise and organizational processes."
   },
   "name": "National Life",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-slow: Regulatory constraints and actuarial rigor prioritize accuracy over speed. Sprints measured in months, not weeks."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: Slow to moderate. Insurance compliance environments typically favor methodical, bureaucratic processes over fast-paced innovation."
   },
   "products": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Life insurance policies (term, whole, universal), annuities, retirement planning products, and investment advisory services."
+   "value": "Life insurance and annuities policies, alongside related compliance and investigative oversight services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + potential year-end shutdown week."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: 15-25 days. Standard for established insurance firms, though exact policies are not public."
   },
-  "refresh_after": 1790065688,
-  "retry_after": 1785161776,
+  "refresh_after": 1790349287,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely observes week between Christmas and New Year as company-wide shutdown; additional summer Fridays possible."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: None guaranteed. No company-wide shutdowns were mentioned in the available sources."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Established mutual insurance company founded 1848; ~$100B+ assets under management; ~1,500-2,000 employees; mature, stable, private (mutual) ownership."
+   "value": "Established corporate insurance provider with dedicated compliance and investigative units."
   },
   "sources": [
    {
@@ -259833,38 +259953,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B for specialized actuarial, data science, and engineering roles. Mutual company structure may mean slower sponsorship processes than big tech."
+   "confidence": "high",
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Visa sponsorship is not offered for compliance analyst positions."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "National Life is a life insurance and financial services company based in Vermont, offering life insurance, annuities, and investment products to individuals and businesses."
+   "value": "National Life is an insurance provider offering life and annuity policies. It makes money by collecting premiums and managing those funds to pay out policies."
   },
-  "synthesized_evidence_sha": "6e77cbd3bd64008a",
+  "synthesized_evidence_sha": "eb483ed0d8d08d57",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "56120e75ed"
+    "86b452c9a2",
+    "3081bef3d3"
    ],
-   "value": "Actuarial modeling, data analytics, policy administration systems, digital customer platforms, risk modeling, and legacy system modernization. Growing investment in AI/ML for underwriting, claims, and customer experience."
+   "value": "Includes compliance analysis, special investigative unit work, and regulatory application to organizational processes."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=National+Life+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers a mission-driven, stable environment with strong work-life balance typical of established mutual insurers—predictable hours, low burnout risk, and meaningful consumer protection work. Technical prestige is moderate: solid actuarial/data science reputation but not an AI research leader. Pay is competitive for the industry but below top-tier tech. Culture emphasizes steadiness over speed, which aligns with your desire for sane hours and learning without sacrifice, but may feel slow if you w"
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "As a traditional life and annuity insurance provider, National Life likely lacks the elite prestige, high new-grad pay, and fast-paced AI/tech culture you are seeking; its compliance-centric roles reflect a slow bureaucratic environment rather than an innovative data science hub."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "4/5: Strong work-life balance culture; 40-45 hr weeks typical; minimal on-call; generous holiday shutdowns common in insurance."
+   "source_ids": [
+    "86b452c9a2",
+    "3081bef3d3"
+   ],
+   "value": "Estimated: Good. Traditional insurance companies often maintain standard corporate hours, which may support work-life balance, though guaranteed shutdowns are unconfirmed."
   }
  },
  "national life group": {
