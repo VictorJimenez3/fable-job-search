@@ -18075,81 +18075,103 @@
  "alphalife sciences": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 (emerging/specialized) \u2014 not a widely recognized AI brand, but offers domain-specific prestige in computational biology."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: Tier 2. As a specialized startup applying cutting-edge AI to clinical trials, it offers strong domain-specific technical prestige but lacks the broad elite name recognition of top-tier tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: B2B sales of life sciences products/services, research partnerships, licensing, or SaaS platforms for drug discovery (common models in sector; not confirmed)."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: B2B enterprise SaaS or platform licensing model providing AI-driven clinical trial software to research and healthcare organizations."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven, science-first, collaborative between computational and wet-lab teams; likely less bureaucratic than large pharma but with higher ambiguity."
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Proactive, enthusiastic, eager to learn, and innovative."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Pharmaceutical companies, academic research institutions, biotech firms, and healthcare organizations (typical life sciences customer base)."
+   "confidence": "medium",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Organizations involved in clinical trials and real-world research (such as pharmaceutical companies, research institutions, and healthcare enterprises)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110k-$140k base + equity (0.05%-0.2%) + sign-on; total comp ~$130k-$170k, below top-tier big-tech but competitive for early-stage biotech."
+   "source_ids": [
+    "dea991ef6c",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary. Competitive AI startup new-grad pay, though the exact package is not public."
   },
   "evidence_sha": "aa7ca0a644f3280e",
-  "generated_at": 1784779005,
+  "generated_at": 1785188211,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Biotechnology / Life Sciences / AI-enabled Drug Discovery"
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Healthcare Technology / AI Software"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "dea991ef6c"
    ],
-   "value": "Ask: (1) What are typical weekly hours and whether the team has explicit 'no-meeting' days or shutdown periods? (2) How are on-call rotations structured for computational vs. wet-lab systems? (3) What does the first 90-day learning plan look like for a new-grad ML/bioinformatics hire? (4) Can you share the current PTO accrual and whether unused days carry over? (5) How are promotions and skill-growth conversations run without a formal rotational program?"
+   "value": "Evaluate if the startup pace genuinely respects work-life balance through sane hours and guaranteed shutdowns, or if it masks a high-burnout environment. Clarify new-grad compensation structures and explore how the fast culture accelerates technical learning and career growth."
   },
-  "last_attempt_at": 1784779005,
+  "last_attempt_at": 1785188211,
   "last_evidence_at": 1785185373,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Likely US-based (San Francisco Bay Area, Boston, or San Diego biotech hubs) given SimplifyJobs targeting; remote/hybrid options uncertain."
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Advancing life sciences through technology and innovation to improve human health outcomes (inferred from company name and sector)."
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "To globalize AuroraPrime in order to enhance clinical trials and real-world research by leveraging cutting-edge AI, cloud computing, and big data."
   },
   "name": "AlphaLife Sciences",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced, experiment-driven cycles typical of early-stage biotech; sprints tied to scientific milestones rather than pure software releases."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: Very fast. Listed as a fast-paced startup environment requiring proactive and eager team members."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Life sciences research tools, therapeutics, diagnostics, or biotechnology platforms (specific products not disclosed in sources)."
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "AuroraPrime, an AI-driven platform for clinical trials and real-world research powered by cloud computing and big data."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 10-15 days PTO + 8-10 company holidays (typical US biotech startup baseline; no public policy found)."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: 15-20 days. Standard startup PTO ranges, though exact policy is not public."
   },
-  "refresh_after": 1789963005,
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18158,15 +18180,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No documented company-wide shutdowns; may observe standard federal holidays only."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical startups rarely offer these."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "dea991ef6c"
    ],
-   "value": "Estimated: Early-to-growth stage startup (20-200 employees) given active new-grad recruiting on SimplifyJobs and limited public footprint."
+   "value": "Fast-paced startup environment."
   },
   "sources": [
    {
@@ -18221,38 +18245,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: May sponsor H-1B for STEM roles common in biotech; new-grad sponsorship likelihood moderate but unconfirmed."
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Unable to sponsor visas. Applicants must be authorized to work in the United States without the need for current or future visa sponsorship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "dea991ef6c"
    ],
-   "value": "AlphaLife Sciences appears to be a life sciences company that recruits new graduate talent through university-focused channels. The company's specific products, revenue model, and core business activities are not detailed in the available public sources."
+   "value": "AlphaLife Sciences develops an AI platform called AuroraPrime to enhance clinical trials and real-world research. By leveraging cutting-edge AI, cloud computing, and big data, they create technology aimed at globalizing and accelerating the clinical trial process."
   },
-  "synthesized_evidence_sha": "adac4e40b01c2ee4",
+  "synthesized_evidence_sha": "aa7ca0a644f3280e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Computational biology, bioinformatics, ML for drug discovery, laboratory automation, data pipelines, and scientific software engineering."
+   "confidence": "high",
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Building and scaling AI software solutions utilizing cutting-edge AI, cloud computing, and big data technologies within a startup environment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784701765,
   "web_search_url": "https://duckduckgo.com/?q=AlphaLife+Sciences+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "dea991ef6c"
    ],
-   "value": "AlphaLife Sciences recruits new grads via SimplifyJobs, signaling openness to early-career talent in a sector where AI/data science drives drug discovery. As a likely early-stage biotech, it may offer faster iteration and closer-to-science work than big tech, with potential for equity upside. However, the absence of public WLB policies, shutdown guarantees, or structured mentorship means you must probe directly for the sane-hours, low-burnout culture you prioritize."
+   "value": "AlphaLife Sciences offers the fast-paced, innovative startup culture and cutting-edge AI technical work you are looking for, avoiding slow bureaucracy. The mission-driven focus on healthcare and clinical trials also aligns with your desire for meaningful work."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3/5 \u2014 early-stage life sciences often demands flexibility around experiments; no public evidence of guaranteed shutdowns or strict hour caps."
+   "source_ids": [
+    "dea991ef6c"
+   ],
+   "value": "Estimated: Moderate. The fast-paced startup nature indicates high intensity, meaning work-life balance may require intentional personal boundaries to avoid burnout."
   }
  },
  "alta resource technologies": {
@@ -62986,37 +63016,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier Prestige. It is a well-known financial firm with a real data science practice, but it is not in the elite tier of top AI research labs or Big Tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Technology-driven financial services company earning revenue through interest income, interchange fees, and service fees from its suite of credit and savings products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, stable, and inclusive. The vibe leans toward a collaborative corporate culture with a genuine focus on managing workload and maintaining boundaries, not a hustle-and-grind style."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Individual consumers seeking credit and savings products, and retailers or brands seeking to offer branded payment and loyalty solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for a new-grad AI/Data Science role in a non-coastal U.S. office, with a bonus target of 5-10%."
   },
   "evidence_sha": "2394d7b16e05a5e5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_evidence_at": 1785187823,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Financial Services / Credit Cards & Consumer Lending"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188041,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Headquartered in Columbus, Ohio, with additional offices in the U.S. and possibly India. Remote or hybrid roles depend on the specific team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "To help people spend, save, and live better with simple, smart financial solutions."
+  },
   "name": "Bread Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slightly above-average for finance, significantly slower than top-tier tech or startups. Bureaucracy is present but not debilitating; the focus is on stable, compliant delivery rather than breakneck speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Private-label credit cards (e.g., for retailers), co-branded credit cards, direct-to-consumer personal loans, and high-yield savings accounts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off per year for new corporate employees, plus standard holidays."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -63026,7 +63110,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns outside of standard U.S. public holidays; however, informal slowdowns are common around year-end holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897",
+    "17f8c9c419"
+   ],
+   "value": "Large, publicly traded enterprise (NYSE: BFH) with thousands of employees."
   },
   "sources": [
    {
@@ -63065,7 +63157,7 @@
     "id": "17f8c9c419",
     "kind": "discovery_feed",
     "publisher": "Bread Financial",
-    "retrieved_at": 1785187823,
+    "retrieved_at": 1785188041,
     "title": "Discovery source for Bread Financial",
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    },
@@ -63090,14 +63182,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=2ce06ad00a37eef450e02460cf270f034affac2168c2820fef1e718e0876a0a9JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnJlYWQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a0b7b48897"
+   ],
+   "value": "Bread Financial is a financial services company that provides private-label and co-branded credit cards, direct-to-consumer lending, and savings products, primarily in the United States. It generates revenue from interest and fees on credit products, as well as from merchant partnerships and payment processing services."
+  },
+  "synthesized_evidence_sha": "6c5bb483bdc4e3eb",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187823,
+  "web_researched_at": 1785188041,
   "web_search_url": "https://duckduckgo.com/?q=Bread+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bread Financial offers a spot in a stable, mid-tier public company where a new grad can work on impactful AI/DS problems in credit and fraud at scale, while estimates suggest the culture prioritizes manageable, sane hours over the burnout common in elite tech. The company is not primarily a tech giant, which often translates to a slower pace, less prestigious peer set, and less competitive base salary than top-tier tech firms, so it balances prestige and pay against robust work-life boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Standard 40-45 hour weeks are the norm, avoiding the 'crunch' culture of some tech firms. Weekend work is rare except for critical issues."
   }
  },
  "brenntag": {
@@ -77757,11 +77872,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77773,7 +77890,8 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1785187822,
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188035,
   "name": "Caterpillar",
   "pace_of_work": {
    "confidence": "estimated",
@@ -77785,6 +77903,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1785188331,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77833,7 +77952,7 @@
     "id": "17f8c9c419",
     "kind": "discovery_feed",
     "publisher": "Caterpillar",
-    "retrieved_at": 1785187822,
+    "retrieved_at": 1785188035,
     "title": "Discovery source for Caterpillar",
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    },
@@ -77858,9 +77977,9 @@
     "url": "https://www.bing.com/ck/a?!&&p=7273bc0b9a8c2931603175c6132e14c9b7b79a176c8970e2396edb2dff6bcb12JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly93d3cuY2F0LmNvbS9lbl9VUy5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187822,
+  "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Caterpillar+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
@@ -81734,7 +81853,7 @@
     "id": "1db9db9c4d",
     "kind": "discovery_feed",
     "publisher": "Chainlink Labs",
-    "retrieved_at": 1785187821,
+    "retrieved_at": 1785188034,
     "title": "Discovery source for Chainlink Labs",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    },
@@ -85747,48 +85866,141 @@
  "cigna": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Non-tech legacy tier. Not recognized as an elite AI or data science employer due to lack of FAANG-level prestige or fast-paced tech culture."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Premiums-based revenue with cost management through integrated pharmacy and care delivery services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Estimated: Professional and mission-driven, prioritizing stability and compliance. Unlikely to match the elite, innovative technical culture found in pure tech firms."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Employers, individuals, families, and government entities seeking health insurance and benefits administration."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $95,000 - $125,000 base salary. Likely lacks the elite top-tier new-grad signing bonuses and RSUs common at FAANG companies."
   },
   "evidence_sha": "d35eacbe736bdfc6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_evidence_at": 1785187823,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Healthcare and Health Insurance."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Probe heavily for team-specific\u654f\u6377\u6027, the speed of deploying models, and whether the team uses modern AI stacks or legacy IT. Ask about production uptime expectations and on-call duties to ensure the role respects your boundary against toxic burnout. Clarify compensation bands and learning budgets to see if they can match your elite pay and rapid growth requirements."
+  },
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188036,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e90d03012"
+   ],
+   "value": "Headquartered in Bloomfield, CT with a global footprint."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "To improve the health, well-being, and peace of mind of those they serve."
+  },
   "name": "Cigna",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3c33bb0b3f",
+    "6e90d03012"
+   ],
+   "value": "Estimated: Slow to moderate. Characteristics of a large legacy corporation where projects often navigate compliance and bureaucracy rather than moving fast."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Health insurance plans, Medicare Advantage, pharmacy benefit management, behavioral health, and global health benefits."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "3c33bb0b3f",
+    "6e90d03012"
+   ],
+   "value": "Estimated: 20-25 days of flexible PTO annually, which is standard for large legacy corporations but may lack the unlimited perks of modern tech firms."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3c33bb0b3f",
+    "6e90d03012"
+   ],
+   "value": "Estimated: None found in research. Health services are continuous, so likely no guaranteed company-wide shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "6e90d03012"
+   ],
+   "value": "Large public company."
   },
   "sources": [
    {
@@ -85827,7 +86039,7 @@
     "id": "17f8c9c419",
     "kind": "discovery_feed",
     "publisher": "Cigna",
-    "retrieved_at": 1785187823,
+    "retrieved_at": 1785188036,
     "title": "Discovery source for Cigna",
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    },
@@ -85852,14 +86064,52 @@
     "url": "https://www.bing.com/ck/a?!&&p=796522aa99ddefaa1b8a3eae5d8089f46addc59abe2d4b851f6645ed6669d6b0JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly9teS5jaWduYS5jb20vd2ViL3B1YmxpYy9ndWVzdA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "No specific sponsorship details found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Cigna is a global health services and insurance company that provides medical, dental, disability, and Medicare products. It makes money by collecting premiums from members and employers, then managing healthcare costs and service delivery."
+  },
+  "synthesized_evidence_sha": "1d690881337d7e8c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science and AI roles likely focus on actuarial modeling, claims analytics, cost prediction, and personalized health recommendations."
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187823,
+  "web_researched_at": 1785188036,
   "web_search_url": "https://duckduckgo.com/?q=Cigna+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3c33bb0b3f",
+    "c45639285d",
+    "6e90d03012"
+   ],
+   "value": "Cigna offers a mission-driven environment focused on health outcomes, which aligns with your desire for meaningful work. While its scale provides stability, the pace may feel slower and more bureaucratic than the fast, elite tech culture you prefer. Expect sane hours reflecting a traditional corporate WLB rather than the high-intensity startup innovation you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3c33bb0b3f",
+    "6e90d03012"
+   ],
+   "value": "Estimated: Good. Large health insurance companies typically maintain traditional corporate hours, offering a balanced alternative to high-burnout tech environments."
   }
  },
  "cimarron inc": {
@@ -92546,48 +92796,125 @@
  "cno financial group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise Insurance). Unlikely to be considered top-tier AI prestige compared to big tech or specialized AI firms, but offers solid enterprise data science experience."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "B2B2C insurance distribution: Sells products through a network of independent agents, direct marketing, and digital channels, earning revenue from policy premiums and investment income."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Stable, mission-driven, and collaborative, but may feature bureaucratic processes typical of established financial institutions."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Middle-income working families and retirees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Competitive for the Midwest/Carmel location but below the elite new-grad pay bands of big tech."
   },
   "evidence_sha": "b11d381ed06c23b5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_evidence_at": 1785187820,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Insurance (Financial Services)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Candidates should probe the specific AI/data science projects, tech stack modernization initiatives, and team dynamics to assess if the culture is sufficiently fast-paced and innovative. Ask about WLB policies, shutdowns, and actual hours to ensure it meets personal time priorities."
+  },
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188034,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Headquartered in Carmel, Indiana, with other office locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "To secure the future of middle-income America."
+  },
   "name": "CNO Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Moderate to slow, typical of traditional enterprise insurance, which may conflict with a preference for a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Life insurance, health insurance, accident insurance, and Medicare supplement insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO, consistent with typical corporate insurance benefits."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Likely offers paid holidays, but guaranteed company-wide shutdowns are not publicly documented for this profile."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Public company, mid-to-large cap."
   },
   "sources": [
    {
@@ -92626,7 +92953,7 @@
     "id": "1db9db9c4d",
     "kind": "discovery_feed",
     "publisher": "CNO Financial Group",
-    "retrieved_at": 1785187820,
+    "retrieved_at": 1785188034,
     "title": "Discovery source for CNO Financial Group",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    },
@@ -92651,14 +92978,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=f0006eeccfbde90f1d8ab85920145a0a275110ccd4dd8c4e78a5b8156d04a267JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly93d3cuZmVkZXguY29tL2VuLXVzL3RyYWNraW5nLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: May offer visa sponsorship for specialized roles, but not widely publicized for standard new-grad positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7b72f9cd48",
+    "cd4c070c56"
+   ],
+   "value": "CNO Financial Group is a holding company that provides insurance solutions, focusing on middle-income working families and retirees. It makes money by collecting premiums and generating returns on its investment portfolio."
+  },
+  "synthesized_evidence_sha": "446da764594eaab1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Data engineering, predictive analytics, and enterprise software development to support insurance underwriting, claims processing, and agent platforms."
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187820,
+  "web_researched_at": 1785188034,
   "web_search_url": "https://duckduckgo.com/?q=CNO+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "This role offers a stable tech environment with a mission-driven focus, but may not fully align with the candidate's desire for elite AI prestige or hyper-fast, innovative tech culture, as enterprise insurance tends to be more bureaucratic and slower-paced."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7b72f9cd48"
+   ],
+   "value": "Estimated: Good, with standard corporate hours likely respected, aligning well with the candidate's priority for sane hours and avoiding burnout."
   }
  },
  "coalition": {
@@ -115336,38 +115695,94 @@
  "dealer tire": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Estimated: Low-tier. The company's technical stack appears focused on traditional web development rather than elite AI or data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Business-to-business (B2B) wholesale distribution of automotive parts and tires."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Estimated: Traditional corporate environment focused on supply chain logistics and automotive industry stability, backed by private equity (Lindsay Goldberg)."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Automotive dealerships."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $75,000 per year for junior web development roles, which may fall below elite new-grad pay expectations."
   },
   "evidence_sha": "74721a1ec7ab66ec",
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Automotive parts and tire wholesale distribution."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should assess the company's tech stack modernization efforts to ensure it meets their desire for a fast, innovative AI/data science environment. They should probe into work-life balance policies, expected hours, and opportunities for rapid career growth to verify it aligns with their goal of technical acceleration without burnout."
   },
-  "last_evidence_at": 1785187822,
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188035,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Headquartered in Cleveland, Ohio, with at least one office in Canton, Michigan."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Dealer Tire",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady. The environment is likely influenced by standard enterprise corporate and supply chain rhythms rather than rapid tech-sector\u8fed\u4ee3."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Tires and related automotive parts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off per year."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115377,7 +115792,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, aside from standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Established company with 1001-5000 employees, founded in 1999."
   },
   "sources": [
    {
@@ -115416,7 +115838,7 @@
     "id": "1db9db9c4d",
     "kind": "discovery_feed",
     "publisher": "Dealer Tire",
-    "retrieved_at": 1785187822,
+    "retrieved_at": 1785188035,
     "title": "Discovery source for Dealer Tire",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    },
@@ -115441,14 +115863,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc79e6e37c0602ff55760af6463c2fb09313e17399a3ad5ef9e1662a3e077ec5JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly9zZXRod2FkbGV5Y2hldnlvZnBlcnJ5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Dealer Tire is a wholesale distributor of tires and automotive parts. It makes money by purchasing these products in bulk from manufacturers and supplying them to automotive dealerships."
+  },
+  "synthesized_evidence_sha": "876cade87d629ef1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "71fe6609f0"
+   ],
+   "value": "Web development utilizing HTML, CSS, JavaScript, C#, and Visual Studio."
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187822,
+  "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Dealer+Tire+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "An established, private-equity-owned distributor may not offer the elite AI/data science prestige or fast-paced, innovative tech culture desired by top-tier new grads. The traditional nature of enterprise B2B logistics might lean toward slower bureaucracy rather than cutting-edge technical acceleration, making it a potential mismatch for candidates prioritizing high-growth, tech-first environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Traditional, non-tech-native companies often feature sane, regular hours."
   }
  },
  "debtbook": {
@@ -136157,7 +136606,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1785187823,
+  "last_evidence_at": 1785188041,
   "name": "Envista Holdings",
   "pace_of_work": {
    "confidence": "estimated",
@@ -136244,7 +136693,7 @@
   ],
   "status": "evidence_only",
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187823,
+  "web_researched_at": 1785188041,
   "web_search_url": "https://duckduckgo.com/?q=Envista+Holdings+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
@@ -236159,34 +236608,76 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Insufficient public data for company-specific estimate"
   },
   "evidence_sha": "59fcc3446ba01572",
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate prioritizes evaluating prestige/pay balance, culture speed vs bureaucracy, genuine work-life balance enforcement, and learning acceleration. Interview should probe these areas directly given lack of public data."
+  },
+  "last_attempt_at": 1785188211,
   "last_evidence_at": 1785185660,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "MacDermid Alpha Electronics Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Insufficient public data for company-specific estimate"
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Insufficient public data for company-specific estimate"
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236196,7 +236687,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Insufficient public data for company-specific estimate"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -236240,14 +236736,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "MacDermid Alpha Electronics Solutions appears to be a company hiring for software engineering new graduate roles, but no detailed business description is available in the provided sources."
+  },
+  "synthesized_evidence_sha": "59fcc3446ba01572",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering new graduate positions posted (per monitored source)"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785185660,
   "web_search_url": "https://duckduckgo.com/?q=MacDermid+Alpha+Electronics+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without sacrificing personal time. Insufficient data to assess fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Insufficient public data for company-specific estimate"
   }
  },
  "mach industries": {
@@ -236894,7 +237415,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1785187823,
+  "last_evidence_at": 1785188036,
   "name": "Magna",
   "pace_of_work": {
    "confidence": "estimated",
@@ -236981,7 +237502,7 @@
   ],
   "status": "evidence_only",
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187823,
+  "web_researched_at": 1785188036,
   "web_search_url": "https://duckduckgo.com/?q=Magna+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
@@ -251009,7 +251530,7 @@
     "id": "1db9db9c4d",
     "kind": "discovery_feed",
     "publisher": "MetLife",
-    "retrieved_at": 1785187821,
+    "retrieved_at": 1785188034,
     "title": "Discovery source for MetLife",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    },
@@ -254921,37 +255442,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High \u2014 recognized for deploying computer vision at city scale, publishing at CVPR/ICCV, and partnering with top academic labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2G/B2B hardware-enabled SaaS: upfront sale of roadside sensors and cameras plus ongoing subscription fees for cloud analytics, data storage, and platform access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-oriented, low-ego, transparent; values learning and impact over optics; remote-inclusive with regular in-person hackathons."
   },
-  "estimated_new_grad_tech_pay": {
+  "customers": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "City and regional transportation departments, public works agencies, engineering consultancies, and smart-city initiatives primarily in North America."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "high",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "CA$85,000\u201395,000 base (Data Scientist I, entry level, per official posting); equity and bonus potential additional."
   },
   "evidence_sha": "fb7d4da2f2f67868",
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "Transportation technology / Smart cities / Applied AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on ML fundamentals, computer vision, and production data pipelines; behavioral emphasis on collaboration, ownership, and alignment with public-sector impact; minimal LeetCode-heavy algorithm grilling."
   },
+  "last_attempt_at": 1785188211,
   "last_evidence_at": 1785185661,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "Headquarters in Waterloo, Ontario; remote-friendly across Canada with occasional on-site collaboration."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "Transform transportation networks through advanced traffic AI to make cities safer, cleaner, and more efficient."
+  },
   "name": "Miovision",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; quarterly planning with protected focus time; rare weekend work."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traffic data collection sensors (Scout), AI analytics platform (TrafficLink), intersection performance measurement tools, and cloud-based traffic management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 vacation days + 10 statutory holidays + 5 personal/wellness days (Canadian norm for tech)."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254961,7 +255532,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24\u2013Jan 1) plus summer long-weekend Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200\u2013500 employees; growth-stage private company (Series C/D equivalent) headquartered in Waterloo, Ontario."
   },
   "sources": [
    {
@@ -255015,14 +255591,39 @@
     "url": "https://jobright.ai/jobs/info/6a6792b85d2a117fb9cec1e6?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Canadian employer; supports work permits (e.g., Global Talent Stream) for eligible candidates. No U.S. sponsorship indicated."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "Miovision develops AI-powered traffic management solutions that help cities optimize transportation networks through computer vision and data analytics. The company sells hardware sensors and software platforms to municipalities and transportation agencies, generating revenue via upfront hardware sales and recurring SaaS subscriptions."
+  },
+  "synthesized_evidence_sha": "fb7d4da2f2f67868",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Computer vision for vehicle/pedestrian detection, time-series forecasting, large-scale geospatial data pipelines, edge computing on sensor nodes, and simulation-based optimization of signal timing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785185661,
   "web_search_url": "https://duckduckgo.com/?q=Miovision+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "59e1b24d2e"
+   ],
+   "value": "Offers elite AI prestige in a mission-driven smart-city domain with competitive new-grad pay (CA$85K\u201395K) and a culture known for sustainable pace, genuine work-life balance, and accelerated technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 \u2014 strong cultural guardrails (core hours, meeting-free blocks, encouraged shutdown rituals)."
   }
  },
  "mirage": {
@@ -262621,48 +263222,126 @@
  "nasdaq": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: Tier 1.5 - High prestige in financial technology and time-series data applications, though viewed more as finance than pure big tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "63596f2309"
+   ],
+   "value": "Generating revenue through exchange transaction fees, corporate listing fees, and the sale of proprietary market data and SaaS financial technology."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: Mission-driven by market integrity and stability, blending traditional finance professionalism with modern engineering practices."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "63596f2309"
+   ],
+   "value": "Public companies seeking to list their stock, institutional investors, asset managers, and financial broker-dealers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Base salary ranging from $130,000 to $160,000, with potential for performance bonuses, aligning with top-tier financial tech new-grad roles."
   },
   "evidence_sha": "45924d99c79b83b4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_evidence_at": 1785187822,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "63596f2309"
+   ],
+   "value": "Capital Markets and Financial Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should focus on how Nasdaq's heavily regulated environment impacts the pace of data science work and technical learning, asking direct questions about new-grad pay bands, work-life balance, and after-hours expectations. It is critical to interview the team on typical sprint speeds and whether the culture supports personal time or demands aggressive, high-burnout availability."
+  },
+  "last_attempt_at": 1785188211,
+  "last_evidence_at": 1785188035,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Global headquarters in New York City with tech hubs globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "To power stronger markets and drive the global economy forward through innovative technology and financial services."
+  },
   "name": "Nasdaq",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: Moderate pace influenced by strict regulatory compliance and release cycles, which can feel like slow bureaucracy compared to fast-moving big tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "63596f2309",
+    "4450a1ad43"
+   ],
+   "value": "Stock exchange listing and trading services, market data feeds, financial analytics software, and capital market infrastructure technology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually, typical for large financial institutions."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "63596f2309"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, though standard market holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Large, established publicly traded financial technology corporation."
   },
   "sources": [
    {
@@ -262701,7 +263380,7 @@
     "id": "17f8c9c419",
     "kind": "discovery_feed",
     "publisher": "Nasdaq",
-    "retrieved_at": 1785187822,
+    "retrieved_at": 1785188035,
     "title": "Discovery source for Nasdaq",
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    },
@@ -262726,14 +263405,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=55b589a431abb4122df99974b053ddf261e0780f176519cacfe3e4d1e30f3b73JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly93d3cubmFzZGFxLmNvbS9tYXJrZXQtYWN0aXZpdHkvc3RvY2tz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: As a large, publicly traded financial institution, Nasdaq often sponsors work visas for specialized tech roles, though it is evaluated on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "63596f2309",
+    "4450a1ad43"
+   ],
+   "value": "Nasdaq is a global technology company that operates the famous Nasdaq stock exchange and provides financial technology, data, and analytics to the capital markets. It makes money by charging fees for trading services, listing company stocks, and selling market data and infrastructure software to financial institutions."
+  },
+  "synthesized_evidence_sha": "1e7608df51c91a5b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Building high-performance trading engines, scalable data pipelines, financial analytics software, and machine learning models for market surveillance."
+  },
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187822,
+  "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Nasdaq+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "4450a1ad43"
+   ],
+   "value": "Nasdaq blends elite financial brand prestige with high-tech data science challenges like market surveillance and high-frequency data processing, offering extensive technical learning. However, as a highly regulated financial entity, it may lean toward slower bureaucracy rather than a fast, innovative tech culture, and candidates must probe to ensure the specific team offers sane hours and avoids toxic burnout cycles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4450a1ad43"
+   ],
+   "value": "Estimated: Generally good work-life balance with sane hours, though peak market events or system outages can cause temporary spikes in workload and stress."
   }
  },
  "nassau community college": {
@@ -363410,7 +364122,7 @@
     "id": "1db9db9c4d",
     "kind": "discovery_feed",
     "publisher": "StaidLogic",
-    "retrieved_at": 1785187821,
+    "retrieved_at": 1785188034,
     "title": "Discovery source for StaidLogic",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    },
@@ -373657,37 +374369,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate. Highly specialized for consumer credit risk modeling, but generally lacks elite, broad industry prestige for cutting-edge AI/DS compared to top big-tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8513f568da"
+   ],
+   "value": "Generates revenue primarily through interest on outstanding credit balances, merchant fees from retail partners, and various consumer account fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, structured, and risk-aware, focusing on stability and operational security over disruptive innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "70d336d474"
+   ],
+   "value": "Consumers seeking retail store credit cards and promotional financing, as well as the retail and merchant partners relying on Synchrony for their credit programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000 base salary, potentially with modest sign-on bonuses, falling below elite big-tech new-grad compensation."
   },
   "evidence_sha": "bac6e56f5caf557a",
+  "generated_at": 1785188211,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8513f568da"
+   ],
+   "value": "Financial Services / Consumer Credit"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should assess the team's specific deployment cadence and innovation velocity to ensure it is not bogged down by legacy bureaucracy. It is critical to ask about exact working hours, on-call expectations, and whether the company enforces guaranteed shutdowns to protect work-life balance."
   },
+  "last_attempt_at": 1785188211,
   "last_evidence_at": 1785188041,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "70d336d474"
+   ],
+   "value": "Headquartered in the United States with corporate offices and data centers distributed nationwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70d336d474"
+   ],
+   "value": "To advance consumer financing by providing seamless, accessible credit solutions for shoppers and retail partners."
+  },
   "name": "Synchrony",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and measured, governed by strict financial compliance and risk management rather than a fast, rapid-iteration tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "40c691938b",
+    "70d336d474"
+   ],
+   "value": "Co-branded store credit cards, promotional consumer financing, and the Synchrony Mastercard."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-25 days of standard annual paid time off, typical for large enterprise US employers."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -373697,7 +374464,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread data indicating guaranteed company-wide shutdown periods; standard paid holidays likely apply."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "70d336d474"
+   ],
+   "value": "A large, established public financial services corporation."
   },
   "sources": [
    {
@@ -373731,14 +374505,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=14445f88da788df497f3baad34219746fcf22342627e0f7c1f3953cccbe601f4JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=118283aa-581e-63d9-3b68-940959216258&u=a1aHR0cHM6Ly93d3cuc3luY2hyb255LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70d336d474"
+   ],
+   "value": "Estimated: Likely provides standard corporate visa sponsorship for specialized tech and data roles, consistent with large US financial institutions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "40c691938b",
+    "8513f568da"
+   ],
+   "value": "Synchrony is a premier consumer financial services company that operates largely through its Synchrony Mastercard platform. It partners with retail brands to issue credit cards and provide promotional financing, generating revenue from interest, fees, and retailer network partnerships."
+  },
+  "synthesized_evidence_sha": "bac6e56f5caf557a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "40c691938b",
+    "8513f568da"
+   ],
+   "value": "Developing and securing digital financial platforms, credit scoring systems, and consumer-facing applications (such as the Synchrony Mastercard login and account management portals)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188041,
   "web_search_url": "https://duckduckgo.com/?q=Synchrony+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While Synchrony offers solid corporate stability, a large enterprise financial institution typically moves at a slower, more bureaucratic pace than a fast, innovative tech startup. New grad pay may be competitive but generally falls short of elite big-tech standards, and the culture prioritizes strict risk management over rapid technical acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally good, offering typical corporate stability and manageable hours, though it may lack explicit guaranteed shutdown policies."
   }
  },
  "synechron": {
@@ -402868,123 +403671,111 @@
  "ui health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: Tier 3 (Strong domain-specific impact in clinical health informatics, but lacks the elite technical prestige and compensation of top-tier tech firms or specialized AI startups)."
+   "source_ids": [],
+   "value": "Estimated: Tier 2 \u2014 Strong applied AI in clinical/research settings with access to Epic/EHR data and NIH-funded projects, but not a primary AI research lab like FAIR or Google Health."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Academic medical center generating revenue through patient care fees, tuition, and medical research grants."
+   "value": "Academic medical center revenue from clinical services (fee-for-service, value-based contracts), research grants, medical education funding (state, tuition, GME payments), and philanthropy."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: Mission-driven and educational, prioritizing patient care and academic research, but structurally bureaucratic."
+   "source_ids": [],
+   "value": "Estimated: Mission-driven, collaborative, hierarchical but collegial; strong emphasis on health equity and serving underserved populations. Tech teams embedded in clinical/research units."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Patients in the Chicago area seeking clinical care, medical and health sciences students, and research funding organizations."
+   "value": "Patients in the Chicago metropolitan area and Illinois, medical students and residents, research grant agencies (NIH, etc.), and insurance payers (Medicare, Medicaid, commercial)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: $75,000 - $90,000. Aligned with university and hospital system pay bands, lacking the top-tier private market scale."
+   "source_ids": [],
+   "value": "Estimated: $85k\u2013$110k base (University of Illinois academic professional pay bands), plus comprehensive benefits (pension, tuition waiver, health). Total comp lower than private tech but with strong stability."
   },
   "evidence_sha": "40507d2c1bccd1cf",
-  "generated_at": 1784883699,
+  "generated_at": 1785188211,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Healthcare and Academic Medicine."
+   "value": "Academic Healthcare / Health System / Academic Medical Center"
   },
   "interview_focus": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Probe deeply into the specific team's tech stack and deployment cadence to ensure it meets fast-paced innovation goals, and clarify work hours plus IT project timelines to avoid infamous public-sector red tape that could stall career growth."
+   "value": "Expect questions on healthcare data (EHR, claims, FHIR), privacy/compliance (HIPAA), model interpretability and fairness in clinical settings, and collaboration with clinicians. Prepare for behavioral questions on mission alignment and working in regulated, multidisciplinary environments."
   },
-  "last_attempt_at": 1784883699,
+  "last_attempt_at": 1785188211,
   "last_evidence_at": 1785185660,
   "locations": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Chicago, Illinois (Illinois Medical District)."
+   "value": "Primary campus in Chicago (Near West Side / Illinois Medical District), with outpatient clinics across Chicago and suburbs. Hybrid/remote options likely vary by role."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Comprehensive patient care, education, and research."
+   "value": "To provide exceptional clinical care, advance medical knowledge through research, and educate the next generation of healthcare professionals, with a focus on health equity and underserved communities."
   },
   "name": "UI Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: Slow to moderate. Driven by standard hospital IT procedures, academic calendars, and public sector processes rather than rapid tech iteration."
+   "source_ids": [],
+   "value": "Estimated: Moderate \u2014 Academic medical center pace with clinical deadlines, IRB/grant cycles, and Epic release schedules; generally slower than venture-backed tech but with periodic crunches (go-lives, audits)."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Healthcare services, academic medical education, and clinical research programs."
+   "value": "Clinical healthcare services (inpatient, outpatient, specialty care), medical education and residency programs, biomedical research, and population health initiatives."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: 20-25 days of annual leave plus university holidays, reflecting generous standard public sector academic benefits."
+   "source_ids": [],
+   "value": "Estimated: 15\u201320 vacation days + 10\u201312 university holidays + sick leave (University of Illinois System policy); exact accrual varies by appointment type."
   },
+  "refresh_after": 1790372211,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "3231f5da40"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: No formal tech team shutdowns, but benefit from standard academic and state holidays."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns; university observes standard federal/state holidays. Some departments may have reduced operations between Christmas/New Year."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Large established academic medical center and university enterprise."
+   "value": "Large, established nonprofit academic health system (~7,000+ employees, 500+ bed hospital, multiple outpatient centers, part of University of Illinois System)."
   },
   "sources": [
    {
@@ -403029,44 +403820,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Generally stable at large public university and hospital systems, but specific visa sponsorship data for tech roles is not publicly detailed."
+   "value": "As a large university-affiliated health system, UI Health likely sponsors H-1B and Green Cards for clinical, research, and specialized tech roles; new-grad sponsorship case-by-case."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40",
-    "663a337562"
+    "1db9db9c4d"
    ],
-   "value": "UI Health is the clinical, academic, and research enterprise of the University of Illinois Chicago, encompassing a hospital, outpatient clinics, and health sciences colleges. While direct sources did not provide detailed excerpts, as an academic medical center it generates revenue through clinical patient services, medical research grants, and educational programs."
+   "value": "UI Health is an academic medical center and health system that provides patient care, research, and education. It operates hospitals, clinics, and a college of medicine."
   },
+  "synthesized_evidence_sha": "40507d2c1bccd1cf",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "Health informatics, electronic health records (EHR) management, clinical data science, and healthcare IT."
+   "value": "Clinical informatics, EHR optimization (Epic), health data analytics, AI/ML for population health and clinical decision support, research computing, telehealth platforms, and interoperability/FHIR initiatives."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583404,
   "web_search_url": "https://duckduckgo.com/?q=UI+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "3231f5da40"
+    "1db9db9c4d"
    ],
-   "value": "The mission-driven nature of healthcare aligns with impactful work, but as a large public university hospital system, UI Health typically operates with slow bureaucracy rather than a fast, innovative tech culture, and new-grad pay is likely standardized to public sector bands rather than elite tech compensation."
+   "value": "UI Health offers a mission-driven academic medical center environment where AI/data science work directly impacts patient care and health equity. As a large public institution, it likely provides more structured hours and better work-life balance than private-sector tech, with access to rich clinical data and research collaborations. The new-grad posting suggests organized entry-level hiring."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "3231f5da40"
-   ],
-   "value": "Estimated: Good. Academic and hospital environments generally offer stable hours and public sector benefits, though unexpected IT outage responses in healthcare can occasionally disrupt schedules."
+   "source_ids": [],
+   "value": "Estimated: 3.5/5 \u2014 Public university benefits, unionized staff, and mission culture support reasonable hours; on-call for clinical systems may apply. Shutdowns not guaranteed."
   }
  },
  "ujet": {
@@ -440093,7 +440882,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1785187822,
+  "last_evidence_at": 1785188035,
   "name": "Zillow",
   "pace_of_work": {
    "confidence": "estimated",
@@ -440180,7 +440969,7 @@
   ],
   "status": "evidence_only",
   "web_research_status": "sources captured",
-  "web_researched_at": 1785187822,
+  "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Zillow+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
