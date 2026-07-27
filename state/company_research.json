@@ -16294,7 +16294,7 @@
    "value": "Estimated: Tier 3. UK SME digital bank, not a global AI powerhouse."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -16320,7 +16320,7 @@
    ],
    "value": "Established small and medium-sized enterprises (SMEs) and local businesses in the UK."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -16351,7 +16351,7 @@
    ],
    "value": "Probing culture is key. Ask about their engineering velocity, on-call expectations, and whether they offer guaranteed shutdowns to ensure they meet your WLB requirements."
   },
-  "last_attempt_at": 1784891151,
+  "last_attempt_at": 1785152469,
   "last_evidence_at": 1785147272,
   "locations": {
    "confidence": "estimated",
@@ -16397,6 +16397,7 @@
    "value": "Estimated: 25-30 days, standard for UK tech scale-ups."
   },
   "refresh_after": 1790075151,
+  "retry_after": 1785152709,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -16472,7 +16473,7 @@
    ],
    "value": "Estimated: Likely to sponsor visa candidates for senior engineering roles, but ambiguous for new grads."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -25206,20 +25207,18 @@
  "anduril": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "a43bad321c"
-   ],
-   "value": "Estimated: High/Tier 1. Building an AI-powered operating system (Lattice OS) for military command and control places Anduril among the elite tech companies working on real-world AI and autonomous systems."
+   "source_ids": [],
+   "value": "Estimated: High-tier, driven by leadership in deploying autonomous systems and cutting-edge AI robotics."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a43bad321c",
-    "12fbd9ff36"
+    "9eb25e3e66",
+    "ae1f47b6bd"
    ],
-   "value": "Anduril designs, builds, and sells advanced military hardware and software systems directly to government defense customers, focusing on rapid scaling and seamless integration of its product family."
+   "value": "Anduril operates at the intersection of commercial and defense worlds, generating revenue by developing and selling advanced hardware and software systems directly to defense and government customers."
   },
   "culture_vibe": {
    "confidence": "high",
@@ -25228,26 +25227,23 @@
     "3f6c5f469a",
     "12fbd9ff36"
    ],
-   "value": "A diverse and collaborative startup culture characterized by real ownership and small, mighty teams scaling through hyper-growth."
+   "value": "Diverse and collaborative, with a small but mighty team structure that provides real ownership and significant room for professional growth."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "9eb25e3e66",
-    "a43bad321c"
+    "ae1f47b6bd"
    ],
-   "value": "The U.S. military and allied defense forces, operating at the intersection of the commercial and defense worlds with a multinational footprint."
+   "value": "Defense customers operating in global operational environments, backed by Anduril's mission success and logistics teams."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "2b6d56767c"
-   ],
-   "value": "Estimated: High ($130k-$160k base), with a high-tempo growth environment and M&A activity suggesting competitive industry compensation."
+   "source_ids": [],
+   "value": "Estimated: Highly competitive tech market rates, likely ranging from $150k to $200k total compensation, driven by its large scale and top-tier talent requirements."
   },
   "evidence_sha": "62d4e7b235c48fe0",
-  "generated_at": 1784928575,
+  "generated_at": 1785152469,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -25256,60 +25252,62 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "738f038676"
+    "ae1f47b6bd",
+    "738f038676",
+    "9eb25e3e66"
    ],
-   "value": "Defense Technology"
+   "value": "Defense Technology & Manufacturing"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "2b6d56767c"
-   ],
-   "value": "Assess the true engineering pace, realistic expectations for work-life balance, and actual working hours. The candidate should probe heavily about team on-call expectations and shutdown policies to see if the role aligns with their goal of accelerated learning without personal time sacrifices."
+   "source_ids": [],
+   "value": "Candidates should weigh the high impact and hyper-growth culture against their priority for guaranteed shutdowns and strictly sane hours. Interview them on handling ambiguous, rapid-scaling environments to see if the technical acceleration justifies the intense pace and potential for long hours."
   },
-  "last_attempt_at": 1785138790,
+  "last_attempt_at": 1785152469,
   "last_evidence_at": 1785132211,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "9eb25e3e66",
-    "12fbd9ff36"
+    "ae1f47b6bd",
+    "9eb25e3e66"
    ],
-   "value": "Anduril operates across a multinational footprint, with various facilities supporting its Air Dominance & Strike division and broader corporate operations."
+   "value": "Anduril operates globally, requiring understanding of a multinational footprint, with operational environments that include global deployments."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a43bad321c"
+    "ae1f47b6bd",
+    "738f038676",
+    "9eb25e3e66"
    ],
-   "value": "To transform U.S. and allied defense capabilities by bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry."
+   "value": "To transform U.S. defense technology and tackle complex challenges at the intersection of the commercial tech and defense worlds."
   },
   "name": "Anduril",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "2b6d56767c"
+    "2b6d56767c",
+    "12fbd9ff36"
    ],
-   "value": "Estimated: Very fast. Anduril actively seeks individuals who thrive in high-tempo, ambiguous environments where the answers aren't in a playbook yet."
+   "value": "Estimated: High-tempo, hyper-growth, and fast-paced. Employees must thrive in ambiguous environments where the answer isn't in a playbook."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "3f6c5f469a",
-    "a43bad321c"
+    "ae1f47b6bd",
+    "738f038676",
+    "3f6c5f469a"
    ],
-   "value": "Anduril builds advanced autonomous systems, such as drones, and develops Lattice OS, an AI-powered operating system that turns thousands of data streams into a real-time, 3D command and control center."
+   "value": "Anduril develops a family of networked sensors and effectors, sophisticated automated systems, flight software for drones, and advanced autonomous systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "2b6d56767c"
-   ],
-   "value": "Estimated: Standard tech PTO (15-20 days), though high-tempo and highly ownership-driven cultures often make taking extended time off difficult."
+   "source_ids": [],
+   "value": "Estimated: Competitive standard for tech sectors, likely around 15-20 days of PTO annually."
   },
-  "refresh_after": 1790112575,
-  "retry_after": 1785142630,
+  "refresh_after": 1790336469,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25319,16 +25317,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed shutdowns, though standard public holidays are observed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3f6c5f469a",
+    "12fbd9ff36",
     "2b6d56767c",
-    "12fbd9ff36"
+    "3f6c5f469a"
    ],
-   "value": "Anduril is in a hyper-growth phase, expanding the volume and breadth of its drone missions while actively acquiring and integrating other companies, requiring scalable facilities and operations."
+   "value": "The company is in a hyper-growth stage, engaging in rapid M&A, scaling production volumes, and expanding operations globally."
   },
   "sources": [
    {
@@ -25397,44 +25395,41 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "ae1f47b6bd",
     "738f038676",
-    "a43bad321c"
+    "3f6c5f469a"
    ],
-   "value": "Anduril Industries is a defense technology company that designs and implements sophisticated autonomous systems and AI-powered command software. It makes money by bringing the innovative technology and business models of the commercial tech sector to the defense industry, changing how military systems are designed, built, and sold to the U.S. and its allies."
+   "value": "Anduril is a defense technology company that builds advanced autonomous systems, drones, and hardware/software ecosystems. It makes money by selling these sophisticated systems, sensors, and effectors to defense customers to close operational kill chains."
   },
-  "synthesized_evidence_sha": "b9a2227a3510432b",
+  "synthesized_evidence_sha": "62d4e7b235c48fe0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "ae1f47b6bd",
     "738f038676",
-    "3f6c5f469a",
-    "a43bad321c"
+    "3f6c5f469a"
    ],
-   "value": "The technical work involves ensuring the rapid deployment, quality, and traceability of software for autonomous systems, developing flight software for drones, and building AI-powered platforms that integrate thousands of data streams."
+   "value": "Engineers build autonomous air defense systems, automated software lifecycle pipelines, flight software for drones, and ERP integration architectures."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "a43bad321c",
-    "2b6d56767c",
-    "12fbd9ff36"
-   ],
-   "value": "Anduril's AI and autonomous systems work is technically cutting-edge and prestigious, but the company is a high-tempo defense contractor experiencing hyper-growth and M&A, which often conflicts with the candidate's desire for strict work-life balance, sane hours, and guaranteed shutdowns."
+   "source_ids": [],
+   "value": "Anduril provides elite prestige and top pay in the defense-tech sector, leveraging fast-paced, high-tempo innovation rather than traditional slow bureaucracy. It is a mission-driven company with rapid technical learning and significant ownership, though the ambitious scale may be a factor to watch regarding work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "9eb25e3e66",
-    "2b6d56767c"
+    "2b6d56767c",
+    "9eb25e3e66"
    ],
-   "value": "Estimated: Low to Moderate. Ownership-driven mission in a fast-moving defense context offering significant room to grow, which typically demands high commitment."
+   "value": "Estimated: Moderate. The company demands significant ownership and works in high-tempo, ambiguous environments across multinational operations."
   }
  },
  "anduril industries": {
@@ -27049,7 +27044,7 @@
    "value": "Estimated top-tier. Cursor is one of the most hyped and popular AI coding tools, offering high visibility in the AI community and prestige among new grads."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -27073,7 +27068,7 @@
    ],
    "value": "Software developers and Enterprise businesses looking to accelerate their coding productivity and operational efficiency."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -27103,7 +27098,7 @@
    ],
    "value": "Given your priority for sane hours and fast innovation, probe heavily for their current burnout metrics and startup pressure. Ask about their technical roadmap and how they balance shipping fast with engineering rigor. Inquire about career progression for new grads to ensure they actually respect personal time."
   },
-  "last_attempt_at": 1784873976,
+  "last_attempt_at": 1785152469,
   "last_evidence_at": 1785147272,
   "locations": {
    "confidence": "estimated",
@@ -27143,6 +27138,7 @@
    "value": "Estimated: 15-20 days of standard PTO for an early-stage tech startup."
   },
   "refresh_after": 1790057976,
+  "retry_after": 1785152949,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -27226,7 +27222,7 @@
    ],
    "value": "Not specified in research, but rapidly scaling startups of this tier generally offer visa sponsorships for top AI/talent."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -146673,7 +146669,7 @@
    "value": "High within the logistics tech sector. It offers stronger prestige and pay compared to traditional logistics companies but is generally a tier below elite big tech AI labs (OpenAI, Google DeepMind) regarding pure research prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -146697,7 +146693,7 @@
    ],
    "value": "Businesses ranging from emerging e-commerce brands to large global enterprises needing international shipping and supply chain management."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146723,7 +146719,7 @@
    "source_ids": [],
    "value": "Candidates should prepare for standard algorithmic interviews typical of high-tier tech companies. Emphasize your ability to thrive in an agile, innovative environment that moves faster than traditional slow bureaucratic companies. Highlight strong technical learning acceleration and a passion for modernizing complex real-world systems without expecting extreme burnout hours."
   },
-  "last_attempt_at": 1784880706,
+  "last_attempt_at": 1785152469,
   "last_evidence_at": 1785147272,
   "locations": {
    "confidence": "high",
@@ -146762,6 +146758,7 @@
    "value": "Estimated: 15-20 days of standard annual paid leave, alongside standard public holidays."
   },
   "refresh_after": 1790064706,
+  "retry_after": 1785152709,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146831,7 +146828,7 @@
    ],
    "value": "As a large global logistics tech company, Flexport typically hires through professional visas. However, recent industry-wide tech layoffs may impact new graduate sponsorship budgets."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
