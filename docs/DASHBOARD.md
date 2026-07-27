@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-27 20:03 UTC** · companies polled directly: **1365** (registry 1543) · jobs tracked: **22200** · new this run: **60** · alerts this run: **3**_
+_Last run: **2026-07-27 20:54 UTC** · companies polled directly: **1380** (registry 1558) · jobs tracked: **22447** · new this run: **247** · alerts this run: **6**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -151,7 +151,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 20h | RTX | [Software Engineer I (On-Site)](https://jobright.ai/jobs/info/6a6759802bf1fb2b71924b59?utm_campaign=Software%20Engineering&utm_source=1103) | Dulles, VA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 20h | RTX | [Software Engineer 1](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-VA-DULLES-710--22110-Pacific-Blvd--BLDG-10/Software-Engineer-I--On-Site-_01860803) | Dulles, VA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 20h | RTX | [Java Software Engineer I (On-Site)](https://jobright.ai/jobs/info/6a675f133b5e6b116a54e68a?utm_campaign=Software%20Engineering&utm_source=1103) | State College, PA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 87 🔥 | 21h | Retell AI | [Software Engineer](https://jobs.ashbyhq.com/retell-ai/538ecfa9-2315-42a6-89cc-3cae52165526/application?embed=true) | San Carlos, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 87 🔥 | 22h | Retell AI | [Software Engineer](https://jobs.ashbyhq.com/retell-ai/538ecfa9-2315-42a6-89cc-3cae52165526/application?embed=true) | San Carlos, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 4d | Amazon Web Services (AWS) | [EFA Network Software Engineer I, Annapurna Labs](https://jobright.ai/jobs/info/6a61d546d51f6101c8fbd5d6?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 6d | Morris Health Technologies Inc. | [Software Engineer 1](https://jobs.ashbyhq.com/morrishealthtech/21e734ca-b012-438d-af22-ff30ea12bf39/application?embed=true) | Logan, UT | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 6d | RTX | [2027 Conversion - Software Engineer I - St. Petersburg, FL (Onsite)](https://jobright.ai/jobs/info/6a5f989f6e0c3c7c7d3d7b01?utm_campaign=Software%20Engineering&utm_source=1103) | St. Petersburg, FL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
