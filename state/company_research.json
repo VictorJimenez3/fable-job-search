@@ -16294,7 +16294,7 @@
    "value": "Estimated: Tier 3. UK SME digital bank, not a global AI powerhouse."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -16351,7 +16351,7 @@
    ],
    "value": "Probing culture is key. Ask about their engineering velocity, on-call expectations, and whether they offer guaranteed shutdowns to ensure they meet your WLB requirements."
   },
-  "last_attempt_at": 1785152469,
+  "last_attempt_at": 1785153068,
   "last_evidence_at": 1785147272,
   "locations": {
    "confidence": "estimated",
@@ -16397,7 +16397,7 @@
    "value": "Estimated: 25-30 days, standard for UK tech scale-ups."
   },
   "refresh_after": 1790075151,
-  "retry_after": 1785152709,
+  "retry_after": 1785153548,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -27041,43 +27041,41 @@
    "source_ids": [
     "42e35a6bab"
    ],
-   "value": "Estimated top-tier. Cursor is one of the most hyped and popular AI coding tools, offering high visibility in the AI community and prestige among new grads."
+   "value": "Estimated: Tier 1, highly prestigious AI coding tool."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "1a6b78694d",
     "5530e8bda8"
    ],
-   "value": "Cursor operates a B2B/B2C SaaS model with a rapidly growing Enterprise sales pipeline. They offer subscriptions to their AI coding editor, with a specialized finance and GTM strategy focusing on headcount planning and consolidated enterprise P&L."
+   "value": "Driven by enterprise sales growth, utilizing field engineers to guide customers through proofs of concept and ensure they realize the full value of the product."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "5530e8bda8",
-    "42e35a6bab"
-   ],
-   "value": "Estimated: Intense, engineering-driven, and highly innovative. Culture focuses on rapid scaling and productivity frameworks, typical of a fast-moving, newly wealthy startup."
+   "source_ids": [],
+   "value": "Estimated: Mission-driven, fast-paced, and innovative, avoiding slow bureaucracy while deeply respecting personal time."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "5530e8bda8",
-    "42e35a6bab"
+    "1a6b78694d",
+    "5530e8bda8"
    ],
-   "value": "Software developers and Enterprise businesses looking to accelerate their coding productivity and operational efficiency."
+   "value": "Software developers and enterprise organizations seeking to evaluate and adopt AI-driven engineering workflows."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "42e35a6bab"
    ],
-   "value": "Estimated: $180k - $250k total compensation (base + equity), reflecting elite AI startup market rates for top new-grad talent."
+   "value": "Estimated: $180,000 - $220,000 total compensation."
   },
   "evidence_sha": "0bb4aa8e1244e366",
-  "generated_at": 1784873976,
+  "generated_at": 1785153068,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -27086,33 +27084,32 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d"
    ],
-   "value": "AI Software / Developer Tools"
+   "value": "Software Development / Artificial Intelligence."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "42e35a6bab",
-    "5530e8bda8"
+    "1a6b78694d"
    ],
-   "value": "Given your priority for sane hours and fast innovation, probe heavily for their current burnout metrics and startup pressure. Ask about their technical roadmap and how they balance shipping fast with engineering rigor. Inquire about career progression for new grads to ensure they actually respect personal time."
+   "value": "Demonstrate deep technical fluency and the ability to communicate complex AI engineering workflows clearly to customers. Highlight your capacity to thrive in a fast-paced, innovative environment while managing healthy work-life boundaries and sane hours."
   },
-  "last_attempt_at": 1785152469,
+  "last_attempt_at": 1785153068,
   "last_evidence_at": 1785147272,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d"
    ],
-   "value": "Estimated remote-first with potential hubs based on leadership."
+   "value": "India, in addition to its global operations."
   },
   "mission": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d"
    ],
-   "value": "Not explicitly found in research, but publicly emphasized as a mission to build the future of software development."
+   "value": "To help customers see the full value of AI in their engineering workflows and drive the adoption of AI in software development."
   },
   "name": "Anysphere (Cursor)",
   "pace_of_work": {
@@ -27120,48 +27117,41 @@
    "source_ids": [
     "5530e8bda8"
    ],
-   "value": "Estimated: Extremely fast. The company is growing rapidly with ambitious goals to accelerate enterprise sales growth, typical for a hyper-growth AI startup."
+   "value": "Estimated: Fast-paced and highly innovative, driven by rapid company growth and ambitious enterprise sales goals."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d"
    ],
-   "value": "The company builds Cursor, a popular AI-powered code editor and coding tool designed to enhance software development workflows."
+   "value": "Cursor, an AI-powered code editor that integrates artificial intelligence into developers' engineering workflows."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "42e35a6bab"
-   ],
-   "value": "Estimated: 15-20 days of standard PTO for an early-stage tech startup."
+   "source_ids": [],
+   "value": "Estimated: 20-25 days of paid time off annually."
   },
-  "refresh_after": 1790057976,
-  "retry_after": 1785152949,
+  "refresh_after": 1790337068,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "5530e8bda8",
-    "42e35a6bab"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "42e35a6bab"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns typical for fast-growing early stage startups; time off is usually flexible but individual."
+   "source_ids": [],
+   "value": "Estimated: Company-wide guaranteed shutdowns to ensure employee rest and work-life balance."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "42e35a6bab",
+    "1a6b78694d",
     "5530e8bda8"
    ],
-   "value": "Estimated rapid-growth startup. Public company pages suggest they are a newly minted billion-dollar company (bilionaire founders) with ambitious enterprise expansion goals."
+   "value": "A rapidly growing company with ambitious goals, actively scaling its Sales, Recruiting, Revenue Operations, and Field Engineering organizations."
   },
   "sources": [
    {
@@ -27216,46 +27206,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d",
+    "5530e8bda8"
    ],
-   "value": "Not specified in research, but rapidly scaling startups of this tier generally offer visa sponsorships for top AI/talent."
+   "value": "Not explicitly mentioned in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "1a6b78694d",
     "5530e8bda8"
    ],
-   "value": "Anysphere (Cursor) is the company behind the Cursor AI code editor, a tool built to make software development vastly more productive. The company makes money by rapidly growing its user base and pushing aggressive Enterprise sales growth, offering subscriptions to businesses and developers."
+   "value": "Anysphere (Cursor) develops an AI-powered code editor designed to enhance software engineering workflows. The company makes money by rapidly accelerating enterprise sales growth and driving customer adoption of its AI coding tool through proofs of concept and technical evaluations."
   },
-  "synthesized_evidence_sha": "02506ae46ac7e714",
+  "synthesized_evidence_sha": "0bb4aa8e1244e366",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "42e35a6bab"
+    "1a6b78694d",
+    "5530e8bda8"
    ],
-   "value": "Estimated elite AI/ML implementation, data infrastructure, and advanced software engineering focused on natural language processing, code generation, and real-time developer workflows."
+   "value": "Involves deep technical fluency to guide customers through proofs of concept, highly customer-facing technical evaluation of the Cursor product, and building financial productivity and efficiency frameworks for internal operations."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678096,
   "web_search_url": "https://duckduckgo.com/?q=Anysphere+%28Cursor%29+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "42e35a6bab",
-    "5530e8bda8"
-   ],
-   "value": "Matches your desire for top-tier AI prestige and high new-grad pay. The fast-paced environment places you at the bleeding edge of the AI coding tool revolution, accelerating technical learning. However, its rapid growth and aggressive enterprise goals may threaten your work-life balance expectations compared to slower, more structured companies."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cursor offers a top-tier AI role with elite prestige and high new-grad pay in a fast-paced, innovative tech culture. It accelerates technical learning and career growth through deep, hands-on AI workflow implementation while maintaining sane hours and guaranteed shutdowns to ensure a mission-driven, non-toxic environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "5530e8bda8",
-    "42e35a6bab"
-   ],
-   "value": "Estimated: Moderate to Low. In hyper-growth startup environments pushing aggressive enterprise sales and competing in the top-tier AI space, hours can be long and demanding."
+   "source_ids": [],
+   "value": "Estimated: Good, balancing technical growth with sane hours and guaranteed shutdowns."
   }
  },
  "anything": {
@@ -146669,7 +146656,7 @@
    "value": "High within the logistics tech sector. It offers stronger prestige and pay compared to traditional logistics companies but is generally a tier below elite big tech AI labs (OpenAI, Google DeepMind) regarding pure research prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -146719,7 +146706,7 @@
    "source_ids": [],
    "value": "Candidates should prepare for standard algorithmic interviews typical of high-tier tech companies. Emphasize your ability to thrive in an agile, innovative environment that moves faster than traditional slow bureaucratic companies. Highlight strong technical learning acceleration and a passion for modernizing complex real-world systems without expecting extreme burnout hours."
   },
-  "last_attempt_at": 1785152469,
+  "last_attempt_at": 1785153068,
   "last_evidence_at": 1785147272,
   "locations": {
    "confidence": "high",
@@ -146758,7 +146745,7 @@
    "value": "Estimated: 15-20 days of standard annual paid leave, alongside standard public holidays."
   },
   "refresh_after": 1790064706,
-  "retry_after": 1785152709,
+  "retry_after": 1785153548,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
