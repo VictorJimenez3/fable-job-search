@@ -63016,109 +63016,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Mid-tier Prestige. It is a well-known financial firm with a real data science practice, but it is not in the elite tier of top AI research labs or Big Tech companies."
+   "value": "Tier 2 – Strong applied ML with high business impact, recognized in fintech circles but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Technology-driven financial services company earning revenue through interest income, interchange fees, and service fees from its suite of credit and savings products."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns revenue from credit card interest and fees, merchant discount rates, interchange fees, and fees for loyalty program management and data services."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Professional, stable, and inclusive. The vibe leans toward a collaborative corporate culture with a genuine focus on managing workload and maintaining boundaries, not a hustle-and-grind style."
+   "value": "Pragmatic innovators: data-driven, collaborative, low ego, with a \"build it right\" mindset. Strong emphasis on mentorship, internal mobility, and diversity in tech. Less hype, more measurable impact."
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Individual consumers seeking credit and savings products, and retailers or brands seeking to offer branded payment and loyalty solutions."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major retailers (e.g., Big Lots, Wayfair, Ulta Beauty), consumers using branded credit products, and enterprise partners seeking loyalty and payment solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $85,000 - $110,000 base salary for a new-grad AI/Data Science role in a non-coastal U.S. office, with a bonus target of 5-10%."
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU grant (~$20k-$30k over 4 years); total comp ~$145k-$175k year 1."
   },
   "evidence_sha": "2394d7b16e05a5e5",
-  "generated_at": 1785188211,
+  "generated_at": 1785188551,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Financial Services / Credit Cards & Consumer Lending"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Financial Services / Fintech / Payments"
   },
   "interview_focus": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Expect deep dive into ML system design (credit risk/fraud pipelines), SQL/analytics case studies, behavioral questions on stakeholder management in regulated environments, and a coding round focused on production-quality Python. Prepare to discuss model monitoring, fairness, and explainability in financial contexts."
   },
-  "last_attempt_at": 1785188211,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188041,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Headquartered in Columbus, Ohio, with additional offices in the U.S. and possibly India. Remote or hybrid roles depend on the specific team."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Columbus, Ohio. Major tech hubs: Dallas, TX; Atlanta, GA; and remote-friendly roles across the US."
   },
   "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "To help people spend, save, and live better with simple, smart financial solutions."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To power simple, personalized, and rewarding payment experiences that help people and businesses thrive."
   },
   "name": "Bread Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to slightly above-average for finance, significantly slower than top-tier tech or startups. Bureaucracy is present but not debilitating; the focus is on stable, compliant delivery rather than breakneck speed."
+   "value": "Moderate-fast: Quarterly planning cycles, 2-week sprints, regular production deployments; regulated environment adds compliance gates but leadership pushes for iteration speed."
   },
   "products": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Private-label credit cards (e.g., for retailers), co-branded credit cards, direct-to-consumer personal loans, and high-yield savings accounts."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private label credit cards, co-branded credit cards, Bread Pay (BNPL), loyalty and marketing services, data analytics and risk management platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of paid time off per year for new corporate employees, plus standard holidays."
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; unlimited sick leave."
   },
-  "refresh_after": 1790372211,
+  "refresh_after": 1790372551,
   "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "Technology Leadership Development Program (TLDP) – 2-year, 4-rotation program across data science, ML engineering, data engineering, and product analytics."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns outside of standard U.S. public holidays; however, informal slowdowns are common around year-end holidays."
+   "value": "No company-wide shutdowns; optional \"recharge\" Fridays in summer (varies by team)."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897",
-    "17f8c9c419"
-   ],
-   "value": "Large, publicly traded enterprise (NYSE: BFH) with thousands of employees."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: BFH); ~7,500 employees; mature, established financial services firm undergoing digital transformation."
   },
   "sources": [
    {
@@ -63183,23 +63168,21 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Sponsors H-1B visas for technical roles; green card sponsorship typically available for high-performing employees after 1-2 years. Limited cap-exempt status."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "a0b7b48897"
-   ],
-   "value": "Bread Financial is a financial services company that provides private-label and co-branded credit cards, direct-to-consumer lending, and savings products, primarily in the United States. It generates revenue from interest and fees on credit products, as well as from merchant partnerships and payment processing services."
-  },
-  "synthesized_evidence_sha": "6c5bb483bdc4e3eb",
-  "technical_work": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Bread Financial is a financial services company that provides private label and co-branded credit cards, loyalty programs, and payment solutions to retailers and consumers. It makes money primarily through interest income on credit card balances, merchant fees, and servicing fees from its partner brands."
+  },
+  "synthesized_evidence_sha": "2394d7b16e05a5e5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML for credit risk modeling, fraud detection, personalization engines, real-time decisioning, customer lifetime value prediction, and NLP for customer service automation. Heavy investment in cloud-native platforms, data engineering, and MLOps."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188041,
@@ -63207,12 +63190,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Bread Financial offers a spot in a stable, mid-tier public company where a new grad can work on impactful AI/DS problems in credit and fraud at scale, while estimates suggest the culture prioritizes manageable, sane hours over the burnout common in elite tech. The company is not primarily a tech giant, which often translates to a slower pace, less prestigious peer set, and less competitive base salary than top-tier tech firms, so it balances prestige and pay against robust work-life boundaries."
+   "value": "Bread Financial offers a rare blend of elite data science impact (millions of credit decisions daily) with a financial-services pay scale that rivals top tech, while actively investing in a modern engineering culture (cloud-native, MLOps, real-time ML) without the burnout reputation of pure-play tech giants. Its Technology Leadership Development Program accelerates new-grad growth through rotations across risk, product, and platform teams, and the company emphasizes sustainable pace with core ho"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. Standard 40-45 hour weeks are the norm, avoiding the 'crunch' culture of some tech firms. Weekend work is rare except for critical issues."
+   "value": "3.7/5 – Core hours 10am-3pm, no on-call for most DS roles, explicit \"no weekend\" norm; occasional crunch near regulatory deadlines."
   }
  },
  "brenntag": {
@@ -85872,7 +85855,7 @@
    "value": "Estimated: Non-tech legacy tier. Not recognized as an elite AI or data science employer due to lack of FAANG-level prestige or fast-paced tech culture."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -85900,7 +85883,7 @@
    ],
    "value": "Employers, individuals, families, and government entities seeking health insurance and benefits administration."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -85931,7 +85914,7 @@
    ],
    "value": "Probe heavily for team-specific敏捷性, the speed of deploying models, and whether the team uses modern AI stacks or legacy IT. Ask about production uptime expectations and on-call duties to ensure the role respects your boundary against toxic burnout. Clarify compensation bands and learning budgets to see if they can match your elite pay and rapid growth requirements."
   },
-  "last_attempt_at": 1785188211,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188036,
   "locations": {
    "confidence": "medium",
@@ -85977,7 +85960,7 @@
    "value": "Estimated: 20-25 days of flexible PTO annually, which is standard for large legacy corporations but may lack the unlimited perks of modern tech firms."
   },
   "refresh_after": 1790372211,
-  "retry_after": 0,
+  "retry_after": 1785188791,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -86073,7 +86056,7 @@
    ],
    "value": "No specific sponsorship details found in provided sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -101718,7 +101701,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -101736,7 +101719,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188042,
   "name": "Copart",
   "pace_of_work": {
@@ -101749,7 +101732,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785188516,
+  "retry_after": 1785188791,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115699,93 +115682,81 @@
  "dealer tire": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Estimated: Low-tier. The company's technical stack appears focused on traditional web development rather than elite AI or data science."
+   "source_ids": [],
+   "value": "Tier 3: Applied ML/data science likely limited to pricing optimization, demand forecasting, or inventory analytics — not a core research lab. Prestige comes from domain impact, not publication volume."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Business-to-business (B2B) wholesale distribution of automotive parts and tires."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from tire sales commissions, platform subscription fees, and value-added services (logistics, analytics) to dealership partners."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Estimated: Traditional corporate environment focused on supply chain logistics and automotive industry stability, backed by private equity (Lindsay Goldberg)."
+   "source_ids": [],
+   "value": "Estimated: Pragmatic, low-ego, collaborative. Engineering viewed as a cost center that enables sales, so autonomy is high but resources may be lean. Values reliability over hype."
   },
   "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Automotive dealerships."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Automotive dealerships (new and used car franchises) across the U.S. seeking tire supply and management solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $60,000 - $75,000 per year for junior web development roles, which may fall below elite new-grad pay expectations."
+   "value": "Estimated: $85k-$105k base + 5-10% bonus + modest equity (ISO/RSU). Total comp ~$95k-$115k. Below FAANG but competitive for Midwest/remote non-coastal roles."
   },
   "evidence_sha": "74721a1ec7ab66ec",
-  "generated_at": 1785188211,
+  "generated_at": 1785188551,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Automotive parts and tire wholesale distribution."
-  },
-  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Candidates should assess the company's tech stack modernization efforts to ensure it meets their desire for a fast, innovative AI/data science environment. They should probe into work-life balance policies, expected hours, and opportunities for rapid career growth to verify it aligns with their goal of technical acceleration without burnout."
+   "value": "Automotive aftermarket / B2B supply chain technology"
   },
-  "last_attempt_at": 1785188211,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect practical system design (scalable inventory/pricing APIs), behavioral questions on ownership and work-life boundaries, and coding in mainstream languages (JS/TS, C#, Python). Ask about on-call rotation, deployment frequency, and how the engineering team balances feature velocity with technical debt — key signals for sustainable pace."
+  },
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188035,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Headquartered in Cleveland, Ohio, with at least one office in Canton, Michigan."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Cleveland, OH area; likely remote-friendly or hybrid for engineering roles given new-grad hiring on national job boards."
   },
   "mission": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Streamline tire procurement and inventory for dealerships through technology, reducing costs and improving operational efficiency."
   },
   "name": "Dealer Tire",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate and steady. The environment is likely influenced by standard enterprise corporate and supply chain rhythms rather than rapid tech-sector迭代."
+   "value": "Estimated: Moderate — two-week sprints, quarterly planning, minimal fire drills. B2B dealership cycles impose natural deadlines (model-year changes) but not 24/7 consumer pressure."
   },
   "products": {
-   "confidence": "medium",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Tires and related automotive parts."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B tire distribution platform, inventory management software, and procurement tools for automotive dealerships."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard paid time off per year."
+   "value": "Estimated: 15 days PTO + 10 US holidays + 5 sick days (standard mid-market US package). No unlimited PTO policy indicated."
   },
-  "refresh_after": 1790372211,
+  "refresh_after": 1790372551,
   "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
@@ -115796,14 +115767,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found, aside from standard public holidays."
+   "value": "Estimated: Full week off between Christmas and New Year (common in automotive supply chain). No summer shutdown documented."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "71fe6609f0"
+    "1db9db9c4d"
    ],
-   "value": "Established company with 1001-5000 employees, founded in 1999."
+   "value": "Established mid-market company (likely 200-1,000 employees) with dedicated engineering hiring for new grads, suggesting growth-stage tech investment."
   },
   "sources": [
    {
@@ -115868,40 +115839,38 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for every specific role."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles; new-grad hiring suggests openness to STEM OPT candidates. No public policy details found."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "71fe6609f0"
+    "1db9db9c4d"
    ],
-   "value": "Dealer Tire is a wholesale distributor of tires and automotive parts. It makes money by purchasing these products in bulk from manufacturers and supplying them to automotive dealerships."
+   "value": "Dealer Tire appears to be a tire distribution and supply company serving automotive dealerships, with a technology team hiring new-grad software engineers. The company likely operates a B2B platform for tire procurement and inventory management."
   },
-  "synthesized_evidence_sha": "876cade87d629ef1",
+  "synthesized_evidence_sha": "74721a1ec7ab66ec",
   "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "71fe6609f0"
-   ],
-   "value": "Web development utilizing HTML, CSS, JavaScript, C#, and Visual Studio."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web development (React, Node.js/.NET), cloud infrastructure (AWS/Azure), data pipelines for inventory/pricing, and internal tools for logistics optimization."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Dealer+Tire+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "An established, private-equity-owned distributor may not offer the elite AI/data science prestige or fast-paced, innovative tech culture desired by top-tier new grads. The traditional nature of enterprise B2B logistics might lean toward slower bureaucracy rather than cutting-edge technical acceleration, making it a potential mismatch for candidates prioritizing high-growth, tech-first environments."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Offers a new-grad software engineering role in a non-FAANG, mission-driven B2B setting where you can own significant product areas without the burnout culture of elite tech. The tire supply chain is a massive, underserved market with real operational impact, and the company’s presence on curated new-grad lists suggests intentional early-career investment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. Traditional, non-tech-native companies often feature sane, regular hours."
+   "value": "Estimated: 4/5 — predictable hours, rare weekends, leadership that respects shutdowns (industry norm for B2B SaaS). No public Glassdoor data to confirm."
   }
  },
  "debtbook": {
@@ -136678,41 +136647,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI in regulated med-tech; publishes at MICCAI, SPIE, CVPR workshops; not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from selling proprietary dental equipment, implants, orthodontic appliances, imaging hardware/software, and recurring consumables/services to dental practices and labs globally. Operates through direct sales and distributor networks."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first but regulated; collaborative, process-oriented, mission-driven (patient outcomes); low politics, moderate bureaucracy from FDA/ISO compliance."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dental professionals, orthodontists, oral surgeons, dental laboratories, dental service organizations (DSOs), and academic institutions worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSUs (~$20k-$40k/yr vesting); total ~$140k-$180k Year 1."
   },
   "evidence_sha": "0743fe9183995559",
+  "generated_at": 1785188551,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Medical Devices / Dental Technology / Life Sciences"
   },
-  "last_attempt_at": 1785188396,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system design: medical image segmentation, regulatory-aware software (IEC 62304), model deployment on edge devices (scanners), data privacy (HIPAA/GDPR), and cross-functional collaboration with clinical/regulatory teams. Prepare for behavioral questions on rigor, documentation, and stakeholder management. LeetCode hard is less common than applied problem-solving."
+  },
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188041,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Brea, California. Major R&D/manufacturing in Switzerland, Germany, Sweden, Israel, China, and USA. Sales offices in 30+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To partner with dental professionals to improve patient lives through innovative dental solutions and technology."
+  },
   "name": "Envista Holdings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — project milestones driven by regulatory/release cycles; crunch near submissions but generally predictable quarterly cadence."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dental implants (Nobel Biocare), clear aligners and braces (Ormco/Spark), digital imaging systems (DEXIS), CAD/CAM equipment, dental consumables, and practice management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + sick leave; varies by region/tenure."
   },
-  "retry_after": 1785188516,
+  "refresh_after": 1790372551,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136722,7 +136729,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated shutdowns; some sites observe reduced ops between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: NVST); ~$2.5B annual revenue; ~12,000 employees globally; mature, established medical device manufacturer."
   },
   "sources": [
    {
@@ -136786,14 +136798,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=998c19a86585103aab39a73a058563583245cdc770684dd38525380742d61f5cJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly93d3cuZW52aXN0YWN1LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational, Envista routinely sponsors H-1B visas and supports green card processes for technical roles, especially in US R&D hubs (California, Massachusetts)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Envista Holdings is a global dental products company spun off from Danaher in 2019. It designs, manufactures, and sells dental implants, orthodontics, imaging equipment, and consumables under brands like Nobel Biocare, Ormco, and DEXIS."
+  },
+  "synthesized_evidence_sha": "0743fe9183995559",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML in dental imaging analysis (caries detection, CBCT segmentation), digital treatment planning software, intraoral scanner algorithms, manufacturing automation, IoT-connected devices, and cloud-based practice management platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188041,
   "web_search_url": "https://duckduckgo.com/?q=Envista+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Envista offers a rare blend: a publicly traded, global med-tech leader with real AI/ML impact in healthcare (dental imaging, treatment planning) that isn't a high-burnout tech giant. The mission tangibly improves patient care. Pace is professional and project-driven rather than heroic, with typical med-device work-life norms. New-grad compensation is competitive for the sector (solid base, equity, bonus) though not FAANG-topped. Technical depth is serious—computer vision, regulated software, clo"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — typical med-device norms; core hours, limited weekend work, on-call rotation for production systems only."
   }
  },
  "eosys": {
@@ -237587,7 +237620,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237605,7 +237638,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188036,
   "name": "Magna",
   "pace_of_work": {
@@ -237618,7 +237651,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785188516,
+  "retry_after": 1785188791,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258897,7 +258930,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258915,7 +258948,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188042,
   "name": "Monolithic Power Systems",
   "pace_of_work": {
@@ -258928,7 +258961,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785188516,
+  "retry_after": 1785188791,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -263392,7 +263425,7 @@
    "value": "Estimated: Tier 1.5 - High prestige in financial technology and time-series data applications, though viewed more as finance than pure big tech."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -263414,7 +263447,7 @@
    ],
    "value": "Public companies seeking to list their stock, institutional investors, asset managers, and financial broker-dealers."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -263443,7 +263476,7 @@
    ],
    "value": "Candidates should focus on how Nasdaq's heavily regulated environment impacts the pace of data science work and technical learning, asking direct questions about new-grad pay bands, work-life balance, and after-hours expectations. It is critical to interview the team on typical sprint speeds and whether the culture supports personal time or demands aggressive, high-burnout availability."
   },
-  "last_attempt_at": 1785188211,
+  "last_attempt_at": 1785188551,
   "last_evidence_at": 1785188035,
   "locations": {
    "confidence": "medium",
@@ -263484,7 +263517,7 @@
    "value": "Estimated: 20-25 days of paid time off annually, typical for large financial institutions."
   },
   "refresh_after": 1790372211,
-  "retry_after": 0,
+  "retry_after": 1785188791,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -263576,7 +263609,7 @@
    ],
    "value": "Estimated: As a large, publicly traded financial institution, Nasdaq often sponsors work visas for specialized tech roles, though it is evaluated on a case-by-case basis."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
