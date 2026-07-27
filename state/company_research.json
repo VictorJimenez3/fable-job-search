@@ -77855,7 +77855,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77873,7 +77873,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188666,
   "last_evidence_at": 1785188035,
   "name": "Caterpillar",
   "pace_of_work": {
@@ -77886,7 +77886,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785188636,
+  "retry_after": 1785189146,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81697,7 +81697,7 @@
    "value": "Estimated: Tier 2. Although primarily a systems and cryptography company focusing on blockchain infrastructure, it maintains high engineering prestige but is not an AI-first company."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -81744,7 +81744,7 @@
    ],
    "value": "Candidates should emphasize their passion for cutting-edge distributed systems design and Rust/TypeScript backend engineering. In interviews, highlight a desire for a fast-paced, mission-driven culture with sane hours, avoiding toxic burnout environments in favor of sustainable, accelerated technical growth."
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188666,
   "last_evidence_at": 1785187821,
   "locations": {
    "confidence": "medium",
@@ -81780,7 +81780,7 @@
    "value": "Estimated: 20-25 days of flexible PTO, standard for remote-first tech companies."
   },
   "refresh_after": 1790371817,
-  "retry_after": 1785188636,
+  "retry_after": 1785189146,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -92780,106 +92780,120 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: Tier 3 (Enterprise Insurance). Unlikely to be considered top-tier AI prestige compared to big tech or specialized AI firms, but offers solid enterprise data science experience."
+   "value": "Estimated: Tier 3 — Traditional insurance carrier with applied DS/ML for pricing, claims, and risk; not known for publishing at top conferences or open-source AI leadership."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "B2B2C insurance distribution: Sells products through a network of independent agents, direct marketing, and digital channels, earning revenue from policy premiums and investment income."
+   "value": "Estimated: Insurance underwriting and premium collection, investment income on float, and fee-based services; typical for a diversified financial services holding company."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: Stable, mission-driven, and collaborative, but may feature bureaucratic processes typical of established financial institutions."
+   "value": "Estimated: Professional, process-oriented, compliance-first culture typical of a mature Fortune 1000 insurer; likely hierarchical with siloed IT/business units; limited public signal on psychological safety or experimentation tolerance."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Middle-income working families and retirees."
+   "value": "Estimated: Middle-income individuals and families seeking life, health, and supplemental insurance coverage; distribution likely through agents and direct channels."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "7b72f9cd48"
+    "cd4c070c56",
+    "7b72f9cd48",
+    "1db9db9c4d"
    ],
-   "value": "Estimated: $80,000 - $110,000. Competitive for the Midwest/Carmel location but below the elite new-grad pay bands of big tech."
+   "value": "Estimated: $85k-$105k base + modest bonus/RSU (insurance industry new grad bands); below top-tier tech/AI labs ($130k-$200k+)."
   },
   "evidence_sha": "b11d381ed06c23b5",
-  "generated_at": 1785188211,
+  "generated_at": 1785188666,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Insurance (Financial Services)."
+   "value": "Insurance / Financial Services"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "7b72f9cd48"
+    "1db9db9c4d"
    ],
-   "value": "Candidates should probe the specific AI/data science projects, tech stack modernization initiatives, and team dynamics to assess if the culture is sufficiently fast-paced and innovative. Ask about WLB policies, shutdowns, and actual hours to ensure it meets personal time priorities."
+   "value": "Prepare for insurance-domain questions (actuarial modeling, claims, policy admin), legacy system modernization scenarios, and standard ML/DS fundamentals; ask explicitly about sprint cadence, on-call expectations, mentorship structure, and whether AI/DS work is research-oriented or production-focused to gauge innovation pace and WLB reality."
   },
-  "last_attempt_at": 1785188396,
+  "last_attempt_at": 1785188666,
   "last_evidence_at": 1785188034,
   "locations": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Headquartered in Carmel, Indiana, with other office locations."
+   "value": "Estimated: Headquarters in Carmel, Indiana; additional offices likely in major US metros; remote/hybrid policies not detailed in sources."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "To secure the future of middle-income America."
+   "value": "Estated: To provide financial security to middle-income Americans through insurance and annuity products; exact mission statement not found in sources."
   },
   "name": "CNO Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: Moderate to slow, typical of traditional enterprise insurance, which may conflict with a preference for a fast, innovative tech culture."
+   "value": "Estimated: Moderate to slow — Regulated insurance environment typically means longer release cycles, compliance gates, and waterfall-adjacent processes; not a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Life insurance, health insurance, accident insurance, and Medicare supplement insurance."
+   "value": "Estimated: Life insurance, health insurance, annuity, and supplemental insurance products for middle-income Americans; specific product lines not detailed in sources."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: 20-25 days of standard PTO, consistent with typical corporate insurance benefits."
+   "value": "Estimated: 15-20 days PTO + 10 US holidays (standard for large US financial services); no public policy details found."
   },
-  "refresh_after": 1790372211,
-  "retry_after": 1785188636,
+  "refresh_after": 1790372666,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
+    "1db9db9c4d",
+    "cd4c070c56",
     "7b72f9cd48"
    ],
    "value": "None found in research"
@@ -92888,16 +92902,18 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: Likely offers paid holidays, but guaranteed company-wide shutdowns are not publicly documented for this profile."
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some US insurers observe limited winter breaks but not universal or policy-guaranteed."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Public company, mid-to-large cap."
+   "value": "Estimated: Large public company (NYSE: CNO) with thousands of employees; mature stage with established market position in insurance."
   },
   "sources": [
    {
@@ -92964,26 +92980,28 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: May offer visa sponsorship for specialized roles, but not widely publicized for standard new-grad positions."
+   "value": "Estimated: As a large public US company, likely sponsors H-1B and green cards for technical roles; no specific policy details in sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "7b72f9cd48",
-    "cd4c070c56"
+    "1db9db9c4d",
+    "cd4c070c56",
+    "7b72f9cd48"
    ],
-   "value": "CNO Financial Group is a holding company that provides insurance solutions, focusing on middle-income working families and retirees. It makes money by collecting premiums and generating returns on its investment portfolio."
+   "value": "CNO Financial Group is a financial services holding company primarily focused on insurance products. The company appears to recruit new graduate software engineers through public job boards."
   },
-  "synthesized_evidence_sha": "446da764594eaab1",
+  "synthesized_evidence_sha": "b11d381ed06c23b5",
   "technical_work": {
    "confidence": "estimated",
    "source_ids": [
-    "7b72f9cd48"
+    "1db9db9c4d"
    ],
-   "value": "Estimated: Data engineering, predictive analytics, and enterprise software development to support insurance underwriting, claims processing, and agent platforms."
+   "value": "Estimated: Legacy insurance platform modernization, actuarial/data science modeling, claims automation, customer-facing digital portals, regulatory reporting systems; new grad roles posted on software engineer boards."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188034,
@@ -92991,16 +93009,18 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "7b72f9cd48"
+    "1db9db9c4d",
+    "cd4c070c56"
    ],
-   "value": "This role offers a stable tech environment with a mission-driven focus, but may not fully align with the candidate's desire for elite AI prestige or hyper-fast, innovative tech culture, as enterprise insurance tends to be more bureaucratic and slower-paced."
+   "value": "CNO offers a traditional insurance-industry AI/data science role with public-company stability and new-grad hiring visibility, but lacks evidence of elite AI prestige, guaranteed shutdowns, or a fast innovative tech culture; work-life balance and learning pace are unknown and likely reflect a mature, regulated enterprise rather than a high-velocity tech environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "cd4c070c56",
     "7b72f9cd48"
    ],
-   "value": "Estimated: Good, with standard corporate hours likely respected, aligning well with the candidate's priority for sane hours and avoiding burnout."
+   "value": "Estimated: 3.5/5 — Large insurers often offer reasonable hours (40-45 hrs/wk) and predictable schedules, but on-call rotations for production models and quarterly regulatory crunches can erode balance; no guaranteed shutdowns documented."
   }
  },
  "coalition": {
