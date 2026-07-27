@@ -127174,95 +127174,102 @@
  "ecs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 (Applied AI/ML minimal; focus is low-code automation and BI, not core AI/DS research or elite ML engineering)."
-  },
-  "aliases": [],
-  "attempts": 2,
-  "business_model": {
-   "confidence": "low",
    "source_ids": [
-    "54f9cc22f1",
+    "f40b1e6266",
     "9a0842cd0d"
    ],
-   "value": "Likely professional services / consulting and managed services for Microsoft Power Platform and Azure/AWS cloud implementations; possibly ISV solutions on AWS Marketplace."
+   "value": "Not a top-tier prestige AI role; positions are largely enterprise IT and integrations rather than core data science."
+  },
+  "aliases": [],
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9a0842cd0d",
+    "f40b1e6266"
+   ],
+   "value": "Likely provides technology staffing, enterprise IT consulting, and custom software development services on a project or contract basis."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Practical, client-facing, certification-driven (Microsoft), learning-through-delivery culture typical of Power Platform consultancies."
+   "value": "Technology team; company-specific culture research pending (estimated)"
   },
   "customers": {
    "confidence": "low",
    "source_ids": [
     "9a0842cd0d"
    ],
-   "value": "Enterprise clients needing low-code/no-code business process automation, data analytics, and custom application development on Microsoft stack."
+   "value": "Not explicitly found in research, but the focus on enterprise tools like SharePoint, Dataverse, and Power BI indicates business-to-business (B2B) or internal corporate clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $75k–$95k base (US) for Junior Power Apps Developer; consulting new-grad bands vary by region."
+   "value": "Estimated: Competitive for IT consulting, but unlikely to match top-tier elite new-grad pay."
   },
   "evidence_sha": "3b720cec04b6d40f",
-  "generated_at": 1784871652,
+  "generated_at": 1785182771,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "medium",
    "source_ids": [
-    "9a0842cd0d",
-    "54f9cc22f1"
-   ],
-   "value": "Enterprise software / cloud consulting / low-code automation (Microsoft Power Platform ecosystem)."
-  },
-  "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
+    "f40b1e6266",
     "9a0842cd0d"
    ],
-   "value": "Expect practical Power Platform assessments: canvas/model-driven app design, Power Automate flow logic, Dataverse data modeling, DAX/Power BI visualization, and scenario-based problem solving for business process automation."
+   "value": "IT Services and Software Development."
   },
-  "last_attempt_at": 1785182471,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f40b1e6266"
+   ],
+   "value": "Focus on demonstrating AI/ML knowledge and full-stack development skills to break out of low-code roles, while verifying if the team's innovation matches the candidate's desired fast culture and sane hours."
+  },
+  "last_attempt_at": 1785182771,
   "last_evidence_at": 1785179882,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "7e4572fce4"
-   ],
-   "value": "Not specified in sources. Estimated: US-based with possible remote/hybrid options; domains suggest Netherlands (.nl redirect) and global cloud presence."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Not explicitly stated in sources. Estimated: Delivering practical Microsoft Power Platform and cloud solutions that accelerate business process automation for enterprise customers."
+   "confidence": "low",
+   "source_ids": [
+    "54f9cc22f1",
+    "7e4572fce4",
+    "fdc8a42066"
+   ],
+   "value": "Not found in research. The company's public pages did not render specific mission statement text."
   },
   "name": "ECS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate-to-fast consulting pace; project-driven with client deadlines, but not described as extreme."
+   "source_ids": [
+    "f40b1e6266"
+   ],
+   "value": "Estimated: Agile software development environment, potentially fast-paced due to client project deadlines."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "9a0842cd0d",
-    "54f9cc22f1"
+    "f40b1e6266",
+    "9a0842cd0d"
    ],
-   "value": "Microsoft Power Platform solutions (Power Apps, Power Automate, Power BI, Dataverse, SharePoint Online integration); likely cloud/enterprise software services given AWS Marketplace presence."
+   "value": "Enterprise software solutions and applications built using Microsoft Power Platform (Power Apps, Power Automate, Power BI, SharePoint Online, Dataverse), alongside full-stack software engineering and AI artifacts."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days PTO + US federal holidays; no public policy found."
+   "value": "Estimated: Standard tech/consulting baseline (15-20 days), but exact policy not found in research."
   },
-  "refresh_after": 1790055652,
-  "retry_after": 1785182711,
+  "refresh_after": 1790366771,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127272,12 +127279,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns documented; consulting firms rarely mandate full shutdowns."
+   "value": "Estimated: No guaranteed company-wide shutdowns found."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Mid-size (200–1,000 employees), growth-stage professional services / cloud solutions firm."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -127342,27 +127349,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Not mentioned in sources. Estimated: May sponsor H-1B for specialized Power Platform/cloud roles given enterprise consulting model."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "1db9db9c4d",
-    "9a0842cd0d",
-    "54f9cc22f1"
+    "f40b1e6266",
+    "9a0842cd0d"
    ],
-   "value": "ECS appears to be a technology company hiring for Microsoft Power Platform roles (Power Apps, Power Automate, Power BI, Dataverse). The company has web presences on AWS Marketplace and domains including ecssteuning.com and ecslimited.com, suggesting it may operate in cloud solutions or enterprise software services."
+   "value": "While the exact corporate identity is challenging to verify through the provided redirect links, recent job postings indicate the company hires for IT and software development roles, requiring skills ranging from low-code platforms (Power Apps, Power Automate) to full-stack development and AI. They likely make money by providing enterprise technology solutions, cloud consulting, or engineering services to other businesses. [Source 1]"
   },
-  "synthesized_evidence_sha": "688095d0431363ca",
+  "synthesized_evidence_sha": "3b720cec04b6d40f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "f40b1e6266",
     "9a0842cd0d"
    ],
-   "value": "Low-code/no-code development on Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse), SharePoint Online integration, business process automation, data modeling, and cloud deployment (Azure/AWS)."
+   "value": "Developing enterprise applications using low-code/no-code Microsoft platforms (Power Apps, Power Automate, Power BI, Dataverse, SharePoint Online) and building agile front-end and back-end software with Artificial Intelligence and Machine Learning components."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
@@ -127370,15 +127377,15 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d",
+    "f40b1e6266",
     "9a0842cd0d"
    ],
-   "value": "This role offers hands-on experience with Microsoft's enterprise low-code stack (Power Platform) at a company actively hiring new grads. It balances practical, in-demand cloud automation skills with a likely consulting-style learning curve, but the sources don't confirm elite AI/data science prestige, guaranteed shutdowns, or above-market new-grad pay."
+   "value": "Fits the candidate's priority for technical learning and fast, innovative culture through exposure to both modern AI/ML and high-demand low-code platforms, though the heavy enterprise tooling may lean towards traditional bureaucracy rather than top-tier prestige or elite new-grad pay."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.5/5; professional services typically have variable hours around client deliverables, no guaranteed shutdowns evidenced."
+   "value": "Estimated: Unknown, but enterprise IT consulting roles typically do not offer guaranteed shutdowns or strict boundaries."
   }
  },
  "ecs group of companies": {
