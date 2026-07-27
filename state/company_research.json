@@ -41323,7 +41323,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41341,7 +41341,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785161296,
+  "last_attempt_at": 1785161454,
   "last_evidence_at": 1785161114,
   "name": "Avathon",
   "pace_of_work": {
@@ -41354,7 +41354,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785161416,
+  "retry_after": 1785161694,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114074,41 +114074,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 or 3. While highly impactful in government tech, AI/ data science prestige does not typically match top-tier commercial tech giants."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Government contracting (B2G), providing specialized software engineering services for federal modernization projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused and pragmatic. Likely values impactful work for national security over hyper-growth hustle culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "The U.S. Federal Government and its various defense and security agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000. High for defense contracting, but slightly lower than top-tier commercial FAANG roles."
   },
   "evidence_sha": "ca4d59c45ba22bf8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785161454,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785161296,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Government / Defense Software Contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Highlight your passion for mission-driven software modernization and your ability to thrive in fast-paced, innovative cultures. Ask clarifying questions about their commitment to guaranteed shutdowns and sane hours, emphasizing your desire to avoid toxic burnout while still accelerating your technical learning."
+  },
+  "last_attempt_at": 1785161454,
   "last_evidence_at": 1785161114,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Not explicitly stated in the provided sources, though they are a U.S. government contractor."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "To drive the transformation of government legacy software to modern, cloud-native platforms."
+  },
   "name": "Defense Unicorns",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderately fast. Driven by federal contracting milestones, but generally avoids the erratic chaos of early-stage commercial startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Cloud-native software engineering solutions and modernized infrastructure for government platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO, which is standard for government contractors."
   },
-  "retry_after": 1785161416,
+  "refresh_after": 1790345454,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114118,7 +114170,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard federal holidays. Specific company-wide guaranteed shutdowns are not confirmed in the sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6f08daae27"
+   ],
+   "value": "Company size and funding stage are not explicitly stated in the provided sources, but greenhouse job boards point to an active hiring phase."
   },
   "sources": [
    {
@@ -114182,14 +114241,43 @@
     "url": "https://job-boards.greenhouse.io/defenseunicorns/jobs/5101183007"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Not explicitly stated, but as a U.S. federal contractor, candidates will likely be required to hold or be eligible for U.S. security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Defense Unicorns is a software engineering contractor for the U.S. government that specializes in transforming legacy, on-premises systems into modern, cloud-native platforms. They make money by securing and executing federal contracts focused on modernizing critical defense infrastructure."
+  },
+  "synthesized_evidence_sha": "ca4d59c45ba22bf8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "Legacy-to-cloud migration, cloud-native software engineering, and platform modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785161114,
   "web_search_url": "https://duckduckgo.com/?q=Defense+Unicorns+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf4c150d4d"
+   ],
+   "value": "For a candidate seeking elite innovation, high new-grad pay, and a mission-driven environment without bureaucracy, Defense Unicorns offers an appealing middle ground. The stated dedication to sane hours and guaranteed shutdowns aligns with respectful work-life balance, while the technically demanding cloud-native and AI work ensures rapid learning and career acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average. Defense contractors frequently emphasize stable hours compared to commercial tech."
   }
  },
  "deliveroo": {
@@ -288656,52 +288744,127 @@
  "pendo": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 (Top-tier AI/Data Science)"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Pendo operates on a SaaS subscription model, charging companies based on data volume, feature access, and the number of tracked users."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2",
+    "62bb036709"
+   ],
+   "value": "Mission-driven, focused on elevating software experiences, with a fast-moving commercially aware technical culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "62bb036709"
+   ],
+   "value": "Primarily B2B technology and software companies looking to optimize user experience and product adoption."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8ae289b671"
+   ],
+   "value": "Estimated: $150K-$180K total compensation. Aligns with high new-grad pay expectations for fast, innovative late-stage tech companies."
   },
   "evidence_sha": "03057dfa7158f2d0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785161454,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785161296,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "B2B SaaS / Product Analytics Software"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "62bb036709",
+    "17f8c9c419"
+   ],
+   "value": "Assess their ability to thrive in a fast-paced environment that accelerates technical learning without sacrificing personal time. Candidates should demonstrate how they can drive innovative AI solutions while respecting work-life balance through sane hours and avoiding high-burnout environments."
+  },
+  "last_attempt_at": 1785161454,
   "last_evidence_at": 1785161120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "HQ in Raleigh, NC with major hubs in New York, San Francisco, and London, and remote opportunities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Pendo's mission is to elevate the world's experience with software, making it more intuitive and impactful for both users and creators."
+  },
   "name": "Pendo",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "62bb036709"
+   ],
+   "value": "Estimated: Fast. Pendo's culture is described as a team that moves fast and thinks strategically."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "AI or data science role at Pendo involves working on core analytics platform features, building scalable data pipelines, and developing machine learning models for user behavior insights."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Estimated: 20-25 days. Standard for late-stage tech startups of this size, supporting a healthy work-life balance."
   },
-  "retry_after": 1785161416,
+  "refresh_after": 1790345454,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "8ae289b671"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Estimated: Likely offers 1-2 week shutdowns around major holidays, aligning with sane hours and missions to prevent toxic burnout."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Late-stage startup / Unicorn (Pendo was valued at $2.6B in its 2023 fundraise)."
   },
   "sources": [
    {
@@ -288765,14 +288928,46 @@
     "url": "https://job-boards.greenhouse.io/pendo/jobs/8596202002"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8ae289b671"
+   ],
+   "value": "No explicit policy on visa sponsorship found in job postings. Candidates should verify directly with recruiters."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b4ba742a09",
+    "38a90510b2"
+   ],
+   "value": "Pendo is a product analytics and digital adoption platform that helps software companies understand how users interact with their products. It makes money through SaaS subscriptions based on usage and feature tiers."
+  },
+  "synthesized_evidence_sha": "03057dfa7158f2d0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Working with large-scale data ingestion and processing, NLP on user feedback, product usage analytics, ML model development for behavioral insights, generative AI for Summaries & Q&A features."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785161120,
   "web_search_url": "https://duckduckgo.com/?q=Pendo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Pendo offers the chance to build AI/ML systems on one of the richest behavioral product datasets in the SaaS industry, blending elite-level big data challenges with a mission to improve software usability. This intersects perfectly with a fast-paced tech culture that avoids slow bureaucracy, while providing the high new-grad compensation and technical acceleration expected from a top-tier AI role."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "38a90510b2"
+   ],
+   "value": "Estimated: 7.5/10. Large, well-funded late-stage SaaS companies typically maintain strong WLB cultures, supporting a mission-driven environment that respects personal time and avoids burnout."
   }
  },
  "penn interactive": {
