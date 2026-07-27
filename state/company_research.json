@@ -349060,42 +349060,104 @@
  "skillstorm": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: Low. As an IT services and outsourcing company, it does not align with elite, top-tier AI or data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "IT services and consulting firm that generates revenue through project management, IT consulting, and outsourced developer placements, often involving government security clearances and client relocation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: Corporate consulting geared toward government and enterprise staffing requirements, rather than a fast, innovative tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Enterprise clients and government agencies requiring security-cleared IT services and outsourced project solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: $60,000 - $75,000. Typical for entry-level developers at IT consulting firms requiring relocation and clearance."
   },
   "evidence_sha": "8bb780fd6f4ed330",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785170555,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785170387,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "IT Services and IT Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "The candidate should urgently clarify the work structure, as this appears to be a consulting firm that places developers at client sites. Key questions should target exactly how 'sane hours' and 'guaranteed shutdowns' are ensured when working under external clients, whether the work involves true AI/Data Science or routine IT project management, and how the firm avoids the typical high-burnout environment of government contracting."
+  },
+  "last_attempt_at": 1785170555,
   "last_evidence_at": 1785170213,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Various client sites; relocation for client placement is a job requirement."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Not explicitly stated in the provided sources, but focuses on providing IT services and outsourced project solutions."
+  },
   "name": "SkillStorm",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: Fast-paced and client-driven, typical of IT consulting and outsourcing, lacking the culture of an innovative product company."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Project management, IT consulting services, and outsourced technology staffing solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: 10-15 days of PTO, as the company lists Paid Time Off as a standard benefit without specifying exact accrual."
   },
-  "retry_after": 1785170507,
+  "refresh_after": 1790354555,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -349105,7 +349167,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research; standard IT consulting does not typically offer guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Established, minority-owned IT services company."
   },
   "sources": [
    {
@@ -349159,14 +349228,45 @@
     "url": "https://jobright.ai/jobs/info/6a6756e73b5e6b116a54e53f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Likely does not sponsor visas, as roles explicitly require the ability to obtain a US government security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "SkillStorm is a minority-owned IT services company that provides project management, consulting services, and outsourced technology solutions. They make money by hiring and placing developers, often requiring them to relocate for government or enterprise client placements."
+  },
+  "synthesized_evidence_sha": "8bb780fd6f4ed330",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Entry-level software development for client projects, requiring willingness to relocate and obtain government security clearance. Work involves client-side placements rather than internal product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785170213,
   "web_search_url": "https://duckduckgo.com/?q=SkillStorm+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "This role at an IT consulting firm contrasts sharply with the candidate's desire for a top-tier AI/Data Science position offering elite prestige. The mandatory relocation for client placement and the consulting/staffing model often found in this sector may conflict with the preference for a fast, innovative tech culture that respects work-life balance and avoids bureaucratic environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e3c1dc40b3"
+   ],
+   "value": "Estimated: Poor to Mixed. The company has a 3.4 Glassdoor rating and requires relocation for client placement, common markers of unpredictable work-life balance in consulting."
   }
  },
  "skydio": {
