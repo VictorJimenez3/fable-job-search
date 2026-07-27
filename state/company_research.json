@@ -16511,7 +16511,7 @@
    "value": "Estimated: Moderate. Recognized for applying AI at scale in insurtech, but a legacy finance/insurance brand lacks the elite prestige of pure big-tech or specialized AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -16533,7 +16533,7 @@
    ],
    "value": "Individual consumers seeking personal and property insurance."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -16562,7 +16562,7 @@
    ],
    "value": "Candidates should seek transparency on team-level autonomy to ensure they land in a fast-moving innovation pod rather than slow-moving bureaucracy. It is critical to interview the hiring manager about sane hours, work-life balance policies, and technical mentorship to verify the company meets the standard for guaranteed personal time and career acceleration over grueling legacy processes."
   },
-  "last_attempt_at": 1784892410,
+  "last_attempt_at": 1785138790,
   "last_evidence_at": 1785132488,
   "locations": {
    "confidence": "high",
@@ -16601,6 +16601,7 @@
    ],
    "value": "Estimated: 20-25 days. Large legacy companies typically provide generous standard vacation packages, though exact policies are not public."
   },
+  "retry_after": 1785139030,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16690,7 +16691,7 @@
    ],
    "value": "Estimated: Like many large US public companies, sponsorship likely exists for high-demand roles but is not guaranteed for new grads."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -25210,7 +25211,7 @@
    "value": "Estimated: High/Tier 1. Building an AI-powered operating system (Lattice OS) for military command and control places Anduril among the elite tech companies working on real-world AI and autonomous systems."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -25236,7 +25237,7 @@
    ],
    "value": "The U.S. military and allied defense forces, operating at the intersection of the commercial and defense worlds with a multinational footprint."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -25265,7 +25266,7 @@
    ],
    "value": "Assess the true engineering pace, realistic expectations for work-life balance, and actual working hours. The candidate should probe heavily about team on-call expectations and shutdown policies to see if the role aligns with their goal of accelerated learning without personal time sacrifices."
   },
-  "last_attempt_at": 1784928575,
+  "last_attempt_at": 1785138790,
   "last_evidence_at": 1785132211,
   "locations": {
    "confidence": "medium",
@@ -25307,6 +25308,7 @@
    "value": "Estimated: Standard tech PTO (15-20 days), though high-tempo and highly ownership-driven cultures often make taking extended time off difficult."
   },
   "refresh_after": 1790112575,
+  "retry_after": 1785142630,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25394,7 +25396,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -325114,39 +325116,95 @@
  },
  "rs global services": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Technical prestige appears high for systems programming due to the low-level GPU and compiler focus, though it is not strictly an AI/Data Science exclusive firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Sells or integrates high-performance computing solutions, virtualization, and systems-level software based on their C++ and GPU expertise."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Tech-focused culture emphasizing low-level systems optimization, low bureaucracy, and high technical learning, based on available technical requirements."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Not explicitly stated in available sources, but the focus on virtualization and low-level systems suggests enterprise or B2B technology clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely top-tier for San Francisco, aligning with competitive tech market rates for low-level systems engineers."
   },
   "evidence_sha": "59520ff63973c3fc",
+  "generated_at": 1785138790,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Information Technology and Software Engineering."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on demonstrating proficiency in C++ and low-level systems optimization, while assessing if the company's culture aligns with your priorities for sane hours and a healthy work-life balance."
   },
+  "last_attempt_at": 1785138790,
   "last_evidence_at": 1785132487,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "San Francisco (On-site)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Not explicitly found in sources; inferred from job postings to be developing optimized low-level systems and GPU technologies."
+  },
   "name": "RS Global Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, high-impact technical work focused on systems performance, typical of San Francisco on-site tech companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Low-level GPU software, virtualization technologies, and compiler systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not public."
   },
+  "refresh_after": 1790322790,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -325156,7 +325214,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not public."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "0284ec05c9",
+    "2bdc268b18",
+    "40f665e0bc"
+   ],
+   "value": "Company size and funding stage are not detailed in the provided sources."
   },
   "sources": [
    {
@@ -325210,14 +325277,41 @@
     "url": "https://jobright.ai/jobs/info/6a66b97e5c7e2d715ebb3e8e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Sponsorship details are not found in sources; the role is listed as on-site in San Francisco."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "RS Global Services is a technology company that hires software engineers to optimize complex C++ systems and build low-level GPU software. They are currently recruiting for on-site roles in San Francisco."
+  },
+  "synthesized_evidence_sha": "59520ff63973c3fc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c812d320bc"
+   ],
+   "value": "Optimizing performance in complex C++ systems, building impactful low-level GPU software, GPU virtualization, and working with compilers and Rust."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785132487,
   "web_search_url": "https://duckduckgo.com/?q=RS+Global+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new grad prioritizing elite technical prestige alongside high pay and fast innovation, a role in low-level systems and GPU virtualization offers deep technical learning that accelerates career growth, provided the intense domain doesn't lead to burnout or encroach on personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; WLB metrics are not public. Requires cultural interviews to verify commitment to sane hours."
   }
  },
  "rtx": {
@@ -381831,7 +381925,7 @@
    "value": "Estimated: Moderate. Prestige is strong within the life sciences and healthcare technology sectors, but not considered an elite, top-tier AI or data science company in the broader tech industry."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -381854,7 +381948,7 @@
    ],
    "value": "Their primary customers include research institutions, laboratories, pharmaceutical companies, and various healthcare and life science organizations."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -381882,7 +381976,7 @@
    "source_ids": [],
    "value": "Candidates should validate their tolerance for corporate enterprise processes and verify if the specific team offers adequate technical learning and autonomy. It is critical to ask about exact on-call expectations, true daily hours, availability of guaranteed shutdowns, and how the team balances project deadlines with work-life balance to avoid burnout."
   },
-  "last_attempt_at": 1784874310,
+  "last_attempt_at": 1785138790,
   "last_evidence_at": 1785132211,
   "locations": {
    "confidence": "high",
@@ -381925,6 +382019,7 @@
    "value": "Estimated: 15-25 days of paid time off annually, standard for large corporate enterprises, alongside standard public holidays."
   },
   "refresh_after": 1790058310,
+  "retry_after": 1785139270,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -381996,7 +382091,7 @@
    ],
    "value": "Estimated: As a large multinational corporation with ongoing talent needs, they frequently sponsor work visas for highly specialized scientific and technical roles, though policies vary by role and region."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -383208,7 +383303,7 @@
    "value": "Low. Tierpoint is an IT infrastructure and colocation provider, not an AI or data science product company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -383231,7 +383326,7 @@
    ],
    "value": "Businesses seeking outsourced IT infrastructure and managed services, likely ranging from mid-market enterprises to large organizations."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -383261,7 +383356,7 @@
    ],
    "value": "Assess if their technical roles offer any modernization projects or data-driven initiatives. Clarify expectations around on-call duties for data center uptime, as these can conflict with your strict work-life balance and sane hours requirements. Ask about the culture to ensure it lacks the toxic burnout environment you are avoiding."
   },
-  "last_attempt_at": 1784980560,
+  "last_attempt_at": 1785138790,
   "last_evidence_at": 1785132487,
   "locations": {
    "confidence": "high",
@@ -383301,6 +383396,7 @@
    ],
    "value": "Estimated: 15-20 days of standard PTO, typical for the established IT services sector."
   },
+  "retry_after": 1785139030,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -383384,7 +383480,7 @@
    ],
    "value": "Not explicitly mentioned in current job postings or company descriptions."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
