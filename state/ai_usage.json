@@ -1,121 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-07-27T14:11:04+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 6069,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 3659,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:11:12+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 14112,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 3884,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:11:20+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 22072,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 3911,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:11:39+00:00",
-   "completion_tokens": 1119,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 40480,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3911,
-   "prompt_tokens": 1276,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:11:52+00:00",
-   "completion_tokens": 2200,
-   "detail": "task schema validation failed",
-   "endpoint": "nvidia:nemotron",
-   "lane": "api",
-   "latency_ms": 53552,
-   "max_tokens": 2200,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "prompt_chars": 3659,
-   "prompt_tokens": 1131,
-   "status": "invalid",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:12:13+00:00",
-   "completion_tokens": 0,
-   "detail": "ReadTimeout: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=75)",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 75136,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3659,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:12:15+00:00",
-   "completion_tokens": 0,
-   "detail": "ReadTimeout: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=75)",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 77054,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 3659,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-27T14:12:18+00:00",
-   "completion_tokens": 1268,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 79999,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3884,
-   "prompt_tokens": 1239,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1785161539,
+ "events": [],
+ "generated_at": 1785161569,
  "history": [
   {
    "attempts": [
@@ -6392,40 +6277,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 3,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 1,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 1,
-   "model": "z-ai/glm-5.2",
-   "ok": 2,
-   "requests": 3,
-   "tokens": 4902
-  },
-  "nvidia:kimi": {
-   "errors": 3,
-   "model": "moonshotai/kimi-k2.6",
-   "ok": 0,
-   "requests": 3,
-   "tokens": 0
-  },
-  "nvidia:nemotron": {
-   "errors": 1,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 3331
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 12,
- "task_calls": {
-  "company_research": 3
- }
+ "requests": 0,
+ "task_calls": {}
 }
