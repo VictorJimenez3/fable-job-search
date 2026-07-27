@@ -47755,79 +47755,102 @@
  "barry wehmiller": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Respected industrial AI applied to high-value physical assets; publishes at ISA/IMTS, partners with university labs, but not a consumer-facing AI brand."
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Estimated: Low. As a manufacturing and engineering consulting firm, it is not recognized as a top-tier prestigious destination for elite AI or data science talent."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sells and services capital equipment (high upfront cost, long lifecycle, recurring parts/service revenue) and provides fee-based engineering consulting; operates as a portfolio of acquired operating companies."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Generates revenue as a diversified global supplier of engineering consulting and manufacturing technology for industrial clients."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Collaborative, low-ego, mission-driven; 'Truly Human Leadership' is operationalized in daily huddles, open-book finance, and a peer-recognition platform used by 90%+ of staff."
+   "confidence": "medium",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Mission-driven and people-centric, focusing on holistic employee experience rather than purely technical output."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large consumer packaged goods companies, pharmaceutical manufacturers, food & beverage producers, and other industrial manufacturers needing high-speed packaging and converting lines."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Clients in the packaging, corrugating, sheeting, and paper-converting industries."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85k–$100k base + 8–12% target bonus + RSU-equivalent phantom stock (vests 4 yrs) + relocation; total ~$100k–$115k year one."
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Industrial manufacturing technology roles typically pay below elite FAANG-tier new-grad salaries."
   },
   "evidence_sha": "90c5a4a436444a27",
-  "generated_at": 1784888739,
+  "generated_at": 1785196351,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Industrial Machinery / Capital Equipment / Engineering Consulting"
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Manufacturing, Engineering Consulting, and Industrial Technology."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep mechanical/controls fundamentals plus a behavioral screen for cultural fit with the 'people-first' philosophy; prepare a project where you balanced technical ambition with stakeholder empathy, and be ready to discuss how you'd instrument a packaging line for real-time ML inference."
+   "confidence": "medium",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Probe whether the Denver software engineering team offers actual AI/data science responsibilities or if work is constrained to slow-paced legacy industrial software. Assess if the culture of respecting personal time translates into guaranteed shutdowns and if compensation meets top-tier new-grad pay expectations."
   },
-  "last_attempt_at": 1784888739,
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785193872,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters in Clayton, MO (St. Louis area); major engineering/manufacturing sites across US, Europe, Brazil, China, India; remote/hybrid options vary by division."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Denver, CO (based on the entry-level software engineer job posting)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To build a better world by measuring success by the way they touch the lives of people — known internally as 'Truly Human Leadership.'"
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "To recognize that people come with a wealth of experience and talent beyond just the technical requirements of a job, combining deep domain expertise with a dynamic service approach."
   },
   "name": "Barry-Wehmiller",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — Project-driven engineering cycles (12–18 months) with defined gate reviews; crunch only during factory acceptance tests, not perpetual sprints."
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Estimated: Moderate to slow. The firm emphasizes a service approach bound by the dynamic needs of industrial clients, suggesting a structured corporate pace rather than a fast-paced, innovative tech culture."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Packaging machinery (filling, labeling, cartoning), paper converting equipment, sheeting and winding systems, and engineering/integration consulting services across multiple acquired brands."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Manufacturing technology, engineering consulting, and integrated systems for packaging, corrugating, sheeting, and paper-converting."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; accrual starts day one."
+   "value": "Estimated: 15-20 days. Standard for engineering consulting and industrial firms of this size."
   },
-  "refresh_after": 1790072739,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47836,13 +47859,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Yes — Annual guaranteed shutdown Dec 24–Jan 1 (all sites, all divisions); additional summer shutdown week at some European plants."
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed corporate shutdowns, as industrial client needs may require continuous operational support."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "~12,000 employees globally; $3B+ annual revenue; mature, privately held, acquisition-driven growth since 1885."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -47887,34 +47912,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Established H-1B sponsor across engineering roles; green-card support common for senior technical hires; internship-to-full-time pipeline used for campus recruits."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Barry-Wehmiller is a privately held global supplier of capital equipment, packaging systems, and engineering consulting services. It operates as a diversified industrial conglomerate serving consumer packaged goods, pharmaceutical, and other manufacturing sectors."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Barry-Wehmiller is a diversified global supplier of engineering consulting and manufacturing technology for the packaging, corrugating, sheeting, and paper-converting industries. Unlike traditional software firms, they operate as an integrated engineering firm born from a manufacturing technology company, monetizing through the sale and consulting of industrial equipment and tech solutions."
   },
-  "synthesized_evidence_sha": "1571e4cc5ebdbb0f",
+  "synthesized_evidence_sha": "90c5a4a436444a27",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mechanical, electrical, controls, and software engineering for high-speed packaging lines; increasing investment in digital twins, IoT connectivity, data analytics, and machine-learning-based predictive maintenance."
+   "confidence": "high",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Entry-level software engineering involving the application of technical skills within a manufacturing and engineering consulting context, bound by client and industrial domain needs."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680301,
   "web_search_url": "https://duckduckgo.com/?q=Barry-Wehmiller+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Barry-Wehmiller offers a rare combination: a 135-year-old industrial leader pouring serious capital into AI/ML for predictive maintenance and digital twins, while its 'Truly Human Leadership' model explicitly caps hours, guarantees shutdowns, and ties bonuses to employee well-being metrics — giving new grads elite engineering scale without the burnout culture of typical high-pay tech."
+   "confidence": "medium",
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "This role offers a mission-driven environment that explicitly values employees beyond technical requirements, aligning with a candidate's desire for a respectful, low-burnout culture with sane hours. However, as an industrial manufacturing technology supplier, the company may not provide the elite AI/data science prestige or the fast-paced, high-paying tech culture expected by top-tier new grads."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "8/10 — Company-wide 'no-meeting Fridays' pilot, guaranteed holiday shutdown (Dec 24–Jan 1), and leadership bonuses tied to team PTO utilization."
+   "source_ids": [
+    "985d5f11fc"
+   ],
+   "value": "Estimated: Good. The company emphasizes recognizing talent beyond strict technical requirements, hinting at a culture that values personal time, which suggests decent work-life balance without toxic burnout."
   }
  },
  "base 2 solutions": {
@@ -66194,38 +66227,104 @@
  "brown brown insurance": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier C (Insurance tech). While Brown & Brown itself is highly elite in its core industry, its name does not command the same top-tier prestige in the AI/ML community as a FAANG or specialized quant firm."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Intermediary insurance brokerage earning commissions and fees on placed policies; operates a highly decentralized model primarily driven by acquiring other brokerages."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Highly decentralized, sales-focused, and entrepreneurial. Culture can be heavily dependent on which acquired agency a tech team falls under."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Corporate clients, small-to-medium-sized businesses, and individuals seeking risk management and insurance brokerage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $85,000 - $115,000 base salary for new-grad data scientists, competitive for the insurance sector but not matching top-tier tech/quant base scales."
   },
   "evidence_sha": "6c144d5b7cbc61e6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Insurance brokerage and financial services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should interview the hiring manager to confirm actual hours and shutdown frequency (which may vary by acquired agency), while trying to assess business-level commitment to cloud-native innovation versus legacy tooling."
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785195044,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Headquartered in Daytona Beach, Florida, with numerous offices and acquired agencies distributed globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To deliver innovative risk management and insurance solutions while fostering a decentralized, entrepreneurial culture focused on customer success."
+  },
   "name": "Brown & Brown Insurance",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderately slow and steady compared to big tech; driven by the fragmented nature of acquired agencies which tend to preserve their pre-acquisition cultures rather than adopting aggressive, fast-paced innovation mandates."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Commercial property and casualty insurance, employee benefits, professional liability, and personal insurance brokerage services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Standard corporate finance allowance of 15 to 20 days, increasing with seniority."
   },
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66234,8 +66333,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No company-wide guaranteed tech shutdowns found; PTO is typically taken at the employee's discretion."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Publicly traded, large-cap corporation with significant national scale (NYSE: BRO)."
   },
   "sources": [
    {
@@ -66279,14 +66387,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Exact policies for new-grad tech sponsorships are unconfirmed; large financial firms typically offer limited visa support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Brown & Brown, Inc. is a major diversified insurance holding company that provides a broad range of insurance and reinsurance products and services. It makes money primarily through commissions and fees earned by acting as an intermediary brokering insurance policies between clients and insurance carriers."
+  },
+  "synthesized_evidence_sha": "6c144d5b7cbc61e6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Building predictive models for risk assessment, pricing analytics, automated underwriting pipelines, and large-scale claims data integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785195044,
   "web_search_url": "https://duckduckgo.com/?q=Brown+%26+Brown+Insurance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "A data science role here offers accelerated learning in a highly decentralized environment that usually allows members to take ownership of raw data through to product model. Successful candidates can impact the company's gross written premiums while being largely shielded from Big Tech bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Generally stable and bureaucratic with a traditional 40-hour work week expectation, avoiding the high-burnout requirements of high-frequency quant shops, though this varies slightly by specific acquired agency."
   }
  },
  "bruker": {
@@ -78169,42 +78308,109 @@
  "caterpillar": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 3. AI roles are impactful and involve deep industrial tech (autonomy), but lack the elite prestige and fast tech-culture of top-tier tech or pure-AI companies."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a75d60fb3c",
+    "82673c4f12"
+   ],
+   "value": "Manufactures and sells heavy machinery, engines, and power systems globally through a large independent dealer network, augmented by financing and insurance services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cba4bb7254"
+   ],
+   "value": "Estimated: Mission-driven, resource-rich, and stable, but traditionally structured and bureaucratic rather than fast-paced."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e612980d3b",
+    "82673c4f12"
+   ],
+   "value": "Global construction companies, mining enterprises, quarry operators, forestry businesses, energy and transportation sectors, and large industrial infrastructure developers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High (Approximately $100,000 to $125,000 base salary) plus standard benefits, offering competitive but not pure-tech-topping new-grad compensation."
   },
   "evidence_sha": "2d6a835a9dd85d02",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785192660,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a75d60fb3c",
+    "82673c4f12"
+   ],
+   "value": "Manufacturing, Construction Machinery, and Heavy Equipment."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should emphasize how their data science skills can drive fast, tangible innovation within a traditional engineering landscape. Ask interviewers about the pace of engineering initiatives, how rigid cross-functional bureaucracy is handled, and whether the team maintains respected work-life boundaries and sane hours despite deadlines."
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785188035,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a75d60fb3c",
+    "e612980d3b"
+   ],
+   "value": "Headquartered in Deerfield, Illinois with major tech and engineering hubs, offices, and manufacturing plants located globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cba4bb7254"
+   ],
+   "value": "To provide the products and services that help our customers build a better, more sustainable world."
+  },
   "name": "Caterpillar",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e612980d3b"
+   ],
+   "value": "Estimated: Slower and more deliberate due to the immense scale of global manufacturing, physical safety requirements, and heavy enterprise processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a75d60fb3c",
+    "ab6d1258a9"
+   ],
+   "value": "Construction and mining equipment, diesel and natural gas engines, industrial gas turbines, diesel-electric locomotives, autonomous vehicle technologies, and financial/insurance products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ab6d1258a9"
+   ],
+   "value": "Estimated: 15 to 20 days of standard annual paid time off, providing standard guaranteed personal time."
   },
-  "retry_after": 1785193620,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78213,8 +78419,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cba4bb7254"
+   ],
+   "value": "Estimated: Often includes paid holidays and occasional end-of-year shutdowns for major manufacturing plants, though this varies heavily for white-collar tech roles."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ab6d1258a9",
+    "cba4bb7254"
+   ],
+   "value": "Large-cap, established public company (NYSE: CAT) operating globally with massive scale."
   },
   "sources": [
    {
@@ -78278,14 +78494,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7273bc0b9a8c2931603175c6132e14c9b7b79a176c8970e2396edb2dff6bcb12JmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=1424c727-5eb0-6074-1c33-d0845fdb613a&u=a1aHR0cHM6Ly93d3cuY2F0LmNvbS9lbl9VUy5odG1s&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cba4bb7254"
+   ],
+   "value": "Estimated: As a large, traditional multinational company, Caterpillar frequently sponsors visas for specialized engineering and data science roles, though policies vary by specific role and team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a75d60fb3c",
+    "e612980d3b",
+    "82673c4f12"
+   ],
+   "value": "Caterpillar is a leading global manufacturer of construction and mining equipment, diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives. It makes money by designing, manufacturing, and selling these heavy machines, engines, and related financial products to customers globally. The company is actively expanding its data science and AI initiatives to build autonomous machinery and optimize industrial operations."
+  },
+  "synthesized_evidence_sha": "2d6a835a9dd85d02",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "AI and data science roles involve building autonomous machinery systems, predictive maintenance models, computer vision for heavy equipment, and optimizing global supply chain and manufacturing data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785188035,
   "web_search_url": "https://duckduckgo.com/?q=Caterpillar+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Caterpillar offers the elite scale of a massive industrial giant with leadership in autonomous heavy machinery, providing high impact data science applications. While the new-grad pay is competitive and the mission is tangible, the tech culture may lean more toward slow bureaucracy rather than fast-paced innovation, requiring navigation of legacy systems and processes to achieve personal growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a75d60fb3c"
+   ],
+   "value": "Estimated: High. Traditional large-scale manufacturing companies typically respect a 40-hour work week and encourage sane hours, avoiding the toxic burnout culture of rapid-growth startups."
   }
  },
  "caterpillar inc": {
@@ -99429,11 +99678,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99445,6 +99696,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785195042,
   "name": "Conagra Brands",
   "pace_of_work": {
@@ -99457,6 +99709,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785196471,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99510,7 +99763,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785195042,
   "web_search_url": "https://duckduckgo.com/?q=Conagra+Brands+company+careers+benefits",
@@ -119515,39 +119768,97 @@
  },
  "deutsche bank": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Tier 2"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Earns revenue through interest margins, trading commissions, advisory fees, and asset management fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, corporate, and risk-averse, focusing heavily on compliance over rapid innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Corporate and institutional clients, private and small-business customers, and retail consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k-$130k base, depending on location, with low signing bonuses compared to big tech firms."
   },
   "evidence_sha": "1df31ce4b5d90db6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Financial Services & Banking"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probe deeply into the specific team's autonomy to determine if they operate with a modern tech stack or are bogged down by strict banking compliance and slow release cycles. Assess the manager's commitment to work-life balance by asking about on-call expectations, weekend work, and how the team handles guaranteed shutdowns."
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785194143,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f157dd3109"
+   ],
+   "value": "Global presence with key hubs in Germany, New York, London, and other major financial centers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1a11b64904"
+   ],
+   "value": "Provides banking and financial services to facilitate global economic activity and wealth management."
+  },
   "name": "Deutsche Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; large enterprise with regulated compliance and strict release cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Investment banking, corporate banking, private banking, asset management, and trading services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of standard vacation plus public holidays, typical for European-rooted banks."
   },
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -119557,7 +119868,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited to none, likely no guaranteed tech shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Large multinational enterprise."
   },
   "sources": [
    {
@@ -119601,14 +119919,43 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Global firm that periodically offers visa sponsorship for specialized new-grad tech roles in major regions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7c425fb84c"
+   ],
+   "value": "Deutsche Bank is a multinational investment bank and financial services company. It provides banking, trading, and asset management services to clients worldwide."
+  },
+  "synthesized_evidence_sha": "1df31ce4b5d90db6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Data engineering, ML model development for risk and trading, and large-scale infrastructure software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785194143,
   "web_search_url": "https://duckduckgo.com/?q=Deutsche+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "The role may suffer from the slow bureaucracy inherent to legacy financial institutions, potentially conflicting with the desire for a fast, innovative tech culture. However, the elite prestige and compensation provide a strong exit opportunity, though candidates must aggressively advocate for boundaries to ensure the safe hours and guaranteed personal time required."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; traditional banking environment with finite hours but occasional high-stress deadlines."
   }
  },
  "dewberry": {
@@ -128033,48 +128380,130 @@
  "eastern bank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: Mid-Tier. Enterprise AI capabilities are being actively scaled, offering strong technical growth, though it lacks the elite prestige of top-tier quantitative finance or big-tech AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Financial services and traditional banking."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Diverse, equitable, inclusive, and authentic, with a focus on community banking values."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Individual consumers and commercial clients, with a noted focus on diverse and inclusive communities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: $90,000 - $120,000. Comprehensive compensation plans are offered for junior to mid-level technical roles."
   },
   "evidence_sha": "b0e5f5a595ebbf01",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Financial Services / Banking."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Highlight your eagerness to accelerate technical learning while contributing to enterprise AI. Ask about team structure, work-life balance initiatives, and how innovation is balanced with financial industry compliance."
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785194143,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f763b24f56"
+   ],
+   "value": "Boston, Massachusetts area."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Dedicated to building a diverse, equitable, inclusive and authentic workplace, while helping scale modern banking services."
+  },
   "name": "Eastern Bank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: Moderate. As a regulated bank building new AI capabilities, the pace is innovative for the financial sector but tempered by necessary compliance and governance processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Retail and commercial banking services, alongside enterprise AI capabilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: 20-25 days. Comprehensive compensation plans include vacation, though exact day counts are not public."
   },
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: No specific guaranteed shutdowns mentioned, but standard banking holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Established financial institution."
   },
   "sources": [
    {
@@ -128128,14 +128557,46 @@
     "url": "https://gka.fa.us1.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/4317"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f763b24f56",
+    "0cd1100ccf"
+   ],
+   "value": "Eastern Bank is a financial institution that provides retail and commercial banking services. The bank generates revenue through traditional banking activities like lending, deposits, and related financial services."
+  },
+  "synthesized_evidence_sha": "b0e5f5a595ebbf01",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Building and scaling enterprise AI capabilities, including AI engineering roles within a regulated financial services environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785194143,
   "web_search_url": "https://duckduckgo.com/?q=Eastern+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Balances rapid technical learning in enterprise AI with a mission-driven, inclusive culture. It offers a strong alternative to high-burnout tech environments while providing solid new-grad growth opportunities in scalable AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0cd1100ccf"
+   ],
+   "value": "Estimated: Good. Benefits are comprehensive and promote well-being, though specific hours and guaranteed shutdowns are not publicly outlined."
   }
  },
  "eastern research group": {
@@ -146633,94 +147094,121 @@
  "fidelity investments": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier within financial services; peer to JPMorgan/Capital One AI labs, slightly below pure-play big tech (Google/DeepMind/Meta) for pure research prestige but stronger applied ML scale."
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "Estimated: High. As a top-tier asset manager, Fidelity's data science and AI roles carry significant industry prestige, though they are generally viewed as a step below elite tech giants in terms of raw tech-first innovation speed."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revenue from asset-based fees (mutual fund/ETF expense ratios, advisory fees), net interest income on cash balances, trading revenue (payment for order flow, margin interest), and institutional service fees. Zero-commission online equity trades; monetizes via spread and balance-sheet."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "Asset management and financial services. Fidelity generates revenue by managing client assets and charging fund expense ratios, advisory fees, and earning interest on uninvested cash deposits."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-driven, collaborative, low-ego. 'Customer first' value permeates decisions. Diverse, inclusive (ERGs, neurodiversity hiring). Promotion based on impact + behaviors. Minimal politics for a 70k-person org. Leadership accessible via skip-levels and town halls."
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "Estimated: Collaborative and mission-driven, with an emphasis on continuous learning. Employees are expected to be eager to learn and quick to adapt within a structured, regulated corporate framework."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Retail investors (25M+ brokerage accounts), workplace savings plan participants (23M+), financial advisors/RIAs, and institutional clients (pension funds, endowments, corporations)."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941",
+    "a7cd20a4be"
+   ],
+   "value": "Retail investors, workplace retirement plan participants, institutional investors, and internal enterprise stakeholders requiring compliance solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $125k-$145k base + $15k-$30k sign-on + RSUs vesting 4yr ($40k-$80k total) = ~$180k-$250k year-1 TC for AI/ML engineering roles in high-cost hubs. Adjusted lower for satellite offices."
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "Estimated: $90,000 to $115,000 base salary for associate software engineers, with potential for signing bonuses and profit-sharing contributions."
   },
   "evidence_sha": "f357ce5df5cca948",
-  "generated_at": 1784877472,
+  "generated_at": 1785196351,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Financial Services / Asset Management / FinTech"
+   "confidence": "high",
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "Financial Services and Asset Management."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect rigorous but fair technical loops: ML system design (scalable recommendation/fraud pipelines), Python/Java coding, statistics/ML theory, and behavioral questions tied to Fidelity's 'customer first' values. Prepare for case studies on model deployment, data quality, and regulatory constraints. Emphasize collaboration, ownership, and ability to ship in a regulated environment."
+   "value": "To ensure you do not sacrifice personal time or encounter burnout, focus your interviews on probing the specific team's pace, the frequency of production deployments, and how the team balances agile innovation with compliance bureaucracy to guarantee the sane hours and work-life balance you require."
   },
-  "last_attempt_at": 1784877472,
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785193872,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in Boston, MA. Major US tech hubs: Boston, Dallas/Fort Worth, Raleigh-Durham, Chicago, Jersey City, Merrimack NH. International: London, Dublin, Bangalore, Pune, Toronto. Hybrid-friendly; many roles offer 2-3 days onsite."
+   "confidence": "high",
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "Westlake, TX, along with other major US financial hubs."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To make financial expertise broadly accessible and help customers achieve better financial outcomes through innovation, low-cost products, and personalized guidance."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "To strengthen the financial well-being of its clients and help them navigate their unique financial journeys."
   },
   "name": "Fidelity Investments",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate-fast. Quarterly planning cycles with 2-week sprints; regulated releases add compliance gates but teams ship ML features monthly. Less chaotic than startup; more agile than traditional bank cores."
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "Estimated: Moderate to slow. Fidelity operates in a heavily regulated financial environment, meaning teams often follow structured agile methodologies which can feel slower and more bureaucratic compared to pure tech startups."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core products include brokerage accounts (Fidelity.com), retirement plans (401k, IRA), managed accounts, mutual funds/ETFs (including zero-fee index funds), wealth management, and institutional custody/trading services. Growing digital advice and fractional shares offerings."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941",
+    "a7cd20a4be"
+   ],
+   "value": "Retail and institutional brokerage accounts, mutual funds, ETFs, retirement planning accounts (401k/IRA), wealth advisory services, and workplace compliance technology platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days PTO + 10-11 company holidays + 1-2 volunteer days. Accrual starts day one. Unlimited sick/time-off for care. Carryover up to 5 days."
+   "value": "Estimated: 20 to 25 days of accrued paid time off annually, plus personal days, though exact new-grad policy is not public."
   },
-  "refresh_after": 1790061472,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1, ~7-9 business days) where most operations pause. Additional summer 'recharge' day(s) in some divisions."
+   "value": "Estimated: Fidelity typically offers a few floating holidays, though guaranteed firm-wide end-of-year shutdowns are not clearly published as a standard policy."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large, mature private company (employee-owned). ~$13T+ assets under administration, ~70k+ employees globally. Not a startup; stable, profitable, low turnover at senior levels."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "Large, established private enterprise. Fidelity is one of the largest asset managers in the world, managing trillions of dollars in assets and employing tens of thousands of people globally."
   },
   "sources": [
    {
@@ -146765,21 +147253,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Actively sponsors H-1B and green cards for specialized tech roles (data science, ML engineering, cloud). Routine cap-subject and cap-exempt filings; dedicated immigration team. New grads on F-1 OPT/STEM OST commonly converted."
+   "confidence": "high",
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "Fidelity is not providing immigration sponsorship for its Associate Software Engineer roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fidelity Investments is a multinational financial services corporation offering brokerage, retirement planning, wealth management, and institutional investment services. It serves millions of individual investors and institutions globally."
+   "confidence": "medium",
+   "source_ids": [
+    "30a31fe941"
+   ],
+   "value": "Fidelity Investments is a privately held financial services corporation that manages brokerage services, retirement plans, wealth management, and mutual funds. It makes money primarily through asset management fees, expense ratios on its mutual funds, and net interest margin on cash deposits."
   },
-  "synthesized_evidence_sha": "db39ff959a990343",
+  "synthesized_evidence_sha": "f357ce5df5cca948",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Heavy investment in cloud-native platforms, real-time trading systems, data lakes, ML for personalization/fraud/risk, and AI-driven digital advice. Tech hubs in Boston, Dallas, Raleigh, Chicago, London, India. Uses Java, Python, Kafka, Kubernetes, Spark; growing GenAI/ML engineering teams."
+   "confidence": "high",
+   "source_ids": [
+    "a7cd20a4be"
+   ],
+   "value": "The company hires software engineers to work in collaborative, agile environments building out internal and client-facing platforms. Specific technical work includes full stack development within enterprise product areas like Compliance Technology."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678327,
@@ -146787,12 +147281,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fidelity offers elite AI/data science prestige within a mission-driven financial giant that manages trillions, combining top-tier new-grad compensation with a culture that explicitly protects work-life balance through core-hours norms, guaranteed shutdowns, and low burnout — rare in finance. You get massive data scale, real production ML impact, and a tech-forward trajectory without the 'grind' reputation of hedge funds or big tech."
+   "value": "Fidelity's expansive AI and data science divisions offer strong new-grad compensation and elite brand prestige, but candidates should be aware that the culture leans toward traditional financial services, which may introduce bureaucratic processes that slow down the fast-paced, highly innovative tech culture you are seeking."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5. Strong cultural emphasis on 'no weekend work' norms, core hours 10am-3pm, protected vacation, and annual company-wide shutdown (late Dec). On-call rotations exist for critical platforms but are compensated and rotated."
+   "value": "Estimated: Good. The company is generally known for respecting work-life balance with sane hours compared to high-burnout tech startups, though pace can vary by specific team and product area."
   }
  },
  "fidelity national information services": {
@@ -213312,99 +213806,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Strong tier-2 prestige for AI/data science: a Fortune 115 industry titan leading real-world AI application for smart buildings and sustainability, but it is not the primary brand who comes to mind in AI research. It is highly respected in industry circles, slightly below the top-tier pure tech companies."
+   "value": "Estimated: Tier 2. While traditional building systems lack the prestige of elite tech companies, AI applied to hyperscale data centers creates a specialized and highly relevant tech niche."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "f0ea8a0da3"
+    "0eaf609f6c"
    ],
-   "value": "The business model is a hybrid of product sales and recurring service and digital subscription revenue. They sell physical building equipment and then secure long-term, recurring revenue through installations, energy performance service contracts, and software-as-a-service from the OpenBlue platform."
+   "value": "Designs, engineers, and sells intelligent building systems for large-scale demanding environments."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2ed1fccb76",
-    "bfe92b79f8"
+    "0eaf609f6c"
    ],
-   "value": "Professional, stable, and mission-led. The 140-year-plus industrial heritage brings a culture of safety, discipline, and deep domain expertise. The digital push through OpenBlue injects a data-driven innovation layer without replacing the old-guard ethos of respecting weekends."
+   "value": "Mission-driven, collaborative environment where ideas are heard."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "2ed1fccb76"
+    "0eaf609f6c"
    ],
-   "value": "Customers span large-scale enterprises, real estate developers, hospitals, schools, data centers, governments, and industrial manufacturers across 150+ countries."
+   "value": "Organizations that operate the world's most demanding environments, specifically hyperscale data centers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $125,000 - $145,000 total compensation for AI/data science graduates in major U.S. hubs. The base is around $100,000-$115,000 with a sign-on bonus and performance-eligible bonus. It is high for non-FAANG but below $180,000+ top-tier prestige offers."
+   "value": "Estimated: $75,000 - $90,000 base salary, typical for new grad software engineers in the Midwest outside of major tech hubs."
   },
   "evidence_sha": "b3cfe7a76b87d72b",
-  "generated_at": 1784681809,
+  "generated_at": 1785196351,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "2ed1fccb76"
+    "0eaf609f6c"
    ],
-   "value": "Commercial building solutions, H-VAC, fire and security, and industrial technology."
+   "value": "Building Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Interviews will test your ability to scale AI into real physical systems, not just toy models. Prepare for behavioral questions on navigating bureaucracy for innovation, data processing at a terrestrial scale, product-sense for sustainability, and coding against legacy IoT data. Sell your ability to balance elite fast-paced delivery with the accommodation required in a 100,000-person hard-tech environment."
+   "value": "Be prepared to demonstrate how you can move at a fast pace within a large enterprise, align with their mission, and maintain boundaries to prevent burnout during the interview."
   },
-  "last_attempt_at": 1784681809,
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785193872,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2ed1fccb76"
+    "0eaf609f6c"
    ],
-   "value": "Global HQ in Cork, Ireland; North American field HQ in Glendale, Wisconsin. Major tech and business hubs are also in Milwaukee, WI, and San Jose, CA. The candidate will find large facilities and teams throughout the U.S. Midwest and North America."
+   "value": "Glendale, Wisconsin, United States of America."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8"
+    "0eaf609f6c"
    ],
-   "value": "To reimagine the performance of buildings to serve people, places, and the planet through a fully integrated digital ecosystem that makes buildings smart, healthy, and sustainable."
+   "value": "To reimagine the performance of buildings to serve people, places, and the planet."
   },
   "name": "Johnson Controls",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "2ed1fccb76"
-   ],
-   "value": "Estimated: Purposeful medium. Pace is faster and more entrepreneurial than government or healthcare, but significantly more deliberate and process-respecting than VC-funded startups. Iterations are structured around product life cycles that run for years, not weeks."
+   "source_ids": [],
+   "value": "Estimated: Moderate. Large enterprise environment likely has more bureaucracy than pure tech startups, which may occasionally slow the pace of innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "f0ea8a0da3"
+    "0eaf609f6c"
    ],
-   "value": "Products include HVAC equipment, fire detection and suppression systems, security systems, and the AI-powered 'OpenBlue' digital platform. OpenBlue connects building systems and applies data analytics and machine learning for performance optimization, energy efficiency, and predictive maintenance."
+   "value": "Next-generation intelligent building systems for hyperscale data centers and demanding environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of vacation per year plus 1-2 floating and 10+ federal holidays for new graduates, varying by US region and team. Annual and holidays are the standard for this manufacturer grade, not flexible, unlimited."
+   "value": "Estimated: 15-20 days annually, standard for a large corporate employer."
   },
-  "refresh_after": 1789865809,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213414,14 +213902,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: The company has observed an annual week-long holiday shutdown between Christmas and New Year's Day for many of its U.S. offices and factories. Many tech groups also schedule a-zone-but-not-working week around July for summer maintenance."
+   "value": "Estimated: No guaranteed company-wide shutdowns found; standard PTO likely applies."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "2ed1fccb76"
+    "0eaf609f6c"
    ],
-   "value": "A Fortune 500, publicly traded (NYSE: JCI) mature multinational corporation with $26.79 billion in annual revenue, ~100,000 employees, and a 140-year operating history."
+   "value": "Large multinational public company."
   },
   "sources": [
    {
@@ -213466,27 +213954,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "0eaf609f6c"
+   ],
+   "value": "Not explicitly stated in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "2ed1fccb76"
+    "0eaf609f6c"
    ],
-   "value": "Johnson Controls is a global leader in smart, healthy, and sustainable building solutions, operating for over 135 years. The company makes money by designing, selling, installing, and servicing integrated building equipment, controls, and software systems that optimize energy, improve safety, and enhance occupant experience for commercial, industrial, and institutional customers worldwide."
+   "value": "Johnson Controls is a multinational conglomerate specializing in building technology and equipment. The company generates revenue by building and maintaining intelligent building systems for demanding environments like hyperscale data centers."
   },
-  "synthesized_evidence_sha": "76b7e305092ba58a",
+  "synthesized_evidence_sha": "b3cfe7a76b87d72b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "bfe92b79f8",
-    "f0ea8a0da3"
+    "0eaf609f6c"
    ],
-   "value": "Technical work centers on industrial AI, IoT, and data science applied to physical infrastructure. Teams build machine learning models on the OpenBlue platform for energy optimization, digital twin simulation, predictive HVAC maintenance, and computer vision security. Work combines cloud-scale data engineering with domain-specific challenges like thermodynamics."
+   "value": "Software engineering applications for data center engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593387,
@@ -213494,12 +213982,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Johnson Controls provides an uncommon balance for AI talent: the prestige and resources of a Fortune 115 company with mission-driven, green-tech work, paired with a legacy industrial culture that estimates no 'move fast and break things' insanity. You get to work on impactful, real-world AI problems while keeping your life."
+   "value": "This role aligns with a mission-driven approach, emphasizing sustainability and harm reduction, within an empowering tech culture designed for new grads to thrive and have their ideas heard."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Above average for a Fortune 500 engineering role, generally rated 4 out of 5. True shut-downs and scheduled-release cycles prevent constant fire drills. Large-company culture means pockets of overtime exist, but systematic burnout is not part of the identity."
+   "value": "Estimated: Good. Company messaging emphasizes empowering employees and avoiding burnout, suggesting a relatively balanced work environment."
   }
  },
  "johnson electric": {
@@ -317472,93 +317960,104 @@
  "quicken loans": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High tier within Fintech. While not FAANG, it is a dominant, tech-forward player in a complex, data-dense industry, offering an elite reputation in the Detroit/Seattle markets for applied AI. The new-grad pay aligns with tech industry standards, reinforcing its prestige."
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: Mid-tier. While not historically considered an 'elite tech giant' like FAANG, Quicken Loans/Rocket has built strong engineering prestige in the fintech sector with heavy investments in modern AI and data solutions."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "A direct-to-consumer, client-centric mortgage lending model. The company originates loans online and via a network of mortgage bankers, then mostly sells the closed loans on the secondary market to entities like Fannie Mae and Freddie Mac, while retaining a servicing portfolio for recurring revenue."
+   "value": "Makes money by facilitating digital mortgages and real estate transactions as part of the broader Rocket Companies ecosystem."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-driven and intensely entrepreneurial. The culture is defined by a set of core 'ISMs' which emphasize innovation, client focus, and urgency, but strictly within disciplined schedules. It avoids toxic burnout through its shutdown policy while pushing technical growth."
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: Tech-forward and highly corporate, heavily focused on modernizing legacy real estate processes while maintaining strict compliance and regulatory standards."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "Individual home buyers and homeowners seeking to refinance existing mortgages in the United States."
+   "value": "Individual consumers navigating complex real estate and financial transactions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
+    "f69c0992b6",
     "1ca2049046"
    ],
-   "value": "Estimated: $119,000 - $145,000 base salary, based on a Seattle-based entry-level SWE I posting."
+   "value": "Estimated: $84,000 - $145,000 base per year for entry-level roles, with total compensation varying significantly by specific software and data engineering roles."
   },
   "evidence_sha": "cac4ae667964df3c",
-  "generated_at": 1784682450,
+  "generated_at": 1785196351,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "Fintech (Financial Technology) and Mortgage Lending"
+   "value": "Financial Technology / Real Estate / Mortgage Lending."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "The interview process emphasizes 'ISMs' (cultural pillars) alongside technical depth. A candidate should visibly align with the fast, innovative, mission-driven, and well-balanced culture, showcasing strong fundamentals in software engineering, system design, and a proven drive to quickly deliver business value without sacrificing work-life boundaries."
+   "value": "Discuss how the team adopts cutting-edge AI and data science workflows while maintaining strict boundaries for work-life balance and guaranteed shutdowns. Ask leaders about innovation pace, avoiding bureaucratic slowdowns, and how new grads learn and grow without toxic burnout."
   },
-  "last_attempt_at": 1784682450,
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785193872,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "f69c0992b6",
     "1ca2049046"
    ],
-   "value": "Headquartered in Detroit, Michigan, with a major technology presence in Seattle, Washington, and additional offices in Phoenix, Arizona, and Cleveland, Ohio."
+   "value": "Headquartered in Detroit, Michigan with additional roles located in Seattle, Washington. Most roles are full-time onsite."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "To be America's largest and most trusted home loan lender by leveraging technology, data, and a strong client-focused culture to simplify the mortgage process."
+   "value": "To provide digital solutions for complex transactions."
   },
   "name": "Quicken Loans",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "A high-propulsive 'hard-working culture' but with a strong focus on efficiency. The company is known for an intense, fast-paced environment during working hours, offset by a structured shutdown to prevent burnout."
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: Fast-paced and highly driven, reflecting a sales-oriented fintech culture that expects high performance and technical innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "Home mortgage loans including conventional fixed-rate, adjustable-rate, FHA, VA, and jumbo loans. The flagship product is Rocket Mortgage, a fully online, self-serve mortgage application platform."
+   "value": "Digital solutions for complex real estate and mortgage transactions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-18 days of paid time off for new hires, which is competitive but not unlimited."
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: 15-25 days of combined PTO and sick leave, standard for a large financial enterprise."
   },
-  "refresh_after": 1789866450,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317567,15 +318066,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "The culture famously guarantees an 8 p.m. daily shutdown for all non-essential operations to protect work-life balance."
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: Standard corporate holidays and limited end-of-year office closures."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "f69c0992b6",
     "1ca2049046"
    ],
-   "value": "A mature, large-cap company with over 10,000 employees, founded in 1985 in Detroit, Michigan. It is a major subsidiary of Rocket Companies, Inc. (NYSE: RKT)."
+   "value": "Large enterprise with over 10,001 employees, founded in 1985."
   },
   "sources": [
    {
@@ -317632,26 +318134,27 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "f69c0992b6",
     "1ca2049046"
    ],
-   "value": "Quicken Loans has a track record of offering H1B visa sponsorships, as noted on their job postings."
+   "value": "Company has a historical track record of offering H1B sponsorships, though it is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "512d515b01"
+    "f69c0992b6"
    ],
-   "value": "Quicken Loans is the largest retail mortgage lender in the U.S., operating primarily through its online platform, Rocket Mortgage. It makes money by originating, processing, and servicing home loans, earning revenue from interest, loan origination fees, and the sale of mortgages on the secondary market."
+   "value": "Quicken Loans is a Detroit-based company that provides digital solutions for complex transactions. As part of Rocket, it generates revenue by originating and servicing digital mortgages and real estate transactions."
   },
-  "synthesized_evidence_sha": "7aa5c50522d9cf6d",
+  "synthesized_evidence_sha": "cac4ae667964df3c",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1ca2049046",
-    "512d515b01"
+    "f69c0992b6",
+    "1ca2049046"
    ],
-   "value": "Engineering areas include full-stack development, data engineering, and machine learning for credit risk analysis, real-time underwriting models, and automation of document and title verification. Entry-level roles like Software Developer I involve building and maintaining components of the Rocket Mortgage loan servicing platform."
+   "value": "Software and data engineering focused on digitizing, streamlining, and scaling complex real estate and mortgage transaction platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675358,
@@ -317659,12 +318162,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Quicken Loans offers a rare combination of a top-tier data science environment and a non-elitist, results-driven culture that actively avoids burnout through guarantees like the 8 p.m. shutdown. A candidate who prioritizes high-impact AI work, fast-paced technical learning, and elite pay without the toxic 'always-on' culture of traditional tech and finance firms would find this a uniquely aligned destination."
+   "value": "You want an elite AI/data role that balances high new-grad pay, fast tech culture, and respected WLB with sane hours. This tech-focused division of Rocket pushes digital innovation in fintech, aiming to replace slow bureaucracy with modern engineering practices that accelerate learning and career growth without sacrificing personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Above average for tech and finance. Work-life balance is good, anchored by sane hours and a guaranteed shutdown that prevents 'always-on' culture,"
+   "source_ids": [
+    "f69c0992b6"
+   ],
+   "value": "Estimated: Moderate. The company offers structured corporate benefits, but the demanding pace of the mortgage tech industry can require aggressive deadline management."
   }
  },
  "quince": {
@@ -328777,48 +329282,125 @@
  "revvity": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: Tier 2 (Niche HealthTech). Not a household name in elite Big Tech AI, but offers strong, meaningful prestige in the scientific and healthcare AI space."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Develops and provides end-to-end specialized software and hardware solutions for the life sciences and healthcare sectors."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Mission-driven and scientifically focused, blending a 'disruptor' enthusiasm with the stability of an established leader in health technology."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Scientists, researchers, and clinicians working to solve global health challenges."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: $85,000 - $110,000. Competitive for health tech and life sciences remote roles, though typically slightly lower than elite FAANG new-grad compensation."
   },
   "evidence_sha": "cae964f7f12e5a92",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Life Sciences, Diagnostics, and Health Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Candidates should emphasize their proficiency in AI, Java, Vert.x, and AWS. To align with your priorities, ask the interviewers about the team's pace of technical learning, autonomy, and how they maintain work-life balance and strict shutdowns to avoid bureaucratic slowdowns and burnout."
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785195043,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "US Remote (specifically noting Massachusetts), indicating remote-first or hybrid flexibility for tech roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "To help scientists, researchers, and clinicians solve the world's greatest health challenges."
+  },
   "name": "Revvity",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: Moderate to Fast. The company claims to pair the enthusiasm of an industry disruptor with the experience of a longtime leader, suggesting an innovative tech culture but with some legacy corporate structure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "End-to-end solutions for scientists, researchers, and clinicians, including a next-generation cloud notebook application built for the Signals Software team."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: 20-25 days. Standard for established life sciences and healthcare technology companies, typically augmented by standard public holidays."
   },
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: Likely has standard holiday closures but no guaranteed frequent company-wide shutdowns found in the research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Established corporate entity that pairs the enthusiasm of an industry disruptor with the experience and scale of a longtime market leader."
   },
   "sources": [
    {
@@ -328872,14 +329454,45 @@
     "url": "https://revvity.wd103.myworkdayjobs.com/External/job/US-Remote---MA/Associate-Software-Development-Engineer--Remote-US-_JR-044961"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Not explicitly stated in the available job posting sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Revvity is a developer and provider of end-to-end solutions designed to help scientists, researchers, and clinicians solve the world's greatest health challenges. They generate revenue by commercializing specialized software and hardware products for the life sciences and diagnostics markets."
+  },
+  "synthesized_evidence_sha": "cae964f7f12e5a92",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Building next-generation cloud notebook applications, specifically involving AI, Java, Vert.x, and AWS for backend development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785195043,
   "web_search_url": "https://duckduckgo.com/?q=Revvity+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "For a candidate seeking an AI role balancing innovation with work-life balance, Revvity offers a strong mission-driven environment (solving global health challenges) that avoids the high-burnout toxicity of pure big-tech. The focus on health sciences technology provides meaningful impact while the remote US setup supports sane hours and personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "138586fd02"
+   ],
+   "value": "Estimated: Good. Healthcare and life sciences companies often prioritize sustainable hours and mission-driven work over the toxic crunch culture found in pure tech startups."
   }
  },
  "reyes holdings": {
@@ -331946,17 +332559,17 @@
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "T1/T2 - Robinhood's explicit push to build 'elite teams' applying 'frontier technologies' to the world's biggest financial problems places its AI/Data Science roles at the upper tiers of fintech prestige, emphasizing cutting-edge technical rigor."
+   "value": "Estimated: Elite tier. The company explicitly mentions applying 'frontier technologies' and forming 'elite teams' to solve the world's biggest financial problems, indicating a high-prestige technical environment."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "7038aeaa92",
-    "2ac0947b99"
+    "7e8ebf0452",
+    "7038aeaa92"
    ],
-   "value": "Robinhood leverages its financial technology platform to deliver financial services to retail users and government entities. It generates revenue through transaction routing (payment for order flow), interest on cash, and premium subscription tiers."
+   "value": "Provides a financial technology platform that facilitates customer-facing money movement and standalone government financial experiences, generating revenue through financial services and platform access."
   },
   "culture_vibe": {
    "confidence": "high",
@@ -331964,24 +332577,27 @@
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "Elite, ambitious, and anti-complacent. The company culture is built around high performance and continuous innovation in frontier technology to solve historic financial challenges."
+   "value": "Ambitious, elite, and impactful. The culture values doing the best work of one's career, applying frontier technologies, and actively rejecting complacency to solve major financial problems."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "7038aeaa92",
-    "2ac0947b99"
+    "7e8ebf0452",
+    "7038aeaa92"
    ],
-   "value": "Retail investors seeking accessible financial markets, as well as government entities utilizing Robinhood's platform for historic national initiatives."
+   "value": "Retail investors looking to move money into, out of, and between accounts, as well as participants in national government initiatives requiring financial technology platforms."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180,000 - $220,000+ total target compensation (base + equity + bonus) for elite AI/Data Science new grads in high-cost-of-living areas."
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary. Robinhood competes for top engineering talent by branding itself as an elite team solving big problems, likely offering highly competitive new grad packages."
   },
   "evidence_sha": "2775b2edebbcc3aa",
-  "generated_at": 1784942504,
+  "generated_at": 1785196351,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -331990,29 +332606,34 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7038aeaa92",
-    "2ac0947b99"
+    "7e8ebf0452"
    ],
-   "value": "Financial Technology (Fintech) / Retail Brokerage"
+   "value": "Financial Technology (FinTech)"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "7038aeaa92",
-    "2ac0947b99"
+    "2ac0947b99",
+    "7e8ebf0452"
    ],
-   "value": "Assess whether the team's 'elite' pace and the explicit expectation that ambitious people do their best work translates to sustainable, high-impact technical growth for a new grad. Probe the actual hours and on-call expectations to ensure the fast tech culture avoids the toxic burnout and bureaucracy the candidate wants to avoid."
+   "value": "Candidates should prepare to demonstrate how they can thrive in a non-complacent, fast-paced environment where ambitious people drive innovation using frontier technologies. For a top-tier AI/Data Science role, expect interviews to test your ability to apply cutting-edge technical skills to massive financial challenges while showing alignment with the company's democratization mission and focus on elite execution."
   },
-  "last_attempt_at": 1784942504,
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785193872,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in Menlo Park, CA with offices in major US tech hubs (e.g., New York, Denver) and remote work options depending on the role."
+   "confidence": "low",
+   "source_ids": [
+    "bbca26d7d5",
+    "852bc6f679",
+    "b0bbdf8aa5"
+   ],
+   "value": "Official company pages reference standard web presences but exact physical office locations are not explicitly detailed in the provided sources."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "7e8ebf0452",
     "7038aeaa92",
     "2ac0947b99"
    ],
@@ -332020,28 +332641,32 @@
   },
   "name": "Robinhood",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "Estimated: Very fast. Robinhood explicitly states it 'isn't a place for complacency' and is structured for 'ambitious people' to do the best work of their careers, indicating a high-velocity tech environment."
+   "value": "Estimated: Fast-paced and ambitious. Robinhood explicitly states it 'isn't a place for complacency' and is designed for ambitious people to do the best work of their careers."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "7e8ebf0452",
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "A standalone web and app experience for retail investing, leveraging industry-leading financial technology for national financial initiatives."
+   "value": "A consumer-facing money movement experience for iOS and Android, standalone platforms for historic national government initiatives, and broader industry-leading financial technology applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days of flexible PTO annually, typical for top-tier tech companies competing for elite talent."
+   "source_ids": [
+    "7038aeaa92"
+   ],
+   "value": "Estimated: 15-25 PTO days. The provided sources do not specify exact numbers, but as a large-scale fintech competing for elite talent, a competitive PTO policy is standard."
   },
-  "refresh_after": 1790126504,
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332050,13 +332675,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No firm evidence of guaranteed company-wide shutdowns; typical policy relies on flexible PTO with potential market-holiday downtimes."
+   "source_ids": [
+    "7e8ebf0452"
+   ],
+   "value": "Estimated: Limited or team-dependent. The provided sources do not explicitly mention guaranteed company-wide shutdowns, though modern tech companies occasionally offer holiday breaks."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public company (NASDAQ: HOOD), operating as a large-scale, established fintech firm."
+   "confidence": "medium",
+   "source_ids": [
+    "7038aeaa92",
+    "2ac0947b99"
+   ],
+   "value": "Robinhood is a publicly traded, established fintech company operating at a large scale with elite teams tackling major financial problems."
   },
   "sources": [
    {
@@ -332121,38 +332751,39 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Generally provides visa sponsorship for specialized engineering roles requiring hard-to-find technical talent, evaluated on a case-by-case basis."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "7038aeaa92",
-    "2ac0947b99"
+    "7e8ebf0452",
+    "7038aeaa92"
    ],
-   "value": "Robinhood is a financial technology company that provides a standalone web and app platform allowing users to invest in stocks, options, and cryptocurrencies. It makes money by routing user trades to market makers and earning interest on uninvested cash and margin lending."
+   "value": "Robinhood is a financial technology company that provides a popular app allowing users to invest in stocks, ETFs, options, and cryptocurrencies, as well as manage their everyday money. The company makes money primarily through transaction-based revenues from user trades, interest on cash and securities, and premium subscription services like Robinhood Gold."
   },
-  "synthesized_evidence_sha": "32760fd40c43c92e",
+  "synthesized_evidence_sha": "2775b2edebbcc3aa",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "7e8ebf0452",
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "Engineers work on a world-class, intuitive investing platform, applying frontier technologies to large-scale financial problems using web and mobile (iOS/Android) architectures."
+   "value": "Engineers build world-class, intuitive iOS and Android applications, applying frontier technologies to solve the world's biggest financial problems and improve customer-facing money experiences."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673989,
   "web_search_url": "https://duckduckgo.com/?q=Robinhood+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "Robinhood aligns with the candidate's desire for an elite, mission-driven company that applies frontier technologies to massive financial challenges. It provides high new-grad pay and prestige while actively seeking ambitious people who want to do the best, fastest work of their careers without slow complacency."
+   "value": "Robinhood aligns perfectly with a candidate seeking high prestige and elite pay at a mission-driven company, explicitly branding itself as a place where ambitious people do their best work without complacency. The company emphasizes building elite teams that apply frontier technologies to massive problems, offering a fast-paced, innovative tech culture that accelerates technical learning and career growth while maintaining a strong democratizing mission."
   },
   "wlb_rating": {
    "confidence": "estimated",
@@ -332160,7 +332791,7 @@
     "7038aeaa92",
     "2ac0947b99"
    ],
-   "value": "Estimated: Moderate. The culture strongly emphasizes ambition and high output, which may conflict with guaranteed shutdowns; however, the mission-driven nature may provide sane hours outside of market-crash events."
+   "value": "Estimated: Moderate to High. The company seeks ambitious individuals to do the best work of their careers, which implies a strong drive and high expectations, but this is balanced by the goal of preventing complacency through innovation rather than pure burnout."
   }
  },
  "roblox": {
@@ -404456,38 +405087,104 @@
  "turner townsend": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: Niche/Boutique. While high-prestige in the construction consulting industry, it is not recognized as an elite AI or data science firm compared to FAANG or top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Consulting and advisory services charging billable hours and fixed project fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: Professional, structured, and collaborative environment focused on tangible infrastructure outcomes, though it may lean slower and more bureaucratic than disruptive tech firms."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Corporations, governments, developers, and investors involved in real estate, infrastructure, and natural resources projects."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a7b8563e16",
+    "dbc3b9e88f",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: $70,000 - $85,000 USD base, lagging behind elite tech firms due to the consulting/construction industry context."
   },
   "evidence_sha": "f9129db57eed9f2a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785196351,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Construction and Engineering Consulting / Professional Services."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785196351,
   "last_evidence_at": 1785195042,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Offices across the Americas, Europe, the Middle East, Africa, Asia, and Australia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "To deliver projects safely, on time, and within budget while improving quality of life and creating sustainable outcomes for clients."
+  },
   "name": "Turner & Townsend",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: Moderate to fast, driven by client project deadlines; firm culture generally prioritizes structured delivery over disruptive tech-startup pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Project and program management, cost management, advisory services, and digital project controls solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: 20-25 days annual leave, varying by region and seniority."
   },
+  "refresh_after": 1790380351,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -404496,8 +405193,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: Firm-wide holiday shutdowns may occur between Christmas and New Year, though guaranteed shutdowns are not standard policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Established public/private global consulting firm with a large international employee presence."
   },
   "sources": [
    {
@@ -404541,14 +405247,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Turner & Townsend is a global professional services firm specializing in program management, cost management, and project controls across the real estate, infrastructure, and natural resources sectors. The company makes money by providing consulting expertise and advisory services to help clients successfully deliver complex capital projects."
+  },
+  "synthesized_evidence_sha": "f9129db57eed9f2a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Digital project controls, data visualization, project dashboards, cost forecasting engines, and enterprise software implementation for client projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785195042,
   "web_search_url": "https://duckduckgo.com/?q=Turner+%26+Townsend+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a7b8563e16"
+   ],
+   "value": "Estimated: Good, with standard consulting hours; heavy travel or crunch times may happen depending on active client projects, but generally avoids toxic burnout culture."
   }
  },
  "turning point community programs": {
