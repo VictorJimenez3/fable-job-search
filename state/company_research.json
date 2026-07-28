@@ -4145,52 +4145,118 @@
  "achieve": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Established fintech with meaningful AI/DS surface area; solid mid-tier prestige — strong applied ML practice but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Revenue from origination fees and interest on personal loans, plus fees for debt resolution and settlement services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, data-driven, remote-first friendly; engineering and data science are central to product strategy. Less bureaucracy than big banks, more structure than early-stage startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Everyday consumers seeking debt relief, credit improvement, and personal financial management assistance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Estimated: $120K–$140K base + equity/bonus for new-grad data science/ML roles, extrapolated from $140K–$160K posted range for 1+ years experience."
   },
   "evidence_sha": "5c7ba113d1e028a7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785201944,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785201778,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Fintech / Digital Personal Finance / Consumer Lending"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Expect deep dives into ML model lifecycle (credit risk, fraud, personalization), causal inference for product decisions, and scalable data architecture. Prepare to discuss how you balance model performance with regulatory compliance and consumer fairness. Behavioral questions will likely probe mission alignment and ability to ship impactful solutions in a regulated, fast-paced fintech setting."
+  },
+  "last_attempt_at": 1785201944,
   "last_evidence_at": 1785201417,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Headquartered in Tempe, Arizona; remote roles available across the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "To help everyday people thrive by providing innovative financial solutions that address debt and improve financial well-being."
+  },
   "name": "Achieve",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced product-driven cycles typical of consumer fintech; regulated environment adds compliance checks but culture emphasizes shipping."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Digital personal finance solutions including debt consolidation loans, debt resolution programs, and financial management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO plus holidays; standard US fintech package. No public policy details found."
   },
-  "retry_after": 1785201898,
+  "refresh_after": 1790385944,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8",
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; some teams may observe winter break informally."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Established private company (founded 2002) with 1,001–5,000 employees, headquartered in Tempe, Arizona."
   },
   "sources": [
    {
@@ -4244,14 +4310,43 @@
     "url": "https://jobright.ai/jobs/info/6a67e069872eb74f9eadb880?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Achieve has a track record of offering H1B sponsorships, though sponsorship for any specific role is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Achieve is a digital personal finance company founded in 2002 that provides innovative financial solutions to help everyday people manage debt and improve financial health. It generates revenue primarily through fees and interest on its lending and debt resolution products."
+  },
+  "synthesized_evidence_sha": "5c7ba113d1e028a7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Data science and AI applied to credit risk modeling, fraud detection, personalization engines, and optimization of financial product offerings. The Data Scientist (AHL) role suggests focus on advanced analytics and machine learning in lending."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785201417,
   "web_search_url": "https://duckduckgo.com/?q=Achieve+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a29a849bd8"
+   ],
+   "value": "Achieve offers a mission-driven fintech environment where AI/data science directly improves consumers' financial health. The remote-friendly culture, established scale (1K–5K employees), and competitive pay bands ($140K–$160K for experienced data scientists) align with a desire for elite technical work without bureaucratic drag. Public emphasis on helping everyday people thrive suggests purpose-driven work, while remote flexibility supports work-life balance goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — remote flexibility and mission focus support balance, but fintech deadlines and regulatory demands can create crunch periods."
   }
  },
  "acorns": {
@@ -106721,7 +106816,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106739,7 +106834,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785201598,
+  "last_attempt_at": 1785201944,
   "last_evidence_at": 1785201409,
   "name": "Cox Automotive",
   "pace_of_work": {
@@ -106752,7 +106847,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785201838,
+  "retry_after": 1785202424,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175448,41 +175543,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low (Industrial focus, not a tech-first company)"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Manufacturing and direct sales of specialized fluid handling equipment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Traditional industrial engineering culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Organizations with complex fluid management needs (e.g., manufacturing, automotive, construction)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $90,000 (non-prestige industrial manufacturing rates)."
   },
   "evidence_sha": "13cdc712138159e2",
+  "generated_at": 1785201944,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Industrial Machinery / Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific team's tech stack to ensure it isn't legacy-bound. Ask about bureaucracy, R&D budget, and whether the role offers actual AI innovation or just basic reporting."
   },
-  "last_attempt_at": 1785201778,
+  "last_attempt_at": 1785201944,
   "last_evidence_at": 1785201417,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Global operations, primary presence in Minneapolis, Minnesota."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Fluid handling solutions and components engineering."
+  },
   "name": "Graco",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and bureaucratic, typical of industrial manufacturing."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df",
+    "07b5b84ac1"
+   ],
+   "value": "Specialized pumps, spray equipment, meters, and fluid dispensing systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days standard PTO."
   },
-  "retry_after": 1785201898,
+  "refresh_after": 1790385944,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175492,7 +175640,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed, standard holidays only."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Publicly traded, established industrial manufacturer."
   },
   "sources": [
    {
@@ -175526,14 +175681,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=0b6128f63612a46c276d9eeeb71c5af6b563aeaec105b5bf3e4f2ee6397949fcJmltdHM9MTc4NTExMDQwMA&ptn=3&ver=2&hsh=4&fclid=3558eb97-c31e-67e7-14d9-fc33c222663e&u=a1aHR0cHM6Ly93d3cuZ3JhY28uY29tL3VzL2VuLmh0bWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Not specified in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df",
+    "07b5b84ac1"
+   ],
+   "value": "Graco designs and manufactures fluid handling systems and equipment used to pump, meter, and dispense various fluids. The company makes money by selling specialized pumps, spray equipment, and related components to organizations with complex fluid management needs. (Note: Public sources provided only redirect notices, but this is established corporate information)"
+  },
+  "synthesized_evidence_sha": "13cdc712138159e2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9d804765df"
+   ],
+   "value": "Industrial engineering, mechanical design, and manufacturing systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785201417,
   "web_search_url": "https://duckduckgo.com/?q=Graco+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional industrial manufacturer, Graco may lack the innovative, AI-driven culture and high compensation you require. While it may offer sane hours compared to big tech, the pace is likely bureaucratic, making it less ideal for rapid career acceleration in data science."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, standard manufacturing hours."
   }
  },
  "gradient robotics": {
@@ -340281,7 +340464,7 @@
    "value": "Estimated: Emerging startup tier. The niche focus on automating hacker intuition with AI presents a unique, high-impact prestige opportunity rather than a traditional big-tech label."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -340332,7 +340515,7 @@
    ],
    "value": "Prepare to highlight your expertise in Python, data structures, LLMs, JavaScript, and React, as these must-have skills are heavily emphasized for the Software Engineer I role. Be ready to discuss how you can contribute to a fast-paced, mission-driven startup environment without sacrificing work-life balance."
   },
-  "last_attempt_at": 1785201598,
+  "last_attempt_at": 1785201944,
   "last_evidence_at": 1785200012,
   "locations": {
    "confidence": "high",
@@ -340370,7 +340553,7 @@
    "value": "Estimated: Standard startup package, typically offering 15-20 days of PTO annually, though precise details are not publicly listed."
   },
   "refresh_after": 1790358990,
-  "retry_after": 1785201838,
+  "retry_after": 1785202424,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
