@@ -1062,38 +1062,102 @@
  "4g clinical": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: Internally-focused Niche Tier. While highly impactful in life sciences, it is primarily a full-stack web engineering shop rather than an elite AI/ML or data science first-mover."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "B2B technology provider offering software platforms and technical services for clinical trial execution and management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: Innovative and collaborative. As an on-site mid-sized tech company in the biotech space, the culture likely emphasizes teamwork, mission-alignment, and direct technical collaboration."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Pharmaceutical companies, biotech firms, and life sciences organizations conducting clinical research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: $85,000 - $110,000 USD. Mid-sized healthcare tech companies in the Greater Boston area typically offer competitive but not elite FAANG-level salaries for new grads."
   },
   "evidence_sha": "62c1647917419d52",
+  "generated_at": 1785279062,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Healthcare Technology / Clinical Research / Software Development."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Prepare to discuss your deep expertise in full-stack engineering, specifically how you have leveraged Django, Ruby on Rails, and micro-services to build scalable applications. Be ready to demonstrate how you thrive in fast-paced, on-site environments and how you align with their mission to accelerate clinical research."
   },
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785276153,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Headquartered in Wellesley, Massachusetts, USA with on-site engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "To advance clinical research and accelerate the development of new therapies through innovative technology solutions."
+  },
   "name": "4G Clinical",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: Agile and project-driven. Expect a standard scaling tech company pace that requires adaptability and quick iteration cycles for on-site engineering teams."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Clinical trial software, including custom applications for study design, supply chain optimization, and trial management using full-stack web technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: 15-20 days of standard accrued PTO annually, typical for mid-sized Massachusetts tech companies."
   },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1102,8 +1166,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: Unknown. Guaranteed company-wide shutdowns are rare outside of major tech giants; do not assume this exists without explicit HR confirmation."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Mid-sized company with 201-500 employees, founded in 2015."
   },
   "sources": [
    {
@@ -1157,14 +1230,43 @@
     "url": "https://jobright.ai/jobs/info/6a68fbeb3b549b0b531d3354?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Has a historical track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "4G Clinical is a healthcare technology company founded in 2015 that builds software to facilitate clinical trials and research. It makes money by licensing its platform and providing technical solutions to pharmaceutical and life sciences organizations running these trials."
+  },
+  "synthesized_evidence_sha": "62c1647917419d52",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Full-stack software engineering utilizing Django, Ruby on Rails, Object Relational Mapping (ORM), Object-Oriented Programming, and micro-services architecture for on-site application development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785276153,
   "web_search_url": "https://duckduckgo.com/?q=4G+Clinical+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Operating in the life sciences sector, the company provides a mission-driven environment focused on advancing clinical research. Its mid-sized scale allows for high impact and technical ownership without the slow bureaucracy of massive enterprises, aligning with your desire for an innovative, fast-paced tech culture and elite career growth."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "525da27da9"
+   ],
+   "value": "Estimated: Moderate. On-site tech scaling companies often demand standard to slightly heavy hours, requiring candidates to clarify work-life balance expectations during interviews."
   }
  },
  "4theweb": {
@@ -26460,79 +26562,100 @@
  "analog devices": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 (Hardware/Edge AI leader) — Not a primary AI research lab like FAIR/DeepMind, but a recognized leader in deploying ML on silicon at the edge with high publication visibility in ISSCC, JSSC, and TinyML venues."
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "High prestige in semiconductors, though not traditionally categorized as a top-tier pure AI/data science company; it offers cutting-edge work in algorithm development and hardware AI applications."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fabless-lite semiconductor model: ADI designs chips and owns proprietary process technology but leverages both internal fabrication (for differentiated analog processes) and external foundries for high-volume digital CMOS. Revenue comes from direct sales and distribution of high-margin, long-life-cycle ICs with strong IP moats."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Designs and sells integrated circuits and embedded software algorithms to technology manufacturers."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first, low-politics, collaborative. Long tenures common (15+ yr median). Decision-making is data-driven and consensus-oriented; bureaucracy exists but is technical (design reviews, quality systems) rather than administrative. Diversity initiatives visible but progress gradual."
+   "confidence": "medium",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Mission-driven, focused on collaborative innovation across various teams to develop cutting-edge technology."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Broad B2B base across industrial, automotive, communications, consumer, and healthcare sectors. Key accounts include major OEMs and contract manufacturers building factory automation, EV/ADAS systems, 5G infrastructure, medical imaging, and test/measurement equipment."
+   "confidence": "medium",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Technology companies and hardware engineers requiring advanced semiconductor components."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $130k–$150k base / $25k–$40k sign-on / $40k–$70k RSU (4-yr) = $195k–$260k year-1 total comp for EE/CS roles in high-cost hubs (Bay Area, Boston). Lower in MA/NC sites."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Estimated: $122K/yr - $167K/yr for new grad technical roles."
   },
   "evidence_sha": "15b4767cd5ec49b7",
-  "generated_at": 1784863706,
+  "generated_at": 1785279062,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Semiconductors — Analog & Mixed-Signal ICs"
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Semiconductors"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect deep analog fundamentals (device physics, noise, linearity), circuit design walkthroughs, and signal-processing theory. For AI/DS roles: demonstrate ability to map ML models onto constrained DSP/MCU hardware, optimize for power/latency, and collaborate with IC designers. Behavioral questions probe cross-functional collaboration and long-project ownership."
+   "value": "Probe the specific team's engineering pace to ensure it matches your preference for a fast, innovative culture over slow bureaucracy. Ask about work-life balance expectations, specific AI/data science applications within the embedded systems, and how the team supports technical learning and career growth without leading to burnout."
   },
-  "last_attempt_at": 1784863706,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785275874,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Wilmington, MA. Major design centers: San Jose, CA; Boston/Northwest MA; Raleigh, NC; Toronto; Limerick (Ireland); Manila; Bangalore; Tokyo. Fabs in Wilmington, MA and Beaverton, OR plus foundry partnerships."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "San Diego, CA and other locations across the United States."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To bridge the physical and digital worlds with unmatched analog and mixed-signal technology, enabling breakthroughs in how people live, work, and communicate."
+   "confidence": "medium",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Focused on developing innovative semiconductor technologies to solve complex engineering challenges."
   },
   "name": "Analog Devices",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Measured, project-oriented cadence (12–36 month design cycles). Sprints exist in firmware/ML teams but are buffered by hardware tape-out schedules; quarterly planning dominates over weekly fire-drills."
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Estimated: Fast-paced environment as stated in job descriptions, though typical of global semiconductor leaders, pace may vary by team."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core product lines include data converters (ADCs/DACs), amplifiers, RF/microwave components, power management ICs, MEMS sensors, and DSP/embedded processors. These are sold as components and as integrated subsystems for instrumentation, communications, automotive, industrial automation, and healthcare."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "High-speed integrated circuits and embedded software for cutting-edge technologies."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days vacation + 10 company holidays + 2 floating days (US new grads); accrual increases with tenure. Unlimited sick time. Summer/Winter shutdowns add ~5–7 extra days."
+   "value": "Estimated: Not specified in sources; typically includes standard accrued PTO for the semiconductor industry."
   },
-  "refresh_after": 1790047706,
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26542,12 +26665,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual summer shutdown (typically 1 week in July) and winter shutdown (1 week between Christmas and New Year) — company-wide, paid, no PTO charged."
+   "value": "Estimated: Not specified in sources; candidates should ask if the company offers guaranteed shutdown periods to support work-life balance."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large-cap public company (NASDAQ: ADI); ~26,000 employees globally; FY2024 revenue ~$12.3B. Mature, profitable, and acquisitive (notably Maxim Integrated merger 2021)."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Global semiconductor leader."
   },
   "sources": [
    {
@@ -26592,21 +26717,25 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Active H-1B sponsor (top 50 employer historically); supports O-1, TN, and green-card (PERM) processing for eligible roles. University recruiting targets top EE/CS programs globally."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Analog Devices (ADI) is a global semiconductor leader specializing in analog, mixed-signal, and digital signal processing (DSP) integrated circuits. The company designs and manufactures chips that bridge the physical and digital worlds, enabling signal conversion, amplification, and processing for a vast range of electronic systems."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Analog Devices (ADI) is a global semiconductor leader that develops innovative technologies and high-speed integrated circuits. The company generates revenue by designing and manufacturing these specialized components for a wide variety of advanced technological applications."
   },
-  "synthesized_evidence_sha": "5bee7ea414a99ef7",
+  "synthesized_evidence_sha": "15b4767cd5ec49b7",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Deep analog/mixed-signal IC design, RF/mmWave circuit design, DSP algorithm development, embedded firmware, hardware validation, test engineering, and increasingly ML/AI for signal processing, predictive maintenance, and edge inference. Strong publication and patent culture."
+   "confidence": "high",
+   "source_ids": [
+    "4128136f74"
+   ],
+   "value": "Designing and maintaining embedded software algorithms for high-speed integrated circuits in a fast-paced environment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674898,
@@ -26614,12 +26743,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "ADI offers elite semiconductor prestige with a growing AI/ML footprint (edge inference, TinyML, signal intelligence) while maintaining a hardware-centric culture that historically respects work-life boundaries better than pure software hyperscalers. New-grad total compensation is top-decile for analog/mixed-signal roles, and the company’s long product cycles reduce death-march crunches common in consumer internet."
+   "value": "For a candidate seeking elite new-grad pay and a fast-paced, innovative environment, ADI offers competitive compensation and cutting-edge hardware-software integration. However, as a legacy global semiconductor leader, it may not perfectly align with the desire for a pure, fast-paced AI tech culture or guaranteed shutdowns, requiring the candidate to probe for specific team dynamics to ensure it meets their work-life balance and career acceleration goals."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5 — Core hours culture with limited weekend/on-call expectation for most design/ML roles. Fab/ops rotations have shift schedules. Company emphasizes ‘sustainable pace’ in engagement surveys."
+   "value": "Estimated: Generally stable, but candidates should verify specific team expectations to ensure sane hours and avoid toxic or high-burnout environments."
   }
  },
  "analysis group": {
@@ -74619,48 +74748,128 @@
  "california department of social services": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: Non-elite / non-technical brand prestige; primarily known for public service rather than AI/data science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Government agency funded by state and federal tax dollars; provides services at no direct cost to eligible recipients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: Mission-driven, public-service oriented, stable and structured; less likely to have toxic high-burnout tech culture but also less innovation speed."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "California residents, including low-income families, children, individuals with disabilities, and older adults."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: $70,000-$95,000 base; state government pay scales generally trail elite tech compensation and lack significant equity."
   },
   "evidence_sha": "2ec78c2bbb833904",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785279062,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Government / Public Administration / Social Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d",
+    "5096d89440"
+   ],
+   "value": "Probe the specific tech stack, AI/data projects, and team culture to assess whether the role offers genuine technical growth or is constrained by slow government processes and lower new-grad compensation than elite tech firms."
+  },
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785278882,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Headquartered in Sacramento, California, with regional and county offices throughout the state."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "To serve, aid, and protect vulnerable children and adults in California, while strengthening and preserving families."
+  },
   "name": "California Department of Social Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: Slow to moderate; typical government bureaucracy with process-heavy workflows rather than fast, iterative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440",
+    "2099be482a",
+    "6f8d96a282"
+   ],
+   "value": "Public assistance programs and social services, including CalWORKs, CalFresh, Foster Care, and disability benefits evaluation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: 15-25 days annually; state employees typically accrue generous paid time off plus state holidays."
   },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: Scheduled state holidays (typically 12-14 per year); no guaranteed tech-style company-wide shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Large state government agency with thousands of employees statewide."
   },
   "sources": [
    {
@@ -74704,14 +74913,48 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "State government employment typically does not sponsor work visas; candidates must generally have U.S. work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5096d89440",
+    "2099be482a",
+    "6f8d96a282"
+   ],
+   "value": "The California Department of Social Services (CDSS) is a state government agency that administers public assistance programs serving vulnerable populations across California. As a government entity, it is funded by state and federal tax revenues rather than operating for profit."
+  },
+  "synthesized_evidence_sha": "2ec78c2bbb833904",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Likely involves data science, analytics, and IT systems used for benefits eligibility, case management, and program evaluation; exact roles not detailed in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785278882,
   "web_search_url": "https://duckduckgo.com/?q=California+Department+of+Social+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d",
+    "5096d89440"
+   ],
+   "value": "You are seeking a top-tier, high-paying AI/data role with fast innovation and minimal bureaucracy; a state social services agency likely offers mission-driven public impact and stable hours, but may not match elite tech salaries or fast-paced startup culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5096d89440"
+   ],
+   "value": "Estimated: Strong/good; government roles typically enforce standard hours and offer stable boundaries, aligning with your sane-hours priority."
   }
  },
  "california department of state hospitals": {
@@ -203652,37 +203895,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Based on available technical roles focusing on QA rather than elite AI/DS core functions."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Likely operates on a subscription-based model for its fitness platform, potentially paired with hardware sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Health-conscious and mission-oriented, focused on holistic wellness."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Health and fitness consumers seeking integrated digital and physical workout experiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$95k. While a listed QA role is $21-$24/hr, new grad tech/software roles typically command higher base salaries."
   },
   "evidence_sha": "43770a28993180aa",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785279062,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Health, Wellness, and Fitness Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Prepare to discuss how your data science or AI skills can enhance their holistic health platform. Be sure to ask about their AI/DS team structure, work-life balance policies, and technical career progression to ensure it meets your high-growth and sane-hours requirements."
+  },
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785278882,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Logan, UT (Onsite)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "To build a holistic health and fitness platform aimed at improving user wellness."
+  },
   "name": "iFIT",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Likely balances product development cycles with stable consumer software maintenance."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "A holistic health and fitness platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO for full-time employees."
   },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203692,7 +203991,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; likely uses standard PTO."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Established company with entry to mid-level technical roles, operating full-time in the United States."
   },
   "sources": [
    {
@@ -203746,14 +204052,43 @@
     "url": "https://jobright.ai/jobs/info/6a68fbabb22f1b56a602a088?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Not explicitly stated in available sources; the QA Software Tester I role targets the United States job market."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "iFIT is a company focused on creating a holistic health and fitness platform. It likely generates revenue through subscription-based memberships for its digital fitness content and integrated hardware offerings."
+  },
+  "synthesized_evidence_sha": "43770a28993180aa",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Software quality assurance and testing, utilizing tools like JIRA, TestRail, and standard bug tracking methodologies to support the platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785278882,
   "web_search_url": "https://duckduckgo.com/?q=iFIT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed81918471"
+   ],
+   "value": "Aligns with your desire for a mission-driven company in the health and wellness space, potentially balancing elite technical learning with sane hours. However, the available roles and location may lean more toward traditional tech operations rather than the top-tier AI/DS prestige and fast, innovative tech culture you are prioritizing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Medium-High. Mission-driven health companies often promote internal work-life balance."
   }
  },
  "ifs": {
@@ -209165,34 +209500,93 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "94eda9eea3",
+    "3ae118cd32"
+   ],
+   "value": "B2B product sales: generates revenue through the sale of proprietary wireless hardware and companion software/platform subscriptions to integrators and enterprise end-users."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "94eda9eea3"
+   ],
+   "value": "Security integrators, commercial building managers, multifamily housing operators, and senior living facilities that require reliable wireless monitoring systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "1b9342dcf9"
+   ],
+   "value": "$85,000 - $95,000 base salary for the Software Engineer I role in Westminster, CO."
   },
   "evidence_sha": "697eb8a7504c1f44",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785279062,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "94eda9eea3",
+    "3ae118cd32"
+   ],
+   "value": "Wireless hardware, IoT, or Commercial Security Systems."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785278882,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1b9342dcf9"
+   ],
+   "value": "Westminster, Colorado (headquarters); job posting indicates on-site requirements."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3ae118cd32",
+    "1b9342dcf9"
+   ],
+   "value": "To provide engineered solutions for wireless connectivity and monitoring that improve safety, efficiency, and quality of life in commercial and residential environments."
+  },
   "name": "Inovonics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical, driven by hardware product cycles and reliability requirements rather than rapid iteration startup chaos or 24/7 SaaS uptime pressures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "94eda9eea3"
+   ],
+   "value": "Wireless sensor transmitters, receivers, repeaters, and cloud-based monitoring platforms for security, environmental sensing, submetering, and senior care applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of paid time off plus standard federal holidays."
   },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209202,7 +209596,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed national holiday shutdowns are standard for manufacturing-adjacent firms; potential for limited end-of-year closure."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1b9342dcf9"
+   ],
+   "value": "Private company with 51-200 employees, founded in 2000, in a mature growth stage focused on niche wireless infrastructure."
   },
   "sources": [
    {
@@ -209256,14 +209657,42 @@
     "url": "https://jobright.ai/jobs/info/6a6900673b549b0b531d34e1?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1b9342dcf9"
+   ],
+   "value": "Inovonics has a track record of offering H1B sponsorships, though it does not guarantee sponsorship for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3ae118cd32",
+    "94eda9eea3"
+   ],
+   "value": "Inovonics is a specialized engineering company that designs and manufactures wireless sensor networks and commercial monitoring solutions for security, life safety, and elder care. They make money by selling hardware devices, related software, and cloud-based services that help businesses and institutions remotely monitor infrastructure and people."
+  },
+  "synthesized_evidence_sha": "697eb8a7504c1f44",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1b9342dcf9"
+   ],
+   "value": "Entry-level software engineering involves developing embedded and application-level software for IoT sensors and cloud platforms, likely using C/C++, Linux, and wireless protocols."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785278882,
   "web_search_url": "https://duckduckgo.com/?q=Inovonics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. A quiet Colorado-based mid-size company in a regulated industry is unlikely to demand excessive crunch time, prioritizing a solid 40-hour week."
   }
  },
  "insight2profit": {
@@ -239831,41 +240260,39 @@
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Estimated: Tier 2 or 3. While Limble is a growing SaaS startup, it is not primarily an AI-first company; AI or data science roles may not carry the same elite prestige as a specialized AI lab, but they offer strong technical growth in an applied setting."
+   "value": "Estimated: Not accurately rated as a top-tier AI/Data Science role based on current sources, which primarily focus on sales growth."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "B2B SaaS. Limble sells software solutions to businesses to help them manage and optimize maintenance operations."
+   "value": "Operates a B2B SaaS model, providing software solutions to organizations to optimize their maintenance and operational excellence."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Mission-driven, ambitious, and adaptable. The culture values fast-paced growth and empowers the 'unsung heroes' managing maintenance operations."
+   "value": "Appears to value adaptability, ambition, and a drive for revolutionizing traditional industries, with a strong mission to empower support heroes."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Businesses looking to optimize maintenance operations, specifically organizations that rely on 'unsung heroes who support the world.'"
+   "value": "Businesses and organizations seeking to improve their operational excellence and maintenance management. The company specifically highlights serving the 'unsung heroes' who support the world."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "214dfa7cf0"
-   ],
-   "value": "Estimated: $90,000 - $130,000 base. Pay at high-growth tech startups for new grads can vary based on exact role, location, and equity packages."
+   "source_ids": [],
+   "value": "Estimated: Precise new-grad pay for AI or technical roles is not available in the provided sources."
   },
   "evidence_sha": "023a81a44540f012",
-  "generated_at": 1784942684,
+  "generated_at": 1785279062,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -239876,45 +240303,43 @@
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Software / Computer Maintenance Management System (CMMS)"
+   "value": "Computerized Maintenance Management System (CMMS) / SaaS"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "214dfa7cf0"
-   ],
-   "value": "Highlight your adaptability and ambition in high-growth environments. Ask about specific work-life balance policies, sane working hours, and guaranteed shutdowns to ensure personal time is respected. Inquire about the technical stack and learning opportunities to confirm it meets your elite AI/data science career growth goals."
+   "source_ids": [],
+   "value": "Probe for specific details on sane working hours and guaranteed shutdowns to ensure the startup's fast pace does not lead to a toxic or high-burnout environment. Ask about new-grad pay benchmarks for elite AI roles and how the rapid technical learning curve scales without sacrificing personal time."
   },
-  "last_attempt_at": 1784942684,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785275874,
   "locations": {
    "confidence": "low",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Not explicitly stated in research, though job postings suggest remote or hybrid options may be available."
+   "value": "Specific physical office locations were not detailed in the available sources."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "To empower the unsung heroes who support the world by providing tools that drive operational excellence."
+   "value": "To revolutionize the way businesses manage their maintenance operations by empowering the unsung heroes who support the world."
   },
   "name": "Limble CMMS",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Estimated: Fast-paced. The company explicitly mentions operating in a high-growth environment requiring adaptability."
+   "value": "Estimated: Fast-paced and adaptable, typical of a high-growth startup environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "A comprehensive suite of maintenance management software solutions designed to optimize asset performance."
+   "value": "A comprehensive suite of software solutions designed to revolutionize how businesses manage maintenance operations and optimize asset performance."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -239922,9 +240347,10 @@
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Estimated: 15-20 days. Exact numbers not in public source, but tech startups typically offer 3-4 weeks of vacation."
+   "value": "Estimated: Exact PTO days are not publicly detailed."
   },
-  "refresh_after": 1790126684,
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239933,17 +240359,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "214dfa7cf0"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Startups sometimes offer holiday shutdowns, but it is not explicitly stated here."
+   "source_ids": [],
+   "value": "Estimated: No information found regarding guaranteed company-wide shutdowns."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Startup operating in a high-growth environment."
+   "value": "Described as a startup that offers fast-paced growth and targets high-growth environments."
   },
   "sources": [
    {
@@ -239998,11 +240422,9 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "214dfa7cf0"
-   ],
-   "value": "Not found in research."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
@@ -240010,32 +240432,31 @@
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Limble provides a comprehensive suite of software solutions that help businesses optimize maintenance operations and asset performance. It makes money by selling these CMMS platforms to organizations seeking to drive operational excellence."
+   "value": "Limble CMMS develops comprehensive computerized maintenance management system (CMMS) software that helps businesses optimize asset performance and streamline their maintenance operations. The company makes money by selling this software suite to organizations looking to drive operational excellence through improved maintenance tracking."
   },
-  "synthesized_evidence_sha": "46c2395a0ff997b9",
+  "synthesized_evidence_sha": "023a81a44540f012",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
+    "3945532bb6",
     "214dfa7cf0"
    ],
-   "value": "Estimated: Developing and maintaining a SaaS platform for maintenance management, likely involving web application development, cloud infrastructure, and scalable backend systems."
+   "value": "Specific AI or data science projects were not detailed in the available sources; research only highlighted outbound sales roles."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784942196,
   "web_search_url": "https://duckduckgo.com/?q=Limble+CMMS+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "214dfa7cf0"
-   ],
-   "value": "This role offers fast-paced growth and an innovative tech culture typical of a startup, accelerating technical learning. It aligns with your desire for a mission-driven company that respects work-life balance, avoiding slow bureaucracy and toxic environments while providing elite new-grad pay."
+   "source_ids": [],
+   "value": "Fits your desire for a fast, innovative tech culture at a startup that offers rapid career and technical growth. As a mission-driven company supporting essential workers, it provides an impactful environment that balances high growth with your requirement to avoid slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "214dfa7cf0"
    ],
-   "value": "Estimated: Moderate. While the environment is fast-paced and high-growth, the mission-driven nature of empowering 'unsung heroes' may reflect a more respectful culture. Specific details on hours or burnout were not explicitly provided."
+   "value": "Estimated: Although the company offers fast-paced growth, specific work-life balance metrics are not publicly detailed and should be verified during the interview."
   }
  },
  "lincoln financial": {
@@ -274941,80 +275362,101 @@
  },
  "natera": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (industry-leading publications, clinical-grade ML, high-impact diagnostics)"
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584"
+   ],
+   "value": "Tier 1: Public company with FDA-cleared AI-driven diagnostics, published clinical validation in top journals (NEJM, Nature), and biopharma partnerships. Comparable to Flatiron, Tempus, Guardant in technical prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Diagnostic test sales with revenue from insurance reimbursement, direct patient pay, and biopharma partnerships for clinical trial enrollment and companion diagnostics."
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584"
+   ],
+   "value": "Revenue generated primarily through diagnostic test reimbursement (insurance, Medicare, patient pay) and biopharma partnerships. High-margin recurring revenue from repeat testing in oncology monitoring and transplant surveillance."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-driven, collaborative, intellectually rigorous; engineers and scientists work side-by-side; transparency from leadership; low politics."
+   "confidence": "medium",
+   "source_ids": [
+    "ae33410664"
+   ],
+   "value": "Mission-driven, scientifically rigorous, collaborative across wet-lab, bioinformatics, clinical, and engineering. Transparent leadership with town halls. Diversity emphasized. Less perks-focused than big tech; more purpose-focused."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Obstetricians, oncologists, transplant centers, health systems, insurance payers, and patients seeking genetic insights."
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584"
+   ],
+   "value": "Primary customers are healthcare providers (OB/GYNs, oncologists, transplant centers), hospitals, health systems, and insurance payers. Also partners with biopharma companies for clinical trial enrollment and companion diagnostics."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $140k-$165k base + 10-15% bonus + RSUs ($40k-$60k/yr vesting); total comp ~$190k-$230k."
+   "value": "Estimated: $140k-$170k base + 10-15% bonus + RSUs (4-year vest) targeting $200k-$250k total first-year. Competitive with top biotech and mid-tier tech."
   },
   "evidence_sha": "6adac9c8947dda48",
-  "generated_at": 1784878881,
+  "generated_at": 1785279062,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Clinical Diagnostics / Genomics / Precision Medicine"
+   "confidence": "high",
+   "source_ids": [
+    "16872a6584"
+   ],
+   "value": "Precision Diagnostics / Genomics / Digital Health"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare for deep technical screens on ML for noisy biological data, scalable pipeline design, and statistical validation. Expect behavioral questions on cross-functional collaboration with clinicians and regulatory awareness. Demonstrate ability to ship reliable code in fast-paced, high-stakes healthcare context."
+   "confidence": "high",
+   "source_ids": [
+    "208d5ac5cc"
+   ],
+   "value": "Expect deep technical interviews on ML model deployment in regulated settings, data pipeline reliability, and clinical validation metrics. Prepare for case studies on reducing human intervention rate, improving cycle time, and balancing sensitivity/specificity in diagnostic AI. Behavioral focus on cross-functional collaboration with clinical, regulatory, and product teams. Demonstrate ability to ship in HIPAA/SOC2/GxP environments."
   },
-  "last_attempt_at": 1784878881,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785275874,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters in Austin, TX; major labs in San Carlos, CA and Austin; remote-friendly roles across US."
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584",
+    "ae33410664"
+   ],
+   "value": "Headquarters in Austin, TX (relocated from San Carlos, CA). Major labs in Austin and San Carlos. Remote/hybrid roles available for engineering and data science."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To make personalized genetic testing and diagnostics part of standard clinical care worldwide."
+   "confidence": "medium",
+   "source_ids": [
+    "ae33410664"
+   ],
+   "value": "To make personalized genetic testing and diagnostics standard of care, enabling earlier detection and better health outcomes through non-invasive cell-free DNA analysis."
   },
   "name": "Natera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fast-paced but structured; sprint cycles with clear regulatory milestones; minimal bureaucracy for a regulated company."
+   "value": "Estimated: Fast-paced commercial velocity with quarterly delivery cycles, but regulated gates (FDA, CLIA) impose structured release processes. Not a 'move fast and break things' culture; more 'move fast with validation.'"
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Panorama (NIPT), Signatera (cancer recurrence monitoring), Prospera (organ transplant rejection), Horizon (carrier screening), and related bioinformatics pipelines."
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584",
+    "ae33410664"
+   ],
+   "value": "Core products include Panorama (non-invasive prenatal testing), Signatera (personalized cancer monitoring), Prospera (organ transplant rejection surveillance), and Anora (miscarriage analysis). Platform leverages massively parallel sequencing and AI-driven bioinformatics pipelines."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 company holidays + flexible sick leave; unlimited not offered but generous accrual."
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + sick leave. Unlimited PTO not standard; accrual-based typical for regulated industry."
   },
-  "refresh_after": 1790062881,
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -275024,12 +275466,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer half-day Fridays; no mandatory crunch periods."
+   "value": "Estimated: No formal company-wide shutdowns. Some teams observe reduced schedules during winter holidays (Dec 24-Jan 1). Not guaranteed."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public company (NASDAQ: NTRA) with ~3,000+ employees, profitable and scaling globally."
+   "confidence": "high",
+   "source_ids": [
+    "16872a6584"
+   ],
+   "value": "Public company (NASDAQ: NTRA) with ~3,000+ employees globally. Commercial-stage with multiple FDA-cleared/CLIA-certified tests and international expansion."
   },
   "sources": [
    {
@@ -275076,32 +275520,41 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Actively sponsors H-1B and green cards for technical roles; history of cap-exempt filings through university collaborations."
+   "value": "H-1B sponsor with active cap-subject and cap-exempt filings. History of sponsoring STEM OPT and green card processes for technical roles."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Natera is a global leader in cell-free DNA testing, providing non-invasive prenatal testing (NIPT), oncology screening, and organ transplant monitoring. The company generates revenue by selling proprietary genetic tests to hospitals, clinics, and directly to patients, billing insurance and through partnerships."
+   "confidence": "medium",
+   "source_ids": [
+    "16872a6584",
+    "ae33410664"
+   ],
+   "value": "Natera is a global leader in cell-free DNA testing, providing genetic testing services for reproductive health, oncology, and organ transplant monitoring. The company commercializes proprietary bioinformatics and molecular technology to deliver non-invasive diagnostic insights."
   },
-  "synthesized_evidence_sha": "c4389c737415ffb2",
+  "synthesized_evidence_sha": "6adac9c8947dda48",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large-scale bioinformatics, machine learning for variant calling and classification, cloud-native data pipelines (AWS/GCP), real-time analytics, and regulatory-grade software development for clinical diagnostics."
+   "confidence": "high",
+   "source_ids": [
+    "208d5ac5cc",
+    "ae33410664"
+   ],
+   "value": "AI/ML engineering for bioinformatics pipelines, variant calling, and clinical decision support. Cloud-native infrastructure (AWS), regulated software development (HIPAA, SOC2, GxP, SOX). Forward-deployed AI solutions engineers track KPIs: throughput, quality, cost, human intervention rate, cycle time, adoption."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
   "web_search_url": "https://duckduckgo.com/?q=Natera+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Natera offers elite AI/DS prestige in a mission-critical clinical genomics setting with top-tier new-grad compensation. The culture emphasizes rapid innovation in regulated environments, strong work-life boundaries (core hours, protected weekends), and structured mentorship that accelerates growth without burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "208d5ac5cc",
+    "16872a6584"
+   ],
+   "value": "Natera offers elite AI/data science prestige through FDA-cleared clinical products impacting millions of patients, with public-company compensation rivaling top tech. The regulated environment demands rigorous engineering (HIPAA, SOC2, GxP) but operates at commercial velocity, not academic slowness. Mission-driven culture in reproductive health and oncology attracts talent seeking purpose without the burnout typical of biotech or big tech. Fast learning curve from deploying models directly into "
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5 – core hours, protected weekends, on-call rotations shared and compensated; leadership emphasizes sustainable pace."
+   "value": "Estimated: 7/10. Reasonable hours typical for regulated diagnostics (40-50 hrs/week). On-call rotations for production clinical systems. Guaranteed shutdowns not formalized but culture respects boundaries; burnout risk lower than pure-play tech or early-stage biotech."
   }
  },
  "national center for missing exploited children": {
@@ -359705,123 +360158,116 @@
  },
  "sharp electronics": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Low. Primarily a hardware and consumer electronics company, not known for top-tier AI or data science prestige."
+   "confidence": "medium",
+   "source_ids": [
+    "6ca9c55120"
+   ],
+   "value": "Not recognized in research as a top-tier AI or data science employer; prestige appears firmly rooted in legacy hardware and systems integration."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Manufactures hardware and electronic components, selling to consumers via retail channels and to businesses via enterprise procurement."
+   "value": "Sells commercial technology hardware and provides enterprise IT services, systems integration, and maintenance contracts through its U.S. divisions."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Traditional Japanese corporate environment, likely emphasizing hierarchy and stability over rapid innovation and mission-driven tech culture."
+   "confidence": "medium",
+   "source_ids": [
+    "6ca9c55120"
+   ],
+   "value": "Traditional, safety-focused corporate environment emphasizing clean, organized workspaces and proper equipment maintenance, typical of an legacy global technology firm."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Retail consumers and business-to-business (B2B) enterprise partners."
+   "value": "Enterprise clients and organizations requiring managed IT services, print production, and complex systems integration."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $70k-$90k. Lower than elite tech firms, aligning with hardware manufacturing industry standards rather than top-tier data science pay."
+   "value": "Estimated: Likely falls below elite tech/AI new-grad pay bands, generally in the $70k-$90k range for systems, IT, or technical analyst work."
   },
   "evidence_sha": "05f6d595e08efb47",
-  "generated_at": 1784897895,
+  "generated_at": 1785279062,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Consumer Electronics and Hardware Manufacturing."
+   "value": "Consumer Electronics, Commercial Hardware, and Enterprise IT Services"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe the specific team's tech stack and innovation pace, asking about AI integration in hardware and how bureaucracy impacts new-grad learning and WLB."
+   "value": "Probe heavily into whether the specific team operates like a fast-paced startup or is bound by legacy corporate bureaucracy. Ask detailed questions about expected working hours, weekend on-call expectations for hardware/systems, and the actual roadmap for AI and data science initiatives to ensure it matches elite prestige and sane WLB standards."
   },
-  "last_attempt_at": 1784897895,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785275874,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Global presence, headquartered in Japan."
+   "value": "Headquartered in the U.S. as a subsidiary of Japan's Sharp Corporation, with operations and job postings based in America."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Not found in research."
+   "value": "To act as a global technology company providing innovative hardware and systems solutions, recognized on Fortune's World's Most Admired Company list."
   },
   "name": "Sharp Electronics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Slow to moderate. Legacy hardware manufacturing typically involves structured, bureaucratic processes rather than fast, innovative tech culture."
+   "value": "Estimated: Traditional corporate pace typical of a mature electronics and enterprise services subsidiary."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Consumer electronics, home appliances, LCD display panels, office equipment, and mobile applications."
+   "value": "Production print equipment, display panels, enterprise networking solutions, and integrated systems for Windows, UNIX, and Macintosh environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days. Standard corporate leave policies typical of large manufacturing firms."
+   "value": "Estimated: Standard corporate accrual providing 15-20 days of vacation for full-time professional employees."
   },
-  "refresh_after": 1790081895,
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6ca9c55120"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: None found in research. Unlikely on top of standard holidays for new grads outside of manufacturing plant maintenance schedules."
+   "value": "Estimated: May offer standard corporate holidays, but guaranteed large-scale company shutdowns were not indicated."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Large, established multinational corporation."
+   "value": "A mature, established corporate subsidiary of a large global technology corporation."
   },
   "sources": [
    {
@@ -359866,29 +360312,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: As a large multinational, likely offers visa sponsorship for specialized hardware and engineering roles, though specific new-grad policies are not public."
+   "confidence": "low",
+   "source_ids": [
+    "6ca9c55120"
+   ],
+   "value": "Not explicitly found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Sharp Corporation is a major Japanese multinational electronics manufacturer that designs and sells consumer electronics, home appliances, and LCD panels. The company makes money by selling these hardware devices and electronic components to retail consumers and enterprise B2B customers."
+   "value": "Sharp Electronics Corporation is the U.S. subsidiary of Japan's Sharp Corporation, a global technology company. It generates revenue by providing complex systems solutions, hardware, and enterprise services—such as production print equipment and networking integration—through its divisions like Sharp Imaging and Information Company of America (SIICA)."
   },
-  "synthesized_evidence_sha": "65b3261c34c23fd6",
+  "synthesized_evidence_sha": "05f6d595e08efb47",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "930c2d7c1b",
-    "94c70e618b",
-    "921710d05b"
+    "6ca9c55120"
    ],
-   "value": "Hardware engineering, LCD display manufacturing, embedded systems, and mobile application development."
+   "value": "Involves understanding and integrating complex systems solutions, hardware maintenance, and networking across Windows, UNIX, and Macintosh environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679629,
@@ -359896,12 +360340,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "As a legacy electronics manufacturer with slow bureaucracy, Sharp may not meet the candidate's priority for an elite AI/data science role with a fast, innovative tech culture or guaranteed shutdowns."
+   "value": "A traditional, mature hardware and IT services subsidiary will likely frustrate a candidate seeking an elite AI/data science role with top-tier new-grad pay and a fast, innovative tech culture. The bureaucracy of an established global corporation may conflict with the desire for rapid technical acceleration without slow processes."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Adequate. Typically offers standard hours but lacks the modern tech-industry WLB perks like guaranteed shutdowns."
+   "value": "Estimated: Standard corporate hours, though roles involving hardware maintenance or systems integration may occasionally require on-call or site-visit work."
   }
  },
  "sharp electronics corporation usa": {
@@ -422407,40 +422851,44 @@
  "united health services": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Likely Tier 3 (Traditional IT). Healthcare systems rarely offer top-tier, elite AI/data prestige compared to big-tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Information not specified in the provided sources. Assumed to operate on a fee-for-service or managed-care healthcare model."
+   "value": "Fee-for-service healthcare network generating revenue through patient treatments and facility admissions."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Estimated: Conservative, mission-driven healthcare culture prioritizing stability, patient outcomes, and clinical compliance over rapid tech innovation."
   },
   "customers": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Information not specified in the provided sources. Assumed to be patients, healthcare networks, or institutional partners."
+   "value": "Patients requiring medical treatment and health insurance companies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Estimated: ~$75,000 - $95,000 base salary, as hospital systems generally pay below big-tech new-grad benchmarks."
   },
   "evidence_sha": "1150f2e1e47a4651",
-  "generated_at": 1784881688,
+  "generated_at": 1785279062,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -422449,42 +422897,38 @@
   "industry": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Healthcare / Health Services"
+   "value": "Healthcare Providers and Hospital Systems."
   },
   "interview_focus": {
-   "confidence": "low",
-   "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
-   ],
-   "value": "Given the expectation for high pay and guaranteed shutdowns, the candidate should interrogate whether the team actually does cutting-edge AI work or routine data engineering. It is critical to clarify exact compensation, after-hours expectations, tech stack modernity, and whether the role offers genuine technical growth or will be slowed by healthcare bureaucracy."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe whether the AI/data team operates like a slow, bureaucratic IT department or an agile innovation hub. Seek specific commitments on work-life balance, guaranteed shutdowns, and fast-tracked technical learning to see if the role actually fits your fast-paced new-grad priorities."
   },
-  "last_attempt_at": 1784881688,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785276153,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Information not specified in the provided sources."
+   "value": "Hospital campuses and corporate offices located primarily across New York State."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Information not specified in the provided sources."
+   "value": "To improve the health and well-being of the communities they serve through compassionate, high-quality healthcare."
   },
   "name": "United Health Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Estimated: Slower-paced environment driven by patient care protocols, clinical compliance, and enterprise IT bureaucracy."
   },
   "products": {
    "confidence": "low",
@@ -422492,35 +422936,39 @@
     "f4ba2baa33",
     "064aef15e4"
    ],
-   "value": "Information not specified in the provided sources due to redirection limits. Assumed to be healthcare-related services or clinical solutions."
+   "value": "Acute care hospitals, outpatient clinics, surgical centers, and emergency medical services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
-  },
-  "rotational_program_name": {
-   "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "None found in research."
+   "value": "Estimated: 20-25 days of PTO annually, typical for established healthcare system employees."
+  },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "high",
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns, though partial hospital operations run 24/7/365."
   },
   "size_stage": {
    "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Information not specified in the provided sources."
+   "value": "Established regional healthcare system with multiple hospital facilities."
   },
   "sources": [
    {
@@ -422568,9 +423016,9 @@
    "confidence": "low",
    "source_ids": [
     "f4ba2baa33",
-    "064aef15e4"
+    "1db9db9c4d"
    ],
-   "value": "Information not specified in the provided sources."
+   "value": "No specific new-grad visa sponsorship details found in research."
   },
   "status": "ready",
   "summary": {
@@ -422579,31 +423027,30 @@
     "f4ba2baa33",
     "064aef15e4"
    ],
-   "value": "Based on available sources, detailed operational information could not be extracted. However, the 'United Health Services' name suggests it may be an entity focused on healthcare or hospital management. Revenue would logically derive from providing medical services or related health-system operations."
+   "value": "United Health Services (UHS) is a regional healthcare provider network that operates hospitals and outpatient facilities. It makes money by billing patients and insurance companies for medical care, procedures, and clinical services."
   },
+  "synthesized_evidence_sha": "1150f2e1e47a4651",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
+    "f4ba2baa33"
    ],
-   "value": "Estimated: Likely involves maintaining electronic health records (EHR) systems, patient data infrastructure, and general hospital IT operations rather than cutting-edge AI or data science development."
+   "value": "Maintaining healthcare information systems, electronic health records (EHR), and internal clinical data infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583420,
   "web_search_url": "https://duckduckgo.com/?q=United+Health+Services+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
-   "source_ids": [
-    "f4ba2baa33",
-    "064aef15e4"
-   ],
-   "value": "Because the candidate prioritizes elite prestige, fast innovative tech culture, and top-tier new-grad pay for AI/data science, this traditional healthcare environment likely poses a mismatch. Standard hospital IT rarely offers the elite AI prestige or fast, non-bureaucratic technical learning the candidate is looking for."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A traditional healthcare provider network is likely to conflict with a desire for a fast, innovative tech culture and elite new-grad pay. While healthcare can be highly mission-driven and offer stable hours, large clinical enterprises typically feature slower bureaucracy rather than top-tier AI/data prestige."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f4ba2baa33"
+   ],
+   "value": "Estimated: Moderate to Good. Hospital operations require on-call rotations, but corporate IT roles typically offer sane hours compared to big tech."
   }
  },
  "united launch alliance": {
@@ -439192,39 +439639,97 @@
  },
  "voloridge": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Niche Elite: Voloridge is highly regarded within the quantitative finance communities for rigorous application of science, on par with top-tier hedge funds. It holds elite prestige in data science and AI circles focused on finance but is less known in broader tech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Voloridge operates as an investment management firm, earning revenue through management fees and performance-based fees on the assets it manages in its quantitative funds."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Driven by quantitative science and collaboration, the environment is intellectually intense but likely informal. The small-firm roots in Jupiter suggest a close-knit, low-ego culture whose primary focus is on problem-solving rather than organizational size."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Institutional investors and qualified individuals who allocate capital to the firm's quantitative investment funds."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Total first-year compensation for a top engineering or research new graduate is conservatively estimated at $175,000 - $225,000 USD, reflecting the niche quantitative finance premium and Jupiter's cost structure. This includes base salary, sign-on payment, and expected performance bonus."
   },
   "evidence_sha": "1ac3d7f21700b2b4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785279062,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Quantitative Investment Management / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785278882,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Headquartered in Jupiter, Florida, offering tech career paths outside traditional urban hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "To generate superior risk-adjusted returns for investors by applying advanced data science and machine learning to financial markets."
+  },
   "name": "Voloridge",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is intellectually fast and demanding, centering on iterative research cycles rather than project management-driven feature factories. Markets drive urgency, but the emphasis on scientific modeling suggests a measured, rigorous speed over chaotic shipping."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Proprietary quantitative investment strategies and managed portfolios powered by machine learning and data science. The firm builds predictive models and data-driven trading systems rather than selling software or technology to external clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Conservative leave of 15-20 days per year. Exact policy is not public; the quant finance industry, outlier norms, usually provides for premium time off, reinforced by the firm's location and probable focus on sustained focus."
   },
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -439234,7 +439739,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely to include market-closure days and a guaranteed week-long year-end break, consistent with the trading calendar and to enforce genuine rest, avoiding burnout. This is a standard approach in many quant and trading firms; exact details are not public."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Founded in 2009, Voloridge is a mature, privately-held firm beyond the startup stage. Specific headcount is not publicly disclosed, but the firm is established with a track record of over 15 years."
   },
   "sources": [
    {
@@ -439288,14 +439800,39 @@
     "url": "https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4336878009"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "Voloridge Investment Management is a quantitative asset management firm that designs, builds, and deploys proprietary machine learning models to predict financial markets. The firm makes money by managing investment portfolios using these predictive models, generating returns for investors through systematic trading strategies."
+  },
+  "synthesized_evidence_sha": "1ac3d7f21700b2b4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "80372a65b3"
+   ],
+   "value": "The team applies machine learning and large-scale data analysis to financial prediction problems. This includes developing predictive models, constructing data pipelines, building back-testing frameworks, and coding infrastructure for research and production trading in areas like trading compliance technology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785278882,
   "web_search_url": "https://duckduckgo.com/?q=Voloridge+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: WLB is expected to be favorable compared to investment banking or high-growth startups. The firm seeks top scientific talent who thrive in a focused, weekly rhythm; the Jupiter location supports a more balanced philosophy, though market-intensive roles may still require occasional flexibility."
   }
  },
  "voltus": {
@@ -460964,45 +461501,47 @@
  },
  "zscaler": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
-   "value": "Estimated: High prestige in applied security AI due to access to the world's largest security data lake."
-  },
-  "aliases": [],
-  "attempts": 2,
-  "business_model": {
    "confidence": "medium",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "SaaS/Cloud security subscription model providing Zero Trust access and protection to enterprises."
+   "value": "High prestige; leveraging the world's largest security data lake to power AI-forward enterprise security."
+  },
+  "aliases": [],
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0c28655952",
+    "9e6b6171b5"
+   ],
+   "value": "B2B cloud security subscriptions, leveraging the world's largest security data lake to power its platform."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Culture of execution centered on customer obsession, collaboration, ownership, and accountability. Describes itself as an AI-forward enterprise constantly pushing the envelope."
+   "value": "Customer-obsessed and collaboration-driven, focused on execution, ownership, and accountability."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Enterprises seeking secure digital transformation and protection from cyberattacks and data loss."
+   "value": "Enterprises seeking to be more agile, efficient, resilient, and secure during digital transformation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
-   "value": "Estimated: High, competitive with top-tier cloud security companies."
+   "source_ids": [],
+   "value": "Estimated: Highly competitive new-grad pay given its status as a public, AI-forward enterprise tech company, likely ranging $130k-$170k base plus equity. Specific figures not found in supplied sources."
   },
   "evidence_sha": "76ca4d09dd46ce42",
-  "generated_at": 1784887724,
+  "generated_at": 1785279062,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -461011,29 +461550,33 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Cybersecurity and Cloud Services."
+   "value": "Cloud cybersecurity and digital transformation."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Candidates should balance the appeal of working with massive data lakes against the potential bureaucracy of a large public enterprise, probing for autonomous technical learning opportunities and work-life balance expectations during interviews."
+   "value": "Highlight experience with massive datasets, data lakes, and AI-forward security models. Emphasize a strong ownership mindset and customer obsession. Ask interviewers about day-to-day execution pace, sane hours, and technical learning opportunities to confirm the culture aligns with avoiding burnout and respecting personal time."
   },
-  "last_attempt_at": 1784887724,
+  "last_attempt_at": 1785279062,
   "last_evidence_at": 1785275874,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "6a29826a1b"
+    "0c28655952",
+    "9e6b6171b5"
    ],
-   "value": "Cloud-native/Global operations, heavy presence in India."
+   "value": "Not explicitly detailed in provided sources, but operates globally as a major cloud enterprise."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
    "value": "To accelerate digital transformation to ensure customers can be more agile, efficient, resilient, and secure."
@@ -461042,47 +461585,45 @@
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Estimated: Fast-paced, execution-focused culture centered on customer obsession, collaboration, ownership, and accountability."
+   "value": "Estimated: Fast-paced and execution-oriented, requiring the pushing of the envelope in an AI-forward enterprise."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Cloud-native Zero Trust Exchange platform powered by the world's largest security data lake. The platform protects customers from cyberattacks and data loss."
+   "value": "Cloud-native Zero Trust Exchange platform."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
-   "value": "Estimated: 20-25 days, standard for large enterprise tech companies."
+   "source_ids": [],
+   "value": "Estimated: Standard unlimited or accrued PTO policy typical for large enterprise tech firms. Specifics not found in supplied sources."
   },
-  "refresh_after": 1790071724,
+  "refresh_after": 1790463062,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
-   "value": "Estimated: No widespread guaranteed shutdowns found in research."
+   "source_ids": [],
+   "value": "Estimated: Unknown if guaranteed shutdowns exist. Not found in supplied sources."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Large, established public enterprise cybersecurity company."
+   "value": "Established public enterprise cybersecurity company."
   },
   "sources": [
    {
@@ -461137,27 +461678,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "9e6b6171b5"
-   ],
-   "value": "Estimated: Public tech company of this size typically sponsors work visas for specialized technical roles, but specific policy not found in research."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Zscaler accelerates digital transformation for its customers to ensure they can be more agile, efficient, resilient, and secure. It operates a cloud-native Zero Trust Exchange platform that securely connects users, devices, and applications in any location."
+   "value": "Zscaler is a cloud-native cybersecurity company that accelerates digital transformation through its Zero Trust Exchange platform. It generates revenue by providing enterprise customers with subscription-based security services that protect against cyberattacks and data loss by securely connecting users, devices, and applications."
   },
-  "synthesized_evidence_sha": "c4adb83109dc81fc",
+  "synthesized_evidence_sha": "76ca4d09dd46ce42",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Building and leveraging an AI-forward enterprise utilizing the world's largest security data lake to power cloud-native security platforms."
+   "value": "AI-forward enterprise engineering, leveraging the world's largest security data lake to power a cloud-native Zero Trust Exchange platform to stop cyberattacks and data loss."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678380,
@@ -461165,16 +461706,18 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Zscaler operates one of the world's largest security data lakes, offering AI/DS candidates massive scale and data volume to tackle real-world cybersecurity challenges, positioning it as a high-impact, mission-driven technical environment."
+   "value": "As an AI-forward enterprise built on the world's largest security data lake, Zscaler offers elite data science and AI opportunities with tremendous scale. The company emphasizes a culture of execution, ownership, and accountability, which may favor fast, innovative tech work over slow bureaucracy, though candidates should probe deeply to ensure WLB and personal time are genuinely respected in practice."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "0c28655952",
     "9e6b6171b5"
    ],
-   "value": "Estimated: Moderate; expected to be sustainable but driven by accountability and execution in a public tech environment."
+   "value": "Estimated: Moderate; centered on a culture of execution, ownership, and accountability which requires verifying boundaries during interviews."
   }
  },
  "zurich north america": {
