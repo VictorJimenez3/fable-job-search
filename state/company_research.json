@@ -402536,53 +402536,126 @@
  },
  "tidalhealth": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Low tier for AI/Data Science prestige. As a regional hospital network, it lacks the elite tech culture and fast-paced innovation of top-tier tech or dedicated AI companies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Healthcare system operating regional hospitals and clinical facilities, generating revenue through patient care and medical services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Mission-driven, community-focused environment centered on patient care rather than rapid technical innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Patients and the surrounding regional community in Maryland."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Likely $80,000 - $110,000. Hospital systems generally offer moderate compensation compared to elite tech companies, though this BI role may sit slightly higher than clinical IT."
   },
   "evidence_sha": "415a36f9c02a8107",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785241223,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785241091,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Hospitals and Healthcare."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Candidates should investigate the team's tech stack velocity and ask about the balance between mission-driven healthcare work and technical growth. It is crucial to probe operational pace and work-life balance expectations to see if they meet the candidate's high standards and low-burnout requirements."
+  },
+  "last_attempt_at": 1785241223,
   "last_evidence_at": 1785238652,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Salisbury, Maryland, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "To provide healthcare and clinical services to its local community."
+  },
   "name": "TidalHealth",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Slow to moderate pace typical of a large legacy healthcare system, which may involve more bureaucracy than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Healthcare services, clinical care, and hospital operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Healthcare networks typically offer standard hospital benefits packages, likely providing 20-25 days of PTO per year."
   },
-  "retry_after": 1785241211,
+  "refresh_after": 1790425223,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Highly unlikely to offer guaranteed tech-industry style shutdowns. Healthcare operations must be maintained 24/7/365."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Late-stage healthcare system with 5001-10000 employees."
   },
   "sources": [
    {
@@ -402636,14 +402709,45 @@
     "url": "https://jobright.ai/jobs/info/6a686b88a6b8730e3b123ba0?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, having sponsored 5 visas between 2023 and 2026 operations. Sponsorship for specific roles is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "TidalHealth is a regional healthcare system founded in 1993 and headquartered in Salisbury, Maryland. It generates revenue by providing clinical services and hospital care to its surrounding communities."
+  },
+  "synthesized_evidence_sha": "415a36f9c02a8107",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Currently hiring for a Developer - Business Intelligence role."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785238652,
   "web_search_url": "https://duckduckgo.com/?q=TidalHealth+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "As a regional healthcare provider, TidalHealth is fundamentally misaligned with the candidate's priority for a top-tier AI/data science role offering elite new-grad pay and a fast-moving, innovative tech culture. Its nature as a hospital system means it will likely feature slower bureaucracy rather than the high-growth, elite prestige environment the candidate seeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "08a8d515f6"
+   ],
+   "value": "Estimated: Stable work-life balance often associated with established healthcare networks, usually avoiding the toxic burnout culture of elite tech startups."
   }
  },
  "tierpoint": {
