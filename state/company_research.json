@@ -3595,94 +3595,99 @@
  },
  "abridge": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier: Clinical LLM leader with peer-reviewed publications, partnerships with major health systems, and recognized technical depth in generative AI for medicine."
+   "confidence": "high",
+   "source_ids": [
+    "d53ff17587"
+   ],
+   "value": "Elite/niche startup tier. As a pioneer setting industry standards for generative AI in healthcare, Abridge offers high prestige within the AI and digital health community, competitive with top-tier health AI companies."
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "business_model": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "d53ff17587",
     "c506f91dd5"
    ],
-   "value": "B2B SaaS model selling AI-powered clinical intelligence platform to healthcare organizations, likely via enterprise contracts and per-seat or per-encounter licensing."
+   "value": "Abridge operates a B2B enterprise SaaS model, selling its AI clinical intelligence platform to health systems and provider organizations. Revenue is generated through platform licensing or per-seat subscriptions integrated into the clinical workflow."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "Mission-driven, clinically grounded, engineering-led. Team includes MDs, researchers, and ML engineers. Values evidence over hype; culture shaped by patient safety constraints."
+   "value": "Mission-driven, multidisciplinary, and thoughtful. The team blends practicing MDs, AI scientists, and PhDs, indicating a culture that values domain expertise, auditable outputs, and making a positive impact over raw pace."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "Healthcare systems, clinicians, and healthcare organizations seeking AI-powered clinical documentation and workflow automation."
+   "value": "The platform serves health systems and practicing clinicians who need to reduce time spent on documentation. Their solutions are adopted by large healthcare organizations seeking auditable and responsible AI tools for their workforce."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $170k-$220k base + equity (0.05-0.15%), signing bonus $25-50k. Total comp ~$200k-$280k. Premium for ML/PhD backgrounds."
+   "value": "Estimated: $175,000 - $225,000 total annual compensation. Based on elite AI startup standards for new AI/ML PhDs or top master's graduates, consisting of high base salary and meaningful equity."
   },
   "evidence_sha": "adee162cc7c15f9e",
-  "generated_at": 1784677856,
+  "generated_at": 1785268435,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "Healthcare AI / Clinical NLP / Health Tech"
+   "value": "AI-powered healthcare technology / digital health."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screening on LLM fine-tuning, clinical NLP evaluation metrics, and healthcare data privacy (HIPAA/FHIR). Prepare for system design around real-time clinical workflows and model safety/guardrails. Behavioral rounds will probe mission alignment and ability to ship in regulated environments without heroics."
+   "confidence": "medium",
+   "source_ids": [
+    "d53ff17587"
+   ],
+   "value": "Candidates should be prepared to discuss building reliable, high-impact AI systems in a regulated domain. Interviews likely focus on practical AI application, prompt engineering, and data pipeline design, along with a strong cultural emphasis on collaboration with domain experts and mission-driven impact over personal overtime heroics."
   },
-  "last_attempt_at": 1784677856,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266068,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "32f5f82d41"
-   ],
-   "value": "Headquarters in Pittsburgh, PA with possible remote/hybrid arrangements; LinkedIn presence suggests US-based team."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "To build patient-centered clinical intelligence that connects care delivery, payment, and evidence-based treatment through AI."
+   "value": "To empower people and make care make more sense by pioneering responsible, generative AI for healthcare conversations."
   },
   "name": "Abridge",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast-paced but sustainable; growth-stage velocity with clinical rigor gates. Not a 'move fast and break things' culture due to patient safety requirements."
+   "value": "Estimated: Fast and innovative like any growing tech startup, but tempered by the methodical rigor required for healthcare regulation and patient safety, avoiding chaotic 'move fast and break things' slippage."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "d53ff17587",
     "c506f91dd5"
    ],
-   "value": "Clinical intelligence platform leveraging generative AI for clinical documentation, care delivery integration, payment alignment, and evidence-based treatment support."
+   "value": "Abridge's core offering is an enterprise-grade generative AI platform for real-time clinical conversation summarization. It is powered by 'Linked Evidence,' a proprietary technology that maps AI-generated summaries back to the original conversation for easy verification. The company has also expanded into a broader clinician intelligence platform that connects care delivery, payment, and evidence-based treatment."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 holidays; unlimited policy common in similar-stage health tech but actual usage varies."
+   "value": "Estimated: Standard for a classy growth-stage startup, likely in the range of 20-25 days of flexible PTO, inclusive of vacation and sick time, though an official policy was not found."
   },
-  "refresh_after": 1789861856,
+  "refresh_after": 1790452435,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3692,14 +3697,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some health tech firms observe winter break but not standardized."
+   "value": "Estimated: Company-wide shutdowns are not confirmed in research. However, a health tech startup focused on clinician wellbeing may offer them to recharge, especially during end-of-year menorah holidays."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "32f5f82d41"
+    "d53ff17587"
    ],
-   "value": "Estimated: Growth-stage startup (Series B/C), approximately 200-500 employees based on healthcare AI company trajectory."
+   "value": "Growth-stage company backed by venture capital, describing itself as a 'growing team' and signaling rapid scaling."
   },
   "sources": [
    {
@@ -3744,38 +3749,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/ML roles given talent competition in healthcare AI; no public policy details found."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "Abridge develops a patient-centered clinical intelligence platform that uses AI to connect care delivery, payment systems, and evidence-based treatment. The platform aims to improve clinical documentation and healthcare workflows through generative AI."
+   "value": "Abridge builds an AI-powered platform that records and summarizes medical conversations, transforming patient-clinician discussions into structured clinical notes in real time. Their technology integrates directly into existing electronic health record systems to alleviate the administrative burden of documentation, allowing clinicians to focus more on patient care."
   },
-  "synthesized_evidence_sha": "cc2622d0930be8ad",
+  "synthesized_evidence_sha": "adee162cc7c15f9e",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "c506f91dd5"
+    "d53ff17587"
    ],
-   "value": "Generative AI for clinical NLP, large language model fine-tuning for medical documentation, healthcare data integration, HIPAA-compliant ML infrastructure, real-time clinical decision support systems."
+   "value": "Technical work involves core generative AI research and development to produce auditable, linked-sourced summaries. It includes building the infrastructure to map AI-generated drafts to ground truth source data, developing tooling for healthcare-specific NLP, and integrating with partner electronic health record systems, all under rigorous standards for AI safety and reliability."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583416,
   "web_search_url": "https://duckduckgo.com/?q=Abridge+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Abridge sits at the intersection of elite AI research (clinical LLMs) and high-impact healthcare mission, offering new-grads top-tier technical prestige without the burnout culture of big tech. The clinical AI domain provides publishing-worthy work and direct patient impact, while the growth-stage size means ownership scope and faster iteration than bureaucratic incumbents."
+   "confidence": "high",
+   "source_ids": [
+    "d53ff17587"
+   ],
+   "value": "Abridge directly addresses the candidate's desire for a mission-driven company by solving a tangible, meaningful problem—reducing clinician documentation burnout with verifiable AI. The emphasis on 'auditable AI' and 'responsible deployment' signals a rigorous environment that values technical depth over bureaucratic busywork, striking a balance between elite scientific fast, and meaningful innovation."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5. Healthcare AI typically respects boundaries better than consumer AI; regulated environment enforces process over heroics. No public data on guaranteed shutdowns."
+   "value": "Estimated: Respectful of work-life boundaries. A mission focused on preventing clinician burnout suggests an internal culture likely to value sustainable, humane hours rather than burnout-causing grind."
   }
  },
  "accenture": {
@@ -27685,7 +27692,7 @@
    "value": "Estimated: High prestige. Anduril is highly recognized in the tech industry for pushing the boundaries of AI, sensor fusion, and autonomy in real-world, high-stakes deployed environments, rivaling top-tier tech companies for rigorous AI and software talent."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -27711,7 +27718,7 @@
    ],
    "value": "U.S. and allied military and defense organizations."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -27744,7 +27751,7 @@
    ],
    "value": "Prepare to demonstrate how your data science and AI skills can translate into actionable insights in fast, physical, and consequential environments. Expect a focus on high-impact, zero-bureaucracy engineering that values rapid learning and mission-critical execution over building mere dashboards."
   },
-  "last_attempt_at": 1785195038,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266068,
   "locations": {
    "confidence": "medium",
@@ -27791,6 +27798,7 @@
    "value": "Estimated: Standard flexible PTO policy. Anduril does not publicly list exact PTO numbers, so use conservative industry-standard estimates of 15-20 days annually."
   },
   "refresh_after": 1790379038,
+  "retry_after": 1785290035,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -27886,7 +27894,7 @@
    ],
    "value": "Anduril works directly with U.S. and allied defense entities, which may constrain eligibility to U.S. persons or those eligible for government security clearances."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -94723,7 +94731,7 @@
    "value": "Tier 3: Respected applied data science in a dominant niche player, not an elite AI research brand."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94739,7 +94747,7 @@
    "source_ids": [],
    "value": "Electric and gas utilities (IOUs, munis, co-ops), regional grid operators (ISOs/RTOs), state energy offices, and large corporate energy buyers across the U.S. and Canada."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94762,7 +94770,7 @@
    "source_ids": [],
    "value": "Expect practical ML/system design questions on energy data (time-series, anonymized AMI), M&V methodology, and stakeholder communication; less LeetCode, more applied modeling and SQL; prepare for cross-functional collaboration scenarios with program managers and utility clients."
   },
-  "last_attempt_at": 1784888147,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266342,
   "locations": {
    "confidence": "estimated",
@@ -94791,6 +94799,7 @@
    "source_ids": [],
    "value": "Estimated: 15 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure."
   },
+  "retry_after": 1785268675,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94864,7 +94873,7 @@
    "source_ids": [],
    "value": "Estimated: Will sponsor H-1B and green cards for experienced data science/engineering hires; new-grad sponsorship likely case-by-case given non-tech-core business."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234270,44 +234279,47 @@
  },
  "leidos australia": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 – nationally significant classified programs but not a primary AI research publisher; prestige comes from deployment scale and clearance level rather than open-source contribution."
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb"
+   ],
+   "value": "Tier 2: High prestige within the defense and government sectors, known for engineering excellence, though not a pure AI research institute. It provides elite mission impact and technical rigor, but not the 'Silicon Valley/FAANG' AI lab research cachet."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb",
-    "2a7688a18e"
+    "500976fffb"
    ],
-   "value": "Government contractor model: wins competitive tenders and sole-source contracts for multi-year programs; revenue comes from cost-plus, fixed-price, and time-and-materials contracts with Australian federal agencies."
+   "value": "B2G (Business-to-Government) contract-based services company. Revenue is generated through competitively tendered, large-value, multi-year contracts for defense and civil government projects, classified as a government services/IT prime contractor."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-first engineering culture; structured, process-heavy (CMMI/ISO), clearance-gated; collaborative but hierarchical; strong veteran/ex-military presence; diversity initiatives growing."
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb"
+   ],
+   "value": "Mission-driven, patriotic engineering culture underpinned by an incumbent, mature corporate environment. It values process, thoroughness, and team collaboration. The typical vibe is stable, with proud staff solving important national problems, but can feel bureaucratic to young talent accustomed to startup speed. It is highly professional, non-toxic, and inclusive by mandated government standards."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "500976fffb",
     "2a7688a18e"
    ],
-   "value": "Australian Department of Defence, intelligence community agencies, federal civilian departments, and allied partner forces."
+   "value": "Primarily Australian Government agencies, notably the Department of Defence and Airservices Australia. Other public sector clients requiring secure, mission-critical infrastructure and services."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: AUD 78k–92k base + 9.5% super + potential clearance allowance (AUD 5k–15k); signing bonus rare; relocation assistance case-by-case."
+   "value": "Estimated: AUD 75,000 - AUD 90,000 total compensation. As a defense prime, Leidos Australia tends to offer highly competitive graduate salaries that sit above average for general IT but slightly below top-tier quantitative finance or FAANG companies operating locally."
   },
   "evidence_sha": "5e98efd955be685f",
-  "generated_at": 1784681898,
+  "generated_at": 1785268435,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
@@ -234315,70 +234327,70 @@
    "source_ids": [
     "500976fffb"
    ],
-   "value": "Defense technology / Government IT services / Systems integration"
+   "value": "Defense Technology & Government IT Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare for: (1) clearance eligibility discussion, (2) applied ML/system-design questions using defense/ISR scenarios, (3) behavioral examples showing delivery under regulatory constraints, (4) questions about workload predictability on cost-plus vs fixed-price contracts, (5) how the grad program (if any) rotates between classified and unclassified streams."
+   "confidence": "medium",
+   "source_ids": [
+    "ba7913a35d"
+   ],
+   "value": "Prepare to demonstrate strong fundamentals in multiple languages (C++, Python, Java, JavaScript, C#). Focus on testing methodologies, secure coding principles, and problem-solving for defense scenarios. Given the candidate's AI/DS background, articulate how rigorous data analysis and model evaluation skills apply to mission assurance and system reliability. Expect behavioral questions assessing suitability for a security-cleared, client-facing government environment."
   },
-  "last_attempt_at": 1784681898,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266343,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb",
-    "b35f75eda1"
+    "ba7913a35d"
    ],
-   "value": "Primary offices in Canberra (Russell, Barton, Fyshwick), Sydney, Brisbane, Melbourne, Adelaide; some roles require baseline or NV1/NV2 security clearance."
+   "value": "Australian headquarters in Melbourne, with a core operational hub in Scoresby, Victoria. Major project sites in Canberra, Brisbane, and other locations close to Defence client bases."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb",
-    "b35f75eda1"
+    "2a7688a18e"
    ],
-   "value": "Deliver innovative technology solutions that protect national security, improve health outcomes, and enable mission success for government customers."
+   "value": "To make the world safer, healthier, and more efficient by bringing technology and engineering to solve the world's toughest challenges, with a specific focus on protecting Australia's national security and sovereign capability."
   },
   "name": "Leidos Australia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate–high: program milestones drive sprints; classified environments limit external collaboration but provide stable long-term roadmaps; less 'move fast break things', more 'deliver to spec on schedule'."
+   "value": "Estimated: Moderate and structured. The pace is governed by government contract deliverables and milestone timelines rather than a 'move fast and break things' tempo. Work is methodical, emphasizing security, accreditation, and documentation alongside development."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "500976fffb",
     "2a7688a18e"
    ],
-   "value": "Defense systems integration, cybersecurity services, intelligence analytics, health IT modernization, logistics and sustainment, and AI/ML-enabled decision support for government missions."
+   "value": "Technology systems integration for air traffic management (e.g., civil and military airspace), enterprise IT solutions, cyber security services, intelligence and geospatial analysis, and command-and-control systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20 days annual leave + 10–12 public holidays + up to 15 days personal/carer’s leave per NES; additional study/exam leave for grads."
+   "value": "Estimated: Standard for large defense tech in Australia, likely 4 weeks (20 days) of annual leave. Leidos PTO policy likely includes additional Christmas/New Year leave and a personal days."
   },
+  "refresh_after": 1790452435,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "medium",
-   "source_ids": [
-    "b35f75eda1"
-   ],
-   "value": "Leidos Australia Graduate Program (2-year, 3–4 rotations across cyber, analytics, systems engineering, software delivery)"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Christmas–New Year stand-down (typically 5–10 business days) common on defense sites; no guaranteed company-wide summer shutdown."
+   "value": "Estimated: Guaranteed end-of-year shutdown. It is standard practice for this category of defense contractor to close operations over the Christmas/New Year's period Christmas, enforcing a two-week office closure, though this is not a published specific number of days."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb"
+    "ba7913a35d"
    ],
-   "value": "Large established subsidiary (parent Leidos ~$15B+ revenue, ~45k employees globally); Australia operation has 1,000+ staff across multiple sites."
+   "value": "Late-stage, large company. The Australian subsidiary has an estimated 1,001-5,000 employees, as indicated in job postings. Parent company Leidos Holdings is a publicly traded Fortune 500 firm."
   },
   "sources": [
    {
@@ -234433,41 +234445,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "b35f75eda1"
-   ],
-   "value": "Employer-sponsored visas (subclass 482/186) available for roles requiring scarce skills; citizenship or eligibility for Australian security clearance is mandatory for most technical positions."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb",
-    "2a7688a18e"
+    "500976fffb"
    ],
-   "value": "Leidos Australia is the Australian subsidiary of Leidos, a Fortune 500 defense, intelligence, and health technology company. It delivers large-scale systems integration, cybersecurity, and data-driven solutions primarily for Australian government defense and national security agencies."
+   "value": "Leidos Australia is a subsidiary of Leidos, a major American defense, aviation, and IT company. It provides technology, engineering, and systems integration services, primarily to the Australian Government and Department of Defence, focusing on mission-critical IT, air traffic management, and cyber security. The company makes money by winning large-scale, long-term government contracts to design, build, deploy, and maintain complex technological systems."
   },
+  "synthesized_evidence_sha": "5e98efd955be685f",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "500976fffb",
-    "b35f75eda1"
+    "ba7913a35d",
+    "500976fffb"
    ],
-   "value": "Classified and unclassified software engineering, data science, AI/ML model development for ISR and decision support, cyber operations, cloud migration (AWS/GovCloud/Azure), DevSecOps, and systems engineering for air/land/sea platforms."
+   "value": "Software development and systems integration roles involve working with legacy and modern tech stacks; the Entry Level Software Tester posting lists C++, Python, JavaScript, Java, and C# as key skills. Work centers on defense-grade testing, validation, and deployment of secure, reliable, and mission-critical applications."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Leidos+Australia+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Leidos Australia offers rare access to classified, mission-critical AI/data-science work at national scale—prestige from defending sovereign capability—while its government-contractor structure enforces clearer contractual hours and leave entitlements than many pure-play tech firms, aligning with your desire for elite impact without burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "2a7688a18e",
+    "500976fffb"
+   ],
+   "value": "This role sits at the intersection of mission-critical national defense and hands-on technical craftsmanship. It offers the elite prestige of working on classified Defense systems, compensating with a strong estimated new-graduate salary, while being situated within a structured 9-to-5 government-contractor culture that inherently avoids the chaotic burnout so common in consumer tech. You gain rapid, applied technical learning on high-stakes systems without sacrificing predictable downtime, maki"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated 3.5/5 – contractual hours (37.5–40/week) are respected on most cost-plus programs; surge periods occur around capability releases; on-call rotations exist for operational systems."
+   "value": "Estimated: Very Good. As a prime government contractor, Leidos is known for respecting stable working hours. Project-based crunch is the exception, culturally discouraged in favor of sustainable delivery, leading to a high likelihood of consistently sane hours."
   }
  },
  "leland": {
@@ -328337,7 +328350,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -328362,7 +328375,7 @@
    ],
    "value": "Ambitious companies seeking to optimize their financial operations and technical workflows."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328388,7 +328401,7 @@
    ],
    "value": "Demonstrating an ability to handle end-to-end systems with high flexibility, leaning into cross-functional collaboration between engineering and technology teams."
   },
-  "last_attempt_at": 1784870150,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266068,
   "locations": {
    "confidence": "unknown",
@@ -328426,6 +328439,7 @@
    "value": "Estimated: Standard tech market PTO."
   },
   "refresh_after": 1790054150,
+  "retry_after": 1785269395,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328499,7 +328513,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -432787,38 +432801,98 @@
  "veritas prime": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Estimated: Low. The company focuses on general web development technologies (React, Node, MongoDB) rather than elite AI or data science domains."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "B2B software services and solutions based on the required software development lifecycle skills in their job postings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Not explicitly defined in available sources, but likely enterprise clients needing custom software development."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Based on average Orlando, FL software developer salaries for a company of this size; well below elite tech tier new-grad pay."
   },
   "evidence_sha": "d8fc7052bec90a9f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785268435,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "IT Services and Software Development."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Given your desire for a fast-paced, innovative environment over bureaucracy, ask questions about their development lifecycle speed and how often they adopt new AI tools. To ensure it meets your work-life balance standards, probe into typical engineering hours, on-call expectations, and whether they offer guaranteed shutdowns or strict boundaries on personal time."
+  },
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266342,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Headquartered in Orlando, Florida, USA."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Veritas Prime",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Estimated: Moderate. As a mid-sizedIT services firm, the pace is likely dictated by client deliverables, which may not offer the explosive, fast-paced innovation of a top-tier AI startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Software development solutions, utilizing technologies like React.js, Node.js, and MongoDB."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for mid-sized tech service companies in the US, though exact policy is not public."
   },
+  "refresh_after": 1790452435,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -432828,7 +432902,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None. No mention of guaranteed company-wide shutdowns in the available research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "201-500 employees."
   },
   "sources": [
    {
@@ -432882,14 +432963,45 @@
     "url": "https://jobright.ai/jobs/info/6a68de513b549b0b531d2713?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Veritas Prime is a technology company founded in 2011 that specializes in software development. It generates revenue by providing software solutions and enterprise applications to its clients."
+  },
+  "synthesized_evidence_sha": "d8fc7052bec90a9f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Full-stack web development and software engineering, including React.js, Node.js, MongoDB, unit testing, and the broader software development lifecycle."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785266342,
   "web_search_url": "https://duckduckgo.com/?q=Veritas+Prime+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "If you are seeking an elite AI or data science role with top-tier prestige and high new-grad pay, this company may not perfectly align, as they are a mid-sized IT services firm focused on full-stack web development rather than cutting-edge AI. The company's culture and pace are not detailed in the sources, so it is unclear if they offer the fast, innovative tech environment and strictly bounded hours you desire to avoid burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6c402cda86"
+   ],
+   "value": "Estimated: Average to Good. Agency-style service work can fluctuate with client deadlines, making strict guaranteed shutdowns rare without explicit policy."
   }
  },
  "verition fund management llc": {
@@ -438135,7 +438247,7 @@
    "value": "Solid, venture-backed digital health AI layer (platform tier); respected within health-tech AI/ML circles but not a top-tier Big Tech or recognized AI-research lab like OpenAI or Google Brain."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -438155,7 +438267,7 @@
    ],
    "value": "Primary care physicians and their practices; the company partners with traditional primary care practices to help them shift to managed care models."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -438182,7 +438294,7 @@
    ],
    "value": "Emphasize passion for fast, innovative tech culture applied to healthcare data, experience building APIs and data pipelines, and appreciation for a work environment with sane hours and guaranteed shutdowns. Demonstrate comfort with platform engineering and clinical data systems."
   },
-  "last_attempt_at": 1784684091,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266068,
   "locations": {
    "confidence": "low",
@@ -438218,6 +438330,7 @@
    "value": "Estimated: 15-20 days paid time off per year standard for comparable health-tech startups, plus holidays. No exact policy found in research."
   },
   "refresh_after": 1789868091,
+  "retry_after": 1785272275,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -438281,7 +438394,7 @@
    "source_ids": [],
    "value": "No explicit visa sponsorship information found in provided sources for data/engineering roles. Smaller VC-backed health-techs often require candidate work authorization; check with Vytalize directly."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -451138,7 +451251,7 @@
    "value": "Estimated: Tier 3 (Consulting/Engineering Analytics). Unlikely to match elite tech prestige for AI/Data Science."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -451160,7 +451273,7 @@
    ],
    "value": "Public and private sector infrastructure developers, construction clients, and agencies seeking built/natural environment advisory."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -451190,7 +451303,7 @@
    ],
    "value": "Probe for exact hours, guaranteed shutdowns, bureaucracy blockers, and technical learning paths for data analysts."
   },
-  "last_attempt_at": 1785265515,
+  "last_attempt_at": 1785268435,
   "last_evidence_at": 1785266068,
   "locations": {
    "confidence": "high",
@@ -451232,6 +451345,7 @@
    "value": "Estimated: 15-20 days PTO, standard for large engineering consulting firms."
   },
   "refresh_after": 1790449515,
+  "retry_after": 1785270355,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -451322,7 +451436,7 @@
    ],
    "value": "Not specified in researched sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
