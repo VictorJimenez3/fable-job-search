@@ -4419,37 +4419,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no AI/data science reputation signals found."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no revenue model or business description found in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture descriptors found."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no customer or market information found in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data found in sources."
   },
   "evidence_sha": "e8c5895e089a2bdf",
+  "generated_at": 1785282452,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology / software; no vertical confirmed."
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Ask for concrete details on: (1) total compensation breakdown for new-grad roles, (2) typical weekly hours and any guaranteed shutdown policies, (3) mentorship structure and learning budget, (4) project allocation for AI/data science vs. general engineering, (5) team turnover and burnout mitigation. No source data exists to pre-answer these."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280954,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely US-based given appearance on a US new-grad board; no office or remote policy found."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No mission statement found in sources."
+  },
   "name": "Access411",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no pace or process information found."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely a software or data platform given new-grad engineering hiring; no product information found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy found."
   },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4459,7 +4505,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no company-wide shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early-to-growth stage (actively recruiting new grads); no headcount or funding data found."
   },
   "sources": [
    {
@@ -4503,14 +4556,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no visa sponsorship policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Access411 appears to be a technology company hiring new-graduate software engineers, surfaced via a 2026 new-grad hiring list. No public company description, product details, or financial information was found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "e8c5895e089a2bdf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: General software engineering for new grads; no specifics on stack, AI/DS focus, or project types found."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280954,
   "web_search_url": "https://duckduckgo.com/?q=Access411+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The company appears on a curated 2026 new-grad hiring list, suggesting active entry-level recruiting. However, the supplied sources provide no evidence about prestige, pay, work-life balance, learning culture, or burnout risk—key priorities for the candidate. Treat all culture and compensation claims as unverified until confirmed directly."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data found."
   }
  },
  "ace": {
@@ -23199,37 +23279,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — High-impact applied AI at massive scale within a global leader, but not a primary AI research lab. Strong for production ML engineering and data science careers; less known for publishing at NeurIPS/ICML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cost center / strategic enabler within Ambev (AB InBev subsidiary). Generates value by reducing operational costs, increasing sales effectiveness, and enabling new digital revenue streams; not a direct revenue-generating SaaS business."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, data-driven, pragmatic. 'Owner's mindset' valued. Diverse, inclusive (public diversity goals). Social culture (cerveja culture) but professional. Flat enough for new grads to ship to production quickly."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily internal: Ambev business units (breweries, distribution, sales, marketing, logistics). Indirectly serves millions of consumers and retail partners in Brazil and Latin America through improved digital experiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: BRL 120k–180k/yr total comp (base ~100–140k + variable/RSU). Top 10% of Brazilian new grad market. RSUs vest over 4 years (AB InBev stock). Signing bonus rare."
   },
   "evidence_sha": "ea41e11ad9636197",
+  "generated_at": 1785282452,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: strong CS fundamentals (data structures, algorithms, SQL), system design for high-throughput/low-latency services, ML lifecycle knowledge (not just modeling), and behavioral questions on ownership, simplicity, and 'disagree and commit.' Prepare case studies on retail/supply chain optimization."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280954,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary hubs: São Paulo (HQ), Jaguariúna, other Brazilian tech centers. Remote-friendly hybrid model common post-pandemic. Some roles may offer relocation to global AB InBev tech hubs (Leuven, NYC, Bangalore)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Accelerate Ambev's digital transformation by leveraging data, AI, and modern engineering to make the beverage business more efficient, consumer-centric, and innovative."
+  },
   "name": "Ambev Tech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Product-driven squads with quarterly OKRs; faster than traditional IT, slower than early-stage startups. Some legacy migration drag. Hackathons and innovation time encouraged."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal tech platforms for supply chain optimization, sales force automation, marketing analytics, e-commerce, and data/AI-driven decision tools across Ambev's beer and non-alcoholic beverage portfolio."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 30 calendar days (legal minimum in Brazil) + ~10 national/state holidays + optional 'wellness days.' No unlimited PTO; accrual-based."
   },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23239,7 +23361,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — collective vacation (férias coletivas) typically 10 days in Dec/Jan + occasional long weekends. Team-level 'no meeting' Fridays or 'focus weeks' common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale enterprise tech organization (hundreds to 1,000+ engineers/data scientists) within a Fortune 500 parent (AB InBev). Mature, well-funded, stable."
   },
   "sources": [
    {
@@ -23283,14 +23410,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major Brazilian multinational, Ambev Tech hires locally in Brazil (CLT contracts). Visa sponsorship for foreign nationals is rare for entry-level; more likely for senior/specialized transfers within AB InBev global mobility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Ambev Tech is the technology arm of Ambev, a major Brazilian beverage company (part of AB InBev), focused on digital transformation, data science, and AI solutions for the beverage industry. It builds internal platforms for supply chain, sales, marketing, and operations."
+  },
+  "synthesized_evidence_sha": "ea41e11ad9636197",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cloud-native microservices (AWS/GCP), real-time data pipelines (Kafka, Spark/Flink), ML platform (model training/serving, feature store), computer vision for retail execution, NLP for consumer insights, large-scale analytics (BigQuery/Snowflake), mobile apps for sales force."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280954,
   "web_search_url": "https://duckduckgo.com/?q=Ambev+Tech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Offers new grads elite-scale data/AI problems (petabyte data, millions of SKUs/retail points) with the prestige of a global Fortune 500 brand, competitive Brazilian-market pay, and a culture explicitly shifting from legacy IT to product-driven tech — without the burnout typical of consulting or late-stage startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Brazilian labor law (CLT) enforces 44h/week, overtime pay, 30 days vacation. Ambev Tech culture emphasizes 'shutdown' rituals, no-on-call for most roles, and mental health programs. Occasional crunch near quarter-end."
   }
  },
  "amca": {
@@ -49548,11 +49700,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49564,6 +49718,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280955,
   "name": "Bank of Montreal",
   "pace_of_work": {
@@ -49576,6 +49731,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785282572,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49619,7 +49775,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d24f22f4bedf60fe56115479058b56c3500b3d03ca930220bd191318b40a2c83JmltdHM9MTc4NTE5NjgwMA&ptn=3&ver=2&hsh=4&fclid=156cea59-47d0-63fe-3197-fdfd46bb627d&u=a1aHR0cHM6Ly93d3cuYmFua29mYW1lcmljYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785280955,
   "web_search_url": "https://duckduckgo.com/?q=Bank+of+Montreal+company+careers+benefits",
@@ -68128,37 +68284,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML in infrastructure (network telemetry, anomaly detection, resource optimization) but not a primary AI research lab. Prestige comes from scale and systems impact, not frontier model publication."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c728fca"
+   ],
+   "value": "Revenue from semiconductor product sales (approx. 60-65%) and infrastructure software subscriptions/licenses (approx. 35-40%). High-margin recurring software revenue from VMware, CA, and Symantec portfolios combined with semiconductor leadership in data center networking and storage."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Execution-oriented, engineering-heavy, metric-driven, and frugal. 'Broadcom way' emphasizes cost discipline, accountability, and integration speed post-acquisition. Less collaborative/innovative startup feel; more structured, hierarchical, and results-focused. Respect for deep technical expertise."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c728fca"
+   ],
+   "value": "Enterprise data centers, cloud service providers, telecommunications carriers, OEMs, and government agencies worldwide. Major customers include hyperscalers, telecom operators, and large enterprises deploying networking, storage, and virtualization infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140K-$165K base + $30K-$60K sign-on + $40K-$80K RSUs (4-yr) = $210K-$305K Year 1 total. Top performers in high-demand roles (AI/ML, SerDes, distributed systems) may exceed $300K. Bay Area premium applied."
   },
   "evidence_sha": "b388a4c9649e3c47",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785282452,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5a0c728fca"
+   ],
+   "value": "Semiconductors & Infrastructure Software"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect deep technical interviews: data structures/algorithms, system design (distributed systems, storage, networking), domain-specific questions (ASIC flow, firmware, kernel, virtualization), and behavioral alignment with Broadcom's 'execution-focused' values. LeetCode Hard frequency is high. Software roles emphasize scale, reliability, and performance. Prepare for cross-functional collaboration questions given acquisition-heavy structure."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280955,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "612b395803"
+   ],
+   "value": "Headquartered in Palo Alto, CA. Major engineering hubs in San Jose, Irvine, Fort Collins, Austin, Raleigh, Bangalore, Hyderabad, Singapore, and multiple European sites. Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "612b395803"
+   ],
+   "value": "To be the leading infrastructure technology company by delivering semiconductor and software solutions that connect and power the digital world."
+  },
   "name": "Broadcom",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast in acquisition integration and product delivery cycles; slower in legacy maintenance. Hardware tapeout deadlines drive intense periods. Software teams vary — VMware/cloud groups more agile, core platform teams more measured."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c728fca",
+    "612b395803"
+   ],
+   "value": "Semiconductor solutions for networking (Ethernet switches, routers), storage (Fibre Channel, SAS/SATA controllers), broadband (cable modems, DSL), wireless (Wi-Fi, Bluetooth), and industrial; infrastructure software including VMware (virtualization, cloud), CA Technologies (enterprise software), and Symantec (cybersecurity)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US). Accrual-based; unlimited PTO not standard. Varies by acquisition legacy (VMware/CA/Symantec policies differ)."
   },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68168,7 +68381,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some divisions observe winter break (Dec 24-Jan 1) but not universal. Team-dependent."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5a0c728fca"
+   ],
+   "value": "Large public company (NASDAQ: AVGO); ~20,000+ employees globally; market cap ~$500B+; annual revenue ~$35B+. Mature, acquisitive conglomerate with steady cash flows."
   },
   "sources": [
    {
@@ -68212,14 +68432,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for engineering roles. Large volume of approved petitions annually across semiconductor and software divisions. New grad offers typically include sponsorship support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c728fca",
+    "612b395803"
+   ],
+   "value": "Broadcom is a global semiconductor and infrastructure software company that designs, develops, and supplies a broad range of semiconductor and infrastructure software solutions. The company operates across multiple technology segments including networking, storage, broadband, wireless, and enterprise software."
+  },
+  "synthesized_evidence_sha": "b388a4c9649e3c47",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a0c728fca",
+    "612b395803"
+   ],
+   "value": "ASIC/FPGA design, high-speed SerDes, analog/mixed-signal, embedded firmware, kernel/driver development, distributed systems for storage/networking, virtualization (VMware ESXi, vSphere), cloud management, cybersecurity platforms, and AI/ML for network telemetry and infrastructure optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280955,
   "web_search_url": "https://duckduckgo.com/?q=Broadcom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Broadcom offers elite semiconductor and infrastructure software prestige with top-tier new grad compensation, but its culture is known for operational intensity and acquisition-driven integration rather than a fast, innovative startup-like pace. Work-life balance varies significantly by division: VMware and software groups may offer more flexibility, while core hardware teams often face demanding schedules. The company respects technical depth and long-term career growth, but guaranteed shutdown"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 overall. High variance: 2.5/5 in core ASIC/hardware; 3.5/5 in some software/cloud groups. No company-wide guaranteed shutdowns. On-call common in infrastructure roles."
   }
  },
  "broadcom limited": {
@@ -259127,21 +259376,115 @@
   }
  },
  "mcsg technologies": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely lower-tier for AI/Data Science compared to top-tier tech firms, as the company focuses on broad IT consulting rather than elite, cutting-edge AI products."
+  },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919"
+   ],
+   "value": "B2B and B2G IT services and consulting firm, generating revenue through government contracts and enterprise client engagements."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Structured, client-focused, and likely more bureaucratic than fast-paced tech startups."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919"
+   ],
+   "value": "US government agencies and enterprise organizations seeking specialized IT and technical support."
+  },
   "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $70,000 - $90,000. Typical for IT consulting new grad roles, but below the elite new-grad pay benchmarked by top-tier tech firms."
+  },
   "evidence_sha": "13aefab852dee35d",
-  "generated_at": 1784848346,
+  "generated_at": 1785282452,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784848346,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919",
+    "58b98f6c1a"
+   ],
+   "value": "IT Services and Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate should clarify whether the specific team offers genuine AI/data science work or if the role leans more heavily toward traditional IT consulting, which may lack the elite prestige and fast-paced, innovative tech culture desired. It is also crucial to ask about actual work-life balance, expected hours, and whether the company culture avoids the toxic or high-burnout environments typically associated with consulting."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1784848350,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919"
+   ],
+   "value": "US-based operations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919",
+    "bd21a49df8"
+   ],
+   "value": "To deliver mission-critical technology solutions and specialized IT services that drive client success."
+  },
   "name": "MCSG Technologies",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Moderate to slow, typical of government and enterprise consulting, which may involve more bureaucracy and less of the fast-paced innovation culture found in top tech firms."
+  },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919",
+    "58b98f6c1a"
+   ],
+   "value": "IT consulting, software development, managed services, and technology solutions for public sector and enterprise clients."
+  },
   "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Standard government consulting package (15-20 days)."
+  },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research."
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No company-wide shutdowns found; likely standard federal holidays off."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919"
+   ],
+   "value": "Established private consulting firm."
+  },
   "sources": [
    {
     "content_sha": "35f1aee2ad38d195",
@@ -259184,10 +259527,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919",
+    "bd21a49df8"
+   ],
+   "value": "MCSG Technologies is an IT services and consulting firm that provides specialized technology, software, and managed services solutions. It generates revenue through government contracts and enterprise client engagements, delivering tailored technical support and systems integration."
+  },
+  "synthesized_evidence_sha": "13aefab852dee35d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4e8a570919",
+    "bd21a49df8",
+    "58b98f6c1a"
+   ],
+   "value": "Software development, systems integration, and managed IT services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784848350,
-  "web_search_url": "https://duckduckgo.com/?q=MCSG+Technologies+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=MCSG+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an IT consulting firm, this role may not align with the candidate's priority for a top-tier AI or data science position that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. Government and enterprise consulting often involves more structured, slower-paced environments, which may conflict with the desire for accelerated technical learning and career growth without sacrificing personal time."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Moderate. Consulting can sometimes demand long hours to meet client expectations, though government contracts may offer more predictable schedules than private sector consulting."
+  }
  },
  "mechanize": {
   "ai_ds_prestige_tier": {
@@ -269505,11 +269881,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269521,6 +269899,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280955,
   "name": "Modal",
   "pace_of_work": {
@@ -269533,6 +269912,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785282572,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269606,7 +269986,7 @@
     "url": "https://jobs.ashbyhq.com/modal/1dffcf2e-32e1-4caa-a1ca-21ad416d4598"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785280955,
   "web_search_url": "https://duckduckgo.com/?q=Modal+company+careers+benefits",
@@ -353806,48 +354186,115 @@
  "sba communications corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Tier 3 — niche domain prestige; not a general AI/ML leader but high technical bar for RF, geospatial, and asset optimization data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "REIT model: acquires, builds, and leases tower sites to carriers under long-term (5-10+ year) leases with escalators; generates predictable recurring revenue and distributes taxable income as dividends."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, low-politics, collaborative; long-tenure workforce with deep domain expertise. Less 'tech startup' energy, more 'infrastructure utility' professionalism. Values reliability over hype."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Major wireless carriers (e.g., AT&T, Verizon, T-Mobile) and other wireless service providers seeking tower infrastructure for network coverage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + 10-15% target bonus + RSU (vesting 3-4 yrs); total comp ~$100k-$130k. RF/structural engineering at top of band; data science/analytics slightly lower."
   },
   "evidence_sha": "73e29d2065a710c8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785282452,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Telecommunications Infrastructure / REIT (Wireless Tower Ownership & Leasing)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect RF fundamentals, structural/civil basics, GIS/data analysis, and case studies on site acquisition or carrier lease economics. Behavioral emphasis on cross-functional coordination (carriers, zoning, construction) and managing long-project timelines."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280954,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Headquartered in Boca Raton, FL; regional offices across the U.S. and international operations in Canada, Brazil, Mexico, Colombia, Chile, Peru, South Africa, and other markets."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To be the leading provider of wireless communications infrastructure, enabling connectivity through a portfolio of tower assets."
+  },
   "name": "SBA Communications Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project-based with carrier-driven deadlines; steady cadence punctuated by deployment surges (e.g., 5G rollout). Not a 'move fast and break things' culture; emphasis on accuracy and regulatory compliance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Wireless tower leasing, site development, construction management, and tower site consulting services for wireless carriers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; accrual-based, increases with tenure. Unlimited not offered."
   },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; standard holiday calendar (Thanksgiving week, Christmas-New Year week) with minimal coverage expected."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Large-cap public company (NASDAQ: SBAC); ~$30B+ market cap, ~1,500 employees, operates ~30,000+ tower sites across the U.S., Canada, Central/South America, and South Africa."
   },
   "sources": [
    {
@@ -353891,14 +354338,43 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "As a large public company, likely sponsors H-1B and green cards for specialized engineering and technical roles; specific new-grad sponsorship policy not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "SBA Communications Corporation is a real estate investment trust (REIT) that owns and operates wireless communications infrastructure, primarily cell towers, across the Americas and South Africa. It generates revenue by leasing tower space to wireless carriers under long-term contracts."
+  },
+  "synthesized_evidence_sha": "73e29d2065a710c8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "RF engineering, site acquisition, structural analysis, GIS/mapping, network planning, construction management, and internal IT/data platforms for asset management and carrier relations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280954,
   "web_search_url": "https://duckduckgo.com/?q=SBA+Communications+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Offers elite REIT prestige with high new-grad compensation in a specialized telecom infrastructure niche; technical roles involve real-world RF/structural/GIS problems at scale with carrier-facing impact. Culture leans engineering-driven with reasonable hours vs. high-burnout tech, but pace can spike during carrier deployment cycles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally sane hours (40-50/wk) with occasional on-call for site issues; corporate engineering roles more predictable than field/construction management. Guaranteed shutdowns not policy but respected in practice."
   }
  },
  "scale ai": {
@@ -361815,91 +362291,109 @@
  "shield ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Top-tier — regularly publishes at ICRA, RSS, NeurIPS; DARPA/AFWERX performer; attracts talent from FAIR, DeepMind, Waymo, Skunk Works."
+   "source_ids": [
+    "4221ac14fb"
+   ],
+   "value": "Estimated: Top-tier. The company is a highly regarded venture-backed defense-tech firm known for its elite, mission-critical intelligent systems and autonomous AI applications."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Defense contractor model: multi-year procurement and sustainment contracts for autonomous hardware/software systems sold to governments."
+   "confidence": "high",
+   "source_ids": [
+    "4221ac14fb",
+    "a10eb51b4b"
+   ],
+   "value": "Venture-backed defense technology manufacturer that secures revenue through the deployment, configuration, lifecycle management, and sustainment of its autonomous aircraft fleet for global security clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-obsessed, engineering-first, flat hierarchy; veterans and PhDs work side-by-side; transparent OKRs; 'no politics' ethos; diversity initiatives active but still male-dominated in core autonomy."
+   "source_ids": [
+    "3a1ebc576d",
+    "4221ac14fb"
+   ],
+   "value": "Estimated: Mission-driven, professional, and welcoming. Operations are globally focused and dedicated to protecting civilians and service members."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "U.S. Department of Defense, allied foreign militaries, and government defense agencies."
+   "confidence": "high",
+   "source_ids": [
+    "a10eb51b4b",
+    "7bb83d5386",
+    "c1ad716faf"
+   ],
+   "value": "Defense forces and security organizations operating globally, supported by facilities and operations across the U.S., Europe, the Middle East, and Asia-Pacific."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $170k–$200k base + $30k–$60k equity (4-yr) + $15k–$25k sign-on; total first-year $215k–$285k."
+   "value": "Estimated: $120,000 - $160,000. High new-grad pay aligned with top-tier AI and defense-tech industry standards."
   },
   "evidence_sha": "37b0bc8a5fe91452",
-  "generated_at": 1784874138,
+  "generated_at": 1785282452,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7bb83d5386",
-    "c1ad716faf",
-    "3a1ebc576d"
+    "4221ac14fb",
+    "a10eb51b4b",
+    "7bb83d5386"
    ],
-   "value": "Defense technology / Autonomous systems / Applied AI"
+   "value": "Defense technology and autonomous systems."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect deep technical screens on robotics/RL fundamentals, C++ systems design, and real-time latency optimization; behavioral questions probe ownership, cross-team collaboration, and ability to deliver under tight integration schedules. Prepare to discuss how you balance speed with safety-critical rigor."
+   "value": "Concentrate on your technical expertise in intelligent systems with expectations to innovate agilely and push AI/DS boundaries while maintaining a sustainable, healthy work-life balance. Emphasize how you can drive fast-paced technical learning and career growth while respecting scheduled shutdowns and a mission-driven purpose."
   },
-  "last_attempt_at": 1784874138,
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785279636,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "a10eb51b4b",
     "7bb83d5386",
-    "c1ad716faf",
-    "3a1ebc576d"
+    "c1ad716faf"
    ],
-   "value": "Headquarters in San Diego, CA; additional offices in Dallas TX, Washington DC, and abroad across Europe, the Middle East, and Asia-Pacific."
+   "value": "Offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "7bb83d5386",
-    "c1ad716faf",
-    "3a1ebc576d"
+    "4221ac14fb",
+    "a10eb51b4b",
+    "7bb83d5386"
    ],
    "value": "Protecting service members and civilians with intelligent systems."
   },
   "name": "Shield AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — 'move fast, break things' culture tempered by flight-safety reviews; 2-week sprints, quarterly flight-test milestones."
+   "source_ids": [
+    "4221ac14fb",
+    "a10eb51b4b"
+   ],
+   "value": "Estimated: Fast and innovative. As a venture-backed defense-tech scale-up, the structure favors rapid technical development and global fleet sustainment over slow bureaucracy."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Autonomous AI pilots (Hivemind) for military aircraft such as the V-BAT vertical takeoff drone and F-16 fighters; associated simulation, training, and mission-planning software."
+   "confidence": "high",
+   "source_ids": [
+    "a10eb51b4b"
+   ],
+   "value": "Intelligent systems including the V-BAT uncrewed aircraft, alongside associated payloads, software, and support equipment."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 company holidays + flexible 'recharge' days; unlimited sick; 12-week parental leave."
+   "value": "Estimated: 20-25 days. The company is expected to provide competitive PTO to maintain sustainable work-life balance for its staff."
   },
-  "refresh_after": 1790058138,
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -361909,12 +362403,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) plus one summer 'recharge week' (early July); not guaranteed contractually."
+   "value": "Estimated: Likely offers guaranteed shutdowns to ensure rest and prevent burnout, though exact dates and frequency are not public."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 600–1,000 employees; late-stage venture-backed (Series E+), valued >$2.5B."
+   "confidence": "high",
+   "source_ids": [
+    "4221ac14fb",
+    "a10eb51b4b",
+    "7bb83d5386"
+   ],
+   "value": "Venture-backed company established in 2015 with a global operational footprint spanning four continents."
   },
   "sources": [
    {
@@ -361979,25 +362477,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Willing to sponsor H-1B and TN visas for technical roles; defense contracts may require U.S. citizenship or green card for certain cleared positions."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7bb83d5386",
-    "c1ad716faf",
-    "3a1ebc576d"
+    "4221ac14fb",
+    "a10eb51b4b"
    ],
-   "value": "Shield AI is a venture-backed defense technology company founded in 2015 that develops intelligent autonomous systems — including AI pilots for aircraft — to protect service members and civilians. It generates revenue by selling its hardware and software platforms to the U.S. Department of Defense and allied militaries."
+   "value": "Shield AI is a venture-backed defense-tech company that builds intelligent systems, such as the V-BAT aircraft, designed to protect service members and civilians. It makes money by fielding and sustaining these autonomous technologies for defense and global security operations."
   },
-  "synthesized_evidence_sha": "ff0dd1fa5a60f705",
+  "synthesized_evidence_sha": "37b0bc8a5fe91452",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core work spans deep reinforcement learning, state estimation, multi-agent autonomy, real-time embedded software (C++/Rust), simulation at scale, and hardware-software integration on tactical aircraft."
+   "confidence": "high",
+   "source_ids": [
+    "a10eb51b4b",
+    "4221ac14fb"
+   ],
+   "value": "Involves developing autonomous intelligent systems and managing the end-to-end lifecycle of uncrewed aerial vehicles, encompassing hardware, payloads, software, and ground equipment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
@@ -362005,12 +362505,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Offers elite AI/autonomy prestige (DARPA/AFWERX programs, published research) with top-decile new-grad compensation, while explicitly marketing a mission to protect lives. Candidate priorities align with Shield AI's stated culture of rapid iteration, 'no bureaucracy,' and emphasis on sustainable pace — though defense deadlines can create crunch periods."
+   "value": "Shield AI provides a mission-driven, fast-paced defense-tech environment that can accelerate your technical learning and career growth while operating at the elite, high-compensation intersection of AI and national security. Your contributions directly enhance the safety of service members while adhering to a professional culture that respects sane hours and personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 — leadership promotes 'sustainable pace' and protected weekends, but integration campaigns and flight tests can demand 50–60 hr weeks for short bursts."
+   "source_ids": [
+    "a10eb51b4b"
+   ],
+   "value": "Estimated: Healthy. Culture respects work-life balance through sane hours to avoid burnout, though specific individual workloads may vary by project role."
   }
  },
  "shift": {
@@ -434030,39 +434532,112 @@
  },
  "varda space": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 (elite) — rare combination of flown space hardware, top-tier VC backing, and publications in peer-reviewed journals; comparable to SpaceX/Relativity/Anduril for technical brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419",
+    "6398dd18ac"
+   ],
+   "value": "Contract manufacturing and direct sales of space-made materials (e.g., ritonavir crystals, ZBLAN fiber); government R&D contracts; satellite-as-a-service for customers who want to fly their own manufacturing payloads on Varda's platform."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6398dd18ac",
+    "f37bdc63cd"
+   ],
+   "value": "Hardware-first, engineering-centric, mission-obsessed; low bureaucracy, high autonomy; 'adults in the room' vibe — experienced founders (Will Bruey, Delian Asparouhov) with SpaceX/Founders Fund pedigree; collaborative across disciplines (software, mechanical, thermal, ops)."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419"
+   ],
+   "value": "Pharmaceutical companies seeking improved drug crystallization, fiber optics manufacturers, defense and government agencies (e.g., USAF, Space Force), and commercial entities needing microgravity-produced materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + equity (0.05%-0.15%) + signing bonus; total comp ~$180k-$230k, competitive with top-tier aerospace/defense tech."
   },
   "evidence_sha": "18aa087cd1b02e4a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785282452,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419"
+   ],
+   "value": "Space manufacturing / in-space production / deep tech aerospace"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6398dd18ac",
+    "17f8c9c419"
+   ],
+   "value": "Expect deep technical screens on ML/statistics fundamentals, spacecraft-relevant problems (anomaly detection in telemetry, optimization under constraints, small-data regimes), and ability to write production-quality Python/C++. Behavioral questions will probe autonomy, ambiguity tolerance, and cross-disciplinary communication with hardware engineers. Prepare a concrete example of a model or analysis you took from concept to deployed impact."
+  },
+  "last_attempt_at": 1785282452,
   "last_evidence_at": 1785280956,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f37bdc63cd",
+    "6398dd18ac"
+   ],
+   "value": "Headquarters in El Segundo, CA; mission operations in California; launch and recovery operations at Vandenberg Space Force Base and international sites. Limited remote flexibility for specialized roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6398dd18ac",
+    "f37bdc63cd"
+   ],
+   "value": "Expand the economic bounds of humankind by making low Earth orbit a viable place for industrial production, not just observation or communications."
+  },
   "name": "Varda Space",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6398dd18ac"
+   ],
+   "value": "Fast, milestone-driven (launch campaigns, mission ops windows) but not chaotic; hardware cadence imposes natural deadlines that prevent indefinite scope expansion. Estimated: 50-55 hrs/wk typical, higher during launch/recovery campaigns."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419",
+    "6398dd18ac"
+   ],
+   "value": "Recoverable space capsules for in-orbit manufacturing of pharmaceuticals, fiber optics, and other advanced materials; satellite platform (Varda W-Series) providing power, propulsion, and thermal control for manufacturing payloads."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; unlimited policy not confirmed; actual usage encouraged but mission ops may constrain timing."
   },
+  "refresh_after": 1790466452,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -434072,7 +434647,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns publicly documented; mission ops schedule dictates availability."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 150-300 employees; post-Series B, venture-backed deep-tech startup with demonstrated orbital flight heritage (multiple successful missions)."
   },
   "sources": [
    {
@@ -434136,14 +434716,45 @@
     "url": "https://job-boards.greenhouse.io/vardaspace/jobs/7697131003"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Will sponsor H-1B and O-1 for exceptional engineering talent; ITAR/export-control restrictions apply to many roles, limiting non-US-person eligibility for core spacecraft positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f37bdc63cd",
+    "17f8c9c419",
+    "6398dd18ac"
+   ],
+   "value": "Varda Space Industries manufactures high-value products like pharmaceuticals and fiber optics in low Earth orbit, leveraging microgravity to create materials impossible to produce on Earth. They operate recoverable space capsules that return finished goods to customers on the ground."
+  },
+  "synthesized_evidence_sha": "18aa087cd1b02e4a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6398dd18ac",
+    "17f8c9c419"
+   ],
+   "value": "Guidance, navigation & control for autonomous reentry; thermal protection systems; spacecraft avionics and software; microgravity manufacturing process development; mission operations and ground software; data science for process optimization and telemetry analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280956,
   "web_search_url": "https://duckduckgo.com/?q=Varda+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6398dd18ac",
+    "17f8c9c419"
+   ],
+   "value": "Varda sits at the rare intersection of elite deep-tech prestige (real orbital hardware, NASA/DoD partnerships) and a focused, fast-moving startup culture. For a new-grad AI/data scientist, it offers ownership of models that directly control spacecraft and manufacturing processes — not just offline analytics — with compensation competitive with top-tier tech, while the mission-driven, hardware-constrained environment naturally bounds scope creep and encourages sustainable pacing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — intense during mission-critical periods, but leadership emphasizes sustainable pace and protected weekends outside campaigns; no guaranteed shutdowns publicly documented."
   }
  },
  "varian": {
