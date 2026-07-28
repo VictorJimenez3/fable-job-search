@@ -90178,119 +90178,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "3d75ef693e",
     "7cb2ccc061"
    ],
-   "value": "Established enterprise leader building AI/ML into core networking/security products. Not a pure-play AI lab but high-impact applied AI at massive scale. Prestige: Tier 2 (strong industry respect, not academic research fame)."
+   "value": "Estimated: Mid-to-High. While not a dedicated elite AI lab like OpenAI, Cisco's Data Fabric and AI/Intelligent Systems engineering roles provide high-impact, scalable enterprise AI experience."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "aa993d0b93"
+    "3d75ef693e"
    ],
-   "value": "Revenue from hardware sales (routing, switching, wireless), software subscriptions (security, collaboration, observability), services (technical support, professional services), and recurring revenue from Meraki cloud-managed IT and Webex. Shifting toward software/subscription model."
+   "value": "Selling enterprise networking hardware, software subscriptions, and cloud-native services."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7cb2ccc061"
+    "3597e57bf3"
    ],
-   "value": "Professional, collaborative, process-oriented, inclusive. Long-tenured workforce. 'Conscious culture' framework emphasizes respect, mindfulness, and giving back. Engineering-driven but with corporate structure. Less 'bro culture', more stable adult environment."
+   "value": "Innovative and respectful, where bold ideas and courageous thinking thrive. The culture prioritizes mindfulness and impact over chaos."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "aa993d0b93"
+    "3d75ef693e"
    ],
-   "value": "Enterprise businesses, service providers, government agencies, small/medium businesses, and cloud providers worldwide. Serves organizations of all sizes across industries including finance, healthcare, education, and retail."
+   "value": "Enterprises requiring scalable networking, security, and cloud infrastructure solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $130k-$160k base + 10-15% target bonus + RSU grant ($40k-$80k over 4 years). Total Year 1 ~$180k-$230k. AI/DS roles may trend higher. Bay Area/NSA premium applies."
+   "value": "Estimated: $120k-$160k base salary, with potential for RSUs and bonuses typical of large-cap tech firms."
   },
   "evidence_sha": "95689ed9b8535b01",
-  "generated_at": 1784882299,
+  "generated_at": 1785220993,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "aa993d0b93"
+    "3d75ef693e"
    ],
-   "value": "Enterprise networking, cybersecurity, cloud infrastructure, collaboration software, telecommunications equipment."
+   "value": "Technology / Networking Hardware and Software / Cloud Services."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "7cb2ccc061"
-   ],
-   "value": "Expect system design (distributed systems, networking fundamentals), coding (LeetCode medium/hard), and behavioral questions aligned with 'mutual respect and mindfulness' values. For AI/DS roles: ML fundamentals, model deployment at scale, and data pipeline design. Prepare examples of collaboration, learning agility, and handling ambiguity in large orgs."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate should interview Cisco's specific teams to ensure they offer elite new-grad pay, sane hours, and guaranteed shutdowns, rather than standard enterprise pace. Given Cisco's scale, probing the team's exact AI/Data science prestige, learning velocity, and autonomy is crucial to match the candidate's high bar."
   },
-  "last_attempt_at": 1785209836,
+  "last_attempt_at": 1785220993,
   "last_evidence_at": 1785200012,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "aa993d0b93"
+    "3d75ef693e",
+    "3597e57bf3"
    ],
-   "value": "Headquartered in San Jose, CA. Major hubs in Research Triangle Park (NC), Boston, Chicago, Austin, Atlanta, Denver, and globally in Bangalore, Tokyo, London, Berlin, Toronto, and more. Hybrid work model common."
+   "value": "Seattle, Washington (US), with global career opportunities available."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7cb2ccc061",
-    "aa993d0b93"
+    "3597e57bf3"
    ],
-   "value": "To power an inclusive future for all by connecting people, devices, and information securely. Focus on bold ideas, revolutionary innovations, and courageous thinking with a culture of mutual respect and mindfulness."
+   "value": "To power the future for customers and the world through bold ideas, revolutionary innovations, and courageous thinking."
   },
   "name": "Cisco",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate, structured pace typical of large enterprise. Quarterly planning cycles, defined processes, but AI/innovation teams may move faster. Less 'move fast break things', more 'deliver reliably at scale'."
+   "source_ids": [
+    "3597e57bf3"
+   ],
+   "value": "Estimated: Moderate. As an established enterprise tech leader, the pace is likely steady and process-oriented, though specific AI/Cloud teams may operate with more agility."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "aa993d0b93",
-    "7cb2ccc061"
+    "3d75ef693e"
    ],
-   "value": "Core products include routers, switches, wireless access points, security appliances (firewalls, VPN), collaboration tools (Webex), cloud networking (Meraki), data center infrastructure, and software-defined networking solutions. Growing AI/ML portfolio for network analytics and security."
+   "value": "Cloud-native services, data fabric frameworks, and software deployed in customer-managed environments, including containers and Kubernetes solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. US new grads typically start at ~15 days. Unlimited not offered; accrual-based. Volunteer time off (5 days) and parental leave generous."
+   "value": "Estimated: 20-25 days. Standard for large enterprise tech companies, complemented by paid holidays."
   },
-  "refresh_after": 1790066299,
-  "retry_after": 1785213676,
+  "refresh_after": 1790404993,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "dbc3b9e88f",
-    "7cb2ccc061"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (typically last week of December). No regular summer or quarterly shutdowns. Some teams may have additional flexibility."
+   "value": "Estimated: Likely offers a few days of holiday shutdown period at year-end."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "aa993d0b93"
+    "dbc3b9e88f"
    ],
-   "value": "Large-cap public company (NASDAQ: CSCO). ~84,000 employees globally. Market cap ~$200B. Mature, stable enterprise with consistent profitability and dividends."
+   "value": "Large-cap, established multinational technology corporation."
   },
   "sources": [
    {
@@ -90357,25 +90354,23 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Actively sponsors H-1B visas and green cards for technical roles. Large international workforce with established immigration support processes. New grad roles typically eligible for sponsorship."
+   "value": "Not explicitly mentioned in available sources, but large multinational tech firms typically sponsor visas for top talent."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "aa993d0b93",
-    "7e6a4d0745"
+    "3d75ef693e"
    ],
-   "value": "Cisco is a global technology conglomerate that designs, manufactures, and sells networking hardware, software, telecommunications equipment, and high-technology services and products. It operates across networking, security, collaboration, applications, and cloud management."
+   "value": "Cisco is a global technology leader that develops networking hardware, software, and cloud-native services. It makes money by selling enterprise networking infrastructure, software subscriptions, and cloud services to businesses worldwide."
   },
-  "synthesized_evidence_sha": "ef170da758893b71",
+  "synthesized_evidence_sha": "95689ed9b8535b01",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7cb2ccc061",
-    "aa993d0b93"
+    "3d75ef693e"
    ],
-   "value": "Large-scale distributed systems, network protocol development, cloud infrastructure, cybersecurity, AI/ML for network analytics and threat detection, full-stack development for collaboration platforms, hardware-software integration, and automation/orchestration tools."
+   "value": "Software engineering with a focus on performance, reliability, security, and operability at scale. Exposure to containers, Kubernetes, public cloud platforms, and CI/CD."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
@@ -90383,17 +90378,16 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "7cb2ccc061",
-    "dbc3b9e88f"
+    "3597e57bf3"
    ],
-   "value": "Cisco offers elite prestige as a networking/tech infrastructure leader with a growing AI/data science focus (per the Data/AI/Intelligent Systems new grad role). The job posting emphasizes 'mutual respect and mindfulness' as cultural keys, suggesting WLB awareness. Large scale provides structured learning and career paths without startup chaos, while the pivot to software/AI offers modern technical challenges. Pay is competitive for new grads at a stable, profitable giant."
+   "value": "Cisco offers a mission-driven environment emphasizing mutual respect and mindfulness, which aligns with a candidate's desire to avoid toxic burnout cultures. However, its size and established nature may lean toward slower bureaucracy rather than the fast, innovative tech culture of top-tier AI startups, requiring the candidate to target specific agile AI/Data teams to find the right fit."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "7cb2ccc061"
+    "3597e57bf3"
    ],
-   "value": "Estimated: 4/5. Cisco publicly emphasizes 'mindfulness' and 'mutual respect' in culture. Large enterprise norms: reasonable hours, flexible/hybrid work, low weekend expectations for most teams. On-call rotations exist for critical infra but generally managed."
+   "value": "Estimated: Good. The company explicitly emphasizes a culture of 'mutual respect and mindfulness' as key to its success, suggesting a conscious effort to maintain healthy boundaries."
   }
  },
  "cision": {
@@ -209832,45 +209826,40 @@
  "intertek": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: Mid-tier (Industry-Focused). AI and data science are applied to internal business operations rather than being a primary revenue driver."
+   "source_ids": [],
+   "value": "Tier 3 (Non-tech enterprise) - AI and Data Science roles are likely focused on internal tooling and business intelligence rather than cutting-edge, elite industry innovation."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a885adc8fc"
+    "f157034d37"
    ],
-   "value": "B2B service revenue generated by charging organizations for third-party quality, safety, and compliance assurance."
+   "value": "Intertek operates a high-quality business model driven by a global network of customer-focused operations and highly engaged subject matter experts, delivering tailored quality assurance and strategic communication solutions to global industries."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "a885adc8fc"
+    "f157034d37"
    ],
-   "value": "Estimated: Traditional, process-driven, risk-averse, and prioritizing operational accuracy over rapid digital innovation."
+   "value": "Customer-focused, prioritize high-quality standards, and highly engaged subject matter expertise. The vibe is structured and professional rather than fast-paced startup."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0f48fb0fc6",
-    "77bfb617ce"
+    "f157034d37"
    ],
-   "value": "Multinational businesses and manufacturers spanning consumer goods, energy, healthcare, transportation, and construction sectors."
+   "value": "Industries worldwide seeking quality assurance, testing, and certification services, as well as organizations needing strategic workforce culture and asset protection communication programs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: $80,000 - $95,000 USD base salary for new-grad technical roles, varying by geographic location."
+   "source_ids": [],
+   "value": "Estimated: $70,000 - $90,000 USD annually. Large non-tech-first enterprises typically pay below top-tier tech market rates for new graduates."
   },
   "evidence_sha": "33f0f167098bffbf",
-  "generated_at": 1784898527,
+  "generated_at": 1785220993,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -209879,81 +209868,71 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a885adc8fc",
-    "0f48fb0fc6"
+    "f157034d37"
    ],
-   "value": "Testing, Inspection, and Certification (TIC); Business Services"
+   "value": "Quality Assurance, Testing, Inspection, and Certification"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: Highlight your enthusiasm for applying cutting-edge AI to optimize complex, real-world physical supply chains and quality assurance processes. Ask targeted questions about the technical team's autonomy, deployment cycles, and whether they operate with a startup-like agility or strict corporate governance to gauge if the culture aligns with your desire for speed."
+   "source_ids": [],
+   "value": "Assess the team's actual pace of innovation versus bureaucratic overhead. Ask about the scope of technical learning, regular working hours to ensure work-life balance, and whether the compensation matches top-tier tech standards despite being in a non-tech-centric industry."
   },
-  "last_attempt_at": 1785209836,
+  "last_attempt_at": 1785220993,
   "last_evidence_at": 1785200012,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "a885adc8fc"
+    "f157034d37"
    ],
-   "value": "Headquartered in the UK with a global network of laboratories and offices in over 100 countries."
+   "value": "Global network of operations with remote work options available for certain roles, such as the Associate Software Developer position."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "77bfb617ce"
+    "f157034d37"
    ],
-   "value": "Bringing quality and safety to life through comprehensive testing, inspection, and certification services worldwide."
+   "value": "To inspire and engage workforces and provide world-leading Total Quality Assurance to optimize client operations, brands, and culture."
   },
   "name": "Intertek",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: Moderate to slow. Governed by strict corporate procedures, compliance, and standardization typical of a global assurance corporation."
+   "source_ids": [],
+   "value": "Estimated: Steady and process-oriented. As a large global enterprise, the pace is likely governed by standard operating procedures and structured workflows rather than rapid, agile tech culture shifts."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0f48fb0fc6"
+    "f157034d37"
    ],
-   "value": "Industry testing, inspection, and certification services, alongside systems certification and advisory solutions."
+   "value": "Total Quality Assurance solutions, including testing, inspection, and certification services. Additionally, Intertek Catalyst provides custom-branded asset protection communication programs designed to optimize workforce culture."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: 20-25 days of standard paid time off, typical for corporate employees in established global enterprises."
+   "source_ids": [],
+   "value": "Estimated: Standard corporate PTO, likely around 15-20 days annually for new full-time employees, plus public holidays."
   },
-  "refresh_after": 1790082527,
-  "retry_after": 1785213676,
+  "refresh_after": 1790404993,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "a885adc8fc",
-    "0f48fb0fc6"
+    "f157034d37"
    ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Some regional offices may observe standard public holidays."
+   "source_ids": [],
+   "value": "Estimated: No company-wide guaranteed shutdowns mentioned. Typical enterprise operations remain open year-round with standard holiday allowances."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "a885adc8fc"
+    "f157034d37"
    ],
-   "value": "Established publicly traded enterprise with a massive global footprint."
+   "value": "Large, established global enterprise and recognized world leader in the Quality Assurance market."
   },
   "sources": [
    {
@@ -209998,45 +209977,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: Large global enterprise likely offers visa sponsorship for specialized data and tech roles across various regions."
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "medium",
-   "source_ids": [
-    "a885adc8fc",
-    "0f48fb0fc6"
-   ],
-   "value": "Intertek is a global Total Quality Assurance provider that offers testing, inspection, and certification services across various industries. The company makes money by charging clients to assess the safety, quality, and compliance of their products, supply chains, and infrastructure."
-  },
-  "synthesized_evidence_sha": "939682718c7bd8dc",
-  "technical_work": {
    "confidence": "low",
    "source_ids": [
-    "a885adc8fc"
+    "f157034d37"
    ],
-   "value": "Developing internal digital systems, data platforms, and laboratory information management systems to streamline global quality assurance processes."
+   "value": "Specific visa sponsorship details are not explicitly stated in the available sources, though global companies of this scale often have established immigration policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f157034d37"
+   ],
+   "value": "Intertek is a leading global provider of Total Quality Assurance services to various industries worldwide. The company generates revenue by providing testing, inspection, and certification solutions, leveraging a global network of subject matter experts to ensure products and operations meet quality and safety standards."
+  },
+  "synthesized_evidence_sha": "33f0f167098bffbf",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f157034d37"
+   ],
+   "value": "Roles like Associate Software Developer involve building and maintaining software solutions that support global quality assurance operations and client-facing platforms. Work may include supporting custom-branded communication platforms and internal tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679540,
   "web_search_url": "https://duckduckgo.com/?q=Intertek+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: While you seek elite AI prestige and a fast, innovative tech culture, Intertek is fundamentally a legacy testing and inspection corporation where AI/data science is treated as internal support rather than a core product. The company allows you to accelerate technical learning on real-world enterprise data while generally maintaining sane hours, but it will likely carry the bureaucratic pace of a massive global firm rather than the high-octane culture of a top-tier tech firm."
+   "source_ids": [],
+   "value": "While Intertek offers remote flexibility and a mission-driven focus on quality, its identity as a traditional, large-scale global enterprise suggests a slower, bureaucratic pace. This conflicts with the desire for a fast, innovative tech culture, elite AI prestige, and top-tier new-grad pay, although the remote nature may support sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "a885adc8fc"
-   ],
-   "value": "Estimated: Good. Standard corporate hours are typical for non-lab roles, avoiding the high-burnout environment of product-focused tech companies."
+   "source_ids": [],
+   "value": "Estimated: Good. The option for remote work and the structured nature of a traditional enterprise suggest sane hours, though this can vary by specific department."
   }
  },
  "into university partnerships": {
@@ -221648,89 +221622,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Respected applied-AI work in national-security and energy domains; not a primary AI research lab but high-impact production deployments."
+   "value": "Estimated: Low tier for mainstream tech elite, but highly prestigious within specific aerospace and defense mission domains."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "35bfe5ac53",
+    "6f397d5246"
    ],
-   "value": "Revenue from cost-reimbursable and fixed-price government contracts, commercial EPC projects, technology licensing, and recurring services/software. Heavy reliance on U.S. federal spending."
+   "value": "Bid- and contract-based revenue model serving both public sector (government) and private sector (commercial) clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Mission-driven, hierarchical, compliance-heavy federal-contractor culture. Strong engineering tradition; innovation encouraged within regulatory constraints. Less \"tech-startup\" vibe, more \"aerospace/defense prime\" vibe."
+   "value": "Estimated: Traditional, mission-driven, and structured; lacks the modern agile perks of elite tech companies but avoids the high-burnout levels of competitive software startups."
   },
   "customers": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "35bfe5ac53",
+    "6f397d5246"
    ],
-   "value": "U.S. federal agencies (DoD, intelligence community, NASA, DOE), allied governments, and commercial energy/chemical companies worldwide."
+   "value": "U.S. and allied government defense and space agencies, as well as commercial industrial clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $85k-$110k base + modest bonus/RSU; higher for clearance-required roles. Total comp ~$95k-$130k."
+   "value": "Estimated: $85,000 - $110,000 base salary, reflective of defense and aerospace industry standards rather than elite Silicon Valley tech packages."
   },
   "evidence_sha": "9b6b1687f4ee3a08",
-  "generated_at": 1784689438,
+  "generated_at": 1785220993,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "35bfe5ac53",
+    "6f397d5246"
    ],
-   "value": "Government services / Engineering & Construction / Defense Technology"
+   "value": "Engineering, Technology, and Government Services"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare for clearance-process questions, domain knowledge in defense/energy, and applied ML/system-design scenarios (e.g., sensor fusion, optimization under constraints). Ask about specific program team tempo, on-call expectations, and internal mobility between cleared/uncleared work."
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "35bfe5ac53"
+   ],
+   "value": "Given your priority for sane hours and work-life balance over a toxic environment, probe heavily into the team's deployment cycle, on-call expectations, and shutdown culture. To address your concerns about slow bureaucracy versus fast tech culture, ask questions about the tech stack modernity, innovation timelines, and how quickly AI prototypes are pushed to production."
   },
-  "last_attempt_at": 1784689438,
+  "last_attempt_at": 1785220993,
   "last_evidence_at": 1785220110,
   "locations": {
    "confidence": "low",
    "source_ids": [
+    "6f397d5246",
     "9ab7677479"
    ],
-   "value": "Headquartered in Houston, TX; major offices in Arlington/VA, UK, Australia, and 40+ countries. Many roles require security clearance and on-site presence at government facilities."
+   "value": "Houston, TX (Headquarters), with offices and operational sites globally."
   },
   "mission": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "9ab7677479",
+    "35bfe5ac53"
    ],
-   "value": "Deliver innovative, sustainable solutions for government and commercial clients to advance critical infrastructure, national security, and energy transition."
+   "value": "To deliver science, technology, and engineering solutions to governments and companies worldwide."
   },
   "name": "KBR",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to fast — project-driven with contract milestones; surge periods common near delivery dates."
+   "value": "Estimated: Slow to moderate; heavily reliant on rigid government contract timelines and compliance checks rather than fast-paced tech iteration."
   },
   "products": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "35bfe5ac53",
+    "9ab7677479",
+    "6f397d5246"
    ],
-   "value": "Engineering and construction services, government services (defense/intelligence), technology solutions for energy transition and sustainable infrastructure, proprietary process technologies (e.g., ammonia, refining), and digital/analytics offerings."
+   "value": "Government defense and logistics services, space operations support, advanced engineering, and technology solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 federal holidays; varies by contract and tenure."
+   "value": "Estimated: 20-25 days of paid time off annually, accruing higher with tenure."
   },
+  "refresh_after": 1790404993,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221740,14 +221726,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; some programs observe holiday breaks but not universal."
+   "value": "Estimated: May offer limited holiday shutdowns around major federal holidays, but guaranteed extensive shutdowns are unlikely unless on specific government site contracts."
   },
   "size_stage": {
    "confidence": "low",
    "source_ids": [
+    "35bfe5ac53",
     "9ab7677479"
    ],
-   "value": "Public company (NYSE: KBR), ~30,000+ employees globally, $7B+ annual revenue, mature multinational contractor."
+   "value": "Large-cap public company."
   },
   "sources": [
    {
@@ -221794,35 +221781,39 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Sponsors H-1B and green cards for specialized roles; clearance-eligible positions often require U.S. citizenship. Global mobility programs exist for non-clearance roles."
+   "value": "Estimated: May sponsor for specialized hard-to-fill roles tied to government contracts, but generally restricted due to U.S. defense clearance requirements."
   },
   "status": "ready",
   "summary": {
    "confidence": "low",
    "source_ids": [
-    "9ab7677479"
+    "17f8c9c419",
+    "35bfe5ac53",
+    "6f397d5246"
    ],
-   "value": "KBR (formerly Kellogg Brown & Root) is a global engineering, procurement, and construction company providing technology and services to government and commercial customers in defense, intelligence, energy, and infrastructure sectors."
+   "value": "KBR is a global engineering, technology, and government services contractor that provides science, systems, and mission-critical solutions. It makes money through long-term government contracts and commercial engineering projects. (Note: Public sources provided in research were indexed as empty redirect pages; this summary is generated based on the consistent context of the KBR identifier across sources)."
   },
+  "synthesized_evidence_sha": "9b6b1687f4ee3a08",
   "technical_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "9ab7677479"
-   ],
-   "value": "Applied data science/AI for predictive maintenance, digital twins, autonomous systems, satellite imagery analysis, process optimization, and mission planning. Legacy stack mixed with modern cloud/ML tooling."
+   "source_ids": [],
+   "value": "Estimated: Systems engineering, software development for mission systems, data science for aerospace/defense operations, and technical consulting."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674830,
   "web_search_url": "https://duckduckgo.com/?q=KBR+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "KBR offers elite-prestige defense/intelligence work with meaningful national-security impact and strong new-grad compensation. However, it operates in a regulated, clearance-heavy federal-contractor culture that can be bureaucratic and deadline-driven, with variable WLB depending on program phase. Guaranteed shutdowns are uncommon; expect periods of high intensity around contract deliveries."
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "35bfe5ac53"
+   ],
+   "value": "As a candidate seeking a top-tier AI/data science role with a fast-paced, innovative tech culture and high new-grad pay, this company presents a mixed fit. While KBR offers stable, mission-driven work in defense and aerospace which can accelerate technical learning, its large-government-contractor nature inherently involves slow bureaucracy that may conflict with your desire for a fast, elite-tech environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3/5 — Varies by program; cleared roles often require on-site presence and can involve extended hours during critical phases. Limited formal shutdown policies."
+   "value": "Estimated: Good overall work-life balance typical of established government contractors, though specific project deadlines or deployments can cause spikes in stress."
   }
  },
  "kbr careers": {
