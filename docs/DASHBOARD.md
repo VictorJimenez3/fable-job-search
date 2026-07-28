@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-28 19:19 UTC** · companies polled directly: **1415** (registry 1604) · jobs tracked: **23187** · new this run: **64** · alerts this run: **4**_
+_Last run: **2026-07-28 19:53 UTC** · companies polled directly: **1415** (registry 1604) · jobs tracked: **23187** · new this run: **64** · alerts this run: **4**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -131,7 +131,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 8d | PMG | [Graduate Leadership Program - Data Analytics (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587036002) |
 | 89 🔥 | 11d | Snap-on | [Jr. Business Intelligence Analyst](https://jobright.ai/jobs/info/6a595b34686b4755d1e0ff6b?utm_campaign=Data%20Analysis&utm_source=1103) | Libertyville, IL, US | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 22d | Ascend Schools | [Data Analyst](https://jobright.ai/jobs/info/6a4b9814971cd25b06f97b81?utm_campaign=Data%20Analysis&utm_source=1103) | Brooklyn, NY | edtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 88 🔥 | 20h | Tax Relief Advocates | [Junior Machine Learning Engineer](https://job-boards.greenhouse.io/taxreliefadvocates/jobs/4759563008) | Irvine, CA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 88 🔥 | 21h | Tax Relief Advocates | [Junior Machine Learning Engineer](https://job-boards.greenhouse.io/taxreliefadvocates/jobs/4759563008) | Irvine, CA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 4d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a6325bf7c70964cbb0559d5?utm_campaign=Software%20Engineering&utm_source=1103) | Tewksbury, MA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 5d | Boson Ai | [Software Engineer - Platform & Application](https://jobs.lever.co/bosonai/2b520a0f-556a-4dc2-a5a7-d8845a921335/apply) | Santa Clara, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 7d | Hipp Health | [Software Engineer New Grad](https://jobs.ashbyhq.com/hipp/ea04e914-674c-4c05-b40a-7e8a035bad14/application?embed=true) | United States | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
