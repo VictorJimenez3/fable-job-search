@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-28 23:05 UTC** · companies polled directly: **1422** (registry 1611) · jobs tracked: **23378** · new this run: **62** · alerts this run: **6**_
+_Last run: **2026-07-28 23:30 UTC** · companies polled directly: **1422** (registry 1611) · jobs tracked: **23378** · new this run: **62** · alerts this run: **6**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -133,7 +133,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 8d | PMG | [Graduate Leadership Program - Data Analytics (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587036002) |
 | 89 🔥 | 11d | Snap-on | [Jr. Business Intelligence Analyst](https://jobright.ai/jobs/info/6a595b34686b4755d1e0ff6b?utm_campaign=Data%20Analysis&utm_source=1103) | Libertyville, IL, US | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 22d | Ascend Schools | [Data Analyst](https://jobright.ai/jobs/info/6a4b9814971cd25b06f97b81?utm_campaign=Data%20Analysis&utm_source=1103) | Brooklyn, NY | edtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 88 🔥 | 23h | The Johns Hopkins University | [Research Assistant (Data Science and Artificial Intelligence)](https://jobright.ai/jobs/info/6a690c1236d36c1ff2997c7a?utm_campaign=Data%20Analysis&utm_source=1103) | Baltimore, MD, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 4d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a6325bf7c70964cbb0559d5?utm_campaign=Software%20Engineering&utm_source=1103) | Tewksbury, MA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 6d | Boson Ai | [Software Engineer - Platform & Application](https://jobs.lever.co/bosonai/2b520a0f-556a-4dc2-a5a7-d8845a921335/apply) | Santa Clara, CA | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 7d | Hipp Health | [Software Engineer New Grad](https://jobs.ashbyhq.com/hipp/ea04e914-674c-4c05-b40a-7e8a035bad14/application?embed=true) | United States | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -152,9 +151,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 26d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 28d | TikTok | [Software Engineer Graduate (Experimentation and Evaluation) - 2026 Sta](https://jobright.ai/jobs/info/6a44451e65e80d3c99f2c3c8?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 29d | TikTok | [Software Engineer Graduate (Global CRM) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a432e92e09ecb495964263a?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 87 🔥 | 21h | Sia Partners | [Associate Consultant - Generative AI](https://jobs.smartrecruiters.com/Sia/744000140104238) | SF | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 87 🔥 | 22h | Sia Partners | [Associate Consultant - Generative AI](https://jobs.smartrecruiters.com/Sia/744000140104238) | SF | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 23h | RTX | [Software Engineer I (On-Site)](https://jobright.ai/jobs/info/6a68fe7e5d01972698ee5cd8?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 23h | SAIC | [Data Scientist Associate](https://jobright.ai/jobs/info/6a68a7f268652d68b3149665?utm_campaign=Data%20Analysis&utm_source=1103) | Washington, DC, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 23h | Daily Management Resorts | [Data Analyst](https://jobright.ai/jobs/info/6a53f737c8eb0843027ae4df?utm_campaign=Data%20Analysis&utm_source=1103) | Miami, FL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 87 🔥 | 23h | RTX | [Software Engineer I (Onsite)](https://jobright.ai/jobs/info/6a68ec763b549b0b531d2c5c?utm_campaign=Software%20Engineering&utm_source=1103) | El Segundo, CA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
