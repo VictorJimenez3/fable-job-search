@@ -365392,7 +365392,7 @@
    "value": "Tier 2 — Established public SaaS with dedicated ML team applying models to production workflow/automation features; not a primary AI research lab but offers real production ML scope at scale."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -365437,7 +365437,7 @@
    ],
    "value": "Expect system-design depth (real-time sync, conflict resolution, multi-tenant data isolation), data-structures/algorithms, and domain modeling for workflow/automation features. AI/ML roles will probe practical ML: feature engineering on event logs, model serving latency, evaluation on noisy enterprise data. Behavioral screens emphasize cross-functional collaboration (PM, design, customer success) and owning features end-to-end. Prepare concrete examples of shipping scalable backend services or M"
   },
-  "last_attempt_at": 1785256213,
+  "last_attempt_at": 1785256473,
   "last_evidence_at": 1785254478,
   "locations": {
    "confidence": "medium",
@@ -365473,7 +365473,7 @@
    "value": "Estimated: 15 days PTO + 10 company holidays + unlimited sick; accrual starts day one."
   },
   "refresh_after": 1790073539,
-  "retry_after": 1785256453,
+  "retry_after": 1785256953,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -449603,42 +449603,107 @@
  "wsp in the u s": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Estimated: Tier 3. High engineering prestige, but low elite AI/Data Science prestige as it primarily focuses on physical infrastructure rather than cutting-edge software products."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "B2B consulting. Earns revenue through professional service contracts for engineering design and project execution data analytics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Estimated: Traditional, mission-driven, and engineering-focused, prioritizing physical infrastructure and project management methodologies over fast-paced technical innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Organizations developing infrastructure, construction projects, and built environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "Estimated: $70,000 - $85,000 base salary for early career data and project controls roles in the U.S."
   },
   "evidence_sha": "282ccf9d7db3d96d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785256473,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785256213,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "Engineering Consulting and Construction Management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Be prepared to discuss how your data science skills scale beyond traditional business intelligence (PowerBI), demonstrating how you can accelerate technical innovation and bring fast-paced data solutions to a large, traditionally slow-moving engineering environment without sacrificing personal time."
+  },
+  "last_attempt_at": 1785256473,
   "last_evidence_at": 1785256024,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a825861899"
+   ],
+   "value": "United States (WSP in the U.S.)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "To shape built and natural environments, and the future of those that use them."
+  },
   "name": "WSP in the U.S.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Estimated: Slow to moderate. As a large, established engineering consulting firm, the pace is likely driven by long-term project milestones rather than fast, innovative tech deployment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "Engineering consulting, project management, construction management, and project controls data analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually, standard for large engineering and professional services consulting firms."
   },
-  "retry_after": 1785256453,
+  "refresh_after": 1790440473,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -449648,7 +449713,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though standard public holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a825861899"
+   ],
+   "value": "Large, established global professional services and engineering consulting firm."
   },
   "sources": [
    {
@@ -449712,14 +449784,46 @@
     "url": "https://jobright.ai/jobs/info/6a68b053e53d5546ebf590a9?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "WSP in the U.S. is a major engineering and professional services firm that designs and shapes built and natural environments. It generates revenue by providing project management, construction management, and data-driven project controls services to clients developing infrastructure."
+  },
+  "synthesized_evidence_sha": "282ccf9d7db3d96d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "Data analytics, dashboard development (PowerBI), and data-driven project management using Microsoft Office tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785256024,
   "web_search_url": "https://duckduckgo.com/?q=WSP+in+the+U.S.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5a44592d2",
+    "807e009c84"
+   ],
+   "value": "As a major engineering firm, WSP provides mission-driven work impacting real-world infrastructure, but for a candidate prioritizing elite AI/data science prestige and a fast, innovative tech culture, traditional engineering consulting may feature slower bureaucracy and lightweight data tooling compared to a top-tier tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a5a44592d2"
+   ],
+   "value": "Estimated: Good. With a Glassdoor rating of 3.7 and a focus on traditional industries, it is likely to offer sane hours, though project deadlines may occasionally cause spikes in workload."
   }
  },
  "wtw": {
