@@ -346508,46 +346508,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
-    "82e213d059"
+    "f5cb3a08ba"
    ],
-   "value": "Estimated: Tier 3. As a traditional defense contractor focusing on systems engineering and UI, SAIC lacks the elite AI/data science prestige and cutting-edge tech culture of top AI firms."
+   "value": "Estimated: Moderate. As an IT services and defense contractor, SAIC does not hold niche elite tech prestige for AI/Data Science compared to FAANG or specialized AI startups. The entry-level data role focuses on Excel and business operations rather than cutting-edge machine learning."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "493a9d4b6e"
+    "f5cb3a08ba",
+    "82e213d059"
    ],
-   "value": "B2G (Business-to-Government) contract services. SAIC earns revenue by bidding on and executing long-term defense and federal contracts."
+   "value": "B2B and B2G service provider generating revenue via full-time technical consulting, government contracts, and outsourced engineering solutions."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
-    "08552e35a8"
+    "f5cb3a08ba",
+    "82e213d059"
    ],
-   "value": "Estimated: Bureaucratic, mission-oriented, and structured. Excellent for fault tolerance learning but may lack the fast-paced innovation of elite AI companies."
+   "value": "Estimated: Established, risk-averse, and hierarchical. The focus seems to be on standard enterprise services and government contracts rather than a fast, innovative tech culture."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "493a9d4b6e"
+    "82e213d059",
+    "f5cb3a08ba"
    ],
-   "value": "U.S. federal government and Department of Defense (DoD) agencies."
+   "value": "Government and commercial organizations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
-    "82e213d059",
-    "493a9d4b6e"
+    "f5cb3a08ba",
+    "82e213d059"
    ],
-   "value": "Estimated: $40K-$160K depending on classification, base location, and contracts (e.g. Junior UI Developer base limits around Ashburn range $40K-$80K, while Associate Software Engineer remote averages $120K-$160K)."
+   "value": "Estimated: $40,000 to $80,000 per year for entry-level tech and data roles."
   },
   "evidence_sha": "e89564c02df1de86",
-  "generated_at": 1784861859,
+  "generated_at": 1785256370,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -346556,68 +346557,74 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "493a9d4b6e",
-    "08552e35a8"
+    "f5cb3a08ba",
+    "82e213d059"
    ],
-   "value": "Government IT Services / Defense Contracting."
+   "value": "IT Services and Defense/Technology Consulting."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "Interviewers will probe your willingness to thrive in a heavily structured, mission-centric environment focused on national security. You should evaluate whether their WLB and shutdown policies offset the slower pace of government work versus your desire for an elite AI culture."
+   "value": "Probe heavily for the specific project or contract you will support to gauge tech stack modernity and true work-life balance, as defense contractors vary widely. Ask about typical tech stack modernity, pace, and learning opportunities to ensure it meets your demand for accelerated growth without a bureaucratic maze."
   },
-  "last_attempt_at": 1785256030,
+  "last_attempt_at": 1785256370,
   "last_evidence_at": 1785254766,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "82e213d059",
-    "493a9d4b6e"
+    "f5cb3a08ba",
+    "82e213d059"
    ],
-   "value": "Headquartered in the U.S. with roles located nationwide; options include an onsite location in Ashburn, VA, and remote positions."
+   "value": "United States, including opportunities in Ashburn, VA, and remote positions."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "08552e35a8",
-    "493a9d4b6e"
+    "56c4ed88f8",
+    "acfb8e7c56",
+    "08552e35a8"
    ],
-   "value": "Addresses complex national challenges through technological and engineering solutions, directly supporting public sector missions."
+   "value": "Not explicitly found in research sources."
   },
   "name": "SAIC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
-    "82e213d059"
+    "56c4ed88f8",
+    "acfb8e7c56",
+    "08552e35a8"
    ],
-   "value": "Estimated: Moderate. While government contracts drive stricter stability and compliance rather than rapid innovation, remote and tech roles experience a steady engineering pace."
+   "value": "Estimated: Moderate to slow. As a large public government contractor, the environment tends to follow traditional government project cycles rather than the high-velocity pace of modern tech startups."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "Software development (such as the Joint Range Extension application), UI/UX development, systems engineering, cloud migration, and enterprise IT modernization."
+   "value": "Software engineering, UI development, data science, data analysis, and IT integration services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "56c4ed88f8",
+    "acfb8e7c56",
     "08552e35a8"
    ],
-   "value": "Estimated: 20-25 days annually, including holidays."
+   "value": "Estimated: Typical large government contractor package of 15-20 days of accrued PTO plus federal holidays, though exact policy is not public."
   },
-  "retry_after": 1785256270,
+  "refresh_after": 1790440370,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
+    "f5cb3a08ba",
     "82e213d059",
-    "493a9d4b6e"
+    "56c4ed88f8"
    ],
    "value": "None found in research"
   },
@@ -346625,16 +346632,20 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e"
+    "56c4ed88f8",
+    "acfb8e7c56",
+    "08552e35a8"
    ],
-   "value": "Estimated: Partial shutdowns around federal holidays though persistent defense operations mean not everyone can take the same time off."
+   "value": "Estimated: Potential holiday shutdown periods common to defense contractors, but guaranteed shutdowns are not publicly documented."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
+    "56c4ed88f8",
+    "acfb8e7c56",
     "08552e35a8"
    ],
-   "value": "Large, established public corporation."
+   "value": "Large, established public company (tracked via public corporate pages and broad job listings across the US)."
   },
   "sources": [
    {
@@ -346701,27 +346712,28 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "Not found in research"
+   "value": "Not explicitly mentioned in research sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "SAIC (Science Applications International Corporation) is a major government contractor providing technology, engineering, and enterprise IT services primarily to U.S. defense and federal agencies. It makes money by securing long-term contracts to build software, modernize infrastructure, and deliver technical solutions for public sector missions."
+   "value": "SAIC (Science Applications International Corporation) provides technical, engineering, and IT services to government and commercial clients. The company makes money by contracting its expertise—such as software development and data science—to solve complex challenges, generating revenue through project-based and long-term service contracts."
   },
+  "synthesized_evidence_sha": "e89564c02df1de86",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "Software engineering fundamentals (data structures, algorithms, compilers, operating systems) and UI development (React, Angular, HTML, JavaScript, CSS)."
+   "value": "Entry-level software development with React, Angular, HTML, JavaScript, and CSS, as well as data analysis using Excel pivot tables, advanced formulas, and data visualization."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674653,
@@ -346729,18 +346741,18 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "SAIC likely aligns with your desire for a mission-driven company (supporting vital defense systems) with sane hours, high new-grad pay, and guaranteed shutdowns, though its defense-contracting nature and scale may lack the fast, innovative tech culture of elite AI firms."
+   "value": "While SAIC offers mission-driven government tech work, its culture is deeply rooted in traditional defense contracting, which often features slower, more bureaucratic processes and lower new-grad pay ($40K-$80K). This contrasts heavily with your priority for an elite AI/data role with top-tier pay and a fast, innovative startup-like culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "493a9d4b6e",
+    "f5cb3a08ba",
     "82e213d059"
    ],
-   "value": "Estimated: Moderate. Defense contractors often feature structured, standard 40-hour weeks and generous shutdowns though final deliverables for federal contracts can require additional crunch time."
+   "value": "Estimated: Good. Large government contractors generally enforce strict 40-hour work weeks and predictable government-standard hours, aligning with your desire for sane hours and low burnout."
   }
  },
  "sailpoint": {
@@ -447442,42 +447454,100 @@
  "workday inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High (Tier 2), recognized for impactful enterprise AI/ML applications and continuous expansion of its utilizing ML Workday platform."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5649826c71",
+    "1690ed9a19"
+   ],
+   "value": "Subscription-based Software-as-a-Service (SaaS), generating recurring revenue from licensing fees tied to deployment size and active user tiers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and employee-centric with a focus on personal growth, continuous learning, and community service."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5649826c71"
+   ],
+   "value": "Mid-sized to large global enterprises across various industries, including technology, healthcare, education, government, and financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $140,000 - $175,000 base salary, with RSU equity and signing bonuses pushing total compensation near $180,000 - $230,000."
   },
   "evidence_sha": "4d629a8e57bf74a4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1785256370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785256213,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1690ed9a19"
+   ],
+   "value": "Enterprise Software, Information Technology, and Cloud Computing."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "In interviews, emphasize your ability to balance cutting-edge AI and data science innovation with real-world enterprise constraints. Highlight your interest in continuous technical learning and scalable ML implementations, aligning with Workday's structured environment and mission-driven data products."
+  },
+  "last_attempt_at": 1785256370,
   "last_evidence_at": 1785256025,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5649826c71"
+   ],
+   "value": "Headquartered in Pleasanton, California, with global offices and widespread remote work options for technical staff."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1690ed9a19"
+   ],
+   "value": "To put people at the center of change, helping organizations drive continuous growth and navigate the evolving future of work."
+  },
   "name": "Workday Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative within the machine learning teams, but operating within the structured release cycles of a large, established enterprise software company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1690ed9a19",
+    "5649826c71"
+   ],
+   "value": "Cloud-based enterprise software solutions including human capital management (HCM), financial management, payroll, talent management, and predictive analytics applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of Paid Time Off annually, in addition to company holidays, for new full-time technical employees."
   },
-  "retry_after": 1785256333,
+  "refresh_after": 1790440370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -447487,7 +447557,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: An end-of-year holiday shutdown (typically covering December 24 to January 1) and occasional scheduled days off to ensure employee rest."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Publicly traded, large-cap enterprise technology company (NASDAQ: WDAY) with over 10,000 employees."
   },
   "sources": [
    {
@@ -447531,14 +447608,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Known to sponsor work visas for full-time technical roles, though H1-B eligibility depends on specific team budgets and interview outcomes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5649826c71",
+    "1690ed9a19",
+    "17f8c9c419"
+   ],
+   "value": "Workday Inc. is a leading provider of enterprise cloud applications for finance and human resources. It makes money primarily through subscription fees for its software-as-a-service (SaaS) platform, which helps organizations manage their workforce, financial data, and operational planning."
+  },
+  "synthesized_evidence_sha": "4d629a8e57bf74a4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "New-grad AI and data science roles involve building predictive models, NLP systems, and large-scale analytics that feature prominently in Workday's HR and finance products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785256025,
   "web_search_url": "https://duckduckgo.com/?q=Workday+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "You are looking for an elite AI/Data Science role with top-tier new-grad pay, a fast-paced tech culture, and guaranteed shutdowns. Workday offers competitive tech salaries and has actively expanded its AI/ML research and applications, while its enterprise nature means sane hours and strong WLB compared to hyper-growth startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High (8/10), generally known for respectful work-life balance, avoiding toxic burnout culture, and offering mandated time-off programs."
   }
  },
  "workstream": {
