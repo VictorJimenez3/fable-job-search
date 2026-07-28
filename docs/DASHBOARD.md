@@ -1,20 +1,20 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-28 07:24 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **52 shown / 11119 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-28 10:14 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **52 shown / 11119 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 90 🔥 | 5d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
+| 90 🔥 | 6d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
 | 90 🔥 | 6d | Micron | [Advanced Engineering & Manufacturing Internship](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
-| 87 🔥 | 9h | GlobalFoundries | [Device Engineer Intern - Ulp Cmos](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | Malta, NY | semiconductors | simplify |
-| 87 🔥 | 9h | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
-| 85 🔥 | 9h | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
+| 87 🔥 | 12h | GlobalFoundries | [Device Engineer Intern - Ulp Cmos](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | Malta, NY | semiconductors | simplify |
+| 87 🔥 | 12h | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
+| 85 🔥 | 12h | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
 | 79 ⭐ | 3d | Micron | [Intern – Process Development Engineer, 3D DRAM Wet Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Wet-Etch_JR106729) | Boise, ID - Main Site | semiconductors | workday |
 | 78 ⭐ | 5d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 77 ⭐ | 4d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
-| 76 ⭐ | 17h | Smiths Detection Group | [Technical Service Engineer Intern](https://jobs.smartrecruiters.com/SmithsGroup2/744000140008569) | Parsippany-Troy Hills, NJ | other | simplify |
+| 76 ⭐ | 20h | Smiths Detection Group | [Technical Service Engineer Intern](https://jobs.smartrecruiters.com/SmithsGroup2/744000140008569) | Parsippany-Troy Hills, NJ | other | simplify |
 | 76 ⭐ | 1d | Waystar | [Application Engineer Co-op](https://waystar.wd1.myworkdayjobs.com/Waystar/job/Atlanta-GA/Application-Engineer-Co-Op_R3313-1) | Atlanta, GA | other | simplify |
 | 76 ⭐ | 12d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 75 ⭐ | 10d | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
