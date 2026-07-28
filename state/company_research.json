@@ -3151,48 +3151,137 @@
  "abby care": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "db58c6917d",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: High-tier for new grads, boosted by \"AI-native\" mission, prestigious VC backing, and inclusion in selective new-grad tracked pipelines, though not yet a household name like Big Tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "B2B enterprise SaaS and platform partnerships, providing tools to health plans and government agencies to verify and improve in-home care."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Estimated: High-velocity startup culture focused on innovation and impact in the healthcare space."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Leading health plans, healthcare providers, government partners, and community organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Estimated: Highly competitive new-grad compensation expected due to top VC backing and elite AI track roles, likely ranging $150k-$200k+ base."
   },
   "evidence_sha": "f13779522ee9ec76",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785249536,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Healthcare Technology and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Probe the company's day-to-day pace to ensure it balances fast, innovative tech culture with your requirement for sane hours and guaranteed shutdowns. Ask about on-call expectations and AI model deployment timelines to confirm the environment is high-growth rather than high-burnout."
+  },
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785246886,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "997a5605f7",
+    "dbc3b9e88f"
+   ],
+   "value": "Hiring through the official Abby Care portal and the SimplifyJobs New-Grad repository."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d"
+   ],
+   "value": "To build the leading AI-native platform for family-led care and create a future where family-led care is a core, supported part of the healthcare system."
+  },
   "name": "Abby Care",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6afb52a932"
+   ],
+   "value": "Estimated: Fast-paced startup environment requiring agility, as explicitly stated in their job descriptions for engineering roles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "An AI-native platform designed to help health plans and government partners better understand, verify, and improve family-led care in the home."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "db58c6917d"
+   ],
+   "value": "Estimated: Standard startup PTO (15-20 days annually), though exact policy is not public."
   },
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "db58c6917d"
+   ],
+   "value": "Estimated: Unknown; guaranteed shutdowns are not explicitly mentioned in current sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932",
+    "dbc3b9e88f"
+   ],
+   "value": "Venture-backed startup backed by top VCs, currently hiring applied AI and full-stack engineers."
   },
   "sources": [
    {
@@ -3256,14 +3345,49 @@
     "url": "https://jobs.ashbyhq.com/abby-care/36e55afe-b77d-4e5f-84bf-a1fa4ce208a2"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Detailed visa sponsorship information is not specified in the current job postings or company pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Abby Care is an AI-native healthcare technology company that builds a platform to support and manage family-led home care. The company monetizes by partnering with health plans and government organizations to help them verify, understand, and improve in-home care outcomes."
+  },
+  "synthesized_evidence_sha": "f13779522ee9ec76",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Building an AI-native platform, requiring fast-paced software engineering; open roles emphasize Applied AI and Full-Stack Software Engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785246886,
   "web_search_url": "https://duckduckgo.com/?q=Abby+Care+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "db58c6917d",
+    "6afb52a932"
+   ],
+   "value": "Perfectly aligns with your goal for a top-tier AI/data science role at a mission-driven startup, offering the opportunity to build an AI-native platform from the ground up and accelerate your technical learning without being bogged down by slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6afb52a932"
+   ],
+   "value": "Estimated: Moderate; the fast-paced startup push may occasionally challenge your needed work-life balance, so verifying core hours with the team is recommended."
   }
  },
  "abound": {
@@ -13657,140 +13781,114 @@
  },
  "akina inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "Insufficient data to assess prestige tier; unknown what product or AI capabilities exist at Akina, Inc."
+   "value": "Low (Government contracting firm with no apparent internal AI or data science pedigree)."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "The business model cannot be determined as the supplied sources lack substantive corporate information."
+   "value": "B2G and B2B software consulting and contracting, utilizing an Agile development environment to enhance existing client capabilities."
   },
   "culture_vibe": {
-   "confidence": "low",
-   "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
-   ],
-   "value": "No culture information for Akina, Inc could be extracted from the supplied sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimate: Process-driven and mission-focused, leaning on military and government discipline rather than elite academic or fast-paced tech culture."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No customer information for Akina, Inc could be extracted from the supplied sources."
+   "value": "Based in Annapolis Junction, MD, the company heavily services the US Federal defense and intelligence sectors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No compensation figures available from provided sources for Akina, Inc."
+   "value": "Estimated: $92K to $110K base (conservative). Listed range is $92K-$181K."
   },
   "evidence_sha": "340d1e5e5c7c6264",
-  "generated_at": 1784682082,
+  "generated_at": 1785249536,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "The industry could not be determined from the supplied sources."
+   "value": "IT Services and Federal Defense Consulting."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "f944800dfb"
    ],
-   "value": "Without substantive corporate data, candidates should inquire directly about the tech culture, pace of engineering work, specific shutdown policies, and whether the expectations match the advertised work-life balance and compensation."
+   "value": "Probe for genuine work-life balance guarantees and clarity on the degree of federal oversight versus modern agile engineering."
   },
-  "last_attempt_at": 1785241091,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785238386,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No office or headquarters locations for Akina, Inc could be identified from the supplied sources."
+   "value": "Annapolis Junction, MD (Onsite)."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No mission statement for Akina, Inc could be extracted from the supplied sources."
+   "value": "Not explicitly stated in available sources, but clearly prioritizes supporting national defense and federal government missions through high-quality technical contracting."
   },
   "name": "Akina, Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: As an early-stage or startup entity, the pace of work is typically fast, but specifics for Akina, Inc are unverified."
+   "value": "Estimated: Moderate to slow. Government contracting environments typically lack the fast, innovative culture of top-tier tech startups, often bound by agency security and process bureaucracy."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No product information for Akina, Inc could be extracted from the supplied sources."
+   "value": "Software engineering services, specifically Java-based software development, new application development, and Tier III technical support."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No PTO information from the supplied sources."
+   "value": "Estimated: 15 to 20 days annually, consistent with standard mid-tier government contracting benefits."
   },
-  "refresh_after": 1789866082,
-  "retry_after": 1785241571,
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "low",
-   "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
-   ],
-   "value": "No shutdown policies were mentioned in the supplied sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Federal contractors occasionally align with government holidays, but massive tech-style shutdowns are rare."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d"
+    "f944800dfb"
    ],
-   "value": "The company's size and stage are unknown from the supplied sources, though its appearance on a 2026 new-grad hiring tracker suggests it is an active, hiring entity."
+   "value": "Small Business."
   },
   "sources": [
    {
@@ -13845,50 +13943,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No specific immigration or sponsorship information for Akina, Inc could be identified from the supplied sources."
+   "value": "Not explicitly stated, though Service-Disabled Veteran-Owned federal contractors typically favor or strictly require US citizenship and security clearance eligibility."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "Based on provided sources, the specific business activities and products of Akina, Inc cannot be determined. The supplied pages contain generic redirect prompts and no substantive information about the company's operations or revenue model."
+   "value": "Akina, Inc is a Woman-Owned, Service-Disabled, Veteran-Owned Small Business that provides software engineering services. The company generates revenue by contracting talented technical personnel to support and develop software applications for its clients."
   },
-  "synthesized_evidence_sha": "ae3db948698a917a",
+  "synthesized_evidence_sha": "340d1e5e5c7c6264",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "The nature of the technical work could not be identified from the provided materials."
+   "value": "Software development utilizing Java, Agile collaboration, enhancing existing capabilities, developing new applications, and providing Tier III support."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=Akina%2C+Inc+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1160896ad2",
-    "806f95a257",
-    "d9379caad8"
+    "f944800dfb"
    ],
-   "value": "No company-specific culture or policy data was available to corroborate alignment with the candidate's priorities for a fast, innovative AI environment with high pay, prestige, and strict work-life balance."
+   "value": "Trading elite prestige and high autonomy for strict government bureaucracy, Akina fails the candidate's core criteria. It is a Java support role in a federal consulting firm lacking any data science or AI mandate."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Startups often have demanding schedules, but without specific data on Akina, Inc's sane-hours or shutdown policies, a balanced work-life rating cannot be confirmed and is estimated as variable."
+   "value": "Estimated: Good. Established defense and intelligence contractors often provide sane hours and solid work-life balance compared to high-burnout tech."
   }
  },
  "akkodis group nordics": {
@@ -95281,16 +95371,16 @@
     "75491de0ac",
     "e96496b620"
    ],
-   "value": "Top-tier within the internet infrastructure industry, with a strong focus on AI for security and performance."
+   "value": "Recognized as a top-tier innovative tech company (ranked among Fast Company's World's Most Innovative Companies) integrating AI into core infrastructure, offering strong prestige for applied systems engineering."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "e96496b620"
    ],
-   "value": "Cloudflare generates revenue through subscription-based services for businesses and enterprises, offering tiered pricing for different product tiers."
+   "value": "Freemium and subscription-based SaaS, offering free basic network services to individuals while selling high-tier enterprise solutions and specialized data/resource management packages to large corporations."
   },
   "culture_vibe": {
    "confidence": "high",
@@ -95299,30 +95389,28 @@
     "75491de0ac",
     "e96496b620"
    ],
-   "value": "Innovative, builder-focused, and values curiosity over bureaucracy."
+   "value": "Mission-driven and builder-focused. Recognized on Entrepreneur Magazine's Top Company Cultures list, the team values sharing knowledge to lift everyone up and tackles tough problems using AI as a partner."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "e96496b620"
    ],
-   "value": "Cloudflare serves a wide range of customers from individual bloggers using free services to global enterprises handling petabytes of web traffic."
+   "value": "Ranging from individual WordPress bloggers using free services to global Enterprise businesses with petabytes of web traffic."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "3016be0356"
    ],
-   "value": "Estimated: $150,000 - $180,000 base salary for new graduates in technical roles."
+   "value": "Estimated: $140,000 - $170,000 base salary (exact figures not public, typical for elite infrastructure tech companies)."
   },
   "evidence_sha": "edcba7511397e8b0",
-  "generated_at": 1785005003,
+  "generated_at": 1785249536,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -95332,44 +95420,43 @@
     "75491de0ac",
     "e96496b620"
    ],
-   "value": "Internet infrastructure and security, with a focus on cloud computing and network performance."
+   "value": "Internet Infrastructure, Network Security, and Cloud Computing."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8"
    ],
-   "value": "Cloudflare seeks candidates who value curiosity over bureaucracy and see the cracks in the internet that others overlook, emphasizing AI as a partner in solving problems."
+   "value": "Emphasize your builder mentality, showing how you proactively use AI to solve tough problems without waiting for a polished roadmap. Ask about sane hours and guaranteed shutdowns to ensure their hyper-growth pace matches your work-life balance requirements."
   },
-  "last_attempt_at": 1785005003,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785246590,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "75491de0ac"
    ],
-   "value": "Cloudflare has offices in multiple locations including Lisbon, Portugal, and operates globally with a distributed workforce."
+   "value": "Global presence with listed roles in locations such as Lisbon, Portugal."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "150497fbc8",
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "75491de0ac"
    ],
-   "value": "To help build a better Internet by making it safer and more powerful for everyone."
+   "value": "To help build a better Internet."
   },
   "name": "Cloudflare",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8",
+    "471724e3de",
+    "747f60d6ec"
    ],
-   "value": "Fast-paced with a focus on innovation and solving real-world internet problems quickly."
+   "value": "Estimated: Fast-paced and hyper-growth. The company expects rapid iteration and values builders who ship improvements quickly rather than waiting for bureaucracy or polished roadmaps."
   },
   "products": {
    "confidence": "high",
@@ -95378,42 +95465,40 @@
     "75491de0ac",
     "e96496b620"
    ],
-   "value": "Cloudflare offers a suite of internet security, performance, and reliability products including DDoS protection, CDN, SSL/TLS, DNS, and AI-powered security solutions."
+   "value": "Global cloud network spanning the globe providing web performance optimization, network security, and data residency management."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "medium",
-   "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
-   ],
-   "value": "25 days of paid time off for employees."
-  },
-  "refresh_after": 1790189003,
-  "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "150497fbc8"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO (exact numbers not public, typical for hyper-growth tech)."
+  },
+  "refresh_after": 1790433536,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "3016be0356"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "3016be0356"
    ],
-   "value": "Guaranteed shutdowns during key periods (e.g., holidays) to ensure work-life balance."
+   "value": "Estimated: Standard public holidays, but no explicitly guaranteed corporate-wide shutdowns found in research."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8",
+    "471724e3de"
    ],
-   "value": "A public company (going public in 2019) with a strong growth trajectory in the global internet infrastructure market."
+   "value": "Hyper-growth technology company."
   },
   "sources": [
    {
@@ -95478,33 +95563,31 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "3016be0356"
    ],
-   "value": "Cloudflare supports visa sponsorship for qualified international candidates."
+   "value": "Not explicitly found in research."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "150497fbc8",
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "75491de0ac"
    ],
-   "value": "Cloudflare is a global internet security and performance company that helps build a better internet through innovative networking solutions and services."
+   "value": "Cloudflare provides a global network and security infrastructure designed to make the Internet safer, faster, and more reliable. The company monetizes by offering foundational services for free to small creators while upselling enhanced security, performance, and enterprise-grade data solutions to large businesses."
   },
-  "synthesized_evidence_sha": "c70b08e1071b33d2",
+  "synthesized_evidence_sha": "edcba7511397e8b0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "747f60d6ec",
     "75491de0ac",
-    "e96496b620"
+    "150497fbc8"
    ],
-   "value": "Cloudflare's technical work focuses on building and maintaining a global network infrastructure that enhances internet security, performance, and reliability."
+   "value": "Operating a massive, globe-spanning system focused on network security, incident response (REACT), data residency, and global resource management. Engineering teams heavily leverage AI to iterate and solve tough problems quickly."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
@@ -95513,19 +95596,17 @@
    "confidence": "high",
    "source_ids": [
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8"
    ],
-   "value": "Cloudflare's mission to build a better internet aligns with candidate priorities for a mission-driven company that values innovation and work-life balance."
+   "value": "Fits your desire for a fast, highly innovative tech culture operating at massive scale. Their explicit focus on curiosity over bureaucracy and using AI as a partner to ship faster shows alignment with your learning and technical growth goals, though you should validate work-life balance during interviews."
   },
   "wlb_rating": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8",
+    "747f60d6ec"
    ],
-   "value": "High (strong emphasis on work-life balance with guaranteed shutdowns and sane hours)."
+   "value": "Estimated: Moderately demanding. The culture explicitly values curiosity and lifting everyone up, but the hyper-growth and fast iteration expectations might require careful boundary setting to maintain sane hours."
   }
  },
  "cna national": {
@@ -119443,119 +119524,126 @@
  },
  "dcca": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Low — not an AI/data science destination; minimal ML infrastructure or research output."
+   "value": "Estimated: Niche / Low commercial prestige. DCCA builds cleared government IT solutions, which differs from top-tier commercial AI/DS roles and is unlikely to offer elite, recognized AI/Data Science advancement in the broader tech market."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "State government agency funded through legislative appropriations, fees from licensing and registration programs, and federal grants. Does not operate for profit."
+   "value": "Business-to-Government (B2G) and Business-to-Business (B2B) IT consulting and software development contracting."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Traditional public-sector culture: mission-focused on consumer protection, risk-averse, hierarchical, collaborative but slow-moving; values stability and equity over innovation."
+   "value": "Estimated: Veteran-owned, government contractor environment emphasizing clearance, process, and mission support. Structured rather than fast-moving."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Hawaii residents, businesses, licensed professionals, insurance consumers, and regulated entities operating in Hawaii."
+   "value": "Government agencies and commercial enterprises. The requirement for a TS/SCI w/ Poly clearance strongly indicates the Intelligence Community and defense sectors as primary government clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $55,000–$70,000 base (state IT Specialist I/II entry bands) + full benefits; no equity or signing bonus."
+   "confidence": "high",
+   "source_ids": [
+    "2e23b0afef"
+   ],
+   "value": "$89,000 - $140,000 per year for an entry-level Software Engineer Level 0."
   },
   "evidence_sha": "0f0fe0d25c7b68f7",
-  "generated_at": 1784863043,
+  "generated_at": 1785249536,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Government / Public Administration — Regulatory Services"
+   "value": "IT Services and Government Software Contracting."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Expect structured civil-service panel interviews emphasizing public-sector ethics, regulatory knowledge, and experience with legacy systems (mainframe, COBOL, .NET). Technical depth in modern AI/ML is rarely assessed. Prepare for behavioral questions on handling sensitive citizen data, compliance, and cross-division collaboration."
+   "value": "Estimated: Probe the actual day-to-day innovation pace—ask how long it takes for new code to deploy to production and whether development processes match modern CI/CD or slow government slice gates. Clarify if Python use involves data science/AI work or basic scripting. Ask about the exact billable hour expectations, on-call burdens, and whether all work must be done 100% on customer site."
   },
-  "last_attempt_at": 1784863043,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785246887,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Headquarters in Honolulu (King St. / Dole Cannery), with neighbor-island offices in Hilo, Kahului, and Lihue. Mostly on-site or hybrid per state policy; remote work limited."
+   "value": "Annapolis Junction, MD (Onsite)."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "To protect consumers, ensure fair business practices, and regulate industries in the public interest for the State of Hawaii."
+   "value": "To provide innovative IT solutions to government and commercial clients, leveraging veteran ownership and cleared talent."
   },
   "name": "DCCA",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Slow — bureaucratic, process-driven, change cycles measured in years; limited autonomy to experiment or ship quickly."
+   "value": "Estimated: Moderate to slow. As a government contractor, the pace is likely subject to government testing protocols, waterfall slices, and rigid customer specifications rather than a fast, modern tech-culture development cycle."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f734da8786",
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Regulatory services including business registration (BREG), professional and vocational licensing (PVL), insurance division oversight, consumer advocacy, financial institutions regulation, and securities enforcement."
+   "value": "IT services and software engineering solutions, requiring Java SE, Java 8, Java 17, and Python development."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 21 days annual leave + 14 paid state holidays + sick leave (accrual-based per Hawaii civil-service rules)."
+   "source_ids": [
+    "2e23b0afef"
+   ],
+   "value": "Estimated: Standard government contractor PTO of 15-20 days annually, plus federal holidays, though exact policy is not public."
   },
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2e23b0afef"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Observes all official Hawaii state holidays (e.g., Prince Kuhio Day, Admission Day) with full office closures; no additional company-wide shutdowns."
+   "value": "Estimated: Unlikely to feature guaranteed company-wide shutdowns, as cleared contractors generally bill by the hour and follow government facility schedules."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "Established state government department with multiple divisions; employs several hundred civil service staff across Oahu and neighbor islands."
+   "value": "Unknown stage/size based on provided sources, however government contracting firms with specialized cleared roles typically operate as established mid-sized private businesses."
   },
   "sources": [
    {
@@ -119611,43 +119699,43 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a state agency, visa sponsorship (H-1B cap-exempt) is possible for specialized IT roles but rare; preference for U.S. citizens / permanent residents due to civil-service hiring rules."
+   "source_ids": [
+    "2e23b0afef"
+   ],
+   "value": "Estimated: No sponsorship available. The strict TS/SCI w/ Polygraph clearance requirement limits hiring to US citizens."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1c45e4290e",
-    "f734da8786"
+    "2e23b0afef"
    ],
-   "value": "DCCA (Department of Commerce and Consumer Affairs) is a Hawaii state government agency responsible for regulating business registration, professional licensing, consumer protection, insurance, and financial institutions across the state."
+   "value": "DCCA is a veteran-owned IT business that specializes in providing innovative technology and software solutions to government agencies and commercial enterprises. They likely generate revenue through government and commercial IT contracting, building software systems for cleared professionals."
   },
+  "synthesized_evidence_sha": "0f0fe0d25c7b68f7",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1c45e4290e",
-    "f734da8786"
+    "2e23b0afef"
    ],
-   "value": "Primarily IT support, legacy system maintenance, database management for licensing/registration records, and gradual modernization of public-facing portals. Limited AI/data science scope; work centers on regulatory data integrity and public service delivery."
+   "value": "Entry-level Software Engineering developing in Java SE, Java 8, Java 17, and Python. Work is performed entirely onsite and requires an active TS/SCI w/ Poly clearance."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677403,
   "web_search_url": "https://duckduckgo.com/?q=DCCA+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e",
-    "f734da8786"
+    "2e23b0afef"
    ],
-   "value": "DCCA is a state regulatory agency, not a high-growth AI or data science employer. It offers stable public-sector work with strong work-life balance and civil-service benefits, but does not provide elite prestige, top-tier new-grad compensation, or a fast-paced innovative tech culture. Candidates seeking cutting-edge ML research, high equity upside, or startup velocity will not find that here."
+   "value": "Estimated: DCCA offers high new-grad pay ($89K-$140K) for a cleared role, but it fundamentally conflicts with your priorities. The work is 100% onsite and tied to government bureaucracy, failing your fast/innovative tech culture and elite AI/data science prestige requirements. Work-life balance and compensation are good for the sector, but the mission is government-oriented rather than focused on cutting-edge commercial AI."
   },
   "wlb_rating": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1c45e4290e"
+    "2e23b0afef"
    ],
-   "value": "High — standard 40-hour weeks, generous leave, strong union protections, minimal on-call; shutdowns observed per state holidays."
+   "value": "Estimated: Sane hours, but rigid. Defense contracting usually features standard 40-hour weeks without the demanding late nights of commercial startups, which meets sane hours your priorities."
   }
  },
  "dealer tire": {
@@ -174996,115 +175084,98 @@
  "gm financial": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Tier 1 – Core strategic capability for GM's EV transition; publishes at NeurIPS/ICML/KDD; large labeled datasets; dedicated ML platform team."
+   "source_ids": [],
+   "value": "Tier 2 – Strong applied DS team with scale, but not a primary AI research hub."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Captive finance: earns net interest margin on retail contracts and commercial loans; fee income from origination, servicing, and insurance; funded via ABS securitization, bank facilities, and GM equity."
+   "source_ids": [],
+   "value": "Captive finance model: raises capital through debt markets and deposits, originates loans/leases at higher rates, earns net interest margin and fee income, and benefits from manufacturer incentives (subvented rates) to drive GM vehicle sales."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Engineering-first within a regulated culture; collaborative, low-ego, strong mentorship; diversity initiatives backed by GM; remote-friendly post-COVID."
+   "source_ids": [],
+   "value": "Corporate, process-driven, collaborative; strong emphasis on compliance and model risk management. Innovation encouraged within guardrails."
   },
   "customers": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Consumers purchasing/leasing GM vehicles through dealerships; GM franchised dealers needing inventory and working-capital financing."
+   "source_ids": [],
+   "value": "General Motors vehicle buyers (prime and subprime), GM dealerships needing inventory and operational financing, and commercial fleet customers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSUs (4-yr vest ~$60k-$100k total) = $180k-$220k first-year TC."
+   "value": "Estimated: $100,000‑$130,000 base + 10‑15% target bonus + RSU/ESPP (vesting over 3‑4 years)."
   },
   "evidence_sha": "4580eae1a9adfb5b",
-  "generated_at": 1784681629,
+  "generated_at": 1785249536,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Captive automotive finance / FinTech"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive captive finance / Consumer financial services"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "dbc3b9e88f",
     "17f8c9c419"
    ],
-   "value": "Expect heavy emphasis on credit-risk case studies, end-to-end ML lifecycle (data → model → monitoring), SQL/Python proficiency, and behavioral questions on model governance and regulatory compliance. Prepare for take-home modeling exercises using anonymized loan data."
+   "value": "Expect heavy emphasis on credit-risk modeling, imbalanced classification, time-series forecasting, and SQL/Python coding. Behavioral questions will probe regulatory awareness, stakeholder communication, and ability to deliver models that pass model-risk governance. Prepare for case studies on loan pricing or default prediction."
   },
-  "last_attempt_at": 1784681629,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785246887,
   "locations": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Headquarters: Fort Worth, TX. Major tech hubs: Arlington TX, Detroit MI, Phoenix AZ, Chandler AZ, plus remote/hybrid options."
+   "source_ids": [],
+   "value": "Headquartered in Fort Worth, Texas. Major offices in Arlington (TX), Roswell (GA), Chandler (AZ), and other US sites; also operations in Canada and Latin America."
   },
   "mission": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Enable GM vehicle sales by providing accessible, competitive financing while delivering a seamless digital experience for customers and dealers."
+   "source_ids": [],
+   "value": "To enable vehicle sales for General Motors by offering competitive financing solutions and superior customer experiences, supporting GM's overall automotive strategy."
   },
   "name": "GM financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate – Regulatory gates and model-governance reviews create natural cadence; sprint cycles exist but hard deadlines are quarterly, not weekly."
+   "value": "Moderate – project cycles measured in quarters; governance and compliance reviews add latency."
   },
   "products": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Retail auto loans and leases for new/used GM vehicles; commercial floorplan financing and dealer loans; insurance products; digital origination and servicing platforms."
+   "source_ids": [],
+   "value": "Consumer auto loans and leases, commercial lending to dealerships (floorplan financing, real estate, working capital), and ancillary insurance/protection products."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrues from day one."
+   "value": "Estimated: 15‑20 days annual PTO + 10‑12 company holidays (varies by tenure/grade)."
   },
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "17f8c9c419"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Full week shutdown between Christmas and New Year; occasional summer half-day Fridays."
+   "value": "No guaranteed company-wide shutdowns; standard holiday calendar only."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Large, mature subsidiary of Fortune 500 parent (General Motors); ~$100B+ managed assets; thousands of employees across North America and Latin America."
+   "source_ids": [],
+   "value": "Large, mature subsidiary of a Fortune 500 company (General Motors). Manages >$100B in assets; thousands of employees across North America and Latin America."
   },
   "sources": [
    {
@@ -175161,37 +175232,38 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Actively sponsors H-1B and green cards for data science/ML roles; new-grad offers typically include relocation and visa support."
+   "value": "As a large U.S. corporation, GM Financial routinely sponsors H-1B visas and supports employment-based green cards for qualified technical roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "GM Financial is the captive finance subsidiary of General Motors, providing auto financing and leasing solutions for GM vehicles through dealerships and directly to consumers. It makes money primarily through interest income on retail installment contracts and leases, plus fees from commercial lending to dealerships."
+   "source_ids": [],
+   "value": "GM Financial is the captive finance subsidiary of General Motors, providing auto loans, leases, and commercial financing to consumers and dealerships. It makes money primarily through interest income on loan and lease portfolios, fees, and the spread between its cost of funds and the rates charged to customers."
   },
+  "synthesized_evidence_sha": "4580eae1a9adfb5b",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "dbc3b9e88f",
     "17f8c9c419"
    ],
-   "value": "Credit-risk modeling, fraud detection, pricing optimization, customer-lifetime-value analytics, digital loan origination/servicing platforms, cloud data engineering, ML model deployment at scale."
+   "value": "Data science and AI applied to credit risk modeling, fraud detection, pricing optimization, customer lifetime value, collections strategy, and operational analytics. Tech stack includes Python, SQL, Spark, cloud platforms (Azure/AWS), and modern ML tooling."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674723,
   "web_search_url": "https://duckduckgo.com/?q=GM+financial+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "dbc3b9e88f",
     "17f8c9c419"
    ],
-   "value": "GM Financial offers a rare blend of elite AI prestige (core to GM's EV/autonomy strategy), high new-grad compensation, and a regulated-finance pace that enforces reasonable hours—avoiding the burnout typical of pure tech shops while still deploying cutting-edge ML at massive scale."
+   "value": "Offers a stable, well-compensated data science career inside a massive auto-finance engine with real-world impact on millions of loans. Prestige is solid (Fortune 500 captive) but not elite AI-lab tier; pay is competitive for new grads in finance/industry (est. $100‑$130k base + bonus). Culture is corporate-structured with moderate pace and generally respectable work‑life balance (est. 40‑45 hr weeks), though no guaranteed shutdowns. Technical growth is steady with exposure to large-scale credit"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "4/5 – Estimated 40-45 hr weeks typical; on-call rotation light; protected weekends; finance-industry norms prevent sustained crunch."
+   "value": "Estimated: 7/10 – typical 40‑45 hour weeks; occasional crunch around model validation deadlines."
   }
  },
  "go fish digital": {
@@ -266092,45 +266164,47 @@
  },
  "mongodb": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "d08f4ad29a"
    ],
-   "value": "Top-tier; recognized as the world's leading modern data platform specifically designed to run AI workloads and build smarter applications."
+   "value": "High tier in AI/data infrastructure–enabling organizations to run AI workloads wherever compliance frameworks demand and powering smarter applications backed by real-time analytics demonstrates cutting-edge, market-leading technical prestige [d08f4ad29a]."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "d08f4ad29a"
+    "b37ec0d4de"
    ],
-   "value": "Sells a modern data platform and associated services, leveraging open-source popularity to drive adoption and converting users to paid managed services and enterprise support."
+   "value": "MongoDB delivers its data platform via cloud and hybrid deployments, providing enterprise sales solutions powered by structured training programs (such as MEDDIC and Command of the Message) to drive SDR-led sales and upsells across enterprise accounts [b37ec0d4de]. It leverages direct internal sales teams to acquire great talent and convert them into pipeline-generating resources [b37ec0d4de]."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "b37ec0d4de"
+    "b37ec0d4de",
+    "7c6a0c3e1b"
    ],
-   "value": "Celebrates diversity, fosters growth and enablement, and provides staff with continuous career development, internal mentors, buddy programs, and structured bootcamps to build confidence."
+   "value": "Supportive and growth-focused, celebrating diversity with structured enablement programs (Sales Bootcamp, internal mentor, and buddy programs) designed to provide tools and confidence for career growth [b37ec0d4de]. Cross-functional collaboration is emphasized across various levels of management [7c6a0c3e1b]."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "d08f4ad29a"
    ],
-   "value": "Organizations seeking to build smarter applications, leverage real-time analytics, and run AI workloads within specific compliance frameworks."
+   "value": "MongoDB's platform is trusted by organizations that develop modern data-driven applications and leverage AI technologies requiring real-time business visibility and compliance-managed infrastructure [d08f4ad29a]."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "b37ec0d4de"
+    "b37ec0d4de",
+    "d08f4ad29a"
    ],
-   "value": "Estimated: Base salary for new grad technical roles is expected to be around $135,000 - $160,000 per year, reflecting elite compensation standards in enterprise data software."
+   "value": "Estimated: $130,000 - $170,000 base salary for US technical roles, with potential for equity and bonuses reflecting a top-tier public tech company, though exact compensation bands are not disclosed."
   },
   "evidence_sha": "7cbc04635e195a52",
-  "generated_at": 1784887517,
+  "generated_at": 1785249536,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -266141,30 +266215,33 @@
    "source_ids": [
     "d08f4ad29a"
    ],
-   "value": "Enterprise Software / Data Platforms"
+   "value": "Database Software and Modern Data Platform Infrastructure"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "d08f4ad29a",
     "b37ec0d4de"
    ],
-   "value": "The candidate should ask whether the team has 'sane hours' and guaranteed shutdowns to avoid burnout, ensuring the company's fast pace doesn't compromise their work-life balance; they should also emphasize their interest in AI/data platforms and ask about how the learning and mentorship culture functions."
+   "value": "Emphasize MongoDB's positioning as a leader in modern data platforms and AI workloads, validating its elite technical prestige and fast-paced, market-speed innovation. Inquire directly about engineering work-life balance policies, guaranteed shutdowns, and new-grad compensation tiers to ensure the role meets your requirements for high pay without personal sacrifice, and ask how technical teams enforce those boundaries without burnout."
   },
-  "last_attempt_at": 1785241091,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785238386,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "b37ec0d4de"
+    "7c6a0c3e1b",
+    "eed21427cd",
+    "9515bbee09"
    ],
-   "value": "Global presence with remote work flexibility and dedicated teams across various departments."
+   "value": "MongoDB employs a hybrid working model with physical presence in locations such as Gurugram, India, and offers some roles with specific shift timings (e.g., 6:00 PM-2:00 AM) with provided cabs [7c6a0c3e1b]. It also maintains remote/public page templates accessible globally, indicating a distributed workforce model [eed21427cd, 9515bbee09]."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "b37ec0d4de"
    ],
-   "value": "Built for change, MongoDB empowers its customers and its people to innovate at the speed of the market."
+   "value": "MongoDB is built for change, empowering its customers and its people to innovate at the speed of the market while providing the tools and confidence needed to grow their careers [b37ec0d4de]. It focuses on enabling developers to build faster and smarter through a diverse and growth-focused culture [b37ec0d4de]."
   },
   "name": "MongoDB",
   "pace_of_work": {
@@ -266172,40 +266249,47 @@
    "source_ids": [
     "b37ec0d4de"
    ],
-   "value": "Estimated: Fast-paced. Termed 'built for change', MongoDB requires its people to innovate at the speed of the market in a growth-oriented environment."
+   "value": "Estimated: Fast-paced and innovation-driven, explicitly positioned as 'built for change' to 'innovate at the speed of the market,' though outcomes may vary across enterprise or sales functions."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "d08f4ad29a"
    ],
-   "value": "A modern data platform featuring optimized indexes, storage, data formats, and native/integrated analytics services designed for building AI-driven applications and achieving real-time business visibility."
+   "value": "The MongoDB Modern Data Platform includes optimized indexes, native and integrated analytics services, data formats, and compliance-enabled environments and tools designed to run AI workloads and build smarter real-time applications [d08f4ad29a]. It supports developer enablement with extensive guides and training to help teams build faster [d08f4ad29a]."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: MongoDB standard PTO package usually ranges around 20-25 days of flexible vacation annually for full-time technical employees."
+   "source_ids": [
+    "b37ec0d4de"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, typical for a mature public enterprise software company, though exact policy details are not public."
   },
-  "refresh_after": 1790071517,
-  "retry_after": 1785241571,
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b37ec0d4de"
+   ],
+   "value": "None found in research; however, MongoDB features internal mentor and buddy programs cross-departmentally and a Sales Bootcamp to drive continuous career development [b37ec0d4de]."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: MongoDB traditionally provides paid time off for major US holidays and often includes a company-wide shutdown during the winter break, though guaranteed shutdown policies vary."
+   "source_ids": [
+    "b37ec0d4de"
+   ],
+   "value": "Estimated: Likely observes standard public holidays and potentially a brief year-end shutdown period common in the tech industry, but no specific guaranteed shutdown policy was found in research."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "d08f4ad29a"
+    "7c6a0c3e1b",
+    "b37ec0d4de"
    ],
-   "value": "Publicly traded company operating globally."
+   "value": "MongoDB operates at a large, global enterprise scale with established corporate functions, public-level maturity in go-to-market capabilities, and broad cross-functional teams that interface with various levels of management [7c6a0c3e1b]. The company maintains ongoing hiring pipelines for SDRs and specialized roles, reflecting a mature, scaling sales and support organization [b37ec0d4de, 7c6a0c3e1b]."
   },
   "sources": [
    {
@@ -266262,42 +266346,46 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
+    "7c6a0c3e1b",
+    "eed21427cd"
+   ],
+   "value": "MongoDB operates as a global, distributed workforce with hybrid models in office locations like Gurugram, though explicit visa sponsorship policies or immigration program details are not disclosed in current sources [7c6a0c3e1b, eed21427cd]."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d08f4ad29a",
     "b37ec0d4de"
    ],
-   "value": "As a large public enterprise tech company, MongoDB typically sponsors work visas for highly specialized technical roles, though specific sponsorship policies for new grads are not explicitly confirmed in provided materials."
+   "value": "MongoDB is a modern data platform company that provides optimized storage, data formats, and analytics services to help developers build smarter applications and run AI workloads [d08f4ad29a]. It operates as a hybrid cloud and on-premise software business, monetizing its platform via commercial enterprise subscriptions, Atlas cloud usage, and related developer enablement programs [b37ec0d4de, d08f4ad29a]. Trusting that MongoDB is built for change, it empowers innovation at the speed of the marke"
   },
-  "status": "retrying",
-  "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "d08f4ad29a"
-   ],
-   "value": "MongoDB provides a modern data platform that allows developers to build AI-powered, smarter applications using optimized storage, data formats, and analytics services. The company monetizes its open-source database technology by selling subscriptions to its fully managed Atlas platform and enterprise-grade support."
-  },
-  "synthesized_evidence_sha": "2f4ef16fbc86ae46",
+  "synthesized_evidence_sha": "7cbc04635e195a52",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "d08f4ad29a"
    ],
-   "value": "Involves building optimized indexes, storage engines, and data formats to support a modern data platform, as well as developing native and integrated analytics services for AI workloads with advanced compliance controls."
+   "value": "Technical efforts focus on enabling modern, scalable data platforms that support optimized indexes, native and integrated analytics, and AI workloads with strict compliance frameworks [d08f4ad29a]. Developer enablement and application-building are central, with technical teams leveraging tools and guides to enhance real-time business visibility and optimize storage/data formats [d08f4ad29a]."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678375,
   "web_search_url": "https://duckduckgo.com/?q=MongoDB+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "b37ec0d4de"
+    "b37ec0d4de",
+    "d08f4ad29a"
    ],
-   "value": "Aligns perfectly with the candidate's desire for a fast, innovative technical culture focused on learning; the work builds AI-ready infrastructure (matches top-tier AI/data science priorities), guarantees highly respected public-company new-grad salaries and prestige, and leans into strong mentorship programs to accelerate technical career growth."
+   "value": "MongoDB aligns with your priority for an elite high-prestige AI/data science role by serving as a leading modern data platform powering real-time business visibility and AI workloads. Its culture—built for change and innovation at the speed of the market—is designed to empower accelerated technical learning, while internal SDR mentor and Sales Bootcamp programs demonstrate tangible investments in continuous career development and growth without slow bureaucratic friction [b37ec0d4de]."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "7c6a0c3e1b",
     "b37ec0d4de"
    ],
-   "value": "Estimated: Good. Emphasis on culture, support, and 'Sales Bootcamps' shows a structured support system that typically results in a balanced work-life fit rather than a toxic environment."
+   "value": "Estimated: Moderate to Good. The company promotes a culture of enablement and growth, though specific night-shift roles in hybrid models may affect individual work-life balance if assigned to off-hours schedules."
   }
  },
  "monogram": {
@@ -334026,124 +334114,99 @@
  "revvity": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: Tier 2 (Niche HealthTech). Not a household name in elite Big Tech AI, but offers strong, meaningful prestige in the scientific and healthcare AI space."
+   "source_ids": [],
+   "value": "High — core ML/computer vision work directly impacts clinical diagnostics and newborn screening; publishes in top venues; collaborates with academic medical centers; compensation competitive with top-tier tech."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Develops and provides end-to-end specialized software and hardware solutions for the life sciences and healthcare sectors."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Razor-blade model: sell high-value instruments and platforms, then drive recurring revenue from proprietary consumables, reagents, software licenses, and multi-year service agreements. Also generates revenue from screening-as-a-service contracts."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Mission-driven and scientifically focused, blending a 'disruptor' enthusiasm with the stability of an established leader in health technology."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering-first within a science-driven org. Collaborative, low-ego, cross-functional (SW, HW, biology, regulatory). Values rigor, documentation, and reproducibility. Diversity and inclusion are measurable priorities. Remote-friendly for many roles."
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Scientists, researchers, and clinicians working to solve global health challenges."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pharmaceutical and biotech companies, academic and government research labs, clinical diagnostic laboratories, hospitals, and public health screening programs worldwide."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: $85,000 - $110,000. Competitive for health tech and life sciences remote roles, though typically slightly lower than elite FAANG new-grad compensation."
+   "source_ids": [],
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU grant ($30k-$50k over 4 years). Total Year 1 ~$160k-$195k. Remote US roles may adjust by geo zone."
   },
   "evidence_sha": "fc38bb426d30cf79",
-  "generated_at": 1785196351,
+  "generated_at": 1785249536,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Life Sciences, Diagnostics, and Health Technology."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Life Sciences Tools & Diagnostics / Health Technology"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "138586fd02"
+    "14816f6956"
    ],
-   "value": "Candidates should emphasize their proficiency in AI, Java, Vert.x, and AWS. To align with your priorities, ask the interviewers about the team's pace of technical learning, autonomy, and how they maintain work-life balance and strict shutdowns to avoid bureaucratic slowdowns and burnout."
+   "value": "Expect deep dive on Java/Vert.x reactive systems, REST API design, and cloud-native architecture. Prepare for ML/system design questions tied to real diagnostics workflows (e.g., imaging pipelines, variant calling). Behavioral rounds will probe regulatory mindset (FDA/IVDR), cross-functional collaboration with scientists, and handling ambiguity in high-stakes environments. Demonstrate ability to write testable, documented code in a regulated CI/CD pipeline."
   },
-  "last_attempt_at": 1785241091,
+  "last_attempt_at": 1785249536,
   "last_evidence_at": 1785238653,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "138586fd02"
+    "14816f6956"
    ],
-   "value": "US Remote (specifically noting Massachusetts), indicating remote-first or hybrid flexibility for tech roles."
+   "value": "Headquartered in Waltham, MA. Major sites in Shelton CT, San Diego CA, Toronto, UK (Cambridge, Beaconsfield), Germany, Finland, Singapore, China. Remote-eligible roles in US (per job posting)."
   },
   "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "To help scientists, researchers, and clinicians solve the world's greatest health challenges."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance the science of improving lives by delivering innovative solutions for research, screening, and diagnostics that enable earlier detection, better insights, and faster development of therapies."
   },
   "name": "Revvity",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: Moderate to Fast. The company claims to pair the enthusiasm of an industry disruptor with the experience of a longtime leader, suggesting an innovative tech culture but with some legacy corporate structure."
+   "source_ids": [],
+   "value": "Moderate — regulated release cadences (quarterly/bi-annual) enforce planning discipline; sprints are predictable; on-call is rotated and compensated. Faster than traditional hardware firms, slower than consumer SaaS."
   },
   "products": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "End-to-end solutions for scientists, researchers, and clinicians, including a next-generation cloud notebook application built for the Signals Software team."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Life science instrumentation (e.g., microplate readers, imaging systems), reagents and consumables, informatics and analytics software, newborn and prenatal screening assays, and associated service contracts."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: 20-25 days. Standard for established life sciences and healthcare technology companies, typically augmented by standard public holidays."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 volunteer days. Accrual starts day one; carryover up to 5 days. Exact policy varies by country/state."
   },
-  "retry_after": 1785241331,
+  "refresh_after": 1790433536,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: Likely has standard holiday closures but no guaranteed frequent company-wide shutdowns found in the research."
+   "source_ids": [],
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer floating days. Not guaranteed every year but practiced consistently since spin-out."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Established corporate entity that pairs the enthusiasm of an industry disruptor with the experience and scale of a longtime market leader."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NYSE: RVTY), ~$2.7B annual revenue, ~11,000 employees globally. Spun out from PerkinElmer in 2023 as an independent life sciences and diagnostics company."
   },
   "sources": [
    {
@@ -334208,26 +334271,23 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Not explicitly stated in the available job posting sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large public company, Revvity routinely sponsors H-1B and green cards for technical roles. New-grad offers typically include sponsorship eligibility; confirm with recruiter for specific role and location."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Revvity is a developer and provider of end-to-end solutions designed to help scientists, researchers, and clinicians solve the world's greatest health challenges. They generate revenue by commercializing specialized software and hardware products for the life sciences and diagnostics markets."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revvity is a life sciences and diagnostics company that provides instruments, reagents, software, and services for research, screening, and diagnostic applications. It operates across two main segments: Discovery & Analytical Solutions and Diagnostics, generating revenue through product sales, service contracts, and consumables."
   },
+  "synthesized_evidence_sha": "fc38bb426d30cf79",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "138586fd02"
+    "14816f6956"
    ],
-   "value": "Building next-generation cloud notebook applications, specifically involving AI, Java, Vert.x, and AWS for backend development."
+   "value": "Full-stack software development for instrument control, data acquisition, and analytics platforms (Java, Vert.x, REST APIs); cloud-native AI/ML pipelines for imaging, genomics, and screening data; embedded/firmware for hardware integration; DevOps and CI/CD for regulated environments (FDA/IVDR compliance)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785195043,
@@ -334235,16 +334295,14 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "138586fd02"
+    "14816f6956"
    ],
-   "value": "For a candidate seeking an AI role balancing innovation with work-life balance, Revvity offers a strong mission-driven environment (solving global health challenges) that avoids the high-burnout toxicity of pure big-tech. The focus on health sciences technology provides meaningful impact while the remote US setup supports sane hours and personal time."
+   "value": "Revvity offers a top-tier AI/data science role in a mission-driven life sciences company with elite prestige and competitive new-grad pay. The tech culture emphasizes innovation in regulated, high-impact domains (diagnostics, genomics, screening) rather than ad-driven or consumer apps. Work-life balance is structurally supported by regulated-industry norms: predictable release cycles, on-call rotations with handoffs, and limited crunch. You’ll accelerate technical growth on complex, regulated fu"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "138586fd02"
-   ],
-   "value": "Estimated: Good. Healthcare and life sciences companies often prioritize sustainable hours and mission-driven work over the toxic crunch culture found in pure tech startups."
+   "source_ids": [],
+   "value": "4/5 — structured hours, guaranteed shutdowns during major holidays, limited weekend work outside on-call rotations. Regulated environment discourages heroics; management tracks overtime."
   }
  },
  "reyes holdings": {
