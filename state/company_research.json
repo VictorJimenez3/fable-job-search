@@ -49697,41 +49697,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 for Canada's banking sector: Elite institutional credibility and high-quality enterprise AI deployment, though not equivalent to pure FAANG-tier research lab prestige in the US market."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Diversified banking model with revenue split between net interest income from lending and non-interest income from fees, commissions, and trading operations. The bank identifies technology modernization as a key enabler for efficiency and risk management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Controlled, professional, and enterprise-stable with a visibly maturing \"digital-first\" motto. The culture prioritizes formal board objectives and inclusion, avoiding aggressive launch discrepancies or burnout-inducing processes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Individuals, small businesses, corporations, and institutional investors, predominantly in Canada and the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $87,000-$101,000 CAD base for Canadian office data science new-grad; U.S. Chicago new-grad base likely $105,000 - $115,000 USD, with modest bonus and non-equity comp rather than stock-heavy start-up packages."
   },
   "evidence_sha": "410a198320f1847c",
+  "generated_at": 1785282610,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Financial Services / Banking"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Expect behavioral questions on resilient enterprise implementation, statistical rigor, and compliance. Technical rounds emphasize production-level model validation, blockchain knowledge, and communicating complex AI trade-offs to non-technical risk stakeholders, balanced against verifying your appetite for measured, process-driven timelines."
   },
-  "last_attempt_at": 1785282452,
+  "last_attempt_at": 1785282610,
   "last_evidence_at": 1785280955,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Global headquarters in Toronto, Canada, with a significant U.S. hub in Chicago and major tech operations distributed non-hub locations across Canada. Remote or hybrid models vary by team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ac5a7da16"
+   ],
+   "value": "To boldly grow the good in business and life, driven by a commitment to sustainable growth, innovation, and inclusive progress for clients and communities."
+  },
   "name": "Bank of Montreal",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and structured, akin to a steady enterprise cadence; significantly slower than a volatile startup. Project delivery follows rigorous bank governance and bias standards, which buffers a sprint-driven grind."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Personal and commercial banking, wealth and asset management, global markets and investment banking, and capital markets advisory."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days for new-grad level, scaling with tenure, which is typical for Canadian banking benefits; US policy aligns closely."
   },
-  "retry_after": 1785282572,
+  "refresh_after": 1790466610,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49741,7 +49796,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Generally none; standard banking holidays apply with no formal company-wide closures. A few development-support teams may observe limited holiday on-call rotations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16"
+   ],
+   "value": "Established multinational financial corporation, one of Canada's Big Five banks, with over 12 million customers and roughly 55,000 employees globally."
   },
   "sources": [
    {
@@ -49775,14 +49837,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=d24f22f4bedf60fe56115479058b56c3500b3d03ca930220bd191318b40a2c83JmltdHM9MTc4NTE5NjgwMA&ptn=3&ver=2&hsh=4&fclid=156cea59-47d0-63fe-3197-fdfd46bb627d&u=a1aHR0cHM6Ly93d3cuYmFua29mYW1lcmljYS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5ac5a7da16",
+    "684497007d"
+   ],
+   "value": "Bank of Montreal (BMO) is a major North American financial institution offering retail banking, wealth management, and capital markets services. It generates revenue primarily through net interest income from loans and mortgages, alongside fees from advisory, trading, and asset management activities."
+  },
+  "synthesized_evidence_sha": "410a198320f1847c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ac5a7da16"
+   ],
+   "value": "Focus areas include algorithmic trading, risk modeling, fraud detection ML, generative AI for customer operations, and cloud infrastructure migration. AI/data roles typically involve large-scale legacy modernization and rigorous model risk governance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785280955,
   "web_search_url": "https://duckduckgo.com/?q=Bank+of+Montreal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BMO provides a blend of elite financial stature and a concentrated push into AI modernization that may accelerate technical learning, while the historically regulated banking cadence can translate into less frantic work schedules than start-ups, aligning with your desire for prestige, pay, and sustainable working hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally rated 3.7/5; technology strategy roles lean toward 40-45 hour weeks with rare weekend spillover, substantially better than fast-paced startups in AI."
   }
  },
  "banner engineering careers": {
@@ -269881,7 +269969,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269899,7 +269987,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785282452,
+  "last_attempt_at": 1785282610,
   "last_evidence_at": 1785280955,
   "name": "Modal",
   "pace_of_work": {
@@ -269912,7 +270000,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785282572,
+  "retry_after": 1785282850,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
