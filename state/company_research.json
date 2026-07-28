@@ -347621,52 +347621,125 @@
  "savannah river mission completion": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Low. As a nuclear environmental cleanup contractor, SRMC is not recognized for top-tier AI or data science prestige or agile tech innovation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Government contract-based revenue for operating facilities and managing environmental remediation at federal nuclear sites."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Mission-driven and safety-focused, featuring a traditional and bureaucratic environment rather than a fast-paced tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "United States Department of Energy (DOE)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: ~$70,000 - $90,000 base salary for entry-level technical/specialist roles, potentially offering strong federal benefits rather than elite new-grad tech pay."
   },
   "evidence_sha": "b9e3341fa95beda2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785233294,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785233122,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Nuclear Waste Management & Environmental Remediation / Government Contracting"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Be prepared to discuss your ability to work in slow, bureaucracy-heavy, heavily regulated environments. Emphasize your appreciation for mission-driven work, safety, and sane hours, and ask about compliance and process-orientation rather than tech innovation or rapid career growth."
+  },
+  "last_attempt_at": 1785233294,
   "last_evidence_at": 1785230391,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Aiken, SC (Savannah River Site). On-site work required (remote not available)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Mission Completion at the Savannah River Site, focusing on safely processing and disposing of defense nuclear waste and environmental cleanup."
+  },
   "name": "Savannah River Mission Completion",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Slow, deliberate, and highly regulated. Pace is driven by strict nuclear safety and compliance protocols rather than a fast-innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Defense Waste Processing Facility (DWPF) operations, environmental remediation, and nuclear waste management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: ~15-20 days of PTO per year, typical for full-time salaried roles at large government contracting joint ventures."
   },
-  "retry_after": 1785233242,
+  "refresh_after": 1790417294,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Potential federal holiday and year-end shutdowns, aligning with typical DOE site operations."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Large, mature joint venture operating a major federal site (Aiken, SC-based)."
   },
   "sources": [
    {
@@ -347710,14 +347783,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Likely requires U.S. citizenship and ability to obtain federal security clearances, typical of DOE contractor roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a",
+    "1c8fc57e10"
+   ],
+   "value": "Savannah River Mission Completion (SRMC) is a government contracting joint venture managing environmental cleanup and nuclear waste processing operations at the Savannah River Site. It makes money through contracts with the U.S. Department of Energy to safely treat, Secure, and dispose of legacy defense nuclear waste."
+  },
+  "synthesized_evidence_sha": "b9e3341fa95beda2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Roles available include environmental specialist, laboratory technician (DWPF), and construction/operations positions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785230391,
   "web_search_url": "https://duckduckgo.com/?q=Savannah+River+Mission+Completion+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "While SRMC is deeply mission-driven and may appeal to candidates seeking work-life balance and guaranteed shutdowns, the culture here is likely slow and bureaucratic rather than fast and innovative. It prioritizes safety and compliance over the rapid technical learning and agile tech culture you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4ea425db1a"
+   ],
+   "value": "Estimated: Good. Government contractors often offer sane hours, predictable schedules, and potential holiday shutdowns, suggesting a strong work-life balance."
   }
  },
  "savannah river national laboratory": {
