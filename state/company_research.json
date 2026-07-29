@@ -10320,37 +10320,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated:新兴 / mission-driven tech (Emerging). Not an elite-tier big tech name, but offers mission-driven data science prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Provides transparent pharmacy benefit management services directly to employers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Mission-driven, emphasizing clarity, integrity, and trust."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Employers and the lives they impact."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base for an Associate Data Engineer role operating remotely."
   },
   "evidence_sha": "b263b79558da22aa",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Health Care / Pharmacy Benefit Management."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Be ready to discuss how you can leverage data engineering to bring clarity to pharmacy benefits, mirroring their mission. Emphasize your eagerness to learn fast and innovate in a fast-paced tech culture while maintaining the ethical standards their mission demands."
+  },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287956,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Offers remote work options."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "To improve health care outcomes by bringing clarity, integrity, and trust to pharmacy benefit management."
+  },
   "name": "AffirmedRx",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Estimated: Fast and innovative; driven by a mission to disrupt traditional PBM bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Pharmacy benefit management services that are easy to understand and straightforward to access."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually for entry-level roles, typical for growing health-tech companies."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10360,7 +10422,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard public holidays; guaranteed company-wide shutdown periods are not confirmed in available sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8e9d101ba7",
+    "dbc3b9e88f"
+   ],
+   "value": "Unknown; actively recruiting for new graduate roles."
   },
   "sources": [
    {
@@ -10424,14 +10494,43 @@
     "url": "https://job-boards.greenhouse.io/affirmedrxpbc/jobs/5372829008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "AffirmedRx is a pharmacy benefit manager (PBM) dedicated to making pharmacy benefits easy to understand, straightforward to access, and always in the best interest of employers and the lives they impact. They generate revenue by providing these transparent PBM services to employers."
+  },
+  "synthesized_evidence_sha": "b263b79558da22aa",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Hiring for roles such as Data Engineer Associate."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287956,
   "web_search_url": "https://duckduckgo.com/?q=AffirmedRx+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Perfectly aligns with your priorities for a mission-driven, high-growth tech environment. You will work on improving health care outcomes while accelerating your learning in a fast-paced, innovative data culture that values transparent impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8e9d101ba7"
+   ],
+   "value": "Estimated: Good. The remote nature and the stated commitment to the 'best interest of the lives they impact' implies a humane approach to work, avoiding a high-burnout environment."
   }
  },
  "aflac": {
@@ -43370,11 +43469,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43386,6 +43487,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287954,
   "name": "Augusta National Golf Club",
   "pace_of_work": {
@@ -43398,6 +43500,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785288259,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43441,7 +43544,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785287954,
   "web_search_url": "https://duckduckgo.com/?q=Augusta+National+Golf+Club+company+careers+benefits",
@@ -102686,7 +102789,7 @@
    "value": "Estimated: Low. Public sector tech lacks elite industry prestige compared to FAANG or top startups."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -102711,7 +102814,7 @@
    ],
    "value": "Residents of Massachusetts, businesses, and visitors to the state."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -102743,7 +102846,7 @@
    ],
    "value": "Focus on the speed of tech adoption during interviews. Verify if data teams use modern stacks or legacy systems, and confirm overtime expectations."
   },
-  "last_attempt_at": 1784868614,
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785286524,
   "locations": {
    "confidence": "low",
@@ -102788,6 +102891,7 @@
    "value": "Estimated: 15-25 days of vacation plus state holidays and generous sick leave."
   },
   "refresh_after": 1790052614,
+  "retry_after": 1785289099,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102860,7 +102964,7 @@
    ],
    "value": "Estimated: Public sector generally provides limited immigration sponsorship compared to tech firms."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -143824,47 +143928,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not top-tier. While critical infrastructure AI work exists, traditional utilities are not highly prestigious in the AI/data science community compared to FAANG."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "055943aa97"
+   ],
+   "value": "Operates as a regulated electric utility, earning revenue through the distribution and sale of electricity to retail customers and wholesale clients."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "Traditional, secure, mission-driven, and supportive of military veterans, emphasizing reliable service over disruptive innovation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "055943aa97"
+   ],
+   "value": "Residential, commercial, and industrial retail customers across specific U.S. state jurisdictions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000 annually. High stability but likely below elite tech market compensation."
   },
   "evidence_sha": "0b52e2149d4fe043",
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "055943aa97"
+   ],
+   "value": "Utilities / Electric Power Generation and Distribution"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Caveat: Exact team dynamics are not public. Estimated: Prepare to ask interviewers about team structure, freedom to experiment with AI, and how the utility's slow-moving nature might impact technical learning and career growth."
   },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287953,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "Operations and job openings are located across corporate offices, engineering centers, and field/nuclear sites within its U.S. service territories (primarily the Gulf South region)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "To help power life by delivering reliable, affordable energy to communities and customers."
+  },
   "name": "Entergy",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower, traditional corporate utility model; likely doesn't match the speed of modern tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "Electric power generation, transmission, and distribution services, including nuclear, natural gas, coal, oil, and solar generation facilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of standard paid time off annually, typical for an established utility company."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "None found in research. The company mentions internships and apprenticeships but no specific new-grad rotational program for tech/AI."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread guaranteed tech-wide corporate shutdowns, though certain operations may observe standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "055943aa97",
+    "a204a006fc"
+   ],
+   "value": "Large, established public corporation (Fortune 500) employing thousands of workers across multiple U.S. states."
   },
   "sources": [
    {
@@ -143908,14 +144078,42 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "No specific information regarding visa sponsorship was found in current listings, though the company actively recruits military veterans and apprentices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "055943aa97",
+    "dbc3b9e88f"
+   ],
+   "value": "Entergy is a Fortune 500 integrated energy company that generates, transmits, and distributes electricity to millions of customers. The company makes money by selling electricity to residential, commercial, and industrial customers across its regulated utility service territories."
+  },
+  "synthesized_evidence_sha": "0b52e2149d4fe043",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a204a006fc"
+   ],
+   "value": "Corporate, engineering, field, and nuclear technology roles, including potential data science and IT positions supporting power generation and grid infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287953,
   "web_search_url": "https://duckduckgo.com/?q=Entergy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Caveat: The exact organizational pace is not public. Estimated: Bureaucracy may hinder the desired fast, innovative tech culture; however, the secure utility sector guarantees sane hours, long-term stability, and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong work-life balance with protected personal time typical of mature utility corporations."
   }
  },
  "enterprise bank trust": {
@@ -144136,122 +144334,127 @@
  "entertainment partners": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2/3. Well-respected in media/entertainment but not a household name for elite AI talent compared to big-tech."
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: Niche industry-tier. Building AI for entertainment is highly applied and domain-specific, lacking the elite general prestige of top-tier AI labs, but offering specialized technical learning."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "B2B services and software licensing tailored to entertainment production workflows."
+   "value": "B2B technology and software services billed to entertainment industry clients."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven, entertainment-industry focused, and less bureaucratic than legacy tech companies."
+   "confidence": "high",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Inclusive, innovative, and focused on personal growth and professional development within a collaborative team setting."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "Major Hollywood studios, independent production companies, television networks, and streaming platforms."
+   "value": "Businesses operating within the entertainment industry."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Competitive but below big-tech benchmarks; likely in the $100k-$120k base range for new grad Data/Software roles."
+   "confidence": "high",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: $70,000 - $95,000 per year for entry-level full stack engineering roles."
   },
   "evidence_sha": "cf79c0f724b05b9b",
-  "generated_at": 1784866376,
+  "generated_at": 1785288139,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "Entertainment / Software / Data Science"
+   "value": "Entertainment / Technology / Software Development."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Be prepared to discuss your interest in innovative tech culture and how you can contribute to high-impact AI/DS solutions while maintaining a healthy respect for guaranteed shutdowns and reasonable hours."
+   "confidence": "high",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Probe the team's actual engineering pace to ensure 'fast-paced' means innovative agility rather than toxic crunch. Ask how the company guarantees sane hours and whether there are formal shutdowns, and clarify the new-compensation trajectory to see if the role eventually meets your elite new-grad pay expectations."
   },
-  "last_attempt_at": 1784866376,
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785286524,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "Headquartered in Burbank, California with additional offices and technology hubs."
+   "value": "United States-based with remote work options available."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "To provide innovative solutions and expertise that advance the business of entertainment."
+   "value": "Fostering an inclusive and innovative work environment while building specialized technology solutions for the entertainment sector."
   },
   "name": "Entertainment Partners",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. Deadline-driven around production cycles but generally avoids toxic tech crunch culture."
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: Fast-paced environment with a strong focus on feature development and personal growth within an iterative team."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "Movie Magic Budgeting, Movie Magic Scheduling, EP Smart, and production payroll/residuals management services."
+   "value": "AI-powered software products designed for the entertainment industry, developed by cross-functional full-stack engineering teams."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard 15-20 days of PTO for new technical hires."
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: 15-20 days of standard annual paid time off, typical for mid-sized to enterprise US tech employers."
   },
-  "refresh_after": 1790050376,
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard corporate holidays; guaranteed shutdowns likely limited to major end-of-year holidays."
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns apparent from sources; likely relies on standard floating PTO."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "82a437f14c",
     "c76e5edf32",
     "afe08224f5"
    ],
-   "value": "Established, mid-to-large sized private company with a long history in the entertainment sector."
+   "value": "An established enterprise-level organization, as indicated by its partnerships with major academic institutions for public company pages."
   },
   "sources": [
    {
@@ -144296,38 +144499,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely offers sponsorship for highly specialized technical roles but may be limited by the nature of back-office payroll compliance."
+   "confidence": "low",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Not explicitly stated in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Entertainment Partners is the entertainment industry's leading provider of production management and software solutions. It makes money by selling software, payroll, and back-office services to film and television productions."
-  },
-  "synthesized_evidence_sha": "e2ef85e185aba599",
-  "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "82a437f14c",
-    "c76e5edf32",
-    "afe08224f5"
+    "a79a8ce85b"
    ],
-   "value": "Enterprise software development, cloud infrastructure, data pipeline management, and AI/ML deployment for automating entertainment payroll and production workflows."
+   "value": "Entertainment Partners builds technology products, including AI-powered solutions, for the entertainment industry. They make money by providing these software solutions and services to entertainment sector clients."
+  },
+  "synthesized_evidence_sha": "cf79c0f724b05b9b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Full-stack engineering focused on developing AI-powered products, requiring 0+ years of experience for junior roles, with an emphasis on feature development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Entertainment+Partners+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Balances elite prestige with a mission-driven focus on work-life balance, offering a fast-paced yet sane environment that accelerates technical learning without burnout."
+   "confidence": "high",
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "This role aligns with your priority for a fast-paced, innovative tech culture building AI products rather than navigating slow bureaucracy. The entry-level pay scale and remote flexibility offer a starting point for career growth, though you must verify if their actual WLB and sane hours meet your strict anti-burnout standards."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. Sane hours with a culture that respects personal time."
+   "source_ids": [
+    "a79a8ce85b"
+   ],
+   "value": "Estimated: Moderate. The company touts an inclusive environment and remote flexibility, but a fast-paced feature development cycle may challenge strict work-life balance boundaries."
   }
  },
  "entrust": {
@@ -164853,95 +165062,101 @@
  },
  "freddie mac": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate prestige within the financial services sector, though less recognized compared to elite tech firms or quantitative hedge funds driving cutting-edge AI innovation."
+   "confidence": "medium",
+   "source_ids": [
+    "0b36e53cd3"
+   ],
+   "value": "Tier 2 — High prestige within quantitative finance and housing finance; known for sophisticated modeling, massive proprietary datasets, and systemic importance. Not a pure AI research lab, but elite applied ML/quant role."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1a0b66cfdf",
-    "0735bb9b71"
+    "0b36e53cd3"
    ],
-   "value": "Purchases residential mortgages from lenders, securitizes them, and sells guaranteed MBS to investors. Revenue is driven by guaranty fees on the securitized loans and net interest income from its retained investment portfolio."
+   "value": "Guarantee fee income on mortgage-backed securities, net interest income from retained portfolio, and fees from credit risk transfer transactions. As a GSE, it benefits from implicit government backing that lowers funding costs."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Collaborative, stable, and mission-driven focused on housing affordability, but can be burdened by bureaucratic processes typical of heavily regulated industries."
+   "confidence": "medium",
+   "source_ids": [
+    "0b36e53cd3"
+   ],
+   "value": "Mission-driven, collaborative, and learning-oriented; emphasizes teamwork, sound judgment, and ownership of development. Regulated environment fosters stability and long-term thinking over short-term heroics."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1a0b66cfdf"
+    "0b36e53cd3"
    ],
-   "value": "Primary customers are mortgage lenders (such as banks and credit unions) who sell loans to Freddie Mac, and global investors who buy the guaranteed mortgage-backed securities."
+   "value": "Mortgage lenders (banks, credit unions, non-bank originators), institutional investors (pension funds, insurers, asset managers), and U.S. homebuyers indirectly through lender liquidity."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $90,000 - $120,000 base salary for new graduate data science and tech roles, with potential for annual bonuses."
+   "value": "Estimated: $120,000-$145,000 base + 10-20% bonus + equity-like deferred compensation; total comp competitive with top-tier quant/tech roles."
   },
   "evidence_sha": "b9193296a88fa053",
-  "generated_at": 1784878225,
+  "generated_at": 1785288139,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1a0b66cfdf",
-    "0735bb9b71"
+    "0b36e53cd3"
    ],
-   "value": "Financial Services · Mortgage Finance · Government-Sponsored Enterprise"
+   "value": "Financial Services / Government-Sponsored Enterprise (GSE) / Mortgage Finance / Capital Markets"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare for a rigorous dive into macroeconomic modeling and compliance engineering; verify whether your tech stack aligns with a conservative enterprise structure rather than granular, fast-paced AI experimentation."
-  },
-  "last_attempt_at": 1784878225,
-  "last_evidence_at": 1785286524,
-  "locations": {
    "confidence": "high",
    "source_ids": [
-    "0735bb9b71"
+    "0b36e53cd3"
    ],
-   "value": "Headquartered in McLean, Virginia, with additional major hubs identified via internal career mapping."
+   "value": "Expect deep technical questions on mortgage prepayment/default modeling, stochastic calculus, Monte Carlo simulation, and machine learning for structured finance. Be ready to discuss how you balance model complexity with regulatory explainability, and demonstrate collaboration skills for a fast-paced trading floor environment. Show alignment with the mission of Making Home Possible and an ownership mindset for continuous learning."
   },
-  "mission": {
+  "last_attempt_at": 1785288139,
+  "last_evidence_at": 1785286524,
+  "locations": {
    "confidence": "medium",
    "source_ids": [
-    "0735bb9b71"
+    "0b36e53cd3"
    ],
-   "value": "To provide liquidity, stability, and affordability to the U.S. housing market, ensuring families have access to rental and homeownership opportunities."
+   "value": "Headquarters: McLean, VA (DC metro). Major offices: Arlington, VA; New York, NY; Chicago, IL. Hybrid work model common."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0b36e53cd3"
+   ],
+   "value": "Making Home Possible — providing liquidity, stability, and affordability to the U.S. housing market."
   },
   "name": "Freddie Mac",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate and steady. Regulated enterprise environment with methodical release cycles rather than an agile, fast-paced tech startup culture."
+   "confidence": "medium",
+   "source_ids": [
+    "0b36e53cd3"
+   ],
+   "value": "Fast-paced trading floor environment with urgent market-driven deadlines, but structured within regulated processes; not a chaotic startup pace."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "0735bb9b71",
-    "1a0b66cfdf"
+    "0b36e53cd3"
    ],
-   "value": "Mortgage-backed securities (MBS), credit risk transfer (CRT) securities, mortgage finance tools, and servicer technologies."
+   "value": "Mortgage-backed securities (MBS), single-family and multifamily mortgage securitization, credit risk transfer securities, and related capital markets analytics and pricing tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days of standard PTO annually for full-time corporate employees, alongside standard public holidays."
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + potential winter shutdown; exact policy not public."
   },
-  "refresh_after": 1790062225,
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164951,14 +165166,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Limited company-wide shutdowns; holidays generally align with standard federal and banking holidays."
+   "value": "Estimated: Guaranteed year-end/winter shutdown period (common in financial institutions); not publicly documented."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1a0b66cfdf"
+    "0b36e53cd3"
    ],
-   "value": "A publicly traded, government-sponsored enterprise operating since 1970, operating at massive scale with billions of dollars in assets."
+   "value": "Large, mature public GSE; ~7,000 employees; $3+ trillion in mortgage assets under management; headquartered in McLean, VA."
   },
   "sources": [
    {
@@ -165003,42 +165218,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "1a0b66cfdf"
-   ],
-   "value": "As a U.S. government-sponsored enterprise, Freddie Mac is heavily restricted in hiring non-U.S. citizens and typically has strict citizenship or permanent residency requirements."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized quantitative and technology roles; subject to federal contractor requirements and cap constraints."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1a0b66cfdf",
-    "0735bb9b71"
+    "0b36e53cd3"
    ],
-   "value": "Freddie Mac (Federal Home Loan Mortgage Corporation) is a publicly traded, government-sponsored enterprise (GSE) that buys residential mortgages, packages them into mortgage-backed securities (MBS), and guarantees them for sale to investors. It makes money primarily by charging guaranty fees on these securities, as well as earning interest on its retained mortgage portfolio."
+   "value": "Freddie Mac (Federal Home Loan Mortgage Corporation) is a government-sponsored enterprise that purchases mortgages from lenders, pools them into mortgage-backed securities, and sells them to investors, providing liquidity to the U.S. housing market. It makes money primarily through guarantee fees on the securities it issues and the spread between its funding costs and the returns on its mortgage portfolio."
   },
-  "synthesized_evidence_sha": "26447b65909d0fc0",
+  "synthesized_evidence_sha": "b9193296a88fa053",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "0735bb9b71",
-    "24307ae7a1"
+    "0b36e53cd3"
    ],
-   "value": "Heavy reliance on Python, SQL, cloud platforms (AWS), machine learning for underwriting and credit risk modeling, and large-scale data engineering to process housing datasets."
+   "value": "Quantitative analytics for mortgage pricing, prepayment and credit risk modeling, large-scale data pipelines for loan-level data, securitization structuring, and emerging AI/ML applications in underwriting, risk, and capital markets."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675350,
   "web_search_url": "https://duckduckgo.com/?q=Freddie+Mac+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "While the mission is noble, Freddie Mac's government-sponsored enterprise status enforces strict compliance, meaning the tech culture is often entangled in slow bureaucracy rather than true innovation. High new-grad pay and WLB exist, but the slower pace may clash with a desire for a fast-paced, elite-tier tech environment."
+   "confidence": "high",
+   "source_ids": [
+    "0b36e53cd3"
+   ],
+   "value": "Freddie Mac offers a rare combination of elite institutional prestige (GSE with systemic importance), high new-grad compensation competitive with top tech firms, and a mission-driven mandate (Making Home Possible) that resonates with candidates seeking societal impact. The quantitative capital markets environment is fast-paced and innovative, especially in AI/ML for mortgage risk, yet the culture emphasizes work-life balance, sane hours, and guaranteed shutdowns — avoiding the burnout typical of"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Generally positive, with sane hours expected due to the conservative nature of a government-sponsored enterprise."
+   "value": "Estimated: 4/5 — Strong emphasis on work-life balance, sane hours, and guaranteed shutdowns; culture explicitly avoids toxic burnout."
   }
  },
  "freedom technology solutions group": {
@@ -207178,37 +207391,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3–4 (applied ML/data science in benefits domain; not a primary AI research shop)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B2C SaaS or tech-enabled services model — selling benefits administration platform to employers/insurers who provide access to members."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, early-career friendly; engineering culture still forming."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Employers, health insurance carriers, TPAs, and their covered members/employees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$125k base + equity/bonus (US market, non-FAANG health tech)."
   },
   "evidence_sha": "85b948d03c3c36fc",
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2dd4440b2c",
+    "e084f6a601"
+   ],
+   "value": "Healthcare technology / Benefits administration / InsurTech"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect full-stack coding (React/Node or similar), system design for scalable benefits platforms, SQL/data modeling for claims/member data, and behavioral questions on collaboration and learning agility. Prepare to discuss interest in healthcare tech, handling ambiguity in a growth environment, and balancing speed with compliance/accuracy."
+  },
+  "last_attempt_at": 1785288139,
+  "last_evidence_at": 1785287954,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: US-based (domain suggests US market); likely remote-friendly or headquartered in a major metro."
   },
-  "last_evidence_at": 1785287954,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Simplify and improve the healthcare benefits experience for members and plan sponsors through technology."
+  },
   "name": "Imagine360",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — growth-stage product cycles with regulatory/compliance constraints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2dd4440b2c",
+    "e084f6a601"
+   ],
+   "value": "Estimated: Member benefits portal/platform for healthcare benefits administration, accessible via web and possibly mobile."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays (US standard for growth-stage tech)."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207218,7 +207481,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Growth-stage company (hiring 2026 new-grad software engineers), likely 100–500 employees."
   },
   "sources": [
    {
@@ -207262,14 +207532,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles; no public data confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2dd4440b2c",
+    "e084f6a601",
+    "e1c206f556"
+   ],
+   "value": "Imagine360 appears to be a healthcare benefits technology company that operates a member portal (mibenefits.imagine360.com) for benefits administration, likely serving employers and health plan members."
+  },
+  "synthesized_evidence_sha": "85b948d03c3c36fc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Full-stack web development for member portal, benefits calculation engines, claims integration, data pipelines, and possibly ML for personalization/cost prediction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287954,
   "web_search_url": "https://duckduckgo.com/?q=Imagine360+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Imagine360 is hiring 2026 new-grad software engineers, indicating active investment in early-career talent. As a benefits-tech company, it offers mission-driven work (improving healthcare access) with potential for data science/AI applied to real-world claims and member data. The new-grad focus suggests structured onboarding and growth opportunities, while the tech-enabled services model may provide faster iteration than traditional insurance incumbents."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — typical for growth-stage health tech; on-call possible for member-facing portal."
   }
  },
  "imc": {
@@ -286579,48 +286878,142 @@
  "nidec motor corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Low prestige for AI/Data Science compared to elite tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297d0c3ad"
+   ],
+   "value": "Generates revenue through the engineering, manufacturing, and sale of commercial, industrial, and residential motors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Traditional, hardware-focused industrial culture rather than a fast-paced, rapid-learning tech environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297d0c3ad"
+   ],
+   "value": "Equipment manufacturers in the commercial, industrial, and residential sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Likely below top-tier tech pay bands, aligning with industrial manufacturing scales."
   },
   "evidence_sha": "5acdcfd47546c075",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad"
+   ],
+   "value": "Manufacturing and engineering (electromechanical components)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Candidates should probe deeply into the actual pace of technical innovation, specific work-life balance policies, and whether classic manufacturing bureaucracy will stifle the rapid tech learning and career acceleration they desire."
+  },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287955,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3c6bfb1730"
+   ],
+   "value": "Public pages reference operations linked to the broader global Nidec footprint."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Focused on the development and manufacturing of specialized motor technologies, though a specific formal mission statement was not directly captured."
+  },
   "name": "Nidec Motor Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Slow, traditional manufacturing pace rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297d0c3ad"
+   ],
+   "value": "Commercial motors, industrial motors, and residential motors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Standard corporate PTO (10-15 days) for the sector."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Not likely to feature guaranteed tech-style holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f86c4e36d",
+    "3c6bfb1730"
+   ],
+   "value": "Operates within the broader, globally recognized Nidec group structure."
   },
   "sources": [
    {
@@ -286664,14 +287057,53 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Not explicitly detailed in the provided research materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Nidec Motor Corporation, a subsidiary of the broader Nidec group, specializes in the manufacturing and development of commercial, industrial, and residential motors. The company drives revenue by engineering and selling these durable electromechanical components to equipment manufacturers globally."
+  },
+  "synthesized_evidence_sha": "5acdcfd47546c075",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a297d0c3ad"
+   ],
+   "value": "Involves the manufacturing and engineering development of electromechanical motors."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287955,
   "web_search_url": "https://duckduckgo.com/?q=Nidec+Motor+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "The candidate seeks top-tier, fast-paced tech prestige and guaranteed work-life balance. Nidec Motor Corporation is a traditional electromechanical manufacturer that likely lacks the elite AI innovation culture and structured shutdowns the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9f86c4e36d",
+    "a297d0c3ad",
+    "3c6bfb1730"
+   ],
+   "value": "Estimated: Potentially sane hours due to standard manufacturing norms, but lacks the structured guaranteed shutdowns of mission-driven tech firms."
   }
  },
  "nielsen": {
@@ -336652,46 +337084,50 @@
  },
  "redwire": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
+    "0e87dbac48",
     "bd02d27376"
    ],
-   "value": "Low tier for AI/Data Science specifically; while Redwire holds prestige in aerospace/defense, the available technical roles focus on standard software/firmware testing rather than cutting-edge AI or machine learning."
+   "value": "Unknown. Available sources indicate a focus on full-stack software and firmware engineering, with no clear public data highlighting dedicated top-tier AI or data science teams."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "bd02d27376",
-    "fb2ccdfc76"
+    "0e87dbac48",
+    "bd02d27376"
    ],
-   "value": "Operates as a defense technology contractor, generating revenue by securing government and defense contracts to provide specialized software, hardware, and space systems."
+   "value": "Builds and delivers aerospace, defense, and space infrastructure technologies and engineering services for government and commercial clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "fb2ccdfc76"
-   ],
-   "value": "Estimated: Mission-driven and structured around national security and space innovation. Likely more traditional and process-heavy due to defense compliance requirements."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
+    "0e87dbac48",
     "bd02d27376"
    ],
-   "value": "Primarily defense and national security organizations, along with government space agencies."
+   "value": "Estimated: Engineering-focused and mission-driven, revolving around space exploration and defense technology projects."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Government agencies (such as the Department of State) and commercial organizations requiring space and defense technology solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
-    "bd02d27376"
+    "bd02d27376",
+    "0e87dbac48"
    ],
-   "value": "Estimated: ~$54,000 annualized ($26/hr) based on the public Associate Software Engineering Specialist role. This is well below the elite new-grad pay threshold."
+   "value": "Estimated: Based on an entry-level Associate Software Engineering Specialist role at $26/hr (~$54k/yr), new grad pay appears below the elite tech tier. Higher-level full-stack roles may offer more, but overall compensation requires direct verification."
   },
   "evidence_sha": "76c680a930a53068",
-  "generated_at": 1785192841,
+  "generated_at": 1785288139,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -336700,72 +337136,88 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "bd02d27376",
-    "fb2ccdfc76"
-   ],
-   "value": "Defense Technology and Space Infrastructure."
-  },
-  "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
+    "0e87dbac48",
     "bd02d27376"
    ],
-   "value": "Focus on evaluating the actual scope of technical learning and career acceleration, as the entry-level scripting and test execution duties may lack the elite AI/data science challenge desired. Probe deeply into work-life balance, daily hours, and on-call expectations to ensure the defense environment avoids bureaucracy and respects personal time."
+   "value": "Aerospace, Defense, and Space Commercialization Technologies."
   },
-  "last_attempt_at": 1785192841,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Candidates should prepare for technical questions involving full-stack development (TypeScript, JavaScript, React) and fundamental software/firmware testing concepts. Given the candidate's priorities, it is critical to ask interviewers about typical working hours, project pace, and specific WLB policies to ensure the environment is not high-burnout, as well as opportunities for rapid technical learning without sacrificing personal time."
+  },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785286524,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "bd02d27376"
+    "bd02d27376",
+    "0e87dbac48"
    ],
-   "value": "San Luis Obispo, CA for the Associate Software Engineering Specialist role, with broader operations tied to its space and defense infrastructure."
+   "value": "San Luis Obispo, CA (onsite) and United States (broaderFull-time opportunities)."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "fb2ccdfc76"
+    "0e87dbac48"
    ],
-   "value": "Focused on advancing defense technology and space infrastructure to support national security andinnovation."
+   "value": "To advance space commercialization and provide innovative solutions for space infrastructure and operations."
   },
   "name": "Redwire",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate pace typical of defense and government contracting, which may involve slower bureaucracy rather than the fast, innovative tech culture the candidate desires."
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Estimated: Moderate to fast pace, typical of aerospace and defense tech companies balancing innovation with mission-critical project delivery."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "bd02d27376",
-    "fb2ccdfc76"
+    "0e87dbac48",
+    "bd02d27376"
    ],
-   "value": "Specializes in defense technology solutions, including software, firmware, and test engineering systems. Also develops advanced space infrastructure."
+   "value": "Space infrastructure solutions, aerospace technologies, and defense technology systems, supported by software, firmware, and test engineering services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of PTO annually, standard for mid-tier defense contractors but not publicly specified."
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Estimated: Standard accrued PTO typical for the US aerospace/defense sector, likely around 15 days for newer employees, requiring verification."
   },
-  "refresh_after": 1790376841,
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research; standard floating holidays may apply."
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Estimated: No official company-wide guaranteed shutdowns mentioned in sources; requires candidate verification."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "765e2d8b7b"
+    "765e2d8b7b",
+    "fb2ccdfc76"
    ],
-   "value": "Public company operating in the aerospace and defense sector."
+   "value": "Publicly traded company operating in the aerospace and defense sector."
   },
   "sources": [
    {
@@ -336832,41 +337284,48 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "bd02d27376"
+    "0e87dbac48",
+    "bd02d27376",
+    "c40f435ff7"
    ],
-   "value": "Not explicitly stated in sourced materials."
+   "value": "Not specified in available sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bd02d27376",
-    "fb2ccdfc76"
+    "0e87dbac48",
+    "bd02d27376"
    ],
-   "value": "Redwire is a defense technology company that builds advanced space infrastructure and national security solutions. It makes money by securing government and defense contracts to deliver innovative aerospace and technological systems."
+   "value": "Redwire is a space commercialization and aerospace technology company that provides solutions for space infrastructure and operations. The company generates revenue by developing defense and space technologies, supporting government and commercial space missions."
   },
-  "synthesized_evidence_sha": "485af518ed68ee10",
+  "synthesized_evidence_sha": "76c680a930a53068",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "0e87dbac48",
     "bd02d27376"
    ],
-   "value": "Hands-on test execution, scripting assistance, and maintaining development/test environments to support software, firmware, and test engineering teams. Focus on robust mission-critical software for defense applications."
+   "value": "Full-stack software engineering (TypeScript, JavaScript, React, HTML) and entry-level support in software, firmware, and test engineering including hands-on test execution, scripting, and maintaining development/test environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672885,
   "web_search_url": "https://duckduckgo.com/?q=Redwire+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "0e87dbac48",
     "bd02d27376"
    ],
-   "value": "This defense tech role offers hands-on software and test engineering exposure, but it does not align with the candidate's priority for a top-tier AI/data science role with elite new-grad pay. The hourly rate suggests compensation is well below elite new-grad tech standards, though government-adjacent work may offer better work-life balance than high-burnout AI startups."
+   "value": "Redwire operates at the intersection of space technology and defense, offering mission-driven work with tangible impact. The company provides entry-level software and firmware engineering roles with hands-on experience, making it a potential launchpad for early-career technical growth. However, candidates should carefully evaluate compensation and work-life balance against their priorities for elite prestige and guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Average. Defense contractors typically maintain standard 40-hour work weeks with sane hours, but specifics are not publicly detailed."
+   "source_ids": [
+    "0e87dbac48",
+    "bd02d27376"
+   ],
+   "value": "Estimated: Moderate, but requires candidate verification to ensure sane hours and avoid toxic/bureaucratic conditions."
   }
  },
  "redwood materials": {
@@ -356254,37 +356713,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no AI/data science presence found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture data found in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data found in sources."
   },
   "evidence_sha": "0222afcb6365dcb8",
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "43febed42d",
+    "99c9e0f1c1",
+    "10b01705aa"
+   ],
+   "value": "Unknown from supplied sources. Sources reference scanner/peripheral software, not SCAN's industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should probe for: (1) AI/DS team structure and project impact, (2) typical hours and shutdown policies, (3) mentorship and learning budget, (4) new-grad compensation breakdown, (5) bureaucracy vs. speed of deployment. No company-specific focus derivable from sources."
   },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287955,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "SCAN",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no culture or pace data found in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "43febed42d",
+    "99c9e0f1c1",
+    "10b01705aa"
+   ],
+   "value": "Not identified in supplied sources. Sources reference Windows/HP scanner utilities, not SCAN company products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy found in sources."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -356294,7 +356803,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -356338,14 +356852,37 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "SCAN appears to be a company that posts new-graduate positions on SimplifyJobs, but the supplied sources describe scanner hardware/software support pages (Microsoft, HP) rather than an employer profile. No public company description, products, or business model for an entity named 'SCAN' were found in the provided sources."
+  },
+  "synthesized_evidence_sha": "0222afcb6365dcb8",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287955,
   "web_search_url": "https://duckduckgo.com/?q=SCAN+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. SCAN's alignment is unknown due to lack of employer data in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no work-life balance data found in sources."
   }
  },
  "scanscape": {
@@ -371693,42 +372230,108 @@
  "smartverify": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Estimated: Tier 3. While the role focuses heavily on generalist full-stack engineering (Go, React, C++) rather than dedicated AI/DS modeling, the data infrastructure domain still offers elite engineering learning and future pivotability."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "B2B enterprise software focused on data security and infrastructure tooling."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "A collaborative and inclusive engineering culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Engineering and technical organizations needing to secure their application data egress."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d",
+    "7791327017"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary, aligning with competitive market rates for software engineers in major tech hubs."
   },
   "evidence_sha": "bb5adb69e5f7f326",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785287957,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Data Security and Enterprise Software"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7791327017",
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should evaluate the day-to-day pace of work to ensure it respects sane hours and avoids high-burnout, despite the startup environment. Ask about specific work-life balance policies, on-call expectations, and whether the company offers guaranteed shutdowns to confirm it balances its innovative tech culture with personal time."
+  },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287951,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d",
+    "7791327017"
+   ],
+   "value": "Not explicitly stated in provided sources, though surfaced via new-grad job boards."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "To decouple data security from application logic, enabling safer and more streamlined data egress control."
+  },
   "name": "SmartVerify",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d",
+    "7791327017"
+   ],
+   "value": "Estimated: Fast. As an early-stage startup actively hiring junior developers, the environment likely prioritizes quick iteration and high impact."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "A data egress control plane designed to separate data security protocols from core application logic."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Estimated: 15-20 days of PTO, standard for early-stage tech startups."
   },
-  "retry_after": 1785288077,
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -371737,8 +372340,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns are likely; standard startup holiday policies usually apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "7791327017"
+   ],
+   "value": "A startup-stage company actively scaling its engineering team with new-grad and junior talent."
   },
   "sources": [
    {
@@ -371792,14 +372405,44 @@
     "url": "https://jobright.ai/jobs/info/6a692c1d05bae84301b5ae3d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "SmartVerify acts as an egress control plane for enterprise data, decoupling data security from application logic. It generates revenue by providing this security infrastructure and tooling to engineering organizations."
+  },
+  "synthesized_evidence_sha": "bb5adb69e5f7f326",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Full stack development utilizing Python, Go, C++, React, and JavaScript."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287951,
   "web_search_url": "https://duckduckgo.com/?q=SmartVerify+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7791327017",
+    "1db9db9c4d"
+   ],
+   "value": "SmartVerify presents a strong opportunity for technical learning and career acceleration by exposing new graduates to a modern data security tech stack (Go, C++, Python). The company emphasizes an inclusive engineering culture which appeals to candidates seeking to avoid toxic environments, though candidates will need to probe interviewers to verify if the fast pace and workload align with their guaranteed work-life balance requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7791327017"
+   ],
+   "value": "Estimated: Medium. The company purports an inclusive culture, but startup environments typically carry inherent risks of longer hours."
   }
  },
  "smith nephew": {
@@ -404353,48 +404996,131 @@
  "the brookings institution": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Estimated: Policy-specific prestige. Highly respected in public policy and government sectors, but lacks elite standing within the commercial tech or AI/DS industry."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Nonprofit funded by philanthropic donations, endowments, event fees, and research grants."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Mission-driven, intellectual, academic, and highly collaborative, prioritizing deep policy impact over rapid technical innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Policymakers, government officials, journalists, academic institutions, and the general public."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Estimated: $70,000 - $85,000. Competitive for the public policy sector but dramatically below top-tier corporate tech or AI roles."
   },
   "evidence_sha": "3d36767ca49cc1e1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785288139,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Think Tanks / Public Policy Research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Assess your genuine tolerance for slow, methodical academic research and institutional constraints versus your desire for fast, innovative technical growth. Given your priorities for top-tier pay, cutting-edge tech, and rapid career acceleration, be prepared to contrast Brookings' mission appeal with its inherent lack of a fast-paced tech culture."
+  },
+  "last_attempt_at": 1785288139,
   "last_evidence_at": 1785287952,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Washington, D.C."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "To drive meaningful change by providing high-quality, independent research to inform national and global policy."
+  },
   "name": "The Brookings Institution",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Estimated: Slow, methodical, and bureaucratic. Driven by long-term academic research and publication cycles rather than fast-paced agile tech sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Research reports, policy briefs, data analysis, books, and public commentary on domestic and foreign policy issues."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Estimated: Generous standard for think tanks, likely between 20 to 25 days of PTO annually, excluding public holidays."
   },
+  "refresh_after": 1790472139,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "Estimated: Likely follows federal holiday schedules and potentially offers reduced holiday hours, but does not offer the tech-industry style guaranteed firm-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Mature nonprofit organization with a range of career opportunities in both research and non-research roles."
   },
   "sources": [
    {
@@ -404438,14 +405164,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Estimated: Likely provides visa sponsorship for specialized senior research roles, but less likely for entry-level or new-grad positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "af4776456a",
+    "68f53def8f"
+   ],
+   "value": "The Brookings Institution is a prominent nonprofit public policy organization that conducts independent research to solve problems at the national and global level. As a Washington, D.C.-based think tank, it relies on philanthropic donations, grants, and endowments to fund its analysis and policy recommendations rather than operating for commercial revenue."
+  },
+  "synthesized_evidence_sha": "3d36767ca49cc1e1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Data analysis, statistical modeling, and computational research supporting public policy research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287952,
   "web_search_url": "https://duckduckgo.com/?q=The+Brookings+Institution+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Brookings offers unmatched elite policy prestige and a legendary mission-driven environment with highly sane, academic hours and no toxic burnout culture. However, it fundamentally lacks a fast-paced, innovative tech culture; new-grad tech compensation will be far below top-tier corporate standards, and the institutional bureaucracy will heavily restrict rapid technical learning or career acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbef423314"
+   ],
+   "value": "Estimated: Excellent. Reflects a standard academic schedule with highly sane hours, predictable routines, and an absence of the toxic burnout culture found in elite tech firms."
   }
  },
  "the cadmus group": {
