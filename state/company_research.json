@@ -154686,11 +154686,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154702,6 +154704,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785351134,
   "last_evidence_at": 1785350954,
   "name": "Fastly",
   "pace_of_work": {
@@ -154714,6 +154717,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785351254,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154767,7 +154771,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785350954,
   "web_search_url": "https://duckduckgo.com/?q=Fastly+company+careers+benefits",
@@ -154993,7 +154997,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155011,7 +155015,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1785350955,
+  "last_attempt_at": 1785351134,
   "last_evidence_at": 1785347419,
   "name": "Federal Reserve Bank of Richmond",
   "pace_of_work": {
@@ -155024,7 +155028,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785351075,
+  "retry_after": 1785351374,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -214998,11 +215002,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215014,6 +215020,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785351134,
   "last_evidence_at": 1785347421,
   "name": "Insulet Corporation",
   "pace_of_work": {
@@ -215026,6 +215033,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785351254,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215089,7 +215097,7 @@
     "url": "https://jobright.ai/jobs/info/6a6a1cd20b42f866b6196cf2?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785347421,
   "web_search_url": "https://duckduckgo.com/?q=Insulet+Corporation+company+careers+benefits",
@@ -368333,43 +368341,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "Estimated: Niche AI startup tier."
+   "value": "Estimated: High potential niche prestige. While not a household name like OpenAI, working here provides elite, highly specialized AI application experience in a critical infrastructure niche."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "B2B software sales, providing platforms to contractors, engineering firms, and utilities."
+   "value": "Sells access to its AI platform to contractors, engineering firms, and utilities to help them unlock insights from sewer inspection data, turning manual video review into automated intelligence."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "4ebcd7f1e5"
+    "e7e4149cad"
    ],
-   "value": "Estimated: Mission-driven, focused on transforming essential public infrastructure with modern technology."
+   "value": "Fast-paced, collaborative, and impactful, where every team member plays a meaningful role in transforming critical infrastructure."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "Contractors, engineering firms, and utilities."
+   "value": "Contractors, engineering firms, and utilities responsible for managing underground infrastructure."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "4ebcd7f1e5"
-   ],
-   "value": "Estimated: $120,000 - $160,000 base salary, though specific new grad compensation is not disclosed."
+   "source_ids": [],
+   "value": "Estimated: $120,000 - $160,000 base salary, typical for an AI startup hiring elite technical talent, supplemented by meaningful early-stage equity."
   },
   "evidence_sha": "727508ab6dfd343b",
-  "generated_at": 1784874470,
+  "generated_at": 1785351134,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -368378,57 +368387,60 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "Computer Vision / Artificial Intelligence applied to Infrastructure Software"
+   "value": "Artificial Intelligence / Underground Infrastructure Management"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "e7e4149cad"
+   ],
+   "value": "Probe the reality of the fast-paced startup environment: ask how the team manages shifting priorities while protecting personal time, and clarify expectations around hours to ensure the culture accelerates your technical growth without leading to burnout or toxic cycles."
   },
-  "last_attempt_at": 1784874470,
+  "last_attempt_at": 1785351134,
   "last_evidence_at": 1785347139,
   "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "2d4ddac390",
-    "7196e1c756"
+    "e7e4149cad",
+    "4ebcd7f1e5"
    ],
-   "value": "Company operates with a public online presence; exact physical headquarters or remote-work policy is not specified."
+   "value": "Not explicitly stated in sources, though hiring is likely centralized in the US."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
    "value": "Transforming underground infrastructure management through AI-powered inspection and risk analysis."
   },
   "name": "SewerAI",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "4ebcd7f1e5"
+    "e7e4149cad"
    ],
-   "value": "Estimated: Fast-paced and innovative startup culture."
+   "value": "Estimated: Fast-paced startup environment where priorities move quickly and every team member plays a meaningful role."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "4ebcd7f1e5",
-    "6e426fcb67"
+    "e7e4149cad",
+    "4ebcd7f1e5"
    ],
-   "value": "An AI-powered platform for underground infrastructure inspection and risk analysis, including a product named Pioneere."
+   "value": "An AI-powered inspection and risk analysis platform that processes underground infrastructure video data to unlock valuable insights."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "4ebcd7f1e5"
-   ],
-   "value": "Estimated: Standard startup PTO, likely around 15 days per year."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of standard PTO, typical for an early-stage US startup."
   },
-  "refresh_after": 1790058470,
+  "refresh_after": 1790535134,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -368437,17 +368449,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "4ebcd7f1e5"
-   ],
-   "value": "Estimated: No formal company-wide shutdowns mentioned."
+   "source_ids": [],
+   "value": "Estimated: No formal company-wide shutdowns mentioned in research; holidays likely follow standard US observances."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "4ebcd7f1e5"
+    "e7e4149cad"
    ],
-   "value": "Estimated to be an early-stage or growth-stage startup based on the presence of Sales Development Representative roles and AI-focused product market fit."
+   "value": "Startup"
   },
   "sources": [
    {
@@ -368502,42 +368512,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "Estimated: No explicit visa sponsorhip details found in research; early-stage startups often lack infrastructure for sponsorship."
+   "value": "Not explicitly stated in provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "SewerAI builds an AI-powered platform that helps utilities, engineering firms, and contractors analyze underground infrastructure inspection data. It makes money by providing software that turns hours of manual sewer video review into actionable intelligence in minutes."
+   "value": "SewerAI is an AI-powered platform that transforms underground infrastructure management by automating sewer inspection and risk analysis. It converts hours of manual video review into actionable intelligence in minutes, selling those insights to contractors, engineering firms, and utilities to help them maintain critical infrastructure more efficiently."
   },
-  "synthesized_evidence_sha": "18a63c3cbe4e052d",
+  "synthesized_evidence_sha": "727508ab6dfd343b",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "e7e4149cad",
     "4ebcd7f1e5"
    ],
-   "value": "Involves AI model development for risk analysis and computer vision pipelines to process underground sewer inspection data."
+   "value": "AI and data science work focused on computer vision, video processing, and risk analysis modeling for underground infrastructure inspection data."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678727,
   "web_search_url": "https://duckduckgo.com/?q=SewerAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "e7e4149cad",
+    "4ebcd7f1e5"
+   ],
+   "value": "As a startup applying AI to a critical, real-world physical problem, SewerAI offers a mission-driven environment where you can have a meaningful impact on infrastructure safety. The fast-paced startup culture promises rapid technical learning and accelerated career growth, allowing you to build elite AI skills without the slow bureaucracy of a larger tech firm."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "4ebcd7f1e5"
+    "e7e4149cad"
    ],
-   "value": "Estimated: Typical startup WLB; expect high intensity with potential for autonomy."
+   "value": "Estimated: Moderate to high. The startup demands speed, but as an emerging company in a non-consumer-tech niche, it likely avoids the toxic burnout culture of late-stage silicon valley giants. Verify shutdown policies during interviews."
   }
  },
  "sharkninja": {
@@ -441958,48 +441974,133 @@
  "valkyrie enterprises": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3afb365738"
+   ],
+   "value": "Estimated: Low. While the company uses generative AI tools for workflow optimization, it operates in the entertainment industry rather than as a top-tier AI product company or software firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "The company operates as a film production, financing, and international sales agency. It makes money by investing in and packaging film projects, then licensing the distribution rights to buyers in various territories."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Estimated: Creative and project-driven. Given its film production focus, the culture likely prioritizes content creation and film packaging, and may lack the structured engineering culture found in traditional software companies."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "International and domestic film distribution companies, streaming platforms, and theatrical audiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3afb365738"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Research analyst roles utilizing AI and data skills in the film entertainment sector typically pay less than FAANG or elite-tier new grad software engineering roles."
   },
   "evidence_sha": "287752fcbdfa01a3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785351134,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Entertainment, Film Production, and International Film Sales."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3afb365738",
+    "1db9db9c4d"
+   ],
+   "value": "To ensure this aligns with your desire for fast technical growth and high compensation without burnout, ask about the structure of guaranteed shutdowns, the specific career acceleration paths for AI talent, and how the company's compensation packages compare to top-tier software roles."
+  },
+  "last_attempt_at": 1785351134,
   "last_evidence_at": 1785347420,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Specific office locations were not found in the provided sources. Film production companies of this nature typically operate out of major entertainment hubs such as Los Angeles or London."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42",
+    "02aff4a943"
+   ],
+   "value": "To produce, finance, and sell high-quality feature films. No specific public-facing mission statement was found in the provided sources."
+  },
   "name": "Valkyrie Enterprises",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Estimated: Fast-paced. Film production and sales companies typically operate in a fast-paced environment driven by project deadlines, funding cycles, and market demands."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Feature films, including notable titles such as 'Kill' and other international cinematic releases."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days of PTO. Exact PTO policies are not public for this company."
   },
+  "refresh_after": 1790535134,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "3afb365738",
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found. Film production may pause between projects, but structured tech-industry shutdowns are unlikely for this type of company."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Likely a small-to-midsize independent film production company. Exact employee count, funding stage, and revenue are not publicly available in the provided sources."
   },
   "sources": [
    {
@@ -442053,14 +442154,48 @@
     "url": "https://jobright.ai/jobs/info/6a6a143e48355b3f12beee36?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3afb365738",
+    "1db9db9c4d"
+   ],
+   "value": "No information regarding visa sponsorship for technical or research roles was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Valkyrie Enterprises is a film production and sales company that works on the financing, production, and distribution of feature films. It generates revenue by packaging film projects, securing financing, and selling the distribution rights to international and domestic markets."
+  },
+  "synthesized_evidence_sha": "287752fcbdfa01a3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3afb365738"
+   ],
+   "value": "AI and data professionals work as Research Analysts focusing on data analysis, content management systems, learning management systems, and utilizing generative AI tools for workflow optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785347420,
   "web_search_url": "https://duckduckgo.com/?q=Valkyrie+Enterprises+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3afb365738"
+   ],
+   "value": "This role may offer a fast, innovative tech culture where you can apply generative AI and data science to optimize workflows in the film industry. However, it may not provide the elite prestige or top-tier new-grad pay typically associated with elite software companies, and the film industry's project-based work could impact overall work-life balance compared to a structured tech environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d9379f4e7b",
+    "8506964c42"
+   ],
+   "value": "Estimated: Moderate. The film and entertainment industry is well-known for demanding, project-based schedules that might not guarantee consistent sane hours or respected work-life boundaries."
   }
  },
  "valon": {
