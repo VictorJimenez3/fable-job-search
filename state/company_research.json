@@ -44044,11 +44044,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44060,6 +44062,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785319755,
   "name": "Aurizon",
   "pace_of_work": {
@@ -44072,6 +44075,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785320833,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44125,7 +44129,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785319755,
   "web_search_url": "https://duckduckgo.com/?q=Aurizon+company+careers+benefits",
@@ -135853,43 +135857,48 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: Tier 3. ERG is a respected consulting firm, but lacks the elite, specialized AI/data science prestige of top-tier tech companies or dedicated AI labs."
+   "value": "Estimated: Low. ERG is a research and consulting firm focused on environmental science, lacking the elite AI/tech brand recognition of top-tier data science employers."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "B2B and B2G consulting; generates revenue by contracting research and support services out to federal, state, and commercial organizations."
+   "value": "Consulting firm revenue model, billing clients for specialized research, analysis, and project management support."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Motivated, flexible, and career-focused. They target highly motivated individuals and emphasize a vibrant, supportive environment for professional development."
+   "value": "Vibrant, flexible, focused on prioritization and effective communication, surrounded by highly qualified colleagues."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
    "value": "Federal, state, and commercial clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: $80,000 - $110,000. Research consulting roles typically pay less than elite big tech, but compensate well for specialized federal contracting."
+   "value": "Estimated: $75,000 - $90,000. Likely offers standard environmental research pay, but lacks the elite new-grad tech pay of FAANG-tier AI jobs."
   },
   "evidence_sha": "cb5a8f1bdc1c4ce4",
-  "generated_at": 1785271097,
+  "generated_at": 1785320713,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -135898,77 +135907,86 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Research and Consulting"
+   "value": "Research and Consulting."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "b4db268eaa"
-   ],
-   "value": "Probe deeply into the actual day-to-day technical work vs. consulting duties, compensation benchmarks, and true pace expectations. Clarify if the role offers genuine AI/DS technical growth or leans toward bureaucratic project management that might stifle innovation."
+   "source_ids": [],
+   "value": "Probe the definition of their 'fast-paced environment' to ensure it means innovative tech, not billable-hour crunch. Ask for proof of respected WLB and sane hours, demand a realistic compensation preview to match your elite expectations, and confirm there are no bureaucratic bottlenecks in career growth."
   },
-  "last_attempt_at": 1785310523,
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785309321,
   "locations": {
    "confidence": "low",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Not explicitly stated in sources, though operates as a remote/flexible and potentially multi-office firm supporting federal clients."
+   "value": "Not explicitly found in provided research, though consulting firms typically operate from dedicated offices and client sites."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "To hire people with the best minds and provide them with a vibrant, flexible environment in which to develop their careers while delivering high-quality support to clients."
+   "value": "To hire the best minds and provide them with a vibrant and flexible environment in which to develop their careers."
   },
   "name": "Eastern Research Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: Fast-paced. The company explicitly notes a fast-paced environment requiring the ability to prioritize and perform effectively."
+   "value": "Estimated: Fast-paced. Sources confirm a 'fast-paced environment' for roles ranging from facilities to environmental scientists."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Research and consulting services, providing specialized support and project execution for government and commercial clients."
+   "value": "Research and consulting support services, including environmental science, GIS analysis, and facilities management."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: 15-25 days. Federal consulting typically provides standard to generous PTO packages to attract top minds, though exact policy is not public."
+   "value": "Estimated: Standard consulting firm allocation of 15-20 PTO days annually, though exact policy is not public."
   },
-  "refresh_after": 1790455097,
-  "retry_after": 1785311003,
+  "refresh_after": 1790504713,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c5e936da60",
+    "b4db268eaa"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: Unlikely guaranteed. While consulting firms may offer flexibility, guaranteed corporate shutdowns are rare unless tied to specific federal holiday schedules."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; likely follows standard federal holiday schedules."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Established consulting firm (specific employee count not found in research, but recognized as a mature federal contractor)."
+   "value": "Not explicitly stated in sources, but operates as an established consulting firm with a diverse staff handling multi-sector clients."
   },
   "sources": [
    {
@@ -136025,42 +136043,44 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Not explicitly found in research; federal contracting often requires US citizenship for some roles, but firm-wide sponsorship policy is unconfirmed."
+   "value": "Not explicitly found in research; candidates requiring visa sponsorship should verify directly with ERG HR."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Eastern Research Group (ERG) is a research and consulting firm that provides a wide range of support to federal, state, and commercial clients. They generate revenue by leveraging highly skilled experts to deliver consulting and research services in a vibrant, flexible environment."
+   "value": "Eastern Research Group (ERG) is a research and consulting firm that provides a wide range of support services to federal, state, and commercial clients. They generate revenue by leveraging highly skilled professionals to solve complex multidisciplinary challenges in a vibrant, flexible environment."
   },
-  "synthesized_evidence_sha": "905a552fce411fdf",
+  "synthesized_evidence_sha": "cb5a8f1bdc1c4ce4",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Involves performing and communicating effectively in a fast-paced consulting environment, applying specialized research and subject matter expertise to client problems."
+   "value": "Environmental science, GIS analysis, facilities and grounds maintenance, prioritization and communication in consulting engagements."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676851,
   "web_search_url": "https://duckduckgo.com/?q=Eastern+Research+Group+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "b4db268eaa"
-   ],
-   "value": "ERG may offer a mission-driven environment with flexible career development, but as a consulting firm, it likely lacks the elite AI/data science prestige, top-tier new grad pay, and innovative tech culture of a pure tech company. The work prioritizes consulting over deep technical acceleration."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ERG's stated mission to provide a vibrant, flexible environment for career development aligns with your desire for sane hours and personal time. However, as a traditional consulting firm, it may not offer the elite new-grad pay, top-tier AI prestige, or fast-paced innovative tech culture you are targeting."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "c5e936da60",
     "b4db268eaa"
    ],
-   "value": "Estimated: Moderate to Good. The company advertises a flexible environment and career development focus, but the fast-paced client-driven nature of consulting can lead to variable work hours."
+   "value": "Estimated: Good. Sources mention a 'flexible environment in which to develop careers', but consulting billable targets can impact this; satisfactory compared to top-tier tech expectations."
   }
  },
  "eataly": {
@@ -154736,45 +154756,39 @@
  "fidelity investments": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "30a31fe941"
-   ],
-   "value": "Estimated: High. As a top-tier asset manager, Fidelity's data science and AI roles carry significant industry prestige, though they are generally viewed as a step below elite tech giants in terms of raw tech-first innovation speed."
+   "source_ids": [],
+   "value": "Estimated: Tier 2. High prestige in finance and fintech, but generally lacks the elite, cutting-edge AI research prestige of top tech companies or specialized AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "30a31fe941"
+    "30a31fe941",
+    "fda41ea6e1"
    ],
-   "value": "Asset management and financial services. Fidelity generates revenue by managing client assets and charging fund expense ratios, advisory fees, and earning interest on uninvested cash deposits."
+   "value": "Asset management and financial services, generating revenue through management fees, brokerage fees, and interest margins, maintained by a privately held ownership structure."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "a7cd20a4be"
-   ],
-   "value": "Estimated: Collaborative and mission-driven, with an emphasis on continuous learning. Employees are expected to be eager to learn and quick to adapt within a structured, regulated corporate framework."
+   "source_ids": [],
+   "value": "Estimated: Collaborative, mission-driven, and corporate. Emphasizes learning and adaptability within a structured, heavily regulated financial environment."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "30a31fe941",
-    "a7cd20a4be"
+    "fda41ea6e1"
    ],
-   "value": "Retail investors, workplace retirement plan participants, institutional investors, and internal enterprise stakeholders requiring compliance solutions."
+   "value": "Retail investors, retirement savers, and institutional clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "a7cd20a4be"
-   ],
-   "value": "Estimated: $90,000 to $115,000 base salary for associate software engineers, with potential for signing bonuses and profit-sharing contributions."
+   "source_ids": [],
+   "value": "Estimated: $100,000 - $130,000 base salary for new graduate software engineering associates."
   },
   "evidence_sha": "5dab0ddfd5fd4b36",
-  "generated_at": 1785196351,
+  "generated_at": 1785320713,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -154783,72 +154797,70 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "30a31fe941"
+    "fda41ea6e1"
    ],
-   "value": "Financial Services and Asset Management."
+   "value": "Financial Services / Investment Management"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "To ensure you do not sacrifice personal time or encounter burnout, focus your interviews on probing the specific team's pace, the frequency of production deployments, and how the team balances agile innovation with compliance bureaucracy to guarantee the sane hours and work-life balance you require."
+   "value": "Prepare to demonstrate your eagerness to learn, quick adaptability, and ability to thrive in a collaborative agile environment. Ask questions about technical learning opportunities, work-life balance, and internal mobility to gauge if the pace matches your desire for fast career growth without burnout."
   },
-  "last_attempt_at": 1785196351,
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785319755,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "a7cd20a4be"
    ],
-   "value": "Westlake, TX, along with other major US financial hubs."
+   "value": "Westlake, TX (with a wider footprint of global offices)."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "30a31fe941"
+    "fda41ea6e1"
    ],
-   "value": "To strengthen the financial well-being of its clients and help them navigate their unique financial journeys."
+   "value": "To help clients plan and achieve their financial goals through trusted investment and wealth management services."
   },
   "name": "Fidelity Investments",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "a7cd20a4be"
-   ],
-   "value": "Estimated: Moderate to slow. Fidelity operates in a heavily regulated financial environment, meaning teams often follow structured agile methodologies which can feel slower and more bureaucratic compared to pure tech startups."
+   "source_ids": [],
+   "value": "Estimated: Moderate. Agile and collaborative, but likely slower and more process-heavy than a fast-paced tech startup due to financial regulations and compliance constraints."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "30a31fe941",
+    "fda41ea6e1",
     "a7cd20a4be"
    ],
-   "value": "Retail and institutional brokerage accounts, mutual funds, ETFs, retirement planning accounts (401k/IRA), wealth advisory services, and workplace compliance technology platforms."
+   "value": "Investment management, retirement planning, wealth management, discount brokerage services, and internal compliance/tech platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20 to 25 days of accrued paid time off annually, plus personal days, though exact new-grad policy is not public."
+   "value": "Estimated: 20-25 days of PTO annually for new graduate associates, plus standard holidays."
   },
+  "refresh_after": 1790504713,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "a7cd20a4be"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fidelity typically offers a few floating holidays, though guaranteed firm-wide end-of-year shutdowns are not clearly published as a standard policy."
+   "value": "Estimated: Likely offers partial or full holiday shutdowns around major holidays, typical of large financial services firms."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
     "30a31fe941"
    ],
-   "value": "Large, established private enterprise. Fidelity is one of the largest asset managers in the world, managing trillions of dollars in assets and employing tens of thousands of people globally."
+   "value": "Large, established, privately held multinational corporation."
   },
   "sources": [
    {
@@ -154907,22 +154919,24 @@
    "source_ids": [
     "a7cd20a4be"
    ],
-   "value": "Fidelity is not providing immigration sponsorship for its Associate Software Engineer roles."
+   "value": "Fidelity is not providing immigration sponsorship for the Associate Full Stack Engineer position."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "30a31fe941"
+    "30a31fe941",
+    "fda41ea6e1"
    ],
-   "value": "Fidelity Investments is a privately held financial services corporation that manages brokerage services, retirement plans, wealth management, and mutual funds. It makes money primarily through asset management fees, expense ratios on its mutual funds, and net interest margin on cash deposits."
+   "value": "Fidelity Investments is a privately held multinational financial services corporation that provides investment management, retirement planning, brokerage, and wealth management services. It makes money primarily through asset management fees on managed funds, brokerage fees, and margins on client cash deposits."
   },
+  "synthesized_evidence_sha": "5dab0ddfd5fd4b36",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "a7cd20a4be"
    ],
-   "value": "The company hires software engineers to work in collaborative, agile environments building out internal and client-facing platforms. Specific technical work includes full stack development within enterprise product areas like Compliance Technology."
+   "value": "Full stack software engineering within collaborative, agile environments, building internal products for areas like Employee Compliance."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678327,
@@ -154930,12 +154944,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fidelity's expansive AI and data science divisions offer strong new-grad compensation and elite brand prestige, but candidates should be aware that the culture leans toward traditional financial services, which may introduce bureaucratic processes that slow down the fast-paced, highly innovative tech culture you are seeking."
+   "value": "This role provides a mission-driven path into financial services technology with strong compensation. However, as a large, established institution, the culture may lean toward slower bureaucracy rather than the fast, innovative, AI-heavy tech culture you are seeking."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. The company is generally known for respecting work-life balance with sane hours compared to high-burnout tech startups, though pace can vary by specific team and product area."
+   "value": "Estimated: Good. Fidelity is known for respecting work-life balance compared to high-burnout tech startups, though exact hours can vary by team."
   }
  },
  "fidelity national information services": {
@@ -287240,11 +287254,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287256,6 +287272,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785319754,
   "name": "NextEra Energy",
   "pace_of_work": {
@@ -287268,6 +287285,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785320833,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287331,7 +287349,7 @@
     "url": "https://jobs.nexteraenergy.com/job/St_-Paul-Applied-Scientist-I-MN-55107/1393884800/?ats=successfactors"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785319754,
   "web_search_url": "https://duckduckgo.com/?q=NextEra+Energy+company+careers+benefits",
@@ -302937,73 +302955,70 @@
    "source_ids": [
     "9aaa0da327"
    ],
-   "value": "Tier 1 (Elite): The most recognizable pure-play AI lab globally, setting the frontier for large language models and generative AI deployment."
+   "value": "Top-tier (Elite)"
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "9aaa0da327",
-    "719d150b26"
-   ],
-   "value": "Generates revenue through paid subscriptions for ChatGPT (consumer and enterprise) and usage-based API access for developers integrating AI capabilities. Monetizes frontier research by deploying AI into commercial products."
-  },
-  "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "98f2743489",
-    "91f97436bc"
-   ],
-   "value": "Mission-centric, high-ownership, and technically intense. Infrastructure work accepts ambiguity and expects individuals to thrive in reliability-heavy, fast-paced environments. Supported remote flexibility is offered."
-  },
-  "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "9aaa0da327",
+    "719d150b26",
+    "ae6f0efd8a",
     "4c9d654807"
    ],
-   "value": "End users seeking AI assistance, enterprise clients requiring custom AI workflows, and internal B2B organizations using AI-native products for operational scaling."
+   "value": "Builds the world's most advanced AI infrastructure ecosystem and monetizes through B2B go-to-market strategies, enterprise software deployment, and complex strategic partnerships."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9aaa0da327",
+    "91f97436bc"
+   ],
+   "value": "Mission-driven, deeply technical, and adaptable, with a strong expectation for independent problem-solving and the ability to safely push the boundaries of AI."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9aaa0da327",
+    "4c9d654807",
+    "ae6f0efd8a"
+   ],
+   "value": "Enterprise verticals, B2B marketing organizations, and complex strategic partners seeking to integrate or complement AI technology in their product stacks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated for new-grad software engineering roles: Total compensation likely $215,000-$320,000, comprised of base salary ($160,000-$200,000), performance bonuses, and substantial equity grants. Heavily weighted toward equity appreciating with rapid valuation growth in infrastructure and research talent markets."
+   "value": "Estimated: $200,000 - $300,000+ total compensation (base + equity), aligning with top-tier elite tech company new-grad pay."
   },
   "evidence_sha": "32a0793bcc63ab0f",
-  "generated_at": 1785265335,
+  "generated_at": 1785320713,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "719d150b26",
     "98f2743489"
    ],
-   "value": "Artificial Intelligence research, cloud infrastructure, and enterprise SaaS product deployment."
+   "value": "Artificial Intelligence Research and Deployment"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "9aaa0da327",
-    "98f2743489",
-    "4c9d654807"
-   ],
-   "value": "Expect deep dives into full-stack ownership spanning frontend, backend, platform dependencies, and quality instrumentation. Prepare for cross-functional scenarios on networking, Kubernetes, scalability, and reliability-heavy automation. Demonstrate rapid learning ability with design partners, production failure diagnosis, and agent improvement loops. Show evidence of balancing innovation speed and reliability at scale and explain how you decompress or maintain work-life boundaries."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Be prepared to demonstrate high technical competence and the ability to operate with extreme ownership in fast-paced, ambiguous environments. Emphasize your passion for safe AI deployment and detail how you navigate complex system design and cross-functional dependencies without succumbing to a slow, bureaucratic pace."
   },
-  "last_attempt_at": 1785298935,
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785298099,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "91f97436bc"
    ],
-   "value": "Based in the United States with hybrid work model: three days per week in the office, with optional work from home on Thursdays and Fridays. Relocation support is provided for new employees."
+   "value": "Uses a hybrid work model requiring three days in the office per week, with optional work from home on Thursdays and Fridays, and offers relocation support to new employees."
   },
   "mission": {
    "confidence": "high",
@@ -303011,34 +303026,33 @@
     "9aaa0da327",
     "719d150b26"
    ],
-   "value": "To ensure that general-purpose artificial intelligence benefits all of humanity. The company pushes the boundaries of AI systems and seeks to safely deploy them to the world through products."
+   "value": "To ensure that general-purpose artificial intelligence benefits all of humanity."
   },
   "name": "OpenAI",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "98f2743489",
     "4c9d654807"
    ],
-   "value": "Rapid, high-ownership pace that mirrors top-tier research labs: speed, scale, and product iteration are explicit requirements. Engineers must move quickly while maintaining production reliability."
+   "value": "Estimated: Aggressive, fast-paced, and highly innovative, with a strong need to move quickly while maintaining scale and system reliability."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "4c9d654807",
-    "719d150b26"
+    "4c9d654807"
    ],
-   "value": "ChatGPT (consumer and enterprise), API services for developers, and AI-native internal tools for go-to-market and B2B scaling. The company also develops the world's most advanced AI infrastructure ecosystem in collaboration with capital partners."
+   "value": "AI-native software products, AI systems, and enterprise workflows that push the boundaries of artificial intelligence capabilities."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Competitive for Tier-1 AI companies, likely 18-22 days per year flexible PTO for salaried employees, aligning with industry peers of similar prestige. Exact parameters not disclosed in study."
+   "value": "Estimated: Typically ranges from 15 to 20 days of flexible PTO annually, though specific exact policy is unstated."
   },
-  "refresh_after": 1790449335,
-  "retry_after": 1785320535,
+  "refresh_after": 1790504713,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303048,14 +303062,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual company-wide shutdown observed during late December period, consistent with peer frontier labs. Not explicitly confirmed in sourcing, but likely given generous time-off culture."
+   "value": "Estimated: Scheduled company-wide shutdowns around major holidays may be offered, but specific guaranteed off-periods are not explicitly stated."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "91f97436bc"
+    "719d150b26"
    ],
-   "value": "Scale-up enterprise in high-growth phase. The company offers relocation support to new employees and operates a hybrid work model with 3 days in office per week."
+   "value": "A rapidly scaling organization with expansive capital projects, including the development of the world's most advanced AI infrastructure ecosystem."
   },
   "sources": [
    {
@@ -303124,44 +303138,42 @@
    "source_ids": [
     "91f97436bc"
    ],
-   "value": "Relocation support is explicitly offered to new employees. No information provided on specific visa sponsorship or immigration support policies."
+   "value": "Visa sponsorship is not explicitly mentioned in job postings, though the company provides relocation support for new employees."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "719d150b26"
+    "ae6f0efd8a"
    ],
-   "value": "OpenAI is an AI research and deployment company dedicated to ensuring general-purpose artificial intelligence benefits all of humanity. It pushes the boundaries of AI capabilities and deploys them safely to the world through products like ChatGPT and APIs, earning revenue primarily through tiered subscriptions and usage-based API access. Its core business model monetizes advanced AI research by turning frontier models into accessible developer and consumer tools."
+   "value": "OpenAI is an AI research and deployment company dedicated to building safe and beneficial general-purpose artificial intelligence. It generates revenue by developing advanced AI models and safely deploying them to the world through enterprise partnerships and native product integrations."
   },
-  "synthesized_evidence_sha": "d9c47641e64a4c96",
+  "synthesized_evidence_sha": "32a0793bcc63ab0f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "98f2743489",
-    "4c9d654807"
+    "4c9d654807",
+    "98f2743489"
    ],
-   "value": "Work spans full-stack product engineering for ambiguous enterprise workflows, infrastructure systems and networking reliability, AI agent improvement loops, WAN circuit bring-up, and bootsrapping scalable Kubernetes environments. Engineers operate close to research with high ownership and an emphasis on reliability, scale, and speed."
+   "value": "Involves full-stack product engineering, designing AI-native agent improvement loops, and building reliable infrastructure, systems, and automation to support rapid AI research at scale."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
   "web_search_url": "https://duckduckgo.com/?q=OpenAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "91f97436bc",
-    "9aaa0da327"
-   ],
-   "value": "Offers elite AI prestige at a mission-driven leader deploying cutting-edge models, perfectly aligning with top-tier ambitions. Explicit hybrid policy with optional WFH Thursdays/Fridays signals respect for boundaries, distinguishing OpenAI from 'always-in-office' burn-out cultures while still accelerating technical growth at the frontier of AI. The non-exempt hourly structure for some roles, with 40-hour standard weeks and overtime eligibility, proves a practical commitment to sane hours."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "OpenAI sits at the absolute apex of the AI industry, offering the elite prestige and top-tier new-grad pay candidates seek. Its deeply technical, high-ownership environment accelerates career growth and learning by allowing engineers to work end-to-end on ambiguous, cutting-edge problems alongside rapid research teams."
   },
   "wlb_rating": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "91f97436bc"
+    "91f97436bc",
+    "98f2743489"
    ],
-   "value": "Above average: 40-hour base with overtime eligibility suggests active discouragement of unlimited, uncompensated hours. Hybrid model with optional WFH Thursdays and Fridays. However, interviews and internal language emphasize speed and high-ownership, so pressure remains."
+   "value": "Estimated: Moderate; the environment demands independent, high-ownership execution in ever-changing, fast-paced environments, which can conflict with strict work-life boundaries."
   }
  },
  "openevidence": {
@@ -342999,7 +343011,7 @@
    "value": "High — core ML/computer vision work directly impacts clinical diagnostics and newborn screening; publishes in top venues; collaborates with academic medical centers; compensation competitive with top-tier tech."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -343015,7 +343027,7 @@
    "source_ids": [],
    "value": "Pharmaceutical and biotech companies, academic and government research labs, clinical diagnostic laboratories, hospitals, and public health screening programs worldwide."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -343040,7 +343052,7 @@
    ],
    "value": "Expect deep dive on Java/Vert.x reactive systems, REST API design, and cloud-native architecture. Prepare for ML/system design questions tied to real diagnostics workflows (e.g., imaging pipelines, variant calling). Behavioral rounds will probe regulatory mindset (FDA/IVDR), cross-functional collaboration with scientists, and handling ambiguity in high-stakes environments. Demonstrate ability to write testable, documented code in a regulated CI/CD pipeline."
   },
-  "last_attempt_at": 1785249536,
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785319487,
   "locations": {
    "confidence": "medium",
@@ -343072,6 +343084,7 @@
    "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 volunteer days. Accrual starts day one; carryover up to 5 days. Exact policy varies by country/state."
   },
   "refresh_after": 1790433536,
+  "retry_after": 1785321673,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -343155,7 +343168,7 @@
    "source_ids": [],
    "value": "As a large public company, Revvity routinely sponsors H-1B and green cards for technical roles. New-grad offers typically include sponsorship eligibility; confirm with recruiter for specific role and location."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406538,7 +406551,7 @@
    "value": "Likely Non-AI / Traditional Engineering. Does not align with top-tier AI or data science elite prestige."
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -406595,7 +406608,7 @@
    ],
    "value": "You should probe heavily into the daily realities of their Agile environment to ensure it isn't just process-heavy defense contracting. Ask about work-life balance, actual hours, and whether shutdowns or flexible time off are practically accessible or throttled by program demands. Clarify the compensation structure to see if it hits top-tier new-grad pay, and question internal mobility to ensure you can accelerate your learning without stalling in a bureaucratic silo."
   },
-  "last_attempt_at": 1785298935,
+  "last_attempt_at": 1785320713,
   "last_evidence_at": 1785298099,
   "locations": {
    "confidence": "high",
@@ -406637,7 +406650,7 @@
    "value": "Estimated: 15 to 20 days of paid time off annually for early career roles."
   },
   "refresh_after": 1790074746,
-  "retry_after": 1785320535,
+  "retry_after": 1785342313,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
