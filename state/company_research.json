@@ -43437,52 +43437,140 @@
  "augusta national golf club": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Low. Despite the company's unparalleled brand prestige, its AI and data science work is not recognized in the tech industry as top-tier or innovative."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Highly exclusive private club sustained by invitation-only membership dues, premium ticketing and merchandise sales, and lucrative broadcast media rights."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Highly traditional, discreet, and perfection-oriented. The culture prioritizes flawless execution and secrecy over rapid tech industry disruption or startup-style innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "An ultra-exclusive, invitation-only membership base and the global broadcast audience of the Masters Tournament."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Likely below top-tier tech standards, as compensation is anchored to local Georgia markets and hospitality norms rather than elite tech AI roles."
   },
   "evidence_sha": "0852be215fc12ba1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785296522,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785288318,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Private Golf Club and Sports Entertainment."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Ask how the tech team balances innovation with institutional caution, what the actual compensation bands are for new tech grads, and the typical pace of technical project delivery. Probe whether AI and data science work is core to the business or merely IT support."
+  },
+  "last_attempt_at": 1785296522,
   "last_evidence_at": 1785287954,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f67fe5b97b",
+    "5e75d48b0d",
+    "dbc3b9e88f"
+   ],
+   "value": "Augusta, Georgia, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "To provide an unparalleled, pristine private golf club experience for its members and to host the most prestigious tournament in professional golf."
+  },
   "name": "Augusta National Golf Club",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Slow to moderate. Operations are highly deliberate and traditional, with intense seasonal bursts leading up to and during the Masters Tournament."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Premier golfing experiences, the annual Masters Tournament, and exclusive championship merchandise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off, reflecting conservative corporate benefits rather than flexible tech industry policies."
   },
-  "retry_after": 1785288558,
+  "refresh_after": 1790480522,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: None found in research. The club does not typically offer tech-style company-wide shutdowns, though operations naturally slow down outside of tournament season."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Mature, highly established private institution operating as a seasonal venue with a permanent core staff and seasonal tournament workforce."
   },
   "sources": [
    {
@@ -43516,14 +43604,50 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f67fe5b97b",
+    "5e75d48b0d",
+    "dbc3b9e88f"
+   ],
+   "value": "Augusta National Golf Club is one of the most exclusive and prestigious private golf clubs in the world, famously hosting the annual Masters Tournament. It generates revenue through highly restricted membership dues, premium merchandising, and massive broadcasting rights for its signature tournament."
+  },
+  "synthesized_evidence_sha": "0852be215fc12ba1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Tech roles likely focus on internal operations, premium digital fan experiences for the Masters, broadcast technology support, and secure data management for club operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287954,
   "web_search_url": "https://duckduckgo.com/?q=Augusta+National+Golf+Club+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "While this company offers unmatched elite prestige and likely sane hours, it fundamentally conflicts with your target fast, innovative tech culture and top-tier new grad pay. Bureaucracy and tradition guide operations here, meaning technical learning and career growth will likely be slow and constrained by non-tech priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f67fe5b97b",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Likely offers standard, sane corporate hours with high stress only during the spring tournament season, respecting personal time outside of the annual event."
   }
  },
  "aurelius systems": {
@@ -102788,136 +102912,124 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: Low. Public sector tech lacks elite industry prestige compared to FAANG or top startups."
+   "value": "Estimated: Low. State government IT focuses on enterprise administration rather than top-tier AI or data science innovation."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Funded by tax revenues and federal allocations to provide public goods and government services."
+   "value": "Government-funded through taxation and federal grants, allocating capital to public works, administrative operations, and technical infrastructure."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: Traditional, bureaucratic, and public-service oriented."
+   "value": "Estimated: Mission-driven, stable, and traditional. Prioritizes public service over rapid technological innovation or aggressive career growth."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Residents of Massachusetts, businesses, and visitors to the state."
+   "value": "The residents of Massachusetts, businesses operating within the state, and internal government departments requiring technical solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: $70,000-$85,000. Below top-tier tech standards."
+   "value": "Estimated: $70,000 - $90,000. Public sector compensation provides a stable baseline but generally lacks the top-tier new-grad pay seen in elite tech or finance."
   },
   "evidence_sha": "5d363a8dad59618b",
-  "generated_at": 1784868614,
+  "generated_at": 1785296522,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Government and Public Administration."
+   "value": "Government Administration"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Focus on the speed of tech adoption during interviews. Verify if data teams use modern stacks or legacy systems, and confirm overtime expectations."
+   "value": "Be prepared to discuss how you will maintain technical acceleration and learning in a slower-paced bureaucratic environment. You should also ask about opportunities to modernize legacy systems and clarify expectations around work-life balance to ensure it meets your guaranteed shutdown requirements."
   },
-  "last_attempt_at": 1785288139,
+  "last_attempt_at": 1785296522,
   "last_evidence_at": 1785286524,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Boston, MA (capital) with offices and facilities across all regions of the state."
+   "value": "State of Massachusetts, USA."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "To serve the public by administering state programs, maintaining infrastructure, and ensuring the well-being and safety of its constituents."
+   "value": "To serve the public by effectively administering state resources, protecting citizens, and improving the quality of life across the Commonwealth."
   },
   "name": "Commonwealth of Massachusetts",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: Slow. Bureaucracy and red tape severely limit innovation speed compared to private tech."
+   "value": "Estimated: Slow. Bureaucratic processes and public sector regulations typically result in a methodical, non-agile work pace."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Public services, regulatory oversight, infrastructure, and digital platforms for state residents."
+   "value": "Public services, regulatory oversight, and administrative software platforms such as grant management systems and Salesforce-based civic tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: 15-25 days of vacation plus state holidays and generous sick leave."
+   "value": "Estimated: 15-25 days of annual leave, plus generous state holidays and personal time, reflecting standard government benefits."
   },
-  "refresh_after": 1790052614,
-  "retry_after": 1785289099,
+  "refresh_after": 1790480522,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "edcf5e740b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: None found in research, likely limited to occasional state holidays."
+   "value": "Estimated: Potential for ad-hoc state holiday closures, but no guaranteed tech-industry style holiday shutdowns."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Mature government entity with thousands of employees across various state agencies."
+   "value": "Mature, massive-scale public sector employer."
   },
   "sources": [
    {
@@ -102964,28 +103076,26 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: Public sector generally provides limited immigration sponsorship compared to tech firms."
+   "value": "Estimated: Typically, U.S. state governments do not offer employment visa sponsorship for technical roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b",
+    "af7ad9dbdb"
    ],
-   "value": "The Commonwealth of Massachusetts is the U.S. state government entity responsible for public administration and services. It funds its operations through state taxes, federal grants, and fees."
+   "value": "The Commonwealth of Massachusetts is a U.S. state government entity focused on public administration and providing civic services to its residents. It funds its operations through taxes, federal grants, and state revenues, deploying these resources across various departments to maintain public infrastructure, safety, and welfare."
   },
-  "synthesized_evidence_sha": "4ae5a767d3f5de93",
+  "synthesized_evidence_sha": "5d363a8dad59618b",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Digital services, enterprise IT, data management, and public policy analytics across various state departments."
+   "value": "Involves enterprise software maintenance and development, including Salesforce development using Apex, SOQL, SOSL, and OmniStudio to support state agencies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586000,
@@ -102993,18 +103103,16 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "A government role may align with mission-driven work and strict work-life boundaries, but it will clash with the desire for a fast, innovative tech culture and high new-grad pay."
+   "value": "While the Commonwealth offers strong work-life balance and sane hours typical of the public sector, it fundamentally conflicts with your priority for elite pay, high prestige, and a fast, innovative tech culture. State government administration is traditionally characterized by slow bureaucracy and older enterprise stacks rather than cutting-edge, high-growth technical learning."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "af7ad9dbdb",
-    "83cc670d66"
+    "edcf5e740b"
    ],
-   "value": "Estimated: High. Public sector roles typically feature predictable 40-hour weeks and strong boundary respect."
+   "value": "Estimated: High. Public sector roles generally offer predictable, sane hours and strong respect for personal time, avoiding toxic burnout cultures."
   }
  },
  "community care cooperative c3": {
@@ -291069,46 +291177,46 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "ca29519020"
    ],
-   "value": "Estimated: High tier prestige for mission-critical and aerospace AI, though less recognized in elite commercial tech circles."
+   "value": "Estimated: Tier 2 or 3 for general AI/Data Science. Highly prestigious within the defense and aerospace sector, but lacks the 'elite' prestige typical of top-tier commercial tech or FAANG companies, as R&D is often constrained by government contract requirements rather than rapid commercial innovation."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "ca29519020",
-    "7e2fce2b3b"
+    "2ac8260b50"
    ],
-   "value": "Sells advanced aerospace, software, and space engineering solutions to government, civil, and commercial entities."
+   "value": "B2B and B2G aerospace and defense contracting, delivering unmatched space capabilities and advanced engineering systems to civil, commercial, and government entities."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "fad20b9095",
-    "2ac8260b50",
-    "515e4ef937"
+    "3339ff854b",
+    "fad20b9095"
    ],
-   "value": "Intellectually curious and cognitively diverse, encouraging employees to bring their whole selves to work."
+   "value": "A mission-focused culture that thrives on intellectual curiosity, cognitive diversity, and bringing your whole self to work, with an insatiable drive to accomplish what others think is impossible."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "ca29519020"
    ],
-   "value": "Government, civil, and commercial customers."
+   "value": "Government, civil, and commercial customers seeking reliable and affordable solutions for their biggest global challenges."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "ca29519020",
+    "7e2fce2b3b"
    ],
-   "value": "Estimated: $80,000 - $110,000 base salary."
+   "value": "Estimated: $80,000 - $110,000 base salary. Northrop Grumman provides a variety of benefits including health insurance, life/disability insurance, and a savings plan, indicating a comprehensive compensation package that may not hit the peak base salaries of top commercial tech firms but offers strong stability."
   },
   "evidence_sha": "d5d2c05e6a3cc12b",
-  "generated_at": 1784925820,
+  "generated_at": 1785296522,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -291120,66 +291228,69 @@
     "2ac8260b50",
     "ca29519020"
    ],
-   "value": "Aerospace, Defense, and Space Technology."
+   "value": "Aerospace, Defense, and Security Technology."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "7e2fce2b3b",
+    "fad20b9095"
    ],
-   "value": "Candidates should expect interviews centered on safety-critical and real-time system development, Agile collaboration, and multi-disciplinary problem-solving. It is crucial to ask interviewers about team-specific work-life balance, shutdown policies, and tech stack modernization to ensure the role meets expectations for sane hours and fast-paced innovation."
+   "value": "Given the candidate's desire for accelerated career growth and sane work-life balance balanced against a highly bureaucratic industry, the interview should focus on team-specific Agile practices, the autonomy given for innovation, actual day-to-day project pace, and how the specific role (like Data Scientist) avoids bureaucratic gridlock or burnout. It is critical to clarify expectations around hours, security clearance processing timelines, and how technical learning is fostered without sacrifi"
   },
-  "last_attempt_at": 1785287957,
+  "last_attempt_at": 1785296522,
   "last_evidence_at": 1785286524,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "3339ff854b",
     "fad20b9095",
-    "2ac8260b50",
     "ca29519020"
    ],
-   "value": "Locations include Morrisville, North Carolina; Palmdale, California; Corinne, Utah; and Colorado Springs, Colorado."
+   "value": "Multiple locations across the United States, including Roy, Utah; Corinne, Utah; Morrisville, North Carolina; and Palmdale, California."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "fad20b9095",
-    "2ac8260b50",
-    "515e4ef937"
+    "3339ff854b"
    ],
-   "value": "Driven by intellectual curiosity and cognitive diversity, the company has an insatiable drive to do what others think is impossible by building revolutionary systems that impact lives around the world today and for generations to come."
+   "value": "To provide employees with opportunities to work on revolutionary systems that impact people's lives around the world today and for generations to come, driven by an insatiable drive to do what others think is impossible."
   },
   "name": "Northrop Grumman",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "7e2fce2b3b",
+    "fad20b9095"
    ],
-   "value": "Estimated: Moderate to slow pace typical of large defense contractors, heavily reliant on government contracts and multi-disciplinary Agile teams."
+   "value": "Estimated: Moderate to slow. The work is highly mission-driven and bound by safety-critical requirements, Agile environments, and defense contracting protocols, which often favor structured, slower-paced development cycles over a fast, freewheeling tech culture."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "fad20b9095",
+    "ca29519020",
     "7e2fce2b3b",
-    "ca29519020"
+    "3339ff854b"
    ],
-   "value": "Revolutionary aerospace systems, embedded and real-time software, and unmatched space capabilities and solutions."
+   "value": "Advanced aeronautics systems, embedded and real-time software for safety-critical systems, custom SharePoint applications, and agile space solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "3339ff854b",
+    "fad20b9095",
+    "ca29519020"
    ],
-   "value": "Estimated: 15 to 20 days of paid time off for vacation and personal business, in addition to company paid holidays."
+   "value": "Estimated: 15 to 20 days of paid time off (PTO) for vacation and/or personal business, alongside company-paid holidays."
   },
-  "refresh_after": 1790109820,
-  "retry_after": 1785295637,
+  "refresh_after": 1790480522,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d"
+    "3339ff854b"
    ],
    "value": "None found in research"
   },
@@ -291187,17 +291298,18 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "3339ff854b",
+    "0c2dfc111c"
    ],
-   "value": "Estimated: Often includes a holiday shutdown period."
+   "value": "Estimated: No explicit mention of guaranteed shutdowns in the provided sources, though defense contractors sometimes offer holiday breaks or limited shutdown periods between Christmas and New Year's."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "1db9db9c4d",
-    "7e2fce2b3b"
+    "2ac8260b50",
+    "fad20b9095"
    ],
-   "value": "Large, established global defense and aerospace contractor with extensive multi-disciplinary teams across the US."
+   "value": "Large, established enterprise (Tier 1 defense contractor)."
   },
   "sources": [
    {
@@ -291262,47 +291374,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d",
-    "7e2fce2b3b",
+    "3339ff854b",
     "fad20b9095"
    ],
-   "value": "Not explicitly mentioned in the provided sources."
+   "value": "Not explicitly mentioned in the provided sources, but defense contractors typically require U.S. citizenship and the ability to obtain a security clearance."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "7e2fce2b3b",
-    "ca29519020"
+    "ca29519020",
+    "fad20b9095",
+    "2ac8260b50"
    ],
-   "value": "Northrop Grumman is a premier aerospace and defense technology company that designs, develops, and integrates advanced systems like embedded software and space technologies. They make money by providing reliable, agile, and affordable solutions to government, civil, and commercial customers solving their biggest challenges."
+   "value": "Northrop Grumman is a premier global aerospace, defense, and security technology company that designs, develops, and manufactures revolutionary systems for space, aeronautics, and defense. The company makes money by securing contracts to provide advanced, mission-critical hardware, software, and space solutions to government, civil, and commercial customers."
   },
-  "synthesized_evidence_sha": "eaae15fc16277b64",
+  "synthesized_evidence_sha": "d5d2c05e6a3cc12b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "7e2fce2b3b"
+    "7e2fce2b3b",
+    "0c2dfc111c"
    ],
-   "value": "Designing, developing, integrating, and testing software for embedded and real-time systems using C, C++, Python, and Real-Time Operating Systems in an Agile environment."
+   "value": "Designing, developing, integrating, and testing software in Agile environments; working on embedded, real-time, safety-critical systems; building custom web parts and applications; and leveraging technical skills in React, JavaScript, TypeScript, HTML5, CSS3, C, C++, and Python."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586005,
   "web_search_url": "https://duckduckgo.com/?q=Northrop+Grumman+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "fad20b9095",
+    "3339ff854b"
    ],
-   "value": "While the company offers strong mission-driven work impacting global security and space exploration, it may struggle to meet a candidate's desire for a fast, innovative tech culture free of slow bureaucracy. However, itsdefense sector requirements for safety-critical systems provide elite learning opportunities in AI and data science that carry high prestige."
+   "value": "While Northrop Grumman offers mission-driven work on revolutionary systems and highlights an environment of intellectual curiosity, a top-tier AI or data candidate must weigh this against the reality of defense contracting. The candidate prioritizes a fast, innovative tech culture with elite prestige and high new-grad pay, which can be at odds with the slow bureaucracy, strict compliance, and security regulations inherent to aerospace and defense work."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "3339ff854b",
+    "2ac8260b50"
    ],
-   "value": "Estimated: Good work-life balance due to standard government contract hours."
+   "value": "Estimated: Good to Very Good. Defense contractors typically operate on standard 40-hour weeks with structured schedules to fulfill government contract metrics, supporting sane hours and avoiding frequent toxic burnout, though shutdowns are not explicitly guaranteed in these sources."
   }
  },
  "northrop grumman australia": {
@@ -339510,52 +339625,126 @@
  "reltio": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Tier 2 (Specialized Data Infrastructure) - Highly respected within the enterprise data ecosystem but not a household name like OpenAI or Databricks."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "B2B enterprise SaaS model, charging organizations recurring subscription fees for cloud-based data management and unification software."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Collaborative and excellence-driven, with a strong focus on 'Simplifying and Sharing' knowledge to remove obstacles for colleagues."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Global large-scale enterprises across highly regulated and data-intensive industries such as life sciences, healthcare, consumer goods, and financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary, aligned with standard late-stage enterprise SaaS market rates for remote roles."
   },
   "evidence_sha": "54fbf43e61ba5bc3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785296522,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785288483,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Enterprise Software & Cloud Data Management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Candidates should emphasize their ability to adapt quickly in a fast-paced environment while maintaining high data quality. Highlighting a collaborative mindset, eagerness to simplify and share knowledge, and a proven ability to learn technical concepts rapidly will align well with the company's culture and the candidate's desire for growth without burnout."
+  },
+  "last_attempt_at": 1785296522,
   "last_evidence_at": 1785287961,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "eafc901f75"
+   ],
+   "value": "Hires remotely and operates globally, with job postings and recruiting managed through platforms like Greenhouse."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "To achieve excellence by simplifying and sharing knowledge, collaborating to remove obstacles for team members, and maintaining high data quality to empower customers."
+  },
   "name": "Reltio",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Estimated: Fast-paced, requiring quick adaptation to changing internal processes and cross-functional demands."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Reltio Connected Data Platform, which includes Reltio Master Data Management (MDM), Reltio Customer 360, and Reltio Data Cloud applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO, typical for late-stage enterprise SaaS companies."
   },
-  "retry_after": 1785288723,
+  "refresh_after": 1790480522,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "eafc901f75",
+    "0f2f4eb476"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Estimated: No explicit mention of guaranteed company-wide shutdowns in public postings."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Late-stage private company backed by venture capital, positioned as a recognized leader in its category with numerous industry awards."
   },
   "sources": [
    {
@@ -339609,14 +339798,46 @@
     "url": "https://job-boards.greenhouse.io/reltio/jobs/5894714004"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "eafc901f75",
+    "0f2f4eb476"
+   ],
+   "value": "Specific visa sponsorship details are not explicitly advertised in standard job descriptions, though global enterprise tech firms of this stage often sponsor selectively for high-demand roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Reltio is an enterprise data platform provider specializing in cloud-native master data management (MDM) and connected data experiences. The company generates revenue by selling SaaS subscriptions to large enterprises seeking to unify, clean, and govern their fragmented data for operational and AI use cases."
+  },
+  "synthesized_evidence_sha": "54fbf43e61ba5bc3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Involves close coordination with teams like Finance, Legal, and Sales Ops to maintain high data quality and improve internal processes, requiring the ability to adapt quickly in a fast-paced environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785287961,
   "web_search_url": "https://duckduckgo.com/?q=Reltio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Reltio offers access to the high-growth, cutting-edge data infrastructure and AI-readiness sector. For early-careercandidates, this means exposure to enterprise-scale data challenges and modern cloud architectures that accelerate technical learning without the stagnation of legacy corporate bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0f2f4eb476"
+   ],
+   "value": "Estimated: Moderate to Good. The company emphasizes collaboration and obstacle removal, though the fast-paced environment requires vigilance over personal bandwidth."
   }
  },
  "relx": {
