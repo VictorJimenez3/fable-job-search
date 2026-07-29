@@ -12872,79 +12872,75 @@
  },
  "ahead": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "5c768d7bce",
-    "7f04cda5bb"
+    "711df3d3fe"
    ],
-   "value": "Low for elite AI/data science. The focus is on enterprise IT consulting and platform integration (e.g., ServiceNow, cloud infrastructure) rather than foundational AI/DS model building."
+   "value": "Mid-tier. AHEAD is a well-established digital transformation consultancy but lacks the elite FAANG-level AI/DS brand recognition or pure-play big data product notoriety. Prestige derives from strong partnerships with hyper-scaler cloud providers and depth in enterprise platform engineering."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "5c768d7bce",
-    "7f04cda5bb"
+    "711df3d3fe"
    ],
-   "value": "B2B IT consulting and systems integration, monetizing through the design, delivery, and management of enterprise cloud, analytics, and software platforms."
+   "value": "Business-to-business technology services model generating revenue through IT consulting, cloud infrastructure projects, managed services, and software delivery engagements."
   },
   "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "customers": {
    "confidence": "high",
    "source_ids": [
     "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "Highly inclusive and collaborative, explicitly prioritizing spaces where all perspectives and voices are represented, valued, respected, and heard."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "5c768d7bce"
-   ],
-   "value": "Enterprises seeking digital transformation."
+   "value": "Enterprises pursuing digital transformation."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "711df3d3fe",
-    "7f04cda5bb"
-   ],
-   "value": "Estimated: $70k - $85k base, aligning with standard market rates for entry-level IT process and technical consulting roles, which may fall short of elite-tier AI/DS pay."
+   "source_ids": [],
+   "value": "Estimated: $85,000-$115,000 for data science or AI-related technical roles, based on competitive mid-market IT services consultancy compensation. Total comp mostly salary with bonus, possibly less equity or RSU-heavy offers than tech product companies."
   },
   "evidence_sha": "b24cc9982eead04e",
-  "generated_at": 1784870150,
+  "generated_at": 1785347070,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "5c768d7bce",
-    "7f04cda5bb"
+    "711df3d3fe"
    ],
-   "value": "IT Services and IT Consulting"
+   "value": "IT Services and Consulting"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "5c768d7bce",
-    "7f04cda5bb"
+    "711df3d3fe"
    ],
-   "value": "Based on your priorities, ask about the actual day-to-day pace of technical learning versus administrative bureaucracy. Also, ask about WLB policies, pto, and guaranteed shutdowns, as they likely vary significantly by client-facing consulting engagements."
+   "value": "Expect to discuss cloud infrastructure, automation, and analytics implementation skills. Behavioral questions will likely assess alignment with the inclusive culture and fit within an enterprise-services delivery model. The candidate should probe for specifics on project cycles, on-call expectations, and typical billable hours targets to confirm WLB claims."
   },
-  "last_attempt_at": 1784870150,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "e4f7f92e6e",
-    "0705c7a981"
+    "1a899635eb",
+    "5c768d7bce",
+    "711df3d3fe"
    ],
-   "value": "Not explicitly stated in the provided sources, but the .com and .org domains suggest a primarily US-based operational presence."
+   "value": "United States-based with remote and in-office positions posted on Lever careers platform. Exact headquarters or office locations not specified in current sources."
   },
   "mission": {
    "confidence": "high",
@@ -12952,58 +12948,46 @@
     "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "To help enterprises deliver on the promise of digital transformation while prioritizing a culture of belonging where all perspectives are represented, valued, and heard."
+   "value": "To help enterprises deliver on the promise of digital transformation by building platforms for digital business while creating a culture of belonging where all voices are represented, valued, respected, and heard."
   },
   "name": "AHEAD",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "7f04cda5bb",
-    "711df3d3fe"
-   ],
-   "value": "Estimated: Moderately fast, driven by client demands and consulting engagement deadlines rather than a hyper-growth product startup culture, which may carry some risk of bureaucracy."
+   "source_ids": [],
+   "value": "Estimated: Moderate to moderately fast. Project-based client delivery creates spikes, but the brand identity avoids the frantic pace of Silicon Valley startups. The role-focused (non-strategy consulting) nature implies structured rather than chaotic schedules."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "5c768d7bce"
+    "5c768d7bce",
+    "1a899635eb",
+    "711df3d3fe"
    ],
-   "value": "Digital business platforms built on advances in cloud infrastructure, automation and analytics, and software delivery."
+   "value": "Digital transformation platforms combining cloud infrastructure, automation, analytics, and software delivery services. Solutions include intelligent operations, IT procurement services, and incident and problem management processes."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "5c768d7bce"
-   ],
-   "value": "Estimated: 15-25 days annually, typical for an established US-based IT consulting firm, though exact policies are unstated."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days annually for new graduate hires, consistent with professional services organizations. Actual policy may include sick leave and personal days."
   },
-  "refresh_after": 1790054150,
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "5c768d7bce",
-    "711df3d3fe",
-    "7f04cda5bb"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "5c768d7bce"
-   ],
-   "value": "Estimated: Standard paid holidays, though no info on guaranteed corporate-wide shutdowns was found."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed seasonal company-wide shutdowns found in research. Holiday observances are standard corporate schedule."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "7f04cda5bb",
-    "711df3d3fe",
-    "5c768d7bce"
-   ],
-   "value": "Established corporate IT consultancy with a broad footprint of technical and consulting roles (e.g., ServiceNow, Process Analysis, Sales)."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -13068,13 +13052,9 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "5c768d7bce",
-    "711df3d3fe",
-    "7f04cda5bb"
-   ],
-   "value": "No specific visa sponsorship details found in the provided sources."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
@@ -13083,27 +13063,28 @@
     "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "AHEAD is an IT consulting and managed services firm that designs and builds platforms for enterprise digital transformation. They make money by helping enterprise clients weave together cloud infrastructure, automation, analytics, and software delivery."
+   "value": "AHEAD builds and manages digital platforms for enterprises by weaving together cloud infrastructure, automation, analytics, and software delivery. It makes money by selling consulting, managed services, and IT solutions that help large organizations modernize their tech stacks and operations."
   },
-  "synthesized_evidence_sha": "d70551bff5d06a57",
+  "synthesized_evidence_sha": "b24cc9982eead04e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "7f04cda5bb",
+    "5c768d7bce",
     "711df3d3fe",
-    "5c768d7bce"
+    "1a899635eb"
    ],
-   "value": "ServiceNow consulting (CMDB, Discovery, Integrations), process analysis for IT service management, and weaving together cloud infrastructure, automation, and analytics for enterprise platforms."
+   "value": "Work spans cloud infrastructure engineering, automation development, analytics implementations, software delivery pipelines, incident management processes, and intelligent operations solutions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=AHEAD+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "5c768d7bce"
+    "5c768d7bce",
+    "711df3d3fe"
    ],
-   "value": "AHEAD emphasizes a culture of belonging and respect, aligning with your desire for a non-toxic environment. However, as an IT services consultancy, it likely prioritizes enterprise software and cloud integrations over the fast-paced, elite-tier AI/data science product development you are seeking."
+   "value": "AHEAD's emphasis on a culture of belonging and empowered voices suggests a non-toxic environment respectful of work-life balance. The focus on modern tech platforms means the candidate would work on relevant cloud, analytics, and automation stacks that accelerate career growth. Absence of any mention of crunch-time or high burnout in official materials indicates a more sustainable pace than traditional high-pressure consultancies. Compensation for new grad tech roles is estimated to be competiti"
   },
   "wlb_rating": {
    "confidence": "estimated",
@@ -13111,7 +13092,7 @@
     "5c768d7bce",
     "711df3d3fe"
    ],
-   "value": "High based on cultural statements emphasizing respect and belonging, but likely variable for technical consultants based on client project demands."
+   "value": "Estimated: Good, as enterprise service firms that manage IT operations and long-term transformation projects often then offer more predictable hours than management consulting or product firms. Culture of belonging reinforces environment respectful of personal boundaries."
   }
  },
  "ai2 applicazioni di ingegneria ed informatica s r l": {
@@ -25530,94 +25511,126 @@
  "american express": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier within financial services; elite for applied ML at scale with proprietary closed-loop data. Recognized for fraud/risk ML leadership."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Tier 1 Financial Services Experiential AI (Below pure-play big tech / LLM-first companies in prestige, but highly competitive compensation enables recruitment of elite data scientists for fraud, risk, and transactionbased modeling)."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Closed-loop network earning revenue from discount fees paid by merchants, net interest income on revolving balances, annual card fees, foreign exchange conversions, and travel service commissions."
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Closed-loop payments network capturing revenue from both merchants (discount fees) and card members (interest, annual fees, late fees)."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Professional, collaborative, customer-obsessed, and inclusive. 'Blue Box' values (customer commitment, quality, integrity, teamwork, respect, accountability). Low ego, high support. Diverse workforce with strong ERGs. Not a 'bro culture'."
+   "confidence": "high",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "Professional, collaborative, and mission-driven, emphasizing support for colleagues and customers via innovation and shared values."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Individual consumers (premium/affluent segments), small to large businesses, merchants accepting Amex cards, and corporate travel clients worldwide."
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Consumers, small and medium-sized businesses, and large global corporations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Base $115-135K, Signing $15-30K, RSU $40-80K over 4 years. Total Year 1 ~$170-220K. Higher for PhD/ML specialist roles. Annual refreshers ~$20-40K."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Estimated: $110k - $160k base salary total compensation (variable depending on role, performance, location, and stock options)."
   },
   "evidence_sha": "fd08a38f59cc7a3f",
-  "generated_at": 1784682541,
+  "generated_at": 1785347070,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Financial Services / Payments / FinTech"
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Financial Services / Consumer Finance / Information Technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep ML system design (fraud detection, ranking, risk), production ML lifecycle questions, SQL/analytics case studies, and behavioral alignment with 'customer obsession' and 'integrity' values. LeetCode medium/hard for DS roles; emphasis on clean code, testing, and scalability. Prepare for 'how would you build X for Amex' product sense questions."
+   "confidence": "medium",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "Candidates seeking top-tier AI roles must probe deeply into team-specific schedules and pace during interviews by asking hiring managers about project deployments, on-call expectations, and average working hours for the first 6 months. Prepare to present portfolio examples that demonstrate rigorous technical execution alongside a strong adherence to amex's leadership behaviors, and ask interviewers directly about how their specific org protects personal time to gauge culture fit."
   },
-  "last_attempt_at": 1785346750,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785342281,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Headquarters in New York, NY. Major tech hubs in New York, Phoenix, Sunrise (FL), London, Bangalore, Singapore, Mexico City. Remote/hybrid options vary by role."
+   "confidence": "medium",
+   "source_ids": [
+    "7e6b64de76",
+    "51c4ce8f5c"
+   ],
+   "value": "United States of America (primary employer focus) and global hubs worldwide with remote opportunities available."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: To provide the world's best customer experience every day, backed by a commitment to trust, security, and service excellence across payments and financial services."
+   "confidence": "high",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "To back customers, communities, and colleagues through a culture built on shared values, leadership behaviors, and a commitment to innovation."
   },
   "name": "American Express",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Deliberate and measured. Regulatory/compliance constraints enforce thoroughness. Not 'move fast break things'; sprints are 2 weeks with planning overhead. Innovation happens via hackathons, research partnerships, and dedicated labs."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Estimated: Moderate-to-fast, balancing startup-like data projects with enterprise governance, risk, and compliance (GRC)."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Consumer and commercial credit/charge cards, payment processing network, travel booking and services, banking products (savings, loans), merchant services, and digital payment solutions."
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Charge cards, credit cards, payment processing networks, expense management software, travel booking services, and banking products."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days PTO + 10-12 company holidays + 2-3 mental health/wellness days. Unlimited sick leave. Accrual starts day one. Carryover up to 5 days."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Estimated: 20-28 paid days off annually (combining standard vacation and sick leave) plus company-paid holidays."
   },
-  "retry_after": 1785346990,
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Full company shutdown between Christmas and New Year (typically Dec 24-Jan 1). Summer 'recharge' week in July for some regions. No guaranteed monthly shutdowns."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, but flexible work policies may allow extended holiday time off."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Large public company (NYSE: AXP) with ~64,000 employees globally (2023), mature stage, Fortune 500, market cap ~$150B+."
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Mature, large-cap publicly traded enterprise."
   },
   "sources": [
    {
@@ -25672,33 +25685,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Actively sponsors H-1B visas for technical roles; green card support common for high-performing employees. University recruiting targets top CS/DS programs globally."
+   "confidence": "high",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "US employment eligibility required for current role openings. The company does not offer visa sponsorship for US-based Data Engineer positions and will not pursue visa sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: American Express is a global financial services company known for its charge and credit card products, payment network, and travel services. It operates a closed-loop network connecting cardmembers, merchants, and partners."
+   "confidence": "medium",
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "American Express (Amex) is a global integrated payments company and financial services corporation that provides charge cards, credit cards, and payment processing services. They make money primarily through transaction fees from merchants, interest on outstanding credit balances, and annual card membership fees."
   },
+  "synthesized_evidence_sha": "fd08a38f59cc7a3f",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Heavy investment in AI/ML for fraud detection, risk modeling, personalization, credit underwriting, NLP for customer service, and real-time payment analytics. Cloud migration, platform engineering, and data platform modernization are active."
+   "confidence": "high",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "Data engineering pipelines, software application development, machine learning algorithms, and secure service maintenance. Focus areas include Global Servicing Technology where engineers develop and test software applications under senior guidance, alongside data engineering initiatives to process large-scale transaction data."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=American+Express+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "American Express offers elite prestige in financial services AI with a closed-loop data advantage (card + merchant + spend data). New-grad total compensation is top-tier (~$170-220K). Culture emphasizes 'win as a team' and 'embrace diversity' with documented focus on work-life integration (flexible schedules, mental health resources). Technical learning is accelerated through massive-scale fraud/risk ML, real-time streaming architecture, and a structured engineering career ladder. Avoids the 'mo"
+   "confidence": "medium",
+   "source_ids": [
+    "7e6b64de76"
+   ],
+   "value": "American Express operates at the intersection of fintech and enterprise data science, offering elite brand prestige combined with competitive compensation. For high-achieving new graduates, it provides a fast-paced space to build impactful machine learning models on massive transactional datasets within a company that values adherence to cultural values."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5. Strong culture of respecting boundaries: core hours, meeting-free Fridays in some orgs, generous mental health days, 'Amex Flex' hybrid model. On-call rotations exist for critical platforms but are managed. Rare weekend work outside incidents."
+   "source_ids": [
+    "51c4ce8f5c"
+   ],
+   "value": "Estimated: Strong work-life balance relative to high-burnout quantitative trading or big tech AI labs, featuring flexible work arrangements and a culture designed to retain talent."
   }
  },
  "american honda motor company inc": {
@@ -47852,84 +47876,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "High – dedicated AI research team publishing at CVPR/ICCV, production ML for video analytics, redaction, and transcription; recognized in GovTech but not a primary AI lab like FAIR/DeepMind."
+   "value": "Estimated: Mid-tier. While highly prestigious in the public safety sector, it is not traditionally classified alongside elite pure-tech AI/DS giants, though it offers meaningful data and reliability challenges."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Hardware sales (TASER devices, cameras) combined with high-margin recurring SaaS subscriptions for evidence management, records, and AI analytics; also offers training and certification programs."
-  },
-  "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
-    "56374d1123",
-    "72f40f3e06"
+    "56374d1123"
    ],
-   "value": "Mission-driven, transparent, and collaborative; values candor and care, diverse perspectives, and teamwork ('we work better together')."
+   "value": "Operates as a total compensation company deriving revenue from the sale of public safety hardware and software platforms."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2",
+    "56374d1123"
+   ],
+   "value": "Collaborative and candid. The company values working better together, connecting with care, and actively seeking out diverse perspectives from customers, communities, and colleagues."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary customers are law enforcement agencies (local, state, federal), corrections, fire/EMS, and enterprise security teams in the US and internationally."
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2"
+   ],
+   "value": "Law enforcement agencies, public safety organizations, and internal teams utilizing the Axon 911 platform."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $120k-$145k base + equity (RSUs) + bonus; total compensation ~$160k-$200k for software/AI roles, competitive with top-tier public tech companies."
+   "source_ids": [
+    "56374d1123"
+   ],
+   "value": "Estimated: Highly competitive total compensation package. Axon explicitly states it is a total compensation company, likely placing new grad tech pay in the upper-middle bracket for the industry."
   },
   "evidence_sha": "712ca06c9248f4e0",
-  "generated_at": 1784869535,
+  "generated_at": 1785347070,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public safety technology / GovTech (law enforcement hardware & SaaS)"
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2"
+   ],
+   "value": "Public Safety Technology and Hardware"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens on ML/CV, distributed systems, and IoT firmware; behavioral questions emphasizing candor, customer empathy, and collaboration; prepare for system design around evidence management scale and real-time constraints."
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2",
+    "56374d1123"
+   ],
+   "value": "Given the candidate's priority for a high-learning, fast-paced environment without toxic burnout, interviews should probe how the 'fast-paced' culture translates to actual daily hours and on-call expectations for Site Reliability Engineers. Candidates should ask about guaranteed shutdowns, total compensation packages for new grads, and how operational excellence is balanced against personal time."
   },
-  "last_attempt_at": 1784869535,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785341822,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Headquartered in Scottsdale, AZ; major engineering hubs in Seattle, WA; Vancouver, Canada; and remote-friendly roles across the US."
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To protect life and make the bullet obsolete by providing less-lethal weapons and transparent, accountable public safety technology."
+   "confidence": "medium",
+   "source_ids": [
+    "b32216b1c2",
+    "56374d1123"
+   ],
+   "value": "To protect life and make community safety a reality through fast-paced, meaningful work and diverse collaboration."
   },
   "name": "Axon",
   "pace_of_work": {
    "confidence": "high",
    "source_ids": [
-    "56374d1123",
-    "72f40f3e06"
+    "b32216b1c2",
+    "56374d1123"
    ],
-   "value": "Fast-paced, challenging, and meaningful; job postings explicitly describe the environment as fast-paced."
+   "value": "Estimated: Fast-paced and challenging. The company explicitly describes its environment this way, which may indicate high output expectations and rapid development cycles."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "TASER conducted energy weapons, Axon Body cameras, Axon Fleet in-car video, Axon Evidence (cloud evidence management), Axon Records (RMS), Axon Respond (real-time operations), and AI-powered analytics tools."
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2"
+   ],
+   "value": "Hardware devices like TASERs and body cameras, alongside software platforms such as Axon 911."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited not indicated."
+   "value": "Estimated: 20-25 days of PTO. Exact policy not provided in sources, but typical for a company of this stage emphasizing total compensation."
   },
-  "refresh_after": 1790053535,
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47939,12 +47980,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdown periods publicly documented; some teams may observe holiday breaks."
+   "value": "Estimated: Standard US public holidays. Guaranteed company-wide shutdown periods are not explicitly mentioned in the provided sources."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Publicly traded (NASDAQ: AXON), ~2,500+ employees, mature growth stage with consistent profitability and expanding product portfolio."
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -48009,37 +48050,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Actively sponsors H-1B visas and supports green card processes for technical roles; history of cap-exempt and cap-subject filings for software, AI, and hardware engineering."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Axon is a public safety technology company that develops conducted energy devices (TASER), body cameras, in-car video, and cloud-based evidence management software. It generates revenue through hardware sales and recurring software-as-a-service subscriptions to law enforcement and public safety agencies worldwide."
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2",
+    "5b6464abc0"
+   ],
+   "value": "Axon develops public safety technologies, including TASER devices and body-worn cameras, to help law enforcement agencies manage and record their operations. The company makes money by selling these hardware devices and offering related cloud-based software solutions like Axon 911."
   },
-  "synthesized_evidence_sha": "aeb258da9af920b6",
+  "synthesized_evidence_sha": "712ca06c9248f4e0",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Computer vision, machine learning for video redaction and analytics, large-scale cloud infrastructure (AWS/Azure), IoT device firmware, real-time streaming, mobile apps, and high-availability backend services."
+   "confidence": "high",
+   "source_ids": [
+    "b32216b1c2"
+   ],
+   "value": "Focuses on ensuring reliability, performance, and operational excellence across a rapidly growing environment for platforms like Axon 911."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=Axon+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "56374d1123",
-    "72f40f3e06"
+    "b32216b1c2"
    ],
-   "value": "Axon offers elite AI/computer vision work on mission-critical public safety products with top-tier new-grad compensation. Its fast-paced, innovative culture (per job postings) balances meaningful impact with a stated emphasis on candor and care, aligning with a desire for technical growth without toxic burnout."
+   "value": "Axon explicitly states that life at the company is fast-paced, challenging, and meaningful, catering to candidates seeking an innovative tech culture that avoids slow bureaucracy. The mission-driven nature of protecting public safety satisfies the desire for impactful work, though candidates should verify if the fast-paced environment aligns with their work-life balance and sane hours requirements during the interview process."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to good – company promotes candor and care, but public safety mission can drive occasional urgency; no public guaranteed shutdown policy."
+   "source_ids": [
+    "b32216b1c2"
+   ],
+   "value": "Estimated: Moderate. While the company emphasizes meaningful work and collaboration, the explicitly fast-paced nature of the environment may sometimes conflict with strict personal time boundaries."
   }
  },
  "axos bank": {
@@ -106657,126 +106704,111 @@
  "conduent": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "e06242a96a"
-   ],
-   "value": "Estimated: Tier 2 or 3. Conduent focuses heavily on enterprise IT and BPO rather than cutting-edge AI research or elite data science, meaning its AI prestige is lower than specialized tech firms."
+   "source_ids": [],
+   "value": "Estimated: Tier 3 (Low prestige). As a business process outsourcing firm, Conduent is not recognized for elite AI or data science research, falling short of top-tier tech or AI lab prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "e06242a96a"
-   ],
-   "value": "B2B and B2G services model generating revenue by managing large-scale enterprise operations and government programs on a contractual basis."
-  },
-  "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "9d85f9d09e"
+    "3b606dbf09"
    ],
-   "value": "Corporate environment where individuality is noticed and valued, prioritizing reliable business operations and client solutions over rapid disruption."
+   "value": "Business Process Outsourcing (BPO) and managed services, charging clients for handling large-scale operational and administrative tasks."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Corporate, steady, and contract-focused. The culture revolves around fulfilling large government and Fortune 100 service agreements rather than rapid, hackathon-style innovation."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e06242a96a"
+    "3b606dbf09"
    ],
-   "value": "A majority of the Fortune 100 companies, as well as numerous state, federal, and international government agencies."
+   "value": "Fortune 100 companies and governments."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "9d85f9d09e"
+    "3b606dbf09"
    ],
-   "value": "Estimated: $75,000 - $95,000 base salary for entry-level software development roles, reflecting standard corporate BPO compensation rather than elite tech pay."
+   "value": "Estimated: $63K-$82K base salary for entry-level software roles. This is notably below the elite top-tier new-grad threshold."
   },
   "evidence_sha": "b9faf6c6043f63ee",
-  "generated_at": 1785341638,
+  "generated_at": 1785347070,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e06242a96a",
-    "3cb9a7e733"
+    "3b606dbf09"
    ],
-   "value": "Information Technology and Business Process Outsourcing (BPO)."
+   "value": "Information Technology Services and Business Process Outsourcing."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "9d85f9d09e"
-   ],
-   "value": "Candidates should evaluate the specific team's tech stack and agile practices to see if they align with the desire for a fast, innovative tech culture. It is also crucial to ask about expected hours and advancement paths to verify work-life balance and technical growth rates."
+   "source_ids": [],
+   "value": "Probe deeply into the specific team's engineering culture and innovation pipeline. Ask whether the role involves building proprietary AI/data science tooling or simply maintaining legacy BPO infrastructure, and clarify expectations around hours, on-call duty, and fast-paced versus slow IT operations to ensure it does not conflict with your anti-burnout priorities."
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785341635,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "e06242a96a"
-   ],
-   "value": "Operations span globally, with a significant footprint in the United States and presence in numerous other countries."
-  },
-  "mission": {
    "confidence": "high",
    "source_ids": [
-    "9d85f9d09e"
+    "3b606dbf09"
    ],
-   "value": "To provide a variety of business process solutions while creating an environment where individuality is noticed and valued, enabling employees to thrive and make a difference."
+   "value": "Headquartered in Irvine, California, USA, with full-time remote work options available for certain roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b606dbf09"
+   ],
+   "value": "To deliver mission-critical services and solutions that drive outcomes for clients, though a singular formal mission statement was not captured in the provided sources."
   },
   "name": "Conduent",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "e06242a96a"
-   ],
-   "value": "Estimated: Slower-paced and steady in legacy BPO areas, but may vary by specific modernization teams; generally considered less fast-paced than top-tier tech companies."
+   "source_ids": [],
+   "value": "Estimated: Slow to moderate. Large enterprise BPOs typically operate with steady, process-driven bureaucracy rather than a fast, innovative tech culture."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e06242a96a"
+    "3b606dbf09"
    ],
-   "value": "Digital government platforms, HR outsourcing, legal and risk solutions, commercial customer experience management, and tolling and transit processing systems."
+   "value": "Mission-critical services and solutions, including transaction processing, claims administration, tolling systems, and other large-scale BPO operations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "9d85f9d09e"
-   ],
-   "value": "Estimated: 15 to 20 days of paid time off annually, alongside paid holidays, though exact tiers depend on tenure and role."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days. Standard for large-sized enterprise companies, though exact policies are not public."
   },
-  "refresh_after": 1790525638,
+  "refresh_after": 1790531070,
   "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "196e0f79d2"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "9d85f9d09e"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research; shutdowns, if any, are likely limited to standard public holidays."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. BPO operations often require continuous coverage for clients."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e06242a96a"
+    "3b606dbf09"
    ],
-   "value": "Large-scale, publicly traded enterprise (Fortune 500-sized)."
+   "value": "Large, established public company with 10,001+ employees, originally founded in 1998."
   },
   "sources": [
    {
@@ -106841,46 +106873,41 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "9d85f9d09e"
+    "3b606dbf09"
    ],
-   "value": "Not explicitly mentioned in the provided sources for entry-level roles."
+   "value": "Conduent has a track record of offering H1B sponsorships, though this is evaluated on a per-role basis and is not guaranteed for every position."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "3cb9a7e733",
-    "e06242a96a"
+    "3b606dbf09",
+    "1db9db9c4d"
    ],
-   "value": "Conduent is a business process services and solutions provider that handles large-scale transaction processing, digital government services, and customer experience operations. They make money by partnering with enterprises and governments to automate workflows, manage IT infrastructure, and streamline high-volume business processes."
+   "value": "Conduent is a large business process services and solutions provider that delivers mission-critical operations to Fortune 100 companies and governments. They generate revenue by managing large-scale, transaction-intensive processes such as claims processing, toll collections, and customer experience operations on behalf of their clients."
   },
-  "synthesized_evidence_sha": "4ec4fbd4e84a9dfd",
+  "synthesized_evidence_sha": "b9faf6c6043f63ee",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "9d85f9d09e",
-    "dbc3b9e88f"
+    "3b606dbf09"
    ],
-   "value": "Software development including entry-level Java Developer roles, focusing on enterprise-grade systems, IT infrastructure, and digital workflow automation."
+   "value": "Involves maintaining and developing software for large-scale transactional and BPO systems; current entry-level openings feature roles such as Java Developer, with compensation around $63K-$82K/yr."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341635,
   "web_search_url": "https://duckduckgo.com/?q=Conduent+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "9d85f9d09e"
-   ],
-   "value": "Given the candidate's priorities, Conduent's large enterprise scale and focus on processing services may lack the fast-paced, innovative tech culture and elite AI prestige desired. However, its stability could offer a structured learning environment for a new grad, though it likely leans more toward slow bureaucracy than rapid technical acceleration."
+   "source_ids": [],
+   "value": "As a large-scale business process outsourcer rather than a cutting-edge AI or pure-tech firm, Conduent is unlikely to offer the elite AI prestige, rapid tech culture, or top-tier new-grad pay you prioritize. It may provide stable technical experience, but candidates seeking hyper-growth, elite learning, and premium compensation without bureaucracy may find the environment misaligned with their goals."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "9d85f9d09e"
-   ],
-   "value": "Estimated: Moderate. Work-life balance likely depends heavily on the specific client project and team, though large enterprise BPOs can sometimes demand rigid schedules."
+   "source_ids": [],
+   "value": "Estimated: Moderate. While large companies can offer predictable hours, managed service provider duties can be heavily constrained by client needs and legacy system maintenance, avoiding the extremes of toxic burnout but rarely offering top-tier tech flexibility."
   }
  },
  "confido": {
@@ -171779,77 +171806,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "7d7343ad36"
+    "6625d7da2a",
+    "686f71846e"
    ],
-   "value": "Estimated: Tier 3. Legacy industrial company, not recognized as a top-tier AI or data science employer."
+   "value": "Estimated: Mid-to-high tier. AI and data science roles at GE Vernova carry strong corporate prestige, though they are traditionally viewed as supporting functions within an industrial company rather than central to a pure-play tech giant."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "686f71846e"
    ],
-   "value": "Unknown from provided sources."
+   "value": "Hardware manufacturing, long-term servicing contracts, and software deployment for energy infrastructure."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "7d7343ad36"
+    "686f71846e",
+    "6625d7da2a"
    ],
-   "value": "Estimated: Mission-driven and traditional corporate, balancing electrification goals with structured engineering processes."
+   "value": "Estimated: Mission-driven and engineering-heavy, focused on sustainable energy solutions. The culture blends legacy industrial discipline with modern digital transformation efforts."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "686f71846e"
    ],
-   "value": "Unknown from provided sources."
+   "value": "Global energy utilities, industrial firms, and power generation operators."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "7d7343ad36"
+    "6625d7da2a"
    ],
-   "value": "Estimated: $90k-$120k base salary. Likely lower than top-tier tech firms but offering solid corporate compensation."
+   "value": "Estimated: Competitive corporate-tier compensation. While new-grad tech base pay is generally strong, it may trend slightly below top-tier FAANG compensation packages while offering lucrative traditional corporate benefits and stability."
   },
   "evidence_sha": "81d7af041df0ac4a",
-  "generated_at": 1784871652,
+  "generated_at": 1785347070,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "08a562d1f7"
+    "686f71846e"
    ],
-   "value": "Unknown from provided sources."
+   "value": "Energy / Power Generation / Electrification."
   },
   "interview_focus": {
-   "confidence": "low",
-   "source_ids": [
-    "686f71846e"
-   ],
-   "value": "To ensure this role fits your priorities, probe heavily on the team's pace of innovation, daily hours, and technical learning curves. Ask direct questions about whether you will be building cutting-edge AI models or supporting legacy infrastructure to verify work-life balance expectations."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidates should prioritize probing the team's agility and specifically asking how AI/DS teams interface with the broader engineering divisions to ensure they are joining a fast-moving innovation pod rather than being bottlenecked by industrial-era bureaucracy. Given the priority on work-life balance, it is vital to confirm actual team hours and shutdown expectations, as permissive PTO can sometimes be offset by the demands of legacy enterprise engineering cycles."
   },
-  "last_attempt_at": 1784871652,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785342281,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
+   "source_ids": [
+    "6625d7da2a",
+    "686f71846e"
+   ],
+   "value": "Niskayuna, NY for certain AI and software engineering roles, alongside a broader global footprint."
+  },
+  "mission": {
+   "confidence": "medium",
    "source_ids": [
     "686f71846e"
    ],
-   "value": "Unknown from provided sources."
-  },
-  "mission": {
-   "confidence": "low",
-   "source_ids": [
-    "08a562d1f7"
-   ],
-   "value": "Unknown from provided sources."
+   "value": "To accelerate the transition to a more sustainable, electrified world by innovating energy and power grid technologies."
   },
   "name": "GE Vernova",
   "pace_of_work": {
@@ -171857,45 +171885,43 @@
    "source_ids": [
     "686f71846e"
    ],
-   "value": "Estimated: Slow to moderate. Large industrial engineering firms tend to have more structured, bureaucratic processes rather than a fast-paced tech culture."
+   "value": "Estimated: Moderate and deliberate. As a large infrastructure and hardware-focused enterprise, the pace is likely steady and process-oriented rather than the unrestrained, rapid pace typical of early-stage tech firms."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "7d7343ad36",
-    "08a562d1f7"
+    "686f71846e",
+    "6625d7da2a"
    ],
-   "value": "Unknown from provided sources."
+   "value": "Wind turbines, gas power generation systems, electrification software, and grid solutions. The company also develops internal AI and machine learning tools to support these engineering and operational efforts."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "686f71846e"
+    "6625d7da2a"
    ],
-   "value": "Estimated: 15-20 days of base PTO, typical for large corporate employers."
+   "value": "Estimated: Generous package including 12 paid holidays plus permissive time off (PTO) for personal use, alongside paid parental leave."
   },
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "686f71846e"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "08a562d1f7"
-   ],
-   "value": "Estimated: Likely offers some standard corporate holidays, but guaranteed extended shutdown periods are unconfirmed."
+   "source_ids": [],
+   "value": "Estimated: None found in research regarding guaranteed company-wide shutdowns."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "7d7343ad36"
+    "686f71846e"
    ],
-   "value": "Public company."
+   "value": "A large, recently spun-off public enterprise operating globally."
   },
   "sources": [
    {
@@ -171950,44 +171976,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "08a562d1f7"
+    "6625d7da2a"
    ],
-   "value": "Unknown from provided sources."
+   "value": "Restricted; GE Vernova explicitly notes they will only employ individuals legally authorized to work in the United States for their openings."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "7d7343ad36",
-    "686f71846e"
+    "686f71846e",
+    "6625d7da2a"
    ],
-   "value": "The provided sources consist solely of redirect pages for GE Vernova and General Electric, yielding no descriptive content. Based on general knowledge, GE Vernova is an energy company formed from GE's spinoff, specializing in power generation, wind, and electrification technologies."
+   "value": "GE Vernova is a standalone energy company spun off from General Electric that designs and deploys technologies for power generation, electrification, and grid modernization. It makes money by manufacturing and servicing advanced gas turbines, wind turbines, and grid solutions for global energy utilities and industrial clients."
   },
+  "synthesized_evidence_sha": "81d7af041df0ac4a",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "08a562d1f7"
+    "6625d7da2a"
    ],
-   "value": "Unknown from provided sources."
+   "value": "AI and software engineering roles, such as AI Tool Developer Engineers, focus on building internal tooling and AI applications to support the company's energy and engineering teams."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677231,
   "web_search_url": "https://duckduckgo.com/?q=GE+Vernova+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
-   "source_ids": [
-    "7d7343ad36"
-   ],
-   "value": "GE Vernova is a legacy industrial player, meaning its culture may lean toward slow bureaucracy rather than the fast, innovative tech environment you seek. While it is highly mission-driven in accelerating electrification, it likely lacks the elite AI prestige and high new-grad pay ceilings of top-tier tech firms."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While GE Vernova provides the elite prestige of the General Electric lineage and a mission-driven focus on global electrification, its scale as a massive industrial enterprise may inherently carry slower bureaucratic processes that conflict with the desire for a fast-paced, innovative tech culture. The company does feature strong work-life balance benefits like permissive time off, which appeals to burnout-avoidance, though the traditional engineering-heavy environment might not perfectly align "
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "08a562d1f7"
+    "6625d7da2a"
    ],
-   "value": "Estimated: Moderate. Likely offers standard corporate hours and guaranteed shutdowns, but may lack the flexibility of pure tech companies."
+   "value": "Estimated: Good. Traditional engineering enterprises typically enforce standard work hours, and the explicit mention of extensive leave policies suggests a structured approach to work-life balance."
   }
  },
  "gecko robotics": {
@@ -191301,92 +191326,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Tier 2 — Large enterprise with massive proprietary healthcare data, active AI/ML investments (fraud, care management, personalization), but not known as an AI research lab; prestige from domain impact and data scale rather than publications."
+   "value": "Estimated: Tier 3. Enterprise insurance with established regulation compliance and legacy tech over cutting-edge AI innovation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Not-for-profit, customer-owned health insurer; revenue from insurance premiums, government contracts (Medicare/Medicaid), and administrative services; reinvests surplus into reserves, community initiatives, and member benefits."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "8f0058c02c",
     "58cd2def3f"
    ],
-   "value": "Estimated: Professional, mission-oriented, collaborative, process-driven; values stability and member impact; employee tenure often long; diversity and community focus; less 'tech-bro' than pure software firms."
+   "value": "Operates as an insurance carrier offering robust total rewards packages and health benefits, funded by insurance premiums."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f0058c02c",
+    "58cd2def3f"
+   ],
+   "value": "Professional, customer service-minded, and heavily reliant on employee referrals and internal professional development."
   },
   "customers": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Individuals, families, employers (small to large), and government programs across five states (IL, MT, NM, OK, TX); serves over 17 million members."
+   "source_ids": [
+    "8f0058c02c"
+   ],
+   "value": "Individuals and employers seeking health insurance coverage and wellness benefits."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "Estimated: $85,000-$105,000 base + bonus + pension (vesting) + 401k match; total comp ~$95k-$120k; varies by location (TX/IL) and role (DS/ML higher than mainframe)."
+   "source_ids": [],
+   "value": "Estimated: $80,000 - $110,000. Robust total rewards package includes a 401(k), pension plan, and tuition reimbursement which supplements base salary."
   },
   "evidence_sha": "f1e0d37de3f51c43",
-  "generated_at": 1784796020,
+  "generated_at": 1785347070,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8f0058c02c",
+    "58cd2def3f"
+   ],
+   "value": "Health Insurance / Healthcare"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask how their AI teams navigate strict industry regulations and if there are dedicated innovation labs separate from legacy maintenance. Probe the balance between slow bureaucracy and rapid technical skill development for new grads."
+  },
+  "last_attempt_at": 1785347070,
+  "last_evidence_at": 1785336064,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8f0058c02c",
+    "58cd2def3f"
+   ],
+   "value": "Remote (telecommute roles available in TN and TX)."
+  },
+  "mission": {
    "confidence": "high",
    "source_ids": [
     "58cd2def3f"
    ],
-   "value": "Health Insurance / Managed Care"
-  },
-  "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "Expect questions on: large-scale data processing (claims, eligibility), healthcare domain knowledge (HIPAA, ICD-10, CMS regulations), mainframe-to-cloud migration experience, model explainability for regulatory compliance, and cross-functional collaboration with clinical/actuarial teams. Highlight projects demonstrating impact on member outcomes or cost savings."
-  },
-  "last_attempt_at": 1784796020,
-  "last_evidence_at": 1785336064,
-  "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "Headquarters: Chicago, IL. Major hubs: Richardson/Dallas TX, Oklahoma City OK, Albuquerque NM, Billings MT, Springfield IL. Hybrid/remote options vary by role."
-  },
-  "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "To improve the health and well-being of members and communities through affordable, accessible, high-quality healthcare solutions."
+   "value": "To be a purpose-driven company that invests in the professional development of its employees, who are the cornerstone of the business."
   },
   "name": "HCSC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate — Enterprise environment with regulatory constraints; modernization initiatives create pockets of faster innovation, but core systems require careful change management; not a 'move fast and break things' culture."
+   "value": "Estimated: Slow to moderate. Focused on navigating strictly regulated timelines and multiple project deadlines rather than rapid deployment."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Health insurance plans (individual, group, Medicare, Medicaid), pharmacy benefit management, dental/vision coverage, wellness programs, and health technology platforms."
+   "confidence": "medium",
+   "source_ids": [
+    "8f0058c02c",
+    "58cd2def3f"
+   ],
+   "value": "Health, wellness, and insurance benefit plans."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "Estimated: 15-20 days PTO + 10-12 paid holidays + sick leave; posting mentions 'paid time off' and 'paid holidays' but exact accrual not public."
+   "source_ids": [],
+   "value": "Estimated: 20-25 days. Features standard paid time off alongside many paid holidays."
   },
-  "refresh_after": 1789980020,
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191396,12 +191427,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; standard holiday calendar; some teams may have reduced coverage between Christmas/New Year."
+   "value": "Estimated: No official company-wide shutdowns found。"
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large enterprise (~25,000 employees); mature, stable organization with 85+ year history; not a startup."
+   "confidence": "medium",
+   "source_ids": [
+    "8f0058c02c",
+    "58cd2def3f"
+   ],
+   "value": "Established enterprise with remote work capabilities."
   },
   "sources": [
    {
@@ -191466,43 +191500,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B for specialized tech roles (data science, engineering); history of hiring international talent; verify with recruiter for specific role."
+   "confidence": "high",
+   "source_ids": [
+    "8f0058c02c"
+   ],
+   "value": "Sponsorship will not be provided for roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
+    "8f0058c02c",
     "58cd2def3f"
    ],
-   "value": "HCSC (Health Care Service Corporation) is the largest customer-owned health insurer in the United States, operating Blue Cross Blue Shield plans in Illinois, Montana, New Mexico, Oklahoma, and Texas. It provides health insurance coverage and related services to individuals, employers, and government programs."
+   "value": "Health Care Service Corporation (HCSC) is a large, established health insurance provider. It makes money by collecting insurance premiums and providing health coverage while investing in its employees' professional development."
   },
-  "synthesized_evidence_sha": "e715ba54cdfd8cef",
+  "synthesized_evidence_sha": "f1e0d37de3f51c43",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "8f0058c02c",
     "58cd2def3f"
    ],
-   "value": "Mainframe systems (COBOL, DB2, JCL), claims processing platforms, data warehousing, analytics, cloud migration (AWS/Azure), API development, member/portal applications, AI/ML for fraud detection and care management."
+   "value": "Roles involve managing multiple projects under strict regulations, data analysis, and legacy system development (e.g., Mainframe Developer)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784725193,
   "web_search_url": "https://duckduckgo.com/?q=HCSC+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "58cd2def3f",
-    "dbc3b9e88f"
-   ],
-   "value": "HCSC offers a mission-driven, not-for-profit environment with elite-scale data (17M+ members) for AI/DS impact on healthcare outcomes. The Mainframe Developer posting signals investment in modernizing core systems, creating opportunities to apply cutting-edge analytics on massive claims datasets. Candidate priorities align: purpose-driven culture, professional development investment, robust benefits (pension + 401k), and large-enterprise stability without startup burnout risk."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you prioritize mission-driven stability, guaranteed remote flexibility, and healthy boundaries without the high burnout of fast-paced tech, HCSC aligns with your goals. It offers a respected corporate path with strict work-hours separation, though it lacks the fast, elite AI prestige and top-tier new grad pay of disruptive tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "58cd2def3f"
-   ],
-   "value": "Estimated: 3.5/5 — Large insurer with established policies; posting emphasizes 'robust total rewards' and professional development; pension suggests long-term retention focus; typical corporate hours with hybrid flexibility; on-call rotations possible for platform roles."
+   "source_ids": [],
+   "value": "Estimated: Good. Supports remote work and invests in employee wellness and assistance programs."
   }
  },
  "hdl companies": {
@@ -313167,7 +313200,7 @@
    "value": "Estimated: Moderate. High domain prestige in visual analytics for defense due to ARL, but generally lacks the cutting-edge commercial tech industry prestige."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -313189,7 +313222,7 @@
    ],
    "value": "Students, academic researchers, and federal government/defense agencies requiring secure, classified, and controlled unclassified information (CUI) solutions."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -313218,7 +313251,7 @@
    ],
    "value": "Probe the pace of innovation at ARL to see if it avoids typical university red tape, and confirm work-life balance norms to ensure new-grad pay and career growth match elite industry tech standards."
   },
-  "last_attempt_at": 1784925820,
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "high",
@@ -313258,6 +313291,7 @@
    "value": "Estimated: 25+ (Standard for large universities, encompassing vacation, holidays, and sick time)."
   },
   "refresh_after": 1790109820,
+  "retry_after": 1785368670,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -313339,7 +313373,7 @@
    ],
    "value": "Not explicitly found in sources, though classified work at ARL may require U.S. citizenship."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -339832,37 +339866,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche Tech & Heritage Brands. Not a tech-first or AI/DS prestige employer; technical roles enable a physical-product business."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "A hybrid DTC and B2B model encompassing in-house retail stores, a network of independent dealers, and e-commerce, all supported by the company's own manufacturing expertise."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Pride in craft, quality, and heritage. Stable, supportive, and unpretentious, focused on serving working people."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Consumers and businesses needing durable, high-quality work footwear and safety products, served via retail stores, independent dealers, and online platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Estimated: $65,000 - $85,000 base salary for an entry-level front-end developer role (Associate Web Developer)."
   },
   "evidence_sha": "2bc6427319b38125",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785347070,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Footwear and Apparel Manufacturing (Workwear/Safety)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Technical interviews will likely probe practical JavaScript, HTML, CSS, and Git skills with a focus on accessibility and DevOps understanding. Behavioral questions will assess alignment with the company's steady, craftsmanship-driven culture and willingness to work in or near Red Wing."
+  },
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785342280,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Headquarters in Red Wing, Minnesota. The Associate Web Developer role is hybrid in Red Wing, MN."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "To deliver top-quality products through innovation, honoring a rich heritage of craftsmanship and service to working people."
+  },
   "name": "Red Wing Shoe Co.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and deliberate, more akin to a durable-goods manufacturer delivering seasonal digital projects than a tech-company sprint."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Premium work boots, safety footwear, and accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of combined PTO and sick time for entry-level corporate roles, consistent with large private companies in the US Midwest."
   },
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -339872,7 +339966,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely on major US holidays, with potential for a Christmas-to-New Year's break. Manufacturing roots suggest predictable annual scheduling."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, privately held enterprise; estimated mature stage."
   },
   "sources": [
    {
@@ -339926,14 +340025,39 @@
     "url": "https://jobright.ai/jobs/info/6a6a051b8693c23e7fb7844b?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Red Wing Shoe Co. is a global manufacturer and retailer of premium work boots, safety footwear, and accessories. It makes money by selling its products through its own retail stores, independent dealers, and e-commerce channels."
+  },
+  "synthesized_evidence_sha": "2bc6427319b38125",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c48249e5dc"
+   ],
+   "value": "Front-end web development, building and maintaining e-commerce platforms using HTML, CSS, JavaScript, and Azure DevOps."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785342280,
   "web_search_url": "https://duckduckgo.com/?q=Red+Wing+Shoe+Co.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Red Wing is a mission-driven company with a century-long heritage of valuing skilled, enduring work, creating a stable environment that naturally respects a balanced 40-hour work week. Its culture likely offers a low-burnout pace that enforces strict work-life boundaries, offering sanity and shutdowns atypical of high-growth tech to accelerate your technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. As a privately held manufacturing company rooted in the skilled trades, the tech culture likely respects fixed work hours and personal time."
   }
  },
  "red5": {
@@ -448838,37 +448962,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — role centers on Excel-based program data analysis and PMO support for Navy/DoD, not modern AI/ML research or production engineering."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Consulting/services revenue model: billing for professional and technical consulting expertise delivered to government and commercial clients on a project or staff-augmentation basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional professional services / government contractor culture — process-oriented, compliance-focused, hierarchical rather than startup-like innovative tech culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Government clients (including DoD/Navy) and commercial clients worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base for entry-level program data analyst roles in government consulting; below top-tier AI/DS new-grad packages ($120k-$200k+)."
   },
   "evidence_sha": "0f32b07213d42b8a",
+  "generated_at": 1785347070,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Government/Defense Consulting & Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on Excel analytics (pivot tables, lookups, Power Query), government program management processes, security clearance eligibility, and ability to work within structured DoD/Navy PMO frameworks rather than cutting-edge AI/ML modeling."
   },
+  "last_attempt_at": 1785347070,
   "last_evidence_at": 1785336410,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "United States (implied by security clearance requirement and 'U.S.' notation in posting); specific offices not disclosed."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Providing multi-disciplinary professional and technical consulting support to government and commercial clients globally."
+  },
   "name": "VISTA Technology Services Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to structured — government consulting typically follows defined contract deliverables and compliance rhythms rather than fast iterative tech cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Professional and technical consulting services including program data analysis, program management office (PMO) support, and data analytics capabilities focused on Excel-based tools (pivot tables, lookups, power queries)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days typical for mid-size government contractors; no public policy disclosed."
   },
+  "refresh_after": 1790531070,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -448878,7 +449056,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; government contractors often operate year-round with standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Established company with nearly 40 years in business; exact employee count not disclosed in sources."
   },
   "sources": [
    {
@@ -448932,14 +449117,41 @@
     "url": "https://jobright.ai/jobs/info/6a69db0009998f68b5a6de2a?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Job posting explicitly states 'No H1B'; U.S. citizenship/security clearance required for government contract work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "VISTA Technology Services Inc. is a multi-disciplinary professional and technical consulting firm with nearly 40 years of experience supporting government and commercial clients worldwide."
+  },
+  "synthesized_evidence_sha": "0f32b07213d42b8a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1bd85457a3"
+   ],
+   "value": "Program data analysis, DoD/Navy PMO support, Excel advanced analytics (pivot tables, VLOOKUP, Power Query); security clearance required for government work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785336410,
   "web_search_url": "https://duckduckgo.com/?q=VISTA+Technology+Services+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers entry into government consulting with data analysis focus, but the Excel-heavy, clearance-required PMO support work may not match a top-tier AI/data science candidate's goals for elite prestige, innovative tech culture, or accelerated technical learning in modern AI/ML stacks. The 'No H1B' policy and clearance requirements also limit accessibility."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — government contracting often has defined hours but can involve surge periods around deliverables; no public policy on guaranteed shutdowns found."
   }
  },
  "vitas healthcare": {
