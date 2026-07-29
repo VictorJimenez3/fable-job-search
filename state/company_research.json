@@ -140802,51 +140802,49 @@
  },
  "elevenlabs": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "8bf1315b68",
-    "590ca598a7",
-    "c2838406dc"
+    "e6a2809ce4",
+    "8bf1315b68"
    ],
-   "value": "High prestige; described as a 'generational opportunity' working with leading AI audio foundational models at a top-tier AI research and product company."
+   "value": "Estimated: Top-tier. As a prominent player in the generative AI space building foundational audio models, the company holds high technical prestige for AI and data science roles."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
     "590ca598a7",
-    "5957cf5bd1"
+    "8bf1315b68"
    ],
-   "value": "B2B and B2D API access to foundational AI audio models, scaling technical solutions directly to enterprise customers and improving internal processes to support sales and revenue generation."
+   "value": "B2B and developer-focused SaaS/API offering. The company scales technical solutions to enterprise customers while providing API access to developers, operating as a research and product company."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
-    "25fc604419",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "9737fe56c6"
    ],
-   "value": "An innovative, builder-centric culture filled with researchers, engineers, and operators pushing the boundaries of AI. It is highly cross-functional and focused on ownership of both technical depth and commercial outcomes."
+   "value": "Researcher, engineer, and operator-driven environment focused on a generational opportunity to define AI's trajectory, highly valuing innovation and boundary-pushing."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
-    "590ca598a7",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "590ca598a7"
    ],
-   "value": "Developers utilizing the ElevenAPI, as well as a wide range of enterprise customers across various regions (e.g., Southern Europe, ANZ) who are scaling technical solutions."
+   "value": "Developers who integrate audio models via ElevenAPI and enterprise customers who require scaled technical audio solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Top-tier AI research and product companies typically offer highly competitive new-grad tech pay (often $150k-$200k+ total compensation) to attract elite talent, though precise figures are not public."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $140k - $180k base. Top-tier AI startups typically offer highly competitive new grad compensation to attract elite talent, though specific pay bands are not public."
   },
   "evidence_sha": "8359c8f836ed6404",
-  "generated_at": 1785265335,
+  "generated_at": 1785359597,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -140856,64 +140854,63 @@
    "confidence": "high",
    "source_ids": [
     "8bf1315b68",
-    "c2838406dc"
+    "590ca598a7"
    ],
-   "value": "Artificial Intelligence Research and Product Development."
+   "value": "Artificial Intelligence Research, Audio Generative AI, and Software Development."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
-    "25fc604419",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "8bf1315b68"
    ],
-   "value": "Probe for concrete examples of how the team manages workload and avoids burnout in a fast-paced, bureaucratic-free environment. Ask engineers about their day-to-day pace, expectations for personal time, and how the innovative culture practically balances aggressive product growth with sane working hours."
+   "value": "Probe the realities of their 'innovative culture' to ensure it is driven by rapid learning rather than burnout; ask about daily expectations, on-call rotations, and how the company protects personal time for engineers. Evaluate compensation structures for new grads to confirm it meets your high-pay requirements alongside the fast-paced environment."
   },
-  "last_attempt_at": 1785350955,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785336410,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "590ca598a7",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "590ca598a7"
    ],
-   "value": "Global presence with specific hiring indicated for regions such as ANZ (Australia/New Zealand) and Southern Europe."
+   "value": "Global presence with offices including Warsaw, Poland, and enterprise operations spanning the ANZ (Australia and New Zealand) region."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "8bf1315b68",
     "c2838406dc",
-    "5957cf5bd1"
+    "9737fe56c6"
    ],
-   "value": "To define the trajectory of AI and push the boundaries of what is possible by transforming how we interact with technology."
+   "value": "To define the trajectory of AI by pushing the boundaries of what is possible and transforming how we interact with technology."
   },
   "name": "ElevenLabs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "25fc604419",
-    "590ca598a7",
-    "5957cf5bd1"
+    "8bf1315b68",
+    "e6a2809ce4"
    ],
-   "value": "Estimated: Extremely fast-paced and highly cross-functional, requiring operators who can thrive in a fast, innovative culture without slow bureaucracy. Work involves rapidly scaling technical solutions to many enterprise customers."
+   "value": "Estimated: Very fast. Described as a 'generational opportunity' pushing the boundaries of AI, the environment demands rapid innovation and execution typical of a high-growth tech startup."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
+    "e6a2809ce4",
     "590ca598a7",
     "9737fe56c6"
    ],
-   "value": "ElevenAPI, which provides developers access to leading AI audio foundational models, alongside broader AI audio product offerings."
+   "value": "AI audio foundational models and the ElevenAPI platform, which provides developers programmatic access to their voice and audio generation technology."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: While exact PTO is undisclosed, AI startups of this stage typically offer standard competitive PTO packages (e.g., 20-25 days annually) alongside company-specific regional holidays."
+   "value": "Estimated: 20-25 days. Standard for high-growth tech companies, though exact policy is not public."
   },
-  "retry_after": 1785358635,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140923,16 +140920,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed shutdown periods are not explicitly mentioned in company postings, so candidates should verify if structural holiday closures exist to protect personal time."
+   "value": "Estimated: None found in research."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "25fc604419",
-    "590ca598a7",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "590ca598a7"
    ],
-   "value": "Rapidly growing, cross-functional organization operating as a 'generational opportunity' in the AI space with dedicated teams for research, engineering, operations, marketing, and customer success across multiple global regions."
+   "value": "Estimated: High-growth startup. The company is actively scaling its operations globally, opening new office spaces (e.g., Warsaw) and expanding enterprise roles into new regions (e.g., ANZ), indicating a rapid expansion phase."
   },
   "sources": [
    {
@@ -140997,28 +140993,31 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f",
+    "590ca598a7"
+   ],
+   "value": "Estimated: Global expansion and remote opportunities may exist, but specific visa sponsorship details are not explicitly stated in current postings."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "8bf1315b68",
-    "590ca598a7",
-    "c2838406dc"
+    "c2838406dc",
+    "590ca598a7"
    ],
-   "value": "ElevenLabs is an AI research and product company that develops foundational AI audio models, transforming how humans interact with technology. They make money by providing developers and enterprise customers with access to these leading models via their ElevenAPI platform."
+   "value": "ElevenLabs is an AI research and product company transforming how humans interact with technology by developing leading AI audio foundational models. The company generates revenue by offering developers and enterprise customers access to these models via the ElevenAPI platform."
   },
+  "synthesized_evidence_sha": "8359c8f836ed6404",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "8bf1315b68",
     "590ca598a7",
-    "5957cf5bd1"
+    "9737fe56c6"
    ],
-   "value": "The team consists of researchers, engineers, and operators who build and scale leading AI audio foundational models and the ElevenAPI platform, working at the intersection of product, engineering, and commercial outcomes."
+   "value": "The company is composed of researchers, engineers, and operators building foundational AI audio models and developing the ElevenAPI infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583509,
@@ -141027,19 +141026,18 @@
    "confidence": "high",
    "source_ids": [
     "8bf1315b68",
-    "c2838406dc",
-    "5957cf5bd1"
+    "e6a2809ce4",
+    "590ca598a7"
    ],
-   "value": "ElevenLabs offers the elite prestige and fast, innovative tech culture you are seeking, operating at the cutting edge of AI audio foundational models. As a generational opportunity to define the AI trajectory, the environment heavily accelerates technical learning and career growth for researchers and engineers without the friction of slow bureaucracy."
+   "value": "This role offers the elite prestige of building foundational AI models at a generational company, aligning with your desire for a fast-paced, innovative tech culture. However, given the startup environment and rapid global scaling, work-life balance may be challenging, making it crucial to assess if the pace sacrifices personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "8bf1315b68",
     "590ca598a7",
-    "5957cf5bd1"
+    "c2838406dc"
    ],
-   "value": "Estimated: Likely challenging to balance due to the demanding, fast-paced nature of a rapidly scaling AI startup, though the company actively promotes a non-toxic, innovative culture. Personal time may frequently compete with aggressive commercial and product outcomes."
+   "value": "Estimated: Moderate to Low. The company's emphasis on pushing boundaries and rapid global scaling may lead to demanding hours, potentially conflicting with strict work-life balance preferences."
   }
  },
  "eliseai": {
@@ -154958,43 +154956,103 @@
  },
  "fastly": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Specialized infrastructure prestige; recognized as a Leader in Edge Development Platforms but not primarily known for mainstream AI/Data Science roles."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Provides edge delivery, security, and development platforms, likely monetized through subscription and usage-based data transfer fees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Mission-driven focusing on trusted innovation and powering the best of the internet."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "The world's leading digital innovators seeking web application and API protection."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $140,000 to $160,000 base salary, aligned with public Bay Area tech infrastructure companies for new-grad roles."
   },
   "evidence_sha": "ff2082b576278af6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785359597,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785355546,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Technology, specifically Edge Cloud Computing, Content Delivery Networks (CDN), and Web Security."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Emphasize your passion for building high-performance, low-latency data systems and your ability to thrive in a fast-paced, innovative environment. Ask probing questions about technical learning pathways and team prientation to ensure the role avoids toxic burnout while meeting your high new-grad pay and work-life balance expectations."
+  },
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785350954,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Global presence with website localization for English, Japanese, Spanish (Spain and Latin America), German, French, and Italian."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Powering the best of the internet by providing a trusted, fully programmable edge cloud platform."
+  },
   "name": "Fastly",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Estimated: Fast-paced driven by real-time system performance demands and a programmable edge platform requiring rapid deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "A fully programmable Edge Cloud Platform providing real-time updates and protecting against DDoS, bots, and other threats."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard PTO annually, typical for a public tech company of this size."
   },
-  "retry_after": 1785356026,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155003,8 +155061,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns due to the critical nature of edge infrastructure and security operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Established public tech company recognized as a leader by Forrester and IDC MarketScape."
   },
   "sources": [
    {
@@ -155048,14 +155115,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Surfaced from a new-grad data science job board, indicating active recruitment for junior tech talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Fastly operates an Edge Cloud Platform that speeds up and secures web applications. The company makes money by charging clients for data transfer, routing requests, and utilizing its programmable edge computing services."
+  },
+  "synthesized_evidence_sha": "ff2082b576278af6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "920ef6a4b5"
+   ],
+   "value": "Building and maintaining a fully programmable Edge Cloud Platform that handles real-time updates, edge development, and robust security against DDoS and bot threats."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785350954,
   "web_search_url": "https://duckduckgo.com/?q=Fastly+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Fastly offers a fast, innovative tech culture centered on cutting-edge edge-computing and security, aligning with your desire for elite prestige without slow bureaucracy. The focus on real-time, high-scale systems provides an elite learning environment to accelerate your technical career in data science and infrastructure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; typical of edge computing and security firms with tight SLAs and real-time uptime requirements."
   }
  },
  "feathery": {
@@ -165711,79 +165807,102 @@
  "foth": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Low — not a primary AI research or product company; data science roles support engineering projects rather than drive core innovation."
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Estimated: Not applicable for elite AI/Data Science prestige; Tier 4. Foth is a traditional science and engineering consulting firm, meaning AI roles lack the FAANG-level industry prestige and high-tech innovation focus the candidate prioritizes."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Project-based consulting fees, multi-year service contracts, and retainer agreements with public and private sector clients."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Member-owned consulting firm that generates revenue through professional engineering and science services, retaining talent through an ownership structure that yields a 92+% member retention rate."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Collaborative, mission-driven, professional services culture with strong employee ownership pride; emphasis on long-term client relationships and technical excellence."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Values-based, collaborative, and flexible. They emphasize working alongside a smart and caring team, prioritizing long-term member retention and a supportive 'Foth difference.'"
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Municipalities, state/federal agencies, private developers, industrial clients, and utility companies."
+   "confidence": "medium",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Clients requiring specialized science and engineering consulting services, including public and private sector organizations managing complex infrastructure and environmental projects."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $70k–$90k base salary + standard benefits (health, 401k match, tuition reimbursement); not competitive with top-tier AI/ML new-grad packages."
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Traditional engineering and science consulting firms pay significantly lower new-grad base compensation than elite AI or data science tech roles, relying on stable benefits and ownership structures rather than high immediate tech pay."
   },
   "evidence_sha": "6e0466ad298c7f95",
-  "generated_at": 1784897083,
+  "generated_at": 1785359597,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering consulting / professional services / infrastructure & environmental services."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Science and Engineering Consulting."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect behavioral questions on client management, project delivery, and teamwork; technical assessments on engineering fundamentals, GIS/analytics tools, and domain-specific problem solving. Limited emphasis on cutting-edge ML research or algorithmic coding."
+   "value": "Candidates should prepare to discuss how their data science capabilities can solve practical engineering and environmental consulting challenges. They should also be ready to ask about long-term technical learning paths in a traditional consulting structure, as the firm's 85-year history suggests slow bureaucracy rather than the disruptive, fast-paced innovation the candidate is seeking."
   },
-  "last_attempt_at": 1784897083,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785356907,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in Green Bay, WI; additional offices in Madison, Milwaukee, Minneapolis, Chicago, Denver, Phoenix, and other regional hubs."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Headquartered in Wisconsin, operating across multiple regional offices to serve client needs."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To deliver innovative, sustainable solutions that improve communities and the environment through collaborative, client-focused service."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "To provide a values-based, collaborative, and flexible work environment that delivers high-quality engineering and science consulting solutions to clients."
   },
   "name": "FOTH",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Project-driven with deadline cycles; moderate to high intensity during proposal and delivery crunches, steadier between major milestones."
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Estimated: Moderate and deadline-driven based on client project milestones. The firm's 85-year history and collaborative culture suggest a steady, traditional pace rather than a fast, disruptive tech environment."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering consulting services including civil, structural, environmental, water resources, transportation, and GIS/data analytics solutions."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Engineering and science consulting services, delivering technical solutions and project execution for client infrastructure and environmental challenges."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15–20 days annual PTO plus 8–10 paid holidays; accrual increases with tenure."
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Estimated: While exact numbers are not public, the firm's 92+% retention rate and heavy promotion of a 'flexible work environment' suggest a competitive standard PTO package typical of mature Midwestern consulting firms (Est. 20 days+ plus holidays)."
   },
-  "refresh_after": 1790081083,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165793,12 +165912,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide mandatory shutdowns; some offices may close between Christmas and New Year’s."
+   "value": "Estimated: No specific data on guaranteed shutdowns (such as summer or winter breaks) was found; compensation and flexibility appear to take standard forms rather than tech-industry shutdowns."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mid-sized, employee-owned firm with approximately 1,000+ employees across multiple U.S. offices; established over 70 years ago."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Established, mature firm with over 85 years of operation, consistently ranked in the top 150 firms by Engineering News Record."
   },
   "sources": [
    {
@@ -165843,25 +165964,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "May sponsor H-1B visas for specialized senior engineering roles; sponsorship for new-grad data science positions is uncommon and case-by-case."
+   "confidence": "low",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Not explicitly detailed in current research materials, though member-owned consulting firms of this type typically prioritize domestic talent pipelines and assess international sponsorship on a case-by-case basis."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "8d6d64c75c",
-    "0b79b69c83",
-    "0adf6190c0"
+    "835c033ff0"
    ],
-   "value": "FOTH is an employee-owned engineering and consulting firm providing infrastructure, environmental, and technology solutions to public and private clients across the U.S."
+   "value": "Foth is a 100% member-owned science and engineering consulting firm headquartered in Wisconsin with over 85 years of success. They make money by providing technical consulting services to clients on complex engineering and scientific projects."
   },
-  "synthesized_evidence_sha": "e068840e1af46c19",
+  "synthesized_evidence_sha": "6e0466ad298c7f95",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Applied engineering design, environmental modeling, GIS/spatial analysis, data visualization, asset management systems, and emerging digital twin/smart infrastructure projects."
+   "confidence": "high",
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Science and engineering consulting, requiring smart teams to tackle complex technical challenges and project delivery for clients."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680402,
@@ -165869,12 +165992,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "For a candidate targeting elite AI/data science prestige, high new-grad pay, and a fast innovative tech culture, FOTH is a traditional engineering consultancy — not a top-tier AI shop. Its pace is project-driven with moderate work-life balance, but compensation and AI research opportunities fall well below elite tech firms. The employee-owned culture offers stability and mission-driven work, but not the rapid technical acceleration or guaranteed shutdowns the candidate prioritizes."
+   "value": "Foth offers a highly stable, collaborative consulting environment with a proven track record of work-life balance and retention. However, as an 85+ year-old traditional engineering firm, it does not align with the candidate's pursuit of elite AI/data science prestige, high new-grad tech pay, or a fast-paced, innovative tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — consulting demands can require overtime near deadlines, but employee-owned culture encourages reasonable hours and flexibility; no guaranteed shutdowns."
+   "source_ids": [
+    "835c033ff0"
+   ],
+   "value": "Estimated: Excellent. The company highlights a 'flexible work environment' and achieves a 92+% member retention rate, indicating strong respect for personal time and the avoidance of toxic, high-burnout cultures."
   }
  },
  "four winds hospital": {
@@ -196226,71 +196351,65 @@
  },
  "hightouch": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Top-tier (recognized Leader in the 2026 Gartner Magic Quadrant)."
+   "value": "Tier 2 (high-growth, recognized leader), elevated by recognized Magic Quadrant leadership and possession equity from users like Spotify, though not a frontier research lab like DeepMind. Very strong prestige for applied AI Product questions in data-heavy enterprises."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
-   ],
-   "value": "B2B enterprise SaaS."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Collaborative, deeply caring, and obsessed with raising the bar for customers and each other."
+   "value": "Intensely collaborative and pack-oriented approach. The company demands excellence and velocity but explicitly claims members care deeply about each other, implying a supportive community, not cutthroat internal competition."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Leading enterprises such as Domino's, Spotify, Aritzia, Cars.com, Ramp, and PetSmart."
+   "value": "Enterprises including Domino's, Spotify, Aritzia, Cars.com, Ramp, and Petsmart. It is trusted by many leading brands across diverse verticals."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "17f8c9c419"
-   ],
-   "value": "Estimated: $130k-$160k base salary, competitive with top-tier AI/data scaleups."
+   "source_ids": [],
+   "value": "Estimated $160m-$210,000 USD total compensation (fair-market adjustable), assuming a high visibility AI R&D or data platform role, built on a competitive premium valuation."
   },
   "evidence_sha": "294b6f4ffcee1501",
-  "generated_at": 1785271097,
+  "generated_at": 1785359597,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Data and AI / Marketing Technology."
+   "value": "Enterprise Software, MarTech, AI/ML Infrastructure."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "713d80e9f5",
-    "17f8c9c419"
+    "0b8c74d00e"
    ],
-   "value": "Emphasize your passion for high-velocity, innovative environments and how you balance raising the technical bar with sane hours. Ask interviewers about their engineering culture, team burnout prevention, and how they maintain work-life balance."
+   "value": "Centered on technical skill in data infrastructure, system design, and practical AI usage. Culture fit will heavily probe for comfort with fast shipping speeds answering our driver to deliver value without long bureaucracy, but will also assess for vulnerability and natural selflessness tō. The interview process will likely verify a candidate's influence thrives by iterating fast but never letting the speed consistently destroy personal boundaries."
   },
-  "last_attempt_at": 1785271097,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785356907,
   "locations": {
    "confidence": "unknown",
@@ -196300,35 +196419,36 @@
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "To help customers leverage data and AI to grow their businesses."
+   "value": "To help customers leverage data and AI to drive growth in their businesses."
   },
   "name": "Hightouch",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Estimated: Fast and high-velocity environment that is energized by speed and raising the bar."
+   "value": "Rapid execution environments, high velocity. The company's own language emphasizes being 'energized by' velocity', which signals moving remarkably fast even for startup standards, but likely includes mature workflow structures to avoid unrealistic hero loads."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Agentic Marketing Platform and an industry-leading Composable CDP."
+   "value": "Agentic Marketing Platform and a Composable Customer Data Platform (CDP). These tools help businesses collect, unify, and activate their data, particularly for AI-driven marketing campaigns."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard competitive tech PTO policy approximating 15-20 days, though exact policy is not public."
+   "value": "Estimated: Flexible/Unlimited PTO policy, with a strong cultural tone favoring a proper rest rhythm. Likely in the range of 20-3 downtime days per year without micromanage counting."
   },
-  "refresh_after": 1790455097,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196338,15 +196458,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No widespread holiday shutdowns known, though some standard holidays are observed."
+   "value": "Estimated: Company-wide non-negotiable holiday and winter recharge break (~last week of December through New Year's). A true company-wide respect for guaranteed deep downtime periods."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Late-stage scaleup recognized as a Leader in the 2026 Gartner Magic Quadrant for Customer Data Platforms."
+   "value": "Venture-backed growth-stage company with 500-800 employees. It has achieved significant market leadership, recognized in the 2026 Gartner Magic Quadrant."
   },
   "sources": [
    {
@@ -196419,19 +196539,19 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Hightouch is an Agentic Marketing Platform powered by a Composable Customer Data Platform (CDP) that helps enterprises leverage their data and AI for growth. It generates revenue by licensing its data activation and AI marketing tools to large enterprise customers."
+   "value": "Hightouch provides an AI-powered marketing platform that helps companies unify and use their customer data for growth. It sells this software to other businesses on a subscription basis."
   },
-  "synthesized_evidence_sha": "4f2dc636930d9f5a",
+  "synthesized_evidence_sha": "294b6f4ffcee1501",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Building agentic AI marketing systems and composable data infrastructure that integrates with enterprise data warehouses."
+   "value": "Projects involve building data infrastructure and AI agents. For data science roles, tasks would center on implementing composable CDP architectures that leverage AI workflows to connect large-scale customer data from sources like warehouses to marketing destinations."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693225,
@@ -196439,18 +196559,18 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "713d80e9f5",
-    "17f8c9c419"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Hightouch offers the elite AI/data-driven technical rigor and top-tier new-grad pay you are targeting. Its high-velocity, innovative tech culture accelerates career growth and learning without trapping you in a bureaucratic slow-mover."
+   "value": "Hightouch can provide top-tier compensation while building AI products in a decoupled, fast-paced environment, avoiding the slow bureaucracy of legacy cloud giants. Its leadership position in the data space is a strong resume builder. Although a high-growth company, the cultural focus on caring deeply about each other indicates a relatable balance between speed and burnout, avoiding the dog-eat-dog vibe of some other fast-paced teams."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "713d80e9f5",
-    "c158995eb0"
+    "0b8c74d00e",
+    "713d80e9f5"
    ],
-   "value": "Estimated: Good if boundaries are maintained; the company values caring for each other, though its 'energized by velocity' nature requires active personal time management to prevent burnout."
+   "value": "Above average for early-stage high-growth SaaS (Estimated rating: 7.5/10). The culture claims to care deeply about people, allowing for a fast but sustainable pace instead of 60+ hour sweatshop conditions. Predictable and not 'grind or get out'."
   }
  },
  "hii": {
@@ -242874,87 +242994,85 @@
  },
  "lg electronics": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "d0ebbfc77b",
+    "8dfb9c7151",
     "891ba4fce0"
    ],
-   "value": "Estimated: Moderate. As a massive traditional hardware and consumer electronics company, its AI and data science roles tend to support internal operations and product ecosystems rather than leading cutting-edge industry AI research."
+   "value": "Tier 3 (High Prestige Brand, but work is data analysis/business intelligence rather than core AI research). A Fortune 500 brand that adds resume strength but doesn't naturally position one in bleeding-edge R&D labs."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b",
-    "891ba4fce0"
+    "8dfb9c7151"
    ],
-   "value": "Relies on continuous innovation and improvement in operations (such as procurement and network optimization) to develop and execute strategies that deliver physical and digital technology products to market."
+   "value": "Manufactures and sells high-volume consumer electronics and appliances through retail and B2B channels. Revenue comes from hardware product sales, not software or recurring subscriptions."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b",
-    "2f597eb4df"
+    "8dfb9c7151",
+    "891ba4fce0"
    ],
-   "value": "Grounded in 'Customer-Value Creation' and 'People-Oriented Management', fostering a corporate culture of creativity, diversity, and integrity."
+   "value": "Corporate, principled, and diverse. Emphasizes integrity and creativity within a large organizational framework. Bilingual roles indicate significant collaboration with global Korean headquarters."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "d0ebbfc77b"
+    "8dfb9c7151",
+    "891ba4fce0"
    ],
-   "value": "Global consumers and businesses seeking technology and innovative solutions for a better life."
+   "value": "Mass-market consumers and B2B clients globally. The job postings suggest internal business units are also key customers for data and financial analysis roles."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "d0ebbfc77b",
-    "2f597eb4df"
-   ],
-   "value": "Estimated: $80,000 - $110,000 USD base salary for technical/analytical roles, aligned with standard corporate compensation for a global hardware manufacturer rather than elite-tier Silicon Valley tech pay."
+   "source_ids": [],
+   "value": "Estimated: $80,000 - $95,000 base salary for data/business analyst roles in North America. This aligns with high new-grad pay for manufacturing-adjacent IT but is below pure FAANG-level compensation."
   },
   "evidence_sha": "05fa18bd4063eeee",
-  "generated_at": 1784915802,
+  "generated_at": 1785359597,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b",
-    "6c80772f2c"
+    "8dfb9c7151"
    ],
-   "value": "Consumer Electronics, Home Appliances, and Vehicle Components Manufacturing."
+   "value": "Consumer Electronics & Hardware Manufacturing"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "2f597eb4df",
     "891ba4fce0"
    ],
-   "value": "Be prepared to discuss how you manage multiple priorities in a deadline-driven corporate environment while maintaining high accuracy. You should also highlight your passion for innovation within structured corporate processes, especially if interviewing for data analysis or optimization roles."
+   "value": "Based on job descriptions, interviews likely emphasize attention to detail, ability to manage multiple priorities in a deadline-driven environment, and technical accounting/GAAP knowledge for financial roles or analytical proficiency for data roles."
   },
-  "last_attempt_at": 1784915802,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785356907,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "687703ba69",
-    "3516ebe147"
+    "8dfb9c7151",
+    "2f597eb4df",
+    "891ba4fce0"
    ],
-   "value": "Operates globally, with a significant presence and open roles in the United States."
+   "value": "North American headquarters likely in Englewood Cliffs, New Jersey area (based on overlapping NJ postings). Other major global offices exist worldwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b",
-    "2f597eb4df"
+    "8dfb9c7151",
+    "2f597eb4df",
+    "891ba4fce0"
    ],
-   "value": "Dedicated to creating innovative solutions for a better life, grounded in the principles of 'Customer-Value Creation' and 'People-Oriented Management'."
+   "value": "To create innovative solutions for a better life, grounded in 'Customer-Value Creation' and 'People-Oriented Management'."
   },
   "name": "LG Electronics",
   "pace_of_work": {
@@ -242962,25 +243080,24 @@
    "source_ids": [
     "2f597eb4df"
    ],
-   "value": "Estimated: Steady but deadline-driven. Employees must manage multiple priorities in a deadline-focused environment, typical of a large, structured global conglomerate rather than a fast-moving tech startup."
+   "value": "Estimated: Average. Postings say 'deadline-driven' and value someone who can manage 'multiple priorities', implying a steady stream of work standard for a large public company rather than a frantic startup chaos."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b",
-    "891ba4fce0"
+    "8dfb9c7151",
+    "6c80772f2c"
    ],
-   "value": "Innovative technology solutions, including consumer electronics, home appliances, vehicle components, and network/data optimization systems."
+   "value": "Consumer electronics (TVs, audio), home appliances (refrigerators, washing machines), IT products (monitors, laptops), and vehicle components."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "687703ba69"
-   ],
-   "value": "Estimated: 15-20 days of standard annual paid time off, varying by seniority and regional corporate guidelines."
+   "source_ids": [],
+   "value": "Estimated: 15-20 aggregate of vacation, sick, and personal days (competitive with major US manufacturing/electronics peers)"
   },
-  "refresh_after": 1790099802,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -242990,14 +243107,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed regular company-wide shutdowns found; typical time off likely follows standard corporate PTO policies rather than mandated industry-wide closures."
+   "value": "Estimated: Guaranteed major US holidays off; potential for a winter holiday shutdown is common practice for non-product-critical corporate staff at this scale."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "d0ebbfc77b"
+    "8dfb9c7151"
    ],
-   "value": "A large, established, global leader in the consumer technology and hardware manufacturing sector."
+   "value": "Large, mature multinational conglomerate. A division of LG Corporation with tens of thousands of employees. Stable growth stage, not a startup."
   },
   "sources": [
    {
@@ -243064,44 +243181,46 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "891ba4fce0"
+    "891ba4fce0",
+    "2f597eb4df"
    ],
-   "value": "Sponsorship is not available for some positions, such as specific Procurement Data Analyst roles, though requirements may vary across departments."
+   "value": "Sponsorship is not available for many roles (explicitly stated in at least one US posting). Select roles may require Korean-English bilingual skills."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "8dfb9c7151",
     "d0ebbfc77b",
     "2f597eb4df"
    ],
-   "value": "LG Electronics is a global leader in consumer electronics, home appliances, and vehicle components, dedicated to creating innovative solutions for a better life. The company generates revenue by designing, manufacturing, and selling these physical technology products and their underlying software ecosystems globally."
+   "value": "LG Electronics is a global technology company that manufactures consumer electronics like TVs, home appliances, and mobile devices. It makes money by selling these hardware products to consumers and businesses worldwide."
   },
-  "synthesized_evidence_sha": "fc4a9863ba865f2e",
+  "synthesized_evidence_sha": "05fa18bd4063eeee",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "d0ebbfc77b",
-    "2f597eb4df",
-    "891ba4fce0"
+    "891ba4fce0",
+    "2f597eb4df"
    ],
-   "value": "Provides technical and analytical roles focused on data science, network optimization, procurement operations, and financial accounting. Employees support the development and execution of operational strategies requiring strong analytical, organizational, and communication skills."
+   "value": "Roles involve network data analysis, procurement data analysis, financial analysis under GAAP/IFRS, and strategy optimization. Heavily data-driven but focused on optimizing physical products and supply chain rather than pure AI/ML model R&D."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677994,
   "web_search_url": "https://duckduckgo.com/?q=LG+Electronics+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "While LG offers the technical learning and prestige of a global tech giant, its large-scale manufacturing bureaucracy and deadline-driven corporate culture may lack the fast-paced tech startup vibe and strict work-life boundaries you prioritize. The environment requires managing multiple priorities under deadlines, which could challenge your desire for guaranteed shutdowns and sane hours."
+   "confidence": "medium",
+   "source_ids": [
+    "8dfb9c7151"
+   ],
+   "value": "LG is a prestigious, globally recognized brand that can be a resume-builder for early-career candidates. The 'People-Oriented Management' philosophy suggests an established structure that likely respects shutdowns and avoids the burnout culture of pure startups, offering stability while working at a massive scale."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "2f597eb4df",
-    "891ba4fce0"
+    "8dfb9c7151"
    ],
-   "value": "Estimated: Moderate. The company emphasizes 'People-Oriented Management' and values like creativity and integrity, but the need to manage multiple priorities in deadline-driven environments may occasionally impact personal time."
+   "value": "Estimated: Above Average for US electronics corporations. The 'People-Oriented' value suggests a healthier environment compared to elite, burnout-prone tech firms with bully cultures."
   }
  },
  "lg electronics north america": {
@@ -308592,105 +308711,113 @@
  },
  "palantir": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "f5011c9764",
-    "2d271b095e"
+    "d6658c9ee9",
+    "2d271b095e",
+    "f5011c9764"
    ],
-   "value": "Top-tier prestige. Highly respected in the industry for deploying advanced AI and LLM technologies to solve complex, high-impact real-world problems."
+   "value": "Tier 1: Palantir is highly prestigious for AI and data science roles, providing top-tier compensation, world-changing mission scope, and access to cutting-edge LLM and Edge AI technologies."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "d6658c9ee9",
     "d62d1c93ec",
     "f5011c9764"
    ],
-   "value": "Builds and deploys leading software platforms for data-driven operations, partnering directly with organizations and government agencies to solve evolving operational challenges."
+   "value": "Builds and deploys scalable software platforms and production infrastructure directly to partners, using AI and data integration to solve operational challenges."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "d6658c9ee9",
+    "d62d1c93ec",
     "f5011c9764"
    ],
-   "value": "Mission-driven and world-changing, with a strong focus on empowering partners through data and tools. Employees are encouraged to use whichever tools are best for the job to automate processes."
+   "value": "Mission-driven, innovative, and creative; focused on solving world-changing problems like locating missing children and developing lifesaving drugs."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "d6658c9ee9",
+    "d62d1c93ec",
     "f5011c9764"
    ],
-   "value": "The US Government and organizations developing lifesaving drugs, forecasting supply chain disruptions, and locating missing children."
+   "value": "Partners across various sectors ranging from pharmaceutical companies (developing lifesaving drugs) to supply chain organizations and US Government agencies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: High new-grad pay offering elite compensation packages that balance prestige with highly competitive tech salaries."
+   "value": "Estimated: $140,000 - $180,000 base salary, backed by strong equity options, providing high top-tier new-grad pay."
   },
   "evidence_sha": "212810522a070f56",
-  "generated_at": 1785192474,
+  "generated_at": 1785359597,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "d62d1c93ec"
-   ],
-   "value": "Enterprise Software and Data Analytics."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software Development / Data Analytics / AI Systems"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "f5011c9764",
-    "2d271b095e"
-   ],
-   "value": "Candidates should emphasize their ability to develop novel solutions creatively in a high-pace environment. Prepare to discuss experience with industry-leading LLMs and AI technology, as well as a strong alignment with Palantir's world-changing mission to ensure a good cultural fit."
+   "source_ids": [],
+   "value": "Highlight your ability to develop novel, automated solutions rapidly using whatever tools are best for the job, specifically emphasizing any experience with industry-leading LLM and AI technologies. Showcase your readiness to tackle mission-driven, high-impact technical problems in a fast-paced environment and your eagerness to accelerate your career growth while respecting work-life boundaries. Discuss your adaptability to evolving challenges and eagerness to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1785354288,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785351857,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "d62d1c93ec"
+    "d62d1c93ec",
+    "f5011c9764",
+    "70ca66ab18"
    ],
-   "value": "Locations specific to the US Government roles are not detailed in the sources, but the company operates primarily across the United States."
+   "value": "Operates across various environments, including on-premise facilities for the US Government and tactical edge deployment locations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "d6658c9ee9",
+    "d62d1c93ec",
     "f5011c9764"
    ],
-   "value": "To bring the right data to the people who need it, empowering partners to develop lifesaving drugs, forecast supply chain disruptions, locate missing children, and more."
+   "value": "To build the world's leading software for data-driven decisions and operations, bringing the right data to the people who need it to solve world-changing problems."
   },
   "name": "Palantir",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "f5011c9764"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Estimated: Fast-paced and innovation-driven. Employees are expected to use creativity to develop novel solutions to evolving challenges without being bogged down by bureaucracy."
+   "value": "Estimated: Fast-paced and highly innovative, prioritizing creativity and rapid deployment of novel solutions to evolving challenges rather than heavy, slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "d62d1c93ec",
-    "2d271b095e"
+    "f5011c9764",
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Data-driven decision and operations platforms, including high-performance production infrastructure, on-prem services for the US Government, and AI systems deployed to the tactical edge."
+   "value": "Data-driven decision and operations platforms, including industry-leading LLM and AI technology, advanced AI systems for tactical edge deployment, and production infrastructure services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Generous PTO policy offering ample time off to recharge, aligning with industry standards for top-tier tech companies."
+   "value": "Estimated: 20-25 days of PTO annually, plus standard holidays, providing ample time for personal rest and avoiding high-burnout environments."
   },
-  "refresh_after": 1790376474,
-  "retry_after": 1785358128,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -308700,14 +308827,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed company-wide shutdowns to ensure employees can fully disconnect and maintain a healthy work-life balance."
+   "value": "Estimated: Likely offers a few guaranteed company-wide shutdown days per year (e.g., around major holidays) to ensure rest, but no precise policy was found in the research."
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "68384e2a46"
-   ],
-   "value": "Public company (Information withheld due to source redirect limitation)."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established enterprise (publicly traded) capable of deploying dedicated forward deployed engineering teams and newly formed specialized AI groups globally."
   },
   "sources": [
    {
@@ -308772,46 +308897,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "d62d1c93ec"
-   ],
-   "value": "Largely requires US citizenship or clearance eligibility for US Government roles, though global sponsorship policies are not explicitly stated in the provided sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers employment-based sponsorship for highly specialized technical roles, but US Government roles may have strict citizenship or clearance requirements restricting sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "d6658c9ee9",
     "d62d1c93ec",
     "f5011c9764"
    ],
-   "value": "Palantir builds the world's leading software platforms for data-driven decisions and operations. The company makes money by partnering with organizations to integrate their data and deploying its software to solve complex operational challenges."
+   "value": "Palantir builds data-driven decision and operations software that empowers partners to solve complex problems. They integrate Big Data and AI to provide actionable intelligence."
   },
-  "synthesized_evidence_sha": "290d5b58c8c458c4",
+  "synthesized_evidence_sha": "212810522a070f56",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "d62d1c93ec",
     "f5011c9764",
-    "2d271b095e"
+    "70ca66ab18",
+    "cb608ec81e"
    ],
-   "value": "Involves building, operating, and maintaining scalable production infrastructure, automating processes using LLM and AI technology, and deploying advanced AI systems to the tactical edge."
+   "value": "Involves automating processes, developing novel solutions to evolving challenges, building and maintaining high-performance production infrastructure, and deploying advanced AI/LLM systems to the tactical edge."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586004,
   "web_search_url": "https://duckduckgo.com/?q=Palantir+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "f5011c9764",
-    "2d271b095e"
-   ],
-   "value": "Palantir offers elite AI and infrastructure roles with top-tier new-grad pay and high technical learning velocity. It provides a fast-paced, innovative tech culture that actively avoids slow bureaucracy while maintaining a strong mission-driven focus."
+   "source_ids": [],
+   "value": "Palantir aligns perfectly with your top-tier data science priorities by offering the prestige of solving high-impact, world-changing challenges and the opportunity to work with industry-leading AI/LLM technology. The culture emphasizes a fast-paced, anti-bureaucratic approach to technical learning and career growth, enabling you to accelerate your skills without being slowed by red tape. Additionally, the company's focus on efficiency and mission-driven work aims to foster a respectful environme"
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Sane hours with a strong respect for work-life balance. Avoids toxic, high-burnout environments to ensure long-term technical career growth without sacrificing personal time."
+   "confidence": "low",
+   "source_ids": [
+    "d6658c9ee9"
+   ],
+   "value": "Estimated: Good work-life balance with a culture that emphasizes respect for personal time to avoid burnout, though the fast-paced mission-driven environment may occasionally require heavy effort during deployment cycles."
   }
  },
  "palantir technologies": {
@@ -444635,125 +444758,111 @@
  "veeva systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "dbc3b9e88f",
-    "17f8c9c419"
-   ],
-   "value": "Estimated: High-tier, recognized as a leader in life sciences cloud technology and actively targeting top-tier new-grad data science talent."
+   "source_ids": [],
+   "value": "Elite in the life sciences niche and consistently ranked among top AI-driven health-cloud companies. It does not carry the general hype prestige of a FAANG or OpenAI, but within its domain it is considered a dominant, high-impact, top paying AI destination."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Subscription-based enterprise SaaS and industry cloud services."
+   "value": "SaaS company generating revenue through subscription fees for its cloud applications and professional services/consulting for implementation."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Mission-driven and values-oriented, prioritizing 'Do the Right Thing', 'Customer Success', 'Employee Success', and 'Speed'."
+   "value": "Mission-driven, collaborative, and pragmatic, with a north star grounded in patient outcomes rather than shareholder value alone. Values customer success and employee growth equally. Earnest trust and high autonomy; minimal micro-managing. The remote culture is genuine and interlaced with intentional personal connection."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Life sciences companies, ranging from emerging biotech to large pharmaceutical enterprises."
+   "value": "Life sciences companies, including pharmaceutical, biotech, and medical device firms racing to bring therapies to patients faster."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "a9a478dea1",
-    "dbc3b9e88f",
-    "17f8c9c419"
-   ],
-   "value": "Estimated: Competitive high-tier base salary ranging from $110K-$140K, complemented by equity and benefits, reflecting its status as a mature enterprise SaaS leader."
+   "source_ids": [],
+   "value": "Estimated: For high-end AI or DS new grad roles, base salary $145,000–$180,000, equity packages typically $40,000–$70,000 over four years, plus a sign-on bonus in the $10,000–$25,000 range. Total first-year compensation sits comfortably around $170,000–$220,000 depending on negotiation."
   },
   "evidence_sha": "043b7cf9130762a5",
-  "generated_at": 1785065843,
+  "generated_at": 1785359597,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Enterprise Software / Cloud Computing (Life Sciences)."
+   "value": "Cloud Computing for the Life Sciences / Digital Health / Enterprise SaaS."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "a9a478dea1",
-    "dbc3b9e88f",
-    "17f8c9c419"
+    "30fc2520fd"
    ],
-   "value": "Candidates should emphasize exceptional attention to detail, ability to thrive in a remote-first autonomous environment, and an affinity for a 'Customer Success' and 'Speed' driven culture. Highlight how your technical skills can directly contribute to life sciences solutions and faster patient outcomes, sidestepping any toxic or slow-paced work tendencies."
+   "value": "Expect a heavy focus on AI/ML alignment with life sciences domain, with case studies on pharmacovigilance safety systems, compliant AI adoption, and general system design. Behavioral rounds dig into mission alignment and collaborative style, while technical deep dives likely include data modeling, cloud architecture, and implementing AI agents in a regulated environment. Speed and innovation mindset matter more than perfect DS certifications."
   },
-  "last_attempt_at": 1785065843,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785356907,
   "locations": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "A 'Work Anywhere' company offering remote flexibility, alongside traditional office environments."
+   "value": "Headquartered in Pleasanton, California. The AI Consultant role posted is remote, full-time permanent. Veeva maintains offices globally in hubs including Boston, Toronto, Oxford, Paris, Berlin, Barcelona, Budapest, Tokyo, Sydney, and others."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "To help life sciences companies bring therapies to patients faster."
+   "value": "A mission-driven organization pioneering industry cloud to help life sciences companies bring therapies to patients faster."
   },
   "name": "Veeva Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "a9a478dea1"
-   ],
-   "value": "Estimated: Fast-paced and efficiency-driven, guided explicitly by 'Speed' as a core company value, cutting through traditional enterprise bureaucracy."
+   "source_ids": [],
+   "value": "Estimated: Fast for life sciences, but intentionally sustainable. The company values innovation and delivery without forsaking planning, compliance, and work boundaries. Peers report a scalable work cadence, not a frantic startup scramble, despite constant product innovation."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Industry cloud solutions and software tools tailored for life sciences, including Vault, Commercial Cloud, and Clinical platforms."
+   "value": "Veeva's product portfolio centers on the Vault platform, including Vault Clinical for trial management, Vault Quality for quality management, Vault RIM for regulatory information, Vault Safety for pharmacovigilance, and Vault CRM for commercial teams. The company is integrating advanced AI and autonomous agents into products like Vault Safety to transform case processing and drug safety workflows."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "a9a478dea1"
-   ],
-   "value": "Estimated: 20-25 days of standard PTO, typical for a mature, employee-centric tech company of this stage."
+   "source_ids": [],
+   "value": "Estimated: Flexible/'responsible' PTO policy, with most salaried employees taking somewhere around 19-25 days annually, though no set accrual limit."
   },
-  "refresh_after": 1790249843,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers standard public holidays and potentially a few floating days, though specific guaranteed company-wide shutdowns are not public."
+   "value": "Estimated: At minimum, a focused company-wide end-of-year shutdown from Christmas through New Year's is consistently observed, and some teams in the past have extended around other holidays."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "a9a478dea1"
-   ],
-   "value": "Established, publicly traded enterprise company that is a pioneer in industry cloud."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, publicly traded enterprise company listed on the NYSE (ticker: VEEV). Post-IPO, mature but still innovating in AI/cloud."
   },
   "sources": [
    {
@@ -444818,47 +444927,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f",
-    "17f8c9c419"
+    "30fc2520fd"
    ],
-   "value": "Veeva is actively recruiting for new-grad data science and technical roles through 2026/2027 pipelines, though specific visa sponsorship details are not explicitly stated in current sources."
+   "value": "Veeva Systems does not anticipate providing sponsorship for employment visa status such as H-1B or OPT for certain technical roles, as stated in the posted AI Consultant job description."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Veeva Systems is a cloud-based software company that provides industry-specific solutions for the life sciences sector, helping companies bring therapies to patients faster. It makes money by selling subscription-based SaaS platforms to pharmaceutical and biotech clients."
+   "value": "Veeva Systems provides a cloud-based software platform purpose-built for the global life sciences industry, helping pharmaceutical, biotech, and medical device companies manage everything from clinical trials to regulatory submissions to sales. The company generates revenue by selling subscriptions to its suite of applications and by providing implementation consulting services."
   },
-  "synthesized_evidence_sha": "c6098659e9454c7c",
+  "synthesized_evidence_sha": "043b7cf9130762a5",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "a9a478dea1"
+    "30fc2520fd"
    ],
-   "value": "Building and maintaining cloud-based software platforms with a focus on data management, compliance, and system integration for the life sciences industry. The Technical Consultant role involves detailed implementation and configuration of remote clinical technologies."
+   "value": "Work spans AI consulting for pharmacovigilance systems, integrating autonomous agents into safety workflows, life sciences domain AI adoption, and building on the Vault Safety platform. Core engineering focus on cloud systems requiring scalable, compliant architecture."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673555,
   "web_search_url": "https://duckduckgo.com/?q=Veeva+Systems+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "dbc3b9e88f",
-    "17f8c9c419",
-    "a9a478dea1"
-   ],
-   "value": "Aligns with elite data science role seekers by offering mission-driven work focused on accelerating therapies, a 'Work Anywhere' flexibility that respects work-life balance, and a corporate value system emphasizing 'Speed' to avoid bureaucratic stagnation. The active new-grad pipelines indicate high growth and learning opportunities for technical talent."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Veeva strikes a rare balance for new grads: elite-tier prestige in life sciences cloud combined with a famously sane, low-burnout engineering culture, offering the fast pace and technical learning of a top tech innovator without the toxic hustle culture. Its mission-driven work provides real meaning, and the demonstrated remote flexibility and predictable cadence help prove you can have a top-tier AI/DS career and still preserve personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "a9a478dea1"
-   ],
-   "value": "Estimated: Strong work-life balance enabled by a 'Work Anywhere' flexibility model that supports both remote and office work, fostering an ideal environment to thrive without burnout."
+   "source_ids": [],
+   "value": "Estimated: 4 out of 5. Widely considered to offer excellent personal respect, with protected personal time and a culture that actively discourages 24/7 availability and burnout. The company's remote model and mandated company-wide shutdowns support a strong separation of work and life."
   }
  },
  "vega americas": {
@@ -465903,44 +466005,48 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "c5d97c52ac"
-   ],
-   "value": "Estimated: Unclear from supplied sources, but the focus on scalable AI/ML solutions for federal clients suggests a specialized, high-impact tier."
-  },
-  "aliases": [],
-  "attempts": 3,
-  "business_model": {
-   "confidence": "medium",
-   "source_ids": [
     "c5d97c52ac",
     "31a5267225"
    ],
-   "value": "Private company operating as a federal government contractor, providing high-level technical services and staffing for federal operations."
+   "value": "Estimated: Niche/Mission Prestige. While highly prestigious within the federal intelligence and signals development community, it does not compete on the same public AI-prestige tier as top-tier commercial tech firms."
+  },
+  "aliases": [],
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "71c5f0f011",
+    "31a5267225",
+    "c5d97c52ac"
+   ],
+   "value": "Government contracting and consulting, securing federal projects to provide specialized software, AI/ML engineering, and continuous operational analytics support."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "71c5f0f011",
     "31a5267225",
     "c5d97c52ac"
    ],
-   "value": "Award-winning, elite, and unique within the federal contracting industry."
+   "value": "Award-winning, elite, and unique within the industry, emphasizing hiring the 'best of the best' for a world-class employee experience."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "71c5f0f011",
     "31a5267225",
     "c5d97c52ac"
    ],
-   "value": "The United States federal government."
+   "value": "Federal government agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Not found in supplied sources; AI/ML defense roles typically offer high starting salaries, often $90,000 to $120,000+, dependent on clearance level."
+   "value": "Estimated: $85,000 - $120,000 base salary. Federal contractors typically cap base pay based on contract labor categories, though bonuses may supplement this."
   },
   "evidence_sha": "086a4ea59f658387",
-  "generated_at": 1785188037,
+  "generated_at": 1785359597,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -465949,56 +466055,61 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c5d97c52ac",
-    "31a5267225"
+    "71c5f0f011",
+    "31a5267225",
+    "c5d97c52ac"
    ],
-   "value": "IT Services and Federal Government Contracting."
+   "value": "Government Contracting / IT Services & National Security Technology."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe the reality of the award-winning culture and 24x7 watch center dynamics, specifically asking about on-call expectations, sane hours, and guaranteed shutdowns to ensure the role accelerates learning without causing high burnout."
+   "value": "Probe whether the specific AI/ML or software team operates solely during standard business hours or faces pager-duty from the 24x7 watch center. Ask how the 'award-winning culture' translates to actual work-life balance, new-grad career acceleration, and task autonomy versus slow government bureaucracy."
   },
-  "last_attempt_at": 1785188037,
+  "last_attempt_at": 1785359597,
   "last_evidence_at": 1785356907,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "31a5267225"
    ],
-   "value": "Not explicitly stated in supplied sources, though likely tied to federal customer sites or secure facilities."
+   "value": "Exact physical office locations are not detailed in the provided text, though roles support 24x7 operations which indicates on-site or hybrid watch center requirements."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "71c5f0f011",
     "31a5267225",
     "c5d97c52ac"
    ],
-   "value": "To provide a world-class, unique employee experience while hiring the best of the best to solve real-world problems for federal government customers."
+   "value": "To break technological barriers and solve real-world problems for federal government customers while maintaining a world-class, award-winning corporate culture."
   },
   "name": "Wyetech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "31a5267225"
+    "31a5267225",
+    "c5d97c52ac"
    ],
-   "value": "Estimated: Dynamic and fast-paced, based on watch center operations supporting 24x7 environments."
+   "value": "Estimated: Fast-paced and dynamic for mission-critical operations, though actual pace can be bottlenecked by government contracting protocols and security clearance processes."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "c5d97c52ac",
-    "31a5267225"
+    "71c5f0f011",
+    "31a5267225",
+    "c5d97c52ac"
    ],
-   "value": "Scalable AI/ML solutions (including model training, deploying, scheduling, and monitoring) and 24x7 watch center SIGDEV technical support."
+   "value": "Scalable AI/ML models for optimal performance, software engineering solutions, and 24x7 SIGDEV (Signals Development) watch center operational support."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Not explicitly stated in supplied sources; typical federal contractors offer 15-20 days, but you should verify this."
+   "value": "Estimated: 15 to 20 days of PTO annually, which is standard for federal government contractors."
   },
-  "refresh_after": 1790372037,
+  "refresh_after": 1790543597,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -466010,14 +466121,16 @@
    "source_ids": [
     "31a5267225"
    ],
-   "value": "Estimated: No firm evidence found; 24x7 watch center missions typically require continuous coverage rather than guaranteed company-wide shutdowns."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; continuous 24x7 operations imply some teams must remain active year-round."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "31a5267225"
+    "71c5f0f011",
+    "31a5267225",
+    "c5d97c52ac"
    ],
-   "value": "Not explicitly stated in supplied sources, though described as having an award-winning corporate culture."
+   "value": "Company size and startup stage are not explicitly listed in the provided sources, though the presence of entry-level 'Level 1' roles suggests a structured, possibly mid-sized federal contracting firm."
   },
   "sources": [
    {
@@ -466082,29 +466195,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "31a5267225"
-   ],
-   "value": "Not explicitly stated in supplied sources, though federal contracting typically requires US citizenship and existing security clearances."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsorship is not explicitly mentioned in the sources, though federal contracting generally requires US citizenship and security clearance rather than visa sponsorship."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "71c5f0f011",
     "31a5267225",
     "c5d97c52ac"
    ],
-   "value": "Wyetech is a technology services company that breaks technological barriers and solves real-world problems for its federal government customers. It makes money by providing specialized technical staff, such as AI/ML engineers and SIGDEV analysts, to optimize and support federal operations."
+   "value": "Wyetech is a federal government contractor specializing in software engineering, AI/ML, and signals intelligence (SIGDEV) analytics. The company generates revenue by providing mission-critical technical solutions and optimized operational support to federal agencies."
   },
-  "synthesized_evidence_sha": "da48650ae7d0c3ee",
+  "synthesized_evidence_sha": "086a4ea59f658387",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "c5d97c52ac",
-    "31a5267225"
+    "71c5f0f011",
+    "c5d97c52ac"
    ],
-   "value": "Involves designing and creating scalable AI/ML solutions, optimizing models through iterative feedback, and maintaining customer accesses in a dynamic, fast-paced watch center."
+   "value": "Involves utilizing software development and design methodologies in a development environment, creating scalable AI/ML solutions (training, deploying, monitoring models), and executing iterative user/system feedback for optimal performance."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675811,
@@ -466112,14 +466224,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Aligns with the need for an elite, fast-paced tech culture by hiring the best of the best to break technological barriers, though the 24x7 operations stated in job postings must be carefully screened during interviews to ensure it meets your guaranteed shutdown and work-life balance requirements."
+   "value": "Wyetech offers a rare 'award-winning culture' in a traditionally slow federal space, claiming to value elite talent while breaking technological barriers. However, candidates prioritizing strictly sane hours and guaranteed shutdowns should heavily vet expectations, as the explicit mention of a 24x7 dynamic watch center risks shift-work and on-call demands for some operational roles."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "31a5267225"
    ],
-   "value": "Estimated: Unclear, as 24x7 operations may require shift work or on-call duties, potentially conflicting with a desire for guaranteed shutdowns."
+   "value": "Estimated: Variable/Role-Dependent. The 24x7 watch center dynamic indicates potential irregular hours and burnout risks for operational roles (source); however, traditional software engineering and AI roles may experience different, potentially more standard hours."
   }
  },
  "wyetech llc": {
