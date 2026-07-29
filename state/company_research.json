@@ -12880,7 +12880,7 @@
    "value": "Low for elite AI/data science. The focus is on enterprise IT consulting and platform integration (e.g., ServiceNow, cloud infrastructure) rather than foundational AI/DS model building."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -12936,7 +12936,7 @@
    ],
    "value": "Based on your priorities, ask about the actual day-to-day pace of technical learning versus administrative bureaucracy. Also, ask about WLB policies, pto, and guaranteed shutdowns, as they likely vary significantly by client-facing consulting engagements."
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785342129,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "low",
@@ -12979,7 +12979,7 @@
    "value": "Estimated: 15-25 days annually, typical for an established US-based IT consulting firm, though exact policies are unstated."
   },
   "refresh_after": 1790054150,
-  "retry_after": 1785342118,
+  "retry_after": 1785343089,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -312555,41 +312555,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong actuarial data science tradition, growing ML/AI in underwriting and customer analytics, but not a primary AI research hub."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Mutual life insurance model: collects premiums, invests in bonds/equities, pays claims and dividends to policyholders. Revenue from premiums, investment income, and advisory fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Established, policyholder-centric, collaborative. Long-tenured workforce; tech teams likely blend actuarial domain experts with newer digital talent. Less startup chaos, more deliberate iteration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Individuals and families seeking financial protection and wealth accumulation, plus businesses needing employee benefits and executive compensation solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + bonus + benefits (actuarial/tech new grad range for large PA-based insurers); equity unlikely at mutual company."
   },
   "evidence_sha": "1db1d455e28ab4fb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785342129,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785341826,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Life Insurance & Financial Services (Mutual Carrier)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ba913c9364"
+   ],
+   "value": "Expect actuarial/insurance domain questions, legacy modernization challenges, data pipeline work, and behavioral focus on policyholder-centric values. Prepare for SQL, Python, cloud, and system design relevant to insurance platforms."
+  },
+  "last_attempt_at": 1785342129,
   "last_evidence_at": 1785336411,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Headquartered in Horsham, PA (Philadelphia metro). Additional offices in major US cities; hybrid/remote options likely for tech roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "To help people achieve financial security and peace of mind through life insurance and financial products, operating as a mutual company owned by policyholders."
+  },
   "name": "Penn Mutual",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — regulated industry demands thoroughness; modernization initiatives add project urgency but rarely 'move fast and break things' pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Life insurance (term, whole, universal), annuities, disability income insurance, long-term care insurance, and investment/wealth management products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays (industry standard for large financial services); exact policy not public."
   },
-  "retry_after": 1785342066,
+  "refresh_after": 1790526129,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312599,7 +312661,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some financial firms observe winter break but not confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855"
+   ],
+   "value": "Large, established mutual insurance carrier (founded 1847) with ~$30B+ in assets under management and 1,500+ employees."
   },
   "sources": [
    {
@@ -312643,14 +312713,45 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized tech/actuarial roles given size; new-grad sponsorship possible but not confirmed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba913c9364",
+    "714c895855",
+    "994724b200"
+   ],
+   "value": "Penn Mutual is a mutual life insurance company providing life insurance, annuities, and investment products. It makes money through insurance premiums, investment returns on its general account, and fee-based financial advisory services."
+  },
+  "synthesized_evidence_sha": "1db1d455e28ab4fb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ba913c9364"
+   ],
+   "value": "Actuarial modeling, policy administration platforms, digital customer portals, data analytics for underwriting/claims, and modernizing legacy systems. Actively hiring new-grad software engineers (per GitHub source)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785336411,
   "web_search_url": "https://duckduckgo.com/?q=Penn+Mutual+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ba913c9364"
+   ],
+   "value": "Offers a mission-driven mutual structure (policyholder-owned) with elite actuarial/data science heritage. New-grad software roles indicate investment in modern tech. Mutual model may align with stable, long-term culture vs. high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — insurance carriers typically offer stable hours; mutual structure may reduce quarterly pressure. Guaranteed shutdowns not documented."
   }
  },
  "penn state university": {
@@ -325960,51 +326061,48 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
+    "55e1993aff"
    ],
-   "value": "Estimated: Tier 3 - Established insurance enterprise; AI/DS roles likely focus on risk and actuarial analytics rather than cutting-edge elite tech prestige."
+   "value": "Estimated: Tier 3. Traditional insurance carriers typically do not offer top-tier AI or data science prestige compared to tech-first companies, focusing instead on applied business analytics and actuarial modeling."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "7e195a7b6e",
+    "55e1993aff",
     "7e9aab659f"
    ],
-   "value": "Insurance underwriting and premium collection across life insurance, asset protection, and employee benefits."
+   "value": "Insurance underwriting and premium collection. The company assumes financial risk from customers in exchange for premium payments, focusing on life insurance and employee benefits."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
-   ],
-   "value": "Mission-driven and customer-focused, emphasizing protection, peace of mind, and cross-functional support across divisions."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
+    "55e1993aff",
     "7e195a7b6e",
     "7e9aab659f"
    ],
-   "value": "Individuals and employers seeking life insurance and employee benefit protections against life's uncertainties."
+   "value": "Corporate, risk-aware, and mission-driven, with a strong emphasis on employee protection and compliance. Innovation happens within the guardrails of strict regulatory frameworks."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "55e1993aff",
+    "7e9aab659f"
+   ],
+   "value": "Individuals seeking life insurance and groups or employers seeking employee benefits coverage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
+    "55e1993aff"
    ],
-   "value": "Estimated: $75,000 - $95,000 for technical analytical roles, reflecting corporate insurance industry standards rather than elite tech compensation."
+   "value": "Estimated: $70,000 - $90,000. Insurance companies generally pay below big tech benchmarks for new graduate technical roles."
   },
   "evidence_sha": "c3c2132f61d08469",
-  "generated_at": 1784871485,
+  "generated_at": 1785342129,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -326013,92 +326111,88 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7e195a7b6e",
+    "55e1993aff",
     "7e9aab659f"
    ],
-   "value": "Insurance and financial services."
+   "value": "Insurance and Financial Services."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
     "7e195a7b6e",
-    "7e9aab659f"
+    "55e1993aff"
    ],
-   "value": "Assess the velocity of technical decision-making and AI deployment to ensure it matches your desire for a fast, innovative culture. Clarify new-grad compensation, promotion velocity, and work-life boundaries to confirm sane hours and absence of burnout practices."
+   "value": "Ask questions about the pace of innovation, tech stack modernization, and how teams balance sane hours with project delivery. Probe whether the specific team offers guaranteed shutdowns and fast-tracked learning, or if it faces typical insurance industry bureaucracy and burnout."
   },
-  "last_attempt_at": 1785341826,
+  "last_attempt_at": 1785342129,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "low",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f"
+    "f4d4fbb38b",
+    "7e195a7b6e"
    ],
-   "value": "United States, with operations and hiring tied to its insurance and corporate divisions."
+   "value": "Headquartered in Birmingham, AL, with corporate offices and remote work options depending on the role."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "55e1993aff",
     "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
+    "7e9aab659f"
    ],
-   "value": "To help protect customers against life's uncertainties and provide protection and peace of mind when customers need it most."
+   "value": "To protect customers against life’s uncertainties and provide peace of mind when they need it most."
   },
   "name": "Protective Life",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
+    "55e1993aff",
     "7e9aab659f"
    ],
-   "value": "Estimated: Moderate corporate pace typical of established insurance companies, prioritizing compliance and stability over rapid technical iteration."
+   "value": "Estimated: Slow to moderate. The environment is likely process-heavy and bureaucratic due to the highly regulated nature of the insurance and compliance industry."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "7e195a7b6e",
+    "55e1993aff",
     "7e9aab659f"
    ],
-   "value": "Life insurance, asset protection, and employee benefits administered through divisions such as Protective Insurance Company."
+   "value": "Life insurance, employee benefits, and related insurance products, including growing offerings in its Employee Benefits Division."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
+    "f4d4fbb38b"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, standard for an established financial services firm."
+  },
+  "refresh_after": 1790526129,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "55e1993aff",
     "7e195a7b6e",
     "7e9aab659f"
    ],
-   "value": "Estimated: 15-25 days of annual PTO, standard for corporate insurance enterprises but exact policy not publicly specified."
-  },
-  "refresh_after": 1790055485,
-  "retry_after": 1785342066,
-  "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
-   ],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f"
+    "f4d4fbb38b"
    ],
-   "value": "Estimated: No evidence of guaranteed company-wide shutdowns; standard holiday schedule is more likely for a traditional corporate insurer."
+   "value": "Guaranteed shutdowns were not explicitly found in the provided sources."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
+    "f4d4fbb38b"
    ],
-   "value": "Established corporate insurer with multiple product divisions and ongoing enterprise hiring across functions."
+   "value": "Established corporate insurance carrier operating on a national scale."
   },
   "sources": [
    {
@@ -326165,48 +326259,46 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f"
+    "55e1993aff",
+    "7e195a7b6e"
    ],
-   "value": "Estimated: Not explicitly detailed in current postings; typical corporate insurance roles may offer limited visa sponsorship."
+   "value": "Information regarding visa sponsorship for technical roles was not explicitly found in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "7e195a7b6e",
+    "55e1993aff",
     "7e9aab659f"
    ],
-   "value": "Protective Life is an insurance and financial services company that provides life insurance, asset protection, and employee benefits. It makes money by collecting insurance premiums, managing reserves and investments, and generating returns on those assets while paying out claims and covering operational costs."
+   "value": "Protective Life is an insurance carrier that provides financial protection and peace of mind to its customers against life's uncertainties. It generates revenue primarily by underwriting life insurance and employee benefits policies, as well as collecting premiums and managing investments against those liabilities."
   },
-  "synthesized_evidence_sha": "e285d2e92990999f",
+  "synthesized_evidence_sha": "c3c2132f61d08469",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
     "7e195a7b6e",
-    "7e9aab659f",
-    "2616853b2f"
+    "55e1993aff"
    ],
-   "value": "Enterprise functions include Security GRC, risk analytics, product compliance, and supporting systems for insurance operations."
+   "value": "Roles in software development, data science, IT infrastructure, and security governance, risk, and compliance (GRC) to support insurance operations and product filing."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674265,
   "web_search_url": "https://duckduckgo.com/?q=Protective+Life+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f"
+    "55e1993aff",
+    "7e195a7b6e"
    ],
-   "value": "Protective Life offers a mission-driven environment centered on customer protection and peace of mind, which aligns with seeking meaningful work. Its corporate structure provides stability and predictable hours, though a candidate prioritizing fast, elite AI innovation should evaluate whether the tech culture moves at the desired pace."
+   "value": "This is a traditional insurance company, which typically leans toward slow bureaucracy rather than the fast, innovative tech culture you desire. While it claims a mission-driven focus on customer protection, legacy carriers often prioritize stability over elite AI prestige, high new-grad pay, and rapid technical career acceleration."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
-    "7e9aab659f"
+    "55e1993aff"
    ],
-   "value": "Estimated: Good, with standard corporate hours typical of the insurance industry, though not necessarily featuring innovative guaranteed shutdowns."
+   "value": "Estimated: Good. Established insurance companies generally maintain standard corporate hours and decent work-life balance, though bureaucratic friction can occasionally cause project bottlenecks."
   }
  },
  "protiviti": {
@@ -347820,41 +347912,44 @@
  "roadrunner recycling": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2/Tier 3; utilizes applied data science and machine learning for logistics and physical operations rather than being a core AI research lab."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: Niche/Specialized Climate Tech. While explicitly recognized for innovation (e.g., Fire Awards), public evidence of elite, top-tier AI/Data Science prestige (like FAANG) does not appear in the provided sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "B2B service-based model generating revenue by providing customized waste management and recycling services to commercial clients."
+   "value": "RoadRunner makes money by providing technology-optimized waste and recycling services to commercial businesses, likely taking revenue from service contracts, subscriptions, or volume-based fees."
   },
   "culture_vibe": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "d00079f414"
+    "fd5b31772b"
    ],
-   "value": "Mission-driven, impact-focused, and innovative tech culture."
+   "value": "Mission-driven, environmentally conscious, and collaborative. The team is described as caring deeply about each other and the planet, operating with integrity, expertise, and passion."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "d00079f414",
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "Businesses across the United States seeking sustainable, cost-effective waste management and recycling solutions."
+   "value": "Commercial and enterprise businesses seeking waste management and recycling solutions (implied by B2B model and Enterprise Sales Development Representative roles)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $90k - $120k (conservative range for a growth-stage tech-enabled environmental services company)."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: $80,000 - $120,000 base salary. Precise new-grad compensation is not public, but scaling tech companies in the Pittsburgh market typically offer in this range for tech roles."
   },
   "evidence_sha": "3c42eb272d99d2f7",
-  "generated_at": 1784893681,
+  "generated_at": 1785342129,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -347863,70 +347958,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "d00079f414",
-    "0c1041673b",
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "Environmental Services / Waste Management & Recycling"
+   "value": "Waste Management, Recycling, and Environmental Technology (Climate Tech)."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Assess the actual pace of innovation versus bureaucracy in their tech stack, specifically whether data roles receive mission-critical visibility and if the work-life balance aligns with elite tech standards or startup burnout."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Explore the pace of innovation and technical autonomy to ensure the tech culture actually accelerates your AI/data science learning without devolving into bureaucracy. Validate WLB claims like dedicated shutdowns and sane hours, and seek clarity on new-grad tech pay to confirm it meets your elite compensation bar for a top-tier role."
   },
-  "last_attempt_at": 1785341826,
+  "last_attempt_at": 1785342129,
   "last_evidence_at": 1785336064,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "d00079f414",
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "United States, with operations across multiple regions."
+   "value": "Operations and presence are tied to Pittsburgh, as evidenced by Pittsburgh Business Times’ Best Places to Work (2025) and Pittsburgh Inno’s 2022 Fire Awards recognition."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "To help businesses lower their waste costs while reducing their environmental footprint and diverting waste from landfills."
+   "value": "To leverage technology and innovation to modernize a vital industry with integrity, expertise, and a passion for creating a future where waste is a problem of the past."
   },
   "name": "RoadRunner Recycling",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and innovative tech culture, typical of a growth-stage startup."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: Fast, innovative, and dynamic. The company emphasizes leveraging technology and innovation, which typically correlates with an agile tech culture rather than a slow corporate bureaucracy."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "d00079f414"
+    "fd5b31772b"
    ],
-   "value": "Tech-enabled commercial waste management and recycling services, including customized diversion programs for materials like cardboard, glass, and compost."
+   "value": "Technology-driven waste management and recycling optimization models. Exact product lines were not captured in the provided sources, but the focus is on modernizing a vital industry via tech innovation."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 10 to 15 days of PTO plus standard public holidays."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO. Exact company-specific policy is not public in the provided sources, but 'people-first' cultures recognized as Best Places to Work typically fall in this range."
   },
-  "refresh_after": 1790077681,
-  "retry_after": 1785342066,
+  "refresh_after": 1790526129,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research."
+   "confidence": "high",
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: Likely standard major holidays, but specific guaranteed company-wide shutdowns are not publicly detailed in the provided sources."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Private growth-stage company."
+   "confidence": "medium",
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Growing mid-stage tech company. Recognized by awards such as Pittsburgh Inno’s 2022 Fire Awards and actively hiring for enterprise roles, indicating a scaling go-to-market team."
   },
   "sources": [
    {
@@ -347971,41 +348075,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No specific information found in research."
+   "confidence": "high",
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Unable to sponsor or take over sponsorship of employment visas."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "d00079f414",
-    "0c1041673b",
-    "cbed701630"
+    "fd5b31772b"
    ],
-   "value": "RoadRunner Recycling is a waste management and recycling company that leverages technology and data analysis to optimize commercial waste diversion. It generates revenue by providing customized, tech-enabled waste and recycling solutions to businesses, helping them reduce costs and environmental impact while diverting waste from landfills."
+   "value": "RoadRunner Recycling is a technology-driven company that modernizes the waste management and recycling industry. It leverages technology and innovation to optimize vital industry operations, ultimately aiming to create a future where waste is a problem of the past."
   },
-  "synthesized_evidence_sha": "6e3b7ca095cd19e1",
+  "synthesized_evidence_sha": "3c42eb272d99d2f7",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "d00079f414",
-    "0c1041673b"
+    "fd5b31772b"
    ],
-   "value": "Tech-enabled routing, data analysis for waste diversion optimization, and digital platforms facilitating efficient commercial waste services."
+   "value": "The company focuses on leveraging technology and innovation to modernize the waste industry. Specific AI/ML or data science tech stacks are not detailed in the sources, but data-driven optimization and industry-leading models are mentioned."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676689,
   "web_search_url": "https://duckduckgo.com/?q=RoadRunner+Recycling+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Provides a fast, innovative tech culture applied to tangible environmental impact within a mission-driven context. The focus on tech-enabled services offers unique data science optimization challenges compared to traditional Silicon Valley software."
+   "confidence": "high",
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Aligns with your top priorities: RoadRunner is explicitly mission-driven around environmental impact and boasts a 'people-first culture' that respects work-life balance without the high-burnout or toxic environment you want to avoid. It promises a fast, innovative tech culture that leverages modernization, making it a strong launchpad for technical learning and career growth free of slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Work-life balance is generally good, though startup dynamics may occasionally require flexibility."
+   "source_ids": [
+    "fd5b31772b"
+   ],
+   "value": "Estimated: Highly positive. The company explicitly claims a 'people-first culture' and has been formally recognized as one of Pittsburgh Business Times’ Best Places to Work (2025), suggesting a non-toxic environment that respects boundaries."
   }
  },
  "robert bosch venture capital": {
@@ -426234,46 +426341,45 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "5a0c1f3b99"
+    "3b4166895e"
    ],
-   "value": "Estimated: Mid-to-High Tier. While not an AI-first company, Twilio's data-driven workflows and automation infrastructure present strong technical opportunities, though not on the same prestige level as dedicated elite-AI labs."
+   "value": "Estimated: Mid-tier. While highly prestigious overall, Twilio's core AI/DS work focuses on operational efficiencies (like fraud detection in communications) rather than elite foundational AI model development."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "3b4166895e",
-    "5a0c1f3b99"
+    "3b4166895e"
    ],
-   "value": "Usage-based cloud communication APIs, charging developers and enterprises for messaging, voice, and compliance infrastructure."
+   "value": "Cloud communications platform as a service (CPaaS), primarily utilizing a usage-based or volume-based pricing model for API interactions and software integrations."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "3b4166895e",
+    "26b2cb416d",
     "5a0c1f3b99"
    ],
-   "value": "Vibrant, inclusive, and collaborative, with a strong emphasis on connection and continuous innovation."
+   "value": "Remote-first, vibrant, diverse, and collaborative. Encourages global inclusion and invites employees to bring something new to the table."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "5a0c1f3b99",
-    "3b4166895e"
+    "5a0c1f3b99"
    ],
-   "value": "Software developers and businesses seeking to embed secure, compliant communication capabilities into their applications."
+   "value": "Businesses of all sizes seeking to embed communication and security capabilities into their software, ranging from startups to large global enterprises."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Estimated: $130,000 - $160,000 base salary. Twilio compensates competitively for tech talent."
+   "value": "Estimated: $140,000 - $160,000 base salary, aligning with competitive large-cap tech companies."
   },
   "evidence_sha": "197763392be333da",
-  "generated_at": 1784873814,
+  "generated_at": 1785342129,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -426284,48 +426390,48 @@
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Cloud Communications and Software as a Service (SaaS)."
+   "value": "Cloud Communications / Software as a Service (SaaS) / Platform as a Service (PaaS)."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "5a0c1f3b99",
-    "3b4166895e"
+    "3b4166895e",
+    "26b2cb416d"
    ],
-   "value": "Candidates should highlight their ability to thrive in a fast-paced, innovative environment while demonstrating proactive problem-solving and a strong drive for autonomy. Discussing readiness to tackle high-scale technical challenges and showing how one manages personal growth without burning out aligns with Twilio's career-driven mission."
+   "value": "Be ready to discuss distributed systems design and proactive problem-solving, particularly regarding communication compliance, security, and high availability systems. The ideal candidate thrives in a fast-paced culture and can leverage remote-first autonomy for accelerated technical learning without sacrificing personal time."
   },
-  "last_attempt_at": 1785341826,
+  "last_attempt_at": 1785342129,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "3b4166895e"
+    "3b4166895e",
+    "26b2cb416d"
    ],
-   "value": "Remote-first organization, allowing employees to work from the comfort of their homes regardless of location."
+   "value": "Remote-first organization with a global workforce, allowing employees to work from the comfort of their homes."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "3b4166895e",
-    "5a0c1f3b99"
+    "3b4166895e"
    ],
-   "value": "Shaping the future of communications by empowering developers and building trust through secure, compliant operations."
+   "value": "To unlock the magic of communications to improve any human experience, shaping the future of communication globally."
   },
   "name": "Twilio",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "5a0c1f3b99"
    ],
-   "value": "Estimated: Fast-paced and innovative. Environment challenges employees to bring their best every day to keep up with the demand."
+   "value": "Estimated: Fast-paced and innovative, requiring proactive problem-solving in a dynamic environment."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "5a0c1f3b99",
     "3b4166895e"
    ],
-   "value": "Programmable communication APIs for SMS, voice, and video; customer engagement tools; and compliance/onboarding security infrastructure."
+   "value": "APIs for SMS, voice, WhatsApp, and video communications, email APIs (via Twilio SendGrid), and programmable contact center solutions."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -426333,13 +426439,15 @@
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Estimated: 20-25 days of annual PTO. Public company remote-first policies typically include flexible vacation alongside standard state holidays."
+   "value": "Estimated: 20-25 days of flexible vacation time, typical for large, remote-first tech companies."
   },
-  "refresh_after": 1790057814,
-  "retry_after": 1785342066,
+  "refresh_after": 1790526129,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "3b4166895e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
@@ -426348,14 +426456,14 @@
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Estimated: No official guaranteed corporate shutdowns found; remote-first workers generally rely on flexible PTO."
+   "value": "Estimated: Likely offers floating holidays or occasional office shutdowns, though unspecified."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Publicly traded, established technology company with a global, remote-first workforce."
+   "value": "Large-cap public technology company."
   },
   "sources": [
    {
@@ -426424,44 +426532,44 @@
    "source_ids": [
     "3b4166895e"
    ],
-   "value": "Not explicitly mentioned in provided sources; however, as a large global tech company, sponsorship opportunities may exist."
+   "value": "Not explicitly stated in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "3b4166895e",
     "5a0c1f3b99"
    ],
-   "value": "Twilio is a cloud communications platform that allows developers to programmatically integrate voice, text, chat, and video into applications via APIs. The company makes money by charging its customers on a usage-based, pay-as-you-go model for executing these communications."
+   "value": "Twilio is a cloud communications platform that enables developers to programmatically integrate voice, messaging, video, and email functionalities into their applications via APIs. The company makes money through a usage-based pricing model, charging clients for the volume of messages sent, minutes called, and active user authentication verifications processed."
   },
-  "synthesized_evidence_sha": "a8ac4a4e9e322175",
+  "synthesized_evidence_sha": "197763392be333da",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "3b4166895e",
     "5a0c1f3b99"
    ],
-   "value": "Building scalable communication infrastructure, developing cloud-based software, and creating security/compliance systems."
+   "value": "Building and scaling high-volume, distributed cloud APIs, managing email and messaging infrastructure, and developing security/compliance systems on a remote-first basis."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678006,
   "web_search_url": "https://duckduckgo.com/?q=Twilio+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "3b4166895e",
-    "5a0c1f3b99"
+    "5a0c1f3b99",
+    "26b2cb416d"
    ],
-   "value": "Twilio offers a dynamic, remote-first culture that accelerates technical learning and puts career growth directly in the hands of the employee. The focus on high-impact communication infrastructure provides new grads with elite, fast-paced technological challenges while maintaining global flexibility."
+   "value": "At Twilio, you will tackle high-throughput communication and security problems that scale globally. While the role demands technical excellence, its focus on secure, compliant infrastructure and remote autonomy helps preserve work-life balance and shields you from high-burnout environments."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "3b4166895e",
-    "5a0c1f3b99"
+    "26b2cb416d"
    ],
-   "value": "Estimated: Moderate to Good. Remote-first setup provides flexibility, but pace and demanding initiatives can require strict boundary-setting to maintain balance."
+   "value": "Estimated: Good. The company promotes a remote-first culture where your career is in your own hands, favoring autonomy and global inclusion to maintain balance."
   }
  },
  "twitch": {
