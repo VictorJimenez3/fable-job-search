@@ -11936,37 +11936,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low — no public AI/data science research, publications, or specialized ML roles found."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Likely a software services or product company hiring engineering talent; may work with placement/training firms like SynergisticIT to source junior developers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Estimated: Engineering-focused, remote-first, likely lean and execution-oriented given placement-partner hiring model."
   },
-  "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+  "customers": {
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Not confirmed"
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "medium",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Estimated: $95K–$154K base (per posting for MERN Stack Developer new-grad role)."
   },
   "evidence_sha": "b924ecf8d9f4c673",
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Software development / IT services (inferred from MERN hiring)."
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Prepare for MERN stack fundamentals (JavaScript/TypeScript, React, Node, Express, MongoDB), data structures/algorithms, and system design basics. Ask explicitly about on-call expectations, core hours, guaranteed shutdown policies, mentorship structure, and how the company measures new-grad success in the first 6–12 months."
+  },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785341636,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "United States (remote)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "AgileGrid Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — early-stage/small companies hiring via placement partners often move quickly to ship product."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "No public product information found; the company is advertising for MERN stack developers, suggesting web application development."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days (typical US small-company default); no public policy found."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11976,7 +12032,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy publicly documented; candidate should confirm."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small company (limited public footprint, hiring via placement partner)."
   },
   "sources": [
    {
@@ -12030,14 +12091,42 @@
     "url": "https://jobright.ai/jobs/info/6a69c7d00b42f866b619563c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e12e7ce070",
+    "1db9db9c4d"
+   ],
+   "value": "AgileGrid Solutions appears to be a technology company hiring for MERN stack developer roles, with at least one new-grad remote position advertised via a placement partner (SynergisticIT). Public sources reveal little about its core products or business model."
+  },
+  "synthesized_evidence_sha": "b924ecf8d9f4c673",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "MERN stack (MongoDB, Express, React, Node.js) development for full-time remote new-grad roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341636,
   "web_search_url": "https://duckduckgo.com/?q=AgileGrid+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e12e7ce070"
+   ],
+   "value": "Offers a new-grad remote MERN role with a posted range of $95K–$154K, which meets the candidate’s high new-grad pay threshold. The remote, full-time structure and placement via a training partner suggest a fast-paced, skills-first environment that could accelerate technical growth without relocation. Limited public data means the candidate should verify WLB, shutdown culture, and mission alignment directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no public employee reviews or policy disclosures found; candidate must ask directly."
   }
  },
  "agilent technologies": {
@@ -12220,37 +12309,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI team in a mission-critical healthcare infrastructure company; not a primary AI research lab but offers high-impact production ML at scale with clinical relevance."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Recurring revenue from multi-year service contracts for equipment maintenance and management, equipment rental/leasing fees, project-based clinical engineering services, and on-site managed service agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, safety-conscious, collaborative; values reliability and clinical outcomes over velocity. Diverse workforce with strong biomedical/clinical engineering presence. Low politics, process-oriented."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Hospitals, integrated health systems, ambulatory surgery centers, and other healthcare providers across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU/equity (private-company equity, liquidity via periodic tenders). Total comp ~$110k–$135k. Above regional median, below FAIR-tier."
   },
   "evidence_sha": "6f41918ac4058167",
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Healthcare Technology Management / Clinical Engineering Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on deploying ML in regulated, safety-critical environments (FDA/HTM standards), time-series analysis for predictive maintenance on heterogeneous medical device fleets, and translating model outputs into field-technician workflows. Prepare to discuss model monitoring, edge deployment constraints, and cross-functional collaboration with clinical engineers. Ask about data access governance, on-call expectations for production models, and how the team balances innovation velocity wi"
   },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785341637,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4fca78ed12",
+    "852b22e837"
+   ],
+   "value": "Headquartered in Eden Prairie, Minnesota with field offices and service centers across 40+ states; hybrid and field-based roles common for technical positions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "To advance healthcare by delivering innovative medical equipment management solutions that improve patient care, reduce costs, and increase operational efficiency for healthcare providers."
+  },
   "name": "Agiliti",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles tied to healthcare budgeting and regulatory review; faster than hospital IT but slower than consumer tech. Sprint cadence likely 2–4 weeks with structured release gates."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Medical equipment management and maintenance services, clinical engineering outsourcing, equipment rental and leasing programs, surgical technology solutions, and on-site managed services for healthcare facilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 company holidays; accrual-based, increases with tenure. No public unlimited-PTO policy."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12260,7 +12404,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; standard holiday closures (Thanksgiving week, Christmas–New Year) observed. Some teams may adopt informal slowdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Large private company (acquired by Thomas H. Lee Partners in 2023); approximately 5,000+ employees serving 9,000+ healthcare facilities nationwide. Previously public (NYSE: AGTI) before going private."
   },
   "sources": [
    {
@@ -12294,14 +12445,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b46fc6eaebe4ad34e148c76f84c2f47d74c467ffa766f4a3b42334cb1d7073e0JmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=2da1b892-ba80-67b1-02a5-af37bbfe6668&u=a1aHR0cHM6Ly93d3cuYWdpbGl0aWhlYWx0aC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized clinical engineering and data science roles given scale and technical needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Agiliti is a healthcare technology management company that provides medical equipment services, maintenance, and rental solutions to hospitals and health systems across the United States. The company helps healthcare providers optimize clinical engineering workflows and equipment availability."
+  },
+  "synthesized_evidence_sha": "6f41918ac4058167",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4fca78ed12"
+   ],
+   "value": "Clinical engineering, biomedical equipment technology, IoT/connected medical device management, service logistics optimization, healthcare data analytics, field service management platforms, and biomedical informatics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341637,
   "web_search_url": "https://duckduckgo.com/?q=Agiliti+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Agiliti sits at the intersection of healthcare operations and technology, offering AI/data science roles focused on real clinical impact — optimizing life-saving equipment uptime and predictive maintenance at national scale. As a private-equity-backed leader in a regulated, mission-critical space, it combines the resources for elite compensation with a tangible patient-care mission, avoiding the ad-driven or speculative work common in pure-play tech. The field-service heritage implies a culture "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — field-service roots emphasize predictable scheduling; corporate/data roles generally follow standard hours with limited on-call for production models. Private ownership reduces quarterly-pressure spikes."
   }
  },
  "agility pr solutions": {
@@ -37343,37 +37519,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier - known for applied computer vision/ML in consumer products but not a top AI research lab; strong for production ML engineering, less for pure research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware sales (cameras, doorbells, accessories) plus recurring subscription revenue from Arlo Secure plans (cloud storage, AI detection, professional monitoring, emergency response)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-driven, innovative, mission-focused on safety; startup-like agility within public company structure; emphasis on ownership and customer impact."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumers (homeowners, renters) and small businesses seeking DIY smart home security solutions with professional monitoring options."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated $130k-$160k base + equity (RSUs) + annual bonus; total compensation ~$160k-$200k for ML/engineering roles (mid-tier for consumer IoT)."
   },
   "evidence_sha": "79e5efdcf0ba0d31",
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Smart Home Security / IoT / Consumer Electronics / Applied AI"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on computer vision model deployment, scalable cloud/video processing, IoT security, edge optimization, and behavioral questions on collaboration, pace, and product ownership. Prepare for system design with real-time constraints."
+  },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785341637,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Carlsbad, California; supports hybrid/remote work for engineering roles; additional offices in Taiwan and Vietnam for hardware operations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide peace of mind through innovative, easy-to-use smart home security solutions that protect what matters most."
+  },
   "name": "Arlo Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced product cycles with quarterly hardware/software releases; estimated moderate-to-high intensity around launches; consumer hardware deadlines drive urgency."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wire-free security cameras, video doorbells, floodlight cameras, security systems, and Arlo Secure subscription service with AI-powered detection (person, package, vehicle, animal)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated 15-20 days PTO + company holidays; unlimited PTO not confirmed in public sources."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37383,7 +37601,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns found in research; may have limited holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: ARLO), approximately 500-1000 employees, spun out from Netgear in 2018; mid-stage public company with established market position."
   },
   "sources": [
    {
@@ -37417,14 +37640,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=4993245aaac176a2649b75011cd1a895512ce0bb98a269426d2fb1b722ead478JmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=2da1b892-ba80-67b1-02a5-af37bbfe6668&u=a1aHR0cHM6Ly91cy5hcmxvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized engineering roles (ML, computer vision, cloud); no public data on new-grad specific sponsorship commitments."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Arlo Technologies is a smart home security company offering wire-free cameras, video doorbells, and security systems with cloud-based AI features. They generate revenue through hardware sales and subscription services (Arlo Secure)."
+  },
+  "synthesized_evidence_sha": "79e5efdcf0ba0d31",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Computer vision and ML for object detection/classification, cloud infrastructure for video processing, mobile app development (iOS/Android), IoT firmware/embedded systems, edge AI optimization, scalable backend services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341637,
   "web_search_url": "https://duckduckgo.com/?q=Arlo+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate wants elite AI prestige, high new-grad pay, fast innovative culture, mission-driven with genuine work-life balance, guaranteed shutdowns, accelerated learning without burnout. Arlo offers applied CV/ML at consumer scale with hardware-software integration, but prestige tier is mid-level and WLB may vary by team."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 3.5/5 - company promotes balance but consumer hardware deadlines can cause crunch periods; varies significantly by team and role."
   }
  },
  "arm": {
@@ -92264,37 +92508,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong technical hiring signal via new-grad program, but firm lacks public AI research brand of top-tier labs or FAANG)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees (time-and-materials or fixed-price engagements); revenue from advisory contracts with corporate and possibly public-sector clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, intellectually rigorous, flat hierarchy, 'smart & nice' peer group; protects personal time via explicit shutdown norms."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + signing bonus + performance bonus (consulting new-grad bands); equity unlikely."
   },
   "evidence_sha": "fecbe61a528f3328",
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Management consulting / Strategy consulting with technology & AI practice"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect case-style problem solving plus technical depth in ML/system design; prepare to show how you translate ambiguous business problems into scalable data solutions while demonstrating consultative communication."
+  },
+  "last_attempt_at": 1785341826,
+  "last_evidence_at": 1785341636,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in sources; consulting firms often have hub offices in major metros (e.g., NYC, SF, Chicago, DC) with travel to client sites."
   },
-  "last_evidence_at": 1785341636,
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "CIL Strategy Consultants",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced project cycles typical of consulting (2–12 week engagements), but internal culture described as innovative with guarded shutdowns to prevent burnout."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Strategy consulting services (specific offerings not detailed in available sources); likely includes digital transformation, data analytics, and AI advisory given technical hiring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (typical for US consulting firms); no public policy found."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -92304,7 +92596,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Firm-wide guaranteed shutdown periods (e.g., winter break, summer Fridays) cited in candidate materials; exact calendar not public."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small-to-mid-sized consulting firm (likely 50–500 employees); stage appears established enough to run campus recruiting for new grads."
   },
   "sources": [
    {
@@ -92348,14 +92645,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No explicit mention of visa sponsorship in sources; many consulting firms sponsor H-1B for technical roles but candidates should confirm directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "CIL Strategy Consultants appears to be a strategy consulting firm that likely provides advisory services to clients. The company was discovered through a 2026 new-grad software engineer job posting, suggesting they are hiring technical talent, though specific details about their core consulting focus and service lines are not available in the retrieved sources."
+  },
+  "synthesized_evidence_sha": "fecbe61a528f3328",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Hiring 2026 new-grad software engineers; likely building internal tools, data platforms, AI/ML models, or client-facing digital products. Stack and architecture details not public."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341636,
   "web_search_url": "https://duckduckgo.com/?q=CIL+Strategy+Consultants+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This role offers a rare blend of elite consulting prestige and hands-on AI/data science work at new-grad pay, with a stated culture of fast innovation and guaranteed shutdowns that protects work-life balance—directly matching your priority for high growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 (candidate-facing materials emphasize sane hours and guaranteed shutdowns; consulting travel may vary by project)"
   }
  },
  "cimarron inc": {
@@ -246334,48 +246658,120 @@
  "logicbroker inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bfda074b6a"
+   ],
+   "value": "Estimated: Mid-tier. The company integrates modern AI features into its operations and recruiting, but is primarily focused on commerce technology rather than being a dedicated AI/data science powerhouse."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "B2B SaaS platform facilitating digital commerce operations and brand-to-customer connections."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Mission-driven, agile, and highly collaborative. The culture is defined by a 'no-ego environment' where the best ideas win, regardless of who voices them."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Global brands looking to accelerate growth, delight customers, and run smarter digital commerce operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for new graduate software engineers, based on industry benchmarks for mid-stage SaaS companies in non-primary tech hub markets."
   },
   "evidence_sha": "ccf91e85ea8a90d3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "E-commerce Platforms / Software Development"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Prepare to discuss cloud platforms (AWS, Azure) and containerization (Docker, Kubernetes) in depth. Emphasize your ability to collaborate effectively in a no-ego environment and ask probing questions about how the team maintains agility and work-life balance while innovating rapidly."
+  },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785341636,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Not explicitly stated in available sources; currently hiring Software Engineers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Transforming digital commerce through innovation and agility, directly shaping how global brands connect with customers."
+  },
   "name": "Logicbroker, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Estimated: Fast. The company explicitly values 'innovation and agility' which indicates a rapid development pace over slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "A digital commerce platform that enables product discovery, shopping, fulfillment, and returns for global brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO annually, based on typical mid-stage tech company benchmarks."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; likely follows standard holiday structures."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "bfda074b6a"
+   ],
+   "value": "Mid-stage tech company actively hiring new graduates and scaling its engineering team via modern recruiting infrastructure."
   },
   "sources": [
    {
@@ -246429,14 +246825,45 @@
     "url": "https://ats.rippling.com/logicbroker-inc/jobs/3d23113d-d689-407d-af4b-57907b4e2a61"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Not explicitly stated in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Logicbroker is a SaaS company that transforms digital commerce by making products discoverable, shoppable, fulfillable, and returnable. It makes money by providing an agile platform that helps global brands run smarter operations and grow faster through automated commerce connections."
+  },
+  "synthesized_evidence_sha": "ccf91e85ea8a90d3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Software engineering involving cloud platforms (AWS, Azure) and containerized environments (Docker, Kubernetes) to build scalable commerce solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341636,
   "web_search_url": "https://duckduckgo.com/?q=Logicbroker%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Logicbroker aligns well with your desire for a mission-driven, fast, and innovative tech culture. Their explicit 'collaborative, no-ego environment' where 'the best ideas win' suggests a healthy, non-toxic workplace that accelerates technical learning without bureaucratic slowdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3f0ed940d6"
+   ],
+   "value": "Estimated: Good. The emphasis on a collaborative, ego-free culture suggests a respectful working environment, though explicit work-life balance guarantees are not documented."
   }
  },
  "logiqal": {
@@ -312131,7 +312558,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312149,7 +312576,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336411,
   "name": "Penn Mutual",
   "pace_of_work": {
@@ -312162,7 +312589,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785341758,
+  "retry_after": 1785342066,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -325540,7 +325967,7 @@
    "value": "Estimated: Tier 3 - Established insurance enterprise; AI/DS roles likely focus on risk and actuarial analytics rather than cutting-edge elite tech prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -325566,7 +325993,7 @@
    ],
    "value": "Individuals and employers seeking life insurance and employee benefit protections against life's uncertainties."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -325599,7 +326026,7 @@
    ],
    "value": "Assess the velocity of technical decision-making and AI deployment to ensure it matches your desire for a fast, innovative culture. Clarify new-grad compensation, promotion velocity, and work-life boundaries to confirm sane hours and absence of burnout practices."
   },
-  "last_attempt_at": 1784871485,
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "low",
@@ -325645,6 +326072,7 @@
    "value": "Estimated: 15-25 days of annual PTO, standard for corporate insurance enterprises but exact policy not publicly specified."
   },
   "refresh_after": 1790055485,
+  "retry_after": 1785342066,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -325742,7 +326170,7 @@
    ],
    "value": "Estimated: Not explicitly detailed in current postings; typical corporate insurance roles may offer limited visa sponsorship."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -347396,7 +347824,7 @@
    "value": "Estimated: Tier 2/Tier 3; utilizes applied data science and machine learning for logistics and physical operations rather than being a core AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -347419,7 +347847,7 @@
    ],
    "value": "Businesses across the United States seeking sustainable, cost-effective waste management and recycling solutions."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -347446,7 +347874,7 @@
    "source_ids": [],
    "value": "Assess the actual pace of innovation versus bureaucracy in their tech stack, specifically whether data roles receive mission-critical visibility and if the work-life balance aligns with elite tech standards or startup burnout."
   },
-  "last_attempt_at": 1784893681,
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "low",
@@ -347483,6 +347911,7 @@
    "value": "Estimated: 10 to 15 days of PTO plus standard public holidays."
   },
   "refresh_after": 1790077681,
+  "retry_after": 1785342066,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -347546,7 +347975,7 @@
    "source_ids": [],
    "value": "No specific information found in research."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -364198,38 +364627,102 @@
  "sensata": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "87847e915d"
+   ],
+   "value": "Estimated: Tier 3. The company is highly recognized in industrial hardware, but does not currently hold top-tier prestige for pure AI/Data Science roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "70707ccf49",
+    "5c9bff3ef4"
+   ],
+   "value": "B2B industrial hardware supplier model; generates recurring revenue by manufacturing and selling high-volume, mission-critical sensor systems to large OEMs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5c9bff3ef4"
+   ],
+   "value": "Estimated: Traditional, mission-focused engineering culture prioritizing safety and reliability over fast-moving 'move fast and break things' software culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c9bff3ef4",
+    "87847e915d"
+   ],
+   "value": "Automotive, heavy vehicle, off-road, and industrial original equipment manufacturers (OEMs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for US-based new graduates in software/data roles."
   },
   "evidence_sha": "1753d25c08a3dc60",
+  "generated_at": 1785341826,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "87847e915d",
+    "5c9bff3ef4"
+   ],
+   "value": "Industrial Technology, Electronic Components, and Sensors."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the specific team's pace and whether AI/ML work is core or experimental. Ask about exact hours, work-life balance policies, and if there is heavy bureaucracy typical of hardware companies that could stifle fast innovation."
   },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785341637,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c9bff3ef4"
+   ],
+   "value": "Global footprint with key operations in the US, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c9bff3ef4"
+   ],
+   "value": "To create a cleaner, more efficient, electrified, and connected world through its sensor-rich solutions."
+  },
   "name": "Sensata",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "70707ccf49"
+   ],
+   "value": "Estimated: Moderate. The work is driven by long-cycle hardware integration and OEM contracts, which may feel bureaucratic and slower-paced compared to a modern software startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5c9bff3ef4",
+    "87847e915d"
+   ],
+   "value": "Sensors, sensor-rich systems, and actuators used for mission-critical monitoring and control."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days of standard accrued PTO for new salaried engineers."
   },
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -364239,7 +364732,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread guaranteed corporate shutdowns; operations may occasionally pause for standard plant retooling or major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "70707ccf49"
+   ],
+   "value": "Large-cap public company (NYSE: SX), operating globally with thousands of employees."
   },
   "sources": [
    {
@@ -364273,14 +364773,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a0675e130d30abd0704fb4459a968762035340fc802a171a70e405746f591e7fJmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=2da1b892-ba80-67b1-02a5-af37bbfe6668&u=a1aHR0cHM6Ly93d3cuc2Vuc2F0YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "70707ccf49"
+   ],
+   "value": "Large global engineering companies typically offer work visa sponsorship for specialized hard-to-fill roles, though specific Sensata policies vary by site and role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "87847e915d",
+    "5c9bff3ef4"
+   ],
+   "value": "Sensata Technologies is a global industrial technology company that designs and manufactures sensors, sensor-rich solutions, and actuators. It makes money by supplying these critical components to automotive, heavy vehicle, and industrial OEMs who integrate them into complex systems."
+  },
+  "synthesized_evidence_sha": "1753d25c08a3dc60",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c9bff3ef4",
+    "87847e915d"
+   ],
+   "value": "Embedded software engineering, IoT systems design, hardware-software integration, and sensor data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785341637,
   "web_search_url": "https://duckduckgo.com/?q=Sensata+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sensata offers a mission-driven pathway into electrification and IoT data streams, which can accelerate technical learning. However, as a legacy industrial manufacturer, it likely lacks the fast-paced elite tech prestige and top-tier new-grad compensation standard at AI-first software companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally sane hours due to standardized manufacturing and engineering cycles, though occasional product-launch crunches can be expected."
   }
  },
  "senseye a siemens business": {
@@ -421297,94 +421826,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Tier 3-4 (low public visibility, minimal research presence, unknown conference publications)"
+   "value": "Estimated: Emerging — niche healthcare AI applications (claims anomaly detection, NLP for clinical notes) but not a known AI research lab; prestige comes from domain impact, not publishing volume."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "6765cbb327",
-    "10ea4e5638",
-    "5187eede4c"
+    "d0c9445fc3"
    ],
-   "value": "No business model information found in the provided sources."
+   "value": "B2B SaaS and tech-enabled services model: likely charges fees based on recovered amounts, subscription for software platform, or project-based consulting for payment integrity audits and credit balance resolution."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown; minimal public employer branding or employee reviews accessible."
+   "confidence": "medium",
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Collaborative, innovative, remote-first, metrics-oriented. Described as 'dynamic growing organization' promoting 'collaborative and innovative work environment' — likely pragmatic, builder culture with healthcare domain seriousness."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "6765cbb327",
-    "10ea4e5638",
-    "5187eede4c"
+    "d0c9445fc3"
    ],
-   "value": "No customer information found in the provided sources."
+   "value": "Healthcare payers (insurance companies, Medicare/Medicaid plans) and providers (hospitals, health systems, physician groups) seeking to reduce payment errors and administrative waste."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $80k-$120k base + equity (wide range for early-stage health tech); well below top-tier AI lab offers of $150k-$250k+."
+   "value": "Estimated: $95k-$120k base + equity (healthcare tech/remote growth-stage benchmark); payment integrity niche may pay slight premium over general SaaS but below FAANG/quant finance."
   },
   "evidence_sha": "8ed2fb7c4284ca50",
-  "generated_at": 1784888953,
+  "generated_at": 1785341826,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthcare technology / Health tech (estimated from company name)"
+   "confidence": "high",
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Healthcare technology / Payment integrity / Revenue cycle management"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ask for specific, written policies on: maximum weekly hours, mandatory shutdown periods, PTO accrual and usage rates, promotion timelines, and mentorship programs. Request to speak with a recent new grad hire about actual experience. Probe the tech stack maturity and whether AI/ML work is core product or experimental side project."
+   "confidence": "medium",
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Ask: (1) What does a typical week look like for a data scientist/engineer — are there core hours or async expectations? (2) How are 'production and quality expectations' measured for technical roles? (3) What is the on-call rotation and incident response process? (4) How does the team balance rapid iteration with healthcare compliance rigor? (5) What learning budget or mentorship exists for new grads?"
   },
-  "last_attempt_at": 1784888953,
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336064,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely US-based given naming convention; no specific locations found in sources."
+   "confidence": "high",
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "US Remote (headquarters likely in a major metro; job posting specifies US Remote for Credit Balance Analyst I role)."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "6765cbb327",
-    "10ea4e5638",
-    "5187eede4c"
+    "d0c9445fc3"
    ],
-   "value": "No mission statement found in the provided sources."
+   "value": "Facilitate collaboration between payers and providers for mutual benefit and waste reduction, ultimately improving access to healthcare."
   },
   "name": "Trend Health Partners",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown; early-stage health tech often moves fast but regulatory constraints can create bottlenecks."
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Estimated: Moderate-fast — 'performance-driven environment' with 'daily production expectations' suggests steady delivery pressure; healthcare compliance adds review gates but remote setup enables focus time."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "6765cbb327",
-    "10ea4e5638",
-    "5187eede4c"
+    "d0c9445fc3"
    ],
-   "value": "No product information found in the provided sources. The sources only contain redirect notices without details about offerings."
+   "value": "Payment integrity software and services including credit balance resolution, claims audit, overpayment recovery, and compliance analytics for healthcare payers and providers."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 10-15 days typical for small US private companies; no published policy found."
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (typical for US growth-stage remote tech companies); no public policy disclosed."
   },
-  "refresh_after": 1790072953,
+  "refresh_after": 1790525826,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -421394,12 +421926,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No evidence of company-wide shutdowns; unlikely for small private firm."
+   "value": "Estimated: None found in research — no mention of company-wide shutdowns, summer Fridays, or mandatory disconnect policies in available sources."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Early-stage or small company given minimal public footprint; exact size and funding stage unknown."
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Growth-stage company (described as 'dynamic growing organization'), likely 100-500 employees based on hiring for analyst roles and remote-first posture."
   },
   "sources": [
    {
@@ -421446,36 +421980,40 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown visa sponsorship policy; small health tech firms often sponsor H-1B but rarely new grads."
+   "value": "No explicit sponsorship policy found in research; remote US roles suggest hiring US-authorized candidates primarily."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "6765cbb327",
-    "10ea4e5638",
-    "5187eede4c"
+    "d0c9445fc3"
    ],
-   "value": "Trend Health Partners appears to be a company with limited public information available. The provided sources show only redirect notices without substantive content about the company's operations, products, or services."
+   "value": "Trend Health Partners is a tech-enabled payment integrity company that helps healthcare payers and providers collaborate to reduce waste and improve payment accuracy. They generate revenue by providing software and services that identify and recover incorrect payments, optimize claims processing, and ensure compliance in healthcare reimbursement."
   },
-  "synthesized_evidence_sha": "446bf55305300a61",
+  "synthesized_evidence_sha": "8ed2fb7c4284ca50",
   "technical_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely involves healthcare data analytics, health tech platform development, or clinical decision support given the name; specific tech stack unknown."
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Building and maintaining payment integrity platform: claims data ingestion, anomaly detection algorithms, rules engines for compliance, credit balance workflow automation, analytics dashboards, and integration with payer/provider systems (EDI, FHIR, APIs)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677862,
   "web_search_url": "https://duckduckgo.com/?q=Trend+Health+Partners+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "This role could offer the mission-driven healthcare impact you want with potential for faster innovation cycles than large bureaucracies, but the lack of public information makes it impossible to verify WLB guarantees, shutdown policies, or pay competitiveness. You'd need to ask directly about concrete policies on hours, time off, and career growth structures."
+   "confidence": "medium",
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Offers a mission-driven healthcare technology role reducing systemic waste — aligns with desire for impact. Remote-first, performance-driven culture may suit self-directed contributors who want autonomy without bureaucracy. However, 'daily production expectations' signals accountability pressure; verify actual hours and burnout safeguards before assuming WLB guarantees."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Unknown; no Glassdoor/Levels.fyi data found in sources."
+   "source_ids": [
+    "d0c9445fc3"
+   ],
+   "value": "Estimated: 3.5/5 — Remote flexibility is a plus, but 'daily production expectations' and performance-driven language hint at metric-driven accountability that can encroach on evenings if not managed; no public evidence of guaranteed shutdowns."
   }
  },
  "trexquant": {
@@ -425689,7 +426227,7 @@
    "value": "Estimated: Mid-to-High Tier. While not an AI-first company, Twilio's data-driven workflows and automation infrastructure present strong technical opportunities, though not on the same prestige level as dedicated elite-AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -425714,7 +426252,7 @@
    ],
    "value": "Software developers and businesses seeking to embed secure, compliant communication capabilities into their applications."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -425744,7 +426282,7 @@
    ],
    "value": "Candidates should highlight their ability to thrive in a fast-paced, innovative environment while demonstrating proactive problem-solving and a strong drive for autonomy. Discussing readiness to tackle high-scale technical challenges and showing how one manages personal growth without burning out aligns with Twilio's career-driven mission."
   },
-  "last_attempt_at": 1784873814,
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "high",
@@ -425786,6 +426324,7 @@
    "value": "Estimated: 20-25 days of annual PTO. Public company remote-first policies typically include flexible vacation alongside standard state holidays."
   },
   "refresh_after": 1790057814,
+  "retry_after": 1785342066,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -425875,7 +426414,7 @@
    ],
    "value": "Not explicitly mentioned in provided sources; however, as a large global tech company, sponsorship opportunities may exist."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -448023,11 +448562,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -448039,6 +448580,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785341826,
   "last_evidence_at": 1785336410,
   "name": "VISTA Technology Services Inc.",
   "pace_of_work": {
@@ -448051,6 +448593,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785341946,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -448114,7 +448657,7 @@
     "url": "https://jobright.ai/jobs/info/6a69db0009998f68b5a6de2a?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785336410,
   "web_search_url": "https://duckduckgo.com/?q=VISTA+Technology+Services+Inc.+company+careers+benefits",
