@@ -54630,44 +54630,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "c89ec17213"
+    "a5aac5ce40"
    ],
-   "value": "Estimated: High academic prestige as part of UC Berkeley, but lacks the elite commercial tech industry prestige typically sought after for top-tier AI or data science roles."
+   "value": "Estimated: High Tier. UC Berkeley is globally recognized for AI and data science research, but as an academic department, its prestige translates to research impact rather than corporate tech pay or culture."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "ded88db085",
-    "c89ec17213"
+    "a5aac5ce40"
    ],
-   "value": "Funded and operated as an academic department within a major public research university."
+   "value": "Public university academic department funded by tuition, state support, and research grants."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "c89ec17213"
    ],
-   "value": "Academic, research-driven, and collaborative, characteristic of a university department."
+   "value": "Estimated: Academic and research-focused. Likely mission-driven toward education and knowledge creation, but not a fast-paced corporate tech environment."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "a5aac5ce40",
     "c89ec17213"
    ],
-   "value": "Students, academic researchers, and potentially industry partners who utilize the department's research outputs or software tools."
+   "value": "Students, academic researchers, and funding agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "1db9db9c4d"
    ],
-   "value": "Estimated: Likely falls below top-tier commercial tech pay, ranging $70,000 - $90,000 annually, reflecting academic research or university-affiliated compensation rates."
+   "value": "Estimated: Academic researcher or staff roles typically pay significantly less than top-tier tech industry roles. Salaries might range from $60k-$80k, unlike corporate new-grad packages."
   },
-  "evidence_sha": "cbd2dfe708619066",
-  "generated_at": 1785256030,
+  "evidence_sha": "893728adea76d110",
+  "generated_at": 1785299944,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -54676,63 +54676,62 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c89ec17213"
+    "a5aac5ce40"
    ],
-   "value": "Higher Education / Research (Academic Department of UC Berkeley)."
+   "value": "Higher Education"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "1db9db9c4d"
    ],
-   "value": "Candidates should prepare for discussions on full-stack web development fundamentals (HTML5, CSS3, JavaScript, OOP). Given the academic context, probing questions about work-life balance, actual work hours, pace of work, and whether the role aligns with a fast-paced, high-paying tech trajectory versus a slower academic environment will be critical."
+   "value": "If this is a university role, expect discussions on research fit and academic background rather than corporate case interviews. If affiliated with a tech employer, expect system design and ML algorithm interviews."
   },
-  "last_attempt_at": 1785256030,
+  "last_attempt_at": 1785299944,
   "last_evidence_at": 1785254478,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40"
    ],
-   "value": "Berkeley, California, US."
+   "value": "Berkeley, California."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "c89ec17213"
+    "a5aac5ce40"
    ],
-   "value": "To advance education and research in industrial engineering and operations research to solve complex societal and industrial challenges."
+   "value": "To advance education and research in industrial engineering, operations research, and data science at UC Berkeley."
   },
   "name": "Berkeley Industrial Engineering & Operations Research",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
-   ],
-   "value": "Estimated: Likely slower and more methodical, typical of an academic research setting, lacking the fast, innovative tech culture of the commercial sector."
-  },
-  "products": {
-   "confidence": "medium",
-   "source_ids": [
-    "ded88db085",
     "c89ec17213"
    ],
-   "value": "Academic research, degree programs, and potentially internal software applications related to industrial engineering and operations research."
+   "value": "Estimated: Academic pace. Likely slower and deadline-driven by semester cycles rather than agile sprints, differing significantly from a fast, innovative tech culture."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c89ec17213"
+   ],
+   "value": "Academic programs, research publications, and graduate education in industrial engineering and operations research."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40"
    ],
-   "value": "Estimated: Generous university-standard PTO (around 15-20 vacation days plus university holidays), though exact tech-role benefits are unconfirmed for this specific posting."
+   "value": "Estimated: University staff typically receive around 20+ days of vacation plus university holidays, but exact policies vary."
   },
-  "refresh_after": 1790440030,
+  "refresh_after": 1790483944,
   "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "c89ec17213"
    ],
    "value": "None found in research"
   },
@@ -54740,28 +54739,18 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40"
    ],
-   "value": "Estimated: May have university calendar shutdowns (such as winter break), but this is not guaranteed for specialized technical roles."
+   "value": "Estimated: The university often observes administrative closures around winter holidays, but guaranteed corporate-style shutdowns are not standard for academic operations."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40"
    ],
-   "value": "Small organization with 2-10 employees explicitly noted, currently classified as an 'Early Stage' entity."
+   "value": "Academic department within a large public research university."
   },
   "sources": [
-   {
-    "content_sha": "e427d2ad9b781abe",
-    "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role Programming fundamentals Object-oriented programming HTML5 CSS3 JavaScript Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L. Full Stack Developer at UST @ Berkeley Industrial Engineering &amp; Operations Research Berkeley, CA, US 2-10 employees https://ieor.berkeley.edu Funding Current Stage Early Stage Company data provided by crunchbase Boost Your Interview Chances Improve Resume Match Score FREE ?",
-    "id": "ded88db085",
-    "kind": "official_job",
-    "publisher": "Berkeley Industrial Engineering & Operations Research",
-    "retrieved_at": 1785254478,
-    "title": "Official job posting — Full Stack Developer at UST",
-    "url": "https://jobright.ai/jobs/info/6a68aeb5e53d5546ebf5901e?utm_campaign=Software%20Engineering&utm_source=1103"
-   },
    {
     "content_sha": "35f1aee2ad38d195",
     "excerpt": "Please click here if the page does not redirect automatically ...",
@@ -54804,28 +54793,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "1db9db9c4d"
    ],
-   "value": "Sponsorship details are not explicitly provided in the job posting or discovery sources."
+   "value": "Not applicable in the corporate sense; as a university department, it typically hires students or academic staff. If postings are linked to affiliated employers, those companies' sponsorship policies would apply."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
-   "source_ids": [
-    "ded88db085",
-    "c89ec17213"
-   ],
-   "value": "Berkeley Industrial Engineering & Operations Research (IEOR) is an academic department at UC Berkeley focused on the study of operations research, industrial engineering, and data science. While operating as part of a public university, it generates 'revenue' through academic grants, tuition, and research funding, though a recent job posting for a Full Stack Developer at UST was linked directly to this organization, suggesting a specialized or affiliated research/software project."
-  },
-  "synthesized_evidence_sha": "cbd2dfe708619066",
-  "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40",
+    "c89ec17213"
    ],
-   "value": "Full stack development utilizing programming fundamentals, object-oriented programming, HTML5, CSS3, and JavaScript."
+   "value": "Berkeley Industrial Engineering & Operations Research is an academic department at the University of California, Berkeley, rather than a traditional corporate employer. It focuses on education and research in industrial engineering, operations research, and data science. It makes money through tuition, research grants, and university funding, though it occasionally posts roles for affiliated tech partners."
+  },
+  "synthesized_evidence_sha": "893728adea76d110",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c89ec17213"
+   ],
+   "value": "Research and teaching in optimization, data science, operations research, and related technical fields."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672884,
@@ -54833,16 +54822,16 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "1db9db9c4d"
    ],
-   "value": "This opportunity presents a unique intersection of academia and software development, potentially offering high technical learning and accelerated career growth in a small, innovative team. However, as an academic or early-stage entity linked to a university, it may not match the candidate's priority for 'elite prestige', 'top-tier new-grad pay', or a fast tech culture,Operating under the heavy bureaucracy often associated with higher education rather than agile tech."
+   "value": "As an academic department, Berkeley IEOR likely does not align with your priority for a corporate AI/data science role that balances elite prestige with high new-grad pay and a fast tech culture. However, if this listing is an industry role sourced through a Berkeley-affiliated program, its relevance depends on the specific employer."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "ded88db085"
+    "a5aac5ce40"
    ],
-   "value": "Estimated: Potentially good work-life balance with sane hours and shutdowns due to university employee benefits, but may lack the fast-paced, high-growth career acceleration typical of tech."
+   "value": "Estimated: Good. University roles typically offer sane hours compared to tech burnouts, but specific guarantees depend on the lab or role."
   }
  },
  "berkshire hathaway energy": {
