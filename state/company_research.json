@@ -107970,110 +107970,102 @@
  },
  "conservice": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Specialized operations company; not a recognized AI, ML, or data science elite employer"
+   "value": "Estimated: Low-tier. The company appears to focus on operational research and auditing rather than elite, cutting-edge AI or data science."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "a47167868c",
-    "26a6b194a1"
-   ],
-   "value": "Conservice makes money through a business process outsourcing model. It charges property management clients a service fee for end-to-end utility administration and generates additional revenue by offering resident-facing payment portals and securing volume-based utility procurement rates, while earning float or transaction fees along the payment chain."
-  },
-  "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Results-oriented but collaborative, with a Midwestern-Utah understated friendliness. Centered around consistency, accuracy, and internal process improvement, with less of the iterative shipping pressure characterizing consumer tech companies."
+   "value": "B2B service and software provider charging for utility management, research, and operational oversight."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a47167868c"
+   ],
+   "value": "Estimated: Traditional and operations-driven. Likely prioritizes process adherence over fast-paced technological innovation, which may appeal to those seeking stability rather than a rapid tech culture."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Multifamily property management companies across the United States, including owners and operators of apartment communities, student housing, military housing, and manufactured housing. Conservice is one of the largest providers in this niche with tens of thousands of community clients."
+   "value": "Not explicitly stated in the provided sources, but generally targeted at organizations needing outsourced operations and utility management."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $32,000–$35,000 per year for the posted $15.75/hr entry-level Research Analyst role. Higher-demand data engineering or analytics positions, if they exist, could range $55,000–$70,000. Well and below elite new-grad tech pay benchmarks."
+   "source_ids": [
+    "a47167868c"
+   ],
+   "value": "Estimated: $15-$25/hr. The only sourced data points to $15.75/hr for an entry-level Research Analyst, which is well below top-tier new-grad tech pay."
   },
-  "evidence_sha": "7d4c57ed0b99f80a",
-  "generated_at": 1785363945,
+  "evidence_sha": "33212b286056df3a",
+  "generated_at": 1785367689,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Utility Management and Real Estate Technology"
+   "value": "Utilities / Operations Management"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "a47167868c"
+   ],
+   "value": "Probe deeply into the actual day-to-day technical challenges to ensure they aren't purely manual operational audits. Ask about the tech stack, AI initiatives, and the potential for accelerated career growth to confirm it isn't a stagnant role."
   },
-  "last_attempt_at": 1785363945,
+  "last_attempt_at": 1785367689,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Headquartered in Logan, Utah, with additional domestic offices in River Heights, UT and hybrid roles in that region. Conservice serves clients nationally across the United States."
+   "value": "Headquartered in Logan, Utah, with roles available in River Heights, UT, and operating in a hybrid work model."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "ddb496cfff",
-    "871100a2bc"
+    "a47167868c"
    ],
-   "value": "To simplify utility management by using people, processes, and technology to deliver comprehensive billing solutions that reduce the costs and complexities of property operations."
+   "value": "Not explicitly stated in the provided sources, but the company is heavily focused on operational efficiency and utility management."
   },
   "name": "Conservice",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Steady, process-driven pace with defined daily and weekly cycles rather than continuous, high-intensity crunch. The work is grounded in methodical financial auditing and operations, suggesting a deliberate tempo."
+   "source_ids": [
+    "a47167868c"
+   ],
+   "value": "Estimated: Moderate to slow-paced, typical of an established operations and utility management company."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "The core product is a full-service utility management and billing platform that consolidates invoices, audits rates, discovers missed meters, builds custom billing formulas, and manages resident utility payments and collections. They also provide vacancy cost recovery, submeter maintenance, and centralized invoice processing."
+   "value": "Operations software and services for utility management, research, and auditing of activations and credit memos."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days of paid time off per year (encompassing vacation and sick leave) plus standard national holidays. Separate policies may exist for Utah holiday observance."
+   "value": "Estimated: 15-20 days annually, aligning with standard mid-sized corporate benefits."
   },
-  "refresh_after": 1790547945,
+  "refresh_after": 1790551689,
   "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
@@ -108084,16 +108076,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual office closure between Christmas and New Year’s consistent with many services firms, plus standard U.S. national holiday shutdowns. Specific dates vary by year and team."
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned; likely relies on standard PTO structure."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1",
-    "ddb496cfff"
+    "a47167868c"
    ],
-   "value": "Privately held, scaled company with 1,001–5,000 employees. Founded in 2000 and still headquartered in Logan, Utah, it is a mature and stable operator in a specialized service domain."
+   "value": "Established mid-sized company with 1001-5000 employees."
   },
   "sources": [
    {
@@ -108105,16 +108095,6 @@
     "retrieved_at": 1785360427,
     "title": "Official job posting — Research Analyst",
     "url": "https://jobright.ai/jobs/info/6a6a3e588693c23e7fb7998f?utm_campaign=Data%20Analysis&utm_source=1103"
-   },
-   {
-    "content_sha": "88dbf9d78a174bd5",
-    "excerpt": "Founded in 2000 Logan, Utah, USA 1001-5000 employees https://www.conservice.com H1B Sponsorship Conservice has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role. Jobright.ai Research Analyst jobs in United States Overview Company Apply on Employer Site APPLY NOW Conservice · 1 hour ago Research Analyst Logan, UT Full-time Hybrid Entry Level $15.75/hr - $15.75/hr Conservice is a company focused on auditing financial processes, and they are seeking a Research Analyst .",
-    "id": "26a6b194a1",
-    "kind": "official_job",
-    "publisher": "Conservice",
-    "retrieved_at": 1785351857,
-    "title": "Official job posting — Research Analyst",
-    "url": "https://jobright.ai/jobs/info/6a6a342816c69119640fd053?utm_campaign=Data%20Analysis&utm_source=1103"
    },
    {
     "content_sha": "35f1aee2ad38d195",
@@ -108160,44 +108140,42 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1"
+    "a47167868c"
    ],
-   "value": "Conservice has a recorded track record of offering H1B visa sponsorships, though this does not guarantee sponsorship for any specific open position."
+   "value": "Has a historical track record of offering H1B sponsorships, though it is not guaranteed for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1"
+    "a47167868c"
    ],
-   "value": "Conservice is a utility management company that acts as an outsourced billing and payment processor for multifamily housing communities, handling everything from meter reading and invoice auditing to resident billing and utility provider payments. By consolidating the complex web of utilities—electricity, gas, water, sewer, trash—into a single platform, they enable property managers to offload back-office overhead and recover more utility costs."
+   "value": "Conservice is a utility management and billing operations company founded in 2000. It generates revenue by handling utility expenses, activations, and credit memos for its clients."
   },
-  "synthesized_evidence_sha": "7d4c57ed0b99f80a",
+  "synthesized_evidence_sha": "33212b286056df3a",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1"
+    "a47167868c"
    ],
-   "value": "Data and technology work centers around ingesting, normalizing, and auditing large-scale utility data, applying business rules engines, and automating workflows across payments and resident portals. Roles like Research Analyst focus on data auditing, investigating credit memos, and improving internal financial and operational data accuracy through systematic research."
+   "value": "Roles involve operational research, data auditing, and utility management rather than cutting-edge AI or data science development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674081,
   "web_search_url": "https://duckduckgo.com/?q=Conservice+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "a47167868c",
-    "26a6b194a1"
+    "a47167868c"
    ],
-   "value": "For a candidate craving elite AI or data science prestige, Conservice is a specialized services firm—not a recognized AI research lab—so it does not carry the same brand cachet as a top tech company and the published entry-level Research Analyst rate of $15.75/hr is materially below high new-grad comp thresholds typically expected in AI and Data Science. However, the firm’s durable, operations-focused business and hybrid Utah setup do not carry the heavy burnout culture often seen in venture-fun"
+   "value": "This company does not align with your goals for elite prestige, top-tier tech pay, or a fast, cutting-edge AI culture. It is operations-focused, which often means slower innovation and traditional bureaucracy compared to dynamic tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Favorable work-life balance. The roles are hybrid and leave-based in a midsize, mature company with low reported burnout indicators."
+   "source_ids": [
+    "a47167868c"
+   ],
+   "value": "Estimated: Good. Entry-level operations roles at established mid-sized companies outside of major tech hubs typically offer standard hours, but burnout risks depend on departmental management."
   }
  },
  "constellis": {
