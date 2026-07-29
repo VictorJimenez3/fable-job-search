@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-29 22:38 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **53 shown / 11122 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-29 23:41 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **54 shown / 11123 stored** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -13,9 +13,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 2d | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
 | 78 ⭐ | 6d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 77 ⭐ | 6d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
+| 76 ⭐ | 1h | RapDev | [ServiceNow Engineer Intern](https://jobs.ashbyhq.com/rapdev/b022388e-79d0-43b8-b524-64aaed9ff4dc/application?embed=true) | Boston, MA | other | simplify |
 | 76 ⭐ | 1d | Cloudflare | [Research Engineer Intern](https://boards.greenhouse.io/cloudflare/jobs/8089379) | Austin, TX | other | simplify |
 | 76 ⭐ | 13d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
-| 75 ⭐ | 4d | Micron | [Intern – Process Development Engineer, 3D DRAM Wet Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Wet-Etch_JR106729) | Boise, ID - Main Site | semiconductors | workday |
+| 75 ⭐ | 5d | Micron | [Intern – Process Development Engineer, 3D DRAM Wet Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Wet-Etch_JR106729) | Boise, ID - Main Site | semiconductors | workday |
 | 75 ⭐ | 12d | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
 | 75 ⭐ | 20d | Microchip Technology | [Applications Engineering Intern](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CA---Roseville/Intern---Applications-Engineering_R2542-26) | Roseville, CA | semiconductors | simplify |
 | 73  | 23d | General Motors | [Research and Development Intern - Research & Development](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2026-Fall-Intern---Research---Development_JR-202613027) | Warren, MI | consumer_manufacturing | simplify |
@@ -60,4 +61,4 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 27d | Eight Sleep | [Prototype & Test Engineer Intern - New Product Development](https://jobs.ashbyhq.com/eightsleep/26d71b34-8a04-45e4-8c39-980688779dc3/application) | SF | other | simplify |
 | 48  | 16d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 
-_53 roles shown (score ≥ 42, posted ≤30d)._
+_54 roles shown (score ≥ 42, posted ≤30d)._
