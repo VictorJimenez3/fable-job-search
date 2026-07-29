@@ -191252,7 +191252,7 @@
    "value": "Estimated: Tier 2 — Large enterprise with massive proprietary healthcare data, active AI/ML investments (fraud, care management, personalization), but not known as an AI research lab; prestige from domain impact and data scale rather than publications."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191299,7 +191299,7 @@
    ],
    "value": "Expect questions on: large-scale data processing (claims, eligibility), healthcare domain knowledge (HIPAA, ICD-10, CMS regulations), mainframe-to-cloud migration experience, model explainability for regulatory compliance, and cross-functional collaboration with clinical/actuarial teams. Highlight projects demonstrating impact on member outcomes or cost savings."
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785342016,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "medium",
@@ -191335,7 +191335,7 @@
    "value": "Estimated: 15-20 days PTO + 10-12 paid holidays + sick leave; posting mentions 'paid time off' and 'paid holidays' but exact accrual not public."
   },
   "refresh_after": 1789980020,
-  "retry_after": 1785341878,
+  "retry_after": 1785342496,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -410175,115 +410175,124 @@
   "ai_ds_prestige_tier": {
    "confidence": "medium",
    "source_ids": [
-    "17f8c9c419",
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Tier 1 (elite) for public-sector mission impact and research caliber; Tier 2 for pure tech brand recognition compared to FAANG. Highly respected in econ/finance ML circles."
+   "value": "Top-tier public sector AI/DS role (high national prestige, low commercial tech prestige)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Not a for-profit entity. Revenue comes from interest on securities holdings, fees for payment services, and loan interest; surplus earnings are remitted to the U.S. Treasury after operational costs and statutory dividends to member banks."
+   "value": "Government entity funded through interest on government securities and fees for services provided to depository institutions."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Mission-driven, intellectual, collaborative, and process-oriented. Values expertise, independence, and public service. Less hierarchical than stereotypes suggest at the analyst/research level. Diversity and inclusion are formal priorities. Can feel bureaucratic for those used to startup agility."
+   "value": "Mission-driven, formal, professional, and highly structured."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "U.S. government (Treasury), depository institutions (banks, credit unions), other central banks, and the broader U.S. economy through policy transmission."
+   "value": "The U.S. federal government, depository institutions, foreign official institutions, and the American public."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $100,000–$130,000 base salary (GS-9/11/12 equivalent or FRB pay bands) + locality pay adjustment + federal benefits (pension, TSP match, health). Total comp ~$115k–$155k depending on location and advanced degree."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: $90,000 - $125,000"
   },
   "evidence_sha": "1be1f2d38aa0b2a3",
-  "generated_at": 1784891972,
+  "generated_at": 1785342016,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Central banking / Financial regulation / Public sector"
+   "value": "Banking and Financial Services"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "03da546537"
    ],
-   "value": "Expect a mix of behavioral (federal competency models), technical (Python, SQL, stats, ML fundamentals), and domain questions (monetary policy basics, payment systems, financial regulation). Emphasis on clear communication, ethical judgment, and ability to work in a structured, compliance-heavy environment. LeetCode-hard algorithms less common than applied data science and problem framing."
+   "value": "Candidates should expect to balance elite technical questions regarding AI and ML with questions about public service motivation. Prepare to discuss how you can bring innovative, fast-paced tech execution into a regulated environment while maintaining their required work-life balance."
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785342016,
   "last_evidence_at": 1785336064,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Board of Governors in Washington, D.C., plus 12 regional Reserve Banks (Boston, New York, Philadelphia, Cleveland, Richmond, Atlanta, Chicago, St. Louis, Minneapolis, Kansas City, Dallas, San Francisco) with branches."
+   "value": "Cleveland, OH"
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "To provide the nation with a safer, more flexible, and more stable monetary and financial system. The Fed's dual mandate is maximum employment and stable prices."
+   "value": "To foster the stability, integrity, and efficiency of the nation's monetary, financial, and payment systems while representing regional District perspectives."
   },
   "name": "The Federal Reserve System",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate, structured pace. Project cycles align with policy calendars (FOMC meetings, reporting deadlines). Less 'move fast and break things,' more deliberate, reviewed, and documented. Occasional crunch around crisis response or major launches (e.g., FedNow)."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: Moderate to slow. Bureaucratic and highly regulated, prioritizing painstaking accuracy over rapid tech-cycle releases."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Monetary policy implementation, payment systems (Fedwire, FedNow), banking supervision and regulation, financial research and data publications, currency distribution, and economic analysis."
+   "value": "Monetary policy implementation, financial system supervision and regulation, payment system services, and economic research."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 13–26 days annual leave (accrues by tenure) + 11 federal holidays + sick leave. Generous compared to private sector; carryover limits apply."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: Generous federal leave policy (typically 15+ days vacation, 13 sick days, and 11 federal holidays)."
   },
-  "refresh_after": 1790075972,
-  "retry_after": 1785341878,
+  "refresh_after": 1790526016,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "03da546537"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns. Federal holidays observed. Some offices may have reduced coverage between Christmas and New Year's, but not a formal policy."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: Yes, guaranteed federal holidays and occasional government shutdown periods where non-essential staff are excused."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Mature government entity. ~20,000 employees across the Board of Governors and 12 Reserve Banks. Not a startup; operates with public-sector stability and bureaucratic processes."
+   "value": "Mature government institution"
   },
   "sources": [
    {
@@ -410339,40 +410348,43 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Federal government entity; hires U.S. citizens for most positions due to security clearance requirements. Limited H-1B sponsorship for specialized research roles; permanent residency often required for career-track positions."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: As a U.S. federal government entity, it typically requires U.S. citizenship or permanent residency and does not sponsor work visas."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "The Federal Reserve System is the central banking system of the United States, responsible for monetary policy, financial stability, and banking supervision. It operates as a decentralized network of 12 regional Reserve Banks overseen by a Board of Governors in Washington, D.C."
+   "value": "The Federal Reserve System is the central bank of the United States, responsible for fostering the stability, integrity, and efficiency of the nation's monetary, financial, and payment systems. It makes money through interest on government securities and fees for services provided to depository institutions."
   },
-  "synthesized_evidence_sha": "661e15d2e7551079",
+  "synthesized_evidence_sha": "1be1f2d38aa0b2a3",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419"
+    "03da546537"
    ],
-   "value": "Large-scale economic modeling, real-time payment infrastructure (FedNow), financial data pipelines, regulatory technology, cybersecurity, and emerging AI/ML research in monetary policy and supervision."
+   "value": "Data mining, artificial intelligence, agentic frameworks, machine learning, and other emerging technical fields applied to financial and economic systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678371,
   "web_search_url": "https://duckduckgo.com/?q=The+Federal+Reserve+System+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "17f8c9c419",
-    "ac80da5477"
+    "03da546537"
    ],
-   "value": "Offers elite prestige as the U.S. central bank with mission-driven impact on the national economy. Provides competitive new-grad pay (estimated $100k–$130k base) with strong work-life balance culture—federal holidays, 40-hour weeks, and rare mandatory overtime. Balances rigorous technical work in payments, modeling, and AI research with public-sector stability and sane hours, avoiding the burnout common in private-sector tech."
+   "value": "Offers the elite prestige and mission-driven stability desired, explicitly requiring AI and ML work. Provides excellent work-life balance and guaranteed shutdowns via government holidays, avoiding tech-burnout. The pace may lean toward slow government bureaucracy, but it prioritizes sane hours and personal time over a fast, high-stress tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 8/10. Strong federal work-life norms: 40-hour weeks standard, generous leave, telework flexibility post-COVID, and cultural expectation to disconnect. On-call rotations exist for critical payments infrastructure but are managed."
+   "source_ids": [
+    "03da546537"
+   ],
+   "value": "Estimated: Exceptional. Strong respect for sane hours and predictable government hours."
   }
  },
  "the giant bullseye": {
@@ -448562,7 +448574,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -448580,7 +448592,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785341826,
+  "last_attempt_at": 1785342016,
   "last_evidence_at": 1785336410,
   "name": "VISTA Technology Services Inc.",
   "pace_of_work": {
@@ -448593,7 +448605,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785341946,
+  "retry_after": 1785342256,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
