@@ -255288,38 +255288,44 @@
  "marsh": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mid-tier business analytics. While Marsh is highly prestigious in the business and finance world, its AI/Data Science work is primarily actuarial, operational, and enterprise-focused rather than cutting-edge research."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: Tier 2 (Corporate Consulting). The parent company is not an elite tech employer, though its subsidiary Oliver Wyman's quantitative divisions may carry higher prestige."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5acc1ee2d8"
+    "c48bb41a2f"
    ],
-   "value": "Earns revenue through commissions and fees by brokering insurance policies and providing risk consulting services."
+   "value": "B2B professional services and management consulting, generating revenue through advisory fees and consulting contracts across its family of businesses."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Professional, structured, and corporate. Heavy emphasis on compliance, risk mitigation, and formal communication, contrasting with a highly innovative, fast-moving tech culture."
+   "confidence": "high",
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Professional, collaborative, and focused on deep risk and management expertise across its global family of businesses."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "3793ad6dbf"
+    "c48bb41a2f"
    ],
-   "value": "Large corporations, small businesses, and institutional clients seeking risk mitigation and insurance solutions."
+   "value": "Organizations across 130 countries seeking risk management, reinsurance, and management consulting expertise."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $90,000 - $120,000 base salary for new-grad data and tech roles, featuring strong benefits but likely lacking the high-end stock multipliers found at elite tech firms."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary (New York area), reflecting standard corporate tech consulting compensation rather than elite tech-tier new grad pay."
   },
   "evidence_sha": "19bce1935e634567",
-  "generated_at": 1784902434,
+  "generated_at": 1785307548,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -255328,69 +255334,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "3793ad6dbf",
-    "5acc1ee2d8"
+    "c48bb41a2f"
    ],
-   "value": "Insurance Brokerage and Risk Management"
+   "value": "Professional Services and Management Consulting"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe the specific technology stack, software development lifecycle speed, and tech-team autonomy to ensure it isn't bogged down by corporate bureaucracy. Validate new-grad compensation bands, work-hour expectations, and on-call structures to confirm they meet your high pay, fast culture, and work-life balance needs rather than traditional financial-services rigidity."
+   "confidence": "medium",
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Candidates should probe the specific tech culture of the team and whether the pace of work matches their preference for fast innovation over slow corporate bureaucracy. It is crucial to clarify expectations around hours, work-life balance, and actual shutdowns to ensure the role avoids high-burnout environments and respects personal time."
   },
-  "last_attempt_at": 1785298935,
+  "last_attempt_at": 1785307548,
   "last_evidence_at": 1785298352,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "5acc1ee2d8"
+    "c48bb41a2f"
    ],
-   "value": "Global presence with major corporate hubs in New York City, London, and Chicago."
+   "value": "Global presence with roles based in major hubs such as New York (1166 Avenue of the Americas)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "97f764bcb8"
+    "c48bb41a2f"
    ],
-   "value": "To act as a trusted advisor and advocate for clients, helping them manage risk effectively so they can thrive."
+   "value": "To help organizations build resilience and competitive advantages from every angle."
   },
   "name": "Marsh",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate and steady. As a traditional corporate financial services firm, the pace is heavily regulated and process-oriented, lacking the rapid, fast-paced iterative cycles of a top-tier tech company."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: Steady and structured with typical corporate bureaucracy. Consulting divisions may experience project-based busy seasons, but it generally lacks the hyper-fast pace of elite tech startups."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "5acc1ee2d8"
+    "c48bb41a2f"
    ],
-   "value": "Commercial insurance brokerage, risk management services, employee health and benefits brokerage, and cyber risk advisory."
+   "value": "Risk advisory, reinsurance and capital advisory, investment consulting, people consulting, and management consulting services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days of paid time off annually, standard for large corporate financial services entities."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: 20-25 days of standard paid time off annually, typical for a large professional services firm."
   },
-  "retry_after": 1785300855,
+  "refresh_after": 1790491548,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c48bb41a2f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No standard guaranteed shutdowns for tech teams. Some corporate offices may close for major holidays, but continuous operations often require staggered coverage, lacking the firm-wide tech shutdowns common in Silicon Valley."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: Likely offers standard corporate holidays, but guaranteed end-of-year firm-wide shutdowns are not publicly confirmed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3793ad6dbf"
+    "c48bb41a2f"
    ],
-   "value": "Large, established global enterprise with tens of thousands of employees worldwide, operating as the flagship subsidiary of Marsh McLennan."
+   "value": "Publicly traded large-cap enterprise (NYSE: MRSH) operating globally in 130 countries."
   },
   "sources": [
    {
@@ -255446,38 +255462,43 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely offers H-1B visa sponsorship and OPT support for specialized technical, actuarial, and data roles due to its large global footprint, but candidates must confirm with recruiters as it is not universally guaranteed."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: As a large global professional services firm, Marsh likely offers visa sponsorship for specialized roles, but specifics are not explicitly mentioned."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "3793ad6dbf",
-    "97f764bcb8"
+    "c48bb41a2f"
    ],
-   "value": "Marsh is the world's leading insurance broker and risk advisor, providing risk management, insurance brokerage, and advisory services. It makes money by charging brokerage fees and commissions for connecting corporate clients with insurance markets."
+   "value": "Marsh is a global professional services firm specializing in risk, reinsurance, capital, people, investments, and management consulting. It generates revenue by advising organizations in over 130 countries on how to build resilience and competitive advantage, operating alongside its subsidiaries Oliver Wyman, Guy Carpenter, and Mercer."
   },
+  "synthesized_evidence_sha": "19bce1935e634567",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "3793ad6dbf",
-    "97f764bcb8"
+    "c48bb41a2f"
    ],
-   "value": "Enterprise data engineering, claims analytics, pricing models, actuarial systems, risk transfer platforms, and internal broker tooling."
+   "value": "Tech roles include product enablement and AI product management within subsidiaries like Oliver Wyman, focusing on internal and regional AI enablement."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674622,
   "web_search_url": "https://duckduckgo.com/?q=Marsh+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "For a new graduate seeking elite prestige and high compensation, Marsh offers strong brand recognition and robust data challenges, but it contrasts with the desire for a fast, innovative tech culture. Its corporate structure leans toward traditional bureaucracy rather than the rapid tech-startup pace, and while financial stability is a plus, the traditional corporate environment may not fully align with the highly accelerated technical learning or guaranteed shutdowns you prioritize."
+   "confidence": "medium",
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "As a large legacy financial and consulting services parent company, Marsh may not align with the candidate's desire for a fast, innovative tech culture. While it offers prestige, a mission-driven focus on resilience, and likely strong benefits, its corporate bureaucracy may slow technical learning and lack the hyper-growth pace of top-tier tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate. Sane hours are generally maintained for back-office tech roles, but client-facing teams may experience spikes during major insurance renewal seasons, which may conflict with a desire for guaranteed boundaries."
+   "source_ids": [
+    "c48bb41a2f"
+   ],
+   "value": "Estimated: Moderate to Good. The company emphasizes a 'flexible work environment,' but standard consulting hours can occasionally be demanding."
   }
  },
  "marsh mclennan": {
@@ -272238,22 +272259,144 @@
   }
  },
  "momentum": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: Tier 2 (Subsidiaries like Koddi hold strong prestige in data science and adtech, though the parent brand is less recognized purely as an AI powerhouse)."
+  },
   "aliases": [],
-  "attempts": 8,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 9,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "Operates as a collective of independent companies (PMG, Koddi, Further) delivering solutions-oriented services to customers, focusing on scalability and innovative results."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "dfed3fa3c1"
+   ],
+   "value": "Solutions-oriented, growth-minded, and dynamic. Employees are expected to be adaptable and focused on scalability and efficiency."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "External clients seeking fast-paced, innovative, and scalable business solutions."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5acc3bf410",
+    "dfed3fa3c1"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary (Dallas market rate for IT Operations and Analyst graduate roles; AI/Data specific roles in subsidiaries may trend higher)."
+  },
   "evidence_sha": "c50728cb599481ce",
-  "generated_at": 1784835394,
+  "generated_at": 1785307548,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1785287957,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "714ee18e13"
+   ],
+   "value": "Technology, Media, and Marketing Services (collective of independent companies)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "To ensure the role meets the candidate's AI/data science and elite new-grad pay criteria, discussions should center on the specific technical stack, team placement, and compensation philosophy of the subsidiary (e.g., Koddi vs. PMG). The candidate should also probe the actual implementation of work-life balance and sane hours, verifying that the advertised 'fast-paced' culture doesn't translate into a toxic or high-burnout environment."
+  },
+  "last_attempt_at": 1785307548,
   "last_evidence_at": 1785286848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "Dallas headquarters located at The Link, 2601 Olive Street."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "714ee18e13"
+   ],
+   "value": "To combine scalability with a solutions-oriented approach to deliver fast-paced, innovative results for customers while creating meaningful growth opportunities for teams."
+  },
   "name": "Momentum",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "714ee18e13"
+   ],
+   "value": "Estimated: Fast-paced and dynamic, focusing on delivering innovative results quickly."
+  },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0",
+    "714ee18e13"
+   ],
+   "value": "The company offers scalable, solutions-oriented services across its independent entities (PMG, Koddi, Further), spanning areas like media, technology, marketing, and data services."
+  },
   "prompt_v": 2,
-  "retry_after": 1785303317,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: 15-20 days (Standard for corporate graduate programs at this stage, though exact policy is not public)."
+  },
+  "refresh_after": 1790491548,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "714ee18e13"
+   ],
+   "value": "2027 Launch Graduate Program"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in available sources; PTO likely operates on a standard accrual basis."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "A consortium of multiple independent companies with on-site teams stationed at corporate campuses and specific domains of focus."
+  },
   "sources": [
    {
     "content_sha": "db88d219759f8c03",
@@ -272306,10 +272449,51 @@
     "url": "https://job-boards.greenhouse.io/momentumcompany3/jobs/8607054002"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "Not specified in the available research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "Momentum is a respected collection of independent companies, including PMG, Koddi, and Further, that combines scalability with a solutions-oriented approach. It delivers fast-paced, innovative results for its customers while creating meaningful growth opportunities for its teams."
+  },
+  "synthesized_evidence_sha": "c50728cb599481ce",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5acc3bf410"
+   ],
+   "value": "Roles focus on building efficiency, reliability, and automation across IT environments for the collective, with some technical operations taking place in a dynamic, fast-paced setting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583643,
-  "web_search_url": "https://duckduckgo.com/?q=Momentum+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=Momentum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410",
+    "714ee18e13"
+   ],
+   "value": "Momentum's portfolio includes highly technical and data-driven companies like Koddi, which aligns with the candidate's desire for elite AI/data science prestige and fast, innovative tech culture. The_launch graduate program specifically pitches meaningful growth opportunities and dynamic days, catering to the candidate's priority for accelerated technical learning and career progression without being boxed into slow bureaucracy."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b72cb8bee0",
+    "5acc3bf410"
+   ],
+   "value": "Estimated: Moderate to Good (The company emphasizes meaningful growth and dynamic environments, but the candidate should verify that the fast-paced nature does not erode personal time.)"
+  }
  },
  "momentum engineering": {
   "ai_ds_prestige_tier": {
