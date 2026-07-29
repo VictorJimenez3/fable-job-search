@@ -1,11 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-29 21:21 UTC** · companies polled directly: **1441** (registry 1630) · jobs tracked: **23771** · new this run: **36** · alerts this run: **0**_
+_Last run: **2026-07-29 21:31 UTC** · companies polled directly: **1441** (registry 1630) · jobs tracked: **23808** · new this run: **37** · alerts this run: **7**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
+| 100 🔥 | 21h | CVS Health | [Analytics & Behavior Change – Data Science Undergrad (Conversion)](https://jobright.ai/jobs/info/6a6a3b5219d76667a2abe6e7?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 100 🔥 | 5d | Medtronic | [Software Engineer 1 - AI-Driven Data Solutions](https://medtronic.wd1.myworkdayjobs.com/redeploymentmedtroniccareers/job/Lafayette-Colorado-United-States-of-America/Software-Engineer-I--AI-Driven-Data-Solutions----Lafayette--CO_R72435) | Lafayette, CO | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 100 🔥 | 6d | NVIDIA | [Software Engineer, Physical Design Infrastructure - New College Grad 2](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Physical-Design-Infrastructure---New-College-Grad-2026_JR2021823) | US, CA, Santa Clara | big_tech | [Direct company / ATS monitoring](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Physical-Design-Infrastructure---New-College-Grad-2026_JR2021823) |
 | 100 🔥 | 6d | NVIDIA | [Developer Technology Engineer - AI - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Developer-Technology-Engineer--AI---New-College-Grad-2026_JR2014130-1) | Santa Clara, CA +5 | big_tech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 22d | ByteDance | [Software Engineer Graduate (Dev Infra) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a4ceae3c643fd23fed3b151?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 22d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 27d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 88 🔥 | 29d | TikTok | [Software Engineer Graduate (Experimentation and Evaluation) - 2026 Sta](https://jobright.ai/jobs/info/6a44451e65e80d3c99f2c3c8?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
