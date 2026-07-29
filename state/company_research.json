@@ -154686,7 +154686,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154704,7 +154704,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785351134,
+  "last_attempt_at": 1785351262,
   "last_evidence_at": 1785350954,
   "name": "Fastly",
   "pace_of_work": {
@@ -154717,7 +154717,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785351254,
+  "retry_after": 1785351502,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -214998,42 +214998,105 @@
  "insulet corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Estimated: Niche. The AI/technical work is targeted exclusively at internal medical device systems rather than broad cross-industry AI applications."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "35efc472de",
+    "fa9179f0d1"
+   ],
+   "value": "Manufacturing and direct-to-consumer and B2B medical device sales."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1",
+    "35efc472de"
+   ],
+   "value": "Mission-driven and engineering-focused, emphasizing accuracy and reliability due to direct impacts on patient health."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "35efc472de"
+   ],
+   "value": "Individuals with diabetes and healthcare providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Estimated: $80,000 - $100,000 base salary for new graduate software/test engineering roles, based on industry and regional standards."
   },
   "evidence_sha": "27437be2f0d64fa3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785351262,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785351134,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1",
+    "35efc472de"
+   ],
+   "value": "Medical Devices and Equipment."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "To align with your goals of rapid learning without burnout, ask about the specific uptime expectations for engineering teams and how compliance requirements (like FDA regulations) impact software deployment cycles. You should also probe the extent of data science and AI applications in their current pipelines versus strict embedded software testing to ensure the daily work matches your elite technical aspirations."
+  },
+  "last_attempt_at": 1785351262,
   "last_evidence_at": 1785347421,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Headquartered in Acton, Massachusetts, USA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "35efc472de"
+   ],
+   "value": "To improve the lives of people with diabetes and other chronic conditions through innovative wearable drug delivery technology."
+  },
   "name": "Insulet Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Estimated: Moderate to slow. Strict FDA and medical regulations demand rigorous testing and compliance, leading to deliberately cautious deployment cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "35efc472de"
+   ],
+   "value": "Omnipod insulin management systems and wearable drug delivery devices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of annual paid time off, consistent with standard mid-to-large medical device industry benefits."
   },
-  "retry_after": 1785351254,
+  "refresh_after": 1790535262,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215043,7 +215106,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard major holidays, though company-wide guaranteed week-long shutdowns are unknown based on public data."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "1001-5000 employees; publicly traded established medical device company."
   },
   "sources": [
    {
@@ -215097,14 +215167,46 @@
     "url": "https://jobright.ai/jobs/info/6a6a1cd20b42f866b6196cf2?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Company has a track record of offering H1B sponsorships, though it is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "35efc472de",
+    "fa9179f0d1"
+   ],
+   "value": "Insulet Corporation is a medical device company that develops and manufactures the Omnipod insulin management system. They make money by selling these wearable disposable insulin pumps and related drug delivery platforms directly to diabetics and healthcare providers."
+  },
+  "synthesized_evidence_sha": "27437be2f0d64fa3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Embedded software testing, manual and automated testing, utilizing Python and Jenkins for medical device software validation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785347421,
   "web_search_url": "https://duckduckgo.com/?q=Insulet+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "While the role offers high impact mission-driven work improving patients' lives, the medical device industry is heavily regulated, which can create a slower-paced, compliance-focused tech culture that may contrast with desires for a fast, elite AI startup environment. Engineering work here is grounded in rigorous testing and safety standards, which could slightly bottleneck rapid technical iteration compared to big tech, though it heavily compensates by offering a deeply meaningful mission and p"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fa9179f0d1"
+   ],
+   "value": "Estimated: Good. Medical device companies generally maintain structured engineering hours and avoid the high-burnout culture seen in big tech, though deadlines for regulatory submissions can intermittently increase pressure."
   }
  },
  "integral federal": {
