@@ -44040,52 +44040,141 @@
  "aurizon": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a",
+    "1db9db9c4d"
+   ],
+   "value": "Low; this is a traditional freight and logistics enterprise where AI and data science are likely treated as operational support rather than core product drivers."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Asset-heavy infrastructure model generating revenue through long-term freight transport contracts, rail access fees, and logistics services for bulk commodities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Estimated: Safety-first, traditional, and stable. The culture prioritizes physical operational safety and reliability of services over fast-paced tech innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Mining companies, agricultural producers, and industrial goods manufacturers requiring bulk freight movement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "31741b4e2d",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely AUD $70,000 - $100,000 (roughly USD $47,000 - $68,000) supporting standard enterprise tech operations, which is lower than elite Australian tech startups."
   },
   "evidence_sha": "2c3c8bb185004fdb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785327996,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785322140,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Freight Transportation and Logistics"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "31741b4e2d",
+    "1db9db9c4d"
+   ],
+   "value": "During interviews, you should probe heavily into how much technical velocity and innovation actually happen versus maintaining legacy operational systems. Ask how the team balances slow enterprise bureaucracy with your need for fast-paced learning and career growth, and ensure the data science work is genuinely impactful rather than just supporting traditional rail logistics."
+  },
+  "last_attempt_at": 1785327996,
   "last_evidence_at": 1785319755,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "98295d710a",
+    "31741b4e2d"
+   ],
+   "value": "Headquartered in Brisbane, Australia, with operations and network infrastructure spanning across Queensland, New South Wales, and Western Australia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "To safely and sustainably deliver freight rail and logistics services that connect resources, agricultural, and industrial sectors to domestic and global markets."
+  },
   "name": "Aurizon",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Estimated: Slower-paced, safety-conscious, and process-driven, typical of heavy industry and asset-based infrastructure enterprises."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Heavy haul freight rail services, rail track access and maintenance, and bulk commodity logistics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Estimated: Likely the Australian standard of 20 days of accrued annual leave, plus state-mandated sick leave and public holidays."
   },
-  "retry_after": 1785322620,
+  "refresh_after": 1790511996,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "31741b4e2d",
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Estimated: Unlikely for software teams, though some industrial operational teams might have specific maintenance schedules that align with network downtime."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "98295d710a",
+    "31741b4e2d"
+   ],
+   "value": "Large-cap established public enterprise (ASX-listed) with extensive physical infrastructure and a large workforce."
   },
   "sources": [
    {
@@ -44129,14 +44218,52 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "31741b4e2d",
+    "1db9db9c4d"
+   ],
+   "value": "As a large Australian enterprise, it may offer visa sponsorship for critical engineering roles, but this is not guaranteed for standard new-grad postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a",
+    "1db9db9c4d"
+   ],
+   "value": "Aurizon is an ASX-listed freight rail transport company that primarily operates in Australia, moving heavy bulk commodities like coal and iron ore. It makes money by charging mining, agricultural, and industrial companies for the hauling, rail access, and maintenance of freight across its extensive rail network."
+  },
+  "synthesized_evidence_sha": "2c3c8bb185004fdb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "31741b4e2d",
+    "1db9db9c4d"
+   ],
+   "value": "Software and data roles likely focus on operational technology, supply chain optimization, predictive maintenance for heavy rail assets, and enterprise IT systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785319755,
   "web_search_url": "https://duckduckgo.com/?q=Aurizon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a",
+    "1db9db9c4d"
+   ],
+   "value": "Aurizon might interest you if you want to apply cutting-edge AI and data science to massive physical infrastructure and mission-critical supply chains. However, as a traditional asset-heavy freight operator, it will likely not provide the elite new-grad pay, fast-paced innovative tech culture, or high AI-prestige of a top-tier tech firm, and bureaucracy may slow technical velocity. Work-life balance is generally sane in Australian enterprise environments, but it will not offer the extreme career"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "31741b4e2d",
+    "98295d710a"
+   ],
+   "value": "Estimated: Good to balanced. Traditional Australian enterprise roles typically respect standard working hours and avoid the high-burnout culture of elite tech startups."
   }
  },
  "aurora": {
@@ -287250,42 +287377,105 @@
  "nextera energy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Estimated: Tier 2-3 (Niche Domain-Specific AI). Not FAANG-level prestige for general software engineering, but highly respected within the energy sector and climate tech for applied science and optimization work."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Provides specialized energy consulting and applied scientific analysis for planning, siting, forecasting, and optimizing all forms of energy projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "85dc635025",
+    "2c7436ee64"
+   ],
+   "value": "Estimated: Mission-oriented and science-driven, but structured. Combines a dedication to renewable energy innovation with the traditional stability, compliance focus, and inclusivity of a large public utility."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Utility and energy sector clients requiring energy consulting, siting, planning, forecasting, and optimization services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "85dc635025",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $80,000 - $105,000 base salary for Applied Scientist / Data Science roles in the Midwest. As a traditional utility, it may offer strong benefits and stability but fall short of ultra-high 'Big Tech' base salaries for new grads."
   },
   "evidence_sha": "be2a2f814cb63141",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785327996,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785322140,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Renewable Energy / Energy Utilities / Data Science Consulting"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Given the focus on 'sophisticated analytical models' and 'optimization and analytics platforms,' expect heavy technical interviews on mathematical optimization, applied physics, and data science. Prepare to discuss how you use open-source technologies to process massive datasets, and demonstrate your passion for renewable energy."
+  },
+  "last_attempt_at": 1785327996,
   "last_evidence_at": 1785319754,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "St. Paul, MN, US, 55107 (for NextEra Analytics roles); company operates broadly."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "To optimize and enhance renewable energy and transmission operations through sophisticated applied science and data analytics."
+  },
   "name": "NextEra Energy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5f03e4e8aa",
+    "85dc635025"
+   ],
+   "value": "Estimated: Moderate and stable. As a large public energy utility, NextEra balances the innovative drive of NextEra Analytics with the regulatory and operational stability of a major utility, likely favoring deliberate, accurate work over rapid, breakneck tech startup speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Optimization and analytics platforms that integrate open-source technologies to leverage massive, diverse sets of utility operating data, alongside analytical models for wind, solar, storage, and transmission operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO for new hires, typical for a large public utility, plus standard public holidays."
   },
-  "retry_after": 1785322620,
+  "refresh_after": 1790511996,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287295,7 +287485,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread guaranteed company-wide shutdowns found in research, though the energy industry typically offers paid holidays and occasional seasonal flex schedules."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f03e4e8aa",
+    "64f3df4f80"
+   ],
+   "value": "Large-scale public energy company operating a specialized analytics division."
   },
   "sources": [
    {
@@ -287349,14 +287547,46 @@
     "url": "https://jobs.nexteraenergy.com/job/St_-Paul-Applied-Scientist-I-MN-55107/1393884800/?ats=successfactors"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c7436ee64"
+   ],
+   "value": "NextEra requires all employees and new hires to be fully vaccinated for COVID-19 or willing to receive it prior to employment, where permitted by law; no specific visa sponsorship details were found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "NextEra Energy is an energy company that, through its NextEra Analytics subsidiary, offers energy consulting services using industry-leading scientific analysis for planning, siting, forecasting, and optimizing energy projects. They operate at the intersection of renewable energy physics and data science to develop sophisticated analytical models for wind, solar, storage, and transmission operations."
+  },
+  "synthesized_evidence_sha": "be2a2f814cb63141",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025"
+   ],
+   "value": "Developing sophisticated analytical models to design, forecast, optimize, and enhance wind, solar, storage, and transmission operations using open-source technologies and massive utility operating datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785319754,
   "web_search_url": "https://duckduckgo.com/?q=NextEra+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "85dc635025",
+    "64f3df4f80"
+   ],
+   "value": "While traditional utility companies are often bureaucratic and slow, NextEra Analytics operates at the cutting edge of renewable energy and data science, integrating open-source tech to solve complex optimization problems. This offers the mission-driven impact of green energy and the technical learning of massive-scale data platforms with the stability of a large public company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5f03e4e8aa"
+   ],
+   "value": "Estimated: High. The energy utility sector traditionally offers strong work-life balance, sane hours, and stable schedules compared to big tech, fitting a low-burnout environment."
   }
  },
  "nexxen": {
@@ -343007,84 +343237,107 @@
  "revvity": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High — core ML/computer vision work directly impacts clinical diagnostics and newborn screening; publishes in top venues; collaborates with academic medical centers; compensation competitive with top-tier tech."
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Estimated: Tier 2 (Niche) - The company utilizes AI tooling and APIs in health tech, though it is not a pure-tier AI or elite data science giant."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Razor-blade model: sell high-value instruments and platforms, then drive recurring revenue from proprietary consumables, reagents, software licenses, and multi-year service agreements. Also generates revenue from screening-as-a-service contracts."
+   "confidence": "medium",
+   "source_ids": [
+    "e538e7bf81",
+    "e94dcc6245"
+   ],
+   "value": "B2B health sciences and technology company providing software solutions, APIs, and scientific tools to research and clinical entities."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first within a science-driven org. Collaborative, low-ego, cross-functional (SW, HW, biology, regulatory). Values rigor, documentation, and reproducibility. Diversity and inclusion are measurable priorities. Remote-friendly for many roles."
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Estimated: Mission-oriented with a focus on accelerating science through AI and software tools within a remote work environment."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Pharmaceutical and biotech companies, academic and government research labs, clinical diagnostic laboratories, hospitals, and public health screening programs worldwide."
+   "confidence": "medium",
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Healthcare, research, and clinical diagnostics organizations seeking to accelerate science through advanced technological solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU grant ($30k-$50k over 4 years). Total Year 1 ~$160k-$195k. Remote US roles may adjust by geo zone."
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary for remote Associate Software Development Engineer roles."
   },
   "evidence_sha": "47418b826bf0251d",
-  "generated_at": 1785249536,
+  "generated_at": 1785327996,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Life Sciences Tools & Diagnostics / Health Technology"
+   "confidence": "medium",
+   "source_ids": [
+    "e538e7bf81",
+    "e94dcc6245"
+   ],
+   "value": "Health sciences and software engineering."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "14816f6956"
+    "e538e7bf81"
    ],
-   "value": "Expect deep dive on Java/Vert.x reactive systems, REST API design, and cloud-native architecture. Prepare for ML/system design questions tied to real diagnostics workflows (e.g., imaging pipelines, variant calling). Behavioral rounds will probe regulatory mindset (FDA/IVDR), cross-functional collaboration with scientists, and handling ambiguity in high-stakes environments. Demonstrate ability to write testable, documented code in a regulated CI/CD pipeline."
+   "value": "To secure a top-tier AI or data science role, focus on demonstrating expertise in AI-powered developer tools, reactive programming, and scalable RESTful APIs during the interview. Emphasize how you can drive innovative, fast-paced solutions in healthcare technology while maintaining sustainable work practices. Prepare to discuss your technical learning agility and ability to contribute to a mission-driven environment without toxic or high-burnout cultures."
   },
-  "last_attempt_at": 1785322140,
+  "last_attempt_at": 1785327996,
   "last_evidence_at": 1785319487,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "e538e7bf81",
     "14816f6956"
    ],
-   "value": "Headquartered in Waltham, MA. Major sites in Shelton CT, San Diego CA, Toronto, UK (Cambridge, Beaconsfield), Germany, Finland, Singapore, China. Remote-eligible roles in US (per job posting)."
+   "value": "Associate Software Development Engineer roles are available fully remote within the United States."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To advance the science of improving lives by delivering innovative solutions for research, screening, and diagnostics that enable earlier detection, better insights, and faster development of therapies."
+   "confidence": "high",
+   "source_ids": [
+    "e538e7bf81",
+    "14816f6956"
+   ],
+   "value": "Accelerating science."
   },
   "name": "Revvity",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — regulated release cadences (quarterly/bi-annual) enforce planning discipline; sprints are predictable; on-call is rotated and compensated. Faster than traditional hardware firms, slower than consumer SaaS."
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Estimated: Medium - Corporate health tech environment suggests steady development cycles rather than rapid fast-paced tech culture."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Life science instrumentation (e.g., microplate readers, imaging systems), reagents and consumables, informatics and analytics software, newborn and prenatal screening assays, and associated service contracts."
+   "confidence": "high",
+   "source_ids": [
+    "e538e7bf81",
+    "14816f6956"
+   ],
+   "value": "The company develops AI-powered developer tools, RESTful APIs, and web services utilizing Java and reactive programming frameworks like Vert.x."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 volunteer days. Accrual starts day one; carryover up to 5 days. Exact policy varies by country/state."
+   "value": "Estimated: 20-25 days PTO per year, as specific companywide PTO policies were not found in the research."
   },
-  "refresh_after": 1790433536,
-  "retry_after": 1785324060,
+  "refresh_after": 1790511996,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -343094,12 +343347,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer floating days. Not guaranteed every year but practiced consistently since spin-out."
+   "value": "Estimated: No widely known guaranteed shutdowns were found in the research."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Publicly traded (NYSE: RVTY), ~$2.7B annual revenue, ~11,000 employees globally. Spun out from PerkinElmer in 2023 as an independent life sciences and diagnostics company."
+   "confidence": "medium",
+   "source_ids": [
+    "e94dcc6245",
+    "e538e7bf81"
+   ],
+   "value": "A publicly traded company operating with a non-commerce focus structured for new graduates."
   },
   "sources": [
    {
@@ -343164,38 +343420,47 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a large public company, Revvity routinely sponsors H-1B and green cards for technical roles. New-grad offers typically include sponsorship eligibility; confirm with recruiter for specific role and location."
-  },
-  "status": "retrying",
-  "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Revvity is a life sciences and diagnostics company that provides instruments, reagents, software, and services for research, screening, and diagnostic applications. It operates across two main segments: Discovery & Analytical Solutions and Diagnostics, generating revenue through product sales, service contracts, and consumables."
-  },
-  "synthesized_evidence_sha": "fc38bb426d30cf79",
-  "technical_work": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
+    "e538e7bf81",
     "14816f6956"
    ],
-   "value": "Full-stack software development for instrument control, data acquisition, and analytics platforms (Java, Vert.x, REST APIs); cloud-native AI/ML pipelines for imaging, genomics, and screening data; embedded/firmware for hardware integration; DevOps and CI/CD for regulated environments (FDA/IVDR compliance)."
+   "value": "No specific details on visa sponsorship for the Associate Software Development Engineer role were found in the research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e538e7bf81",
+    "e94dcc6245"
+   ],
+   "value": "Revvity is a health sciences and diagnostics company that provides advanced instruments, consumables, and software to accelerate scientific discovery. It makes money by selling these specialized solutions and research tools to clinical laboratories and pharmaceutical organizations."
+  },
+  "synthesized_evidence_sha": "47418b826bf0251d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e538e7bf81",
+    "14816f6956"
+   ],
+   "value": "Engineering roles involve software development centered on Java, Reactive Programming (Vert.x), Web Services, RESTful APIs, and AI-powered developer tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785195043,
   "web_search_url": "https://duckduckgo.com/?q=Revvity+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "14816f6956"
+    "e538e7bf81"
    ],
-   "value": "Revvity offers a top-tier AI/data science role in a mission-driven life sciences company with elite prestige and competitive new-grad pay. The tech culture emphasizes innovation in regulated, high-impact domains (diagnostics, genomics, screening) rather than ad-driven or consumer apps. Work-life balance is structurally supported by regulated-industry norms: predictable release cycles, on-call rotations with handoffs, and limited crunch. You’ll accelerate technical growth on complex, regulated fu"
+   "value": "For an AI or data science new grad, Revvity offers potential technical growth through API development and AI-powered tools, which aligns with elite prestige and fast innovation. However, candidates should verify if the work-life balance and guaranteed shutdowns meet their expectations to avoid high-burnout environments. The mission to accelerate science suggests meaningful work without sacrificing personal time, pending further confirmation on sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "4/5 — structured hours, guaranteed shutdowns during major holidays, limited weekend work outside on-call rotations. Regulated environment discourages heroics; management tracks overtime."
+   "source_ids": [
+    "e538e7bf81"
+   ],
+   "value": "Estimated: Moderate - Remote work flexibility is provided, though no specific policies on guaranteed shutdowns or work hours were found in the research."
   }
  },
  "reyes holdings": {
