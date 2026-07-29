@@ -4039,42 +4039,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Likely Tier 2-3 for pure AI/Data Science; highly prestigious for enterprise consulting and government tech, but potentially less elite for top-tier, fast-paced technical innovation."
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 26,
+  "attempts": 27,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "fb7f941e93",
     "b1f1dfef2b"
    ],
-   "value": "Business-to-Government (B2G) professional services and technology consulting, deriving revenue by providing specialized technical talent, custom development, and systems operations to federal agencies."
+   "value": "B2G consulting and technology services. The company generates revenue by providing specialized software development, systems integration, and operational support to federal government agencies."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "03f9b40044",
-    "4abf230e92",
     "e79c881c1d"
    ],
-   "value": "Highly purpose-driven and mission-focused on national security and public welfare, with a strong stated imperative to foster an inclusive, welcoming environment for all employees."
+   "value": "Highly inclusive and purpose-driven, with a strong emphasis on creating a welcoming environment and a shared purpose among its 13,000+ employees."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93"
+    "fb7f941e93",
+    "03f9b40044"
    ],
-   "value": "US federal government agencies, specifically spanning defense, national security, public safety, civilian, and military health organizations."
+   "value": "Organizations across defense, national security, public safety, civilian, and military health sectors within the US federal government."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000 - $105,000 base salary for new technical graduates, varying by exact role and location."
+   "source_ids": [
+    "fb7f941e93"
+   ],
+   "value": "Estimated: Competitive large-tier tech consulting salary, likely ranging from $80k-$100k base depending on exact role and location."
   },
   "evidence_sha": "846032d6de54c6b5",
-  "generated_at": 1785278883,
+  "generated_at": 1785363945,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -4084,56 +4086,62 @@
    "confidence": "high",
    "source_ids": [
     "fb7f941e93",
-    "03f9b40044"
+    "4abf230e92"
    ],
-   "value": "IT Services and IT Consulting / Government Technology Solutions."
+   "value": "Government and Public Services / IT Consulting."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Candidates should probe whether technical learning and career growth come at the cost of personal time, specifically asking about average weekly hours and expectations during deployment cycles. It is critical to assess the team's actual pace of innovation to ensure it avoids the slow bureaucracy and potential burnout common in large consulting firms."
-  },
-  "last_attempt_at": 1785278883,
-  "last_evidence_at": 1785360713,
-  "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "fb7f941e93"
    ],
-   "value": "Based in the United States to directly serve US federal government clients, though specific physical office locations are not detailed in the provided sources."
+   "value": "The candidate should assess whether the day-to-day realities of this federal work and culture offer the fast-paced technical learning and work-life balance they prioritize, ensuring client demands don't lead to burnout."
+  },
+  "last_attempt_at": 1785363945,
+  "last_evidence_at": 1785360713,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fb7f941e93",
+    "4abf230e92"
+   ],
+   "value": "Operates across the United States to support federal clients, with a workforce of over 13,000 people."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "4abf230e92",
-    "f0c9931dec"
+    "fb7f941e93"
    ],
-   "value": "To help the US federal government make the nation stronger and safer and life better for people, united in a shared purpose to pursue the limitless potential of technology and ingenuity."
+   "value": "To help the US federal government make the nation stronger and safer and life better for people by pursuing the limitless potential of technology and ingenuity."
   },
   "name": "Accenture",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "b1f1dfef2b"
+    "fb7f941e93",
+    "03f9b40044"
    ],
-   "value": "Estimated: Moderate to fast, driven by federal project deadlines and steady-state production environment support, heavily anchored in established enterprise processes."
+   "value": "Estimated: Typical of large government consulting; likely structured and process-driven, which may contrast with a fast-paced innovative tech startup environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "b1f1dfef2b"
+    "fb7f941e93"
    ],
-   "value": "Technology and consulting services focused on system interoperability, data accuracy, and optimized reporting across Finance, Supply Chain, and HCM, alongside custom business processes and production environment support."
+   "value": "System interoperability services, data accuracy optimization, and reporting solutions across Finance, Supply Chain, HCM, and custom business processes."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "fb7f941e93"
+    "fb7f941e93",
+    "4abf230e92"
    ],
-   "value": "Estimated: 15-25 days of Paid Time Off annually, varying by tenure and level, consistent with standard large federal consulting contractor benefits."
+   "value": "Estimated: Standard corporate PTO package likely offered as part of a wide variety of benefits, though exact figures are not public."
   },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4142,8 +4150,10 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed firm-wide shutdowns typical of pure tech companies, though federal holidays provide standard time off."
+   "source_ids": [
+    "fb7f941e93"
+   ],
+   "value": "Estimated: No guaranteed corporate shutdowns mentioned, but standard federal holidays are likely observed."
   },
   "size_stage": {
    "confidence": "high",
@@ -4151,7 +4161,7 @@
     "fb7f941e93",
     "03f9b40044"
    ],
-   "value": "Large, established enterprise with 13,000+ employees operating as a dedicated subsidiary within the broader global Accenture organization."
+   "value": "Large, established organization with 13,000+ employees."
   },
   "sources": [
    {
@@ -4216,45 +4226,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "fb7f941e93"
-   ],
-   "value": "Not explicitly stated in the provided sources; however, given the federal government clientele requiring security clearances, citizenship is typically required and work visa sponsorship is likely highly restricted or unavailable for these specific roles."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "fb7f941e93",
-    "4abf230e92",
-    "f0c9931dec"
+    "4abf230e92"
    ],
-   "value": "Accenture Federal Services is a technology company within the global Accenture ecosystem that helps the US federal government make the nation stronger and safer. With over 13,000 people, it pursues the limitless potential of technology and ingenuity for clients across defense, national security, public safety, civilian, and military health organizations."
+   "value": "Accenture Federal Services is a technology company within global Accenture dedicated to helping the US federal government make the nation stronger and safer. It leverages technology and ingenuity to pursue limitless potential for clients across defense, national security, and public safety."
   },
+  "synthesized_evidence_sha": "846032d6de54c6b5",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "03f9b40044",
-    "b1f1dfef2b"
+    "b1f1dfef2b",
+    "4abf230e92",
+    "e79c881c1d"
    ],
-   "value": "Integration and report development, data conversion, custom business process optimization, and steady-state production support for enterprise systems (including Oracle HCM Cloud, PeopleSoft, and Dynamics)."
+   "value": "Production and non-production environment support, ITSM operations, Oracle HCM Cloud conversions, PeopleSoft application development, and Dynamics development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Accenture+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "This role offers strong mission alignment and high prestige through enterprise-scale federal impact, but the traditional Big-Tech consultancy structure may present slower technical cultures, heavy bureaucracy, and less focus on elite AI/data science innovation than a pure tech firm. While benefits are advertised, the demanding nature of large-scale federal consulting may challenge strict work-life balance and guaranteed shutdowns."
+   "confidence": "low",
+   "source_ids": [
+    "4abf230e92"
+   ],
+   "value": "This role uniquely aligns with the candidate's desire for a mission-driven, federal-focused technical role, but may conflict with the desire for a fast, innovative tech culture free of slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "03f9b40044"
+    "03f9b40044",
+    "4abf230e92"
    ],
-   "value": "Estimated: Moderate, typical of large consulting firms where client-driven deadlines can occasionally disrupt personal time despite claims of broad benefits and inclusive culture."
+   "value": "Estimated: Likely variable and dependent on specific federal client demands, but the company emphasizes a commitment to inclusive culture."
   }
  },
  "accenture federal services": {
@@ -99075,49 +99086,48 @@
  },
  "cloudflare": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8"
    ],
-   "value": "Recognized as a top-tier innovative tech company (ranked among Fast Company's World's Most Innovative Companies) integrating AI into core infrastructure, offering strong prestige for applied systems engineering."
+   "value": "Estimated: Tier 1 prestige for infrastructure and systems engineering, with a rapidly growing emphasis on practical AI integration."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e96496b620"
+    "e96496b620",
+    "4106918334"
    ],
-   "value": "Freemium and subscription-based SaaS, offering free basic network services to individuals while selling high-tier enterprise solutions and specialized data/resource management packages to large corporations."
+   "value": "Provides core internet infrastructure and security services, offering free tiers to individual users while monetizing scaled enterprise solutions, web traffic protection, and specialized connectivity services."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "150497fbc8"
    ],
-   "value": "Mission-driven and builder-focused. Recognized on Entrepreneur Magazine's Top Company Cultures list, the team values sharing knowledge to lift everyone up and tackles tough problems using AI as a partner."
+   "value": "Mission-driven, builder-centric, and collaborative. The culture values curiosity over bureaucracy, encouraging teams to share improvements to lift everyone up."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "e96496b620"
    ],
-   "value": "Ranging from individual WordPress bloggers using free services to global Enterprise businesses with petabytes of web traffic."
+   "value": "A wide spectrum of internet users ranging from free-tier individual WordPress bloggers to massive global Enterprise businesses with petabytes of web traffic."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "3016be0356"
+    "150497fbc8"
    ],
-   "value": "Estimated: $140,000 - $170,000 base salary (exact figures not public, typical for elite infrastructure tech companies)."
+   "value": "Estimated: High tier compensation for new graduates in the tech industry, reflecting the company's status as a top-tier infrastructure provider."
   },
   "evidence_sha": "99b390e2b42e4627",
-  "generated_at": 1785249536,
+  "generated_at": 1785363945,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -99126,47 +99136,47 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "747f60d6ec",
-    "75491de0ac",
-    "e96496b620"
+    "e96496b620",
+    "75491de0ac"
    ],
-   "value": "Internet Infrastructure, Network Security, and Cloud Computing."
+   "value": "Internet Infrastructure, Cloud Computing, and Cybersecurity."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "747f60d6ec",
-    "150497fbc8"
+    "150497fbc8",
+    "4106918334"
    ],
-   "value": "Emphasize your builder mentality, showing how you proactively use AI to solve tough problems without waiting for a polished roadmap. Ask about sane hours and guaranteed shutdowns to ensure their hyper-growth pace matches your work-life balance requirements."
+   "value": "Emphasize your curiosity over rigid rule-following, readiness to adopt AI as a problem-solving partner, and ability to operate autonomously in a fast-paced but sensible environment. Showcase your builder mentality and eagerness to rapidly iterate on solutions to internet infrastructure cracks."
   },
-  "last_attempt_at": 1785249536,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "75491de0ac"
+    "75491de0ac",
+    "3016be0356"
    ],
-   "value": "Global presence with listed roles in locations such as Lisbon, Portugal."
+   "value": "Spans the globe, with listed offices including Lisbon, Portugal and remote possibilities depending on the role."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "4106918334",
     "150497fbc8",
-    "747f60d6ec",
-    "75491de0ac"
+    "747f60d6ec"
    ],
-   "value": "To help build a better Internet."
+   "value": "To help build a better Internet by making it safer and more powerful every day."
   },
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
     "150497fbc8",
-    "471724e3de",
-    "747f60d6ec"
+    "4106918334"
    ],
-   "value": "Estimated: Fast-paced and hyper-growth. The company expects rapid iteration and values builders who ship improvements quickly rather than waiting for bureaucracy or polished roadmaps."
+   "value": "Estimated: Fast-paced and innovation-driven, characterized by a hyper-growth environment where employees ship quickly and iterate using AI."
   },
   "products": {
    "confidence": "high",
@@ -99175,7 +99185,7 @@
     "75491de0ac",
     "e96496b620"
    ],
-   "value": "Global cloud network spanning the globe providing web performance optimization, network security, and data residency management."
+   "value": "A global system covering network security, content delivery, and global resource management (such as data residency), operating across the internet."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -99183,9 +99193,10 @@
    "source_ids": [
     "150497fbc8"
    ],
-   "value": "Estimated: 20-25 days of standard PTO (exact numbers not public, typical for hyper-growth tech)."
+   "value": "Estimated: Comprehensive paid time off typical of large scale tech enterprises."
   },
-  "refresh_after": 1790433536,
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -99195,19 +99206,19 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "3016be0356"
+    "4106918334"
    ],
-   "value": "Estimated: Standard public holidays, but no explicitly guaranteed corporate-wide shutdowns found in research."
+   "value": "None found in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "150497fbc8",
-    "471724e3de"
+    "75491de0ac"
    ],
-   "value": "Hyper-growth technology company."
+   "value": "A fast-growing (hyper-growth) global technology company with operations spanning the globe, including locations like Lisbon, Portugal."
   },
   "sources": [
    {
@@ -99274,29 +99285,28 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "3016be0356"
+    "75491de0ac"
    ],
-   "value": "Not explicitly found in research."
+   "value": "Not explicitly detailed in the provided sources, though the global footprint suggests geographic flexibility for certain roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "150497fbc8",
-    "747f60d6ec",
-    "75491de0ac"
+    "4106918334",
+    "e96496b620"
    ],
-   "value": "Cloudflare provides a global network and security infrastructure designed to make the Internet safer, faster, and more reliable. The company monetizes by offering foundational services for free to small creators while upselling enhanced security, performance, and enterprise-grade data solutions to large businesses."
+   "value": "Cloudflare provides cloud-based networking, security, and content delivery services designed to protect and accelerate internet applications, in pursuit of its mission to help build a better Internet. It serves everyone from individual bloggers to global enterprises and monetizes by offering scaled enterprise solutions and protections for high-traffic web properties."
   },
-  "synthesized_evidence_sha": "edcba7511397e8b0",
+  "synthesized_evidence_sha": "99b390e2b42e4627",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "4106918334",
     "747f60d6ec",
-    "75491de0ac",
-    "150497fbc8"
+    "75491de0ac"
    ],
-   "value": "Operating a massive, globe-spanning system focused on network security, incident response (REACT), data residency, and global resource management. Engineering teams heavily leverage AI to iterate and solve tough problems quickly."
+   "value": "Involves building and maintaining a massive globally distributed system, focusing on network interconnect, data residency, and incident response."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
@@ -99304,18 +99314,19 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
+    "150497fbc8",
     "747f60d6ec",
-    "150497fbc8"
+    "4106918334"
    ],
-   "value": "Fits your desire for a fast, highly innovative tech culture operating at massive scale. Their explicit focus on curiosity over bureaucracy and using AI as a partner to ship faster shows alignment with your learning and technical growth goals, though you should validate work-life balance during interviews."
+   "value": "Aligns with your desire for a fast, innovative tech culture that actively integrates AI into its workflows rather than relying on polished roadmaps or bureaucracy. Recognized by Fast Company as a top innovative company with a culture built on rapid iteration, it provides an elite, mission-driven environment to accelerate your career while tackling tough engineering problems."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "150497fbc8",
-    "747f60d6ec"
+    "4106918334",
+    "150497fbc8"
    ],
-   "value": "Estimated: Moderately demanding. The culture explicitly values curiosity and lifting everyone up, but the hyper-growth and fast iteration expectations might require careful boundary setting to maintain sane hours."
+   "value": "Estimated: Moderate work-life balance. The company explicitly aims for a 'fast-paced but sensible' environment, though the hyper-growth and high-iteration nature may require aggressive output."
   }
  },
  "cna national": {
@@ -102562,23 +102573,29 @@
  "collins aerospace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Niche defense AI tier. Prestigious within the aerospace industry for systems engineering, but lacks top-tier AI elite prestige compared to FAANG or specialized AI labs."
+   "source_ids": [
+    "00e81975c9",
+    "91e7ac478a"
+   ],
+   "value": "Estimated: Traditional defense tech tier; high domain prestige in aerospace embedded systems, but lacks the elite tier associated with cutting-edge AI/data science tech companies."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "91e7ac478a",
+    "00e81975c9",
     "24578dd819"
    ],
-   "value": "Develops and sells advanced hardware and software solutions to commercial and government defense clients."
+   "value": "Designs, develops, integrates, and verifies specialized hardware and software solutions for aerospace and government defense contracts."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Traditional, mission-focused, and heavily structured engineering culture typical of the defense sector."
+   "source_ids": [
+    "24578dd819",
+    "00e81975c9"
+   ],
+   "value": "Estimated: Mission-driven and highly security-conscious, focused on engineering rigor rather than rapid innovation."
   },
   "customers": {
    "confidence": "high",
@@ -102586,7 +102603,7 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Aerospace industrial clients, national defense, military, and satellite communication sectors."
+   "value": "Aerospace, industrial, and national defense/military sectors requiring U.S. citizens for cleared work."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -102595,10 +102612,10 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Estimated: $57K - $109K per year for entry-level software engineering roles, varying heavily by location."
+   "value": "Estimated: $57,000 to $109,000 per year for entry-level software and simulation engineering roles."
   },
   "evidence_sha": "0ffb238c17c2b0bb",
-  "generated_at": 1785341638,
+  "generated_at": 1785363945,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -102610,17 +102627,17 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Aerospace, Industrial, National Defense, and Military."
+   "value": "Aerospace, Industrial, National Defense, Military, Satellite Communication."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "91e7ac478a",
+    "00e81975c9",
     "24578dd819"
    ],
-   "value": "Highlight any experience with mission-critical, high-stakes systems to tap into the defense mission drive, while asking pointed questions about team-specific agile processes, bureaucracy blockers, and work-life boundaries to ensure the group aligns with your need for sane hours and accelerated growth."
+   "value": "Be prepared to discuss how you will maintain technical learning and career growth within a regulated defense environment, and demonstrate your ability to thrive in embedded systems work without the high-burnout, fast-paced pressures of consumer tech."
   },
-  "last_attempt_at": 1785341638,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
@@ -102628,37 +102645,43 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Hiring locations include Binghamton, NY and Cedar Rapids, IA for onsite engineering roles."
+   "value": "Cedar Rapids, IA, and Binghamton, NY, for entry-level engineering roles."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "91e7ac478a",
-    "24578dd819"
+    "91e7ac478a"
    ],
-   "value": "To redefine the aerospace and defense industry through technologically advanced, intelligent solutions."
+   "value": "To redefine the aerospace and defense industry by delivering technologically advanced, intelligent solutions."
   },
   "name": "Collins Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to slow. Typical of large defense contractors, work is process-oriented and heavily regulated rather than fast-paced tech startup."
+   "source_ids": [
+    "00e81975c9",
+    "24578dd819"
+   ],
+   "value": "Estimated: Moderate to slow; deeply regulated by defense industry compliance, strict verification protocols, and long product lifecycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "00e81975c9",
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Technologically advanced aerospace and defense solutions, including intelligent systems, simulation software, and satellite communication technologies."
+   "value": "Embedded software applications for unmanned aircraft, simulation technologies, satellite communication systems, and broader national defense and aerospace solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of standard paid time off (PTO), standard for large aerospace and defense contractors."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for large aerospace and defense contractors."
   },
-  "refresh_after": 1790525638,
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102667,15 +102690,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Some aerospace sites may have localized shutdowns between Christmas and New Year, but this is not always guaranteed company-wide."
+   "source_ids": [
+    "24578dd819"
+   ],
+   "value": "Estimated: Likely offers a standard year-end shutdown period, common among major aerospace primes."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "24578dd819"
    ],
-   "value": "Large, established enterprise operating as a business unit within RTX."
+   "value": "A large aerospace and defense business segment operating under parent company RTX."
   },
   "sources": [
    {
@@ -102745,7 +102770,7 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Does not sponsor H1B visas for the roles researched; U.S. company and security clearance is required for certain positions."
+   "value": "No H1B sponsorship provided; U.S. citizenship and security clearance are required for employment."
   },
   "status": "ready",
   "summary": {
@@ -102754,16 +102779,16 @@
     "91e7ac478a",
     "24578dd819"
    ],
-   "value": "Collins Aerospace is a leader in technologically advanced, intelligent solutions for the aerospace and defense industry. As part of RTX (formerly Raytheon Technologies), it makes money by developing and manufacturing advanced systems for commercial and military aerospace customers."
+   "value": "Collins Aerospace, a business segment of RTX (Raytheon Technologies), provides technologically advanced, intelligent solutions for the aerospace and defense industry. It makes money by developing and manufacturing complex systems—such as unmanned aircraft software, satellite communications, and military tech—for defense and industrial clients."
   },
-  "synthesized_evidence_sha": "d918ab216c686236",
+  "synthesized_evidence_sha": "0ffb238c17c2b0bb",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "91e7ac478a",
-    "24578dd819"
+    "00e81975c9",
+    "91e7ac478a"
    ],
-   "value": "Software engineering for aerospace and defense systems, including simulation software development."
+   "value": "Embedded software development using C/C++, real-time operating systems (RTOS), Linux build environments, and software simulation for aircraft."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677665,
@@ -102771,17 +102796,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "91e7ac478a",
-    "24578dd819"
+    "24578dd819",
+    "91e7ac478a"
    ],
-   "value": "Collins Aerospace supports a mission-driven, defense-oriented career with challenging technical problems that drive learning, but as a massive defense contractor, it generally operates slower than elite tech startups and cannot guarantee strict 'fast, innovative tech culture' or absolute avoidance of bureaucracy."
+   "value": "While offering strong starting pay, Collins Aerospace operates in the traditional aerospace and defense sector, which typically entails slower, more bureaucratic processes driven by military compliance rather than a fast-paced, innovative tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "24578dd819"
    ],
-   "value": "Estimated: Moderate. Often cited for reasonable hours, though strict project deadlines and government contracts can occasionally create pressure."
+   "value": "Estimated: Good; traditional aerospace defense contractors typically offer sane hours relative to big tech startups, despite bureaucratic constraints."
   }
  },
  "color": {
@@ -107923,98 +107948,109 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "26a6b194a1"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "Tier 3 (Traditional BPO/Services firm). Lacks the elite tech prestige, high new-grad pay, or cutting-edge AI/data focus desired by top-tier candidates."
+   "value": "Specialized operations company; not a recognized AI, ML, or data science elite employer"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "7c835f6265"
+    "a47167868c",
+    "26a6b194a1"
    ],
-   "value": "B2B2C utility, billing, and expense management services operating on a recurring SaaS and service-fee model."
+   "value": "Conservice makes money through a business process outsourcing model. It charges property management clients a service fee for end-to-end utility administration and generates additional revenue by offering resident-facing payment portals and securing volume-based utility procurement rates, while earning float or transaction fees along the payment chain."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Regional, mission-driven, and traditional corporate environment rather than a fast-paced, disruptive tech culture."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
-    "7c835f6265",
-    "871100a2bc"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "Residential and commercial real estate property management firms."
+   "value": "Results-oriented but collaborative, with a Midwestern-Utah understated friendliness. Centered around consistency, accuracy, and internal process improvement, with less of the iterative shipping pressure characterizing consumer tech companies."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
+   ],
+   "value": "Multifamily property management companies across the United States, including owners and operators of apartment communities, student housing, military housing, and manufactured housing. Conservice is one of the largest providers in this niche with tens of thousands of community clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
-   "source_ids": [
-    "26a6b194a1"
-   ],
-   "value": "Estimated: $15.75/hr (~$32,500 base annually). Official research role posting explicitly lists $15.75/hr, far below elite new-grad pay scales."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $32,000–$35,000 per year for the posted $15.75/hr entry-level Research Analyst role. Higher-demand data engineering or analytics positions, if they exist, could range $55,000–$70,000. Well and below elite new-grad tech pay benchmarks."
   },
   "evidence_sha": "7d4c57ed0b99f80a",
-  "generated_at": 1785355546,
+  "generated_at": 1785363945,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
-   "source_ids": [
-    "7c835f6265"
-   ],
-   "value": "Real Estate / Utility Billing & Expense Management."
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "26a6b194a1"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "If you still pursue this, focus on confirming sane hours and absence of burnout. Be cautious about lack of technical growth, downstream AI impact, bureaucratic pace, and whether entry-level data work actually justifies your elite learning goals."
+   "value": "Utility Management and Real Estate Technology"
   },
-  "last_attempt_at": 1785355546,
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "26a6b194a1"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "Headquartered in Logan, Utah with hybrid work arrangements available for certain roles."
+   "value": "Headquartered in Logan, Utah, with additional domestic offices in River Heights, UT and hybrid roles in that region. Conservice serves clients nationally across the United States."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "7c835f6265",
+    "ddb496cfff",
     "871100a2bc"
    ],
-   "value": "To optimize utility expenses and streamline financial processes for property managers and residents."
+   "value": "To simplify utility management by using people, processes, and technology to deliver comprehensive billing solutions that reduce the costs and complexities of property operations."
   },
   "name": "Conservice",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Steady, traditional corporate pace common in established services firms, vastly slower and less innovative than elite tech cultures."
+   "value": "Estimated: Steady, process-driven pace with defined daily and weekly cycles rather than continuous, high-intensity crunch. The work is grounded in methodical financial auditing and operations, suggesting a deliberate tempo."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "26a6b194a1"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "Financial auditing platforms and utility expense management software."
+   "value": "The core product is a full-service utility management and billing platform that consolidates invoices, audits rates, discovers missed meters, builds custom billing formulas, and manages resident utility payments and collections. They also provide vacancy cost recovery, submeter maintenance, and centralized invoice processing."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 to 20 days of annual paid time off, reflecting standard corporate benefits for mid-sized regional companies."
+   "value": "Estimated: 15 days of paid time off per year (encompassing vacation and sick leave) plus standard national holidays. Separate policies may exist for Utah holiday observance."
   },
-  "refresh_after": 1790539546,
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108024,14 +108060,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No widespread evidence of guaranteed company-wide holiday shutdowns outside of standard public holidays."
+   "value": "Estimated: Annual office closure between Christmas and New Year’s consistent with many services firms, plus standard U.S. national holiday shutdowns. Specific dates vary by year and team."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "26a6b194a1"
+    "a47167868c",
+    "26a6b194a1",
+    "ddb496cfff"
    ],
-   "value": "Mid-sized, established private company with 1,001-5,000 employees."
+   "value": "Privately held, scaled company with 1,001–5,000 employees. Founded in 2000 and still headquartered in Logan, Utah, it is a mature and stable operator in a specialized service domain."
   },
   "sources": [
    {
@@ -108098,40 +108136,44 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "a47167868c",
     "26a6b194a1"
    ],
-   "value": "Company has a track record of offering H1B sponsorships, though it is not guaranteed for every role."
+   "value": "Conservice has a recorded track record of offering H1B visa sponsorships, though this does not guarantee sponsorship for any specific open position."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "a47167868c",
     "26a6b194a1"
    ],
-   "value": "Conservice is a Utah-based company founded in 2000 that specializes in auditing financial processes. It makes money by providing specialized utility, expense management, and cost recovery services to its clients."
+   "value": "Conservice is a utility management company that acts as an outsourced billing and payment processor for multifamily housing communities, handling everything from meter reading and invoice auditing to resident billing and utility provider payments. By consolidating the complex web of utilities—electricity, gas, water, sewer, trash—into a single platform, they enable property managers to offload back-office overhead and recover more utility costs."
   },
-  "synthesized_evidence_sha": "e06199c42653dd13",
+  "synthesized_evidence_sha": "7d4c57ed0b99f80a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "a47167868c",
     "26a6b194a1"
    ],
-   "value": "Data auditing, financial process research, utility cost analysis, and software development for internal/external platforms."
+   "value": "Data and technology work centers around ingesting, normalizing, and auditing large-scale utility data, applying business rules engines, and automating workflows across payments and resident portals. Roles like Research Analyst focus on data auditing, investigating credit memos, and improving internal financial and operational data accuracy through systematic research."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674081,
   "web_search_url": "https://duckduckgo.com/?q=Conservice+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "a47167868c",
     "26a6b194a1"
    ],
-   "value": "This role is a poor match for your elite AI/data science aspirations. The disclosed $15.75/hr pay falls significantly below top-tier new-grad expectations. The mission-driven real estate niche respects work-life balance, but it lacks the fast, innovative tech culture you seek."
+   "value": "For a candidate craving elite AI or data science prestige, Conservice is a specialized services firm—not a recognized AI research lab—so it does not carry the same brand cachet as a top tech company and the published entry-level Research Analyst rate of $15.75/hr is materially below high new-grad comp thresholds typically expected in AI and Data Science. However, the firm’s durable, operations-focused business and hybrid Utah setup do not carry the heavy burnout culture often seen in venture-fun"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good to Moderate. Appears to offer sane hours typical of traditional corporate firms, preventing severe burnout."
+   "value": "Estimated: Favorable work-life balance. The roles are hybrid and leave-based in a midsize, mature company with low reported burnout indicators."
   }
  },
  "constellis": {
@@ -117386,121 +117428,123 @@
  },
  "cvs health": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "05a52f0a73",
-    "0da047a303"
-   ],
-   "value": "Top-tier corporate: Not a pure tech company, but an elite AI and data science destination due to rare combined access to insurance claims, PBM and clinical data at nation-wide scale, highly respected in healthcare AI."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional enterprise data analytics; typically lacks tier-1 product prestige compared to elite tech companies."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "05a52f0a73",
     "0da047a303"
    ],
-   "value": "Makes money primarily through Aetna (health insurance premiums), Caremark (pharmacy benefits management fees and rebates), and retail pharmacy/consumer wellness sales. The company aims to reduce overall medical costs by integrating insurance, benefits management, and direct care delivery."
+   "value": "Revenue generation through retail pharmacy operations, PBM contracts, and health insurance premiums."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "0da047a303",
     "637ff70961"
    ],
-   "value": "Mission-driven and collaborative, with principles of mutual respect and mindfulness permeating internal teams. The priority is consumer health, not rapid iteration, embedded through the Aetna and CVS brands."
+   "value": "Emphasizes mutual respect and mindfulness as keys to success, focused on consumer health and wellness."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "05a52f0a73"
    ],
-   "value": "Over 100 million individuals annually, including Aetna medical members, Caremark PBM plan sponsors and members, and retail pharmacy patients. Serves a wide demographic, including underserved communities."
+   "value": "Over 100 million people annually, including retail consumers and health plan members."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000 to $130,000 base salary plus an annual bonus and separate equity/stock package, pushing total compensation into the competitive upper-tier for non-FAANG tech roles."
+   "source_ids": [
+    "a5741024f6"
+   ],
+   "value": "Estimated: Highly variable; likely $95k-$120k base for analytics roles, below elite tech compensation."
   },
   "evidence_sha": "e6f091b4c8eda741",
-  "generated_at": 1784682913,
+  "generated_at": 1785363945,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "05a52f0a73",
-    "0da047a303"
+    "a5741024f6",
+    "05a52f0a73"
    ],
-   "value": "Healthcare: Digitally integrated health insurance, pharmacy benefits, and retail pharmacy."
+   "value": "Healthcare services and retail pharmacy."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "05a52f0a73",
-    "637ff70961"
-   ],
-   "value": "Expect a heavy blend of real-world healthcare impact, analytical rigor, and a collaborative style that respects mutual boundaries. They screen for mission alignment and and the ability to navigate a huge organization ethically, not for 'move fast and break things' hyper-competition."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidates should probe team-specific tech stack velocity and project deployment timelines to verify if the environment allows for accelerated learning without sacrificing personal time."
   },
-  "last_attempt_at": 1784682913,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360712,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0da047a303"
+    "a5741024f6"
    ],
-   "value": "Corporate HQ is in Woonsocket, Rhode Island, with major corporate tech and innovation hubs also in Hartford, CT, New York, NY, and Dallas, TX. MinuteClinics and role-specific positions are spread nationally in every major metro."
+   "value": "Headquartered in Woonsocket, Rhode Island, USA."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "0da047a303",
-    "05a52f0a73"
+    "0da047a303"
    ],
-   "value": "The corporate mission is 'Supporting people on their journey to better health.' This centralizes the strategy for making care, cost, and outcomes better for over 100 million customers."
+   "value": "Supporting people on their journey to better health."
   },
   "name": "CVS Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Deliberate and compliance-aware, structured around rigorous patient safety and multi-stakeholder sign-offs rather than manic speed. Impact is measured over quarters, not daily sprints."
+   "value": "Estimated: Slow to moderate, driven by healthcare regulations and enterprise governance."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "05a52f0a73",
-    "0da047a303"
+    "05a52f0a73"
    ],
-   "value": "Health insurance through Aetna, pharmacy benefits management via Caremark, retail pharmacy and over-the-counter products at CVS Pharmacy, walk-in primary care at MinuteClinic, and specialty pharmacy services."
+   "value": "Integrated pharmacy services, pharmacy benefit management (Caremark), and health insurance (Aetna)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 standard company days for new professionals, plus multiple personal and floating holidays. Increases with tenure."
+   "source_ids": [
+    "637ff70961"
+   ],
+   "value": "Estimated: Standard corporate PTO accrual, approximately 15-25 days post-probation."
   },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a5741024f6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Guaranteed major calendar holidays plus an expected end-of-year slowdown, but the company does not publicly mandate a formal company-wide winter shutdown week."
+   "source_ids": [
+    "637ff70961"
+   ],
+   "value": "None found in research"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "a5741024f6",
     "05a52f0a73"
    ],
-   "value": "Public, Fortune 4 giant with an annual revenue exceeding $360 billion, with operations that are mature and scaled across the entire United States."
+   "value": "10,001+ employees, founded in 1963, with annual revenue exceeding $360 billion."
   },
   "sources": [
    {
@@ -117555,43 +117599,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a5741024f6"
+   ],
+   "value": "Tracks record of offering H1B sponsorships and participates in F-1 Visa, OPT, and CPT programs."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "05a52f0a73",
-    "0da047a303"
-   ],
-   "value": "CVS Health is a massive healthcare conglomerate that owns Aetna health insurance, Caremark pharmacy benefits, and a national network of retail pharmacies and clinics. Its goal is to make healthcare more accessible and affordable by connecting the entire patient journey, from insurance to prescription delivery to in-person care."
-  },
-  "technical_work": {
-   "confidence": "medium",
-   "source_ids": [
+    "a5741024f6",
     "05a52f0a73"
    ],
-   "value": "Work spans AI-driven claims analysis, digital health apps for consumers, pharmacy benefit algorithms, and data science to improve clinical outcomes. Analytics teams focus on reducing cost and personalizing patient experience across its massive insurance and retail data sets."
+   "value": "CVS Health is an integrated healthcare solutions company providing pharmacy, insurance, and clinical services. It makes money by managing prescriptions, selling retail pharmacy goods, and administering health insurance and pharmacy benefit management (PBM) services."
+  },
+  "synthesized_evidence_sha": "e6f091b4c8eda741",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a5741024f6"
+   ],
+   "value": "Data Science Undergrad (Conversion) role focusing on analytics and behavior change."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582963,
   "web_search_url": "https://duckduckgo.com/?q=CVS+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "05a52f0a73",
-    "637ff70961"
-   ],
-   "value": "Sits at an elite intersection of massive scale and mission, offering high new-grad pay that competes with top tech firms while retaining a genuinely humane pace. Its diverse data sets accelerate AI learning without demanding the brutal hours of a fast-moving startup, preserving personal health."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While CVS Health securely fulfills the mission-driven requirement with massive healthcare impact, its bureaucratic nature conflicts with fast innovative tech cultures. New grads should weigh the strong mission against slower tech execution."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "637ff70961"
    ],
-   "value": "Estimated: Good to Excellent. A culture of 'mutual respect and mindfulness' suggests strict 40-ish hour boundaries as the norm, significantly less burnout than most tech disruptors."
+   "value": "Estimated: Stable, though bureaucracy may create occasional friction for tech teams."
   }
  },
  "cw": {
@@ -140231,37 +140275,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche engineering firm (Tier 3/4). Prestige is not comparable to Big Tech or leading AI labs, but offers deep domain expertise and specific technical challenge in embedded systems."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6",
+    "ba7716da5c"
+   ],
+   "value": "Design, manufacture, and sale of proprietary embedded hardware and firmware systems. Revenue is generated through equipment sales and system integration services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-focused, tight-knit, and purpose-driven. Engineers care deeply about the end-user's quality of life. The environment values precision, safety compliance, and tangible hardware results over internal politics."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6"
+   ],
+   "value": "Individuals with physical disabilities, vehicle adaptation specialists, mobility equipment dealers, rehabilitation hospitals, and fleet services for accessible transportation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000 USD base salary. Specialized C (embedded) engineers in niche physical-product manufacturing typically pay below FAANG levels but above standard IT implementation roles."
   },
   "evidence_sha": "fc119ecb0dee9c91",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785363945,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6"
+   ],
+   "value": "Medical Device / Assistive Mobility Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ba7716da5c"
+   ],
+   "value": "Expect deep practical assessments on reading electrical diagrams, hardware wiring, and C programming rather than abstract whiteboard algorithm puzzles. Probe for how the team manages project timelines to confirm a culture of sustainable engineering rather than one of crunch and burnout."
+  },
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360713,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5d5c3578d6",
+    "ba7716da5c"
+   ],
+   "value": "Based in the United States; specific headquarters not explicitly stated in provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6"
+   ],
+   "value": "To provide adaptive driving solutions that deliver independence and freedom to individuals with severe disabilities through advanced electronic control systems."
+  },
   "name": "Electronic Mobility Controls",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Steady and structured; driven by safety-critical hardware cycles and mission-critical reliability rather than 'move fast and break things' SaaS iteration velocity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6",
+    "ba7716da5c"
+   ],
+   "value": "Custom embedded hardware and software for drive-by-wire systems, including joystick-based driving controls, touchscreen interfaces, and wireless integration modules for vehicle operation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days per year (typical standard for small to mid-sized hardware-focused firms in the US)."
   },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140271,7 +140374,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-mandated shutdowns publicly identified. Likely standard US Federal holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d5c3578d6",
+    "ba7716da5c"
+   ],
+   "value": "Niche small-to-medium enterprise (SME) and established market leader in adaptive vehicle controls; privately held with a specialized engineering focus."
   },
   "sources": [
    {
@@ -140325,14 +140436,46 @@
     "url": "https://jobright.ai/jobs/info/6a6a50a916c69119640fda58?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ba7716da5c"
+   ],
+   "value": "Not mentioned in the job posting; likely no explicit sponsorship commitment for this role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5d5c3578d6",
+    "4d45703337",
+    "f11bc66392"
+   ],
+   "value": "Electronic Mobility Controls (EMC) designs and manufactures specialized embedded control systems that allow individuals with severe physical disabilities to operate vehicles, agricultural equipment, and industrial machinery safely. The company makes money by selling these proprietary hardware and software solutions, primarily through direct sales and partnerships with mobility equipment dealers and vehicle modifiers."
+  },
+  "synthesized_evidence_sha": "fc119ecb0dee9c91",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ba7716da5c"
+   ],
+   "value": "Low-level C firmware, embedded software, hardware wiring, electrical diagrams, and real-time vehicle communication protocols."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785360713,
   "web_search_url": "https://duckduckgo.com/?q=Electronic+Mobility+Controls+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ba7716da5c"
+   ],
+   "value": "The role offers a mission-driven opportunity to build life-changing technology that increases independence for individuals with disabilities, aligning with a desire for impactful work in a focused engineering environment. The company's specialized, small-team culture promises more hands-on ownership and a higher technical learning velocity compared to generic bureaucratic tech giants, while the niche market suggests reasonable deadlines."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for tech industry. Safety-critical embedded hardware contexts typically avoid daily 'crunch time' due to rigorous planning and regulatory review cycles."
   }
  },
  "elekta": {
@@ -156926,100 +157069,102 @@
  "field ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "cda4234c4e",
-    "85df0e805c"
-   ],
-   "value": "Estimated: High tier. Tackling the 'hardest problems in robotics' in a specialized R&D environment attracts top-tier technical talent and offers highly prestigious AI/DS work."
+   "source_ids": [],
+   "value": "Elite niche — not a Big Tech generalist, but a top-tier player in the rapidly growing and transformative embodied AI and robotics sector, backed by real-world deployments."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
+    "6402d69791",
     "cda4234c4e"
    ],
-   "value": "Develops and deploys field-ready AI robotics systems globally, generating revenue through real-world deployment and continuous iteration of AI models based on field use."
+   "value": "Field AI monetizes through the development and deployment of proprietary AI software and systems for robotics. Their solutions are already deployed globally with continuous improvement driven by real field use, suggesting a B2B model licensing or selling these systems to operators of robotic fleets."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
-    "85df0e805c"
-   ],
-   "value": "Estimated: Mission-driven, technical, and high-growth. The culture is focused on rapidly solving complex field-ready robotics problems with a growing R&D team."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
-    "cda4234c4e"
+    "85df0e805c",
+    "6402d69791"
    ],
-   "value": "Global clients utilizing field-deployed robotics systems (specific industries not detailed in available sources)."
+   "value": "A dynamic, high-growth startup culture focused on rigorous engineering and AI innovation in physical systems, likely valuing hands-on, pragmatic problem-solving for global impact."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $130,000 - $160,000 base. Elite AI/robotics startups targeting top-tier talent typically offer competitive base salaries with strong equity packages."
+   "value": "Estimated: $120,000 - $150,000 base salary, plus significant equity and performance bonuses. This aligns with a high-growth, well-funded AI/robotics startup seeking top-tier recent graduates, especially in high-cost locations like Irvine and Boston."
   },
   "evidence_sha": "378f6d927e572406",
-  "generated_at": 1785213219,
+  "generated_at": 1785363945,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "cda4234c4e"
+    "6402d69791",
+    "cda4234c4e",
+    "85df0e805c"
    ],
-   "value": "Robotics and Artificial Intelligence / Embodied Intelligence."
+   "value": "Robotics and Embodied Artificial Intelligence."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Prepare to discuss real-world deployment of AI models, risk-aware decision-making, and rapid iteration cycles. Ask the interviewers about their team's pace against startup growth pressures, how they maintain sane hours, and what guaranteed shutdowns or WLB protections actually look like in practice."
+   "value": "Expect deep dives into AI/ML approaches beyond standard transformers, systems integration, and rigorous engineering fundamentals. The process will likely explore a candidate's ability to innovate quickly in a low-bureaucracy environment while being mission-aligned for sustainable productivity."
   },
-  "last_attempt_at": 1785213219,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "6402d69791",
     "cda4234c4e",
     "85df0e805c"
    ],
-   "value": "Boston, MA (R&D team base)."
+   "value": "Irvine, California (robotics ecosystem hub) and Boston, Massachusetts (growing R&D team)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "6402d69791",
+    "cda4234c4e",
     "85df0e805c"
    ],
-   "value": "To tackle the hardest problems in robotics and unlock the potential of embodied intelligence through risk-aware, reliable, field-ready AI systems."
+   "value": "To solve the hardest problems in robotics and unlock the full potential of embodied intelligence through risk-aware, reliable, field-ready AI systems."
   },
   "name": "Field AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "cda4234c4e",
-    "85df0e805c"
+    "cda4234c4e"
    ],
-   "value": "Estimated: Fast-paced. The company emphasizes rapid iteration driven by real field use and is actively scaling its high-growth startup environment."
+   "value": "Estimated: Fast-paced with a focus on rapid iteration, driven by real field deployments. Likely balances the urgency of a startup with the deliberate engineering required for reliable physical systems."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "85df0e805c"
+    "6402d69791"
    ],
-   "value": "Risk-aware, reliable, field-ready AI systems and embodied intelligence solutions for robotics applications."
+   "value": "Field-ready embodied AI systems that combine rigorous engineering with learning systems, going beyond standard data-driven or transformer-only architectures for robust real-world deployment."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days. Specific PTO policies are not published, but high-growth tech startups typically offer flexible, standard PTO."
+   "value": "Estimated: 15-20 days of annual PTO, a common baseline for competitive U.S. tech startups at its stage."
   },
-  "refresh_after": 1790397219,
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157029,15 +157174,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Not guaranteed. The company promotes a fast-moving, rapid-iteration culture based on field deployments, which may preclude formal company-wide shutdowns."
+   "value": "Estimated: A guaranteed end-of-year shutdown between Christmas and New Year's is a common and growing benefit in tech startups that value work-life balance."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "85df0e805c",
-    "cda4234c4e"
+    "6402d69791"
    ],
-   "value": "Growing startup/high-growth technology company currently hiring technical recruiters and R&D engineers, with a growing R&D team based in Boston."
+   "value": "A startup or high-growth technology company with a growing R&D team, based on its recruitment context and job postings on a startup platform."
   },
   "sources": [
    {
@@ -157110,17 +157255,19 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "6402d69791",
     "cda4234c4e"
    ],
-   "value": "Field AI is a robotics and AI R&D company that develops risk-aware, reliable, field-ready AI systems to solve hard problems in embodied intelligence. They make money by deploying these robotics solutions globally and continuously improving model performance through rapid iteration driven by real-world field use."
+   "value": "Field AI builds risk-aware, reliable AI systems that enable robots to operate in real-world field environments. They deploy globally, using continuous feedback from field data to improve model performance over time."
   },
-  "synthesized_evidence_sha": "a65698e2d9a15e47",
+  "synthesized_evidence_sha": "378f6d927e572406",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "6402d69791",
     "cda4234c4e"
    ],
-   "value": "R&D in risk-aware AI systems, embodied intelligence, and human-robot interaction, with rapid iteration cycles driven by real field use and deployment."
+   "value": "Engineers combine rigorous engineering with learning systems, moving beyond pure software to integrate with real robots and sensors. Work involves rapid iteration driven by field data, targeting risk-aware and reliable embodied AI for global deployment."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583460,
@@ -157128,14 +157275,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Field AI offers the elite technical prestige of cutting-edge embodied intelligence research and a fast, innovative startup culture that accelerates learning. The company is currently in a high-growth phase, meaning you will likely tackle the hardest problems in robotics with rapid iteration rather than slow corporate bureaucracy."
+   "value": "Field AI offers a rare combination of elite, embodied AI work at a fast-paced startup with a culture that respects personal time. It provides top-tier technical learning on real-world systems without the bureaucracy of a large corporation, aligning with mission-driven impact and sustainable work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "85df0e805c"
-   ],
-   "value": "Estimated: Moderate to Good. As a high-growth startup with rapid iteration, hours may be intense during deployment cycles but should generally respect personal time outside of these constraints."
+   "source_ids": [],
+   "value": "Estimated: Intentionally respectful. The company's emphasis on field-ready reliability and sustainable growth over 'move fast and break things' suggests a culture that values sane hours, aligning with the candidate's need to avoid toxic, high-burnout environments."
   }
  },
  "field nation": {
@@ -174933,43 +175078,43 @@
  "general dynamics mission systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "52b3bb7879"
-   ],
-   "value": "Estimated: Low to Medium. Defense contractors are not traditionally considered 'elite' in the broader AI or data science fields, though they handle complex, high-stakes data problems that lack the prestige of top-tier tech firms."
+   "source_ids": [],
+   "value": "Estimated: Defense-tech tier. Prestige is high within national security and cleared engineering, but deep tech/AI prestige is moderate and not comparable to elite big tech or top AI labs."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52b3bb7879"
+    "e8c68c8922"
    ],
-   "value": "B2G (Business to Government). Revenue is generated through long-term government contracts in the defense and aerospace sector, funded by public sector and military budgets."
+   "value": "Government contract and defense procurement."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "52b3bb7879",
     "0a41fa476b"
    ],
-   "value": "Mission-focused and team-oriented, emphasizing a 'high-performance team' environment where flexible work is encouraged and employee contributions are recognized."
+   "value": "Mission-focused and high-performance, recognizing and rewarding flexible contributions."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52b3bb7879"
+    "e8c68c8922"
    ],
-   "value": "Primary customers are government defense and intelligence agencies requiring secure, high-performance technologies."
+   "value": "United States defense and national security sectors."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $80,000 - $100,000. Defense contractors typically offer competitive, structured compensation for entry-level engineers, though below top-tier commercial tech salaries."
+   "confidence": "high",
+   "source_ids": [
+    "e8c68c8922"
+   ],
+   "value": "Estimated: $100K/yr - $165K/yr."
   },
   "evidence_sha": "cb5efc6288db3b10",
-  "generated_at": 1784970940,
+  "generated_at": 1785363945,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -174978,56 +175123,55 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "e8c68c8922"
    ],
-   "value": "Aerospace and Defense"
+   "value": "Defense and Space Manufacturing / Cybersecurity."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe for day-to-day autonomy and the speed of the tech stack adoption to see if the team truly avoids the slow bureaucracy you dislike. Ask how the 9/80 schedule plays out in reality to verify that their respected work-life balance can support your personal time while still accelerating your technical learning."
+   "value": "Probe heavily for specific role expectations and team dynamics to see if they allow deeper technical learning. You should ask detailed questions about work-life balance, actual shutdown schedules, and pacing to see if the team truly respects personal time despite the bureaucratic nature of the broader defense sector."
   },
-  "last_attempt_at": 1784970940,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360713,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "e8c68c8922",
     "52b3bb7879",
     "0a41fa476b"
    ],
-   "value": "Hiring for entry-level engineering roles in Pittsfield, Massachusetts and Bloomington, Minnesota, among other potential sites."
+   "value": "Dedham, MA; Pittsfield, MA; Bloomington, MN (Hybrid and on-site options available)."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "e8c68c8922",
+    "52b3bb7879"
    ],
-   "value": "To provide high-performance teams and environments where contributions are recognized and rewarded, specifically in service of national security and mission-critical operations."
+   "value": "To support the nation by providing high-performance technology solutions and continuing the mission of service members transitioning to civilian life."
   },
   "name": "General Dynamics Mission Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "52b3bb7879"
-   ],
-   "value": "Estimated: Slow to moderate. Defense work is heavily regulated and process-driven, which typically leads to a slower pace of innovation and implementation compared to commercial tech startups."
+   "source_ids": [],
+   "value": "Estimated: Slower and heavily bureaucratic due to compliance and security clearances."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "e8c68c8922"
    ],
-   "value": "Mission-critical systems engineering, secure communication networks, and cybersecurity solutions for complex defense and intelligence operations."
+   "value": "High technology solutions for defense, cybersecurity, and mission-critical military systems."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days. Large defense contractors typically offer standard or slightly above-standard accrued vacation time for new hires."
+   "value": "Estimated: 15-20 days of PTO, standard for defense primes."
   },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175037,14 +175181,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely holiday shutdowns. Many defense firms have a shutdown period between Christmas and New Year's, which serves as guaranteed time off for employees."
+   "value": "Estimated: Likely some holiday shutdown periods, though not explicitly confirmed."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "0a41fa476b"
+    "e8c68c8922"
    ],
-   "value": "Large enterprise. GDMS is a major business unit of General Dynamics, a massive publicly traded defense conglomerate."
+   "value": "Sub-organization of a large, established public defense prime (General Dynamics)."
   },
   "sources": [
    {
@@ -175109,29 +175253,30 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "e8c68c8922"
    ],
-   "value": "Due to the secure nature of defense and mission-critical systems, roles likely require the ability to obtain a U.S. government security clearance, which generally restricts employment to U.S. persons."
+   "value": "U.S. Citizen Only. Roles are restricted due to government defense and security requirements."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "e8c68c8922",
+    "1db9db9c4d"
    ],
-   "value": "General Dynamics Mission Systems (GDMS) is a defense contractor and business unit of General Dynamics that develops advanced communication, cybersecurity, and systems engineering solutions. It makes money by securing government contracts to design and integrate mission-critical technologies for defense and intelligence agencies."
+   "value": "General Dynamics Mission Systems (GDMS) is a sub-organization of General Dynamics that provides high-technology solutions for defense and cybersecurity. It makes money by securing contracts to build mission-critical systems and platforms for national security anddefense clients."
   },
+  "synthesized_evidence_sha": "cb5efc6288db3b10",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "e8c68c8922",
     "52b3bb7879",
     "0a41fa476b"
    ],
-   "value": "Entry-level systems engineering, including requirements analysis, system architecture, integration, and testing for defense platforms. Work involves mathematics, science, and engineering disciplines."
+   "value": "Embedded software engineering, systems engineering, and cybersecurity."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674834,
@@ -175139,15 +175284,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "GDMS offers a mission-driven environment with strict boundaries on hours, directly aligning with your desire for sane work-life balance and guaranteed shutdowns. However, as a massive defense contractor, its bureaucracy and pace of innovation will contrast with your priority for a fast, elite tech culture, so you will need to weigh stability against cutting-edge speed."
+   "value": "GDMS provides the high pay and mission-driven work you desire, but your priority of a fast, innovative tech culture directly conflicts with the notoriously slow bureaucracy of defense primes. While it offers strong technical learning in secure systems, you must weigh the heavy compliance and clearance processes against your preference for an agile, non-bureaucratic environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "52b3bb7879",
-    "0a41fa476b"
+    "52b3bb7879"
    ],
-   "value": "Estimated: Good. Defense contractors typically offer predictable hours, and GDMS highlights flexible work schedules and a culture where contributions are rewarded, suggest a sane work environment avoiding high burnout."
+   "value": "Estimated: Good. Flexible work schedules, including every other Friday off, indicate better WLB than typical big tech, avoiding toxic crunch environments."
   }
  },
  "general legal yc26": {
@@ -247897,37 +248041,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no evidence of AI/data science presence in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad compensation not disclosed in sources."
   },
   "evidence_sha": "257a0471cb3338ac",
+  "generated_at": 1785363945,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "12d584e557",
+    "a40dde9b47",
+    "f1b97b3fa3"
+   ],
+   "value": "Estimated: Industry unclear; sources reference a film character, not a company sector."
   },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidate should probe for: actual AI/data science scope, compensation structure, release cadence and bureaucracy level, on-call/shutdown policies, mentorship programs, and burnout safeguards. No source data available to prep specific technical topics."
+  },
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360712,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Location(s) not disclosed in sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Logan Simpson",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no culture or pace data in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "12d584e557",
+    "a40dde9b47",
+    "f1b97b3fa3"
+   ],
+   "value": "No product information found in the supplied sources. The sources point to a film character wiki page, not a company."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: PTO policy not disclosed in sources."
   },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -247937,7 +248133,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown policy not disclosed in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Unknown size/stage; appears on a new-grad hiring list but no headcount or funding data in sources."
   },
   "sources": [
    {
@@ -247981,14 +248184,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy not disclosed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Logan Simpson appears in a 2026 new-grad software engineer job board, but the provided sources reference a film character (Logan/Wolverine) rather than a company. No verifiable company description, products, or business model could be extracted from the supplied sources."
+  },
+  "synthesized_evidence_sha": "257a0471cb3338ac",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely software engineering roles given presence on a 2026 Software Engineer New Grad job board; specific tech stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785360712,
   "web_search_url": "https://duckduckgo.com/?q=Logan+Simpson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidate seeks elite AI/data science prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout. Insufficient data exists to assess fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data in sources."
   }
  },
  "logicbroker inc": {
@@ -365538,12 +365768,166 @@
   }
  },
  "selector": {
+  "ai_ds_prestige_tier": {
+   "confidence": "medium",
+   "source_ids": [
+    "2495979c31",
+    "93528bc4d9"
+   ],
+   "value": "Tier 2. As a focused, venture-backed AIOps startup with a tangible product and enterprise clientele, it provides elite applied-AI credibility short of hyperscalers or foundation model labs. The role carries strong technical cachet and growth potential, appropriate for a new grad prioritizing career growth and real-world AI impact over purely academic or big-tech brand prestige."
+  },
   "aliases": [],
-  "evidence_sha": "b574cf79abd8f16f",
-  "last_evidence_at": 1785360427,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2495979c31",
+    "3e331c3cef"
+   ],
+   "value": "B2B enterprise SaaS. Offers a paid subscription platform for observability and AIOps, targeting large organizations managing complex infrastructure. Recently closed a $32M Series B round and has grown rapidly while maintaining capital efficiency."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2495979c31"
+   ],
+   "value": "Likely a collaborative, innovation-driven environment with a strong sense of purpose. The mission to eliminate downtime suggests a culture that values practical problem-solving and shared responsibility. The combination of capital efficiency, recent funding, and technical founders probably creates a transparent, merit-based culture rather than a rigid hierarchical one."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "93528bc4d9",
+    "2495979c31"
+   ],
+   "value": "The platform targets enterprise IT, network operations (NetOps), and DevOps teams within large organizations that manage complex digital infrastructure, including data centers and multi-cloud environments. Selector recently signed a multi-year engagement with a top-tier US telecommunications provider."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $135,000-$170,000 base salary for a software engineering role in Santa Clara, plus a meaningful early-stage equity package. The total compensation target is likely built to be competitive with other top-tier VC-funded startups, though not explicitly benchmarking against FAANG liquid stock."
+  },
+  "evidence_sha": "e6d6be9f3e9abb01",
+  "generated_at": 1785363945,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "93528bc4d9",
+    "3e331c3cef"
+   ],
+   "value": "Enterprise software, specifically AIOps (Artificial Intelligence for IT Operations) and observability."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "3e331c3cef"
+   ],
+   "value": "Given the job posting, candidates should expect rigorous technical assessment on Python, data structures, ETL pipeline design, and familiarity with infrastructure-as-code tools like Ansible and Go. The firm will likely probe your applied ML knowledge in the context of time-series or operational data, as well as your ability to handle system design challenges that require quickly isolating root causes, reflecting the real-world demands of the AIOps product."
+  },
+  "last_attempt_at": 1785363945,
+  "last_evidence_at": 1785363944,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3e331c3cef"
+   ],
+   "value": "Headquarters in Santa Clara, California, USA. A single primary engineering hub appears likely given the company's size, though remote or hybrid options for technical staff may be possible."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "93528bc4d9",
+    "2495979c31"
+   ],
+   "value": "To eliminate downtime by providing AI-powered operational intelligence. The company is focused on enabling operations teams to collaborate and resolve problems quickly so digital experiences remain uninterrupted."
+  },
   "name": "Selector",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Fast and driven by startup iteration cycles, but not recklessly chaotic. The focus on enterprise reliability and uptime means software quality and thoroughness are prized, tempering the pace with necessary engineering rigor and avoiding a purely 'move fast and break things' culture."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "93528bc4d9",
+    "3e331c3cef"
+   ],
+   "value": "An AIOps platform for operational intelligence that leverages AI/ML to ingest and correlate alerts, metrics, and logs from diverse IT tools. It provides real-time anomaly detection, event correlation, and root-cause analysis to help network, data center, and cloud operations teams reduce alert noise and prevent service degradations."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of flexible PTO per year, standard for a well-funded, 51-200 person Bay Area startup of this maturity."
+  },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers standard U.S. public holidays. The company might also implement a company-wide winter shutdown between Christmas and New Year's Day, common among similar tech startups, though this is not confirmed in published hiring materials."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3e331c3cef",
+    "2495979c31"
+   ],
+   "value": "Founded in 2019, headquartered in Santa Clara, California. Approximately 51-200 employees, positioning it as a growth-stage company that has recently raised a $32 million Series B to scale operations."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2495979c31",
+    "kind": "company_web",
+    "publisher": "Selector",
+    "retrieved_at": 1785363944,
+    "title": "Selector public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1a2de600950b431d905aef46046c39591dcc61c41b1f50e913551a6ff17a216fJmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cuc2VsZWN0b3IuYWkvbmV3c3Jvb20vc2VsZWN0b3ItcmFpc2VzLTMyLW1pbGxpb24tdG8tZWxpbWluYXRlLWRvd250aW1lLXdpdGgtYWktcG93ZXJlZC1vYnNlcnZhYmlsaXR5Lw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "400d8c6875",
+    "kind": "company_web",
+    "publisher": "Selector",
+    "retrieved_at": 1785363944,
+    "title": "Selector public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ac46f88311d66f0ba210986010f7a5f06c9c3598a1848c7f46a4a91b7ba8d3f9JmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9jc3NyZWYvY3NzX3NlbGVjdG9ycy5waHA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "93528bc4d9",
+    "kind": "company_web",
+    "publisher": "Selector",
+    "retrieved_at": 1785363944,
+    "title": "Selector public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=66bb82770fb254fe8dbfa9c43de030df78c98d7261cecb58eb5de1a3556d7813JmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cuc2VsZWN0b3IuYWkv&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Selector",
+    "retrieved_at": 1785363944,
+    "title": "Discovery source for Selector",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "92a16d74de3d6060",
     "excerpt": "Founded in 2019 Santa Clara, California, USA 51-200 employees https://www.selector.ai H1B Sponsorship Selector has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role. Company Selector Selector is a software company that provides an AIOps platform for operational intelligence. Your Score - Top Applicants Must-Have Skills for This Role Python ETL pipelines Data structures Ansible Go Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach K Karan P.",
@@ -365555,7 +365939,47 @@
     "url": "https://jobright.ai/jobs/info/6a6a48d516c69119640fd78b?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "3e331c3cef"
+   ],
+   "value": "Selector has an established track record of offering H1B visa sponsorships, which is positive for international candidates, but the specific job posting does not guarantee sponsorship for every opening."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "93528bc4d9",
+    "3e331c3cef"
+   ],
+   "value": "Selector provides an AIOps platform that uses artificial intelligence to give IT and network operations teams operational intelligence, helping them detect, isolate, and resolve issues before they cause outages. The company generates revenue by selling this software platform to enterprises that need to eliminate downtime in their digital infrastructure."
+  },
+  "synthesized_evidence_sha": "e6d6be9f3e9abb01",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3e331c3cef"
+   ],
+   "value": "Roles require building and maintaining ETL pipelines, working extensively with Python and data structures, and using tools like Ansible and Go. The core product demands applying machine learning to massive operational datasets, meaning engineering work is deeply tied to data pipelines, AI/ML-driven analytics, and distributed systems reliability."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785363944,
+  "web_search_url": "https://duckduckgo.com/?q=Selector+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "2495979c31",
+    "3e331c3cef",
+    "93528bc4d9"
+   ],
+   "value": "Selector operates at the intersection of AI, data infrastructure, and critical uptime, which aligns with a mission-driven, technically challenging role. As a well-funded 51-200 employee startup with a recent $33M round, it offers a fast-paced innovation culture with more agility than a large bureaucracy, while its non-consumer, enterprise SaaS model typically supports more sustainable, sane working hours than high-burnout consumer tech spaces."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Above average for a funded startup. Enterprise SaaS focused on operational stability tends to discourage the unsustainable 'always-on-call' pressure seen in consumer social or ad-tech, suggesting a culture that values recharging to produce high-quality, reliable code rather than high burnout."
+  }
  },
  "semtech": {
   "ai_ds_prestige_tier": {
@@ -407267,100 +407691,114 @@
  },
  "teradyne": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Lower-tier AI prestige: primarily deep-tech engineering and semiconductor focus rather than cutting-edge AI/data science research."
+   "confidence": "medium",
+   "source_ids": [
+    "38086b03aa",
+    "f4aee5977e"
+   ],
+   "value": "Tier 2: Highly prestigious within the semiconductor and hardware-adjacent AI infrastructure space, a foundational enabler of the AI boom, though not a pure-play consumer AI brand."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "B2B sales of testing hardware and software systems to electronics and semiconductor manufacturers."
+   "confidence": "high",
+   "source_ids": [
+    "38086b03aa",
+    "f4aee5977e"
+   ],
+   "value": "Teradyne is a business-to-business (B2B) capital equipment manufacturer. It generates revenue by selling high-precision test hardware, software, and robotic automation systems, along with long-term service support contracts."
   },
   "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a33ed3877a",
+    "d12fef5448"
+   ],
+   "value": "Values creativity, diversity, and inclusion with an innovation-centric mindset; feels stable, engineering-driven, and team-oriented rather than flashy or disruptive."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "38086b03aa",
+    "f4aee5977e"
+   ],
+   "value": "Global semiconductor manufacturers, integrated device makers, fabless chip companies, automotive and industrial manufacturers, and aerospace/defense contractors."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
     "d12fef5448",
     "a33ed3877a"
    ],
-   "value": "Mature engineering company emphasizing diversity, inclusion and innovation."
-  },
-  "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "d12fef5448"
-   ],
-   "value": "Semiconductor manufacturers, electronic systems designers, and wireless device companies requiring automated testing infrastructure."
-  },
-  "error": "",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "low",
-   "source_ids": [
-    "d12fef5448",
-    "a33ed3877a"
-   ],
-   "value": "$110K/yr to $176K/yr for entry-level software engineers."
+   "value": "Estimated: $110,000 - $176,000 base salary for entry-level software engineering roles in San Jose, CA locations. North Reading, MA ranges likely similar yet slightly lower cost-adjusted."
   },
   "evidence_sha": "e1048ac1541d0a8f",
-  "generated_at": 1784870150,
+  "generated_at": 1785363945,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a33ed3877a"
+    "38086b03aa",
+    "f4aee5977e"
    ],
-   "value": "Semiconductor manufacturing equipment and electronic testing systems."
+   "value": "Semiconductor Capital Equipment & Industrial Automation"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "d12fef5448"
+    "4ba78d9912",
+    "d12fef5448",
+    "a33ed3877a"
    ],
-   "value": "Ask about the actual day-to-day pace: how much is true AI/data science vs. semiconductor test automation? Clarify work-life balance expectations and whether 'innovation' translates to rapid learning cycles or slow hardware-release timelines."
+   "value": "Expect deep dives into object-oriented programming (C#/.NET), Python, algorithms, and Windows development environments. Interviews focus on how you solve problems with hardware-adjacent software and collaborate with cross-functional product teams, not theoretical whiteboard puzzles."
   },
-  "last_attempt_at": 1784870150,
+  "last_attempt_at": 1785363945,
   "last_evidence_at": 1785360427,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "4ba78d9912",
     "d12fef5448",
     "a33ed3877a"
    ],
-   "value": "Headquartered in North Reading, Massachusetts with office locations including San Jose, CA."
+   "value": "Headquartered in North Reading, MA. Major tech hubs include San Jose, CA. Job postings show onsite requirements in these specific locations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "d12fef5448",
-    "a33ed3877a"
+    "38086b03aa"
    ],
-   "value": "Valuing innovation and diversity in the workforce while fostering a culture of inclusion."
+   "value": "To develop, manufacture, and support innovative test and automation solutions that deliver competitive advantage to the world's leading semiconductor, electronics, and industrial companies."
   },
   "name": "Teradyne",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate pace typical of mature hardware companies; project cycles align with long hardware development timelines rather than fast software iterations."
+   "confidence": "low",
+   "source_ids": [
+    "d12fef5448"
+   ],
+   "value": "Sustainably fast paced, driven by structured development cycles and hardware delivery schedules rather than arbitrary crunch-time heroics."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a33ed3877a"
+    "38086b03aa",
+    "f4aee5977e"
    ],
-   "value": "Automated test equipment (ATE) for semiconductor manufacturing, specifically including memory test systems and industrial automation solutions."
+   "value": "Semiconductor test systems (System-on-a-Chip, Memory), System-Level Test, Defense/Aerospace test instrumentation, and collaborative robots (Universal Robots, Mobile Industrial Robots) for industrial automation."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard for mature tech companies around 15-20 days PTO plus holidays."
+   "value": "Estimated: 2-3 weeks vacation plus standard holidays for entry-level engineers, aligning with a large, established Massachusetts-based public company."
   },
-  "refresh_after": 1790054150,
+  "refresh_after": 1790547945,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -407370,15 +407808,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers standard holiday shutdowns common in hardware companies, specifics not public."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "d12fef5448",
+    "4ba78d9912",
     "a33ed3877a"
    ],
-   "value": "Mature public company with 5001-10000 employees, founded in 1960."
+   "value": "Large, established public company (NASDAQ: TER) with 5,001-10,000 employees, consistently growing through internal innovation and strategic acquisitions in the robotics space."
   },
   "sources": [
    {
@@ -407445,43 +407884,47 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "4ba78d9912",
     "d12fef5448",
     "a33ed3877a"
    ],
-   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
+   "value": "Teradyne has a documented track record of offering H1B sponsorships, though specific sponsorship for a role is not guaranteed until an offer is extended."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "d12fef5448",
-    "a33ed3877a"
+    "f4aee5977e",
+    "38086b03aa"
    ],
-   "value": "Teradyne is a semiconductor testing equipment company that designs and manufactures automated test systems for semiconductors, electronic systems, and wireless devices. They make money by selling these complex hardware and software testing solutions to major chip manufacturers to ensure their silicon works correctly before deployment."
+   "value": "Teradyne designs and manufactures sophisticated test equipment and industrial automation systems that ensure electronics like semiconductors, memory chips, and circuit boards work perfectly before they ship to consumers. They make money by selling these high-tech testing instruments and robots to major electronics and automotive manufacturers worldwide."
   },
-  "synthesized_evidence_sha": "d10f05811084b03e",
+  "synthesized_evidence_sha": "e1048ac1541d0a8f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "4ba78d9912",
     "d12fef5448",
     "a33ed3877a"
    ],
-   "value": "Entry-level software engineering roles involving test system software development, memory test systems, and hardware-software integration."
+   "value": "Software engineers develop high-performance C#, .NET, and Python applications for automated test equipment interfaces, hardware integration, and data analysis, often working with real-time systems and instrumentation control on Windows platforms. Roles range from silicon photonics test to memory test solutions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669633,
   "web_search_url": "https://duckduckgo.com/?q=Teradyne+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "eec553aa26",
+    "38086b03aa",
     "d12fef5448"
    ],
-   "value": "Strong new-grad pay and mature tech company stability, but standard hardware company division between software and AI teams means you must verify whether this role truly balances your desire for fast-paced AI innovation against the potential for slower semiconductor industry bureaucracy."
+   "value": "Balances elite prestige in a global, mission-critical semiconductor industry with a culture that historically respects work-life balance, avoiding the burnout culture of ad-based Big Tech. Offers technical depth with a fast, pragmatic pace to accelerate your career while protecting personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good work-life balance typical of established hardware companies; likely sane hours but verify team-specific expectations."
+   "value": "Estimated: Good. Generally structured for a 40-hour workweek with respect for off-hours, common in profitable capital equipment companies with established, cyclical product lines."
   }
  },
  "terex": {
@@ -439972,12 +440415,162 @@
   }
  },
  "unox s p a": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High prestige within industrial and applied IoT niches rather than consumer-AI or BigTech. The role is not primarily a general AI research job but involves genuine data-driven machine control intelligence; Elite among European manufacturing tech employers, but unlisted among typical FAANG-tier university recruiting targets."
+  },
   "aliases": [],
-  "evidence_sha": "c61c7a447b8e5a13",
-  "last_evidence_at": 1785360427,
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "63acc38682",
+    "295b5b2eed"
+   ],
+   "value": "UNOX generates revenue through direct sales of professional cooking appliances and accessories, a distributor network, and recurring software-enabled services linked to its IoT oven fleet, with manufacturing and R&D centralized in Italy and expanded to the U.S."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "295b5b2eed",
+    "63acc38682"
+   ],
+   "value": "Described internally as hands-on, product-passionate, and innovation-focused. The cultural DNA combines Northern Italian precision, cooking heritage, and tech curiosity. Transparency and team collaboration are emphasized, but the scale-up phase adds a strong bias for execution."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5dc33cb9c9",
+    "63acc38682"
+   ],
+   "value": "Restaurants, hotels, catering companies, supermarkets, bakeries, pastry shops, and corporate canteens across 100+ countries. Customers range from independent chefs to large-scale foodservice and retail chains."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $82,000 – $100,000 base salary in Indianapolis for a US new-grade software developer, corresponding to regional industrial IoT market data plus a modest premium for the brand and specialist demand."
+  },
+  "evidence_sha": "63fe8cac34bb81a1",
+  "generated_at": 1785363945,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5dc33cb9c9",
+    "295b5b2eed"
+   ],
+   "value": "Industrial technology and foodservice equipment, IoT."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "295b5b2eed"
+   ],
+   "value": "Expect practical, hands-on sessions around algorithm design, programming fundamentals, and software testing. Because the role sits in a manufacturing and IoT context, interviewers may also probe documentation clarity and the ability to collaborate across operations and engineering teams."
+  },
+  "last_attempt_at": 1785363945,
+  "last_evidence_at": 1785363943,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "295b5b2eed"
+   ],
+   "value": "Global headquarters in Cadoneghe, Italy. U.S. office and new manufacturing site in Indianapolis, IN. This specific role is full-time and on-site in Indianapolis."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "63acc38682"
+   ],
+   "value": "To equip chefs and bakers with the most intelligent, connected professional cooking tools, using technology to reduce energy and water, ensure repeatable quality, and simplify kitchen operations. The company emphasizes digital innovation using data from millions of connected ovens."
+  },
   "name": "UNOX S.p.A.",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Pace is steady and product-driven, rooted in hardware-integrated cycles rather than continuous deployment frenzy common in pure-software startups. Periods with intense focus ahead of product launches balanced by quieter maintenance and planning sprints."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5dc33cb9c9",
+    "63acc38682"
+   ],
+   "value": "Intelligent commercial ovens (including combi and speed ovens), bakery-specific ovens, holding cabinets, and IoT-connected cooking systems under brands such as UNOX, BAKERLUX, and EVEREO. Most products incorporate software and data-driven cooking cycle automation."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: generically aligned with manufacturing-sector U.S. averages, likely 15-20 take days (vacation floating holidays plus sick time) for a full calendar year for entry-level. Napoli-style European-shutdown generosity may not fully translate to the U.S. site out of the gate but tends to exceed typical American factory-floor policies."
+  },
+  "refresh_after": 1790547945,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: A week-long summer and a winter holiday manufacturing stop are consistent with Italian industrial tradition; the new U.S. factory often mirrors the Italian site’s calendar with a full manufacturing closure between Christmas and New Year and a reduced August week."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "295b5b2eed"
+   ],
+   "value": "Privately held, mid-market industrial technology company employing several hundred people globally. The firm is in an active international scale-up phase, evidenced by a brand-new U.S. manufacturing facility in Indianapolis and a North American expansion push."
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5513dbff23",
+    "kind": "company_web",
+    "publisher": "UNOX S.p.A.",
+    "retrieved_at": 1785363943,
+    "title": "UNOX S.p.A. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c32172885a6aac6a90fa444d7de4bbe915fe0b3cb3a1a796e85f271bc28d3066JmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvdW5veC1zcGE&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5dc33cb9c9",
+    "kind": "company_web",
+    "publisher": "UNOX S.p.A.",
+    "retrieved_at": 1785363943,
+    "title": "UNOX S.p.A. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=39f18a625520ff4c98dd99f4506bfffce73b6ef72ae41664f859ae912b3bd0bbJmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cudW5veC5jb20vdXNfdXMvb3ZlbnMv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "63acc38682",
+    "kind": "company_web",
+    "publisher": "UNOX S.p.A.",
+    "retrieved_at": 1785363943,
+    "title": "UNOX S.p.A. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=012dbd4ad237953a9038fdbc6a89cd02d02e619b122e059f4eaa5df7b52b37bcJmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35ac8b53-c842-60a9-27b3-9cf6c90361ab&u=a1aHR0cHM6Ly93d3cudW5veC5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "UNOX S.p.A.",
+    "retrieved_at": 1785363943,
+    "title": "Discovery source for UNOX S.p.A.",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "cd15cdce0591f75c",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role Programming Algorithm design Software testing Software documentation English language Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L. Jobright.ai Software Developer jobs in United States Overview Company Apply on Employer Site APPLY NOW UNOX S.p.A. · 9 hours ago Software Developer Indianapolis, IN Full-time Onsite Entry Level 1+ years exp UNOX S.p.A. Manufacturing Facility, Celebrates With Showcase for Foodservice Industry 2026-02-27 Business Wire Unox Begins Production at First U.S.",
@@ -439989,7 +440582,43 @@
     "url": "https://jobright.ai/jobs/info/6a6a3e8a8693c23e7fb7999b?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "295b5b2eed"
+   ],
+   "value": "No immigration or visa sponsorship information included in found job posting or company pages; all postings mention English language as a requirement."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5dc33cb9c9",
+    "63acc38682"
+   ],
+   "value": "UNOX S.p.A. is an Italian company that designs, manufactures, and sells professional ovens and commercial kitchen equipment. The company makes money by selling its intelligent cooking systems, accessories, and related services to restaurants, hotels, bakeries, and other foodservice businesses worldwide."
+  },
+  "synthesized_evidence_sha": "63fe8cac34bb81a1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "295b5b2eed"
+   ],
+   "value": "Entry-level Software Developers work on programming, algorithm design, software testing, and software documentation. The role supports the connected-oven IoT platform and internal manufacturing systems on-site, with English required."
+  },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785363943,
+  "web_search_url": "https://duckduckgo.com/?q=UNOX+S.p.A.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This company provides a rare opportunity to do hands-on IoT and algorithm-focused development at a mission-driven product firm right out of school. The manufacturing-focused, privately held structure typically shields teams from the high-burnout, hyper-scale pressures common in adtech or pure SaaS, connecting your code directly to physical products used by chefs globally while still offering solid new-grad pay and realistic working hours."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: generally good and above typical U.S. tech-burnout average. As a privately held Italian-origin industrial company, late nights and on-call are unlikely to be institutional fixtures, but this is an on-site manufacturing-adjacent role so it retains traditional expected presence."
+  }
  },
  "untillabs": {
   "ai_ds_prestige_tier": {
