@@ -6817,6 +6817,19 @@
   "status": "active",
   "token": "aviahealth"
  },
+ "lever:calstart": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1785451546,
+  "last_ok": 1785451547,
+  "name": "CALSTART",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "calstart"
+ },
  "lever:capricor": {
   "ats": "lever",
   "extra": {},
@@ -9096,6 +9109,19 @@
   "status": "active",
   "token": "AtriaGroupLLC"
  },
+ "smartrecruiters:AveryDennison": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1785451546,
+  "last_ok": 1785451547,
+  "name": "Avery Dennison",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "AveryDennison"
+ },
  "smartrecruiters:BoschGroup": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -9577,6 +9603,19 @@
   "status": "active",
   "token": "TurnerTownsend"
  },
+ "smartrecruiters:Ubisoft2": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1785451546,
+  "last_ok": 1785451547,
+  "name": "Ubisoft",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "Ubisoft2"
+ },
  "smartrecruiters:UnitedFranchiseGroup": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -9706,7 +9745,7 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 0,
+  "failures": 1,
   "first_seen": 1784354642,
   "last_ok": 1785447059,
   "name": "3M",
@@ -10102,7 +10141,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447061,
+  "last_ok": 1785451567,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12105,7 +12144,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447053,
+  "last_ok": 1785451558,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12198,7 +12237,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447049,
+  "last_ok": 1785451554,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12773,7 +12812,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447053,
+  "last_ok": 1785451559,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13076,6 +13115,22 @@
   "sector": "",
   "status": "active",
   "token": "hoganas"
+ },
+ "workday:homedepot:CareerDepotCanada": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "CareerDepotCanada"
+  },
+  "failures": 0,
+  "first_seen": 1785451546,
+  "last_ok": 1785451548,
+  "name": "The Home Depot",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "homedepot"
  },
  "workday:homedepot:careerdepot": {
   "ats": "workday",
@@ -14171,7 +14226,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447049,
+  "last_ok": 1785451555,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15773,7 +15828,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785447053,
+  "last_ok": 1785451560,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
