@@ -4091,44 +4091,41 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. While parent Accenture has strong AI divisions, the federal services subsidiary focuses heavily on legacy enterprise integrations rather than top-tier, cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 27,
+  "attempts": 28,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "b1f1dfef2b"
+    "203cbd6988"
    ],
-   "value": "B2G consulting and technology services. The company generates revenue by providing specialized software development, systems integration, and operational support to federal government agencies."
+   "value": "Business-to-Government (B2G) professional services and technology consulting, earning revenue through federal contracts and staffing billable hours for technical implementation and support."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "03f9b40044",
-    "e79c881c1d"
+    "203cbd6988",
+    "4abf230e92"
    ],
-   "value": "Highly inclusive and purpose-driven, with a strong emphasis on creating a welcoming environment and a shared purpose among its 13,000+ employees."
+   "value": "Inclusive and mission-driven, focusing heavily on creating a welcoming culture united by the purpose of supporting national security and public safety."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "03f9b40044"
+    "203cbd6988",
+    "4abf230e92"
    ],
-   "value": "Organizations across defense, national security, public safety, civilian, and military health sectors within the US federal government."
+   "value": "US federal government agencies, specifically spanning defense, national security, public safety, civilian, and military health organizations."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "fb7f941e93"
-   ],
-   "value": "Estimated: Competitive large-tier tech consulting salary, likely ranging from $80k-$100k base depending on exact role and location."
+   "source_ids": [],
+   "value": "Estimated: $80,000 - $95,000 base. Federal consulting compensation is generally lower than top-tier commercial tech or AI roles, and specific new-grad tech pay scales are not published."
   },
   "evidence_sha": "c98bd14daf85d356",
-  "generated_at": 1785363945,
+  "generated_at": 1785430709,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -4137,62 +4134,55 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "4abf230e92"
+    "203cbd6988"
    ],
-   "value": "Government and Public Services / IT Consulting."
+   "value": "IT Services and IT Consulting / Government Technology"
   },
   "interview_focus": {
-   "confidence": "low",
-   "source_ids": [
-    "fb7f941e93"
-   ],
-   "value": "The candidate should assess whether the day-to-day realities of this federal work and culture offer the fast-paced technical learning and work-life balance they prioritize, ensuring client demands don't lead to burnout."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for strict billable hour expectations, project placement volatility, and actual day-to-day pace to ensure it does not become a bureaucratic maintenance role. Ask about avenues for modern AI learning outside federal compliance parameters to see if they can meet the candidate's career acceleration needs without toxic burnout."
   },
-  "last_attempt_at": 1785363945,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785428538,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "fb7f941e93",
-    "4abf230e92"
-   ],
-   "value": "Operates across the United States to support federal clients, with a workforce of over 13,000 people."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "United States, driven by federal client requirements."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "4abf230e92",
-    "fb7f941e93"
+    "203cbd6988",
+    "4abf230e92"
    ],
-   "value": "To help the US federal government make the nation stronger and safer and life better for people by pursuing the limitless potential of technology and ingenuity."
+   "value": "To pursue the limitless potential of technology and ingenuity to help the US federal government make the nation stronger and safer, and life better for people."
   },
   "name": "Accenture",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "fb7f941e93",
-    "03f9b40044"
-   ],
-   "value": "Estimated: Typical of large government consulting; likely structured and process-driven, which may contrast with a fast-paced innovative tech startup environment."
+   "source_ids": [],
+   "value": "Estimated: Moderate to slow. Inheriting the regulatory compliance and security clearance protocols typical of federal clients creates a deliberate, heavily managed pace rather than a fast, innovative tech culture."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93"
+    "203cbd6988",
+    "fb7f941e93",
+    "03f9b40044"
    ],
-   "value": "System interoperability services, data accuracy optimization, and reporting solutions across Finance, Supply Chain, HCM, and custom business processes."
+   "value": "Technology and software development services, including systems integration, production environment support, ITSM operations, enterprise software customization (PeopleSoft, Dynamics), and custom reporting across Finance, Supply Chain, and HCM."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "fb7f941e93",
-    "4abf230e92"
+    "203cbd6988"
    ],
-   "value": "Estimated: Standard corporate PTO package likely offered as part of a wide variety of benefits, though exact figures are not public."
+   "value": "Estimated: 15-20 days of vacation, plus federal holidays. Benefits are described as wide-ranging but specific PTO accrual schedules are not explicitly stated in public postings."
   },
-  "refresh_after": 1790547945,
+  "refresh_after": 1790614709,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4201,18 +4191,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "fb7f941e93"
-   ],
-   "value": "Estimated: No guaranteed corporate shutdowns mentioned, but standard federal holidays are likely observed."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns found in research. Federal contractors generally only get official federal holidays off."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
-    "03f9b40044"
+    "203cbd6988"
    ],
-   "value": "Large, established organization with 13,000+ employees."
+   "value": "Large enterprise with a headcount of over 13,000 employees operating within the broader global Accenture parent company."
   },
   "sources": [
    {
@@ -4285,38 +4272,36 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "fb7f941e93",
+    "203cbd6988",
     "4abf230e92"
    ],
-   "value": "Accenture Federal Services is a technology company within global Accenture dedicated to helping the US federal government make the nation stronger and safer. It leverages technology and ingenuity to pursue limitless potential for clients across defense, national security, and public safety."
+   "value": "Accenture Federal Services (AFS) is a technology subsidiary of global Accenture dedicated solely to serving the US federal government. It makes money by providing large-scale technology consulting, systems integration, and custom development services for federal agencies."
   },
-  "synthesized_evidence_sha": "846032d6de54c6b5",
+  "synthesized_evidence_sha": "c98bd14daf85d356",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "fb7f941e93",
     "b1f1dfef2b",
-    "4abf230e92",
-    "e79c881c1d"
+    "4abf230e92"
    ],
-   "value": "Production and non-production environment support, ITSM operations, Oracle HCM Cloud conversions, PeopleSoft application development, and Dynamics development."
+   "value": "Enterprise software development and integration, ensuring system interoperability, data accuracy, optimized reporting, and providing steady-state support across production and non-prod environments for large federal systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Accenture+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "4abf230e92"
+    "b1f1dfef2b",
+    "203cbd6988"
    ],
-   "value": "This role uniquely aligns with the candidate's desire for a mission-driven, federal-focused technical role, but may conflict with the desire for a fast, innovative tech culture free of slow bureaucracy."
+   "value": "This role sits in heavy enterprise consulting rather than a fast-paced, pure-tech AI lab. The candidate prioritizes elite AI prestige, high new-grad pay, fast innovation, and guaranteed work-life balance. Federal IT support is primarily steady-state maintenance and legacy integration (bureaucracy), which poorly aligns with the desired innovative tech culture, modern AI work, and streamlined career acceleration."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "03f9b40044",
-    "4abf230e92"
-   ],
-   "value": "Estimated: Likely variable and dependent on specific federal client demands, but the company emphasizes a commitment to inclusive culture."
+   "source_ids": [],
+   "value": "Estimated: Good. Consulting headcounts are carefully managed against federal contract caps, generally preventing the extreme burnout seen in high-speed tech startups, though hours can fluctuate during project deadlines."
   }
  },
  "accenture federal services": {
@@ -30068,48 +30053,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "e13061238d",
     "54a5ea4174"
    ],
-   "value": "Estimated: Elite. The company builds sophisticated AI-powered systems like Lattice OS, placing it at the cutting edge of defense AI and data science."
+   "value": "Estimated: Elite/Tier 1. Highly competitive and fast-growing defense tech recognized for advanced autonomous and ML-backed systems engineering."
   },
   "aliases": [],
-  "attempts": 15,
+  "attempts": 16,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "54a5ea4174",
-    "5943841a2b"
-   ],
-   "value": "Designs and builds cutting-edge defense technology hardware and software systems, selling these advanced autonomous military systems to defense customers."
-  },
-  "culture_vibe": {
-   "confidence": "high",
-   "source_ids": [
-    "5943841a2b",
+    "5586a4739e",
     "54a5ea4174"
    ],
-   "value": "Mission-driven and highly innovative, bringing a modern Silicon Valley-style tech culture to the defense sector to rapidly deliver advanced autonomous systems."
+   "value": "B2B and B2G defense contracting; designing and deploying classified digital infrastructure and autonomous software systems for multinational militaries."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "54a5ea4174"
+   ],
+   "value": "Estimated: Mission-driven, fast-paced, and intensely focused on national security. Emphasizes efficiency and automated processes over manual legacy defense approaches."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "54a5ea4174",
-    "ad37cb913b"
+    "5586a4739e"
    ],
-   "value": "The U.S. military and defense sector."
+   "value": "U.S. military and allied operational and engineering teams, including Australian and UK defense forces."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "e13061238d",
-    "5943841a2b"
+    "19a9e71b29"
    ],
-   "value": "Estimated: Highly competitive elite tech pay, likely exceeding $150k base given its top-tier AI focus and modern tech business model, though exact new-grad figures are not public."
+   "value": "Estimated: Highly competitive new-grad pay likely ranging from $140k to $180k base, reflecting top-tier defense tech benchmarks for elite talent."
   },
   "evidence_sha": "db016d9abe19c3c4",
-  "generated_at": 1785366898,
+  "generated_at": 1785430709,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -30118,73 +30099,85 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "54a5ea4174",
-    "5943841a2b"
+    "5586a4739e",
+    "54a5ea4174"
    ],
    "value": "Defense Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect a rigorous technical interview assessing your ability to operate autonomously in complex environments and break down intricate problems into simple solutions. For AI and data science roles, preparation should focus on developing automated systems and optimizing software deployment pipelines, directly aligning with the fast-paced culture while maintaining the sane hours required for sustainable work-life balance."
+   "source_ids": [
+    "5586a4739e",
+    "54a5ea4174"
+   ],
+   "value": "Interviewees should highlight their interest in high-impact defense technology, emphasizing their ability to solely dedicate themselves to the role without outside distractions. Candidates should focus on demonstrating robust full stack engineering skills, comfort with classified/high-security environments, and eagerness to learn in a fast-paced environment."
   },
-  "last_attempt_at": 1785366898,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785428538,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "19a9e71b29"
+    "5586a4739e"
    ],
-   "value": "Not explicitly detailed in the provided sources, though hiring is active across multiple technical and corporate roles."
+   "value": "United States, with specific engineering roles supporting multinational operations involving Australia and the UK."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "5943841a2b",
+    "5586a4739e",
     "54a5ea4174"
    ],
-   "value": "To transform U.S. defense by bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry, changing how military systems are designed, built, and sold."
+   "value": "Transform U.S. and allied defense capabilities by delivering advanced autonomous systems and sophisticated automated infrastructure."
   },
   "name": "Anduril",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "5943841a2b"
+    "5586a4739e",
+    "54a5ea4174"
    ],
-   "value": "Estimated: Fast-paced. The company explicitly describes itself as a fast-paced organization developing cutting-edge technology."
+   "value": "Estimated: Fast and highly autonomous. The focus on delivering rapid autonomous solutions and enabling collaboration 'at speed' suggests a rapid development cycle."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e13061238d",
+    "5586a4739e",
     "54a5ea4174"
    ],
-   "value": "Advanced autonomous systems and Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center."
+   "value": "Mission-critical maritime and multinational digital infrastructure systems, classified environments, networks, gateways, and automated systems for software development and production pipelines."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard tech industry PTO, likely in the 15-20 days range, though exact policy is not public."
+   "source_ids": [
+    "19a9e71b29"
+   ],
+   "value": "Estimated: Standard accrued federal-style PTO, typically around 15 to 20 days annually for new engineers."
   },
-  "refresh_after": 1790550898,
+  "refresh_after": 1790614709,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "19a9e71b29"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns listed in the provided sources."
+   "source_ids": [
+    "19a9e71b29"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Shutdowns likely depend on programmatic deployment phases."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "5943841a2b"
+    "5586a4739e",
+    "19a9e71b29"
    ],
-   "value": "Fast-paced, growing company operating with cutting-edge technology development."
+   "value": "Highly-scaled, fast-growing private defense technology company with active multinational recruitment."
   },
   "sources": [
    {
@@ -30249,46 +30242,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "54a5ea4174",
-    "19a9e71b29"
+    "5586a4739e"
    ],
-   "value": "No specific details found in the provided sources regarding visa sponsorship."
+   "value": "Estimated: Roles require ability to work in the US and likely require extensive background checks and clearances. Specific visa sponsorship details were not provided."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "54a5ea4174",
-    "5943841a2b"
+    "5586a4739e",
+    "54a5ea4174"
    ],
-   "value": "Anduril Industries is a defense technology company that designs and implements sophisticated automated systems and autonomous technologies for the U.S. military. It makes money by applying the business models of innovative 21st-century tech companies to the defense industry, changing how military systems are designed, built, and sold."
+   "value": "Anduril is a defense technology company that builds advanced autonomous systems, software, and infrastructure to transform U.S. and allied military capabilities. It makes money by securing government contracts to design, develop, and deploy mission-critical hardware and software solutions."
   },
-  "synthesized_evidence_sha": "bfc260e877ac3ceb",
+  "synthesized_evidence_sha": "db016d9abe19c3c4",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "54a5ea4174",
-    "e13061238d"
+    "5586a4739e",
+    "54a5ea4174"
    ],
-   "value": "Designing and implementing sophisticated automated systems, ensuring rapid software deployment and quality, and maintaining AI-powered operating systems like Lattice OS that optimize critical control systems."
+   "value": "Architecting classified networks and gateways (IL5, IL6) for multinational collaboration, full stack systems and software engineering, developing autonomous systems, and building automated software lifecycle and quality integration pipelines."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Anduril offers top-tier prestige and competitive new-grad pay at the intersection of AI and defense technology, operating with a fast-paced, innovative tech-company culture that avoids traditional defense bureaucracy. The mission-driven focus on building advanced autonomous systems provides accelerated technical learning and career growth opportunities for elite AI and data science talent seeking impactful work."
+   "source_ids": [
+    "5586a4739e",
+    "54a5ea4174"
+   ],
+   "value": "Anduril offers a unique intersection of elite AI/systems engineering and meaningful defense mission impact, suited for fast learners who want to bypass slow legacy bureaucracy. The company culture is highly mission-driven and seeks to accelerate technical growth, giving new grads a chance to work on highly complex, secure systems."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "5943841a2b",
-    "e13061238d"
+    "5586a4739e",
+    "54a5ea4174"
    ],
-   "value": "Estimated: Moderate. While the environment is explicitly fast-paced and requires operating autonomously with limited oversight, the modern tech business model suggests an effort to avoid the toxic burnout culture of legacy defense contractors."
+   "value": "Estimated: Demanding. The mission-critical nature of classified defense systems and rapid deployment cycles imply intense work periods, which may limit standard work-life balance."
   }
  },
  "anduril industries": {
@@ -47166,12 +47161,92 @@
   }
  },
  "automated media inc": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "e7f96310d113cf7a",
-  "last_evidence_at": 1785428538,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "943f9684a4939a56",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785430708,
   "name": "Automated Media Inc.",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "330f80c85d",
+    "kind": "company_web",
+    "publisher": "Automated Media Inc.",
+    "retrieved_at": 1785430708,
+    "title": "Automated Media Inc. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=939df6e9e1a4d5e7be1911c9b81810da8a80d319808908ebcbcaba0a61537f39JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly9kaWN0aW9uYXJ5LmNhbWJyaWRnZS5vcmcvZGljdGlvbmFyeS9lbmdsaXNoL2F1dG9tYXRlZA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "49a467aac6",
+    "kind": "company_web",
+    "publisher": "Automated Media Inc.",
+    "retrieved_at": 1785430708,
+    "title": "Automated Media Inc. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3f151d1825209b9f3152708b5c7c0435a36a0ac7c3b82d066e5edcdd76b321a7JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9wb3dlci1wbGF0Zm9ybS9wcm9kdWN0cy9wb3dlci1hdXRvbWF0ZS8_bXNvY2tpZD0wOGJjNWQ4MWRkY2U2ZDljMjZmNTRhMjdkY2Y5NmM1Zg&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "98b818d0e1",
+    "kind": "company_web",
+    "publisher": "Automated Media Inc.",
+    "retrieved_at": 1785430708,
+    "title": "Automated Media Inc. public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5bbd6b0334a0967521f45dbfc76b536814e22f06f14a92ef455d22340c87dda4JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2F1dG9tYXRlZA&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Automated Media Inc.",
+    "retrieved_at": 1785430708,
+    "title": "Discovery source for Automated Media Inc.",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "a6ab94f9eacbe500",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role HTML CSS JavaScript Visual Studio C# Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach M Mike H. Web Developer (Canton, MI) @ Automated Media Inc. Web Developer (Canton, MI) jobs in United States Overview Company Apply on Employer Site APPLY NOW Automated Media Inc. Web Developer (Canton, MI) United States Full-time Remote Entry Level $25/hr - $34.62/hr 1+ years exp Automated Media, Inc.",
@@ -47183,7 +47258,15 @@
     "url": "https://jobright.ai/jobs/info/6a6798365d2a117fb9cec311?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785430708,
+  "web_search_url": "https://duckduckgo.com/?q=Automated+Media+Inc.+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "autozone": {
   "ai_ds_prestige_tier": {
@@ -96300,7 +96383,7 @@
    "value": "Tier 1 (Legacy Tech Giant expanding into AI)."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -96356,7 +96439,7 @@
    ],
    "value": "Ensure the role meets your need for elite new-grad pay and accelerated learning by asking about team-specific culture, pace, and work-life balance. Probe whether the team upholds Cisco's stated culture of mindfulness and respect to guarantee sane hours, avoiding toxic or high-burnout environments while maintaining rapid technical innovation."
   },
-  "last_attempt_at": 1785407816,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "high",
@@ -96399,7 +96482,7 @@
    "value": "Estimated: 20-25 days of accrued vacation time per year, standard for large, established tech giants."
   },
   "refresh_after": 1790556779,
-  "retry_after": 1785429416,
+  "retry_after": 1785452309,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130892,7 +130975,7 @@
    "value": "Tier 1 (Elite) — Pioneer in FDA-cleared AI/ML for glucose prediction; publishes at NeurIPS, AMIA, ADA; integrates with automated insulin delivery systems; high-impact physiological time-series work."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -130941,7 +131024,7 @@
    ],
    "value": "Expect deep technical screens on ML for time-series physiological data, embedded systems constraints, regulatory-grade software practices, and system design for safety-critical products. Prepare for behavioral questions on cross-functional collaboration (clinical, regulatory, hardware) and handling ambiguity in a regulated environment. LeetCode medium/hard common for DS/ML roles."
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785406980,
   "locations": {
    "confidence": "low",
@@ -130977,7 +131060,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick time; varies by level/tenure. Unlimited not offered."
   },
-  "retry_after": 1785429154,
+  "retry_after": 1785438389,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235152,43 +235235,43 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: Top-tier for consulting, highly competitive with elite tech roles. Highly respected in the industry and positions the candidate well for future career mobility."
+   "value": "Consulting-elite, but digital teams are support functions rather than primary AI product drivers."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Project-based consulting revenue. The firm bills clients for specialized advisory services, data-driven strategy formulation, and digital implementation."
+   "value": "B2B consulting services, charging premium fees for strategic advisory and operational implementation."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: Collaborative, mission-driven, and client-focused, with a strong emphasis on swift delivery and sustainable transformation rather than slow bureaucratic technical processes."
+   "value": "Structured, highly professional, and demanding, prioritizing client success."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Large global enterprises, Fortune 500 companies, and government organizations seeking strategic and operational improvements."
+   "value": "Large corporations and organizations seeking executive-level strategic and operational guidance."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: $90,000 - $130,000 per year for entry-level Data Scientist roles."
+   "value": "$90K - $130K base salary plus potential discretionary performance bonus."
   },
   "evidence_sha": "07ae8e6d74b08430",
-  "generated_at": 1785287957,
+  "generated_at": 1785430709,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -235197,78 +235280,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
    "value": "Management Consulting"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Emphasize your technical foundation strictly in the CRISP-DM lifecycle, statistical modeling, EDA, and Python/SQL proficiency. Contrasted with pure tech, expect heavy case-study focus—demonstrate how your data science skills drive actionable client business impact rather than just theoretical model deployment."
+   "value": "Candidates should expect behavioral questions assessing tolerance for fast-paced environments and potential travel, alongside technical full-stack assessments. Since Kearney is a consulting firm, candidates must probe hard during interviews about billable utilization rates, shutdowns, and whether the role respects work-life balance before accepting."
   },
-  "last_attempt_at": 1785287957,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785428538,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Global presence with US roles located in Washington, DC, and other major hubs. Roles are primarily onsite."
+   "value": "Washington, DC (and other global offices)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "To deliver impactful solutions to clients, focusing on pragmatic, immediate, and sustainable transformations."
+   "value": "Addressing strategic and operational CEO agenda issues for global clients."
   },
   "name": "Kearney",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: Fast-paced and high-pressure, driven by project deadlines and client expectations. There is a tech-culture component, but it is bounded by traditional consulting deadlines."
+   "value": "Estimated: Fast-paced and client-driven, with aggressive timelines typical of top-tier management consulting."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Management consulting services, with specific technical offerings like 'Kearney Activate' which provides digital transformation, data science, and operational implementation."
+   "value": "Strategic management consulting, operational CEO agenda solutions, and proprietary digital enablement platforms via their 'Kearney Activate' group."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: 20-25 days of PTO, typical for top-tier consulting firms, though utilization can depend on project demands."
+   "value": "Estimated: Flexible PTO policy typical of professional services, but actual usage depends heavily on project demands and client deadlines."
   },
-  "refresh_after": 1790471957,
+  "refresh_after": 1790614709,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: No guaranteed company-wide tech shutdowns found, though consulting firms sometimes offer firm-wide holidays during summer and winter breaks."
+   "value": "None found in research."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Established global enterprise with thousands of employees operating onsite across international offices."
+   "value": "Established, large global professional services firm."
   },
   "sources": [
    {
@@ -235335,25 +235419,25 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Not explicitly found in research."
+   "value": "Sponsorship details not found in research."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Kearney is a top-tier global management consulting firm that focuses on delivering impactful strategic and operational solutions to corporate clients. It makes money by charging clients for expert advisory services, specializing in C-suite strategy, supply chain, and digital transformation."
+   "value": "Kearney is a top-tier global management consulting firm that advises CEOs on strategic and operational issues. They make money by selling high-level advisory services and custom operational solutions to large corporate clients."
   },
-  "synthesized_evidence_sha": "76da65f21b35b1c1",
+  "synthesized_evidence_sha": "07ae8e6d74b08430",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Data Science roles involve executing the CRISP-DM lifecycle, statistical modeling, and exploratory data analysis using SQL and Python to solve client business problems."
+   "value": "Building internal software and full-stack digital enablement tools for consulting operations and clients."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785286848,
@@ -235361,16 +235445,16 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "This role offers elite consulting prestige and high new-grad pay ($90K-$130K) with excellent career acceleration. While consulting is typically known for heavy hours and slower pace compared to pure tech, the dedicated technical 'Kearney Activate' arm allows you to do innovative data science while mitigating traditional consulting burnout compared to pure strategic tracks."
+   "value": "Kearney's Activate group offers elite brand prestige for tech professionals and high new-grad pay, plus fast learning from exposure to cutting-edge business problems. However, candidates should be aware that consulting environments often conflict with strict work-life balance and sane hours expectations due to demanding travel and variable workloads."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "706020f867"
+    "daf1b20b4c"
    ],
-   "value": "Estimated: Moderate. While consulting is historically demanding on personal time, 'Activate' data scientists may experience slightly more predictable schedules than strategy consultants."
+   "value": "Estimated: Moderate-to-low for consulting roles, but digital roles like Activate may offer more sane hours compared to traditional consultants."
   }
  },
  "keenfinity group": {
@@ -238741,7 +238825,7 @@
    "value": "T1 (Top-tier). KLA sets the industry standard for semiconductor process control, meaning its AI, machine learning, and data science roles deal with proprietary, mission-critical datasets at a globally recognized scale."
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -238798,7 +238882,7 @@
    ],
    "value": "Candidates should expect deep technical interviews emphasizing high-performance computing (HPC), performance optimization, scalability, and system reliability. To align with the company's high standards without sacrificing sanity, candidates should probe interviewers about the team's agile practices, tech-debt management, and work-life balance protocols to ensure the fast-paced technical learning is supported by guaranteed personal time."
   },
-  "last_attempt_at": 1785407816,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "high",
@@ -238843,7 +238927,7 @@
    "value": "Estimated: 15 to 20 days of standard Paid Time Off annually for new graduate corporate employees, with standard incremental increases based on tenure."
   },
   "refresh_after": 1789932360,
-  "retry_after": 1785429416,
+  "retry_after": 1785452309,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -312461,7 +312545,7 @@
    "value": "High tier for enterprise AI and cloud data infrastructure; Oracle demands elite credibility from a traditional powerhouse, though it is not a generative-AI frontier lab."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -312483,7 +312567,7 @@
    ],
    "value": "Fortune 500 companies, government agencies, and financial institutions depend on Oracle. Its database and cloud solutions serve large enterprises across every major industry."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312511,7 +312595,7 @@
    ],
    "value": "Interview loops at Oracle typically weigh both coding and design, but for cloud and AI roles, expect deep architecture and data pipeline questions. The candidate should probe team-specific mandates to verify the high-impact scope and realistic workload boundaries, rather than accepting general company reputation."
   },
-  "last_attempt_at": 1785265335,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785428821,
   "locations": {
    "confidence": "medium",
@@ -312544,6 +312628,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days of combined vacation and sick leave, with exact days dependent on un-limited tier and tenure."
   },
+  "retry_after": 1785434549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312629,7 +312714,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -325920,46 +326005,48 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "ec37d6ff77",
+    "6d3f3b5ec0"
    ],
-   "value": "Plaid holds a strong industry-specific prestige as a top-tier fintech employer, particularly recognized for data engineering and applied machine learning, though it is less broadly known for pure AI research compared to dedicated AI labs."
+   "value": "Estimated: Tier-2 (Strong fintech infrastructure prestige, highly respected in data engineering and infrastructure, though not strictly an AI-first research lab)."
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "ed48462f99",
+    "ff1848f1e1"
    ],
-   "value": "The company operates a B2B API infrastructure model, charging fintech companies and financial institutions based on API usage and the specific data products they integrate."
+   "value": "B2B API infrastructure network monetized via usage-based fees or subscriptions for data access, payment processing, and enterprise product adoption."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "ff1848f1e1"
    ],
-   "value": "Mission-driven with a strong emphasis on innovation, security, and building trusted infrastructure, valuing technical excellence and data-driven problem solving."
+   "value": "Small, high-impact teams of low-ego generalists with a penchant for ownership; serves as a launchpad for leadership roles in Product and GTM."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "6d3f3b5ec0",
+    "ed48462f99"
    ],
-   "value": "Customers are primarily fintech apps (like Venmo and Robinhood), digital banks, lending platforms, and traditional financial institutions that need to access or verify user financial data."
+   "value": "Fintech apps, consumer financial services, and large enterprises requiring financial integrations across the US, Canada, UK, and Europe."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "ec37d6ff77"
    ],
-   "value": "Estimated: Highly competitive new-grad compensation matching elite fintech standards, likely in the $130,000-$160,000 base range with sizable equity grants and performance bonuses."
+   "value": "Estimated: $150,000 - $180,000 base salary, with equity and bonuses providing strong new grad compensation typical of elite Bay Area fintech scale-ups."
   },
   "evidence_sha": "f358825284ab6565",
-  "generated_at": 1784834780,
+  "generated_at": 1785430709,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -325968,64 +326055,70 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "6d3f3b5ec0",
+    "ec37d6ff77"
    ],
-   "value": "Financial Technology (FinTech) / API Infrastructure"
+   "value": "Financial Technology / B2B API Infrastructure."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [
-    "6e0b01bee2"
-   ],
-   "value": "Focus on assessing the team's actual pace, work-life balance, and technical mentorship structure for new grads. Ask questions about sane working hours, guaranteed shutdowns, the avoidance of toxic burnout culture, and how the specific AI/Data Science team accelerates learning without sacrificing personal time."
-  },
-  "last_attempt_at": 1785407816,
-  "last_evidence_at": 1785376288,
-  "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "ef51f9d321"
-   ],
-   "value": "Headquartered in San Francisco, California, with additional office locations and remote work options based on team and role requirements."
-  },
-  "mission": {
    "confidence": "medium",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "ff1848f1e1"
    ],
-   "value": "Plaid's mission is to unlock financial freedom for everyone by building the digital infrastructure that enables consumer-permissioned financial data sharing."
+   "value": "Discuss examples of owning quantifiable impact, generalist problem-solving, and partnering cross-functionally, while probing the pace of technical projects to ensure the environment supports fast innovation over slow bureaucracy."
+  },
+  "last_attempt_at": 1785430709,
+  "last_evidence_at": 1785376288,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6d3f3b5ec0",
+    "ec37d6ff77"
+   ],
+   "value": "United States, Canada, UK, and Europe."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ff1848f1e1",
+    "ed48462f99"
+   ],
+   "value": "To unlock financial freedom for everyone by powering the tools millions of people rely on to live a healthier financial life."
   },
   "name": "Plaid",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "ff1848f1e1"
    ],
-   "value": "Estimated: Fast-paced and highly innovative tech culture emphasizing rapid iteration and problem-solving, characteristic of leading Silicon Valley fintech companies, rather than slow-moving bureaucracy."
+   "value": "Estimated: Fast-paced and impact-oriented, with a strong emphasis on autonomous ownership and efficient problem-solving."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "ec37d6ff77",
+    "ed48462f99"
    ],
-   "value": "Products include APIs for bank account linking, transaction data retrieval, identity verification, balance checks, and income verification, serving fintech and broader financial applications."
+   "value": "Financial data APIs, payment initiation, identity verification, risk and fraud prevention, and compliance/GRC engineering tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "ed48462f99"
    ],
-   "value": "Estimated: Flexible PTO policies standard for top-tier tech firms, typically allowing 15 to 20 days of accrued base vacation alongside company holidays."
+   "value": "Estimated: 15-25 days of standard PTO plus company holidays, flexible, but exact public numbers are not disclosed."
   },
-  "refresh_after": 1790018780,
-  "retry_after": 1785429416,
+  "refresh_after": 1790614709,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "6e0b01bee2"
+    "f834f050d5",
+    "6191d64d78"
    ],
    "value": "None found in research"
   },
@@ -326033,16 +326126,18 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321"
+    "f834f050d5",
+    "6d3f3b5ec0"
    ],
-   "value": "Estimated: Likely offers standard public holidays. Candidate should verify directly if guaranteed company-wide week-long shutdowns exist, as they are not confirmed in the provided sources."
+   "value": "Estimated: Likely offers standard holiday breaks and 1-2 company-wide shutdown days per year, though a strict guaranteed shutdown policy is not explicitly confirmed."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "ef51f9d321"
+    "6d3f3b5ec0",
+    "ec37d6ff77"
    ],
-   "value": "Plaid is a late-stage, well-funded private technology company operating at a massive scale, having been valued in the billions during its latest funding rounds."
+   "value": "A late-stage scale-up featuring a large network across 12,000 financial institutions across North America and Europe."
   },
   "sources": [
    {
@@ -326107,47 +326202,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "6e0b01bee2"
+    "6d3f3b5ec0",
+    "ec37d6ff77"
    ],
-   "value": "Exact visa policy is not fully detailed in the provided resources, though as a large-scale fintech employer, it typically sponsors visas for specialized technical roles. Candidates should verify specifics directly with recruiters."
+   "value": "Supported, as the company actively maintains networks and hires across the US, Canada, UK, and Europe."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "6d3f3b5ec0",
+    "ed48462f99"
    ],
-   "value": "Plaid is a financial technology company that acts as a data network connecting consumer bank accounts to mobile apps. It makes money by charging app developers and financial institutions API usage fees for securely accessing user-permissioned financial data to power payments, lending, and wealth management features."
+   "value": "Plaid builds a data network infrastructure that connects consumer financial accounts to various apps and services, providing the underlying APIs for fintech and broader tech companies. It makes money by charging businesses for securely accessing financial data and facilitating payment initiation across its network of 12,000 institutions."
   },
-  "synthesized_evidence_sha": "a15eb3d71b01c9e9",
+  "synthesized_evidence_sha": "f358825284ab6565",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "ec37d6ff77",
+    "ed48462f99"
    ],
-   "value": "Technical work involves building highly scalable, secure APIs and data pipelines that handle sensitive financial data parsing, risk assessment, and machine learning for data normalization and fraud prevention."
+   "value": "Turning compliance into code, automating evidence into telemetry, and building robust, scalable API infrastructure linking financial institutions with developer platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675467,
   "web_search_url": "https://duckduckgo.com/?q=Plaid+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "6e0b01bee2"
+    "f834f050d5",
+    "ff1848f1e1"
    ],
-   "value": "Plaid fits the candidate's desire for an innovative, mission-driven fintech environment where AI and data science solve complex infrastructural challenges. It provides high technical learning and career growth opportunities by working with high-volume financial data systems, though candidates must carefully screen specific teams during interviews to ensure the role meets expectations for work-life balance and sane hours away from bureaucratic slowdowns."
+   "value": "Plaid provides an elite fintech pedigree with a mission-driven culture, prioritizing high-impact, low-ego problem solving that accelerates technical learning and career growth without falling into toxic bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "ef51f9d321",
-    "187c8f0614"
+    "f834f050d5",
+    "6d3f3b5ec0"
    ],
-   "value": "Estimated: Generally respects work-life balance through sane hours and remote flexibility, but this can vary by team; candidates should investigate specific team culture to avoid high-burnout pockets."
+   "value": "Estimated: Moderate to Good. Plaid emphasizes a low-ego culture, but late-stage scale-up pressures may require careful boundary setting to maintain sane hours."
   }
  },
  "planbase": {
@@ -326602,7 +326699,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -326620,7 +326717,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785406980,
   "name": "Planet Technologies",
   "pace_of_work": {
@@ -326633,7 +326730,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785427234,
+  "retry_after": 1785434549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331763,6 +331860,104 @@
    "value": "Estimated: High; strong institutional support for work-life balance (e.g., 9-month faculty appointments, generous holidays, sabbaticals), though varies by department and role."
   }
  },
+ "principal chile": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "0ea67c2d5ec62b3a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785430707,
+  "name": "Principal Chile",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e4f4d550bf",
+    "kind": "company_web",
+    "publisher": "Principal Chile",
+    "retrieved_at": 1785430707,
+    "title": "Principal Chile public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0f556d6231adbc311462b7a3c20d93f101c0e85e4f8a5f7039085f4220e8cf08JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3ByaW5jaXBhbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9aaf9aa692",
+    "kind": "company_web",
+    "publisher": "Principal Chile",
+    "retrieved_at": 1785430707,
+    "title": "Principal Chile public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0feb88d30de2172cf6d5a21d6ecb17666a59ff26a394b338f39ea4e97600cc17JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cucHJpbmNpcGFsLmNvbS93ZWxjb21lLXByaW5jaXBhbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1b80f12146",
+    "kind": "company_web",
+    "publisher": "Principal Chile",
+    "retrieved_at": 1785430707,
+    "title": "Principal Chile public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=aee8fc07c2022db4e357e3ce2e45f06efff39a28f282d863d811106e88536dcdJmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cucHJpbmNpcGFsLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Principal Chile",
+    "retrieved_at": 1785430707,
+    "title": "Discovery source for Principal Chile",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785430707,
+  "web_search_url": "https://duckduckgo.com/?q=Principal+Chile+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "principal financial group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -331997,6 +332192,104 @@
     "7be0f08c9d"
    ],
    "value": "Estimated: Good. Financial services firms generally offer stable hours and respect work-life boundaries, avoiding the high-burnout culture of hedge funds or tech startups."
+  }
+ },
+ "principal global services": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "0ea67c2d5ec62b3a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785430707,
+  "name": "Principal Global Services",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e4f4d550bf",
+    "kind": "company_web",
+    "publisher": "Principal Global Services",
+    "retrieved_at": 1785430707,
+    "title": "Principal Global Services public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0f556d6231adbc311462b7a3c20d93f101c0e85e4f8a5f7039085f4220e8cf08JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3ByaW5jaXBhbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9aaf9aa692",
+    "kind": "company_web",
+    "publisher": "Principal Global Services",
+    "retrieved_at": 1785430707,
+    "title": "Principal Global Services public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0feb88d30de2172cf6d5a21d6ecb17666a59ff26a394b338f39ea4e97600cc17JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cucHJpbmNpcGFsLmNvbS93ZWxjb21lLXByaW5jaXBhbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1b80f12146",
+    "kind": "company_web",
+    "publisher": "Principal Global Services",
+    "retrieved_at": 1785430707,
+    "title": "Principal Global Services public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=aee8fc07c2022db4e357e3ce2e45f06efff39a28f282d863d811106e88536dcdJmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=08bc5d81-ddce-6d9c-26f5-4a27dcf96c5f&u=a1aHR0cHM6Ly93d3cucHJpbmNpcGFsLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Principal Global Services",
+    "retrieved_at": 1785430707,
+    "title": "Discovery source for Principal Global Services",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785430707,
+  "web_search_url": "https://duckduckgo.com/?q=Principal+Global+Services+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "prizeout": {
@@ -359473,7 +359766,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -359491,7 +359784,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785413735,
   "name": "Rollout",
   "pace_of_work": {
@@ -359504,7 +359797,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785426274,
+  "retry_after": 1785432629,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -368966,45 +369259,47 @@
  },
  "schonfeld": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "Tier 1 - Elite quantitative hedge fund platform competing for top AI and data science talent."
+   "value": "Tier 1 (Hedge Fund Quant). As a multi-manager platform with a dedicated quantitative trading strategy, it sits among top quant hedge funds where AI and data science roles command high prestige and strong compensation."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "Multi-manager hedge fund platform that invests proprietary capital with internal and partner portfolio managers on an exclusive or semi-exclusive basis to generate trading profits."
+   "value": "Schonfeld invests its own capital with internal and partner portfolio managers, primarily on an exclusive or semi-exclusive basis. A multi-manager platform expanding across four key trading strategies."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "4392c813fe"
+    "4392c813fe",
+    "bf7f716b44"
    ],
-   "value": "Inclusive, teamwork-oriented, and collaborative; values diverse backgrounds and voices while encouraging ideas to be shared at all levels."
+   "value": "Teamwork-oriented, collaborative and inclusive. They encourage continual learning and sharing ideas at all levels, emphasizing diverse backgrounds and voices to spark better ideas and more resilient systems."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "The firm acts as a principal investing platform, deploying its own capital alongside exclusive and semi-exclusive portfolio managers rather than serving external retail clients."
+   "value": "Investment partners and internal portfolio managers who utilize Schonfeld's platform and capital to execute their trading strategies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "75eefa4f9c"
+    "75eefa4f9c",
+    "bf7f716b44"
    ],
-   "value": "Estimated: $200K-$300K total compensation package, aligning with elite quantitative hedge fund new-grad offers."
+   "value": "Estimated: $200K-$300K total comp. Top-tier quantitative hedge funds in New York typically offer highly competitive new grad packages (base + bonus) to attract top AI/DS talent."
   },
   "evidence_sha": "b34ed6778de4e9c9",
-  "generated_at": 1784915984,
+  "generated_at": 1785430709,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -369015,77 +369310,77 @@
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "Financial Services / Investment Management (Multi-Manager Hedge Fund)"
+   "value": "Financial Services / Multi-Manager Hedge Fund."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "bf7f716b44",
     "4392c813fe"
    ],
-   "value": "Prepare to discuss how you drive innovation and resilient system design in a collaborative setting, and ask about the team's engineering culture to ensure the pace aligns with sustainable hours. Highlight your eagerness to continually learn and share ideas at all levels, while clarifying expectations around guaranteed shutdowns and sane work-life balance to confirm it meets your standards."
+   "value": "Probe whether the 'teamwork-oriented' culture genuinely translates to sane hours for new grads or if the multi-manager structure creates toxic pressure and burnout. Ask about day-to-day pace of innovation versus slow bureaucracy in technical mandates. Look for concrete examples of how they protect personal time while accelerating technical learning in the highly competitive quantitative trading space."
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785413438,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "75eefa4f9c"
+    "bf7f716b44"
    ],
-   "value": "Not explicitly stated in supplied sources, but as a major hedge fund platform, operations are likely concentrated in major financial hubs."
+   "value": "New York."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "4392c813fe"
+    "75eefa4f9c",
+    "4392c813fe",
+    "bf7f716b44"
    ],
-   "value": "To create an inclusive environment where diverse backgrounds and voices spark better ideas, empowering talent to continually learn, innovate, and pursue ambitious goals while thriving professionally."
+   "value": "To create an environment where our people can thrive. The company fosters a culture where talent is empowered to continually learn, innovate and pursue ambitious goals."
   },
   "name": "Schonfeld",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "4392c813fe"
+    "4392c813fe",
+    "bf7f716b44"
    ],
-   "value": "Estimated: Fast-paced and ambitious drive to continuously innovate and pursue ambitious goals."
+   "value": "Estimated: High. The culture explicitly encourages pursuing ambitious goals and sharing ideas at all levels, implying a fast-paced and demanding environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "Capital allocation and investment management services across quantitative, fundamental equity, tactical trading, and discretionary macro & fixed income strategies."
+   "value": "A multi-manager investment platform managing internal and partner portfolio teams across four trading strategies: quantitative, fundamental equity, tactical trading, and discretionary macro & fixed income."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "4392c813fe"
+    "bf7f716b44"
    ],
-   "value": "Estimated: 20-25 paid time off days annually, following standard financial sector norms."
+   "value": "Estimated: 20-25 days. Standard for elite New York financial firms that emphasize top-tier talent retention, though specific PTO policies aren't explicit in the provided sources."
   },
-  "refresh_after": 1790099984,
-  "retry_after": 1785429154,
+  "refresh_after": 1790614709,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "4392c813fe"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "75eefa4f9c"
-   ],
-   "value": "Estimated: Likely observes standard market holidays, though specific firm-wide shutdown periods were not found in research."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed firm-wide shutdowns mentioned in sources. Hedge funds typically trade actively, but you should ask if they offer end-of-year quiet periods."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "75eefa4f9c"
+    "bf7f716b44"
    ],
-   "value": "Established multi-manager hedge fund platform operating across four distinct trading strategies with internal and partner portfolio managers."
+   "value": "An established multi-manager hedge fund platform with a Human Capital Management team. The office is based in New York."
   },
   "sources": [
    {
@@ -369152,42 +369447,47 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "4392c813fe"
+    "4392c813fe",
+    "bf7f716b44"
    ],
-   "value": "Not explicitly confirmed in supplied sources, though the firm's investment in diverse backgrounds suggests an inclusive hiring approach."
+   "value": "Sponsorship details for technical roles are not explicitly mentioned in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "75eefa4f9c"
    ],
-   "value": "Schonfeld Strategic Advisors is a multi-manager hedge fund platform that invests its capital with internal and partner portfolio managers across four primary trading strategies: quantitative, fundamental equity, tactical trading, and discretionary macro & fixed income. The firm makes money by deploying its own capital to generate absolute returns across these diverse market strategies."
+   "value": "Schonfeld Strategic Advisors is a multi-manager hedge fund platform that invests its own capital with internal and partner portfolio managers. It generates returns by deploying capital primarily on an exclusive or semi-exclusive basis across four trading strategies: quantitative, fundamental equity, tactical trading, and discretionary macro/fixed income."
   },
-  "synthesized_evidence_sha": "59a27cae6f910053",
+  "synthesized_evidence_sha": "b34ed6778de4e9c9",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "4392c813fe"
+    "4392c813fe",
+    "75eefa4f9c"
    ],
-   "value": "Engineering roles involve building systems that support quantitative trading strategies, including quantitative data engineering and developing resilient technical infrastructure for portfolio management teams."
+   "value": "Involves building resilient trading systems and infrastructure to support a wide range of quantitative, fundamental equity, and macro trading strategies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673566,
   "web_search_url": "https://duckduckgo.com/?q=Schonfeld+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "4392c813fe"
+    "bf7f716b44",
+    "4392c813fe",
+    "75eefa4f9c"
    ],
-   "value": "Schonfeld offers the elite prestige and top-tier compensation expected from a major hedge fund, with a fast innovative tech culture that continually empowers talent to learn and pursue ambitious goals. The collaborative, teamwork-oriented environment encourages ideas at all levels, providing strong technical learning acceleration and career growth without the slow bureaucracy found elsewhere."
+   "value": "Matches your desire for a high-prestige environment that accelerates technical learning and career growth. Schonfeld emphasizes an inclusive, teamwork-oriented culture where talent is empowered to innovate and pursue ambitious goals. Its quantitative trading focus offers deep technical challenges and new grads work alongside elite talent in a culture that claims to invest in its employees."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "75eefa4f9c",
     "4392c813fe"
    ],
-   "value": "Estimated: Moderate work-life balance, typical of elite multi-manager hedge funds."
+   "value": "Estimated: Moderate. Schonfeld emphasizes a culture where employees thrive, though work in hedge funds typically demands intensity. Teamwork-orientation may offer better balance than lone-wolf cultures, but you should verify actual hours in interviews."
   }
  },
  "schroders": {
@@ -443918,11 +444218,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -443934,6 +444236,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785430709,
   "last_evidence_at": 1785428821,
   "name": "University of Maryland, Baltimore (UMB)",
   "pace_of_work": {
@@ -443946,6 +444249,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785430829,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -444009,7 +444313,7 @@
     "url": "https://jobright.ai/jobs/info/6a6b276cc00ae03109f827f5?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785428821,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Maryland%2C+Baltimore+%28UMB%29+company+careers+benefits",
