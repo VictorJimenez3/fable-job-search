@@ -434395,80 +434395,102 @@
  "tyler technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — Respected applied AI in mission-critical government domains; not a primary research lab but growing ML engineering reputation with real-world deployment scale."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Estimated: Low tier. Focuses on traditional enterprise IT rather than cutting-edge AI or data science research."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Recurring revenue model driven by SaaS subscriptions, maintenance/support contracts, and professional services (implementation, training, consulting). High retention due to mission-critical nature and switching costs in government contracts."
+   "confidence": "medium",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Business-to-Government (B2G) software licensing, long-term service contracts, and IT support subscriptions."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Professional, mission-driven, collaborative, and low-ego. Engineers stay 5-10+ years. Culture values institutional knowledge, mentorship, and incremental innovation over heroics. Diversity and inclusion initiatives are active. Remote-friendly post-COVID."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Estimated: Stable, mission-driven, and traditional, heavily emphasizing civic services over rapid technological disruption."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary customers are U.S. local and state government agencies, school districts, courts, and public sector entities. The company serves over 44,000 installations across all 50 states."
+   "confidence": "medium",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Local, county, and state government agencies across the United States."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000-$135,000 base + $15,000-$30,000 RSUs (4-year vest) + $5,000-$15,000 signing bonus. Total comp ~$130K-$180K year 1. Adjusts by location (Plano/Dallas baseline)."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Estimated: $70,000 - $85,000 base salary, which is moderate but does not meet top-tier elite new-grad pay expectations."
   },
   "evidence_sha": "96f451e16bb20c5e",
-  "generated_at": 1784866231,
+  "generated_at": 1785383776,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "GovTech / Public Sector Software / SaaS"
+   "confidence": "medium",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Information Technology and Public Sector Software."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect practical coding (LeetCode medium), system design for high-availability public systems, SQL/data modeling, and behavioral questions on stakeholder management and compliance awareness. AI/DS roles add ML fundamentals, model deployment, and ethics/fairness discussions. Domain knowledge of government processes is a plus but not required."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Candidates should expect interviews to prioritize traditional software engineering, enterprise application maintenance, and standard development practices over cutting-edge AI or data science challenges. Given the candidate's desire for fast-paced innovation and top-tier compensation, they should carefully evaluate whether the team's specific tech stack aligns with their rapid career growth goals."
   },
-  "last_attempt_at": 1785383476,
+  "last_attempt_at": 1785383776,
   "last_evidence_at": 1785376288,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters in Plano, TX. Major offices in Dallas, Denver, Atlanta, Boston, Philadelphia, Seattle, and remote/hybrid options across the U.S. Limited international presence."
+   "confidence": "high",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Headquartered in Plano, Texas, USA."
   },
   "mission": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "To empower public sector organizations to operate more efficiently, transparently, and responsively through innovative technology solutions that serve communities."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "To provide integrated software solutions that help public sector agencies efficiently serve their communities."
   },
   "name": "Tyler Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — Steady, predictable delivery cycles aligned with government fiscal years and procurement timelines. Not a 'move fast and break things' culture; emphasis on reliability, compliance, and long-term maintainability."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Estimated: Slow to moderate pace typical of government-adjacent enterprise software, which may feel bureaucratic rather than fast-paced."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core offerings include Tyler Munis (ERP for government), Tyler EnerGov (community development), Tyler SIS (student information), Odyssey (court case management), and various SaaS/cloud solutions for public finance, HR, revenue, and citizen engagement."
+   "confidence": "medium",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Enterprise software applications and IT services tailored for government administration, public safety, and local civic operations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 floating days; accrues with tenure. Unlimited sick leave. Parental leave 6-12 weeks paid."
+   "value": "Estimated: 15-20 days of standard paid time off annually, consistent with large legacy tech employers."
   },
-  "refresh_after": 1790050231,
-  "retry_after": 1785383716,
+  "refresh_after": 1790567776,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -434478,12 +434500,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Company-wide shutdown week between Christmas and New Year; occasional summer half-day Fridays. No mandatory 'crunch' periods."
+   "value": "Estimated: No widespread company-wide guaranteed shutdowns found in research, only standard PTO."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Publicly traded (NYSE: TYL), ~9,000+ employees, $2B+ annual revenue, mature large-cap company with steady growth through acquisitions and organic expansion."
+   "confidence": "high",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Large, mature enterprise with 5,001-10,000 employees, founded in 1966."
   },
   "sources": [
    {
@@ -434518,34 +434542,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: H-1B sponsor for specialized engineering and data science roles; green card sponsorship typically for senior/lead positions. Public sector contracts may impose citizenship requirements on certain programs."
+   "confidence": "high",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Has a documented track record of offering H1B sponsorships, though availability is not guaranteed for every specific role."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tyler Technologies is a leading provider of integrated software and technology services for the public sector, including local governments, schools, and courts. The company focuses on modernizing public sector operations through ERP, civic services, and data analytics platforms."
+   "confidence": "high",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Tyler Technologies is a large, established public sector software company that builds enterprise applications for local, county, and state governments. It makes money by licensing these specialized platforms and providing related IT services to government agencies."
   },
-  "synthesized_evidence_sha": "2471c789a0aff78e",
+  "synthesized_evidence_sha": "96f451e16bb20c5e",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Full-stack development (C#, .NET, JavaScript, SQL), cloud migration (AWS/Azure), data engineering, AI/ML for predictive analytics in public safety and finance, DevOps, legacy modernization, and platform integration. Growing investment in AI-driven civic insights."
+   "confidence": "high",
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Application development utilizing Java, PHP, Perl, JavaScript, Linux-based web server environments, and enterprise web applications."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676797,
   "web_search_url": "https://duckduckgo.com/?q=Tyler+Technologies+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tyler offers a rare combination of elite public-sector mission impact, stable high compensation for new grads (estimated $110-135K base + equity), and a mature but modernizing tech culture. Unlike high-burnout consumer tech, work-life balance is respected with predictable hours and low weekend on-call. The scale of government data provides meaningful AI/ML problems (predictive analytics for justice, education, finance) without the pressure of ad-driven metrics. Career growth is structured with c"
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Tyler Technologies offers mission-driven public sector impact and a stable enterprise environment, but its culture largely revolves around slow-paced government bureaucracy and maintaining legacy systems rather than fast, elite AI innovation. It is not an optimal fit for a candidate seeking top-tier prestige, highly accelerated innovation, or a cutting-edge tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "4/5 — Estimated: Strong work-life balance culture; core hours ~9-5 with flexibility, minimal weekend work, protected vacation, and leadership that models boundaries. On-call rotations exist for production support but are infrequent and compensated."
+   "source_ids": [
+    "b00a8d6cb2"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, reflecting standard corporate government contracting norms rather than a toxic or high-burnout startup environment."
   }
  },
  "u s bank": {
