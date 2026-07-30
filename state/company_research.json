@@ -23892,11 +23892,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23908,6 +23910,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785435209,
   "name": "Amazon Kuiper Commercial Services LLC",
   "pace_of_work": {
@@ -23920,6 +23923,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785435522,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23973,7 +23977,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785435209,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Kuiper+Commercial+Services+LLC+company+careers+benefits",
@@ -51447,7 +51451,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -51470,7 +51474,7 @@
    ],
    "value": "Government and commercial clients."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
@@ -51500,7 +51504,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1784872913,
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -51543,6 +51547,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
+  "retry_after": 1785435642,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -51637,7 +51642,7 @@
    ],
    "value": "Not explicitly found in the supplied sources, but defense contractors typically require US citizenship due to government security clearance mandates."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -101397,7 +101402,7 @@
    "value": "Estimated: High. Cloudflare is highly regarded for heavily integrating AI into internal engineering workflows and maintaining its status as a top-tier, globally critical network infrastructure provider."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -101423,7 +101428,7 @@
    ],
    "value": "A wide range of users from individual developers and small businesses using free tier tools to high-performing enterprise sales teams requiring global network interconnectivity and data residency solutions."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -101455,7 +101460,7 @@
    ],
    "value": "Emphasize your experience with distributed systems and demonstrate how you use AI as a daily partner to solve tough engineering problems. Be ready to show your bias for action—Cloudflare wants builders who iterate quickly without waiting for a polished roadmap."
   },
-  "last_attempt_at": 1785431078,
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "estimated",
@@ -101500,6 +101505,7 @@
    "value": "Estimated: Standard tech market PTO (typically 15-25 days annually), though exact specific policy not explicitly detailed in current sources."
   },
   "refresh_after": 1790615078,
+  "retry_after": 1785457002,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -101592,7 +101598,7 @@
    ],
    "value": "Estimated: Sponsors work visas for specialized technical roles, though specific details vary by region and are not explicitly confirmed in current postings."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -204019,37 +204025,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / not ranked in public AI research tiers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture descriptors available in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No public salary data; likely market-rate for Phoenix-area new grads (~$70k–$100k base) until verified."
   },
   "evidence_sha": "2ffe9fc44f70aff4",
+  "generated_at": 1785435402,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Technology / Software (inferred from new-grad SE hiring list)."
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Ask for concrete data on new-grad compensation packages, typical working hours, shutdown policies, mentorship structure, and any AI/ML project exposure. Request employee testimonials or Glassdoor/Blind links to validate work-life balance and learning culture claims."
+  },
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785434417,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "255a8ea63a",
+    "4761b8869e",
+    "d017269515"
+   ],
+   "value": "Estimated: Phoenix, AZ area (source URLs reference phoenix.craigslist.org)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "HopeWell Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no public data on release cadence or bureaucracy level."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not published; assume standard US baseline (10–15 days) until confirmed."
   },
+  "refresh_after": 1790619402,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204059,7 +204115,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early-stage or small company (appears on new-grad hiring list but lacks detailed public presence)."
   },
   "sources": [
    {
@@ -204103,14 +204166,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "HopeWell Inc appears in a curated 2026 new-grad software engineer hiring list, suggesting it recruits entry-level technical talent. No detailed public description of its products, mission, or business model was accessible in the retrieved sources."
+  },
+  "synthesized_evidence_sha": "2ffe9fc44f70aff4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: General software engineering; specific stack or AI/data-science focus not disclosed in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785434417,
   "web_search_url": "https://duckduckgo.com/?q=HopeWell+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The company actively hires new-grad software engineers, which aligns with the candidate’s goal of an entry-level AI/data-science role. However, without public information on prestige, pay, work-life balance, or culture, the candidate should verify these priorities directly during interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no employee-review data found in sources."
   }
  },
  "horizon surgical systems": {
@@ -249372,37 +249462,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected niche player with massive user base but not an AI/ML research hub. ML work exists (personalization, translation alignment, content recommendation) but not core identity. Prestige comes from scale and mission, not AI publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Non-profit 501(c)(3) religious organization funded by donations from Life.Church attendees and partners. YouVersion is free with no ads or subscriptions; costs covered by church giving and voluntary donations to the app. No revenue from user data or advertising."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, collaborative, humble. Engineering culture values servant leadership, code quality, and user empathy. Diverse theological views but unified on purpose. Low ego, high trust. Remote-friendly with strong async communication. Not a 'cool startup' vibe — more mature, purposeful, and family-oriented."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Global users of the YouVersion Bible App (over 700M installs), partner churches using Church Online Platform, and Life.Church attendees across 30+ physical campuses. Primary 'customers' are individuals seeking digital Bible engagement and churches adopting tech for ministry."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k-$95k base + minimal equity (non-profit) + strong benefits (health, 403b match, tuition assistance). Total comp ~$85k-$110k. Below market-rate tech but exceptional for mission-driven sector with this WLB."
   },
   "evidence_sha": "1fc4e7eaca9c8600",
+  "generated_at": 1785435402,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Non-profit / Religious Technology / Consumer Software (Bible App)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical system design (scaling Bible content delivery, offline sync), product sense for global accessibility, and behavioral questions on collaboration and values alignment. LeetCode heavy prep less critical than demonstrating thoughtful engineering and mission resonance. Prepare to discuss how you'd handle ambiguity in a non-profit context and prioritize features for diverse global users."
   },
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785435210,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3397d5f061",
+    "353aca7727"
+   ],
+   "value": "Headquarters: Edmond, OK (OKC metro). Tech roles often hybrid (Edmond campus) or remote-friendly within US. Physical campuses across 10+ states. No international offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "To lead people to become fully devoted followers of Christ. Technology serves this mission by making Scripture accessible worldwide through the YouVersion platform and equipping churches with digital tools."
+  },
   "name": "Life.Church (YouVersion)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable and deliberate. Quarterly planning cycles, minimal fire drills. Releases measured; stability > velocity. No 'move fast and break things' — religious org values stewardship. Pace allows deep work and learning."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Primary product is the YouVersion Bible App (mobile/web) offering free Bible translations, reading plans, and community features. Also develops Church Online Platform, Life.Church Open Network resources, and internal tools for multi-site church operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10+ paid holidays (includes Christian holidays) + sabbatical eligibility after 7 years. Conservative estimate based on non-profit norms and public culture signals."
   },
+  "refresh_after": 1790619402,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -249412,7 +249557,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — organization-wide Christmas/New Year shutdown (~2 weeks) and summer reduced schedule. Leadership explicitly encourages full disconnect. No 'check Slack on vacation' culture."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Large established non-profit: ~1,000+ staff across 30+ physical campuses, plus distributed tech team. YouVersion team is a significant engineering org within the church. Mature stage with decades of operation (founded 1996)."
   },
   "sources": [
    {
@@ -249456,14 +249608,40 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Limited H-1B sponsorship capacity as a non-profit religious organization; may sponsor for specialized senior roles but not typical for new grads. Cap-exempt H-1B possible through affiliated educational/research activities. Verify with recruiting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3397d5f061",
+    "353aca7727"
+   ],
+   "value": "Life.Church is a multi-site Christian church headquartered in Edmond, Oklahoma, known for its YouVersion Bible App — one of the world's most downloaded Bible applications. The organization operates as a non-profit religious entity that leverages technology to distribute spiritual content globally."
+  },
+  "synthesized_evidence_sha": "1fc4e7eaca9c8600",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "353aca7727"
+   ],
+   "value": "Scalable mobile/web platform serving 700M+ installs with high availability. Work includes Bible text rendering, reading plan algorithms, community features, audio/video streaming, offline sync, multilingual support (2,000+ languages), and church management tools. Stack includes cloud infrastructure, React Native, Node.js, Python, Kubernetes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785435210,
   "web_search_url": "https://duckduckgo.com/?q=Life.Church+%28YouVersion%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rare combination of elite-scale consumer tech (700M+ installs) with genuine mission-driven culture and strong work-life boundaries. Faith-based org prioritizes sustainable pace — evenings/weekends respected, no on-call burnout culture. Technical challenges are real (scale, multilingual, offline-first) but pursued without venture-pressure urgency. Accelerates growth via ownership of high-impact features serving global users, not internal tooling. Pay is competitive for mission-driven sector but b"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 9/10. Explicit culture of boundaries: no expectation of evenings/weekends, generous PTO, leadership models shutdown. Faith ethos reinforces rest. On-call rotations exist but humane. Rare for tech at this scale."
   }
  },
  "light wonder": {
@@ -428954,133 +429132,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Top-tier (publishes at top conferences, optimizes flagship open models, backed by top AI investors)"
+   "value": "Estimated: Tier 1 (elite) — recognized leader in AI infrastructure, publishing research, and attracting top talent from PhD programs and big-tech AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Usage-based pricing for inference API (per token), reserved GPU cluster rentals (hourly/monthly), and enterprise contracts for dedicated deployments and support."
+   "value": "Cloud infrastructure and platform services revenue from GPU compute, managed training/fine-tuning workflows, and enterprise AI deployment solutions."
   },
   "culture_vibe": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Engineering-first, open-source oriented, high autonomy, collaborative but intense; values technical excellence and transparency. Remote-friendly with strong async communication."
+   "value": "Estimated: Technical, research-first, collaborative — engineers work alongside scientists to productionize cutting-edge techniques; less political than big tech, more focused on technical excellence and open innovation."
   },
   "customers": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "AI startups, enterprise ML teams, researchers, and developers building generative AI applications who need scalable, cost-effective inference and training for open-source models."
+   "value": "AI research teams, enterprises building generative AI applications, model developers, and organizations needing scalable training and inference infrastructure."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $170k-$220k base + equity (0.05-0.15%) + sign-on; total comp $220k-$300k for ML/infra roles."
+   "value": "Estimated: $170k-$220k base + equity (likely 0.05-0.15% for new grads) + signing bonus; total comp competitive with top AI labs (Meta/Google/DeepMind) to attract elite talent."
   },
   "evidence_sha": "7efc4879db11e59f",
-  "generated_at": 1784683819,
+  "generated_at": 1785435402,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Generative AI Cloud Infrastructure / MLOps Platform"
+   "value": "AI Infrastructure / Cloud Compute / Generative AI Platform"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens on distributed systems, GPU programming (CUDA/Triton), LLM inference internals (attention kernels, memory management), and ML systems design. Prepare to discuss open-source contributions, performance optimization trade-offs, and experience with PyTorch/TensorRT. Cultural fit questions will probe collaboration in fast-paced, high-autonomy environments."
+   "source_ids": [
+    "e74088668d"
+   ],
+   "value": "Expect deep technical interviews on distributed systems, GPU optimization, training convergence debugging, and large-scale ML infrastructure. Prepare to discuss profiling methodologies, bottleneck identification across the stack, and translating research papers (e.g., FlashAttention, FSDP, mixture-of-experts) into production code. Emphasize experience with PyTorch internals, CUDA kernels, and multi-node training."
   },
-  "last_attempt_at": 1784683819,
+  "last_attempt_at": 1785435402,
   "last_evidence_at": 1785434128,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
-   ],
-   "value": "Headquartered in San Francisco, CA; remote-friendly with employees across US and Europe."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco Bay Area; likely remote-friendly with distributed team across US and possibly international hubs."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "To make state-of-the-art AI models accessible and efficient for everyone by providing the fastest, most cost-effective cloud platform for open-source generative AI."
+   "value": "To accelerate AI research and production by providing optimized, scalable training infrastructure that bridges cutting-edge research techniques with production deployment."
   },
   "name": "Together AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — weekly releases, rapid iteration on kernel/model optimizations, but with explicit cultural guardrails against unsustainable crunch."
+   "source_ids": [
+    "e74088668d"
+   ],
+   "value": "Estimated: Fast — research-driven culture with rapid iteration on new model architectures and optimization techniques; faster than enterprise bureaucracies but potentially intense during major releases."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Together Inference API (serverless and dedicated endpoints), Together Fine-tuning, Together GPU Clusters, Together Custom Models, and open-source model hosting (e.g., Llama, Mistral, Falcon)."
+   "value": "Large-scale AI training infrastructure, model fine-tuning platforms, GPU cloud compute services, and optimized training stacks for generative AI models."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited policy in practice with manager approval."
+   "value": "Estimated: 15-20 days PTO + company holidays; unlimited PTO policies common in this tier but actual usage varies."
   },
-  "refresh_after": 1789867819,
+  "refresh_after": 1790619402,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (last week of December) + occasional mental health days; no monthly guaranteed shutdowns publicly documented."
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some AI infra companies offer winter breaks but not standard."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
-   ],
-   "value": "Estimated: 200-500 employees; Series A/B stage (raised $100M+ from investors including Salesforce Ventures, NVIDIA, Kleiner Perkins)."
+   "source_ids": [],
+   "value": "Estimated: Growth-stage startup (Series A/B), approximately 100-500 employees, well-funded by top-tier VCs in the AI infrastructure space."
   },
   "sources": [
    {
@@ -429126,45 +429283,39 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
-   ],
-   "value": "Estimated: Offers H-1B transfers and new cap filings for technical roles; green card sponsorship likely for senior hires. No public policy details found in sources."
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and other work visas given AI talent competition; specific policies not publicly documented."
   },
   "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Together AI is a cloud platform for generative AI that provides optimized inference, fine-tuning, and training infrastructure for open-source models. The company enables developers and enterprises to run, customize, and scale AI models efficiently via API and dedicated GPU clusters."
+   "value": "Together AI is a research-driven artificial intelligence company that builds and optimizes large-scale training infrastructure for AI models. They make money by providing cloud-based AI infrastructure and platform services for training, fine-tuning, and deploying generative AI models at scale."
   },
-  "synthesized_evidence_sha": "0d92c1cc0825ea4a",
+  "synthesized_evidence_sha": "7efc4879db11e59f",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "631f78637e",
-    "380d4b943e",
-    "98c927475e"
+    "e74088668d"
    ],
-   "value": "Distributed systems for LLM inference optimization (FlashAttention, quantization, speculative decoding), GPU kernel development, scalable training/fine-tuning pipelines, MLops platform, and high-performance networking for multi-node clusters."
+   "value": "Designing and optimizing large-scale distributed training systems, profiling performance bottlenecks across the stack, integrating novel model architectures, validating training convergence, and implementing state-of-the-art techniques from research literature into production fine-tuning workloads."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583426,
   "web_search_url": "https://duckduckgo.com/?q=Together+AI+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Together AI sits at the intersection of elite AI research prestige (publishing at NeurIPS/ICML, optimizing flagship open models) and high new-grad compensation typical of well-funded generative AI infra startups. Its culture emphasizes speed and technical depth — shipping kernel-level optimizations weekly — while leadership has publicly emphasized sustainable pace and avoiding burnout, aligning with your priority for mission-driven innovation without toxic hours."
+   "source_ids": [
+    "e74088668d"
+   ],
+   "value": "Together AI offers elite AI infrastructure work at a research-driven company with top-tier prestige and competitive new-grad pay. The focus on bridging research literature with production systems accelerates technical growth, while the research-driven (not bureaucracy-driven) culture suggests faster innovation cycles. As a well-funded growth-stage AI company, it likely offers more sane hours and better work-life balance than hyperscaler giants or high-burnout labs, aligning with your priority fo"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4/5 — leadership emphasizes sane hours, guaranteed shutdowns, and no weekend expectations; actual experience varies by team."
+   "value": "Estimated: 7/10 — research-driven (not crisis-driven) environment suggests more predictable hours than high-burnout labs; shutdown policies not public but growth-stage AI companies increasingly respect boundaries to retain talent."
   }
  },
  "tokio marine north america services": {
