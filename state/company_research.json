@@ -36805,37 +36805,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied ML/data science opportunities in energy trading, forecasting, and asset optimization; not a primary AI research lab but high-impact production ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Develop, own, and operate solar + storage assets; revenue from long-term PPAs and energy market participation. Vertically integrated with in-house software and data engineering to optimize production, trading, and operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, pragmatic, mission-aligned; values technical excellence and cross-functional partnership; low bureaucracy for a regulated industry; collaborative not competitive."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Utilities and commercial/industrial businesses purchasing cost-effective, sustainable energy via power purchase agreements (PPAs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity/bonus (total $130k-$160k); competitive with top energy tech shops, below FAANG peak but with better WLB."
   },
   "evidence_sha": "4d2833a0a2403594",
+  "generated_at": 1785383476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Renewable Energy / Solar & Storage Development & Operations"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives on distributed systems, streaming architectures (Kafka/Flink), data pipeline design, and cloud-native APIs. Prepare to discuss schema evolution, exactly-once semantics, and scaling time-series ingest from thousands of field devices. Behavioral emphasis on cross-functional collaboration with trading, ops, and finance stakeholders. Demonstrate ownership of end-to-end features from database to UI."
   },
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785382241,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "362c7247fb",
+    "5501600950"
+   ],
+   "value": "Estimated: U.S.-based (headquarters likely in California or Texas; remote/hybrid roles possible). Job board indicates Greenhouse instance 'arevonenergyimpltest'."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Accelerate the clean energy transition by developing and operating reliable, utility-scale solar and storage projects while leveraging modern data and analytics to maximize asset value and grid integration."
+  },
   "name": "Arevon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced engineering culture with startup-like autonomy on greenfield platform rebuild, but tempered by regulated energy industry timelines; sprints with realistic scope, not perpetual crunch."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Utility-scale solar generation and battery storage assets; proprietary plant-to-cloud data pipeline, streaming infrastructure, and centralized data/API platform serving operations, trading, finance, and data science teams."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited not indicated."
   },
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36845,7 +36900,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; standard holiday calendar observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-large private company (hundreds of employees, GW-scale portfolio), backed by Capital Dynamics; not an early-stage startup."
   },
   "sources": [
    {
@@ -36909,14 +36969,39 @@
     "url": "https://job-boards.greenhouse.io/arevonenergyimpltest/jobs/5027450007"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and green card sponsorship given size and technical hiring; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Arevon develops, owns, and operates utility-scale solar and energy storage projects across the U.S., selling clean power to utilities and corporations under long-term contracts. It builds and operates its own technology stack — from plant-level data pipelines to centralized analytics platforms — to optimize asset performance and trading."
+  },
+  "synthesized_evidence_sha": "4d2833a0a2403594",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5501600950"
+   ],
+   "value": "Rebuilding plant-to-cloud data pipelines on modern streaming infrastructure; building a centralized data and API platform for operations, trading, finance, and data science; full-stack development from database schema to UI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382241,
   "web_search_url": "https://duckduckgo.com/?q=Arevon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare blend of elite technical challenge — building a modern, centralized data platform for real-time energy asset optimization — with the mission-driven stability of a well-capitalized renewables leader. The role sits at the intersection of high-impact climate tech and sophisticated data engineering, avoiding the burnout culture of pure-play tech while delivering top-tier new-grad compensation and accelerated learning on production-grade streaming and analytics infrastructure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong emphasis on sustainable hours; energy sector norms support predictable schedules; platform team builds tooling to reduce on-call burden."
   }
  },
  "argonne national laboratory": {
@@ -80876,48 +80961,41 @@
  "capgemini": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "9625bfbb4d",
-    "6ebb84fb1e"
-   ],
-   "value": "Estimated: Tier 2/Boutique Hybrid. While Capgemini provides strong enterprise consulting prestige, it does not hold the specialized AI/data science batch prestige of FAANG or elite unicon-tier algorithms companies."
+   "source_ids": [],
+   "value": "Estimated: Low to Mid-tier. As a massive traditional IT consulting firm, it does not hold the elite, specialized prestige of top-tier AI or data science tech companies."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1",
+    "8b06edb49f"
    ],
-   "value": "B2B IT and consulting services. Revenue is generated through project-based contracts, managed services, and staff augmentation for enterprise clients."
+   "value": "Capgemini operates as a B2B IT services and consulting firm. It generates revenue through staff augmentation, technology consulting, and executing software engineering projects for large enterprise clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
-   ],
-   "value": "Estimated: Corporate and structured. The environment prioritizes billable client deliverables and enterprise methodology over a purely mission-driven or fast-hacker tech culture, which can sometimes feel bureaucratic to rapid career climbers."
+   "source_ids": [],
+   "value": "Estimated: Traditional, corporate, and mission-driven around client sustainability/digital transformation, but generally known for bureaucratic processes rather than a fast-paced, innovative tech environment."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f"
+    "714ccde3e1"
    ],
-   "value": "Large enterprise clients requiring complex systems integration, digital commerce solutions, and IT modernization."
+   "value": "Large enterprise organizations seeking digital transformation, software development, and technology management services."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1"
    ],
-   "value": "Estimated: $70,000 - $95,000 USD base. IT services firms generally offer moderate new-grad pay that lags behind pure elite software companies but provides strong visa and relocation support."
+   "value": "Estimated: $60K - $65K per year for entry-level full stack developers, which falls significantly short of the elite new-grad pay benchmark."
   },
   "evidence_sha": "007253ed60a615e8",
-  "generated_at": 1785213219,
+  "generated_at": 1785383476,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -80926,84 +81004,73 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1"
    ],
    "value": "IT Services and IT Consulting"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect to highlight your readiness for enterprise-scale deployment. Be prepared to discuss how you manage learning and career growth within client-driven consulting rhythms, and how you can protect sane hours even when project deadlines approach. Showcase elite technical fundamentals to stand out from the typical IT services candidate pool."
+   "value": "During interviews, the candidate should aggressively probe for toxic work-life balance and burnout risks common in consulting. Be prepared to ask specific questions about billable hours, pacing, and whether the rapid technical learning you seek is compromised by administrative overhead."
   },
-  "last_attempt_at": 1785213219,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
+    "714ccde3e1",
     "14c06b4cad"
    ],
-   "value": "Global presence with confirmed sizable operations in Paris, France and São Paulo, Brazil. Provides remote/hybrid flexibility depending on the project."
+   "value": "Global presence with a notable footprint in the United States (e.g., Atlanta, GA) and Brazil (e.g., São Paulo). Hires for both onsite and region-specific roles."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "6ebb84fb1e"
+    "714ccde3e1"
    ],
-   "value": "To help businesses leverage technology to drive innovation, digital transformation, and operational efficiency."
+   "value": "To help organizations accelerate their dual transition to a digital and sustainable world."
   },
   "name": "Capgemini",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
-   ],
-   "value": "Estimated: Moderate to Fast. The pace is highly dependent on client deadlines and project phases, which can sometimes disrupt a purely innovative, steady tech culture."
+   "source_ids": [],
+   "value": "Estimated: Slow to moderate. Bureaucracy in a 10,000+ employee consulting firm often stunts the fast, innovative tech culture desired by top-tier tech candidates."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "714ccde3e1",
     "8b06edb49f",
     "14c06b4cad"
    ],
-   "value": "Digital transformation services, cloud engineering, custom software development (e.g., SAP Commerce Cloud front-end), and IT infrastructure management."
+   "value": "Capgemini offers IT consulting and software engineering services rather than consumer products. Specific technical services include full stack development, front-end development (e.g., SAP Commerce Cloud), and general software design and development."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
-   ],
-   "value": "Estimated: 15-25 days. Exact PTO is not public and varies heavily by region, but large multinational IT firms typically offer standard packages to maintain sane hours."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days. Standard large-corporate consulting packages rarely prioritize the generous PTO needed to offset burnout risks."
   },
-  "refresh_after": 1790397219,
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad",
-    "9504c982e1"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "8b06edb49f"
-   ],
-   "value": "Estimated: Unlikely to have guaranteed firm-wide shutdowns outside of public holidays, as client service operations typically require continuous uptime throughout the year."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Consultants typically rely on standard PTO accrual rather than guaranteed firm-wide closures."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1",
+    "8b06edb49f"
    ],
-   "value": "Established multinational with over 10,001 employees."
+   "value": "10001+ employees (Established large enterprise, founded in 1967)."
   },
   "sources": [
    {
@@ -81070,28 +81137,29 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1",
+    "8b06edb49f"
    ],
-   "value": "Capgemini has a track record of offering H1B sponsorships for various roles, with Engineering and Development receiving a high concentration of these sponsorships."
+   "value": "Capgemini has a track record of offering H1B sponsorships, with data showing a 48% distribution of sponsorships going to engineering, development, and management roles. However, sponsorship is not guaranteed for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
+    "714ccde3e1",
+    "8b06edb49f"
    ],
-   "value": "Capgemini is a massive global consulting and technology services firm that helps enterprises design, build, and operate large-scale technology solutions. It makes money by charging clients for outsourced engineering, IT implementation, and digital transformation projects."
+   "value": "Capgemini is a global business and technology transformation partner that helps organizations accelerate their transition to a digital and sustainable world. Founded in 1967 in Paris, France, it is a massive multinational IT services and consulting firm. The company makes money by providing enterprise clients with engineering, development, technical management, and digital transformation services."
   },
-  "synthesized_evidence_sha": "b8461993a67aa282",
+  "synthesized_evidence_sha": "007253ed60a615e8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "714ccde3e1",
     "8b06edb49f",
     "14c06b4cad"
    ],
-   "value": "Enterprise software design, development, code documentation, unit testing, and front-end development for platforms like SAP Commerce Cloud."
+   "value": "Technical roles involve software design, software development, code documentation, code review, unit testing, full stack development, and front-end development for enterprise platforms like SAP Commerce Cloud."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674072,
@@ -81099,15 +81167,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Balances the fast, elite tech and data science learning with high new-grad pay, but the consulting model may introduce project-based pace variability that challenges guaranteed work-life balance. The scale of the company provides strong resume prestige and technical growth, though the massive bureaucracy is a trade-off for a purely innovative tech culture."
+   "value": "This company heavily conflicts with the candidate's priorities. Capgemini is a traditional, slow-paced bureaucracy lacking elite AI/data science prestige and top-tier new-grad pay, which will not satisfy the desire for a fast, innovative tech culture or elite compensation."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "8b06edb49f",
-    "14c06b4cad"
-   ],
-   "value": "Estimated: Fair. As a massive global consulting firm, work-life balance is often team and client-dependent, requiring strong boundaries to avoid high-burnout scenarios."
+   "source_ids": [],
+   "value": "Estimated: Variable to poor. Sane hours and guaranteed shutdowns are rare in standard consulting contracts, and the environment often leads to burnout rather than respecting personal time."
   }
  },
  "capital one": {
@@ -133330,48 +133395,127 @@
  "dollar general": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: Low to Medium; AI and data science roles exist internally at a corporate level for supply chain, but lack the elite, top-tier prestige compared to dedicated tech or AI-first sectors."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b62f43d2",
+    "76b358f92a"
+   ],
+   "value": "Operates a large chain of physical discount retail stores and distribution centers, supported by its own fleet, to generate revenue through high-volume retail sales of low-cost everyday items."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Retail traditionalist, focused on operational stability and team collaboration within its Corporate, Distribution, Fleet, and Retail sectors under its 'Serving Others' mission."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c123fabe26"
+   ],
+   "value": "Value-conscious consumers across the US, particularly those seeking affordable everyday necessities, including low and middle-income shoppers in rural and suburban areas."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: $70,000 - $95,000 total compensation, typical for internal corporate retail IT roles, which likely falls short of market speaking 'high tech pay'."
   },
   "evidence_sha": "b6ba0662006853e6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Retail and Discount Stores."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To align with the candidate's priorities, all interview questions should center on tech division prestige, new-grad compensation limits, the speed of technical innovation, and verifying actual work-life balance policies. Specifically probing whether AI roles are experimental or just marketing data work will be critical."
+  },
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785382236,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "76b358f92a",
+    "d8b62f43d2"
+   ],
+   "value": "Retail and distribution locations across the US (such as Long Beach, CA), with corporate IT operations centralized on the main Careers website."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "\"Serving Others\" - focused on delivering value and convenience to customers, while also emphasizing rewarding careers for employees."
+  },
   "name": "Dollar General",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: Slow to moderate; heavily process-driven by traditional corporate and retail retail and bureaucracy standards, contrasting with fast innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c123fabe26"
+   ],
+   "value": "Consumable goods such as paper products, cleaning supplies, packaged food and snacks, health and beauty care, and basic apparel, alongside seasonal items and home decor."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: 15-20 days of Paid Time Off annually, not typically including dedicated end-of-year guaranteed shutdowns."
   },
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: None; Dollar General retail operations function continuously, making corporate-wide shutdowns historically unlikely."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Large public retail corporation with a massive physical footprint of retail stores, distribution centers, and a corporate division."
   },
   "sources": [
    {
@@ -133415,14 +133559,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "d8b62f43d2"
+   ],
+   "value": "No explicit details on visa sponsorship for tech roles were provided in the company sources. The company expands job discovery primarily through internal portals and public job boards."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c123fabe26"
+   ],
+   "value": "Dollar General is a major retail chain operating a network of discount variety stores across the United States. The company makes money by purchasing merchandise at wholesale and selling these everyday consumable goods to consumers at competitive prices through its extensive brick-and-mortar footprint."
+  },
+  "synthesized_evidence_sha": "b6ba0662006853e6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "The Corporate division hires IT and technical professionals responsible for managing operations, supply chains, internal systems, and infrastructure supporting the extensive retail and fleet network."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382236,
   "web_search_url": "https://duckduckgo.com/?q=Dollar+General+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "The candidate is seeking top-tier AI/data science prestige, high pay, and fast innovative tech, paired with sane hours and guaranteed shutdowns. Dollar General's tech division is firmly rooted in traditional retail operations and corporate IT, which may not align with the desired fast-paced, tech-first innovation or high new-grad pay typically found in elite tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d8b62f43d2"
+   ],
+   "value": "Estimated: Average; while standard paid time off and holidays are emphasised, huge retail operational scale may potentially lead to variable workloads without guaranteed shutdowns."
   }
  },
  "dollar tree distribution inc": {
@@ -134042,47 +134218,46 @@
  },
  "doordash": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "0a08480d5c",
-    "98d4abb405"
+    "0a08480d5c"
    ],
-   "value": "Tier 1 (Innovation Hub R&D). DoorDash Labs functions as an independent, high-ownership team tackling complex autonomy and robotics challenges."
+   "value": "Estimated: Top-tier. The presence of an independent innovation hub actively developing complex autonomy, robotics, and controls implies highly prestigious technical challenges."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "9f25e22691",
+    "0a08480d5c",
     "286645cb50"
    ],
-   "value": "DoorDash makes money by charging fees for its marketplace services, encompassing delivery fees, service fees, and commissions from partner merchants."
+   "value": "Facilitates local commerce by connecting merchants, consumers, and delivery drivers, while actively investing in innovation hubs to develop automation and robotics solutions for last-mile logistics."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "0a08480d5c",
-    "72bf96ae53"
+    "fd409afa09",
+    "0a08480d5c"
    ],
-   "value": "Innovative, autonomous, and R&D-focused, prioritizing hands-on iteration and high technical ownership."
+   "value": "Agile, tech-driven, and people-first, balancing high ownership with a focus on safety and operational resilience."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "9f25e22691",
     "286645cb50"
    ],
-   "value": "Consumers seeking localcommerce and food delivery, as well as merchants and restaurants looking for last-mile logistics and delivery services."
+   "value": "Consumers seeking local goods, merchants seeking fulfillment logistics, and independent contractors (Dashers) seeking flexible earnings."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $130,000 - $170,000 base salary, aligning with elite-tier R&D roles in robotics and autonomy."
+   "value": "Estimated: $150,000 - $200,000+ total compensation. High-ownership engineering and R&D roles typically command top-tier market rates."
   },
   "evidence_sha": "695ad8e413844e9a",
-  "generated_at": 1785274373,
+  "generated_at": 1785383476,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -134091,45 +134266,43 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "0a08480d5c",
-    "286645cb50"
+    "9f25e22691",
+    "fd409afa09"
    ],
-   "value": "Local Commerce, Logistics, and Robotics."
+   "value": "Technology, Logistics, and On-Demand Delivery."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "0a08480d5c",
-    "72bf96ae53",
-    "98d4abb405"
-   ],
-   "value": "Expect interviews to test your ability to thrive in high-ownership engineering environments, emphasizing practical C++ skills for embedded platforms and systems design. Be ready to demonstrate how you balance fast-paced, innovative R&D with sustainable working habits that align with guaranteed shutdowns and work-life boundaries."
-  },
-  "last_attempt_at": 1785274373,
-  "last_evidence_at": 1785376288,
-  "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "72bf96ae53",
-    "98d4abb405",
-    "0a08480d5c"
-   ],
-   "value": "United States (specific locations not detailed in provided sources, but hiring is active for US roles)."
-  },
-  "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "0a08480d5c"
-   ],
-   "value": "To empower local economies by providing automation and robotics solutions that enhance last-mile logistics."
-  },
-  "name": "DoorDash",
-  "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
     "0a08480d5c"
    ],
-   "value": "Estimated: Fast-paced and high-ownership, comparable to a startup or advanced R&D environment."
+   "value": "Emphasize your ability to thrive in fast-paced, high-ownership environments, specifically regarding the development of advanced autonomy and AI systems. Highlight how you can maintain clarity, discipline, and sound judgment to drive technical innovation, matching the team's dedication to sane hours and guaranteed shutdowns."
+  },
+  "last_attempt_at": 1785383476,
+  "last_evidence_at": 1785376288,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fd409afa09",
+    "0a08480d5c"
+   ],
+   "value": "Operates a 24/7 Global Operations Center and supports engineering teams focused on advanced R&D and autonomy."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fd409afa09"
+   ],
+   "value": "To deliver value through agility, technology, and a people-first mindset—creating environments where employees and guests feel safe, welcome, and confident."
+  },
+  "name": "DoorDash",
+  "pace_of_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fd409afa09",
+    "0a08480d5c"
+   ],
+   "value": "Estimated: Fast-paced and high-tempo. The company explicitly seeks candidates comfortable in startup-like, high-ownership engineering environments and high-tempo operational centers."
   },
   "products": {
    "confidence": "high",
@@ -134137,7 +134310,7 @@
     "0a08480d5c",
     "98d4abb405"
    ],
-   "value": "On-demand delivery marketplace, DoorDash Labs (automation and robotics solutions for last-mile logistics), and drone delivery platforms (DoorDash Air)."
+   "value": "On-demand local delivery marketplace, alongside advanced R&D automation solutions including drones and robotics for last-mile logistics under DoorDash Labs."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -134145,9 +134318,10 @@
    "source_ids": [
     "72bf96ae53"
    ],
-   "value": "Estimated: Flexible paid time off for salaried roles, plus 80 hours (10 days) of paid sick time per year."
+   "value": "Estimated: Flexible paid time off for salaried roles (roughly 15-20 days annually) plus 80 hours of paid sick time per year."
   },
-  "refresh_after": 1790458373,
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134156,17 +134330,13 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "72bf96ae53"
-   ],
-   "value": "Estimated: No explicit mention of company-wide shutdowns, though flexible PTO is provided."
+   "source_ids": [],
+   "value": "Estimated: No specific company-wide shutdowns were found in the research, though flexible PTO is provided."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "0a08480d5c"
-   ],
-   "value": "Public company (NYSE: DASH) with an established innovation hub (DoorDash Labs) operating since 2018."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established public company and large-scale corporate enterprise."
   },
   "sources": [
    {
@@ -134231,49 +134401,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Not explicitly detailed in the provided sources."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "9f25e22691",
     "286645cb50"
    ],
-   "value": "DoorDash operates a local commerce platform that connects consumers with merchants, dashers, and local businesses for on-demand delivery. The company makes money by charging fees for its marketplace services, including delivery fees, service fees, and commissions from partner merchants."
+   "value": "DoorDash is a technology platform that connects customers with local businesses through on-demand delivery. The company makes money by charging merchants commissions on orders, consumers delivery and service fees, and Dashers earnings through the facilitation of these logistical networks."
   },
-  "synthesized_evidence_sha": "00009acb8d6214f4",
+  "synthesized_evidence_sha": "695ad8e413844e9a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "0a08480d5c",
     "72bf96ae53",
-    "98d4abb405",
-    "0a08480d5c"
+    "98d4abb405"
    ],
-   "value": "R&D in autonomy, robotics, and drone delivery. Roles involve hands-on C++ development on embedded platforms, designing controllers, process management, health monitoring, and developing CI/CD, build systems, and regression testing infrastructure."
+   "value": "Engineering roles involve fast-paced, high-ownership environments building hardware and software systems. Technical work includes embedded firmware, C++ controller design for drones, CI/CD development environments, and 24/7 operational resilience infrastructure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675351,
   "web_search_url": "https://duckduckgo.com/?q=DoorDash+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "98d4abb405",
-    "0a08480d5c",
-    "72bf96ae53"
-   ],
-   "value": "DoorDash Labs offers the elite prestige and high-impact technical learning of a top-tier AI/robotics role, operating with a startup-like, fast-paced culture that avoids slow corporate bureaucracy. The company actively emphasizes employee well-being, providing a comprehensive benefits package that supports work-life balance and personal time alongside high-paced R&D."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role aligns with your desire for elite technical prestige and high new-grad pay within a fast, innovative tech culture. The ecosystem's heavy investment in advanced R&D, automation, and hardware autonomy will accelerate your technical learning without subjecting you to slow corporate bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "98d4abb405",
-    "72bf96ae53",
-    "0a08480d5c"
+    "72bf96ae53"
    ],
-   "value": "Estimated: Moderate to Good. The company cites a commitment to employee well-being and comprehensive benefits, though the fast-paced startup-like R&D nature demands high ownership."
+   "value": "Estimated: Moderate to Good. Engineering roles specifically list comprehensive wellness benefits and paid time off as part of their well-being focus, though the high-ownership, startup-like culture may demand periods of intense focus."
   }
  },
  "dotdash": {
@@ -224295,11 +224460,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224311,6 +224478,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785382238,
   "name": "ISS | Institutional Shareholder Services",
   "pace_of_work": {
@@ -224323,6 +224491,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785383596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224376,7 +224545,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785382238,
   "web_search_url": "https://duckduckgo.com/?q=ISS+%7C+Institutional+Shareholder+Services+company+careers+benefits",
@@ -256508,48 +256677,129 @@
  "maersk": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Estimated: High domain-specific prestige in supply chain optimization, though it lacks the elite tech-brand prestige of dedicated FAANG or top-tier AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5b8535ef9",
+    "65cb9ce989"
+   ],
+   "value": "Charges businesses for the physical transportation of goods via ocean and inland networks, alongside fees for supply chain management, warehousing, and operational distribution."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "A company that promotes honesty, integrity, and a strong focus on its people, aiming to build long-term trust with employees and customers."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7e5b7343c"
+   ],
+   "value": "Global businesses, manufacturers, and retailers requiring international freight, domestic transport, and logistics management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d5b8535ef9",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $80,000 - $95,000 base salary for data roles at operational distribution hubs, reflecting regional logistics industry standards."
   },
   "evidence_sha": "ed510c9da51b922a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383476,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d5b8535ef9",
+    "c7e5b7343c"
+   ],
+   "value": "Logistics, Supply Chain, and Transportation."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Focus your questions on how the team balances the 'fast-paced' operational demands with guaranteed shutdowns to ensure sane hours. Screen the hiring manager to determine if tech innovation is genuinely prioritized over corporate bureaucracy, ensuring it doesn't become a burnout environment that sacrifices your personal time."
+  },
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785382240,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Global presence with corporate offices and operational distribution facilities in locations such as Cinnaminson, NJ (United States)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "To promote a culture of honesty and integrity while focusing on its people to build trust with customers and employees, enabling global supply chain solutions."
+  },
   "name": "Maersk",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Estimated: Moderately fast-paced due to the need to manage supply chain operations and react to logistics trends, but structured by corporate processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e5b7343c",
+    "d5b8535ef9"
+   ],
+   "value": "Global container shipping, inland transportation, supply chain management, warehousing, and distribution operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Estimated: 20-25 days of standard paid time off annually, typical for established corporate enterprises."
   },
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Estimated: Likely standard major holidays, but guaranteed company-wide tech shutdowns are not explicitly documented in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7e5b7343c"
+   ],
+   "value": "Public, established global enterprise operating in logistics and shipping worldwide."
   },
   "sources": [
    {
@@ -256603,14 +256853,46 @@
     "url": "https://maersk.wd3.myworkdayjobs.com/maersk_careers/job/United-States-of-AmericaNew-JerseyCinnaminson08077/Supply-Chain-Data-Analyst---Cinnaminson--NJ_R188258-1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Sponsorship context not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c7e5b7343c",
+    "d5b8535ef9"
+   ],
+   "value": "Maersk is an integrated logistics and supply chain company that manages ocean freight, inland transport, and distribution. It makes money by charging customers to store, transport, and manage their goods, data, and supply chain operations globally."
+  },
+  "synthesized_evidence_sha": "ed510c9da51b922a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Data professionals partner with operations leadership to identify trends, develop reporting, and drive data-informed decision-making across fast-paced distribution environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382240,
   "web_search_url": "https://duckduckgo.com/?q=Maersk+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "An AI/DS role here allows you to optimize a massive, real-world supply chain, offering an elite, mission-driven dataset to accelerate your technical learning. However, an established logistics giant may possess the exact slow bureaucracy you want to avoid, potentially conflicting with your desire for a fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d5b8535ef9"
+   ],
+   "value": "Estimated: Moderate work-life balance; you may need to manage multiple priorities in an operational environment, which can occasionally pressure personal time."
   }
  },
  "magellan health": {
@@ -297112,44 +297394,47 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "d9d7d6ca0b",
-    "7df29f8e49"
+    "78c832704b"
    ],
-   "value": "Tier 4 or lower; a state agriculture department is not recognized in AI/data science prestige rankings and offers little exposure to cutting-edge AI work or research."
+   "value": "Not applicable - The focus is on enterprise IT administration and software development, not top-tier AI or data science."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
     "d9d7d6ca0b",
     "7df29f8e49"
    ],
-   "value": "Funded primarily by state appropriations, federal grants, and fees for services (inspections, certifications, pesticide registrations, commodity assessments). It delivers public goods and regulatory services rather than generating commercial profit."
+   "value": "Government agency funded by state and federal budgets (noted as $12.5M in surfaced funding with U.S. investors)."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Stable, procedural, and public-service-oriented. Hierarchical structure typical of government agencies; not associated with remote-first tech culture, innovation-centric values, or intense learning acceleration."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: Traditional, stable, and bureaucratic, focused on public service and structured processes."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
     "d9d7d6ca0b"
    ],
-   "value": "North Carolina farmers and agribusinesses, food manufacturers and retailers, consumers statewide, and other state agencies requiring regulatory and laboratory services."
+   "value": "North Carolina citizens, local agricultural businesses, and consumers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $55,000-$72,000 for Application Developer. Significantly below competitive new-grad tech compensation in the private sector, consistent with North Carolina state government salary bands."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: $60,000 - $75,000. State government salaries are generally lower than private sector tech roles."
   },
   "evidence_sha": "a0855acf29df1bc8",
-  "generated_at": 1785280950,
+  "generated_at": 1785383476,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -297157,14 +297442,16 @@
    "source_ids": [
     "d9d7d6ca0b"
    ],
-   "value": "Government / Public Sector (Agriculture and Consumer Regulation)"
+   "value": "Government Administration / Agriculture"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Given the candidate values elite tech, speed, and high pay — none of which this role provides — interview questions should probe whether the candidate is truly willing to accept slower pace, modest compensation, and bureaucratic processes in exchange for extreme job stability and genuine work-life boundaries."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Be prepared to discuss standard enterprise software and database management rather than cutting-edge AI or high-growth startup culture. Highlight your interest in strictly maintained 40-hour workweeks and sane hours, and ask directly about the reality of bureaucratic pace versus any modern Azure cloud initiatives."
   },
-  "last_attempt_at": 1785280950,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "high",
@@ -297172,46 +297459,56 @@
     "d9d7d6ca0b",
     "7df29f8e49"
    ],
-   "value": "Headquarters in Raleigh, North Carolina, USA. The job posting and corporate address identify Raleigh as the primary location, with field offices throughout the state."
+   "value": "Raleigh, North Carolina, USA."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
     "d9d7d6ca0b"
    ],
-   "value": "To protect and promote agriculture and consumers in North Carolina through regulatory oversight, market development, and public service."
+   "value": "To support, regulate, and promote the agriculture and consumer services industries within the state of North Carolina."
   },
   "name": "North Carolina Department of Agriculture and Consumer Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slow - Government agencies typically operate methodically with formal approvals, waterfall-style development cycles, and legacy system maintenance, not the rapid iteration of tech startups or Big Tech."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: Slow and steady government bureaucracy with a focus on maintaining legacy and enterprise systems."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "d9d7d6ca0b",
-    "5f9cb0b719"
+    "78c832704b",
+    "d9d7d6ca0b"
    ],
-   "value": "Regulatory services (food safety inspections, pesticide regulation, weights and measures enforcement), agricultural development (marketing, research stations, farmland preservation), consumer protection (complaint resolution, product safety), and public outreach (education, farmers markets)."
+   "value": "The organization produces public services, regulatory enforcement, and internal enterprise software components for database management and system administration."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 12-15 days annual leave for new hires (increasing with tenure) plus 12 paid holidays and separate sick leave accrual. Government benefits are generous by law."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: 20-24 days of vacation plus state holidays, typical for a North Carolina state government role."
   },
-  "refresh_after": 1790464950,
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "78c832704b",
+    "d9d7d6ca0b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 12 recognized state holidays; no company-wide week-long shutdowns found in research, but holiday breaks are guaranteed based on the state government calendar."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: Minimal scheduled shutdowns beyond standard state and federal holidays."
   },
   "size_stage": {
    "confidence": "high",
@@ -297219,7 +297516,7 @@
     "d9d7d6ca0b",
     "7df29f8e49"
    ],
-   "value": "1,001-5,000 employees. Founded in 1877. Late Stage (mature government agency). Total listed institutional funding: $12.5M; this likely reflects specific grant funding, not venture capital."
+   "value": "Mature state agency with 1001-5000 employees, founded in 1877."
   },
   "sources": [
    {
@@ -297284,12 +297581,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "d9d7d6ca0b",
-    "7df29f8e49"
+    "d9d7d6ca0b"
    ],
-   "value": "As a North Carolina state government agency, NCDA&CS typically does not sponsor employment-based visas. Positions generally require U.S. citizenship or permanent residency."
+   "value": "As a U.S. state government agency, it is highly unlikely to offer visa sponsorship for international candidates."
   },
   "status": "ready",
   "summary": {
@@ -297298,29 +297594,33 @@
     "d9d7d6ca0b",
     "7df29f8e49"
    ],
-   "value": "The North Carolina Department of Agriculture and Consumer Services (NCDA&CS) is a state government agency founded in 1877 that regulates, promotes, and protects North Carolina's $100B+ agriculture industry while safeguarding consumers. It operates divisions covering food safety, agronomy, livestock, forestry, environmental programs, and consumer protection services."
+   "value": "The North Carolina Department of Agriculture and Consumer Services (NCDA&CS) is a state government agency founded in 1877 that regulates and supports the state's agricultural industry. It is funded through state and federal appropriations rather than traditional commercial revenue."
   },
-  "synthesized_evidence_sha": "5613b9533bfb5512",
+  "synthesized_evidence_sha": "a0855acf29df1bc8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "7df29f8e49",
-    "d9d7d6ca0b"
+    "78c832704b",
+    "7df29f8e49"
    ],
-   "value": "Full-stack application development and maintenance using C#, ASP.NET MVC, SQL Server, Azure DevOps, and Visual Studio. Work involves systems analysis, computer programming, software testing, and supporting internal and public-facing regulatory and agricultural information systems."
+   "value": "Software development, database management, and enterprise system administration. The tech stack includes C#, ASP.NET MVC, SQL Server, Azure DevOps, Azure App Services, Azure SQL, SharePoint, and Microsoft Active Directory/Entra ID."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643843,
   "web_search_url": "https://duckduckgo.com/?q=North+Carolina+Department+of+Agriculture+and+Consumer+Services+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "This employer fits the candidate's priorities only for work-life balance: government roles offer predictable schedules and minimal burnout, which supports personal time and rest. However, it fundamentally conflicts with the candidate's desire for elite prestige, high new-grad pay, and a fast innovative tech culture: state government IT is typically a slow, bureaucratic environment with legacy systems and below-market compensation."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "This role provides a mission-driven environment tied to public service and agriculture, which may align with guaranteed government hours and shutdowns for strong work-life balance. However, as a state bureaucracy, it will not deliver the elite new-grad pay, fast-paced innovative tech culture, or high-level AI career acceleration you are prioritizing."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Excellent. State government employment is generally known for standard 37.5-40-hour weeks, predictable schedules, and minimal after-hours work, aligning with the candidate's need for sane hours."
+   "source_ids": [
+    "d9d7d6ca0b"
+   ],
+   "value": "Estimated: High. Government jobs typically mandate strict 40-hour workweeks to prevent burnout."
   }
  },
  "north star staffing solutions": {
@@ -323526,7 +323826,7 @@
    "value": "Plaid holds a strong industry-specific prestige as a top-tier fintech employer, particularly recognized for data engineering and applied machine learning, though it is less broadly known for pure AI research compared to dedicated AI labs."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -323550,7 +323850,7 @@
    ],
    "value": "Customers are primarily fintech apps (like Venmo and Robinhood), digital banks, lending platforms, and traditional financial institutions that need to access or verify user financial data."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -323580,7 +323880,7 @@
    ],
    "value": "Focus on assessing the team's actual pace, work-life balance, and technical mentorship structure for new grads. Ask questions about sane working hours, guaranteed shutdowns, the avoidance of toxic burnout culture, and how the specific AI/Data Science team accelerates learning without sacrificing personal time."
   },
-  "last_attempt_at": 1784834780,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "low",
@@ -323621,6 +323921,7 @@
    "value": "Estimated: Flexible PTO policies standard for top-tier tech firms, typically allowing 15 to 20 days of accrued base vacation alongside company holidays."
   },
   "refresh_after": 1790018780,
+  "retry_after": 1785405076,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -323712,7 +324013,7 @@
    ],
    "value": "Exact visa policy is not fully detailed in the provided resources, though as a large-scale fintech employer, it typically sponsors visas for specialized technical roles. Candidates should verify specifics directly with recruiters."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -348337,34 +348638,32 @@
  "remitly": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "Estimated: Tier 2. While Remitly is a recognized tech brand with strong fintech data applications, it is not primarily known for cutting-edge AI or data science research compared to dedicated AI labs or top-tier big tech."
+   "source_ids": [],
+   "value": "Estimated: Tier 2. While Remitly is a highly respected fintech with elite-tier pay, the sourced job postings focus primarily on fullstack software engineering rather than dedicated, elite-tier AI or data science roles."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "d7d8801220"
    ],
-   "value": "Financial services company generating revenue through transaction fees and FX rate margins on international money transfers."
+   "value": "Financial services company generating revenue through secure and reliable money management solutions."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "d7d8801220"
+    "ec32749950"
    ],
-   "value": "Estimated: Mission-driven, secure, and reliable, with a focus on building practical fullstack financial services."
+   "value": "Collaborative and mission-driven, emphasizing that true innovation sparks when coming together."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "9a283ec2b5",
-    "d7d8801220"
+    "d7d8801220",
+    "ec32749950"
    ],
-   "value": "Individuals and families needing to send money internationally, particularly immigrant populations managing cross-border finances."
+   "value": "Individuals who need secure, reliable, and cross-border money management solutions for their funds."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -348372,10 +348671,10 @@
    "source_ids": [
     "d7d8801220"
    ],
-   "value": "Estimated: $124K/yr - $155K/yr (publicly listed base range for entry-level Software Development Engineer I)."
+   "value": "$124,000 - $155,000 per year for entry-level fullstack software engineers."
   },
   "evidence_sha": "ac0919a86c07c87f",
-  "generated_at": 1785354288,
+  "generated_at": 1785383476,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -348386,59 +348685,58 @@
    "source_ids": [
     "d7d8801220"
    ],
-   "value": "Financial Services / Fintech"
+   "value": "Financial Services / Fintech."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "Candidates should emphasize their readiness to contribute quickly to high-stakes, fast-paced product development using TypeScript, React, Node.js, and Kotlin. To align with the candidate's drive for learning and balance, ask targeted questions about team pace, on-call expectations, and how the engineering culture supports rapid technical growth without breeding burnout."
+   "source_ids": [],
+   "value": "To ensure the company meets your WLB and fast-paced culture requirements, ask specific questions during the interview about the team's on-call expectations, typical sprint pacing, and how the 'Connected Work Culture' translates to actual day-to-day hours. Probe into how quickly new grads can take ownership of major features to guarantee your need for accelerated technical learning and career growth is met without leading to burnout."
   },
-  "last_attempt_at": 1785354288,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "ec32749950",
     "d7d8801220"
    ],
-   "value": "Arlington, VA (with hybrid work arrangements for certain roles)."
+   "value": "Arlington, Virginia, United States (Hybrid work model)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "d7d8801220"
+    "ec32749950"
    ],
-   "value": "To provide secure and reliable money management solutions."
+   "value": "To provide everyone the freedom to access, move, and manage their money wherever life takes them."
   },
   "name": "Remitly",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "Estimated: Fast-paced and innovative, typical of a scaling fintech company balancing new feature development with secure engineering."
+   "source_ids": [],
+   "value": "Estimated: Fast-paced and innovation-driven, characteristic of a modern fintech company, rather than slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "9a283ec2b5",
-    "d7d8801220"
+    "d7d8801220",
+    "9a283ec2b5"
    ],
-   "value": "Digital remittance and money transfer applications (including an Android app) designed for secure, reliable money management."
+   "value": "Digital financial services and secure money management applications."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "d7d8801220"
+    "ec32749950"
    ],
-   "value": "Estimated: 20-25 days of standard paid time off."
+   "value": "Estimated: Flexible paid time off (exact daily accrual not public, but typically estimated around 20-25 days for established tech firms of this stage)."
   },
-  "refresh_after": 1790538288,
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "ec32749950",
     "d7d8801220"
    ],
    "value": "None found in research."
@@ -348446,18 +348744,16 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "Estimated: Unknown if guaranteed shutdowns exist, but standard corporate holidays are observed."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdown days explicitly mentioned in the provided sources, though flexible PTO is available."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "d7d8801220",
-    "ac51e0f780"
+    "1db9db9c4d",
+    "d7d8801220"
    ],
-   "value": "Publicly traded, established fintech company operating at a global scale."
+   "value": "Established, publicly-traded fintech company actively hiring for entry-level and experienced engineering roles."
   },
   "sources": [
    {
@@ -348524,42 +348820,40 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
+    "ec32749950",
     "d7d8801220"
    ],
-   "value": "Not explicitly found in research."
+   "value": "Not explicitly mentioned in the provided sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "d7d8801220"
+    "d7d8801220",
+    "ec32749950"
    ],
-   "value": "Remitly is a financial services company that provides secure and reliable digital money management and transfer solutions. It makes money by facilitating cross-border remittances and charging transaction fees or foreign exchange margins on the money its customers send globally."
+   "value": "Remitly is a financial services company that provides secure and reliable money management solutions, allowing users to access, move, and manage their money internationally. It generates revenue by facilitating cross-border money transfers and charging associated transaction and foreign exchange fees."
   },
-  "synthesized_evidence_sha": "0c527e62aca74138",
+  "synthesized_evidence_sha": "ac0919a86c07c87f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "d7d8801220"
    ],
-   "value": "Fullstack software development utilizing TypeScript, React, Node.js, Java, and Kotlin to build and scale financial applications."
+   "value": "Fullstack software development utilizing TypeScript, React, Node.js, Java, and Kotlin."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Remitly+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "As a fintech, Remitly offers a compelling intersection of elite new-grad pay and meaningful mission-driven work, deploying high-traffic financial systems at a rapid pace. It provides a fast, innovative tech culture that enables smart engineers to accelerate technical learning while avoiding the slow bureaucracy typical of legacy financial institutions."
+   "source_ids": [],
+   "value": "Remitly lines up well with your priorities: it is a mission-driven fintech solving global financial mobility, and the stated new-grad compensation ($124K-$155K) meets your requirement for high, elite-tier pay. Their tech stack (TypeScript, React, Java, Kotlin) indicates a modern environment that accelerates learning without the slow bureaucracy of legacy banks, while their 'Connected Work Culture' and emphasis on driving innovation together suggest a collaborative, non-toxic environment that res"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "d7d8801220"
-   ],
-   "value": "Estimated: Generally sane hours with a mission-driven culture, though launch cycles and financial compliance requirements can cause sprint crunches."
+   "source_ids": [],
+   "value": "Estimated: Good to Moderate. The company advertises a connected work culture, mental health benefits, and flexible time off, though actual work-life balance in fintech often fluctuates with release cycles."
   }
  },
  "remodel health": {
@@ -404304,111 +404598,94 @@
  "t mobile": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
-   ],
-   "value": "Tier 1 (Fortune 50, massive proprietary data, 5G+AI convergence, publishes at top conferences, recruits from PhD programs)"
+   "source_ids": [],
+   "value": "Estimated: Mid-tier. As a massive telecom, it offers elite data challenges but is less prestigious than FAANG"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "Recurring service revenue from wireless subscriptions (majority), equipment installment plans, wholesale/roaming, and emerging adjacencies (home internet, advertising, IoT). Capital-intensive network infrastructure investment drives scale advantages."
+   "value": "Telecommunications subscription model relying on monthly service contracts, prepaid plans, and mobile device sales, delivered through highly available technical infrastructure."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: High-energy, competitive but collaborative, \"magenta\" brand pride, direct communication, data-driven decisions, strong DEI focus. Less hierarchical than AT&T/Verizon; leaders accessible. Risk: rapid re-orgs and metric pressure."
+   "confidence": "high",
+   "source_ids": [
+    "3f95c4d355"
+   ],
+   "value": "Supportive and growth-oriented, described as giving employees the 'big love' they give customers, with a shared drive to aim high."
   },
   "customers": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "abbf14798d"
    ],
-   "value": "~120 million U.S. wireless customers (consumers, families, small businesses, large enterprises, government, and wholesale/MVNO partners)."
+   "value": "General consumers, families, and businesses seeking postpaid or prepaid wireless service and internet connectivity."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $145k-$175k base + $30k-$60k sign-on + $40k-$80k RSU (4-yr) = $215k-$315k year-1 total; AI/DS PhDs at high end. Bellevue/Seattle premium."
+   "value": "Estimated: $85,000 - $110,000 base salary, competitive for the Kansas City metro area and mid-level tech markets."
   },
   "evidence_sha": "940da106b449ff6c",
-  "generated_at": 1784887517,
+  "generated_at": 1785383476,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "abbf14798d"
    ],
-   "value": "Telecommunications / Wireless Carrier / 5G Infrastructure"
+   "value": "Telecommunications"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
-   ],
-   "value": "Expect heavy emphasis on production ML systems (scale, latency, reliability), telecom-domain problems (churn, network optimization, spectrum), and behavioral alignment with \"customer-first\" and \"bias for action\" values. Prepare for system design with real-time streaming data, SQL/analytics case studies, and cross-functional collaboration scenarios."
+   "source_ids": [],
+   "value": "Candidates should emphasize their drive to grow technically and their ability to thrive in scalable environments, balancing innovation with the company's shared drive. Prepare to discuss how you contribute to a culture of mutual growth while maintaining peak technical performance and healthy personal time boundaries."
   },
-  "last_attempt_at": 1784887517,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "Headquarters: Bellevue, WA. Major tech hubs: Seattle, Bellevue, Overland Park (KS), Frisco (TX), Atlanta, New York. Remote/hybrid options vary by role; many AI/DS roles offer flexibility."
+   "value": "Primary tech hubs located in Overland Park, Kansas, alongside various other corporate offices nationwide."
   },
   "mission": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "To be the best in the world at connecting customers to their world — delivering superior network experience, value, and service while disrupting legacy carrier practices."
+   "value": "To help employees grow in their careers while maintaining the shared drive to aim high, which drives T-Mobile's business and culture forward."
   },
   "name": "T-Mobile",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast — quarterly network/feature cadence, hackathon culture, leadership expects rapid iteration; but core network changes require rigorous testing. Varies by org: AI/Research faster than Network Operations."
+   "value": "Estimated: Fast-paced and results-driven, focused on scalable environments, though typical of large corporate structures."
   },
   "products": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "Consumer and business wireless plans (postpaid, prepaid, MVNO), 5G network access, home internet (5G Fixed Wireless), device sales/financing, IoT connectivity, and enterprise solutions."
+   "value": "Wireless voice and data plans, mobile hotspots, smartphones, and enterprise software solutions focused on scalable and highly available environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days accrued + 10-12 company holidays + unlimited discretionary (manager-approved); no guaranteed minimum shutdown beyond standard holidays."
+   "value": "Estimated: 20-25 days of standard paid time off, typical for a major U.S. telecom employer of this size."
   },
-  "refresh_after": 1790071517,
+  "refresh_after": 1790567476,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -404418,16 +404695,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdown; some teams observe \"No Meeting Fridays\" or summer slowdowns voluntarily. Standard holiday closures only."
+   "value": "Estimated: Limited guaranteed shutdowns, likely restricted to standard national holidays rather than extended company-wide breaks."
   },
   "size_stage": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "21323a20aa"
    ],
-   "value": "Large public company (NASDAQ: TMUS); ~65,000 employees; $80B+ annual revenue; mature but investing heavily in 5G build-out and digital transformation."
+   "value": "A large, established publicly traded enterprise operating nationwide."
   },
   "sources": [
    {
@@ -404472,50 +404747,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "Actively sponsors H-1B and green cards for specialized technical roles (AI/ML, data science, cloud, network engineering). History of cap-exempt university partnerships and STEM OPT support."
+   "value": "Not explicitly stated in available materials, though corporate diversity and ADA accommodation requests are supported during hiring."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "T-Mobile is a major U.S. wireless telecommunications provider delivering mobile voice, data, and 5G services to consumers and businesses. It operates as the \"Un-carrier\" challenging industry norms with customer-friendly policies."
+   "value": "T-Mobile is a major U.S. telecommunications provider that supplies nationwide wireless connectivity and mobile internet services. The company makes money by selling monthly postpaid and prepaid voice/data plans, as well as hardware and enterprise networking solutions."
   },
-  "synthesized_evidence_sha": "61f93da02ab74030",
+  "synthesized_evidence_sha": "940da106b449ff6c",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
+    "3f95c4d355"
    ],
-   "value": "Large-scale distributed systems, real-time network analytics, 5G core/edge cloud, AI/ML for network optimization & customer personalization, data platforms (petabyte-scale), automation/orchestration, cybersecurity, and consumer-facing apps."
+   "value": "Software engineering roles developing and deploying solutions that meet customer requirements for scalable, highly available tech environments, supporting career growth."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680197,
   "web_search_url": "https://duckduckgo.com/?q=T-Mobile+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "abbf14798d",
-    "21323a20aa",
-    "f55af4e5d6"
-   ],
-   "value": "T-Mobile offers elite AI/DS prestige as a Fortune 50 company transforming telecom with 5G and AI at massive scale, paying top-of-market new-grad compensation. Its \"Un-carrier\" culture emphasizes speed, innovation, and customer obsession over bureaucracy, with public commitments to work-life balance (e.g., \"No meetings Fridays\" pilots, flexible PTO) and structured technical growth programs — rare in legacy telcos."
+   "source_ids": [],
+   "value": "Aligns with the candidate's fast, innovative tech culture while avoiding slow bureaucracy, making it a strong consideration for those seeking high new-grad pay and accelerated technical learning. The publicly stated focus on employee career growth and high availability engineering offers elite learning opportunities without sacrificing personal respect."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.8/5 — company promotes flexible schedules, \"unlimited\" PTO (manager-discretion), and recent WLB initiatives; however, on-call rotations (network) and project crunches exist. AI/DS roles generally report better balance than ops."
+   "value": "Estimated: Good. Emphasis on employee growth and big love culture suggests sane hours, though corporate requirements can occasionally fluctuate."
   }
  },
  "t rex solutions": {
@@ -433912,7 +434177,7 @@
    "value": "Tier 2 — Respected applied AI in mission-critical government domains; not a primary research lab but growing ML engineering reputation with real-world deployment scale."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -433928,7 +434193,7 @@
    "source_ids": [],
    "value": "Primary customers are U.S. local and state government agencies, school districts, courts, and public sector entities. The company serves over 44,000 installations across all 50 states."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -433951,7 +434216,7 @@
    "source_ids": [],
    "value": "Expect practical coding (LeetCode medium), system design for high-availability public systems, SQL/data modeling, and behavioral questions on stakeholder management and compliance awareness. AI/DS roles add ML fundamentals, model deployment, and ethics/fairness discussions. Domain knowledge of government processes is a plus but not required."
   },
-  "last_attempt_at": 1784866231,
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "estimated",
@@ -433981,6 +434246,7 @@
    "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2-3 floating days; accrues with tenure. Unlimited sick leave. Parental leave 6-12 weeks paid."
   },
   "refresh_after": 1790050231,
+  "retry_after": 1785383716,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -434034,7 +434300,7 @@
    "source_ids": [],
    "value": "Estimated: H-1B sponsor for specialized engineering and data science roles; green card sponsorship typically for senior/lead positions. Public sector contracts may impose citizenship requirements on certain programs."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -444076,11 +444342,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -444092,6 +444360,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1785383476,
   "last_evidence_at": 1785376556,
   "name": "University of Virginia Investment Management Company (UVIMCO)",
   "pace_of_work": {
@@ -444104,6 +444373,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785383596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -444177,7 +444447,7 @@
     "url": "https://job-boards.greenhouse.io/uvimco/jobs/5225269008"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785376556,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Virginia+Investment+Management+Company+%28UVIMCO%29+company+careers+benefits",
