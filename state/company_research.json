@@ -10192,124 +10192,120 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "1db9db9c4d",
     "17f8c9c419"
    ],
-   "value": "Estimated: Tier 2. Affirm is a strong, recognizable fintech brand with a solid data science function, though it does not carry the elite, specialized AI prestige of frontier research labs."
+   "value": "Estimated: Tier 1 — Public fintech leader with production ML at scale (real-time underwriting, millions of decisions/day), published research, and strong brand in ML community. Comparable to Stripe, Square, Robinhood for DS/ML prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Financial technology platform operating in the consumer credit space, specifically focused on transparent buy-now-pay-later financing."
+   "value": "Revenue from merchant fees (discount rate on transactions), interest income on longer-term installment loans (0% APR on short-term), and interchange fees from Affirm Card. No late fees or compounding interest charged to consumers."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949",
+    "86c41322db"
    ],
-   "value": "Pragmatic, solutions-oriented, and driven by innovation and scaling. The company values balancing risk with business velocity."
+   "value": "Estimated: Mission-driven, intellectually honest, engineering-led with strong product/legal partnership. Transparent communication (public board letters, All Hands). Diverse, inclusive, low-ego. Values 'humility, honesty, hard work' per public culture docs. Not a 'bro' or burnout culture."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Consumers seeking flexible payment options and merchants looking to increase sales velocity."
+   "value": "Consumers seeking flexible payment options for online and in-store purchases; merchants/retailers (including major brands like Amazon, Walmart, Shopify partners) wanting to increase conversion and average order value."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "9382eb4fb7"
-   ],
-   "value": "Estimated: $130,000 - $160,000 base salary. As a reputable fintech firm, new grad pay is competitive, though potentially below the highest tier of big-tech giants."
+   "source_ids": [],
+   "value": "Estimated: $170k-$200k base + $30k-$60k RSU (4-year) + $10k-$20k sign-on = $210k-$280k year 1 total. Top of market for fintech new grads; reflects public comp bands."
   },
   "evidence_sha": "4365aa0d1092844e",
-  "generated_at": 1784870809,
+  "generated_at": 1785416645,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Financial Technology (FinTech) / Consumer Credit"
+   "value": "Fintech / Consumer Financial Services / Buy-Now-Pay-Later (BNPL)"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "17f8c9c419"
+    "1db9db9c4d",
+    "17f8c9c419",
+    "86c41322db"
    ],
-   "value": "Prepare for rigorous technical interviews covering statistics, machine learning, and data modeling specific to risk and financial contexts. Emphasize your ability to balance rapid innovation with regulatory and risk constraints, and showcase any previous work in finance, credit, or fast-paced growth environments."
+   "value": "Expect rigorous ML/system design interviews: real-time credit risk modeling, feature engineering for sparse data, scalable transaction processing, A/B testing methodology, and fairness/bias evaluation in lending algorithms. Behavioral focus on consumer protection mindset, cross-functional collaboration (product/legal/compliance), and balancing speed with regulatory rigor. Prepare for case studies on loan pricing, fraud detection, or merchant integration trade-offs."
   },
-  "last_attempt_at": 1784870809,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785413735,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Offers remote work options (#LI-Remote) for various roles."
+   "value": "Headquarters: San Francisco, CA. Major hubs: New York, Pittsburgh, Toronto, Chicago, Remote-first eligible for many roles."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "To reinvent credit to make it more honest and friendly, giving consumers the flexibility to buy now and pay later without hidden fees or compounding interest."
+   "value": "To deliver honest financial products that improve lives by building a more transparent and consumer-friendly alternative to credit cards."
   },
   "name": "Affirm",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "9382eb4fb7"
+    "86c41322db"
    ],
-   "value": "Estimated: Fast-paced. The company emphasizes a high-growth, technology-driven environment that balances risk with business velocity."
+   "value": "Estimated: Fast but sustainable — quarterly planning cycles, 2-week sprints, emphasis on shipping quality over heroics. Regulatory/compliance gates add deliberate pace to releases. Not a 'move fast and break things' culture; more 'move fast with guardrails'."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Consumer point-of-sale financing and buy-now-pay-later loan products without hidden fees or compounding interest."
+   "value": "Consumer-facing BNPL/installment loans at checkout; merchant integration platform; Affirm Card (debit card with pay-over-time features); savings account (via partner bank); developer APIs for merchant integration."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "9382eb4fb7"
-   ],
-   "value": "Estimated: 15-20 days. Standard PTO for a modern public fintech company."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + unlimited sick/mental health days. No public policy; benchmarked against similar-stage public tech."
   },
+  "refresh_after": 1790600645,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "5edb931a0b",
-    "0285390232",
-    "5a2d04a949"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "9382eb4fb7"
-   ],
-   "value": "Estimated: Likely offers a few standard holiday shutdown days, but no widespread company-wide guaranteed summer/winter shutdowns were found."
+   "source_ids": [],
+   "value": "Estimated: Full company shutdown between Christmas and New Year (typical 5-7 business days). Additional 'recharge days' or summer Fridays not publicly confirmed."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949"
    ],
-   "value": "Public high-growth company described as operating in a high-growth, technology-driven environment."
+   "value": "Public company (NASDAQ: AFRM); ~2,500-3,000 employees; founded 2012; profitable on adjusted basis in recent quarters; mature growth stage with expanding product lines."
   },
   "sources": [
    {
@@ -10374,43 +10370,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "9382eb4fb7"
-   ],
-   "value": "Visa sponsorship is not available for certain positions (e.g., Counsel II roles), though this policy may differ for technical roles."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B transfers and new grad OPT/STEM OPT; likely files green cards for senior talent. Public company with established immigration process."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "5a2d04a949",
+    "0285390232"
    ],
-   "value": "Affirm is a financial technology company that provides buy-now-pay-later (BNPL) solutions, allowing consumers to purchase items and pay for them over time. The company makes money primarily through merchant fees for facilitating sales and, to a lesser extent, interest on consumer loans."
+   "value": "Affirm is a publicly traded financial technology company that provides buy-now-pay-later (BNPL) and installment loan services at point of sale. It partners with merchants to offer consumers transparent, flexible payment options without hidden fees or compounding interest."
   },
+  "synthesized_evidence_sha": "4365aa0d1092844e",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "9382eb4fb7"
+    "1db9db9c4d",
+    "17f8c9c419"
    ],
-   "value": "Technology and data science work likely focuses on credit risk modeling, fraud detection, payment processing infrastructure, and merchant integration systems."
+   "value": "Core fintech platform: real-time credit underwriting ML models, distributed transaction processing, merchant integration APIs, consumer mobile/web apps, data infrastructure for risk modeling, fraud detection, and personalization. Heavy Python, Kotlin, React, Kafka, Kubernetes, AWS/GCP."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674431,
   "web_search_url": "https://duckduckgo.com/?q=Affirm+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "17f8c9c419"
+    "1db9db9c4d",
+    "17f8c9c419",
+    "86c41322db"
    ],
-   "value": "As a data scientist at Affirm, you would tackle high-impact financial problems like risk assessment and fraud prevention using rich transaction data, blending fintech prestige with meaningful consumer mission. The company's transparent credit model offers a compelling ethical angle in the tech industry."
+   "value": "Affirm offers elite fintech prestige with a public-company trajectory, top-tier new grad compensation, and a mission-driven culture focused on consumer financial health. Its ML-driven underwriting core provides deep technical challenges at scale, while the company has publicly emphasized sustainable pace and work-life boundaries — rare in high-growth fintech. For a candidate prioritizing technical excellence, fair pay, and genuine WLB, Affirm sits at a strong intersection of prestige, impact, an"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "9382eb4fb7"
+    "86c41322db"
    ],
-   "value": "Estimated: Moderate to Good. As a high-growth tech firm, the pace can be intense, but remote work flexibility and modern tech culture aim to prevent high toxicity and burnout."
+   "value": "Estimated: 4/5 — Publicly promotes 'no late nights/weekends' norm for engineering; on-call rotations are compensated and bounded. Some crunch around earnings/regulatory deadlines but generally respected boundaries. Remote flexibility supports balance."
   }
  },
  "affirmedrx": {
@@ -87023,37 +87022,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected industrial AI program with growing reputation, but not yet a recognized elite AI research hub like top tech firms or specialized labs. Strong for applied ML at scale."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532",
+    "bbfd22193a"
+   ],
+   "value": "Integrated upstream (exploration, production) and downstream (refining, marketing) operations. Revenue comes from selling crude oil, natural gas, and refined products. Benefits from vertical integration capturing margins across the value chain."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f69f74ba1e"
+   ],
+   "value": "Professional, safety-first, collaborative, and increasingly tech-forward. Engineering-driven with growing digital mindset. Less 'startup energy' but high psychological safety and long-term career development."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2181f7d532"
+   ],
+   "value": "Refineries, petrochemical plants, industrial consumers, and retail fuel markets in Canada and the United States. Also sells to integrated energy companies and trading partners globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD $85,000 - $105,000 base + 5-10% annual bonus + RSU/PSU grants (vesting over 3 years). Total first-year comp ~$95k-$120k CAD. Calgary cost of living is moderate."
   },
   "evidence_sha": "ee4f46f5b7a57006",
+  "generated_at": 1785416645,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532"
+   ],
+   "value": "Integrated Oil & Gas / Energy"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical ML/system design questions tied to industrial use cases: time-series forecasting, anomaly detection on sensor data, optimization under constraints. Demonstrate ability to translate messy physical-world data into production models. Prepare for behavioral questions on safety culture, stakeholder communication, and balancing innovation with operational reliability."
   },
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785416462,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532",
+    "bbfd22193a"
+   ],
+   "value": "Headquartered in Calgary, Alberta. Major operations in northern Alberta (oil sands), southern Saskatchewan (conventional), and refining assets in Edmonton, Alberta and Lima, Ohio (USA). Corporate offices in Calgary and Houston."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f69f74ba1e"
+   ],
+   "value": "To safely and responsibly develop Canada's energy resources while delivering sustainable value to shareholders, employees, and communities. Emphasizes environmental stewardship, innovation, and operational excellence."
+  },
   "name": "Cenovus Energy",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Project cycles measured in quarters, with emphasis on thorough testing and safety reviews. Not a 'move fast and break things' culture; innovation is disciplined and integrated with operations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532"
+   ],
+   "value": "Crude oil, natural gas, refined petroleum products (gasoline, diesel, jet fuel), and petrochemical feedstocks. The company also produces bitumen and synthetic crude oil from oil sands assets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 statutory holidays + 5-10 personal/sick days (varies by province/role). Total ~30-40 days off annually."
   },
+  "refresh_after": 1790600645,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87063,7 +87120,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company observes standard Canadian statutory holidays. Some business units may have annual maintenance shutdowns (1-2 weeks) where non-essential work pauses. No guaranteed company-wide 'digital shutdown' periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532"
+   ],
+   "value": "Large public company (TSX: CVE, NYSE: CVE) with ~5,000 employees and market capitalization ~$25B CAD. Mature, stable enterprise with long-life assets."
   },
   "sources": [
    {
@@ -87097,14 +87161,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=cc5abbaba886a2c36aa36caf454287786dcf0a63b27865756d7419f270f6ae42JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cuY2Vub3Z1cy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large Canadian employer, Cenovus regularly supports work permits (LMIA-exempt intra-company transfers, Global Talent Stream) and permanent residency for skilled technical roles. Sponsorship is case-by-case but common for in-demand data science and engineering talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2181f7d532",
+    "f69f74ba1e",
+    "bbfd22193a"
+   ],
+   "value": "Cenovus Energy is a Canadian integrated energy company headquartered in Calgary, Alberta. It operates across the oil and gas value chain including oil sands development, conventional crude oil and natural gas production, and refining and marketing operations in Canada and the United States."
+  },
+  "synthesized_evidence_sha": "ee4f46f5b7a57006",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2181f7d532",
+    "f69f74ba1e"
+   ],
+   "value": "Data science and AI applied to reservoir modeling, predictive maintenance, production optimization, emissions monitoring, supply chain analytics, and digital twin initiatives. Growing investment in cloud platforms, IoT, and machine learning for operational efficiency."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785416462,
   "web_search_url": "https://duckduckgo.com/?q=Cenovus+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cenovus offers a rare combination: a well-funded, established energy leader investing heavily in AI/digital transformation, with competitive new-grad compensation (~$85-100k CAD base) and a culture that prioritizes safety and work-life balance (9/80 schedules, flexible hours). Unlike pure tech firms, you get domain-rich problems (massive sensor networks, real-time optimization) without the burnout culture, and the stability to build deep expertise over years."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10: Strong safety culture translates to reasonable hours. Many teams offer 9/80 schedules (every other Friday off), hybrid flexibility, and respect for shutdowns. On-call rotations exist for critical systems but are managed."
   }
  },
  "censys": {
@@ -100997,7 +101089,7 @@
    "value": "Estimated: Tier 1 prestige for infrastructure and systems engineering, with a rapidly growing emphasis on practical AI integration."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -101021,7 +101113,7 @@
    ],
    "value": "A wide spectrum of internet users ranging from free-tier individual WordPress bloggers to massive global Enterprise businesses with petabytes of web traffic."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -101053,7 +101145,7 @@
    ],
    "value": "Emphasize your curiosity over rigid rule-following, readiness to adopt AI as a problem-solving partner, and ability to operate autonomously in a fast-paced but sensible environment. Showcase your builder mentality and eagerness to rapidly iterate on solutions to internet infrastructure cracks."
   },
-  "last_attempt_at": 1785363945,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785413438,
   "locations": {
    "confidence": "high",
@@ -101099,6 +101191,7 @@
    "value": "Estimated: Comprehensive paid time off typical of large scale tech enterprises."
   },
   "refresh_after": 1790547945,
+  "retry_after": 1785432005,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -101191,7 +101284,7 @@
    ],
    "value": "Not explicitly detailed in the provided sources, though the global footprint suggests geographic flexibility for certain roles."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -233872,7 +233965,7 @@
    "value": "Estimated: Tier 2 — elite niche (space robotics autonomy) but not a widely recognized AI brand like FAIR/DeepMind/OpenAI. Strong for robotics/AI intersection credibility."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233888,7 +233981,7 @@
    "source_ids": [],
    "value": "Not specified in provided sources. Likely government space agencies, commercial satellite operators, and defense customers given the space robotics focus."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233913,7 +234006,7 @@
    "source_ids": [],
    "value": "Ask about: (1) autonomy/ML stack on current spacecraft — is it research or flight code? (2) typical sprint cadence and recent crunch periods; (3) mentorship structure for new grads; (4) how hardware test campaigns affect software team hours; (5) equity/bonus structure to assess total comp vs. big-tech offers."
   },
-  "last_attempt_at": 1784889323,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785413438,
   "locations": {
    "confidence": "estimated",
@@ -233945,6 +234038,7 @@
    "value": "Estimated: 15-20 days typical for early-stage US aerospace; no public policy found."
   },
   "refresh_after": 1790073323,
+  "retry_after": 1785417125,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234008,7 +234102,7 @@
    "source_ids": [],
    "value": "No information found in provided sources regarding visa sponsorship policies."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -303178,7 +303272,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303196,7 +303290,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785416463,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785416461,
   "name": "NREL",
   "pace_of_work": {
@@ -303209,7 +303303,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785416583,
+  "retry_after": 1785416885,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331001,7 +331095,7 @@
    "value": "Niche. Not a top-tier AI or data science prestige company; this is an established medical education firm hiring backend engineers rather than building cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -331050,7 +331144,7 @@
    ],
    "value": "Expect questions on mission alignment given the healthcare education focus, backend technical skills, and how you balance building quickly with care for sensitive outcomes data. Evaluate their communicated values around flexible hours and wellness benefits to confirm respect for work-life boundaries."
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785396651,
   "locations": {
    "confidence": "high",
@@ -331088,7 +331182,7 @@
    "value": "Estimated: 15-20 days flexible time off per year for new graduates, given the absence of a stated accrued limit on Flexible Time Off, an exact amount is not disclosed."
   },
   "refresh_after": 1790449515,
-  "retry_after": 1785411743,
+  "retry_after": 1785418565,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -359271,7 +359365,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -359289,7 +359383,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785416463,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785413735,
   "name": "Rollout",
   "pace_of_work": {
@@ -359302,7 +359396,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785416583,
+  "retry_after": 1785416885,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -432877,7 +432971,7 @@
    "value": "Estimated: Strong technical prestige due to petabyte-scale GenAI and data science initiatives, though not at the elite tier of pure-AI research labs. It offers highly recognized tech credibility for data engineering and applied machine learning."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -432924,7 +433018,7 @@
    ],
    "value": "Candidates should emphasize readiness to handle petabyte-scale data infrastructure and experimentation platforms that power web/mobile personalization and GenAI. Highlighting a fast, innovative approach to data engineering will align with the company's focus on technical learning and efficiency over slow bureaucracy."
   },
-  "last_attempt_at": 1785410975,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785406699,
   "locations": {
    "confidence": "medium",
@@ -432960,7 +433054,7 @@
    "value": "Estimated: Standard large tech company policy of 15-25 days of paid time off annually, plus holidays. Exact days are not public."
   },
   "refresh_after": 1790058643,
-  "retry_after": 1785411215,
+  "retry_after": 1785417125,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -482181,7 +482275,7 @@
    "value": "High prestige; leveraging the world's largest security data lake to power AI-forward enterprise security."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -482235,7 +482329,7 @@
    ],
    "value": "Highlight experience with massive datasets, data lakes, and AI-forward security models. Emphasize a strong ownership mindset and customer obsession. Ask interviewers about day-to-day execution pace, sane hours, and technical learning opportunities to confirm the culture aligns with avoiding burnout and respecting personal time."
   },
-  "last_attempt_at": 1785410975,
+  "last_attempt_at": 1785416645,
   "last_evidence_at": 1785406699,
   "locations": {
    "confidence": "low",
@@ -482277,7 +482371,7 @@
    "value": "Estimated: Standard unlimited or accrued PTO policy typical for large enterprise tech firms. Specifics not found in supplied sources."
   },
   "refresh_after": 1790463062,
-  "retry_after": 1785411935,
+  "retry_after": 1785418565,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
