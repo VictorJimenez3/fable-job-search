@@ -476772,43 +476772,113 @@
  },
  "workiva": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd"
+   ],
+   "value": "Strong tier-2: A recognized leader in a specialized, high-value niche (financial reporting and compliance) with a customer base of elite enterprises. Not a 'Magnificent Seven' general AI firm, but offers high prestige within business software and data integrity circles."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva operates a B2B SaaS model, selling subscriptions to its cloud platform and related professional services. Revenue is largely recurring, driven by multi-year enterprise contracts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd"
+   ],
+   "value": "The culture is described as ethical, mission-focused, and highly collaborative, centered on building a reliable product that customers depend on for critical reporting. The vibe is professional, supportive, and purpose-driven rather than flashy or growth-at-all-costs."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d79b1fbd",
+    "6818a8dba6",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva primarily serves large enterprises, including over 85% of Fortune 500 companies, as well as government agencies and higher education institutions, across finance, accounting, legal, and sustainability departments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: A new-grad offer for an AI/data science role in a mid-to-lower cost-of-living hub (like Denver or Ames) likely includes a base salary around $95,000 - $115,000, plus annual bonus and equity, targeting a total compensation in the range of $120,000 - $150,000."
   },
   "evidence_sha": "d7dfe4682918cfd5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785451094,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785450929,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd",
+    "44e7ea08f5"
+   ],
+   "value": "Enterprise SaaS / RegTech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d79b1fbd",
+    "6818a8dba6"
+   ],
+   "value": "Interviews likely emphasize collaborative problem-solving on complex data challenges and practical AI application design. Candidates should prepare to discuss how they would build reliable, explainable ML features for a regulatory platform, demonstrating a balance of rapid innovation and respect for controlled, quality-focused delivery without hero-culture burnout."
+  },
+  "last_attempt_at": 1785451094,
   "last_evidence_at": 1785450747,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6818a8dba6",
+    "44e7ea08f5"
+   ],
+   "value": "Primary engineering and AI hubs include the US headquarters in Ames, Iowa, with additional offices in Denver, Colorado, and Missoula, Montana. A global presence also includes offices in Europe and APAC."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva's mission is to power transparent reporting for a better world by bringing clarity and confidence to business data through its integrated platform."
+  },
   "name": "Workiva",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is steady, deliberate, and quality-focused, driven by enterprise release cycles and compliance standards, which naturally avoids the chaotic 'move fast and break things' culture. Innovation is balanced with platform stability."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "58d79b1fbd",
+    "6818a8dba6",
+    "44e7ea08f5"
+   ],
+   "value": "The Workiva platform is a unified, cloud-native SaaS solution for financial reporting, ESG reporting, internal audit, risk management, and connected GRC. It features real-time collaboration, data linking, process automation, and controlled, auditable workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: A standard policy of 15-20 flexible PTO days, plus separate sick time, is typical for a public enterprise SaaS company at this scale."
   },
-  "retry_after": 1785451049,
+  "refresh_after": 1790635094,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -476818,7 +476888,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide or office-specific shutdowns, particularly during winter holidays, are not publicly documented but are a common practice in the industry, though not universally guaranteed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6818a8dba6",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva is a mid-size public company with approximately 2,500+ employees that has moved beyond the startup phase into a growth-focused scale-up stage."
   },
   "sources": [
    {
@@ -476852,14 +476930,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0efe30df0e9900534aafb015c5e75e240b6d2467bdc7ba2991a644082f117fbJmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=1c17f98c-2e64-6596-3919-ee2a2f9764bc&u=a1aHR0cHM6Ly93d3cud29ya2l2YS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6818a8dba6",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva sponsors H-1B visas and permanent residency for specialized technical roles, though specific availability will depend on the candidate's exact position and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva provides a cloud-based platform for financial reporting, ESG, audit, and risk management that simplifies complex compliance and data processes for enterprises worldwide. The company generates revenue through software subscriptions and professional services."
+  },
+  "synthesized_evidence_sha": "d7dfe4682918cfd5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d79b1fbd",
+    "6818a8dba6"
+   ],
+   "value": "AI and data science work likely involves building machine learning and data analytics features into the platform, such as automated anomaly detection, natural language generation for report narratives, and large-scale data processing for complex regulatory data sets. Technical teams commonly work with cloud-native architecture and distributed systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785450747,
   "web_search_url": "https://duckduckgo.com/?q=Workiva+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "6818a8dba6",
+    "58d79b1fbd",
+    "44e7ea08f5"
+   ],
+   "value": "Workiva offers a unique blend of a mission-driven, stable public company culture with a modern, cloud-native tech stack seeking AI innovation, directly addressing the candidate's desire to avoid slow bureaucracy and burnout. The customer base of elite F500 corporations provides prestige and complex technical challenges, while the company's culture emphasizes sustained, sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is likely very strong, often reported as a top positive in employee reviews, supported by the company's established, quality-over-velocity culture and focus on sustainable output."
   }
  },
  "workstream": {
