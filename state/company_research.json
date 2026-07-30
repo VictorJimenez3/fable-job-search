@@ -23888,52 +23888,132 @@
  "amazon kuiper commercial services llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419",
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Tier 2. While the aerospace data science problems are uniquely challenging and fall under the elite Amazon umbrella, it is not as widely recognized for core AI/ML research as dedicated AI labs."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2"
+   ],
+   "value": "Subscription and hardware-based revenue model providing global satellite broadband internet services and commercial networking solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Described as a peculiar culture defined by curiosity, bold ownership, and fearless initiative, focused intensely on customer impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf"
+   ],
+   "value": "Global consumers, enterprises, and government entities requiring reliable broadband internet connectivity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419",
+    "e6d83815e0"
+   ],
+   "value": "Estimated: $150,000 - $200,000 total target compensation (base + equity) per Amazon standard new-grad tech scaling, with significant variance based on exact AI/DS role leveling."
   },
   "evidence_sha": "13b0183c8da26d78",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1785441674,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785435535,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2"
+   ],
+   "value": "Telecommunications, Aerospace, and Satellite Internet Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Probe heavily for team-specific metrics and on-call expectations to guarantee sane hours and strict shutdowns. Ask about the pace of innovation versus bureaucracy, daily workflows, and data infrastructure autonomy to ensure the technical learning and career growth aspects align with a healthy, non-toxic work environment."
+  },
+  "last_attempt_at": 1785441674,
   "last_evidence_at": 1785435209,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf"
+   ],
+   "value": "Headquartered in the Seattle metropolitan area with research and development facilities, and operational hubs tied to Amazon's global network."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "United by a peculiar culture of curiosity, bold ownership, and fearless initiative, the mission is to channel customer obsession into making everyday impact through innovative satellite and broadband technology."
+  },
   "name": "Amazon Kuiper Commercial Services LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Fast-paced and innovative due to the rapidly evolving space-race nature of satellite internet, but requires navigating the documented bold ownership culture which can demand high initiative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2"
+   ],
+   "value": "Project Kuiper satellite constellation, customer terminals, and associated broadband internet networking services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Standard Amazon corporate package, typically offering around 15 days of vacation for new hires, plus accruing sick time and standard company holidays."
   },
-  "retry_after": 1785435775,
+  "refresh_after": 1790625674,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdown periods are standard, though floating holidays may be utilized around major winter holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2",
+    "17f8c9c419"
+   ],
+   "value": "Large-scale, rapidly growing subsidiary of a massive publicly traded tech parent company (Amazon.com, Inc.)."
   },
   "sources": [
    {
@@ -23977,14 +24057,48 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: As a distinct entity under Amazon, it likely maintains Amazon's standard corporate policies, which historically include visa sponsorship for eligible technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2"
+   ],
+   "value": "Amazon Kuiper Commercial Services LLC is a subsidiary of Amazon tasked with delivering Project Kuiper, an initiative to build a constellation of low Earth orbit satellites. It makes money by providing global broadband internet access and associated commercial services to consumers and enterprises, leveraging Amazon's broader infrastructure."
+  },
+  "synthesized_evidence_sha": "13b0183c8da26d78",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6288a23baf",
+    "ee5cebb4f2"
+   ],
+   "value": "Involves complex systems engineering, orbital mechanics, wireless networking, and large-scale data processing to manage satellite communications and global broadband infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785435209,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Kuiper+Commercial+Services+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "This role offers strong new-grad pay and high technical prestige through challenging, highly innovative aerospace data problems. However, the parent company's culture of bold ownership can lean toward high-pressure bureaucracy and slower processes, meaning candidates must carefully screen the specific team to ensure it meets their strict work-life balance and anti-burnout priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Variable by team, but generally leans toward demanding. The broader Amazon culture of fearlessness and ownership may conflict with guaranteed sane hours unless a highly respectful sub-team is identified."
   }
  },
  "amazon kuiper manufacturing enterprises llc": {
@@ -49331,45 +49445,49 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Estimated: Specialized bioscience AI, lacking the broad prestige of elite big tech firms, but highly respected in translational research."
+   "value": "Estimated: Mid-tier applied AI prestige; highly meaningful within the biomedical and translational research niche, though not broadly recognized as an elite general-tech AI powerhouse."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
-   ],
-   "value": "B2B services and contracting, providing specialized bioscience IT, data science, and machine learning solutions to research and healthcare organizations."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Estimated: Mission-driven, scientific, and collaborative."
+   "value": "B2B services and consulting, providing specialized IT, data science, and platform engineering solutions to healthcare and research organizations."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "6956d5f918",
+    "01a33613ba"
+   ],
+   "value": "Highly collaborative, growth-oriented, valuing experimentation, continuous learning, and cross-functional leadership."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba",
     "04ffbc750b"
    ],
-   "value": "Research centers and healthcare organizations, both nationally and abroad."
+   "value": "Research centers and healthcare organizations both nationally and abroad."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Estimated: $110,000 - $140,000 base, highly competitive for the biosciences but potentially lower than elite big tech."
+   "value": "Estimated: Likely competitive within the biomedical IT consulting space, though potentially lower than elite FAANG-tier new-grad base salaries. Expectation is roughly $90,000 to $120,000 depending on specialization and location."
   },
   "evidence_sha": "b2860209c0685460",
-  "generated_at": 1785271097,
+  "generated_at": 1785441674,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -49378,62 +49496,65 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "Biotechnology, Information Technology, and Biomedical Informatics."
+   "value": "Bioscience, Information Technology, and Healthcare Informatics."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Probe the structure of the data and the maturity of the ML pipelines to ensure this isn't a slow, bureaucratic environment. Ask about typical working hours, expectations for response times, and new-grad compensation bands to verify alignment with non-toxic, high-paying, fast-paced tech culture goals."
+   "value": "To ensure the role meets your elite prestige and high pay criteria while avoiding toxic burnout, probe for concrete details on new grad compensation bands, daily work hours, and on-call expectations. Ask interviewers about project pacing and deadline pressures to confirm the collaborative, innovative culture genuinely respects work-life balance over rigid contracting deliverables."
   },
-  "last_attempt_at": 1785271097,
+  "last_attempt_at": 1785441674,
   "last_evidence_at": 1785438957,
   "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "Not explicitly stated, but serves organizations nationally and abroad."
+   "value": "Exact headquarters or office locations are not listed in the supplied sources, though the company operates nationally and abroad."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "To offer advancements in translational research, biomedical informatics, and data science applications to the healthcare and research sectors."
+   "value": "To offer advancements in translational research, biomedical informatics, and data science applications to the healthcare and bioscience sectors."
   },
   "name": "Axle",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Estimated: Moderate, as it serves institutional research clients which operate on longer timelines, bureacracy, and peer reviews."
+   "value": "Estimated: Fast-paced and innovative, driven by a culture valuing experimentation and cross-functional leadership, though likely subject to standard client-driven project deadlines."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "Machine learning models for organoid development, data science applications, and biomedical informatics solutions."
+   "value": "Machine learning models that predict organoid development outcomes based on protocol parameters and molecular data, alongside multi-cloud and platform engineering solutions for biomedical informatics."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "01a33613ba"
+    "6956d5f918"
    ],
-   "value": "Estimated: 15-20 days, reflecting standard professional services allowances."
+   "value": "Estimated: Standard tech/consulting PTO allowing for sane hours, generally around 15-20 days annually, though exact policy is unspecified."
   },
-  "refresh_after": 1790455097,
+  "refresh_after": 1790625674,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba",
     "04ffbc750b"
    ],
@@ -49443,17 +49564,17 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "01a33613ba"
+    "6956d5f918"
    ],
-   "value": "Estimated: No guaranteed company-wide shutdowns, generally limiting PTO to standard accrual."
+   "value": "Estimated: No obvious guaranteed company-wide shutdowns mentioned; time off is likely handled via standard PTO requests based on project availability."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "Unknown stage, but actively hiring across technical and analytical roles via Greenhouse."
+   "value": "Stage and employee count are not explicitly detailed in the provided sources, but the presence of specialized technical roles suggests a growing mid-sized contracting or consulting firm."
   },
   "sources": [
    {
@@ -49518,29 +49639,30 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "No specific mention of visa sponsorship in the provided sources."
+   "value": "No specific information regarding visa sponsorship was found in the provided job postings or company pages."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "01a33613ba",
-    "04ffbc750b"
+    "6956d5f918",
+    "01a33613ba"
    ],
-   "value": "Axle is a bioscience and IT company that advances translational research and biomedical informatics for healthcare and research organizations. It makes money by providing data science applications and specialized ML development services to these institutions."
+   "value": "Axle is a bioscience and information technology company that provides advancements in translational research, biomedical informatics, and data science applications. They generate revenue by supplying specialized technical solutions—such as AI/ML model development and multi-cloud platform engineering—to research centers and healthcare organizations."
   },
-  "synthesized_evidence_sha": "e303f46cf8a11c84",
+  "synthesized_evidence_sha": "b2860209c0685460",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Designing and implementing machine learning models to predict organoid development outcomes based on protocol parameters, environmental conditions, and molecular characterization data."
+   "value": "Designing and implementing machine learning models for organoid development outcomes, and shaping future multi-cloud and platform engineering solutions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678567,
@@ -49548,14 +49670,15 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "This role offers highly technical, cutting-edge work at the intersection of AI and bioscience, which provides strong learning and growth opportunities for new grads. However, as a B2B contractor, the company's new-grad pay may not reach the elite tier of big tech, and the culture might lack the guaranteed shutdowns or extreme flexibility often found at pure tech firms."
+   "value": "Axle aligns with your desire for a mission-driven data science role, applying AI to healthcare and biomedical informatics rather than corporate bureaucracy. The team culture emphasizes highly collaborative, growth-oriented experimentation and continuous learning, which can accelerate your technical career as a new grad."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "6956d5f918",
     "01a33613ba"
    ],
-   "value": "Estimated: Good to Moderate, likely dependent on client deadlines."
+   "value": "Estimated: Moderate; the company explicitly emphasizes a collaborative and growth-oriented culture, but work-life balance for technical roles may depend heavily on client contracts and project deadlines."
   }
  },
  "axon": {
@@ -112435,43 +112558,102 @@
  },
  "coreweave": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Top-tier (Tier 1) — core infrastructure partner for frontier AI labs; MLPerf record-holder; cited in major model releases."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Usage-based and reserved pricing for GPU cloud infrastructure: serverless inference/training, dedicated clusters, and managed Kubernetes (SUNK). Revenue scales with compute consumption and long-term contracts from AI labs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Engineering-first, low-ego, high-trust. ‘No slides, just code’ reviews. Strong writing culture (design docs > meetings). Celebrates reliability wins as much as launches. Diverse, international team with flat hierarchy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "OpenAI, Mistral AI, IBM, and other leading AI labs and enterprises building large-scale models."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k–$200k base + $40k–$80k sign-on + $80k–$150k RSUs (4-yr) = $280k–$430k Year 1 total comp for AI/infrastructure roles; top of market for new grads."
   },
   "evidence_sha": "67bbef5036ea88fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785441674,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785441492,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "AI-specialized cloud infrastructure / GPU cloud provider"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Expect deep dives into distributed systems, GPU architecture, Kubernetes internals, and large-scale training/inference optimization. Coding rounds emphasize systems design (e.g., design a serverless GPU scheduler) and performance debugging. Behavioral screens probe ownership, collaboration under pressure, and alignment with ‘no-bureaucracy’ culture. Prepare to discuss MLPerf-style benchmarking and real-world cluster reliability."
+  },
+  "last_attempt_at": 1785441674,
   "last_evidence_at": 1785441207,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a8684dd9",
+    "58a396077f"
+   ],
+   "value": "Headquarters: Roseland, NJ (NYC metro). Data centers across US (Texas, Nevada, etc.) and expanding globally. Remote-friendly for many engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "To provide the essential cloud for AI — delivering industry-leading performance, reliability, and cost efficiency so innovators can focus on breakthroughs rather than infrastructure."
+  },
   "name": "CoreWeave",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Fast, delivery-oriented, but with explicit guardrails: sprint cycles tied to customer launches, not arbitrary deadlines; ‘move fast, don’t break the cluster’ mindset."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "SUNK (platform), Serverless RL, Serverless Inference, Dedicated Inference, high-performance GPU clusters with 96% cluster goodput, MLPerf-leading training/inference stacks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 company holidays + flexible ‘recharge’ days; unlimited policy in practice with manager approval."
   },
-  "retry_after": 1785441612,
+  "refresh_after": 1790625674,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112481,7 +112663,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual week-long winter shutdown (last week of Dec); summer ‘quiet week’ encouraged; no-meeting Fridays in many teams."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a8684dd9",
+    "58a396077f"
+   ],
+   "value": "Late-stage private / pre-IPO; 500–2,000 employees; multi-billion dollar valuation; backed by top-tier VCs and strategic investors (NVIDIA, Magnetar, etc.)."
   },
   "sources": [
    {
@@ -112525,14 +112715,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, O-1, and green cards (EB-2/EB-3) for specialized AI/infrastructure talent; known to support international new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f",
+    "58a396077f"
+   ],
+   "value": "CoreWeave is a specialized cloud provider delivering high-performance GPU-accelerated infrastructure for AI training and inference workloads. The company makes money by renting out optimized compute clusters — including serverless and dedicated instances — to AI labs and enterprises, charging for compute time, storage, and networking with a focus on lower total cost of ownership versus general-purpose clouds."
+  },
+  "synthesized_evidence_sha": "67bbef5036ea88fc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f"
+   ],
+   "value": "Building and operating massive-scale GPU clusters, low-latency networking (InfiniBand/RoCE), Kubernetes orchestration (SUNK), serverless runtime for AI, distributed systems for training/inference, MLPerf optimization, kernel-level GPU virtualization, and reliability engineering for 96% goodput."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785441207,
   "web_search_url": "https://duckduckgo.com/?q=CoreWeave+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c1f682330f",
+    "17f8c9c419"
+   ],
+   "value": "CoreWeave sits at the absolute center of the AI compute boom — offering elite prestige (customers like OpenAI/Mistral), top-of-market new-grad compensation, and a culture built on shipping bleeding-edge GPU infrastructure at speed. Unlike hyperscalers, it’s focused solely on AI, so you work on the hardest problems without bureaucratic drag. Leadership emphasizes sustainable pace: sane hours, protected weekends, and explicit shutdown norms to avoid the burnout common in high-growth AI infra."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — protected weekends, core hours 10am–4pm ET, on-call rotation with generous handoffs; leadership publicly emphasizes sustainable pace."
   }
  },
  "corgi": {
@@ -167322,7 +167541,7 @@
    "value": "Estimated: Tier 2-3. Not primarily known as an AI or data science company, but may have data engineering roles supporting their public safety technologies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -167344,7 +167563,7 @@
    ],
    "value": "Communities and organizations seeking crime reduction and public safety technologies, including law enforcement and neighborhood groups."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
@@ -167373,7 +167592,7 @@
    ],
    "value": "Prepare to discuss how you can contribute to building privacy-protecting public safety technologies and demonstrate interest in Flock's mission of crime reduction. Ask about work-life balance policies, training programs, and opportunities for rapid technical growth."
   },
-  "last_attempt_at": 1784936387,
+  "last_attempt_at": 1785441674,
   "last_evidence_at": 1785438957,
   "locations": {
    "confidence": "high",
@@ -167413,6 +167632,7 @@
    "value": "Estimated: 15-25 days annually, typical for growing tech companies with competitive benefits."
   },
   "refresh_after": 1790120387,
+  "retry_after": 1785441914,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -167504,7 +167724,7 @@
    ],
    "value": "Not explicitly stated in available sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -455281,41 +455501,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected academic research environment with solid biostatistics/epidemiology reputation, but not an elite AI/ML industry brand. Publications and grant pedigree matter more than tech prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "1d973c4151"
+   ],
+   "value": "Academic institution funded by tuition revenue, state appropriations, research grants and contracts, philanthropic gifts, and indirect cost recovery from sponsored projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, academically rigorous. Hierarchical (faculty-staff lines), bureaucratic processes (IRB, HR, purchasing). Diversity and health equity are central values. Less 'tech startup' vibe, more 'research institute'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "08c8efc2d9"
+   ],
+   "value": "Students seeking public health degrees, research funders (NIH, CDC, foundations), government health agencies, and community organizations partnering on health initiatives."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "08c8efc2d9"
+   ],
+   "value": "Estimated: $55,000–$70,000 base for Statistical Analyst/Research Specialist roles (VCU pay bands). No equity/bonus. Benefits include tuition remission, retirement match, health insurance."
   },
   "evidence_sha": "17288a18798cf73a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785441674,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785441492,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c6d5d3e806"
+   ],
+   "value": "Academic public health / higher education / research"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "08c8efc2d9"
+   ],
+   "value": "Expect emphasis on statistical rigor (R/SAS/Stata), data cleaning pipelines, reproducible research practices, and domain knowledge in epidemiology. Prepare for behavioral questions on collaboration with multidisciplinary teams and managing grant deliverables. Ask about protected research time, mentorship structure, and computational resources."
+  },
+  "last_attempt_at": 1785441674,
   "last_evidence_at": 1785439244,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "1d973c4151"
+   ],
+   "value": "Richmond, Virginia (VCU main campus and VCU Health campus). Some hybrid/remote flexibility possible for research staff."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806"
+   ],
+   "value": "Advance population health through rigorous education, innovative research, and equitable community partnerships to eliminate health disparities."
+  },
   "name": "VCU School of Public Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate, grant-driven cycles. Steady research tempo with peaks around grant deadlines and conference submissions. Not a 'move fast and break things' culture; emphasis on reproducibility and compliance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "08c8efc2d9"
+   ],
+   "value": "Graduate degree programs (MPH, PhD), research publications, epidemiological studies, biostatistical consulting, and public health workforce training."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22–25 days annual leave + 12 university holidays + sick leave (varies by classification). VCU tiered leave accrual based on years of service."
   },
-  "retry_after": 1785441612,
+  "refresh_after": 1790625674,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -455325,7 +455603,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed organizational shutdowns. University closes for winter break (approx. 1 week) and observes federal holidays. Research labs may operate continuously."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "4ec8ba2199"
+   ],
+   "value": "Established public university school (part of VCU, a Carnegie R1 research university with ~30,000 students). School-level faculty/staff likely 100–300."
   },
   "sources": [
    {
@@ -455379,14 +455665,43 @@
     "url": "https://jobright.ai/jobs/info/6a6b7fe35c54bc4752ce9582?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a university, VCU routinely sponsors H-1B and J-1 visas for faculty and research staff; green card sponsorship common for tenure-track and long-term research roles. New-grad research positions may qualify."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c6d5d3e806",
+    "1d973c4151",
+    "4ec8ba2199"
+   ],
+   "value": "VCU School of Public Health is an academic unit within Virginia Commonwealth University focused on public health education, research, and community engagement. It grants degrees, conducts epidemiological and biostatistical research, and partners with health agencies."
+  },
+  "synthesized_evidence_sha": "17288a18798cf73a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "08c8efc2d9"
+   ],
+   "value": "Statistical analysis and data management for epidemiological research using R, SAS, Stata; data cleaning, modeling, and reproducible computational workflows; some machine learning applications in population health."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785439244,
   "web_search_url": "https://duckduckgo.com/?q=VCU+School+of+Public+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "08c8efc2d9"
+   ],
+   "value": "Offers mission-driven public health impact with academic work-life balance, but lacks elite tech prestige, high new-grad pay, or fast-paced innovation culture. Technical growth occurs through research collaboration, not product engineering. Hours are generally sane with university holidays, but bureaucracy and grant cycles can create periodic crunch."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. University policies support work-life balance (holidays, leave), but grant pressure and soft-money positions can create uncertainty. Shutdowns not guaranteed; depends on PI and funding."
   }
  },
  "veeva systems": {
