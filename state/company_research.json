@@ -10841,11 +10841,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10857,6 +10859,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785406980,
   "name": "AFP Cuprum",
   "pace_of_work": {
@@ -10869,6 +10872,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785410903,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10922,7 +10926,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785406980,
   "web_search_url": "https://duckduckgo.com/?q=AFP+Cuprum+company+careers+benefits",
@@ -21399,52 +21403,122 @@
  "altera": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 for AI hardware/ML systems; top-tier for FPGA-accelerated inference. Not a pure AI research lab but elite in programmable acceleration."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "Sells programmable logic hardware (FPGAs, SoCs) and licenses software/tools; revenue from chip sales, IP licensing, and support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics. Strong mentorship culture. Values technical depth over visibility. Post-spinout energy is high—'startup speed with big-company resources.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "Data center, communications, industrial, automotive, and defense/aerospace sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$155k base + $20k–$40k sign-on + RSUs ($60k–$100k over 4yr) = ~$210k–$295k year-1 TC."
   },
   "evidence_sha": "f799fe2d3a2e70f3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785410783,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785402724,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "Semiconductors / Programmable Logic (FPGA)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect deep digital design (Verilog/SystemVerilog), FPGA architecture, timing closure, and increasingly ML-on-FPGA (quantization, kernel mapping). Coding assessment in C++/Python. Behavioral focus on collaboration, ownership, and learning agility. Prepare for domain-specific questions on high-speed I/O, power, or compiler optimization depending on team."
+  },
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785402542,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "Headquarters: San Jose, CA. Major sites: Portland OR, Penang (Malaysia), Shanghai, Belfast, Toronto."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "To deliver programmable semiconductor solutions that enable customers to innovate and differentiate."
+  },
   "name": "Altera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable—project-driven with quarterly milestones; crunch near tape-outs but protected recovery time."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "FPGAs, SoC FPGAs, CPLDs, power management solutions, and associated software tools (Quartus Prime)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays; unlimited sick; summer/winter shutdowns ~1 week each."
   },
-  "retry_after": 1785402964,
+  "refresh_after": 1790594783,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (last week Dec–first week Jan) and summer shutdown (one week July)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e"
+   ],
+   "value": "Large public company (spun out from Intel ~2025); ~3,000–4,000 employees globally."
   },
   "sources": [
    {
@@ -21488,14 +21562,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; new-grad sponsorship likely for FPGA/ML talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e",
+    "3f708acd3b"
+   ],
+   "value": "Altera is a semiconductor company specializing in FPGAs (field-programmable gate arrays) and programmable logic devices. It operates as an independent company after being spun out from Intel."
+  },
+  "synthesized_evidence_sha": "f799fe2d3a2e70f3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d06572512",
+    "f87b8b655e",
+    "17f8c9c419"
+   ],
+   "value": "FPGA architecture, RTL design, verification, software toolchain (compilers, placement/routing), ML acceleration on FPGAs, high-speed SerDes, power optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785402542,
   "web_search_url": "https://duckduckgo.com/?q=Altera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Altera offers elite semiconductor/AI hardware prestige with new-grad pay competitive with top tech. As a newly independent FPGA leader, it has a fast, innovation-driven culture focused on programmable acceleration for AI workloads—avoiding big-tech bureaucracy. The mission (programmable compute for AI era) is technically substantive. Work-life balance is reportedly sane for hardware (core hours, protected weekends), and the technical depth accelerates careers without burnout typical of pure soft"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 for hardware (core hours ~10–6, weekends respected, shutdowns around holidays)."
   }
  },
  "altera corporation": {
@@ -64175,47 +64280,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "4a27272799",
-    "778c83456d"
+    "4a27272799"
    ],
-   "value": "Estimated: Tier 2 (Consulting/Solutions focus). While they work on cutting-edge AI tasks like response evaluation, they are primarily a broad technology solutions firm rather than a dedicated AI research lab."
+   "value": "Estimated: Mid-tier. The company works on AI response evaluation and cutting-edge technology solutions, but positions itself as a consulting firm rather than an AI-first product company."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "8fda429750",
     "778c83456d"
    ],
-   "value": "Technology solutions firm that builds and implements cutting-edge technology and provides specialized services (such as data annotation and customer support) for client transformation."
+   "value": "Technology consulting and solutions firm that leverages the knowledge, skills, and expertise of its teams to deliver cutting-edge technology solutions and transform client businesses."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "8017eb4e61",
     "778c83456d"
    ],
-   "value": "Bold, smart, agile, and fun, relying on the knowledge, skills, and unique perspectives of experienced teams across multiple industries."
+   "value": "Bold, smart, agile, and fun, with emphasis on unique perspectives and cross-industry expertise across their teams."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "778c83456d",
-    "79879c87bf"
+    "8017eb4e61",
+    "4a27272799"
    ],
-   "value": "Organizations across multiple industries seeking strategy and technology execution, as well as end customers requiring technical support and accurate service."
+   "value": "Companies seeking transformation and growth across multiple industries, with a strong presence across the United States and an expanding footprint in Latin America."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "4a27272799",
-    "778c83456d"
-   ],
-   "value": "Estimated: $80,000 - $120,000 USD base. The firm is expanding across LATAM and the US, suggesting market-rate regional compensation rather than elite tier-1 AI new-grad pay."
+   "source_ids": [],
+   "value": "Estimated: $90,000-$120,000 base. Based on Bellevue, WA tech consulting market rates for new graduates in embedded software and AI roles."
   },
   "evidence_sha": "1f94d47fee35a126",
-  "generated_at": 1785274373,
+  "generated_at": 1785410783,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -64224,87 +64326,76 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "778c83456d",
-    "79879c87bf"
-   ],
-   "value": "Technology Solutions and IT Consulting."
-  },
-  "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
+    "8017eb4e61",
     "778c83456d"
    ],
-   "value": "To match your priorities, you should probe deeply into their actual engineering delivery cycles, client expectations, and specific AI project pipelines to ensure the culture is genuinely fast-paced. It is also vital to ask specific questions about expected working hours for tech roles and new-grad compensation bands, as these details are not publicly visible."
+   "value": "Technology solutions and consulting"
   },
-  "last_attempt_at": 1785402543,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe whether the agile, fast-paced culture they describe translates to actual innovation velocity or just client-driven pressure. Ask about typical project timelines, how they protect engineers from scope creep, and whether AI/data science work is core IP development or client customization. Clarify expectations around billable hours and client site work to assess true work-life balance."
+  },
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785387236,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "4a27272799",
-    "778c83456d"
+    "8017eb4e61",
+    "4a27272799"
    ],
-   "value": "Headquartered in Bellevue, Washington with a strong presence across the US and an expanding footprint across Latin America (LATAM). Hires globally for specific language and support roles."
+   "value": "Headquartered in Bellevue, Washington, with strong presence across the United States and expanding footprint across Latin America."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "8017eb4e61",
     "778c83456d"
    ],
-   "value": "To connect strategy, business solutions, products, and services to transform and grow companies using technology as a tool to bridge the gap between strategy and execution."
+   "value": "To use technology as a tool to bridge the gap between strategy and execution, connecting business solutions to transform and grow companies."
   },
   "name": "Blueprint Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "778c83456d",
-    "8fda429750"
+    "778c83456d"
    ],
-   "value": "Estimated: Fast-paced. The company branding emphasizes being bold, smart, agile, and building cutting-edge technology solutions, suggesting a high-speed environment."
+   "value": "Estimated: Fast-paced. The company self-describes as agile and emphasizes cutting-edge solutions, suggesting a dynamic work environment typical of technology consulting."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "4a27272799",
     "778c83456d",
-    "8fda429750"
+    "8017eb4e61"
    ],
-   "value": "Custom technology solutions, business consulting, AI response evaluation/data labeling services, and customer experience support."
+   "value": "Custom technology solutions, business solutions, and product and service implementations powered by cross-industry expertise."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "4a27272799"
-   ],
-   "value": "Estimated: 15-20 days. US roles likely feature standard tech market PTO, while international roles feature locally compliant statutory paid vacation and benefits."
+   "source_ids": [],
+   "value": "Estimated: 15-25 days. US-based benefits align with local market practices; specific PTO not publicly disclosed in available sources."
   },
-  "refresh_after": 1790458373,
-  "retry_after": 1785410223,
+  "refresh_after": 1790594783,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "4a27272799",
-    "79879c87bf",
-    "8fda429750"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "778c83456d"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Typical expectations for solutions/consulting firms apply."
+   "source_ids": [],
+   "value": "Estimated: Not guaranteed. No mention of company-wide shutdowns in available sources; typical for consulting firms to follow client schedules."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "4a27272799",
-    "79879c87bf"
+    "8017eb4e61"
    ],
-   "value": "Headquartered in Bellevue, Washington with a strong presence across the United States and an expanding footprint across Latin America (LATAM)."
+   "value": "Established firm with a strong US presence and expanding LATAM footprint, operating at a scale that supports diverse roles from embedded engineering to customer support and design."
   },
   "sources": [
    {
@@ -64369,46 +64460,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
+    "79879c87bf",
     "4a27272799"
    ],
-   "value": "Not explicitly found in research; however, they hire globally and provide locally compliant benefits in regions like LATAM, suggesting location-flexible hiring."
+   "value": "Not directly addressed in available sources; however, the company hires for specialized language roles (Russian, Castilian Spanish) and technical positions, suggesting some geographic flexibility."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "778c83456d",
-    "79879c87bf"
+    "8017eb4e61",
+    "778c83456d"
    ],
-   "value": "Blueprint Technologies is a technology solutions firm that bridges the gap between strategy and execution to transform and grow companies. They make money by providing cutting-edge technology solutions, products, and consulting services powered by their teams' expertise."
+   "value": "Blueprint Technologies is a technology solutions firm headquartered in Bellevue, Washington, that bridges the gap between strategy and execution for enterprise clients. They make money by connecting strategy, business solutions, products, and services to transform and grow companies across multiple industries."
   },
-  "synthesized_evidence_sha": "179823737b116ea4",
+  "synthesized_evidence_sha": "1f94d47fee35a126",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "8017eb4e61",
     "4a27272799",
-    "79879c87bf"
+    "8fda429750"
    ],
-   "value": "Evaluating AI system responses, data annotation, technology solutions development, and technical research and investigation for customer support."
+   "value": "Diverse technical scope including embedded software engineering (firmware rehosting, automated analysis), AI response evaluation and labeling, and cutting-edge technology solutions development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Blueprint+Technologies+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "778c83456d"
-   ],
-   "value": "Blueprint Technologies explicitly claims to be bold, smart, agile, and fun, which aligns with your desire for a fast-paced, innovative tech culture rather than slow bureaucracy. Their focus on cutting-edge AI evaluation and technology solutions can accelerate your technical learning, though as a solutions firm, you will need to verify if the prestige and new-grad pay match your top-tier expectations."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Blueprint's self-described culture as bold, smart, agile, and fun directly aligns with your desire for a fast, innovative tech environment. Their AI response evaluation and embedded systems work offer technical learning opportunities, while the solutions-consulting model provides exposure to diverse industries. However, as a consulting firm, work-life balance may vary by client engagement."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "778c83456d"
-   ],
-   "value": "Estimated: Moderate. The 'agile and cutting-edge' consulting branding implies fast delivery cycles which can occasionally push work-life boundaries, unlike guaranteed shutdown environments."
+   "source_ids": [],
+   "value": "Estimated: Moderate. As a solutions firm serving multiple industries, work-life balance likely depends on client engagement and project deadlines rather than guaranteed protected time."
   }
  },
  "bluescope": {
@@ -84965,7 +85054,7 @@
    "value": "Estimated: Tier 3. AI roles are impactful and involve deep industrial tech (autonomy), but lack the elite prestige and fast tech-culture of top-tier tech or pure-AI companies."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -84989,7 +85078,7 @@
    ],
    "value": "Global construction companies, mining enterprises, quarry operators, forestry businesses, energy and transportation sectors, and large industrial infrastructure developers."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -85019,7 +85108,7 @@
    ],
    "value": "Candidates should emphasize how their data science skills can drive fast, tangible innovation within a traditional engineering landscape. Ask interviewers about the pace of engineering initiatives, how rigid cross-functional bureaucracy is handled, and whether the team maintains respected work-life boundaries and sane hours despite deadlines."
   },
-  "last_attempt_at": 1785196351,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785406699,
   "locations": {
    "confidence": "medium",
@@ -85061,6 +85150,7 @@
    "value": "Estimated: 15 to 20 days of standard annual paid time off, providing standard guaranteed personal time."
   },
   "refresh_after": 1790380351,
+  "retry_after": 1785414623,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85151,7 +85241,7 @@
    ],
    "value": "Estimated: As a large, traditional multinational company, Caterpillar frequently sponsors visas for specialized engineering and data science roles, though policies vary by specific role and team."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -130326,7 +130416,7 @@
    "value": "Tier 1 (Elite) — Pioneer in FDA-cleared AI/ML for glucose prediction; publishes at NeurIPS, AMIA, ADA; integrates with automated insulin delivery systems; high-impact physiological time-series work."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -130348,7 +130438,7 @@
    ],
    "value": "People with diabetes (Type 1 and Type 2), healthcare providers, hospitals, pharmacies, and distributors; reimbursed through insurance, Medicare, and direct pay."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130375,7 +130465,7 @@
    ],
    "value": "Expect deep technical screens on ML for time-series physiological data, embedded systems constraints, regulatory-grade software practices, and system design for safety-critical products. Prepare for behavioral questions on cross-functional collaboration (clinical, regulatory, hardware) and handling ambiguity in a regulated environment. LeetCode medium/hard common for DS/ML roles."
   },
-  "last_attempt_at": 1784878400,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785406980,
   "locations": {
    "confidence": "low",
@@ -130411,6 +130501,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick time; varies by level/tenure. Unlimited not offered."
   },
+  "retry_after": 1785411263,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130486,7 +130577,7 @@
    "source_ids": [],
    "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; common for ML, firmware, and data science positions given talent needs."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -289763,7 +289854,7 @@
    "value": "Estimated: Low to Medium. Recognized for consumer brand prestige rather than elite tech industry standing or cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -289810,7 +289901,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1785402724,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785396993,
   "locations": {
    "confidence": "high",
@@ -289848,7 +289939,7 @@
    "source_ids": [],
    "value": "Estimated: 20-25 days of paid time off annually, reflecting standard corporate European-rooted benefits."
   },
-  "retry_after": 1785403204,
+  "retry_after": 1785411743,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297742,7 +297833,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297760,7 +297851,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785407816,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785396993,
   "name": "Nooks",
   "pace_of_work": {
@@ -297773,7 +297864,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785408296,
+  "retry_after": 1785411743,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -312701,48 +312792,125 @@
  "ou health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Niche/Mission-driven tier. AI and data science work here is impactful in the medical domain but lacks the FAANG-level market prestige and compensation benchmarks of elite tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "An academic health system that generates revenue primarily through fee-for-service medical care, health insurance reimbursements, and federal/private research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Mission-driven, academic, and highly collaborative, but bounded by heavy institutional procedure and clinical bureaucracy rather than a fast-moving tech ethos."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Patients seeking medical care across Oklahoma and the surrounding regions, as well as medical students and healthcare professionals in training."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000 - $90,000 base salary. Public health system tech roles generally offer lower compensation compared to elite private-sector tech companies."
   },
   "evidence_sha": "c8946dca3399f59a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785410783,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Hospitals and Healthcare / Academic Medicine"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probing the team's deployment cadence, tech stack modernity, and on-call expectations is critical to determine if they run like a nimble startup or a rigid hospital IT department. Verify if the compensation meets high new-grad expectations and confirm how work-life balance is practically maintained amid hospital operational pressures."
+  },
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785406979,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Based in Oklahoma City, Oklahoma, with additional facilities and clinics located throughout the state of Oklahoma."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To advance the health and wellbeing of individuals and communities through patient care, education, and research."
+  },
   "name": "OU Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Slow to moderate. Driven by strict healthcare compliance, clinical system stability requirements, and academic institutional processes, which typically hinder fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Inpatient and outpatient healthcare services, specialized medical treatments, surgical procedures, and academic medical training programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually, standard for a large public university health system, plus typical state holidays."
   },
+  "refresh_after": 1790594783,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No guaranteed corporate tech shutdowns, though state/university holidays (such as winter break surrounding Christmas and New Year's) likely apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "A large, established non-profit academic medical center operating as a mature state-wide health system."
   },
   "sources": [
    {
@@ -312786,14 +312954,45 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: As a large public health system, visa sponsorship for international candidates may be limited and is typically evaluated on a case-by-case basis for specialized hard-to-fill roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "OU Health is Oklahoma's flagship academic health system, comprising a comprehensive hospital, physician network, and the University of Oklahoma's medical schools. It generates revenue by providing clinical patient care, conducting advanced medical research, and offering specialized healthcare services across the region."
+  },
+  "synthesized_evidence_sha": "c8946dca3399f59a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Tech roles likely focus on healthcare IT, electronic health record (EHR) systems, data infrastructure for medical research, and applied machine learning for clinical outcomes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785406979,
   "web_search_url": "https://duckduckgo.com/?q=OU+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "While this role fulfills the mission-driven requirement of improving healthcare, a massive academic medical system inherently carries clinical bureaucracy, slow IT cadences, and heavy compliance regulations (HIPAA). This conflicts directly with the desire for a fast-paced, elite-tier tech culture that accelerates career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Standard hospital hours are the norm for non-clinical staff, thoughIT support roles may occasionally require after-hours maintenance windows for critical health systems."
   }
  },
  "oura": {
@@ -325649,7 +325848,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -325667,7 +325866,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785407816,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785406980,
   "name": "Planet Technologies",
   "pace_of_work": {
@@ -325680,7 +325879,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785407936,
+  "retry_after": 1785411023,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330250,7 +330449,7 @@
    "value": "Niche. Not a top-tier AI or data science prestige company; this is an established medical education firm hiring backend engineers rather than building cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -330299,7 +330498,7 @@
    ],
    "value": "Expect questions on mission alignment given the healthcare education focus, backend technical skills, and how you balance building quickly with care for sensitive outcomes data. Evaluate their communicated values around flexible hours and wellness benefits to confirm respect for work-life boundaries."
   },
-  "last_attempt_at": 1785402724,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785396651,
   "locations": {
    "confidence": "high",
@@ -330337,7 +330536,7 @@
    "value": "Estimated: 15-20 days flexible time off per year for new graduates, given the absence of a stated accrued limit on Flexible Time Off, an exact amount is not disclosed."
   },
   "refresh_after": 1790449515,
-  "retry_after": 1785403204,
+  "retry_after": 1785411743,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -390912,7 +391111,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -390930,7 +391129,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1785402724,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785396993,
   "name": "Spectrum Asset Management, Inc.",
   "pace_of_work": {
@@ -390943,7 +391142,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785402964,
+  "retry_after": 1785411263,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -475524,7 +475723,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -475542,7 +475741,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785402724,
+  "last_attempt_at": 1785410783,
   "last_evidence_at": 1785402542,
   "name": "Yahoo",
   "pace_of_work": {
@@ -475555,7 +475754,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785402964,
+  "retry_after": 1785411263,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
