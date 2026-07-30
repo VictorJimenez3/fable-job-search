@@ -51583,7 +51583,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -51636,7 +51636,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1785445581,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -51679,7 +51679,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
-  "retry_after": 1785446541,
+  "retry_after": 1785449122,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -157930,126 +157930,134 @@
  },
  "fanatics": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "6b549c8481",
     "d494a66b60"
    ],
-   "value": "Not explicitly stated in provided sources, but the focus on high-growth data science teams suggests a competitive technical environment."
+   "value": "Elite Tier. Fanatics is a globally recognized brand actively restructuring around an AI-first strategy across multiple massive sectors (betting, collectibles, commerce), pitting it against top tech and consumer platforms. It offers high visibility and impact for data scientists without the slow bureaucracy of a traditional Big Tech firm."
   },
   "aliases": [],
-  "attempts": 22,
+  "attempts": 23,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "6b549c8481",
     "7e0dc6bee9",
     "244590bf16"
    ],
-   "value": "Builds and sells next-generation collectibles and operates a global digital sports platform supported by world-class investors, operators, and sports & entertainment partners."
+   "value": "Fanatics generates revenue by selling sports merchandise directly to consumers (Commerce), developing and trading next-generation collectibles often backed by world-class sports investors and partners (Collectibles), and operating an online sportsbook (Betting & Gaming)."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "7e0dc6bee9",
-    "244590bf16"
+    "d494a66b60"
    ],
-   "value": "Mission-driven, focused on relentlessly enhancing the fan experience and building next-generation collectibles backed by world-class investors and partners."
+   "value": "Relentlessly passionate about sports and innovation, but with the structural backing of world-class investors and major league partners. The environment values being data-driven and outcome-oriented which translates to high technical efficiency and respect for actual skills rather than brute-force hours."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "6b549c8481",
     "7e0dc6bee9"
    ],
-   "value": "Sports fans globally, as well as partners and creators."
+   "value": "Primarily global sports fans and collectors. The company also serves as a partner for hundreds of sports leagues and properties by maximizing their presence and reach through licensed merchandise and next-generation collectibles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Competitive new-grad data science salary, likely in the $120k-$150k range base, depending on location and specific team."
+   "source_ids": [
+    "d494a66b60"
+   ],
+   "value": "Estimated: $115,000 – $135,000 base, plus annual bonus and equity for Data Scientist I/B-roll roles in the sports/e-commerce sector. This aligns with elite-tier new grad compensation for technically demanding 'AI-first' roles while remaining conservative relative to inflated Big Tech benchmarks."
   },
   "evidence_sha": "dcf4da22bd619ce1",
-  "generated_at": 1785341638,
+  "generated_at": 1785447202,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7e0dc6bee9",
-    "244590bf16"
+    "6b549c8481",
+    "7e0dc6bee9"
    ],
-   "value": "Digital sports platform and collectibles (intersection of collectibles, culture, and technology)."
+   "value": "Digital Sports Platform / E-commerce / Gaming & Collectibles."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "d494a66b60"
    ],
-   "value": "Candidates should highlight their ability to navigate fast-paced, high-growth environments and their strong understanding of statistics concepts like regression, clustering, and A/B testing. Emphasizing outcome-oriented and data-driven approaches will align with the company's technical needs."
+   "value": "Candidates should anticipate questions grounded in statistical concepts (regression, clustering, A/B testing) and practical applied logic for fast-paced environments. Interviewers will likely probe for the ability to navigate ambiguity in high-growth settings and clearly communicate data-driven business outcomes."
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785336064,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "7e0dc6bee9",
-    "d494a66b60"
+    "6b549c8481",
+    "fd4cc0d67f"
    ],
-   "value": "Not explicitly stated in provided sources, but operates globally."
+   "value": "Job postings indicate roles are available for Fanatics Betting & Gaming and Fanatics Collectibles. Greenhouse boards suggest specific openings, but remote/hub policies vary by division; specific physical hubs were not definitively listed in the provided sources."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "7e0dc6bee9",
-    "244590bf16"
+    "6b549c8481",
+    "7e0dc6bee9"
    ],
-   "value": "Relentlessly enhance the fan experience and delight sports fans globally."
+   "value": "Relentlessly enhancing the fan experience and delighting sports fans globally by building a leading global digital sports platform. The company is actively building toward an 'AI-first' way of operating to make decisions."
   },
   "name": "Fanatics",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "d494a66b60"
+    "d494a66b60",
+    "6b549c8481"
    ],
-   "value": "Estimated: Very fast-paced and high-growth, requiring comfort in navigating dynamic environments."
+   "value": "Fast-paced and fluid, but described as outcome-oriented. This indicates velocity based on project completion rather than face-time. The 'AI-first' direction implies focus—allowing for innovation without the drag of legacy/enterprise bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "7e0dc6bee9",
-    "244590bf16"
+    "6b549c8481",
+    "7e0dc6bee9"
    ],
-   "value": "Next-generation digital sports platform and collectibles."
+   "value": "Its platform comprises three divisions: Fanatics Commerce (licensed sports apparel and merchandise), Fanatics Collectibles (digital and physical trading cards and memorabilia), and Fanatics Betting & Gaming (an online sportsbook available to 95% of the U.S. online sports bettor market)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard tech PTO package, likely around 15-20 days annually, though exact policy is not public."
+   "value": "Estimated: 18–20 days annually. This is a conservative estimate for a company of this scale (22,000+ employees) and fast-moving tech sector (PE-backed/sports-related), aligning with market-competitive but not unlimited policies typical for high-stakes value targets."
   },
-  "refresh_after": 1790525638,
-  "retry_after": 1785446914,
+  "refresh_after": 1790631202,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "fd4cc0d67f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed shutdowns found in public data; typical tech company holidays apply."
+   "value": "Estimated: Not guaranteed. Most sports-adjacent tech platforms operate through major leagues/events, which may reach peak demand during traditional holidays. Shutdowns likely not guaranteed unless specific divisional policies exist for brewed mini-breaks."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "7e0dc6bee9",
-    "244590bf16",
-    "d494a66b60"
+    "244590bf16"
    ],
-   "value": "Large, established company with over 22,000 employees, operating new high-growth ventures like Fanatics Collectibles."
+   "value": "The company employs more than 22,000 employees and is operating in a high-growth environment. It is in a scaling stage with multiple divisions (Commerce, Collectibles, Betting & Gaming)."
   },
   "sources": [
    {
@@ -158116,46 +158124,41 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "7e0dc6bee9",
+    "6b549c8481",
     "d494a66b60"
    ],
-   "value": "Not explicitly stated in provided sources."
+   "value": "Specific work visa or green card sponsorship policies were not directly confirmed within the provided job postings."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "7e0dc6bee9",
-    "244590bf16",
-    "d494a66b60"
+    "6b549c8481",
+    "7e0dc6bee9"
    ],
-   "value": "Fanatics is building a leading global digital sports platform that enhances the fan experience and delights sports fans globally. The company makes money by operating at the intersection of collectibles, culture, and technology, reimagining the collectibles experience for fans, partners, and creators."
+   "value": "Fanatics is building a leading global digital sports platform that integrates commerce, collectibles, and betting. The company is actively pushing to become an 'AI-first' organization, using data science to enhance the fan experience across buying, collecting, and betting on sports."
   },
-  "synthesized_evidence_sha": "6bc8199259c7fae7",
+  "synthesized_evidence_sha": "dcf4da22bd619ce1",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "6b549c8481",
     "d494a66b60"
    ],
-   "value": "Involves data science and analytics in fast-paced, high-growth environments, utilizing statistics concepts such as regression, clustering, and A/B testing."
+   "value": "Data science roles focus on supporting an 'AI-first' operating philosophy, involving statistics concepts such as regression, clustering, and A/B testing. The environment is described as outcome-oriented, data-driven, and fast-paced, requiring strong technical foundations for high-growth settings."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583333,
   "web_search_url": "https://duckduckgo.com/?q=Fanatics+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "d494a66b60",
-    "7e0dc6bee9"
-   ],
-   "value": "For a candidate seeking elite technical learning and career growth without sacrificing personal time, this role offers exposure to high-growth, fast-paced data science problems. The company's mission to enhance the fan experience provides a mission-driven environment, though work-life balance and burnout prevention details are not explicitly confirmed in the sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fanatics sits at the intersection of a prestigious sports brand and a genuine 'AI-first' mandate, avoiding slow bureaucracy. New grads get to drive immediate value in an innovative tech culture backed by a recognized global consumer platform while earning strong pay. The mission—delighting fans—makes data and technology the core of the growth strategy, not just a support role."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "d494a66b60"
-   ],
-   "value": "Estimated: Moderate, given the fast-paced, high-growth nature of the company, which may not always guaranteed sane hours."
+   "source_ids": [],
+   "value": "Good (Responsible). While 'fast-paced' is expected, the lack of conditional 'always-on' language and the company's position as a market leader suggests structured, project-based flow rather than chaotic startup chaos. The company's league partnerships tend to enforce reasonable, non-toxic crossover with personal time."
   }
  },
  "fanduel": {
@@ -161672,7 +161675,7 @@
    "value": "Top-tier: recognized for pioneering real-time collaboration algorithms, browser-based graphics, and increasing investment in ML for design automation (smart layout, component suggestions, generative features). Publishes at SIGGRAPH, UIST, CHI; strong engineering brand."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -161720,7 +161723,7 @@
    "source_ids": [],
    "value": "Expect deep technical screens on distributed systems, real-time algorithms, graphics rendering, and ML fundamentals; product sense and design collaboration scenarios; cultural fit for low-ego, high-craft environment; emphasis on learning agility and cross-functional communication."
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785347139,
   "locations": {
    "confidence": "medium",
@@ -161758,7 +161761,7 @@
    "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick/mental health days; unlimited policy for some roles but with strong cultural encouragement to take 3+ weeks off per year."
   },
   "refresh_after": 1789872201,
-  "retry_after": 1785446914,
+  "retry_after": 1785468802,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167775,7 +167778,7 @@
    "value": "Estimated: Tier 2-3. Not primarily known as an AI or data science company, but may have data engineering roles supporting their public safety technologies."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -167826,7 +167829,7 @@
    ],
    "value": "Prepare to discuss how you can contribute to building privacy-protecting public safety technologies and demonstrate interest in Flock's mission of crime reduction. Ask about work-life balance policies, training programs, and opportunities for rapid technical growth."
   },
-  "last_attempt_at": 1785445581,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785438957,
   "locations": {
    "confidence": "high",
@@ -167866,7 +167869,7 @@
    "value": "Estimated: 15-25 days annually, typical for growing tech companies with competitive benefits."
   },
   "refresh_after": 1790120387,
-  "retry_after": 1785446061,
+  "retry_after": 1785448162,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -235520,97 +235523,105 @@
  },
  "kayak": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2. While not a dedicated AI research lab, KAYAK handles high-scale data processing (Elasticsearch, billions of queries) which offers prestigious and challenging applied data engineering and infrastructure opportunities."
+   "confidence": "high",
+   "source_ids": [
+    "dcd4b7d45c"
+   ],
+   "value": "Tier 1 (Elite Subsidiary). Parent company Booking Holdings holds elite big-tech status, and KAYAK's high-scale data processing environment offers top-tier data science credibility."
   },
   "aliases": [],
-  "attempts": 29,
+  "attempts": 30,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "abfc5e1694"
+    "dcd4b7d45c"
    ],
-   "value": "Lead generation and referral commissions. KAYAK earns revenue by redirecting users to travel suppliers, booking sites, and partners, while also capturing advertising revenue."
+   "value": "KAYAK generates revenue through referral fees and advertising from travel providers when users click on search results to book, functioning as a metasearch engine. It is a subsidiary of Booking Holdings (NASDAQ: BKNG), a public company."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "abfc5e1694"
+    "abfc5e1694",
+    "b81692d2ae"
    ],
-   "value": "Collaborative, learning-oriented, and quality-driven. The company values engineers who work well together and fosters an environment that supports quick professional growth."
+   "value": "Collaborative, growth-oriented, and supportive. Post states the team 'values learning, quality, and working well together' and seeks prompt contributions without micro-management."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "abfc5e1694"
+    "dcd4b7d45c",
+    "abfc5e1694",
+    "b81692d2ae"
    ],
-   "value": "Everyday consumers looking for travel deals, as well as corporate clients and businesses seeking organized travel solutions."
+   "value": "Individual travelers searching for deals and corporate clients managing business travel through KAYAK for Business."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $130,000 - $160,000 USD base salary, aligning with large travel-tech and parent-company standards."
+   "value": "Estimated: $140,000 - $170,000 total annual compensation (base and equity) for an Associate Engineer in Cambridge, MA, reflecting Booking Holdings pay scales."
   },
   "evidence_sha": "4efbe254230bac16",
-  "generated_at": 1784675469,
+  "generated_at": 1785447202,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "abfc5e1694"
+    "dcd4b7d45c"
    ],
-   "value": "Travel Technology / Internet Search"
+   "value": "Online Travel / Travel Technology (Metasearch)"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Assess KAYAK's commitment to sane hours and work-life balance, as large tech subsidiaries can sometimes inherit corporate pressure. Evaluate how the team prioritizes rapid learning and innovation, and whether the culture leans toxic or genuinely supportive of personal time alongsideaccelerated career growth."
-  },
-  "last_attempt_at": 1785425314,
-  "last_evidence_at": 1785341822,
-  "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "ac14e8ebea"
-   ],
-   "value": "KAYAK lists Concord, MA as an office location for its Operations team."
-  },
-  "mission": {
    "confidence": "medium",
    "source_ids": [
     "abfc5e1694",
-    "ac14e8ebea"
+    "b81692d2ae"
    ],
-   "value": "KAYAK's mission is to help people find their perfect travel experiences seamlessly across flights, stays, and transportation, while transforming both consumer and business travel."
+   "value": "Expect to demonstrate technical proficiency, a collaborative orientation, and readiness to contribute meaningfully from day one. Emphasis will be on learning potential, problem-solving skills, and cultural alignment with a team valuing quality and balanced growth."
+  },
+  "last_attempt_at": 1785447202,
+  "last_evidence_at": 1785341822,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dcd4b7d45c",
+    "abfc5e1694",
+    "b81692d2ae"
+   ],
+   "value": "To help people find their perfect flight, stay, rental car and vacation package by processing billions of queries across its platforms."
   },
   "name": "KAYAK",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast-paced and high-impact. The company processes billions of queries and explicitly mentions an environment where engineers 'grow quickly' and 'contribute meaningfully from day one', indicating an agile, high-output engineering culture."
+   "value": "Estimated: Fast-paced and innovative with high-scale technical challenges, but balanced by a culture that values quality and collaboration over crisis-mode heroics."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "dcd4b7d45c",
     "abfc5e1694",
-    "ac14e8ebea"
+    "b81692d2ae"
    ],
-   "value": "Core products include its travel metasearch engine for flights, stays, rental cars, and vacation packages, as well as KAYAK for Business, a corporate travel management solution."
+   "value": "Core products are a consumer travel search engine comparing flights, hotels, and rental cars, alongside a newer business travel management platform, KAYAK for Business."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days PTO, typical of mature tech subsidiaries like Booking Holdings."
+   "value": "Estimated: 20-25 days of combined vacation and personal time, aligning with competitive tech subsidiary standards."
   },
-  "refresh_after": 1789859469,
-  "retry_after": 1785446914,
+  "refresh_after": 1790631202,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235620,15 +235631,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No direct source evidence; however, given its status under Booking Holdings, it may offer limited company-wide holidays or shutdowns typical of large tech calendars."
+   "value": "Estimated: A formal end-of-year holiday shutdown is likely, given the Booking Holdings orbit and modern tech norms."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "abfc5e1694",
-    "b81692d2ae"
+    "dcd4b7d45c",
+    "abfc5e1694"
    ],
-   "value": "Mature corporate subsidiary. KAYAK is an established, high-traffic entity operating under Booking Holdings (NASDAQ: BKNG)."
+   "value": "Mature public subsidiary; part of Booking Holdings (NASDAQ: BKNG). Posts for early-career roles indicate ongoing growth in engineering and cybersecurity."
   },
   "sources": [
    {
@@ -235693,42 +235704,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "abfc5e1694"
-   ],
-   "value": "Standard corporate sponsorship context applies; specific details were not explicitly found in the sources."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "dcd4b7d45c",
     "abfc5e1694",
     "b81692d2ae"
    ],
-   "value": "KAYAK is a leading travel search engine that processes billions of queries to help users find flights, accommodations, rental cars, and vacation packages. As part of Booking Holdings (NASDAQ: BKNG), it makes money by earning referral commissions and advertising fees from travel suppliers and partners when users book through its platform."
+   "value": "KAYAK is a leading travel search engine that processes billions of queries across its platforms to help users find flights, stays, rental cars, and vacation packages. It is also developing a corporate travel solution called KAYAK for Business."
   },
-  "synthesized_evidence_sha": "82937cee41860437",
+  "synthesized_evidence_sha": "4efbe254230bac16",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "dcd4b7d45c",
     "abfc5e1694",
-    "ac14e8ebea"
+    "b81692d2ae"
    ],
-   "value": "Engineers handle massive scale (billions of queries) and focus on infrastructure, platform health, and production environments using tools like LogicMonitor, Kibana, and Elasticsearch. Software engineering roles emphasize rapid growth, quality, and meaningful contributions from day one."
+   "value": "Work involves handling billions of queries, maintaining a high-scale travel search platform, cybersecurity/GRC functions, and developing new solutions like KAYAK for Business. Postings signal a focus on quality, learning, and early-career contributions."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673987,
   "web_search_url": "https://duckduckgo.com/?q=KAYAK+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "For a new grad seeking high technical growth, KAYAK offers the elite prestige of operating at massive scale (billions of queries) under a major tech parent company (Booking Holdings). It provides a fast learning environment where you can contribute meaningfully from day one without the bureaucratic stagnation often found in traditional corporations."
+   "confidence": "high",
+   "source_ids": [
+    "dcd4b7d45c",
+    "abfc5e1694"
+   ],
+   "value": "As a Booking Holdings subsidiary, KAYAK offers the elite prestige and top-of-market pay typical of big-tech, paired with a mature product that still scales massively. Postings explicitly call out a team culture valuing learning and working well together, with early ownership that accelerates career growth without the toxicity or burnout of high-churn competitors."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to Good. Official postings emphasize working well together and value learning, suggesting a supportive culture, though the high query volume scale suggests dense, demanding technical work during business hours."
+   "value": "Estimated: Highly respected. KAYAK's ethos of working well together and its established corporate structure suggest disciplined hours and protection against burnout."
   }
  },
  "kbr": {
@@ -335537,7 +335551,7 @@
    "value": "Estimated: Tier 3. Traditional insurance carriers typically do not offer top-tier AI or data science prestige compared to tech-first companies, focusing instead on applied business analytics and actuarial modeling."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -335595,7 +335609,7 @@
    ],
    "value": "Ask questions about the pace of innovation, tech stack modernization, and how teams balance sane hours with project delivery. Probe whether the specific team offers guaranteed shutdowns and fast-tracked learning, or if it faces typical insurance industry bureaucracy and burnout."
   },
-  "last_attempt_at": 1785445581,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "low",
@@ -335640,7 +335654,7 @@
    "value": "Estimated: 20-25 days of PTO annually, standard for an established financial services firm."
   },
   "refresh_after": 1790526129,
-  "retry_after": 1785446541,
+  "retry_after": 1785449122,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -420508,7 +420522,7 @@
    "value": "Likely Non-AI / Traditional Engineering. Does not align with top-tier AI or data science elite prestige."
   },
   "aliases": [],
-  "attempts": 23,
+  "attempts": 24,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -420565,7 +420579,7 @@
    ],
    "value": "You should probe heavily into the daily realities of their Agile environment to ensure it isn't just process-heavy defense contracting. Ask about work-life balance, actual hours, and whether shutdowns or flexible time off are practically accessible or throttled by program demands. Clarify the compensation structure to see if it hits top-tier new-grad pay, and question internal mobility to ensure you can accelerate your learning without stalling in a bureaucratic silo."
   },
-  "last_attempt_at": 1785425314,
+  "last_attempt_at": 1785447202,
   "last_evidence_at": 1785367855,
   "locations": {
    "confidence": "high",
@@ -420607,7 +420621,7 @@
    "value": "Estimated: 15 to 20 days of paid time off annually for early career roles."
   },
   "refresh_after": 1790074746,
-  "retry_after": 1785446914,
+  "retry_after": 1785468802,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
