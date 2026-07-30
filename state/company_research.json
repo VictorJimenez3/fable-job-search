@@ -87029,136 +87029,123 @@
  },
  "celonis": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "High; recognized as a fast-growing enterprise SaaS leader pushing the boundaries of AI-driven transformation and process intelligence."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 2 (Elite Enterprise). Celonis is a dominant, high-growth decacorn highly prestigious in business process AI, though lacking the broad consumer AI cachet of an OpenAI or DeepMind."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
+    "7864b1a6cb",
+    "4e8ce7498b"
    ],
-   "value": "Enterprise SaaS; they generate revenue by accelerating platform adoption and ensuring measurable business impact for clients through cross-functional engagement teams."
+   "value": "Celonis operates a subscription-based B2B software-as-a-service model. Revenue is generated through platform subscription fees and engagement services where cross-functional teams, including partners and engineers, drive platform adoption and measurable business impact."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "7864b1a6cb",
     "4e8ce7498b",
     "d898530833"
    ],
-   "value": "Mission-driven, innovative, and cross-functional. Described as changemakers focused on driving measurable business impact and increasing platform adoption through collaboration."
+   "value": "The internal vibe is mission-driven and cross-collaborative 'changemakers.' The structure is designed to pair lean data scientists with servicing, product and engineering teams, suggesting a high-autonomy, low-silo environment focused on real-world outcomes over lone-hero egos."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "7864b1a6cb",
     "4e8ce7498b"
    ],
-   "value": "Large enterprises across various industries, with specific focus areas including logistics and transportation."
+   "value": "Celonis serves large enterprises globally across diverse industries. Recent job postings highlight a dedicated focus on verticals like Logistics/Transportation, indicating a specialized go-to-market approach for major industry segments."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Not found in research."
+   "source_ids": [],
+   "value": "Estimated: $140,000 - $170,000 in total cash compensation for a New York-based Associate for Raleigh's lower cost of an data science with this requirement. Equity grant would be additional."
   },
   "evidence_sha": "dcb815f0775192ce",
-  "generated_at": 1785310523,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "4e8ce7498b",
     "d898530833"
    ],
-   "value": "Enterprise Software / Process Mining / SaaS"
+   "value": "Enterprise software and AI-driven business process transformation."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "To verify your boundaries and WLB requirements, ask about the typical hours of a 'proof project' cycle, expectations for cross-functional staffing during customer crunches, and whether on-call duties exist. To assess the technical culture, inquire about the specific AI tools used in the 'AI-Driven Data Science & Analytics' track and the learning curve for PQL. Determine if the fast-paced 'changemaker' environment operates on sane hours or relies on high-burnout heroics to drive measurable impact"
+   "source_ids": [],
+   "value": "For a new-grad data role, candidates should showcase consultative business acumen paired with deep technical skills in SQL and Python. Interview preparation should de-emphasize managed-algorithm trivia and focus on how you would structure a proof project to address a business pain point using process intelligence."
   },
-  "last_attempt_at": 1785310523,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785444015,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "4e8ce7498b",
+    "a73c74406c",
+    "29d63913b8",
     "d898530833"
    ],
-   "value": "Global presence, utilizing cross-functional teams and resources worldwide to staff customer engagements."
+   "value": "Celonis is headquartered in Munich, Germany, with a significant US office in New York, as well as other global hubs. The 'Orbit Program' posting is located in Raleigh, NC, demonstrating a distributed technical footprint."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "To make processes work for people, companies, and the planet."
+   "value": "According to its public statements, Celonis's mission is to make processes work for people, companies, and the planet."
   },
   "name": "Celonis",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Estimated: Fast-paced and deadline-driven, defined by rapid execution of proof projects and a self-described 'changemaker' culture pushing the boundaries of what is possible."
+   "source_ids": [],
+   "value": "Estimated: Fast-paced and impact-driven, typical of a 'fastest-growing' late-stage SaaS company. The need to 'drive measurable business impact' and foster adoption suggests an environment where iteration and optimization happen at high speed, though the complex enterprise sales cycle protects against truly frantic consumer-app cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "de1a65828a",
     "d898530833"
    ],
-   "value": "The Celonis Process Intelligence platform, which features proprietary data modeling, analytics, and a query language called PQL."
+   "value": "The Celonis platform is centered on Process Intelligence, combining process mining, AI-driven analytics, and automation capabilities. It ingests event logs from enterprise systems, reconstructs process flows, and applies machine learning to identify root causes and recommend actions for improvement."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Not found in research."
+   "source_ids": [],
+   "value": "Estimated: Flexible leave, 20-25 days annually for new graduates in the US, reflecting a more generous European norm."
   },
-  "refresh_after": 1790494523,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Orbit Program."
+   "value": "Orbit Program"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Not found in research."
+   "source_ids": [],
+   "value": "Estimated: Global sobriety likely includes a week-long end-of-year company recharge shutdown, mirroring patterns at global enterprise software peers."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "7864b1a6cb",
     "4e8ce7498b",
     "d898530833"
    ],
-   "value": "Self-described as one of the world's fastest-growing enterprise SaaS companies, indicating a late-stage, rapidly scaling organization."
+   "value": "Celonis describes itself as one of the world's fastest-growing enterprise SaaS companies, indicating a post-Series D/growth-equity stage well beyond a startup, operating at significant global scale."
   },
   "sources": [
    {
@@ -87223,48 +87210,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Preview not captured in detail, but standard for a global enterprise SaaS company of this stage."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "4e8ce7498b",
+    "a73c74406c",
+    "de1a65828a",
     "d898530833"
    ],
-   "value": "Celonis is a fast-growing enterprise SaaS company that provides a Process Intelligence platform, helping organizations analyze and optimize their internal business processes. They make money by licensing this software to large enterprises, enabling them to drive measurable business impact, operational efficiency, and AI-driven transformation."
+   "value": "Celonis is a global enterprise SaaS company that provides a process mining and process intelligence platform. The software analyzes digital footprints from systems like ERP and CRM to visualize how business processes actually run, uncovering inefficiencies and bottlenecks so companies can optimize operations and automate workflows."
   },
-  "synthesized_evidence_sha": "26ac9b1a1640ff65",
+  "synthesized_evidence_sha": "dcb815f0775192ce",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Involves executing proof-of-concept projects, developing and modifying Celonis data models using SQL, and creating analyses using PQL to build compelling prototypes for customer pain points."
+   "value": "Technical roles, such as the Associate Value Engineer, involve executing proof projects and developing AI-driven data science and analytics prototypes. The hands-on technical work requires modifying data models using SQL and building analyses with a proprietary language, PQL, often directly supporting the sales cycle."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673651,
   "web_search_url": "https://duckduckgo.com/?q=Celonis+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Celonis aligns perfectly with your desire for a fast, innovative tech culture, branding itself as a 'changemaker' pushing technological boundaries. The heavy focus on AI-driven data science and rapid platform development provides the elite technical learning and career growth you seek. However, as a fast-growing SaaS company driven by customer engagements, you should critically evaluate if the consulting-style deadlines and value-driven metrics match your requirement for guaranteed shutdowns and"
+   "source_ids": [],
+   "value": "Celonis matches your target profile by being an elite, venture-backed enterprise SaaS company operating at the intersection of AI and data science. The engineering culture appears focused on accelerating learning through high-trust proof projects rather than bureaucratic maintenance, while its origin story and public mission suggest a values-driven environment that stands in contrast to toxic, high-burnout tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "4e8ce7498b",
-    "d898530833"
-   ],
-   "value": "Estimated: Moderate to Variable. While a mission-driven company, the focus on customer engagements, proof projects, and being one of the world's fastest-growing SaaS companies suggests that WLB may fluctuate based on client deadlines rather than strictly guaranteed sane hours."
+   "source_ids": [],
+   "value": "Estimated: 4 out of 5. As a high-value European-founded enterprise firm, Celonis likely honors a saner working rhythm than US West Coast consumer tech. The mission-centric culture implies a pull for high enjoyment, not push for fear, though a client-facing technical role includes natural deadlines."
   }
  },
  "cencora": {
@@ -94017,39 +93996,107 @@
  },
  "chime": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e59051b4ec",
+    "dd2cc06d3c"
+   ],
+   "value": "Top-Tier Fintech Unicorn; viewed as elite within the SF tech ecosystem due to scale, modern architecture, and strong engineering culture, on par with top private firms before IPO."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "dd2cc06d3c",
+    "876203cae2"
+   ],
+   "value": "B2C digital bank monetizing primarily through interchange fees from debit/credit card transactions, with revenue streams tied to user engagement rather than penalty fees."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "dd2cc06d3c",
+    "e59051b4ec"
+   ],
+   "value": "Mission-driven and member-obsessed, with a strong focus on inclusion, financial literacy, and pragmatic innovation. Collaboration across engineering, product, and operations is the norm."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dd2cc06d3c",
+    "876203cae2"
+   ],
+   "value": "Millions of U.S. consumers underserved by traditional banks, seeking low-fee, mobile-driven financial management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130K–$165K base salary plus meaningful equity and likely performance bonus. Exact mix negotiable based on competing offers."
   },
   "evidence_sha": "707ad79b47ff7aab",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785445395,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dd2cc06d3c",
+    "876203cae2"
+   ],
+   "value": "Financial Technology (Fintech) / Digital Banking"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e59051b4ec"
+   ],
+   "value": "Expect full-stack system design, coding (JavaScript/Python), high-volume data modeling, and behavioral questions emphasizing owner mentality and mission alignment. Reach out to the recruiter to specifically confirm team-level WLB, on-call frequencies, and standard working hours."
+  },
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785444316,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e59051b4ec"
+   ],
+   "value": "Headquarters in San Francisco, CA. Onsite roles in San Francisco."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dd2cc06d3c",
+    "e59051b4ec"
+   ],
+   "value": "To provide affordable, transparent financial services that help everyday people achieve financial peace of mind and progress."
+  },
   "name": "Chime",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced with ownership and rapid shipping cycles typical of a leading late-stage fintech; motivated by product velocity rather than bureaucratic or banking legacy rhythms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "dd2cc06d3c",
+    "876203cae2",
+    "f12c67c99f"
+   ],
+   "value": "Mobile-first banking services including Checking and Savings accounts, a secured credit builder card, fee-free overdraft (SpotMe), early direct deposit, and peer-to-peer payments, all accessible via app."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18–20 flexible PTO days annually for new-grad tech employees, in line with competitive SF fintech benchmarks."
   },
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94059,7 +94106,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Scheduled company-wide winter shutdown (week between Christmas and New Year); periodic wellness days likely offered."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e59051b4ec"
+   ],
+   "value": "Late-stage private fintech with 1,001-5,000 employees, founded in 2012 and headquartered in San Francisco. Well-capitalized with strong IPO potential."
   },
   "sources": [
    {
@@ -94113,14 +94167,45 @@
     "url": "https://jobright.ai/jobs/info/6a6b9065c00ae03109f84af0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "e59051b4ec"
+   ],
+   "value": "Chime has a track record of offering H1B sponsorships, though it does not guarantee sponsorship for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dd2cc06d3c",
+    "876203cae2"
+   ],
+   "value": "Chime is a financial technology company that provides mobile banking services through a partner bank model. It makes money primarily from interchange fees paid by merchants when members use their Chime debit or credit cards."
+  },
+  "synthesized_evidence_sha": "707ad79b47ff7aab",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e59051b4ec"
+   ],
+   "value": "Full-stack engineering building internal tools for human agent workflows. Work spans consumer fintech scale challenges, real-time transaction systems, and agent efficiency platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785444316,
   "web_search_url": "https://duckduckgo.com/?q=Chime+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e59051b4ec",
+    "dd2cc06d3c"
+   ],
+   "value": "Chime combines elite fintech prestige with tangible mission impact for millions of underserved users. Early responsibilities likely accelerate technical growth through AI-driven and large-scale data engineering challenges. Culture is geared toward innovation, and the deliberate tech focus likely guards against burnout typically seen in traditional finance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally healthy boundaries for a San Francisco unicorn with sane working hours and protected weekends; less grueling than investment banking or early-stage hustle startups."
   }
  },
  "chipotle mexican grill": {
@@ -124754,126 +124839,118 @@
  },
  "databricks": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "Estimated: Top-tier, recognized as an elite AI and data science company."
-  },
-  "aliases": [],
-  "attempts": 4,
-  "business_model": {
    "confidence": "high",
    "source_ids": [
     "855cd41d09"
    ],
-   "value": "SaaS/Cloud platform usage, where customers build, maintain, and use their data and AI stacks on Databricks daily."
+   "value": "Tier 1 (Elite); Databricks is widely considered a top-tier destination in the data and AI infrastructure sector, rivaled only by a few hyperscalers and foundational platforms."
+  },
+  "aliases": [],
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d381e54880"
+   ],
+   "value": "Databricks operates on a consumption-based subscription model, where partners and sales teams work to identify use cases that drive customer adoption and grow consumption within accounts."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "d381e54880",
     "855cd41d09"
    ],
-   "value": "Passionate, mission-driven, and highly technical; encourages early adoption, direct feedback, and reusable solution building."
+   "value": "The culture is strongly focused on open-source stewardship, technical excellence, and diversity and inclusion where everyone can excel. The environment is highly collaborative between engineering product teams and customer-facing technical roles. It values developers who use the platform daily to build real solutions."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "855cd41d09"
+    "d381e54880"
    ],
-   "value": "Data teams across various organizations aiming to accelerate breakthroughs in fields like medical research and transportation."
+   "value": "Databricks serves a wide range of technically sophisticated clients, from enterprises solving complex transportation and medical problems to accounts exploring advanced AI and data use cases that require significant consumption growth within their cloud environments."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "Estimated: Highly competitive new-grad tech pay reflecting top-tier AI industry standards."
+   "source_ids": [],
+   "value": "Estimated: $175,000 - $210,000 total annual compensation (salary + equity + bonus) for elite software/new-grad engineering roles in the San Francisco Bay Area."
   },
   "evidence_sha": "ce9f4cbbb3058b40",
-  "generated_at": 1784777137,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "855cd41d09"
+    "855cd41d09",
+    "d381e54880"
    ],
-   "value": "Data and AI Software / Cloud Computing."
+   "value": "Enterprise Data & AI Infrastructure"
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
+    "d381e54880",
     "855cd41d09"
    ],
-   "value": "Emphasize your ability to rapidly adopt new AI technologies, your passion for the mission of solving tough problems, and your drive for continuous technical learning and fast-paced innovation that respects personal time."
+   "value": "Interviews will focus heavily on high-impact technical problem-solving and a self-starter mindset. The process likely screens for a strong engineering background in big data and AI combined with a fast-paced, customer-centric attitude, ensuring candidates can keep up with the platform's rapid innovation cycle without a bureaucratic slowdown."
   },
-  "last_attempt_at": 1785441492,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785438957,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "82f735a068"
-   ],
-   "value": "Hiring is global, facilitated through their online job board and career portal."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "855cd41d09"
    ],
-   "value": "To enable data teams to solve the world’s toughest problems."
+   "value": "The company's stated mission is to help data teams solve the world's toughest problems by accelerating the development of innovations like next-generation transportation and medical breakthroughs."
   },
   "name": "Databricks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "855cd41d09"
+    "855cd41d09",
+    "d381e54880"
    ],
-   "value": "Estimated: Fast and innovative, expecting employees to try new features early and use the platform heavily every day."
+   "value": "Estimated: Very Fast. The technology area moves extremely quickly and the job postings explicitly demand eagerness to learn, a willingness to rapidly adopt unreleased features, and a self-starting problem-solver personality."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "855cd41d09"
    ],
-   "value": "A unified data and AI platform featuring tools such as Databricks Apps, Genie, metric views, AI/BI, Lakebase, and Agent Bricks."
+   "value": "The Databricks Platform includes a cloud-based data lakehouse architecture that combines the best of data lakes and data warehouses. Key features and products mentioned in research include lakehouse analytics, AI/BI, Databricks Apps, Genie, metric views, Lakebase, Agent Bricks, and a suite of machine learning and data engineering tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "Estimated: Standard tech PTO (e.g., 15-20 days annually) supporting a balanced WLB."
+   "source_ids": [],
+   "value": "Estimated: Flexible/Unlimited PTO policy, typical for the tech industry cohort."
   },
-  "refresh_after": 1789961137,
-  "retry_after": 1785442452,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns found, though standard public holidays are likely observed."
+   "source_ids": [],
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "82f735a068"
-   ],
-   "value": "Large, late-stage enterprise tech company with active, ongoing global hiring."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -124938,28 +125015,27 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "82f735a068"
-   ],
-   "value": "Not explicitly found in the provided sources."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "855cd41d09",
-    "82f735a068"
+    "d381e54880"
    ],
-   "value": "Databricks provides a unified data and AI platform that enables data teams to solve the world's toughest problems by building and maintaining data and AI stacks. It generates revenue by offering a heavily-used cloud platform where organizations leverage features like AI/BI, Apps, and Genie for data processing and intelligence."
+   "value": "Databricks provides a unified analytics platform that helps organizations build, deploy, and manage data and AI projects on a massive scale. The company originated as the commercial steward of Apache Spark and has grown into a broad platform for data engineering, data science, machine learning, and generative AI."
   },
-  "synthesized_evidence_sha": "c4bf5d4bbc03d58b",
+  "synthesized_evidence_sha": "ce9f4cbbb3058b40",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "855cd41d09"
+    "855cd41d09",
+    "d381e54880"
    ],
-   "value": "Building and maintaining data and AI stacks on the Databricks platform; using the platform heavily every day; trying new features early and providing direct product feedback to Developer Relations."
+   "value": "Technical work ranges from deeply engineering-focused roles (building platforms on top of Databricks, testing new features like AI/BI and Agent Bricks early) to customer-facing engineering roles that involve direct product feedback and solution selling with a strong emphasis on Big Data and AI."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583369,
@@ -124967,16 +125043,15 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "855cd41d09"
+    "855cd41d09",
+    "d381e54880"
    ],
-   "value": "Databricks aligns with your desire for a top-tier AI and data science role, offering fast-paced, innovative work directly impacting product development that accelerates technical learning and career growth without being bogged down by slow bureaucracy."
+   "value": "For a candidate seeking elite prestige, Databricks sits at the absolute pinnacle of the modern data and AI infrastructure space as a top-tier tech name. The company's platform is deeply technical and innovative, requiring a fast-paced culture that avoids slow bureaucracy. The pre-IPO status and high consumption-based revenue model allow it to offer extremely competitive new-grad compensation while serving a mission to help engineers solve the world's hardest problems."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "855cd41d09"
-   ],
-   "value": "Estimated: Good, balancing a fast-paced innovative culture with a mission-driven approach to avoid toxic burnout."
+   "source_ids": [],
+   "value": "Estimated: 3.7 / 5.0. As a high-growth infrastructure company, workloads can be intense, but the engineering-driven culture typically respects boundaries more than consumer-social or consulting firms. No research cited specific mandated burnout policies."
   }
  },
  "datadog": {
@@ -156628,7 +156703,7 @@
    "value": "Tier 2 — Strong applied AI reputation in insurance/healthcare analytics; publishes at top conferences (KDD, NeurIPS workshops) and builds proprietary platforms, but not a primary AI research lab like FAIR/DeepMind."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -156650,7 +156725,7 @@
    ],
    "value": "Fortune 500 and Global 1000 companies primarily in insurance, healthcare, banking & financial services, utilities, retail, and technology sectors seeking data-driven operational improvement."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156676,7 +156751,7 @@
    "source_ids": [],
    "value": "Expect case-style problem solving with messy client data, ML system design for regulated environments, and behavioral questions on stakeholder management. Prepare to discuss end-to-end model lifecycle (not just modeling), cloud cost optimization, and how you balance technical rigor with delivery deadlines. Ask about 'utilization guardrails' and 'innovation time allocation' to gauge WLB reality."
   },
-  "last_attempt_at": 1784681178,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785444316,
   "locations": {
    "confidence": "high",
@@ -156713,6 +156788,7 @@
    "source_ids": [],
    "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); accrues monthly, carryover limited. Varies by country/tenure."
   },
+  "retry_after": 1785445635,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156779,7 +156855,7 @@
    "source_ids": [],
    "value": "Actively sponsors H-1B visas and green cards for technical roles (data science, ML engineering, analytics); large global workforce with established immigration support processes."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -178863,7 +178939,7 @@
    "value": "Estimated: Tier 2 within the defense sector. Highly prestigious for defense contracting and mission-critical work, but lacks the prestige of top-tier commercial tech giants for purely AI or data science roles."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -178916,7 +178992,7 @@
    ],
    "value": "During interviews, you should probe heavily into the day-to-day pace and bureaucratic hurdles to ensure the role won't be a slow grind. Ask about the extent of remote work flexibility, user access protocols, and whether the team culture actually respects sane hours and avoids burnout or sustains a toxic environment."
   },
-  "last_attempt_at": 1785441203,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785439245,
   "locations": {
    "confidence": "high",
@@ -178956,7 +179032,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days of vacation plus federal holidays, standard for large defense contractors."
   },
-  "retry_after": 1785445043,
+  "retry_after": 1785453075,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195666,94 +195742,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Tier 4 (Non-technical employer; recruiting services firm). Does not conduct AI/ML research or build models. Prestige derives from client roster, not technical output."
+   "value": "Estimated: Not applicable / Unknown. The available research focuses on mobile engineering rather than AI or data science, making it difficult to assess elite prestige in those specific domains."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Contingency and retained search fees for direct placements; hourly markups for contract staffing; possible subscription or consulting retainers for talent advisory services."
+   "confidence": "low",
+   "source_ids": [
+    "92930c9f37"
+   ],
+   "value": "The exact business model is not explicitly described in the provided sources."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Competitive, relationship-driven, metric-oriented sales culture with emphasis on placement volume and client satisfaction. Less \"engineering-first\" than product companies."
+   "value": "Estimated: Agile, high-impact, and growth-oriented, typical of an early-stage tech company."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Technology companies, startups, and enterprises seeking specialized engineering and data talent across various industries."
+   "confidence": "low",
+   "source_ids": [
+    "92930c9f37"
+   ],
+   "value": "Not explicitly identified in the provided sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $70k-$90k base + commission/bonus for junior recruiter or analyst roles. Not competitive with top-tier AI/DS new-grad packages ($150k-$250k+)."
+   "value": "Estimated: £35,000 - £50,000 (UK) or $80,000 - $110,000 (US), depending on the hiring location."
   },
   "evidence_sha": "7b7e308a4f51c242",
-  "generated_at": 1784863706,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology recruiting & staffing / Human capital services"
+   "confidence": "medium",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Information Technology and Software Engineering."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "If interviewing for an internal technical role (e.g., recruiting ops, data analyst), expect focus on SQL/Python, ATS/CRM systems, sourcing automation, and talent market analytics. For recruiter roles: consultative selling, technical screening ability, and client management. No AI/DS research depth expected."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Focus on evaluating the company's technical roadmap to ensure it offers genuine AI or data science opportunities. Ask candid questions about expected working hours, on-call expectations, and shutdown policies to confirm the company avoids toxic or high-burnout environments."
   },
-  "last_attempt_at": 1785441799,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785438957,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Headquartered in the Washington DC metro area (Arlington, VA); may have remote/hybrid presence across US tech hubs."
+   "confidence": "medium",
+   "source_ids": [
+    "7715d98ced",
+    "92930c9f37"
+   ],
+   "value": "Public company pages indicate a UK presence (hatch.co) and a US presence (hatch.com)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: To bridge the gap between top-tier technical talent and innovative companies through specialized recruiting expertise."
+   "confidence": "low",
+   "source_ids": [
+    "92930c9f37"
+   ],
+   "value": "The exact company mission is not explicitly available in the provided sources."
   },
   "name": "Hatch IT",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast-paced, metrics-driven sales/recruiting cycles with quarterly quotas. Internal tech roles may have more sustainable pace but still service-oriented."
+   "value": "Estimated: Fast-paced. Early-stage startups typically require high velocity and daily impact, which may risk bleed-over into personal time."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Technical recruiting services, contract staffing, direct-hire placement, and talent consulting for software engineering, data science, AI/ML, and related roles. No proprietary software product indicated in available sources."
+   "confidence": "medium",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Specific proprietary products or services are not detailed in the provided sources, though the company is actively developing mobile applications and software solutions based on their engineering roles."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + US federal holidays; unlimited policies uncommon in traditional staffing firms."
+   "value": "Estimated: 20-25 days. Standard tech industry PTO, though specific startup policies may vary."
   },
-  "refresh_after": 1790047706,
-  "retry_after": 1785442279,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns; typical US staffing firm holiday schedule only."
+   "value": "Estimated: None found in research. Guaranteed shutdowns are uncommon at early-stage startups unless explicitly stated."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Small to mid-sized private company (likely 50-200 employees), mature recruiting firm rather than early-stage startup."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Early-stage startup."
   },
   "sources": [
    {
@@ -195798,34 +195891,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: As a staffing firm, may place candidates on client-sponsored visas (H-1B, O-1, TN) but unlikely to sponsor directly for internal roles except senior positions."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Does not provide visa sponsorship for its engineering roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Hatch IT is a technology-focused recruiting and staffing firm that connects companies with engineering, data science, and AI talent. The company operates as a talent marketplace and recruitment partner rather than a product company."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Hatch IT is an early-stage technology company that is actively hiring software and mobile engineering talent. They generate revenue by delivering technology solutions to their clients and end-users."
   },
-  "synthesized_evidence_sha": "68fe2fc6a03e77e3",
+  "synthesized_evidence_sha": "7b7e308a4f51c242",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Internal roles may include recruiting operations tooling, CRM/ATS customization, data analysis for talent market insights, and automation of sourcing workflows. Not a primary AI/ML product engineering environment."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "Involves mobile and software engineering, providing an open runway for technical growth and immediate daily impact."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=Hatch+IT+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay and fast innovation culture: Hatch IT is a recruiting firm, not an AI product company, so it does not offer direct AI/DS research or engineering roles with technical prestige. It may provide exposure to many companies but lacks the mission-driven technical culture, guaranteed shutdowns, or accelerated technical learning of an AI-native employer."
+   "confidence": "high",
+   "source_ids": [
+    "9c0427ff05"
+   ],
+   "value": "An early-stage environment offers a fast, innovative culture with an open runway for rapid career growth. However, candidates should carefully vet the company to ensure it avoids startup bureaucracy and maintains a sustainable work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3/5. Recruiting roles often involve evenings/weekends for candidate/client calls. Internal tech roles likely better but still subject to service demands."
+   "value": "Estimated: Moderate. The startup nature implies a demanding environment, meaning guaranteed work-life balance must be explicitly verified by the candidate."
   }
  },
  "havi": {
@@ -266117,109 +266218,126 @@
  },
  "mass general brigham": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Tier 1 among academic medical centers. The combined MGH/BWH research ecosystem is globally elite in biomedical AI, though total comp and pure-tech prestige are lower than FAANG firms and top proprietary AI labs."
+   "value": "If focused specifically on AI/Data Science talent, likely operates as a functional reporting tier rather than an elite AI/DS tier that prioritizes emerging engineers, as the technical skills emphasize standard query writing and report design."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Non-profit health system investing all revenues back into community care, research, and education. It generates surplus from its insurance plans and clinical services, then reinvests those funds into workforce initiatives, technology, and scientific discovery rather than distributing profit to shareholders."
+   "value": "Revenue generation through patient care services, hospital operations, and funded medical research grants."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-oriented, collegial, and academic medical. The vibe is a lab-coat culture that values evidence, humility, and peer-reviewed impact above moving fast or breaking things. It is strictly bureaucratic on administrative tasks but has minimal tolerance for burnout-by-shouting or swell-work death marches."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: Mission-driven and stable, values rigorous clinical and operational accuracy over fast-paced technical experiment."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Patients in the greater Boston area and beyond who seek specialty care, as well as individuals covered under its own health insurance plans."
+   "confidence": "high",
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Patients seeking medical treatment and healthcare services across Massachusetts and the broader region."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $105,000 - $120,000 base salary for a new-grad AI / Data Science position within the computational medicine or IT division. Research post-doc pay is far lower, while specialized machine learning engineering roles in the data-science team can reach toward $125,000 with no long-term incentive."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: $70000 - $85000 for Data Analyst I, which is moderate hospital-admin pay, significantly lower than top-tier tech roles."
   },
   "evidence_sha": "447a35171bf51fc9",
-  "generated_at": 1784683999,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Hospital & Health Care"
+   "value": "Hospitals and Healthcare"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect technical rounds to dive into statistics, Python or R data-wrangling, and causal inference methods, with a strong emphasis on communicating complex modeling concepts to doctors who lack a tech background. Behavioral rounds focus on mission alignment, handling ambiguous clinical time series data, and working within IRB constraints without requiring round-the-clock availability."
+   "confidence": "medium",
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Candidates should confirm whether this specific team operates with an innovative, fast-paced tech culture or conforms to traditional slow bureaucracy, and verify sane hours and learning methodologies despite the overall corporate footprint."
   },
-  "last_attempt_at": 1785441203,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785434417,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Headquartered in Somerville, Massachusetts, with primary research and teaching hubs in Boston and clinical sites in multiple suburban towns."
+   "value": "Somerville, Massachusetts, USA."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Serving the community, caring for patients, discovering new treatments, and training the next generation of doctors."
+   "value": "To provide comprehensive, high-quality patient care while advancing medical research and education."
   },
   "name": "Mass General Brigham",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Deliberate and measured, paced more like an academic research lab than a SaaS startup. The work revolves around grant cycles and clinical meetings, with careful validation required before any model touches patient-care protocols."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: Matches typical large enterprise pace, tending toward slow bureaucracy rather than fast-paced innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "It provides a range of healthcare delivery and health-insurance products. The non-profit receives NIH funding for biomedical research and trains future physicians."
+   "value": "Clinical healthcare services, medical research output, and hospital patient care programs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 combined days annually for a new grad hire, blending vacation, personal, and sick time in a single rich accrual, plus standard Massachusetts fixed paid holidays."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: Typical for large hospital systems, usually around 20-25 paid days off annually."
   },
-  "retry_after": 1785442163,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "cef62db5ae"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Guaranteed institutional shutdowns typically occur on major federal holidays and often a half-week winter break closure in late December when non-essential tech and research IT operations freeze."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: No widespread guaranteed tech shutdown periods observed in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "The largest hospital-based research enterprise and the second-largest non-profit institution in the U.S. It represents a state-wide, mature organization with roughly 82,000 employees across the system."
+   "value": "10001+ employees, established enterprise non-profit."
   },
   "sources": [
    {
@@ -266274,35 +266392,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though it is not guaranteed for any specific role."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "ec38a98a8d"
+    "cef62db5ae"
    ],
-   "value": "Mass General Brigham is a not-for-profit integrated healthcare system that combines the clinical, research, and educational power of Brigham and Women’s Hospital, Massachusetts General Hospital, and other top-tier institutions. It makes money by billing for advanced patient care and surgical procedures, and by winning massive federal research grants that fuel its academic medical centers and data-science initiatives."
+   "value": "Mass General Brigham is a large non-profit healthcare system founded in 1994. As a hospital and research network, it makes money by providing patient care, conducting medical research, and managing healthcare facilities."
   },
+  "synthesized_evidence_sha": "447a35171bf51fc9",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Technical work involves data analysis, statistics, query writing, and report design."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673559,
   "web_search_url": "https://duckduckgo.com/?q=Mass+General+Brigham+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "This system places a new grad inside an elite institution with immediate access to patient data that is rare for a tech giant, offsetting the slower pace of a massive academic medical center with mission-focused, truly meaningful work such as curing cancer with machine learning. It actively protects personal time through sane academic hours and scheduled breaks, avoiding the toxic burnout found in many startup or wear-a-pager corporate rotation cultures."
+   "confidence": "medium",
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "This role fundamentally misaligns with the candidate's priorities. It offers strong mission-driven healthcare work but lacks elite software coding, features slower bureaucracy over a fast innovative tech culture, and provides hospital-admin pay rather than top-tier tech pay."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Respectfully paced. Clinical research environments typically enforce a standard structured week, and on-call is generally zero for pure AI roles. The non-profit hospital culture strongly discourages the late-night crunch mode common in tech desks."
+   "source_ids": [
+    "cef62db5ae"
+   ],
+   "value": "Estimated: Typically offers sane hours and enforced work-life balance, avoiding toxic high-burnout environments."
   }
  },
  "massmutual": {
@@ -312882,7 +313009,7 @@
    "value": "Top-tier (undisputed industry leader in AI research and deployment)"
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -312909,7 +313036,7 @@
    ],
    "value": "Enterprise customers, design partners, and strategic product partners seeking complex AI integrations and solutions."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -312941,7 +313068,7 @@
    ],
    "value": "Probe the realities of their fast-paced environment: ask specific questions about on-call expectations, weekend work, and whether guaranteed shutdowns actually exist for your target team. Emphasize your ability to operate with high autonomy and sound judgment in fast-moving technical environments, but set clear boundaries to ensure the role doesn't sacrifice your personal time."
   },
-  "last_attempt_at": 1785392120,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "high",
@@ -312983,6 +313110,7 @@
    "value": "Estimated: Standard unlimited PTO typically seen in elite tech scale-ups (actual accrual often averages 15-20 days/year, dependent on team pace)."
   },
   "refresh_after": 1790576120,
+  "retry_after": 1785466995,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -313072,7 +313200,7 @@
    ],
    "value": "Not explicitly detailed in available sources, though the company offers relocation support to new employees."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -313819,47 +313947,42 @@
  },
  "oracle": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "d6f3c5b02f",
-    "1db9db9c4d"
-   ],
-   "value": "High tier for enterprise AI and cloud data infrastructure; Oracle demands elite credibility from a traditional powerhouse, though it is not a generative-AI frontier lab."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional enterprise infrastructure; AI/ML developer prestige is highly dependent on joining OCI's specialized AI or GenCloud teams, with many roles lacking top-tier market prestige."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Oracle follows a hybrid business model, generating income from cloud services and license support, on-premise software and hardware licenses, and associated professional services."
+   "value": "Primarily B2B software sales and cloud computing subscriptions, generating recurring revenue through multi-year licensing agreements and cloud infrastructure usage fees."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "d6f3c5b02f"
-   ],
-   "value": "The culture at Oracle is described as hierarchical and often team-dependent, meaning a persons experience hinges on the specific group and manager. It values technical competence over a move-fast mentality, giving it a more formal reputation than younger consumer tech companies."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Traditional, stable, and legacy-focused corporate environment that respects personal time. May lack the fast-paced, innovation-driven feel of modern AI startups."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Fortune 500 companies, government agencies, and financial institutions depend on Oracle. Its database and cloud solutions serve large enterprises across every major industry."
+   "value": "Large enterprises, government agencies, and mid-sized businesses worldwide that require robust data management, enterprise resource planning (ERP), and cloud infrastructure solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: New graduate master's and PhD tech roles in high cost-of-living areas frequently receive a total annual package of $175,000 to $250,000, mixing base salary, equity, and sign-on."
+   "value": "Estimated: Base salary ranges from $120k to $150k, with total compensation around $150k to $200k; significantly lower than top-tier startup/tech pay, but may feature decent stock refreshers."
   },
   "evidence_sha": "081b1efea09fb0da",
-  "generated_at": 1785265335,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -313867,67 +313990,76 @@
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Software, cloud infrastructure, and enterprise technology."
+   "value": "Enterprise Software and Cloud Computing."
   },
   "interview_focus": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "d9a98292ee",
-    "1db9db9c4d"
+    "dbc3b9e88f",
+    "f1d12af51e"
    ],
-   "value": "Interview loops at Oracle typically weigh both coding and design, but for cloud and AI roles, expect deep architecture and data pipeline questions. The candidate should probe team-specific mandates to verify the high-impact scope and realistic workload boundaries, rather than accepting general company reputation."
+   "value": "Candidates should probe heavily into the specific team's work-life balance, expected hours, bureaucratic overhead, and modern tech stack usage to ensure the role provides elite, fast-paced learning without toxic burnout risks that sometimes accompany proprietary enterprise environments."
   },
-  "last_attempt_at": 1785435212,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785428821,
   "locations": {
    "confidence": "medium",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Oracle is headquartered in Austin, Texas, with significant engineering hubs in the Bay Area (Redwood City/Santa Clara), Seattle, and other global offices."
+   "value": "Headquartered in Austin, Texas, with major engineering hubs globally, including the San Francisco Bay Area and Seattle."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "d6f3c5b02f"
+   ],
+   "value": "To help people see data in new ways, discover insights, and unlock possibilities."
   },
   "name": "Oracle",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: More measured than early-stage startups, with a focus on deliberate projects; real pace by team varies, particularly within growth-oriented cloud groups."
+   "value": "Estimated: Slow to moderate; often characterized by traditional enterprise processes, slower release cadences, and heavy bureaucracy. Some cloud infrastructure teams may operate moderately faster."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Products include Oracle Database, Oracle Cloud Infrastructure (OCI), enterprise resource planning (ERP) systems, customer relationship management (CRM) software, supply chain management tools, and Java."
+   "value": "Oracle Database, Oracle Cloud Infrastructure (OCI), NetSuite,Oracle E-Business Suite, and various enterprise SaaS applications for HR, finance, and supply chain."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of combined vacation and sick leave, with exact days dependent on un-limited tier and tenure."
+   "confidence": "high",
+   "source_ids": [
+    "f1d12af51e"
+   ],
+   "value": "Estimated: Accrued Vacation is 13 days annually for the first three years, increasing to 18 days subsequently; eligible salaried employees receive Flexible Vacation (no set accrual cap)."
   },
-  "retry_after": 1785442892,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research; Oracle hires recent graduates directly into teams rather than through a single structured rotational program of the type defined."
+   "confidence": "high",
+   "source_ids": [
+    "f1d12af51e"
+   ],
+   "value": "None found in research for rotational programs."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Some limited operations over the holiday period; a company-wide guaranteed shutdown policy was not found for all full-time employees."
+   "source_ids": [
+    "f1d12af51e"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns mentioned in standard public policies; PTO is discretionary and not strongly structured around mandatory breaks."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Oracle is a well-established, public multinational with a recent market capitalization near $360 billion to $430 billion, placing it among the world's largest technology corporations."
+   "value": "Established public enterprise tech giant (NYSE: ORCL) with over 100,000 employees."
   },
   "sources": [
    {
@@ -313992,24 +314124,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "dbc3b9e88f"
+   ],
+   "value": "Known to sponsor H-1B visas and hire international students for US-based technical roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "d6f3c5b02f"
    ],
-   "value": "Oracle is a major enterprise technology company that sells database management systems, cloud infrastructure, and enterprise software. It generates revenue through cloud subscriptions, software licenses, hardware sales, and consulting services."
+   "value": "Oracle is a massive enterprise technology corporation that sells database software, cloud infrastructure, and enterprise application products. It makes money primarily through long-term software licensing, subscription-based cloud services (SaaS, IaaS, PaaS), and ongoing hardware maintenance contracts."
   },
+  "synthesized_evidence_sha": "081b1efea09fb0da",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "d6f3c5b02f"
+    "f1d12af51e"
    ],
-   "value": "Engineers build and maintain Oracle Cloud Infrastructure, autonomous databases, back-end enterprise applications, and AI/ML integrations like Oracle Digital Assistant and embedded AI features in its database and cloud services."
+   "value": "Building and maintaining large-scale distributed systems, database architecture, and cloud infrastructure software, primarily using C++, Java, and Python."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583471,
@@ -314017,16 +314153,15 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "d6f3c5b02f",
-    "d9a98292ee",
-    "30a0ca192a"
+    "dbc3b9e88f",
+    "f1d12af51e"
    ],
-   "value": "Oracle provides a top-tier AI and data science platform with enterprise-scale challenges that carry serious engineering prestige. The company is known for a more predictable pace and established work-life boundaries compared to ad-driven hypergrowth rivals, allowing for technical depth and career acceleration without 24-7 urgency."
+   "value": "Oracle's massive enterprise footprint provides valuable exposure to large-scale distributed systems and robust AI infrastructure. However, the traditional enterprise structure may carry slow bureaucracy that conflicts with a desire for fast, innovative culture, and candidates should verify that specific teams offer modern, high-impact learning rather than legacy maintenance work."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Rated above average for large tech, with many teams respecting a true 40-45 hour week and not expecting persistent off-hours pings, although it can slip during major releases."
+   "value": "Estimated: Generally strong, with sane hours and little toxic burnout compared to top-tier tech. This varies significantly by team, with some cloud groups requiring more on-call hours."
   }
  },
  "orb aerospace": {
@@ -336920,45 +337055,46 @@
  },
  "publicis groupe": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Estimated: Mid-tier. As an advertising and digital services conglomerate, it does not carry the elite, top-tier prestige of a dedicated AI research lab or pure-tech giant for data scientists."
+   "value": "Not top-tier for AI/Data Science prestige. While applying ML in adtech and martech, it is not categorized alongside elite AI labs or pure-tech heavyweights for core data science."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "B2B consulting and agency services, generating revenue by providing software development, digital marketing, and communication solutions to enterprise clients."
+   "value": "B2B services model generating revenue through digital marketing, communication services, and IT/development consulting for enterprise clients."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Estimated: Corporate agency with a flexible, hybrid-friendly environment. Glassdoor rating sits at 3.8, indicating a stable culture that values work-life balance but may have typical large-company friction."
+   "value": "Corporate agency holding company culture that balances client pressures with traditional IT operations. Glassdoor rating sits at 3.8."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "1f0edbf1c9"
+    "1f0edbf1c9",
+    "445b068e01"
    ],
-   "value": "Global enterprise brands seeking digital transformation, marketing campaigns, and interactive technology solutions."
+   "value": "Enterprise clients requiring digital transformation, marketing, advertising, and interactive communication services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Estimated: $75,000 - $90,000. Large advertising/communication agencies generally offer lower base compensation for new grad software developers compared to top-tier tech firms, though Arlington's cost of living pushes the salary to the higher end of this range."
+   "value": "Estimated: $70,000 - $90,000 for an Associate Software Developer in the Arlington, VA area, which is competitive for agency tech roles but may not meet top-tier elite tech pay."
   },
   "evidence_sha": "8d3650827c1cc38e",
-  "generated_at": 1785256030,
+  "generated_at": 1785445395,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -336969,30 +337105,30 @@
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Digital and interactive communication services / Advertising and marketing technology."
+   "value": "Advertising, Marketing, and Digital Consulting."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Assess whether the day-to-day technical work involves cutting-edge AI/data tooling or is primarily traditional full-stack enterprise development. Determine if the team's pace is genuinely innovative and fast-moving, or slowed by typical big-agency client bureaucracy and consulting hours."
+   "value": "Assess how technical and innovative the specific team is: ask about AI tooling, tech stack modernity, genuine work-life balance policies, and whether the environment supports rapid learning without the toxic burnout often found in agency models."
   },
-  "last_attempt_at": 1785441203,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785434417,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Arlington, Virginia (with hybrid work model requiring 4 days in-office), alongside numerous global offices."
+   "value": "Global presence, specifically hiring for hybrid roles (4 days in-office) in Arlington, Virginia."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "1f0edbf1c9"
+    "445b068e01"
    ],
-   "value": "To provide digital and interactive communication services that help brands connect with their audiences, while offering flexibility to support employee work-life balance."
+   "value": "To be the indispensable transformation partner for clients by combining creativity, media, and technology."
   },
   "name": "Publicis Groupe",
   "pace_of_work": {
@@ -337000,24 +337136,25 @@
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Estimated: Moderate to fast. Agency life can require quick turnarounds for client pitches and deliverables, though large conglomerates often have internal bureaucratic hurdles."
+   "value": "Estimated: Agency-style pace which can sometimes mean high-pressure client deadlines and bureaucratic bottlenecks, rather than the fast and innovative tech culture preferred."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Digital and interactive communication services, including full-stack software development, creative marketing, advertising, and media buying."
+   "value": "Digital and interactive communication services, full stack software development (including Java, Spring Boot, RESTful APIs, Angular, and TypeScript), and marketing technology solutions."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "1f0edbf1c9"
+    "445b068e01"
    ],
-   "value": "Estimated: 15 to 20 days of standard PTO for new hires, typical for a large US-based employer, alongside standard public holidays."
+   "value": "Estimated: 15-25 days of paid time off, as is standard for a global corporation of this size."
   },
-  "retry_after": 1785443123,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -337027,16 +337164,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "1f0edbf1c9"
+    "445b068e01"
    ],
-   "value": "Estimated: No guaranteed tech-wide shutdowns found in research; agency models typically do not fully close outside of standard winter holidays."
+   "value": "Estimated: Unlikely to have guaranteed company-wide tech shutdowns outside of standard public holidays."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1f0edbf1c9"
+    "445b068e01"
    ],
-   "value": "Large, established global public company with a massive international footprint (revenue exceeds €10 billion annually)."
+   "value": "Public, large-cap global enterprise."
   },
   "sources": [
    {
@@ -337093,41 +337230,42 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "1f0edbf1c9"
+    "445b068e01"
    ],
-   "value": "Not explicitly mentioned in the sourced documents."
+   "value": "Specific visa sponsorship details are not publicly listed in the provided sources, but large global holding companies typically sponsor high-demand technical roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Publicis Groupe is a global digital and interactive communication services provider that acts as a major advertising and consulting holding company. It makes money by designing marketing campaigns, building digital experiences, and providing technology consulting for large enterprise clients."
+   "value": "Publicis Groupe is a digital and interactive communication services provider operating as a major global holding company. It makes money by providing marketing, advertising, transformation, and technology consulting services to enterprise clients."
   },
+  "synthesized_evidence_sha": "8d3650827c1cc38e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Full-stack software development utilizing Java, Spring Boot, RESTful APIs, Angular, and TypeScript for building interactive digital platforms."
+   "value": "Full-stack software development utilizing Java, Spring Boot, RESTful APIs, Angular, and TypeScript."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583466,
   "web_search_url": "https://duckduckgo.com/?q=Publicis+Groupe+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "While Publicis offers hybrid flexibility and a strong enterprise footprint, it is fundamentally a consulting and advertising giant rather than a pure-tech firm, which may carry more bureaucracy than a fast-paced startup. The role provides solid full-stack experience and sane hours, but may lack the elite AI/data prestige of a dedicated tech unicorn or top-tier lab."
+   "value": "This fits your requirement for a role that balances a hybrid work setup (4 days in-office) in a major tech hub, though as a massive global holding company, it may lean more toward enterprise bureaucracy rather than the fast-paced, high-prestige AI/Data science startup culture you seek."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "1f0edbf1c9"
    ],
-   "value": "Estimated: Good. The company explicitly highlights flexibility to support work-life balance, and agency roles typically require standard 40-hour weeks rather than tech-startup crunch, avoiding highly toxic burnout environments."
+   "value": "Estimated: Moderate; the company explicitly mentions flexibility to support work-life balance and offers hybrid arrangements, but agency environments can experience periods of high demand."
   }
  },
  "publicis groupe anz": {
@@ -349883,80 +350021,96 @@
  "redfin": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High — recognized for production ML at scale (home valuation, search ranking, lead scoring) with a dedicated research/applied science track, publications at KDD/ICML, and a CTO who champions AI. Not a pure research lab, but elite applied ML engineering."
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Tier 2. A recognized, publicly traded product company with a national scale of data and real-world ML applications, sitting just below Big Tech. Offers respected technical brand names and strong exit opportunities."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Redfin earns revenue primarily from real estate commissions (typically 1–1.5% listing fee vs. traditional 2.5–3%), plus mortgage origination fees, title/escrow fees, and advertising/partner revenue. The salaried-agent model reduces per-transaction cost, enabling lower consumer fees while capturing full commission economics."
+   "confidence": "medium",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Transaction fee income. Revenue from home-sale commissions (listing fee 1%-1.5%), buyer-agent commissions, and lending/title/escrow margins. Software engineering teams directly contribute to the custom platform that drives the low-cost brokerage."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Pragmatic, data-driven, consumer-obsessed. Low ego, high transparency (public postmortems, open salary bands). Diverse workforce with strong ERGs. Engineers sit near product/design/analytics — cross-functional by default. 'Move fast, fix things' with a focus on sustainable pace."
+   "value": "Collaborative, practical engineering culture with a consumer tech energy, yet anchored by a mission to lower real estate costs. Flat hierarchy for decision making, and engineering teams tend toward inclusive behaviours with minimal bureaucratic papercuts."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Primary customers are home buyers and sellers in major U.S. metro areas. Secondary customers include mortgage borrowers and title/escrow clients. Redfin serves both retail consumers and, through Redfin Direct, agents from other brokerages."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Primarily US home buyers, sellers, and renters who want a self-service search combined with professional agent support at a discount to traditional commissions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $140k–$165k base + $30k–$50k RSU (4-yr) + $10k–$20k sign-on. Total Year 1 ~$180k–$235k. Band varies by location (Seattle/SF premium). Refreshers annually."
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Estimated: $115,000–$145,000 base salary, plus bonus or potential RSUs/equity (total median comp around $130,000–$160,000) for new graduate AI/data software roles within the US, in alignment with disclosed iOS Developer I banding."
   },
   "evidence_sha": "2a46d1fadc49fce5",
-  "generated_at": 1784865793,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "PropTech / Real Estate Technology / Online Real Estate Brokerage"
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Residential Real Estate Technology (PropTech and Online Brokerage)"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect ML system design (ranking, recommendation, valuation), practical coding (Python/SQL), statistics/AB testing fluency, and product-sense questions tied to real-estate consumer behavior. Prepare to discuss model deployment, feature stores, and how you balance offline metrics with online business impact. Cultural screen emphasizes collaboration, bias-to-action, and consumer empathy."
+   "value": "Process typically assesses core coding and system design, product analytics reasoning, and cross-functional communication (demonstrating tech oneself, articulating trade-offs for lower-latency real estate experiences). Behavioral rounds place heavy weight on operational ownership and respect for grounded execution—reflecting a pace that prizes steady, smart iteration over burnout."
   },
-  "last_attempt_at": 1785441203,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785434128,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Seattle, WA. Major tech hubs: San Francisco, Denver, Boston, Austin. Remote-friendly for many engineering roles; agents operate in 100+ metro areas."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Headquartered in Seattle, WA. Technology hubs include San Francisco, Daly City, and Frisco, Texas, with hybrid schedules; additional engineering offices likely in greater Seattle. Real estate operations cover hundreds of US metro areas."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To redefine real estate in the consumer's favor by combining technology and full-service agents to make buying and selling a home faster, easier, and less expensive."
+   "confidence": "medium",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Redefine real estate for all consumers by putting technology and a user-first model at the center of the transaction, making buying and selling more transparent and affordable."
   },
   "name": "Redfin",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fast — weekly deploys, experiment-driven roadmap, quarterly OKRs. Engineering operates in small autonomous squads. On-call rotation exists but is managed; incident culture is blameless. Not a 9-5, but sustainable sprint cadence rather than perpetual crunch."
+   "value": "Estimated: Sustainable, metric-driven pace. Engineering teams ship incremental product improvements rapidly, but the residential real estate domain forces thoughtful compliance and weekend-hour business constraints that naturally cap chaos. 40–45 typical work week on average."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Core products include the Redfin website and mobile app for home search, Redfin Touring for on-demand home tours, Redfin Mortgage for lending, Title Forward for title/settlement, and RedfinNow (formerly) for instant offers. The platform integrates MLS data with proprietary tools for pricing, scheduling, and transaction management."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Full-service real estate brokerage with lower listing fees, an end-to-end digital home-search platform, Redfin Mortgage, and Redfin Title. Mobile and web tools deliver map-based inventory, instant home updates, on-demand touring, and direct-to-agent messaging."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days accrued PTO + 10–12 company holidays + 2–3 floating days. Unlimited sick/mental-health days. 4 weeks parental leave (primary) + 2 weeks (secondary) at 100% pay."
+   "value": "Estimated: 15–20 days per year of flexible PTO (combined vacation and sick) for new grad new hires, depending on tenure, plus standard paid holidays."
   },
-  "refresh_after": 1790049793,
-  "retry_after": 1785442163,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -349966,12 +350120,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (approx. Dec 24–Jan 1) plus one summer 'Recharge Week' (early July). No guaranteed monthly shutdowns."
+   "value": "Estimated: Company-wide winter break between Christmas and New Year's Day on top of federal holidays, plus one occasional summer recharge day."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Public company (NASDAQ: RDFN) with ~5,000–6,000 employees (including agents) as of recent filings. Operates in 100+ U.S. markets. Profitability has fluctuated; focused on adjusted EBITDA breakeven and cash-flow discipline."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Public, mid-sized technology firm established in 2004 (Seattle). Employs 1,001–5,000 people. Mature scaling stage with a track record of H1B sponsorship for tech roles."
   },
   "sources": [
    {
@@ -350016,34 +350172,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Redfin sponsors H-1B visas and has filed for green cards (PERM) for software engineering and data science roles. Sponsorship is role-dependent and typically available for senior and specialized positions."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Redfin has a documented record of H1B sponsorship for software roles, though a specific guarantee depends on the position and hiring year."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Redfin is a technology-powered residential real estate brokerage that operates an online platform for buying and selling homes, employing its own salaried agents instead of the traditional commission-only model."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Redfin is a technology-powered residential real estate brokerage that uses modern software to reshape how people buy and sell homes. It earns money primarily by employing salaried agents who charge listing fees as low as 1% and by providing ancillary services like mortgage and title."
   },
-  "synthesized_evidence_sha": "3e8515e2da97c86f",
+  "synthesized_evidence_sha": "2a46d1fadc49fce5",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering focuses on high-scale consumer web/mobile (React, GraphQL, Kubernetes, ML for pricing/recommendations), data platform (Snowflake, Airflow, dbt), ML/AI for home valuation (Redfin Estimate), search ranking, lead routing, and internal agent tools. Strong emphasis on experimentation (A/B) and rapid deployment."
+   "confidence": "high",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Vertically integrated tech stack: consumer-facing web and mobile app development (iOS, Android, front-end), AI/ML for home-value estimates and personalized recommendations, core marketplace algorithms, backend services for transactions, and mortgage-tech software. The iOS Developer role demonstrates hybrid in-office work at around $119K–$145K with 0+ years experience."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675409,
   "web_search_url": "https://duckduckgo.com/?q=Redfin+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Redfin offers a rare combination: a public-company platform with massive proprietary real-estate data, a genuine engineering-first culture (CTO-led, heavy ML investment), and a mission that aligns tech work directly with consumer savings. For a new-grad AI/DS candidate, it means production-scale modeling on unique transaction/behavioral data, fast iteration cycles, and compensation competitive with top-tier tech — without the burnout reputation of FAANG or high-frequency finance."
+   "confidence": "medium",
+   "source_ids": [
+    "c671abb60d"
+   ],
+   "value": "Redfin operates at the intersection of a data-intensive, multi-billion-dollar industry and a pragmatic tech culture that values work-life sanity. The company publicly trademarks itself as 'technology-driven' with AI/ML essential to pricing and search, providing a strong prestige-to-hours ratio. Its consistent backing of hybrid work, combined with evidence of H1B sponsorship and market salary ranges, signals a stable but innovative setting where career acceleration does not require sacrificing pe"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Good (≈4/5) — salaried-agent model extends to tech: core hours ~10am–4pm, explicit no-meeting Wednesdays in some orgs, generous parental leave, and leadership publicly discourages heroics. Occasional launch-week intensity but rare weekend work."
+   "value": "Estimated: 4 out of 5. Employee feedback frequently cites normal working hours, manager respect for boundaries, and limited off-hours pager load compared to ad-tech or gaming peers, though some seasonality around spring market may cause spikes."
   }
  },
  "redsail technologies": {
@@ -366228,146 +366392,133 @@
  },
  "saic": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "acfb8e7c56",
     "f5cb3a08ba"
    ],
-   "value": "Estimated: Moderate. As an IT services and defense contractor, SAIC does not hold niche elite tech prestige for AI/Data Science compared to FAANG or specialized AI startups. The entry-level data role focuses on Excel and business operations rather than cutting-edge machine learning."
+   "value": "Mid-tier prestige. SAIC is a well-respected Fortune 500 government contractor executing critical national missions, but it is not a FAANG, tier-1 pure-play AI lab, or top-tier R&D company defining the frontier of machine learning."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "B2B and B2G service provider generating revenue via full-time technical consulting, government contracts, and outsourced engineering solutions."
+   "value": "Government contracting revenue model, primarily through large, long-term cost-plus and fixed-price prime contracts for defense and civilian agencies."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
-   ],
-   "value": "Estimated: Established, risk-averse, and hierarchical. The focus seems to be on standard enterprise services and government contracts rather than a fast, innovative tech culture."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
-    "82e213d059",
-    "f5cb3a08ba"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "Government and commercial organizations."
+   "value": "Mission-centric, deliberate, and cleared. The culture prizes reliability and service-membership ethics over fast-fail innovation; it supports ex-military talent and values clear processes, making it highly focused and low-ego for new graduates."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "acfb8e7c56"
+   ],
+   "value": "U.S. Department of Defense, national intelligence agencies, and federal civilian agencies like NASA and the Department of Homeland Security."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
     "f5cb3a08ba",
-    "82e213d059"
+    "82e213d059",
+    "d2c767e40a"
    ],
-   "value": "Estimated: $40,000 to $80,000 per year for entry-level tech and data roles."
+   "value": "Estimated: $75K/yr - $95K/yr salary for a typical Software or Data Engineering new grad in a non-HCOL clear zone. The entry-level data scientist posting explicitly had a range of $40K-$80K, with the upper band also matching entry-to-junior UI/Java developer roles."
   },
   "evidence_sha": "914ab857342ea66d",
-  "generated_at": 1785256370,
+  "generated_at": 1785445395,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "IT Services and Defense/Technology Consulting."
+   "value": "Defense & Government Technology Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "d2c767e40a",
+    "82e213d059",
+    "f5cb3a08ba"
    ],
-   "value": "Probe heavily for the specific project or contract you will support to gauge tech stack modernity and true work-life balance, as defense contractors vary widely. Ask about typical tech stack modernity, pace, and learning opportunities to ensure it meets your demand for accelerated growth without a bureaucratic maze."
+   "value": "Candidates should anticipate questions on object-oriented Java/Spring Boot fundamentals (for dev roles), modern JavaScript frameworks like React/Angular, basic data modeling for data science roles, and clear communication on handling secure government environments. Possibly a STARS-like behavioral assessment to ensure alignment with mission-driven, reliable work styles."
   },
-  "last_attempt_at": 1785441203,
+  "last_attempt_at": 1785445395,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "d2c767e40a",
+    "82e213d059",
+    "f5cb3a08ba"
    ],
-   "value": "United States, including opportunities in Ashburn, VA, and remote positions."
+   "value": "Headquarters are in Reston, Virginia, with major employment hubs including Ashburn, VA and opportunities listed as fully remote (e.g., the Data Scientist Associate role)."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "56c4ed88f8",
-    "acfb8e7c56",
-    "08552e35a8"
+    "acfb8e7c56"
    ],
-   "value": "Not explicitly found in research sources."
+   "value": "To deliver transformative technology and mission support that ensures national security and public service effectiveness."
   },
   "name": "SAIC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "56c4ed88f8",
-    "acfb8e7c56",
-    "08552e35a8"
-   ],
-   "value": "Estimated: Moderate to slow. As a large public government contractor, the environment tends to follow traditional government project cycles rather than the high-velocity pace of modern tech startups."
+   "source_ids": [],
+   "value": "Estimated: Steady and predictable. Pace is governed by federal budget cycles and program milestones, leading to a methodical delivery cadence without startup-like feature churn or constant tight deadlines typical of venture-backed tech."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "Software engineering, UI development, data science, data analysis, and IT integration services."
+   "value": "Digital engineering, secure cloud migration, AI/ML solutions, IT modernization, systems integration, mission support, and logistics for government clients."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "56c4ed88f8",
-    "acfb8e7c56",
-    "08552e35a8"
-   ],
-   "value": "Estimated: Typical large government contractor package of 15-20 days of accrued PTO plus federal holidays, though exact policy is not public."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of combined PTO and sick leave annually for a new graduate. As a government contractor, SAIC typically offers a competitive but not unlimited policy that aligns with federal-shift structures."
   },
-  "refresh_after": 1790440370,
-  "retry_after": 1785443123,
+  "refresh_after": 1790629395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
+    "d2c767e40a",
     "82e213d059",
-    "56c4ed88f8"
+    "f5cb3a08ba"
    ],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "56c4ed88f8",
-    "acfb8e7c56",
-    "08552e35a8"
-   ],
-   "value": "Estimated: Potential holiday shutdown periods common to defense contractors, but guaranteed shutdowns are not publicly documented."
+   "source_ids": [],
+   "value": "Estimated: Observed all 10 federal holidays. A guaranteed holiday shutdown between Christmas and New Year's is a common practice among government contractors, though not confirmed in the provided sources."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "56c4ed88f8",
-    "acfb8e7c56",
-    "08552e35a8"
+    "d2c767e40a"
    ],
-   "value": "Large, established public company (tracked via public corporate pages and broad job listings across the US)."
+   "value": "Publicly traded (NYSE: SAIC) large-cap enterprise with over 24,000 employees, founded in 1969 and headquartered in Reston, Virginia."
   },
   "sources": [
    {
@@ -366434,47 +366585,48 @@
   "sponsorship_context": {
    "confidence": "low",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "d2c767e40a",
+    "82e213d059",
+    "f5cb3a08ba"
    ],
-   "value": "Not explicitly mentioned in research sources."
+   "value": "Explicitly not stated in the provided job postings. As a large defense contractor with security clearance requirements, sponsorship is likely not available for roles requiring clearance; some non-cleared tracks may offer sponsorship, but candidates should verify per requisition."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "SAIC (Science Applications International Corporation) provides technical, engineering, and IT services to government and commercial clients. The company makes money by contracting its expertise—such as software development and data science—to solve complex challenges, generating revenue through project-based and long-term service contracts."
+   "value": "SAIC is a government technology integrator that modernizes IT systems, performs advanced data science, and develops software for U.S. defense, intelligence, and civilian agencies. It makes money through long-term cost-plus and fixed-price contracts, providing mission-critical engineering and IT services to federal clients like the Department of Defense."
   },
-  "synthesized_evidence_sha": "e89564c02df1de86",
+  "synthesized_evidence_sha": "914ab857342ea66d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "82e213d059",
+    "d2c767e40a",
+    "f5cb3a08ba"
    ],
-   "value": "Entry-level software development with React, Angular, HTML, JavaScript, and CSS, as well as data analysis using Excel pivot tables, advanced formulas, and data visualization."
+   "value": "The Entry-Level UI Developer role requires React, Angular, HTML, JavaScript, and CSS on-site in Ashburn, VA. An Entry-Level Java Developer/Automation Tester role seeks Java, Spring Boot, and RxJS skills. A Data Scientist Associate posting highlights data analysis, Excel pivot tables, and business operations, all suggesting standard enterprise IT and data science work rather than bleeding-edge R&D."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674653,
   "web_search_url": "https://duckduckgo.com/?q=SAIC+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "acfb8e7c56",
+    "d2c767e40a"
    ],
-   "value": "While SAIC offers mission-driven government tech work, its culture is deeply rooted in traditional defense contracting, which often features slower, more bureaucratic processes and lower new-grad pay ($40K-$80K). This contrasts heavily with your priority for an elite AI/data role with top-tier pay and a fast, innovative startup-like culture."
+   "value": "SAIC provides the elite prestige of working on high-stakes national security missions with hard, sane hours that respect life outside work. It offers a stable contractor culture with predictable 40-hour weeks that avoids burnout, enabling technical growth through critical program rotations without sacrificing personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "f5cb3a08ba",
-    "82e213d059"
+    "f5cb3a08ba"
    ],
-   "value": "Estimated: Good. Large government contractors generally enforce strict 40-hour work weeks and predictable government-standard hours, aligning with your desire for sane hours and low burnout."
+   "value": "Estimated: 4.0 out of 5 (Excellent). The typical 40-hour week with minimal on-call requirements is a competitive differentiator for a mission-driven, anti-burnout culture. The remote Data Scientist role further underscores flexibility."
   }
  },
  "sailpoint": {
