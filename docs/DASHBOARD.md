@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-30 19:20 UTC** · companies polled directly: **1464** (registry 1654) · jobs tracked: **24319** · new this run: **56** · alerts this run: **1**_
+_Last run: **2026-07-30 19:52 UTC** · companies polled directly: **1464** (registry 1654) · jobs tracked: **24319** · new this run: **56** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -106,7 +106,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 15d | UST HealthProof | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a5864d13330ca6f993c47fc?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 92 🔥 | 21d | Cincinnati Children’s Hospital and Med | [Application Developer 1 - Power Platform](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Offices-at-Vernon-Place/Application-Developer-I--Power-Platform_JR222607) | Cincinnati, OH | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 92 🔥 | 24d | UST HealthProof | [Junior Full Stack Developer (Data CoE)](https://jobright.ai/jobs/info/6a426efbff87fd527f984439?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 91 🔥 | 20h | Cisco | [Software Engineer Backend/Platform Systems 1](https://careers.cisco.com/global/en/job/2000046) | San Jose, CA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 91 🔥 | 21h | Cisco | [Software Engineer Backend/Platform Systems 1](https://careers.cisco.com/global/en/job/2000046) | San Jose, CA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 91 🔥 | 6d | Northwell Health | [Associate Software Engineer](https://eppr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/192698) | Manhasset, NY | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 91 🔥 | 11d | Cadence | [Software Engineer I](https://jobright.ai/jobs/info/6981458aabff4c399aa02d1f?utm_campaign=Software%20Engineering&utm_source=1103) | SAN JOSE | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 91 🔥 | 11d | Cadence | [Software Engineer I](https://jobright.ai/jobs/info/6a57f5b09f1f56462cf67bd6?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
