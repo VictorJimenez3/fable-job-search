@@ -156717,95 +156717,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 2 — Strong applied AI reputation in insurance/healthcare analytics; publishes at top conferences (KDD, NeurIPS workshops) and builds proprietary platforms, but not a primary AI research lab like FAIR/DeepMind."
+   "value": "Tier 2 – Strong industry reputation in applied enterprise AI; not a primary research lab but recognized for production-grade ML at scale."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Project-based and managed-services contracts billed on time-and-materials, fixed-price, or outcome-based models; revenue comes from multi-year digital transformation engagements, analytics platform subscriptions, and consulting fees."
+   "value": "B2B professional services and platform revenue: consulting/project fees, managed-services contracts, and licensing of proprietary analytics/AI platforms."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Engineering-first within a consulting wrapper: technical depth respected, flat hierarchy in delivery pods, strong peer learning (guilds, hackathons), but client-facing polish expected. Diversity & inclusion metrics published annually."
+   "value": "Engineering-led delivery culture within a professional-services firm; collaborative, process-oriented, with growing investment in internal tooling and community (hackathons, tech talks). Less ‘move fast and break things,’ more ‘ship reliable ML products for clients.’"
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Fortune 500 and Global 1000 companies primarily in insurance, healthcare, banking & financial services, utilities, retail, and technology sectors seeking data-driven operational improvement."
+   "value": "Large enterprises in insurance, healthcare, banking & financial services, retail, and utilities (inferred from public EXL branding; not detailed in provided excerpts)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $110k–$130k base + $10k–$20k sign-on + RSUs ($15k–$25k/yr vesting) for Data Scientist / ML Engineer roles in US metros. Total comp ~$135k–$175k Year 1."
+   "value": "Estimated: $105k–$125k base + 10–15% target bonus + RSU (~$15k–$25k/yr vesting) for US data science/ML engineering new grads; higher in SF/NYC hubs."
   },
   "evidence_sha": "184cbca657e4464c",
-  "generated_at": 1784681178,
+  "generated_at": 1785445715,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Professional Services / Data Analytics & AI Consulting"
+   "value": "Data Analytics / AI Services / Digital Transformation Consulting"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect case-style problem solving with messy client data, ML system design for regulated environments, and behavioral questions on stakeholder management. Prepare to discuss end-to-end model lifecycle (not just modeling), cloud cost optimization, and how you balance technical rigor with delivery deadlines. Ask about 'utilization guardrails' and 'innovation time allocation' to gauge WLB reality."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect a mix of applied ML/system design (scalable data pipelines, model deployment, cloud architecture), domain case studies (insurance/healthcare analytics), and behavioral questions on client-facing communication. Prepare to discuss end-to-end project ownership, model monitoring, and how you balance innovation with production reliability."
   },
-  "last_attempt_at": 1785445395,
+  "last_attempt_at": 1785445715,
   "last_evidence_at": 1785444316,
   "locations": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Headquartered in New York, NY; major delivery centers in London, Dallas, Bangalore, Mumbai, Pune, Chennai, Manila, Shanghai, Prague, and remote/hybrid options across US, UK, EU, APAC."
+   "value": "Headquartered in New York, NY; major delivery centers in the US, UK, India, Philippines, South Africa, and other global sites."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "05a7bb9556"
+    "05a7bb9556",
+    "cd87962120"
    ],
-   "value": "To help clients unlock growth and improve outcomes through the power of data, analytics, AI, and deep domain knowledge — delivering measurable impact at scale."
+   "value": "To help clients unlock growth and efficiency through data-led insights and AI-driven digital transformation (inferred from public EXL branding; not detailed in provided excerpts)."
   },
   "name": "EXL",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate-to-fast project cadence (2–6 week sprints) with defined utilization targets (~75–85% billable); slower than pure tech product companies, faster than traditional IT consulting. Peak periods around client go-lives."
+   "value": "Moderate – Project-based delivery cycles with sprint cadences; faster than traditional IT consulting but generally more predictable than high-growth product startups."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Data analytics, AI/ML solutions, digital transformation services, cloud migration, customer experience platforms, risk & compliance analytics, and industry-specific solutions for insurance, healthcare, banking & financial services."
+   "value": "Data analytics, AI/machine learning solutions, digital transformation services, and operations management/platforms for insurance, healthcare, banking, and other sectors (inferred from public EXL branding; not detailed in provided excerpts)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); accrues monthly, carryover limited. Varies by country/tenure."
+   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays (US); varies by country and tenure."
   },
-  "retry_after": 1785445635,
+  "refresh_after": 1790629715,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156815,15 +156819,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide mandatory shutdowns; some business units observe 'low utilization weeks' around year-end. Team-level flexibility encouraged."
+   "value": "Estimated: No company-wide guaranteed shutdowns; some business units observe reduced operations between Christmas and New Year."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "Publicly traded (NASDAQ: EXLS), ~45,000+ employees globally, $1.5B+ annual revenue, mature growth-stage professional services firm with 20+ year history."
+   "value": "Public company (NASDAQ: EXLS); ~45,000+ employees globally; mature, large-cap stage."
   },
   "sources": [
    {
@@ -156870,37 +156874,41 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Actively sponsors H-1B visas and green cards for technical roles (data science, ML engineering, analytics); large global workforce with established immigration support processes."
+   "value": "Established H-1B and green-card sponsor given large global workforce and US presence; new-grad roles open to candidates requiring sponsorship (typical for large public firms)."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
+    "1db9db9c4d",
     "05a7bb9556",
     "cd87962120"
    ],
-   "value": "EXL is a global analytics and digital solutions company that partners with enterprises to improve business outcomes through data, AI, and domain expertise. It operates as a professional services firm delivering data-led transformation across insurance, healthcare, banking, and other industries."
+   "value": "EXL (EXL Service) is a global analytics and digital solutions company that provides data analytics, AI, and operations management services to enterprises across industries. The company was surfaced in a 2026 new-grad software engineer hiring list."
   },
+  "synthesized_evidence_sha": "184cbca657e4464c",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "05a7bb9556",
-    "cd87962120"
+    "1db9db9c4d"
    ],
-   "value": "Building production ML pipelines, NLP/LLM applications, cloud data platforms (AWS/Azure/GCP), MLOps, advanced analytics products, and scalable data engineering for enterprise clients — mix of client-facing delivery and internal platform development."
+   "value": "Building scalable data pipelines, ML/AI models, cloud-native platforms, and analytics products for enterprise clients; roles include data science, ML engineering, data engineering, and full-stack development."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673558,
   "web_search_url": "https://duckduckgo.com/?q=EXL+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "EXL offers a rare blend: elite AI/data science work at Fortune 500 scale with a professional-services pace that is more predictable than hyperscaler crunch cycles. You get exposure to massive, real-world datasets across regulated industries, a clear technical career ladder (Analyst → Senior → Lead → Principal), and a culture that explicitly tracks utilization targets to protect personal time — aligning with your priorities for prestige, growth, and sustainable hours."
+   "source_ids": [
+    "1db9db9c4d",
+    "05a7bb9556"
+   ],
+   "value": "EXL offers a rare blend for a new-grad AI/data scientist: a publicly traded, Fortune 1000 company with brand prestige and competitive pay, yet it operates delivery centers with modern engineering practices that can feel faster than traditional consulting. The firm’s public ESG commitments and “analytics for good” narrative align with mission-driven work, while its scale provides structured mentorship and clear promotion ladders without the burnout culture of elite tech unicorns."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.8/5 — Company tracks 'utilization caps' and promotes 'protected weekends'; most teams report 45–50 hr weeks average with occasional spikes. Better than Big 4 consulting, variable by client account."
+   "value": "Estimated: 3.5/5 – Typical 40–45 hr weeks in delivery centers; on-call rotations exist for production platforms but are managed; company publicizes flexibility and ‘right to disconnect’ policies in some regions."
   }
  },
  "expedia group": {
