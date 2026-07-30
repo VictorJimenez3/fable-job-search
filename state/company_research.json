@@ -393649,52 +393649,125 @@
  "standwithus": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Low tier for AI/Data Science prestige; non-profits rarely compete with elite tech firms in cutting-edge AI/DS prestige."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Growth-stage non-profit organization."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Advocacy-focused, educational, and mission-driven."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Students, community members, and the general public."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: $60,000 - $85,000 annually."
   },
   "evidence_sha": "e07da3607748d925",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785392287,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785392120,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Non-profit / Civic and Social Organizations."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Candidates should assess if the non-profit pace aligns with their desire for fast innovation and elite technical learning. Inquire directly about projected compensation, work-life balance expectations, and the exact technical stack to see if it accelerates career growth without compromising personal time."
+  },
+  "last_attempt_at": 1785392287,
   "last_evidence_at": 1785387503,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Los Angeles, California, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "To educate about Israel and combat antisemitism."
+  },
   "name": "StandWithUs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Mission-driven but likely slower and lower-urgency than startup tech culture, constrained by non-profit budgets."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Educational materials, community programs, and survey-based research initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Standard non-profit PTO of 15-20 days annually."
   },
-  "retry_after": 1785392240,
+  "refresh_after": 1790576287,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0d1d012227"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Unlikely to have formal tech-industry style shutdowns, though major federal holidays are likely observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "51-200 employees, growth stage."
   },
   "sources": [
    {
@@ -393748,14 +393821,45 @@
     "url": "https://jobright.ai/jobs/info/6a6a9d0648355b3f12bf1c3d?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Highly unlikely to offer visa sponsorship for a Data Science Assistant role at a non-profit."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "StandWithUs is a non-profit organization founded in 2001 that focuses on Israel education and combating antisemitism. It operates as a standard non-profit, likely funded through donations, grants, and grassroots fundraising rather than traditional commercial sales."
+  },
+  "synthesized_evidence_sha": "e07da3607748d925",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Data Science Assistant role requiring use of statistical software and quantitative/qualitative data analysis tools, including survey design."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785387503,
   "web_search_url": "https://duckduckgo.com/?q=StandWithUs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "While the organization is strongly mission-driven, it is fundamentally a mid-sized non-profit. This means the 'tech culture' and 'prestige' do not mirror elite AI tech companies; new grad pay will be substantially lower than industry benchmarks, and cutting-edge innovation may be constrained by the non-profit's operational tempo and budget rather than typical startup bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0d1d012227"
+   ],
+   "value": "Estimated: Likely leans toward sane hours, though resource constraints typical of mid-sized non-profits may impact personnel."
   }
  },
  "stanley black decker": {
