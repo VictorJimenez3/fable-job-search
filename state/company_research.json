@@ -460724,94 +460724,131 @@
  "washington university in st louis": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (Elite) — Top-15 CS department, top-5 Medical School, ~$1B+ annual research expenditure, major NIH/NSF AI institutes."
+   "source_ids": [
+    "2e9749d4ba",
+    "3c63bcd410"
+   ],
+   "value": "Estimated: High academic prestige tied to institutional status, but not categorized as a top-tier corporate AI/DS powerhouse."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Non-profit university funded by net tuition revenue, large research grants/contracts, clinical practice revenue, endowment distributions, and philanthropy. Operates with a multi-billion dollar annual budget."
+   "confidence": "high",
+   "source_ids": [
+    "3c63bcd410"
+   ],
+   "value": "Generates revenue through student tuition, comprehensive research grants, and a significant financial endowment."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Intellectual, collaborative, mission-driven, bureaucratic but stable. Strong emphasis on mentorship, publication, and long-term impact. Hierarchical (faculty-led labs) but with growing staff-scientist career tracks."
+   "confidence": "high",
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "Mission-driven, collaborative, and focused on learning and research."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Students (undergrad, grad, professional), research sponsors (federal agencies, foundations, industry), patients (via clinical affiliates), donors/alumni, and corporate partners."
+   "confidence": "high",
+   "source_ids": [
+    "2e9749d4ba",
+    "3c63bcd410"
+   ],
+   "value": "Undergraduate, graduate, and professional students, as well as funding agencies like the federal government."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $70k–$95k base for research staff / data scientist roles (PhD higher); faculty-track starts higher. Total compensation lower than Big Tech but includes strong benefits (tuition remission, retirement match, subsidized healthcare)."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Competitive for the academic sector but may fall below top-tier commercial tech standards."
   },
   "evidence_sha": "305e3543ab6b47a0",
-  "generated_at": 1784683639,
+  "generated_at": 1785393745,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Higher Education / Academic Research / Academic Medical Center"
+   "confidence": "high",
+   "source_ids": [
+    "3c63bcd410",
+    "4137f5b294"
+   ],
+   "value": "Higher Education and Research."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect questions on research depth, publication history, cross-disciplinary collaboration, grant-writing awareness, and ability to balance multiple projects. Technical interviews may be less LeetCode-heavy than industry; more emphasis on problem framing, methodology, and communication. Ask about mentorship structure, protected research time, and path to independence."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should probe deeply into the specific team's technical stack to ensure it matches fast, modern AI and data science standards. They should ask to clarify expectations around daily pace, personal time off, and whether workloads respect strict work-life balance. Asking about technical growth trajectories and the team's structure helps avoid slow bureaucratic positions that lack high learning velocity."
   },
-  "last_attempt_at": 1785392380,
+  "last_attempt_at": 1785393745,
   "last_evidence_at": 1785387504,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Main campus: Danforth Campus (St. Louis, MO). Medical Campus (Central West End, St. Louis). North, West, and Tyson Research Center campuses. Remote/hybrid options vary by role."
+   "confidence": "high",
+   "source_ids": [
+    "3c63bcd410",
+    "4137f5b294"
+   ],
+   "value": "St. Louis, Missouri."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To discover and disseminate knowledge, and protect the freedom of inquiry through research, teaching, and learning."
+   "confidence": "medium",
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "To discover and disseminate knowledge, and to protect the freedom of inquiry through research and teaching."
   },
   "name": "Washington University in St. Louis",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate — Research-driven cycles (grants, papers, semesters) rather than sprint-driven product releases. Peaks around grant deadlines and conference submissions, but generally predictable."
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "Estimated: Slow-to-moderate, typical of an academic institution's operational pace."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Undergraduate, graduate, and professional degree programs; sponsored research (NIH, NSF, DOE, etc.); clinical care through affiliated hospitals (Barnes-Jewish, St. Louis Children's); executive and continuing education."
+   "confidence": "high",
+   "source_ids": [
+    "2e9749d4ba",
+    "3c63bcd410"
+   ],
+   "value": "Higher education degrees, academic research publications, and advanced technological research initiatives."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 22–25 vacation days + 10–12 university holidays + sick leave (varies by employee class)."
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "Estimated: Generous, typically including university holidays and extended winter breaks."
   },
-  "retry_after": 1785392860,
+  "refresh_after": 1790577745,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: University observes winter break (typically ~1 week between Christmas and New Year) and limited summer reduced-schedule options; no formal company-wide shutdowns beyond standard holidays."
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "Estimated: Likely features a winter holiday closure, though specific guaranteed tech shutdowns are not confirmed."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large, established research university (~17,000 students, ~4,000 faculty, ~16,000 staff). Mature, stable organization with 170+ year history."
+   "confidence": "high",
+   "source_ids": [
+    "3c63bcd410",
+    "1db9db9c4d"
+   ],
+   "value": "A large, established academic institution with thousands of staff and students. Actively hiring for 2026 new grad software engineering roles."
   },
   "sources": [
    {
@@ -460856,33 +460893,47 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Actively sponsors H-1B, O-1, J-1, and employment-based green cards for faculty, research staff, and specialized professional roles. Dedicated Office of International Students and Scholars supports visa processes."
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not explicitly stated in the provided sources. Typical academic institutions often provide visa sponsorship for specialized research and technical roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Washington University in St. Louis is a private research university known for elite academics, significant research funding, and a top-tier medical school. It operates as a non-profit educational and research institution."
+   "confidence": "high",
+   "source_ids": [
+    "2e9749d4ba",
+    "3c63bcd410",
+    "1db9db9c4d"
+   ],
+   "value": "Washington University in St. Louis (WashU) is a premier private research university that generates revenue through student tuition, substantial federal research grants, and alumni endowments. The institution actively recruits top-tier talent, including software engineers, to support its academic mission and advanced research infrastructure."
   },
+  "synthesized_evidence_sha": "305e3543ab6b47a0",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "AI/ML research across schools (Engineering, Medicine, Arts & Sciences); high-performance computing; biomedical informatics; data science cores; interdisciplinary centers (e.g., Institute for Informatics, AI for Health)."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "2e9749d4ba"
+   ],
+   "value": "Software engineering roles supporting university systems, data infrastructure, and advanced AI/computational research tools."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784657140,
   "web_search_url": "https://duckduckgo.com/?q=Washington+University+in+St.+Louis+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "WashU offers elite AI/data science prestige (top-15 CS, top-5 Med school) with massive NIH/NSF funding, but as a university it typically provides better work-life balance than industry: sane hours, generous PTO, academic calendar breaks, and a mission-driven culture. Pay is lower than Big Tech but competitive for research roles, and the environment prioritizes learning and publication over crunch."
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The candidate is seeking a top-tier role with high new-grad pay, fast-paced tech culture, and strong work-life balance, including guaranteed shutdowns. This academic employer offers elite institutional prestige and mission-driven work, but may not align with the desire for fast-paced innovation over slow bureaucracy, nor match the high compensation of ultra-competitive tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High — Academic culture encourages boundaries; typical 40–50 hr weeks for staff researchers, protected vacation, university holidays, and summer flexibility. Less on-call pressure than industry."
+   "source_ids": [
+    "2e9749d4ba"
+   ],
+   "value": "Estimated: Good work-life balance typical of university environments, but not guaranteed through tech industry conventions like shutdowns."
   }
  },
  "washington university school of medicine in st louis": {
