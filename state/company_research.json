@@ -89496,81 +89496,115 @@
  },
  "charles river laboratories": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier within life sciences; recognized as a premier destination for applied AI in drug development, though not a pure-play 'tech giant' brand."
+   "confidence": "medium",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Mid-tier within the pharmaceutical CRO sector, with growing AI/DS initiatives but not yet a leader in AI-driven drug discovery like some specialized tech firms."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Contract research services billed per study or project; recurring revenue from research model sales and colony management; growing digital solutions and AI-enabled platforms licensed or offered as managed services."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Charles River Laboratories operates as a contract research organization (CRO), earning revenue by delivering specialized research and development services to pharmaceutical and biotech clients on a project-based or ongoing contract basis."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Science-first, collaborative, process-oriented with increasing digital/agile adoption. Values rigor, compliance, and patient impact. Less 'move fast and break things,' more 'move fast with validation.'"
+   "confidence": "low",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Professional and collaborative, with a focus on scientific rigor and client service; however, public sources do not indicate strong emphasis on innovation or work-life balance beyond standard industry practices."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Pharmaceutical and biotechnology companies of all sizes, medical device firms, academic institutions, and government agencies engaged in drug development."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Pharmaceutical companies, biotechnology firms, and research institutions seeking to develop new drugs and therapies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000-$135,000 base salary + 10-15% target bonus + RSU (~$15-25k/year vesting); total comp ~$130k-$170k."
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Estimated: $80,000 - $100,000 base salary for new-grad AI/data science roles, based on industry benchmarks and the $21/hr Research Analyst I role (which is not a tech role but provides a baseline)."
   },
   "evidence_sha": "a87711171a002170",
-  "generated_at": 1784865939,
+  "generated_at": 1785374842,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Contract Research Organization (CRO) / Life Sciences Services"
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Pharmaceutical and biotechnology research and development services (CRO sector)."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical assessments in ML/statistics, domain-relevant case studies (e.g., predictive toxicology, biomarker discovery), and behavioral questions emphasizing collaboration, regulatory awareness, and ability to deliver in a matrixed, science-first organization. Prepare to discuss how you balance innovation with reproducibility and compliance."
+   "confidence": "medium",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "The interview process likely emphasizes technical skills in data analysis, problem-solving, and collaboration, with a focus on how candidates can contribute to improving research efficiency through data-driven approaches."
   },
-  "last_attempt_at": 1785372961,
+  "last_attempt_at": 1785374842,
   "last_evidence_at": 1785367855,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquartered in Wilmington, Massachusetts, USA; major sites across North America, Europe, and Asia (including Canada, UK, Germany, France, China, Japan); remote/hybrid options for many tech roles."
+   "confidence": "high",
+   "source_ids": [
+    "bf74deddff",
+    "8d357ace7f",
+    "79c04bc7b2"
+   ],
+   "value": "Headquartered in Wilmington, Massachusetts, with global offices and facilities in the United States, Europe, and Asia, including locations such as Cleveland, Ohio (as mentioned in the job posting)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To accelerate the discovery, development, and safe manufacture of new drug therapies by providing essential research products and services that improve human and animal health."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "To accelerate the development of safe and effective medicines by providing comprehensive research and development services to the pharmaceutical and biotech industries."
   },
   "name": "Charles River Laboratories",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to fast for AI/data teams driving new platform initiatives; slower for core service delivery groups. Overall less bureaucratic than pharma internal R&D but more structured than startups."
+   "confidence": "medium",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Moderate to fast-paced, with project deadlines and client demands driving a dynamic work environment; however, the company's size may introduce some bureaucratic elements typical of large organizations."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Preclinical and clinical research services, research models (rodents, primates), drug discovery and safety assessment, manufacturing support, regulatory consulting, and emerging digital/AI-driven drug discovery platforms."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Preclinical research services, clinical research services, drug discovery and development support, laboratory testing, and data analysis for pharmaceutical and biotech clients."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days annual PTO plus 10-12 company holidays; additional volunteer/time-off programs may exist."
+   "value": "Estimated: 15-20 days annually for new hires, based on standard industry practices for mid-level CRO roles."
   },
-  "refresh_after": 1790049939,
-  "retry_after": 1785373441,
+  "refresh_after": 1790558842,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89580,12 +89614,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) and summer holiday week in some regions; not guaranteed globally."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large, publicly traded company (NYSE: CRL) with ~20,000+ employees worldwide, mature stage with consistent profitability and global footprint."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Global public company with a significant presence in the pharmaceutical R&D services market, operating in multiple countries and serving a broad client base."
   },
   "sources": [
    {
@@ -89630,34 +89668,50 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Actively sponsors H-1B visas and green cards for specialized technical roles (data science, ML engineering, bioinformatics); typical for large life-sciences employers with global talent needs."
+   "confidence": "low",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Charles River Laboratories supports H-1B visa sponsorship for qualified candidates, though specific details on sponsorship processes are not publicly detailed."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Charles River Laboratories is a global contract research organization (CRO) that provides preclinical and clinical laboratory services, research models, and drug development support to pharmaceutical, biotechnology, and medical device companies. It generates revenue through long-term service contracts, fee-for-service studies, and the sale of research models and related products."
+   "confidence": "high",
+   "source_ids": [
+    "8d357ace7f",
+    "79c04bc7b2",
+    "418b653805"
+   ],
+   "value": "Charles River Laboratories is a global contract research organization (CRO) that provides preclinical and clinical research services to pharmaceutical and biotechnology companies, enabling drug discovery and development. The company generates revenue by offering these specialized R&D services to clients across the pharmaceutical industry."
   },
-  "synthesized_evidence_sha": "3ab79b92a6cd17c4",
+  "synthesized_evidence_sha": "a87711171a002170",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Data science, machine learning, and AI applied to drug discovery, toxicology prediction, bioinformatics, imaging analysis, and digital pathology; software engineering for lab automation, LIMS, and cloud platforms; high-performance computing and statistical modeling."
+   "confidence": "medium",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Data analysis, laboratory testing, and research support for drug development, including statistical analysis and bioinformatics, with growing emphasis on AI and machine learning in data-driven drug discovery."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673259,
   "web_search_url": "https://duckduckgo.com/?q=Charles+River+Laboratories+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers elite prestige as the world's largest CRO with a mission directly tied to human health; competitive new-grad compensation for AI/data roles; growing investment in digital/AI platforms creates a faster-paced tech culture within a stable, mission-driven enterprise that generally respects work-life balance compared to pure tech or high-burnout biotech startups."
+   "confidence": "medium",
+   "source_ids": [
+    "bf74deddff",
+    "8d357ace7f",
+    "79c04bc7b2"
+   ],
+   "value": "Charles River is a well-established CRO with a strong reputation in the pharmaceutical industry, offering opportunities to work on high-impact drug development projects. The company has a growing focus on AI and data science to enhance research efficiency, making it a relevant choice for technical roles in a mission-driven environment."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5. Generally sane hours with limited weekend work; occasional crunch around study deadlines. Hybrid flexibility common. Better than high-burnout biotech or big tech, but not a guaranteed 40-hour week."
+   "confidence": "low",
+   "source_ids": [
+    "bf74deddff"
+   ],
+   "value": "Mixed: While some roles may have flexible hours, the company's size and industry standards suggest moderate work-life balance challenges, though not explicitly stated as high-burnout in public sources."
   }
  },
  "charles schwab": {
