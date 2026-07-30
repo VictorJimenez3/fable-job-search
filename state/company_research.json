@@ -49364,7 +49364,7 @@
    "value": "Estimated: Mid-tier. While highly prestigious in the public safety sector, it is not traditionally classified alongside elite pure-tech AI/DS giants, though it offers meaningful data and reliability challenges."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -49387,7 +49387,7 @@
    ],
    "value": "Law enforcement agencies, public safety organizations, and internal teams utilizing the Axon 911 platform."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -49417,7 +49417,7 @@
    ],
    "value": "Given the candidate's priority for a high-learning, fast-paced environment without toxic burnout, interviews should probe how the 'fast-paced' culture translates to actual daily hours and on-call expectations for Site Reliability Engineers. Candidates should ask about guaranteed shutdowns, total compensation packages for new grads, and how operational excellence is balanced against personal time."
   },
-  "last_attempt_at": 1785347070,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785428538,
   "locations": {
    "confidence": "unknown",
@@ -49455,6 +49455,7 @@
    "value": "Estimated: 20-25 days of PTO. Exact policy not provided in sources, but typical for a company of this stage emphasizing total compensation."
   },
   "refresh_after": 1790531070,
+  "retry_after": 1785431857,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49538,7 +49539,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -109322,102 +109323,109 @@
  "confido": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Emerging / Early-stage — not yet recognized as a top-tier AI destination. Prestige derives from founding-team access and product ownership, not brand recognition in ML research."
+   "source_ids": [
+    "4ab99cfcdc"
+   ],
+   "value": "Tier 3 (Boutique AI Startup). While the role involves building AI-driven systems, the company is small and focused on a specific legal tech niche rather than being a globally recognized elite AI research lab."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
     "9ee4cd0c36",
-    "f11908ff88"
+    "8d06aaa334"
    ],
-   "value": "Likely B2B SaaS model selling legal software to firms and practitioners. Revenue model not explicitly confirmed in sources."
+   "value": "Confido likely operates on a B2B SaaS or subscription-based model, offering software platforms for legal professionals and regulatory compliance teams."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
     "8d06aaa334"
    ],
-   "value": "Small, intense, founder-driven, in-person NYC culture. Early employees shape product and culture directly. High ownership, high ambiguity, minimal bureaucracy."
+   "value": "Early-stage, highly collaborative, and in-person. The culture is entrepreneurial and transparent, giving employees direct access to the executive team and the power to shape the company's culture and product directly."
   },
   "customers": {
    "confidence": "low",
    "source_ids": [
+    "8d06aaa334",
     "9ee4cd0c36"
    ],
-   "value": "Legal professionals and law firms seeking technology solutions. Exact customer segments not specified in available sources."
+   "value": "The legal industry, including law firms, legal professionals, and organizations that require streamlined regulatory and transactional workflows."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $120k-$160k base + equity (early-stage NYC startup range). No public data; likely below top-tier AI labs (e.g., OpenAI, Anthropic) but with meaningful equity upside."
+   "source_ids": [
+    "4ab99cfcdc"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary. Given its New York City location, AI focus, and new-grad listing, this falls in line with competitive NYC tech startup compensation."
   },
   "evidence_sha": "f74c41646b46db1b",
-  "generated_at": 1784680200,
+  "generated_at": 1785430897,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "medium",
    "source_ids": [
     "9ee4cd0c36",
-    "f11908ff88"
+    "8d06aaa334"
    ],
-   "value": "Legal Technology (LegalTech) / B2B SaaS"
+   "value": "Legal Technology and Software Development."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
+    "4ab99cfcdc",
     "8d06aaa334"
    ],
-   "value": "Assess tolerance for ambiguity and fast-paced execution (explicitly required). Probe for examples of end-to-end ownership in early-stage environments. Evaluate alignment with in-person NYC culture and willingness to influence product/culture directly. Technical depth in full-stack/SaaS architecture likely expected for AI/data roles."
+   "value": "Be prepared to demonstrate strong programming fundamentals and expertise in full-stack or backend development, particularly in building APIs and AI-driven systems. You should also emphasize your ability to thrive and multi-task in a fast-paced, ambiguous environment, while clearly expressing your desire to help shape a balanced, sustainable company culture that avoids toxic burnout."
   },
-  "last_attempt_at": 1784680200,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785428538,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "4ab99cfcdc",
     "8d06aaa334"
    ],
-   "value": "New York City (in-person only per job posting). No remote or other offices mentioned."
+   "value": "Headquartered in New York City, NY, operating as an in-person team."
   },
   "mission": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "9ee4cd0c36",
-    "f11908ff88"
+    "8d06aaa334"
    ],
-   "value": "Modernize legal workflows through technology. Mission inferred from legal tech focus; no explicit mission statement found in sources."
+   "value": "The company aims to make a direct impact on business strategy, growth, and the legal tech space, empowering its early employees to shape the product, culture, and company itself."
   },
   "name": "Confido",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "8d06aaa334"
    ],
-   "value": "Fast-paced, ambiguous, high-autonomy startup environment. Explicitly described as 'fast-paced, ambiguous' where multitasking is essential."
+   "value": "Estimated: Fast-paced and ambiguous. The team is small, in-person, and requires the ability to multi-task efficiently."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "d2eee7fa4e",
-    "9ee4cd0c36",
-    "f11908ff88"
+    "4ab99cfcdc",
+    "8d06aaa334",
+    "9ee4cd0c36"
    ],
-   "value": "Legal technology platform (confidolegal.com) with a web application (app.confidolegal.com) and technology infrastructure (confidotech.com). Specific product details not publicly detailed in sources."
+   "value": "AI-driven systems, backend and full-stack applications, and APIs designed for legal tech, workflow automation, and regulatory navigation."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 10-15 days PTO (typical early-stage US startup). No formal policy disclosed."
+   "value": "Estimated: 15-20 paid time off days per year, typical for a venture-backed startup of this size, though precise policies are not public."
   },
-  "refresh_after": 1789864200,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109427,14 +109435,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research. No mention of guaranteed shutdowns, summer Fridays, or mandatory disconnect policies."
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in the research, typical for most early-stage startups."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "4ab99cfcdc",
     "8d06aaa334"
    ],
-   "value": "Early-stage startup with a small team (likely <50 employees). Described as 'small, in-person team' where early hires 'shape the product, the culture, and the company itself.'"
+   "value": "Confido is an early-stage startup founded in 2019, consisting of a small team of 11-50 employees."
   },
   "sources": [
    {
@@ -109489,28 +109498,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "No information found in sources regarding visa sponsorship (H-1B, O-1, etc.). Early-stage startups often have limited sponsorship capacity."
+   "confidence": "high",
+   "source_ids": [
+    "4ab99cfcdc"
+   ],
+   "value": "Confido has a historical track record of offering H1B sponsorships, though sponsorship is not guaranteed for any specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "8d06aaa334",
-    "9ee4cd0c36",
-    "f11908ff88"
+    "4ab99cfcdc",
+    "8d06aaa334"
    ],
-   "value": "Confido is an early-stage legal technology company building a platform for legal professionals, operating with a small in-person team in New York City."
+   "value": "Confido is a fast-paced technology startup that builds software tools, with a focus on AI-driven systems, for the legal and regulatory sector. The company operates as a small, in-person team to help users manage legal workflows and navigate transactions."
   },
-  "synthesized_evidence_sha": "0abed4819bae26b2",
+  "synthesized_evidence_sha": "f74c41646b46db1b",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "d2eee7fa4e",
-    "f11908ff88"
+    "4ab99cfcdc"
    ],
-   "value": "Full-stack development for legal SaaS platform, likely involving document automation, workflow tools, and secure client data handling. Specific stack not disclosed in sources."
+   "value": "Technical work involves full-stack and backend development, building APIs, and programming AI-driven systems, requiring a solid grasp of programming fundamentals."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
@@ -109518,16 +109527,17 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
+    "4ab99cfcdc",
     "8d06aaa334"
    ],
-   "value": "Confido offers a rare early-stage opportunity to directly shape a legal tech product and company culture with executive access, aligning with the candidate's desire for high-impact, fast-paced innovation without bureaucratic drag. The small NYC team promises steep learning curves and ownership — key for accelerated technical growth — though the in-person requirement and startup ambiguity may challenge work-life balance expectations."
+   "value": "For a candidate seeking elite new-grad pay and a fast, innovative AI tech culture, Confido offers a high-impact environment where you can build AI-driven systems directly with the executive team. The small startup size guarantees rapid technical learning and hands-on career growth without the slow bureaucracy of larger companies. Because culture is currently being shaped by early employees, there is a unique opportunity to establish sane hours and guaranteed shutdowns to ensure the workplace rem"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "8d06aaa334"
    ],
-   "value": "Estimated: Moderate to low. Early-stage in-person startup with 'fast-paced, ambiguous' expectations suggests long hours and limited formal boundaries. No guaranteed shutdowns or WLB policies found."
+   "value": "Estimated: Variable. As an early-stage startup with an in-person New York City presence, work-life balance may fluctuate depending on product deadlines, though it is currently a small team where culture is malleable."
   }
  },
  "confluence technologies": {
@@ -234080,99 +234090,123 @@
  "katalyst space technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2 — elite niche (space robotics autonomy) but not a widely recognized AI brand like FAIR/DeepMind/OpenAI. Strong for robotics/AI intersection credibility."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Likely mid-tier or niche due to the organization's hardware-centric aerospace focus. AI/Data Science roles exist but likely support complex space robotics rather than functioning as core product offerings."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely contracts for spacecraft development, testing, and deployment services to government and commercial space customers. No revenue details in sources."
+   "confidence": "medium",
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Designs and manufactures robotic spacecraft and associated ground software to provide dynamic space operations capabilities, likely operating under government and commercial aerospace development contracts."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven, engineering-first, high technical bar. Likely small, tight-knit team with strong ownership. Culture details not in sources."
+   "confidence": "high",
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "An intense, hands-on, and deeply rewarding environment where engineers take real ownership of their work and see direct operational impact. Collaboration is focused on solving difficult problems quickly rather than navigating slow bureaucracy."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Not specified in provided sources. Likely government space agencies, commercial satellite operators, and defense customers given the space robotics focus."
+   "confidence": "medium",
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Public company pages were inaccessible, but customers likely include government space agencies and commercial satellite或 orbital operations operators requiring dynamic orbital services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110k-$140k base + equity (space startup range); likely below top-tier AI lab offers ($150k-$200k+ base). No public data."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Likely competitive within the aerospace sector, projecting $100,000 - $140,000 base salary for new graduate software or data roles, though exact figures are not public."
   },
   "evidence_sha": "c004368b91bb3315",
-  "generated_at": 1784889323,
+  "generated_at": 1785430897,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "5f7e8e6417"
+    "5691bf2efc"
    ],
-   "value": "Space technology / aerospace / robotics"
+   "value": "Aerospace and Defense"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Ask about: (1) autonomy/ML stack on current spacecraft — is it research or flight code? (2) typical sprint cadence and recent crunch periods; (3) mentorship structure for new grads; (4) how hardware test campaigns affect software team hours; (5) equity/bonus structure to assess total comp vs. big-tech offers."
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1785425504,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785413438,
   "locations": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters location not specified in sources. Website domains suggest US presence."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Specific office locations are not publicly available, but the company likely operates out of standard aerospace engineering hubs within the United States."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Not explicitly stated in provided sources. Inferred mission: advancing robotic spacecraft technology for space operations."
+   "confidence": "high",
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "To enable dynamic space operations, creating a future where maneuvering, upgrading, refueling, and exploration in space are as routine as they are on Earth."
   },
   "name": "Katalyst Space Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast — hardware milestones drive deadlines; startup culture suggests high velocity but risk of crunch before test campaigns."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Fast-paced and demanding within an intense hands-on environment. The company asks employees to take real ownership of moving hard problems rapidly from concept to operations."
   },
   "products": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "5f7e8e6417"
+    "5691bf2efc"
    ],
-   "value": "Robotic spacecraft and space robotics systems (inferred from news about robotic spacecraft testing milestone). No detailed product lineup found in provided sources."
+   "value": "Robotic spacecraft and ground software systems designed to enable dynamic space operations such as maneuvering, upgrading, and refueling."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days typical for early-stage US aerospace; no public policy found."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Unlimited Paid Time Off. Actual usage and culture around taking extended time off should be verified."
   },
-  "refresh_after": 1790073323,
-  "retry_after": 1785426464,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5691bf2efc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in research; aerospace startups rarely mandate them."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Not explicitly mentioned. Likely relies on individual PTO scheduling rather than guaranteed company-wide shutdowns, typical for smaller growing tech startups."
   },
   "size_stage": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Early-stage space technology startup (inferred from milestone testing news and company naming). Exact headcount and funding stage not in sources."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Likely a small-to-midstage startup or growing aerospace technology firm, supported by current active hiring for specialized engineering roles."
   },
   "sources": [
    {
@@ -234218,37 +234252,41 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "No information found in provided sources regarding visa sponsorship policies."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: The company's specific visa sponsorship policy is not published. Given its size and specialized technical focus, it may be limited."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "5f7e8e6417"
+    "5691bf2efc"
    ],
-   "value": "Katalyst Space Technologies appears to be a space technology company developing robotic spacecraft, as indicated by a news item about a robotic spacecraft passing a testing milestone. The company likely focuses on space robotics and spacecraft systems."
+   "value": "Katalyst Space Technologies builds robotic spacecraft designed to enable dynamic space operations, with the ultimate goal of making activities like maneuvering, refueling, and exploration as routine as they are on Earth. The company generates revenue by developing and operating these spacecraft for commercial and institutional clients."
   },
-  "synthesized_evidence_sha": "cfd41cecf0bca7f9",
+  "synthesized_evidence_sha": "c004368b91bb3315",
   "technical_work": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "5f7e8e6417"
+    "5691bf2efc"
    ],
-   "value": "Spacecraft robotics, systems engineering, guidance/navigation/control (GNC), embedded software, hardware-in-the-loop testing, space-qualified hardware development."
+   "value": "Engineers work on robotic spacecraft and ground software, taking conceptual designs through to operational deployment in a hands-on environment. Work involves solving deeply complex technical problems with tangible, mission-critical impact."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677997,
   "web_search_url": "https://duckduckgo.com/?q=Katalyst+Space+Technologies+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay in a fast, innovative culture: Katalyst offers cutting-edge space robotics work that demands advanced autonomy, perception, and planning algorithms — a genuine technical frontier. The startup stage suggests speed and ownership, while the spacecraft testing milestone indicates real hardware progress. However, space hardware deadlines can create crunch periods; the candidate should probe actual WLB practices and whether "
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3/5 — space hardware deadlines often demand overtime; no public policy on guaranteed shutdowns found. Candidate must verify."
+   "source_ids": [
+    "5691bf2efc"
+   ],
+   "value": "Estimated: Mixed. While unlimited PTO is provided, the 'intense' operational nature of the space industry suggests typical WLB may be highly variable and potentially strained during critical mission phases."
   }
  },
  "kaukahi llc": {
@@ -235618,130 +235656,98 @@
  },
  "kekst cnc": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Not Applicable. The firm is a strategic communications agency and holds no prestige or tier in the AI or Data Science sector."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown – no evidence in sources of AI/data science presence, publications, or reputation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "B2B consulting model charging premium fees for strategic advisory and crisis management retainers, typically serving clients during high-stress corporate events and major announcements."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Intense corporate consulting. Professional, discreet, client-first, and likely lacking a fast, tech-driven innovation loop in favor of intense corporate advisory."
+   "value": "Estimated: Unknown – no culture descriptors, employee reviews, or values documentation in sources."
   },
   "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Corporate boards, executive leadership teams, financial sponsors, and global organizations facing critical inflection points, crises, or major market transactions."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $0 - $0 base salary for a top-tier AI or data science role, as the firm operates as a non-technical communications consultancy."
+   "value": "Estimated: Unknown – no compensation data for new-grad technical roles in sources."
   },
   "evidence_sha": "0b63b287fb9a7457",
-  "generated_at": 1784883078,
+  "generated_at": 1785430897,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
+    "1db9db9c4d"
    ],
-   "value": "Public Relations and Strategic Communications Consulting."
+   "value": "Industry not identifiable from supplied sources; the GitHub source only notes new-grad software engineer hiring activity."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Zero alignment with your goals for top-tier tech pay, AI roles, or a data-driven culture; candidates should instead prepare for case studies based on corporate crisis management and media strategy."
+   "value": "Given the candidate's priorities, interviews should probe: (1) actual AI/data science project scope and prestige markers (publications, conferences, impact), (2) new-grad compensation structure and benchmarks, (3) engineering culture indicators (deployment frequency, bureaucracy levels, innovation time), (4) mission alignment and how it shapes daily work, (5) concrete WLB policies (core hours, shutdown enforcement, on-call expectations), (6) learning budget, mentorship structure, and promotion t"
   },
-  "last_attempt_at": 1784883078,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785428821,
   "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Headquartered in New York with key global offices in London, Munich, Tokyo, and Frankfurt."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "To deliver elite, discreet, and highly strategic counsel that helps clients navigate complex corporate events and protect their reputational assets."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "name": "Kekst CNC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast-paced, high-pressure, and deadline-driven, dictated by clients breaking news and unfolding crises, which heavily contradicts a slow, sane innovation environment."
+   "value": "Estimated: Unknown – no cultural or operational details in sources to assess pace."
   },
   "products": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Service offerings include crisis management (incident response, workplace safety, data breaches), transaction communications (M&A, shareholder activism, IPOs), ongoing reputation management, and strategic positioning counsel."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-25 days of standard PTO, typical for elite professional services consulting, though unpredictable client crises may practically limit takeoff."
+   "value": "Estimated: Unknown – no PTO or leave policy information in sources."
   },
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard holiday time off may be discouraged or interrupted during client crises, lacking the guaranteed, firm-wide shutdowns you prioritize."
+   "value": "Estimated: Unknown – no mention of company-wide shutdowns or guaranteed disconnect periods in sources."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Established global consultancy operating across major financial hubs in the US, UK, Germany, and Japan, having grown through its merger and subsequent independent evolution."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -235786,45 +235792,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
-   ],
-   "value": "Not publicly detailed for specialized tech roles, though generalist corporate roles likely offer standard employment without robust, guaranteed tech-focused H-1B sponsorship."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
+    "1db9db9c4d"
    ],
-   "value": "Kekst CNC is a premier global strategic communications firm that specializes in corporate reputation management, crisis communications, and transactions. The firm makes money by providing high-level advisory services to corporations, financial sponsors, and institutions navigating complex, high-stakes challenges."
+   "value": "Kekst CNC appears in a monitored GitHub repository listing 2026 new-graduate software engineer positions, indicating it hires entry-level technical talent. No further details about its business, products, or operations are present in the supplied sources."
   },
+  "synthesized_evidence_sha": "0b63b287fb9a7457",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "31fae1d4f3",
-    "9a365727d4",
-    "c824c8c923"
+    "1db9db9c4d"
    ],
-   "value": "Non-technical strategic advisory work focused on corporate communications, media relations, and reputation management rather than software development, AI, or data science engineering."
+   "value": "The company posts new-graduate software engineer roles, suggesting it employs software engineers, but no details on tech stack, AI/data science work, or engineering practices are in the sources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674617,
   "web_search_url": "https://duckduckgo.com/?q=Kekst+CNC+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "While it offers elite prestige in corporate communications, it entirely misses your priorities for AI or data science work, fast innovative tech culture, and technical learning growth; it is fundamentally a non-technology firm."
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Kekst CNC's appearance on a new-grad hiring list suggests it recruits entry-level talent, but the supplied sources contain no evidence about its AI prestige, pay, culture, WLB, or growth opportunities."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Poor to Average. Due to the crisis-driven nature of PR advisory, expect unpredictable, demanding hours and high burnout risk rather than guaranteed personal time."
+   "value": "Estimated: Unknown – no work-life balance data, hours, or shutdown policies in sources."
   }
  },
  "kemper": {
@@ -246063,29 +246064,32 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "f78267acc6"
+    "27b310204a",
+    "072b310d83"
    ],
-   "value": "Estimated: Specialized prestige in space-data engineering rather than mainstream AI/ML. Data science work is likely domain-specific and high-impact but not necessarily top-tier general AI."
+   "value": "Estimated: Niche but elite space-tech prestige. High technical learning and cutting-edge data science applications in astrodynamics, though less broadly recognized in general big-tech AI rankings."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "Estimated: B2B services and data platforms for space operators and defense organizations."
+   "value": "Operates as a trusted partner providing space technology solutions, likely monetizing through government and defense contracts as well as commercial space operator subscriptions (estimated)."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "f78267acc6"
    ],
-   "value": "Estimated: Collaborative, relationship-driven, and energized by technical recruiting and hiring with a focus on growth and mission impact."
+   "value": "Collaborative, fast-paced, and mission-driven. Energized by building relationships and redefining global safety."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
    "value": "Top-tier space operators and allied defense organizations."
@@ -246094,10 +246098,10 @@
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $120K-$160K base salary for new grad tech roles."
+   "value": "Estimated: Competitive space-tech salary, likely ranging from $90,000 to $130,000 base, potentially offset by lower base balances if high equity/RSUs are included."
   },
   "evidence_sha": "f6348c36272435f3",
-  "generated_at": 1785278883,
+  "generated_at": 1785430897,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -246106,53 +246110,61 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "Aerospace, Space Domain Awareness, and Defense Technology."
+   "value": "Aerospace & Space Technology"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "Given your priorities, ask Interviewers about top of market new grad compensation, typical engineering hours, and whether sane work-life balance and guaranteed shutdowns are built into the culture. Clarify if innovation and autonomy are prioritized over slow bureaucracy."
+   "value": "Probe whether their fast-paced, high-growth environment genuinely respects work-life balance through sane hours and guaranteed shutdowns, or if it masks a toxic or high-burnout culture. Clarify new grad compensation to ensure it meets your elite pay expectations."
   },
-  "last_attempt_at": 1785278883,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785428538,
   "locations": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Headquartered in the US with primary operations in space-tech hubs."
+   "source_ids": [
+    "072b310d83"
+   ],
+   "value": "Estimated: US-based with operations distributed globally to support a network of radar tracking sites."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "To serve as a trusted partner for Space Domain Awareness, Space Traffic Management, and Satellite Operations as orbital activity accelerates and threats grow more complex."
+   "value": "To redefine global security, safety, and transparency in space as orbital activity accelerates and threats grow more complex."
   },
   "name": "LeoLabs",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "Estimated: Fast-paced and collaborative."
+   "value": "Estimated: Fast-paced, high-growth environment where priorities can evolve quickly and team members must step in flexibly to support company objectives."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "Space Domain Awareness, Space Traffic Management, and Satellite Operations solutions for orbital activity and threat management."
+   "value": "Technology solutions for Space Domain Awareness, Space Traffic Management, and Satellite Operations, designed to increase global security and transparency in space."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-25 days PTO."
+   "value": "Estimated: Standard tech PTO package of 15-20 days annually."
   },
-  "refresh_after": 1790462883,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -246162,14 +246174,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown; likely limitedShutdowns or holidayShutdowns but not confirmed."
+   "value": "Estimated: No specific public mention of company-wide guaranteed shutdowns."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [
     "f78267acc6"
    ],
-   "value": "Estimated: Growing startup-stage company actively expanding its Talent Acquisition team."
+   "value": "Estimated: Mid-stage high-growth scale-up. Currently scaling teams and recruiting heavily for technical talent."
   },
   "sources": [
    {
@@ -246228,40 +246240,42 @@
    "source_ids": [
     "f78267acc6"
    ],
-   "value": "Estimated: US defense and allied government contracting may restrict roles to US citizens or require security clearances."
+   "value": "Estimated: Sponsorship availability varies by role, though they are actively expanding their talent acquisition team which may support broader hiring needs."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "27b310204a",
     "f78267acc6"
    ],
-   "value": "LeoLabs is a trusted partner for Space Domain Awareness, Space Traffic Management, and Satellite Operations. It provides services to space operators and allied defense organizations to help manage orbital activity and complex threats."
+   "value": "LeoLabs is a trusted partner for Space Domain Awareness, Space Traffic Management, and Satellite Operations, mapping and tracking objects in orbit to address accelerating orbital activity and complex threats. They build technology aimed at redefining global security, safety, and transparency in space for top-tier space operators and allied defense organizations."
   },
-  "synthesized_evidence_sha": "371aa770bada4a93",
+  "synthesized_evidence_sha": "f6348c36272435f3",
   "technical_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "f78267acc6"
+    "27b310204a",
+    "550c2479fc"
    ],
-   "value": "Estimated: Technical challenges likely involve radar data processing, orbital mechanics, sensor fusion, and scalable software platforms for satellite tracking and space domain awareness."
+   "value": "Building technology to map and track orbital objects for space domain awareness and traffic management, likely involving complex radar systems, astrodynamics, and large-scale data processing."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675813,
   "web_search_url": "https://duckduckgo.com/?q=LeoLabs+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "f78267acc6"
+    "27b310204a"
    ],
-   "value": "LeoLabs offers strong mission alignment around space safety and defense, allied with a fast-paced, innovative culture. For candidates seeking high-impact, high-prestige technical roles without toxic bureaucracy, this could fit well—though work-life balance and guaranteed shutdowns are less certain."
+   "value": "LeoLabs offers a mission-driven culture focused on global space security, aligning with your desire for impactful work. The high-growth nature provides exceptional technical learning and career acceleration, operating in a cutting-edge sector that fits your fast, innovative tech ideals."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "f78267acc6"
+    "27b310204a"
    ],
-   "value": "Estimated: Moderate; culture appears fast-paced and mission-driven, so hours can be intense but not necessarily toxic."
+   "value": "Estimated: Moderate. The constantly evolving priorities and fast pace may challenge strict work-life balance, but the mission-driven nature may foster a supportive team culture."
   }
  },
  "leonardo": {
@@ -290478,7 +290492,7 @@
    "value": "Estimated: Low to Medium. Recognized for consumer brand prestige rather than elite tech industry standing or cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -290525,7 +290539,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1785421987,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785396993,
   "locations": {
    "confidence": "high",
@@ -290563,7 +290577,7 @@
    "source_ids": [],
    "value": "Estimated: 20-25 days of paid time off annually, reflecting standard corporate European-rooted benefits."
   },
-  "retry_after": 1785425827,
+  "retry_after": 1785438577,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303432,52 +303446,132 @@
  "nrel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "47f7cee224",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 2–3. High prestige in physical sciences, computational energy research, and public sector impact, but lacks the elite tech industry prestige of FAANG."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4b3518f1e7",
+    "c4dff5ac2f"
+   ],
+   "value": "Operates as a Federally Funded Research and Development Center (FFRDC) reliant on direct U.S. government funding and external research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: Collaborative, scientific, and mission-aligned. Attracts academic and environmentally focused professionals who prioritize sustainability and sustainable career trajectories over cutthroat competition."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Primary stakeholders include the U.S. Department of Energy, federal partners, and the broader public scientific and academic communities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4b3518f1e7",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $85K - $110K base salary. Lower than top-tier software roles but compensated by excellent benefits, job security, and robust retirement contributions."
   },
   "evidence_sha": "bd0b9146ecccd599",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785430897,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785425504,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4b3518f1e7",
+    "c4dff5ac2f"
+   ],
+   "value": "Government Research & Renewable Energy"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "47f7cee224"
+   ],
+   "value": "Candidates should frame their expectations around high-impact, mission-driven public-sector science rather than elite tech compensation or fast-paced fail-fast innovation. Interview conversations should strongly emphasize the desire for deep academic-style technical learning and clear work-life boundaries."
+  },
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785416461,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Headquartered in Golden, Colorado, with additional research facilities and satellite offices."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4b3518f1e7",
+    "c4dff5ac2f"
+   ],
+   "value": "To advance sustainable energy technologies through rigorous research, driving the transition to a clean energy economy."
+  },
   "name": "NREL",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: A deliberate, scientific research pace. Removes extreme tech-industry pressure but retains typical federal lab bureaucracy and compliance requirements that slow product timelines."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b3518f1e7",
+    "47f7cee224"
+   ],
+   "value": "NREL produces public-domain scientific research, validated technology datasets, open-source modeling tools, and advanced prototypes in renewables and sustainable energy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: 20 to 26 days of annual leave, alongside generous federal holidays and accrued sick leave typical of national lab environments."
   },
-  "retry_after": 1785426464,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: None found in research. National labs typically hire new grads directly into specific research teams rather than formal tech rotational programs."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns like tech companies offer, but employees typically receive administrative leave during federal holidays with flexible scheduling."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "A mature, large-scale national research institution (typically employing thousands of staff, researchers, and postdocs)."
   },
   "sources": [
    {
@@ -303521,14 +303615,48 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: As a federal FFRDC, hires are subject to strict U.S. citizenship and permanent residency requirements for most technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4b3518f1e7",
+    "c4dff5ac2f"
+   ],
+   "value": "The National Renewable Energy Laboratory (NREL) is a U.S. Department of Energy national laboratory dedicated to advancing renewable energy and energy efficiency technologies. As a government-funded research institution, it operates by securing federal appropriations and competitive research grants to conduct applied science and engineering."
+  },
+  "synthesized_evidence_sha": "bd0b9146ecccd599",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "47f7cee224",
+    "17f8c9c419"
+   ],
+   "value": "Involves applying AI, data science, and computational modeling to optimize energy systems, grid infrastructure, and materials science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785416461,
   "web_search_url": "https://duckduckgo.com/?q=NREL+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "4b3518f1e7"
+   ],
+   "value": "NREL provides a highly mission-driven and stable environment for data scientists to accelerate technical learning while genuinely respecting work-life balance and sane hours. While federal lab pay scales and innovation pace will not match top-tier FAANG compensation or eliminate bureaucracy entirely, it completely avoids toxic burnout cultures and offers high-impact energy research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4b3518f1e7"
+   ],
+   "value": "Estimated: Excellent (9/10). Government research labs generally enforce healthy 40-hour workweeks with high autonomy and low expectations for out-of-hours availability."
   }
  },
  "nuro": {
@@ -331867,11 +331995,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331883,6 +332013,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785430707,
   "name": "Principal Chile",
   "pace_of_work": {
@@ -331895,6 +332026,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785431017,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331948,7 +332080,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785430707,
   "web_search_url": "https://duckduckgo.com/?q=Principal+Chile+company+careers+benefits",
@@ -332201,11 +332333,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332217,6 +332351,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785430707,
   "name": "Principal Global Services",
   "pace_of_work": {
@@ -332229,6 +332364,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785431017,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332282,7 +332418,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785430707,
   "web_search_url": "https://duckduckgo.com/?q=Principal+Global+Services+company+careers+benefits",
@@ -392118,41 +392254,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong specialist reputation in financial technology/data science; not a household AI research name but elite within asset management tech)."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management typically earns revenue through management fees (percentage of assets under management), performance fees, and/or advisory fees. Specific model not confirmed in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, low-bureaucracy, collaborative. Small-team feel with direct impact on investment processes. Likely values technical craftsmanship over politics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + 10-20% bonus + equity/RSUs (typical range for asset management new-grad SWE in major US hubs)."
   },
   "evidence_sha": "790876a5f29ff367",
+  "generated_at": 1785430897,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a163941458",
+    "f34acb016b",
+    "ac93b03984"
+   ],
+   "value": "Asset Management / Financial Services / FinTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Expect practical coding (Python/Java/C++), data structures, and system design focused on reliability and correctness. Prepare for domain questions: time-series data, portfolio optimization basics, risk metrics, or event-driven architectures. Ask about deployment frequency, on-call rotation, and how the team balances feature velocity with regulatory/compliance constraints."
   },
-  "last_attempt_at": 1785425504,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785396993,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Spectrum Asset Management, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Financial tech demands rigor and uptime, but asset management typically avoids the extreme latency arms race of HFT, allowing more sustainable sprint cycles."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US federal holidays + occasional winter shutdown (common in finance)."
   },
-  "retry_after": 1785429344,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -392162,7 +392340,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes market holidays and may have a year-end quiet period (late Dec). No guaranteed company-wide shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private firm (likely <500 employees). No public funding or headcount data found."
   },
   "sources": [
    {
@@ -392206,14 +392389,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a163941458",
+    "f34acb016b",
+    "ac93b03984"
+   ],
+   "value": "Spectrum Asset Management, Inc. appears to be an asset management firm with a web presence at spectrumnet.net/.com. The company was surfaced in a 2026 new-grad software engineer hiring list, indicating active technical recruiting."
+  },
+  "synthesized_evidence_sha": "790876a5f29ff367",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Actively hiring 2026 new-grad software engineers per source. Likely involves portfolio management systems, trading infrastructure, data pipelines, risk analytics, or client-facing fintech platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785396993,
   "web_search_url": "https://duckduckgo.com/?q=Spectrum+Asset+Management%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role matches your priority for a fast, innovative tech culture in a mission-driven financial firm that respects work-life balance. Asset management tech teams often build high-impact systems with sane hours compared to high-frequency trading or big-tech grind, offering strong new-grad pay and accelerated learning on real financial data without the burnout culture of quant hedge funds or FAANG."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Industry norm for asset management tech is 40-50 hrs/week with protected weekends; on-call usually rotates and is infrequent for non-trading systems."
   }
  },
  "spiderrock": {
@@ -444214,42 +444424,105 @@
  "university of maryland baltimore umb": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: Tier 2. Research universities provide strong academic credibility, but lack the top-tier industry prestige of elite tech companies."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Academic institution funded by student tuition, government research grants, and state appropriations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Mission-driven, academic, and focused on professional development, research, and healthcare."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2cfc96560",
+    "90e601fe7e"
+   ],
+   "value": "Students, medical patients, and residents of the state of Maryland."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: $70,000 - $95,000. Higher education generally pays software engineers less than elite tech companies."
   },
   "evidence_sha": "3292cfc82a5456b5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785430897,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785430709,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Higher Education."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Candidates should evaluate whether the university's research labs offer adequate acceleration in technical learning and career growth. It is also vital to probe for slow academic bureaucracy and confirm actual working hours meet personal standards for work-life balance."
+  },
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785428821,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Baltimore, Maryland, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "42b83a326a"
+   ],
+   "value": "To improve the human condition and serve the public good through education, research, and public service."
+  },
   "name": "University of Maryland, Baltimore (UMB)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: Slow to moderate. Academic and research environments typically operate with more bureaucracy and slower deployment cycles than tech start-ups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Higher education, clinical care, and public service programs, including schools of medicine, law, social work, and pharmacy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: 20-25 days of vacation time, typical for higher education institutions."
   },
-  "retry_after": 1785430829,
+  "refresh_after": 1790614897,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -444258,8 +444531,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: Likely includes holiday closures between Christmas and New Year, though specific guaranteed shutdown dates are not published."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Established public university with between 5,001 and 10,000 employees."
   },
   "sources": [
    {
@@ -444313,14 +444595,46 @@
     "url": "https://jobright.ai/jobs/info/6a6b276cc00ae03109f827f5?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Has a track record of offering H1B visa sponsorships, though approval is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560",
+    "42b83a326a"
+   ],
+   "value": "The University of Maryland, Baltimore (UMB) is a public university founded in 1807 that focuses on human services, professional education, and healthcare. As an academic institution, it generates revenue through research grants, tuition, and state funding."
+  },
+  "synthesized_evidence_sha": "3292cfc82a5456b5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Data analysis and machine learning for clinical and laboratory research projects, occasionally requiring deep learning frameworks like PyTorch."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785428821,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Maryland%2C+Baltimore+%28UMB%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "UMB aligns with a mission-driven healthcare and public service focus, offering work/life balance. However, as a higher education institution, it may not provide the elite tech prestige, fast-paced innovation, or high new-grad compensation found in top-tier tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e2cfc96560"
+   ],
+   "value": "Estimated: Above average. Benefits prioritize work/life balance and wellness, typical of higher education institutions."
   }
  },
  "university of maryland college park": {
@@ -476818,7 +477132,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -476836,7 +477150,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785425504,
+  "last_attempt_at": 1785430897,
   "last_evidence_at": 1785402542,
   "name": "Yahoo",
   "pace_of_work": {
@@ -476849,7 +477163,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785429344,
+  "retry_after": 1785438577,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
