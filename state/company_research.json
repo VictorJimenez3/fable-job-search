@@ -30274,7 +30274,7 @@
    "value": "Estimated: Elite/Tier 1. Highly competitive and fast-growing defense tech recognized for advanced autonomous and ML-backed systems engineering."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -30297,7 +30297,7 @@
    ],
    "value": "U.S. military and allied operational and engineering teams, including Australian and UK defense forces."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -30328,7 +30328,7 @@
    ],
    "value": "Interviewees should highlight their interest in high-impact defense technology, emphasizing their ability to solely dedicate themselves to the role without outside distractions. Candidates should focus on demonstrating robust full stack engineering skills, comfort with classified/high-security environments, and eagerness to learn in a fast-paced environment."
   },
-  "last_attempt_at": 1785430709,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "high",
@@ -30371,6 +30371,7 @@
    "value": "Estimated: Standard accrued federal-style PTO, typically around 15 to 20 days annually for new engineers."
   },
   "refresh_after": 1790614709,
+  "retry_after": 1785467181,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -30463,7 +30464,7 @@
    ],
    "value": "Estimated: Roles require ability to work in the US and likely require extensive background checks and clearances. Specific visa sponsorship details were not provided."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -51582,7 +51583,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -51635,7 +51636,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1785441492,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -51678,7 +51679,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
-  "retry_after": 1785441972,
+  "retry_after": 1785446541,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -137758,90 +137759,98 @@
  },
  "drw": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Top-tier. The firm is recognized for its elite quantitative and data-driven trading roles, innovative tech culture, and high compensation standards."
+   "confidence": "medium",
+   "source_ids": [
+    "75cac23095",
+    "97a042e239"
+   ],
+   "value": "Tier 1 (Elite Proprietary Trading Firm) — Competitive with quant hedge funds and top Big Tech AI labs for technical talent and compensation."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Principal trading firm using proprietary capital to take positions across global markets, making money by exploiting market inefficiencies and tech-driven trading strategies."
+   "value": "Principal trading and investment: profit from market-making and proprietary trading, supplemented by strategic investments in non-traditional areas like real estate and crypto."
   },
   "culture_vibe": {
-   "confidence": "high",
-   "source_ids": [
-    "97a042e239",
-    "2292afc482"
-   ],
-   "value": "Innovative, integrity-driven, and consensus-challenging. It is a high-pressure environment that values exceptional people and sophisticated technology."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
+    "75cac23095",
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Global financial markets, trading venues, liquidity pools, and portfolio companies within its venture capital and real estate verticals."
+   "value": "High-expectation, innovative, and intellectually competitive. Seeks people who challenge consensus and thrive in high-stakes, collegial environment, not toxic pressure-cooker."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "75cac23095",
+    "97a042e239"
+   ],
+   "value": "Global financial markets and exchanges; the firm trades for its own account rather than on behalf of external clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Top-tier range of $200k-$300k total compensation, driven by high base salaries and substantial performance bonuses typical for elite trading firms."
+   "value": "Estimated: $250,000–$350,000 total comp first-year, heavily weighted toward base and guaranteed bonus. Software Developer (Research) roles in this tier typically exceed $200k base and push past $300k with bonus; exact number discipline-dependent."
   },
   "evidence_sha": "a39c795fc624e3e9",
-  "generated_at": 1785355546,
+  "generated_at": 1785445581,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "75cac23095",
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Financial Services / Trading"
+   "value": "Proprietary Trading / Financial Technology"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "75cac23095",
     "97a042e239"
    ],
-   "value": "Candidates should expect deep technical evaluations, problem-solving under pressure, and questions assessing their fit within a fast-paced, highly demanding, and high-expectations environment."
+   "value": "Expect hands-on technical assessments probing low-latency systems, real-world data signal extraction, and comfort with a competitive, high-stakes environment. Behavioral rounds will explicitly seek a growth mindset that thrives on ownership rather than tolerating demands, checking for mission-alignment with high expectations and integrity."
   },
-  "last_attempt_at": 1785355546,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "medium",
    "source_ids": [
+    "75cac23095",
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Markets and offices around the world."
+   "value": "Global presence; no single HQ location provided in sources, but operates in markets worldwide. Job postings suggest major financial centers like Chicago and London."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "75cac23095",
     "97a042e239",
     "2292afc482"
    ],
-   "value": "To push boundaries by bringing sophisticated technology and exceptional people together to operate in markets worldwide, driven by high expectations, integrity, innovation, and a willingness to challenge consensus."
+   "value": "Unite sophisticated technology with exceptional people to operate in markets worldwide with high expectations, integrity, and innovation."
   },
   "name": "DRW",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "97a042e239",
-    "2292afc482"
+    "75cac23095",
+    "97a042e239"
    ],
-   "value": "Estimated: Fast-paced and highly demanding, characterized by high expectations and an environment that challenges consensus."
+   "value": "Fast-paced and demanding during market hours, with high stakes obsessed with speed (right-second-as-wrong mentality). Intense but finite."
   },
   "products": {
    "confidence": "high",
@@ -137849,15 +137858,16 @@
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Quantitative trading systems, market-making infrastructure, and proprietary algorithms spanning traditional asset classes as well as non-traditional strategies like cryptoassets, real estate, and venture capital."
+   "value": "Market-making and proprietary trading activities across asset classes, real estate investments, venture capital funding, and cryptoasset trading."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Highly competitive package typically in the range of 20-25 PTO days annually for tech and trading roles, though exact policy is not public."
+   "value": "Estimated: 20+ days PTO plus sick leave, competitive with top-tier trading firms. Exact allocation not disclosed; typically generous for elite roles."
   },
-  "refresh_after": 1790539546,
+  "refresh_after": 1790629581,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137867,15 +137877,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely market holiday closures, though no firm-wide guaranteed shutdowns were found in the provided research."
+   "value": "Estimated: Guaranteed shutdowns when U.S. and European markets are closed (evenings, weekends, public exchange holidays). No client demands means near-zero off-hour obligations."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
+    "75cac23095",
     "97a042e239",
     "2292afc482"
    ],
-   "value": "Mature private firm with over 3 decades of experience and expanded operations globally."
+   "value": "Mature, privately-held firm with over 30 years of experience."
   },
   "sources": [
    {
@@ -137940,42 +137951,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Specific visa sponsorship details not found in research, but it operates globally as a mature trading firm."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "97a042e239",
+    "75cac23095",
     "2292afc482"
    ],
-   "value": "DRW is a diversified principal trading firm that combines sophisticated technology and exceptional people to operate in financial markets globally. It generates revenue by leveraging its own capital and tech-driven strategies across various asset classes, alongside investments in real estate, venture capital, and cryptoassets."
+   "value": "DRW is a diversified principal trading firm that uses its own capital and sophisticated technology to trade across global financial markets. It also operates beyond traditional trading through ventures in real estate, venture capital, and cryptoassets."
   },
-  "synthesized_evidence_sha": "a759cda4597d6043",
+  "synthesized_evidence_sha": "a39c795fc624e3e9",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "97a042e239",
-    "2292afc482"
+    "75cac23095",
+    "97a042e239"
    ],
-   "value": "Building and operating sophisticated trading infrastructure, quantitative models, and data analytics pipelines for global markets, prediction markets, and cryptoassets."
+   "value": "Building low-latency systems that turn real-world events into actionable trading signal under high reliability constraints. Data analysis and engineering for global markets and equities."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675818,
   "web_search_url": "https://duckduckgo.com/?q=DRW+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers elite prestige and highly competitive new-grad pay alongside a fast-paced, innovative culture that pushes technical learning. The environment demands high performance which can border on demanding, so candidates must weigh the accelerated career growth against the intense expectations."
+   "confidence": "medium",
+   "source_ids": [
+    "75cac23095",
+    "97a042e239",
+    "2292afc482"
+   ],
+   "value": "DRW sits at the elite intersection of AI, data science, and algorithmic trading—a tier-one prop firm known for top-tier new-grad compensation and an innovation-focused culture. Candidates who prioritize technical learning without a toxic grind will find its no-client model naturally enforces sane hours and guaranteed shutdowns when markets close. The diversified structure across trading, VC, and cryptoaccelerates career growth through varied, high-impact data work while maintaining intellectual "
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "75cac23095",
     "97a042e239"
    ],
-   "value": "Estimated: Moderate. The firm's fast-paced and demanding environment can lead to heavy workloads, typical of elite trading firms."
+   "value": "Estimated: Above average for elite finance. No traditional clients eliminates after-hours servicing; markets close at predictable times, enabling consistent shutdowns."
   }
  },
  "dtcc": {
@@ -167750,7 +167767,7 @@
    "value": "Estimated: Tier 2-3. Not primarily known as an AI or data science company, but may have data engineering roles supporting their public safety technologies."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -167801,7 +167818,7 @@
    ],
    "value": "Prepare to discuss how you can contribute to building privacy-protecting public safety technologies and demonstrate interest in Flock's mission of crime reduction. Ask about work-life balance policies, training programs, and opportunities for rapid technical growth."
   },
-  "last_attempt_at": 1785441674,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785438957,
   "locations": {
    "confidence": "high",
@@ -167841,7 +167858,7 @@
    "value": "Estimated: 15-25 days annually, typical for growing tech companies with competitive benefits."
   },
   "refresh_after": 1790120387,
-  "retry_after": 1785441914,
+  "retry_after": 1785446061,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -335512,7 +335529,7 @@
    "value": "Estimated: Tier 3. Traditional insurance carriers typically do not offer top-tier AI or data science prestige compared to tech-first companies, focusing instead on applied business analytics and actuarial modeling."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -335538,7 +335555,7 @@
    ],
    "value": "Individuals seeking life insurance and groups or employers seeking employee benefits coverage."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -335570,7 +335587,7 @@
    ],
    "value": "Ask questions about the pace of innovation, tech stack modernization, and how teams balance sane hours with project delivery. Probe whether the specific team offers guaranteed shutdowns and fast-tracked learning, or if it faces typical insurance industry bureaucracy and burnout."
   },
-  "last_attempt_at": 1785342129,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "low",
@@ -335615,6 +335632,7 @@
    "value": "Estimated: 20-25 days of PTO annually, standard for an established financial services firm."
   },
   "refresh_after": 1790526129,
+  "retry_after": 1785446541,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -335709,7 +335727,7 @@
    ],
    "value": "Information regarding visa sponsorship for technical roles was not explicitly found in the provided sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "medium",
    "source_ids": [
@@ -383394,54 +383412,71 @@
  },
  "simplisafe": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Strong second-tier prestige for consumer tech and IoT innovation. It is not FAANG, but it's a clear category leader applying sophisticated data science to a massive installed base of connected hardware, making it a desirable, high-impact launchpad."
+   "confidence": "low",
+   "source_ids": [
+    "2d2b93da56"
+   ],
+   "value": "Not found in research; operates as a high-tech home security company but AI/Data prestige tier is not established in the provided sources."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "d60bd6fe37",
-    "b4d4c881e5"
+    "966d5800c1",
+    "8ce17352c3"
    ],
-   "value": "Direct-to-consumer hardware sales with optional recurring monthly subscription plans for professional monitoring, combining a one-time purchase with recurring service revenue."
+   "value": "Sells high-tech home security hardware and operates a fast-paced culture of collaboration to make a huge impact on the lives of those they protect."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56"
+   ],
+   "value": "A 'no ego' culture of collaboration and innovation where those seeking their next challenge can find big opportunities and make a huge impact."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56",
+    "8ce17352c3"
+   ],
+   "value": "Individuals and families seeking to protect their homes and the lives they have built."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $120,000 – $160,000 total first-year compensation for a top-tier AI/Data Science new grad in Boston, combining strong base salary, performance bonus, and equity."
+   "source_ids": [
+    "8ce17352c3"
+   ],
+   "value": "Estimated: $110,000 - $140,000. Not found in research; estimated based on high-tech home security industry standards in major tech hubs."
   },
   "evidence_sha": "d657f0c26e94b7bb",
-  "generated_at": 1785265803,
+  "generated_at": 1785445581,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "2d2b93da56",
+    "8ce17352c3"
+   ],
+   "value": "High-tech home security"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "966d5800c1",
+    "8ce17352c3"
+   ],
+   "value": "Ask about 'sane hours' and guaranteed shutdowns to verify the fast-paced environment does not lead to high burnout. Seek proof of elite new-grad pay and technical learning acceleration without bureaucratic slowdowns."
   },
-  "last_attempt_at": 1785265803,
+  "last_attempt_at": 1785445581,
   "last_evidence_at": 1785444015,
   "locations": {
    "confidence": "unknown",
@@ -383449,31 +383484,40 @@
    "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56"
+   ],
+   "value": "Keeping Every Home Secure while deeply caring about the career you are building."
   },
   "name": "SimpliSafe",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1"
+   ],
+   "value": "Estimated: Fast-paced environment requiring excellent time management skills and the ability to prioritize effectively."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "d60bd6fe37",
-    "b4d4c881e5"
+    "966d5800c1",
+    "2d2b93da56",
+    "8ce17352c3"
    ],
-   "value": "Wireless home security systems including base stations, entry sensors, motion sensors, indoor/outdoor cameras, doorbells, glass break sensors, and smart locks, bundled with professional monitoring plans."
+   "value": "Smart home security systems and related hardware designed to keep homes secure."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Competitive tech standard, likely offering a flexible 'unlimited' or generous accrual-based PTO in the 20-25 day range."
+   "source_ids": [
+    "2d2b93da56"
+   ],
+   "value": "Estimated: 15-20 days. Not found in research, but typically standard for mid-to-large tech companies."
   },
-  "refresh_after": 1790449803,
+  "refresh_after": 1790629581,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -383482,13 +383526,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely observes standard US holidays with no mandated end-of-year shutdowns widely published; a sane-hours culture makes it less critical."
+   "source_ids": [
+    "966d5800c1"
+   ],
+   "value": "Estimated: No guaranteed shutdowns found in research; typical tech companies may offer a few holiday shutdown days."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "966d5800c1"
+   ],
+   "value": "Exact size not found in research, but operates with a fast-paced environment requiring strong time management and prioritization."
   },
   "sources": [
    {
@@ -383561,30 +383609,39 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "966d5800c1",
     "2d2b93da56",
-    "8ce17352c3",
-    "b15f17c766"
+    "8ce17352c3"
    ],
-   "value": "SimpliSafe is a high-tech home security company that designs and sells self-installed, professionally monitored security systems directly to consumers. It generates revenue primarily through the sale of hardware devices like cameras, sensors, and base stations, as well as recurring monthly subscriptions for 24/7 professional monitoring services."
+   "value": "SimpliSafe is a high-tech home security company dedicated to protecting the lives and homes of its customers. It generates revenue by selling smart security hardware systems and providing professional monitoring subscription services to ensure every home remains secure."
   },
-  "synthesized_evidence_sha": "84f7a724510a8b62",
+  "synthesized_evidence_sha": "d657f0c26e94b7bb",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56"
+   ],
+   "value": "Fast-paced technical environment emphasizing innovation and the ability to prioritize in a high-tech home security setting."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676948,
   "web_search_url": "https://duckduckgo.com/?q=SimpliSafe+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56"
+   ],
+   "value": "Aligns with a fast, innovative tech culture and a mission-driven environment that respects the career you are building. It prioritizes a 'no ego' culture of collaboration, which may offer the fast-paced technical challenge you seek."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "966d5800c1",
+    "2d2b93da56"
+   ],
+   "value": "Estimated: Moderate. The company states it cares deeply about the career you are building, but also explicitly notes a fast-paced working environment which can sometimes challenge strict work-life balance."
   }
  },
  "simpson strong tie": {
