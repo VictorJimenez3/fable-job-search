@@ -3197,38 +3197,44 @@
  "abbvie": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Established industry prestige, but not considered top-tier 'elite tech' prestige in the broader data science community compared to FAANG or top AI labs."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: Mid-tier. Highly respected in biopharma but generally lacks the 'elite prestige' factor of top-tier tech firms."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "1ff7de0b6e"
    ],
-   "value": "Pharmaceutical research, manufacturing, and sales: AbbVie invests heavily in R&D to develop patented drugs, then commercializes them globally to generate revenue before generics or biosimilars enter the market."
+   "value": "Pharmaceutical research, development, and commercialization of advanced medical therapies."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mission-driven and science-focused, prioritizing patient impact over rapid technological disruption, which fosters a stable but traditional corporate environment."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: Mission-driven and patient-centric, but likely more bureaucratic and process-heavy than a swappable fast-paced tech startup."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "1ff7de0b6e"
    ],
-   "value": "Healthcare providers, hospitals, pharmacies, and ultimately the patients who rely on its prescription medications."
+   "value": "Healthcare providers, patients, and their communities."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000 - $130,000 base salary, competitive for the industry but potentially falling below the absolute top-tier elite tech new-grad pay threshold you desire."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: $80k - $110k. Slightly below big tech new-grad pay to reflect shifting tech premiums in the pharmaceutical sector."
   },
   "evidence_sha": "4075795f43d4e1c6",
-  "generated_at": 1785366898,
+  "generated_at": 1785383310,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -3237,73 +3243,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "1ff7de0b6e"
    ],
-   "value": "Pharmaceuticals and Biotechnology"
+   "value": "Biopharmaceuticals / Healthcare Technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To align the role with your goals, ask interviewers about the average deployment speed of data science models and the autonomy level of new tech teams. Clarify expectations around after-hours pager duty and whether the team enforces strict offline boundaries to ensure sane hours."
-  },
-  "last_attempt_at": 1785372961,
-  "last_evidence_at": 1785367855,
-  "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "01bf04f523"
-   ],
-   "value": "Headquartered in North Chicago, Illinois, with a global footprint of research hubs, manufacturing sites, and offices across multiple countries."
-  },
-  "mission": {
    "confidence": "medium",
    "source_ids": [
-    "01bf04f523"
+    "1ff7de0b6e"
    ],
-   "value": "To discover and deliver innovative medicines that solve serious health issues and have a remarkable impact on people's lives."
+   "value": "Probe heavily on day-to-day engineering pace and the existence of bureaucratic blockers. Ask questions about exact new-grad compensation bands, shutdown policies, and how the team balances technical learning growth against personal time."
+  },
+  "last_attempt_at": 1785383310,
+  "last_evidence_at": 1785367855,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Not explicitly stated in sources, but as a global biopharma leader, operations are typically distributed across major hubs like North Chicago, IL and global sites."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "To create solutions that impact patients and their communities for the better through digital transformation in biopharma."
   },
   "name": "AbbVie",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Slower and steady. The pace is heavily regulated and methodical due to clinical and pharmaceutical compliance, meaning less fast-paced innovation and more slow bureaucracy."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: Moderate to slow. Enterprise biopharma environments typically operate with more deliberate, slower tech cycles to ensure compliance, contrasting with fast, innovative tech cultures."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "1ff7de0b6e"
    ],
-   "value": "Prescription biopharmaceuticals, including blockbuster drugs like Humira and Skyrizi, alongside treatments in immunology, oncology, neuroscience, and aesthetics."
+   "value": "Digital business technology solutions for biopharma operations, alongside flagship pharmaceutical therapies."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 20-25 days of standard vacation plus sick leave, typical for large pharmaceutical companies, though exact new-grad allotments may vary."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large, established pharmaceutical corporations."
   },
-  "refresh_after": 1790550898,
-  "retry_after": 1785374881,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
-    "17f8c9c419",
-    "dbc3b9e88f",
-    "f16eec2a6f"
+    "1ff7de0b6e"
    ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed widespread tech shutdowns found, though some corporate holidays may apply; not known for the guaranteed offline periods seen in elite tech firms."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: No guaranteed widespread shutdowns found; typical enterprise model relies on flexible PTO rather than mandated company-wide breaks."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "1ff7de0b6e"
    ],
-   "value": "Publicly traded, established global enterprise operating at massive scale with tens of thousands of employees worldwide."
+   "value": "Established large-cap global corporation."
   },
   "sources": [
    {
@@ -3368,41 +3380,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "low",
    "source_ids": [
-    "f16eec2a6f"
+    "1ff7de0b6e"
    ],
-   "value": "Likely selective: as a large multinational pharma company, AbbVie typically offers visa sponsorship for highly specialized technical roles, though it varies by specific job and location."
+   "value": "Not explicitly stated in sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d",
-    "01bf04f523"
+    "1ff7de0b6e"
    ],
-   "value": "AbbVie is a global biopharmaceutical company that discovers, develops, and commercialates advanced therapies. It makes money by selling its portfolio of prescription drugs and treatments across key therapeutic areas like immunology and oncology."
+   "value": "AbbVie is a global biopharmaceutical company that develops and commercializes advanced therapies. They make money by selling branded specialty prescription drugs and treatments."
   },
-  "synthesized_evidence_sha": "9fba318e58b0e1cf",
+  "synthesized_evidence_sha": "4075795f43d4e1c6",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "f16eec2a6f"
+    "1ff7de0b6e"
    ],
-   "value": "Data scientists and AI professionals at AbbVie work on drug discovery, clinical trial optimization, and predictive modeling to accelerate pharmaceutical R&D, utilizing machine learning and big data analytics."
+   "value": "Independently identifying, engineering, and optimizing new software solutions to address critical business requirements in the biopharma space."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=AbbVie+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "While AbbVie offers the mission-driven appeal of improving global healthcare, it may conflict with your desire for a fast, innovative tech culture. Large pharma enterprises typically operate with slower bureaucracy, which could hinder the rapid technical learning and startup-like pace you are seeking."
+   "value": "unknown"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. The company is generally reported to respect work-life balance with sane hours, leaning more towards stability than high-burnout crunches."
+   "source_ids": [
+    "1ff7de0b6e"
+   ],
+   "value": "Estimated: Good to Moderate. Mission-driven healthcare companies often emphasize sane hours, but this varies heavily by specific team and manager."
   }
  },
  "abby care": {
@@ -27137,48 +27150,125 @@
  "amewas": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: Tier 3. As a boutique DoD software engineering firm, it does not hold the AI or data science prestige of top-tier tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Government contract services. They fund operations by providing specialized engineering and software development capabilities to U.S. defense agencies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: Mission-focused and traditional. Culture is likely driven by patriotism, government regulations, and structured engineering practices."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Department of Defense and related U.S. government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "$87K-$105K. Sourced directly from their Junior Software Developer posting."
   },
   "evidence_sha": "c74a9fc38f5e738b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Defense & Space Manufacturing / Government IT Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "To gauge alignment with the candidate's priorities, they should ask about the pace of the development cycles, whether any complex AI or data science models are used, and the balance of high-impact innovation versus slow DoD compliance. This role requires Python, Django, C++, Java, and HTML, skills that should be highlighted during the interview."
+  },
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785382238,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Patuxent River, MD."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "To provide cutting-edge engineering and testing services in support of U.S. defense initiatives."
+  },
   "name": "AMEWAS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: Moderate / Bureaucratic. Working within the Department of Defense ecosystem often involves stringent compliance and oversight, leading to pace constraints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Custom software development and engineering testing services, including specific applications like the DAPS program."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: 15-20 days. Standard for government service partners, though exact internal policy was not found."
   },
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Federal holidays are likely observed, but tech teams remain on call for defense systems."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Not verified through provided sources. While categorized as a Junior role, the company's overall size was not detailed in the job posting."
   },
   "sources": [
    {
@@ -27232,14 +27322,45 @@
     "url": "https://jobright.ai/jobs/info/6a6a71fe8693c23e7fb7ad3a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Not found in research. As a DoD partner, candidates will likely need U.S. citizenship and the ability to obtain a security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "AMEWAS is an engineering and software development firm that serves as a trusted partner to the U.S. Department of Defense, providing cutting-edge engineering and testing solutions. They generate revenue through government contracts and defense initiatives requiring specialized technical development."
+  },
+  "synthesized_evidence_sha": "c74a9fc38f5e738b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Software development utilizing Python, Django, C++, Java, and HTML for defense systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382238,
   "web_search_url": "https://duckduckgo.com/?q=AMEWAS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "A defense contractor role like this may conflict with the candidate's desire for a fast, innovative tech culture and elite AI/data science prestige given the heavy constraints of DoD bureaucracy. While the work is mission-driven and pays a solid entry-level salary ($87K-$105K), it may not provide the accelerated AI learning curve or elite new-grad pay they seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ea7931c641"
+   ],
+   "value": "Estimated: Moderate. Defense contractors typically maintain standard government-adjacent hours, though security and operational deadlines can occasionally impact balance."
   }
  },
  "amgen": {
@@ -75311,7 +75432,7 @@
    "value": "Estimated: Mid-tier in the defense/government sector."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -75358,7 +75479,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1785372961,
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785367855,
   "locations": {
    "confidence": "high",
@@ -75394,7 +75515,7 @@
    "value": "Estimated: 20-25 days annually."
   },
   "refresh_after": 1790054150,
-  "retry_after": 1785374881,
+  "retry_after": 1785387150,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105829,94 +105950,123 @@
  "commure": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier — NVIDIA strategic partner, NeurIPS/ICML publications, dedicated research org publishing on clinical LLMs, and recruitment from FAIR, Google Health, and Stanford AIMI."
+   "source_ids": [
+    "133bdb51ef",
+    "a8095ffa3e"
+   ],
+   "value": "Estimated: Tier 1. Backed by a $7B valuation and focused heavily on cutting-edge AI agents and ambient AI at high scale."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "SaaS and platform revenue: subscription fees for CommureOS modules, per-seat pricing for Scribe and StrongLine, plus implementation and integration services. Targets enterprise health system contracts with multi-year agreements."
+   "confidence": "medium",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "SaaS platform integrated with EHRs; providing AI, documentation, and revenue cycle automation tools to healthcare practices."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first, clinician-adjacent, mission-obsessed. Transparent leadership (weekly AMAs), heavy investment in mentorship (structured 6-month new-grad ramp), and a 'no heroes' ethos that rewards sustainable shipping over heroics. Diverse, inclusive, and unusually candid about healthcare's complexity."
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Estimated: Intense and mission-driven. Focused on 'eliminating documentation burden' and heavily featuring AI-native language to drive healthcare transformation."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Health systems, academic medical centers, and physician groups across the U.S., including notable deployments at HCA Healthcare, Tenet Health, and various regional health networks."
+   "confidence": "medium",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Healthcare practices, practice staff, and administrators."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $170K–$195K base + $30K–$50K sign-on + $80K–$120K 4-year RSU (vesting quarterly). Total Year 1: ~$280K–$365K. Top of market for health AI; comparable to FAANG AI/ML new-grad bands."
+   "source_ids": [
+    "133bdb51ef"
+   ],
+   "value": "Estimated: $150k-$200k total compensation. The $7B valuation and elite-tier AI focus signify heavy VC backing and standard top-tier new grad pay."
   },
   "evidence_sha": "356d23a65569d4f4",
-  "generated_at": 1784684457,
+  "generated_at": 1785383310,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthcare Technology / Health AI / Clinical Informatics"
+   "confidence": "high",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Healthcare Technology / AI Software."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens: distributed systems design (FHIR at scale), ML model evaluation for clinical NLP, and pragmatic coding (Go/Python). Behavioral rounds probe ownership in ambiguous, regulated environments. Prepare for a live debugging exercise with real de-identified HL7 data. Demonstrate fluency in healthcare data standards and a clear point of view on AI safety in clinical workflows."
+   "source_ids": [
+    "a8095ffa3e",
+    "133bdb51ef"
+   ],
+   "value": "Challenge them on engineering pace: ask how the fast, innovative tech culture is maintained post-$7B raise versus slow bureaucracy. Probe for concrete signs of a respected work-life balance and sane hours, and clarify exact new grad compensation to ensure it matches your elite pay requirements."
   },
-  "last_attempt_at": 1784684457,
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785376288,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Mountain View, CA. Major hubs: San Francisco, New York, Boston, Denver, and remote-first across U.S. Some roles require proximity to health system clients."
+   "confidence": "low",
+   "source_ids": [
+    "59b656ab3c",
+    "925c971400"
+   ],
+   "value": "Confirmed public web presence (specific physical office locations not available in supplied sources)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To accelerate healthcare innovation by giving builders the infrastructure they need to create modern, connected care experiences — reducing administrative burden so clinicians can focus on patients."
+   "confidence": "high",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "To build the AI Operating System for healthcare that defines how care is delivered, documented, and financed."
   },
   "name": "Commure",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fast — weekly releases, 2-week sprints, blameless postmortems. Engineers own services end-to-end. Less bureaucracy than EHR incumbents; more rigor than early-stage startups."
+   "source_ids": [
+    "a8095ffa3e",
+    "133bdb51ef"
+   ],
+   "value": "Estimated: Fast. Company language ('defining how care is delivered' and raising $70M at $7B valuation) implies aggressive scale-up execution."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Commure's platform includes CommureOS (health data infrastructure), Commure Scribe (ambient AI clinical documentation), StrongLine (staff safety wearables), and a suite of APIs for patient access, scheduling, and revenue cycle management."
+   "confidence": "high",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "A single AI-native platform including Ambient AI and Dictation for documentation, intelligent Agents for patient and revenue workflows, autonomous RCM processing billions in claims, and Insights, a tool for practice staff to manage operations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 company holidays + 5 'wellness days' (use-it-or-lose-it). Unlimited sick leave. 12 weeks paid parental leave (all genders). Sabbatical after 4 years (4 weeks paid)."
+   "value": "Estimated: 15-20 days. Exact PTO policy is not provided in research."
   },
-  "refresh_after": 1789868457,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Company-wide shutdown last week of December (paid). Summer 'slow-down' (last two weeks of July) with optional PTO encouraged. No mandatory work during shutdowns."
+   "value": "Estimated: Standard public holidays. Guaranteed company-wide shutdowns are not mentioned in research."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Late-stage private (~1,000–1,500 employees). Raised $500M+ across Series A–C; last known valuation ~$3.5B (2024). Backed by General Catalyst, Sequoia, NVIDIA, and health system strategic investors."
+   "confidence": "high",
+   "source_ids": [
+    "133bdb51ef"
+   ],
+   "value": "Highly-funded scale-up (recently raised $70M at a $7B valuation)."
   },
   "sources": [
    {
@@ -105963,32 +106113,41 @@
   "sponsorship_context": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Actively sponsors H-1B and green cards for engineering and data science roles. Cap-exempt through university-affiliated research collaborations. STEM OPT friendly."
+   "value": "Not found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Commure is a healthcare technology company building an AI-powered operating system for healthcare providers, combining data infrastructure, clinical workflow tools, and ambient AI to modernize care delivery operations."
+   "confidence": "high",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Commure builds an AI-native operating system for healthcare, spanning the full care journey from point-of-care documentation to revenue cycle management. The company makes money by providing a suite of software tools—intelligent agents, ambient AI, and automated claims processing—on a single platform integrated with 60+ EHRs."
   },
-  "synthesized_evidence_sha": "5b260be62fb190a9",
+  "synthesized_evidence_sha": "356d23a65569d4f4",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large-scale FHIR data platform, real-time HL7/CDA ingestion, ambient AI (LLM fine-tuning for clinical notes), wearable IoT firmware, and high-availability cloud infrastructure (Kubernetes, Kafka, Spark). Strong emphasis on healthcare interoperability standards and compliance (HIPAA, SOC2, HITRUST)."
+   "confidence": "high",
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Building an AI-native platform with ambient AI, dictation, and AI agents. Processing massive scale RCM claims and integrating deeply with 60+ EHR systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583427,
   "web_search_url": "https://duckduckgo.com/?q=Commure+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Commure offers elite AI prestige (NVIDIA-backed, publishing at top venues) and top-decile new-grad compensation in a mission-driven healthcare context. Its fast, engineering-led culture ships to production weekly, not quarterly, while leadership publicly champions sustainable pace — no mandatory weekends, protected 'no-meeting' blocks, and a track record of avoiding the burnout common in both big tech and health IT consulting."
+   "source_ids": [
+    "a8095ffa3e",
+    "133bdb51ef"
+   ],
+   "value": "At a $7B valuation scale-up processing billions in claims, you will get exposure to high-scale AI systems. It balances the elite prestige and fast innovation culture you seek with a deeply mission-driven mandate to fix healthcare operations, leaving ample room for accelerated technical learning."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — Core hours 10am–4pm PT, no-meeting Wednesdays, explicit 'shutdown at 6pm' norm for non-on-call. On-call rotation ~1 week/month with 15-min response SLA; compensated with comp time. Quarterly 'recharge weeks' with reduced scope."
+   "source_ids": [
+    "a8095ffa3e"
+   ],
+   "value": "Estimated: Moderate. Expect a demanding environment typical of high-growth scale-ups, though the specific culture regarding sane hours is not detailed in the sources."
   }
  },
  "commvault": {
@@ -138687,49 +138846,126 @@
  },
  "easy dynamics corp": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: Not found in research. The current technical openings focus strictly on cloud infrastructure and DevOps rather than core AI or data science models."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "B2B services and solutions, likely operating as a government contractor or specialized tech consultancy billing for secure system design and cloud engineering."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: Technical and mission-driven, prioritizing engineers who can quickly adopt modern containerization and cloud tools to secure critical systems."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Organizations requiring secure systems and infrastructure to protect people and places."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: $70K/yr - $155K/yr for entry-level Cloud Engineering roles."
   },
   "evidence_sha": "f2eb2057dc31765a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "IT Services, Cloud Engineering, and System Security."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Probe deeply into day-to-day pace and on-call expectations, using the remote work setup to ask how they guarantee 'sane hours' and avoid digital presenteeism. Ask about the timeline for technical skill acquisition in AWS/Kubernetes to ensure the learning curve meets your desire for fast career growth without sacrificing work-life balance."
+  },
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785382239,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "United States (Full-time Remote)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "To design, build, and secure systems that protect people and places."
+  },
   "name": "Easy Dynamics Corp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: Agency/contractor-adjacent pace focused on secure delivery, likely requiring fast ramp-ups on cloud technologies but avoiding the toxic burnout of consumer tech crunches."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Secure infrastructure systems and cloud engineering solutions designed to protect people and physical places."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: Standard tech contractor allotment, likely 15-20 days of PTO, though exact policy is not public."
   },
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "2542edcd46"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: No formal company-wide guaranteed shutdowns found in public sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Not explicitly stated in public materials, but actively hiring for entry-level and full-time remote positions."
   },
   "sources": [
    {
@@ -138783,14 +139019,45 @@
     "url": "https://jobright.ai/jobs/info/6a6a7f3919d76667a2abff6e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Not explicitly found in research; entry-level role is open to applicants with 1+ years of experience."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Easy Dynamics Corp designs, builds, and secures systems to protect people and places. It generates revenue by providing specialized cloud engineering, system security, and infrastructure services to its clients."
+  },
+  "synthesized_evidence_sha": "f2eb2057dc31765a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Cloud engineering and infrastructure security, requiring proficiency in AWS, Azure, GCP, Docker, and Kubernetes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382239,
   "web_search_url": "https://duckduckgo.com/?q=Easy+Dynamics+Corp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Fully aligns with your target for elite new-grad pay, offering a wide salary band (up to $155K) that satisfies your compensation priority. The remote nature and mission-driven focus on protecting people provide the systemic impact you want, while removing commute friction to better protect your personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2542edcd46"
+   ],
+   "value": "Estimated: Good to neutral. The fully remote setup helps, but you must verify boundaries during the interview."
   }
  },
  "eataly": {
@@ -165867,52 +166134,124 @@
  "flow traders": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Estimated: Elite tier. High-frequency trading firms like Flow Traders are among the most prestigious destinations for quant and data scientists."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Principal trading firm that acts as a market maker, capturing small spreads on high trading volumes across global exchanges."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Open, communicative, fast, and competitive. They focus on transparent global communication and intellectually curious teams."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Global financial markets, exchanges, and institutional participants requiring reliable liquidity for trading ETPs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2b5ebb3782",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $150K - $250K+ base. Top quantitative流氓 firms typically provide highly competitive base salaries, with performance bonuses pushing total compensation even higher."
   },
   "evidence_sha": "855ff9816a9164b9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785382232,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Financial Services / Proprietary Trading"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Be prepared for fast-paced, highly competitive interviews centered on your intellectual curiosity, technical aptitude, and communication skills, as the firm explicitly seeks driven individuals for Trading roles."
+  },
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785376557,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "New York (and other global offices)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "To maintain open and transparent communication while providing liquidity and operating highly competitive technology-driven trading teams."
+  },
   "name": "Flow Traders",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Estimated: Fast-paced and competitive. The company actively seeks driven and competitive candidates to operate in real-time markets."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Proprietary trading algorithms and high-frequency trading infrastructure used for market making in exchange-traded products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-30 days. While exact policy is not public, global trading firms typically offer competitive European-style leave policies."
   },
-  "retry_after": 1785382352,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782",
+    "c21fa68e50"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Market holidays only. Trading firms generally pause operations on public market holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c21fa68e50",
+    "dbc3b9e88f"
+   ],
+   "value": "Established global financial firm currently expanding its teams and actively hiring new graduates."
   },
   "sources": [
    {
@@ -165976,14 +166315,47 @@
     "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8094581"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Not explicitly confirmed in sources, but standard for top-tier global quantitative trading firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c21fa68e50",
+    "2b5ebb3782"
+   ],
+   "value": "Flow Traders is a global technology-driven trading firm that provides liquidity in exchange-traded products (ETPs). It makes money by capturing the spread between bid and ask prices across various global financial markets, relying on proprietary low-latency technology."
+  },
+  "synthesized_evidence_sha": "855ff9816a9164b9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Building and optimizing low-latency trading systems and quantitative algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785376557,
   "web_search_url": "https://duckduckgo.com/?q=Flow+Traders+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "2b5ebb3782",
+    "dbc3b9e88f"
+   ],
+   "value": "Matches your goal for a top-tier new-grad role with elite prestige and high pay. As a tech-driven trading firm, it offers a fast, innovative environment and accelerated technical learning for AI/data science candidates."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2b5ebb3782"
+   ],
+   "value": "Estimated: Balanced. While financial markets operate on strict schedules which can sane hours, the competitive nature of trading typically requires intense focus during work hours."
   }
  },
  "fluidstack": {
@@ -173379,48 +173751,125 @@
  "gbit global bridge infotech inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: Low. As an IT staffing firm hiring entry-level software engineers at $20/hr, it does not fit the profile of a top-tier AI/Data Science company with elite prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "IT consulting and staffing; generates revenue by placing software engineers at client projects and billing clients for the work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: Not explicitly available, but IT staffing firms typically focus on placing talent at client sites, suggesting a contractor culture rather than an elite, mission-driven tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Businesses seeking outsourced software development and IT engineering talent."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: $20/hr based on public job posting for Junior Software Engineer. This equals roughly $41,600/year, which is below the elite pay tier for new-grad tech roles."
   },
   "evidence_sha": "c68e9acbb4d10058",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Information Technology Services and IT Consulting/Staffing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Given the consulting/staffing model, candidates should clarify if there is a guaranteed path to high-level AI/Data Science work, elite prestige, and fast technical career growth. Ask about typical billable hours, expected WLB, and whether the $20/hr rate is the ceiling or if it scales quickly, to ensure it meets your high pay and sane hours requirements."
+  },
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785382239,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Richardson, TX (United States) for current open roles."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Not explicitly stated in available sources, but implied to be providing reliable IT talent and software solutions to client companies."
+  },
   "name": "GBIT (Global Bridge InfoTech Inc)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: Likely paced by client billing cycles and project deadlines typical of IT consulting, which can lead to periods of intense work to meet client needs rather than an innovative, fast-paced tech product culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Information technology services, software engineering, and tech staffing solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: Not public. Standard IT consulting PTO is typically estimated at 10-15 days per year for entry-level employees."
   },
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: None known. IT staffing/consulting firms generally do not offer guaranteed company-wide shutdowns, as they must support client operations."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Exact size not found in research; appears to be an established but smaller-scale IT staffing or consulting firm based on available job postings."
   },
   "sources": [
    {
@@ -173474,14 +173923,45 @@
     "url": "https://jobright.ai/jobs/info/6a6a784d19d76667a2abfdaf?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "GBIT (Global Bridge InfoTech Inc) is an IT services and staffing firm that places software engineering talent, currently hiring entry-level developers for client projects. It makes money by billing clients for outsourced engineering work, as evidenced by their $20/hr entry-level Junior Software Engineer role."
+  },
+  "synthesized_evidence_sha": "c68e9acbb4d10058",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Junior Software Engineering, specifically full-time onsite roles involving entry-level software development tasks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382239,
   "web_search_url": "https://duckduckgo.com/?q=GBIT+%28Global+Bridge+InfoTech+Inc%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "This is an IT staffing firm offering entry-level contract or consulting work rather than a top-tier AI/Data Science product company. Because it is a consulting body shop, it likely lacks the elite prestige, high new-grad pay, fast-paced innovative tech culture, and deep technical learning acceleration of a top-tier tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cdf5f8b419"
+   ],
+   "value": "Estimated: Unknown. Consulting/staffing firms often have variable WLB depending on the client project you are assigned to. It is not guaranteed to be a mission-driven culture with guaranteed shutdowns."
   }
  },
  "gci": {
@@ -187591,41 +188071,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3/Unknown."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
+  "attempts": 2,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "SaaS and payroll/transaction processing fees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6c3122c15"
+   ],
+   "value": "Tech-driven, focused on entertainment industry."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d80998776"
+   ],
+   "value": "Film, television, and commercial production companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k-$130k."
   },
   "evidence_sha": "f4ffeb13f2272515",
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d80998776"
+   ],
+   "value": "Entertainment / Software / Fintech."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Assess commitment to sane hours, fast technical learning, and avoiding burnout culture."
+  },
+  "last_attempt_at": 1785383310,
+  "last_evidence_at": 1785382240,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "USA (likely LA/NY hubs)."
   },
-  "last_attempt_at": 1785382232,
-  "last_evidence_at": 1785382240,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6c3122c15"
+   ],
+   "value": "To streamline entertainment payroll and production workflows."
+  },
   "name": "GreenSlate",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d80998776"
+   ],
+   "value": "Cloud-based entertainment payroll software and production management tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days."
   },
-  "retry_after": 1785382352,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187635,7 +188165,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "441e11ffc1"
+   ],
+   "value": "Midsize private company."
   },
   "sources": [
    {
@@ -187679,14 +188216,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not explicitly known; US tech roles may be available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GreenSlate provides entertainment payroll and production management technology. It makes money by software licensing and facilitating payroll/equipment workflows."
+  },
+  "synthesized_evidence_sha": "f4ffeb13f2272515",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Web applications, cloud infrastructure, and payroll processing systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382240,
   "web_search_url": "https://duckduckgo.com/?q=GreenSlate+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Balances elite new-grad pay with a mission-driven focus and fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good."
   }
  },
  "gridcare": {
@@ -190517,41 +191079,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Very low / none. As a regional grocery store, it is not recognized as a tech or AI hub."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962",
+    "4595ee2f23"
+   ],
+   "value": "Brick-and-mortar grocery retail, generating revenue through direct in-store consumer sales of food and household items."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Community and retail-focused, steady, and slow-paced, lacking the innovative tech culture you are prioritizing."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962",
+    "4595ee2f23"
+   ],
+   "value": "Everyday consumers and households located in the Pacific Northwest regions where the stores operate."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Tens to low hundreds of thousands of dollars per year."
   },
   "evidence_sha": "034fe734421305c9",
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962"
+   ],
+   "value": "Grocery retail / Supermarkets"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Given your focus on accelerated technical learning and high new-grad pay, prepare to ask hard questions about their small IT scope and whether the work will be engaging or support-focused rather than innovative AI."
   },
-  "last_attempt_at": 1785382232,
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785382240,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962"
+   ],
+   "value": "Stores and corporate operations are located in Washington state, Oregon, and other Pacific Northwest regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962",
+    "4595ee2f23"
+   ],
+   "value": "To provide high-quality groceries and fresh goods while serving the local communities in the Pacific Northwest."
+  },
   "name": "Haggen, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Traditional and slow-paced, typical of established brick-and-mortar retail management rather than agile startup tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962",
+    "4595ee2f23"
+   ],
+   "value": "Grocery retail goods including fresh produce, meat, seafood, deli items, baked goods, and standard grocery merchandise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Likely around 10-15 days of paid time off annually for corporate and new professional employees."
   },
-  "retry_after": 1785382352,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190561,7 +191183,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal tech-wide shutdowns, though corporate offices likely close for major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4f8e15be49"
+   ],
+   "value": "Established regional grocery chain with a history spanning several decades in the Pacific Northwest."
   },
   "sources": [
    {
@@ -190605,14 +191234,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to offer employment visa sponsorship for technical roles, as traditional grocery retailers rarely sponsor visas for non-leadership engineering or IT positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4f8e15be49",
+    "bf49df5962",
+    "4595ee2f23"
+   ],
+   "value": "Haggen, Inc. is a regional grocery supermarket chain operating in the Pacific Northwest. It makes money through the retail sale of groceries, fresh produce, meat, seafood, and deli items directly to consumers in its local markets."
+  },
+  "synthesized_evidence_sha": "034fe734421305c9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves traditional IT infrastructure support, supply chain management systems, and e-commerce integrations for a regional brick-and-mortar retailer. Deep AI or advanced data science roles are highly unlikely."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382240,
   "web_search_url": "https://duckduckgo.com/?q=Haggen%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on your priorities, this company is a mismatch: a traditional grocery chain offers slow bureaucracy rather than a fast, innovative tech culture, and will lack elite AI prestige or top-tier new-grad tech pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average. Retail operations keep sane corporate hours, but the culture is traditional rather than fast-paced tech. Burnout risk is low."
   }
  },
  "hakk da an ibm company": {
@@ -397108,110 +397762,110 @@
  },
  "stripe": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "c8f17ac575",
-    "daea32b581"
+    "d22a058a5c",
+    "c8f17ac575"
    ],
-   "value": "Elite. Grouped with top-tier private tech firms like OpenAI or Databricks for AI talent, given its work at the intersection of AI, finance, and massive-scale product development."
+   "value": "Elite tier. High-impact AI, machine learning, and data roles directly serving massive tech enterprises (like OpenAI and Anthropic) and solving complex treasury finance architecture problems."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "7c75ffb53e"
+    "af7878c019",
+    "7c75ffb53e",
+    "37219dc908"
    ],
-   "value": "Stripe makes money primarily by charging a per-transaction fee for payment processing. It also generates revenue through subscription products, data tools, and other value-added financial services."
+   "value": "Stripe charges fees on payment processing volumes and provides software infrastructure for businesses to accept payments, grow revenue, and manage billing and treasury operations."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "6a87a1a68b",
-    "7c75ffb53e"
+    "af7878c019",
+    "6a87a1a68b"
    ],
-   "value": "Mission-driven with a builder mindset. It values resourceful, proactive individuals who enjoy optimizing processes and collaborating across teams to increase the internet's GDP."
+   "value": "Fast-paced, changing, and flexible. Seeks proactive, resourceful individuals who think in terms of big ideas but execute with meticulous craft and beauty."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "7c75ffb53e",
-    "a535c01581"
+    "d22a058a5c"
    ],
-   "value": "Millions of businesses ranging from the world's largest enterprises to ambitious startups that use Stripe to accept payments, grow revenue, and accelerate new business opportunities."
+   "value": "Millions of companies ranging from ambitious startups to the world's largest enterprises, including notable AI and tech players like OpenAI, NVIDIA, Confluent, and Anthropic."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: For a top AI or engineering new grad in the U.S., total annual compensation likely falls between $180,000 and $250,000+, including base, bonus, and highly competitive equity."
+   "value": "Estimated: Top-tier new-grad Total Compensation (TC) ranging from $180k - $220k+, reflecting elite prestige and highly technical benchmarking."
   },
   "evidence_sha": "af32a446fa049be1",
-  "generated_at": 1785280950,
+  "generated_at": 1785383310,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7c75ffb53e",
-    "37219dc908"
+    "af7878c019",
+    "d22a058a5c"
    ],
-   "value": "Financnial Technology (Fintech) / Payments and Economic Infrastructure."
+   "value": "Financial Infrastructure / Financial Technology (FinTech)"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "7c75ffb53e",
-    "6a87a1a68b"
-   ],
-   "value": "Expect rigorous technical interviews evaluating AI, systems design, and programming depth, alongside assessments of cultural fit that probe for a fast-paced, yet collaborative and low-ego style. Look in-depth at how you build efficient solutions without overwork."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To succeed in interviews here, emphasize your ability to handle high-ownership roles in a fast-paced environment while working at the intersection of AI and finance. Be prepared to discuss how you can leverage cutting-edge AI applications to scale infrastructure efficiently without leaving room for slow bureaucracy."
   },
-  "last_attempt_at": 1785354288,
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785376288,
   "locations": {
    "confidence": "medium",
    "source_ids": [
     "c8f17ac575"
    ],
-   "value": "Major tech hubs across the Americas, with known offices in the San Francisco Bay Area and Seattle. Distributed or specific city roles vary by team."
+   "value": "Americas (specifically noted for Treasury Finance AI and Quantitative Analytics teams), indicating a broad regional presence for global operations."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "af7878c019",
     "7c75ffb53e",
-    "6a87a1a68b",
-    "c8f17ac575"
+    "6a87a1a68b"
    ],
-   "value": "Increase the GDP of the internet."
+   "value": "To increase the GDP of the internet."
   },
   "name": "Stripe",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "6a87a1a68b",
-    "c8f17ac575"
+    "af7878c019",
+    "6a87a1a68b"
    ],
-   "value": "Fast-paced and changing environment requiring flexibility and proactive efficiency. Engineers rapidly deploy cutting-edge AI that scales with the company's growth."
+   "value": "Estimated: High-impact, high-ownership, and fast-paced environment with a staggering amount of work ahead as the company continues to scale globally."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "daea32b581",
     "37219dc908",
-    "7c75ffb53e"
+    "d22a058a5c",
+    "c8f17ac575"
    ],
-   "value": "A suite of APIs and products for online payments, billing, fraud detection, and financial operations. This also includes data analytics tools like Sigma and Data Pipeline, plus newer offerings like Stripe Atlas for company formation and the Revenue Suite."
+   "value": "Stripe Revenue Suite, Stripe Profiles, Stripe Atlas, and the Global Payments and Treasury Network (GPTN), as well as usage-based billing via Metronome."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: PTO is not detailed in the provided source job postings. A conservative estimate based on top-tier competitors would be 20+ days annually."
+   "value": "Estimated: 15 to 25 days of standard accrued PTO focused on flexible time off for high-impact employees."
   },
-  "refresh_after": 1790464950,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -397221,15 +397875,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Occasional company-wide or team-specific holiday pauses, though guaranteed broad shutdowns are not explicitly confirmed."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "7c75ffb53e",
-    "6a87a1a68b"
+    "d22a058a5c",
+    "37219dc908"
    ],
-   "value": "A large, private, late-stage company. It operates globally with a 'staggering amount of work ahead', employing thousands and competing with major public tech firms."
+   "value": "Established, large-scale global enterprise operating in a complex interwoven legal, regulatory, and financial partnership environment, featuring acquired platforms like Metronome."
   },
   "sources": [
    {
@@ -397298,43 +397952,41 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "af7878c019",
     "7c75ffb53e",
-    "a535c01581"
+    "c8f17ac575"
    ],
-   "value": "Stripe builds financial infrastructure that lets businesses accept payments and manage their money online. It handles everything from checkout forms to fraud prevention, so companies can transact seamlessly across the globe."
+   "value": "Stripe is a financial infrastructure platform for businesses that processes payments and manages treasury networks. It makes money by charging merchants transaction fees on payment volumes and offering software subscriptions for billing, revenue automation, and corporate services."
   },
-  "synthesized_evidence_sha": "2ff76f8aa4f05a6d",
+  "synthesized_evidence_sha": "af32a446fa049be1",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "7c75ffb53e",
     "c8f17ac575",
-    "a535c01581"
+    "d22a058a5c"
    ],
-   "value": "Engineers build scalable infrastructure for global payments and treasury, applying AI and quantitative analytics to financial and credit decisions. Work includes creating consistent developer experiences and deploying cutting-edge AI applications alongside product and engineering teams."
+   "value": "Building scalable, consistent developer infrastructure, deploying AI applications at the intersection of finance and product, and creating usage-based billing architectures."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583445,
   "web_search_url": "https://duckduckgo.com/?q=Stripe+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "c8f17ac575",
-    "daea32b581",
-    "7c75ffb53e"
-   ],
-   "value": "Stripe delivers the elite prestige and high new-grad pay of a top-tier tech company while embedding AI at its core, especially in treasury and data products. It matches a fast, innovative culture with a mission-driven focus that prioritizes actual work-life balance, setting boundaries to avoid toxic burnout."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Stripe perfectly aligns with your desire for elite prestige, top-tier new grad pay, and a fast, highly technical culture. By serving premier AI companies like OpenAI and Anthropic, and deploying cutting-edge AI applications within its own treasury and finance infrastructure, Stripe accelerates technical learning for data scientists while maintaining a mission-driven focus with a high-ownership tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "af7878c019",
     "6a87a1a68b"
    ],
-   "value": "Estimated: Above average for top-tier fintech. The culture emphasizes sustainable work alongside a 'staggering amount of work', aiming for high output without mandatory burnout."
+   "value": "Estimated: Elite tech culture with a strong focus on career growth and technical learning; standard to slightly demanding hours are likely given the high-ownership expectations, but it stops short of being a structurally toxic environment."
   }
  },
  "stryker": {
@@ -419877,79 +420529,115 @@
  },
  "the voleon group": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Top-tier (comparable to Two Sigma, Citadel, DE Shaw)"
+   "confidence": "high",
+   "source_ids": [
+    "d47a2182ac"
+   ],
+   "value": "High prestige machine learning firm targeting top talent from leading tech companies and top academic programs to tackle state-of-the-art AI challenges in finance."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Management fees and performance fees on assets under management."
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "Technology-driven quantitative finance and securities liquidity provision powered by machine learning."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Academic, collaborative, intellectually rigorous, low bureaucracy."
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac",
+    "69d9738e33"
+   ],
+   "value": "Enriching, collegial, start-up-like, with modern offices, daily catered lunches, and internal technology talks by experts."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Institutional investors and limited partners in hedge fund vehicles."
+   "confidence": "medium",
+   "source_ids": [
+    "989b60922a"
+   ],
+   "value": "Financial markets and securities markets participants."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $200k-$250k base + bonus (total $300k-$400k)."
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "Estimated: High new-grad pay consistent with elite quant/ML hedge funds given 'highly competitive compensation' and 'start-up environment' language. Often in the top percentile for tech roles."
   },
   "evidence_sha": "6bba71f8b9c79ee5",
-  "generated_at": 1784887105,
+  "generated_at": 1785383310,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Quantitative Finance / Hedge Fund / Systematic Trading"
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "Financial Technology and Asset Management / Securities / Quantitative Finance."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Strong emphasis on ML theory, statistics, coding, and practical problem-solving; likely includes research presentations and coding challenges."
+   "confidence": "medium",
+   "source_ids": [
+    "989b60922a",
+    "5c71a26464",
+    "d47a2182ac"
+   ],
+   "value": "Emphasize your readiness for a fast-paced, high-performance, start-up environment and your interest in tackling real-world problems in finance using state-of-the-art AI/ML. Ask questions about how the 'collegial' environment translates to realistic work hours, mentorship structures, and how the company ensures work-life balance while remaining fast and innovative."
   },
-  "last_attempt_at": 1784887105,
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785376557,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Berkeley, California (headquarters); possibly remote options."
+   "confidence": "high",
+   "source_ids": [
+    "69d9738e33",
+    "d47a2182ac"
+   ],
+   "value": "The company has operations in London and a beautiful modern office locally staffed. The company operates globally in finance."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To generate superior risk-adjusted returns through advanced machine learning and data science."
+   "confidence": "high",
+   "source_ids": [
+    "d47a2182ac"
+   ],
+   "value": "To apply state-of-the-art AI and machine learning techniques to real-world problems in finance."
   },
   "name": "The Voleon Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fast-paced research environment but with reasonable hours compared to industry; estimated 45-55 hours/week."
+   "source_ids": [
+    "989b60922a",
+    "5c71a26464"
+   ],
+   "value": "Estimated: Fast-paced, high-performance, start-up environment."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Systematic trading strategies, machine learning models for financial prediction, proprietary trading algorithms."
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "AI and machine learning-driven financial market solutions, including liquidity provision in securities markets via Voleon Securities."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO plus holidays."
+   "source_ids": [
+    "989b60922a"
+   ],
+   "value": "Estimated: Standard competitive finance tech PTO (typically 20-25 days) but exact policy not public in supplied sources."
   },
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -419958,13 +420646,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns; possibly winter break."
+   "source_ids": [
+    "989b60922a"
+   ],
+   "value": "Estimated: No explicit mention of guaranteed shutdowns in supplied source materials."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Small, elite team (~50-100 employees), founded 2007, well-established."
+   "confidence": "medium",
+   "source_ids": [
+    "989b60922a"
+   ],
+   "value": "Operates with a mix of growing business units (e.g., Voleon Securities is a 'new business within the Voleon Group') in a fast-paced, start-up environment."
   },
   "sources": [
    {
@@ -420029,33 +420721,52 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B visas for specialized roles; limited public data."
+   "confidence": "low",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "Sponsorship details are not explicitly stated in available job postings sourced here."
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "The Voleon Group is a quantitative hedge fund that applies machine learning and statistical techniques to systematic trading strategies across global financial markets."
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac"
+   ],
+   "value": "The Voleon Group is a technology company that applies state-of-the-art AI and machine learning techniques to real-world problems in finance. It makes money by leveraging deep real-world experience applying ML to financial markets, including providing liquidity in securities markets through its Voleon Securities business."
   },
+  "synthesized_evidence_sha": "6bba71f8b9c79ee5",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Machine learning research, statistical modeling, high-performance computing, data engineering, strategy implementation."
+   "confidence": "high",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac",
+    "f6875a5b34"
+   ],
+   "value": "Hands-on, quantitative, and machine learning-based work in a fast-paced, start-up environment. Engineers and data scientists work on data insights, data infrastructure, and apply ML techniques to real-world finance problems, with mentorship opportunities and shaping of engineering culture."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677671,
   "web_search_url": "https://duckduckgo.com/?q=The+Voleon+Group+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Offers top-tier AI/quant prestige and high new-grad compensation within a research-driven, low-bureaucracy culture that values work-life balance and accelerated technical growth without burnout."
+   "confidence": "medium",
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac",
+    "5c71a26464"
+   ],
+   "value": "This role matches your priority for a top-tier AI role that offers elite prestige and high new-grad pay within a fast, innovative, start-up-like tech culture rather than a slow bureaucracy. It is a mission-driven company that aims to respect work-life balance, providing an enriching and collegial working environment that accelerates technical learning while avoiding toxic environments."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated 4/5 (better than average for quant finance)"
+   "source_ids": [
+    "989b60922a",
+    "d47a2182ac",
+    "5c71a26464"
+   ],
+   "value": "Estimated: While described as 'enriching and collegial,' the environment is explicitly fast-paced and demanding. Actual WLB depends on negotiation and team."
   }
  },
  "the walt disney company": {
@@ -467333,52 +468044,138 @@
  "woodward inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "675875e462",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Not a FAANG-style elite tech brand, but holds high domain prestige in aerospace/industrial hardware—respectable for mission-driven engineering, with less focus on cutting-edge AI research reputation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "30557c7c29"
+   ],
+   "value": "Designs and manufactures high-value, mission-critical control systems and provides aftermarket services for the aerospace and industrial sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "675875e462",
+    "30557c7c29"
+   ],
+   "value": "Estimated: Mission-driven, engineering-centric, and collaborative, typical of established industrial OEMs; may have some bureaucracy typical of mature hardware companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "a144a7d70a"
+   ],
+   "value": "Aerospace and defense OEMs, commercial airlines, and industrial machinery/equipment manufacturers requiring energy control technologies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d",
+    "05814333fd"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary for new-grad roles in data science, dependent on location and specific technical role; high new-grad pay is not the primary draw compared to top-tier software firms."
   },
   "evidence_sha": "636278250c27e47d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785383310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785382232,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "675875e462",
+    "30557c7c29"
+   ],
+   "value": "Aerospace and Industrial Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidates should highlight interest in applying AI to physical, mission-critical systems and willingness to navigate a structured engineering environment. Emphasize balancing innovation with safety/efficiency and respect for sustainable hours to avoid burnout."
+  },
+  "last_attempt_at": 1785383310,
   "last_evidence_at": 1785376557,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "a144a7d70a"
+   ],
+   "value": "Headquartered in Fort Collins, Colorado, with manufacturing and engineering facilities across several U.S. states and internationally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "30557c7c29"
+   ],
+   "value": "To be the trusted leader in energy control and optimization solutions for the aerospace and industrial markets."
+  },
   "name": "Woodward, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "675875e462",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Methodical and engineering-focused, typical of hardware/manufacturing firms; reliable and structured rather than fast-paced tech startup culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "30557c7c29",
+    "a144a7d70a"
+   ],
+   "value": "Energy control and optimization solutions, including fuel systems, combustion systems, actuators, electronic engine controls, and industrial turbochargers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "05814333fd"
+   ],
+   "value": "Estimated: Standard corporate package likely offering 15-20 days of vacation plus sick time, bereavement, and disability leave; exact upfront PTO accrual rates not specified publicly."
   },
-  "retry_after": 1785382352,
+  "refresh_after": 1790567310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d",
+    "30557c7c29"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "05814333fd"
+   ],
+   "value": "Estimated: Not publicly confirmed as a guaranteed benefit; standard paid holidays likely apply, but specific corporate-wide shutdown periods are absent in available sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "1db9db9c4d"
+   ],
+   "value": "Public company (NASDAQ: WWD) with a global workforce of approximately 9,000 employees."
   },
   "sources": [
    {
@@ -467432,14 +468229,49 @@
     "url": "https://jobright.ai/jobs/info/6a6a71a28693c23e7fb7ad2d?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "05814333fd",
+    "1db9db9c4d"
+   ],
+   "value": "Available benefits suggest traditional U.S. employment; specific visa sponsorship capacity for the Data Scientist role is not explicitly confirmed in public postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "675875e462",
+    "30557c7c29",
+    "a144a7d70a"
+   ],
+   "value": "Woodward, Inc. is an independent designer, manufacturer, and service provider of energy control and optimization solutions. The company makes money by supplying complex aerospace and industrial components—such as fuel systems, actuators, and turbines—to OEMs and aftermarket customers globally."
+  },
+  "synthesized_evidence_sha": "636278250c27e47d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "05814333fd",
+    "1db9db9c4d"
+   ],
+   "value": "Data science roles at Woodward likely involve optimizing complex industrial and aerospace systems, analyzing operational data for predictive maintenance, and modeling energy-efficient control algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785376557,
   "web_search_url": "https://duckduckgo.com/?q=Woodward%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Woodward offers mission-driven work in aerospace and industrial optimization, providing stability and promoting work-life balance—general corporate benefits include vacation and sick leave, though precise guaranteed shutdowns are unstated. The pace may lean toward traditional manufacturing and hardware cycles, making it slower than elite tech but less toxic or high-burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "05814333fd"
+   ],
+   "value": "Estimated: Good, supported by traditional corporate benefits and expected reasonable working hours, though guaranteed shutdowns are not explicitly documented."
   }
  },
  "woolpert": {
