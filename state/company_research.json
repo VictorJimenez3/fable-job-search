@@ -49449,44 +49449,44 @@
  },
  "axon": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mid-tier. While highly prestigious in the public safety sector, it is not traditionally classified alongside elite pure-tech AI/DS giants, though it offers meaningful data and reliability challenges."
+   "confidence": "low",
+   "source_ids": [
+    "811c38f89f"
+   ],
+   "value": "Not found in the provided sources."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "56374d1123"
+    "72f40f3e06",
+    "b32216b1c2"
    ],
-   "value": "Operates as a total compensation company deriving revenue from the sale of public safety hardware and software platforms."
+   "value": "Total compensation company model, providing hardware and cloud platforms to public safety and emergency response customers."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "b32216b1c2",
-    "56374d1123"
+    "72f40f3e06"
    ],
-   "value": "Collaborative and candid. The company values working better together, connecting with care, and actively seeking out diverse perspectives from customers, communities, and colleagues."
+   "value": "Collaborative, connecting with candor and care, seeking diverse perspectives."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "b32216b1c2"
    ],
-   "value": "Law enforcement agencies, public safety organizations, and internal teams utilizing the Axon 911 platform."
+   "value": "Public safety agencies, 911 operations, and internal teams using the Axon 911 platform."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "56374d1123"
-   ],
-   "value": "Estimated: Highly competitive total compensation package. Axon explicitly states it is a total compensation company, likely placing new grad tech pay in the upper-middle bracket for the industry."
+   "source_ids": [],
+   "value": "Estimated: Competitive total compensation (base salary, bonus, benefits), posto grande."
   },
   "evidence_sha": "b7c52ea67f87a38c",
-  "generated_at": 1785347070,
+  "generated_at": 1785433779,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -49495,57 +49495,61 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "811c38f89f",
     "b32216b1c2"
    ],
-   "value": "Public Safety Technology and Hardware"
+   "value": "Public Safety Technology."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "b32216b1c2",
-    "56374d1123"
+    "811c38f89f"
    ],
-   "value": "Given the candidate's priority for a high-learning, fast-paced environment without toxic burnout, interviews should probe how the 'fast-paced' culture translates to actual daily hours and on-call expectations for Site Reliability Engineers. Candidates should ask about guaranteed shutdowns, total compensation packages for new grads, and how operational excellence is balanced against personal time."
+   "value": "Candidates should emphasize their alignment with a fast-paced, high-impact environment and readiness to own critical systems that rely on reliability. Prepare to discuss how you drive rapid technical learning and collaborate cross-functionally, while proactively asking about team structure to ensure work-life balance remains sustainable."
   },
-  "last_attempt_at": 1785430897,
+  "last_attempt_at": 1785433779,
   "last_evidence_at": 1785428538,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "811c38f89f",
+    "b32216b1c2"
+   ],
+   "value": "Specific office locations not found in the provided sources."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "b32216b1c2",
-    "56374d1123"
+    "811c38f89f",
+    "72f40f3e06"
    ],
-   "value": "To protect life and make community safety a reality through fast-paced, meaningful work and diverse collaboration."
+   "value": "To capture critical evidence during mission-essential moments for customers, working better together by connecting with candor and care while seeking diverse perspectives."
   },
   "name": "Axon",
   "pace_of_work": {
    "confidence": "high",
    "source_ids": [
-    "b32216b1c2",
-    "56374d1123"
+    "811c38f89f",
+    "b32216b1c2"
    ],
-   "value": "Estimated: Fast-paced and challenging. The company explicitly describes its environment this way, which may indicate high output expectations and rapid development cycles."
+   "value": "Fast-paced, challenging and meaningful."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "811c38f89f",
     "b32216b1c2"
    ],
-   "value": "Hardware devices like TASERs and body cameras, alongside software platforms such as Axon 911."
+   "value": "Axon devices with embedded software, Axon 911 platform."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days of PTO. Exact policy not provided in sources, but typical for a company of this stage emphasizing total compensation."
+   "value": "Estimated: Consistent with industry standard (typically 15-20 days annually), though exact policy varies by seniority."
   },
-  "refresh_after": 1790531070,
-  "retry_after": 1785431857,
+  "refresh_after": 1790617779,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49555,12 +49559,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard US public holidays. Guaranteed company-wide shutdown periods are not explicitly mentioned in the provided sources."
+   "value": "Estimated: No specific information found on shutdowns."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "b32216b1c2",
+    "811c38f89f"
+   ],
+   "value": "Rapidly growing environment with high-impact software engineering teams."
   },
   "sources": [
    {
@@ -49625,26 +49632,31 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "811c38f89f",
+    "56374d1123"
+   ],
+   "value": "Specific visa sponsorship details not found in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "b32216b1c2",
-    "5b6464abc0"
+    "811c38f89f",
+    "b32216b1c2"
    ],
-   "value": "Axon develops public safety technologies, including TASER devices and body-worn cameras, to help law enforcement agencies manage and record their operations. The company makes money by selling these hardware devices and offering related cloud-based software solutions like Axon 911."
+   "value": "Axon develops public safety technologies, including body cameras and software platforms like Axon 911, to capture critical evidence during mission-essential moments. Working closely with product managers and designers, the company builds hardware and embedded systems for law enforcement and emergency response, while operating a fast-paced and meaningful engineering culture."
   },
-  "synthesized_evidence_sha": "712ca06c9248f4e0",
+  "synthesized_evidence_sha": "b7c52ea67f87a38c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "811c38f89f",
+    "56374d1123",
     "b32216b1c2"
    ],
-   "value": "Focuses on ensuring reliability, performance, and operational excellence across a rapidly growing environment for platforms like Axon 911."
+   "value": "Embedded software development for devices, site reliability engineering, and technical support for the Axon 911 platform."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
@@ -49652,16 +49664,14 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "b32216b1c2"
+    "811c38f89f"
    ],
-   "value": "Axon explicitly states that life at the company is fast-paced, challenging, and meaningful, catering to candidates seeking an innovative tech culture that avoids slow bureaucracy. The mission-driven nature of protecting public safety satisfies the desire for impactful work, though candidates should verify if the fast-paced environment aligns with their work-life balance and sane hours requirements during the interview process."
+   "value": "Axon is mission-driven and explicitly promises a fast-paced tech culture, avoiding slow bureaucracy while ensuring engineers build directly for first responders. The challenging environment accelerates learning, appealing to top-tier grads who want innovative work without sacrificing meaningful, mission-oriented output."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "b32216b1c2"
-   ],
-   "value": "Estimated: Moderate. While the company emphasizes meaningful work and collaboration, the explicitly fast-paced nature of the environment may sometimes conflict with strict personal time boundaries."
+   "source_ids": [],
+   "value": "Estimated: Medium; role might see challenging late-night hours."
   }
  },
  "axos bank": {
@@ -332535,52 +332545,135 @@
  "principal global services": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e4f4d550bf",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate. Corporate IT subsidiaries of financial groups generally lack the top-tier AI prestige of tech-first companies or quantitative finance firms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "1b80f12146"
+   ],
+   "value": "Operates as an in-house shared services and global capability center, funded by the broader Principal Financial Group enterprise."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e4f4d550bf",
+    "1b80f12146"
+   ],
+   "value": "Estimated: Corporate, stable, and process-oriented, focused on supporting the broader business rather than driving rapid technical innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "1b80f12146"
+   ],
+   "value": "Principal Financial Group and its affiliated business units."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $75,000-$100,000 base salary, reflecting standard corporate IT scales slightly below top-tier tech market rates."
   },
   "evidence_sha": "0ea67c2d5ec62b3a",
+  "generated_at": 1785433779,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "e4f4d550bf",
+    "1b80f12146"
+   ],
+   "value": "Financial services technology / IT shared services."
   },
-  "last_attempt_at": 1785431078,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "1db9db9c4d"
+   ],
+   "value": "Probe deeply into the specific team's tech stack to ensure the work involves modern AI/ML rather than legacy IT maintenance, and ask about expected working hours, on-call expectations, and new-grad compensation bands to verify it meets your high-pay and strict work-life balance targets."
+  },
+  "last_attempt_at": 1785433779,
   "last_evidence_at": 1785430707,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Global presence supporting Principal Financial Group operations (exact hubs not captured in this data pull)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "9aaf9aa692"
+   ],
+   "value": "Provides global technology solutions to support the broader Principal Financial Group operations (specific text unavailable in provided tracking sources)."
+  },
   "name": "Principal Global Services",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Estimated: Slow to moderate, characterized by traditional enterprise bureaucracy and process-heavy workflows rather than fast, iterative tech culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Internal enterprise software, data management platforms, and IT infrastructure capabilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Estimated: 18-25 days of standard paid time off, typical for large financial services subsidiaries."
   },
-  "retry_after": 1785431318,
+  "refresh_after": 1790617779,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "e4f4d550bf",
+    "9aaf9aa692",
+    "1b80f12146"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Estimated: Likely standard corporate holidays; no specific guaranteed week-long shutdowns found in provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "1db9db9c4d"
+   ],
+   "value": "Large, established corporate subsidiary."
   },
   "sources": [
    {
@@ -332624,14 +332717,48 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Estimated: Large financial subsidiaries typically offer H-1B sponsorship for specialized tech roles, though exact policies for Principal Global Services were not captured."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e4f4d550bf",
+    "9aaf9aa692",
+    "1db9db9c4d"
+   ],
+   "value": "Based on the provided automated redirects and discovery tracking, Principal Global Services is the global technology and operations subsidiary of Principal Financial Group. It functions as an in-house capability center providing IT, software, and data services to its parent organization."
+  },
+  "synthesized_evidence_sha": "0ea67c2d5ec62b3a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering, data management, and IT enterprise services supporting the parent company's financial workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785430707,
   "web_search_url": "https://duckduckgo.com/?q=Principal+Global+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e4f4d550bf",
+    "1db9db9c4d"
+   ],
+   "value": "A role here offers stable, enterprise-scale data workflows, but may fall short of the 'elite prestige' and 'fast, innovative tech culture' you are seeking; large financial shared-services centers often prioritize steady IT delivery over cutting-edge AI acceleration and new-grad market-rate pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e4f4d550bf"
+   ],
+   "value": "Estimated: Good. Parent companies in financial services typically maintain standard corporate hours, which may satisfy your need for sane hours and avoid toxic burnout cultures."
   }
  },
  "prizeout": {
@@ -360104,52 +360231,133 @@
  "rollout": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Estimated: Niche / Emerging startup prestige. High technical prestige opportunity for new grads due to founding role autonomy, modern AI stack exposure, and complex secure infrastructure challenges."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2f238ba0f6"
+   ],
+   "value": "B2B software sales, likely through contracts with law enforcement agencies and police departments to utilize their AI reporting infrastructure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Estimated: Elite, scrappy, and cutting-edge. The culture values rapid AI adoption, direct collaboration with co-founders, and a mission-driven focus on solving real-world field problems for police officers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Police officers and law enforcement agencies that require secure, field-ready tools for generating and filing incident reports during and after traffic stops or incidents."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: High competitive new-grad pay typical for elite AI startups (likely ringing in at $120k-$160k base, plus significant early-stage equity), but exact figures are not listed."
   },
   "evidence_sha": "36cb788ee64bc772",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785433779,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785430709,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Artificial Intelligence / Law Enforcement Technology / GovTech"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Candidates should seek to confirm that the intense, fast-paced startup environment respects personal time and offers guaranteed shutdowns, preventing toxic burnout. It is crucial to discuss how technical learning and career growth are accelerated without sacrificing sane hours."
+  },
+  "last_attempt_at": 1785433779,
   "last_evidence_at": 1785413735,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Specific physical locations are not listed in the job postings, which are hosted on AshbyHQ, suggesting a potentially remote-friendly or distributed founding team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "To make the experience of police officers simpler and more efficient through modern AI, streamlining the complex process of generating report-ready output from the field mid-incident."
+  },
   "name": "Rollout",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Estimated: Very fast-paced and highly innovative. As a founding team member, the environment requires tracking and rapidly adopting new AI models and tools as they ship."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "A modern AI product suite for police officers, including a mobile app for field use, an AI pipeline that turns voice, photos, and notes into report-ready output, and a laptop agent that automatically fills out report forms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Estimated: Standard flexible startup PTO, though exact days are not public in the provided sources."
   },
-  "retry_after": 1785432629,
+  "refresh_after": 1790617779,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Estimated: No information found regarding guaranteed company shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Early-stage, founding team startup. They are currently hiring their first product designer and founding software engineers, indicating a very small team."
   },
   "sources": [
    {
@@ -360213,14 +360421,48 @@
     "url": "https://jobs.ashbyhq.com/rollout/ac255ccb-888f-46d9-8d57-5e7334a5ee46"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Not explicitly stated in the available job postings for founding roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Rollout is an early-stage AI startup that builds software for law enforcement to help police officers generate and file incident reports. It monetizes by selling this AI reporting platform and related laptop agent software to police departments and records systems."
+  },
+  "synthesized_evidence_sha": "36cb788ee64bc772",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2f238ba0f6",
+    "5d85a1b405"
+   ],
+   "value": "Engineering involves building a modern AI product suite: a mobile app, an AI pipeline converting voice/photos/notes to structured reports, a laptop agent for form-filling, and highly secure infrastructure suitable for sensitive law enforcement data. Engineers also serve as scouts tracking new AI models, agents, and coding tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785413735,
   "web_search_url": "https://duckduckgo.com/?q=Rollout+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "As a founding engineer or designer, you will directly shape a high-impact AI pipeline and infrastructure in a fast, innovative tech culture free of corporate bureaucracy. This aligns with elite new-grad pay and prestige potential, though candidates should verify if the mission-driven law enforcement focus and startup pace match their desired work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5d85a1b405"
+   ],
+   "value": "Estimated: Potentially demanding. Founding-stage startups often require intense effort, so work-life balance and sane hours are not guaranteed and should be thoroughly vetted by the candidate."
   }
  },
  "rolls royce": {
