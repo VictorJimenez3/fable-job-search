@@ -30545,79 +30545,99 @@
  "antares nuclear": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2: High technical prestige in nuclear computational science; emerging AI/ML applications in reactor design and digital twins."
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Estimated: Niche/emerging; AI/data work centers on workflow automation and enterprise tooling rather than elite research or core ML/AI product leadership."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Revenue from reactor design licensing, engineering services contracts, fuel supply agreements, and government R&D grants."
+   "confidence": "low",
+   "source_ids": [
+    "4979b2d702",
+    "a1840af52f"
+   ],
+   "value": "Likely a hardware and energy services model involving design, manufacture, and deployment of microreactors; reference to subscription/unlimited offerings suggests possible recurring software or product access offerings."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Engineering-first, safety-conscious, collaborative; small-team autonomy with strong QA culture; less bureaucracy than legacy nuclear vendors."
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Estimated: Mission-driven, systems-minded, and user-focused; values operators who can map real processes and build practical automations."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Utilities, government energy agencies, and industrial partners seeking decarbonized baseload power solutions."
+   "confidence": "low",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Likely targets include commercial energy buyers, government and defense agencies, and space or industrial operators requiring autonomous off-grid power (inferred from microreactor use cases)."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $95k-$120k base + equity/bonus; nuclear premium over general software but below top-tier AI labs."
+   "value": "Estimated: Competitive startup clean-energy compensation, likely $110k-$150k base for new grad technical roles, with equity; exact figures not public."
   },
   "evidence_sha": "6ffbc9065be04573",
-  "generated_at": 1784864030,
+  "generated_at": 1785392120,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Advanced nuclear energy / clean tech"
+   "confidence": "high",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Clean energy / nuclear microreactor technology."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Demonstrate nuclear engineering fundamentals (neutronics, TH, safety analysis) plus computational skills (Python, MOOSE, OpenMC, Serpent); ask about QA/QC processes for NQA-1 compliance and work cadence around licensing milestones."
+   "confidence": "medium",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Probe the balance between fast innovation and nuclear regulatory pace, actual implementation of sane hours and shutdowns, and the real depth and prestige of AI/data roles versus enterprise IT automation."
   },
-  "last_attempt_at": 1784864030,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Headquarters in Washington DC area; potential remote/hybrid flexibility for computational roles."
+   "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Accelerate deployment of safe, economical nuclear energy to address climate change and energy security."
+   "confidence": "high",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "To make clean energy abundant from Earth to the Asteroid Belt."
   },
   "name": "Antares Nuclear",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Project-driven with regulatory milestone deadlines; intense sprint periods around NRC submissions balanced by steadier R&D cycles."
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Estimated: Fast-moving startup energy in software/automation teams, potentially moderated by nuclear hardware and compliance rigor."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Small modular reactor (SMR) designs, nuclear fuel fabrication services, and advanced reactor licensing support."
+   "confidence": "high",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Mass-producible, inherently safe, deployable microreactors designed for use terrestrially, underwater, and in space."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 federal holidays; unlimited not typical in regulated nuclear sector."
+   "value": "Estimated: Typical startup range, likely 15-20 days annually with standard holidays; exact policy not disclosed."
   },
-  "refresh_after": 1790048030,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -30627,12 +30647,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No company-wide shutdowns documented; typical federal holiday observance only."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; startup operations typically run year-round."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 50-200 employees, venture-backed growth stage with DOE ARPA-E and private funding."
+   "confidence": "medium",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Startup-stage clean energy company with an active engineering and enterprise software hiring footprint."
   },
   "sources": [
    {
@@ -30677,34 +30699,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Likely supports H-1B and cap-exempt filings given DOE contract work; green card sponsorship case-by-case."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Antares Nuclear develops advanced nuclear technology solutions, focusing on small modular reactors and nuclear fuel cycle innovations for clean energy deployment."
+   "confidence": "high",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Antares Nuclear is a clean energy startup building mass-producible, inherently safe, deployable microreactors for terrestrial, underwater, and space applications. The company aims to commercialize compact nuclear technology to make clean energy abundant from Earth to the Asteroid Belt."
   },
-  "synthesized_evidence_sha": "339f94f6dcece7e9",
+  "synthesized_evidence_sha": "6ffbc9065be04573",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Neutronics modeling, thermal-hydraulics simulation, materials qualification, licensing analysis, and digital twin development for advanced reactors."
+   "confidence": "high",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Includes enterprise tool administration, business process mapping, automation and AI-enabled workflow development, and user-centered system configuration to align tools with real work practices."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677230,
   "web_search_url": "https://duckduckgo.com/?q=Antares+Nuclear+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Matches your priority for mission-driven nuclear innovation with elite technical depth; SMR sector offers high prestige and competitive new-grad pay without FAANG-style burnout culture."
+   "confidence": "medium",
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "For a candidate seeking elite mission-driven AI/data work with fast innovation and respected personal time, Antares offers a compelling mission and AI-enabled automation scope; however, hardware-nuclear compliance may bring slower cycles than pure software startups, and elite AI brand prestige is less established than top tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 7/10 — mission-driven culture with regulated industry discipline; likely reasonable hours outside licensing crunches, but limited public data."
+   "source_ids": [
+    "4979b2d702"
+   ],
+   "value": "Estimated: Moderate to good; startup culture may demand intensity, but mission-driven focus and stated emphasis on systems-minded operators suggest sane hours compared to toxic environments."
   }
  },
  "anthelion capital": {
@@ -63775,7 +63805,7 @@
    "value": "Estimated: Tier 2 (Consulting/Solutions focus). While they work on cutting-edge AI tasks like response evaluation, they are primarily a broad technology solutions firm rather than a dedicated AI research lab."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -63799,7 +63829,7 @@
    ],
    "value": "Organizations across multiple industries seeking strategy and technology execution, as well as end customers requiring technical support and accurate service."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -63830,7 +63860,7 @@
    ],
    "value": "To match your priorities, you should probe deeply into their actual engineering delivery cycles, client expectations, and specific AI project pipelines to ensure the culture is genuinely fast-paced. It is also vital to ask specific questions about expected working hours for tech roles and new-grad compensation bands, as these details are not publicly visible."
   },
-  "last_attempt_at": 1785274373,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
    "confidence": "high",
@@ -63874,6 +63904,7 @@
    "value": "Estimated: 15-20 days. US roles likely feature standard tech market PTO, while international roles feature locally compliant statutory paid vacation and benefits."
   },
   "refresh_after": 1790458373,
+  "retry_after": 1785395960,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -63968,7 +63999,7 @@
    ],
    "value": "Not explicitly found in research; however, they hire globally and provide locally compliant benefits in regions like LATAM, suggesting location-flexible hiring."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -75554,39 +75585,42 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Mid-tier in the defense/government sector."
+   "value": "Estimated: Tier 2 - Respected federal tech prestige, but not considered elite FAANG-level AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Business-to-Government (B2G) services contract provider, leveraging technical expertise to fulfill public sector requirements."
+   "value": "B2G (Business-to-Government) contracting; bidding on and executing federal defense and IT service contracts."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Mission-driven, characterized by a strong emphasis on integrity."
+   "value": "Mission-driven with a strong stated emphasis on integrity. Up to 10% travel is expected for some engineering roles."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "U.S. federal government agencies and their related organizations."
+   "value": "U.S. federal government agencies, civilian agencies, and military branches."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $80,000-$95,000 base salary."
+   "value": "Estimated: $75,000 - $95,000 base salary for junior tech roles."
   },
   "evidence_sha": "e9d74f4adc286f03",
-  "generated_at": 1784870150,
+  "generated_at": 1785392120,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -75595,52 +75629,58 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Government IT and Consulting Services."
+   "value": "Defense and Government Technology Services"
   },
   "interview_focus": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Probe the specific team's Agile implementation and daily autonomy to gauge bureaucracy. Ask about on-call expectations, actual sprint pace, and how the team balances federal deliverables with work-life boundaries to ensure it avoids toxic burnout cultures."
   },
-  "last_attempt_at": 1785383310,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785367855,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Denver, Colorado (based on specific role examined), with additional office locations nationwide."
+   "value": "San Antonio, TX and Denver, CO (based on hiring locations), with nationwide presence and up to 10% continental US travel."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "To deliver unique contributions that support and protect employees, their families, and our customers every day, driven by a culture of integrity."
+   "value": "To deliver unique technological contributions that protect and support employees, customers, and national security, guided by a culture of integrity."
   },
   "name": "CACI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Steady and structured, driven by government contract timelines rather than agile, fast-paced innovation cycles."
+   "source_ids": [
+    "4973907a16"
+   ],
+   "value": "Estimated: Moderate. Agile environments are used, but output is governed by federal contract cycles and government compliance, which can slow innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Information technology services, intelligence and cyber operations support, and large-scale data and GIS technology solutions."
+   "value": "Custom software applications, full-stack development services, GIS technologies, cloud-native architectures, and large-scale data environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days annually."
+   "value": "Estimated: 15 to 25 days annually, contingent on tenure and corporate tier."
   },
-  "refresh_after": 1790054150,
-  "retry_after": 1785387150,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75650,14 +75690,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Possible federal holiday observances."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; paid time off is typically handled via standard PTO."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Large, established public company (Fortune 1000)."
+   "value": "Large-scale, established public company defense contractor."
   },
   "sources": [
    {
@@ -75712,137 +75753,148 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "4973907a16"
+   ],
+   "value": "No security clearance is required to start for some roles, but as a federal contractor, roles typically require U.S. citizenship and the ability to obtain a clearance."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "CACI International Inc is a Fortune 1000 company that provides information technology, intelligence, and cyber services, primarily to U.S. federal government agencies. It makes money by securing large government contracts to deliver specialized technology solutions, such as cloud-native architectures and large-scale data environments."
+   "value": "CACI is a large government contractor that designs and builds IT, software, and intelligence systems primarily for U.S. national security and federal agencies. It makes money by securing long-term government contracts and delivering specialized technology services and mission support."
   },
-  "synthesized_evidence_sha": "ffd786ac379a5ffe",
+  "synthesized_evidence_sha": "e9d74f4adc286f03",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "4973907a16",
     "67b154bde0"
    ],
-   "value": "Hands-on development utilizing GIS technologies, cloud-native architectures, and large-scale data environments, tailored specifically for government clients."
+   "value": "Agile software development, full-stack development, GIS technologies, cloud-native architectures, and large-scale data environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784661276,
   "web_search_url": "https://duckduckgo.com/?q=CACI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "While defense contracting naturally carries some federal bureaucracy, you will handle high-impact, mission-driven national security data. It provides solid technical learning and competitive compensation, but you must aggressively screen your specific team to ensure it matches your fast-paced, innovative tech culture goals."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "67b154bde0"
-   ],
-   "value": "Estimated: Good, supported by competitive benefits packages."
+   "source_ids": [],
+   "value": "Estimated: Good. Government contractors generally enforce standard 40-hour weeks to avoid burnout, though specific team cultures can vary."
   }
  },
  "caci bv": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Upper-middle tier for defense contracting; highly respected in the government sector but lacks the consumer-facing brand cachet of a top-tier 'Big Tech' or unclassified research lab."
+   "value": "Estimated: Unclear for AI/Data Science. Based on descriptions, roles are generic full stack development rather than specialized elite AI or data science positions. Expect a lower tier for pure AI prestige compared to big tech or specialized AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Operates as a government services contractor, generating revenue through cost-reimbursable, fixed-price, and time-and-materials contracts with U.S. government agencies."
+   "confidence": "medium",
+   "source_ids": [
+    "a6a5b3c5f8",
+    "9e1fbb701e"
+   ],
+   "value": "Federally contracted defense and national security services, providing technical staffing and software development outsourcing to government agencies."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a6a5b3c5f8",
+    "9e1fbb701e"
+   ],
+   "value": "Estimated: Highly mission-driven around national security. The culture likely favors structured teamwork and compliance with federal standards over rapid startup innovation."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95"
+    "a6a5b3c5f8",
+    "9e1fbb701e"
    ],
-   "value": "Primarily branches of the U.S. Department of Defense, the U.S. Intelligence Community, and other federal government agencies."
+   "value": "United States federal government and national security agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Estimated: $80,000 - $110,000 base salary for an entry-level technical role, based on the Denver posting range of $53K - $106K plus a weighted national average for cleared asset areas."
+   "value": "Estimated: $53K/yr - $106K/yr for entry-level full stack roles, which is moderate but potentially restrictive for 'high new-grad pay' expectations."
   },
   "evidence_sha": "f11bed07a6fdc037",
-  "generated_at": 1784681898,
+  "generated_at": 1785392120,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95"
-   ],
-   "value": "Defense & Government Information Technology Services"
-  },
-  "interview_focus": {
-   "confidence": "low",
-   "source_ids": [
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Likely emphasizes problem-solving, Agile methodology adherence, coding proficiency, and cultural fit for government work. Will heavily assess clearance eligibility and interest in long-term, mission-oriented projects rather than shifting startup pivots."
+   "value": "National Security and Defense Contracting / Software Development."
   },
-  "last_attempt_at": 1784681898,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You should probe the specific team's culture to determine if it genuinely respects work-life balance and sane hours, or if 'fast-paced Agile' means burnout. Ask about technical learning pathways and whether technology modernization is prioritized over slow compliance processes to ensure it meets your career growth needs."
+  },
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95",
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Headquarters in Reston, VA (Washington, D.C. metro area). Current job postings include Denver, CO, and other major federal contracting hubs. Significant presence across U.S. government client sites."
+   "value": "San Antonio, TX and Denver, CO for current entry-level openings."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95",
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "To deliver distinctive expertise and differentiated technology to U.S. government customers in support of national security missions."
+   "value": "Dedicated to ensuring the safety of the nation through innovative national security solutions."
   },
   "name": "CACI bv",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Estimated: Fast-paced within structured contractual boundaries. Agile team references suggest high productivity during working hours, but the government-contractor cycle avoids the chaotic pivots of pure startups."
+   "value": "Estimated: Reported as 'fast-paced' within Agile teams for junior roles, though overarching federal contracting bureaucracy may slow down broader strategic innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95",
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Information technology services, mission expertise, and enterprise solutions including Agile software development, cybersecurity, data analytics, intelligence, and engineering services for government customers."
+   "value": "Full-stack applications and custom software solutions built in Agile environments for national security clients, including client-side and server-side development."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days paid time off plus federal holidays. Government contractors often follow federal schedules with a standard tiered accrual based on tenure."
+   "value": "Estimated: Unknown exactly, but defense contractors typically provide 15-20 days of PTO annually."
   },
-  "refresh_after": 1789865898,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75852,14 +75904,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed shutdown for all federal U.S. holidays. A full week off for Christmas through New Year's is a common but not guaranteed practice at many federal contractors."
+   "value": "Estimated: Unknown exactly. Federal contractors occasionally align with government holidays but strict guaranteed shutdowns like top-tier tech companies are not industry standard."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [
-    "65d6f00f95"
-   ],
-   "value": "Large, publicly traded company (estimated >20,000 employees) focused on established defense and federal IT markets; not a startup."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -75924,39 +75974,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "As a U.S. government defense contractor, many roles require U.S. citizenship and the ability to obtain a security clearance. Sponsorship for visas is typically not available for cleared or national security positions; general technology roles may vary but are not standard."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "65d6f00f95",
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "CACI is a large professional services and information technology company providing digital solutions and mission expertise to U.S. government agencies, primarily in defense and national security. It makes money through long-term government contracts, delivering services like Agile software development, systems integration, and data analytics support."
+   "value": "CACI bv is a company dedicated to ensuring the safety of the nation through innovative solutions, primarily focused on national security missions. They make money by providing technical talent and developing bespoke applications for federal defense clients using Agile methodologies."
   },
-  "synthesized_evidence_sha": "2004ebb1de1d9999",
+  "synthesized_evidence_sha": "f11bed07a6fdc037",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "a6a5b3c5f8",
     "9e1fbb701e"
    ],
-   "value": "Roles can involve Agile software development, application creation (likely using Java, JavaScript, Python, SQL), data analytics integration, and mission-specific system deployment. A Junior Application Developer posting specifies working on a fast-paced Agile team."
+   "value": "Junior Software Developer and Junior Application Developer roles involving full stack development, collaborating in fast-paced Agile environments to build features for both client-side and server-side applications."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=CACI+bv+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "This role provides strong mission-driven work in national security, which may appeal to your desire for purpose. However, government contracting often features more bureaucracy than fast-paced tech startups, and the advertised pay scale ($53K-$106K) may fall below your expectations for 'high new-grad pay' and 'elite prestige' in the AI/data science sector."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good, likely enforcing 40-45 hour weeks. Government contracting inherently promotes fulfillment of contractual hours rather than indefinite crisis-mode. A clear boundary exists between work and personal life."
+   "value": "Estimated: Unknown. Federal contractors occasionally offer predictable schedules, but project deadlines can create spikes in hours."
   }
  },
  "caci international inc": {
@@ -131833,44 +131884,42 @@
  },
  "discord": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "1b729873d8"
-   ],
-   "value": "High. The company explicitly utilizes multidisciplinary squads and pairs software engineers with Machine Learning engineers to solve complex, global-scale signal optimization problems."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: High. Discord deploys machine learning at massive scale on highly visible user behavior signals, offering recognized technical prestige in applied AI."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "1b729873d8",
-    "e7d3e4e9ed"
+    "dedd3caccb"
    ],
-   "value": "Freemium model. The application is free to use, with revenue generated from premium user subscriptions (Nitro), server boosts, and digital goods."
+   "value": "Freemium model offering free core communication services with monetization through paid premium subscriptions and server boosting features."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "1b729873d8"
+    "dedd3caccb"
    ],
-   "value": "Gamer-centric, community-driven, and highly focused on making hanging out fun. The engineering culture is cross-functional, requiring seamless collaboration across client, infrastructure, and machine learning teams."
+   "value": "Gaming and community-centric, valuing cross-functional collaboration and a builder's mindset that prefers automating a control rather than babysitting it."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "dedd3caccb",
     "1b729873d8"
    ],
-   "value": "Gamers and online communities, ranging from small friend groups to massive public servers, who use the platform to coordinate and socialize before, during, and after playing games."
+   "value": "Gamers and online community members looking for a place to hang out before, during, and after playing games."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $180,000 - $220,000 total compensation (base + equity). As a top-tier tech firm, Discord is expected to offer highly competitive new-grad packages that align with elite market rates."
+   "value": "Estimated: $160,000 - $200,000 total compensation."
   },
   "evidence_sha": "2c52777869c7ce5a",
-  "generated_at": 1784877161,
+  "generated_at": 1785392120,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -131879,54 +131928,60 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1b729873d8"
+    "0ba66d07c4"
    ],
-   "value": "Technology / Social Media / Gaming"
+   "value": "Consumer Technology and Telecommunications"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prepare for technical interviews heavily centered on machine learning optimization, signal quality, and data infrastructure at scale. Be ready to discuss how to balance a fast, innovative engineering culture with strict boundaries to maintain personal time and avoid burnout."
+   "source_ids": [
+    "1b729873d8",
+    "dedd3caccb"
+   ],
+   "value": "Prepare to discuss practical applications of machine learning in real-time communication, your collaborative approach in a fast-moving environment with competing priorities, and your philosophy on building automated systems rather than manual controls."
   },
-  "last_attempt_at": 1784877161,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "0ba66d07c4",
-    "48822c8041",
     "e7d3e4e9ed"
    ],
-   "value": "Public pages indicate a web presence and downloads for users globally; specific primary office locations were not detailed in the provided sources, but the company is known to operate in major US tech hubs."
+   "value": "Public presence operates primarily through discord.com and discordapp.com."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "dedd3caccb",
     "1b729873d8"
    ],
-   "value": "To make it easier and more fun for people to hang out before, during, and after playing games, playing a uniquely important role in the future of gaming."
+   "value": "To play a uniquely important role in the future of gaming by making it easier and more fun for people to hang out before, during, and after playing games."
   },
   "name": "Discord",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast-paced and innovative. Engineers operate in multidisciplinary squads focused on high-signal, high-value outcomes, indicating a dynamic environment that pushes for quick technical iteration rather than slow bureaucracy."
+   "source_ids": [
+    "dedd3caccb"
+   ],
+   "value": "Estimated: Fast. The company explicitly operates in a fast-moving environment with competing priorities, requiring high adaptability."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "1b729873d8",
-    "48822c8041"
+    "dedd3caccb",
+    "1b729873d8"
    ],
-   "value": "The core product is the Discord app, available on desktop and mobile, which features voice, video, text chatting, and community servers. The company also monetizes via Discord Nitro (premium subscriptions) and offers a downloadable client for gamers."
+   "value": "Voice, video, and text chat application built specifically for gamers and online communities to hang out and coordinate gameplay."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days of flexible paid time off annually, in addition to standard holidays and company-wide rest periods."
+   "value": "Estimated: 20-25 days. Standard for late-stage Silicon Valley tech companies."
   },
-  "refresh_after": 1790061161,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131936,14 +131991,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers guaranteed shutdowns (such as a winter holiday break) to ensure company-wide rest and prevent burnout, though exact dates are not specified in public sources."
+   "value": "Estimated: Likely offers holiday shutdowns."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "17f8c9c419"
+    "0ba66d07c4"
    ],
-   "value": "Late-stage private company (Post-IPO readiness/Hypergrowth). Surfaces new graduate data science roles for the 2027 cycle."
+   "value": "Well-established late-stage tech company operating a massively popular, global communication platform."
   },
   "sources": [
    {
@@ -132008,42 +132063,47 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "17f8c9c419",
-    "1b729873d8"
+    "17f8c9c419"
    ],
-   "value": "Lists new graduate data science and software engineering positions for the 2027 cycle, suggesting structured entry-level hiring pipelines, though specific visa sponsorship details are not confirmed in the sources."
+   "value": "Recruiting actively tracked by new-grad data science job aggregators, indicating open pathways for early-career technical talent."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1b729873d8",
-    "0ba66d07c4"
+    "dedd3caccb",
+    "1b729873d8"
    ],
-   "value": "Discord is a popular communication platform that allows people to talk, chat, and hang out, primarily centered around gaming communities. It makes money through premium subscription tiers like Nitro, which offer enhanced features, alongside revenue from Server Boosts and a platform-wide marketplace."
+   "value": "Discord is a communication platform focused on making it easier and more fun for people to hang out before, during, and after playing games. It makes money through premium subscription tiers (like Nitro), boosted server features, and various digital goods."
   },
-  "synthesized_evidence_sha": "e3b2f5ef27e09997",
+  "synthesized_evidence_sha": "2c52777869c7ce5a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "dedd3caccb",
     "1b729873d8"
    ],
-   "value": "Multidisciplinary engineering squads, such as the Notifications squad, work across client experiences, infrastructure, and machine learning to optimize global signals. Software and ML engineers pair to ensure notifications sent are high signal and high value."
+   "value": "Multidisciplinary engineering across client experiences, large-scale infrastructure, and machine learning to optimize high-signal global notifications. Fast-moving environment requiring influence without authority and a strong preference for automating controls over manual oversight."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=Discord+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Discord offers a mission-driven environment centered on gaming and community that pairs well with personal technical growth. It provides elite compensation and a fast-paced, innovative tech culture that avoids slow bureaucracy, while publicly committing to a work environment that respects work-life balance and sane hours."
+   "source_ids": [
+    "1b729873d8",
+    "dedd3caccb"
+   ],
+   "value": "Discord integrates machine learning directly into core user-facing features like notification optimization, satisfying the need for elite, fast-paced technical work. The engineering culture emphasizes automation and sane system design over manual babysitting, aligning with a desire to avoid slow bureaucracy and toxic burnout environments while accelerating career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Good. The company is known for respecting personal time through sane hours and avoiding toxic, high-burnout expectations, though specific policy details are not published in the provided sources."
+   "source_ids": [
+    "dedd3caccb"
+   ],
+   "value": "Estimated: Moderate. The fast pace and competing priorities suggest an engaging but demanding environment, though elite late-stage tech companies typically maintain standard hours."
   }
  },
  "dish tv": {
@@ -290438,48 +290498,125 @@
  "netcyberops": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: Tier 3. This appears to be a standard backend software engineering role at a managed services company rather than a top-tier AI or data science position."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Managed security services provider, likely utilizing a B2B SaaS or subscription model for its security management web application."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: Quality-focused and pragmatic. The company emphasizes the 'quality of our work,' suggesting a culture rooted in reliable security engineering rather than rapid, high-pressure scaling."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Organizations needing managed security services and tools to oversee their security posture."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: $65,000 - $85,000 per year. This is explicitly listed for the entry-level Jr Backend Python Developer role."
   },
   "evidence_sha": "384c9aff602b8661",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785392120,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Computer and Network Security / Managed Security Services."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "To align with your priorities, you should ask about the company's pace of innovation versus bureaucracy, daily expected hours, and policies regarding after-hours or on-call expectations to ensure they respect work-life balance. Also, inquire about the technical learning curve and mentorship available for new grads to ensure it accelerates your career growth."
+  },
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387504,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "United States, operating fully remote for this role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "To deliver high-quality managed security services and build reliable software tools for security posture management."
+  },
   "name": "NetCyberOps",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: Moderate. As a smaller managed services company, the pace is likely practical and product-focused, though specific details on bureaucracy or tech culture speed are not public."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "A web application featuring a REST API that allows customers to manage and monitor their security posture."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: 15-20 days. Standard PTO for a US-based company of this size, as exact policy is not public."
   },
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: Unknown/None. There is no mention of guaranteed company-wide shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Appears to be a smaller, growing company currently hiring entry-level remote developers."
   },
   "sources": [
    {
@@ -290533,14 +290670,45 @@
     "url": "https://jobright.ai/jobs/info/6a6ab9acc00ae03109f7f872?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "No specific information found in the provided sources regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "NetCyberOps is a managed security services company that builds web applications and REST APIs to help customers manage their security posture. It likely generates revenue by providing outsourced security operations, monitoring, and tooling to enterprise clients."
+  },
+  "synthesized_evidence_sha": "384c9aff602b8661",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Backend Python development with a focus on building and extending REST APIs for a web-based security application."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785387504,
   "web_search_url": "https://duckduckgo.com/?q=NetCyberOps+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "This role offers a solid entry point into backend engineering within the cybersecurity domain, providing practical experience building REST APIs in Python. It allows you to accelerate your technical learning in a remote setting, though the compensation is mid-tier rather than the elite new-grad pay you are targeting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9022295e46"
+   ],
+   "value": "Estimated: Moderate. The role is remote and entry-level, which may offer baseline flexibility, but specific guarantees regarding sane hours or burnout prevention are not available in the sources."
   }
  },
  "netdocuments": {
@@ -301177,38 +301345,38 @@
  },
  "notion": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [
-    "525992582f",
-    "1f4c46e843"
-   ],
-   "value": "Estimated: Top-tier. Notion is actively redefining its platform as a collaborative AI workspace where human and AI agents interact, placing its AI and data engineering work at the cutting edge of the industry."
-  },
-  "aliases": [],
-  "attempts": 9,
-  "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "1c7789b508",
-    "6571e57717"
+    "2455334a6c",
+    "39d6eb2e08"
    ],
-   "value": "Software-as-a-Service (SaaS) subscriptions for its productivity and enterprise collaboration workspace."
+   "value": "High. Positioned as a 'collaborative AI workspace' at the frontier of building and managing AI agents for enterprise businesses."
+  },
+  "aliases": [],
+  "attempts": 10,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6571e57717",
+    "39d6eb2e08"
+   ],
+   "value": "Sells productivity, collaboration, and workflow software (likely via SaaS subscriptions) to individuals and businesses, backed by competitive GTM and enterprise sales motions."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "1f4c46e843",
-    "39d6eb2e08",
+    "2455334a6c",
     "6571e57717"
    ],
-   "value": "Builder-led, innovative, and highly metric-driven. The company culture is reimagining how enterprise software is built and sold, pushing for a workflow-first approach over traditional bureaucratic models."
+   "value": "Builder-led and workflow-first. They value clear, consistent, actionable talent expectations and aim to build durable systems without over-programming."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "525992582f"
+    "525992582f",
+    "39d6eb2e08"
    ],
-   "value": "Millions of individuals, small teams, and large companies who run their work and operations on the Notion platform."
+   "value": "Millions of individuals, small teams, and large companies who run their work on the Notion platform."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -301216,10 +301384,10 @@
    "source_ids": [
     "6571e57717"
    ],
-   "value": "Estimated: Highly competitive new-grad pay likely in the $1k to $1.2k USD range, drawing from their public commitment to highly competitive cash compensation and equity."
+   "value": "Estimated: $150,000 - $190,000 base salary, plus highly competitive equity, aligning with top-tier tech compensation in San Francisco."
   },
   "evidence_sha": "59732149ea774fee",
-  "generated_at": 1785170215,
+  "generated_at": 1785392120,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -301228,86 +301396,79 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1c7789b508",
-    "39d6eb2e08"
+    "6571e57717"
    ],
-   "value": "Software, Productivity, and Enterprise Collaboration."
+   "value": "Productivity, Collaboration, and Enterprise Workflow Software."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "525992582f",
-    "1f4c46e843"
+    "1f4c46e843",
+    "6571e57717",
+    "2455334a6c"
    ],
-   "value": "Evaluate the company's AI deployment and agent architecture to ensure the technical learning pace matches an elite tech environment. Probe WLB practices and shutdown policies to confirm personal time is respected, avoiding burnout despite the fast, builder-led go-to-market motion."
+   "value": "Highlight your ability to design AI-driven solutions and translate real-world implementation challenges into actionable technical requirements. Emphasize how you thrive in a builder-led, innovative environment with clear pipeline targets, and showcase your readiness to accelerate learning while maintaining a sane, sustainable pace."
   },
-  "last_attempt_at": 1785170215,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "525992582f",
-    "9476faa60a",
-    "39d6eb2e08"
+    "6571e57717",
+    "1f4c46e843",
+    "525992582f"
    ],
-   "value": "Headquartered in San Francisco, with active hiring and presence in international markets including Korea and Japan."
+   "value": "San Francisco, AMER (remote/embedded), Korea, and Japan."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "2455334a6c",
     "525992582f"
    ],
-   "value": "To give customers more time for their life's work by automating away busy work through a collaborative AI workspace."
+   "value": "To deeply care about giving customers more time for their life's work by automating away busy work and providing a collaborative AI workspace."
   },
   "name": "Notion",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "525992582f",
-    "6571e57717"
-   ],
-   "value": "Estimated: High and fast-paced. Notion is actively rebuilding its go-to-market motion around a workflow-first, builder-led model, requiring quick execution and high-velocity metric-driven operations."
+   "source_ids": [],
+   "value": "Estimated: High-velocity, metric-driven, and builder-led, focusing on clear pipeline targets and fast feedback loops that favor a fast-tech culture over slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "525992582f",
-    "1c7789b508"
+    "2455334a6c",
+    "1f4c46e843"
    ],
-   "value": "An all-in-one collaborative AI workspace used for building business systems of record, managing AI agents, automating workflows, and general productivity."
+   "value": "A collaborative AI workspace that includes tools for building business systems of record, creating and managing AI agents, and automating workflows."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "1c7789b508"
-   ],
-   "value": "Estimated: 15 to 20 days per year, typically standard for high-growth SaaS startups of this stage in the US."
+   "source_ids": [],
+   "value": "Estimated: 20-25 days of flexible PTO, standard for highly competitive SF tech companies."
   },
-  "refresh_after": 1790354215,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "1f4c46e843",
-    "39d6eb2e08"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "1c7789b508"
-   ],
-   "value": "Estimated: Likely standard national holidays; guaranteed company-wide shutdown periods are not explicitly detailed."
+   "source_ids": [],
+   "value": "Estimated: Likely offers standard holiday shutdowns to ensure guaranteed rest, aligning with their mission to prioritize life's work."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "525992582f",
-    "1f4c46e843"
+    "1f4c46e843",
+    "9476faa60a",
+    "39d6eb2e08"
    ],
-   "value": "Later-stage growth company with significant market traction and ongoing global hiring across Go-To-Market and engineering functions."
+   "value": "A rapidly scaling, highly collaborative tech company with a global footprint (presence in AMER, Korea, Japan) rebuilding its enterprise and GTM motions."
   },
   "sources": [
    {
@@ -301372,49 +301533,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "9476faa60a",
-    "525992582f"
+    "1f4c46e843",
+    "9476faa60a"
    ],
-   "value": "Specific visa sponsorship details are not explicitly confirmed, but the presence of global roles across North America and Asia suggests a structured support system for international talent workflows."
+   "value": "Not explicitly detailed in current sources, but global hiring presence across AMER, Korea, and Japan suggests a structured capacity for international workforce management."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "525992582f",
-    "1c7789b508"
+    "2455334a6c",
+    "525992582f"
    ],
-   "value": "Notion is a San Francisco-based software company that provides a collaborative AI workspace where teams and AI agents work together. It makes money by offering subscription-based productivity and workspace tools to individuals, small teams, and large enterprises."
+   "value": "Notion is a collaborative AI workspace where teams and agents work together to build systems of record, manage AI agents, and automate busywork. The company makes money by offering this productivity and workflow platform to individuals, small teams, and large enterprises."
   },
-  "synthesized_evidence_sha": "415e60d8926e1226",
+  "synthesized_evidence_sha": "59732149ea774fee",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "525992582f",
     "1f4c46e843"
    ],
-   "value": "Building and integrating collaborative workspace architecture, designing AI agent infrastructure, embedding deeply into enterprise technical environments, and creating tooling that influences product roadmap based on real-world implementations."
+   "value": "Forward Deployed Engineers embed with enterprise customers to design and build solutions integrating Notion deeply into technical environments, operating feedback loops with Product and Engineering to directly influence the product roadmap."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582960,
   "web_search_url": "https://duckduckgo.com/?q=Notion+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "525992582f",
-    "1f4c46e843"
+    "1f4c46e843",
+    "39d6eb2e08",
+    "2455334a6c"
    ],
-   "value": "As a collaborative AI workspace, Notion offers elite prestige in the applied AI and productivity space with a builder-led tech culture. This aligns with a fast-paced, innovative environment that accelerates technical learning and career growth without getting bogged down in slow corporate bureaucracy."
+   "value": "Notion is actively reimagining its go-to-market and enterprise motions around a builder-led model, embedding engineers directly with clients. This aligns with your desire for a fast, innovative culture that accelerates technical learning through high-impact AI agent and workflow automation projects, providing elite prestige without being a slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "525992582f",
-    "6571e57717"
-   ],
-   "value": "Estimated: Moderate. The company explicitly states it cares deeply about giving customers time for their life's work, but internal roles demand high velocity in a builder-led environment that may require strict boundary management to maintain sane hours."
+   "source_ids": [],
+   "value": "Estimated: Balanced. The company mission centers on giving customers time for their 'life's work', a philosophy that appears to reflect internally in their talent systems designed to avoid over-programming or unnecessary process."
   }
  },
  "nov": {
@@ -310012,46 +310170,50 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "9aaa0da327"
+    "9aaa0da327",
+    "98f2743489"
    ],
-   "value": "Top-tier (Elite)"
+   "value": "Top-tier (undisputed industry leader in AI research and deployment)"
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "719d150b26",
+    "9aaa0da327",
     "ae6f0efd8a",
-    "4c9d654807"
+    "2ef421bcc8"
    ],
-   "value": "Builds the world's most advanced AI infrastructure ecosystem and monetizes through B2B go-to-market strategies, enterprise software deployment, and complex strategic partnerships."
+   "value": "Monetizes through the deployment of AI products, enterprise vertical solutions, and strategic commercial partnerships, supported by massive long-term infrastructure investments."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "91f97436bc"
+    "98f2743489",
+    "ae6f0efd8a"
    ],
-   "value": "Mission-driven, deeply technical, and adaptable, with a strong expectation for independent problem-solving and the ability to safely push the boundaries of AI."
+   "value": "Mission-driven, hands-on, and deeply technical. The culture values independent engineers and leaders who can operate with autonomy and build defensible viewpoints in complex situations."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "4c9d654807",
     "ae6f0efd8a"
    ],
-   "value": "Enterprise verticals, B2B marketing organizations, and complex strategic partners seeking to integrate or complement AI technology in their product stacks."
+   "value": "Enterprise customers, design partners, and strategic product partners seeking complex AI integrations and solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $200,000 - $300,000+ total compensation (base + equity), aligning with top-tier elite tech company new-grad pay."
+   "source_ids": [
+    "98f2743489",
+    "9aaa0da327"
+   ],
+   "value": "Estimated: Elite tier, likely $200k-$300k+ total compensation (base + equity) for new grad technical roles, reflective of top-tier AI market rates."
   },
   "evidence_sha": "aa01bdcc23d35740",
-  "generated_at": 1785320713,
+  "generated_at": 1785392120,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -310060,30 +310222,32 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "9aaa0da327",
-    "98f2743489"
+    "9aaa0da327"
    ],
    "value": "Artificial Intelligence Research and Deployment"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Be prepared to demonstrate high technical competence and the ability to operate with extreme ownership in fast-paced, ambiguous environments. Emphasize your passion for safe AI deployment and detail how you navigate complex system design and cross-functional dependencies without succumbing to a slow, bureaucratic pace."
+   "confidence": "high",
+   "source_ids": [
+    "2ef421bcc8",
+    "98f2743489",
+    "91f97436bc"
+   ],
+   "value": "Probe the realities of their fast-paced environment: ask specific questions about on-call expectations, weekend work, and whether guaranteed shutdowns actually exist for your target team. Emphasize your ability to operate with high autonomy and sound judgment in fast-moving technical environments, but set clear boundaries to ensure the role doesn't sacrifice your personal time."
   },
-  "last_attempt_at": 1785320713,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387236,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "91f97436bc"
    ],
-   "value": "Uses a hybrid work model requiring three days in the office per week, with optional work from home on Thursdays and Fridays, and offers relocation support to new employees."
+   "value": "Operates with a hybrid work model requiring three days in the office per week, with optional remote work on Thursdays and Fridays."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "9aaa0da327",
-    "719d150b26"
+    "9aaa0da327"
    ],
    "value": "To ensure that general-purpose artificial intelligence benefits all of humanity."
   },
@@ -310091,26 +310255,29 @@
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "2ef421bcc8",
     "98f2743489",
-    "4c9d654807"
+    "91f97436bc"
    ],
-   "value": "Estimated: Aggressive, fast-paced, and highly innovative, with a strong need to move quickly while maintaining scale and system reliability."
+   "value": "Estimated: Extremely fast-paced, high-ownership, and fast-moving technical environment requiring independent problem-solving and adaptability to ever-changing conditions."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "9aaa0da327",
-    "4c9d654807"
+    "9aaa0da327"
    ],
-   "value": "AI-native software products, AI systems, and enterprise workflows that push the boundaries of artificial intelligence capabilities."
+   "value": "General-purpose artificial intelligence systems and enterprise product workflows designed to push the boundaries of AI capabilities."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Typically ranges from 15 to 20 days of flexible PTO annually, though specific exact policy is unstated."
+   "source_ids": [
+    "91f97436bc"
+   ],
+   "value": "Estimated: Standard unlimited PTO typically seen in elite tech scale-ups (actual accrual often averages 15-20 days/year, dependent on team pace)."
   },
-  "refresh_after": 1790504713,
+  "refresh_after": 1790576120,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310119,15 +310286,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Scheduled company-wide shutdowns around major holidays may be offered, but specific guaranteed off-periods are not explicitly stated."
+   "source_ids": [
+    "91f97436bc"
+   ],
+   "value": "Estimated: No explicit mention of guaranteed company-wide shutdowns; verify if standard tech holiday breaks exist during interviews."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
     "719d150b26"
    ],
-   "value": "A rapidly scaling organization with expansive capital projects, including the development of the world's most advanced AI infrastructure ecosystem."
+   "value": "Highly mature, heavily funded scale-up operating at a massive global infrastructure level."
   },
   "sources": [
    {
@@ -310192,46 +310361,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
     "91f97436bc"
    ],
-   "value": "Visa sponsorship is not explicitly mentioned in job postings, though the company provides relocation support for new employees."
+   "value": "Not explicitly detailed in available sources, though the company offers relocation support to new employees."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "ae6f0efd8a"
+    "719d150b26"
    ],
-   "value": "OpenAI is an AI research and deployment company dedicated to building safe and beneficial general-purpose artificial intelligence. It generates revenue by developing advanced AI models and safely deploying them to the world through enterprise partnerships and native product integrations."
+   "value": "OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. It makes money by developing advanced AI systems and safely deploying them to the world through products, enterprise solutions, and strategic infrastructure partnerships."
   },
-  "synthesized_evidence_sha": "32a0793bcc63ab0f",
+  "synthesized_evidence_sha": "aa01bdcc23d35740",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "9aaa0da327",
-    "4c9d654807",
     "98f2743489"
    ],
-   "value": "Involves full-stack product engineering, designing AI-native agent improvement loops, and building reliable infrastructure, systems, and automation to support rapid AI research at scale."
+   "value": "Involves full-stack product engineering, reliability-heavy infrastructure systems, networking, Kubernetes, scalability, and building tools close to AI research."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
   "web_search_url": "https://duckduckgo.com/?q=OpenAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "OpenAI sits at the absolute apex of the AI industry, offering the elite prestige and top-tier new-grad pay candidates seek. Its deeply technical, high-ownership environment accelerates career growth and learning by allowing engineers to work end-to-end on ambiguous, cutting-edge problems alongside rapid research teams."
+   "confidence": "high",
+   "source_ids": [
+    "9aaa0da327",
+    "98f2743489",
+    "2ef421bcc8"
+   ],
+   "value": "OpenAI is the pinnacle of elite AI prestige and offers the deep, fast-paced technical learning you crave, operating in a highly autonomous environment that pushes the boundaries of AI systems. However, you must deeply vet their WLB and shutdown claims, as the fast-moving, high-ownership infrastructure and research culture could potentially conflict with your strict requirements for sane hours and guaranteed personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "91f97436bc",
-    "98f2743489"
+    "2ef421bcc8"
    ],
-   "value": "Estimated: Moderate; the environment demands independent, high-ownership execution in ever-changing, fast-paced environments, which can conflict with strict work-life boundaries."
+   "value": "Estimated: Moderate to Low. The hybrid schedule provides some flexibility, but the culture demands high autonomy in highly technical and fast-moving environments, which can challenge strict WLB."
   }
  },
  "openevidence": {
@@ -393481,11 +393653,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -393497,6 +393671,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387503,
   "name": "StandWithUs",
   "pace_of_work": {
@@ -393509,6 +393684,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785392240,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -393572,7 +393748,7 @@
     "url": "https://jobright.ai/jobs/info/6a6a9d0648355b3f12bf1c3d?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785387503,
   "web_search_url": "https://duckduckgo.com/?q=StandWithUs+company+careers+benefits",
@@ -460448,7 +460624,7 @@
    "value": "Tier 1 (Elite) — Top-15 CS department, top-5 Medical School, ~$1B+ annual research expenditure, major NIH/NSF AI institutes."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -460464,7 +460640,7 @@
    "source_ids": [],
    "value": "Students (undergrad, grad, professional), research sponsors (federal agencies, foundations, industry), patients (via clinical affiliates), donors/alumni, and corporate partners."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -460487,7 +460663,7 @@
    "source_ids": [],
    "value": "Expect questions on research depth, publication history, cross-disciplinary collaboration, grant-writing awareness, and ability to balance multiple projects. Technical interviews may be less LeetCode-heavy than industry; more emphasis on problem framing, methodology, and communication. Ask about mentorship structure, protected research time, and path to independence."
   },
-  "last_attempt_at": 1784683639,
+  "last_attempt_at": 1785392120,
   "last_evidence_at": 1785387504,
   "locations": {
    "confidence": "estimated",
@@ -460516,6 +460692,7 @@
    "source_ids": [],
    "value": "Estimated: 22–25 vacation days + 10–12 university holidays + sick leave (varies by employee class)."
   },
+  "retry_after": 1785392360,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -460579,7 +460756,7 @@
    "source_ids": [],
    "value": "Actively sponsors H-1B, O-1, J-1, and employment-based green cards for faculty, research staff, and specialized professional roles. Dedicated Office of International Students and Scholars supports visa processes."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
