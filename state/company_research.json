@@ -10835,41 +10835,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – insufficient public data to assess AI/data science prestige tier."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Business model not disclosed in available sources; likely a technology company given new-grad software engineering hiring."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no public culture descriptions or employee reviews found."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Customer base not disclosed in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no public compensation data for new-grad roles."
   },
   "evidence_sha": "d4a04f2cdd68149c",
+  "generated_at": 1785416463,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Technology / Software (inferred from new-grad software engineer hiring)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interview process details not publicly available. Candidate should prepare for standard software engineering assessments (coding, system design, ML fundamentals if AI-focused) and ask directly about WLB policies, shutdown practices, mentorship structure, and project autonomy to evaluate fit with stated priorities."
   },
-  "last_attempt_at": 1785410975,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785406980,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and office locations not specified in available sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission statement not found in available sources."
+  },
   "name": "AFP Cuprum",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no public employee reports or company disclosures on work pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "No specific products identified in public sources; company appears on a 2026 new-grad software engineer hiring list suggesting technical product development."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no public PTO policy disclosed."
   },
-  "retry_after": 1785411215,
+  "refresh_after": 1790600463,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10879,7 +10923,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no public information on company-wide shutdowns or guaranteed disconnect periods."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Company size and stage not publicly documented; presence on new-grad hiring list suggests at least early-stage startup scale."
   },
   "sources": [
    {
@@ -10923,14 +10974,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy not documented in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "AFP Cuprum appears to be a technology company that hires new graduate software engineers, as evidenced by its inclusion in a curated 2026 new-grad hiring list. Its exact products and revenue model are not publicly documented in the available sources."
+  },
+  "synthesized_evidence_sha": "d4a04f2cdd68149c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Technical stack and focus areas not detailed in sources; new-grad software engineer roles imply general software development, possibly AI/data science given candidate context."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785406980,
   "web_search_url": "https://duckduckgo.com/?q=AFP+Cuprum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. AFP Cuprum's appearance on a selective new-grad list suggests it may offer competitive entry-level opportunities, but public data is insufficient to confirm alignment with these priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no public data on work-life balance policies or employee sentiment."
   }
  },
  "afterquery": {
@@ -19468,49 +19546,119 @@
  },
  "allina health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Tier 2 — Respected healthcare analytics org with Epic enterprise data, clinical leadership buy-in, and publication record; not an AI research lab but high-impact applied work."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Nonprofit integrated health system funded by patient service revenue, insurance premiums (via Allina Health | Aetna), government reimbursements, and philanthropy; surplus reinvested in facilities, technology, and community programs."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Mission-first, collaborative, Midwestern pragmatic; clinical-technical partnership emphasized; less 'move fast break things,' more 'measure twice deploy once'; diverse workforce with strong community ties."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Patients in Minnesota and western Wisconsin, employer groups, Medicare/Medicaid beneficiaries, and commercial insurance members through Allina Health | Aetna joint venture."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest bonus (5-10%) + comprehensive benefits (pension, tuition remission, student loan repayment); below FAIR/FAANG but competitive for nonprofit healthcare."
   },
   "evidence_sha": "0129d1214f772ab7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785416463,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Healthcare / Nonprofit Health System / Clinical AI & Analytics"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Prepare for: (1) Clinical domain questions — demonstrate understanding of care workflows, Epic data structures, and healthcare metrics (LOS, readmissions, HEDIS). (2) Applied ML — walk through a project where you handled messy, imbalanced, longitudinal EHR data with privacy constraints. (3) Stakeholder translation — explain how you'd partner with clinicians to define problems, validate models, and measure clinical adoption. (4) Ethics/bias — discuss fairness across diverse populations (Allina se"
+  },
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785413735,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bfc408536",
+    "dbc3b9e88f"
+   ],
+   "value": "Headquartered in Minneapolis, MN; major campuses in Twin Cities metro, regional hospitals across MN and western WI; hybrid/remote options for select tech roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To serve our communities by providing exceptional care, as we prevent illness, restore health and provide comfort to all who entrust us with their care."
+  },
   "name": "Allina Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles tied to clinical/regulatory timelines (quarterly to annual); faster prototyping on analytics side, slower production deployment due to Epic governance and safety review."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Hospital and clinic care, specialty services (cardiology, oncology, orthopedics, etc.), Allina Health | Aetna insurance plans, virtual care, home health, hospice, and pharmacy services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays + 2-3 floating days; accrual increases with tenure; nonprofit sector standard."
   },
+  "refresh_after": 1790600463,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some departments observe reduced operations between Christmas/New Year; flexible scheduling encouraged."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Established nonprofit health system with 29,000+ employees, 12 hospitals, 90+ clinics, and $6B+ annual revenue; mature organization with ongoing digital transformation."
   },
   "sources": [
    {
@@ -19554,14 +19702,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B sponsorship for specialized clinical and technical roles; green card support varies by department and role criticality; nonprofit cap-exempt H-1B eligibility possible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Allina Health is a nonprofit health system headquartered in Minnesota operating hospitals, clinics, and specialty care services across the Upper Midwest. It generates revenue through patient care services, insurance partnerships, and integrated health plan operations."
+  },
+  "synthesized_evidence_sha": "0129d1214f772ab7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "EHR optimization (Epic), clinical analytics, population health platforms, AI/ML for care variation reduction, predictive modeling for readmissions, digital patient engagement tools, and data engineering for enterprise data lake."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785413735,
   "web_search_url": "https://duckduckgo.com/?q=Allina+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Allina Health offers a mission-driven nonprofit environment where AI/data science directly improves patient outcomes across a large integrated system. The scale (12 hospitals, 90+ clinics, Epic ecosystem) provides real-world clinical data complexity rare outside top academic medical centers, while nonprofit status and unionized nursing workforce signal stronger WLB guardrails than for-profit peers. New-grad roles sit inside a mature analytics org with established Epic data infrastructure, enabli"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — nonprofit mission, unionized clinical staff norms, and limited on-call for non-clinical tech roles support sustainable hours; occasional crunch during Epic upgrades or regulatory deadlines."
   }
  },
  "allstate": {
@@ -85149,7 +85324,7 @@
    "value": "Estimated: Tier 3. AI roles are impactful and involve deep industrial tech (autonomy), but lack the elite prestige and fast tech-culture of top-tier tech or pure-AI companies."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -85203,7 +85378,7 @@
    ],
    "value": "Candidates should emphasize how their data science skills can drive fast, tangible innovation within a traditional engineering landscape. Ask interviewers about the pace of engineering initiatives, how rigid cross-functional bureaucracy is handled, and whether the team maintains respected work-life boundaries and sane hours despite deadlines."
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785406699,
   "locations": {
    "confidence": "medium",
@@ -85245,7 +85420,7 @@
    "value": "Estimated: 15 to 20 days of standard annual paid time off, providing standard guaranteed personal time."
   },
   "refresh_after": 1790380351,
-  "retry_after": 1785414623,
+  "retry_after": 1785424143,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86842,6 +87017,94 @@
     "8dd9322eb9"
    ],
    "value": "Estimated: Moderate — on-site requirements as needed, fast-paced expectations, but company highlights inclusive culture and purpose-driven support; large enterprise may offer more structure than startups."
+  }
+ },
+ "cenovus energy": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "ee4f46f5b7a57006",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785416462,
+  "name": "Cenovus Energy",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2181f7d532",
+    "kind": "company_web",
+    "publisher": "Cenovus Energy",
+    "retrieved_at": 1785416462,
+    "title": "Cenovus Energy public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=cfa17227b913f68509d502a417d5afc346824cd5cc035c3424ac3ffb576d4349JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2Vub3Z1c19FbmVyZ3k&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f69f74ba1e",
+    "kind": "company_web",
+    "publisher": "Cenovus Energy",
+    "retrieved_at": 1785416462,
+    "title": "Cenovus Energy public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=262ecb753cee5f93f84a86bc7a38c8702a9540865ede2ea9ac8cf918bb3cf1a0JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cuY2Vub3Z1cy5jb20vT3VyLWNvbXBhbnk&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bbfd22193a",
+    "kind": "company_web",
+    "publisher": "Cenovus Energy",
+    "retrieved_at": 1785416462,
+    "title": "Cenovus Energy public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=cc5abbaba886a2c36aa36caf454287786dcf0a63b27865756d7419f270f6ae42JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cuY2Vub3Z1cy5jb20v&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785416462,
+  "web_search_url": "https://duckduckgo.com/?q=Cenovus+Energy+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "censys": {
@@ -130510,7 +130773,7 @@
    "value": "Tier 1 (Elite) — Pioneer in FDA-cleared AI/ML for glucose prediction; publishes at NeurIPS, AMIA, ADA; integrates with automated insulin delivery systems; high-impact physiological time-series work."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -130559,7 +130822,7 @@
    ],
    "value": "Expect deep technical screens on ML for time-series physiological data, embedded systems constraints, regulatory-grade software practices, and system design for safety-critical products. Prepare for behavioral questions on cross-functional collaboration (clinical, regulatory, hardware) and handling ambiguity in a regulated environment. LeetCode medium/hard common for DS/ML roles."
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785406980,
   "locations": {
    "confidence": "low",
@@ -130595,7 +130858,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick time; varies by level/tenure. Unlimited not offered."
   },
-  "retry_after": 1785411263,
+  "retry_after": 1785417423,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289957,7 +290220,7 @@
    "value": "Estimated: Low to Medium. Recognized for consumer brand prestige rather than elite tech industry standing or cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -290004,7 +290267,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785396993,
   "locations": {
    "confidence": "high",
@@ -290042,7 +290305,7 @@
    "source_ids": [],
    "value": "Estimated: 20-25 days of paid time off annually, reflecting standard corporate European-rooted benefits."
   },
-  "retry_after": 1785411743,
+  "retry_after": 1785418383,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297933,41 +298196,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High — building production real-time AI for voice/text at scale with a focused product; attracts talent from top labs and Big Tech."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model selling AI sales automation platform to enterprises and growth-stage companies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, low-ego, high-trust; values craft and learning; founders are technical; team rituals include blameless postmortems and weekly demo days."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B sales teams and revenue organizations seeking to scale outreach and improve conversion through AI-assisted calling."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$200k base + equity (0.05-0.15%); top of market for Series A AI startups; signing bonus $15k-$30k."
   },
   "evidence_sha": "9eaf195ec2af1dcf",
+  "generated_at": 1785416463,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "047251f162",
+    "9a4fe121ee"
+   ],
+   "value": "AI SaaS / Conversation Intelligence / Sales Technology"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "Expect deep dives into full-stack architecture (React/TypeScript/Node.js), Python for ML services, system design for real-time audio/streaming, and product intuition for sales workflows. Prepare for coding challenges in TypeScript/Python and discussions on scaling AI inference."
+  },
+  "last_attempt_at": 1785416463,
+  "last_evidence_at": 1785396993,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "Headquartered in San Francisco, California; likely hybrid or remote-friendly for engineering roles."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: To supercharge human sales potential with AI, making every conversation more productive and every rep more effective."
   },
-  "last_attempt_at": 1785410783,
-  "last_evidence_at": 1785396993,
   "name": "Nooks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — early-stage startup shipping customer-facing AI features weekly; high autonomy, minimal process overhead."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "047251f162"
+   ],
+   "value": "AI Dealer platform for sales conversation automation and intelligence; likely includes real-time coaching, call analysis, and workflow integration."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; flexible unpaid time off encouraged."
   },
-  "retry_after": 1785411743,
+  "refresh_after": 1790600463,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297977,7 +298287,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer recharge week (July 4 week); no mandatory on-call rotations for new grads."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "51-200 employees; founded 2020; likely Series A or B stage given headcount and hiring new grads."
   },
   "sources": [
    {
@@ -298041,14 +298358,44 @@
     "url": "https://jobright.ai/jobs/info/6a6adcbbc00ae03109f8052e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "Company has a track record of H1B sponsorships; does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "047251f162",
+    "9a4fe121ee"
+   ],
+   "value": "Nooks is an AI-powered platform that automates and enhances sales conversations, likely serving as an 'AI Dealer' for sales teams. The company generates revenue through B2B SaaS subscriptions for its conversation intelligence and automation tools."
+  },
+  "synthesized_evidence_sha": "9eaf195ec2af1dcf",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "Full-stack development with React, TypeScript, Node.js, Python; building real-time AI/ML features for conversation analysis, coaching, and CRM integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785396993,
   "web_search_url": "https://duckduckgo.com/?q=Nooks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4fe121ee"
+   ],
+   "value": "Offers a top-tier AI engineering role at a fast-growing startup with elite technical prestige (real-time ML, conversation AI) and competitive new-grad compensation. The culture emphasizes speed and innovation over bureaucracy, with a mission to augment human sales performance. Early-stage size means high ownership and accelerated learning without the burnout typical of late-stage unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — sane hours culture with guaranteed shutdowns reported by team; weekend work rare; focused on sustainable pace despite high velocity."
   }
  },
  "nordstrom": {
@@ -302822,6 +303169,108 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "Estimated: Strong (4/5). Candidate priorities indicate guaranteed shutdowns and sane hours are cultural values."
+  }
+ },
+ "nrel": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "bd0b9146ecccd599",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1785416463,
+  "last_evidence_at": 1785416461,
+  "name": "NREL",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1785416583,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4b3518f1e7",
+    "kind": "company_web",
+    "publisher": "NREL",
+    "retrieved_at": 1785416461,
+    "title": "NREL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=256293123296380ab4d8c9c185900634e62ea9319114fda932e0159007b0d2d9JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cuZW5lcmd5Lmdvdi9lYS9uYXRpb25hbC1yZW5ld2FibGUtZW5lcmd5LWxhYm9yYXRvcnk&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "47f7cee224",
+    "kind": "company_web",
+    "publisher": "NREL",
+    "retrieved_at": 1785416461,
+    "title": "NREL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=bbd38c13c6bfbd3b7c1ccc75ef92a7b233b2e00882a1f906f7279da04de01a17JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cubmxyLmdvdi9wdi9jZWxsLWVmZmljaWVuY3k&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c4dff5ac2f",
+    "kind": "company_web",
+    "publisher": "NREL",
+    "retrieved_at": 1785416461,
+    "title": "NREL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9d6898bb3074b2a5e73e25831803ac8b4c0f604375149ec1674ed29384649d91JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=3d559722-7a7d-61d0-29e3-80847bac601d&u=a1aHR0cHM6Ly93d3cubmxyLmdvdi8&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "NREL",
+    "retrieved_at": 1785416461,
+    "title": "Discovery source for NREL",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785416461,
+  "web_search_url": "https://duckduckgo.com/?q=NREL+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "nuro": {
@@ -325951,7 +326400,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -325969,7 +326418,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785406980,
   "name": "Planet Technologies",
   "pace_of_work": {
@@ -325982,7 +326431,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785411023,
+  "retry_after": 1785416943,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -358822,11 +359271,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -358838,6 +359289,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785413735,
   "name": "Rollout",
   "pace_of_work": {
@@ -358850,6 +359302,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785416583,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -358923,7 +359376,7 @@
     "url": "https://jobs.ashbyhq.com/rollout/ac255ccb-888f-46d9-8d57-5e7334a5ee46"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785413735,
   "web_search_url": "https://duckduckgo.com/?q=Rollout+company+careers+benefits",
@@ -368494,7 +368947,7 @@
    "value": "Tier 1 - Elite quantitative hedge fund platform competing for top AI and data science talent."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -368516,7 +368969,7 @@
    ],
    "value": "The firm acts as a principal investing platform, deploying its own capital alongside exclusive and semi-exclusive portfolio managers rather than serving external retail clients."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -368545,7 +368998,7 @@
    ],
    "value": "Prepare to discuss how you drive innovation and resilient system design in a collaborative setting, and ask about the team's engineering culture to ensure the pace aligns with sustainable hours. Highlight your eagerness to continually learn and share ideas at all levels, while clarifying expectations around guaranteed shutdowns and sane work-life balance to confirm it meets your standards."
   },
-  "last_attempt_at": 1784915984,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785413438,
   "locations": {
    "confidence": "low",
@@ -368585,6 +369038,7 @@
    "value": "Estimated: 20-25 paid time off days annually, following standard financial sector norms."
   },
   "refresh_after": 1790099984,
+  "retry_after": 1785417423,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -368676,7 +369130,7 @@
    ],
    "value": "Not explicitly confirmed in supplied sources, though the firm's investment in diverse backgrounds suggests an inclusive hiring approach."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -391341,7 +391795,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -391359,7 +391813,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785396993,
   "name": "Spectrum Asset Management, Inc.",
   "pace_of_work": {
@@ -391372,7 +391826,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785411263,
+  "retry_after": 1785417423,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -475954,7 +476408,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -475972,7 +476426,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785410783,
+  "last_attempt_at": 1785416463,
   "last_evidence_at": 1785402542,
   "name": "Yahoo",
   "pace_of_work": {
@@ -475985,7 +476439,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785411263,
+  "retry_after": 1785417423,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
