@@ -8022,11 +8022,120 @@
   }
  },
  "advanced technology services": {
+  "ai_ds_prestige_tier": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "Low: the company operates in an industrial maintenance industry and has no visible AI or data science innovation presence in the supplied sources."
+  },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "B2B service provider: revenue comes from long-term contracts for on-site industrial maintenance, repair, and asset management."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Field-service and reliability-engineer oriented, probably process-driven and hands-on rather than defined by a fast output-driven tech startup ethos."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b8b427c4d2"
+   ],
+   "value": "Industrial manufacturers and factories across the U.S., Mexico, and U.K., with a focus on companies looking to outsource equipment maintenance and improve plant reliability."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $60,000–$85,base USD, because AI/data science roles are not evident as a pay category; facilities maintenance positions often operate in this or lower range."
+  },
   "evidence_sha": "12ad3ec1d1bb6eb6",
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2"
+   ],
+   "value": "Industrial Services, Maintenance, Repair and Operations (MRO)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b8b427c4d2"
+   ],
+   "value": "Based on the single sourced opening, the interview process would center on technical maintenance skills and hands-on facilities knowledge rather than AI or data science. Should the company have unlisted tech roles, a curious candidate would need to directly ask about data innovation roadmaps, tools infrastructure, dedicated AI teams, well-defined work hours, engineering culture, and the reality of flexible schedules versus on-call expectations. Evidence of burnout protection, such as physical fa"
+  },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785455444,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2"
+   ],
+   "value": "United States, Mexico, and the United Kingdom, with the posted maintenance role appearing to be a multi-site facilities position."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2"
+   ],
+   "value": "We make factories run better."
+  },
   "name": "Advanced Technology Services",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Steady operational tempo typical of industrial maintenance environments, emphasizing procedure and reliability over rapid tech iteration."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "Factory maintenance outsourcing, predictive maintenance technologies, MRO asset management, and reliability engineering services."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Conservative assumption of 10-15 days (annually) for a U.S. new-grad, aligned with standard industrial-services offerings; no public policy signal found."
+  },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "Mid-sized private company with international presence; founded in 1985 and maintaining operations across several countries."
+  },
   "sources": [
    {
     "content_sha": "35f1aee2ad38d195",
@@ -8079,10 +8188,45 @@
     "url": "https://job-boards.greenhouse.io/advancedtechnologyservices/jobs/4693701006"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "Advanced Technology Services (ATS) is an industrial maintenance and MRO (maintenance, repair, and operations) asset management provider that helps factories run more efficiently through outsourced maintenance and technology-driven reliability solutions. The company generates revenue by contracting with manufacturers to manage equipment upkeep, reduce downtime, and optimize industrial assets, primarily in the U.S., Mexico, and the United Kingdom."
+  },
+  "synthesized_evidence_sha": "12ad3ec1d1bb6eb6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "Research indicates current active roles are focused on hands-on facilities and industrial maintenance; no specific AI or data science job listings were identified in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785455444,
-  "web_search_url": "https://duckduckgo.com/?q=Advanced+Technology+Services+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=Advanced+Technology+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b8b427c4d2",
+    "b9b6787d58"
+   ],
+   "value": "ATS is not a natural match for elite AI/data science new-grad priorities. Its core business is industrial maintenance, not software or AI products, which means limited prestige in the tech community and the absence of a fast-paced, product-driven innovation culture. There is no evidence in the sources of a structured tech new-grad program, rotational program, or guaranteed shutdowns, making it unlikely to deliver the high-pay, low-bureaucracy, learning-accelerated environment this candidate seek"
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely follows site-shift hours, which may provide decent work-life boundaries, though no universal policy on sane hours for tech is documented."
+  }
  },
  "advantage solutions": {
   "ai_ds_prestige_tier": {
@@ -28423,125 +28567,126 @@
  },
  "amewas": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "ea7931c641"
+    "8596e608ae"
    ],
-   "value": "Estimated: Tier 3. As a boutique DoD software engineering firm, it does not hold the AI or data science prestige of top-tier tech companies."
+   "value": "Specialized niche: not a dedicated AI/ML pure-play but falls within a crucial defense simulation context that commands solid technical respect."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Government contract services. They fund operations by providing specialized engineering and software development capabilities to U.S. defense agencies."
+   "value": "Government contracting and consulting services, earning revenue through contracts to provide engineering, software development, and testing for defense agencies."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "ea7931c641"
+    "8596e608ae"
    ],
-   "value": "Estimated: Mission-focused and traditional. Culture is likely driven by patriotism, government regulations, and structured engineering practices."
+   "value": "Mission-oriented and team-based, centered on supporting warfighters through technology. Avoids the high-burnout, wobbly environment of less established tech companies."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Department of Defense and related U.S. government agencies."
+   "value": "U.S. Department of Defense and related defense entities."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "$87K-$105K. Sourced directly from their Junior Software Developer posting."
+   "value": "Estimated: $87K/yr - $116K/yr, based on the posted range for the Software Developer Junior roles."
   },
   "evidence_sha": "abb64193ce9f3cfc",
-  "generated_at": 1785383310,
+  "generated_at": 1785455620,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Defense & Space Manufacturing / Government IT Services."
+   "value": "Defense contracting and aerospace modeling & simulation."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "ea7931c641"
    ],
-   "value": "To gauge alignment with the candidate's priorities, they should ask about the pace of the development cycles, whether any complex AI or data science models are used, and the balance of high-impact innovation versus slow DoD compliance. This role requires Python, Django, C++, Java, and HTML, skills that should be highlighted during the interview."
+   "value": "Technical proficiency in Python, Django, C++, Java, and HTML, and likely an interest in mission-driven government support work."
   },
-  "last_attempt_at": 1785383310,
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785454242,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Patuxent River, MD."
+   "value": "Positions available in California State and Patuxent River, Maryland."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "To provide cutting-edge engineering and testing services in support of U.S. defense initiatives."
+   "value": "To serve as a trusted partner to the Department of Defense by delivering cutting-edge engineering and testing for critical defense systems and training."
   },
   "name": "AMEWAS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "Estimated: Moderate / Bureaucratic. Working within the Department of Defense ecosystem often involves stringent compliance and oversight, leading to pace constraints."
+   "source_ids": [],
+   "value": "Estimated: Structured and mission-driven rather than fast-paced startup-style; defined by project milestones and DoD cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Custom software development and engineering testing services, including specific applications like the DAPS program."
+   "value": "Custom software development and integration for military training simulations; technical engineering and testing services for defense programs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "Estimated: 15-20 days. Standard for government service partners, though exact internal policy was not found."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days combined vacation and sick leave annually, standard for an established government contractor."
   },
-  "refresh_after": 1790567310,
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns. Federal holidays are likely observed, but tech teams remain on call for defense systems."
+   "source_ids": [],
+   "value": "Estimated: Federal holiday shutdowns guaranteed; potential for year-end closeout shutdowns dependent on client contracts."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Not verified through provided sources. While categorized as a Junior role, the company's overall size was not detailed in the job posting."
+   "value": "Exact size unknown; operates as an established government contractor with multiple active job postings across different U.S. locations."
   },
   "sources": [
    {
@@ -28606,44 +28751,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "Not found in research. As a DoD partner, candidates will likely need U.S. citizenship and the ability to obtain a security clearance."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "ea7931c641"
+    "8596e608ae"
    ],
-   "value": "AMEWAS is an engineering and software development firm that serves as a trusted partner to the U.S. Department of Defense, providing cutting-edge engineering and testing solutions. They generate revenue through government contracts and defense initiatives requiring specialized technical development."
+   "value": "AMEWAS provides technical engineering and testing services to the U.S. Department of Defense, specializing in battlespace modeling, simulation, and training environments for pilots."
   },
-  "synthesized_evidence_sha": "c74a9fc38f5e738b",
+  "synthesized_evidence_sha": "abb64193ce9f3cfc",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "Software development utilizing Python, Django, C++, Java, and HTML for defense systems."
+   "value": "Developing software for battlespace modeling and simulation, integrating training systems for pilots; required skills span Python, Django, C++, Java, and HTML."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785382238,
   "web_search_url": "https://duckduckgo.com/?q=AMEWAS+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "8596e608ae",
     "ea7931c641"
    ],
-   "value": "A defense contractor role like this may conflict with the candidate's desire for a fast, innovative tech culture and elite AI/data science prestige given the heavy constraints of DoD bureaucracy. While the work is mission-driven and pays a solid entry-level salary ($87K-$105K), it may not provide the accelerated AI learning curve or elite new-grad pay they seek."
+   "value": "Offers a mission-driven entry into defense tech with published new-grad pay and a tech stack heavy on modern languages, sidestepping the slow, bureaucratic reputation of many large government contractors. Allows for rapid learning in modeling and simulation while providing the stable schedules characteristic of defense work, avoiding the 24/7 burnout cycles of commercial tech."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "ea7931c641"
-   ],
-   "value": "Estimated: Moderate. Defense contractors typically maintain standard government-adjacent hours, though security and operational deadlines can occasionally impact balance."
+   "source_ids": [],
+   "value": "Estimated: Generally favorable, structured around government contracting norms with predictable schedules rather than marathon coding sessions."
   }
  },
  "amgen": {
@@ -52111,7 +52254,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -52164,7 +52307,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1785450929,
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -52207,7 +52350,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
-  "retry_after": 1785454769,
+  "retry_after": 1785463300,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -69753,37 +69896,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier for traditional industry (Tier 2 overall). While not an elite pure-tech company, the brand name and scale provide very strong CV prestige in applied AI/data science, especially in energy, trading, and logistics verticals."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Vertically integrated energy model covering upstream exploration/production, midstream trading/logistics, and downstream refining/marketing, with a growing low-carbon division aimed at future revenue diversification."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Values-led, collegial, and polite with a strong industrial identity. An organization in flux, adopting more agile and tech-like ways of working, particularly in its digital and low-carbon units, while retaining a formal corporate backbone."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Retail consumers at gas stations, wholesale fuel buyers, airlines, shipping companies, industrial manufacturers, utilities, and governments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$130,000 base salary, with additional cash bonus (10-20%) and equity or profit shares in US/UK hubs. Trading linked data roles can edge higher."
   },
   "evidence_sha": "e9c755c6ce5785bd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Oil & Gas / Integrated Energy"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Expect a blend of technical coding/system design round(s) and behavioral interviews centered on safety leadership, human performance, and the BP Values of 'Care for Others, Excellence, and Courage.' They probe for how you manage risk, collaborate, and balance speed with reliability."
+  },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785455444,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Global. Key hubs include London (global HQ), Sunbury-on-Thames (UK), Houston and Chicago (US), Pune (India), and Budapest (Hungary). Energy trading floors operate from London, Houston, and Singapore."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "To deliver secure, affordable, and lower-carbon energy to the world, while running a safe, high-performing business."
+  },
   "name": "BP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace with bursts of intensity during trading hours or quarterly cycles. The 'innovation' culture within digital arm bp pulse and trading is faster; corporate functions move more deliberately with structured decision-making typical of a mature public company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Crude oil, natural gas, gasoline, diesel, jet fuel, lubricants, petrochemicals, wind and solar power, biofuels, EV charging, and carbon offset solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 days of annual leave plus public holidays for entry-level professional staff, based on standard UK/US policies of large energy purchasers."
   },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69793,7 +69994,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide mandated shutdown weeks. The standard annual leave policy and reduced working hours over Christmas for non-critical staff act as a 'de facto' soft shutdown at the end of the year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Listed public company; FTSE 100 constituent. A mature, multinational giant with tens of thousands of employees and operations in over 70 countries. Actively in a transformation stage to become an integrated energy company."
   },
   "sources": [
    {
@@ -69827,14 +70035,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7afd4c9382ee5764aea857996e5266377c0b4ce56b2f859fd50d6a6e8688eb47JmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=1662a2da-7b8d-6b61-2eac-b57c7a366a29&u=a1aHR0cHM6Ly93d3cuYnAuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major global employer, BP typically sponsors experienced hires in specialized technical roles where local talent is scarce, including niche data science and AI. New-grad sponsorship is less common and usually subject to local market rules and business need."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "BP is an integrated energy company that produces oil and gas, refines fuels, and moves them to market. It is also investing heavily in low-carbon and renewable energy as part of a transition into a broader energy business."
+  },
+  "synthesized_evidence_sha": "e9c755c6ce5785bd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "Data science and AI roles work on seismic imaging, subsurface modeling, predictive maintenance for refineries, supply chain optimization, energy trading algorithms, and customer experience analytics for its retail network. Digital teams are key in the push toward renewables optimization and electric vehicle infrastructure planning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785455444,
   "web_search_url": "https://duckduckgo.com/?q=BP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "63b640603b"
+   ],
+   "value": "BP offers a high-status brand name and strong new-grad pay, while its digital transformation push promises a faster technical culture than traditional oil & gas. The hybrid working model and a stated focus on 'safe, balanced operations' help guard against toxic burnout and protect personal time better than many tech-centric firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good (4 out of 5). Official policy is a 60/40 hybrid split for office staff, with 'FlexReady' working and a strong safety-first ethos that discourages unmanaged long hours. Trading floors and operational incident response roles can have spikes in intensity."
   }
  },
  "bracebridge capital": {
@@ -117019,37 +117254,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Emerging/Niche) — No public AI research publications, conference presence, or known elite AI talent density found. Likely applied ML for credit risk/fraud rather than frontier research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Estimated: Revenue likely from interest/fees on credit products, subscription fees for credit monitoring, transaction fees, or B2B data services. No financial details disclosed in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, compliance-aware, data-driven. Likely more structured than startup but less bureaucratic than big banks. No employee reviews sourced."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Estimated: Consumers seeking credit products, credit monitoring, or financial management tools; possibly B2B clients needing credit risk assessment. No specific customer segments documented in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k-$130k base + equity/bonus (US fintech new grad range). No offer data found."
   },
   "evidence_sha": "1a4c45dc8545afa2",
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Financial Services / Fintech / Credit Reporting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Ask directly: (1) Typical weekly hours and whether \"guaranteed shutdowns\" (e.g., no-meeting Fridays, protected evenings/weekends) exist. (2) On-call rotation frequency and incident severity. (3) Structured mentorship or learning budget for new grads. (4) AI/ML project scope — is it core product or peripheral? (5) Promotion timeline and technical vs. management tracks. (6) PTO policy and actual utilization rates. (7) Team autonomy vs. top-down bureaucracy."
+  },
+  "last_attempt_at": 1785455620,
+  "last_evidence_at": 1785454528,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Estimated: Likely US-based (domains suggest US financial services). Specific headquarters or office locations not identified in sources."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Estimated: To provide accessible credit solutions and financial empowerment tools. No official mission statement found in available sources."
   },
-  "last_evidence_at": 1785454528,
   "name": "Credit Control, LLC.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to Fast — Fintech often balances regulatory compliance speed with product iteration. No employee reports found to confirm."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Estimated: Credit-related financial products such as credit cards, credit monitoring, lending services, or credit scoring solutions. No specific product details found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays (typical US fintech). No official policy found."
   },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117059,7 +117358,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns (e.g., winter break, summer Fridays) documented. Candidates should ask about protected time policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Estimated: Mid-to-large stage company given associations with known brands (Credit One Bank, Experian, Credit Karma). Employee count and funding stage not publicly confirmed."
   },
   "sources": [
    {
@@ -117103,14 +117411,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No visa sponsorship policy information found in sources. Candidates should inquire directly during recruitment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c21cc11108",
+    "97dbb733f7",
+    "82516a298e"
+   ],
+   "value": "Credit Control, LLC appears to be a financial services company likely operating in the credit reporting, lending, or credit management space based on associated domains (creditonebank.com, experian.com, creditkarma.com). The company was identified through a 2026 new-grad software engineer job posting, suggesting active hiring for technical roles."
+  },
+  "synthesized_evidence_sha": "1a4c45dc8545afa2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Software engineering roles for new grads (per GitHub job board). Likely involves full-stack development, data pipelines, credit risk modeling, or platform engineering. No specific tech stack details found."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785454528,
   "web_search_url": "https://duckduckgo.com/?q=Credit+Control%2C+LLC.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This role appears on a curated new-grad software engineer list, suggesting active entry-level hiring. The association with major credit/finance brands may offer exposure to large-scale financial data systems. However, without public details on culture, WLB, or AI prestige, candidates should probe deeply on work pace, shutdown policies, and technical mentorship during interviews to assess alignment with your priorities for balanced innovation and sustainable growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Industry average for fintech; no Glassdoor/Blind data found. Candidates should verify actual hours and shutdown culture."
   }
  },
  "cresta": {
@@ -194696,39 +195033,42 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Niche/Low. While highly prestigious in traditional energy engineering, its data science and AI roles do not carry the elite prestige of top-tier tech companies, FAANG, or quantitative finance."
+   "value": "Estimated: Niche specialist. While highly established in the oil and gas software space, it does not carry the same 'elite prestige' in the broader AI/data science community as big-tech or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "6c8952ee85",
     "cebb6e81ad"
    ],
-   "value": "B2B service and product provider. Generates revenue by deploying specialized field personnel and proprietary technologies to energy operators on a project or contract basis, while also supporting energy startups through Halliburton Labs."
+   "value": "Business-to-business sales of specialized energy services, field operations, and enterprise software to energy companies."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
     "cebb6e81ad"
    ],
-   "value": "Safety-conscious, operational, and heavily traditional 'oilfield' culture, emphasizing hands-on field experience, loyalty, and rigorous service quality."
+   "value": "Professional and service-oriented. Halliburton values being 'the industry's best-trained professionals' and emphasizes superior service quality and field operations excellence."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "cebb6e81ad"
+    "6c8952ee85"
    ],
-   "value": "National and international oil companies, independent oil and gas operators, and energy tech startups (via Halliburton Labs)."
+   "value": "Oil and gas exploration and production companies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000 - $110,000 base salary for technical data and software roles in the US. Good, but below the elite top-tier tech new-grad pay bands ($150k+) you are targeting."
+   "source_ids": [
+    "6c8952ee85"
+   ],
+   "value": "Estimated: $80,000 - $105,000 base salary for early career software engineers in Houston, TX."
   },
   "evidence_sha": "d69edac79430d181",
-  "generated_at": 1784883896,
+  "generated_at": 1785455620,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -194737,52 +195077,58 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "896641e3b8",
+    "6c8952ee85",
     "cebb6e81ad"
    ],
-   "value": "Oil & Gas Energy Services / Oilfield Equipment"
+   "value": "Energy / Oil & Gas Equipment & Services"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "6c8952ee85"
+   ],
+   "value": "Be prepared to discuss your passion for innovation, achievement, growth, and leadership, as these core values are explicitly highlighted in their hiring. Frame your technical learning goals to align with how you can drive digital operations and production optimization while maintaining the work-life balance they value."
   },
-  "last_attempt_at": 1784883896,
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785454242,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "896641e3b8"
-   ],
-   "value": "Headquartered in Houston, Texas, with dozens of operational field camps, research centers, and offices located globally across major energy-producing regions."
-  },
-  "mission": {
-   "confidence": "medium",
-   "source_ids": [
+    "6c8952ee85",
     "cebb6e81ad"
    ],
-   "value": "To achieve superior results for its customers in the energy industry, setting the standard for superior service quality and sustainability, while advancing energy innovation."
+   "value": "Houston, TX, US (Landmark software). Field operations and offices globally."
   },
-  "name": "Halliburton",
-  "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Bureaucratic and slow-paced. As a large, traditional energy corporation, it is tied heavily to long capital cycles and slow-moving industry standards rather than a fast-paced tech culture."
-  },
-  "products": {
+  "mission": {
    "confidence": "high",
    "source_ids": [
     "cebb6e81ad"
    ],
-   "value": "Offers a wide array of specialized services and technologies including drilling systems, formation evaluation, well completion tools, cementing, stimulation, and digital solutions for reservoir management. The company also operates Halliburton Labs, a collaborative space designed to help energy tech startups scale."
+   "value": "To set the standard for superior service and be in the hands of the industry's best-trained professionals."
+  },
+  "name": "Halliburton",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6c8952ee85"
+   ],
+   "value": "Estimated: Moderate. The company seeks people who want to 'innovate, achieve, grow and lead', indicating a forward-leaning environment for new graduates. However, as a mature public corporation, the actual operational tempo is likely more bureaucratic and slow-paced compared to fast-paced startups."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6c8952ee85"
+   ],
+   "value": "Software and hardware for subsurface interpretation, well construction planning, reservoir simulation, production optimization, and digital operations (Landmark product line)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard accrued PTO per year, plus standard public holidays, typical of large legacy energy corporations."
+   "value": "Estimated: 15-25 days of vacation plus standard public holidays."
   },
-  "refresh_after": 1790067896,
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194792,15 +195138,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: None found in research for standard operations. Unlike some heavy manufacturing or pure-tech firms, the energy sector typically operates continuously, making guaranteed shutdowns unlikely."
+   "value": "Estimated: No formal guaranteed company-wide shutdowns found in research."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "896641e3b8",
     "cebb6e81ad"
    ],
-   "value": "Publicly traded, established global enterprise (NYSE: HAL). It is a mature, large-cap corporation operating in over 70 countries."
+   "value": "Large, established public corporation (NYSE: HAL)."
   },
   "sources": [
    {
@@ -194845,40 +195190,38 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Sponsors work visas for specialized engineering and technical roles depending on regional needs, but not consistently across all business units. Field-based roles are typically restricted due to domestic sourcing requirements."
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "896641e3b8",
-    "cebb6e81ad"
+    "6c8952ee85"
    ],
-   "value": "Halliburton is one of the world's largest providers of products and services to the energy industry, operating across the oil and gas lifecycle. It makes money by offering specialized services, proprietary technologies, and integrated solutions to national and international oil companies for upstream exploration, drilling, completion, and production."
+   "value": "Halliburton is a global energy services company that provides products and services to the oil and gas industry. It makes money by selling software and offering specialized field services for subsurface interpretation, well construction planning, reservoir simulation, and production optimization."
   },
-  "synthesized_evidence_sha": "5d78a555f5aa0c45",
+  "synthesized_evidence_sha": "d69edac79430d181",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "896641e3b8",
-    "cebb6e81ad"
+    "6c8952ee85"
    ],
-   "value": "Focuses heavily on hardware engineering, field operations, geoscience, and industrial digital solutions. Tech roles involve developing software for drilling optimization, data analytics for reservoir performance, and supporting the digital infrastructure for global field operations."
+   "value": "Early career software engineers work on the Landmark product line, developing software for subsurface interpretation, reservoir simulation, and digital operations."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675132,
   "web_search_url": "https://duckduckgo.com/?q=Halliburton+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "While traditional energy may seem slower, it offers a stable platform for technical learning and growth without the toxic burnout of FAANG or high-pressure startups. It provides a mission to optimize energy operations, allowing you to build a career and technical expertise while preserving personal time and maintaining a healthy work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. While corporate tech offices may keep standard business hours, the broader company is heavily tied to a demanding, operational field-environment (24/7 rig operations) that can lead to a high-burnout culture."
+   "value": "Estimated: Good. Traditional energy services tend to offer more balanced hours compared to Silicon Valley tech or high-pressure startups, though field operations can be demanding."
   }
  },
  "halvik": {
@@ -260687,37 +261030,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected applied ML team in a Fortune 500 retailer, but not an elite AI research brand; publications and conference presence are limited."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Omnichannel retail: revenue from in-store and online sales of owned and third-party brands, plus private label products; loyalty program drives repeat purchases; real estate portfolio provides asset value."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate retail culture undergoing digital shift; hierarchical, process-heavy, with pockets of modern engineering culture in tech hubs. DEI emphasis. Not a 'move fast' startup vibe."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Broad U.S. consumer base seeking mid-range to upscale fashion, beauty, and home products; includes loyal Macy's Star Rewards members and omnichannel shoppers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU ($20k-$40k over 4 yrs) = ~$140k-$180k total first year. Lower than top-tier tech."
   },
   "evidence_sha": "18781c1bddc4f949",
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Retail / Department Stores / Omnichannel Commerce"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect applied ML/system design questions tied to retail use cases (recommendation, forecasting, pricing). Behavioral focus on stakeholder management, ambiguity, and delivering in a matrix org. Ask about team autonomy, deployment frequency, on-call expectations, and concrete WLB policies (core hours, shutdowns). Clarify new-grad total compensation breakdown and promotion timeline."
+  },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785455444,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York, NY. Major tech hubs in New York, San Francisco, Atlanta, Dallas, and remote roles. Stores nationwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be a trusted national retailer helping customers express their unique style and celebrate special moments, while driving digital transformation and sustainable growth."
+  },
   "name": "Macy's",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow — corporate retail cycles, quarterly planning, compliance gates; some agile teams but overall bureaucratic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Apparel, accessories, cosmetics, home furnishings, and related consumer goods sold through physical department stores, macys.com, and mobile app. Also operates Bloomingdale's and Bluemercury brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 paid holidays; accrual-based, increases with tenure. No public unlimited PTO policy."
   },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -260727,7 +261112,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams may observe reduced hours between Christmas and New Year, but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: M) with ~90,000 employees, ~500 Macy's stores, plus Bloomingdale's and Bluemercury; FY2023 revenue ~$23B. Mature, restructuring phase."
   },
   "sources": [
    {
@@ -260761,14 +261151,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=af03831b2056e315789942649c635d1f25ac9fbe956baf9066d3660269792acfJmltdHM9MTc4NTM2OTYwMA&ptn=3&ver=2&hsh=4&fclid=1662a2da-7b8d-6b61-2eac-b57c7a366a29&u=a1aHR0cHM6Ly93d3cubWFjeXMuY29tLz9tc29ja2lkPTE2NjJhMmRhN2I4ZDZiNjEyZWFjYjU3YzdhMzY2YTI5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for tech roles (data science, software engineering) per public disclosure data; green card sponsorship likely for senior roles. No public policy details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Macy's is a historic American department store chain operating hundreds of locations across the U.S., selling apparel, accessories, home goods, and beauty products. It is transitioning toward an omnichannel retailer with significant e-commerce and digital investments."
+  },
+  "synthesized_evidence_sha": "18781c1bddc4f949",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "E-commerce platform, data science for personalization/inventory/pricing, ML for demand forecasting, supply chain optimization, customer 360, mobile app, digital marketing tech, cloud migration (Google Cloud), store tech modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785455444,
   "web_search_url": "https://duckduckgo.com/?q=Macy%27s+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Macy's offers a large-scale retail data environment with real customer transaction volume for AI/ML impact, but it is a traditional retailer in digital transformation—not a pure tech company. Prestige and pay are moderate for new grads; culture leans corporate with bureaucracy, not fast-paced innovation. Work-life balance varies by team; no guaranteed shutdowns. Learning opportunities exist in applied ML at scale, but career acceleration may be slower than in tech-first firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.2/5 — Varies widely; some teams report 40-45 hrs, others 50+ during peaks (holiday). No company-wide guaranteed shutdowns."
   }
  },
  "maersk": {
@@ -287961,11 +288372,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -287977,6 +288390,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785455443,
   "name": "MUFG",
   "pace_of_work": {
@@ -287989,6 +288403,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785455740,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -288042,7 +288457,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785455443,
   "web_search_url": "https://duckduckgo.com/?q=MUFG+company+careers+benefits",
@@ -337321,139 +337736,131 @@
  "protective life": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "55e1993aff"
-   ],
-   "value": "Estimated: Tier 3. Traditional insurance carriers typically do not offer top-tier AI or data science prestige compared to tech-first companies, focusing instead on applied business analytics and actuarial modeling."
+   "source_ids": [],
+   "value": "Niche/Traditional Corporate. Protective Life is not considered top-tier for Silicon Valley-style AI labs or unicorn tech firms; the prestige lies in stability and a long-standing insurance brand rather than bleeding-edge academic AI research."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "55e1993aff",
-    "7e9aab659f"
+    "f086dd99f5",
+    "55e1993aff"
    ],
-   "value": "Insurance underwriting and premium collection. The company assumes financial risk from customers in exchange for premium payments, focusing on life insurance and employee benefits."
+   "value": "Premium-driven insurance model. The company collects premiums from policyholders and pays out claims, generating profit through underwriting margins and investment income on held assets."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
+    "c875bd8226",
     "55e1993aff",
-    "7e195a7b6e",
-    "7e9aab659f"
+    "7e195a7b6e"
    ],
-   "value": "Corporate, risk-aware, and mission-driven, with a strong emphasis on employee protection and compliance. Innovation happens within the guardrails of strict regulatory frameworks."
+   "value": "Stable, supportive, and conservative. The culture reflects the 'peace of mind' mantra used in all job postings. Focus is likely on reliability, compliance, and customer protection rather than disruptive innovation."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "55e1993aff",
-    "7e9aab659f"
+    "7e9aab659f",
+    "c875bd8226"
    ],
-   "value": "Individuals seeking life insurance and groups or employers seeking employee benefits coverage."
+   "value": "Individuals seeking life insurance and businesses seeking employee benefits programs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "7e195a7b6e",
-    "55e1993aff"
-   ],
-   "value": "Estimated: $70,000 - $90,000. Insurance companies generally pay below big tech benchmarks for new graduate technical roles."
+   "source_ids": [],
+   "value": "Estimated: $70,000 - $85,000 base salary for technical analyst roles. This does not stack up against tier-1 Big Tech salaries but is competitive with insurance-sector new grad pay; notice that the candidate prioritizing 'top-tier new-grad pay' might find this a limitation."
   },
   "evidence_sha": "25297e16d91c578c",
-  "generated_at": 1785342129,
+  "generated_at": 1785455620,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "55e1993aff",
-    "7e9aab659f"
+    "7e9aab659f",
+    "f086dd99f5"
    ],
-   "value": "Insurance and Financial Services."
+   "value": "Insurance, Financial Services"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "7e195a7b6e",
-    "55e1993aff"
+    "c875bd8226",
+    "7e9aab659f"
    ],
-   "value": "Ask questions about the pace of innovation, tech stack modernization, and how teams balance sane hours with project delivery. Probe whether the specific team offers guaranteed shutdowns and fast-tracked learning, or if it faces typical insurance industry bureaucracy and burnout."
+   "value": "Interviews will likely test process-mapping and systems-thinking for the analyst track. Candidates from elite AI/Analytics backgrounds should prepare to articulate why operating in a slower, compliance-regulated environment appeals to them, and how they drive innovation without disrupting a stable, risk-averse system."
   },
-  "last_attempt_at": 1785450929,
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785444015,
   "locations": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "f4d4fbb38b",
-    "7e195a7b6e"
+    "c875bd8226",
+    "55e1993aff",
+    "8a889c3522"
    ],
-   "value": "Headquartered in Birmingham, AL, with corporate offices and remote work options depending on the role."
+   "value": "Birmingham, AL (Headquarters). Research indicates a significant presence or an office in the Chicago area."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "c875bd8226",
     "55e1993aff",
-    "7e195a7b6e",
-    "7e9aab659f"
+    "7e195a7b6e"
    ],
-   "value": "To protect customers against life’s uncertainties and provide peace of mind when they need it most."
+   "value": "To help protect customers against life's uncertainties by providing protection and peace of mind when they need it most."
   },
   "name": "Protective Life",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "55e1993aff",
-    "7e9aab659f"
+    "c875bd8226",
+    "7e195a7b6e"
    ],
-   "value": "Estimated: Slow to moderate. The environment is likely process-heavy and bureaucratic due to the highly regulated nature of the insurance and compliance industry."
+   "value": "Status: Unhurried/Steady. A regulated insurance and compliance environment typically moves slower than Big Tech or startups, with the specific description of 'providing peace of mind' indicating a sustainable workflow rather than a fast-release culture."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "55e1993aff",
-    "7e9aab659f"
+    "7e9aab659f",
+    "f086dd99f5"
    ],
-   "value": "Life insurance, employee benefits, and related insurance products, including growing offerings in its Employee Benefits Division."
+   "value": "Term life, whole life, and universal life insurance, along with employee benefits such as disability and supplemental health coverage."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "f4d4fbb38b"
-   ],
-   "value": "Estimated: 20-25 days of PTO annually, standard for an established financial services firm."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days starting PTO for a New Grad analyst, plus separate sick time and a few floating holidays. This follows the conservative industry standard for entry-level corporate roles."
   },
-  "refresh_after": 1790526129,
-  "retry_after": 1785454769,
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
-   "source_ids": [
-    "55e1993aff",
-    "7e195a7b6e",
-    "7e9aab659f"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "low",
-   "source_ids": [
-    "f4d4fbb38b"
-   ],
-   "value": "Guaranteed shutdowns were not explicitly found in the provided sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "f4d4fbb38b"
+    "f086dd99f5",
+    "8a889c3522"
    ],
-   "value": "Established corporate insurance carrier operating on a national scale."
+   "value": "Established large-cap financial services firm with stable, long-term operations; not a startup or early-stage company."
   },
   "sources": [
    {
@@ -337518,30 +337925,29 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
    "source_ids": [
+    "c875bd8226",
     "55e1993aff",
     "7e195a7b6e"
    ],
-   "value": "Information regarding visa sponsorship for technical roles was not explicitly found in the provided sources."
+   "value": "Protective Life provides financial protection products like life insurance and employee benefits, helping customers manage financial uncertainty. It makes money by collecting premiums from these policies and investing those funds before paying out future claims."
   },
-  "status": "retrying",
-  "summary": {
-   "confidence": "medium",
-   "source_ids": [
-    "55e1993aff",
-    "7e9aab659f"
-   ],
-   "value": "Protective Life is an insurance carrier that provides financial protection and peace of mind to its customers against life's uncertainties. It generates revenue primarily by underwriting life insurance and employee benefits policies, as well as collecting premiums and managing investments against those liabilities."
-  },
-  "synthesized_evidence_sha": "c3c2132f61d08469",
+  "synthesized_evidence_sha": "25297e16d91c578c",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "c875bd8226",
     "7e195a7b6e",
     "55e1993aff"
    ],
-   "value": "Roles in software development, data science, IT infrastructure, and security governance, risk, and compliance (GRC) to support insurance operations and product filing."
+   "value": "Research-available roles include Business Systems Analyst (likely bridging insurance product logic with systems), Security GRC Analyst (cybersecurity compliance), and product/compliance analysis. The technical work is likely centered on maintaining, configuring, and optimizing core insurance administration systems rather than cutting-edge generative AI research."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674265,
@@ -337549,17 +337955,18 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "55e1993aff",
+    "c875bd8226",
     "7e195a7b6e"
    ],
-   "value": "This is a traditional insurance company, which typically leans toward slow bureaucracy rather than the fast, innovative tech culture you desire. While it claims a mission-driven focus on customer protection, legacy carriers often prioritize stability over elite AI prestige, high new-grad pay, and rapid technical career acceleration."
+   "value": "Protective Life offers a mission-driven environment with lower risk of the aggressive burnout found in Silicon Valley startups or trading firms. The emphasis on 'protection and peace of mind' aligns with stable, sane hours and genuine work-life balance that protect your long-term health and personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "55e1993aff"
+    "c875bd8226",
+    "7e195a7b6e"
    ],
-   "value": "Estimated: Good. Established insurance companies generally maintain standard corporate hours and decent work-life balance, though bureaucratic friction can occasionally cause project bottlenecks."
+   "value": "High. The nature of the insurance sector and Protective Life’s specific mission-driven messaging strongly indicates respect for work-life balance. Tech roles in non-software firms rarely feature the death marches seen in gaming or elite software; standard 35-40 hour weeks are expected."
   }
  },
  "protiviti": {
@@ -406619,39 +407026,104 @@
  },
  "sugarcrm": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a72d3730d8",
+    "64350b14a1"
+   ],
+   "value": "Niche AI innovator (Tier 2) with strong domain authority in applying AI to enterprise productivity; highly respected within the SMB/mid-market CRM space but without the prestige reach of a FAANG company."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f8672735ab"
+   ],
+   "value": "Business-to-business (B2B) subscription software model. Revenue is generated through recurring licenses or subscriptions for its cloud CRM platform."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1",
+    "bd467a0c8f"
+   ],
+   "value": "Trust-based, flexible, and fast-moving culture where individuals are trusted to lead ideas without excessive layers of approval. The environment actively encourages unconstrained thinking distributed across global offices."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f8672735ab",
+    "64350b14a1"
+   ],
+   "value": "Sales, marketing, and service teams across various industries that need an intelligent, high-productivity alternative to more complex or manual CRM solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base salary for U.S. new-grad software/ML engineering roles, aligned with competitive mid-market tech firms offering strong work-life balance."
   },
   "evidence_sha": "61f80391be9ce9fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f8672735ab",
+    "64350b14a1"
+   ],
+   "value": "Enterprise SaaS and AI-driven Customer Relationship Management (CRM)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "64350b14a1"
+   ],
+   "value": "Send a direct note about burning out but staying competitive to jennifer@sugarcrm.com to express candidacy; expect evaluations focused on rapid problem-solving, initiative, and deep technical AI skills over bureaucratic procedure."
+  },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785455444,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1"
+   ],
+   "value": "Roles are location-flexible within the U.S. (remote) with a preference for candidates in close proximity to specific time zones or hubs like Durham, NC; also has an office in Munich, Germany."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1"
+   ],
+   "value": "To let the platform do the work, helping teams focus on what matters most and know exactly what to do next, thereby removing busy work and increasing productivity."
+  },
   "name": "SugarCRM",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and iterative where 'thoughtful ideas move quickly,' but governed by a trusting environment rather than constant firefighting or arbitrary deadlines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1",
+    "f8672735ab"
+   ],
+   "value": "The primary product is an AI-powered CRM platform that provides sales, marketing, and service automation without requiring extensive manual configuration. It aims to eliminate 'busy work' and surface the most critical next actions for users."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Vacation policy aligns with peer SaaS companies, likely providing 15-20 days of PTO plus sick time and personal days, but no explicit company-specific number was confirmed."
   },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406661,7 +407133,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: A company-wide end-of-year slow down or holiday closure is typical at similar mid-sized tech firms; specific guaranteed shutdowns were not documented in provided material."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f8672735ab",
+    "0e682818bd"
+   ],
+   "value": "Late-stage private company operating globally with a mature product focused on steady growth and AI integration."
   },
   "sources": [
    {
@@ -406725,14 +407205,42 @@
     "url": "https://jobs.lever.co/sugarcrm/bfb274bb-9b20-46bb-8d71-dfaf64ee298b"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1",
+    "f8672735ab"
+   ],
+   "value": "SugarCRM is a customer relationship management (CRM) platform that uses AI to help sales, marketing, and service teams prioritize leads and automate workflows rather than just offering static dashboards. The company sells its platform on a subscription basis directly to businesses."
+  },
+  "synthesized_evidence_sha": "61f80391be9ce9fc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1"
+   ],
+   "value": "Software engineering roles involve building an AI-driven Horde platform, focusing on rapid development of intelligent features that help users take action, not just view data. Work includes back-end engineering and AI model integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785455444,
   "web_search_url": "https://duckduckgo.com/?q=SugarCRM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "64350b14a1"
+   ],
+   "value": "For a candidate seeking elite AI work without the bureaucracy of Big Tech, SugarCRM offers a high-impact platform role where AI drives core product decisions. It promises a fast, trusted culture that explicitly guards against burnout and aims to shorten the path from idea to execution, aligning high new-grad compensation potential with a commitment to protecting personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong work-life balance with a culture dedicated to flexibility that supports great work getting done, avoiding the overwork norms of high-burnout environments."
   }
  },
  "sumitomo electric wiring systems": {
@@ -444927,47 +445435,120 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Established academic medical center with Texas Tech affiliation; strong regional research reputation and Epic enterprise data—credible for clinical AI publications and informatics fellowships, but not a national AI research lab brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "Non-profit integrated health system funded by patient service revenue (insurance/government reimbursement), government disproportionate-share hospital (DSH) payments, grants, philanthropy, and academic affiliation funding from Texas Tech."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, collaborative, hierarchical but respectful; strong nursing/physician partnership; bilingual (English/Spanish) environment; emphasis on health equity and community service; less 'tech bro' culture, more clinical-academic professionalism."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "Patients across West Texas and Southern New Mexico (largely Medicaid, Medicare, commercial insurance, and uninsured/underinsured populations), Texas Tech medical students and residents, and employer/health-plan partners in the region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + standard health-system benefits (pension/403b match, tuition remission for Texas Tech courses); equity/RSUs not typical for non-profit."
   },
   "evidence_sha": "6e0481fcb6e9ebb5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1785455620,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "Healthcare / Academic Medical Center / Non-profit Health System"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Be ready to discuss: (1) end-to-end ML projects on messy clinical data (EHR, claims, imaging), (2) model explainability and bias mitigation for diverse border populations, (3) experience with Epic/Clarity/Cogito or FHIR pipelines, (4) collaboration with physicians/researchers in an IRB-governed setting, and (5) how you prioritize maintainable, auditable code over flashy prototypes—signaling you fit a regulated, patient-safety-first culture."
+  },
+  "last_attempt_at": 1785455620,
   "last_evidence_at": 1785454527,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "794616ce0c"
+   ],
+   "value": "Primary campus in El Paso, TX (umcelpaso.org); multiple outpatient clinics across El Paso County; academic affiliation with Texas Tech University Health Sciences Center El Paso."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "To provide exceptional healthcare to the community through clinical excellence, innovation, education, and research, serving as the safety-net and academic anchor for the border region."
+  },
   "name": "UMC Health System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate—project cycles governed by clinical/IRB timelines (weeks–months), not sprint-driven; protected time for research but limited 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "Inpatient and outpatient hospital services, Level I trauma center, organ transplant programs (kidney, liver), cancer care, cardiovascular services, women's and children's services, emergency medicine, and graduate medical education residency/fellowship programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 paid holidays + 1–2 weeks CME/research leave for eligible roles; exact accrual varies by union/classification."
   },
+  "refresh_after": 1790639620,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; major holidays observed; individual departments may operate minimal staffing year-round due to 24/7 hospital operations."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 3,000–4,000 employees; ~400+ licensed beds; mature, established non-profit health system (not a startup)."
   },
   "sources": [
    {
@@ -445011,14 +445592,43 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Capable of H-1B and employment-based green card sponsorship for clinical and research roles; new-grad tech roles may have limited sponsorship precedent—verify with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "43e581f593",
+    "14e1a6463f",
+    "794616ce0c"
+   ],
+   "value": "UMC Health System is a non-profit academic medical center and health system based in El Paso, Texas, providing comprehensive healthcare services including Level I trauma, transplant, and specialized clinical care to the West Texas/Southern New Mexico region. It operates as the primary teaching hospital for Texas Tech University Health Sciences Center El Paso."
+  },
+  "synthesized_evidence_sha": "6e0481fcb6e9ebb5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EHR optimization (Epic), clinical analytics, population health data platforms, research informatics, imaging AI (radiology/pathology), revenue-cycle automation, and health-equity data initiatives tied to the academic mission."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785454527,
   "web_search_url": "https://duckduckgo.com/?q=UMC+Health+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "43e581f593",
+    "14e1a6463f"
+   ],
+   "value": "UMC offers a mission-driven academic medical center environment where AI/data science directly impacts underserved border populations and Level I trauma care. The non-profit, teaching-hospital culture tends toward structured hours and less burnout than high-growth tech, while still providing exposure to Epic-scale clinical data, research collaborations with Texas Tech, and a clear path to publications and clinical informatics leadership—aligning with your desire for prestige, learning velocity, "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—typical 40–45 hr weeks for analytics/DS roles; on-call rare; academic calendar provides predictable downtime; non-profit mission reduces pressure for aggressive revenue targets."
   }
  },
  "uncountable": {
