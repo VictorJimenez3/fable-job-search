@@ -253978,41 +253978,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche deep-tech hardware tier. While prestigious in the materials science sector, it lacks the elite, top-tier AI/DS software industry prestige due to its physical hardware focus."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939",
+    "1f5faba27d"
+   ],
+   "value": "Lyten operates as a deep-tech hardware and materials manufacturer, generating revenue by scaling and selling its proprietary battery and 3D lattice products to enterprise and industrial clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "659f55a939"
+   ],
+   "value": "Estimated: Mission-driven, engineering-focused, and innovative, typical of a well-funded deep-tech startup."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939"
+   ],
+   "value": "The company targets the electric vehicle, aerospace, defense, and industrial manufacturing sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $130,000 base salary, aligned with deep-tech hardware industry standards rather than elite top-tier AI software roles."
   },
   "evidence_sha": "1d197a6f5f3ebd2c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785373316,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785373155,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939"
+   ],
+   "value": "Advanced Materials and Battery Manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f5faba27d"
+   ],
+   "value": "Candidates should clarify expectations around new-grad pay bands, as deep-tech hardware may not match top-tier AI/DS software salaries. To assess the culture fit, ask the interview panel about sustainable engineering hours, weekend expectations, and whether the rapid manufacturing pace creates high-burnout conditions."
+  },
+  "last_attempt_at": 1785373316,
   "last_evidence_at": 1785372778,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f5faba27d"
+   ],
+   "value": "Headquartered in San Jose, California, with a manufacturing facility in Reno, Nevada."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939",
+    "1f5faba27d"
+   ],
+   "value": "Lyten's mission centers on delivering breakthrough materials that reduce emissions and decarbonize the physical economy."
+  },
   "name": "Lyten",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1f5faba27d"
+   ],
+   "value": "Estimated: Fast-paced, agile startup environment driven by rapid R&D and commercialization timelines."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939",
+    "1f5faba27d"
+   ],
+   "value": "Lyten's primary products include LytCell lithium-sulfur batteries, lightweight 3D lattice structures, and IoT sensors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, with specific exact policy not public."
   },
-  "retry_after": 1785373275,
+  "refresh_after": 1790557316,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254022,7 +254081,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of guaranteed corporate shutdowns, a benefit more common in mature tech companies."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f5faba27d"
+   ],
+   "value": "Lyten is a rapidly scaling private company, operating as a deep-tech startup with significant funding and industrial manufacturing facilities."
   },
   "sources": [
    {
@@ -254056,14 +254122,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=f7fc51596ed84afccc762793ef9499eaa79ed848d1da04ec8b5c2c1b079dc29bJmltdHM9MTc4NTI4MzIwMA&ptn=3&ver=2&hsh=4&fclid=35c8c739-a690-6291-14e3-d09fa78463d4&u=a1aHR0cHM6Ly9seXRlbi5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f5faba27d"
+   ],
+   "value": "Exact visa sponsorship policies are not publicly detailed, though deep-tech hardware startups often have selectively limited capacity for visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939",
+    "1f5faba27d"
+   ],
+   "value": "Lyten is an advanced materials and manufacturing company that develops lithium-sulfur batteries and lightweight 3D lattice materials. It makes money by commercializing these proprietary technologies for use in electric vehicles, aerospace, and industrial applications."
+  },
+  "synthesized_evidence_sha": "1d197a6f5f3ebd2c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "659f55a939"
+   ],
+   "value": "Technical work involves advanced materials science, electrochemistry, mechanical engineering, and manufacturing process scaling for battery and lattice technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785372778,
   "web_search_url": "https://duckduckgo.com/?q=Lyten+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "659f55a939",
+    "1f5faba27d"
+   ],
+   "value": "Lyten offers a mission-driven environment focused on decarbonization, which appeals to candidates seeking meaningful impact. The deep-tech startup culture promises fast-paced innovation and accelerated technical learning, though candidates should verify if the hardware manufacturing pace aligns with their strict work-life balance requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Deep-tech startups often demand long hours during critical manufacturing or funding milestones."
   }
  },
  "m t bank": {
