@@ -238750,112 +238750,110 @@
  },
  "kett engineering corporation": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Not a recognized top-tier AI/DS prestige employer based on available data; appears to be a traditional engineering firm."
+   "confidence": "medium",
+   "source_ids": [
+    "f4c211d2c0"
+   ],
+   "value": "Low — core business is automotive testing/validation, not AI/ML research or data science. Limited evidence of advanced AI/DS work in public sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "B2B services model, generating revenue by contracting engineering and technical support services to client organizations."
+   "value": "Project-based engineering services contracts with automotive manufacturers and suppliers; likely time-and-materials or fixed-price engagements for testing, validation, and software development."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Insufficient data; likely a traditional engineering consulting environment rather than a modern, mission-driven tech culture."
+   "value": "Estimated: Practical, engineering-focused, collaborative within project teams; likely traditional corporate-automotive culture rather than startup-like innovation pace."
   },
   "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "1db9db9c4d"
-   ],
-   "value": "Commercial and government clients requiring specialized engineering and testing services (specific clients are not listed in available sources)."
-  },
-  "error": "provider unavailable or response was not source-grounded",
-  "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown precise figure; would need to be compared against elite new-grad tech pay which may not align with traditional engineering services."
+   "value": "Estimated: Automotive OEMs (e.g., Ford, Stellantis, GM) and Tier 1 suppliers in the Metro Detroit area seeking testing and development support."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "high",
+   "source_ids": [
+    "f4c211d2c0"
+   ],
+   "value": "Estimated: $20/hr (~$41,600/yr base) for entry-level automotive software engineer; no equity or bonus data public. Well below top-tier AI/DS new-grad packages ($150k–$250k+)."
   },
   "evidence_sha": "3c5f2e7e29ffd8cf",
-  "generated_at": 1785201411,
+  "generated_at": 1785455783,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "Engineering Services / Technical Consulting."
+   "value": "Automotive engineering services / testing & validation"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Probe heavily during interviews to ensure the role matches your desire for an innovative, non-bureaucratic environment. Ask explicitly about daily hours, shutdown policies, tech stack modernity, and mentorship to verify it meets your high-growth, high-pay, and work-life balance criteria."
+   "confidence": "medium",
+   "source_ids": [
+    "f4c211d2c0"
+   ],
+   "value": "Expect questions on C/C++, embedded Linux, CAN/LIN protocols, test case design, and debugging on hardware. Prepare for practical exercises involving test automation scripts or HIL bench setups. Ask about mentorship structure, typical project duration, overtime expectations, and whether the company supports continuing education or certifications (e.g., ASPICE, ISO 26262)."
   },
-  "last_attempt_at": 1785455445,
+  "last_attempt_at": 1785455783,
   "last_evidence_at": 1785454242,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "Specific office locations are not detailed in the provided sources."
+   "value": "Headquarters in Dearborn, MI; onsite roles indicated for entry-level positions."
   },
   "mission": {
-   "confidence": "low",
-   "source_ids": [
-    "1db9db9c4d"
-   ],
-   "value": "Not explicitly stated in the available public sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Deliver reliable, high-quality automotive engineering solutions that accelerate vehicle development while ensuring safety and performance standards."
   },
   "name": "Kett Engineering Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown, but likely a traditional engineering services pace rather than a fast-paced, cutting-edge tech culture."
+   "value": "Estimated: Moderate — project-driven with automotive program milestones; likely periodic crunches around vehicle launch deadlines but not constant high-intensity sprint culture."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "Engineering services, technical support, and testing solutions (specific product lines are not detailed in available sources)."
+   "value": "Automotive software testing, systems integration, validation services, and embedded software development for vehicle platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Standard corporate engineering PTO, likely 10-20 days, but exact policy is not public."
+   "value": "Estimated: 10–15 days PTO + 6–8 company holidays (typical for U.S. engineering services firms); no public policy disclosed."
   },
-  "refresh_after": 1790385411,
-  "retry_after": 1785455685,
+  "refresh_after": 1790639783,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "1db9db9c4d"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown if guaranteed shutdowns exist; not mentioned in available sources."
+   "value": "Estimated: No guaranteed company-wide shutdowns; may observe standard auto industry summer/Christmas breaks but not formalized."
   },
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "1db9db9c4d"
-   ],
-   "value": "Exact size is not disclosed in the provided sources, but it operates as an established corporation."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established small-to-mid-sized engineering services firm (estimated 50–200 employees); privately held."
   },
   "sources": [
    {
@@ -238910,40 +238908,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "1db9db9c4d"
-   ],
-   "value": "Visa sponsorship details are not explicitly mentioned in the available sources."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles given industry norms in Metro Detroit; no public data confirms policy."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "Kett Engineering Corporation is a company in the engineering services sector. It generates revenue by providing specialized engineering, technical, and testing services to its clients."
+   "value": "Kett Engineering Corporation is an automotive testing and development services company based in Dearborn, Michigan. It generates revenue by providing specialized engineering services to automotive manufacturers and suppliers, focusing on software and systems testing for vehicle development programs."
   },
-  "synthesized_evidence_sha": "c5016794566de175",
+  "synthesized_evidence_sha": "3c5f2e7e29ffd8cf",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "1db9db9c4d"
+    "f4c211d2c0"
    ],
-   "value": "Monitored sources indicate technical roles including Software Engineer positions for new grads; broader engineering and testing projects are likely."
+   "value": "Automotive embedded software development, HIL/SIL testing, vehicle network protocols (CAN, LIN, Ethernet), test automation, and validation of ECUs and vehicle systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1785201409,
   "web_search_url": "https://duckduckgo.com/?q=Kett+Engineering+Corporation+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a candidate prioritizing a top-tier AI/data science role with elite prestige, fast-paced innovation, and strict work-life balance, you should evaluate if this company's actual technical stack and culture align with these goals. Given the lack of detailed public data, you will need to confirm if the day-to-day work offers the high-level AI/DS learning acceleration and sane hours you require."
+   "confidence": "medium",
+   "source_ids": [
+    "f4c211d2c0"
+   ],
+   "value": "Offers a direct entry point into automotive software engineering at the heart of the U.S. auto industry (Dearborn). The role provides hands-on experience with vehicle-level systems and testing infrastructure — valuable for candidates wanting real-world embedded/auto experience without the bureaucracy of massive OEMs. However, the $20/hr entry rate (~$41.6k/yr) is well below top-tier AI/data science compensation, and the work is traditional automotive testing rather than cutting-edge AI/ML resear"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Unknown; requires direct confirmation during interviews to see if it meets sane hours and anti-burnout expectations."
+   "value": "Estimated: 3.5/5 — engineering services firms in auto often have predictable hours outside launch windows; onsite requirement suggests limited flexibility."
   }
  },
  "keurig dr pepper inc": {
@@ -288367,43 +288365,103 @@
  },
  "mufg": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0c636a5f57"
+   ],
+   "value": "Tier A (Elite Global Institution): A global systemically important bank (G-SIB) providing high-grade brand signaling. Prestige is derived from the parent company's scale and legacy, though innovation speed is typical of the regulated banking sector."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0c636a5f57",
+    "ce7a54bae9"
+   ],
+   "value": "Generates revenue primarily through net interest income (lending and deposit-taking), fees and commissions (investment banking, brokerage, asset management), and trading activities."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "7303951f6a"
+   ],
+   "value": "Professional, hierarchical, and collaborative with a serious focus on risk management and client service; often seen as a \"safe\" environment free of the hustling chaos of startup cultures."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c636a5f57"
+   ],
+   "value": "Individuals, small and medium-sized enterprises, large corporations, financial institutions, and governments globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Total first-year compensation package for a Software Engineer or Data Scientist in a major U.S. hub is $110,000-$135,000 USD (base + performance bonus). Back-breaking differentials are not liquid for this bank; bonus is typically formulaic."
   },
   "evidence_sha": "40655728e02fb8ee",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785455783,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785455620,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0c636a5f57",
+    "ce7a54bae9"
+   ],
+   "value": "Financial Services (Banking & Asset Management)"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1785455783,
   "last_evidence_at": 1785455443,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7303951f6a",
+    "ce7a54bae9"
+   ],
+   "value": "Global headquarters in Tokyo. Key Americas tech hubs include New York, Jersey City, and Tempe, AZ."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7303951f6a",
+    "ce7a54bae9"
+   ],
+   "value": "To be the world's most trusted financial group, working with people and organizations to meet their needs, and contributing to a sustainable society."
+  },
   "name": "MUFG",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ce7a54bae9"
+   ],
+   "value": "Estimated: Moderate and structured pace typical of a large, risk-averse financial institution with mature process frameworks; not extremely fast or agile."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ce7a54bae9"
+   ],
+   "value": "Commercial and retail banking, corporate and investment banking, wealth management, treasury services, capital markets, and asset management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18-23 days of combined vacation/sick time for new U.S. hires, plus standard federal holidays."
   },
-  "retry_after": 1785455740,
+  "refresh_after": 1790639783,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -288413,7 +288471,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Core holidays (e.g., Christmas Day, New Year's Day) observed; no explicit firm-wide seasonal shutdowns comparable to tech firms, though year-end leave is culturally supported."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0c636a5f57"
+   ],
+   "value": "Large-cap global enterprise; a mature, publicly traded mega-bank with over 100,000 employees and operations in approximately 50 countries."
   },
   "sources": [
    {
@@ -288457,14 +288522,40 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Typically sponsors H-1B for highly specialized technical roles in the U.S., subject to cap limitations; policy may vary by division and prevailing wage requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0c636a5f57",
+    "ce7a54bae9"
+   ],
+   "value": "MUFG (Mitsubishi UFJ Financial Group) is one of the world's largest financial institutions, headquartered in Tokyo, offering a comprehensive range of financial services globally through subsidiaries like MUFG Bank and MUFG Americas."
+  },
+  "synthesized_evidence_sha": "40655728e02fb8ee",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce7a54bae9"
+   ],
+   "value": "Encompasses software engineering for banking platforms, AI/ML for risk modeling and fraud detection, data engineering for financial analytics, cloud migration (AWS/Azure), and cybersecurity operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785455443,
   "web_search_url": "https://duckduckgo.com/?q=MUFG+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Very Good. Generally standard working hours with rare weekend work, supported by a corporate accountability to safe hours."
   }
  },
  "multicare health system": {
