@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-31 01:14 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **59 shown / 11129 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-31 04:42 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **59 shown / 11129 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -12,10 +12,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 3d | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
 | 79 ⭐ | 3d | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
 | 77 ⭐ | 7d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
-| 76 ⭐ | 2h | Sparksoft | [Technical Intern](https://job-boards.greenhouse.io/sparksoftcorporation/jobs/5199580007) | Maryland | other | simplify |
-| 76 ⭐ | 2h | LightGuide, Inc. | [Application Engineering Co-op](https://ats.rippling.com/lightguide/jobs/37069bc9-a6ba-4841-97fb-b7d743826af0) | Wixom, MI | other | simplify |
-| 76 ⭐ | 3h | Avery Dennison | [RFID Applications Engineering Co-op](https://jobs.smartrecruiters.com/AveryDennison/744000140739858) | Miamisburg, OH | other | simplify |
-| 76 ⭐ | 23h | Forus | [Engineer Intern](https://jobs.ashbyhq.com/forus/82e10191-232e-4e8d-9c5e-cb82940cdfc7/application?embed=true) | NYC | other | simplify |
+| 76 ⭐ | 6h | Sparksoft | [Technical Intern](https://job-boards.greenhouse.io/sparksoftcorporation/jobs/5199580007) | Maryland | other | simplify |
+| 76 ⭐ | 6h | LightGuide, Inc. | [Application Engineering Co-op](https://ats.rippling.com/lightguide/jobs/37069bc9-a6ba-4841-97fb-b7d743826af0) | Wixom, MI | other | simplify |
+| 76 ⭐ | 6h | Avery Dennison | [RFID Applications Engineering Co-op](https://jobs.smartrecruiters.com/AveryDennison/744000140739858) | Miamisburg, OH | other | simplify |
+| 76 ⭐ | 1d | Forus | [Engineer Intern](https://jobs.ashbyhq.com/forus/82e10191-232e-4e8d-9c5e-cb82940cdfc7/application?embed=true) | NYC | other | simplify |
 | 76 ⭐ | 1d | Amentum | [Digital and Logic Design Engineer Intern](https://pae.wd1.myworkdayjobs.com/en-US/amentum_careers/job/US-AL-Huntsville/Intern---Digital-and-Logic-Design-Engineer-Fall-Intern_R0167259) | Huntsville, AL | other | simplify |
 | 76 ⭐ | 1d | Waystar | [Application Engineer Co-op](https://waystar.wd1.myworkdayjobs.com/Waystar/job/Lehi-UT/Application-Engineer-Co-op_R3312-1) | Lehi, UT | other | simplify |
 | 76 ⭐ | 1d | RapDev | [ServiceNow Engineer Intern](https://jobs.ashbyhq.com/rapdev/b022388e-79d0-43b8-b524-64aaed9ff4dc/application?embed=true) | Boston, MA | other | simplify |
@@ -35,13 +35,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 8d | Spectrum Control | [Engineering Intern](https://spectrumcontrol.wd1.myworkdayjobs.com/spectrumcontrol/job/Fairview-PA/Engineering-Intern_JR101449) | Erie, PA | other | simplify |
 | 64  | 9d | Mosaic | [Operations & Automation Engineering Co-op/Intern](https://mosaic.wd5.myworkdayjobs.com/mosaic/job/US---Bartow-FL/Operations---Automation-Engineering-Co-op-Intern---Spring-2027_64675-1) | Bartow, FL | other | simplify |
 | 64  | 9d | Pennsylvania State University | [Research Engineering Intern](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/Research-Engineering-Interns_REQ_0000080335-1) | State College, PA | other | simplify |
-| 64  | 9d | Exploration Technology Corp. | [Engineer Intern](https://ats.rippling.com/etg/jobs/75ad65e6-f504-4ae2-adf1-587e704b2bcc) | SF | other | simplify |
-| 64  | 9d | Revise Robotics | [Engineer Intern](https://jobs.ashbyhq.com/reviserobotics/7b0426d4-cf8c-4fdf-98a8-5a0360706633/application?embed=true) | NYC | other | simplify |
-| 64  | 9d | Fluency | [Engineer Intern](https://jobs.ashbyhq.com/fluency/2aced4e2-485b-4525-802c-763e62c91e88/application?embed=true) | SF | other | simplify |
-| 64  | 9d | Firetiger | [Product Engineer Intern/Co-op](https://jobs.ashbyhq.com/firetiger/7acf0768-f10d-4650-bcfc-12ed6e5d7cfc/application?embed=true) | SF | other | simplify |
-| 64  | 9d | Roam | [Engineer Intern](https://jobs.ashbyhq.com/tryroam/59b76a77-44e5-424b-a3d5-71edf091869c/application?embed=true) | SF | other | simplify |
-| 64  | 9d | Varick Agents | [Engineer Intern](https://jobs.ashbyhq.com/varick-agents/b2df1c3b-43c7-40d4-8271-150a06f10bf2/application?embed=true) | SF | other | simplify |
-| 64  | 9d | Gritt Robotics Inc | [Robot Learning Engineer Intern](https://jobs.ashbyhq.com/gritt/5c4737ce-f546-453b-b30d-791a121fb9fd/application?embed=true) | San Bruno, CA | other | simplify |
+| 64  | 10d | Exploration Technology Corp. | [Engineer Intern](https://ats.rippling.com/etg/jobs/75ad65e6-f504-4ae2-adf1-587e704b2bcc) | SF | other | simplify |
+| 64  | 10d | Revise Robotics | [Engineer Intern](https://jobs.ashbyhq.com/reviserobotics/7b0426d4-cf8c-4fdf-98a8-5a0360706633/application?embed=true) | NYC | other | simplify |
+| 64  | 10d | Fluency | [Engineer Intern](https://jobs.ashbyhq.com/fluency/2aced4e2-485b-4525-802c-763e62c91e88/application?embed=true) | SF | other | simplify |
+| 64  | 10d | Firetiger | [Product Engineer Intern/Co-op](https://jobs.ashbyhq.com/firetiger/7acf0768-f10d-4650-bcfc-12ed6e5d7cfc/application?embed=true) | SF | other | simplify |
+| 64  | 10d | Roam | [Engineer Intern](https://jobs.ashbyhq.com/tryroam/59b76a77-44e5-424b-a3d5-71edf091869c/application?embed=true) | SF | other | simplify |
+| 64  | 10d | Varick Agents | [Engineer Intern](https://jobs.ashbyhq.com/varick-agents/b2df1c3b-43c7-40d4-8271-150a06f10bf2/application?embed=true) | SF | other | simplify |
+| 64  | 10d | Gritt Robotics Inc | [Robot Learning Engineer Intern](https://jobs.ashbyhq.com/gritt/5c4737ce-f546-453b-b30d-791a121fb9fd/application?embed=true) | San Bruno, CA | other | simplify |
 | 64  | 10d | Odin Dynamics, Inc | [Engineering Intern](https://jobs.ashbyhq.com/odin-dynamics/db6fe6ed-3517-423d-a757-3b6edea4b51d/application?embed=true) | LA | other | simplify |
 | 64  | 10d | Fab2 | [Packaging Engineer Intern](https://jobs.ashbyhq.com/fab2/4497473d-0ce0-4e83-88c3-2afedceac622/application?embed=true) | SF | other | simplify |
 | 64  | 14d | Leidos | [Signal Processing Technical Intern](https://leidos.wd5.myworkdayjobs.com/External/job/San-Diego-CA/Signal-Processing-Technical-Intern_R-00187499) | San Diego, CA | other | simplify |
@@ -61,8 +61,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 26d | Verne Robotics | [Engineering Intern](https://jobs.ashbyhq.com/Verne%20Robotics/bb78cdd4-449b-49f0-bd10-2c62fc85f83b/application) | San Bruno, CA | other | simplify |
 | 64  | 26d | GE Aerospace | [Embedded Systems Engineer Co-op](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Bohemia/Embedded-Systems-Engineer-Co-op--Bohemia--NY----Spring-2027_R5035583-1) | Long Island, New York | other | simplify |
 | 64  | 27d | Arlington County VA | [Utility Engineering Intern](https://fa-exkk-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1624) | Arlington, VA | other | simplify |
-| 64  | 28d | Valeo | [Warranty Engineering Co-op](https://valeo.wd3.myworkdayjobs.com/en-US/valeo_jobs/job/Troy-MI/Warranty-Engineering-Co-Op_REQ2026071365) | Troy, MI | other | simplify |
-| 64  | 28d | Pennsylvania State University | [Research and Development Engineer Intern](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/Research-and-Development-Engineer-Intern_REQ_0000072876-1) | State College, PA | other | simplify |
+| 64  | 29d | Valeo | [Warranty Engineering Co-op](https://valeo.wd3.myworkdayjobs.com/en-US/valeo_jobs/job/Troy-MI/Warranty-Engineering-Co-Op_REQ2026071365) | Troy, MI | other | simplify |
+| 64  | 29d | Pennsylvania State University | [Research and Development Engineer Intern](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/Research-and-Development-Engineer-Intern_REQ_0000072876-1) | State College, PA | other | simplify |
 | 64  | 29d | Eight Sleep | [Prototype & Test Engineer Intern - New Product Development](https://jobs.ashbyhq.com/eightsleep/26d71b34-8a04-45e4-8c39-980688779dc3/application) | SF | other | simplify |
 | 48  | 18d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 
