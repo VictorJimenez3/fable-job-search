@@ -112108,11 +112108,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112124,6 +112126,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785477198,
   "name": "Consumer Direct Care Network",
   "pace_of_work": {
@@ -112136,6 +112139,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785482208,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112199,7 +112203,7 @@
     "url": "https://jobright.ai/jobs/info/6a6c13c057120971bf3aa47e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785477198,
   "web_search_url": "https://duckduckgo.com/?q=Consumer+Direct+Care+Network+company+careers+benefits",
@@ -121452,7 +121456,7 @@
    "value": "Estimated: Traditional enterprise data analytics; typically lacks tier-1 product prestige compared to elite tech companies."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -121475,7 +121479,7 @@
    ],
    "value": "Over 100 million people annually, including retail consumers and health plan members."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -121503,7 +121507,7 @@
    "source_ids": [],
    "value": "Candidates should probe team-specific tech stack velocity and project deployment timelines to verify if the environment allows for accelerated learning without sacrificing personal time."
   },
-  "last_attempt_at": 1785363945,
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785476922,
   "locations": {
    "confidence": "high",
@@ -121541,6 +121545,7 @@
    "value": "Estimated: Standard corporate PTO accrual, approximately 15-25 days post-probation."
   },
   "refresh_after": 1790547945,
+  "retry_after": 1785489768,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -121633,7 +121638,7 @@
    ],
    "value": "Tracks record of offering H1B sponsorships and participates in F-1 Visa, OPT, and CPT programs."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -121868,12 +121873,92 @@
   }
  },
  "cwill": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "acb8b7dbfd26884f",
-  "last_evidence_at": 1785476922,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c0fc9b35260118be",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785482093,
   "name": "CWILL",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "916262a57d",
+    "kind": "company_web",
+    "publisher": "CWILL",
+    "retrieved_at": 1785482093,
+    "title": "CWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f5a90d97ff4a171bd6147b20f4285a5456d20cf59b6abd52379460946b71ffe5JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cuYnVzaW5lc3N3aXJlLmNvbS9uZXdzL2hvbWUvMjAyNjAxMTU5Mzk0NjMvZW4vQ2hhbm5lbHdpbGwtUmVicmFuZHMtYXMtQ1dJTEwtQnVpbGRzLVVuaWZpZWQtQUktRHJpdmVuLUNvbW1lcmNlLVBsYXRmb3Jt&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9a1ed07c8f",
+    "kind": "company_web",
+    "publisher": "CWILL",
+    "retrieved_at": 1785482093,
+    "title": "CWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=693777f4f6969658d4b33484d0fad9527520d180da6d48e07c979d4386b213c4JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cuY3dpbGwuY29tL2Fib3V0LXVzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "822cccf70d",
+    "kind": "company_web",
+    "publisher": "CWILL",
+    "retrieved_at": 1785482093,
+    "title": "CWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b1c1340463fd286f6650eacec7006d2a49968c5b003c2ec3c1680d015457888bJmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cuY3dpbGwuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "CWILL",
+    "retrieved_at": 1785482093,
+    "title": "Discovery source for CWILL",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "0061c075a4c90e87",
     "excerpt": "Jobright.ai R&amp;D Management Trainee - Full-Stack Engineer (Backend） jobs in United States Overview Company Apply on Employer Site APPLY NOW CWILL · 3 hours ago R&amp;D Management Trainee - Full-Stack Engineer (Backend） Illinois State Full-time Onsite New Grad $60K/yr - $80K/yr CWILL is a company that provides a post-purchase and retention suite for Shopify brands. Your Score - Top Applicants Must-Have Skills for This Role JavaScript TypeScript Python Java Go Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L.",
@@ -121893,39 +121978,17 @@
     "retrieved_at": 1785476922,
     "title": "Official job posting — R&D Management Trainee - Full-Stack Engineer (Backend）",
     "url": "https://jobright.ai/jobs/info/6a6c076b57120971bf3aa0d7?utm_campaign=Software%20Engineering&utm_source=1103"
-   },
-   {
-    "content_sha": "511fed332f5a9ae6",
-    "excerpt": "Jobright.ai R&amp;D Management Trainee - Full-Stack Engineer (Backend） jobs in United States Overview Company Apply on Employer Site APPLY NOW CWILL · 3 hours ago R&amp;D Management Trainee - Full-Stack Engineer (Backend） Texas State Full-time Onsite New Grad $60K/yr - $80K/yr CWILL is a company that provides a post-purchase and retention suite for Shopify brands. Your Score - Top Applicants Must-Have Skills for This Role JavaScript TypeScript Python Java Go Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L.",
-    "id": "c2216140e6",
-    "kind": "official_job",
-    "publisher": "CWILL",
-    "retrieved_at": 1785476922,
-    "title": "Official job posting — R&D Management Trainee - Full-Stack Engineer (Backend）",
-    "url": "https://jobright.ai/jobs/info/6a6c078632f9300c3a3e20d9?utm_campaign=Software%20Engineering&utm_source=1103"
-   },
-   {
-    "content_sha": "4c20dd85b9313d19",
-    "excerpt": "Jobright.ai R&amp;D Management Trainee - Full-Stack Engineer (Backend） jobs in United States Overview Company Apply on Employer Site APPLY NOW CWILL · 3 hours ago R&amp;D Management Trainee - Full-Stack Engineer (Backend） New Jersey State Full-time Onsite New Grad $60K/yr - $80K/yr CWILL is a company focused on post-purchase and retention tools for Shopify brands. Your Score - Top Applicants Must-Have Skills for This Role JavaScript TypeScript Python Java Go Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L.",
-    "id": "d77562a25d",
-    "kind": "official_job",
-    "publisher": "CWILL",
-    "retrieved_at": 1785476922,
-    "title": "Official job posting — R&D Management Trainee - Full-Stack Engineer (Backend）",
-    "url": "https://jobright.ai/jobs/info/6a6c07a057120971bf3aa0d8?utm_campaign=Software%20Engineering&utm_source=1103"
-   },
-   {
-    "content_sha": "541c27decfb83bcc",
-    "excerpt": "Jobright.ai R&amp;D Management Trainee - Full-Stack Engineer (Backend） jobs in United States Overview Company Apply on Employer Site APPLY NOW CWILL · 3 hours ago R&amp;D Management Trainee - Full-Stack Engineer (Backend） Cary, NC Full-time Onsite New Grad $60K/yr - $80K/yr CWILL is a post-purchase and retention suite built for Shopify brands, seeking new engineering talent for their R&D Management Trainee program. R&amp;D Management Trainee - Full-Stack Engineer (Backend） @ CWILL",
-    "id": "a80676ff39",
-    "kind": "official_job",
-    "publisher": "CWILL",
-    "retrieved_at": 1785476922,
-    "title": "Official job posting — R&D Management Trainee - Full-Stack Engineer (Backend）",
-    "url": "https://jobright.ai/jobs/info/6a6c085bacb0a61f9dbc3f95?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785482093,
+  "web_search_url": "https://duckduckgo.com/?q=CWILL+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "cyber risk analysis group": {
   "ai_ds_prestige_tier": {
@@ -142778,11 +142841,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142794,6 +142859,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785477198,
   "name": "Eaton",
   "pace_of_work": {
@@ -142806,6 +142872,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785482208,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142879,7 +142946,7 @@
     "url": "https://jobright.ai/jobs/info/6a6c10bd57120971bf3aa3a8?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785477198,
   "web_search_url": "https://duckduckgo.com/?q=Eaton+company+careers+benefits",
@@ -238786,11 +238853,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238802,6 +238871,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785477199,
   "name": "Kearney & Company",
   "pace_of_work": {
@@ -238814,6 +238884,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785482208,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238877,7 +238948,7 @@
     "url": "https://jobright.ai/jobs/info/6a6bf8a3ca1f9338465fd54e?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785477199,
   "web_search_url": "https://duckduckgo.com/?q=Kearney+%26+Company+company+careers+benefits",
@@ -280773,7 +280844,7 @@
    "value": "Estimated: Low - no evidence of AI/data science research or elite technical reputation"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -280797,7 +280868,7 @@
    ],
    "value": "Military spouses seeking employment and employers looking to hire them; specific customer segments not detailed in sources."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -280824,7 +280895,7 @@
    "source_ids": [],
    "value": "If interviewing, focus on mission alignment with military spouse support, full-stack web development skills, and understanding of two-sided marketplace dynamics. Not relevant for cutting-edge AI/DS roles."
   },
-  "last_attempt_at": 1784864030,
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785477199,
   "locations": {
    "confidence": "estimated",
@@ -280861,6 +280932,7 @@
    "source_ids": [],
    "value": "Estimated: 15-20 days typical for US small orgs; no specific policy found"
   },
+  "retry_after": 1785482328,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -280934,7 +281006,7 @@
    "source_ids": [],
    "value": "Estimated: Unlikely to sponsor visas given niche domestic focus; no sponsorship policy found in sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -303839,7 +303911,7 @@
    "value": "Not applicable - The focus is on enterprise IT administration and software development, not top-tier AI or data science."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -303891,7 +303963,7 @@
    ],
    "value": "Be prepared to discuss standard enterprise software and database management rather than cutting-edge AI or high-growth startup culture. Highlight your interest in strictly maintained 40-hour workweeks and sane hours, and ask directly about the reality of bureaucratic pace versus any modern Azure cloud initiatives."
   },
-  "last_attempt_at": 1785461129,
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785449256,
   "locations": {
    "confidence": "high",
@@ -303933,7 +304005,7 @@
    "value": "Estimated: 20-24 days of vacation plus state holidays, typical for a North Carolina state government role."
   },
   "refresh_after": 1790567476,
-  "retry_after": 1785476489,
+  "retry_after": 1785503688,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -310971,12 +311043,92 @@
   }
  },
  "odyssey space research llc": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "2ac0047571f7f184",
-  "last_evidence_at": 1785476922,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "2f3d517ef2e6acec",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785482092,
   "name": "Odyssey Space Research, LLC",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a9bfaa7274",
+    "kind": "company_web",
+    "publisher": "Odyssey Space Research, LLC",
+    "retrieved_at": 1785482092,
+    "title": "Odyssey Space Research, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=74ab2c650cecb4e882f1761ef1e356c0095410e0deb6891973a6d6d82243dc58JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cub2R5c3NleW1vdmllLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "29f91d7625",
+    "kind": "company_web",
+    "publisher": "Odyssey Space Research, LLC",
+    "retrieved_at": 1785482092,
+    "title": "Odyssey Space Research, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=10e3aba9d894083ad661b6a947d02115452cf64dd0ee50909a3ea617dd9d0877JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly9zdXBwb3J0LndpdGhvZHlzc2V5LmNvbS9oYy9lbi11cy9jYXRlZ29yaWVzLzQ0MDI3NzUxMDA0Njk5LVRleGFzLUVkdWNhdGlvbi1GcmVlZG9tLUFjY291bnRzLVByb2dyYW0&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ef68344796",
+    "kind": "company_web",
+    "publisher": "Odyssey Space Research, LLC",
+    "retrieved_at": 1785482092,
+    "title": "Odyssey Space Research, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=506cf4942bafd76e2515c8cbe624936af5033f635fddc2810d1f5240c93f0106JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9PZHlzc2V5&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Odyssey Space Research, LLC",
+    "retrieved_at": 1785482092,
+    "title": "Discovery source for Odyssey Space Research, LLC",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "3a945959169b845f",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role C/C++ Linux development environments Docker Jenkins Git Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach T Trevor S. Citizen Only Hiring Manager Wade Johnson Responsibilities Support the software development on the Lunar Terrain Vehicle (LTV) Provide key support in the development, training, and operation of the LTVS system Qualification C/C++ Linux development environments Docker Jenkins Git Gitlab Required U.S. LTV Flight and Ground Software Engineer @ Odyssey Space Research, LLC",
@@ -310988,7 +311140,15 @@
     "url": "https://jobright.ai/jobs/info/6a6bf84632f9300c3a3e1bc3?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785482092,
+  "web_search_url": "https://duckduckgo.com/?q=Odyssey+Space+Research%2C+LLC+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "office depot": {
   "ai_ds_prestige_tier": {
@@ -428888,7 +429048,7 @@
    "value": "Estimated: Tier 3 (Niche Tech). While not an elite AI or data science giant, a foundational data hire at a fast-paced nuclear energy startup offers a unique, mission-driven technical prestigue."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -428940,7 +429100,7 @@
    ],
    "value": "Probe whether the 'execute with urgency' mantra leads to burnout or if there are sane hours and structural guardrails. Ask about the specific pace of technical learning and career acceleration to see if it meets your elite growth criteria without sacrificing personal time."
   },
-  "last_attempt_at": 1785473479,
+  "last_attempt_at": 1785482088,
   "last_evidence_at": 1785463778,
   "locations": {
    "confidence": "low",
@@ -428980,7 +429140,7 @@
    "value": "Estimated: 15-20 days of standard PTO typical for a scaling startup, though exact policy is not public."
   },
   "refresh_after": 1790449515,
-  "retry_after": 1785473959,
+  "retry_after": 1785483048,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -440811,12 +440971,92 @@
   }
  },
  "trustwill": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "5f7e96b6c41404c1",
-  "last_evidence_at": 1785476922,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "a2ce91727dd33ee0",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1785482093,
   "name": "TrustWILL",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "16e6ffad08",
+    "kind": "company_web",
+    "publisher": "TrustWILL",
+    "retrieved_at": 1785482093,
+    "title": "TrustWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e71f77e7b519c1d2a56a4e81c4c253418554c9d60e6a0c1482564c4feff5c2b1JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vYW5hbHl0aWNzL2Fuc3dlci82MzY3MzQyP2hsPWVu&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f047d7cad6",
+    "kind": "company_web",
+    "publisher": "TrustWILL",
+    "retrieved_at": 1785482093,
+    "title": "TrustWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b6a4e6e7c0bbdeb7edf1348807e78795ffb206d8b4d11d83c5722bfdb0169b5dJmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vY2hhdHN1cHBvcnQvP2hsPWVu&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "903277fd46",
+    "kind": "company_web",
+    "publisher": "TrustWILL",
+    "retrieved_at": 1785482093,
+    "title": "TrustWILL public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=743c8b962b9f87a5b1adcb81ab456e6a8fd98327acfcb7952130803e3ca7bf17JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "TrustWILL",
+    "retrieved_at": 1785482093,
+    "title": "Discovery source for TrustWILL",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "d622e17a2f23a464",
     "excerpt": "Jobright.ai R&amp;D Management Trainee - Full-Stack Engineer (Backend） jobs in United States Overview Company Apply on Employer Site APPLY NOW TrustWILL · 3 hours ago R&amp;D Management Trainee - Full-Stack Engineer (Backend） United States Full-time Remote New Grad $60K/yr - $80K/yr TrustWILL is a company focused on providing post-purchase retention solutions for Shopify brands. Your Score - Top Applicants Must-Have Skills for This Role JavaScript TypeScript Python Java Go Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L.",
@@ -440828,7 +441068,15 @@
     "url": "https://jobright.ai/jobs/info/6a6c0997c00ae03109f8729c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785482093,
+  "web_search_url": "https://duckduckgo.com/?q=TrustWILL+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "truveta": {
   "ai_ds_prestige_tier": {
@@ -441630,12 +441878,96 @@
   }
  },
  "ttx company": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "5749ed824fc3e90f",
-  "last_evidence_at": 1785476922,
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "b40186173fcc7f32",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1785482088,
+  "last_evidence_at": 1785482092,
   "name": "TTX Company",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1785482208,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "26e454d47e",
+    "kind": "company_web",
+    "publisher": "TTX Company",
+    "retrieved_at": 1785482092,
+    "title": "TTX Company public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=dbdd6cea7ec66dcb96d1ea250345bb07e5a36fe7e72834bf3cade7a6451a4ae2JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cudHR4LWluYy5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bc78656657",
+    "kind": "company_web",
+    "publisher": "TTX Company",
+    "retrieved_at": 1785482092,
+    "title": "TTX Company public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=381c2d3d5a47482efd55356c75c2551172fbfe366dffcdc84d6c96d15c26c005JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cudHR4LmNvbS9jYXJlZXJzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9c10c78135",
+    "kind": "company_web",
+    "publisher": "TTX Company",
+    "retrieved_at": 1785482092,
+    "title": "TTX Company public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2bc9f7dc7ba4a3e2becbeb5dacde84d99a0ab3642dfc80b86c8c344a2312ff37JmltdHM9MTc4NTQ1NjAwMA&ptn=3&ver=2&hsh=4&fclid=1cf55c2c-1b56-6aeb-0d3e-4b8b1afd6b4d&u=a1aHR0cHM6Ly93d3cudHR4LmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "TTX Company",
+    "retrieved_at": 1785482092,
+    "title": "Discovery source for TTX Company",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "2d77844efbfee5f2",
     "excerpt": "Jobright.ai Associate Data Scientist I jobs in United States Overview Company Apply on Employer Site APPLY NOW TTX Company · 1 day ago Associate Data Scientist I Charlotte, NC Full-time Onsite Entry Level $77K/yr - $100K/yr 0+ years exp TTX Company is a leading provider of railcars and related freight car management services to the North American rail industry. Founded in 1955 Chicago, Illinois, USA 1001-5000 employees http://www.ttx.com H1B Sponsorship TTX Company has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role.",
@@ -441647,7 +441979,15 @@
     "url": "https://jobright.ai/jobs/info/6a6bf83cca1f9338465fd3f5?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1785482092,
+  "web_search_url": "https://duckduckgo.com/?q=TTX+Company+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "tuesday health": {
   "ai_ds_prestige_tier": {
