@@ -181730,118 +181730,145 @@
  "general dynamics information technology": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 — respected for applied AI/ML at scale in classified environments, but not a primary research lab; prestige comes from mission impact and clearance access rather than academic publishing."
+   "source_ids": [
+    "8ec056d1cb",
+    "5080092bfd",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate Tier. Deeply mission-oriented and impactful within the defense sector, but generally lacks the elite commercial tech prestige of FAANG or top-tier AI research labs."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "8ec056d1cb",
+    "5080092bfd",
     "327d69f3a1"
    ],
-   "value": "Government contracting model: wins prime contracts and subcontracts through competitive bidding (IDIQ, GWAC, GSA schedules), then staffs projects with cleared personnel; revenue is almost entirely fee-for-service and cost-reimbursable task orders from federal clients."
+   "value": "A business-to-government (B2G) contract model where GDIT bids on and sustains large, multi-year federal contracts. It supports central agency operations and specific military installations through deployed technical personnel."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-first, process-oriented, hierarchical; strong emphasis on security clearance compliance, teaming with government counterparts, and long-term program loyalty; less \"move fast\" culture, more \"deliver reliably\" culture."
+   "source_ids": [
+    "8ec056d1cb",
+    "5080092bfd",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Traditional, mission-driven, and structured. It leans heavily on dependable government execution and seeks technically capable individuals with a flag-draped mission focus rather than an agile hacker mindset."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "8ec056d1cb",
+    "5080092bfd",
     "327d69f3a1"
    ],
-   "value": "U.S. federal government agencies — Department of Defense, intelligence community, Department of Homeland Security, Health and Human Services, Veterans Affairs, and other civilian agencies."
+   "value": "Government agencies, particularly within the U.S. Department of Defense, military branches (such as the Air Force at Hurlburt Field), and civilian federal sectors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $85,000-$110,000 base + modest sign-on bonus + relocation; total comp ~$95k-$125k; varies by clearance level, location, and contract funding."
+   "source_ids": [
+    "5080092bfd",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary for a new-grad Data Scientist I in a defense contracting context."
   },
   "evidence_sha": "5f6f3c1a3803fedf",
-  "generated_at": 1784688568,
+  "generated_at": 1785495582,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "8ec056d1cb",
-    "327d69f3a1"
+    "327d69f3a1",
+    "d851af9d98"
    ],
-   "value": "Federal IT services / Government contracting / Defense technology"
+   "value": "Information Technology, Defense Contracting, and Business Process Services."
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "5080092bfd",
+    "8ec056d1cb",
     "dbc3b9e88f"
    ],
-   "value": "Expect behavioral questions tied to federal mission values, technical screens on Python/SQL/cloud fundamentals, and scenario-based discussions about handling classified data, compliance constraints, and cross-team coordination; prepare to explain how you balance innovation with strict security and regulatory requirements."
+   "value": "Prepare to demonstrate your technical aptitude for cutting-edge AI applications alongside your passion for the company's mission. Be sure to ask about flex work policies and team-specific cultures to find a group that matches your expectation for fast-paced learning and strictly enforced work-life balance."
   },
-  "last_attempt_at": 1785493728,
+  "last_attempt_at": 1785495582,
   "last_evidence_at": 1785476922,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "8ec056d1cb",
+    "5080092bfd",
     "327d69f3a1"
    ],
-   "value": "Headquartered in Falls Church, VA; major hubs in Washington DC metro, San Antonio, TX, Huntsville, AL, and 100+ offices near military bases and federal campuses nationwide; remote/hybrid options vary by contract and clearance level."
+   "value": "Headquartered with major operations in the U.S., including specific deployment hubs and military bases such as Hurlburt Field, Florida."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "8ec056d1cb",
+    "5080092bfd",
     "327d69f3a1"
    ],
-   "value": "Deliver trusted, innovative technology solutions that advance the missions of U.S. government customers and protect national security."
+   "value": "To deliver high-end IT and defense solutions that enable federal and military customers to execute their critical missions securely and efficiently."
   },
   "name": "General Dynamics Information Technology",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate to variable — driven by contract delivery cycles, compliance gates, and government fiscal calendars; slower than consumer tech but with intense sprint periods around major milestones."
+   "source_ids": [
+    "8ec056d1cb",
+    "5080092bfd",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate to slow. Governed by rigid federal contract structures and bureaucratic processes, the culture typically prioritizes methodical, reliable delivery over fast-paced, unrestrained technological innovation."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "8ec056d1cb",
-    "327d69f3a1"
+    "5080092bfd",
+    "8ec056d1cb"
    ],
-   "value": "IT modernization, cybersecurity, cloud computing, data analytics, AI/ML solutions, enterprise IT services, digital consulting, and mission support services for federal agencies."
+   "value": "GDIT's offerings include cloud computing, cybersecurity, enterprise IT, artificial intelligence, and mission-critical systems support. They also apply data science in specialized areas such as human performance and defense analytics."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 10 federal holidays + sick leave; accrual increases with tenure; unused PTO may carry over up to contract-specific caps."
+   "confidence": "high",
+   "source_ids": [
+    "5080092bfd"
+   ],
+   "value": "Estimated: 15 days of paid leave (vacation/personal/sick) and 10 paid holidays per year."
   },
-  "refresh_after": 1789872568,
-  "retry_after": 1785494208,
+  "refresh_after": 1790679582,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5080092bfd",
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts observe federal holiday weekends or program-specific stand-downs, but not a universal policy."
+   "source_ids": [
+    "5080092bfd"
+   ],
+   "value": "Estimated: Guaranteed shutdowns are uncommon; the company leans on flex schedules and standard PTO policies (vacation, sick, personal, holidays, and paid parental leave) for redundancy rather than mandatory corporate-wide pauses."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
     "8ec056d1cb",
-    "327d69f3a1"
+    "327d69f3a1",
+    "dbc3b9e88f"
    ],
-   "value": "Large, mature subsidiary (~30,000 employees) of General Dynamics (Fortune 100); operates as an established federal integrator with multi-year contract backlog."
+   "value": "A large, established subsidiary of a massive public defense and aerospace conglomerate. It operates at enterprise scale with tens of thousands of employees globally."
   },
   "sources": [
    {
@@ -181897,42 +181924,49 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sponsors H-1B and green cards for select roles, but most positions require active U.S. security clearance (Secret/TS/SCI), which generally limits eligibility to U.S. citizens."
+   "source_ids": [
+    "5080092bfd",
+    "8ec056d1cb"
+   ],
+   "value": "Not explicitly mentioned, but federal defense roles typically require U.S. citizenship and the ability to obtain security clearances, often limiting international visa sponsorship."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
     "8ec056d1cb",
     "327d69f3a1",
-    "d851af9d98"
+    "dbc3b9e88f"
    ],
-   "value": "General Dynamics Information Technology (GDIT) is a subsidiary of General Dynamics that provides IT services, consulting, and mission-critical solutions to U.S. federal government agencies, including defense, intelligence, and civilian departments. It generates revenue primarily through long-term government contracts and task orders for technology modernization, cybersecurity, cloud migration, and data analytics."
+   "value": "General Dynamics Information Technology (GDIT) is a subsidiary of General Dynamics that provides IT, systems engineering, professional services, and advanced technology solutions to government agencies. The company makes money by securing and executing large-scale federal contracts."
   },
-  "synthesized_evidence_sha": "34da002e7326a03f",
+  "synthesized_evidence_sha": "5f6f3c1a3803fedf",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8ec056d1cb",
-    "327d69f3a1"
+    "5080092bfd",
+    "8ec056d1cb"
    ],
-   "value": "Cloud migration (AWS GovCloud, Azure Government), DevSecOps, zero-trust cybersecurity, data engineering, AI/ML model deployment, software factories, agile development, and legacy system modernization for classified and unclassified environments."
+   "value": "Technical roles at GDIT often focus on applied data science, artificial intelligence, cloud infrastructure, and cybersecurity, tailored specifically for government and defense use cases."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673980,
   "web_search_url": "https://duckduckgo.com/?q=General+Dynamics+Information+Technology+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "5080092bfd",
+    "8ec056d1cb",
     "dbc3b9e88f"
    ],
-   "value": "GDIT offers new-grad AI/data science roles on high-impact national security missions with top-tier clearance sponsorship and competitive pay, but the federal contracting model brings structured processes, compliance overhead, and project-based pacing that can feel bureaucratic compared to commercial tech; work-life balance varies by contract, with some programs enforcing strict 40-hour weeks and others demanding surge effort around delivery milestones."
+   "value": "As an AI or Data Scientist at GDIT, your technical learning will accelerate through high-impact, mission-driven defense projects. However, unlike high-burnout tech firms, the company prioritizes a strong work-life balance with flex work schedules and predictable time off, making it an excellent environment to grow your career quickly without sacrificing personal time or encountering toxic bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 — many contracts enforce 40-hour weeks and comp time, but surge deployments and clearance onboarding can create temporary crunches; guaranteed shutdowns are not standard policy."
+   "source_ids": [
+    "5080092bfd"
+   ],
+   "value": "Estimated: High. The organization explicitly emphasizes work-life balance by offering flex work weeks where possible alongside various paid leave plans, pointing to sane hours and lower burnout risk."
   }
  },
  "general dynamics mission systems": {
