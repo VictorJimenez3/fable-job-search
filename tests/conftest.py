@@ -15,3 +15,5 @@ def _no_culture_bleed(monkeypatch):
     their own cache explicitly."""
     from radar import score
     monkeypatch.setattr(score, "_CULTURE_CACHE", {})
+    monkeypatch.setattr(score, "_COMPANY_RESEARCH_CACHE", {})
+    monkeypatch.setattr(score, "_CULTURE_MATCH_CACHE", {})

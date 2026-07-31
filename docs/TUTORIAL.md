@@ -55,6 +55,47 @@ uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
 It shares this repository's Notion integration, so tracked ChemE roles enter
 the same Applications database instead of creating a second Notion system.
 
+## Private Resume Studio
+
+Victor's CV workflow runs locally because `CV/` is personal and gitignored.
+From the repository on the Mac, start:
+
+```bash
+.venv/bin/python scripts/resume_studio.py
+```
+
+Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
+
+- **Use my existing bullets** — selects target-relevant source IDs from the
+  master CV and example résumés and copies their text without rewriting.
+- **Reviewable enhancements** — permits source-anchored bullet improvements,
+  then runs the same fixed review rubric.
+
+Both modes render through the exact `CV/resume.tex` structure. Models cannot
+write the document, alter its margins/typography/spacing, enlarge text, or pass
+a visibly underfilled page. Their existing local subscription sessions are
+used; the radar does not receive or store their credentials. The report
+includes the fixed score, target-specific omissions, and known Codex token
+usage.
+
+Drafts, prompts, source context, PDFs, and review reports live only under
+`CV/.resume_studio/`. Review the generated PDF and report before using any
+application material. The system preserves the master CV as the evidence bank
+and never auto-submits a resume.
+
+Use the sort menu to switch among Radar score, newest posting, and private
+Resume Match. The title-only match is deliberately labeled low-confidence;
+after selecting a role, **Analyze full posting match** fetches the job page and
+recomputes the fixed rubric when readable. The result shows capability
+coverage, gaps, evidence confidence, and private source-backed score.
+
+The generator does not assume a fixed number of experiences or projects. It
+creates a strongest-first candidate portfolio and repeatedly compiles it into
+the unchanged template. A result passes layout only when it is one page, uses
+the available line width, and adding one normal bullet forces overflow. Resume
+Craft measures the argument and writing; factuality, eligibility, and layout
+remain separate gates that cannot be averaged away.
+
 ## The places you look
 
 | Where | What you see | When to look |
@@ -110,7 +151,7 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   leadership programs are a dedicated exception. Eligible roles then use an
   auditable point rubric prioritizing AI/ML and data science above SWE/systems;
   every score has printed reasons. This runs in the cloud with zero API keys.
-- **Your MacBook is the bulk AI worker.** A background job (launchd, every 2 hours
+- **Your MacBook is the bulk AI worker for radar enrichment.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:
   - a one-line *angle* per alert ("emphasize your clinical-data project"),
@@ -121,8 +162,9 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   Model memory is released after each run (`keep_alive: 0` + `ollama stop`).
 - **Observable and bounded:** the AI tab shows task/model successes, errors,
   reported tokens, and the run cap. Prompts/keys are never stored.
-- **Shelved:** Gmail confirmation detection (auto-flip to Applied) — needs an
-  email App Password secret; see README §Setup.
+- **Parked for future multi-user support:** Gmail confirmation detection
+  (auto-flip to Applied). Victor's current owner workflow does not need the
+  email App Password secret.
 
 ## Running things manually
 

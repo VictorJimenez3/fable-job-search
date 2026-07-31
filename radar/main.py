@@ -360,6 +360,7 @@ def enrich() -> int:
     # re-score recent jobs with the enriched culture data
     import radar.score as score_mod
     score_mod._CULTURE_CACHE = None  # force reload
+    score_mod._COMPANY_RESEARCH_CACHE = None
     fb = state.feedback()
     rescored = 0
     for rec in jobs_state.values():
@@ -372,6 +373,10 @@ def enrich() -> int:
                 sector=rec.get("sector", ""))
         old = rec.get("score", 0)
         score(j, fb, now)
+        rec["score_raw"] = j.score_raw
+        rec["score_calibrated"] = j.score_calibrated
+        rec["score_dimensions"] = j.score_dimensions
+        rec["score_version"] = RULES_VERSION
         if j.score != old:
             rec["score"] = j.score
             rec["score_reasons"] = j.score_reasons
@@ -568,6 +573,8 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
 
     culture.write_outputs()
     score_mod._CULTURE_CACHE = None
+    score_mod._CULTURE_MATCH_CACHE = {}
+    score_mod._COMPANY_RESEARCH_CACHE = None
     changed = 0
     alerts = 0
     for rec in jobs_state.values():
@@ -580,6 +587,9 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
         score(job, fb, now)
         job.score_reasons += gate_reasons
         rec["score"] = job.score
+        rec["score_raw"] = job.score_raw
+        rec["score_calibrated"] = job.score_calibrated
+        rec["score_dimensions"] = job.score_dimensions
         rec["score_reasons"] = job.score_reasons
         rec["alert_ok"] = bool(keep and alert_eligible)
         rec["explicit_new_grad"] = explicit_new_grad(job.title) or source_new_grad(job)

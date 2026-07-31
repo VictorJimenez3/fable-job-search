@@ -61,7 +61,8 @@ def test_only_curated_culture_feeds_ranking(monkeypatch):
              url="u", source="simplify", locations=["Remote"])
     score(j1, fb)
     score(j2, fb)
-    assert j1.score == j2.score + 6
+    assert j1.score_raw == j2.score_raw + 6
+    assert j1.score > j2.score
     assert any("culture fit" in r for r in j1.score_reasons)
 
     # Model-memory estimates remain visible but cannot silently move ranking.

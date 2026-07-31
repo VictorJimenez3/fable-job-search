@@ -132,6 +132,65 @@ deterministic-auditable by logging the similarity as a reason line. Needs
 the scraped posting text (now shipping) + `CV/` content (Mac-only,
 DECISIONS #29). Park until the scrape pass has filled a few weeks of text.
 
+## Radar score calibration v8 — ✅ SHIPPED 2026-07-31 (DECISIONS #70-71)
+
+The current additive score clamps at 100, so meaningfully different excellent
+roles collapse into the same ceiling. NVIDIA should remain capable of earning
+100 because it is a genuine goal company, but company identity alone should
+not make every NVIDIA posting identical: strong roles should occupy the 90s
+and reach 100 when the posting's actual work, level, compensation, and wording
+justify it.
+
+Victor's constraint is deliberately broader than a prestige exception:
+
+> "a lot of companies like nvidia get 100s. and i love that, that should happen
+> nvidia is a goal. however, I think that there should be in the 90s range and
+> can get to 100 depending on the role wording"
+
+> "if its 120 in one area and shitty in another, that 120 should
+> overcompsitate a bit"
+
+The scorer now uses an **uncapped internal utility** plus a calibrated
+0–100 display score. A genuine superpower—for example extraordinary role fit,
+pay, company momentum, technical learning, or mission—may compensate for a
+weaker dimension. Do not implement that as a Netflix/NVIDIA/health-company
+special case or as enough small bonuses to guarantee a favorite outcome.
+Hard eligibility and field-fit gates remain non-compensable.
+
+Shipped behavior:
+
+- Replace the hard ceiling as the aggregation mechanism. Preserve per-dimension
+  raw utility, then map the total to a meaningful 0–100 range without percentile
+  quotas or forced winners.
+- Separate company quality into evidence-backed dimensions such as technical
+  intensity, scale/trajectory ("motion"), compensation, learning opportunity,
+  prestige/selectivity, and mission. Missing evidence stays neutral and dated
+  dossier evidence must remain inspectable.
+- Apply diminishing returns within one ordinary dimension so a small employer
+  does not become elite merely because it is health-related. Allow truly
+  exceptional evidence in one dimension to exceed its normal band and partly
+  offset weaknesses elsewhere.
+- Make posting-specific evidence matter enough that roles at the same company
+  spread across the 90s instead of inheriting the same 100. Role family,
+  responsibilities, scope, level, requirements, compensation, and candidate
+  wording alignment should create that separation.
+- Keep the deterministic reason ledger: expose raw dimension values,
+  compensating strengths, weaknesses, calibration version, and final mapping.
+  AI/company research may supply cited evidence but cannot be required or set
+  the final score directly.
+- Calibrate against a checked-in golden fixture set spanning goal-company
+  roles, strong non-health roles, high-pay/high-motion outliers, small
+  health-company roles, ordinary eligible roles, and clear mismatches. Inspect
+  score histograms by company, sector, and role family, but do not tune to make
+  a named company win a contrived example.
+
+Acceptance examples are directional, not hard-coded fixtures: an excellent
+NVIDIA role may still be 100; nearby NVIDIA roles should plausibly be 92–99
+based on the posting; a modest health employer should not rank near the top on
+sector alone; and an exceptional non-health role may outrank it through a real
+superpower. This Radar score remains separate from the planned private Resume
+Match and post-generation Resume Craft scores.
+
 ## Ranking v2/v3 + platform research tabs — ✅ SHIPPED 2026-07-18 (DECISIONS #31-33, #36)
 
 Field fit and seniority now outrank the Shams rule (off-field/mid-level
@@ -146,16 +205,29 @@ Rules v3 makes role eligibility title-led and narrows the data-science analyst
 match; unrelated titles mentioned above no longer ride company/JD AI prose
 into alerts.
 
-## CV auto-tailoring — ⏸️ ON HOLD (Victor's call, 2026-07-16; direction unchanged)
+## CV auto-tailoring — ✅ OWNER-FIRST V1 SHIPPED 2026-07-31 (DECISIONS #67-69, #72)
 
-`CV/` now exists locally (gitignored — DECISIONS #29: personal documents
-never enter this public repo). Victor will flesh out `cv_full.tex` as the
-superset of everything he's done; then, per target role, the Mac companion
-picks the strongest bullets/experiences for that posting and emits a
-one-page `resume.tex` draft into a local review folder. Human stays the
-author (DECISIONS §6): drafts are reviewed, never auto-submitted. Because
-the CV is local-only, this feature runs exclusively on the Mac companion —
-never in Actions.
+`CV/` remains local-only (DECISIONS #29). The first implementation is the
+owner-only local Resume Studio in `scripts/resume_studio.py`. Source-only mode
+selects existing evidence IDs; enhancement mode permits reviewable bullet edits
+anchored to those IDs. Both render through the exact `CV/resume.tex` format
+with company-first headings, immutable typography/margins/spacing, and a hard
+page-density test (DECISIONS #69). Victor's installed first-party Codex and
+Claude Code clients perform planning and fixed adversarial review. Human stays
+the author (DECISIONS §6): drafts are reviewed, never auto-submitted. Reports
+expose known Codex token usage and do not imply an exact total when a provider
+omits usage metadata.
+
+The owner workflow now includes the private structured evidence graph, bounded
+GitHub/Devpost corroboration, Resume Match scoring and Best/Newest/Resume Match
+sorting, full-posting re-analysis, dynamic compile-measured page packing, and
+source-addressed custom bullets. Horizontal line geometry and the one-more-
+bullet overflow test are hard layout gates. Resume Craft is a fixed weighted
+rubric; factuality, eligibility, and layout are separate non-negotiable gates.
+
+Next slices are bullet-level locks/history and interactive revision threads.
+Multi-user provider/CV storage remains later; no email/account integration is
+part of the owner-first system.
 
 ## Pipeline intelligence
 - **Response-rate analytics** — per-sector/per-source conversion rates in the

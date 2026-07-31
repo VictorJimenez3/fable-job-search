@@ -2,8 +2,8 @@ import time
 
 from radar.models import Job
 from radar import main
-from radar.score import (RULES_VERSION, early_career_possible, gates, regate, score,
-                         update_feedback_from_applied)
+from radar.score import (RULES_VERSION, calibrate_score, early_career_possible,
+                         gates, regate, score, update_feedback_from_applied)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -267,6 +267,59 @@ def test_score_prefers_healthtech_ai_over_generic_swe():
 
     assert ai_health.score > generic.score + 15
     assert any("healthtech" in r for r in ai_health.score_reasons)
+
+
+def test_v8_calibration_is_monotonic_and_reserves_top_end():
+    raw_values = [0, 35, 55, 70, 85, 100, 115, 125, 150]
+    scores = [calibrate_score(value) for value in raw_values]
+    assert scores == sorted(scores)
+    assert calibrate_score(55) == 66
+    assert calibrate_score(100) == 94
+    assert calibrate_score(125) == 100
+
+
+def test_v8_role_wording_separates_same_goal_company(monkeypatch):
+    from radar import score as score_module
+    monkeypatch.setattr(score_module, "_COMPANY_RESEARCH_CACHE", {
+        "nvidia": {
+            "ai_ds_prestige_tier": {"confidence": "high", "source_ids": ["a"], "value": "Top-tier Tier 1 industry leader"},
+            "pace_of_work": {"confidence": "high", "source_ids": ["b"], "value": "Fast-paced rapid iteration"},
+            "technical_work": {"confidence": "high", "source_ids": ["c"], "value": "AI/ML infrastructure and distributed training"},
+            "size_stage": {"confidence": "high", "source_ids": ["d"], "value": "Global public company"},
+        }
+    })
+    fb = {"company_boosts": {"nvidia": 8}, "token_boosts": {}, "negative_companies": []}
+    frontier = mk("Deep Learning Engineer, New Grad", company="NVIDIA", salary="$210k-$260k")
+    hardware = mk("Digital Logic Tools Engineer, New Grad", company="NVIDIA", salary="$172k")
+    frontier.sector = hardware.sector = "big_tech"
+    score(frontier, fb, NOW)
+    score(hardware, fb, NOW)
+    assert frontier.score == 100
+    assert 90 <= hardware.score < frontier.score
+    assert frontier.score_raw > hardware.score_raw
+    assert frontier.score_dimensions["compensation"] > hardware.score_dimensions["compensation"]
+
+
+def test_v8_superpower_can_beat_sector_without_named_exception():
+    health = mk("Software Engineer, New Grad", company="Small Health Co", sector="healthtech")
+    high_pay = mk("Machine Learning Engineer, New Grad", company="Unlisted Systems", sector="other",
+                  salary="$225,000-$275,000")
+    score(health, FB, NOW)
+    score(high_pay, FB, NOW)
+    assert health.score < 90
+    assert high_pay.score > health.score
+    assert any("compensation ceiling" in reason for reason in high_pay.score_reasons)
+
+
+def test_v8_persists_auditable_dimensions_and_raw_utility():
+    job = mk("Machine Learning Platform Engineer, New Grad", salary="$180k")
+    score(job, FB, NOW)
+    assert job.score_raw == sum(job.score_dimensions.values())
+    assert set(job.score_dimensions) == {
+        "base", "role_fit", "eligibility", "mission", "company_quality",
+        "compensation", "personal_signal", "timing_access",
+    }
+    assert any("calibration v8" in reason for reason in job.score_reasons)
 
 
 def test_new_grad_priority_beats_prestigious_experienced_role():

@@ -64,13 +64,9 @@ Before changing the radar, read these in order:
   second Notion database or token for ChemE.
 - **Notion:** `NOTION_TOKEN` is set and working. Checkbox → entry with the
   `stage_saved` status ("Waiting for a referral" in his DB); Victor promotes
-  manually, OR the **email autopilot** (DECISIONS #26, shipped 2026-07-13 by
-  an Opus session) advances Stage from lifecycle emails (applied/OA/
-  interview/rejected, forward-only, auto-close after 45 d silence) — that
-  path is coded and tested but **awaits the `EMAIL_ADDRESS` /
-  `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
-  2026-07-18; Gmail app password setup is in README §2). The current 142
-  tracked entries are all still `saved`, not confirmed applications.
+  manually. The email autopilot remains coded/tested but is intentionally
+  parked as future multi-user functionality; no `EMAIL_ADDRESS` /
+  `EMAIL_APP_PASSWORD` secrets are needed for Victor's current workflow.
 - **Scoring (rules v7, 2026-07-24):** verified new-grad or
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee
@@ -207,11 +203,40 @@ Before changing the radar, read these in order:
   backfill` to resume safely. Failed provider
   or schema attempts are explicit retryable records with capped exponential
   backoff; checkpoint logs expose ready/pending/retry/error counts.
-- **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
-  or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector
-  RAG. The only user steps for shipped code are optional Google OAuth
-  activation and the already-documented ChemE email app password.
+- **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it or
+  anything derived from it. Owner-only Resume Studio now runs locally with
+  source-only and enhancement modes; start it with
+  `.venv/bin/python scripts/resume_studio.py` and open `http://127.0.0.1:4317/`.
+  It uses installed first-party Codex/Claude Code sessions, strips API-key
+  environment variables, and stores all output under `CV/.resume_studio/`.
+  `CV/resume.tex` / `.pdf` is the exact visual baseline; TLDP is only one
+  target artifact. Providers return source-addressed content plans, never full
+  LaTeX. The renderer preserves the baseline's header, education, skills,
+  margins, typography, and spacing, uses company-first employer headings, and
+  hard-fails an underfilled page or formatting drift. Reports record the fixed
+  reviewer score, exclusions, provider calls, and emitted Codex token usage;
+  totals are marked incomplete when a provider omits a call's footer.
+  Live validation on 2026-07-31 found the Codex subscription session usable;
+  the installed Claude client returned an organization-level 403 stating that
+  Claude Code subscription access is disabled. The harness fell back to Codex
+  and did not request or consume an Anthropic API key.
+- **Resume intelligence v1 is shipped locally (DECISIONS #72):** the Studio
+  builds a source-authority evidence graph from the ignored CV corpus, caches
+  public GitHub/Devpost material as corroboration only, and exposes Best,
+  Newest, and Resume Match sorts. The full-posting match is fixed-weight and
+  source-explained. Generation produces a rich candidate portfolio and a
+  deterministic compile loop packs the strongest content into one page. It
+  measures actual PDF bullet geometry and requires one additional standard
+  bullet to overflow. Resume Craft cannot override factuality, eligibility,
+  or layout gates.
+- **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
+  utility, calibrated base, dimension values, reasons, and final score. Goal
+  companies can reach 100, but posting wording separates nearby roles; cited
+  momentum and compensation can compensate for weaker ordinary dimensions.
+  Sector points have diminishing influence and hard gates remain absolute.
+- **Still deliberately deferred:** semantic/vector RAG, bullet locks/history,
+  revision threads, and multi-user CV/provider storage. Email-based
+  applied detection is also parked until the multi-user privacy model exists.
 
 ## Safe handoff practice
 

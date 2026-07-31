@@ -926,3 +926,142 @@ guess about an arbitrary visitor's next click. Twelve bounded concurrent
 dossiers keep the existing 30-RPM global request gate busy during provider
 latency; the gate, circuit breakers, and per-company exponential retry remain
 the cost and reliability limits.
+
+## 67. Resume intelligence is owner-first and CLI-native (2026-07-30)
+
+The resume feature must meet Victor's quality bar before it becomes a
+multi-user service. The public radar therefore does not receive CV content,
+provider credentials, or generated resume artifacts. `scripts/resume_studio.py`
+runs on Victor's Mac, reads the ignored `CV/` directory and the local job
+snapshot, and writes prompts, drafts, PDFs, and review reports beneath
+`CV/.resume_studio/`.
+
+The first slice has two modes. Strict mode uses the existing human-approved
+TLDP one-page artifact and performs deterministic rendering checks. Frontier
+mode invokes the installed first-party Codex and Claude Code CLIs through their
+local authenticated sessions, runs independent drafts, synthesizes them, and
+then uses a fresh fixed reviewer pass. API-key environment variables are
+removed from those subprocesses so the owner workflow cannot silently switch
+to billable API traffic. Ollama remains an optional radar-enrichment fallback,
+not the required writer or reviewer for resume work.
+
+The reviewer returns observations but cannot set its own score. The harness
+owns the versioned rubric, hard layout/fact checks, point weights, and
+readiness calculation. This preserves human control while preventing a
+generation prompt or model from weakening its test. Future multi-user support
+may offer private local agents, official provider/API adapters, or another
+isolated compute path, but it must not route other users through Victor's
+subscription sessions.
+
+## 68. TLDP is the visual baseline and employer headings are company-first (2026-07-31)
+
+`CV/tldp_resume.tex` and its one-page PDF are the baseline because they are
+Victor's actual TLDP application materials, not because “TLDP” is a generic
+resume style. Resume Studio preserves that baseline's typography, spacing,
+hierarchy, density, and owner header. Employer entries render the company on
+the first line and the role on the second; Education remains school-first.
+
+Strict mode uses that baseline with deterministic checks. Frontier mode uses it
+as the layout shell while selecting target-specific evidence from the local
+CV source bank. For a Johnson & Johnson target, TICC is excluded unless the
+posting makes it relevant; this is a target decision, not a global deletion.
+When only one authenticated frontier CLI is usable, the harness skips a
+redundant same-provider synthesis call and reports that fact. Reports include
+Codex's emitted token usage and explicitly mark totals incomplete when a CLI
+does not provide a usage footer.
+
+## 69. Resume Studio renders plans through `CV/resume.tex`; models never author the document (2026-07-31)
+
+Decision #68 incorrectly treated the TLDP artifact as the generic rendering
+baseline. Victor clarified that the existing general `CV/resume.tex` / `.pdf`
+is the canonical format and that the methodology, example résumés, and master
+CV are the content system. TLDP remains one target application artifact.
+
+Resume Studio therefore removes complete-LaTeX generation from the provider
+schema. Source-only mode selects source IDs and copies existing headings and
+bullets verbatim. Enhancement mode may revise selected bullet text while
+retaining a source ID, but a deterministic renderer owns the document and
+copies the complete header, education, skills, preamble, margins, typography,
+and spacing from `CV/resume.tex`. Employer entries use the existing
+`\resumeSubheading` macro with company first and role second.
+
+Formatting is a hard test, not a prompt preference. Generated files must have
+an identical canonical prefix, no model-supplied layout commands, no font-size
+increase, and no more than a 5% reduction; the current renderer makes a 0%
+change. One page is insufficient by itself: the visible content must reach
+within 24 points of the canonical resume's bottom-most content, preventing a
+sparse one-pager from passing the fixed reviewer.
+
+## 70. Ranking needs uncapped utility before a calibrated 0–100 display score (2026-07-31)
+
+The additive scorer's final `min(100, ...)` compresses distinct top roles into
+the same result and makes it difficult to tell a great goal-company opening
+from the best possible opening at that company. NVIDIA and comparable genuine
+goals must still be able to earn 100; the correction is not to suppress them,
+but to let posting-specific evidence distribute excellent roles through the
+90s and reserve 100 for combinations that actually reach it.
+
+The future scorer will therefore reason in uncapped internal utility before a
+versioned mapping to the displayed 0–100 range. Exceptional strength in one
+dimension may partly compensate for weakness elsewhere—Victor's model is that
+a dimension can effectively contribute "120" rather than disappearing at its
+nominal ceiling. This compensation does not cross hard eligibility, seniority,
+location, or field-fit gates.
+
+This is a general scoring property, not a collection of employer exceptions.
+Company momentum, compensation, technical intensity, role quality, learning,
+mission, and prestige require distinct, auditable evidence; health affiliation
+alone cannot make an otherwise ordinary small employer elite. Conversely, an
+exceptional non-health role may outrank a health role without requiring a
+Netflix-specific or other hand-tuned rule. Detailed implementation and
+calibration acceptance criteria live in `ROADMAP.md`; behavior does not change
+until the scorer, migration, reason strings, and golden regression fixtures
+ship together under a new rules version.
+
+## 71. Score v8 ships as fixed utility calibration, not percentile ranking (2026-07-31)
+
+Rules version 8 implements decision #70. Each job now retains an uncapped raw
+utility, a pre-adjustment calibrated score, named dimension totals, and the
+existing reason ledger. The display mapping is a fixed monotonic piecewise
+curve; it does not inspect the current job population, manufacture winners, or
+move when the feed changes.
+
+New-grad eligibility remains the dominant compensable dimension. Explicit goal
+companies receive a profile-declared signal, while generic cited company
+research can add technical reputation, scale, pace, and technical-work utility.
+Posting wording and continuous compensation signals create role-level spread.
+Health/sector preference uses diminishing influence so mission cannot carry an
+otherwise ordinary employer to the ceiling. All hard eligibility, seniority,
+location, and field-fit gates continue to operate outside compensation.
+
+The local Resume Studio projects stale v7 records through the v8 equation in
+memory so its sort is current before the next crawler rebuild. Production state
+is still migrated only by the normal full-score rebuild; the Studio never
+hand-edits generated state.
+
+## 72. Resume Match, evidence authority, page packing, and review are separate systems (2026-07-31)
+
+Resume Studio builds a private evidence graph beneath `CV/.resume_studio/` from
+the canonical resume, master CV, example resumes, methodology, context notes,
+and experience dossiers. Explicit experience source-of-truth files outrank
+resume wording. Public GitHub and Devpost records may corroborate breadth but
+cannot authorize a resume claim by themselves. Enhancement bullets must cite a
+known claim-authorizing evidence node.
+
+Resume Match is a fixed pre-generation rubric: required coverage 35, preferred
+coverage 20, evidence strength 20, domain relevance 10, eligibility 10, and
+distinctiveness 5. Its confidence and reasons are visible, and it remains
+separate from the public Radar score. Best, Newest, and Resume Match are three
+explicit sorts, not one blended score.
+
+Models propose a rich, ordered evidence portfolio rather than a fixed three-
+experience/four-project layout. A deterministic compile loop removes the
+lowest value-density content until the canonical one-page template fits, then
+tries strong exclusions back. PDF coordinates enforce horizontal saturation;
+a second compile with one ordinary bullet added must overflow to prove vertical
+capacity is used. The style delta is currently 0%.
+
+Finally, the immutable Resume Craft rubric scores target fit 30, evidence 25,
+clarity 15, portfolio 20, and layout 10. Factuality, eligibility, and layout
+are independent gates. A polished draft cannot average away an unsupported
+claim, an ineligible role, or a failed layout.

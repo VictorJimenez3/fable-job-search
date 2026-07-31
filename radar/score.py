@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 7
+RULES_VERSION = 8
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -333,6 +333,8 @@ def pays_bank(salary: str) -> bool:
 # ---------- scoring ----------
 
 _CULTURE_CACHE: dict | None = None
+_CULTURE_MATCH_CACHE: dict[tuple[int, str], dict | None] = {}
+_COMPANY_RESEARCH_CACHE: dict | None = None
 _SHPE_CACHE: set | None = None
 
 
@@ -360,6 +362,79 @@ def _culture_cache() -> dict:
     return _CULTURE_CACHE
 
 
+def _culture_dossier(company: str) -> dict | None:
+    """Memoize loose dossier matching across thousands of roles per company."""
+    dossiers = _culture_cache()
+    # Include object identity so tests, reloads, and repairs that replace the
+    # dossier map cannot receive a match cached against older evidence.
+    key = (id(dossiers), norm(company))
+    if key not in _CULTURE_MATCH_CACHE:
+        from . import culture as _culture
+        _CULTURE_MATCH_CACHE[key] = _culture.dossier_for(company, dossiers)
+    return _CULTURE_MATCH_CACHE[key]
+
+
+def _company_research_cache() -> dict:
+    """Load optional cited employer evidence without making it a dependency."""
+    global _COMPANY_RESEARCH_CACHE
+    if _COMPANY_RESEARCH_CACHE is None:
+        try:
+            from . import state
+            value = state.load("company_research.json", {})
+            _COMPANY_RESEARCH_CACHE = value if isinstance(value, dict) else {}
+        except Exception:
+            _COMPANY_RESEARCH_CACHE = {}
+    return _COMPANY_RESEARCH_CACHE
+
+
+def _company_record(company: str) -> dict:
+    records = _company_research_cache()
+    for key in (company, company.lower(), norm(company)):
+        value = records.get(key)
+        if isinstance(value, dict):
+            return value
+    return {}
+
+
+def _supported_field(record: dict, name: str) -> str:
+    field = record.get(name)
+    if not isinstance(field, dict):
+        return ""
+    if field.get("confidence") not in {"high", "medium"} or not field.get("source_ids"):
+        return ""
+    return str(field.get("value") or "")
+
+
+def company_momentum_signal(company: str) -> tuple[int, list[str]]:
+    """Score cited scale, technical intensity, prestige, and pace generically."""
+    record = _company_record(company)
+    prestige = _supported_field(record, "ai_ds_prestige_tier")
+    scale = _supported_field(record, "size_stage")
+    pace = _supported_field(record, "pace_of_work")
+    technical = _supported_field(record, "technical_work")
+    points = 0
+    reasons: list[str] = []
+    if re.search(r"\b(top[- ]tier|tier\s*1|world[- ]class|global(?:ly)?\s+(?:recognized|leading)|industry leader)", prestige, re.I):
+        points += 4
+        reasons.append("cited AI/technical prestige +4")
+    elif re.search(r"\b(strong|leading|recognized|highly regarded)\b", prestige, re.I):
+        points += 2
+        reasons.append("cited technical reputation +2")
+    if re.search(r"\b(fast[- ]paced|rapid iteration|high[- ]growth|rapidly growing|high velocity)\b", pace, re.I):
+        points += 2
+        reasons.append("cited company momentum +2")
+    elif re.search(r"\b(slow|bureaucratic|limited innovation)\b", pace, re.I):
+        points -= 2
+        reasons.append("cited low company momentum -2")
+    if re.search(r"\b(frontier|cutting[- ]edge|large[- ]scale|distributed training|core AI|AI/ML infrastructure|research)\b", technical, re.I):
+        points += 2
+        reasons.append("cited technical intensity +2")
+    if re.search(r"\b(global|public company|fortune\s*\d+|over\s+[\d,]+\s+employees)\b", scale, re.I):
+        points += 1
+        reasons.append("cited operating scale +1")
+    return max(-3, min(points, 8)), reasons
+
+
 # Tokens the taste model must never learn or reward: employment-shape noise,
 # leaked location words, and off-field families (boosting "business" or
 # "marketing" floods the board with roles outside Victor's field). Filtered
@@ -382,68 +457,185 @@ def _title_tokens(title: str) -> set[str]:
     return {w for w in norm(title).split() if len(w) > 2 and w not in stop}
 
 
+def _salary_max(salary: str) -> int | None:
+    if not salary:
+        return None
+    values = []
+    for number, suffix in _MONEY_RE.findall(salary):
+        try:
+            value = float(number.replace(",", ""))
+        except ValueError:
+            continue
+        if suffix:
+            value *= 1000
+        values.append(value)
+    if not values:
+        return None
+    maximum = max(values)
+    if re.search(r"/\s*(?:hr|hour)|hourly", salary, re.I) and maximum < 1000:
+        maximum *= 2080
+    return round(maximum)
+
+
+def compensation_signal(salary: str) -> tuple[int, str]:
+    maximum = _salary_max(salary)
+    if maximum is None or maximum < 120_000:
+        return 0, ""
+    if maximum >= 250_000:
+        points = 15
+    elif maximum >= 220_000:
+        points = 13
+    elif maximum >= 190_000:
+        points = 10
+    elif maximum >= 165_000:
+        points = 7
+    elif maximum >= 145_000:
+        points = 4
+    else:
+        points = 2
+    return points, f"compensation ceiling ${maximum:,} +{points}"
+
+
+def wording_signal(title: str, description: str = "") -> tuple[int, list[str]]:
+    """Posting-specific alignment so one employer's roles do not tie."""
+    text = f"{title}\n{description[:2500]}"
+    patterns = [
+        (r"\b(deep learning|generative AI|large language model|LLMs?)\b", 4, "frontier AI wording"),
+        (r"\b(machine learning|artificial intelligence|computer vision|NLP)\b", 3, "AI/ML wording"),
+        (r"\b(data science|applied scientist|research engineer)\b", 3, "data/research wording"),
+        (r"\b(cloud|distributed systems?|platform|backend|infrastructure)\b", 2, "systems/cloud wording"),
+        (r"\b(healthcare|clinical|patient|drug|biomedical|medical)\b", 2, "health mission wording"),
+        (r"\b(quality assurance|manual test|test engineer)\b", -3, "lower-priority QA wording"),
+    ]
+    points = 0
+    reasons = []
+    for pattern, value, label in patterns:
+        if re.search(pattern, text, re.I):
+            points += value
+            reasons.append(f"{label} {'+' if value > 0 else ''}{value}")
+    return max(-4, min(points, 10)), reasons
+
+
+def calibrate_score(raw_utility: float) -> int:
+    """Map uncapped utility onto a stable, non-percentile 0-100 scale."""
+    anchors = (
+        (0.0, 0.0),
+        (35.0, 45.0),
+        (55.0, 66.0),
+        (70.0, 78.0),
+        (85.0, 88.0),
+        (100.0, 94.0),
+        (115.0, 98.0),
+        (125.0, 100.0),
+    )
+    raw = max(0.0, float(raw_utility))
+    if raw >= anchors[-1][0]:
+        return 100
+    for (x0, y0), (x1, y1) in zip(anchors, anchors[1:]):
+        if raw <= x1:
+            ratio = (raw - x0) / (x1 - x0)
+            return max(0, min(100, round(y0 + ratio * (y1 - y0))))
+    return 100
+
+
 def score(job: Job, feedback: dict, now: int | None = None) -> None:
-    """Mutates job.score / job.score_reasons. Assumes gates already passed."""
+    """Build uncapped dimension utility, then calibrate it for display."""
     p = profile()
     now = now or int(time.time())
-    # New-grad evidence is intentionally the largest component. A prestigious
-    # or fresh experienced role must not outrank an eligible new-grad role.
-    pts = 5
-    reasons = ["base 5"]
+    dimensions = {
+        "base": 5,
+        "role_fit": 0,
+        "eligibility": 0,
+        "mission": 0,
+        "company_quality": 0,
+        "compensation": 0,
+        "personal_signal": 0,
+        "timing_access": 0,
+    }
+    reasons = ["base utility +5"]
 
     bucket = role_bucket(job.title, job.description) or "swe"
     role_pts = p["roles"].get(bucket, 10)
-    pts += role_pts
+    wording_pts, wording_reasons = wording_signal(job.title, job.description)
+    dimensions["role_fit"] = role_pts + wording_pts
     reasons.append(f"role:{bucket} +{role_pts}")
+    reasons.extend(wording_reasons)
 
-    sector_pts = p["sectors"].get(job.sector or "other", 0)
+    configured_sector = p["sectors"].get(job.sector or "other", 0)
+    sector_pts = round(configured_sector * 0.7)
     if sector_pts:
-        pts += sector_pts
-        reasons.append(f"sector:{job.sector} +{sector_pts}")
+        dimensions["mission"] += sector_pts
+        reasons.append(f"sector:{job.sector} +{sector_pts} (diminishing return)")
 
     b = p["bonuses"]
     program = leadership_program_signal(job.company, job.title, job.description)
     new_grad = new_grad_signal(job.title, job.description) or source_new_grad(job)
     if new_grad or program:
-        pts += b["explicit_new_grad_title"]
+        eligibility_pts = int(p.get("scoring_v8", {}).get("eligible_utility", 30))
+        dimensions["eligibility"] = eligibility_pts
         evidence = ("trusted new-grad board" if source_new_grad(job)
                     and not new_grad_signal(job.title, job.description)
                     else "new-grad/early-career")
-        reasons.append(f"{evidence} priority +{b['explicit_new_grad_title']}")
+        reasons.append(f"{evidence} priority +{eligibility_pts} (eligibility)")
     else:
         reasons.append("new-grad evidence absent (below eligible roles)")
 
     if program:
-        pts += b.get("leadership_program", 0)
-        reasons.append(f"technical leadership program +{b.get('leadership_program', 0)}")
+        program_pts = min(6, b.get("leadership_program", 0))
+        dimensions["role_fit"] += program_pts
+        reasons.append(f"technical leadership program +{program_pts}")
         if norm(job.company) in target_program_companies():
-            pts += b.get("target_program_company", 0)
-            reasons.append(f"target healthcare program company +{b.get('target_program_company', 0)}")
+            target_pts = min(3, b.get("target_program_company", 0))
+            dimensions["mission"] += target_pts
+            reasons.append(f"target healthcare program company +{target_pts}")
 
     if is_marquee(job.company):
-        pts += b.get("marquee_company", 0)
-        reasons.append("company tier: marquee (competitive)")
+        marquee_pts = b.get("marquee_company", 0)
+        dimensions["company_quality"] += marquee_pts
+        reasons.append(f"company tier: marquee +{marquee_pts}")
+
+    goal_companies = {norm(name) for name in p.get("goal_companies", [])}
+    if norm(job.company) in goal_companies:
+        goal_pts = int(p.get("scoring_v8", {}).get("goal_company_utility", 10))
+        dimensions["company_quality"] += goal_pts
+        reasons.append(f"explicit goal company +{goal_pts}")
+
+    momentum_pts, momentum_reasons = company_momentum_signal(job.company)
+    dimensions["company_quality"] += momentum_pts
+    reasons.extend(momentum_reasons)
+
+    pay_pts, pay_reason = compensation_signal(job.salary)
+    dimensions["compensation"] = pay_pts
+    if pay_reason:
+        reasons.append(pay_reason)
 
     if job.posted_at:
         age_h = (now - job.posted_at) / 3600
         if age_h <= 24:
-            pts += b["fresh_24h"]; reasons.append(f"posted <24h +{b['fresh_24h']}")
+            fresh = min(4, b["fresh_24h"])
+            dimensions["timing_access"] += fresh
+            reasons.append(f"posted <24h +{fresh}")
         elif age_h <= 72:
-            pts += b["fresh_72h"]; reasons.append(f"posted <72h +{b['fresh_72h']}")
+            fresh = min(3, b["fresh_72h"])
+            dimensions["timing_access"] += fresh
+            reasons.append(f"posted <72h +{fresh}")
         elif age_h <= 168:
-            pts += b["fresh_7d"]; reasons.append(f"posted <7d +{b['fresh_7d']}")
+            fresh = min(1, b["fresh_7d"])
+            dimensions["timing_access"] += fresh
+            reasons.append(f"posted <7d +{fresh}")
 
     if job.remote:
-        pts += b["remote"]; reasons.append(f"remote +{b['remote']}")
+        dimensions["timing_access"] += b["remote"]
+        reasons.append(f"remote +{b['remote']}")
 
     comp = norm(job.company)
     cb = feedback.get("company_boosts", {}).get(comp, 0)
     if cb:
         cb = min(cb, b["feedback_company_max"])
-        pts += cb
+        dimensions["personal_signal"] += cb
         reasons.append(f"you've engaged with {job.company} +{cb}")
     if comp in feedback.get("negative_companies", []):
-        pts -= 10
+        dimensions["personal_signal"] -= 10
         reasons.append("previously skipped -10")
 
     tb = 0
@@ -452,33 +644,33 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         tb += boosts.get(tok, 0)
     tb = max(min(tb, b["feedback_tokens_max"]), -6)
     if tb:
-        pts += tb
+        dimensions["personal_signal"] += tb
         reasons.append(f"title matches your history {'+' if tb > 0 else ''}{tb}")
 
-    # culture fit (±6) when a dossier exists for this company
-    from . import culture as _culture
-    d = _culture.dossier_for(job.company, _culture_cache())
-    # Legacy AI culture estimates were generated without evidence. They stay
-    # visible as clearly-labeled guesses but never move ranking; only the
-    # human-curated seed is trusted for this subjective score adjustment.
+    d = _culture_dossier(job.company)
     if d and d.get("source") == "seed" and d.get("fit") is not None:
         cf = round((d["fit"] - 50) / 50 * 6)
         if cf:
-            pts += cf
+            dimensions["company_quality"] += cf
             reasons.append(f"culture fit {d['fit']}/100 {'+' if cf > 0 else ''}{cf}")
 
-    # SHPE 2026 exhibitor: the posting doubles as a warm booth intro (Oct 28-31)
     if norm(job.company) in _shpe_companies():
-        pts += 4
-        reasons.append("SHPE 2026 exhibitor +4")
+        dimensions["personal_signal"] += 2
+        reasons.append("SHPE 2026 exhibitor +2")
 
-    if leadership_program_signal(job.company, job.title, job.description):
+    raw_utility = round(sum(dimensions.values()), 1)
+    display = calibrate_score(raw_utility)
+    if program:
         floor = int(p["thresholds"].get("alert", 66))
-        if pts < floor:
-            reasons.append(f"technical program alert floor +{floor - pts}")
-            pts = floor
+        if display < floor:
+            reasons.append(f"technical program display floor +{floor - display}")
+            display = floor
 
-    job.score = max(0, min(100, round(pts)))
+    job.score_raw = raw_utility
+    job.score_calibrated = display
+    job.score_dimensions = dimensions
+    job.score = display
+    reasons.append(f"raw utility {raw_utility:g}; calibration v{RULES_VERSION} -> {display}/100")
     job.score_reasons = reasons
 
 

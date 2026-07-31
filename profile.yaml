@@ -1,5 +1,6 @@
 # JobRadar candidate profile — edit freely; the ranker reads this on every run.
-# Nothing here is code. Weights are additive points on a 0-100 score.
+# Nothing here is code. Ranking v8 builds uncapped utility from these
+# preferences, then applies a fixed 0-100 calibration in radar/score.py.
 
 candidate:
   name: Victor Jimenez
@@ -60,6 +61,16 @@ bonuses:
   remote: 2
   feedback_company_max: 8      # learned from what you actually apply to
   feedback_tokens_max: 6
+
+# Explicit preferences belong in data, never as company-name branches in code.
+# Goal status is only one company-quality input; posting wording, compensation,
+# cited momentum, and role fit determine whether a role reaches 100.
+goal_companies:
+  - NVIDIA
+
+scoring_v8:
+  eligible_utility: 30
+  goal_company_utility: 10
 
 locations:
   countries: [US]              # non-US-only postings are gated out

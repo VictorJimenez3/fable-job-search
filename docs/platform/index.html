@@ -134,6 +134,24 @@
   .table-scroll { overflow-x:auto; margin-top:0.6rem; }
   .note { background:var(--card); border-left:3px solid var(--amber); padding:0.6rem 0.8rem;
           border-radius:0 5px 5px 0; font-size:0.85rem; margin-bottom:0.9rem; }
+  .testing-hero { border:1px solid var(--accent-ink); border-radius:10px; padding:0.9rem;
+                  margin-bottom:0.9rem; background:var(--card); }
+  .testing-hero h2 { margin:0 0 0.25rem; font-size:1.1rem; }
+  .testing-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(250px,0.8fr);
+                  gap:0.9rem; align-items:start; }
+  .testing-stack { display:grid; gap:0.7rem; }
+  .testing-role { display:grid; grid-template-columns:3rem minmax(0,1fr); gap:0.65rem;
+                  border-bottom:1px solid var(--line); padding:0.65rem 0.15rem; }
+  .testing-role:last-child { border-bottom:0; }
+  .testing-role .match-score { width:3rem; height:3rem; border:1px solid var(--accent-ink);
+                  color:var(--accent-ink); border-radius:50%; display:grid; place-items:center;
+                  font:700 0.86rem ui-monospace,"SF Mono",Menlo,monospace; }
+  .testing-role h3 { margin:0; font-size:0.9rem; }
+  .testing-role details { margin-top:0.35rem; }
+  .testing-role summary { cursor:pointer; color:var(--accent-ink); font-size:0.75rem;
+                          font-family:ui-monospace,"SF Mono",Menlo,monospace; }
+  .testing-role .kv { margin-top:0.35rem; }
+  .gate-row { display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.45rem; }
   .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
            background:var(--ink); color:var(--paper); padding:0.5rem 1rem; border-radius:6px;
            font-size:0.8rem; z-index:99; }
@@ -148,6 +166,7 @@
     .job .acts { width:100%; padding-left:2.9rem; }
     .job .acts button { flex:1; }
     .filters select { flex:1; min-width:9rem; }
+    .testing-grid { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -197,6 +216,7 @@ const S = {           // app state
   auth:null, backend:false,
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
+  testing:{q:"", sort:"resume", shown:40},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
     "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker",
@@ -527,7 +547,9 @@ function startApply(j) {
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function render() {
-  $("#nav").innerHTML = TABS.map(([k,l]) =>
+  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["testing","Testing"], TABS.at(-1)] : TABS;
+  if (S.tab === "testing" && !S.auth?.owner) S.tab = "jobs";
+  $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
     (S.backend ? (S.auth
@@ -542,7 +564,7 @@ function render() {
     `<span><b>${saved.length}</b>to apply</span>` +
     `<span><b>${done.length}</b>applied</span>`;
   ({jobs:rJobs, pipeline:rPipe, companies:rCos, interview:rInterview,
-    ai:rAI, settings:rSet})[S.tab]();
+    ai:rAI, testing:rTesting, settings:rSet})[S.tab]();
 }
 
 function rowHTML(j, byId) {
@@ -802,7 +824,7 @@ function openWS(id) {
     <div class="decision">
       <b>Quick decision</b>
       <div class="sub">${esc((j.locations||[])[0]||"location unknown")}${j.salary?" · "+esc(j.salary):""}
-        · score ${j.score??"?"} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
+        · score ${j.score??"?"}${j.score_raw!==undefined?` (raw utility ${j.score_raw})`:""} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
       <div class="facts">${eligibilityBadges(j)}</div>
       <div class="acts" style="margin-top:0.65rem">
         <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
@@ -864,9 +886,12 @@ function wsCompany(j, w, c, id) {
 }
 
 function wsFit(j, w, c, id) {
+  const dimensions = Object.entries(j.score_dimensions||{});
   return `
     <div class="sect"><h4>Posting facts (scraped, no AI needed)</h4>${postingCard(j)}</div>
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
+      ${dimensions.length?`<div class="kv">${dimensions.map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>${value>=0?'+':''}${esc(value)}</span>`).join('')}</div>
+      <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100 after posting/quality adjustments. Dimensions may compensate; hard eligibility gates cannot.</p>`:""}
       <div class="sub">${(j.score_reasons||[]).map(esc).join(" · ")||"–"}</div>
       ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
     <div class="sect"><h4>Posting verdict (LLM)</h4>${qualityCard(j)}</div>
@@ -1054,6 +1079,127 @@ function rAI() {
           <span class="k">total registry</span><span>${Object.keys(S.companies).length}</span>
         </div></div>
     </div>`;
+}
+
+// ---------- owner testing lab --------------------------------------------
+// This is deliberately a public-data preview. The real evidence graph, source
+// documents, prompts, and generated resumes remain under ignored CV/ on the
+// owner's Mac. Hiding the tab is product access control, not a claim that
+// static JavaScript in a public repository can hold secrets.
+const TEST_MATCH_VERSION = "title-preview-v1 · full Resume Match stays local";
+const TEST_CAPABILITIES = {
+  ai_ml:{strength:.95, terms:["ai","ml","machine learning","deep learning","model","inference","pytorch"]},
+  llm_rag:{strength:.92, terms:["llm","rag","generative ai","agentic","retrieval","embedding"]},
+  data_science:{strength:.95, terms:["data scientist","data science","analytics","statistic","quantitative"]},
+  software:{strength:.90, terms:["software","developer","engineering","backend","frontend","full stack","api"]},
+  backend_cloud:{strength:.85, terms:["cloud","backend","kubernetes","docker","platform"]},
+  systems:{strength:.72, terms:["systems","infrastructure","distributed","performance","compiler","hpc"]},
+  databases:{strength:.85, terms:["database","sql","data engineer","data platform"]},
+  research:{strength:.90, terms:["research","scientist","experimental"]},
+  computer_vision:{strength:.82, terms:["computer vision","vision","image","video","perception"]},
+  hardware:{strength:.65, terms:["hardware","embedded","firmware","gpu","chip","silicon"]},
+  security:{strength:.75, terms:["security","privacy","cyber"]},
+  health:{strength:.90, terms:["health","clinical","medical","biomedical","patient","drug"]},
+  quantum:{strength:.76, terms:["quantum","qubit"]},
+  leadership:{strength:.90, terms:["leadership","rotational","program"]},
+};
+const TEST_DOMAIN_CLUSTER = {healthtech:"health", ai_lab:"ai_ml", big_tech:"systems",
+  sports:"data_science", video_games:"software", edtech:"llm_rag", fintech:"data_science"};
+function testClusters(j) {
+  const text = norm(`${j.title||""} ${j.sector||""}`);
+  const hits = Object.entries(TEST_CAPABILITIES)
+    .filter(([,cap])=>cap.terms.some(term=>text.includes(norm(term))))
+    .map(([name])=>name);
+  return hits.length ? hits : ["software"];
+}
+function testingMatch(j) {
+  const clusters = testClusters(j);
+  const strengths = clusters.map(name=>TEST_CAPABILITIES[name]?.strength||.5);
+  const evidence = strengths.reduce((a,b)=>a+b,0) / strengths.length;
+  const title = norm(j.title||"");
+  const specific = Object.entries(TEST_CAPABILITIES).flatMap(([name,cap])=>
+    cap.terms.filter(term=>title.includes(norm(term))).map(()=>cap.strength));
+  const direct = specific.length ? specific.reduce((a,b)=>a+b,0)/specific.length : 0;
+  const domain = TEST_DOMAIN_CLUSTER[j.sector];
+  const dimensions = {
+    required_coverage:Math.round(25 + 10*direct),
+    preferred_coverage:10,
+    evidence_strength:Math.round(20*evidence),
+    domain_relevance:domain && clusters.includes(domain) ? 10 : 6,
+    eligibility:j.alert_ok ? 10 : j.early_career_possible ? 6 : 3,
+    distinctiveness:clusters.some(c=>["research","health","quantum","security","computer_vision"].includes(c)) ? 5 : 3,
+  };
+  const score = Math.min(100,Object.values(dimensions).reduce((a,b)=>a+b,0));
+  return {version:TEST_MATCH_VERSION, score, confidence:"low", dimensions, clusters,
+    reasons:[`title capabilities: ${clusters.join(", ")}`,
+      j.alert_ok?"verified alert-eligible role":j.early_career_possible?"early-career possible; eligibility unverified":"eligibility not established",
+      "full posting and private source-level evidence are evaluated on the Mac"]};
+}
+function testingRows() {
+  const q = norm(S.testing.q);
+  let rows = Object.values(S.jobs).filter(isOpenRelevant)
+    .filter(j=>!postedTs(j) || Date.now()/1000-postedTs(j)<=365*86400)
+    .filter(j=>roleFamily(j)!=="other")
+    .filter(j=>!q || norm(`${j.company} ${j.title}`).includes(q))
+    .map(j=>({job:j, match:testingMatch(j)}));
+  if (S.testing.sort === "new") rows.sort((a,b)=>postedTs(b.job)-postedTs(a.job));
+  else if (S.testing.sort === "radar") rows.sort((a,b)=>(b.job.score||0)-(a.job.score||0) || b.match.score-a.match.score);
+  else rows.sort((a,b)=>b.match.score-a.match.score || (b.job.score||0)-(a.job.score||0) || postedTs(b.job)-postedTs(a.job));
+  return rows;
+}
+function testingRoleHTML(row) {
+  const {job:j,match:m}=row;
+  return `<article class="testing-role">
+    <div class="match-score" title="Resume Match title preview">${m.score}</div>
+    <div><h3>${esc(j.company)} — ${esc(j.title)}</h3>
+      <div class="sub">Resume Match ${m.score} · low-confidence title preview · Radar ${j.score??"–"} · ${ago(postedTs(j))||"date unknown"}</div>
+      <div class="gate-row"><span class="chip ${j.alert_ok?'good':'unknown'}">${j.alert_ok?'eligibility pass':'eligibility review'}</span>
+        ${m.clusters.map(c=>`<span class="chip">${esc(c.replaceAll('_',' '))}</span>`).join('')}</div>
+      <details><summary>fixed score breakdown</summary>
+        <div class="kv">${Object.entries(m.dimensions).map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>+${value}</span>`).join('')}</div>
+        <p class="sub">${m.reasons.map(esc).join(' · ')}</p></details>
+      <div class="bar" style="margin:.45rem 0 0"><button class="act" onclick='openWS("${j.id}")'>role details</button>
+        <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button></div>
+    </div></article>`;
+}
+function rTesting() {
+  if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
+  const rows=testingRows();
+  const calibrated=Object.values(S.jobs).filter(j=>j.score_raw!=null && j.score_calibrated!=null);
+  $("#main").innerHTML = `<section class="testing-hero">
+    <span class="chip good">owner only · @${esc(S.auth.login)}</span>
+    <h2>Resume + scoring lab</h2>
+    <p class="sub">This is the production window into the system under test. Company comes first everywhere. Private CV sources and generated PDFs stay on the Mac and are never copied into this public repository.</p>
+  </section>
+  <div class="testing-grid"><section>
+    <div class="filters"><div class="bar">
+      <input id="testingQ" type="search" placeholder="search company or role…" value="${esc(S.testing.q)}">
+      <select id="testingSort" aria-label="Testing sort">
+        <option value="resume" ${S.testing.sort==='resume'?'selected':''}>best Resume Match</option>
+        <option value="new" ${S.testing.sort==='new'?'selected':''}>newest</option>
+        <option value="radar" ${S.testing.sort==='radar'?'selected':''}>best Radar score</option></select>
+      <button class="act primary" onclick="S.testing.q=$('#testingQ').value;S.testing.sort=$('#testingSort').value;rTesting()">rank</button>
+    </div><p class="sub">${rows.length} open technical roles · Match uses the fixed 35/20/20/10/10/5 rubric. This phone preview is intentionally title-only; selecting Tailor on the Mac adds the full posting and source-addressed private evidence graph.</p></div>
+    <div class="lane">${rows.slice(0,S.testing.shown).map(testingRoleHTML).join('')||'<p class="sub">No matching roles.</p>'}
+      ${rows.length>S.testing.shown?`<button class="act" onclick="S.testing.shown+=40;rTesting()">show 40 more</button>`:''}</div>
+  </section><aside class="testing-stack">
+    <div class="lane"><h3>What is live</h3><div class="kv">
+      <span class="k">Resume Match</span><span>best-fit, newest, and Radar ranking</span>
+      <span class="k">evidence graph</span><span>private source IDs + authority hierarchy</span>
+      <span class="k">tailoring modes</span><span>source-only and reviewable AI enhancements</span>
+      <span class="k">layout</span><span>exact CV/resume.tex, 0% scaling, measured 2D packing</span>
+      <span class="k">review</span><span>fixed craft rubric + factual, eligibility, and layout gates</span>
+    </div></div>
+    <div class="lane"><h3>Scoring calibration v8</h3>
+      <p><b>${calibrated.length.toLocaleString()}</b> jobs currently carry the new raw-utility and calibrated-score ledger in production state.</p>
+      <p class="sub">Dimensions can compensate for one another—exceptional company motion or compensation can outweigh a weaker sector fit—but eligibility remains a hard gate. NVIDIA can reach 100; wording and role fit create separation through the 90s.</p></div>
+    <div class="lane"><h3>Non-negotiable QA</h3><div class="gate-row">
+      <span class="chip good">company first</span><span class="chip good">one page</span>
+      <span class="chip good">0% format growth</span><span class="chip good">+1 bullet overflows</span>
+      <span class="chip good">~10-char width tolerance</span><span class="chip good">claims cited</span>
+      </div><p class="sub">A draft is never marked ready unless the PDF compiles and every independent gate passes. The reviewer cannot alter its weights or lower the bar.</p></div>
+    <div class="note"><b>Why PDFs are not here:</b> CV/ is personal and gitignored by contract. Production shows the control plane and ranking; actual resume documents remain private on the Mac.</div>
+  </aside></div>`;
 }
 
 function rSet() {

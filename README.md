@@ -92,8 +92,9 @@ every ~30 min (GitHub Actions cron)
    Google Sheets remains optional/legacy)
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
-2. **When you apply, the inbox becomes the source of truth.** With the email
-   credentials set up (below), the watcher reads application-lifecycle emails
+2. **When you apply, the inbox becomes the source of truth.** The email-based
+   watcher is currently parked as a future multi-user capability. When that
+   capability is enabled, it reads application-lifecycle emails
    and drives the tracker **Stage** for you, end to end — no manual updates:
    - "Thank you for applying…" → promotes the tracked entry to **Applied**
    - online-assessment / coding-challenge invite → **OA**
@@ -172,7 +173,12 @@ works with zero setup.
 
 Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
 
-**2. Optional email-based applied-detection (~3 min)**
+**Future multi-user email-based applied-detection (not part of Victor's current setup)**
+
+This path is intentionally parked until the application has a proper
+multi-user privacy/authentication model. Victor's current owner workflow does
+not need `EMAIL_ADDRESS` or `EMAIL_APP_PASSWORD`.
+
 The ChemE candidate uses NJIT Google Workspace/Gmail, so this uses IMAP with an App Password
 (Google's supported way to let a non-browser client log in — this is not
 your NJIT password and can be revoked anytime independent of it):
@@ -217,6 +223,40 @@ just upgrades whatever it finds when awake. Requires `git push` auth on the
 Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
+
+## Owner-only Resume Studio
+
+Resume Studio is the private Victor-first application harness. It reads the
+radar's local job snapshot plus the ignored `CV/` directory and writes all
+prompts, drafts, PDFs, and review reports under `CV/.resume_studio/`.
+
+Start it from the repository:
+
+```bash
+.venv/bin/python scripts/resume_studio.py
+```
+
+Open `http://127.0.0.1:4317/`. **Existing-bullets mode** selects a target-aware
+subset from the master CV and example résumés without rewriting it.
+**Enhancement mode** may tighten selected bullets while preserving their source
+IDs. In both modes a deterministic renderer uses `CV/resume.tex` unchanged;
+models cannot author the LaTeX document, alter the margins or typography, or
+pass an underfilled page. Employer headings are company-first. Usable installed
+first-party Codex and Claude Code sessions provide planning and fixed review;
+one may fail independently and the run degrades to the other without API keys.
+The local harness removes API-key environment variables so this owner workflow
+does not silently spend API credits. Nothing from `CV/` is sent to GitHub
+Actions or committed to the public repository.
+
+The role list can be sorted by **Best Radar score**, **Newest**, or the private
+**Resume Match** rubric. Match analysis reports requirement coverage, evidence
+strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
+and source IDs; selected roles can be rechecked against the full posting.
+Generation asks for a rich evidence portfolio, then compiles candidate layouts
+to retain the highest-value content that fits. Actual PDF line widths and a
+one-more-bullet overflow probe guard both horizontal and vertical space. The
+reported Resume Craft score is separate from hard factuality, eligibility, and
+layout gates.
 
 Optional upgrades:
 - The four NVIDIA NIM keys are wired into a task-aware, budgeted cloud router
