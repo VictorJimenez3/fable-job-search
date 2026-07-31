@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-31 14:35 UTC** · companies polled directly: **1484** (registry 1676) · jobs tracked: **24735** · new this run: **55** · alerts this run: **0**_
+_Last run: **2026-07-31 14:42 UTC** · companies polled directly: **1484** (registry 1676) · jobs tracked: **24735** · new this run: **55** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -99,7 +99,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 29d | Amigo AI | [Applied AI Engineer](https://jobs.ashbyhq.com/amigo/77e12c0a-e623-4988-8c60-78e3017f0876/application) | SF | ai_lab | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 92 🔥 | 7d | Intel | [Software Development Engineer](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Arizona-Phoenix/Software-Application-Development-Engineer_JR0285267) | Santa Clara, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 92 🔥 | 10d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 92 🔥 | 10d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
+| 92 🔥 | 11d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 92 🔥 | 11d | PMG | [Graduate Leadership Program - AI & Software Engineering (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587038002) |
 | 92 🔥 | 13d | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 92 🔥 | 16d | UST HealthProof | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a5864d13330ca6f993c47fc?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -134,7 +134,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 1d | Oracle | [Systems Software Engineer 1](https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/340728) | United States | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 2d | ZOLL Medical Corporation | [Software Engineer](https://jobright.ai/jobs/info/6a4618393dbab558e29a3a4c?utm_campaign=Software%20Engineering&utm_source=1103) | Chelmsford, MA, United States of America | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 10d | PMG | [Graduate Leadership Program - Data Analytics](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 89 🔥 | 10d | PMG | [Graduate Leadership Program - Data Analytics (January Start)](https://job-boards.greenhouse.io/pmg/jobs/8587053002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
+| 89 🔥 | 11d | PMG | [Graduate Leadership Program - Data Analytics (January Start)](https://job-boards.greenhouse.io/pmg/jobs/8587053002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
 | 89 🔥 | 11d | PMG | [Graduate Leadership Program - Data Analytics (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587036002) |
 | 89 🔥 | 14d | Snap-on | [Jr. Business Intelligence Analyst](https://jobright.ai/jobs/info/6a595b34686b4755d1e0ff6b?utm_campaign=Data%20Analysis&utm_source=1103) | Libertyville, IL, US | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 25d | Ascend Schools | [Data Analyst](https://jobright.ai/jobs/info/6a4b9814971cd25b06f97b81?utm_campaign=Data%20Analysis&utm_source=1103) | Brooklyn, NY | edtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
