@@ -52238,7 +52238,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -52291,7 +52291,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1785455620,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -52334,7 +52334,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
-  "retry_after": 1785463300,
+  "retry_after": 1785488839,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -105360,44 +105360,41 @@
  "coinbase": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "bfdf087093"
-   ],
-   "value": "Estimated: Tier 2. Prestigious fintech pedigree with strong pay and highly complex data challenges, though it sits below foundational AI labs."
+   "source_ids": [],
+   "value": "Estimated: Tier 2; high prestige for fintech/blockchain data roles but not a dedicated AI research lab."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "bfdf087093"
    ],
-   "value": "Transaction fees from retail and institutional cryptocurrency trading, alongside recurring revenue from subscription, staking, and custody services."
+   "value": "Transaction fees from cryptocurrency trading and services."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Estimated: Intense, direct, and self-driven, attempting to avoid bureaucracy by demanding a high-agency 'startup-like' pace."
+   "value": "Uncompromising, elite, and intense."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "d40c46643a",
     "bfdf087093"
    ],
-   "value": "Retail cryptocurrency investors, institutional asset managers, and Web3 developers."
+   "value": "Retail users, institutional investors, and internal engineering teams."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "bfdf087093"
-   ],
-   "value": "Estimated: $200k+ total compensation package, heavily weighted in public equity."
+   "source_ids": [],
+   "value": "Estimated: $150,000 - $200,000+ base, with strong equity and sign-on bonuses typical of elite tech firms."
   },
   "evidence_sha": "9ebd826611370e11",
-  "generated_at": 1784879178,
+  "generated_at": 1785473479,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -105406,78 +105403,75 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "bfdf087093",
+    "856406dddf"
    ],
-   "value": "Financial Technology (Fintech) / Cryptocurrency"
+   "value": "Cryptocurrency / Financial Technology"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Strongly emphasize your ability to execute in an extremely high-performance culture and build complex distributed systems without relying on heavy management, while probing how the specific team balances on-call rotations and sane hours."
+   "value": "Look for concrete examples of thriving in a remote-first, intense tech environment. Probe for high performance tolerance, working with infrastructure customers to solve pain points, and strategies to maintain healthy boundaries given the intense culture."
   },
-  "last_attempt_at": 1784879178,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785463778,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Headquartered in the United States with a globally distributed remote workforce."
+   "value": "Remote-first, but not remote-only."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "To create an open financial system for the world."
+   "value": "Increase economic freedom."
   },
   "name": "Coinbase",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Estimated: Extremely fast and intensive, operating like an aggressive startup inside a public market."
+   "value": "Estimated: Extremely fast and high-pressure. The company explicitly states the bar is high, the environment is intense, and they like it that way."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "856406dddf",
+    "d40c46643a"
    ],
-   "value": "Cryptocurrency exchange, wallet application, institutional custody and staking services, and developer APIs."
+   "value": "Crypto exchange, self-custody wallets, and developer infrastructure platforms."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "bfdf087093"
-   ],
-   "value": "Estimated: 15 to 20 days of standard accrued time off, heavily depending on seniority and geographic hub."
+   "source_ids": [],
+   "value": "Estimated: 20-25 days. Specific policies not found in research."
   },
-  "refresh_after": 1790063178,
+  "refresh_after": 1790657479,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "bfdf087093"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "bfdf087093"
-   ],
-   "value": "Estimated: Potential company-wide domestic shutdown days blocking off major bank holidays, but daily shutdowns are not guaranteed."
+   "source_ids": [],
+   "value": "Estimated: Likely offers standard public holidays, but guaranteed week-long company shutdowns are not indicated in provided research."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Large-cap publicly traded company (NASDAQ: COIN) with thousands of global employees."
+   "value": "Large, public, remote-first company."
   },
   "sources": [
    {
@@ -105522,44 +105516,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [
-    "bfdf087093"
-   ],
-   "value": "Historically provides visa sponsorship for highly specialized technical roles, though policies fluctuate with market cycles."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "bfdf087093",
+    "856406dddf"
    ],
-   "value": "Coinbase is a financial technology company that operates a leading platform for buying, selling, transferring, and storing cryptocurrency. It makes money primarily by charging transaction fees to retail users and institutional clients for trading digital assets, as well as earning revenue from staking, custody services, and subscription products."
+   "value": "Coinbase is a cryptocurrency platform that allows users to buy, sell, and store digital assets. It makes money primarily through transaction fees generated from trading volume on its exchange."
   },
-  "synthesized_evidence_sha": "5b3ec8459b736b3a",
+  "synthesized_evidence_sha": "9ebd826611370e11",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "High-volume distributed ledger and trading infrastructure, blockchain protocol integration, cryptographic security, and machine learning applications for fraud detection and market analytics."
+   "value": "Building scalable developer infrastructure and collaborating with engineering teams to translate platform pain points into concrete improvements."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583542,
   "web_search_url": "https://duckduckgo.com/?q=Coinbase+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Offers remote flexibility and mission-driven technical work in the high-context blockchain domain, but candidates prioritizing strict boundaries should deeply vet the company's reputation for performance-driven pressure."
+   "value": "Offers top-tier prestige, elite new-grad pay, and a fast, highly innovative tech culture with excellent technical learning opportunities. However, the environment is intensely fast-paced and explicitly intense, which may challenge the expectation for guaranteed shutdowns and a low-burnout environment."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "bfdf087093"
+    "d40c46643a"
    ],
-   "value": "Estimated: Moderate to low. Benefits like remote options exist, but recent years have seen highly publicized gripes regarding heavy workloads and rigid performance tracking."
+   "value": "Estimated: Below Average to Average, due to the explicitly intense environment and high performance bar."
   }
  },
  "collabera": {
@@ -162910,101 +162903,99 @@
  },
  "figma": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
-   "source_ids": [
-    "240dea24e1",
-    "83de283a63"
-   ],
-   "value": "Top-tier: recognized for pioneering real-time collaboration algorithms, browser-based graphics, and increasing investment in ML for design automation (smart layout, component suggestions, generative features). Publishes at SIGGRAPH, UIST, CHI; strong engineering brand."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Elite Tier. Figma is recognized as a top-tier destination for AI and ML talent within the design and collaboration space, often recruiting directly from top CS programs. The prestige rivals the top-tier SaaS companies."
   },
   "aliases": [],
-  "attempts": 17,
+  "attempts": 18,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bcc0669a17",
+    "875d659894",
     "240dea24e1"
    ],
-   "value": "Freemium SaaS subscription model: free tier for individuals and small teams; paid Professional and Organization plans per editor per month; Enterprise tier with custom pricing for advanced security, compliance, and administration. Revenue comes from recurring subscriptions."
+   "value": "Freemium SaaS platform with tiered subscriptions for teams, enterprises, and educational institutions. Revenue is generated from paid plans that offer advanced collaboration, security, and AI capabilities."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "240dea24e1"
+    "875d659894"
    ],
-   "value": "Design-led, low-ego, highly collaborative, craft-obsessed, transparent, and inclusive. Values \"default to open,\" \"play,\" and \"thoughtful rigor.\" Strong emphasis on mentorship, learning, and psychological safety."
+   "value": "Mission-driven, collaborative, and builder-centric. The emphasis is on merging creative passion with technical depth in a welcoming, inclusive environment for new graduates and experienced hires alike."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "240dea24e1"
+    "875d659894"
    ],
-   "value": "Customers range from individual freelancers and startups to large enterprises such as Microsoft, Google, Airbnb, Uber, and Salesforce. Figma serves designers, product managers, engineers, and cross-functional teams across technology, media, finance, and education sectors."
+   "value": "Creative and technical teams across industries, ranging from individual designers to large organizations that need collaborative design systems."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $170k-$210k base + $30k-$60k RSU (4-year) + $10k-$20k sign-on; total first-year $210k-$290k. Highly competitive with top-tier AI labs and big tech."
+   "value": "Estimated: $120,000 - $150,000 base salary plus aggressive equity. Total early-career compensation is structured to exceed the top band of Big Tech design and AI-standard offers."
   },
   "evidence_sha": "702719b1dde56988",
-  "generated_at": 1784688201,
+  "generated_at": 1785473479,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "875d659894",
     "240dea24e1"
    ],
-   "value": "SaaS / Design Software / Developer Tools / Creative Technology"
+   "value": "Productivity Software, Design Tools, and Enterprise Collaboration."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect deep technical screens on distributed systems, real-time algorithms, graphics rendering, and ML fundamentals; product sense and design collaboration scenarios; cultural fit for low-ego, high-craft environment; emphasis on learning agility and cross-functional communication."
+   "source_ids": [
+    "875d659894"
+   ],
+   "value": "Candidates are evaluated on delivering high-quality craft with technical depth. Figma's process looks for domain expertise and a collaborative spirit, aligning with the candidate's desire for an elite bar without a grinding, high-burnout culture."
   },
-  "last_attempt_at": 1785447202,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785347139,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "240dea24e1"
+    "875d659894"
    ],
-   "value": "Headquarters in San Francisco; major hubs in New York, London, Tokyo, and remote-first culture with employees across US, Europe, and Asia. Offices designed for collaboration but remote work is fully supported."
+   "value": "San Francisco, New York, and other US hubs, with full-time remote work supported in the United States."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bcc0669a17",
-    "240dea24e1"
+    "875d659894"
    ],
-   "value": "To make design accessible and collaborative for everyone, enabling teams to create better products together through a browser-based, real-time platform."
+   "value": "To make design accessible to all."
   },
   "name": "Figma",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fast but sustainable: rapid iteration cycles (weekly releases), hackathons, and innovation time, balanced by explicit cultural guardrails against burnout. Teams ship quickly but with strong design review and user feedback loops."
+   "value": "Fast-paced, innovative, and iterative with high craft expectations. The culture drives technical impact without falling into the slow bureaucracy of large, old guard tech corporations."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bcc0669a17",
-    "240dea24e1"
+    "875d659894"
    ],
-   "value": "Core products include Figma Design (interface design and prototyping), FigJam (online whiteboarding for brainstorming and diagramming), and Figma Enterprise (advanced security, administration, and organization features). The platform also offers plugins, widgets, and APIs for extensibility."
+   "value": "A cloud-based design platform for brainstorming, prototyping, design-to-code workflows, and AI-powered iteration. Serves as a collaborative environment bridging design and development teams."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick/mental health days; unlimited policy for some roles but with strong cultural encouragement to take 3+ weeks off per year."
+   "value": "Estimated: Discretionary or 'take what you need' model, typically interpreted as 15-20 days of vacation plus sick leave. Standard or flexible policies to prevent burnout."
   },
-  "refresh_after": 1789872201,
-  "retry_after": 1785468802,
+  "refresh_after": 1790657479,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163014,14 +163005,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual year-end shutdown (last week of December through first week of January); occasional additional company-wide recharge days (e.g., \"Figma Fridays\" summer half-days)."
+   "value": "Estimated: Guaranteed annual company-wide winter shutdown between Christmas and New Year's, plus occasional company-wide mental health days."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
     "240dea24e1"
    ],
-   "value": "Late-stage private company (acquired by Adobe in 2022 for $20B, though integration operates independently); ~1,000-2,000 employees; valuation ~$10-20B range pre-acquisition; profitable with strong ARR growth."
+   "value": "Large-scale growth stage private company, currently valued around $10 billion with over 1,200 employees. It is a mature startup that has pivoted to monetization and enterprise expansion post the failed Adobe acquisition."
   },
   "sources": [
    {
@@ -163066,27 +163057,26 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Actively sponsors H-1B, TN, and other work visas; supports green card processes (PERM, EB-2/EB-3); dedicated immigration team; hires internationally for both office and remote roles."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "bcc0669a17",
+    "875d659894",
     "240dea24e1"
    ],
-   "value": "Figma is a cloud-based collaborative design platform that enables teams to design, prototype, and hand off digital products in real time. It operates as a web-first application with multiplayer editing, making it a standard tool for UI/UX designers, product teams, and developers."
+   "value": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop apps. It makes money primarily through subscription-based pricing tiers that unlock advanced team collaboration and design system features."
   },
-  "synthesized_evidence_sha": "f3b3971dd507844c",
+  "synthesized_evidence_sha": "702719b1dde56988",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "240dea24e1",
-    "83de283a63"
+    "875d659894"
    ],
-   "value": "Core engineering challenges include real-time collaboration (CRDTs, operational transforms), high-performance WebGL rendering, browser-based multiplayer infrastructure, plugin/extensibility platform, large-scale data pipelines, and ML-assisted design features (auto-layout, smart selection, content generation)."
+   "value": "Roles include product design with deep technical depth, integrating AI for design iteration, translating design to code, and platform engineering to support real-time design collaboration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583446,
@@ -163094,12 +163084,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Figma offers elite AI/data science prestige through its cutting-edge real-time collaboration engine, WebGL rendering, and emerging ML-assisted design features, combined with top-tier new-grad compensation. Its mission-driven, design-centric culture emphasizes craft and user impact over bureaucracy, with a strong reputation for work-life balance, sane hours, and a fast but sustainable pace that accelerates technical growth without burnout."
+   "value": "Figma provides elite, top-tier prestige in the design tools space while balancing a fast, innovative culture with a mission to democratize design. It offers high new-grad compensation and actively respects work-life balance, avoiding the burnout and bureaucracy typical of larger tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4.2/5 — widely reported as respecting boundaries, flexible hours, no mandatory weekends, and supportive management. Occasional crunch around major launches but not systemic."
+   "value": "Excellent, with an emphasis on respecting personal time and avoiding toxic hustle culture. Known for guarding against burnout better than the typical high-growth startup or FAANG subsidiary."
   }
  },
  "figure": {
@@ -173907,11 +173897,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173923,6 +173915,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785464056,
   "name": "Frost",
   "pace_of_work": {
@@ -173935,6 +173928,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785473599,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173988,7 +173982,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785464056,
   "web_search_url": "https://duckduckgo.com/?q=Frost+company+careers+benefits",
@@ -187912,45 +187906,47 @@
  },
  "goldman sachs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
+    "dbc3b9e88f",
     "31b59c286a"
    ],
-   "value": "Estimated: Top-tier within financial services; global brand prestige is elite, though tech culture is historically more traditional than top-tier tech firms."
+   "value": "Ultra-elite institutional prestige offering top-tier new-grad pay and excellent exit opportunities for data professionals."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Delivering data platforms and products that drive business results through production-focused engineering and modern data technologies."
+   "value": "Leveraging modern data technologies to ingest, transform, and optimize data, delivering fit-for-purpose data products that drive important business outcomes."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Estimated: Pragmatic and technically strong with a focus on production reliability and business outcomes; can be intense."
+   "value": "Fast-paced, pragmatic, delivery-focused engineering culture prioritizing the deployment of reliable, scalable data products for business outcomes."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "4b22b263a5"
+    "31b59c286a"
    ],
-   "value": "Corporations, financial institutions, governments, and institutional investors."
+   "value": "Institutional and corporate clients relying on robust data platforms and important business outcomes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
+    "dbc3b9e88f",
     "31b59c286a"
    ],
-   "value": "Estimated: Highly competitive new-grad base plus bonus, often comparable to top tech firms; exact figures not public in sources."
+   "value": "Estimated: Highly competitive base salary ranging from $110k-$150k, supplemented by significant performance bonuses typical of top-tier financial firms."
   },
   "evidence_sha": "babc0253161ddc9a",
-  "generated_at": 1785372961,
+  "generated_at": 1785473479,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -187959,32 +187955,32 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "4b22b263a5"
+    "31b59c286a"
    ],
-   "value": "Financial Services / Investment Banking"
+   "value": "Financial services and investment banking, with a strong emphasis on data engineering and modern data technology platforms."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Assess whether the firm's delivery-focused engineering and robust data asset building align with the candidate's mission-driven goals; probe for respect of work-life balance and sane hours while offering fast technical learning and career growth."
+   "value": "To screen for your core priorities, rigorously question the interviewers about the team's specific on-call rotation, weekend pager duty expectations, and the actual definition of 'fast-paced' (whether it means innovative tech deployment or simply firefighting late tickets). Clarify if the 'growth over time' mentioned is tied to guaranteed rotational learning or simply tenure-based survival, and probe for whether sane hours and personal time are actually respected or if the role demands 80+ hour "
   },
-  "last_attempt_at": 1785469897,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785464056,
   "locations": {
    "confidence": "medium",
    "source_ids": [
     "4b22b263a5"
    ],
-   "value": "Opportunities posted via the firm's internal hiring platform."
+   "value": "Roles are posted and managed through the firm's higher.gs.com portal, indicating a global or multi-location presence."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "To build robust data assets and deliver reliable, scalable data products fit for production and important business outcomes."
+   "value": "Delivery-focused engineering to build robust data assets, ensuring data products are reliable, scalable, and fit for purpose while supporting business operations."
   },
   "name": "Goldman Sachs",
   "pace_of_work": {
@@ -187992,29 +187988,29 @@
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Estimated: Fast-paced and delivery-focused, matching candidate preference for speed, though large-firm bureaucracy can still exist."
+   "value": "Estimated: Fast-paced and delivery-focused, emphasizing rapid production of robust data assets in a high-pressure environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Data platforms and data products supporting business outcomes, including ingestion, transformation, modelling, optimization, and data quality assets."
+   "value": "Data platforms, data products, ingestion and transformation pipelines, modeling and optimization assets, and reliable scalable data systems supporting business outcomes."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "4b22b263a5"
+    "31b59c286a"
    ],
-   "value": "Estimated: Generous by industry standards but often around 15–25 days; exact policy not found in sources."
+   "value": "Estimated: 15-20 days, reflecting standard corporate policies for large financial institutions."
   },
-  "retry_after": 1785470377,
+  "refresh_after": 1790657479,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "31b59c286a",
-    "4b22b263a5"
+    "31b59c286a"
    ],
    "value": "None found in research"
   },
@@ -188022,16 +188018,17 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "4b22b263a5"
+    "31b59c286a"
    ],
-   "value": "Estimated: Limited firm-wide shutdowns typical in banking; not confirmed in provided sources."
+   "value": "Estimated: No guaranteed technical shutdowns; data platforms frequently require continuous operation and availability."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "4b22b263a5"
+    "4b22b263a5",
+    "dbc3b9e88f"
    ],
-   "value": "Large, established global financial institution with ongoing hiring across multiple roles."
+   "value": "Large, established global firm with ongoing opportunities for technical growth and delivery-focused engineering roles."
   },
   "sources": [
    {
@@ -188086,44 +188083,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "4b22b263a5"
+    "dbc3b9e88f"
    ],
-   "value": "Not explicitly detailed in available materials; global mobility typically possible for top talent."
+   "value": "New-grad positions are actively surfaced and monitored for the firm via external tracked repositories, indicating open deployment for entry-level talent."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "4b22b263a5",
+    "dbc3b9e88f",
     "31b59c286a"
    ],
-   "value": "Goldman Sachs is a leading global investment bank and financial services firm that helps corporations, institutions, and governments raise capital and manage risk. It makes money primarily through investment banking fees, trading and principal investments, and asset management services."
+   "value": "Goldman Sachs is a leading global financial institution that provides investment banking, securities, and asset management services. It makes money by charging fees for advisory and underwriting services, executing trading transactions, and managing capital for institutional and individual clients."
   },
+  "synthesized_evidence_sha": "babc0253161ddc9a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Working with modern data technologies across ingestion, transformation, modelling, optimization, and data quality to build production-grade data assets."
+   "value": "Ingestion, transformation, modeling, optimization, data quality, and building robust data assets in production using modern data technologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655991,
   "web_search_url": "https://duckduckgo.com/?q=Goldman+Sachs+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "31b59c286a"
+    "31b59c286a",
+    "dbc3b9e88f"
    ],
-   "value": "Matches the candidate's desire for elite prestige and high new-grad pay, and the job posting emphasizes working in a fast-paced environment with modern data technologies, appealing to a candidate wanting innovative tech culture over slow bureaucracy."
+   "value": "This position technically aligns with your goal for top-tier AI/data science work, but it fundamentally conflicts with your mission to avoid toxicity and burnout. A 'delivery-focused' role in a 'fast-paced' environment at a top financial institution guarantees elite prestige and high new-grad pay, but it inherently carries the slow bureaucracy, insane hours, and high-burnout culture you want to escape."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "31b59c286a"
    ],
-   "value": "Estimated: Moderate; often demanding in financial services, so candidate should verify team-specific hours and burnout expectations."
+   "value": "Estimated: Poor. The combination of a fast-paced financial environment and delivery-focused engineering typically demands long hours and high availability."
   }
  },
  "gong": {
@@ -224209,38 +224208,101 @@
  "interface ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Estimated: High-tier niche AI startup prestige due to specialized focus on agentic AI for financial services, offering applied AI engineers high-visibility roles directly interfacing with the CEO's office."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Generates real revenue by selling its agentic AI platform to credit unions and community banks, enabling them to offer intelligent financial services to their members."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f6e4ed3846",
+    "5d3581dd57"
+   ],
+   "value": "Estimated: High-leverage, mission-oriented, and scrappy, with a strong emphasis on building impactful AI that directly optimizes users' financial lives."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Credit unions and community banks that serve everyday Americans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new-grad pay for an AI startup, likely ranging from $140k-$180k base, but exact figures are not public."
   },
   "evidence_sha": "bfc4c0920c19e2b2",
+  "generated_at": 1785473479,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Financial Services Technology and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Candidates should highlight their ability to deliver impact in a fast-paced startup environment and their technical depth in applying AI to real-world financial automation. Asking about work-life balance expectations, engineering team rituals, and how the company avoids burnout will be key to ensuring the role meets their personal time requirements."
+  },
+  "last_attempt_at": 1785473479,
+  "last_evidence_at": 1785469901,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Estimated: Likely remote-friendly with a US-based workforce, given the digital nature of the postings and US market focus."
   },
-  "last_evidence_at": 1785469901,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846",
+    "5d3581dd57"
+   ],
+   "value": "Making intelligent financial services available to the millions of people who've never had a private banker by building an AI that knows your entire financial life and acts on your behalf."
+  },
   "name": "interface.ai",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, typical of a revenue-generating AI startup building cutting-edge agentic systems."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846",
+    "5d3581dd57"
+   ],
+   "value": "An agentic AI platform for financial services, referred to as BankGPT, acts as a personal financial intelligence that aggregates user accounts, understands financial situations, and continuously optimizes financial life by finding better rates, negotiating bills, and moving money."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO policy, likely in the range of 15-20 days annually, but exact policy is not public."
   },
+  "refresh_after": 1790657479,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224250,7 +224312,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific data on company-wide shutdowns found in research; job-seekers should inquire about holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f6e4ed3846",
+    "5d3581dd57"
+   ],
+   "value": "Estimated: Early-to-mid stage AI startup in production with real revenue and active hiring for technical and recruiting roles, indicating a growth phase."
   },
   "sources": [
    {
@@ -224314,14 +224384,46 @@
     "url": "https://jobs.ashbyhq.com/interface-ai/61971291-437f-48da-a244-86e3f91d96b8"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5d3581dd57"
+   ],
+   "value": "Estimated: No explicit mention of visa sponsorship in the provided sources; candidates should confirm directly with the recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "interface.ai is an agentic AI platform for financial services, bringing conversational and agentic AI to credit unions and community banks. It generates revenue by selling this AI platform to institutions to help them serve everyday Americans."
+  },
+  "synthesized_evidence_sha": "bfc4c0920c19e2b2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f6e4ed3846",
+    "5d3581dd57"
+   ],
+   "value": "Applied AI engineering focused on building agentic and conversational AI systems, including high-leverage internal automation projects directly for the CEO's office and building financial intelligence products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785469901,
   "web_search_url": "https://duckduckgo.com/?q=interface.ai+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "The mission-driven focus of making private banking accessible to all aligns with the desire for impactful work. The high-leverage applications of applied AI engineering offer elite technical learning, while the fast-moving, revenue-generating startup stage ensures an innovative, non-bureaucratic culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f6e4ed3846"
+   ],
+   "value": "Estimated: Balances a demanding startup pace with a mission-driven culture, though exact work-life balance policies are not public and should be verified."
   }
  },
  "interimage": {
@@ -294272,11 +294374,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -294288,6 +294392,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785469902,
   "name": "Neros Technologies",
   "pace_of_work": {
@@ -294300,6 +294405,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785473599,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -294373,7 +294479,7 @@
     "url": "https://job-boards.greenhouse.io/nerostechnologies/jobs/5176253007"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785469902,
   "web_search_url": "https://duckduckgo.com/?q=Neros+Technologies+company+careers+benefits",
@@ -381772,109 +381878,114 @@
  },
  "shield ai": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [
-    "4221ac14fb"
-   ],
-   "value": "Estimated: Top-tier. The company is a highly regarded venture-backed defense-tech firm known for its elite, mission-critical intelligent systems and autonomous AI applications."
-  },
-  "aliases": [],
-  "attempts": 3,
-  "business_model": {
    "confidence": "high",
    "source_ids": [
     "4221ac14fb",
     "a10eb51b4b"
    ],
-   "value": "Venture-backed defense technology manufacturer that secures revenue through the deployment, configuration, lifecycle management, and sustainment of its autonomous aircraft fleet for global security clients."
+   "value": "Top tier — fielded autonomy on Group 3 UAS (V-BAT), Hivemind stack deployed in contested environments, frequent publications and DARPA/DoD program participation."
   },
-  "culture_vibe": {
-   "confidence": "estimated",
+  "aliases": [],
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
    "source_ids": [
-    "3a1ebc576d",
+    "486387d5ce",
     "4221ac14fb"
    ],
-   "value": "Estimated: Mission-driven, professional, and welcoming. Operations are globally focused and dedicated to protecting civilians and service members."
+   "value": "Venture-backed defense contractor selling autonomous AI software and hardware systems (V-BAT) to government and allied military customers; revenue from development contracts, production, and sustainment."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "4221ac14fb",
+    "a10eb51b4b"
+   ],
+   "value": "Mission-driven, engineering-first, high autonomy, low bureaucracy; team members describe 'adults treating adults like adults' with strong ownership and direct communication. Not a 'move fast and break things' culture — it's 'move fast and don't break the aircraft.'"
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "a10eb51b4b",
-    "7bb83d5386",
-    "c1ad716faf"
+    "486387d5ce",
+    "4221ac14fb",
+    "7bb83d5386"
    ],
-   "value": "Defense forces and security organizations operating globally, supported by facilities and operations across the U.S., Europe, the Middle East, and Asia-Pacific."
+   "value": "U.S. Department of Defense, allied militaries, and government agencies worldwide; technology actively supports operations across multiple theaters."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $120,000 - $160,000. High new-grad pay aligned with top-tier AI and defense-tech industry standards."
+   "value": "Estimated: $140k-$170k base + equity (RSUs) + signing bonus; total comp ~$180k-$220k for AI/ML, autonomy, or robotics new grads (benchmark: top-tier defense tech / autonomy startups)."
   },
   "evidence_sha": "8482d22c5af13b2c",
-  "generated_at": 1785282452,
+  "generated_at": 1785473479,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "4221ac14fb",
-    "a10eb51b4b",
-    "7bb83d5386"
+    "486387d5ce",
+    "4221ac14fb"
    ],
-   "value": "Defense technology and autonomous systems."
+   "value": "Defense technology / Autonomous systems / AI & Robotics"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Concentrate on your technical expertise in intelligent systems with expectations to innovate agilely and push AI/DS boundaries while maintaining a sustainable, healthy work-life balance. Emphasize how you can drive fast-paced technical learning and career growth while respecting scheduled shutdowns and a mission-driven purpose."
+   "confidence": "high",
+   "source_ids": [
+    "4221ac14fb",
+    "a10eb51b4b"
+   ],
+   "value": "Expect deep technical screens on autonomy, robotics, C++/Python, real-time systems, and ML for perception/control. Prepare for system-design questions on deployed autonomous platforms. Be ready to discuss how you balance speed with safety/rigor in mission-critical code. Ask about team autonomy, deployment cycles, and how the org protects focus time."
   },
-  "last_attempt_at": 1785282452,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785463778,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "a10eb51b4b",
-    "7bb83d5386",
-    "c1ad716faf"
+    "486387d5ce",
+    "4221ac14fb",
+    "a10eb51b4b"
    ],
-   "value": "Offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific."
+   "value": "Headquarters in San Diego, CA; additional offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "486387d5ce",
     "4221ac14fb",
-    "a10eb51b4b",
-    "7bb83d5386"
+    "a10eb51b4b"
    ],
-   "value": "Protecting service members and civilians with intelligent systems."
+   "value": "Protect service members and civilians with intelligent systems."
   },
   "name": "Shield AI",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "4221ac14fb",
     "a10eb51b4b"
    ],
-   "value": "Estimated: Fast and innovative. As a venture-backed defense-tech scale-up, the structure favors rapid technical development and global fleet sustainment over slow bureaucracy."
+   "value": "Fast, iterative, deployment-driven; engineering culture values shipping to real platforms over process-heavy bureaucracy. Faster than traditional defense primes, more mission-constrained than pure SaaS."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "4221ac14fb",
     "a10eb51b4b"
    ],
-   "value": "Intelligent systems including the V-BAT uncrewed aircraft, alongside associated payloads, software, and support equipment."
+   "value": "Autonomous AI software (Hivemind) and the V-BAT vertical takeoff and landing (VTOL) unmanned aircraft system; integrated hardware/software platforms for defense and intelligence operations."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 days. The company is expected to provide competitive PTO to maintain sustainable work-life balance for its staff."
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited or flexible policy for senior roles (not explicitly confirmed in public sources)."
   },
-  "refresh_after": 1790466452,
+  "refresh_after": 1790657479,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -381884,16 +381995,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers guaranteed shutdowns to ensure rest and prevent burnout, though exact dates and frequency are not public."
+   "value": "Estimated: Annual end-of-year shutdown (typical for defense tech); occasional 'recharge' days or summer Fridays not publicly confirmed."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "486387d5ce",
     "4221ac14fb",
-    "a10eb51b4b",
     "7bb83d5386"
    ],
-   "value": "Venture-backed company established in 2015 with a global operational footprint spanning four continents."
+   "value": "Founded 2015; venture-backed growth stage with global offices and facilities across four continents; several hundred to 1,000+ employees (exact count not public)."
   },
   "sources": [
    {
@@ -381958,42 +382069,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Defense-sector employer; likely sponsors U.S. work visas (H-1B, O-1, TN) for technical roles; citizenship/clearance requirements vary by program — many roles require U.S. person status or ability to obtain clearance."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "486387d5ce",
     "4221ac14fb",
     "a10eb51b4b"
    ],
-   "value": "Shield AI is a venture-backed defense-tech company that builds intelligent systems, such as the V-BAT aircraft, designed to protect service members and civilians. It makes money by fielding and sustaining these autonomous technologies for defense and global security operations."
+   "value": "Shield AI is a venture-backed defense technology company founded in 2015 that develops intelligent autonomous systems, including the V-BAT aircraft, to protect service members and civilians. It operates globally with offices across the U.S., Europe, the Middle East, and Asia-Pacific."
   },
-  "synthesized_evidence_sha": "37b0bc8a5fe91452",
+  "synthesized_evidence_sha": "8482d22c5af13b2c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a10eb51b4b",
-    "4221ac14fb"
+    "4221ac14fb",
+    "a10eb51b4b"
    ],
-   "value": "Involves developing autonomous intelligent systems and managing the end-to-end lifecycle of uncrewed aerial vehicles, encompassing hardware, payloads, software, and ground equipment."
+   "value": "AI/ML for autonomous systems, robotics, computer vision, sensor fusion, real-time embedded software, flight control, simulation, and hardware-in-the-loop testing; full-stack autonomy stack (Hivemind) on V-BAT and other platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Shield+AI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Shield AI provides a mission-driven, fast-paced defense-tech environment that can accelerate your technical learning and career growth while operating at the elite, high-compensation intersection of AI and national security. Your contributions directly enhance the safety of service members while adhering to a professional culture that respects sane hours and personal time."
+   "confidence": "high",
+   "source_ids": [
+    "486387d5ce",
+    "4221ac14fb"
+   ],
+   "value": "Shield AI offers elite AI/robotics prestige — building fielded autonomous aircraft used by the military — with top-tier new-grad compensation. The mission is concrete (protecting lives with autonomy), the culture is fast and engineering-led, and the company emphasizes sustainable pace and work-life balance compared to traditional defense primes or high-burnout tech startups."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "a10eb51b4b"
-   ],
-   "value": "Estimated: Healthy. Culture respects work-life balance through sane hours to avoid burnout, though specific individual workloads may vary by project role."
+   "source_ids": [],
+   "value": "Estimated: 4/5 — company publicly emphasizes sustainable pace, sane hours, and protected personal time; defense deadlines exist but culture pushes back on burnout."
   }
  },
  "shift": {
@@ -428211,7 +428324,7 @@
    "value": "Estimated: Tier 3 (Niche Tech). While not an elite AI or data science giant, a foundational data hire at a fast-paced nuclear energy startup offers a unique, mission-driven technical prestigue."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -428234,7 +428347,7 @@
    ],
    "value": "Public and private entities seeking safe, reliable, and affordable nuclear energy, as well as public-company operating model stakeholders."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -428263,7 +428376,7 @@
    ],
    "value": "Probe whether the 'execute with urgency' mantra leads to burnout or if there are sane hours and structural guardrails. Ask about the specific pace of technical learning and career acceleration to see if it meets your elite growth criteria without sacrificing personal time."
   },
-  "last_attempt_at": 1785265515,
+  "last_attempt_at": 1785473479,
   "last_evidence_at": 1785463778,
   "locations": {
    "confidence": "low",
@@ -428303,6 +428416,7 @@
    "value": "Estimated: 15-20 days of standard PTO typical for a scaling startup, though exact policy is not public."
   },
   "refresh_after": 1790449515,
+  "retry_after": 1785473959,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -428389,7 +428503,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
