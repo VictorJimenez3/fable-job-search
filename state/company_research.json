@@ -269328,52 +269328,131 @@
  "marshall wace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Tier 1 / Highly Prestige-Elitist Quantitative Hedge Fund. Estimated: Tech roles grant exposure to ultra-high-level data infrastructure but with a demanding performance culture."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Asset management firm generating revenue from management fees on invested capital and performance fees based on fund returns."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Performance-driven, professional, and innovation-focused; graduate environments emphasize building confidence and learning how to apply skills in team settings."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Institutional investors, pension funds, sovereign wealth funds, and qualified private clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Estimated: $150,000 to $200,000+ base salary, often supplemented by significant performance bonuses."
   },
   "evidence_sha": "c2b4ef8fb070bac6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785493893,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785493728,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Financial Services / Asset Management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "To assess fit for this fast, high-prestige AI and data role, expect rigorous evaluations of algorithmic fundamentals and quantitative problem-solving. Candidates should also demonstrate enthusiasm for rapid innovation, cross-functional mobility, and a drive for continuous technical learning."
+  },
+  "last_attempt_at": 1785493893,
   "last_evidence_at": 1785493545,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "New York and Hong Kong, alongside other global financial centers."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "To deliver long-term investment performance through cutting-edge technology, deep data analysis, and a collaborative culture of innovation."
+  },
   "name": "Marshall Wace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Estimated: Intensely fast-paced environment where high performance, technical innovation, and teamwork are emphasized."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Systematic and quantitative investment funds, alongside proprietary data analytics and trading platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Estimated: 20 to 25 days PTO standard for global quantitative hubs, with utilization dependent on project demands."
   },
-  "retry_after": 1785493848,
+  "refresh_after": 1790677893,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Tech Graduate Program. New graduates spend time in different engineering environments across distinct technical disciplines and business functions."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Estimated: Standard bank holiday closedowns and limited year-end quiet periods are typical in global asset management, though full guaranteed shutdowns are rare in active trading environments."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c15951d91f"
+   ],
+   "value": "Established, large-scale global financial institution operating across multiple international financial hubs."
   },
   "sources": [
    {
@@ -269437,14 +269516,48 @@
     "url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646984002"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Likely offers competitive visa sponsorship for elite quantitative and technical talent given its international graduate tech presence in NY and HK. Estimated: specifics vary by region and role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Marshall Wace is a global asset management and hedge fund firm. It makes money by developing sophisticated quantitative and systematic investment strategies that generate returns for its institutional and private clients."
+  },
+  "synthesized_evidence_sha": "c2b4ef8fb070bac6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "Graduate software and infrastructure engineers gain exposure to a range of technical disciplines by rotating through different engineering environments, focusing on performance, innovation, and teamwork."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785493545,
   "web_search_url": "https://duckduckgo.com/?q=Marshall+Wace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e71520b80",
+    "5246410021"
+   ],
+   "value": "This role uniquely accelerates a new grad's career by rotating them across elite technical disciplines within a high-prestige hedge fund environment. Marshall Wace pairs cutting-edge, fast-paced tech assignments with steep learning curves, presenting a high-impact alternative to slower corporate bureaucracies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c61942b264"
+   ],
+   "value": "Estimated: Demanding quant finance hours with high baseline expectations. Work-life balance is achievable but secondary to performance and innovation."
   }
  },
  "marvell": {
@@ -397752,51 +397865,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: While not primarily an AI/ML house, flight software for space operations is elite systems engineering with significant algorithmic complexity. The startup likely offers moderate AI/DS prestige due to dual-use space autonomy work, though it is not a dedicated AI first-tier employer."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "B2B and B2G dual-use technology startup, developing and selling specialized space software and operational technologies for both commercial and government applications."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical, mission-driven, and engineering-heavy culture with focus on hard problems, autonomy, and ownership. Likely a smaller team environment where individual contributions have high visibility."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Commercial space enterprise customers, defense agencies, and government organizations requiring dual-use space technology."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive startup aerospace package likely ranges 110,000 to 140,000 USD base salary for new grad software engineers, plus equity/stock options and potential bonuses."
   },
   "evidence_sha": "908ba855ff1055d5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785493893,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785493728,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Space technology, defense, and aerospace software systems."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "The interview will likely test fundamentals in OOP, C++/C#/Java, and version control workflows relevant to flight software.prepare technical examples showing ability to thrive in startup environments without bureaucracy, demonstrate passion for mission-driven space technology, and ask clarifying questions about work-hour expectations, burnout prevention, and guaranteed shutdown policies."
+  },
+  "last_attempt_at": 1785493893,
   "last_evidence_at": 1785487466,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "United States based, actively hiring for flight software engineering roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "To drive innovation in space operations through advanced dual-use space technology."
+  },
   "name": "Space Kinetic Corp.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup environment, typical of venture-backed or growth-stage space tech companies pushing for rapid innovation and product development cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Innovative space operations technology and flight software systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Industry standard for startups typically ranges 15-20 days PTO annually, though startup vacation policies may have theoretical flexibility balanced against project delivery pressures."
   },
-  "retry_after": 1785493848,
+  "refresh_after": 1790677893,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Flight Software Engineering Development Program (3 Months - Path to Hire)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific shutdown policies were found. Startups rarely offer guaranteed company-wide shutdowns, though some may observe standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Startup stage organization, actively recruiting for new grad and early career development programs."
   },
   "sources": [
    {
@@ -397850,14 +398024,43 @@
     "url": "https://jobright.ai/jobs/info/6a6c3c465c54bc4752cecee9?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Not explicitly stated in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Space Kinetic Corp. is a dual-use space technology startup focused on innovative space operations. As a private startup, it likely generates revenue by developing and selling specialized space technologies and software to both commercial and government entities."
+  },
+  "synthesized_evidence_sha": "908ba855ff1055d5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "Flight software engineering requiring object-oriented programming, with emphasis on C++, C#, and Java, alongside version control and systems optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785487466,
   "web_search_url": "https://duckduckgo.com/?q=Space+Kinetic+Corp.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "863cf9f97e"
+   ],
+   "value": "As a space tech startup with dual-use applications, SKC offers mission-driven work at the intersection of commercial innovation and national security space operations. The startup environment should provide technical learning velocity and ownership opportunities, while the software engineering role aligns with elite new-grad career growth priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Hardware-adjacent aviation startups often require moderate to long hours during launch or critical delivery phases. Work-life balance is rarely guaranteed in early-stage space companies; expect sane hours in theory but startup pressure in practice."
   }
  },
  "spacex": {
