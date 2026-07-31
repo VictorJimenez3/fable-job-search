@@ -173892,43 +173892,115 @@
  },
  "frost": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not determinable from supplied sources; verify compensation competitiveness."
   },
   "evidence_sha": "e2a06bb42b5379cc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785473636,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785473479,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probe directly whether the team offers top-tier AI/data-science work with high new-grad pay and fast innovation rather than slow bureaucracy. Ask explicit questions about expected hours, guaranteed shutdowns, burnout culture, and how much the role accelerates technical growth without sacrificing your personal time."
+  },
+  "last_attempt_at": 1785473636,
   "last_evidence_at": 1785464056,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
   "name": "Frost",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Not determinable from supplied sources; verify whether it matches a fast, non-bureaucratic tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not determinable from supplied sources; verify exact policy with the employer."
   },
-  "retry_after": 1785473599,
+  "refresh_after": 1790657636,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173938,7 +174010,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not determinable from supplied sources; verify whether guaranteed shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
   },
   "sources": [
    {
@@ -173982,14 +174063,49 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Because the supplied company pages did not resolve into readable text, no factual description of Frost's core business and revenue model can be confirmed. Any specific claim beyond the company name would be unsourced and speculative."
+  },
+  "synthesized_evidence_sha": "e2a06bb42b5379cc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9c810267a0",
+    "5801c9afa3",
+    "d4e1df6390"
+   ],
+   "value": "Unconfirmed in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785464056,
   "web_search_url": "https://duckduckgo.com/?q=Frost+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Frost surfaces in new-grad tech tracking, but without readable text you cannot verify the elite AI/data-science prestige, fast innovative culture, or genuine work-life balance you prioritize. Treat it as unproven until you can confirm the role’s learning velocity, sane hours, and shutdown policy from reliable public data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Not determinable from supplied sources; verify actual hours and guaranteed time-off practices."
   }
  },
  "fti consulting": {
@@ -294374,7 +294490,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -294392,7 +294508,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1785473479,
+  "last_attempt_at": 1785473636,
   "last_evidence_at": 1785469902,
   "name": "Neros Technologies",
   "pace_of_work": {
@@ -294405,7 +294521,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1785473599,
+  "retry_after": 1785473876,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
