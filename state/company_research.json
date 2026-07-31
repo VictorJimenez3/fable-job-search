@@ -52469,7 +52469,7 @@
    "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -52522,7 +52522,7 @@
    ],
    "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
   },
-  "last_attempt_at": 1785473479,
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785434128,
   "locations": {
    "confidence": "medium",
@@ -52565,7 +52565,7 @@
    "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
   "refresh_after": 1790056913,
-  "retry_after": 1785488839,
+  "retry_after": 1785515328,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -122175,52 +122175,127 @@
  "cwill": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Estimated: Low. While the company markets an 'AI-driven commerce platform,' the compensation range ($60K-$80K) is well below top-tier elite AI benchmarks for new grads."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "B2B SaaS. CWILL sells software to e-commerce merchants to help them retain customers after a purchase is made."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Estimated: Startup/Builder. The presence of an 'R&D Management Trainee' role suggests a hands-on culture focused on foundational product development."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "E-commerce brands and merchants operating on the Shopify platform."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "$60K/yr - $80K/yr (explicitly listed in job posting)."
   },
   "evidence_sha": "c0fc9b35260118be",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785493728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785483968,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "E-commerce Technology and B2B SaaS."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Candidates should assess if this role actually centers on advanced AI/Data Science or if it is primarily traditional backend SaaS work. Given the new-grad trainee title, probing questions about the technical mentorship structure, the reality of the promised 'sane hours' at this startup stage rather than high-burnout expectations, and opportunities for fast career growth without sacrificing personal time are strongly recommended."
+  },
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785482093,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Illinois State (US). The role is full-time and onsite."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "916262a57d"
+   ],
+   "value": "Not explicitly stated in the provided sources, though their recent branding mentions 'Building Unified AI-Driven Commerce Platforms,' suggesting a focus on AI-driven e-commerce innovation."
+  },
   "name": "CWILL",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "916262a57d",
+    "d945047c85"
+   ],
+   "value": "Estimated: Fast-paced. The emphasis on 'R&D' and the platform's recent rebranding as an 'AI-Driven Commerce Platform' imply an innovative, agile environment rather than slow corporate bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d945047c85",
+    "916262a57d"
+   ],
+   "value": "A post-purchase and retention software suite for Shopify brands. Recent reporting also mentions CWILL is building a 'Unified AI-Driven Commerce Platform'."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9a1ed07c8f"
+   ],
+   "value": "Estimated: Standard startup PTO (10-15 days), not publicly specified."
   },
-  "retry_after": 1785484088,
+  "refresh_after": 1790677728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "R&D Management Trainee - Full-Stack Engineer (Backend)"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "822cccf70d"
+   ],
+   "value": "No information found regarding guaranteed company shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Early-stage. CWILL recently posted an 'R&D Management Trainee' role for a new grad, which implies a startup environment building out its foundational engineering teams."
   },
   "sources": [
    {
@@ -122284,14 +122359,44 @@
     "url": "https://jobright.ai/jobs/info/6a6c076b57120971bf3aa0d7?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "CWILL provides a post-purchase and retention suite designed specifically for Shopify brands. The company monetizes by selling its software platform to e-commerce merchants looking to improve customer retention and drive recurring revenue."
+  },
+  "synthesized_evidence_sha": "c0fc9b35260118be",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d945047c85",
+    "83a3c20177"
+   ],
+   "value": "Full-stack backend engineering with a strong focus on AI and data science technologies. Required skills include Python, JavaScript, TypeScript, Java, and Go, likely to build scalable commerce and retention systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785482093,
   "web_search_url": "https://duckduckgo.com/?q=CWILL+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "This role may not meet the candidate's priorities for 'top-tier pay' and 'elite prestige' given the stated compensation of $60K-$80K/yr and the absence of an established AI industry footprint. However, the R&D branding and AI-driven platform roadmap could potentially offer the fast, innovative tech culture and hands-on learning the candidate desires, assuming the company respects boundaries to avoid burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d945047c85"
+   ],
+   "value": "Estimated: Unknown. No specific mentions of work-life balance, sane hours, or guaranteed shutdowns were found in the company sources."
   }
  },
  "cyber risk analysis group": {
@@ -181629,7 +181734,7 @@
    "value": "Tier 2 — respected for applied AI/ML at scale in classified environments, but not a primary research lab; prestige comes from mission impact and clearance access rather than academic publishing."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -181679,7 +181784,7 @@
    ],
    "value": "Expect behavioral questions tied to federal mission values, technical screens on Python/SQL/cloud fundamentals, and scenario-based discussions about handling classified data, compliance constraints, and cross-team coordination; prepare to explain how you balance innovation with strict security and regulatory requirements."
   },
-  "last_attempt_at": 1785483778,
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785476922,
   "locations": {
    "confidence": "medium",
@@ -181718,7 +181823,7 @@
    "value": "Estimated: 15-20 days PTO + 10 federal holidays + sick leave; accrual increases with tenure; unused PTO may carry over up to contract-specific caps."
   },
   "refresh_after": 1789872568,
-  "retry_after": 1785484018,
+  "retry_after": 1785494208,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -256914,113 +257019,136 @@
  "lockheed martin": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1: Extremely high prestige within the defense and aerospace sector. While not a Silicon Valley consumer AI company, its 'Skunk Works' advanced division and core role in national-security AI are considered elite among engineering and national infrastructure circles."
+   "source_ids": [
+    "01848b07a7",
+    "11f6ab2a59"
+   ],
+   "value": "Estimated: Tier 2. Defense contractors generally offer high technical prestige in aerospace and systems engineering but lack the elite, exclusive tier-1 status of top commercial AI labs regarding cutting-edge machine learning research and new-grad compensation."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "5995ca2d90",
-    "1a83f5fa36"
+    "01848b07a7",
+    "11f6ab2a59"
    ],
-   "value": "Generates revenue predominantly through U.S. federal government appropriations and long-term, cost-plus or fixed-price defense contracts. A secondary revenue stream comes from foreign military sales arranged through the U.S. government."
+   "value": "Operates as a global security and aerospace company that develops advanced technology systems, products, and services for government and defense clients, making money through defense contracts and systems development."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-first and technically serious, dominated by decades of military and veteran influence. It has a formal, safety-obsessed, and respectful engineering culture that values security clearances and patriotism. Internal innovation is balanced against extremely rigorous process and compliance."
+   "source_ids": [
+    "01848b07a7",
+    "11f6ab2a59"
+   ],
+   "value": "Estimated: Mission-driven, structured, and patriotic. Emphasis on reliability, national security, and multidisciplinary teamwork rather than tech sector disruptiveness."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5995ca2d90",
-    "1a83f5fa36"
+    "01848b07a7"
    ],
-   "value": "Primarily the U.S. Department of Defense and its various military branches (Air Force, Navy, Army, Marines), as well as NASA and national intelligence agencies. Also serves international allied governments and a limited number of commercial space/cybersecurity clients."
+   "value": "Global security and defense clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $95,000–$120,000 base salary for a new graduate AI/software engineer in a moderate cost-of-living defense hub, supplemented by a potential signing bonus and a performance-based annual incentive."
+   "source_ids": [
+    "01848b07a7",
+    "11f6ab2a59"
+   ],
+   "value": "Estimated: $85,000 - $110,000. Defense contractors typically offer solid but traditional new-grad salaries rather than top-tier FAANG/elite AI lab compensation."
   },
   "evidence_sha": "d6a3cfea07a36547",
-  "generated_at": 1784681538,
+  "generated_at": 1785493728,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "5995ca2d90",
-    "1a83f5fa36"
+    "01848b07a7"
    ],
-   "value": "Aerospace, Defense, and Security"
+   "value": "Global Security and Aerospace"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Focus on behavioral competencies and problem-solving within real-world defense scenarios over abstract leetcode challenges. Interviews typically assess cultural fit for a mission-driven, collaborative environment, and may probe understanding of secure coding practices, systems thinking, and how you'd apply AI to constrained, safety-critical hardware problems."
+   "source_ids": [
+    "01848b07a7",
+    "11f6ab2a59"
+   ],
+   "value": "Be prepared to discuss how you handle structured, mission-critical development environments rather than rapid tech-startup iteration, and ask about specific team dynamics to gauge if they offer the fast-paced learning and sane hours you are looking for without bureaucracy slowing down innovation."
   },
-  "last_attempt_at": 1784681538,
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785487466,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "5995ca2d90"
+    "11f6ab2a59",
+    "01848b07a7"
    ],
-   "value": "Headquartered in Bethesda, Maryland. Major U.S. facilities include Fort Worth, TX (F-35), Palmdale, CA (Skunk Works), Orlando, FL (training/simulation), Sunnyvale, CA (satellites), and Denver, CO (space business). International presencesupporting allied programs."
+   "value": "Various locations across the United States, with specific job postings indicating Washington state applicants and radar engineering roles."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "1a83f5fa36"
+    "01848b07a7",
+    "11f6ab2a59"
    ],
-   "value": "To solve complex challenges, advance scientific discovery, and deliver innovative solutions to help its customers keep people safe."
+   "value": "To develop reliable, high-impact software and advanced technology systems in dynamic, multidisciplinary environments to support global security."
   },
   "name": "Lockheed Martin",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Typically a structured, deliberate pace with standard 40-hour weeks. It is a large-government contractor with well-defined waterfall and program milestones, though specific advanced development groups (like Skunk Works) can elevate the urgency on classified prototypes while maintaining predictable schedules."
+   "source_ids": [
+    "11f6ab2a59",
+    "01848b07a7"
+   ],
+   "value": "Estimated: Moderate. Job postings describe a 'fast-paced team environment' and 'dynamic, multidisciplinary environment', but the defense sector typically involves strict compliance, security protocols, and bureaucratic processes that slow true technical agility."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "5995ca2d90",
-    "1a83f5fa36"
+    "01848b07a7",
+    "11f6ab2a59"
    ],
-   "value": "Combat aircraft (F-35 Lightning II, F-16), military helicopters (Sikorsky), missile defense systems (THAAD, PAC-3), space exploration vehicles (Orion), satellites, and advanced radar. Its commercial arm focuses on cybersecurity, energy solutions, and advanced logistics technology."
+   "value": "Advanced technology systems, aerospace products, radar systems, and software applications focused on continuous integration and deployment."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15–20 paid time off days annually for new graduates, often combined with sick and personal leave in one bank, plus standard federal holidays."
-  },
-  "rotational_program_name": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "74b5556a9d"
+    "11f6ab2a59"
    ],
-   "value": "Engineering Leadership Development Program (ELDP)"
+   "value": "Estimated: 15-20 days per year. Non-represented full-time employees accrue at least 10 hours per month of PTO (approx. 15 days/year), alongside at least 90 hours (approx. 11 days) of holiday time, both prorated based on start date."
+  },
+  "refresh_after": 1790677728,
+  "retry_after": 0,
+  "rotational_program_name": {
+   "confidence": "high",
+   "source_ids": [
+    "11f6ab2a59",
+    "01848b07a7"
+   ],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "The entire company typically observes a full week-long winter shutdown between Christmas and New Year's Day. Some program-specific pauses also occur around other federal holidays, though not guaranteed company-wide."
+   "source_ids": [
+    "01848b07a7"
+   ],
+   "value": "Estimated: No official company-wide guaranteed shutdowns were found. However, condensed schedules like 4x10 work days with 3 days off per week provide built-in extended time away from the office in addition to PTO."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5995ca2d90"
+    "01848b07a7",
+    "11f6ab2a59"
    ],
-   "value": "Large public company with approximately 122,000 employees, annual revenue exceeding $67 billion, and a market capitalization over $100 billion. Mature and stable, not a startup."
+   "value": "Large, established global corporation (sub-organizations referenced in job postings indicate a massive enterprise structure)."
   },
   "sources": [
    {
@@ -257085,41 +257213,48 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "74b5556a9d"
+    "11f6ab2a59"
    ],
-   "value": "Widely known to sponsor security clearances for U.S. citizens for roles requiring them, as mandated by law for working on classified defense projects. Standard corporate immigration sponsorship is limited because many projects are restricted by International Traffic in Arms Regulations (ITAR)."
+   "value": "Specific roles require security clearances (e.g., Secret Clearance), which inherently restricts employment eligibility."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "5995ca2d90",
-    "1a83f5fa36"
+    "01848b07a7",
+    "11f6ab2a59"
    ],
-   "value": "Lockheed Martin is a global aerospace and defense company that researches, designs, and manufactures advanced military aircraft, missiles, satellites, and integrated technology systems. It generates revenue primarily by selling these products and related services under long-term contracts with the U.S. Department of Defense and allied foreign governments."
+   "value": "Lockheed Martin is a global security and aerospace company that specializes in advanced technology systems, products, and services. They design, develop, and test software and hardware applications for defense and security clients globally."
   },
+  "synthesized_evidence_sha": "d6a3cfea07a36547",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "5995ca2d90",
-    "74b5556a9d"
+    "11f6ab2a59",
+    "01848b07a7"
    ],
-   "value": "In AI/ML and data science, engineers work on autonomous flight systems, predictive maintenance for aircraft, computer vision for satellite imagery, electronic warfare signal processing, and anomaly detection for cybersecurity. The work blends cutting-edge research with classified defense applications."
+   "value": "Software engineering roles involve thriving in a fast-paced team environment focusing on the design, development, and testing of software applications, as well as developing reliable CI/CD software for radar systems in dynamic, multidisciplinary environments."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784645371,
   "web_search_url": "https://duckduckgo.com/?q=Lockheed+Martin+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Effectively bridges elite defense prestige with applied AI innovation, offering new grads high-level security clearance and mission-critical projects that serve as a lifelong career accelerator. The company's genuine 4/10 flexible schedule and frequent plant shutdowns directly align with a desire for deep technical growth without sacrificing personal time or encountering toxic 'crunch' culture."
+   "source_ids": [
+    "01848b07a7",
+    "11f6ab2a59"
+   ],
+   "value": "While Lockheed Martin offers high prestige, mission-driven work, and structured time-off policies that provide work-life balance, it traditionally operates within a slower, process-heavy defense bureaucracy rather than a fast, innovative tech culture, which may conflict with your desire for accelerated technical learning and high new-grad pay."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "4 out of 5. A very strong work-life in the defense industry, widely reported for a '9/80' or '4x10' alternative schedule allowing every other Friday off, supported by a low-overtime, planned-contract cycle."
+   "source_ids": [
+    "11f6ab2a59",
+    "01848b07a7"
+   ],
+   "value": "Estimated: Good. The company offers structured PTO, generous holiday hours, and condensed schedules like 4x10s with 3 days off per week, which supports work-life balance and avoids toxic burnout cultures."
   }
  },
  "logan simpson": {
@@ -269197,11 +269332,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269213,6 +269350,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785493545,
   "name": "Marshall Wace",
   "pace_of_work": {
@@ -269225,6 +269363,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785493848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -269298,7 +269437,7 @@
     "url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646984002"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785493545,
   "web_search_url": "https://duckduckgo.com/?q=Marshall+Wace+company+careers+benefits",
@@ -296075,52 +296214,136 @@
  "neros technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "89368188b6"
+   ],
+   "value": "Estimated: Emerging elite-tier prestige in the specialized defense tech sector, driven by its high-impact mission to modernize the military drone industrial base."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Defense manufacturing and technology development, likely securing government and defense contracts to fund its UAV systems."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Estimated: Mission-driven, hands-on, and highly innovative, prioritizing rapid deployment of defense systems over slow bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Western military and defense organizations requiring modernized systems to compete on the modern battlefield."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1064b4df19",
+    "765c46f5d5"
+   ],
+   "value": "Estimated: Highly competitive new-grad compensation aligned with top-tier defense tech companies, conservatively estimated at $140,000 - $180,000 base salary."
   },
   "evidence_sha": "1f32e5d30fceff83",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785493728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785483968,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Defense Technology and Aerospace Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Emphasize your passion for mission-driven defense technology and showcase your ability to thrive in a fast-paced, hands-on environment that balances learning with sustainable work-life boundaries."
+  },
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785469902,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "89368188b6"
+   ],
+   "value": "Not explicitly stated in research, though the company focuses on rebuilding America's drone industrial base."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "To close the gap between design and deployment by delivering the drone systems the West needs to deter the adversaries of democracy."
+  },
   "name": "Neros Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Estimated: Fast-paced, hands-on, and obsessed with closing the gap between design and deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6"
+   ],
+   "value": "Unmanned aerial vehicles (UAVs) and modern drone systems designed for rapid prototyping and battlefield deployment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "765c46f5d5"
+   ],
+   "value": "Estimated: Standard tech-flexible PTO policy, conservatively estimated at 15-20 days annually for new graduates."
   },
-  "retry_after": 1785484448,
+  "refresh_after": 1790677728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "89368188b6"
+   ],
+   "value": "Estimated: Likely standard federal holidays and potential holiday breaks, though no specific company-wide guaranteed shutdowns are published."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1064b4df19",
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "A scaling technology company with an active hiring presence for engineering and strategic finance roles."
   },
   "sources": [
    {
@@ -296184,14 +296407,49 @@
     "url": "https://job-boards.greenhouse.io/nerostechnologies/jobs/5176253007"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Neros Technologies is a defense technology company focused on rebuilding America's drone industrial base. It designs, prototypes, and deploys unmanned aerial vehicles (UAVs) to help the West compete on the modern battlefield and deter adversaries."
+  },
+  "synthesized_evidence_sha": "1f32e5d30fceff83",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "89368188b6"
+   ],
+   "value": "Prototyping and improving unmanned aerial platforms, requiring a fast and hands-on approach to systems engineering and technical development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785469902,
   "web_search_url": "https://duckduckgo.com/?q=Neros+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "This role perfectly aligns with your desire for elite prestige and high new-grad pay within a fast, innovative tech culture, while fulfilling your requirement for a mission-driven environment that respects work-life balance through sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "89368188b6",
+    "765c46f5d5"
+   ],
+   "value": "Estimated: Sustainable work-life balance with sane hours, though deadlines around rapid prototyping cycles may occasionally require intense focus."
   }
  },
  "nestl": {
@@ -312135,51 +312393,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: While the company is not a pure-play AI firm, applying AI and data science to solve hard, safety-critical spaceflight problems commands strong domain prestige. The small company size may slightly reduce broad \"elite\" tech prestige compared to FAANG, but the mission drives high respect and impact. [1][2]"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "B2B and B2G services model involving contracting specialized engineering and software development support for spaceflight programs and missions. [1][2]"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, highly technical, and deeply engineering-focused. Cultures in this sector are typically collaborative and nerdy in a positive way, with employees passionate about human space exploration. Speed is balanced by process, avoiding the chaotic bureaucracy of massive primes or the burnout culture of tech scale-ups. [1][2]"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "The core customers include civilian space agencies (such as NASA) and defense organizations requiring specialized spaceflight engineering and software development support. [1][2]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Assuming a high-level software engineering role in the Houston market, new grad total compensation likely lands in the $90,000 - $120,000 range, heavily skewed towards base salary rather than equity, typical for non-big-tech aerospace. Exact pay is not public. [1][2]"
   },
   "evidence_sha": "2f3d517ef2e6acec",
+  "generated_at": 1785493728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Aerospace Engineering, Space Technology, and Software Engineering. [1][2]"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "While the role demands hardcore systems engineering (C/C++, Linux, Docker, Jenkins) rather than pure AI, the wider company incubates AI and data science through flight dynamics and trajectory optimization. Candidates should probe how their AI skills translate to orbital simulation, precision data processing, or autonomous LTV system operations. Also, interviewers respect work-life balance, so it’s fair to ask about the on-call rotation for flight operations and how the team ensures sane hours du"
   },
-  "last_attempt_at": 1785483968,
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785482092,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Headquartered in Houston, Texas, though specific office locations were not provided in the sources retrieved. [1][2]"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "To provide safe and reliable software, systems, and aerospace solutions for human and robotic spaceflight. [1][2]"
+  },
   "name": "Odyssey Space Research, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Spaceflight software organizations operate with methodical, quality-focused development lifecycles due to mission-critical constraints and human safety risks, meaning a slower pace than hyper-growth tech but with accumulation of deep technical expertise. [1][2]"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Odyssey Space Research develops flight and ground software systems, training and operations programs, and engineering support for space vehicle systems, such as the Lunar Terrain Vehicle (LTV). [1][2]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Aerospace and engineering services firms of this size typically offer standard professional PTO packages, usually accruing 15-20 days of vacation annually alongside standard federal holidays. Exact policy not public. [1][2]"
   },
-  "retry_after": 1785484088,
+  "refresh_after": 1790677728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6",
+    "1db9db9c4d"
+   ],
+   "value": "None found in research. [1][2]"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide shutdowns (e.g., winter holidays) are common in established aerospace and government services firms, serving as an enforced WLB mechanism to avoid burnout. Exact policy not public. [1][2]"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Company size was not explicitly disclosed in the retrieved sources, but it operates as a specialized, niche-aerospace LLC affecting mission-critical projects. [1][2]"
   },
   "sources": [
    {
@@ -312233,14 +312551,42 @@
     "url": "https://jobright.ai/jobs/info/6a6bf84632f9300c3a3e1bc3?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Explicit visa sponsorship information was not found, but the job posting explicitly requires U.S. Citizenship Only. [1]"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "69073cc6d6",
+    "ef68344796"
+   ],
+   "value": "Odyssey Space Research is an aerospace and software engineering firm specializing in complex systems for spaceflight, including navigation, software development, and training systems. They generate revenue by providing specialized engineering solutions and support to civilian space agencies, defense organizations, and NASA's lunar exploration initiatives. [1][2][3]"
+  },
+  "synthesized_evidence_sha": "2f3d517ef2e6acec",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "69073cc6d6"
+   ],
+   "value": "Roles involve embedded and ground software development in C/C++ within Linux environments, utilizing containers (Docker) and CI/CD pipelines (Jenkins, Git, Gitlab) to support space vehicle software systems. [1]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785482092,
   "web_search_url": "https://duckduckgo.com/?q=Odyssey+Space+Research%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a high-achieving AI/Software candidate seeking a mission-driven, fast-paced, non-bureaucratic culture with strong work-life balance, specialized companies like Odyssey offer a unique compromise: deep technical learning in a high-stakes domain and strong culture, typically without the intense grind of big tech scale-ups. This sector provides a mission-driven \"blue-collar tech\" vibe with sane hours and guaranteed shutdowns avoiding toxic or high-burnout environments, accelerating technical gro"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Engineering services firms supporting space agencies often foster a traditional engineering culture with stable operations teams, suggesting a balanced WLB with predictable hours; however, major mission milestones require crunch periods. [1][2]"
   }
  },
  "office depot": {
@@ -397409,11 +397755,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -397425,6 +397773,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785487466,
   "name": "Space Kinetic Corp.",
   "pace_of_work": {
@@ -397437,6 +397786,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1785493848,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -397500,7 +397850,7 @@
     "url": "https://jobright.ai/jobs/info/6a6c3c465c54bc4752cecee9?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1785487466,
   "web_search_url": "https://duckduckgo.com/?q=Space+Kinetic+Corp.+company+careers+benefits",
@@ -442176,52 +442526,125 @@
  "trustwill": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: Emerging/Startup. The company currently focuses on full-stack engineering rather than dedicated AI/ML roles, so it is unlikely to provide the top-tier AI or data science prestige you are seeking."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "B2B SaaS, providing software tools to e-commerce brands, likely via recurring subscription pricing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: Innovative and collaborative, suited for tech newcomers looking to build broad skill sets in an early-stage setting."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Shopify brands and e-commerce merchants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: $60,000 - $80,000 per year for new grad full-stack engineering roles."
   },
   "evidence_sha": "a2ce91727dd33ee0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1785493728,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1785483968,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "E-commerce Technology / SaaS"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Probe the team's growth potential and daily hours. Ask about on-call expectations, how strictly the company respects off-the-clock personal time, and whether there are structured learning budgets or mentorship programs to accelerate your technical development."
+  },
+  "last_attempt_at": 1785493728,
   "last_evidence_at": 1785482093,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "United States (remote)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Not explicitly stated in the provided sources, but implied to be helping Shopify brands retain customers and maximize post-purchase value."
+  },
   "name": "TrustWILL",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: Fast-paced startup environment balancing product iteration with learning runway, typical of an early-stage growth company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Post-purchase retention solutions designed for Shopify brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: 10-15 days of standard PTO typical for a US startup, though official policy is not published."
   },
-  "retry_after": 1785484088,
+  "refresh_after": 1790677728,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "R&D Management Trainee - Full-Stack Engineer (Backend)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: Unknown or limited formal shutdowns. Startups of this size rarely offer guaranteed corporate holidays beyond standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Startup/early-stage company (currently hiring R&D Management Trainees and offering remote roles)."
   },
   "sources": [
    {
@@ -442275,14 +442698,45 @@
     "url": "https://jobright.ai/jobs/info/6a6c0997c00ae03109f8729c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Not specified in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "TrustWILL builds post-purchase retention solutions specifically for Shopify brands. The company monetizes by selling these retention software tools to e-commerce merchants, likely operating on a SaaS or subscription-based revenue model."
+  },
+  "synthesized_evidence_sha": "a2ce91727dd33ee0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Full-stack engineering with a backend focus. Tech stack includes JavaScript, TypeScript, Python, Java, and Go."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1785482093,
   "web_search_url": "https://duckduckgo.com/?q=TrustWILL+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "For a new grad prioritizing fast technical skill acceleration over elite prestige, TrustWILL offers a high-impact startup environment. The broad, modern tech stack (Python, Go, TS) will challenge you to learn rapidly, though the estimated $60K-$80K base pay is well below your top-tier target and the remote startup pace may conflict with your desire for guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c48d1a10f2"
+   ],
+   "value": "Estimated: Moderate. Full-time remote work offers flexibility, but startup demands could impact strict work-life boundaries."
   }
  },
  "truveta": {
