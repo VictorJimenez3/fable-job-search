@@ -1,26 +1,6 @@
 [
  {
   "aggregators": {
-   "hn": 8,
-   "jobright": 767,
-   "simplify": 1173,
-   "speedyapply": 18,
-   "vansh": 0
-  },
-  "alerts": 3,
-  "ats": {
-   "companies_polled": 486,
-   "failed": 0,
-   "ok": 486
-  },
-  "dropped_by_gates": 31177,
-  "new_jobs": 9,
-  "registry_size": 538,
-  "took_s": 77.4,
-  "ts": 1783549870
- },
- {
-  "aggregators": {
    "hn": 9,
    "jobright": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-New-Grad/master/README.md",
    "simplify": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json",
@@ -6130,5 +6110,26 @@
   "registry_size": 1677,
   "took_s": 302.8,
   "ts": 1785512156
+ },
+ {
+  "aggregators": {
+   "hn": 10,
+   "jobright": 1078,
+   "simplify": 2716,
+   "speedyapply": 145,
+   "vansh": 438,
+   "zapply": 417
+  },
+  "alerts": 1,
+  "ats": {
+   "companies_polled": 800,
+   "failed": 1,
+   "ok": 799
+  },
+  "dropped_by_gates": 54277,
+  "new_jobs": 60,
+  "registry_size": 1678,
+  "took_s": 406.9,
+  "ts": 1785518587
  }
 ]
