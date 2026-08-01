@@ -9877,7 +9877,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592456,
+  "last_ok": 1785597495,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -10271,7 +10271,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592459,
+  "last_ok": 1785597498,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12338,7 +12338,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592451,
+  "last_ok": 1785597490,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12447,7 +12447,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592447,
+  "last_ok": 1785597487,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13038,7 +13038,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592452,
+  "last_ok": 1785597491,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14099,6 +14099,22 @@
   "status": "active",
   "token": "lsu"
  },
+ "workday:lsu:lsuwaiver": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "lsuwaiver"
+  },
+  "failures": 0,
+  "first_seen": 1785597480,
+  "last_ok": 1785597481,
+  "name": "Louisiana State University (LSU)",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lsu"
+ },
  "workday:lumentum:LITE": {
   "ats": "workday",
   "extra": {
@@ -14484,7 +14500,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592448,
+  "last_ok": 1785597487,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14755,6 +14771,22 @@
   "sector": "",
   "status": "active",
   "token": "nationwide"
+ },
+ "workday:nationwidechildrens:NCHCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "NCHCareers"
+  },
+  "failures": 0,
+  "first_seen": 1785597480,
+  "last_ok": 1785597481,
+  "name": "Nationwide Children's Hospital",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nationwidechildrens"
  },
  "workday:navcanada:NAV_Careers": {
   "ats": "workday",
@@ -16118,7 +16150,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1785592452,
+  "last_ok": 1785597490,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
