@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-01 19:33 UTC** · companies polled directly: **1521** (registry 1718) · jobs tracked: **25521** · new this run: **16** · alerts this run: **0**_
+_Last run: **2026-08-01 19:37 UTC** · companies polled directly: **1521** (registry 1718) · jobs tracked: **25521** · new this run: **16** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -35,7 +35,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 8d | Medtronic | [Software Engineer 1 - AI-Driven Data Solutions](https://medtronic.wd1.myworkdayjobs.com/redeploymentmedtroniccareers/job/Lafayette-Colorado-United-States-of-America/Software-Engineer-I--AI-Driven-Data-Solutions----Lafayette--CO_R72435) | Lafayette, CO | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 93 🔥 | 1d | Mayo Clinic Rochester | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d055f57120971bf3ae7f1?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 93 🔥 | 25d | Amazon | [Software Dev Engineer - Amazon Connect](https://www.amazon.jobs/jobs/10479215/apply) | Seattle, WA | big_tech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 92 🔥 | 2d | Amazon | [Front-End Engineer - Kiro](https://www.amazon.jobs/jobs/10488461/apply) | Seattle, WA | big_tech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 92 🔥 | 12d | Amazon | [Software Development Engineer - Agentic Workspaces](https://www.amazon.jobs/jobs/10482153/apply) | Seattle, WA | big_tech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 90 🔥 | 1d | Mayo Clinic | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d019dca1f933846601ecb?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 90 🔥 | 1d | Mayo Clinic Healthcare London | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d05bc32f9300c3a3e691d?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 1d | Omnicom | [Data Science and Analytics_NEX_03](https://jobright.ai/jobs/info/6a6d12e7ba7efe79c2f6853f?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Associate, Software Engineering](https://jobright.ai/jobs/info/6a6cd603acb0a61f9dbc7682?utm_campaign=Software%20Engineering&utm_source=1103) | Colorado Springs, CO, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Associate, Software Engineering](https://jobright.ai/jobs/info/6a6cd604acb0a61f9dbc7686?utm_campaign=Software%20Engineering&utm_source=1103) | Herndon, VA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 79 ⭐ | 2d | Oracle | [Systems Software Engineer 1](https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/340728) | United States | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
