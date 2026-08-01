@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-01 18:40 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **61 shown / 11137 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-01 19:54 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **62 shown / 11138 stored** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -13,8 +13,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 1d | Microchip Technology | [Power, Analog and Mixed-Signal IC Product Engineer Intern - Product En](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/AZ---Chandler/Intern--Engineering--Product-Engineering-_R3151-26-1) | Chandler, AZ | semiconductors | simplify |
 | 77 ⭐ | 4d | GlobalFoundries | [Device Engineer Intern - Ulp Cmos](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | Malta, NY | semiconductors | simplify |
 | 77 ⭐ | 4d | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
-| 76 ⭐ | 17h | SiMa.ai | [Application Engineering Intern](https://jobs.jobvite.com/simaai/job/oBUkAfw9?nl=1&nl=1&fr=false) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Western Digital | [Hardware Engineering Intern](https://jobs.smartrecruiters.com/WesternDigital/744000140949875) | Fremont, CA | other | simplify |
+| 76 ⭐ | 18h | SiMa.ai | [Application Engineering Intern](https://jobs.jobvite.com/simaai/job/oBUkAfw9?nl=1&nl=1&fr=false) | San Jose, CA | other | simplify |
+| 76 ⭐ | 21h | Western Digital | [Hardware Engineering Intern](https://jobs.smartrecruiters.com/WesternDigital/744000140949875) | Fremont, CA | other | simplify |
 | 76 ⭐ | 9d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 76 ⭐ | 16d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 75 ⭐ | 4d | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
@@ -50,6 +50,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 11d | Fab2 | [Packaging Engineer Intern](https://jobs.ashbyhq.com/fab2/4497473d-0ce0-4e83-88c3-2afedceac622/application?embed=true) | SF | other | simplify |
 | 64  | 15d | Leidos | [Signal Processing Technical Intern](https://leidos.wd5.myworkdayjobs.com/External/job/San-Diego-CA/Signal-Processing-Technical-Intern_R-00187499) | San Diego, CA | other | simplify |
 | 64  | 15d | Nidec | [Test Lab Engineer Co-op](https://nidec.wd1.myworkdayjobs.com/nidec/job/North-AmericaUSAMissouriSt-Louis---WPE-MO/Test-Lab-Engineer-Co-op_R0016732) | St. Louis, MO | other | simplify |
+| 64  | 15d | Gumloop | [Design Engineer Intern](https://jobs.ashbyhq.com/Gumloop/dcdc0658-b3fd-44cd-b0cf-4016c9513d40/application?embed=true) | SF | other | simplify |
 | 64  | 16d | Cadence Design Systems | [SSG Design Engineering Intern](https://cadence.wd1.myworkdayjobs.com/External_Careers/job/SAN-JOSE/SSG-Design-Engineering-Intern--Fall-2026-_R52641) | San Jose, CA | other | simplify |
 | 64  | 17d | Schweitzer Engineering Laboratories | [Engineering Intern](https://selinc.wd1.myworkdayjobs.com/SEL/job/Texas---Houston/Engineering-Intern_2026-22278) | Houston, TX | other | simplify |
 | 64  | 17d | Pennsylvania State University | [R&D Engineer Intern](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/R-D-Engineer-Intern_REQ_0000079178-1) | State College, PA | other | simplify |
@@ -68,4 +69,4 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 29d | Arlington County VA | [Utility Engineering Intern](https://fa-exkk-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1624) | Arlington, VA | other | simplify |
 | 48  | 19d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 
-_61 roles shown (score ≥ 42, posted ≤30d)._
+_62 roles shown (score ≥ 42, posted ≤30d)._
