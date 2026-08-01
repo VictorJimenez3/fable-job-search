@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-01 20:29 UTC** · companies polled directly: **1521** (registry 1718) · jobs tracked: **25528** · new this run: **7** · alerts this run: **1**_
+_Last run: **2026-08-01 21:12 UTC** · companies polled directly: **1521** (registry 1718) · jobs tracked: **25528** · new this run: **7** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -57,7 +57,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 28d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a2213097c30cc2cc516d39a?utm_campaign=Software%20Engineering&utm_source=1103) | Austin - ATX1 | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 29d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a0f44fd80bf0430c76322b7?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 19h | Quora | [Software Engineer New Grad - Machine Learning Platform](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db/application?embed=true) | Remote in USA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 87 🔥 | 20h | Quora | [Software Engineer, Machine Learning Platform, New Grad - Quora (Remote](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote - Multiple Locations | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) |
+| 87 🔥 | 21h | Quora | [Software Engineer, Machine Learning Platform, New Grad - Quora (Remote](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote - Multiple Locations | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) |
 | 87 🔥 | 16d | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 19d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 11d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
