@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-01 16:59 UTC** · companies polled directly: **1518** (registry 1715) · jobs tracked: **25501** · new this run: **35** · alerts this run: **0**_
+_Last run: **2026-08-01 17:23 UTC** · companies polled directly: **1518** (registry 1715) · jobs tracked: **25501** · new this run: **35** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -150,7 +150,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 29d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 29d | IXL Learning | [Software Engineer New Grad](https://www.ixl.com/company/jobs?gh_jid=8615717002) | Raleigh, NC | edtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 29d | IXL Learning | [Software Engineer New Grad](https://www.ixl.com/company/jobs?gh_jid=8615710002) | San Mateo, CA | edtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 79 ⭐ | 15h | Ema | [AI Resident](https://jobs.ashbyhq.com/ema/0b289403-c2a2-4544-b244-5e9e042af883/application?embed=true) | SF | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 16h | Ema | [AI Resident](https://jobs.ashbyhq.com/ema/0b289403-c2a2-4544-b244-5e9e042af883/application?embed=true) | SF | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Colorado-Springs-Associate,-Software-Engineering-CO-80925/1414513700/?ats=successfactors) | Colorado Springs, CO | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Herndon-Associate,-Software-Engineering-VA-20171/1414531300/?ats=successfactors) | Reston, VA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | Omnicom | [Data Science and Analytics_NEX_03](https://jobright.ai/jobs/info/6a6d12e7ba7efe79c2f6853f?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
