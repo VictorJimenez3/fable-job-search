@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-02 10:17 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25644** · new this run: **24** · alerts this run: **0**_
+_Last run: **2026-08-02 11:16 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25647** · new this run: **3** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -151,7 +151,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 24d | Jump Trading | [AI Research Engineer - Research Automation](https://boards.greenhouse.io/embed/job_app?token=8052356) | Chicago, IL | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 25d | Jane Street | [Software Engineer Full-Time: New Grad](https://www.janestreet.com/join-jane-street/position/8594541002) | New York City, NY | other | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 27d | UST HealthProof | [Junior Full Stack Developer (Data CoE)](https://jobright.ai/jobs/info/6a426efbff87fd527f984439?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 79 ⭐ | 23h | Sirius XM Radio | [Analyst – Commercial Analytics and Data Science](https://careers.siriusxm.com/jobs/17444?icims=1) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 1d | Sirius XM Radio | [Analyst – Commercial Analytics and Data Science](https://careers.siriusxm.com/jobs/17444?icims=1) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Colorado-Springs-Associate,-Software-Engineering-CO-80925/1414513700/?ats=successfactors) | Colorado Springs, CO | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Herndon-Associate,-Software-Engineering-VA-20171/1414531300/?ats=successfactors) | Reston, VA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 2d | Omnicom | [Data Science and Analytics_NEX_03](https://jobright.ai/jobs/info/6a6d12e7ba7efe79c2f6853f?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
