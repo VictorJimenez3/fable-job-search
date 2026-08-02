@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-02 03:51 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **64 shown / 11140 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-02 06:44 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **63 shown / 11140 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -15,7 +15,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 5d | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
 | 76 ⭐ | 1d | SiMa.ai | [Application Engineering Intern](https://jobs.jobvite.com/simaai/job/oBUkAfw9?nl=1&nl=1&fr=false) | San Jose, CA | other | simplify |
 | 76 ⭐ | 1d | Western Digital | [Hardware Engineering Intern](https://jobs.smartrecruiters.com/WesternDigital/744000140949875) | Fremont, CA | other | simplify |
-| 76 ⭐ | 9d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
+| 76 ⭐ | 10d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 76 ⭐ | 17d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 75 ⭐ | 5d | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
 | 75 ⭐ | 9d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
@@ -65,10 +65,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 22d | GE Appliances | [Engineering Co-op](https://haier.wd3.myworkdayjobs.com/ge_appliances/job/USA-LaFayette-GA/Engineering-Co-op-Fall-2026_REQ-23567) | Calhoun, GA | other | simplify |
 | 64  | 24d | ABB | [Application Engineering Intern](https://abb.wd3.myworkdayjobs.com/external_career_page/job/Alpharetta-Georgia-United-States-of-America/Application-Engineering-Intern---Fall-2026_JR00038999) | Lombard, IL | other | simplify |
 | 64  | 26d | Astranis | [Radiation Effects Engineer Intern](https://job-boards.greenhouse.io/astranis/jobs/4694853006) | SF | other | simplify |
-| 64  | 26d | Susquehanna International Group (SIG) | [Trading System Engineer Intern](https://careers-sig.icims.com/jobs/11169/job?mobile=true&needsRedirect=false) | United States | other | simplify |
+| 64  | 27d | Susquehanna International Group (SIG) | [Trading System Engineer Intern](https://careers-sig.icims.com/jobs/11169/job?mobile=true&needsRedirect=false) | United States | other | simplify |
 | 64  | 28d | Verne Robotics | [Engineering Intern](https://jobs.ashbyhq.com/Verne%20Robotics/bb78cdd4-449b-49f0-bd10-2c62fc85f83b/application) | San Bruno, CA | other | simplify |
 | 64  | 28d | GE Aerospace | [Embedded Systems Engineer Co-op](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Bohemia/Embedded-Systems-Engineer-Co-op--Bohemia--NY----Spring-2027_R5035583-1) | Long Island, New York | other | simplify |
-| 64  | 29d | Arlington County VA | [Utility Engineering Intern](https://fa-exkk-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1624) | Arlington, VA | other | simplify |
 | 48  | 20d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 
-_64 roles shown (score ≥ 42, posted ≤30d)._
+_63 roles shown (score ≥ 42, posted ≤30d)._
