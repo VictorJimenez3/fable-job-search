@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-02 17:18 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25662** · new this run: **1** · alerts this run: **1**_
+_Last run: **2026-08-02 18:00 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25662** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -107,7 +107,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 16d | Mayo Clinic Healthcare London | [IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward](https://jobright.ai/jobs/info/6a5a34863ac7627fe9002ab4?utm_campaign=Software%20Engineering&utm_source=1103) | Rochester, MN, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 18d | Five Rings | [Campus Full Time 2027 - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | New York City, NY | other | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 82 ⭐ | 19d | Abridge | [Software Engineer](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace/application) | SF | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 82 ⭐ | 19d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) |
+| 82 ⭐ | 20d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) |
 | 82 ⭐ | 24d | Cincinnati Children’s Hospital and Med | [Application Developer 1 - Power Platform](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Offices-at-Vernon-Place/Application-Developer-I--Power-Platform_JR222607) | Cincinnati, OH | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 28d | WHOOP | [Software Engineer I (Backend)](https://jobright.ai/jobs/info/699e63ede0bddb6acacde721?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 1d | Tower Health | [Electronic Security Systems Engineer](https://www.towercareers.org/jobs/64416?icims=1) | West Reading, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
