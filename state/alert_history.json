@@ -3,42 +3,6 @@
   "alert_ok": true,
   "alerted_at": 1784768504,
   "ats": "",
-  "company": "Truist Bank",
-  "description": "",
-  "id": "30367a133a4265ef",
-  "llm_note": "",
-  "locations": [
-   "Charlotte, NC"
-  ],
-  "posted_at": 1784678400,
-  "posting": {
-   "analyzed_at": 1784768504,
-   "fetch_note": "could not retrieve the posting page/API",
-   "fetch_status": "unavailable",
-   "fetched": true
-  },
-  "remote": false,
-  "salary": "",
-  "score": 87,
-  "score_reasons": [
-   "base 5",
-   "role:data_science +23",
-   "sector:fintech +5",
-   "trusted new-grad board priority +45",
-   "posted <72h +3",
-   "title matches your history +6",
-   "verified new-grad/early-career evidence"
-  ],
-  "sector": "fintech",
-  "source": "simplify",
-  "source_url": "https://github.com/SimplifyJobs/New-Grad-Positions",
-  "title": "Data Scientist 1",
-  "url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Charlotte-NC/Data-Scientist-I_R0117092"
- },
- {
-  "alert_ok": true,
-  "alerted_at": 1784768504,
-  "ats": "",
   "company": "RTX",
   "description": "",
   "id": "c2def2382b142450",
@@ -18682,5 +18646,59 @@
   "source_url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad",
   "title": "JUNIOR DATA ANALYST",
   "url": "https://jobright.ai/jobs/info/6a6f1235cd3bac13d3708152?utm_campaign=Data%20Analysis&utm_source=1103"
+ },
+ {
+  "alert_ok": true,
+  "alerted_at": 1785680720,
+  "ats": "ashby",
+  "company": "Clera",
+  "description": "",
+  "id": "aab3c8a9b0675ee4",
+  "llm_note": "",
+  "locations": [
+   "New York"
+  ],
+  "posted_at": 1785675459,
+  "posting": {
+   "analyzed_at": 1785680720,
+   "fetch_status": "readable",
+   "fetched": false,
+   "sponsorship": "yes",
+   "sponsorship_note": "visa sponsorship is available"
+  },
+  "remote": true,
+  "salary": "",
+  "score": 83,
+  "score_calibrated": 83,
+  "score_dimensions": {
+   "base": 5,
+   "company_quality": 4,
+   "compensation": 0,
+   "eligibility": 30,
+   "mission": 0,
+   "personal_signal": 6,
+   "role_fit": 26,
+   "timing_access": 6
+  },
+  "score_raw": 77,
+  "score_reasons": [
+   "base utility +5",
+   "role:swe +20",
+   "frontier AI wording +4",
+   "systems/cloud wording +2",
+   "new-grad/early-career priority +30 (eligibility)",
+   "cited AI/technical prestige +4",
+   "posted <24h +4",
+   "remote +2",
+   "you've engaged with Clera +2",
+   "title matches your history +4",
+   "raw utility 77; calibration v8 -> 83/100",
+   "verified new-grad/early-career evidence"
+  ],
+  "sector": "other",
+  "source": "ashby",
+  "source_url": "",
+  "title": "Full Stack Engineer",
+  "url": "https://jobs.ashbyhq.com/clera/06e05494-44b9-4289-b82c-f39b76cbac60"
  }
 ]
