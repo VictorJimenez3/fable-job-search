@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-02 18:00 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25662** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-02 19:10 UTC** · companies polled directly: **1539** (registry 1736) · jobs tracked: **25663** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -80,7 +80,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 84 ⭐ | 18d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 18d | Flatiron Health | [Data Analyst - Evidence Solutions](https://jobright.ai/jobs/info/6a57e31a8f51964c0404568e?utm_campaign=Data%20Analysis&utm_source=1103) | Durham, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 23d | Generate Biomedicines | [Data Scientist 1](https://generatebiomedicines.com/open-positions?gh_jid=4695495006) | Cambridge, MA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 84 ⭐ | 26d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) |
+| 84 ⭐ | 27d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) |
 | 83 ⭐ | 10d | California Correctional Health Care Se | [Financial Data Analyst and Reports Developer](https://jobright.ai/jobs/info/6a629923846162391c936e46?utm_campaign=Data%20Analysis&utm_source=1103) | Sacramento County, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 83 ⭐ | 11d | California Correctional Health Care Se | [Associate Data Analytics and Report Developer](https://jobright.ai/jobs/info/6a62994bd5caab4af8baf032?utm_campaign=Data%20Analysis&utm_source=1103) | Sacramento County, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 83 ⭐ | 12d | Concourse | [Applied AI Deployment Strategist](https://jobs.ashbyhq.com/concourse/b1222d96-2d02-4809-9533-4fd31e62b8d0/application?embed=true) | NYC | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
