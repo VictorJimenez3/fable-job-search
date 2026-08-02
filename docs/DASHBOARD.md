@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-02 07:33 UTC** · companies polled directly: **1536** (registry 1733) · jobs tracked: **25620** · new this run: **2** · alerts this run: **1**_
+_Last run: **2026-08-02 08:37 UTC** · companies polled directly: **1536** (registry 1733) · jobs tracked: **25620** · new this run: **2** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -110,7 +110,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 19d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) |
 | 82 ⭐ | 24d | Cincinnati Children’s Hospital and Med | [Application Developer 1 - Power Platform](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Offices-at-Vernon-Place/Application-Developer-I--Power-Platform_JR222607) | Cincinnati, OH | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 28d | WHOOP | [Software Engineer I (Backend)](https://jobright.ai/jobs/info/699e63ede0bddb6acacde721?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 81 ⭐ | 22h | Tower Health | [Electronic Security Systems Engineer](https://www.towercareers.org/jobs/64416?icims=1) | West Reading, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 23h | Tower Health | [Electronic Security Systems Engineer](https://www.towercareers.org/jobs/64416?icims=1) | West Reading, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | Welo Global | [Generative AI Analyst - Simplified Chinese](https://jobs.lever.co/weloglobal/c169172d-6b2e-45a8-885d-78723b1a7a1c/apply) | Remote in USA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 2d | Fifth Third Bank | [IT Leadership Program - 2027](https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/IT-Leadership-Program---2027_R67329) | Cincinnati, OH | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 3d | AbbVie | [Associate Software Engineer 1](https://jobs.smartrecruiters.com/AbbVie/3743990014350476) | Vernon Hills, IL | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -151,7 +151,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 24d | Jump Trading | [AI Research Engineer - Research Automation](https://boards.greenhouse.io/embed/job_app?token=8052356) | Chicago, IL | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 25d | Jane Street | [Software Engineer Full-Time: New Grad](https://www.janestreet.com/join-jane-street/position/8594541002) | New York City, NY | other | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 27d | UST HealthProof | [Junior Full Stack Developer (Data CoE)](https://jobright.ai/jobs/info/6a426efbff87fd527f984439?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 79 ⭐ | 21h | Sirius XM Radio | [Analyst – Commercial Analytics and Data Science](https://careers.siriusxm.com/jobs/17444?icims=1) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 22h | Sirius XM Radio | [Analyst – Commercial Analytics and Data Science](https://careers.siriusxm.com/jobs/17444?icims=1) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Colorado-Springs-Associate,-Software-Engineering-CO-80925/1414513700/?ats=successfactors) | Colorado Springs, CO | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | L3Harris Technologies | [Software Engineering Associate](https://jobs.l3harris.com/job/Herndon-Associate,-Software-Engineering-VA-20171/1414531300/?ats=successfactors) | Reston, VA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 2d | Omnicom | [Data Science and Analytics_NEX_03](https://jobright.ai/jobs/info/6a6d12e7ba7efe79c2f6853f?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
