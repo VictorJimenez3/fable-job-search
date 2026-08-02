@@ -1,11 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-08-01T09:45:38+00:00",
+   "at": "2026-08-02T09:45:30+00:00",
    "completion_tokens": 600,
    "detail": "",
    "endpoint": "nvidia:nemotron",
-   "latency_ms": 16429,
+   "latency_ms": 13674,
    "max_tokens": 600,
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "prompt_chars": 659,
@@ -14,7 +14,7 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1785577538,
+ "generated_at": 1785663930,
  "history": [
   {
    "generated_at": 1784389212,
@@ -361,6 +361,24 @@
   },
   {
    "generated_at": 1785577538,
+   "logical_calls": 1,
+   "models": {
+    "nvidia:nemotron": {
+     "errors": 0,
+     "model": "nvidia/nemotron-3-ultra-550b-a55b",
+     "ok": 1,
+     "requests": 1,
+     "tokens": 775
+    }
+   },
+   "provider": "nvidia-router",
+   "requests": 1,
+   "task_calls": {
+    "discovery": 1
+   }
+  },
+  {
+   "generated_at": 1785663930,
    "logical_calls": 1,
    "models": {
     "nvidia:nemotron": {
