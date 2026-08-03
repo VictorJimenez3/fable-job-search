@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-03 23:29 UTC** · companies polled directly: **1551** (registry 1748) · jobs tracked: **26252** · new this run: **48** · alerts this run: **3**_
+_Last run: **2026-08-03 23:38 UTC** · companies polled directly: **1562** (registry 1759) · jobs tracked: **26312** · new this run: **60** · alerts this run: **10**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -119,6 +119,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 26d | Cincinnati Children’s Hospital and Med | [Application Developer 1 - Power Platform](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Offices-at-Vernon-Place/Application-Developer-I--Power-Platform_JR222607) | Cincinnati, OH | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 29d | WHOOP | [Software Engineer I (Backend)](https://jobright.ai/jobs/info/699e63ede0bddb6acacde721?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 9h | Universal Health Services | [Associate Software Engineer - FSI](https://jobs.uhsinc.com/jobs/362176?icims=1) | King of Prussia, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 23h | Robert Half | [Software Engineer 1 - Generative AI Applications](https://roberthalf.wd1.myworkdayjobs.com/roberthalfcareers/job/NEW-YORK-MIDTOWN/Software-Engineer-I--Generative-AI-Applications_JR-261077) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | CodeVertex Operations | [Virtual Data Analyst / Entry Level (Remote)](https://jobright.ai/jobs/info/6a70944b357dfc6ff2b39b0f?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 1d | TikTok | [Software Development Engineer in Test Graduate (Global E-commerce) - 2](https://jobright.ai/jobs/info/6a701a43cd3bac13d3709854?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 1d | TikTok | [Software Development Engineer in Test Graduate (Global E-commerce) - 2](https://jobright.ai/jobs/info/6a701a40c56c0956e8adda67?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 18d | Lightfield | [Software Engineer New Grad - Applied AI](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d/application?embed=true) | SF | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 18d | Lightfield | [Software Engineer, Applied AI (Early Career)](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) |
 | 80 ⭐ | 18d | Lightfield | [Software Engineer, Applied AI, New Grad](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) |
-| 80 ⭐ | 19d | UST HealthProof | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a5864d13330ca6f993c47fc?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
