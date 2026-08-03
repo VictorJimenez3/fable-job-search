@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-03 19:23 UTC** · companies polled directly: **1549** (registry 1746) · jobs tracked: **26123** · new this run: **69** · alerts this run: **5**_
+_Last run: **2026-08-03 19:57 UTC** · companies polled directly: **1549** (registry 1746) · jobs tracked: **26123** · new this run: **69** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -106,7 +106,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 27d | Tesla | [AI Engineer - Whole Body Controls - Optimus](https://www.tesla.com/careers/search/job/275999) | Palo Alto, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 28d | Capital One | [Data Analyst Associate](https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Data-Analyst-Associate---2027_R244316-1) | McLean, VA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 28d | Capital One | [Data Analyst Associate - 2027](https://jobright.ai/jobs/info/6a4ba0f75d7b097d2df3da78?utm_campaign=Data%20Analysis&utm_source=1103) | McLean, VA, United States of America | fintech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 82 ⭐ | 3h | Accenture | [Accenture Graduate Program – Technology – Enterprise Platform Advisory](https://accenture.wd103.myworkdayjobs.com/en-US/AccentureCareers/job/Hong-Kong/Accenture-Graduate-Program---Technology---Enterprise-Platform-Advisory_R00317185) |  | other | [Direct company / ATS monitoring](https://accenture.wd103.myworkdayjobs.com/en-US/AccentureCareers/job/Hong-Kong/Accenture-Graduate-Program---Technology---Enterprise-Platform-Advisory_R00317185) |
+| 82 ⭐ | 4h | Accenture | [Accenture Graduate Program – Technology – Enterprise Platform Advisory](https://accenture.wd103.myworkdayjobs.com/en-US/AccentureCareers/job/Hong-Kong/Accenture-Graduate-Program---Technology---Enterprise-Platform-Advisory_R00317185) |  | other | [Direct company / ATS monitoring](https://accenture.wd103.myworkdayjobs.com/en-US/AccentureCareers/job/Hong-Kong/Accenture-Graduate-Program---Technology---Enterprise-Platform-Advisory_R00317185) |
 | 82 ⭐ | 19h | Canoe Intelligence | [Data Analyst, Private Markets](https://jobright.ai/jobs/info/6a70be2071acd469eed9f502?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | ai_lab | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 1d | TikTok | [Backend Software Engineer Graduate (Business Governace) - 2027 Start](https://jobright.ai/jobs/info/6a6ffdc5cd3bac13d3709520?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 1d | SayVo AI | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a6fcf7341b41d325296d5a6?utm_campaign=Software%20Engineering&utm_source=1103) | United States | ai_lab | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
