@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-04 23:22 UTC** · companies polled directly: **1575** (registry 1773) · jobs tracked: **26965** · new this run: **44** · alerts this run: **1**_
+_Last run: **2026-08-04 23:35 UTC** · companies polled directly: **1584** (registry 1783) · jobs tracked: **27043** · new this run: **78** · alerts this run: **13**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -131,6 +131,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 17h | TikTok | [Graduate Software Engineer - Ads Interface](https://lifeattiktok.com/search/7668855346857019701) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 23h | TikTok | [Frontend Software Engineer Graduate (Global E-commerce) - 2027 Start](https://jobright.ai/jobs/info/6a71a411ee751e0c7934463b?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 23h | TikTok | [Mobile Software Engineer Graduate (Global E-commerce) - 2027 Start](https://jobright.ai/jobs/info/6a71a4109a0ca4480c7d4eeb?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 81 ⭐ | 23h | Shirley Ryan AbilityLab | [Machine Learning Ops Engineer 1 - CBM Lab](https://sralab.wd1.myworkdayjobs.com/SRAlabCareers/job/Chicago-IL/Engineer-I--Machine-Learning-Ops-CBM-Lab_JR-1065210-2) | Chicago, IL | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | Universal Health Services | [Associate Software Engineer - FSI](https://jobs.uhsinc.com/jobs/362176?icims=1) | King of Prussia, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | TikTok | [Backend Software Engineer Graduate - Risk & Response](https://lifeattiktok.com/search/7663032057264244997) | Seattle, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | TikTok | [Backend Software Engineer Graduate - Business Governance](https://lifeattiktok.com/search/7663042453461600517) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 21d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 21d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 22d | Allstate Insurance Company | [AI Product Engineer - Copilot & Power Platform](https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/US---Remote/AI-Product-Engineer--Copilot---Power-Platform---Remote---US-_R30742-1) | Remote in USA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 81 ⭐ | 27d | CareFirst BlueCross BlueShield | [Associate Data Analyst (Hybrid)](https://jobright.ai/jobs/info/6a4e4d259469c0662034ac35?utm_campaign=Data%20Analysis&utm_source=1103) | Baltimore, MD, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
