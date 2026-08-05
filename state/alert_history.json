@@ -1,41 +1,6 @@
 [
  {
   "alert_ok": true,
-  "alerted_at": 1785193872,
-  "ats": "",
-  "company": "Barry-Wehmiller",
-  "description": "",
-  "id": "0cb3f1267c0da4c4",
-  "llm_note": "",
-  "locations": [
-   "Denver, CO"
-  ],
-  "posted_at": 1785110400,
-  "posting": {
-   "analyzed_at": 1785193872,
-   "fetch_status": "readable",
-   "fetched": true,
-   "sponsorship": "unknown"
-  },
-  "remote": false,
-  "salary": "",
-  "score": 77,
-  "score_reasons": [
-   "base 5",
-   "role:swe +20",
-   "new-grad/early-career priority +45",
-   "posted <24h +6",
-   "title matches your history +1",
-   "verified new-grad/early-career evidence"
-  ],
-  "sector": "other",
-  "source": "simplify",
-  "source_url": "https://github.com/SimplifyJobs/New-Grad-Positions",
-  "title": "Entry Level Software Engineer",
-  "url": "https://barrywehmiller.wd1.myworkdayjobs.com/BWConfidential/job/Denver-CO/Entry-Level-Software-Engineer_R022282"
- },
- {
-  "alert_ok": true,
   "alerted_at": 1785200012,
   "ats": "",
   "company": "Miovision",
@@ -21283,5 +21248,54 @@
   "source_url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad",
   "title": "Software Engineer, Entry-Level",
   "url": "https://jobright.ai/jobs/info/6a7367e0e55c73319eb17087?utm_campaign=Software%20Engineering&utm_source=1103"
+ },
+ {
+  "alert_ok": true,
+  "alerted_at": 1785966156,
+  "ats": "",
+  "company": "ListLab",
+  "description": "",
+  "id": "6ed6fbec8856aba9",
+  "llm_note": "",
+  "locations": [
+   "United States"
+  ],
+  "posted_at": 1785888000,
+  "posting": {
+   "analyzed_at": 1785966156,
+   "fetch_status": "readable",
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "remote": true,
+  "salary": "",
+  "score": 76,
+  "score_calibrated": 76,
+  "score_dimensions": {
+   "base": 5,
+   "company_quality": 0,
+   "compensation": 0,
+   "eligibility": 30,
+   "mission": 0,
+   "personal_signal": 6,
+   "role_fit": 20,
+   "timing_access": 6
+  },
+  "score_raw": 67,
+  "score_reasons": [
+   "base utility +5",
+   "role:swe +20",
+   "trusted new-grad board priority +30 (eligibility)",
+   "posted <24h +4",
+   "remote +2",
+   "title matches your history +6",
+   "raw utility 67; calibration v8 -> 76/100",
+   "verified new-grad/early-career evidence"
+  ],
+  "sector": "other",
+  "source": "jobright",
+  "source_url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad",
+  "title": "Junior Software Developer — Remote",
+  "url": "https://jobright.ai/jobs/info/6a7388a81ce9647cdbca8bcf?utm_campaign=Software%20Engineering&utm_source=1103"
  }
 ]
