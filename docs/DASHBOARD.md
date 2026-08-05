@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-05 17:56 UTC** · companies polled directly: **1596** (registry 1795) · jobs tracked: **27370** · new this run: **60** · alerts this run: **5**_
+_Last run: **2026-08-05 18:09 UTC** · companies polled directly: **1596** (registry 1795) · jobs tracked: **27370** · new this run: **60** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -151,7 +151,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 27d | Cincinnati Children’s Hospital and Med | [Application Developer 1 - Power Platform](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Offices-at-Vernon-Place/Application-Developer-I--Power-Platform_JR222607) | Cincinnati, OH | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 28d | Blissway | [Machine Learning Engineer - Machine Learning Engineer](https://jobs.ashbyhq.com/blissway/662f1761-5d28-421d-8b47-605cc910991d/application) | Denver, CO | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 29d | Tesla | [AI Engineer - Whole Body Controls - Optimus](https://www.tesla.com/careers/search/job/275999) | Palo Alto, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 81 ⭐ | 17h | RTX | [Software Engineer 1 - Air Traffic Solutions](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA3--1001-Boston-Post-Rd--BLDG-3/Software-Engineer-I---Air-Traffic-Solutions--Onsite-_01864077) | Marlborough, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 18h | RTX | [Software Engineer 1 - Air Traffic Solutions](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA3--1001-Boston-Post-Rd--BLDG-3/Software-Engineer-I---Air-Traffic-Solutions--Onsite-_01864077) | Marlborough, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | RTX | [Software Engineer I - Air Traffic Solutions (Onsite)](https://jobright.ai/jobs/info/6a731a2b8cd88e7ccbf56b46?utm_campaign=Software%20Engineering&utm_source=1103) | Marlborough, MA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 2d | Universal Health Services | [Associate Software Engineer - FSI](https://jobs.uhsinc.com/jobs/362176?icims=1) | King of Prussia, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 2d | Robert Half | [Software Engineer 1 - Generative AI Applications](https://roberthalf.wd1.myworkdayjobs.com/roberthalfcareers/job/NEW-YORK-MIDTOWN/Software-Engineer-I--Generative-AI-Applications_JR-261077) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
