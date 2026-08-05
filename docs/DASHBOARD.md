@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-05 20:10 UTC** · companies polled directly: **1597** (registry 1796) · jobs tracked: **27488** · new this run: **78** · alerts this run: **10**_
+_Last run: **2026-08-05 20:11 UTC** · companies polled directly: **1597** (registry 1796) · jobs tracked: **27488** · new this run: **78** · alerts this run: **10**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -102,6 +102,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 25d | Fuze Health | [Graduate Software Engineer - Fuze Services](https://jobright.ai/jobs/info/6a52583f9fbdab22fe13b2b3?utm_campaign=Software%20Engineering&utm_source=1103) | United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 85 🔥 | 26d | TikTok | [Software Engineer Graduate (Capital Platform) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/69d5ff1ae63cea7a8b667141?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 85 🔥 | 28d | Trinity Health | [Associate Data Scientist](https://jobright.ai/jobs/info/6a4eb19ffc327f422fef3d17?utm_campaign=Data%20Analysis&utm_source=1103) | Clive, IA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 84 ⭐ | 4h | Roblox | [[2027] Software Engineer, Early Career](https://careers.roblox.com/jobs/8072244?gh_jid=8072244) | San Mateo, CA, United States | big_tech | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/roblox) |
 | 84 ⭐ | 1d | TikTok | [Frontend Software Engineer Graduate - Global E-commerce](https://lifeattiktok.com/search/7668828193675036981) | Seattle, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 1d | TikTok | [Mobile Software Engineer Graduate - Global E-commerce](https://lifeattiktok.com/search/7668831181590513925) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 1d | TikTok | [Graduate Software Engineer](https://lifeattiktok.com/search/7668566347702569269) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 20h | RTX | [Software Engineer 1 - Air Traffic Solutions](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA3--1001-Boston-Post-Rd--BLDG-3/Software-Engineer-I---Air-Traffic-Solutions--Onsite-_01864077) | Marlborough, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | RTX | [Software Engineer I - Air Traffic Solutions (Onsite)](https://jobright.ai/jobs/info/6a731a2b8cd88e7ccbf56b46?utm_campaign=Software%20Engineering&utm_source=1103) | Marlborough, MA, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 2d | Universal Health Services | [Associate Software Engineer - FSI](https://jobs.uhsinc.com/jobs/362176?icims=1) | King of Prussia, PA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 81 ⭐ | 2d | Robert Half | [Software Engineer 1 - Generative AI Applications](https://roberthalf.wd1.myworkdayjobs.com/roberthalfcareers/job/NEW-YORK-MIDTOWN/Software-Engineer-I--Generative-AI-Applications_JR-261077) | NYC | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
