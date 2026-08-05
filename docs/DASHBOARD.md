@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-05 14:33 UTC** · companies polled directly: **1592** (registry 1791) · jobs tracked: **27208** · new this run: **22** · alerts this run: **4**_
+_Last run: **2026-08-05 14:37 UTC** · companies polled directly: **1592** (registry 1791) · jobs tracked: **27208** · new this run: **22** · alerts this run: **4**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -65,7 +65,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 1d | Massachusetts General Hospital | [Clinical Research Coordinator/Data Analyst](https://jobright.ai/jobs/info/6a72375102d93145bf89356a?utm_campaign=Data%20Analysis&utm_source=1103) | Boston, MA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 2d | TikTok | [Machine Learning Engineer New Grad - Recommendation](https://lifeattiktok.com/search/7663389745178757429) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 15d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 86 🔥 | 15d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
+| 86 🔥 | 16d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 86 🔥 | 16d | PMG | [Graduate Leadership Program - AI & Software Engineering (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587038002) |
 | 86 🔥 | 21d | Akuna Capital | [Junior Quantitative Developer & Strategist](https://www.akunacapital.com/careers/job/8016687/?gh_jid=8016687) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 85 🔥 | 8h | Qualcomm | [Software Engineer - Kernel Services - Software Engineering](https://qualcomm.eightfold.ai/careers/job/446719058286) | San Diego, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -144,7 +144,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 13d | Sutter Health | [Infrastructure Engineer 1 - Technical Operations Center](https://jobright.ai/jobs/info/6a62547bf805ef6ff42322a5?utm_campaign=Software%20Engineering&utm_source=1103) | Sacramento, CA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 20d | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 20d | Vytalize Health | [Associate Data Engineer](https://jobs.ashbyhq.com/Vytalize%20Health/3576b087-709e-4bf0-a016-6cc1c24b802c/application?embed=true) | Remote in USA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 81 ⭐ | 20d | Bracebridge Capital | [Machine Learning Analyst](https://job-boards.greenhouse.io/bracebridgecapital/jobs/4715042005) | Boston, MA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 21d | Bracebridge Capital | [Machine Learning Analyst](https://job-boards.greenhouse.io/bracebridgecapital/jobs/4715042005) | Boston, MA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 21d | Michigan Medicine | [Graduate Student Events and Data Analyst](https://jobright.ai/jobs/info/6a5805f568d16a30e2411334?utm_campaign=Data%20Analysis&utm_source=1103) | Dearborn, MI, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 22d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 22d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
