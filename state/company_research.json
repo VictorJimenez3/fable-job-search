@@ -1,65 +1,61 @@
 {
  "micron": {
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "d5fccf6276"
-   ],
-   "value": "Delivers a rich portfolio of memory and storage products with a relentless focus on customers, technology leadership, and manufacturing and operational excellence."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "customers": {
-   "confidence": "medium",
-   "source_ids": [
-    "d5fccf6276"
-   ],
-   "value": "Customers enabled by solutions making virtual reality experiences and neural networks possible, though specific customer identities are not confirmed."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "evidence_sha": "470fd6df632e497c",
-  "generated_at": 1784971340,
+  "generated_at": 1785925012,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
-   ],
-   "value": "Candidates should seek clarity on specific plant and lab exposure, safety culture, mentorship structures, work-life balance expectations, and explicit details regarding work authorization and relocation support."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784971340,
+  "last_attempt_at": 1785925012,
   "last_evidence_at": 1785862969,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
+    "a898c41626",
+    "bee43ec0d2",
+    "36b996c3da"
    ],
-   "value": "Boise, ID (Main Site) and Fab 10NX, Singapore."
+   "value": "Boise, Idaho (Main Site) confirmed for these intern roles."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "0e201d4d96"
+    "a898c41626",
+    "bee43ec0d2",
+    "36b996c3da"
    ],
-   "value": "To accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and advance faster than ever."
+   "value": "Transform how the world uses information to enrich life through innovative memory and storage solutions."
   },
   "name": "Micron",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
+    "a898c41626",
+    "36b996c3da"
    ],
-   "value": "High-performance DRAM, NAND, and NOR memory and storage products (including 3D DRAM and wet process technologies) delivered through Micron® and Crucial® brands."
+   "value": "Memory and storage solutions, including DRAM technologies and semiconductors for AI, data centers, mobile devices, and automotive applications."
   },
   "prompt_v": 1,
-  "refresh_after": 1790155340,
+  "refresh_after": 1791109012,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -107,32 +103,38 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
+    "a898c41626",
+    "bee43ec0d2",
+    "36b996c3da"
    ],
-   "value": "Micron Technology is a world leader in innovating memory and storage solutions, advancing memory innovation through manufacturing and operational excellence."
+   "value": "Micron Technology is a world leader in memory and storage solutions that supplies semiconductors used in AI, data centers, mobile, and automotive applications."
   },
-  "synthesized_evidence_sha": "0902bb524e635800",
+  "synthesized_evidence_sha": "470fd6df632e497c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
+    "a898c41626",
+    "bee43ec0d2",
+    "36b996c3da"
    ],
-   "value": "Internships involve developing and optimizing wet process technologies for product performance, supporting equipment optimization, and supporting reliability initiatives."
+   "value": "Chemical engineering internships involve hands-on process development and optimization. Projects include photolithography process support, DRAM thin films development, and 3D DRAM dry etch process development, working alongside experienced engineers."
   },
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0e201d4d96",
-    "d5fccf6276"
+    "a898c41626",
+    "bee43ec0d2",
+    "36b996c3da"
    ],
-   "value": "The available roles align directly with chemical engineering priorities by offering meaningful technical work in wet process development, equipment optimization, and manufacturing scale-up within a leading global semiconductor plant."
+   "value": "Internships are project-based roles working on real semiconductor process development with experienced engineers, which aligns with a candidate seeking meaningful technical work, exposure to real processes and scale-up, and accessible mentorship. The stated company commitment to people and collaboration suggests attention to development and team culture. The candidate should confirm specifics on safety culture, work-life balance, relocation, and work authorization, as these are not detailed in t"
   }
  },
  "micron technology": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "60bfe03cb10787e1",
+  "last_attempt_at": 1785925012,
   "last_evidence_at": 1785885459,
   "name": "Micron Technology",
   "schema_v": 1,
