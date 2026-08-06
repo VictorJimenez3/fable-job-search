@@ -131,13 +131,66 @@
  },
  "micron technology": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Innovates and manufactures memory and storage solutions, driving innovation and efficiency across global research and development fabs."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "60bfe03cb10787e1",
-  "last_attempt_at": 1785925012,
+  "generated_at": 1786011511,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Ask for specifics on the mentorship structure, the daily safety culture within the fabs, and the exact scope of hands-on plant and manufacturing processes. Seek clear explanations regarding work authorization expectations, relocation details, and how the company supports intern development and work-life balance."
+  },
+  "last_attempt_at": 1786011511,
   "last_evidence_at": 1785885459,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Boise, Idaho (Main Site) with a global footprint of research and development fabs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "To inspire the world to learn, communicate and advance faster than ever by accelerating the transformation of information into intelligence."
+  },
   "name": "Micron Technology",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Memory and storage solutions."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1791195511,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "ab18d129e3abfc77",
@@ -150,7 +203,34 @@
     "url": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---TPG-Global-IE_JR107486"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence."
+  },
+  "synthesized_evidence_sha": "60bfe03cb10787e1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "Industrial Engineering interns within the Technology & Products Group work on driving innovation and efficiency across global research and development fabs."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "50cac73034"
+   ],
+   "value": "This internship aligns with your priority for meaningful technical work and exposure to real processes and plants, as you will directly drive innovation and efficiency in global R&D fabs. Micron notes that its benefits are designed to help you stay well and provide peace of mind, indicating a supportive environment."
+  }
  },
  "neuralink": {
   "aliases": [],
