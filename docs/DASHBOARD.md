@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-06 14:34 UTC** · companies polled directly: **1612** (registry 1813) · jobs tracked: **27885** · new this run: **35** · alerts this run: **0**_
+_Last run: **2026-08-06 14:37 UTC** · companies polled directly: **1612** (registry 1813) · jobs tracked: **27885** · new this run: **35** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -76,7 +76,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 2d | TikTok | [AI Engineer Graduate - Client Architecture - 2027 Start](https://lifeattiktok.com/search/7664978367107713333) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 2d | Massachusetts General Hospital | [Clinical Research Coordinator/Data Analyst](https://jobright.ai/jobs/info/6a72375102d93145bf89356a?utm_campaign=Data%20Analysis&utm_source=1103) | Boston, MA, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 16d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 86 🔥 | 16d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
+| 86 🔥 | 17d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 86 🔥 | 17d | PMG | [Graduate Leadership Program - AI & Software Engineering (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587038002) |
 | 86 🔥 | 22d | Akuna Capital | [Junior Quantitative Developer & Strategist](https://www.akunacapital.com/careers/job/8016687/?gh_jid=8016687) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 85 🔥 | 1d | Qualcomm | [Software Engineer - Kernel Services - Software Engineering](https://qualcomm.eightfold.ai/careers/job/446719058286) | San Diego, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
