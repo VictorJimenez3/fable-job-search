@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-07 08:15 UTC** · companies polled directly: **1629** (registry 1831) · jobs tracked: **28388** · new this run: **10** · alerts this run: **0**_
+_Last run: **2026-08-07 09:18 UTC** · companies polled directly: **1629** (registry 1831) · jobs tracked: **28388** · new this run: **10** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -74,7 +74,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 2d | TikTok | [AI Engineer Graduate - Client Architecture - 2027 Start](https://lifeattiktok.com/search/7664978367107713333) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 8d | Apple | [Swift Software Engineer, SWE Program Tools](https://jobright.ai/jobs/info/6a6bb46dc00ae03109f857ae?utm_campaign=Software%20Engineering&utm_source=1103) | Cupertino, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 87 🔥 | 22d | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 87 🔥 | 22d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 87 🔥 | 23d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 25d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 17d | PMG | [Graduate Leadership Program - AI & Software Engineering](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 17d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
