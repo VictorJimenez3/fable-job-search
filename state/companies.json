@@ -5999,6 +5999,19 @@
   "status": "active",
   "token": "uvimco"
  },
+ "greenhouse:vardaspace": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1786144618,
+  "last_ok": 1786144619,
+  "name": "Varda Space",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "vardaspace"
+ },
  "greenhouse:vegaamericas": {
   "ats": "greenhouse",
   "extra": {},
@@ -7287,6 +7300,19 @@
   "status": "active",
   "token": "aviahealth"
  },
+ "lever:belvederetrading": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1786144618,
+  "last_ok": 1786144618,
+  "name": "Belvedere Trading",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "belvederetrading"
+ },
  "lever:calstart": {
   "ats": "lever",
   "extra": {},
@@ -8435,6 +8461,22 @@
   "sector": "",
   "status": "active",
   "token": "edmn"
+ },
+ "oracle_orc:edqv:CX": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "edqv.fa.us2.oraclecloud.com",
+   "site": "CX"
+  },
+  "failures": 0,
+  "first_seen": 1786144618,
+  "last_ok": 1786144619,
+  "name": "GCI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "edqv"
  },
  "oracle_orc:edxn:CX_5001": {
   "ats": "oracle_orc",
@@ -10256,7 +10298,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141090,
+  "last_ok": 1786144634,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -10650,13 +10692,29 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141092,
+  "last_ok": 1786144637,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
   "sector": "semiconductors",
   "status": "active",
   "token": "amat"
+ },
+ "workday:amcor:amcor_external_career_site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "amcor_external_career_site"
+  },
+  "failures": 0,
+  "first_seen": 1786144618,
+  "last_ok": 1786144618,
+  "name": "Amcor",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "amcor"
  },
  "workday:american:au": {
   "ats": "workday",
@@ -12781,7 +12839,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141086,
+  "last_ok": 1786144634,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12890,7 +12948,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141078,
+  "last_ok": 1786144625,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13497,7 +13555,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141085,
+  "last_ok": 1786144630,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14975,7 +15033,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141081,
+  "last_ok": 1786144626,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16705,7 +16763,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786141086,
+  "last_ok": 1786144632,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
