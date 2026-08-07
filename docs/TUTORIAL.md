@@ -81,7 +81,11 @@ usage.
 Drafts, prompts, source context, PDFs, and review reports live only under
 `CV/.resume_studio/`. Review the generated PDF and report before using any
 application material. The system preserves the master CV as the evidence bank
-and never auto-submits a resume.
+and never auto-submits a resume. Use **Resume bank** in the header to revisit
+any saved run or legacy experiment; selecting another posting does not remove
+the previous result. New PDFs use a company-identifiable name such as
+`mayo_clinic_resume_ai.pdf`, and each new run stores a private posting snapshot
+beside its artifacts.
 
 To create a temporary varied-role calibration set for labeling bullets, run:
 

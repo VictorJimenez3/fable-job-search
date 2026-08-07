@@ -264,6 +264,14 @@ adversarial pass must return an applied corrected plan rather than a complaint
 about an already-rendered draft. The reported Resume Craft score is separate
 from hard factuality, eligibility, and layout gates.
 
+Use **Resume bank** in the Studio header to browse every saved run and legacy
+experiment. Each new run keeps a private snapshot of the selected posting,
+remains visible after switching to another role, and names its PDF with the
+company (for example, `mayo_clinic_resume_ai.pdf`). Open a saved posting
+snapshot from its card when the source text was captured. Failed and in-progress
+runs remain listed so an interrupted attempt is inspectable rather than
+silently disappearing.
+
 For a disposable human-feedback batch across varied roles, use the calibration
 lab:
 

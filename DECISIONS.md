@@ -1121,3 +1121,17 @@ The corrective Mayo case rendered 23 meaningful bullets across three
 experiences, four projects, and leadership; it had zero wraps, a 2.25-point
 bottom gap, unchanged style, and all factual, target-fit, evidence, clarity,
 portfolio, eligibility, and layout gates passed under `resume-review-v4`.
+
+## 75. Resume Studio runs are a durable, posting-linked private library (2026-08-07)
+
+The local Studio must make generated work inspectable before it can be judged.
+Each new run therefore snapshots the selected posting and job metadata beside
+its private artifacts, assigns a company-identifiable PDF name such as
+`mayo_clinic_resume_ai.pdf`, and remains addressable after another posting is
+selected. A derived Resume Bank indexes current runs and legacy architecture
+experiments without changing the immutable `CV/resume.pdf` or
+`CV/tldp_resume.pdf` references. The UI separates creating a new run from
+browsing/previewing existing runs, shows source-only versus AI-enhanced mode,
+and exposes the saved posting snapshot when one exists. Failed and in-progress
+runs remain visible as inspectable history; no run is overwritten by a later
+selection.

@@ -22,6 +22,55 @@ def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
     assert list(tmp_path.glob("*.tmp")) == []
 
 
+def test_generated_resume_filename_is_company_identifiable():
+    assert rs.resume_pdf_filename({"company": "Johnson & Johnson"}) == "johnson_johnson_resume_ai.pdf"
+    assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
+
+
+def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots(tmp_path):
+    run = tmp_path / "CV" / ".resume_studio" / "runs" / "0123456789ab"
+    run.mkdir(parents=True)
+    job = {"id": "job-1", "company": "Example Co", "title": "Data Scientist", "url": "https://example.test/job"}
+    rs.write_json(run / "job.json", job)
+    rs.write_json(run / "status.json", {
+        "run_id": "0123456789ab", "mode": "dream", "status": "complete",
+        "created_at": "2026-08-07T12:00:00+00:00", "pdf_filename": "example_co_resume_ai.pdf",
+        "job": rs.job_summary(job),
+    })
+    rs.write_json(run / "job_context.json", {"posting_text": "Required: Python and SQL."})
+    rs.write_json(run / "report.json", {"mode": "enhanced", "job": rs.job_summary(job), "review": {"craft_score": 88}})
+    (run / "example_co_resume_ai.pdf").write_bytes(b"pdf")
+
+    legacy = tmp_path / "CV" / ".resume_studio" / "architecture_experiments" / "old-example"
+    legacy.mkdir(parents=True)
+    legacy_job = {"id": "job-2", "company": "Old Co", "title": "Engineer"}
+    rs.write_json(legacy / "report.json", {"mode": "enhanced", "job": rs.job_summary(legacy_job)})
+    (legacy / "resume.pdf").write_bytes(b"legacy")
+
+    entries = rs.resume_library(tmp_path)
+    assert {entry["source"] for entry in entries} == {"run", "experiment"}
+    saved = next(entry for entry in entries if entry["source"] == "run")
+    assert saved["pdf_filename"] == "example_co_resume_ai.pdf"
+    assert saved["has_posting_snapshot"] is True
+    snapshot = rs.posting_snapshot(tmp_path, "run", "0123456789ab")
+    assert snapshot["posting_text"] == "Required: Python and SQL."
+
+
+def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
+    class NoopExecutor:
+        def submit(self, *args, **kwargs):
+            return None
+
+    manager = rs.RunManager(tmp_path)
+    manager.executor.shutdown(wait=False)
+    manager.executor = NoopExecutor()
+    job = {"id": "job-3", "company": "Acme Labs", "title": "ML Engineer"}
+    status = manager.start(job, "dream")
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / status["run_id"]
+    assert status["pdf_filename"] == "acme_labs_resume_ai.pdf"
+    assert json.loads((run_dir / "job.json").read_text())["company"] == "Acme Labs"
+
+
 def test_provider_plan_schema_cannot_return_a_latex_document():
     for enhance in (False, True):
         properties = rs.plan_schema(enhance)["properties"]

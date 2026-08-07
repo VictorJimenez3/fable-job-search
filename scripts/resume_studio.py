@@ -11,8 +11,8 @@ The service has two modes:
 * ``strict`` selects only existing, human-approved source bullets and runs
   deterministic layout checks against the canonical one-page resume format.
 * ``dream`` runs independent frontier drafts, a synthesis pass, and a fixed
-  reviewer pass.  The reviewer returns observations only; this module computes
-  the final score from the immutable rubric below.
+  reviewer pass. The reviewer returns an applied corrected plan; this module
+  computes the final score from the immutable rubric below.
 
 Run with::
 
@@ -343,6 +343,35 @@ def _slug(value: str) -> str:
     return value[:48] or "entry"
 
 
+def resume_pdf_filename(job: Dict[str, Any]) -> str:
+    """Return the human-readable filename shown for a generated resume.
+
+    Runs already have unique directories, but ``resume.pdf`` made it
+    impossible to identify an artifact after downloading or opening several
+    drafts.  Keep the company in the filename while leaving the run directory
+    as the collision boundary.
+    """
+    company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "resume").lower()).strip("_")
+    return "%s_resume_ai.pdf" % (company[:64] or "resume")
+
+
+def run_pdf_path(run_dir: Path) -> Path:
+    """Find the generated PDF for both new named runs and legacy runs."""
+    status = read_json(run_dir / "status.json", {}) or {}
+    configured = str(status.get("pdf_filename") or "").strip()
+    if configured:
+        return run_dir / Path(configured).name
+    named = sorted(run_dir.glob("*_resume_ai.pdf"))
+    if named:
+        return named[0]
+    return run_dir / "resume.pdf"
+
+
+def run_preview_path(run_dir: Path) -> Path:
+    pdf = run_pdf_path(run_dir)
+    return run_dir / (pdf.stem + "-preview.png")
+
+
 def _resume_tokens(value: str) -> set:
     plain = _latex_plain(value).lower()
     tokens = re.findall(r"[a-z0-9]+", plain)
@@ -591,6 +620,128 @@ def job_summary(job: Dict[str, Any], match: Optional[Dict[str, Any]] = None) -> 
             "version": match.get("version", MATCH_VERSION),
         }
     return summary
+
+
+def _library_dir(root: Optional[Path], source: str, entry_id: str) -> Optional[Path]:
+    base = studio_root(root)
+    if source == "run" and re.fullmatch(r"[a-f0-9]{12}", entry_id or ""):
+        return base / "runs" / entry_id
+    if source == "experiment" and re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,80}", entry_id or ""):
+        return base / "architecture_experiments" / entry_id
+    return None
+
+
+def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: Path) -> Dict[str, Any]:
+    status = read_json(directory / "status.json", {}) or {}
+    report = read_json(directory / "report.json", {}) or status.get("report") or {}
+    if not isinstance(report, dict):
+        report = {}
+    job = read_json(directory / "job.json", {}) or report.get("job") or status.get("job") or {}
+    if not isinstance(job, dict):
+        job = {}
+    pdf = run_pdf_path(directory)
+    preview = run_preview_path(directory)
+    review = report.get("review") if isinstance(report.get("review"), dict) else {}
+    resume_match = report.get("resume_match") if isinstance(report.get("resume_match"), dict) else None
+    context = read_json(directory / "job_context.json", {}) or {}
+    if not isinstance(context, dict):
+        context = {}
+    mode = str(status.get("mode") or report.get("mode") or "unknown")
+    if mode == "dream":
+        mode = "enhanced"
+    created_at = str(status.get("created_at") or report.get("created_at") or "")
+    if not created_at:
+        try:
+            created_at = dt.datetime.fromtimestamp(directory.stat().st_mtime, dt.timezone.utc).isoformat(timespec="seconds")
+        except OSError:
+            created_at = ""
+    artifacts = []
+    for name in (pdf.name, preview.name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt"):
+        if (directory / name).is_file():
+            artifacts.append(name)
+    return {
+        "entry_id": entry_id,
+        "source": source,
+        "legacy": source != "run",
+        "run_id": entry_id if source == "run" else "",
+        "status": str(status.get("status") or ("complete" if report or pdf.exists() else "unknown")),
+        "step": str(status.get("step") or ""),
+        "message": str(status.get("message") or ""),
+        "mode": mode,
+        "created_at": created_at,
+        "updated_at": str(status.get("updated_at") or created_at),
+        "job": job_summary(job, resume_match),
+        "pdf_filename": pdf.name,
+        "preview_filename": preview.name if preview.is_file() else "",
+        "has_pdf": pdf.is_file(),
+        "has_posting_snapshot": bool(str(context.get("posting_text") or job.get("description") or "").strip()),
+        "craft_score": review.get("craft_score"),
+        "ready": review.get("ready"),
+        "review_plan_applied": report.get("review_plan_applied"),
+        "validation_warnings": report.get("validation_warnings") or [],
+        "artifacts": artifacts,
+        "urls": {
+            "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(pdf.name, safe="")),
+            "preview": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(preview.name, safe="")) if preview.is_file() else "",
+            "posting": "/api/posting?source=%s&id=%s" % (quote(source, safe=""), quote(entry_id, safe="")),
+        },
+    }
+
+
+def resume_library(root: Optional[Path] = None, query: str = "", job_id: str = "", limit: int = 200) -> List[Dict[str, Any]]:
+    """Index completed, running, and legacy private resume artifacts.
+
+    The index is derived from per-run metadata rather than a single mutable
+    pointer.  Selecting a different posting therefore cannot hide or delete a
+    prior result, and older runs remain visible after the UI is restarted.
+    """
+    base = studio_root(root)
+    candidates: List[Tuple[str, str, Path]] = []
+    runs = base / "runs"
+    if runs.is_dir():
+        for directory in runs.iterdir():
+            if directory.is_dir() and (directory / "status.json").is_file():
+                candidates.append(("run", directory.name, directory))
+    experiments = base / "architecture_experiments"
+    if experiments.is_dir():
+        for directory in experiments.iterdir():
+            if directory.is_dir() and (directory / "report.json").is_file():
+                candidates.append(("experiment", directory.name, directory))
+    entries = [_library_entry(root, source, entry_id, directory) for source, entry_id, directory in candidates]
+    needle = " ".join(str(query or "").lower().split())
+    filtered = []
+    for entry in entries:
+        job = entry["job"]
+        haystack = " ".join([str(job.get("company") or ""), str(job.get("title") or ""), str(job.get("sector") or "")]).lower()
+        if needle and not all(part in haystack for part in needle.split()):
+            continue
+        if job_id and str(job.get("id") or "") != job_id:
+            continue
+        filtered.append(entry)
+    filtered.sort(key=lambda item: (item.get("created_at") or "", item.get("entry_id") or ""), reverse=True)
+    return filtered[:max(1, min(int(limit or 200), 500))]
+
+
+def posting_snapshot(root: Optional[Path], source: str, entry_id: str) -> Optional[Dict[str, Any]]:
+    directory = _library_dir(root, source, entry_id)
+    if directory is None or not directory.is_dir():
+        return None
+    entry = _library_entry(root, source, entry_id, directory)
+    context = read_json(directory / "job_context.json", {}) or {}
+    if not isinstance(context, dict):
+        context = {}
+    job = read_json(directory / "job.json", {}) or entry.get("job") or {}
+    if not isinstance(job, dict):
+        job = entry.get("job") or {}
+    posting_text = str(context.get("posting_text") or job.get("description") or "").strip()
+    return {
+        "entry_id": entry_id,
+        "source": source,
+        "job": job_summary(job),
+        "posting_text": posting_text,
+        "captured_at": entry.get("created_at"),
+        "available": bool(posting_text),
+    }
 
 
 def list_jobs(
@@ -2067,10 +2218,10 @@ def vertical_capacity_test(run_dir: Path, tex: str) -> Dict[str, Any]:
 
 def render_preview(run_dir: Path) -> Optional[str]:
     pdftoppm = shutil.which("pdftoppm")
-    pdf = run_dir / "resume.pdf"
+    pdf = run_pdf_path(run_dir)
     if not pdftoppm or not pdf.exists():
         return None
-    prefix = run_dir / "resume-preview"
+    prefix = run_preview_path(run_dir).with_suffix("")
     try:
         subprocess.run(
             [pdftoppm, "-png", "-r", "144", "-singlefile", str(pdf), str(prefix)],
@@ -2101,9 +2252,14 @@ def compile_resume(run_dir: Path) -> Dict[str, Any]:
             timeout=180,
         )
         (run_dir / "tectonic.stdout.txt").write_text(proc.stdout or "")
-        pdf = run_dir / "resume.pdf"
-        if proc.returncode != 0 or not pdf.exists():
+        compiled_pdf = run_dir / "resume.pdf"
+        pdf = run_pdf_path(run_dir)
+        if proc.returncode != 0 or not compiled_pdf.exists():
             return {"compiled": False, "error": "LaTeX compilation failed", "exit_code": proc.returncode}
+        if pdf != compiled_pdf:
+            if pdf.exists():
+                pdf.unlink()
+            compiled_pdf.replace(pdf)
         return {"compiled": True, "pdf": str(pdf), "exit_code": proc.returncode}
     except (OSError, subprocess.TimeoutExpired) as exc:
         return {"compiled": False, "error": str(exc)}
@@ -2131,7 +2287,7 @@ def pdf_layout(
     if not result["compiled"]:
         result["warnings"].append(compile_info.get("error", "compile failed"))
         return result
-    pdf = run_dir / "resume.pdf"
+    pdf = run_pdf_path(run_dir)
     pdfinfo = shutil.which("pdfinfo")
     pdftotext = shutil.which("pdftotext")
     if pdfinfo:
@@ -2527,6 +2683,8 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     known_codex = [item["usage_tokens"] for item in codex_records if item.get("usage_tokens") is not None]
     report = {
         "mode": "enhanced" if enhance else "source-only",
+        "pdf_filename": run_pdf_path(run_dir).name,
+        "preview_filename": run_preview_path(run_dir).name if preview else "",
         "job": job_summary(job),
         "resume_match": match,
         "positioning_thesis": synthesis_data.get("positioning_thesis", ""),
@@ -2559,9 +2717,10 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         "review_plan_errors": review_plan_errors,
         "artifacts": [
             "resume.tex",
-            "resume.pdf",
+            run_pdf_path(run_dir).name,
             "resume.txt",
-            "resume-preview.png" if preview else None,
+            run_preview_path(run_dir).name if preview else None,
+            "job.json",
             "report.json",
             "job_context.json",
             "evidence_catalog.json",
@@ -2602,6 +2761,7 @@ class RunManager:
         run_id = uuid.uuid4().hex[:12]
         run_dir = studio_root(self.root) / "runs" / run_id
         run_dir.mkdir(parents=True, exist_ok=True)
+        pdf_filename = resume_pdf_filename(job)
         status = {
             "run_id": run_id,
             "mode": mode,
@@ -2611,8 +2771,14 @@ class RunManager:
             "created_at": now_iso(),
             "updated_at": now_iso(),
             "job": job_summary(job),
+            "pdf_filename": pdf_filename,
+            "preview_filename": Path(pdf_filename).stem + "-preview.png",
             "run_dir": str(run_dir),
         }
+        # Keep the historical posting record attached to the run even if the
+        # radar later removes or updates the live job.  This is private ignored
+        # state, not a second source of truth for the public radar database.
+        write_json(run_dir / "job.json", copy.deepcopy(job))
         write_json(run_dir / "status.json", status)
         self.executor.submit(self._worker, run_id, run_dir, job, mode)
         return status
@@ -2650,23 +2816,53 @@ UI_HTML = r"""<!doctype html>
 <style>
 :root{color-scheme:dark;--bg:#0e1117;--panel:#161b22;--line:#30363d;--muted:#8b949e;--text:#f0f6fc;--accent:#58a6ff;--good:#3fb950;--warn:#d29922;--bad:#f85149}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1250px;margin:0 auto;padding:28px 20px 70px}h1{margin:0 0 6px;font-size:28px}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--muted);margin:0 0 20px}.grid{display:grid;grid-template-columns:410px 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}.jobs{max-height:650px;overflow:auto}.job{width:100%;text-align:left;background:transparent;color:var(--text);border:1px solid transparent;border-radius:8px;padding:10px;margin:4px 0;cursor:pointer}.job:hover,.job.selected{background:#1f2937;border-color:#3b82f6}.job strong{display:block}.job small{color:var(--muted)}input,select,button{font:inherit}input,select{background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}input{width:100%;margin-bottom:8px}.toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}.toolbar select{min-width:145px}button{background:#238636;border:1px solid #2ea043;color:#fff;border-radius:6px;padding:9px 12px;cursor:pointer;margin:4px 6px 4px 0}button.secondary{background:#21262d;border-color:var(--line)}button:disabled{opacity:.5;cursor:wait}.selected-card{border:1px solid var(--accent);border-radius:8px;padding:13px;margin:10px 0 16px}.meta{color:var(--muted);font-size:13px}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:3px 4px 0 0;font-size:12px}.match-card{margin:10px 0;padding:10px;border-radius:7px;background:#0d1117;border:1px solid var(--line)}.match-card strong{font-size:18px}.status{border-left:3px solid var(--accent);padding:10px 12px;background:#111827;white-space:pre-wrap}.status.complete{border-color:var(--good)}.status.failed{border-color:var(--bad)}.status.running{border-color:var(--warn)}a{color:var(--accent)}pre{white-space:pre-wrap;max-height:360px;overflow:auto;background:#0d1117;border:1px solid var(--line);padding:12px;border-radius:6px;font-size:12px}.score{font-size:27px;margin:4px 0}.preview{display:block;width:100%;max-width:760px;margin:14px auto;border:1px solid var(--line);background:#fff}.hidden{display:none}@media(max-width:850px){.grid{grid-template-columns:1fr}.jobs{max-height:360px}}
+<style>
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.12em;font-weight:700}.hero h1{margin-top:4px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap}.hero-actions button{margin:0}.hero-actions button.active{background:var(--accent);border-color:var(--accent);color:#08111d}.grid{grid-template-columns:360px minmax(0,1fr)}.panel{box-shadow:0 12px 35px rgba(0,0,0,.14)}.panel-top,.workspace-heading,.section-title,.library-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.count{color:var(--muted);font-size:12px;padding-top:4px}.hint{color:var(--muted);margin-top:-5px}.notice{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px 12px;margin:0 0 14px;color:#c7e5ff}.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.action-card{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px}.action-card h3{font-size:14px;margin:0 0 4px}.action-card p{color:var(--muted);font-size:12px;min-height:36px;margin:0 0 8px}.action-card button{margin:0;width:100%}.section-title{margin-top:20px}.section-title h3{margin:0;font-size:15px}.empty{padding:38px 12px;text-align:center;color:var(--muted)}.library-view{margin-top:18px}.library-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:8px;margin:14px 0}.library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.resume-card{background:#0d1117;border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.resume-card:hover{border-color:#4b6e91}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card-top strong{display:block}.card-top small{display:block;color:var(--muted);margin-top:3px}.thumb{display:block;width:100%;height:230px;object-fit:contain;object-position:top center;background:#fff;border:1px solid var(--line);margin:10px 0;border-radius:5px}.thumb-placeholder{height:70px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:5px;margin:10px 0;color:var(--muted)}.card-meta{color:var(--muted);font-size:12px;line-height:1.55}.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.card-actions a,.card-actions button{font-size:12px;margin:0;padding:6px 8px}.card-actions button{background:#21262d;border:1px solid var(--line);color:var(--text);border-radius:6px;cursor:pointer}.posting-snapshot{margin-top:10px}.posting-snapshot pre{max-height:230px;margin:6px 0}.legacy{color:var(--warn)}.hidden{display:none!important}@media(max-width:850px){.hero{display:block}.hero-actions{margin-top:12px}.action-grid{grid-template-columns:1fr}.library-toolbar{grid-template-columns:1fr}}
 </style></head><body><main>
-<h1>Resume Studio</h1><p class="sub">Victor-first local workspace · CV and frontier sessions never leave this Mac through Job Radar.</p>
-<div class="grid"><section class="panel"><h2>Choose a role</h2><input id="search" placeholder="Search company, title, sector…" autocomplete="off"><div class="toolbar"><select id="sort" aria-label="Sort roles"><option value="best">Best Radar score</option><option value="newest">Newest</option><option value="resume_match">Resume Match</option></select><button id="refreshEvidence" class="secondary" title="Refresh GitHub and Devpost evidence">Refresh evidence</button></div><div id="jobs" class="jobs">Loading roles…</div></section>
-<section class="panel"><h2>Application workspace</h2><div id="empty" class="sub">Select a company and role. Both modes preserve CV/resume.tex exactly.</div><div id="workspace" class="hidden"><div id="selected" class="selected-card"></div><div id="match" class="match-card"></div><button id="analyzeMatch" class="secondary">Analyze full posting match</button><button id="strict">Tailor with my existing bullets</button><button id="dream">Tailor with reviewable enhancements</button><div id="status" class="status hidden"></div><div id="report" class="hidden"></div></div></section></div>
+<header class="hero"><div><div class="eyebrow">PRIVATE RESUME WORKSPACE</div><h1>Resume Studio</h1><p class="sub">Create, compare, and revisit role-specific resumes without losing a run.</p></div><div class="hero-actions"><button id="tailorTab" class="active">New tailoring</button><button id="libraryTab" class="secondary">Resume bank <span id="libraryCount">0</span></button></div></header>
+<div id="tailorView" class="grid"><section class="panel"><div class="panel-top"><h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p><input id="search" placeholder="Search company, title, sector…" autocomplete="off"><div class="toolbar"><select id="sort" aria-label="Sort roles"><option value="best">Best Radar score</option><option value="newest">Newest</option><option value="resume_match">Resume Match</option></select><button id="refreshEvidence" class="secondary" title="Refresh GitHub and Devpost evidence">Refresh evidence</button></div><div id="jobs" class="jobs">Loading roles…</div></section>
+<section class="panel"><div id="empty" class="empty">Select a posting to see its match, saved resumes, and tailoring actions.</div><div id="workspace" class="hidden"><div class="workspace-heading"><div id="selected" class="selected-card"></div><button id="selectedLibrary" class="secondary">View resume bank</button></div><div class="notice">Switching postings never deletes a generated resume. Every run is saved with its posting snapshot.</div><div id="match" class="match-card"></div><button id="analyzeMatch" class="secondary">Analyze full posting match</button><div class="action-grid"><div class="action-card"><h3>Source-only</h3><p>Uses your approved bullets verbatim. Safest comparison baseline.</p><button id="strict">Create source-only resume</button></div><div class="action-card"><h3>AI-enhanced</h3><p>Allows source-grounded bullet improvements with evidence and review.</p><button id="dream">Create AI-enhanced resume</button></div></div><div id="status" class="status hidden"></div><div id="report" class="hidden"></div><div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div></div></section></div>
+<section id="libraryView" class="panel library-view hidden"><div class="library-head"><div><h2>Resume bank</h2><p class="sub">Every generated run and legacy experiment, paired with the posting it used.</p></div><button id="backToTailor" class="secondary">Back to tailoring</button></div><div class="library-toolbar"><input id="librarySearch" placeholder="Filter saved resumes by company or role…" autocomplete="off"><select id="libraryMode" aria-label="Filter resume mode"><option value="all">All modes</option><option value="enhanced">AI-enhanced</option><option value="source-only">Source-only</option></select></div><div id="libraryCards" class="library-grid"></div></section>
 <script>
-let selected=null, pollTimer=null;
+let selected=null,activeRunId=null,libraryEntries=[],runTimers=new Map(),jobsCache=[];
 const $=id=>document.getElementById(id);
-async function loadJobs(){const q=encodeURIComponent($('search').value),sort=encodeURIComponent($('sort').value);$('jobs').innerHTML='<p class="sub">Scoring roles…</p>';const r=await fetch('/api/jobs?query='+q+'&sort='+sort);const data=await r.json();$('jobs').innerHTML=data.jobs.map(j=>{const m=j.resume_match?` · resume ${j.resume_match.score} (${j.resume_match.confidence})`:'';return `<button class="job" data-id="${j.id}"><strong>${esc(j.company)} · ${esc(j.title)}</strong><small>${esc((j.locations||[]).join(', '))} · Radar ${j.score}${m} ${j.alert_ok?'· alert':''}</small></button>`}).join('')||'<p class="sub">No matching roles.</p>';document.querySelectorAll('.job').forEach(b=>b.onclick=()=>choose(b.dataset.id));}
-function renderMatch(match){if(!match){$('match').innerHTML='<span class="meta">Resume Match not analyzed.</span>';return;}const gaps=(match.missing_requirements||[]).join(', ')||'none detected';$('match').innerHTML=`<strong>${match.score}/100 Resume Match</strong> <span class="badge">${esc(match.confidence||'low')} confidence</span><div class="meta">${esc((match.reasons||[]).join(' · '))}</div><div class="meta">Gaps: ${esc(gaps)}</div>`;}
-async function choose(id){const r=await fetch('/api/job?id='+encodeURIComponent(id));selected=await r.json();$('empty').classList.add('hidden');$('workspace').classList.remove('hidden');$('selected').innerHTML=`<strong>${esc(selected.company)} · ${esc(selected.title)}</strong><div class="meta">${esc((selected.locations||[]).join(', '))} · Radar ${selected.score} · <a href="${esc(selected.url)}" target="_blank" rel="noreferrer">open posting</a></div><div>${(selected.alert_ok?'<span class="badge">alert eligible</span>':'<span class="badge">dashboard role</span>')} ${(selected.early_career_possible?'<span class="badge">early-career possible</span>':'')}</div>`;renderMatch(selected.resume_match);document.querySelectorAll('.job').forEach(b=>b.classList.toggle('selected',b.dataset.id===id));$('status').classList.add('hidden');$('report').classList.add('hidden');}
-async function analyzeMatch(){if(!selected)return;$('analyzeMatch').disabled=true;$('match').innerHTML='<span class="meta">Fetching the posting and matching the full evidence graph…</span>';const r=await fetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id})});const data=await r.json();$('analyzeMatch').disabled=false;if(!r.ok){$('match').textContent=data.error||'Match analysis failed';return;}selected.resume_match=data.resume_match;renderMatch(data.resume_match);}
-async function refreshEvidence(){const button=$('refreshEvidence');button.disabled=true;button.textContent='Refreshing…';const r=await fetch('/api/evidence/refresh',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});const data=await r.json();button.disabled=false;button.textContent='Refresh evidence';if(!r.ok){alert(data.error||'Evidence refresh failed');return;}await loadJobs();if(selected)await choose(selected.id);}
-async function start(mode){if(!selected)return;['strict','dream'].forEach(x=>$(x).disabled=true);$('status').className='status running';$('status').textContent='Starting '+mode+'…';$('status').classList.remove('hidden');$('report').classList.add('hidden');const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id,mode})});const data=await r.json();if(!r.ok){$('status').className='status failed';$('status').textContent=data.error||'Could not start run';['strict','dream'].forEach(x=>$(x).disabled=false);return;}poll(data.run_id);}
-async function poll(id){const r=await fetch('/api/run?id='+encodeURIComponent(id));const data=await r.json();$('status').textContent=data.message||data.status;$('status').className='status '+data.status;if(data.status==='complete'||data.status==='failed'){['strict','dream'].forEach(x=>$(x).disabled=false);renderReport(data);return;}pollTimer=setTimeout(()=>poll(id),1500);}
-function renderReport(status){const report=status.report;if(!report){return;}$('report').classList.remove('hidden');const review=report.review||{},gates=review.gates||{};let html='<h3>Result</h3>';if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.underfilled_line_count||0} lines with more than ~10 characters left · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="/runs/${status.run_id}/resume.pdf" target="_blank">Open PDF</a> · <a href="/runs/${status.run_id}/resume.tex" target="_blank">Open LaTeX</a> · <a href="/runs/${status.run_id}/content_plan.json" target="_blank">Open source plan</a> · <a href="/runs/${status.run_id}/report.json" target="_blank">Open report</a></p>`;if((report.artifacts||[]).includes('resume-preview.png'))html+=`<img class="preview" src="/runs/${status.run_id}/resume-preview.png" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');loadJobs();
+function fmtDate(value){if(!value)return 'date unavailable';const date=new Date(value);return Number.isNaN(date.getTime())?String(value):date.toLocaleString([], {dateStyle:'medium',timeStyle:'short'});}
+function modeLabel(mode){return mode==='enhanced'||mode==='dream'?'AI-enhanced':'Source-only';}
+function artifactUrl(source,id,name){return '/artifacts/'+encodeURIComponent(source)+'/'+encodeURIComponent(id)+'/'+encodeURIComponent(name);}
+function runArtifact(id,name){return artifactUrl('run',id,name);}
+function savedFor(job){return libraryEntries.filter(entry=>String(entry.job?.id||'')===String(job?.id||''));}
+function renderJobRows(jobs){
+  $('jobCount').textContent=jobs.length+' shown';
+  $('jobs').innerHTML=jobs.map(job=>{const count=savedFor(job).length;const match=job.resume_match?` · match ${job.resume_match.score}`:'';return `<button class="job ${selected&&selected.id===job.id?'selected':''}" data-id="${esc(job.id)}"><strong>${esc(job.company)} · ${esc(job.title)}</strong><small>${esc((job.locations||[]).join(', '))} · Radar ${job.score}${match}${count?` · ${count} saved`:''}</small></button>`;}).join('')||'<p class="sub">No matching roles.</p>';
+  document.querySelectorAll('.job').forEach(button=>button.onclick=()=>choose(button.dataset.id));
+}
+async function loadJobs(){
+  const q=encodeURIComponent($('search').value),sort=encodeURIComponent($('sort').value);$('jobs').innerHTML='<p class="sub">Scoring roles…</p>';
+  try{const r=await fetch('/api/jobs?query='+q+'&sort='+sort);const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load postings');jobsCache=data.jobs||[];renderJobRows(jobsCache);}catch(error){$('jobs').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}
+}
+function renderMatch(match){if(!match){$('match').innerHTML='<span class="meta">Resume Match not analyzed yet. Full-posting analysis is optional.</span>';return;}const gaps=(match.missing_requirements||[]).join(', ')||'none detected';$('match').innerHTML=`<strong>${match.score}/100 Resume Match</strong> <span class="badge">${esc(match.confidence||'low')} confidence</span><div class="meta">${esc((match.reasons||[]).join(' · '))}</div><div class="meta">Gaps: ${esc(gaps)}</div>`;}
+function renderCard(entry,compact=false){
+  const job=entry.job||{},report=entry.artifacts.includes('report.json')?artifactUrl(entry.source,entry.entry_id,'report.json'):'';const preview=entry.urls.preview?`<img class="thumb" loading="lazy" src="${entry.urls.preview}" alt="${esc(job.company)} resume preview">`:'<div class="thumb-placeholder">Preview appears after the run finishes</div>';const pdf=entry.has_pdf?`<a href="${entry.urls.pdf}" target="_blank" rel="noreferrer">Preview PDF</a>`:'<span class="meta">PDF pending</span>';const posting=entry.has_posting_snapshot?`<button data-view-posting data-posting="${entry.urls.posting}">View posting snapshot</button>`:'<span class="meta">No saved posting text</span>';const warning=entry.legacy?'<span class="legacy">legacy experiment</span>':'';return `<article class="resume-card"><div class="card-top"><div><strong>${esc(job.company||'Unknown company')}</strong><small>${esc(job.title||'Untitled role')}</small></div><span class="badge">${modeLabel(entry.mode)}</span></div>${compact?'':preview}<div class="card-meta">${fmtDate(entry.created_at)} · ${esc(entry.status)}${warning?' · '+warning:''}${entry.craft_score!==null&&entry.craft_score!==undefined?' · ':''}${entry.craft_score!==null&&entry.craft_score!==undefined?`Craft ${esc(entry.craft_score)}/100`:''}${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div><div class="card-actions">${pdf}${report?`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`:''}${posting}</div><div class="posting-snapshot hidden"></div></article>`;
+}
+function renderSelectedResumes(){
+  if(!selected)return;const entries=savedFor(selected);$('selectedResumes').innerHTML=entries.length?entries.map(entry=>renderCard(entry,true)).join(''):'<p class="sub">No saved resume for this posting yet. Create one above; it will remain here and in the bank.</p>';
+}
+function renderLibrary(){
+  const query=$('librarySearch').value.toLowerCase().trim(),mode=$('libraryMode').value;const entries=libraryEntries.filter(entry=>{const job=entry.job||{},hay=(String(job.company||'')+' '+String(job.title||'')).toLowerCase();return (!query||query.split(/\s+/).every(part=>hay.includes(part)))&&(mode==='all'||entry.mode===mode);});$('libraryCount').textContent=String(libraryEntries.length);$('libraryCards').innerHTML=entries.length?entries.map(entry=>renderCard(entry)).join(''):'<p class="sub">No saved resumes match this filter.</p>';
+}
+async function loadLibrary(){try{const r=await fetch('/api/library?limit=500');const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load resume bank');libraryEntries=data.resumes||[];renderLibrary();renderSelectedResumes();renderJobRows(jobsCache);}catch(error){$('libraryCards').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}}
+async function choose(id){
+  const r=await fetch('/api/job?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok){$('match').textContent=data.error||'Posting could not be loaded';return;}selected=data;$('empty').classList.add('hidden');$('workspace').classList.remove('hidden');$('selected').innerHTML=`<strong>${esc(selected.company)} · ${esc(selected.title)}</strong><div class="meta">${esc((selected.locations||[]).join(', '))} · Radar ${selected.score} · <a href="${esc(selected.url)}" target="_blank" rel="noreferrer">open live posting</a></div><div>${(selected.alert_ok?'<span class="badge">alert eligible</span>':'<span class="badge">dashboard role</span>')} ${(selected.early_career_possible?'<span class="badge">early-career possible</span>':'')}</div>`;renderMatch(selected.resume_match);document.querySelectorAll('.job').forEach(b=>b.classList.toggle('selected',b.dataset.id===id));renderSelectedResumes();showView('tailor');}
+async function analyzeMatch(){if(!selected)return;const button=$('analyzeMatch');button.disabled=true;$('match').innerHTML='<span class="meta">Fetching the posting and matching the full evidence graph…</span>';try{const r=await fetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Match analysis failed');selected.resume_match=data.resume_match;renderMatch(data.resume_match);}catch(error){$('match').textContent=error.message;}finally{button.disabled=false;}}
+async function refreshEvidence(){const button=$('refreshEvidence');button.disabled=true;button.textContent='Refreshing…';try{const r=await fetch('/api/evidence/refresh',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});const data=await r.json();if(!r.ok)throw new Error(data.error||'Evidence refresh failed');await loadJobs();if(selected)await choose(selected.id);}catch(error){alert(error.message);}finally{button.disabled=false;button.textContent='Refresh evidence';}}
+function setTailorButtons(disabled){['strict','dream'].forEach(id=>$(id).disabled=disabled);}
+async function start(mode){if(!selected)return;setTailorButtons(true);$('status').className='status running';$('status').textContent='Saving this '+modeLabel(mode)+' run for '+selected.company+'…';$('status').classList.remove('hidden');$('report').classList.add('hidden');try{const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id,mode})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not start run');activeRunId=data.run_id;await loadLibrary();watchRun(data.run_id);}catch(error){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}
+function watchRun(id){if(runTimers.has(id))return;const tick=async()=>{try{const r=await fetch('/api/run?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok)throw new Error(data.error||'Run status unavailable');if(id===activeRunId){$('status').textContent=(data.job?.company?data.job.company+': ':'')+(data.message||data.status);$('status').className='status '+data.status;}if(data.status==='complete'||data.status==='failed'){runTimers.delete(id);if(id===activeRunId){setTailorButtons(false);if(data.status==='complete')renderReport(data);else $('report').classList.add('hidden');}await loadLibrary();return;}const timer=setTimeout(()=>{runTimers.delete(id);tick();},1500);runTimers.set(id,timer);}catch(error){runTimers.delete(id);if(id===activeRunId){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}};tick();}
+function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='dream'||report.mode==='enhanced')html+=`<p class="meta">AI-enhanced bullets were source-addressed, evidence-checked, and saved with this run.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;}
+function showView(view){const bank=view==='library';$('tailorView').classList.toggle('hidden',bank);$('libraryView').classList.toggle('hidden',!bank);$('tailorTab').classList.toggle('active',!bank);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();}
+document.addEventListener('click',async event=>{const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
+$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');Promise.all([loadJobs(),loadLibrary()]);
 </script></main></body></html>"""
 
 
@@ -2722,6 +2918,28 @@ class StudioHandler(BaseHTTPRequestHandler):
             value = dict(job)
             value["resume_match"] = resume_match_for_job(job, repo_root())
             return self.send_json(value)
+        if parsed.path == "/api/library":
+            params = parse_qs(parsed.query)
+            try:
+                limit = int(params.get("limit", [200])[0] or 200)
+            except (TypeError, ValueError):
+                limit = 200
+            return self.send_json({
+                "resumes": resume_library(
+                    repo_root(),
+                    query=params.get("query", [""])[0],
+                    job_id=params.get("job_id", [""])[0],
+                    limit=limit,
+                ),
+            })
+        if parsed.path == "/api/posting":
+            params = parse_qs(parsed.query)
+            source = params.get("source", [""])[0]
+            entry_id = params.get("id", [""])[0]
+            snapshot = posting_snapshot(repo_root(), source, entry_id)
+            if snapshot is None:
+                return self.send_json({"error": "posting snapshot not found"}, HTTPStatus.NOT_FOUND)
+            return self.send_json(snapshot)
         if parsed.path == "/api/run":
             run_id = parse_qs(parsed.query).get("id", [""])[0]
             status = self.manager.get(run_id)
@@ -2735,6 +2953,19 @@ class StudioHandler(BaseHTTPRequestHandler):
             run_dir = studio_root(repo_root()) / "runs" / parts[2]
             target = (run_dir / parts[3]).resolve()
             if run_dir.resolve() not in target.parents or not target.is_file():
+                return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
+            content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
+            return self.send_bytes(target.read_bytes(), content_type)
+        if parsed.path.startswith("/artifacts/"):
+            parts = parsed.path.split("/")
+            if len(parts) != 5:
+                return self.send_json({"error": "invalid artifact path"}, HTTPStatus.BAD_REQUEST)
+            source, entry_id, filename = parts[2], parts[3], parts[4]
+            directory = _library_dir(repo_root(), source, entry_id)
+            if directory is None or Path(filename).name != filename:
+                return self.send_json({"error": "invalid artifact path"}, HTTPStatus.BAD_REQUEST)
+            target = (directory / filename).resolve()
+            if directory.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
             return self.send_bytes(target.read_bytes(), content_type)

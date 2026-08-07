@@ -239,10 +239,15 @@ Before changing the radar, read these in order:
   Scope qualifiers are protected and compilation errors stop packing instead
   of deleting content. Resume Craft cannot override factuality, eligibility,
   or layout gates.
-- **Luna handoff after the 2026-08-06 Sol-high calibration:** add bullet-level
-  lock/unlock controls and revision history to the existing local Studio, then
-  add an explicit resume-library/preview surface that separates immutable human
-  references from generated runs. Keep the first pass deterministic/UI-focused;
+- **Resume Studio library/preview surface is shipped (DECISIONS #75):** every
+  new run snapshots its selected posting under the private run directory,
+  receives a company-identifiable PDF name, and remains visible when another
+  posting is selected. The **Resume bank** indexes current runs plus legacy
+  architecture experiments, shows source-only versus AI-enhanced mode, and can
+  reveal the captured posting text. Failed and in-progress runs remain
+  inspectable; the immutable human reference PDFs are untouched.
+- **Next Luna-sized Resume Studio slice:** add bullet-level lock/unlock
+  controls and revision history. Keep the first pass deterministic/UI-focused;
   do not change rubric weights, evidence authority, portfolio caps, or CV facts.
   Add tests for lock persistence, history rollback, and source-signature
   preservation. Reuse the calibration lab for PDF inspection; do not rerun the

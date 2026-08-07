@@ -236,12 +236,11 @@ of the Sol pipeline.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
-Open UX gap: Resume Studio currently exposes the generated PDF only after a
-new run completes; it does not yet provide a resume-library view with explicit
-“preview existing artifact” and “create new run” separation. Generated runs
-are already isolated under `CV/.resume_studio/runs/` and do not overwrite
-`CV/resume.tex`, but the UI should make that safety boundary obvious before
-future resume-management work.
+Resume library/preview surface — ✅ SHIPPED (DECISION #75). Resume Studio now
+indexes saved runs and legacy architecture experiments, separates “create a
+new run” from “Resume bank,” snapshots the selected posting, preserves prior
+results when switching roles, and exposes company-identifiable PDF names for
+new runs. Bullet-level locks and revision history remain future work.
 
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
