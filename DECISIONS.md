@@ -1135,3 +1135,23 @@ browsing/previewing existing runs, shows source-only versus AI-enhanced mode,
 and exposes the saved posting snapshot when one exists. Failed and in-progress
 runs remain visible as inspectable history; no run is overwritten by a later
 selection.
+
+## 76. Resume Studio is an editable, source-grounded workshop (2026-08-07)
+
+The first Resume Studio generation contract was too narrow: enhanced agents
+were effectively asked to tighten existing source bullets, and deterministic
+packing could then restore source wording to fill the page. That made a
+passing process capable of producing a weaker résumé than Victor's own
+reference. Enhancement mode now permits a substantive rewrite or synthesis
+from multiple authorized source bullets. Each rendered line keeps a primary
+source ID, supporting source IDs, evidence IDs, and protected scope
+qualifiers; models still cannot author LaTeX layout or invent facts.
+
+Completed runs expose a local Workshop with readable line-level editing across
+education, technical skills, experience, projects, and leadership. AI returns
+candidate rewrites without applying them automatically. Manual saves, applied
+AI candidates, and reverts append a full plan revision and render into a unique
+private PDF/preview directory, leaving the original company-named run artifact
+untouched. The contact header and canonical visual template remain protected.
+The available local provider lanes are Codex CLI and Claude Code; a Luna lane
+is optional and is not claimed when no local `luna` executable exists.

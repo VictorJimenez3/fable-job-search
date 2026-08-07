@@ -92,6 +92,40 @@ def test_plan_schema_requests_a_full_ranked_candidate_pool():
 
     enhanced_bullet = rs.plan_schema(True)["properties"]["experiences"]["items"]["properties"]["bullets"]["items"]
     assert {"source_id", "text", "evidence_ids", "candidate_rationale"}.issubset(enhanced_bullet["required"])
+    assert "source_ids" in enhanced_bullet["required"]
+
+
+def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    enhanced = json.loads(json.dumps(plan))
+    bullet = enhanced["experiences"][0]["bullets"][0]
+    bullet.update({
+        "text": "\\textbf{Architected a stronger item} combining workflow and evidence",
+        "source_ids": [
+            "experience:item0:b1",
+            "experience:item0:b2",
+        ],
+        "evidence_ids": [
+            "experience:item0:b1",
+            "experience:item0:b2",
+        ],
+        "candidate_rationale": "Synthesis keeps both independently authorized mechanisms.",
+    })
+    normalized, errors = rs.validate_plan(enhanced, catalog, enhance=True, graph=graph)
+    assert not errors
+    assert normalized["experiences"][0]["bullets"][0]["source_ids"] == [
+        "experience:item0:b1",
+        "experience:item0:b2",
+    ]
 
 
 def test_review_schema_requires_a_complete_corrected_plan():
@@ -266,6 +300,100 @@ def test_candidate_expansion_adds_authorized_source_backups():
     merged = rs.merge_edited_bullets(expanded, edited)
     assert merged["projects"][0]["bullets"][0]["text"] == "edited text"
     assert rs.portfolio_metrics(merged)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+
+
+def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkeypatch, tmp_path):
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "content_plan.json", plan)
+    rs.write_json(run_dir / "job.json", {"id": "job-1", "company": "Example Co", "title": "ML Engineer"})
+    rs.write_json(run_dir / "status.json", {"run_id": run_id, "mode": "dream", "status": "complete"})
+    monkeypatch.setattr(rs, "source_catalog", lambda root=None: catalog)
+    monkeypatch.setattr(
+        rs,
+        "_workshop_render",
+        lambda *args, **kwargs: {
+            "revision_id": args[2]["revision_id"],
+            "pdf_filename": "example_workshop.pdf",
+            "preview_filename": "example_workshop.png",
+            "compiled": True,
+            "layout": {"pages": 1},
+        },
+    )
+    line_id = plan["experiences"][0]["bullets"][0]["source_id"]
+    result = rs.workshop_apply_edit(
+        tmp_path, run_id, line_id, "\\textbf{Built a better item} with evidence", origin="manual"
+    )
+    assert result["last_render"]["revision_id"]
+    assert result["lines"][0]["text"] == "\\textbf{Built a better item} with evidence"
+    assert json.loads((run_dir / "content_plan.json").read_text())["experiences"][0]["bullets"][0]["text"] != "\\textbf{Built a better item} with evidence"
+    state = json.loads((run_dir / "workshop.json").read_text())
+    assert len(state["revisions"]) == 1
+    reverted = rs.workshop_revert(tmp_path, run_id, state["revisions"][0]["revision_id"])
+    assert reverted["lines"][0]["text"] == "\\textbf{Built a better item} with evidence"
+    assert len(json.loads((run_dir / "workshop.json").read_text())["revisions"]) == 2
+
+
+def test_workshop_front_matter_is_editable_without_changing_the_template(tmp_path):
+    front = rs.front_matter_catalog()
+    assert {item["line_id"] for item in front} >= {
+        "front:education:school",
+        "front:skills:0",
+        "front:skills:3",
+    }
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["front_matter"] = json.loads(json.dumps(front))
+    next(item for item in plan["front_matter"] if item["line_id"] == "front:education:school")["text"] = "New Jersey Institute of Technology"
+    next(item for item in plan["front_matter"] if item["line_id"] == "front:skills:0")["text"] = "\\textbf{Languages:} Python, Rust"
+    tex = rs.render_workshop_plan(plan, catalog, rs.repo_root())
+    assert "New Jersey Institute of Technology" in tex
+    assert "Python, Rust" in tex
+    assert rs.template_style_guard(tex, rs.repo_root())["identical_preamble_header_education_skills"] is False
+
+
+def test_workshop_ai_returns_candidates_without_mutating_the_current_draft(monkeypatch, tmp_path):
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "content_plan.json", plan)
+    rs.write_json(run_dir / "job.json", {"id": "job-1", "company": "Example Co", "title": "ML Engineer"})
+    rs.write_json(run_dir / "status.json", {"run_id": run_id, "mode": "dream", "status": "complete"})
+    monkeypatch.setattr(rs, "source_catalog", lambda root=None: catalog)
+    monkeypatch.setattr(rs, "evidence_graph", lambda root=None: {"nodes": []})
+    monkeypatch.setattr(rs, "provider_commands", lambda: {"codex": "/usr/bin/codex", "claude": None})
+    line_id = plan["experiences"][0]["bullets"][0]["source_id"]
+    monkeypatch.setattr(
+        rs,
+        "run_provider",
+        lambda *args, **kwargs: {
+            "provider": "codex", "ok": True, "elapsed_seconds": 1.2,
+            "usage_tokens": 123,
+            "data": {
+                "reply": "I kept the artifact and ownership visible.",
+                "suggestions": [{
+                    "line_id": line_id,
+                    "text": "\\textbf{Architected the system} with a clearer ownership story",
+                    "rationale": "Leads with the technical artifact and preserves the authorized scope.",
+                    "evidence_ids": [line_id],
+                }],
+                "warnings": [],
+            },
+        },
+    )
+    result = rs.workshop_ai(tmp_path, run_id, "Make this line more decisive", line_id=line_id, provider="codex")
+    assert result["suggestions"][0]["line_id"] == line_id
+    assert result["usage_tokens"] == 123
+    assert result["workshop"]["messages"][-1]["kind"] == "ai"
+    assert json.loads((run_dir / "content_plan.json").read_text())["experiences"][0]["bullets"][0]["text"] != result["suggestions"][0]["text"]
 
 
 def test_semantic_duplicate_with_abbreviated_unit_is_detected():

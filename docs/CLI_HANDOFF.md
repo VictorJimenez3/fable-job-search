@@ -246,12 +246,14 @@ Before changing the radar, read these in order:
   architecture experiments, shows source-only versus AI-enhanced mode, and can
   reveal the captured posting text. Failed and in-progress runs remain
   inspectable; the immutable human reference PDFs are untouched.
-- **Next Luna-sized Resume Studio slice:** add bullet-level lock/unlock
-  controls and revision history. Keep the first pass deterministic/UI-focused;
-  do not change rubric weights, evidence authority, portfolio caps, or CV facts.
-  Add tests for lock persistence, history rollback, and source-signature
-  preservation. Reuse the calibration lab for PDF inspection; do not rerun the
-  three expensive Sol architecture cases unless behavior changes materially.
+- **Resume Studio workshop is shipped (DECISION #76):** enhanced generation can
+  substantially rewrite or synthesize a line from multiple authorized source
+  bullets instead of only tightening a source sentence. Completed runs open a
+  durable line editor for education, skills, experience, projects, and
+  leadership; AI suggestions are opt-in, manual/AI saves render unique PDF
+  revisions, and history rollback creates a new revision without overwriting
+  the original. The current machine exposes Codex CLI and Claude Code lanes;
+  Luna remains an optional future lane if its local executable is installed.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited

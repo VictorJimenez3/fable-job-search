@@ -68,8 +68,9 @@ Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 
 - **Use my existing bullets** — selects target-relevant source IDs from the
   master CV and example résumés and copies their text without rewriting.
-- **Reviewable enhancements** — permits source-anchored bullet improvements,
-  then runs the same fixed review rubric.
+- **Reviewable enhancements** — permits substantive source-grounded rewrites
+  and synthesis from multiple authorized lines, then runs the same fixed
+  review rubric.
 
 Both modes render through the exact `CV/resume.tex` structure. Models cannot
 write the document, alter its margins/typography/spacing, enlarge text, or pass
@@ -86,6 +87,16 @@ any saved run or legacy experiment; selecting another posting does not remove
 the previous result. New PDFs use a company-identifiable name such as
 `mayo_clinic_resume_ai.pdf`, and each new run stores a private posting snapshot
 beside its artifacts.
+
+### Workshop editing
+
+Open **Workshop** from a saved run in Resume bank. Education and Technical
+Skills are available alongside experience, project, and leadership lines; the
+contact header and LaTeX layout remain protected. The editor shows readable
+résumé wording, while unchanged lines retain their existing emphasis. **Save
+line** renders a new revision in a unique private folder, **Ask AI about this**
+returns candidates without applying them, and **Revert** creates a new revision
+from any earlier saved version. The original company-named PDF remains intact.
 
 To create a temporary varied-role calibration set for labeling bullets, run:
 

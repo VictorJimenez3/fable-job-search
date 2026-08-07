@@ -209,8 +209,9 @@ into alerts.
 
 `CV/` remains local-only (DECISIONS #29). The first implementation is the
 owner-only local Resume Studio in `scripts/resume_studio.py`. Source-only mode
-selects existing evidence IDs; enhancement mode permits reviewable bullet edits
-anchored to those IDs. Both render through the exact `CV/resume.tex` format
+selects existing evidence IDs; enhancement mode permits reviewable substantive
+rewrites and multi-source synthesis anchored to those IDs. Both render through
+the exact `CV/resume.tex` format
 with company-first headings, immutable typography/margins/spacing, and a hard
 page-density test (DECISIONS #69). Victor's installed first-party Codex and
 Claude Code clients perform planning and fixed adversarial review. Human stays
@@ -230,9 +231,12 @@ qualifiers survive enhancement, and compile errors cannot trigger content
 deletion. Resume Craft is a fixed weighted rubric; factuality, eligibility,
 and layout are separate non-negotiable gates.
 
-Next Luna-sized slices are bullet-level locks/history and an explicit local
-resume-library/preview surface; the review-driven correction pass is now part
-of the Sol pipeline.
+Resume Studio workshop — ✅ SHIPPED (DECISION #76). Completed runs now expose
+editable education, skills, experience, project, and leadership lines; AI may
+return multiple source-grounded candidates for an explicit user request; and
+each saved/reverted draft renders to a unique private revision artifact. The
+original run and human reference PDFs remain intact. Contact/header metadata,
+layout, evidence authority, and factuality guards remain protected.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
@@ -240,7 +244,8 @@ Resume library/preview surface — ✅ SHIPPED (DECISION #75). Resume Studio now
 indexes saved runs and legacy architecture experiments, separates “create a
 new run” from “Resume bank,” snapshots the selected posting, preserves prior
 results when switching roles, and exposes company-identifiable PDF names for
-new runs. Bullet-level locks and revision history remain future work.
+new runs. The editable workshop and revision history are now the next layer on
+top of that durable bank.
 
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,

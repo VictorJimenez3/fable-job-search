@@ -78,6 +78,9 @@ MAX_RIGHT_SLACK_PT = 38.0
 MAX_LINE_EDIT_PASSES = 2
 MIN_TOTAL_BULLETS = 22
 MAX_TOTAL_BULLETS = 26
+MAX_WORKSHOP_TEXT_CHARS = 900
+MAX_WORKSHOP_REQUEST_CHARS = 3000
+MAX_WORKSHOP_REVISIONS = 100
 PROTECTED_QUALIFIERS = (
     "proof of concept",
     "prototype",
@@ -372,6 +375,21 @@ def run_preview_path(run_dir: Path) -> Path:
     return run_dir / (pdf.stem + "-preview.png")
 
 
+def _workshop_run_dir(root: Optional[Path], run_id: str) -> Optional[Path]:
+    if not re.fullmatch(r"[a-f0-9]{12}", str(run_id or "")):
+        return None
+    directory = studio_root(root) / "runs" / str(run_id)
+    return directory if directory.is_dir() else None
+
+
+def workshop_artifact_url(run_id: str, revision_id: str, filename: str) -> str:
+    return "/workshop/%s/%s/%s" % (
+        quote(str(run_id), safe=""),
+        quote(str(revision_id), safe=""),
+        quote(Path(filename).name, safe=""),
+    )
+
+
 def _resume_tokens(value: str) -> set:
     plain = _latex_plain(value).lower()
     tokens = re.findall(r"[a-z0-9]+", plain)
@@ -656,7 +674,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         except OSError:
             created_at = ""
     artifacts = []
-    for name in (pdf.name, preview.name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt"):
+    for name in (pdf.name, preview.name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
             artifacts.append(name)
     return {
@@ -675,6 +693,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "preview_filename": preview.name if preview.is_file() else "",
         "has_pdf": pdf.is_file(),
         "has_posting_snapshot": bool(str(context.get("posting_text") or job.get("description") or "").strip()),
+        "has_workshop": source == "run" and (directory / "content_plan.json").is_file(),
         "craft_score": review.get("craft_score"),
         "ready": review.get("ready"),
         "review_plan_applied": report.get("review_plan_applied"),
@@ -684,6 +703,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
             "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(pdf.name, safe="")),
             "preview": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(preview.name, safe="")) if preview.is_file() else "",
             "posting": "/api/posting?source=%s&id=%s" % (quote(source, safe=""), quote(entry_id, safe="")),
+            "workshop": "/api/workshop?id=%s" % quote(entry_id, safe="") if source == "run" and (directory / "content_plan.json").is_file() else "",
         },
     }
 
@@ -898,6 +918,8 @@ def response_data(raw: str) -> Dict[str, Any]:
 def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
     if not isinstance(data, dict) or data.get("is_error") or data.get("api_error_status"):
         return False
+    if label.startswith("workshop"):
+        return bool(data.get("suggestions") or str(data.get("reply") or "").strip())
     if label.startswith("review"):
         criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
         return any(
@@ -917,12 +939,15 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
     # still clamps it defensively for other providers.
     bullet_required = ["source_id", "priority"]
     if enhance:
+        bullet_properties["source_ids"] = {
+            "type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 8
+        }
         bullet_properties["text"] = {"type": "string"}
         bullet_properties["evidence_ids"] = {
             "type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 8
         }
         bullet_properties["candidate_rationale"] = {"type": "string"}
-        bullet_required.extend(["text", "evidence_ids", "candidate_rationale"])
+        bullet_required.extend(["source_ids", "text", "evidence_ids", "candidate_rationale"])
     bullet = {
         "type": "object",
         "properties": bullet_properties,
@@ -1032,6 +1057,38 @@ def reviewed_plan_schema(enhance: bool) -> Dict[str, Any]:
     schema["properties"]["final_plan"] = plan_schema(enhance)
     schema["required"].append("final_plan")
     return schema
+
+
+def workshop_schema() -> Dict[str, Any]:
+    """Schema for a small, interactive workshop call.
+
+    Workshop calls return suggestions rather than silently mutating a resume.
+    The owner chooses which candidate becomes a durable revision in the UI.
+    """
+    return {
+        "type": "object",
+        "properties": {
+            "reply": {"type": "string"},
+            "suggestions": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "line_id": {"type": "string"},
+                        "text": {"type": "string"},
+                        "rationale": {"type": "string"},
+                        "evidence_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 8},
+                    },
+                    "required": ["line_id", "text", "rationale", "evidence_ids"],
+                    "additionalProperties": False,
+                },
+                "maxItems": 5,
+            },
+            "warnings": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["reply", "suggestions", "warnings"],
+        "additionalProperties": False,
+    }
 
 
 def provider_data_from_files(stdout_path: Path, stderr_path: Path, label: str) -> Optional[Dict[str, Any]]:
@@ -1264,9 +1321,11 @@ Victor-specific guardrails:
 """.strip()
     if enhance:
         role_guardrails += (
-            "\n- Enhancement mode may tighten a selected bullet's wording, but every bullet must retain its source_id, "
-            "remain source-grounded, use only inline \\textbf/\\emph emphasis, and follow the methodology. "
-            "Cite every fact-bearing source in evidence_ids and explain why the candidate improves the benchmark. "
+            "\n- Enhancement mode is a real drafting pass, not a synonym swap. You may substantially rewrite, combine, "
+            "reorder, or replace a weak selected bullet with a stronger line grounded in one or more authorized "
+            "source bullets. Keep the selected bullet's primary source_id, put every supporting source in source_ids, "
+            "use only inline \\textbf/\\emph emphasis, and follow the methodology. Cite every fact-bearing source in "
+            "evidence_ids and explain why the candidate improves the benchmark. "
             "Public GitHub/Devpost nodes corroborate breadth but cannot authorize a claim by themselves."
         )
     else:
@@ -1330,7 +1389,7 @@ def synthesis_prompt(
         "CV/resume.tex remains immutable and the harness renders it. Return a rich, strongest-first ranked pool sized "
         "to match the full human-authored reference page; each bullet must earn its place through target fit, proof, "
         "and a distinct interview story. "
-        + ("You may tighten bullet text but must retain its source_id and facts. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
+        + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + "Choose the stronger defensible plan rather than averaging it.\n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
@@ -1360,8 +1419,8 @@ def reviewer_prompt(
         "complete, strongest-first replacement plan. Keep all three established experiences, "
         "four or five complementary projects, and one or two leadership entries so the "
         "deterministic packer can produce the same full-page evidence density as Victor's "
-        "human references. You may reorder, replace, or rewrite bullets using authorized "
-        "source IDs. Remove overlap and unsupported implications; do not solve criticism by "
+        "human references. You may reorder, replace, or substantially rewrite bullets using one or more authorized "
+        "source IDs; source_ids must list every source bullet used to synthesize a line. Remove overlap and unsupported implications; do not solve criticism by "
         "making the page sparse. Then grade the FINAL plan you return, not the input draft. "
         "unsupported_claims must describe only claims still present in final_plan.\n\n"
         "Authority rule: CV/resume.tex is canonical for the immutable contact, "
@@ -1416,6 +1475,152 @@ def line_editor_prompt(
     )
 
 
+def workshop_ai_prompt(
+    context: Dict[str, Any], plan: Dict[str, Any], catalog: Dict[str, Any],
+    request: str, line_id: str = "", graph: Optional[Dict[str, Any]] = None,
+) -> str:
+    current_line = _workshop_line(plan, line_id) if line_id else None
+    all_sources = {
+        str(item.get("id")): str(item.get("text") or "")
+        for entry in catalog.get("entries", {}).values()
+        for item in entry.get("bullets", [])
+    }
+    allowed = []
+    if current_line:
+        for source_id in current_line.get("source_ids") or [current_line.get("source_id")]:
+            if source_id in all_sources:
+                allowed.append({"source_id": source_id, "text": all_sources[source_id]})
+    if not allowed:
+        allowed = [
+            {"source_id": item["source_id"], "text": item["text"]}
+            for item in workshop_lines(plan, catalog)
+        ][:80]
+    target = {
+        "line_id": line_id,
+        "current_line": current_line.get("text") if current_line else "",
+        "authorized_source_lines": allowed,
+    }
+    return (
+        "You are the writing partner inside Victor Jimenez's resume workshop. "
+        "Return JSON matching the supplied schema. A suggestion is not applied automatically. "
+        "Write a complete, meaningful resume line: lead with the strongest action and technical object, "
+        "keep concrete mechanism/scope/result, and remove filler. You may substantially rewrite the line or "
+        "synthesize the authorized source lines. Never invent a metric, user, adoption, deployment, accuracy, "
+        "technology, date, or outcome. Preserve prototype, POC, synthetic, simulation, demo, and other scope "
+        "limits. Keep inline emphasis only (\\textbf and \\emph), and do not return LaTeX layout commands. "
+        "Return 2-4 genuinely different candidates when revising a line. Every candidate must use the requested "
+        "line_id and list the evidence IDs that authorize it. For a general conversation, answer in reply and "
+        "only include suggestions when a concrete line change is warranted.\n\n"
+        "Request:\n" + str(request or "").strip()[:MAX_WORKSHOP_REQUEST_CHARS]
+        + "\n\nTarget line and authorized source material:\n"
+        + json.dumps(target, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + "\n\nTarget posting:\n"
+        + json.dumps({
+            "company": context.get("company"), "title": context.get("title"),
+            "posting_text": str(context.get("posting_text") or "")[:MAX_POSTING_CHARS],
+        }, indent=2, ensure_ascii=False)
+        + "\n\nMethodology:\n"
+        + resume_methodology_context(repo_root())[:MAX_PROMPT_CHARS]
+        + "\n\nAuthorized evidence context:\n"
+        + json.dumps(
+            evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [],
+            indent=2, ensure_ascii=False,
+        )[:MAX_PROMPT_CHARS]
+    )
+
+
+def workshop_ai(
+    root: Optional[Path], run_id: str, request: str, line_id: str = "",
+    provider: str = "",
+) -> Dict[str, Any]:
+    run_dir = _workshop_run_dir(root, run_id)
+    if run_dir is None:
+        raise ValueError("run not found")
+    request = str(request or "").strip()
+    if not request:
+        raise ValueError("Tell the workshop what you want changed")
+    if len(request) > MAX_WORKSHOP_REQUEST_CHARS:
+        raise ValueError("Workshop request is too long")
+    catalog = source_catalog(root or repo_root())
+    state = _workshop_state(run_dir, catalog, root=root or repo_root())
+    line = _workshop_line(state["plan"], line_id) if line_id else None
+    if line_id and line is None:
+        raise ValueError("resume line not found")
+    context = read_json(run_dir / "job_context.json", {}) or {}
+    graph = evidence_graph(root or repo_root())
+    selected = provider or ("codex" if provider_commands().get("codex") else "claude")
+    if not provider_commands().get(selected):
+        raise ValueError("Provider is not installed: %s" % selected)
+    label = "workshop_%s" % uuid.uuid4().hex[:8]
+    result = run_provider(
+        selected,
+        workshop_ai_prompt(context, state["plan"], catalog, request, line_id=line_id, graph=graph),
+        run_dir,
+        label,
+        timeout=5 * 60,
+        schema=workshop_schema(),
+    )
+    write_json(run_dir / (label + ".json"), result)
+    if not result.get("ok"):
+        raise RuntimeError(result.get("error") or "AI workshop call failed")
+    data = result.get("data") or {}
+    valid_line_ids = {
+        str(item.get("line_id")) for item in workshop_lines(state["plan"], catalog)
+    }
+    suggestions = []
+    warnings = list(data.get("warnings") or [])
+    for suggestion in data.get("suggestions") or []:
+        if not isinstance(suggestion, dict):
+            continue
+        suggestion_line_id = str(suggestion.get("line_id") or line_id)
+        if suggestion_line_id not in valid_line_ids:
+            warnings.append("Dropped a suggestion for an unknown line")
+            continue
+        try:
+            normalized, _ = _workshop_validate_text(
+                str(suggestion.get("text") or ""),
+                str((_workshop_line(state["plan"], suggestion_line_id) or {}).get("text") or ""),
+                "ai",
+            )
+        except ValueError as exc:
+            warnings.append(str(exc))
+            continue
+        suggestions.append({
+            "line_id": suggestion_line_id,
+            "text": normalized,
+            "rationale": str(suggestion.get("rationale") or ""),
+            "evidence_ids": [str(item) for item in (suggestion.get("evidence_ids") or []) if str(item)],
+        })
+    message = {
+        "message_id": uuid.uuid4().hex[:10],
+        "created_at": now_iso(),
+        "kind": "ai",
+        "provider": selected,
+        "line_id": line_id,
+        "request": request,
+        "reply": str(data.get("reply") or ""),
+        "suggestions": suggestions,
+    }
+    state.setdefault("messages", []).append(message)
+    state.setdefault("provider_calls", []).append({
+        "created_at": message["created_at"], "provider": selected,
+        "label": label, "usage_tokens": result.get("usage_tokens"),
+        "elapsed_seconds": result.get("elapsed_seconds"),
+    })
+    state["updated_at"] = now_iso()
+    write_json(_workshop_state_path(run_dir), state)
+    return {
+        "run_id": run_id,
+        "provider": selected,
+        "reply": message["reply"],
+        "suggestions": suggestions,
+        "warnings": warnings,
+        "usage_tokens": result.get("usage_tokens"),
+        "elapsed_seconds": result.get("elapsed_seconds"),
+        "workshop": _workshop_view(run_dir, catalog),
+    }
+
+
 def _plan_source_signature(plan: Dict[str, Any]) -> List[Tuple[str, Tuple[str, ...]]]:
     return [
         (str(entry.get("source_id")), tuple(str(bullet.get("source_id")) for bullet in entry.get("bullets", [])))
@@ -1458,6 +1663,12 @@ def validate_plan(
     graph: Optional[Dict[str, Any]] = None,
 ) -> Tuple[Dict[str, Any], List[str]]:
     entries = catalog.get("entries", {})
+    all_bullet_bank = {
+        str(item.get("id")): str(item.get("text") or "")
+        for entry in entries.values()
+        for item in entry.get("bullets", [])
+        if item.get("id")
+    }
     evidence_ids = {str(node.get("id")) for node in (graph or {}).get("nodes", [])}
     claim_authorities = {
         str(node.get("id")) for node in (graph or {}).get("nodes", [])
@@ -1554,8 +1765,26 @@ def validate_plan(
                     if not set(cited) & claim_authorities:
                         errors.append("bullet %s has no claim-authorizing evidence" % bullet_id)
                         continue
+                supporting_ids = [bullet_id]
+                if enhance:
+                    raw_supporting_ids = bullet.get("source_ids") or [bullet_id]
+                    if not isinstance(raw_supporting_ids, list):
+                        raw_supporting_ids = [raw_supporting_ids]
+                    supporting_ids = []
+                    for supporting_id in raw_supporting_ids:
+                        normalized_id = str(supporting_id or "")
+                        if normalized_id in all_bullet_bank and normalized_id not in supporting_ids:
+                            supporting_ids.append(normalized_id)
+                        elif normalized_id:
+                            validation_warnings.append(
+                                "dropped unknown supporting source %s for %s"
+                                % (normalized_id, bullet_id)
+                            )
+                    if bullet_id not in supporting_ids:
+                        supporting_ids.insert(0, bullet_id)
                 selected_bullets.append({
                     "source_id": bullet_id,
+                    "source_ids": supporting_ids,
                     "text": text,
                     "evidence_ids": cited or [bullet_id],
                     "priority": max(1, min(100, int(bullet.get("priority") or 50))),
@@ -1900,6 +2129,388 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
         lines.extend(["\\resumeSubHeadingListEnd", ""])
     lines.extend(["\\end{document}", ""])
     return "\n".join(lines)
+
+
+def _replace_macro_call(source: str, macro: str, index: int, args: List[str]) -> str:
+    calls = _macro_calls(source, macro, len(args))
+    if index >= len(calls):
+        return source
+    start, _, after = calls[index]
+    replacement = "\\%s%s" % (macro, "".join("{%s}" % value for value in args))
+    return source[:start] + replacement + source[after:]
+
+
+def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """Expose editable education/skills values without exposing LaTeX layout."""
+    template = (cv_root(root or repo_root()) / CANONICAL_TEMPLATE)
+    try:
+        source = template.read_text()
+    except OSError:
+        return []
+    if BODY_MARKER not in source:
+        return []
+    prefix = source.split(BODY_MARKER, 1)[0]
+    result: List[Dict[str, Any]] = []
+    headings = _macro_calls(prefix, "resumeSubheading", 4)
+    if headings:
+        _, args, _ = headings[0]
+        labels = ("School", "Location", "Degree", "Dates")
+        for key, label, text in zip(("school", "location", "degree", "dates"), labels, args):
+            result.append({
+                "line_id": "front:education:" + key,
+                "section": "education",
+                "entry_id": "front:education",
+                "entry_label": "Education",
+                "role": label,
+                "text": text,
+                "source_text": text,
+                "template": "education",
+                "template_index": 0,
+                "argument_index": labels.index(label),
+            })
+    before_skills = prefix.lower().find("%-----------skills-----------")
+    skills = [call for call in _macro_calls(prefix, "resumeItem", 1) if call[0] > before_skills]
+    for index, (_, args, _) in enumerate(skills):
+        result.append({
+            "line_id": "front:skills:%s" % index,
+            "section": "technical skills",
+            "entry_id": "front:skills",
+            "entry_label": "Technical Skills",
+            "role": "Skill line %s" % (index + 1),
+            "text": args[0],
+            "source_text": args[0],
+            "template": "skills",
+            "template_index": index + 1,  # GPA is resumeItem index 0.
+            "argument_index": 0,
+        })
+    return result
+
+
+def render_workshop_plan(
+    plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Path] = None,
+) -> str:
+    """Render body plus owner-editable education/skills values."""
+    tex = render_plan(plan, catalog, root)
+    front = {
+        str(item.get("line_id")): str(item.get("text") or "")
+        for item in plan.get("front_matter", [])
+        if item.get("line_id")
+    }
+    if not front:
+        return tex
+    marker = BODY_MARKER
+    prefix, body = tex.split(marker, 1)
+    headings = _macro_calls(prefix, "resumeSubheading", 4)
+    education_keys = (
+        "front:education:school", "front:education:location",
+        "front:education:degree", "front:education:dates",
+    )
+    if headings and all(key in front for key in education_keys):
+        prefix = _replace_macro_call(
+            prefix, "resumeSubheading", 0,
+            [front[key] for key in education_keys],
+        )
+    # resumeItem index 0 is the Education GPA; the next four are skills.
+    for item in plan.get("front_matter", []):
+        line_id = str(item.get("line_id") or "")
+        if not line_id.startswith("front:skills:"):
+            continue
+        try:
+            index = int(str(item.get("template_index")))
+        except (TypeError, ValueError):
+            continue
+        prefix = _replace_macro_call(prefix, "resumeItem", index, [front[line_id]])
+    return prefix + marker + body
+
+
+def _workshop_plan(plan: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
+    """Add stable line identities without changing the render contract."""
+    value = copy.deepcopy(plan)
+    existing_front = value.get("front_matter")
+    if not isinstance(existing_front, list):
+        existing_front = front_matter_catalog(root or repo_root())
+    value["front_matter"] = existing_front
+    for section in ("experiences", "projects", "leadership"):
+        for entry in value.get(section, []):
+            for bullet in entry.get("bullets", []):
+                source_id = str(bullet.get("source_id") or "")
+                bullet["line_id"] = str(bullet.get("line_id") or source_id)
+                bullet["source_ids"] = list(
+                    dict.fromkeys(
+                        str(item)
+                        for item in (bullet.get("source_ids") or [source_id])
+                        if str(item)
+                    )
+                )
+                if source_id and source_id not in bullet["source_ids"]:
+                    bullet["source_ids"].insert(0, source_id)
+                bullet.setdefault("evidence_ids", [source_id] if source_id else [])
+                bullet.setdefault("revision_note", "")
+    return value
+
+
+def _workshop_line(plan: Dict[str, Any], line_id: str) -> Optional[Dict[str, Any]]:
+    for item in plan.get("front_matter", []):
+        if str(item.get("line_id") or "") == str(line_id):
+            return item
+    for section in ("experiences", "projects", "leadership"):
+        for entry in plan.get(section, []):
+            for bullet in entry.get("bullets", []):
+                if str(bullet.get("line_id") or bullet.get("source_id")) == str(line_id):
+                    return bullet
+    return None
+
+
+def workshop_lines(plan: Dict[str, Any], catalog: Dict[str, Any]) -> List[Dict[str, Any]]:
+    entries = catalog.get("entries", {})
+    lines: List[Dict[str, Any]] = []
+    for item in plan.get("front_matter", []):
+        line_id = str(item.get("line_id") or "")
+        lines.append({
+            "line_id": line_id,
+            "section": str(item.get("section") or ""),
+            "entry_id": str(item.get("entry_id") or ""),
+            "entry_label": str(item.get("entry_label") or ""),
+            "role": str(item.get("role") or ""),
+            "text": str(item.get("text") or ""),
+            "source_text": str(item.get("source_text") or item.get("text") or ""),
+            "source_id": line_id,
+            "source_ids": [line_id] if line_id else [],
+            "evidence_ids": [],
+            "priority": None,
+            "candidate_rationale": "Canonical education/skills line",
+            "revision_note": str(item.get("revision_note") or ""),
+        })
+    for section in ("experiences", "projects", "leadership"):
+        for entry in plan.get(section, []):
+            source_entry = entries.get(str(entry.get("source_id"))) or {}
+            source_bullets = {
+                str(item.get("id")): str(item.get("text") or "")
+                for item in source_entry.get("bullets", [])
+            }
+            for bullet in entry.get("bullets", []):
+                source_id = str(bullet.get("source_id") or "")
+                lines.append({
+                    "line_id": str(bullet.get("line_id") or source_id),
+                    "section": section,
+                    "entry_id": str(entry.get("source_id") or ""),
+                    "entry_label": str(
+                        source_entry.get("company")
+                        or source_entry.get("heading")
+                        or entry.get("source_id")
+                    ),
+                    "role": str(source_entry.get("role") or ""),
+                    "text": str(bullet.get("text") or ""),
+                    "source_text": source_bullets.get(source_id, str(bullet.get("text") or "")),
+                    "source_id": source_id,
+                    "source_ids": list(bullet.get("source_ids") or [source_id]),
+                    "evidence_ids": list(bullet.get("evidence_ids") or [source_id]),
+                    "priority": bullet.get("priority"),
+                    "candidate_rationale": str(bullet.get("candidate_rationale") or ""),
+                    "revision_note": str(bullet.get("revision_note") or ""),
+                })
+    return lines
+
+
+def _workshop_state_path(run_dir: Path) -> Path:
+    return run_dir / "workshop.json"
+
+
+def _workshop_state(
+    run_dir: Path, catalog: Optional[Dict[str, Any]] = None,
+    root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    current = read_json(_workshop_state_path(run_dir), {}) or {}
+    plan = current.get("plan") if isinstance(current.get("plan"), dict) else None
+    if plan is None:
+        plan = read_json(run_dir / "content_plan.json", {}) or {}
+    if not isinstance(plan, dict) or not plan.get("experiences"):
+        raise RuntimeError("This run has no completed content plan yet")
+    base = root or (run_dir.parents[3] if len(run_dir.parents) > 3 else repo_root())
+    value = {
+        "version": 1,
+        "run_id": str(current.get("run_id") or run_dir.name),
+        "created_at": str(current.get("created_at") or now_iso()),
+        "updated_at": now_iso(),
+        "plan": _workshop_plan(plan, base),
+        "revisions": list(current.get("revisions") or []),
+        "messages": list(current.get("messages") or []),
+        "last_render": current.get("last_render"),
+        "provider_calls": list(current.get("provider_calls") or []),
+    }
+    if not current or current.get("plan") != value["plan"]:
+        write_json(_workshop_state_path(run_dir), value)
+    return value
+
+
+def _workshop_view(run_dir: Path, catalog: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    catalog = catalog or source_catalog(repo_root())
+    base = run_dir.parents[3] if len(run_dir.parents) > 3 else repo_root()
+    state = _workshop_state(run_dir, catalog, root=base)
+    job = read_json(run_dir / "job.json", {}) or {}
+    status = read_json(run_dir / "status.json", {}) or {}
+    render = state.get("last_render") if isinstance(state.get("last_render"), dict) else {}
+    if render.get("revision_id") and render.get("pdf_filename"):
+        render = dict(render)
+        render["pdf_url"] = workshop_artifact_url(
+            run_dir.name, render["revision_id"], render["pdf_filename"]
+        )
+        if render.get("preview_filename"):
+            render["preview_url"] = workshop_artifact_url(
+                run_dir.name, render["revision_id"], render["preview_filename"]
+            )
+    revisions = [
+        {
+            "revision_id": item.get("revision_id"),
+            "created_at": item.get("created_at"),
+            "kind": item.get("kind"),
+            "label": item.get("label"),
+            "line_id": item.get("line_id"),
+            "provider": item.get("provider"),
+        }
+        for item in state.get("revisions", [])
+        if isinstance(item, dict)
+    ]
+    return {
+        "run_id": run_dir.name,
+        "job": job_summary(job),
+        "status": status,
+        "mode": status.get("mode"),
+        "plan": state["plan"],
+        "lines": workshop_lines(state["plan"], catalog),
+        "revisions": list(reversed(revisions)),
+        "messages": state.get("messages", [])[-30:],
+        "last_render": render,
+        "providers": {name: bool(path) for name, path in provider_commands().items()},
+        "original_pdf_url": (
+            "/artifacts/run/%s/%s"
+            % (quote(run_dir.name, safe=""), quote(run_pdf_path(run_dir).name, safe=""))
+            if run_pdf_path(run_dir).is_file() else ""
+        ),
+    }
+
+
+def _workshop_record_revision(
+    state: Dict[str, Any], plan: Dict[str, Any], kind: str, label: str,
+    line_id: str = "", instruction: str = "", provider: str = "",
+    root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    revision = {
+        "revision_id": uuid.uuid4().hex[:10],
+        "created_at": now_iso(),
+        "kind": kind,
+        "label": label,
+        "line_id": line_id,
+        "instruction": instruction[:MAX_WORKSHOP_REQUEST_CHARS],
+        "provider": provider,
+        "plan": _workshop_plan(plan, root or repo_root()),
+    }
+    revisions = list(state.get("revisions") or [])
+    revisions.append(revision)
+    state["revisions"] = revisions[-MAX_WORKSHOP_REVISIONS:]
+    state["plan"] = revision["plan"]
+    state["updated_at"] = now_iso()
+    return revision
+
+
+def _workshop_validate_text(text: str, original: str, origin: str) -> Tuple[str, List[str]]:
+    normalized = _normalize_model_fragment(text)
+    if not normalized:
+        raise ValueError("A resume line cannot be empty")
+    if len(_latex_plain(normalized)) > MAX_WORKSHOP_TEXT_CHARS:
+        raise ValueError("Resume line is too long; keep the technical proof and cut filler")
+    if FORBIDDEN_CONTENT_COMMANDS.search(normalized):
+        raise ValueError("Line contains a layout command; edit wording only")
+    unsupported = _unsupported_inline_commands(normalized)
+    if unsupported:
+        raise ValueError("Unsupported inline command(s): %s" % ", ".join(unsupported))
+    warnings = []
+    missing = _missing_protected_qualifiers(original, normalized)
+    if missing and origin != "manual":
+        raise ValueError("AI suggestion dropped protected qualifier(s): %s" % ", ".join(missing))
+    if missing:
+        warnings.append("Manual edit removed protected qualifier(s): %s" % ", ".join(missing))
+    return normalized, warnings
+
+
+def _workshop_render(
+    run_dir: Path, plan: Dict[str, Any], revision: Dict[str, Any],
+    root: Optional[Path] = None, catalog: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    revision_dir = run_dir / "workshop" / "revisions" / str(revision["revision_id"])
+    revision_dir.mkdir(parents=True, exist_ok=True)
+    job = read_json(run_dir / "job.json", {}) or {}
+    pdf_filename = "%s_workshop_%s.pdf" % (
+        re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "resume").lower()).strip("_")[:64] or "resume",
+        revision["revision_id"],
+    )
+    write_json(revision_dir / "status.json", {"pdf_filename": pdf_filename})
+    base = root or repo_root()
+    (revision_dir / "resume.tex").write_text(render_workshop_plan(plan, catalog or source_catalog(base), base))
+    compiled = compile_resume(revision_dir)
+    layout = pdf_layout(revision_dir, compiled, plan=plan)
+    preview = render_preview(revision_dir)
+    render = {
+        "revision_id": revision["revision_id"],
+        "pdf_filename": pdf_filename,
+        "preview_filename": run_preview_path(revision_dir).name if preview else "",
+        "compiled": bool(compiled.get("compiled")),
+        "layout": layout,
+    }
+    write_json(revision_dir / "render.json", render)
+    return render
+
+
+def workshop_apply_edit(
+    root: Optional[Path], run_id: str, line_id: str, text: str,
+    origin: str = "manual", label: str = "Line edit", provider: str = "",
+    instruction: str = "",
+) -> Dict[str, Any]:
+    run_dir = _workshop_run_dir(root, run_id)
+    if run_dir is None:
+        raise ValueError("run not found")
+    catalog = source_catalog(root or repo_root())
+    state = _workshop_state(run_dir, catalog, root=root or repo_root())
+    line = _workshop_line(state["plan"], line_id)
+    if line is None:
+        raise ValueError("resume line not found")
+    normalized, warnings = _workshop_validate_text(str(text or ""), str(line.get("text") or ""), origin)
+    updated = copy.deepcopy(state["plan"])
+    target = _workshop_line(updated, line_id)
+    target["text"] = normalized
+    target["revision_note"] = label
+    revision = _workshop_record_revision(
+        state, updated, "line_edit" if origin == "manual" else "ai_apply", label,
+        line_id=line_id, instruction=instruction, provider=provider, root=root or repo_root(),
+    )
+    render = _workshop_render(run_dir, state["plan"], revision, root=root or repo_root(), catalog=catalog)
+    state["last_render"] = render
+    write_json(_workshop_state_path(run_dir), state)
+    result = _workshop_view(run_dir, catalog)
+    result["warnings"] = warnings
+    return result
+
+
+def workshop_revert(root: Optional[Path], run_id: str, revision_id: str) -> Dict[str, Any]:
+    run_dir = _workshop_run_dir(root, run_id)
+    if run_dir is None:
+        raise ValueError("run not found")
+    catalog = source_catalog(root or repo_root())
+    state = _workshop_state(run_dir, catalog, root=root or repo_root())
+    prior = next(
+        (item for item in state.get("revisions", []) if str(item.get("revision_id")) == str(revision_id)),
+        None,
+    )
+    if not isinstance(prior, dict) or not isinstance(prior.get("plan"), dict):
+        raise ValueError("revision not found")
+    revision = _workshop_record_revision(
+        state, prior["plan"], "revert", "Reverted to %s" % revision_id,
+        root=root or repo_root(),
+    )
+    render = _workshop_render(run_dir, state["plan"], revision, root=root or repo_root(), catalog=catalog)
+    state["last_render"] = render
+    write_json(_workshop_state_path(run_dir), state)
+    return _workshop_view(run_dir, catalog)
 
 
 def _bullet_value(bullet: Dict[str, Any]) -> float:
@@ -2734,6 +3345,10 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     }
     report["artifacts"] = [artifact for artifact in report["artifacts"] if artifact]
     make_report(run_dir, report)
+    # The first completed draft is immediately addressable in the workshop;
+    # later edits create separate revision artifacts and never overwrite this
+    # original generated PDF.
+    _workshop_state(run_dir, catalog)
     update(
         "complete",
         "%s tailored draft and adversarial final edit are ready" % mode_label.capitalize(),
@@ -2817,14 +3432,15 @@ UI_HTML = r"""<!doctype html>
 :root{color-scheme:dark;--bg:#0e1117;--panel:#161b22;--line:#30363d;--muted:#8b949e;--text:#f0f6fc;--accent:#58a6ff;--good:#3fb950;--warn:#d29922;--bad:#f85149}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1250px;margin:0 auto;padding:28px 20px 70px}h1{margin:0 0 6px;font-size:28px}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--muted);margin:0 0 20px}.grid{display:grid;grid-template-columns:410px 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}.jobs{max-height:650px;overflow:auto}.job{width:100%;text-align:left;background:transparent;color:var(--text);border:1px solid transparent;border-radius:8px;padding:10px;margin:4px 0;cursor:pointer}.job:hover,.job.selected{background:#1f2937;border-color:#3b82f6}.job strong{display:block}.job small{color:var(--muted)}input,select,button{font:inherit}input,select{background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}input{width:100%;margin-bottom:8px}.toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}.toolbar select{min-width:145px}button{background:#238636;border:1px solid #2ea043;color:#fff;border-radius:6px;padding:9px 12px;cursor:pointer;margin:4px 6px 4px 0}button.secondary{background:#21262d;border-color:var(--line)}button:disabled{opacity:.5;cursor:wait}.selected-card{border:1px solid var(--accent);border-radius:8px;padding:13px;margin:10px 0 16px}.meta{color:var(--muted);font-size:13px}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:3px 4px 0 0;font-size:12px}.match-card{margin:10px 0;padding:10px;border-radius:7px;background:#0d1117;border:1px solid var(--line)}.match-card strong{font-size:18px}.status{border-left:3px solid var(--accent);padding:10px 12px;background:#111827;white-space:pre-wrap}.status.complete{border-color:var(--good)}.status.failed{border-color:var(--bad)}.status.running{border-color:var(--warn)}a{color:var(--accent)}pre{white-space:pre-wrap;max-height:360px;overflow:auto;background:#0d1117;border:1px solid var(--line);padding:12px;border-radius:6px;font-size:12px}.score{font-size:27px;margin:4px 0}.preview{display:block;width:100%;max-width:760px;margin:14px auto;border:1px solid var(--line);background:#fff}.hidden{display:none}@media(max-width:850px){.grid{grid-template-columns:1fr}.jobs{max-height:360px}}
 <style>
-.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.12em;font-weight:700}.hero h1{margin-top:4px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap}.hero-actions button{margin:0}.hero-actions button.active{background:var(--accent);border-color:var(--accent);color:#08111d}.grid{grid-template-columns:360px minmax(0,1fr)}.panel{box-shadow:0 12px 35px rgba(0,0,0,.14)}.panel-top,.workspace-heading,.section-title,.library-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.count{color:var(--muted);font-size:12px;padding-top:4px}.hint{color:var(--muted);margin-top:-5px}.notice{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px 12px;margin:0 0 14px;color:#c7e5ff}.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.action-card{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px}.action-card h3{font-size:14px;margin:0 0 4px}.action-card p{color:var(--muted);font-size:12px;min-height:36px;margin:0 0 8px}.action-card button{margin:0;width:100%}.section-title{margin-top:20px}.section-title h3{margin:0;font-size:15px}.empty{padding:38px 12px;text-align:center;color:var(--muted)}.library-view{margin-top:18px}.library-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:8px;margin:14px 0}.library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.resume-card{background:#0d1117;border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.resume-card:hover{border-color:#4b6e91}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card-top strong{display:block}.card-top small{display:block;color:var(--muted);margin-top:3px}.thumb{display:block;width:100%;height:230px;object-fit:contain;object-position:top center;background:#fff;border:1px solid var(--line);margin:10px 0;border-radius:5px}.thumb-placeholder{height:70px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:5px;margin:10px 0;color:var(--muted)}.card-meta{color:var(--muted);font-size:12px;line-height:1.55}.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.card-actions a,.card-actions button{font-size:12px;margin:0;padding:6px 8px}.card-actions button{background:#21262d;border:1px solid var(--line);color:var(--text);border-radius:6px;cursor:pointer}.posting-snapshot{margin-top:10px}.posting-snapshot pre{max-height:230px;margin:6px 0}.legacy{color:var(--warn)}.hidden{display:none!important}@media(max-width:850px){.hero{display:block}.hero-actions{margin-top:12px}.action-grid{grid-template-columns:1fr}.library-toolbar{grid-template-columns:1fr}}
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.12em;font-weight:700}.hero h1{margin-top:4px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap}.hero-actions button{margin:0}.hero-actions button.active{background:var(--accent);border-color:var(--accent);color:#08111d}.grid{grid-template-columns:360px minmax(0,1fr)}.panel{box-shadow:0 12px 35px rgba(0,0,0,.14)}.panel-top,.workspace-heading,.section-title,.library-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.count{color:var(--muted);font-size:12px;padding-top:4px}.hint{color:var(--muted);margin-top:-5px}.notice{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px 12px;margin:0 0 14px;color:#c7e5ff}.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.action-card{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px}.action-card h3{font-size:14px;margin:0 0 4px}.action-card p{color:var(--muted);font-size:12px;min-height:36px;margin:0 0 8px}.action-card button{margin:0;width:100%}.section-title{margin-top:20px}.section-title h3{margin:0;font-size:15px}.empty{padding:38px 12px;text-align:center;color:var(--muted)}.library-view{margin-top:18px}.library-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:8px;margin:14px 0}.library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.resume-card{background:#0d1117;border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.resume-card:hover{border-color:#4b6e91}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card-top strong{display:block}.card-top small{display:block;color:var(--muted);margin-top:3px}.thumb{display:block;width:100%;height:230px;object-fit:contain;object-position:top center;background:#fff;border:1px solid var(--line);margin:10px 0;border-radius:5px}.thumb-placeholder{height:70px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:5px;margin:10px 0;color:var(--muted)}.card-meta{color:var(--muted);font-size:12px;line-height:1.55}.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.card-actions a,.card-actions button{font-size:12px;margin:0;padding:6px 8px}.card-actions button{background:#21262d;border:1px solid var(--line);color:var(--text);border-radius:6px;cursor:pointer}.posting-snapshot{margin-top:10px}.posting-snapshot pre{max-height:230px;margin:6px 0}.legacy{color:var(--warn)}.hidden{display:none!important}.workshop-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px}.workshop-lines{max-height:calc(100vh - 220px);overflow:auto;padding-right:3px}.workshop-entry{border-top:1px solid var(--line);padding:12px 0}.workshop-entry:first-child{border-top:0;padding-top:0}.workshop-entry h4{margin:0 0 8px;font-size:14px}.workshop-line{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0}.workshop-line:focus-within{border-color:var(--accent)}.line-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;margin-bottom:6px}.line-text{width:100%;min-height:58px;resize:vertical;line-height:1.4;background:#111827;border:1px solid #263241;border-radius:5px;color:var(--text);padding:8px}.line-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.line-actions button{font-size:12px;margin:0;padding:6px 8px}.source-note{color:var(--muted);font-size:11px;margin:7px 0 0}.workshop-side{position:sticky;top:16px;align-self:start}.workshop-preview{width:100%;max-height:560px;object-fit:contain;object-position:top;background:#fff;border:1px solid var(--line);border-radius:5px}.chat-box textarea{width:100%;min-height:82px;resize:vertical;background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}.chat-row{display:flex;gap:8px;margin-top:8px}.chat-row select{flex:0 0 120px}.chat-row button{margin:0;flex:1}.ai-reply{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px;margin-top:10px;white-space:pre-wrap}.suggestion{border:1px solid var(--line);border-radius:7px;padding:9px;margin:8px 0}.suggestion .text{font-size:13px}.history-list{max-height:180px;overflow:auto}.history-row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:7px 0;font-size:12px}.history-row button{font-size:11px;margin:0;padding:4px 7px;background:#21262d;border-color:var(--line)}@media(max-width:850px){.hero{display:block}.hero-actions{margin-top:12px}.action-grid{grid-template-columns:1fr}.library-toolbar{grid-template-columns:1fr}.workshop-layout{grid-template-columns:1fr}.workshop-side{position:static}}
 </style></head><body><main>
 <header class="hero"><div><div class="eyebrow">PRIVATE RESUME WORKSPACE</div><h1>Resume Studio</h1><p class="sub">Create, compare, and revisit role-specific resumes without losing a run.</p></div><div class="hero-actions"><button id="tailorTab" class="active">New tailoring</button><button id="libraryTab" class="secondary">Resume bank <span id="libraryCount">0</span></button></div></header>
 <div id="tailorView" class="grid"><section class="panel"><div class="panel-top"><h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p><input id="search" placeholder="Search company, title, sector…" autocomplete="off"><div class="toolbar"><select id="sort" aria-label="Sort roles"><option value="best">Best Radar score</option><option value="newest">Newest</option><option value="resume_match">Resume Match</option></select><button id="refreshEvidence" class="secondary" title="Refresh GitHub and Devpost evidence">Refresh evidence</button></div><div id="jobs" class="jobs">Loading roles…</div></section>
 <section class="panel"><div id="empty" class="empty">Select a posting to see its match, saved resumes, and tailoring actions.</div><div id="workspace" class="hidden"><div class="workspace-heading"><div id="selected" class="selected-card"></div><button id="selectedLibrary" class="secondary">View resume bank</button></div><div class="notice">Switching postings never deletes a generated resume. Every run is saved with its posting snapshot.</div><div id="match" class="match-card"></div><button id="analyzeMatch" class="secondary">Analyze full posting match</button><div class="action-grid"><div class="action-card"><h3>Source-only</h3><p>Uses your approved bullets verbatim. Safest comparison baseline.</p><button id="strict">Create source-only resume</button></div><div class="action-card"><h3>AI-enhanced</h3><p>Allows source-grounded bullet improvements with evidence and review.</p><button id="dream">Create AI-enhanced resume</button></div></div><div id="status" class="status hidden"></div><div id="report" class="hidden"></div><div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div></div></section></div>
 <section id="libraryView" class="panel library-view hidden"><div class="library-head"><div><h2>Resume bank</h2><p class="sub">Every generated run and legacy experiment, paired with the posting it used.</p></div><button id="backToTailor" class="secondary">Back to tailoring</button></div><div class="library-toolbar"><input id="librarySearch" placeholder="Filter saved resumes by company or role…" autocomplete="off"><select id="libraryMode" aria-label="Filter resume mode"><option value="all">All modes</option><option value="enhanced">AI-enhanced</option><option value="source-only">Source-only</option></select></div><div id="libraryCards" class="library-grid"></div></section>
+<section id="workshopView" class="panel library-view hidden"><div class="library-head"><div><div class="eyebrow">DRAFT WORKSHOP</div><h2 id="workshopTitle">Resume workshop</h2><p id="workshopSubtitle" class="sub">Edit one line at a time. Every save creates a new PDF revision.</p></div><div><button id="workshopBack" class="secondary">Back to bank</button><button id="workshopTailor" class="secondary">Back to posting</button></div></div><div class="notice">The original generated PDF stays untouched. Header, education, and technical skills remain the canonical base; experience, projects, and leadership lines are editable here.</div><div class="workshop-layout"><section class="panel"><div class="section-title"><h3>Editable resume lines</h3><span id="workshopLineCount" class="count"></span></div><div id="workshopLines" class="workshop-lines">Loading workshop…</div></section><aside class="workshop-side"><section class="panel"><div class="section-title"><h3>Preview</h3><span id="workshopSaveStatus" class="meta"></span></div><div id="workshopPreview"></div></section><section class="panel chat-box"><h3>Ask the writing partner</h3><p class="hint">Give it a goal or ask about a specific line. It returns candidates; you choose what to apply.</p><textarea id="workshopRequest" placeholder="e.g. Make the J&J bullets feel more like an AI platform I architected, keep the technical proof, and cut generic wording."></textarea><div class="chat-row"><select id="workshopProvider" aria-label="AI provider"></select><button id="workshopAsk">Ask for candidates</button></div><div id="workshopAiResult"></div></section><section class="panel"><div class="section-title"><h3>Revision history</h3><span class="meta">revert creates a new revision</span></div><div id="workshopHistory" class="history-list"></div></section></aside></div></section>
 <script>
-let selected=null,activeRunId=null,libraryEntries=[],runTimers=new Map(),jobsCache=[];
+let selected=null,activeRunId=null,libraryEntries=[],runTimers=new Map(),jobsCache=[],workshopState=null,workshopSuggestions=[];
 const $=id=>document.getElementById(id);
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function fmtDate(value){if(!value)return 'date unavailable';const date=new Date(value);return Number.isNaN(date.getTime())?String(value):date.toLocaleString([], {dateStyle:'medium',timeStyle:'short'});}
@@ -2843,7 +3459,7 @@ async function loadJobs(){
 }
 function renderMatch(match){if(!match){$('match').innerHTML='<span class="meta">Resume Match not analyzed yet. Full-posting analysis is optional.</span>';return;}const gaps=(match.missing_requirements||[]).join(', ')||'none detected';$('match').innerHTML=`<strong>${match.score}/100 Resume Match</strong> <span class="badge">${esc(match.confidence||'low')} confidence</span><div class="meta">${esc((match.reasons||[]).join(' · '))}</div><div class="meta">Gaps: ${esc(gaps)}</div>`;}
 function renderCard(entry,compact=false){
-  const job=entry.job||{},report=entry.artifacts.includes('report.json')?artifactUrl(entry.source,entry.entry_id,'report.json'):'';const preview=entry.urls.preview?`<img class="thumb" loading="lazy" src="${entry.urls.preview}" alt="${esc(job.company)} resume preview">`:'<div class="thumb-placeholder">Preview appears after the run finishes</div>';const pdf=entry.has_pdf?`<a href="${entry.urls.pdf}" target="_blank" rel="noreferrer">Preview PDF</a>`:'<span class="meta">PDF pending</span>';const posting=entry.has_posting_snapshot?`<button data-view-posting data-posting="${entry.urls.posting}">View posting snapshot</button>`:'<span class="meta">No saved posting text</span>';const warning=entry.legacy?'<span class="legacy">legacy experiment</span>':'';return `<article class="resume-card"><div class="card-top"><div><strong>${esc(job.company||'Unknown company')}</strong><small>${esc(job.title||'Untitled role')}</small></div><span class="badge">${modeLabel(entry.mode)}</span></div>${compact?'':preview}<div class="card-meta">${fmtDate(entry.created_at)} · ${esc(entry.status)}${warning?' · '+warning:''}${entry.craft_score!==null&&entry.craft_score!==undefined?' · ':''}${entry.craft_score!==null&&entry.craft_score!==undefined?`Craft ${esc(entry.craft_score)}/100`:''}${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div><div class="card-actions">${pdf}${report?`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`:''}${posting}</div><div class="posting-snapshot hidden"></div></article>`;
+  const job=entry.job||{},report=entry.artifacts.includes('report.json')?artifactUrl(entry.source,entry.entry_id,'report.json'):'';const preview=entry.urls.preview?`<img class="thumb" loading="lazy" src="${entry.urls.preview}" alt="${esc(job.company)} resume preview">`:'<div class="thumb-placeholder">Preview appears after the run finishes</div>';const pdf=entry.has_pdf?`<a href="${entry.urls.pdf}" target="_blank" rel="noreferrer">Preview PDF</a>`:'<span class="meta">PDF pending</span>';const posting=entry.has_posting_snapshot?`<button data-view-posting data-posting="${entry.urls.posting}">View posting snapshot</button>`:'<span class="meta">No saved posting text</span>';const workshop=entry.has_workshop?`<button data-open-workshop data-run="${esc(entry.run_id)}">Open workshop</button>`:'';const warning=entry.legacy?'<span class="legacy">legacy experiment</span>':'';return `<article class="resume-card"><div class="card-top"><div><strong>${esc(job.company||'Unknown company')}</strong><small>${esc(job.title||'Untitled role')}</small></div><span class="badge">${modeLabel(entry.mode)}</span></div>${compact?'':preview}<div class="card-meta">${fmtDate(entry.created_at)} · ${esc(entry.status)}${warning?' · '+warning:''}${entry.craft_score!==null&&entry.craft_score!==undefined?' · ':''}${entry.craft_score!==null&&entry.craft_score!==undefined?`Craft ${esc(entry.craft_score)}/100`:''}${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div><div class="card-actions">${pdf}${workshop}${report?`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`:''}${posting}</div><div class="posting-snapshot hidden"></div></article>`;
 }
 function renderSelectedResumes(){
   if(!selected)return;const entries=savedFor(selected);$('selectedResumes').innerHTML=entries.length?entries.map(entry=>renderCard(entry,true)).join(''):'<p class="sub">No saved resume for this posting yet. Create one above; it will remain here and in the bank.</p>';
@@ -2852,6 +3468,23 @@ function renderLibrary(){
   const query=$('librarySearch').value.toLowerCase().trim(),mode=$('libraryMode').value;const entries=libraryEntries.filter(entry=>{const job=entry.job||{},hay=(String(job.company||'')+' '+String(job.title||'')).toLowerCase();return (!query||query.split(/\s+/).every(part=>hay.includes(part)))&&(mode==='all'||entry.mode===mode);});$('libraryCount').textContent=String(libraryEntries.length);$('libraryCards').innerHTML=entries.length?entries.map(entry=>renderCard(entry)).join(''):'<p class="sub">No saved resumes match this filter.</p>';
 }
 async function loadLibrary(){try{const r=await fetch('/api/library?limit=500');const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load resume bank');libraryEntries=data.resumes||[];renderLibrary();renderSelectedResumes();renderJobRows(jobsCache);}catch(error){$('libraryCards').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}}
+function workshopLineElement(lineId){return Array.from(document.querySelectorAll('[data-line-id]')).find(node=>node.dataset.lineId===lineId);}
+function plainLine(value){return String(value??'').replace(/\\textbf\{([^{}]*)\}/g,'$1').replace(/\\emph\{([^{}]*)\}/g,'$1').replace(/\\(?:large|normalsize|small|scshape)\s*/g,'').replace(/\\(?:%|&|\$)/g,m=>m==='\\%'?'%':m==='\\&'?'&':'$').replace(/\\times\{\}/g,'x');}
+function renderWorkshop(){
+  if(!workshopState)return;const job=workshopState.job||{};$('workshopTitle').textContent=(job.company||'Resume')+' · workshop';$('workshopSubtitle').textContent=(job.title||'Tailored draft')+' · edit wording, ask for alternatives, and keep every revision';
+  const lines=workshopState.lines||[];$('workshopLineCount').textContent=lines.length+' editable lines';const groups=[];lines.forEach(line=>{let group=groups.find(item=>item.entry_id===line.entry_id);if(!group){group={entry_id:line.entry_id,label:line.entry_label,role:line.role,section:line.section,lines:[]};groups.push(group);}group.lines.push(line);});
+  $('workshopLines').innerHTML=groups.map(group=>`<div class="workshop-entry"><h4>${esc(group.label)}${group.role?' · '+esc(group.role):''}</h4>${group.lines.map(line=>`<div class="workshop-line"><div class="line-meta"><span>${esc(line.section)} · ${esc(line.line_id)}</span><span>${line.source_ids?.length>1?'synthesized from '+line.source_ids.length+' sources':'source-grounded'}</span></div><textarea class="line-text" data-line-id="${esc(line.line_id)}">${esc(plainLine(line.text))}</textarea><div class="line-actions"><button data-save-line="${esc(line.line_id)}">Save line</button><button class="secondary" data-ask-line="${esc(line.line_id)}">Ask AI about this</button></div>${line.source_text&&line.source_text!==line.text?`<p class="source-note">Base source: ${esc(plainLine(line.source_text))}</p>`:''}</div>`).join('')}</div>`).join('')||'<p class="sub">No editable lines in this draft.</p>';
+  const providers=workshopState.providers||{};const choices=Object.keys(providers).filter(name=>providers[name]);$('workshopProvider').innerHTML=choices.length?choices.map(name=>`<option value="${esc(name)}">${esc(name==='codex'?'Codex CLI':name==='claude'?'Claude CLI':name)}</option>`).join(''):'<option value="">No local AI CLI</option>';$('workshopAsk').disabled=!choices.length;
+  const render=workshopState.last_render||{};$('workshopSaveStatus').textContent=render.revision_id?'revision '+render.revision_id:'original generated draft';$('workshopPreview').innerHTML=render.preview_url?`<img class="workshop-preview" src="${render.preview_url}" alt="Workshop resume preview"><p><a href="${render.pdf_url}" target="_blank" rel="noreferrer">Open workshop PDF</a> · <a href="${workshopState.original_pdf_url}" target="_blank" rel="noreferrer">Open original generated PDF</a></p>`:workshopState.original_pdf_url?`<p class="meta">Showing the original generated PDF until you save a workshop revision.</p><a href="${workshopState.original_pdf_url}" target="_blank" rel="noreferrer">Open original generated PDF</a>`:'<p class="sub">Preview is not available yet.</p>';
+  $('workshopHistory').innerHTML=(workshopState.revisions||[]).map(revision=>`<div class="history-row"><span>${esc(revision.label||revision.kind||'revision')}<br><small>${fmtDate(revision.created_at)}${revision.provider?' · '+esc(revision.provider):''}</small></span><button data-revert-revision="${esc(revision.revision_id)}">Revert</button></div>`).join('')||'<p class="meta">Your first save will appear here.</p>';
+  document.querySelectorAll('[data-save-line]').forEach(button=>button.onclick=()=>saveWorkshopLine(button.dataset.saveLine));document.querySelectorAll('[data-ask-line]').forEach(button=>button.onclick=()=>askWorkshop(button.dataset.askLine));document.querySelectorAll('[data-revert-revision]').forEach(button=>button.onclick=()=>revertWorkshop(button.dataset.revertRevision));
+}
+async function openWorkshop(runId){try{const r=await fetch('/api/workshop?id='+encodeURIComponent(runId));const data=await r.json();if(!r.ok)throw new Error(data.error||'Workshop unavailable');workshopState=data;activeRunId=runId;showView('workshop');renderWorkshop();}catch(error){alert(error.message);}}
+async function saveWorkshopLine(lineId){const field=workshopLineElement(lineId);if(!field)return;const button=document.querySelector(`[data-save-line="${CSS.escape(lineId)}"]`);if(button)button.disabled=true;const current=(workshopState.lines||[]).find(line=>line.line_id===lineId);const displayedOriginal=plainLine(current?.text||'').trim();const edited=field.value.trim();const payloadText=edited===displayedOriginal?(current?.text||edited):edited;try{const r=await fetch('/api/workshop/edit',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:workshopState.run_id,line_id:lineId,text:payloadText,origin:'manual',label:'Manual line edit'})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not save line');workshopState=data;renderWorkshop();}catch(error){alert(error.message);}finally{if(button)button.disabled=false;}}
+function renderWorkshopAiResult(data){workshopSuggestions=data.suggestions||[];let html=data.reply?`<div class="ai-reply">${esc(data.reply)}</div>`:'';if(data.warnings?.length)html+=`<p class="meta">${esc(data.warnings.join(' · '))}</p>`;html+=workshopSuggestions.map((suggestion,index)=>`<div class="suggestion"><div class="text">${esc(plainLine(suggestion.text))}</div><p class="source-note">${esc(suggestion.rationale||'Authorized-source candidate')}</p><button data-apply-suggestion="${index}">Apply this candidate</button></div>`).join('');$('workshopAiResult').innerHTML=html||'<p class="meta">No candidate came back. Try a more specific request.</p>';document.querySelectorAll('[data-apply-suggestion]').forEach(button=>button.onclick=()=>applyWorkshopSuggestion(Number(button.dataset.applySuggestion)));}
+async function askWorkshop(lineId=''){const request=$('workshopRequest').value.trim()||'Rewrite this line with stronger technical substance, clearer ownership, and a concrete consequence while staying concise and factual.';const button=$('workshopAsk');button.disabled=true;$('workshopAiResult').innerHTML='<p class="meta">Asking the local '+$('workshopProvider').value+' lane…</p>';try{const r=await fetch('/api/workshop/ai',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:workshopState.run_id,line_id:lineId,request,provider:$('workshopProvider').value})});const data=await r.json();if(!r.ok)throw new Error(data.error||'AI workshop call failed');renderWorkshopAiResult(data);}catch(error){$('workshopAiResult').innerHTML='<p class="meta">'+esc(error.message)+'</p>';}finally{button.disabled=false;}}
+async function applyWorkshopSuggestion(index){const suggestion=workshopSuggestions[index];if(!suggestion)return;try{const r=await fetch('/api/workshop/edit',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:workshopState.run_id,line_id:suggestion.line_id,text:suggestion.text,origin:'ai',label:'Applied AI candidate',provider:$('workshopProvider').value,instruction:$('workshopRequest').value})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not apply candidate');workshopState=data;$('workshopAiResult').innerHTML='<p class="meta">Applied and rendered a new revision.</p>';renderWorkshop();}catch(error){$('workshopAiResult').innerHTML='<p class="meta">'+esc(error.message)+'</p>';}}
+async function revertWorkshop(revisionId){if(!confirm('Create a new revision from this older version?'))return;try{const r=await fetch('/api/workshop/revert',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:workshopState.run_id,revision_id:revisionId})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not revert');workshopState=data;renderWorkshop();}catch(error){alert(error.message);}}
 async function choose(id){
   const r=await fetch('/api/job?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok){$('match').textContent=data.error||'Posting could not be loaded';return;}selected=data;$('empty').classList.add('hidden');$('workspace').classList.remove('hidden');$('selected').innerHTML=`<strong>${esc(selected.company)} · ${esc(selected.title)}</strong><div class="meta">${esc((selected.locations||[]).join(', '))} · Radar ${selected.score} · <a href="${esc(selected.url)}" target="_blank" rel="noreferrer">open live posting</a></div><div>${(selected.alert_ok?'<span class="badge">alert eligible</span>':'<span class="badge">dashboard role</span>')} ${(selected.early_career_possible?'<span class="badge">early-career possible</span>':'')}</div>`;renderMatch(selected.resume_match);document.querySelectorAll('.job').forEach(b=>b.classList.toggle('selected',b.dataset.id===id));renderSelectedResumes();showView('tailor');}
 async function analyzeMatch(){if(!selected)return;const button=$('analyzeMatch');button.disabled=true;$('match').innerHTML='<span class="meta">Fetching the posting and matching the full evidence graph…</span>';try{const r=await fetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Match analysis failed');selected.resume_match=data.resume_match;renderMatch(data.resume_match);}catch(error){$('match').textContent=error.message;}finally{button.disabled=false;}}
@@ -2859,10 +3492,10 @@ async function refreshEvidence(){const button=$('refreshEvidence');button.disabl
 function setTailorButtons(disabled){['strict','dream'].forEach(id=>$(id).disabled=disabled);}
 async function start(mode){if(!selected)return;setTailorButtons(true);$('status').className='status running';$('status').textContent='Saving this '+modeLabel(mode)+' run for '+selected.company+'…';$('status').classList.remove('hidden');$('report').classList.add('hidden');try{const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id,mode})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not start run');activeRunId=data.run_id;await loadLibrary();watchRun(data.run_id);}catch(error){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}
 function watchRun(id){if(runTimers.has(id))return;const tick=async()=>{try{const r=await fetch('/api/run?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok)throw new Error(data.error||'Run status unavailable');if(id===activeRunId){$('status').textContent=(data.job?.company?data.job.company+': ':'')+(data.message||data.status);$('status').className='status '+data.status;}if(data.status==='complete'||data.status==='failed'){runTimers.delete(id);if(id===activeRunId){setTailorButtons(false);if(data.status==='complete')renderReport(data);else $('report').classList.add('hidden');}await loadLibrary();return;}const timer=setTimeout(()=>{runTimers.delete(id);tick();},1500);runTimers.set(id,timer);}catch(error){runTimers.delete(id);if(id===activeRunId){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}};tick();}
-function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='dream'||report.mode==='enhanced')html+=`<p class="meta">AI-enhanced bullets were source-addressed, evidence-checked, and saved with this run.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;}
-function showView(view){const bank=view==='library';$('tailorView').classList.toggle('hidden',bank);$('libraryView').classList.toggle('hidden',!bank);$('tailorTab').classList.toggle('active',!bank);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();}
-document.addEventListener('click',async event=>{const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
-$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');Promise.all([loadJobs(),loadLibrary()]);
+function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='dream'||report.mode==='enhanced')html+=`<p class="meta">AI-enhanced bullets may be synthesized from multiple authorized source lines; edit or revert them in the workshop.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <button class="secondary" data-open-workshop="${esc(status.run_id)}">Open workshop</button> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;document.querySelectorAll('[data-open-workshop]').forEach(button=>button.onclick=()=>openWorkshop(button.dataset.openWorkshop||status.run_id));}
+function showView(view){const bank=view==='library',workshop=view==='workshop';$('tailorView').classList.toggle('hidden',bank||workshop);$('libraryView').classList.toggle('hidden',!bank);$('workshopView').classList.toggle('hidden',!workshop);$('tailorTab').classList.toggle('active',!bank&&!workshop);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();if(workshop)renderWorkshop();}
+document.addEventListener('click',async event=>{const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
+$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary()]);
 </script></main></body></html>"""
 
 
@@ -2946,6 +3579,15 @@ class StudioHandler(BaseHTTPRequestHandler):
             if not status:
                 return self.send_json({"error": "run not found"}, HTTPStatus.NOT_FOUND)
             return self.send_json(status)
+        if parsed.path == "/api/workshop":
+            run_id = parse_qs(parsed.query).get("id", [""])[0]
+            run_dir = _workshop_run_dir(repo_root(), run_id)
+            if run_dir is None:
+                return self.send_json({"error": "run not found"}, HTTPStatus.NOT_FOUND)
+            try:
+                return self.send_json(_workshop_view(run_dir))
+            except RuntimeError as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.CONFLICT)
         if parsed.path.startswith("/runs/"):
             parts = parsed.path.split("/")
             if len(parts) != 4 or not re.fullmatch(r"[a-f0-9]{12}", parts[2]):
@@ -2954,6 +3596,18 @@ class StudioHandler(BaseHTTPRequestHandler):
             target = (run_dir / parts[3]).resolve()
             if run_dir.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
+            content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
+            return self.send_bytes(target.read_bytes(), content_type)
+        if parsed.path.startswith("/workshop/"):
+            parts = parsed.path.split("/")
+            if len(parts) != 5 or not re.fullmatch(r"[a-f0-9]{12}", parts[2]) or not re.fullmatch(r"[a-f0-9]{10}", parts[3]):
+                return self.send_json({"error": "invalid workshop artifact path"}, HTTPStatus.BAD_REQUEST)
+            if Path(parts[4]).name != parts[4]:
+                return self.send_json({"error": "invalid workshop artifact path"}, HTTPStatus.BAD_REQUEST)
+            target_dir = studio_root(repo_root()) / "runs" / parts[2] / "workshop" / "revisions" / parts[3]
+            target = (target_dir / parts[4]).resolve()
+            if target_dir.resolve() not in target.parents or not target.is_file():
+                return self.send_json({"error": "workshop artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
             return self.send_bytes(target.read_bytes(), content_type)
         if parsed.path.startswith("/artifacts/"):
@@ -2973,7 +3627,10 @@ class StudioHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
-        if parsed.path not in {"/api/run", "/api/match", "/api/evidence/refresh"}:
+        if parsed.path not in {
+            "/api/run", "/api/match", "/api/evidence/refresh",
+            "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
+        }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
         try:
             length = int(self.headers.get("Content-Length", "0"))
@@ -2989,6 +3646,30 @@ class StudioHandler(BaseHTTPRequestHandler):
                     "hash": graph.get("hash"),
                     "public_refresh_errors": graph.get("public_refresh_errors", []),
                 })
+            if parsed.path == "/api/workshop/edit":
+                result = workshop_apply_edit(
+                    repo_root(), str(body.get("run_id") or ""),
+                    str(body.get("line_id") or ""), str(body.get("text") or ""),
+                    origin=str(body.get("origin") or "manual"),
+                    label=str(body.get("label") or "Line edit"),
+                    provider=str(body.get("provider") or ""),
+                    instruction=str(body.get("instruction") or ""),
+                )
+                return self.send_json(result)
+            if parsed.path == "/api/workshop/ai":
+                result = workshop_ai(
+                    repo_root(), str(body.get("run_id") or ""),
+                    str(body.get("request") or ""),
+                    line_id=str(body.get("line_id") or ""),
+                    provider=str(body.get("provider") or ""),
+                )
+                return self.send_json(result)
+            if parsed.path == "/api/workshop/revert":
+                result = workshop_revert(
+                    repo_root(), str(body.get("run_id") or ""),
+                    str(body.get("revision_id") or ""),
+                )
+                return self.send_json(result)
             job_id = str(body.get("job_id") or "")
             job = current_scored_jobs(repo_root()).get(job_id)
             if not job:
@@ -3000,7 +3681,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             mode = str(body.get("mode") or "")
             status = self.manager.start(job, mode)
             return self.send_json(status, HTTPStatus.ACCEPTED)
-        except (ValueError, json.JSONDecodeError) as exc:
+        except (ValueError, RuntimeError, json.JSONDecodeError) as exc:
             return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
 
 

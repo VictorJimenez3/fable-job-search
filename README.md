@@ -238,8 +238,9 @@ Start it from the repository:
 
 Open `http://127.0.0.1:4317/`. **Existing-bullets mode** selects a target-aware
 subset from the master CV and example résumés without rewriting it.
-**Enhancement mode** may tighten selected bullets while preserving their source
-IDs. In both modes a deterministic renderer uses `CV/resume.tex` unchanged;
+**Enhancement mode** may substantially rewrite or synthesize bullets from
+multiple authorized source lines while preserving their evidence IDs. In both
+modes a deterministic renderer uses `CV/resume.tex` unchanged;
 models cannot author the LaTeX document, alter the margins or typography, or
 pass a sparse or bloated portfolio. Employer headings are company-first. Usable installed
 first-party Codex and Claude Code sessions provide planning and fixed review;
@@ -271,6 +272,13 @@ company (for example, `mayo_clinic_resume_ai.pdf`). Open a saved posting
 snapshot from its card when the source text was captured. Failed and in-progress
 runs remain listed so an interrupted attempt is inspectable rather than
 silently disappearing.
+
+Open **Workshop** on a completed run to edit education, skills, experience,
+projects, and leadership lines without touching the original PDF. Saving a
+line creates a unique rendered revision; the AI writing partner returns
+source-grounded candidates for approval, and revision history can revert to an
+earlier draft. The current Mac exposes Codex CLI and Claude Code lanes; a Luna
+lane is only available when a local `luna` executable is installed.
 
 For a disposable human-feedback batch across varied roles, use the calibration
 lab:
