@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-07 00:15 UTC** · companies polled directly: **1614** (registry 1815) · jobs tracked: **27953** · new this run: **68** · alerts this run: **6**_
+_Last run: **2026-08-07 00:18 UTC** · companies polled directly: **1614** (registry 1815) · jobs tracked: **27953** · new this run: **68** · alerts this run: **6**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -40,7 +40,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 1d | Qualcomm | [Machine Learning Engineer - Machine Learning Engineering](https://qualcomm.eightfold.ai/careers/job/446717859953) | San Diego, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 5d | Quora | [Software Engineer New Grad - Machine Learning Platform](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db/application?embed=true) | Remote in USA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 6d | Quora | [Software Engineer, Machine Learning Platform, New Grad - Quora (Remote](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote - Multiple Locations | other | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) |
-| 89 🔥 | 10h | Amazon | [Data Engineer - Multiple Teams](https://amazon.jobs/en/jobs/10494000/data-engineer-data-science-focus-ads-science-analysis-tech-asat) | NYC | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 2d | Apple | [Software Engineer - Front-end](https://jobs.apple.com/en-us/details/200660851) | Austin, TX | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 7d | Mayo Clinic | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d019dca1f933846601ecb?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 9d | CVS Health | [Analytics & Behavior Change – Data Science Undergrad (Conversion)](https://jobright.ai/jobs/info/6a6a3b5219d76667a2abe6e7?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -126,7 +125,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 22h | TikTok | [Software Engineer Graduate - Data Arch - E-commerce](https://lifeattiktok.com/search/7668582542044072245) | Seattle, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 1d | Quora | [New Grad: Software Engineer](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote | other | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 2d | RTX | [Software Safety Engineer](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-TEWKSBURY-TB3--50-Apple-Hill-Dr--CONCORD-BLDG-Tewksbury-Tb3-300-Concord/Software-Safety-Engineer_01863205-1) | Tewksbury, MA | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 81 ⭐ | 2d | CodeVertex Operations | [Entry-Level Data Analyst](https://jobright.ai/jobs/info/6a743af1b17cba56903556c8?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 2d | TikTok | [Backend Engineer Graduate](https://lifeattiktok.com/search/7665989305914984709) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 2d | TikTok | [Backend Software Engineer Graduate - Global E-commerce](https://lifeattiktok.com/search/7668827379083823413) | Seattle, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 2d | TikTok | [Backend Engineer Graduate - User Growth](https://lifeattiktok.com/search/7665986019233958197) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -156,5 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 23d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 23d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 25d | Allstate Insurance Company | [AI Product Engineer - Copilot & Power Platform](https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/US---Remote/AI-Product-Engineer--Copilot---Power-Platform---Remote---US-_R30742-1) | Remote in USA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 25d | ByteDance | [Software Development Engineer Graduate (Intent-Based Networking) - 202](https://jobright.ai/jobs/info/6a54fe00268af95237be8908?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 80 ⭐ | 2d | CompleteCare, Inc. | [Junior Software Engineer](https://jobright.ai/jobs/info/6a73987932ebbc14ffb4fef8?utm_campaign=Software%20Engineering&utm_source=1103) | Maitland, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
