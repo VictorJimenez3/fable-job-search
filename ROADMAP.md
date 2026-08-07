@@ -233,6 +233,13 @@ source-signature-preserving revision thread driven by review priorities.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
+Open UX gap: Resume Studio currently exposes the generated PDF only after a
+new run completes; it does not yet provide a resume-library view with explicit
+“preview existing artifact” and “create new run” separation. Generated runs
+are already isolated under `CV/.resume_studio/runs/` and do not overwrite
+`CV/resume.tex`, but the UI should make that safety boundary obvious before
+future resume-management work.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and
