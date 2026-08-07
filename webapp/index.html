@@ -277,14 +277,16 @@ async function boot() {
     }
   } catch {}
   RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+  const ownerView = Boolean(S.auth?.owner);
   let [jobs, applied, culture, research, aiUsage, companies, runs, scout, web] = await Promise.all([
-    fetchJSON("state/jobs.json", {}), S.auth && !S.auth.owner ? Promise.resolve([]) : fetchJSON("state/applied.json", []),
+    fetchJSON("state/jobs.json", {}), ownerView ? fetchJSON("state/applied.json", []) : Promise.resolve([]),
     fetchJSON("state/culture.json", {}), fetchJSON("state/company_research.json", {}),
     fetchJSON("state/ai_usage.json", {}), fetchJSON("state/companies.json", {}),
     fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
-    S.auth && !S.auth.owner ? Promise.resolve(null) : fetchJSON("state/web_state.json", null),
+    ownerView ? fetchJSON("state/web_state.json", null) : Promise.resolve(null),
   ]);
-  // A non-owner must never receive the owner's shared applied.json. Their
+  // Anyone who is not the authenticated owner must never receive the owner's
+  // shared applied.json. Their
   // private tracker rows come from the authenticated Google Sheets endpoint.
   if (S.auth && !S.auth.owner) {
     applied = [];
