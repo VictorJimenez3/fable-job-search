@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-07 06:00 UTC** · companies polled directly: **1629** (registry 1831) · jobs tracked: **28364** · new this run: **20** · alerts this run: **0**_
+_Last run: **2026-08-07 06:14 UTC** · companies polled directly: **1629** (registry 1831) · jobs tracked: **28364** · new this run: **20** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -59,9 +59,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 2d | TikTok | [Machine Learning Engineer New Grad - Performance Monetization](https://lifeattiktok.com/search/7669691374918011141) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 2d | TikTok | [Machine Learning Engineer New Grad - Search Ads](https://lifeattiktok.com/search/7669698543896054069) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 2d | TikTok | [Machine Learning Engineer Graduate - App Ads and Gaming](https://lifeattiktok.com/search/7669709290431236357) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 89 🔥 | 2d | Apple | [Software Engineer - Front-end](https://jobs.apple.com/en-us/details/200660851) | Austin, TX | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 7d | Mayo Clinic | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d019dca1f933846601ecb?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 9d | CVS Health | [Analytics & Behavior Change – Data Science Undergrad (Conversion)](https://jobright.ai/jobs/info/6a6a3b5219d76667a2abe6e7?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 88 🔥 | 3d | Apple | [Software Engineer - Front-end](https://jobs.apple.com/en-us/details/200660851) | Austin, TX | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 3d | Medtronic | [Software Engineer I - CRM](https://jobright.ai/jobs/info/6a737e5332ebbc14ffb4f4d1?utm_campaign=Software%20Engineering&utm_source=1103) | Mounds View, MN, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 3d | TikTok | [Machine Learning Engineer New Grad - Recommendation](https://lifeattiktok.com/search/7663389745178757429) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 6d | TikTok | [Software Engineer Graduate - Data Arch - E-commerce - 2027 Start](https://lifeattiktok.com/search/7668582086900680965) | Seattle, WA | big_tech | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
